@@ -25,7 +25,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -48,23 +49,24 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new RadiusServerProfile(&#34;example&#34;, RadiusServerProfileArgs.builder()        
- *             .folder(&#34;Shared&#34;)
+ *         var example = new RadiusServerProfile("example", RadiusServerProfileArgs.builder()        
+ *             .folder("Shared")
  *             .retries(5)
  *             .timeout(7)
  *             .protocol(RadiusServerProfileProtocolArgs.builder()
  *                 .chap(true)
  *                 .build())
  *             .servers(RadiusServerProfileServerArgs.builder()
- *                 .name(&#34;server1&#34;)
- *                 .ip_address(&#34;11.2.3.5&#34;)
- *                 .secret(&#34;secret&#34;)
+ *                 .name("server1")
+ *                 .ip_address("11.2.3.5")
+ *                 .secret("secret")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

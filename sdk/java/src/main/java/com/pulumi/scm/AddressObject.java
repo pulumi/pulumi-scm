@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,16 +43,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AddressObject(&#34;example&#34;, AddressObjectArgs.builder()        
- *             .folder(&#34;Shared&#34;)
- *             .name(&#34;example&#34;)
- *             .description(&#34;Made by Terraform&#34;)
- *             .ipNetmask(&#34;10.2.3.4&#34;)
+ *         var example = new AddressObject("example", AddressObjectArgs.builder()        
+ *             .folder("Shared")
+ *             .name("example")
+ *             .description("Made by Terraform")
+ *             .ipNetmask("10.2.3.4")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

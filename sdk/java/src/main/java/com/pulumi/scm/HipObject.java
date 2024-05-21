@@ -31,7 +31,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -56,10 +57,10 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new HipObject(&#34;example&#34;, HipObjectArgs.builder()        
- *             .folder(&#34;Shared&#34;)
- *             .name(&#34;myExample&#34;)
- *             .description(&#34;Made by Terraform&#34;)
+ *         var example = new HipObject("example", HipObjectArgs.builder()        
+ *             .folder("Shared")
+ *             .name("myExample")
+ *             .description("Made by Terraform")
  *             .diskBackup(HipObjectDiskBackupArgs.builder()
  *                 .criteria(HipObjectDiskBackupCriteriaArgs.builder()
  *                     .isInstalled(true)
@@ -75,7 +76,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

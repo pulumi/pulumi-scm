@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,22 +46,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var x = new AddressObject(&#34;x&#34;, AddressObjectArgs.builder()        
- *             .folder(&#34;Shared&#34;)
- *             .name(&#34;foo&#34;)
- *             .description(&#34;Made by Terraform&#34;)
- *             .fqdn(&#34;www.example.com&#34;)
+ *         var x = new AddressObject("x", AddressObjectArgs.builder()        
+ *             .folder("Shared")
+ *             .name("foo")
+ *             .description("Made by Terraform")
+ *             .fqdn("www.example.com")
  *             .build());
  * 
- *         var example = new AddressGroup(&#34;example&#34;, AddressGroupArgs.builder()        
- *             .folder(&#34;Shared&#34;)
- *             .name(&#34;example&#34;)
+ *         var example = new AddressGroup("example", AddressGroupArgs.builder()        
+ *             .folder("Shared")
+ *             .name("example")
  *             .staticLists(x.name())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

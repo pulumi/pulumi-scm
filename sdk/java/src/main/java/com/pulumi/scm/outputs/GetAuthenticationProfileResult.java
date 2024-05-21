@@ -57,7 +57,7 @@ public final class GetAuthenticationProfileResult {
      */
     private String userDomain;
     /**
-     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%@%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
      * 
      */
     private String usernameModifier;
@@ -123,7 +123,7 @@ public final class GetAuthenticationProfileResult {
         return this.userDomain;
     }
     /**
-     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%@%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
      * 
      */
     public String usernameModifier() {

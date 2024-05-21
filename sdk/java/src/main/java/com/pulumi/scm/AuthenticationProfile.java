@@ -25,7 +25,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,11 +46,12 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AuthenticationProfile(&#34;example&#34;);
+ *         var example = new AuthenticationProfile("example");
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */
@@ -202,14 +204,14 @@ public class AuthenticationProfile extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.userDomain);
     }
     /**
-     * The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%@%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
      * 
      */
     @Export(name="usernameModifier", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> usernameModifier;
 
     /**
-     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%@%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
      * 
      */
     public Output<Optional<String>> usernameModifier() {

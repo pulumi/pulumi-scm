@@ -16,14 +16,14 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
     public static final IkeGatewayPeerIdArgs Empty = new IkeGatewayPeerIdArgs();
 
     /**
-     * Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\@[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
      * 
      */
     @Import(name="id")
     private @Nullable Output<String> id;
 
     /**
-     * @return Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\@[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * @return Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
      * 
      */
     public Optional<Output<String>> id() {
@@ -71,7 +71,7 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param id Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\@[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+         * @param id Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param id Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\@[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+         * @param id Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
          * 
          * @return builder
          * 

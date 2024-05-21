@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayLocalId {
     /**
-     * @return Local ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\@[a-zA-Z0-9.-]+)$|^([$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * @return Local ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[a-zA-Z0-9.-]+)$|^([$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
      * 
      */
     private @Nullable String id;
@@ -24,7 +24,7 @@ public final class IkeGatewayLocalId {
 
     private IkeGatewayLocalId() {}
     /**
-     * @return Local ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\@[a-zA-Z0-9.-]+)$|^([$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * @return Local ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[a-zA-Z0-9.-]+)$|^([$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
      * 
      */
     public Optional<String> id() {

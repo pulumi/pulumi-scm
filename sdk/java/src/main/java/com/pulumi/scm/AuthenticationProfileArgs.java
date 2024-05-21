@@ -171,14 +171,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%@%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
      * 
      */
     @Import(name="usernameModifier")
     private @Nullable Output<String> usernameModifier;
 
     /**
-     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%@%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
      * 
      */
     public Optional<Output<String>> usernameModifier() {
@@ -440,7 +440,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param usernameModifier The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%@%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+         * @param usernameModifier The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
          * 
          * @return builder
          * 
@@ -451,7 +451,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param usernameModifier The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%@%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+         * @param usernameModifier The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
          * 
          * @return builder
          * 

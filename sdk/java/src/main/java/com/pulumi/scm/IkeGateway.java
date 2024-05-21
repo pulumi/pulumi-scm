@@ -28,7 +28,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -54,14 +55,14 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new IkeGateway(&#34;example&#34;, IkeGatewayArgs.builder()        
- *             .folder(&#34;Remote Networks&#34;)
- *             .name(&#34;gw1&#34;)
+ *         var example = new IkeGateway("example", IkeGatewayArgs.builder()        
+ *             .folder("Remote Networks")
+ *             .name("gw1")
  *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
  *                 .dynamic_address(true)
  *                 .build())
  *             .protocol(IkeGatewayProtocolArgs.builder()
- *                 .version(&#34;ikev2&#34;)
+ *                 .version("ikev2")
  *                 .ikev2(IkeGatewayProtocolIkev2Args.builder()
  *                     .dpd(IkeGatewayProtocolIkev2DpdArgs.builder()
  *                         .enable(false)
@@ -75,7 +76,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,15 +45,16 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LocalUser(&#34;example&#34;, LocalUserArgs.builder()        
- *             .folder(&#34;Shared&#34;)
- *             .name(&#34;user1&#34;)
- *             .password(&#34;secret&#34;)
+ *         var example = new LocalUser("example", LocalUserArgs.builder()        
+ *             .folder("Shared")
+ *             .name("user1")
+ *             .password("secret")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

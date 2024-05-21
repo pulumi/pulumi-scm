@@ -26,7 +26,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -48,22 +49,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new NatRule(&#34;example&#34;, NatRuleArgs.builder()        
- *             .folder(&#34;folder1&#34;)
- *             .name(&#34;example_nat1&#34;)
- *             .description(&#34;Example source nat&#34;)
- *             .sources(&#34;10.10.10.10/24&#34;)
- *             .froms(&#34;any&#34;)
- *             .tos(&#34;untrust&#34;)
+ *         var example = new NatRule("example", NatRuleArgs.builder()        
+ *             .folder("folder1")
+ *             .name("example_nat1")
+ *             .description("Example source nat")
+ *             .sources("10.10.10.10/24")
+ *             .froms("any")
+ *             .tos("untrust")
  *             .sourceTranslation(NatRuleSourceTranslationArgs.builder()
- *                 .translated_address_single(&#34;192.168.10.100&#34;)
- *                 .bi_directional(&#34;no&#34;)
+ *                 .translated_address_single("192.168.10.100")
+ *                 .bi_directional("no")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

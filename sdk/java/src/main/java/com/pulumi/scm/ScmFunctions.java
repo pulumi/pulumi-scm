@@ -397,7 +397,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -419,12 +420,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressGroup(GetAddressGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -437,7 +439,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -459,12 +462,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressGroup(GetAddressGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -477,7 +481,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -499,12 +504,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressGroup(GetAddressGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -517,7 +523,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -539,12 +546,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressGroup(GetAddressGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -557,7 +565,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -579,12 +588,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressGroupList(GetAddressGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -597,7 +607,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -619,12 +630,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressGroupList(GetAddressGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -637,7 +649,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -659,12 +672,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressGroupList(GetAddressGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -677,7 +691,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -699,12 +714,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressGroupList(GetAddressGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -717,7 +733,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -739,12 +756,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressGroupList(GetAddressGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -757,7 +775,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -779,12 +798,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressGroupList(GetAddressGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -797,7 +817,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -819,12 +840,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressObject(GetAddressObjectArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -837,7 +859,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -859,12 +882,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressObject(GetAddressObjectArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -877,7 +901,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -899,12 +924,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressObject(GetAddressObjectArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -917,7 +943,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -939,12 +966,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressObject(GetAddressObjectArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -957,7 +985,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -979,12 +1008,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressObjectList(GetAddressObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -997,7 +1027,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1019,12 +1050,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressObjectList(GetAddressObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1037,7 +1069,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1059,12 +1092,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressObjectList(GetAddressObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1077,7 +1111,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1099,12 +1134,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressObjectList(GetAddressObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1117,7 +1153,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1139,12 +1176,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressObjectList(GetAddressObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1157,7 +1195,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1179,12 +1218,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAddressObjectList(GetAddressObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1197,7 +1237,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1219,12 +1260,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareProfile(GetAntiSpywareProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1237,7 +1279,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1259,12 +1302,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareProfile(GetAntiSpywareProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1277,7 +1321,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1299,12 +1344,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareProfile(GetAntiSpywareProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1317,7 +1363,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1339,12 +1386,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareProfile(GetAntiSpywareProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1357,7 +1405,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1379,12 +1428,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1397,7 +1447,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1419,12 +1470,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1437,7 +1489,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1459,12 +1512,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1477,7 +1531,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1499,12 +1554,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1517,7 +1573,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1539,12 +1596,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1557,7 +1615,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1579,12 +1638,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1597,7 +1657,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1619,12 +1680,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareSignature(GetAntiSpywareSignatureArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1637,7 +1699,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1659,12 +1722,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareSignature(GetAntiSpywareSignatureArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1677,7 +1741,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1699,12 +1764,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareSignature(GetAntiSpywareSignatureArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1717,7 +1783,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1739,12 +1806,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareSignature(GetAntiSpywareSignatureArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1757,7 +1825,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1779,12 +1848,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1797,7 +1867,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1819,12 +1890,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1837,7 +1909,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1859,12 +1932,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1877,7 +1951,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1899,12 +1974,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1917,7 +1993,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1939,12 +2016,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1957,7 +2035,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1979,12 +2058,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1997,7 +2077,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2019,12 +2100,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAppOverrideRule(GetAppOverrideRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2037,7 +2119,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2059,12 +2142,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAppOverrideRule(GetAppOverrideRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2077,7 +2161,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2099,12 +2184,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAppOverrideRule(GetAppOverrideRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2117,7 +2203,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2139,12 +2226,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAppOverrideRule(GetAppOverrideRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2157,7 +2245,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2179,13 +2268,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAppOverrideRuleList(GetAppOverrideRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2198,7 +2288,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2220,13 +2311,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAppOverrideRuleList(GetAppOverrideRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2239,7 +2331,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2261,13 +2354,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAppOverrideRuleList(GetAppOverrideRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2280,7 +2374,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2302,13 +2397,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAppOverrideRuleList(GetAppOverrideRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2321,7 +2417,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2343,13 +2440,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAppOverrideRuleList(GetAppOverrideRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2362,7 +2460,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2384,13 +2483,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAppOverrideRuleList(GetAppOverrideRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2403,7 +2503,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2425,12 +2526,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplication(GetApplicationArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2443,7 +2545,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2465,12 +2568,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplication(GetApplicationArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2483,7 +2587,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2505,12 +2610,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplication(GetApplicationArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2523,7 +2629,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2545,12 +2652,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplication(GetApplicationArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2563,7 +2671,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2585,12 +2694,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationFilter(GetApplicationFilterArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2603,7 +2713,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2625,12 +2736,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationFilter(GetApplicationFilterArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2643,7 +2755,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2665,12 +2778,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationFilter(GetApplicationFilterArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2683,7 +2797,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2705,12 +2820,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationFilter(GetApplicationFilterArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2723,7 +2839,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2745,12 +2862,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationFilterList(GetApplicationFilterListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2763,7 +2881,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2785,12 +2904,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationFilterList(GetApplicationFilterListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2803,7 +2923,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2825,12 +2946,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationFilterList(GetApplicationFilterListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2843,7 +2965,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2865,12 +2988,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationFilterList(GetApplicationFilterListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2883,7 +3007,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2905,12 +3030,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationFilterList(GetApplicationFilterListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2923,7 +3049,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2945,12 +3072,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationFilterList(GetApplicationFilterListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2963,7 +3091,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2985,12 +3114,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationGroup(GetApplicationGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3003,7 +3133,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3025,12 +3156,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationGroup(GetApplicationGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3043,7 +3175,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3065,12 +3198,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationGroup(GetApplicationGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3083,7 +3217,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3105,12 +3240,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationGroup(GetApplicationGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3123,7 +3259,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3145,12 +3282,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationGroupList(GetApplicationGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3163,7 +3301,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3185,12 +3324,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationGroupList(GetApplicationGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3203,7 +3343,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3225,12 +3366,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationGroupList(GetApplicationGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3243,7 +3385,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3265,12 +3408,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationGroupList(GetApplicationGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3283,7 +3427,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3305,12 +3450,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationGroupList(GetApplicationGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3323,7 +3469,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3345,12 +3492,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationGroupList(GetApplicationGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3363,7 +3511,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3385,12 +3534,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3403,7 +3553,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3425,12 +3576,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3443,7 +3595,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3465,12 +3618,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3483,7 +3637,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3505,12 +3660,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3523,7 +3679,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3545,12 +3702,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3563,7 +3721,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3585,12 +3744,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3603,7 +3763,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3625,12 +3786,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationPortal(GetAuthenticationPortalArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3643,7 +3805,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3665,12 +3828,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationPortal(GetAuthenticationPortalArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3683,7 +3847,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3705,12 +3870,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationPortal(GetAuthenticationPortalArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3723,7 +3889,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3745,12 +3912,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationPortal(GetAuthenticationPortalArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3763,7 +3931,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3785,12 +3954,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationPortalList(GetAuthenticationPortalListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3803,7 +3973,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3825,12 +3996,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationPortalList(GetAuthenticationPortalListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3843,7 +4015,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3865,12 +4038,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationPortalList(GetAuthenticationPortalListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3883,7 +4057,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3905,12 +4080,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationPortalList(GetAuthenticationPortalListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3923,7 +4099,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3945,12 +4122,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationPortalList(GetAuthenticationPortalListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3963,7 +4141,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3985,12 +4164,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationPortalList(GetAuthenticationPortalListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4003,7 +4183,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4025,12 +4206,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationProfile(GetAuthenticationProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4043,7 +4225,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4065,12 +4248,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationProfile(GetAuthenticationProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4083,7 +4267,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4105,12 +4290,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationProfile(GetAuthenticationProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4123,7 +4309,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4145,12 +4332,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationProfile(GetAuthenticationProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4163,7 +4351,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4185,12 +4374,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationProfileList(GetAuthenticationProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4203,7 +4393,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4225,12 +4416,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationProfileList(GetAuthenticationProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4243,7 +4435,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4265,12 +4458,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationProfileList(GetAuthenticationProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4283,7 +4477,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4305,12 +4500,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationProfileList(GetAuthenticationProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4323,7 +4519,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4345,12 +4542,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationProfileList(GetAuthenticationProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4363,7 +4561,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4385,12 +4584,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationProfileList(GetAuthenticationProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4403,7 +4603,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4425,12 +4626,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4443,7 +4645,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4465,12 +4668,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4483,7 +4687,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4505,12 +4710,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4523,7 +4729,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4545,12 +4752,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4563,7 +4771,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4585,13 +4794,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationRuleList(GetAuthenticationRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4604,7 +4814,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4626,13 +4837,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationRuleList(GetAuthenticationRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4645,7 +4857,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4667,13 +4880,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationRuleList(GetAuthenticationRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4686,7 +4900,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4708,13 +4923,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationRuleList(GetAuthenticationRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4727,7 +4943,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4749,13 +4966,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationRuleList(GetAuthenticationRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4768,7 +4986,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4790,13 +5009,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationRuleList(GetAuthenticationRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4809,7 +5029,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4831,12 +5052,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationSequence(GetAuthenticationSequenceArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4849,7 +5071,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4871,12 +5094,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationSequence(GetAuthenticationSequenceArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4889,7 +5113,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4911,12 +5136,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationSequence(GetAuthenticationSequenceArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4929,7 +5155,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4951,12 +5178,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationSequence(GetAuthenticationSequenceArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4969,7 +5197,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4991,12 +5220,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationSequenceList(GetAuthenticationSequenceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5009,7 +5239,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5031,12 +5262,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationSequenceList(GetAuthenticationSequenceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5049,7 +5281,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5071,12 +5304,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationSequenceList(GetAuthenticationSequenceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5089,7 +5323,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5111,12 +5346,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationSequenceList(GetAuthenticationSequenceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5129,7 +5365,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5151,12 +5388,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationSequenceList(GetAuthenticationSequenceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5169,7 +5407,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5191,12 +5430,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getAuthenticationSequenceList(GetAuthenticationSequenceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5209,7 +5449,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5234,7 +5475,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5247,7 +5489,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5272,7 +5515,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5285,7 +5529,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5310,7 +5555,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5323,7 +5569,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5348,7 +5595,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5361,7 +5609,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5386,7 +5635,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5399,7 +5649,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5424,7 +5675,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5437,7 +5689,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5459,12 +5712,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getCertificateProfile(GetCertificateProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5477,7 +5731,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5499,12 +5754,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getCertificateProfile(GetCertificateProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5517,7 +5773,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5539,12 +5796,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getCertificateProfile(GetCertificateProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5557,7 +5815,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5579,12 +5838,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getCertificateProfile(GetCertificateProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5597,7 +5857,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5619,12 +5880,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5637,7 +5899,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5659,12 +5922,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5677,7 +5941,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5699,12 +5964,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5717,7 +5983,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5739,12 +6006,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5757,7 +6025,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5779,12 +6048,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5797,7 +6067,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5819,12 +6090,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5837,7 +6109,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5859,12 +6132,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionExclusion(GetDecryptionExclusionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5877,7 +6151,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5899,12 +6174,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionExclusion(GetDecryptionExclusionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5917,7 +6193,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5939,12 +6216,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionExclusion(GetDecryptionExclusionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5957,7 +6235,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5979,12 +6258,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionExclusion(GetDecryptionExclusionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5997,7 +6277,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6019,12 +6300,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionProfile(GetDecryptionProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6037,7 +6319,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6059,12 +6342,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionProfile(GetDecryptionProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6077,7 +6361,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6099,12 +6384,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionProfile(GetDecryptionProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6117,7 +6403,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6139,12 +6426,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionProfile(GetDecryptionProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6157,7 +6445,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6179,12 +6468,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6197,7 +6487,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6219,12 +6510,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6237,7 +6529,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6259,12 +6552,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6277,7 +6571,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6299,12 +6594,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6317,7 +6613,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6339,12 +6636,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6357,7 +6655,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6379,12 +6678,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6397,7 +6697,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6419,12 +6720,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionRule(GetDecryptionRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6437,7 +6739,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6459,12 +6762,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionRule(GetDecryptionRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6477,7 +6781,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6499,12 +6804,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionRule(GetDecryptionRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6517,7 +6823,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6539,12 +6846,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionRule(GetDecryptionRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6557,7 +6865,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6579,13 +6888,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionRuleList(GetDecryptionRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6598,7 +6908,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6620,13 +6931,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionRuleList(GetDecryptionRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6639,7 +6951,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6661,13 +6974,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionRuleList(GetDecryptionRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6680,7 +6994,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6702,13 +7017,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionRuleList(GetDecryptionRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6721,7 +7037,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6743,13 +7060,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionRuleList(GetDecryptionRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6762,7 +7080,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6784,13 +7103,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDecryptionRuleList(GetDecryptionRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6803,7 +7123,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6825,12 +7146,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serial(&#34;12345&#34;)
+     *             .serial("12345")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6843,7 +7165,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6865,12 +7188,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serial(&#34;12345&#34;)
+     *             .serial("12345")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6883,7 +7207,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6905,12 +7230,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serial(&#34;12345&#34;)
+     *             .serial("12345")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6923,7 +7249,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6945,12 +7272,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serial(&#34;12345&#34;)
+     *             .serial("12345")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6963,7 +7291,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6988,7 +7317,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7001,7 +7331,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7026,7 +7357,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7039,7 +7371,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7064,7 +7397,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7077,7 +7411,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7102,7 +7437,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7115,7 +7451,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7140,7 +7477,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7153,7 +7491,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7178,7 +7517,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7191,7 +7531,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7213,12 +7554,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDnsSecurityProfile(GetDnsSecurityProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7231,7 +7573,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7253,12 +7596,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDnsSecurityProfile(GetDnsSecurityProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7271,7 +7615,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7293,12 +7638,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDnsSecurityProfile(GetDnsSecurityProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7311,7 +7657,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7333,12 +7680,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDnsSecurityProfile(GetDnsSecurityProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7351,7 +7699,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7373,12 +7722,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7391,7 +7741,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7413,12 +7764,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7431,7 +7783,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7453,12 +7806,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7471,7 +7825,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7493,12 +7848,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7511,7 +7867,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7533,12 +7890,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7551,7 +7909,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7573,12 +7932,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7591,7 +7951,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7613,12 +7974,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDynamicUserGroup(GetDynamicUserGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7631,7 +7993,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7653,12 +8016,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDynamicUserGroup(GetDynamicUserGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7671,7 +8035,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7693,12 +8058,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDynamicUserGroup(GetDynamicUserGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7711,7 +8077,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7733,12 +8100,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDynamicUserGroup(GetDynamicUserGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7751,7 +8119,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7773,12 +8142,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDynamicUserGroupList(GetDynamicUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7791,7 +8161,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7813,12 +8184,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDynamicUserGroupList(GetDynamicUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7831,7 +8203,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7853,12 +8226,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDynamicUserGroupList(GetDynamicUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7871,7 +8245,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7893,12 +8268,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDynamicUserGroupList(GetDynamicUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7911,7 +8287,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7933,12 +8310,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDynamicUserGroupList(GetDynamicUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7951,7 +8329,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7973,12 +8352,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getDynamicUserGroupList(GetDynamicUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7991,7 +8371,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8013,12 +8394,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getExternalDynamicList(GetExternalDynamicListArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8031,7 +8413,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8053,12 +8436,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getExternalDynamicList(GetExternalDynamicListArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8071,7 +8455,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8093,12 +8478,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getExternalDynamicList(GetExternalDynamicListArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8111,7 +8497,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8133,12 +8520,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getExternalDynamicList(GetExternalDynamicListArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8151,7 +8539,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8173,12 +8562,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8191,7 +8581,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8213,12 +8604,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8231,7 +8623,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8253,12 +8646,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8271,7 +8665,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8293,12 +8688,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8311,7 +8707,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8333,12 +8730,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8351,7 +8749,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8373,12 +8772,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8391,7 +8791,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8413,12 +8814,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getFileBlockingProfile(GetFileBlockingProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8431,7 +8833,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8453,12 +8856,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getFileBlockingProfile(GetFileBlockingProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8471,7 +8875,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8493,12 +8898,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getFileBlockingProfile(GetFileBlockingProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8511,7 +8917,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8533,12 +8940,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getFileBlockingProfile(GetFileBlockingProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8551,7 +8959,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8573,12 +8982,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8591,7 +9001,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8613,12 +9024,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8631,7 +9043,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8653,12 +9066,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8671,7 +9085,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8693,12 +9108,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8711,7 +9127,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8733,12 +9150,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8751,7 +9169,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8773,12 +9192,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getFileBlockingProfileList(GetFileBlockingProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8791,7 +9211,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8813,12 +9234,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipObject(GetHipObjectArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8831,7 +9253,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8853,12 +9276,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipObject(GetHipObjectArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8871,7 +9295,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8893,12 +9318,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipObject(GetHipObjectArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8911,7 +9337,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8933,12 +9360,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipObject(GetHipObjectArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8951,7 +9379,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8973,12 +9402,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8991,7 +9421,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9013,12 +9444,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9031,7 +9463,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9053,12 +9486,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9071,7 +9505,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9093,12 +9528,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9111,7 +9547,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9133,12 +9570,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9151,7 +9589,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9173,12 +9612,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9191,7 +9631,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9213,12 +9654,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipProfile(GetHipProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9231,7 +9673,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9253,12 +9696,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipProfile(GetHipProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9271,7 +9715,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9293,12 +9738,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipProfile(GetHipProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9311,7 +9757,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9333,12 +9780,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipProfile(GetHipProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9351,7 +9799,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9373,12 +9822,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9391,7 +9841,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9413,12 +9864,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9431,7 +9883,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9453,12 +9906,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9471,7 +9925,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9493,12 +9948,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9511,7 +9967,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9533,12 +9990,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9551,7 +10009,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9573,12 +10032,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9591,7 +10051,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9613,12 +10074,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHttpHeaderProfile(GetHttpHeaderProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9631,7 +10093,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9653,12 +10116,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHttpHeaderProfile(GetHttpHeaderProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9671,7 +10135,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9693,12 +10158,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHttpHeaderProfile(GetHttpHeaderProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9711,7 +10177,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9733,12 +10200,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHttpHeaderProfile(GetHttpHeaderProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9751,7 +10219,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9773,12 +10242,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9791,7 +10261,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9813,12 +10284,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9831,7 +10303,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9853,12 +10326,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9871,7 +10345,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9893,12 +10368,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9911,7 +10387,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9933,12 +10410,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9951,7 +10429,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9973,12 +10452,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getHttpHeaderProfileList(GetHttpHeaderProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9991,7 +10471,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10013,12 +10494,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeCryptoProfile(GetIkeCryptoProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10031,7 +10513,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10053,12 +10536,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeCryptoProfile(GetIkeCryptoProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10071,7 +10555,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10093,12 +10578,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeCryptoProfile(GetIkeCryptoProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10111,7 +10597,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10133,12 +10620,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeCryptoProfile(GetIkeCryptoProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10151,7 +10639,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10173,12 +10662,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeCryptoProfileList(GetIkeCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10191,7 +10681,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10213,12 +10704,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeCryptoProfileList(GetIkeCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10231,7 +10723,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10253,12 +10746,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeCryptoProfileList(GetIkeCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10271,7 +10765,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10293,12 +10788,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeCryptoProfileList(GetIkeCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10311,7 +10807,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10333,12 +10830,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeCryptoProfileList(GetIkeCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10351,7 +10849,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10373,12 +10872,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeCryptoProfileList(GetIkeCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10391,7 +10891,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10413,12 +10914,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeGateway(GetIkeGatewayArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10431,7 +10933,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10453,12 +10956,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeGateway(GetIkeGatewayArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10471,7 +10975,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10493,12 +10998,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeGateway(GetIkeGatewayArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10511,7 +11017,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10533,12 +11040,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeGateway(GetIkeGatewayArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10551,7 +11059,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10573,12 +11082,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10591,7 +11101,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10613,12 +11124,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10631,7 +11143,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10653,12 +11166,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10671,7 +11185,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10693,12 +11208,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10711,7 +11227,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10733,12 +11250,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10751,7 +11269,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10773,12 +11292,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIkeGatewayList(GetIkeGatewayListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10791,7 +11311,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10813,12 +11334,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getInternalDnsServer(GetInternalDnsServerArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10831,7 +11353,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10853,12 +11376,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getInternalDnsServer(GetInternalDnsServerArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10871,7 +11395,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10893,12 +11418,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getInternalDnsServer(GetInternalDnsServerArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10911,7 +11437,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10933,12 +11460,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getInternalDnsServer(GetInternalDnsServerArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10951,7 +11479,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10976,7 +11505,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10989,7 +11519,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11014,7 +11545,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11027,7 +11559,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11052,7 +11585,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11065,7 +11599,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11090,7 +11625,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11103,7 +11639,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11128,7 +11665,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11141,7 +11679,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11166,7 +11705,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11179,7 +11719,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11201,12 +11742,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecCryptoProfile(GetIpsecCryptoProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11219,7 +11761,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11241,12 +11784,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecCryptoProfile(GetIpsecCryptoProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11259,7 +11803,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11281,12 +11826,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecCryptoProfile(GetIpsecCryptoProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11299,7 +11845,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11321,12 +11868,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecCryptoProfile(GetIpsecCryptoProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11339,7 +11887,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11361,12 +11910,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecCryptoProfileList(GetIpsecCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11379,7 +11929,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11401,12 +11952,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecCryptoProfileList(GetIpsecCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11419,7 +11971,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11441,12 +11994,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecCryptoProfileList(GetIpsecCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11459,7 +12013,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11481,12 +12036,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecCryptoProfileList(GetIpsecCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11499,7 +12055,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11521,12 +12078,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecCryptoProfileList(GetIpsecCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11539,7 +12097,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11561,12 +12120,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecCryptoProfileList(GetIpsecCryptoProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11579,7 +12139,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11601,12 +12162,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecTunnel(GetIpsecTunnelArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11619,7 +12181,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11641,12 +12204,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecTunnel(GetIpsecTunnelArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11659,7 +12223,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11681,12 +12246,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecTunnel(GetIpsecTunnelArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11699,7 +12265,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11721,12 +12288,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecTunnel(GetIpsecTunnelArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11739,7 +12307,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11761,12 +12330,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecTunnelList(GetIpsecTunnelListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11779,7 +12349,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11801,12 +12372,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecTunnelList(GetIpsecTunnelListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11819,7 +12391,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11841,12 +12414,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecTunnelList(GetIpsecTunnelListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11859,7 +12433,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11881,12 +12456,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecTunnelList(GetIpsecTunnelListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11899,7 +12475,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11921,12 +12498,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecTunnelList(GetIpsecTunnelListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11939,7 +12517,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11961,12 +12540,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getIpsecTunnelList(GetIpsecTunnelListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11979,7 +12559,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12004,7 +12585,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12017,7 +12599,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12042,7 +12625,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12055,7 +12639,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12080,7 +12665,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12093,7 +12679,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12118,7 +12705,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12131,7 +12719,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12155,7 +12744,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12168,7 +12758,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12192,7 +12783,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12205,7 +12797,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12229,7 +12822,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12242,7 +12836,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12266,7 +12861,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12279,7 +12875,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12303,7 +12900,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12316,7 +12914,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12340,7 +12939,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12353,7 +12953,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12375,12 +12976,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getKerberosServerProfile(GetKerberosServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12393,7 +12995,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12415,12 +13018,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getKerberosServerProfile(GetKerberosServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12433,7 +13037,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12455,12 +13060,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getKerberosServerProfile(GetKerberosServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12473,7 +13079,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12495,12 +13102,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getKerberosServerProfile(GetKerberosServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12513,7 +13121,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12535,12 +13144,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12553,7 +13163,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12575,12 +13186,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12593,7 +13205,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12615,12 +13228,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12633,7 +13247,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12655,12 +13270,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12673,7 +13289,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12695,12 +13312,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12713,7 +13331,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12735,12 +13354,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getKerberosServerProfileList(GetKerberosServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12753,7 +13373,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12778,7 +13399,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12791,7 +13413,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12816,7 +13439,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12829,7 +13453,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12854,7 +13479,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12867,7 +13493,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12892,7 +13519,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12905,7 +13533,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12930,7 +13559,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12943,7 +13573,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12968,7 +13599,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12981,7 +13613,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13003,12 +13636,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLabelsGetbyidResponse(GetLabelsGetbyidResponseArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13021,7 +13655,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13043,12 +13678,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLabelsGetbyidResponse(GetLabelsGetbyidResponseArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13061,7 +13697,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13083,12 +13720,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLabelsGetbyidResponse(GetLabelsGetbyidResponseArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13101,7 +13739,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13123,12 +13762,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLabelsGetbyidResponse(GetLabelsGetbyidResponseArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13141,7 +13781,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13163,12 +13804,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLdapServerProfile(GetLdapServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13181,7 +13823,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13203,12 +13846,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLdapServerProfile(GetLdapServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13221,7 +13865,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13243,12 +13888,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLdapServerProfile(GetLdapServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13261,7 +13907,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13283,12 +13930,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLdapServerProfile(GetLdapServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13301,7 +13949,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13323,12 +13972,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLdapServerProfileList(GetLdapServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13341,7 +13991,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13363,12 +14014,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLdapServerProfileList(GetLdapServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13381,7 +14033,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13403,12 +14056,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLdapServerProfileList(GetLdapServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13421,7 +14075,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13443,12 +14098,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLdapServerProfileList(GetLdapServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13461,7 +14117,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13483,12 +14140,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLdapServerProfileList(GetLdapServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13501,7 +14159,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13523,12 +14182,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLdapServerProfileList(GetLdapServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13541,7 +14201,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13563,12 +14224,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUser(GetLocalUserArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13581,7 +14243,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13603,12 +14266,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUser(GetLocalUserArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13621,7 +14285,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13643,12 +14308,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUser(GetLocalUserArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13661,7 +14327,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13683,12 +14350,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUser(GetLocalUserArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13701,7 +14369,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13723,12 +14392,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserGroupList(GetLocalUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13741,7 +14411,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13763,12 +14434,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserGroupList(GetLocalUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13781,7 +14453,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13803,12 +14476,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserGroupList(GetLocalUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13821,7 +14495,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13843,12 +14518,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserGroupList(GetLocalUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13861,7 +14537,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13883,12 +14560,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserGroupList(GetLocalUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13901,7 +14579,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13923,12 +14602,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserGroupList(GetLocalUserGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13941,7 +14621,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13963,12 +14644,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserList(GetLocalUserListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13981,7 +14663,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14003,12 +14686,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserList(GetLocalUserListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14021,7 +14705,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14043,12 +14728,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserList(GetLocalUserListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14061,7 +14747,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14083,12 +14770,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserList(GetLocalUserListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14101,7 +14789,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14123,12 +14812,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserList(GetLocalUserListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14141,7 +14831,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14163,12 +14854,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getLocalUserList(GetLocalUserListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14181,7 +14873,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14203,12 +14896,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getMfaServer(GetMfaServerArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14221,7 +14915,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14243,12 +14938,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getMfaServer(GetMfaServerArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14261,7 +14957,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14283,12 +14980,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getMfaServer(GetMfaServerArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14301,7 +14999,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14323,12 +15022,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getMfaServer(GetMfaServerArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14341,7 +15041,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14363,12 +15064,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14381,7 +15083,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14403,12 +15106,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14421,7 +15125,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14443,12 +15148,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14461,7 +15167,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14483,12 +15190,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14501,7 +15209,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14526,7 +15235,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14539,7 +15249,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14564,7 +15275,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14577,7 +15289,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14602,7 +15315,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14615,7 +15329,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14640,7 +15355,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14653,7 +15369,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14678,7 +15395,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14691,7 +15409,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14716,7 +15435,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14729,7 +15449,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14751,12 +15472,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getOcspResponder(GetOcspResponderArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14769,7 +15491,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14791,12 +15514,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getOcspResponder(GetOcspResponderArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14809,7 +15533,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14831,12 +15556,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getOcspResponder(GetOcspResponderArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14849,7 +15575,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14871,12 +15598,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getOcspResponder(GetOcspResponderArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14889,7 +15617,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14911,12 +15640,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getOcspResponderList(GetOcspResponderListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14929,7 +15659,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14951,12 +15682,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getOcspResponderList(GetOcspResponderListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14969,7 +15701,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14991,12 +15724,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getOcspResponderList(GetOcspResponderListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15009,7 +15743,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15031,12 +15766,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getOcspResponderList(GetOcspResponderListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15049,7 +15785,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15071,12 +15808,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getOcspResponderList(GetOcspResponderListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15089,7 +15827,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15111,12 +15850,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getOcspResponderList(GetOcspResponderListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15129,7 +15869,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15151,12 +15892,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getProfileGroup(GetProfileGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15169,7 +15911,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15191,12 +15934,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getProfileGroup(GetProfileGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15209,7 +15953,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15231,12 +15976,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getProfileGroup(GetProfileGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15249,7 +15995,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15271,12 +16018,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getProfileGroup(GetProfileGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15289,7 +16037,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15311,12 +16060,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getProfileGroupList(GetProfileGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15329,7 +16079,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15351,12 +16102,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getProfileGroupList(GetProfileGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15369,7 +16121,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15391,12 +16144,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getProfileGroupList(GetProfileGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15409,7 +16163,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15431,12 +16186,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getProfileGroupList(GetProfileGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15449,7 +16205,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15471,12 +16228,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getProfileGroupList(GetProfileGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15489,7 +16247,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15511,12 +16270,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getProfileGroupList(GetProfileGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15529,7 +16289,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15551,12 +16312,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosPolicyRule(GetQosPolicyRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15569,7 +16331,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15591,12 +16354,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosPolicyRule(GetQosPolicyRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15609,7 +16373,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15631,12 +16396,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosPolicyRule(GetQosPolicyRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15649,7 +16415,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15671,12 +16438,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosPolicyRule(GetQosPolicyRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15689,7 +16457,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15711,13 +16480,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosPolicyRuleList(GetQosPolicyRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15730,7 +16500,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15752,13 +16523,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosPolicyRuleList(GetQosPolicyRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15771,7 +16543,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15793,13 +16566,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosPolicyRuleList(GetQosPolicyRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15812,7 +16586,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15834,13 +16609,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosPolicyRuleList(GetQosPolicyRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15853,7 +16629,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15875,13 +16652,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosPolicyRuleList(GetQosPolicyRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15894,7 +16672,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15916,13 +16695,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosPolicyRuleList(GetQosPolicyRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15935,7 +16715,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15957,12 +16738,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosProfile(GetQosProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15975,7 +16757,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15997,12 +16780,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosProfile(GetQosProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16015,7 +16799,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16037,12 +16822,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosProfile(GetQosProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16055,7 +16841,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16077,12 +16864,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosProfile(GetQosProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16095,7 +16883,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16117,12 +16906,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16135,7 +16925,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16157,12 +16948,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16175,7 +16967,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16197,12 +16990,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16215,7 +17009,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16237,12 +17032,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16255,7 +17051,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16277,12 +17074,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16295,7 +17093,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16317,12 +17116,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getQosProfileList(GetQosProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16335,7 +17135,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16357,12 +17158,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRadiusServerProfile(GetRadiusServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16375,7 +17177,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16397,12 +17200,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRadiusServerProfile(GetRadiusServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16415,7 +17219,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16437,12 +17242,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRadiusServerProfile(GetRadiusServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16455,7 +17261,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16477,12 +17284,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRadiusServerProfile(GetRadiusServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16495,7 +17303,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16517,12 +17326,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRadiusServerProfileList(GetRadiusServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16535,7 +17345,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16557,12 +17368,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRadiusServerProfileList(GetRadiusServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16575,7 +17387,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16597,12 +17410,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRadiusServerProfileList(GetRadiusServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16615,7 +17429,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16637,12 +17452,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRadiusServerProfileList(GetRadiusServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16655,7 +17471,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16677,12 +17494,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRadiusServerProfileList(GetRadiusServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16695,7 +17513,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16717,12 +17536,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRadiusServerProfileList(GetRadiusServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16735,7 +17555,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16757,12 +17578,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRegion(GetRegionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16775,7 +17597,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16797,12 +17620,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRegion(GetRegionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16815,7 +17639,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16837,12 +17662,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRegion(GetRegionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16855,7 +17681,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16877,12 +17704,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRegion(GetRegionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16895,7 +17723,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16917,12 +17746,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRegionList(GetRegionListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16935,7 +17765,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16957,12 +17788,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRegionList(GetRegionListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16975,7 +17807,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16997,12 +17830,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRegionList(GetRegionListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17015,7 +17849,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17037,12 +17872,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRegionList(GetRegionListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17055,7 +17891,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17077,12 +17914,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRegionList(GetRegionListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17095,7 +17933,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17117,12 +17956,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRegionList(GetRegionListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17135,7 +17975,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17157,12 +17998,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRemoteNetwork(GetRemoteNetworkArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17175,7 +18017,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17197,12 +18040,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRemoteNetwork(GetRemoteNetworkArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17215,7 +18059,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17237,12 +18082,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRemoteNetwork(GetRemoteNetworkArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17255,7 +18101,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17277,12 +18124,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRemoteNetwork(GetRemoteNetworkArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17295,7 +18143,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17317,12 +18166,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRemoteNetworkList(GetRemoteNetworkListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17335,7 +18185,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17357,12 +18208,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRemoteNetworkList(GetRemoteNetworkListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17375,7 +18227,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17397,12 +18250,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRemoteNetworkList(GetRemoteNetworkListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17415,7 +18269,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17437,12 +18292,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRemoteNetworkList(GetRemoteNetworkListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17455,7 +18311,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17477,12 +18334,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRemoteNetworkList(GetRemoteNetworkListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17495,7 +18353,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17517,12 +18376,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getRemoteNetworkList(GetRemoteNetworkListArgs.builder()
-     *             .folder(&#34;Remote Networks&#34;)
+     *             .folder("Remote Networks")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17535,7 +18395,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17557,12 +18418,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSamlServerProfile(GetSamlServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17575,7 +18437,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17597,12 +18460,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSamlServerProfile(GetSamlServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17615,7 +18479,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17637,12 +18502,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSamlServerProfile(GetSamlServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17655,7 +18521,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17677,12 +18544,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSamlServerProfile(GetSamlServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17695,7 +18563,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17717,12 +18586,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17735,7 +18605,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17757,12 +18628,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17775,7 +18647,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17797,12 +18670,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17815,7 +18689,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17837,12 +18712,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17855,7 +18731,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17877,12 +18754,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17895,7 +18773,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17917,12 +18796,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSamlServerProfileList(GetSamlServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17935,7 +18815,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17957,12 +18838,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScepProfile(GetScepProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17975,7 +18857,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17997,12 +18880,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScepProfile(GetScepProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18015,7 +18899,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18037,12 +18922,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScepProfile(GetScepProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18055,7 +18941,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18077,12 +18964,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScepProfile(GetScepProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18095,7 +18983,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18117,12 +19006,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18135,7 +19025,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18157,12 +19048,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18175,7 +19067,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18197,12 +19090,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18215,7 +19109,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18237,12 +19132,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18255,7 +19151,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18277,12 +19174,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18295,7 +19193,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18317,12 +19216,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScepProfileList(GetScepProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18335,7 +19235,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18357,12 +19258,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSchedule(GetScheduleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18375,7 +19277,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18397,12 +19300,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSchedule(GetScheduleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18415,7 +19319,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18437,12 +19342,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSchedule(GetScheduleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18455,7 +19361,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18477,12 +19384,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSchedule(GetScheduleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18495,7 +19403,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18517,12 +19426,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScheduleList(GetScheduleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18535,7 +19445,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18557,12 +19468,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScheduleList(GetScheduleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18575,7 +19487,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18597,12 +19510,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScheduleList(GetScheduleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18615,7 +19529,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18637,12 +19552,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScheduleList(GetScheduleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18655,7 +19571,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18677,12 +19594,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScheduleList(GetScheduleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18695,7 +19613,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18717,12 +19636,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getScheduleList(GetScheduleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18735,7 +19655,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18757,12 +19678,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSecurityRule(GetSecurityRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18775,7 +19697,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18797,12 +19720,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSecurityRule(GetSecurityRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18815,7 +19739,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18837,12 +19762,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSecurityRule(GetSecurityRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18855,7 +19781,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18877,12 +19804,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSecurityRule(GetSecurityRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18895,7 +19823,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18917,13 +19846,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSecurityRuleList(GetSecurityRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18936,7 +19866,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18958,13 +19889,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSecurityRuleList(GetSecurityRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18977,7 +19909,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18999,13 +19932,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSecurityRuleList(GetSecurityRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19018,7 +19952,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19040,13 +19975,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSecurityRuleList(GetSecurityRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19059,7 +19995,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19081,13 +20018,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSecurityRuleList(GetSecurityRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19100,7 +20038,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19122,13 +20061,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSecurityRuleList(GetSecurityRuleListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
-     *             .position(&#34;pre&#34;)
+     *             .folder("Shared")
+     *             .position("pre")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19141,7 +20081,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19163,12 +20104,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getService(GetServiceArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19181,7 +20123,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19203,12 +20146,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getService(GetServiceArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19221,7 +20165,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19243,12 +20188,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getService(GetServiceArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19261,7 +20207,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19283,12 +20230,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getService(GetServiceArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19301,7 +20249,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19323,13 +20272,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnection(GetServiceConnectionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19342,7 +20292,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19364,13 +20315,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnection(GetServiceConnectionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19383,7 +20335,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19405,13 +20358,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnection(GetServiceConnectionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19424,7 +20378,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19446,13 +20401,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnection(GetServiceConnectionArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19465,7 +20421,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19487,13 +20444,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19506,7 +20464,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19528,13 +20487,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19547,7 +20507,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19569,13 +20530,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19588,7 +20550,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19610,13 +20573,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19629,7 +20593,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19651,12 +20616,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionGroupList(GetServiceConnectionGroupListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19669,7 +20635,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19691,12 +20658,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionGroupList(GetServiceConnectionGroupListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19709,7 +20677,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19731,12 +20700,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionGroupList(GetServiceConnectionGroupListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19749,7 +20719,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19771,12 +20742,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionGroupList(GetServiceConnectionGroupListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19789,7 +20761,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19811,12 +20784,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionGroupList(GetServiceConnectionGroupListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19829,7 +20803,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19851,12 +20826,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionGroupList(GetServiceConnectionGroupListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19869,7 +20845,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19891,12 +20868,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionList(GetServiceConnectionListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19909,7 +20887,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19931,12 +20910,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionList(GetServiceConnectionListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19949,7 +20929,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19971,12 +20952,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionList(GetServiceConnectionListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19989,7 +20971,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20011,12 +20994,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionList(GetServiceConnectionListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20029,7 +21013,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20051,12 +21036,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionList(GetServiceConnectionListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20069,7 +21055,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20091,12 +21078,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceConnectionList(GetServiceConnectionListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20109,7 +21097,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20131,12 +21120,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceGroup(GetServiceGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20149,7 +21139,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20171,12 +21162,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceGroup(GetServiceGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20189,7 +21181,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20211,12 +21204,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceGroup(GetServiceGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20229,7 +21223,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20251,12 +21246,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceGroup(GetServiceGroupArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20269,7 +21265,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20291,12 +21288,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20309,7 +21307,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20331,12 +21330,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20349,7 +21349,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20371,12 +21372,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20389,7 +21391,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20411,12 +21414,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20429,7 +21433,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20451,12 +21456,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20469,7 +21475,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20491,12 +21498,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20509,7 +21517,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20531,12 +21540,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceList(GetServiceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20549,7 +21559,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20571,12 +21582,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceList(GetServiceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20589,7 +21601,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20611,12 +21624,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceList(GetServiceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20629,7 +21643,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20651,12 +21666,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceList(GetServiceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20669,7 +21685,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20691,12 +21708,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceList(GetServiceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20709,7 +21727,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20731,12 +21750,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getServiceList(GetServiceListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20749,7 +21769,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20774,7 +21795,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20787,7 +21809,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20812,7 +21835,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20825,7 +21849,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20850,7 +21875,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20863,7 +21889,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20888,7 +21915,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20901,7 +21929,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20926,7 +21955,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20939,7 +21969,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20964,7 +21995,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20977,7 +22009,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20999,12 +22032,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSnippet(GetSnippetArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21017,7 +22051,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21039,12 +22074,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSnippet(GetSnippetArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21057,7 +22093,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21079,12 +22116,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSnippet(GetSnippetArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21097,7 +22135,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21119,12 +22158,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getSnippet(GetSnippetArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21137,7 +22177,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21162,7 +22203,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21175,7 +22217,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21200,7 +22243,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21213,7 +22257,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21238,7 +22283,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21251,7 +22297,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21276,7 +22323,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21289,7 +22337,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21314,7 +22363,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21327,7 +22377,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21352,7 +22403,8 @@ public final class ScmFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21365,7 +22417,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21387,12 +22440,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTacacsServerProfile(GetTacacsServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21405,7 +22459,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21427,12 +22482,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTacacsServerProfile(GetTacacsServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21445,7 +22501,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21467,12 +22524,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTacacsServerProfile(GetTacacsServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21485,7 +22543,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21507,12 +22566,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTacacsServerProfile(GetTacacsServerProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21525,7 +22585,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21547,12 +22608,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTacacsServerProfileList(GetTacacsServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21565,7 +22627,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21587,12 +22650,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTacacsServerProfileList(GetTacacsServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21605,7 +22669,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21627,12 +22692,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTacacsServerProfileList(GetTacacsServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21645,7 +22711,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21667,12 +22734,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTacacsServerProfileList(GetTacacsServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21685,7 +22753,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21707,12 +22776,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTacacsServerProfileList(GetTacacsServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21725,7 +22795,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21747,12 +22818,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTacacsServerProfileList(GetTacacsServerProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21765,7 +22837,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21787,12 +22860,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTag(GetTagArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21805,7 +22879,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21827,12 +22902,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTag(GetTagArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21845,7 +22921,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21867,12 +22944,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTag(GetTagArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21885,7 +22963,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21907,12 +22986,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTag(GetTagArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21925,7 +23005,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21947,12 +23028,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21965,7 +23047,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21987,12 +23070,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22005,7 +23089,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22027,12 +23112,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22045,7 +23131,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22067,12 +23154,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22085,7 +23173,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22107,12 +23196,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22125,7 +23215,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22147,12 +23238,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22165,7 +23257,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22187,12 +23280,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTlsServiceProfile(GetTlsServiceProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22205,7 +23299,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22227,12 +23322,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTlsServiceProfile(GetTlsServiceProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22245,7 +23341,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22267,12 +23364,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTlsServiceProfile(GetTlsServiceProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22285,7 +23383,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22307,12 +23406,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTlsServiceProfile(GetTlsServiceProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22325,7 +23425,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22347,12 +23448,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22365,7 +23467,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22387,12 +23490,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22405,7 +23509,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22427,12 +23532,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22445,7 +23551,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22467,12 +23574,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22485,7 +23593,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22507,12 +23616,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22525,7 +23635,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22547,12 +23658,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTlsServiceProfileList(GetTlsServiceProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22565,7 +23677,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22587,13 +23700,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrafficSteeringRule(GetTrafficSteeringRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22606,7 +23720,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22628,13 +23743,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrafficSteeringRule(GetTrafficSteeringRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22647,7 +23763,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22669,13 +23786,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrafficSteeringRule(GetTrafficSteeringRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22688,7 +23806,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22710,13 +23829,14 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrafficSteeringRule(GetTrafficSteeringRuleArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
-     *             .folder(&#34;Service Connections&#34;)
+     *             .id("1234-56-789")
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22729,7 +23849,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22751,12 +23872,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrafficSteeringRuleList(GetTrafficSteeringRuleListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22769,7 +23891,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22791,12 +23914,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrafficSteeringRuleList(GetTrafficSteeringRuleListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22809,7 +23933,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22831,12 +23956,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrafficSteeringRuleList(GetTrafficSteeringRuleListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22849,7 +23975,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22871,12 +23998,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrafficSteeringRuleList(GetTrafficSteeringRuleListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22889,7 +24017,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22911,12 +24040,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrafficSteeringRuleList(GetTrafficSteeringRuleListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22929,7 +24059,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22951,12 +24082,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrafficSteeringRuleList(GetTrafficSteeringRuleListArgs.builder()
-     *             .folder(&#34;Service Connections&#34;)
+     *             .folder("Service Connections")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22969,7 +24101,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22991,12 +24124,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrustedCertificateAuthorityList(GetTrustedCertificateAuthorityListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23009,7 +24143,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23031,12 +24166,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrustedCertificateAuthorityList(GetTrustedCertificateAuthorityListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23049,7 +24185,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23071,12 +24208,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrustedCertificateAuthorityList(GetTrustedCertificateAuthorityListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23089,7 +24227,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23111,12 +24250,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrustedCertificateAuthorityList(GetTrustedCertificateAuthorityListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23129,7 +24269,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23151,12 +24292,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrustedCertificateAuthorityList(GetTrustedCertificateAuthorityListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23169,7 +24311,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23191,12 +24334,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getTrustedCertificateAuthorityList(GetTrustedCertificateAuthorityListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23209,7 +24353,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23231,12 +24376,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlAccessProfile(GetUrlAccessProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23249,7 +24395,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23271,12 +24418,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlAccessProfile(GetUrlAccessProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23289,7 +24437,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23311,12 +24460,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlAccessProfile(GetUrlAccessProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23329,7 +24479,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23351,12 +24502,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlAccessProfile(GetUrlAccessProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23369,7 +24521,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23391,12 +24544,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23409,7 +24563,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23431,12 +24586,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23449,7 +24605,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23471,12 +24628,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23489,7 +24647,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23511,12 +24670,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23529,7 +24689,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23551,12 +24712,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23569,7 +24731,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23591,12 +24754,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23637,7 +24801,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23659,12 +24824,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23677,7 +24843,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23699,12 +24866,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23717,7 +24885,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23739,12 +24908,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23757,7 +24927,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23779,12 +24950,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23797,7 +24969,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23819,12 +24992,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23837,7 +25011,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23859,12 +25034,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23877,7 +25053,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23899,12 +25076,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlFilteringCategoryList(GetUrlFilteringCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23917,7 +25095,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23939,12 +25118,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlFilteringCategoryList(GetUrlFilteringCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23957,7 +25137,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23979,12 +25160,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlFilteringCategoryList(GetUrlFilteringCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23997,7 +25179,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24019,12 +25202,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlFilteringCategoryList(GetUrlFilteringCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24037,7 +25221,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24059,12 +25244,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlFilteringCategoryList(GetUrlFilteringCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24077,7 +25263,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24099,12 +25286,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getUrlFilteringCategoryList(GetUrlFilteringCategoryListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24117,7 +25305,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24139,12 +25328,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVariable(GetVariableArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24157,7 +25347,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24179,12 +25370,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVariable(GetVariableArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24197,7 +25389,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24219,12 +25412,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVariable(GetVariableArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24237,7 +25431,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24259,12 +25454,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVariable(GetVariableArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24277,7 +25473,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24299,12 +25496,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVariableList(GetVariableListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24317,7 +25515,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24339,12 +25538,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVariableList(GetVariableListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24357,7 +25557,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24379,12 +25580,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVariableList(GetVariableListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24397,7 +25599,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24419,12 +25622,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVariableList(GetVariableListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24437,7 +25641,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24459,12 +25664,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVariableList(GetVariableListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24477,7 +25683,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24499,12 +25706,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVariableList(GetVariableListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24517,7 +25725,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24539,12 +25748,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionProfile(GetVulnerabilityProtectionProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24557,7 +25767,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24579,12 +25790,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionProfile(GetVulnerabilityProtectionProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24597,7 +25809,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24619,12 +25832,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionProfile(GetVulnerabilityProtectionProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24637,7 +25851,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24659,12 +25874,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionProfile(GetVulnerabilityProtectionProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24677,7 +25893,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24699,12 +25916,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24717,7 +25935,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24739,12 +25958,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24757,7 +25977,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24779,12 +26000,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24797,7 +26019,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24819,12 +26042,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24837,7 +26061,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24859,12 +26084,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24877,7 +26103,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24899,12 +26126,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24917,7 +26145,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24939,12 +26168,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionSignatures(GetVulnerabilityProtectionSignaturesArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24957,7 +26187,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24979,12 +26210,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionSignatures(GetVulnerabilityProtectionSignaturesArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24997,7 +26229,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25019,12 +26252,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionSignatures(GetVulnerabilityProtectionSignaturesArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25037,7 +26271,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25059,12 +26294,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionSignatures(GetVulnerabilityProtectionSignaturesArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25077,7 +26313,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25099,12 +26336,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionSignaturesList(GetVulnerabilityProtectionSignaturesListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25117,7 +26355,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25139,12 +26378,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionSignaturesList(GetVulnerabilityProtectionSignaturesListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25157,7 +26397,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25179,12 +26420,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionSignaturesList(GetVulnerabilityProtectionSignaturesListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25197,7 +26439,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25219,12 +26462,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionSignaturesList(GetVulnerabilityProtectionSignaturesListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25237,7 +26481,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25259,12 +26504,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionSignaturesList(GetVulnerabilityProtectionSignaturesListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25277,7 +26523,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25299,12 +26546,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getVulnerabilityProtectionSignaturesList(GetVulnerabilityProtectionSignaturesListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25317,7 +26565,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25339,12 +26588,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getWildfireAntiVirusProfile(GetWildfireAntiVirusProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25357,7 +26607,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25379,12 +26630,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getWildfireAntiVirusProfile(GetWildfireAntiVirusProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25397,7 +26649,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25419,12 +26672,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getWildfireAntiVirusProfile(GetWildfireAntiVirusProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25437,7 +26691,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25459,12 +26714,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getWildfireAntiVirusProfile(GetWildfireAntiVirusProfileArgs.builder()
-     *             .id(&#34;1234-56-789&#34;)
+     *             .id("1234-56-789")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25477,7 +26733,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25499,12 +26756,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getWildfireAntiVirusProfileList(GetWildfireAntiVirusProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25517,7 +26775,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25539,12 +26798,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getWildfireAntiVirusProfileList(GetWildfireAntiVirusProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25557,7 +26817,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25579,12 +26840,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getWildfireAntiVirusProfileList(GetWildfireAntiVirusProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25597,7 +26859,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25619,12 +26882,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getWildfireAntiVirusProfileList(GetWildfireAntiVirusProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25637,7 +26901,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25659,12 +26924,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getWildfireAntiVirusProfileList(GetWildfireAntiVirusProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25677,7 +26943,8 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25699,12 +26966,13 @@ public final class ScmFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = ScmFunctions.getWildfireAntiVirusProfileList(GetWildfireAntiVirusProfileListArgs.builder()
-     *             .folder(&#34;Shared&#34;)
+     *             .folder("Shared")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */

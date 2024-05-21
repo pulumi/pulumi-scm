@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayPeerId {
     /**
-     * @return Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\@[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * @return Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
      * 
      */
     private @Nullable String id;
@@ -24,7 +24,7 @@ public final class IkeGatewayPeerId {
 
     private IkeGatewayPeerId() {}
     /**
-     * @return Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\@[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * @return Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
      * 
      */
     public Optional<String> id() {
