@@ -138,6 +138,7 @@ func Provider() tfbridge.ProviderInfo {
 	)
 
 	prov.SetAutonaming(255, "-")
+	prov.MustApplyAutoAliases()
 
 	return prov
 }
