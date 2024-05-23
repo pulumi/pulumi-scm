@@ -55,7 +55,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new IkeGateway("example", IkeGatewayArgs.builder()        
+ *         var example = new IkeGateway("example", IkeGatewayArgs.builder()
  *             .folder("Remote Networks")
  *             .name("gw1")
  *             .peerAddress(IkeGatewayPeerAddressArgs.builder()

@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TlsServiceProfile("example", TlsServiceProfileArgs.builder()        
+ *         var example = new TlsServiceProfile("example", TlsServiceProfileArgs.builder()
  *             .folder("Shared")
  *             .build());
  * 

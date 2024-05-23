@@ -57,7 +57,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new HipObject("example", HipObjectArgs.builder()        
+ *         var example = new HipObject("example", HipObjectArgs.builder()
  *             .folder("Shared")
  *             .name("myExample")
  *             .description("Made by Terraform")
