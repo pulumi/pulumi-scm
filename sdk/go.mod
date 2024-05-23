@@ -2,7 +2,7 @@ module github.com/pulumi/pulumi-scm/sdk
 
 go 1.21
 
-require github.com/pulumi/pulumi/sdk/v3 v3.114.0
+require github.com/pulumi/pulumi/sdk/v3 v3.116.1
 
 require (
 	dario.cat/mergo v1.0.0 // indirect
