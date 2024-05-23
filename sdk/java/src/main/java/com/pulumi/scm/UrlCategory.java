@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new UrlCategory("example", UrlCategoryArgs.builder()        
+ *         var example = new UrlCategory("example", UrlCategoryArgs.builder()
  *             .folder("Shared")
  *             .build());
  * 

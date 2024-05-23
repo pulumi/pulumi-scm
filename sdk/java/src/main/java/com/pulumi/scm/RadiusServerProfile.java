@@ -49,7 +49,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new RadiusServerProfile("example", RadiusServerProfileArgs.builder()        
+ *         var example = new RadiusServerProfile("example", RadiusServerProfileArgs.builder()
  *             .folder("Shared")
  *             .retries(5)
  *             .timeout(7)
