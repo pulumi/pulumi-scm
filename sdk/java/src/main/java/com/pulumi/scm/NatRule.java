@@ -49,7 +49,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new NatRule("example", NatRuleArgs.builder()        
+ *         var example = new NatRule("example", NatRuleArgs.builder()
  *             .folder("folder1")
  *             .name("example_nat1")
  *             .description("Example source nat")

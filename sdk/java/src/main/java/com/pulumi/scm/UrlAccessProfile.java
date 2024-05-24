@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new UrlAccessProfile("example", UrlAccessProfileArgs.builder()        
+ *         var example = new UrlAccessProfile("example", UrlAccessProfileArgs.builder()
  *             .folder("Shared")
  *             .build());
  * 

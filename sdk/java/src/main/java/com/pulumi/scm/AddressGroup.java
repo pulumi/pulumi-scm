@@ -46,14 +46,14 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var x = new AddressObject("x", AddressObjectArgs.builder()        
+ *         var x = new AddressObject("x", AddressObjectArgs.builder()
  *             .folder("Shared")
  *             .name("foo")
  *             .description("Made by Terraform")
  *             .fqdn("www.example.com")
  *             .build());
  * 
- *         var example = new AddressGroup("example", AddressGroupArgs.builder()        
+ *         var example = new AddressGroup("example", AddressGroupArgs.builder()
  *             .folder("Shared")
  *             .name("example")
  *             .staticLists(x.name())

@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AddressObject("example", AddressObjectArgs.builder()        
+ *         var example = new AddressObject("example", AddressObjectArgs.builder()
  *             .folder("Shared")
  *             .name("example")
  *             .description("Made by Terraform")

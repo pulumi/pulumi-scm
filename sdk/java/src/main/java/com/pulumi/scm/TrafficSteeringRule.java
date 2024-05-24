@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TrafficSteeringRule("example", TrafficSteeringRuleArgs.builder()        
+ *         var example = new TrafficSteeringRule("example", TrafficSteeringRuleArgs.builder()
  *             .folder("Shared")
  *             .build());
  * 

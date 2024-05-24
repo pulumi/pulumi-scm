@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Variable("example", VariableArgs.builder()        
+ *         var example = new Variable("example", VariableArgs.builder()
  *             .folder("Shared")
  *             .build());
  * 
