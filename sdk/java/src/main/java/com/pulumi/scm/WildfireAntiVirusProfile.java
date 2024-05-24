@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WildfireAntiVirusProfile("example", WildfireAntiVirusProfileArgs.builder()        
+ *         var example = new WildfireAntiVirusProfile("example", WildfireAntiVirusProfileArgs.builder()
  *             .folder("Shared")
  *             .build());
  * 

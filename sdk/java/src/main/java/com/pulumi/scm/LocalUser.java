@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LocalUser("example", LocalUserArgs.builder()        
+ *         var example = new LocalUser("example", LocalUserArgs.builder()
  *             .folder("Shared")
  *             .name("user1")
  *             .password("secret")
