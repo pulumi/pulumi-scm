@@ -9,7 +9,7 @@
   [project.license]
     text = "Apache-2.0"
   [project.urls]
-    Homepage = "https://github.com/pulumi/pulumi-scm"
+    Homepage = "https://pulumi.com"
     Repository = "https://github.com/pulumi/pulumi-scm"
 
 [build-system]

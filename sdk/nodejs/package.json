@@ -8,7 +8,7 @@
         "paloaltonetworks",
         "category/network"
     ],
-    "homepage": "https://github.com/pulumi/pulumi-scm",
+    "homepage": "https://pulumi.com",
     "repository": "https://github.com/pulumi/pulumi-scm",
     "license": "Apache-2.0",
     "scripts": {
