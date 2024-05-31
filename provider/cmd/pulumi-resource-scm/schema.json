@@ -8,12 +8,11 @@
         "paloaltonetworks",
         "category/network"
     ],
-    "homepage": "https://github.com/pulumi/pulumi-scm",
+    "homepage": "https://pulumi.com",
     "license": "Apache-2.0",
     "attribution": "This Pulumi package is based on the [`scm` Terraform Provider](https://github.com/PaloAltoNetworks/terraform-provider-scm).",
     "repository": "https://github.com/pulumi/pulumi-scm",
     "logoUrl": "https://raw.githubusercontent.com/pulumi/pulumi-scm/main/docs/logo.png",
-    "publisher": "pulumi",
     "meta": {
         "moduleFormat": "(.*)(?:/[^/]*)"
     },
