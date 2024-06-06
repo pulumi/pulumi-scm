@@ -42,6 +42,18 @@ namespace Pulumi.Scm
             set => _authFile.Set(value);
         }
 
+        private static readonly __Value<string?> _authUrl = new __Value<string?>(() => __config.Get("authUrl"));
+        /// <summary>
+        /// The URL to send auth credentials to which will return a JWT. Default:
+        /// `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+        /// file variable: `auth_url`.
+        /// </summary>
+        public static string? AuthUrl
+        {
+            get => _authUrl.Get();
+            set => _authUrl.Set(value);
+        }
+
         private static readonly __Value<string?> _clientId = new __Value<string?>(() => __config.Get("clientId"));
         /// <summary>
         /// The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
@@ -61,6 +73,17 @@ namespace Pulumi.Scm
         {
             get => _clientSecret.Get();
             set => _clientSecret.Set(value);
+        }
+
+        private static readonly __Value<ImmutableDictionary<string, string>?> _headers = new __Value<ImmutableDictionary<string, string>?>(() => __config.GetObject<ImmutableDictionary<string, string>>("headers"));
+        /// <summary>
+        /// Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
+        /// `headers`.
+        /// </summary>
+        public static ImmutableDictionary<string, string>? Headers
+        {
+            get => _headers.Get();
+            set => _headers.Set(value);
         }
 
         private static readonly __Value<string?> _host = new __Value<string?>(() => __config.Get("host"));
@@ -83,6 +106,28 @@ namespace Pulumi.Scm
         {
             get => _logging.Get();
             set => _logging.Set(value);
+        }
+
+        private static readonly __Value<int?> _port = new __Value<int?>(() => __config.GetInt32("port"));
+        /// <summary>
+        /// The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
+        /// config file variable: `port`.
+        /// </summary>
+        public static int? Port
+        {
+            get => _port.Get();
+            set => _port.Set(value);
+        }
+
+        private static readonly __Value<string?> _protocol = new __Value<string?>(() => __config.Get("protocol"));
+        /// <summary>
+        /// The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+        /// JSON config file variable: `protocol`.
+        /// </summary>
+        public static string? Protocol
+        {
+            get => _protocol.Get();
+            set => _protocol.Set(value);
         }
 
         private static readonly __Value<string?> _scope = new __Value<string?>(() => __config.Get("scope"));

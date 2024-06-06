@@ -25,6 +25,14 @@ namespace Pulumi.Scm
         public Output<string?> AuthFile { get; private set; } = null!;
 
         /// <summary>
+        /// The URL to send auth credentials to which will return a JWT. Default:
+        /// `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+        /// file variable: `auth_url`.
+        /// </summary>
+        [Output("authUrl")]
+        public Output<string?> AuthUrl { get; private set; } = null!;
+
+        /// <summary>
         /// The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
         /// </summary>
         [Output("clientId")]
@@ -50,6 +58,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Output("logging")]
         public Output<string?> Logging { get; private set; } = null!;
+
+        /// <summary>
+        /// The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+        /// JSON config file variable: `protocol`.
+        /// </summary>
+        [Output("protocol")]
+        public Output<string?> Protocol { get; private set; } = null!;
 
         /// <summary>
         /// The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
@@ -96,6 +111,14 @@ namespace Pulumi.Scm
         public Input<string>? AuthFile { get; set; }
 
         /// <summary>
+        /// The URL to send auth credentials to which will return a JWT. Default:
+        /// `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+        /// file variable: `auth_url`.
+        /// </summary>
+        [Input("authUrl")]
+        public Input<string>? AuthUrl { get; set; }
+
+        /// <summary>
         /// The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
         /// </summary>
         [Input("clientId")]
@@ -118,6 +141,19 @@ namespace Pulumi.Scm
             }
         }
 
+        [Input("headers", json: true)]
+        private InputMap<string>? _headers;
+
+        /// <summary>
+        /// Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
+        /// `headers`.
+        /// </summary>
+        public InputMap<string> Headers
+        {
+            get => _headers ?? (_headers = new InputMap<string>());
+            set => _headers = value;
+        }
+
         /// <summary>
         /// The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
         /// JSON config file variable: `host`.
@@ -131,6 +167,20 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("logging")]
         public Input<string>? Logging { get; set; }
+
+        /// <summary>
+        /// The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
+        /// config file variable: `port`.
+        /// </summary>
+        [Input("port", json: true)]
+        public Input<int>? Port { get; set; }
+
+        /// <summary>
+        /// The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+        /// JSON config file variable: `protocol`.
+        /// </summary>
+        [Input("protocol")]
+        public Input<string>? Protocol { get; set; }
 
         /// <summary>
         /// The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.

@@ -3,8 +3,11 @@
 
 package com.pulumi.scm;
 
+import com.pulumi.core.TypeShape;
 import com.pulumi.core.internal.Codegen;
+import java.lang.Integer;
 import java.lang.String;
+import java.util.Map;
 import java.util.Optional;
 
 public final class Config {
@@ -16,6 +19,15 @@ public final class Config {
  */
     public Optional<String> authFile() {
         return Codegen.stringProp("authFile").config(config).get();
+    }
+/**
+ * The URL to send auth credentials to which will return a JWT. Default:
+ * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+ * file variable: `auth_url`.
+ * 
+ */
+    public Optional<String> authUrl() {
+        return Codegen.stringProp("authUrl").config(config).get();
     }
 /**
  * The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
@@ -33,6 +45,14 @@ public final class Config {
         return Codegen.stringProp("clientSecret").config(config).get();
     }
 /**
+ * Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
+ * `headers`.
+ * 
+ */
+    public Optional<Map<String,String>> headers() {
+        return Codegen.objectProp("headers", TypeShape.<Map<String,String>>builder(Map.class).addParameter(String.class).addParameter(String.class).build()).config(config).get();
+    }
+/**
  * The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
  * JSON config file variable: `host`.
  * 
@@ -47,6 +67,22 @@ public final class Config {
  */
     public Optional<String> logging() {
         return Codegen.stringProp("logging").config(config).get();
+    }
+/**
+ * The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
+ * config file variable: `port`.
+ * 
+ */
+    public Optional<Integer> port() {
+        return Codegen.integerProp("port").config(config).get();
+    }
+/**
+ * The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+ * JSON config file variable: `protocol`.
+ * 
+ */
+    public Optional<String> protocol() {
+        return Codegen.stringProp("protocol").config(config).get();
     }
 /**
  * The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.

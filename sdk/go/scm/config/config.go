@@ -16,6 +16,13 @@ func GetAuthFile(ctx *pulumi.Context) string {
 	return config.Get(ctx, "scm:authFile")
 }
 
+// The URL to send auth credentials to which will return a JWT. Default:
+// `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+// file variable: `authUrl`.
+func GetAuthUrl(ctx *pulumi.Context) string {
+	return config.Get(ctx, "scm:authUrl")
+}
+
 // The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `clientId`.
 func GetClientId(ctx *pulumi.Context) string {
 	return config.Get(ctx, "scm:clientId")
@@ -25,6 +32,12 @@ func GetClientId(ctx *pulumi.Context) string {
 // `clientSecret`.
 func GetClientSecret(ctx *pulumi.Context) string {
 	return config.Get(ctx, "scm:clientSecret")
+}
+
+// Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
+// `headers`.
+func GetHeaders(ctx *pulumi.Context) string {
+	return config.Get(ctx, "scm:headers")
 }
 
 // The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
@@ -37,6 +50,18 @@ func GetHost(ctx *pulumi.Context) string {
 // `SCM_LOGGING`. JSON config file variable: `logging`.
 func GetLogging(ctx *pulumi.Context) string {
 	return config.Get(ctx, "scm:logging")
+}
+
+// The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
+// config file variable: `port`.
+func GetPort(ctx *pulumi.Context) int {
+	return config.GetInt(ctx, "scm:port")
+}
+
+// The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+// JSON config file variable: `protocol`.
+func GetProtocol(ctx *pulumi.Context) string {
+	return config.Get(ctx, "scm:protocol")
 }
 
 // The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
