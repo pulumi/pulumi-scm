@@ -19,6 +19,19 @@ Object.defineProperty(exports, "authFile", {
 });
 
 /**
+ * The URL to send auth credentials to which will return a JWT. Default:
+ * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+ * file variable: `authUrl`.
+ */
+export declare const authUrl: string | undefined;
+Object.defineProperty(exports, "authUrl", {
+    get() {
+        return __config.get("authUrl");
+    },
+    enumerable: true,
+});
+
+/**
  * The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `clientId`.
  */
 export declare const clientId: string | undefined;
@@ -37,6 +50,18 @@ export declare const clientSecret: string | undefined;
 Object.defineProperty(exports, "clientSecret", {
     get() {
         return __config.get("clientSecret");
+    },
+    enumerable: true,
+});
+
+/**
+ * Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
+ * `headers`.
+ */
+export declare const headers: {[key: string]: string} | undefined;
+Object.defineProperty(exports, "headers", {
+    get() {
+        return __config.getObject<{[key: string]: string}>("headers");
     },
     enumerable: true,
 });
@@ -61,6 +86,30 @@ export declare const logging: string | undefined;
 Object.defineProperty(exports, "logging", {
     get() {
         return __config.get("logging");
+    },
+    enumerable: true,
+});
+
+/**
+ * The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
+ * config file variable: `port`.
+ */
+export declare const port: number | undefined;
+Object.defineProperty(exports, "port", {
+    get() {
+        return __config.getObject<number>("port");
+    },
+    enumerable: true,
+});
+
+/**
+ * The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+ * JSON config file variable: `protocol`.
+ */
+export declare const protocol: string | undefined;
+Object.defineProperty(exports, "protocol", {
+    get() {
+        return __config.get("protocol");
     },
     enumerable: true,
 });

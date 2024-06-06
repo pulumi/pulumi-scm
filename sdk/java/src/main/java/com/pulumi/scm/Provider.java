@@ -38,6 +38,24 @@ public class Provider extends com.pulumi.resources.ProviderResource {
         return Codegen.optional(this.authFile);
     }
     /**
+     * The URL to send auth credentials to which will return a JWT. Default:
+     * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+     * file variable: `auth_url`.
+     * 
+     */
+    @Export(name="authUrl", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> authUrl;
+
+    /**
+     * @return The URL to send auth credentials to which will return a JWT. Default:
+     * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+     * file variable: `auth_url`.
+     * 
+     */
+    public Output<Optional<String>> authUrl() {
+        return Codegen.optional(this.authUrl);
+    }
+    /**
      * The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
      * 
      */
@@ -98,6 +116,22 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      */
     public Output<Optional<String>> logging() {
         return Codegen.optional(this.logging);
+    }
+    /**
+     * The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+     * JSON config file variable: `protocol`.
+     * 
+     */
+    @Export(name="protocol", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> protocol;
+
+    /**
+     * @return The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+     * JSON config file variable: `protocol`.
+     * 
+     */
+    public Output<Optional<String>> protocol() {
+        return Codegen.optional(this.protocol);
     }
     /**
      * The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.

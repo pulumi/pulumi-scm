@@ -23,6 +23,15 @@ class _ExportableConfig(types.ModuleType):
         return __config__.get('authFile')
 
     @property
+    def auth_url(self) -> Optional[str]:
+        """
+        The URL to send auth credentials to which will return a JWT. Default:
+        `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+        file variable: `auth_url`.
+        """
+        return __config__.get('authUrl')
+
+    @property
     def client_id(self) -> Optional[str]:
         """
         The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
@@ -36,6 +45,14 @@ class _ExportableConfig(types.ModuleType):
         `client_secret`.
         """
         return __config__.get('clientSecret')
+
+    @property
+    def headers(self) -> Optional[str]:
+        """
+        Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
+        `headers`.
+        """
+        return __config__.get('headers')
 
     @property
     def host(self) -> Optional[str]:
@@ -52,6 +69,22 @@ class _ExportableConfig(types.ModuleType):
         `SCM_LOGGING`. JSON config file variable: `logging`.
         """
         return __config__.get('logging')
+
+    @property
+    def port(self) -> Optional[int]:
+        """
+        The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
+        config file variable: `port`.
+        """
+        return __config__.get_int('port')
+
+    @property
+    def protocol(self) -> Optional[str]:
+        """
+        The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+        JSON config file variable: `protocol`.
+        """
+        return __config__.get('protocol')
 
     @property
     def scope(self) -> Optional[str]:

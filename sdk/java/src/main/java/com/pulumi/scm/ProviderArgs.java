@@ -5,7 +5,9 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Integer;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -28,6 +30,25 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> authFile() {
         return Optional.ofNullable(this.authFile);
+    }
+
+    /**
+     * The URL to send auth credentials to which will return a JWT. Default:
+     * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+     * file variable: `auth_url`.
+     * 
+     */
+    @Import(name="authUrl")
+    private @Nullable Output<String> authUrl;
+
+    /**
+     * @return The URL to send auth credentials to which will return a JWT. Default:
+     * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+     * file variable: `auth_url`.
+     * 
+     */
+    public Optional<Output<String>> authUrl() {
+        return Optional.ofNullable(this.authUrl);
     }
 
     /**
@@ -60,6 +81,23 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
+    }
+
+    /**
+     * Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
+     * `headers`.
+     * 
+     */
+    @Import(name="headers", json=true)
+    private @Nullable Output<Map<String,String>> headers;
+
+    /**
+     * @return Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
+     * `headers`.
+     * 
+     */
+    public Optional<Output<Map<String,String>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -97,6 +135,40 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
+     * config file variable: `port`.
+     * 
+     */
+    @Import(name="port", json=true)
+    private @Nullable Output<Integer> port;
+
+    /**
+     * @return The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
+     * config file variable: `port`.
+     * 
+     */
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
+    }
+
+    /**
+     * The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+     * JSON config file variable: `protocol`.
+     * 
+     */
+    @Import(name="protocol")
+    private @Nullable Output<String> protocol;
+
+    /**
+     * @return The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+     * JSON config file variable: `protocol`.
+     * 
+     */
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
+    }
+
+    /**
      * The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
      * 
      */
@@ -115,10 +187,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
     private ProviderArgs(ProviderArgs $) {
         this.authFile = $.authFile;
+        this.authUrl = $.authUrl;
         this.clientId = $.clientId;
         this.clientSecret = $.clientSecret;
+        this.headers = $.headers;
         this.host = $.host;
         this.logging = $.logging;
+        this.port = $.port;
+        this.protocol = $.protocol;
         this.scope = $.scope;
     }
 
@@ -159,6 +235,31 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder authFile(String authFile) {
             return authFile(Output.of(authFile));
+        }
+
+        /**
+         * @param authUrl The URL to send auth credentials to which will return a JWT. Default:
+         * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+         * file variable: `auth_url`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authUrl(@Nullable Output<String> authUrl) {
+            $.authUrl = authUrl;
+            return this;
+        }
+
+        /**
+         * @param authUrl The URL to send auth credentials to which will return a JWT. Default:
+         * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
+         * file variable: `auth_url`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder authUrl(String authUrl) {
+            return authUrl(Output.of(authUrl));
         }
 
         /**
@@ -206,6 +307,29 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param headers Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
+         * `headers`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder headers(@Nullable Output<Map<String,String>> headers) {
+            $.headers = headers;
+            return this;
+        }
+
+        /**
+         * @param headers Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
+         * `headers`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder headers(Map<String,String> headers) {
+            return headers(Output.of(headers));
+        }
+
+        /**
          * @param host The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
          * JSON config file variable: `host`.
          * 
@@ -249,6 +373,52 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder logging(String logging) {
             return logging(Output.of(logging));
+        }
+
+        /**
+         * @param port The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
+         * config file variable: `port`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder port(@Nullable Output<Integer> port) {
+            $.port = port;
+            return this;
+        }
+
+        /**
+         * @param port The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
+         * config file variable: `port`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder port(Integer port) {
+            return port(Output.of(port));
+        }
+
+        /**
+         * @param protocol The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+         * JSON config file variable: `protocol`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder protocol(@Nullable Output<String> protocol) {
+            $.protocol = protocol;
+            return this;
+        }
+
+        /**
+         * @param protocol The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`.
+         * JSON config file variable: `protocol`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
 
         /**
