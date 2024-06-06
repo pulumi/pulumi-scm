@@ -69,6 +69,10 @@
                 "type": "string",
                 "description": "The file path to the JSON file with auth creds for SCM.\n"
             },
+            "authUrl": {
+                "type": "string",
+                "description": "The URL to send auth credentials to which will return a JWT. Default:\n`https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config\nfile variable: `auth_url`.\n"
+            },
             "clientId": {
                 "type": "string",
                 "description": "The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.\n"
@@ -78,6 +82,13 @@
                 "description": "The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:\n`client_secret`.\n",
                 "secret": true
             },
+            "headers": {
+                "type": "object",
+                "additionalProperties": {
+                    "type": "string"
+                },
+                "description": "Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:\n`headers`.\n"
+            },
             "host": {
                 "type": "string",
                 "description": "The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.\nJSON config file variable: `host`.\n"
@@ -85,6 +96,14 @@
             "logging": {
                 "type": "string",
                 "description": "The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:\n`SCM_LOGGING`. JSON config file variable: `logging`.\n"
+            },
+            "port": {
+                "type": "integer",
+                "description": "The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON\nconfig file variable: `port`.\n"
+            },
+            "protocol": {
+                "type": "string",
+                "description": "The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.\nJSON config file variable: `protocol`.\n"
             },
             "scope": {
                 "type": "string",
@@ -27854,6 +27873,10 @@
                 "type": "string",
                 "description": "The file path to the JSON file with auth creds for SCM.\n"
             },
+            "authUrl": {
+                "type": "string",
+                "description": "The URL to send auth credentials to which will return a JWT. Default:\n`https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config\nfile variable: `auth_url`.\n"
+            },
             "clientId": {
                 "type": "string",
                 "description": "The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.\n"
@@ -27863,6 +27886,13 @@
                 "description": "The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:\n`client_secret`.\n",
                 "secret": true
             },
+            "headers": {
+                "type": "object",
+                "additionalProperties": {
+                    "type": "string"
+                },
+                "description": "Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:\n`headers`.\n"
+            },
             "host": {
                 "type": "string",
                 "description": "The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.\nJSON config file variable: `host`.\n"
@@ -27870,6 +27900,14 @@
             "logging": {
                 "type": "string",
                 "description": "The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:\n`SCM_LOGGING`. JSON config file variable: `logging`.\n"
+            },
+            "port": {
+                "type": "integer",
+                "description": "The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON\nconfig file variable: `port`.\n"
+            },
+            "protocol": {
+                "type": "string",
+                "description": "The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.\nJSON config file variable: `protocol`.\n"
             },
             "scope": {
                 "type": "string",
@@ -27881,6 +27919,10 @@
                 "type": "string",
                 "description": "The file path to the JSON file with auth creds for SCM.\n"
             },
+            "authUrl": {
+                "type": "string",
+                "description": "The URL to send auth credentials to which will return a JWT. Default:\n`https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config\nfile variable: `auth_url`.\n"
+            },
             "clientId": {
                 "type": "string",
                 "description": "The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.\n"
@@ -27890,6 +27932,13 @@
                 "description": "The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:\n`client_secret`.\n",
                 "secret": true
             },
+            "headers": {
+                "type": "object",
+                "additionalProperties": {
+                    "type": "string"
+                },
+                "description": "Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:\n`headers`.\n"
+            },
             "host": {
                 "type": "string",
                 "description": "The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.\nJSON config file variable: `host`.\n"
@@ -27897,6 +27946,14 @@
             "logging": {
                 "type": "string",
                 "description": "The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:\n`SCM_LOGGING`. JSON config file variable: `logging`.\n"
+            },
+            "port": {
+                "type": "integer",
+                "description": "The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON\nconfig file variable: `port`.\n"
+            },
+            "protocol": {
+                "type": "string",
+                "description": "The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.\nJSON config file variable: `protocol`.\n"
             },
             "scope": {
                 "type": "string",
