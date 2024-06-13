@@ -256,7 +256,7 @@ class Tag(pulumi.CustomResource):
             folder="Shared",
             name="myColor",
             color="Green",
-            comments="Made by Terraform")
+            comments="Made by Pulumi")
         ```
 
         :param str resource_name: The name of the resource.
@@ -287,7 +287,7 @@ class Tag(pulumi.CustomResource):
             folder="Shared",
             name="myColor",
             color="Green",
-            comments="Made by Terraform")
+            comments="Made by Pulumi")
         ```
 
         :param str resource_name: The name of the resource.
