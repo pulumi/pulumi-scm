@@ -31,7 +31,7 @@ import (
 //				Folder:   pulumi.String("Shared"),
 //				Name:     pulumi.String("myColor"),
 //				Color:    pulumi.String("Green"),
-//				Comments: pulumi.String("Made by Terraform"),
+//				Comments: pulumi.String("Made by Pulumi"),
 //			})
 //			if err != nil {
 //				return err

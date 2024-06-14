@@ -60,7 +60,7 @@ import javax.annotation.Nullable;
  *         var example = new HipObject("example", HipObjectArgs.builder()
  *             .folder("Shared")
  *             .name("myExample")
- *             .description("Made by Terraform")
+ *             .description("Made by Pulumi")
  *             .diskBackup(HipObjectDiskBackupArgs.builder()
  *                 .criteria(HipObjectDiskBackupCriteriaArgs.builder()
  *                     .isInstalled(true)

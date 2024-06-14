@@ -26,7 +26,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Folder = "Shared",
     ///         Name = "foo",
-    ///         Description = "Made by Terraform",
+    ///         Description = "Made by Pulumi",
     ///         Fqdn = "www.example.com",
     ///     });
     /// 

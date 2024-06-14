@@ -27,7 +27,7 @@ namespace Pulumi.Scm
     ///         Folder = "Shared",
     ///         Name = "myColor",
     ///         Color = "Green",
-    ///         Comments = "Made by Terraform",
+    ///         Comments = "Made by Pulumi",
     ///     });
     /// 
     /// });

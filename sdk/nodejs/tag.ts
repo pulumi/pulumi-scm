@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *     folder: "Shared",
  *     name: "myColor",
  *     color: "Green",
- *     comments: "Made by Terraform",
+ *     comments: "Made by Pulumi",
  * });
  * ```
  */
