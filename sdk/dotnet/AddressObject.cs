@@ -26,7 +26,7 @@ namespace Pulumi.Scm
     ///     {
     ///         Folder = "Shared",
     ///         Name = "example",
-    ///         Description = "Made by Terraform",
+    ///         Description = "Made by Pulumi",
     ///         IpNetmask = "10.2.3.4",
     ///     });
     /// 

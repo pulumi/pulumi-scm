@@ -403,7 +403,7 @@ class AddressObject(pulumi.CustomResource):
         example = scm.AddressObject("example",
             folder="Shared",
             name="example",
-            description="Made by Terraform",
+            description="Made by Pulumi",
             ip_netmask="10.2.3.4")
         ```
 
@@ -438,7 +438,7 @@ class AddressObject(pulumi.CustomResource):
         example = scm.AddressObject("example",
             folder="Shared",
             name="example",
-            description="Made by Terraform",
+            description="Made by Pulumi",
             ip_netmask="10.2.3.4")
         ```
 
