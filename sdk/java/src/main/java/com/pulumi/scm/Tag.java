@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *             .folder("Shared")
  *             .name("myColor")
  *             .color("Green")
- *             .comments("Made by Terraform")
+ *             .comments("Made by Pulumi")
  *             .build());
  * 
  *     }

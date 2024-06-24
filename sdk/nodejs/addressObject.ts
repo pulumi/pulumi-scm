@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * const example = new scm.AddressObject("example", {
  *     folder: "Shared",
  *     name: "example",
- *     description: "Made by Terraform",
+ *     description: "Made by Pulumi",
  *     ipNetmask: "10.2.3.4",
  * });
  * ```

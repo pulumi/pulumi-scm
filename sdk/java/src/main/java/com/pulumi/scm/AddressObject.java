@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *         var example = new AddressObject("example", AddressObjectArgs.builder()
  *             .folder("Shared")
  *             .name("example")
- *             .description("Made by Terraform")
+ *             .description("Made by Pulumi")
  *             .ipNetmask("10.2.3.4")
  *             .build());
  * 

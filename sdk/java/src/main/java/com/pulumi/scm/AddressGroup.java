@@ -49,7 +49,7 @@ import javax.annotation.Nullable;
  *         var x = new AddressObject("x", AddressObjectArgs.builder()
  *             .folder("Shared")
  *             .name("foo")
- *             .description("Made by Terraform")
+ *             .description("Made by Pulumi")
  *             .fqdn("www.example.com")
  *             .build());
  * 
