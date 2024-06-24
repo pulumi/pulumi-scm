@@ -30,7 +30,7 @@ import (
 //			x, err := scm.NewAddressObject(ctx, "x", &scm.AddressObjectArgs{
 //				Folder:      pulumi.String("Shared"),
 //				Name:        pulumi.String("foo"),
-//				Description: pulumi.String("Made by Terraform"),
+//				Description: pulumi.String("Made by Pulumi"),
 //				Fqdn:        pulumi.String("www.example.com"),
 //			})
 //			if err != nil {

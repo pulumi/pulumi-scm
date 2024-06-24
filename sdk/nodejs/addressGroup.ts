@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * const x = new scm.AddressObject("x", {
  *     folder: "Shared",
  *     name: "foo",
- *     description: "Made by Terraform",
+ *     description: "Made by Pulumi",
  *     fqdn: "www.example.com",
  * });
  * const example = new scm.AddressGroup("example", {

@@ -323,7 +323,7 @@ class AddressGroup(pulumi.CustomResource):
         x = scm.AddressObject("x",
             folder="Shared",
             name="foo",
-            description="Made by Terraform",
+            description="Made by Pulumi",
             fqdn="www.example.com")
         example = scm.AddressGroup("example",
             folder="Shared",
@@ -360,7 +360,7 @@ class AddressGroup(pulumi.CustomResource):
         x = scm.AddressObject("x",
             folder="Shared",
             name="foo",
-            description="Made by Terraform",
+            description="Made by Pulumi",
             fqdn="www.example.com")
         example = scm.AddressGroup("example",
             folder="Shared",
