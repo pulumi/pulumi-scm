@@ -249,7 +249,7 @@ public class LdapServerProfile extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public LdapServerProfile(String name) {
+    public LdapServerProfile(java.lang.String name) {
         this(name, LdapServerProfileArgs.Empty);
     }
     /**
@@ -257,7 +257,7 @@ public class LdapServerProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public LdapServerProfile(String name, LdapServerProfileArgs args) {
+    public LdapServerProfile(java.lang.String name, LdapServerProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -266,15 +266,22 @@ public class LdapServerProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LdapServerProfile(String name, LdapServerProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/ldapServerProfile:LdapServerProfile", name, args == null ? LdapServerProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public LdapServerProfile(java.lang.String name, LdapServerProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/ldapServerProfile:LdapServerProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private LdapServerProfile(String name, Output<String> id, @Nullable LdapServerProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/ldapServerProfile:LdapServerProfile", name, state, makeResourceOptions(options, id));
+    private LdapServerProfile(java.lang.String name, Output<java.lang.String> id, @Nullable LdapServerProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/ldapServerProfile:LdapServerProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static LdapServerProfileArgs makeArgs(LdapServerProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? LdapServerProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .additionalSecretOutputs(List.of(
@@ -293,7 +300,7 @@ public class LdapServerProfile extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LdapServerProfile get(String name, Output<String> id, @Nullable LdapServerProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LdapServerProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable LdapServerProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new LdapServerProfile(name, id, state, options);
     }
 }

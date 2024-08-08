@@ -495,13 +495,13 @@ class AntiSpywareSignature(pulumi.CustomResource):
                  bugtraqs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  comment: Optional[pulumi.Input[str]] = None,
                  cves: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 default_action: Optional[pulumi.Input[pulumi.InputType['AntiSpywareSignatureDefaultActionArgs']]] = None,
+                 default_action: Optional[pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  direction: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  references: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  severity: Optional[pulumi.Input[str]] = None,
-                 signature: Optional[pulumi.Input[pulumi.InputType['AntiSpywareSignatureSignatureArgs']]] = None,
+                 signature: Optional[pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  threat_id: Optional[pulumi.Input[int]] = None,
                  threatname: Optional[pulumi.Input[str]] = None,
@@ -524,13 +524,13 @@ class AntiSpywareSignature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] bugtraqs: The Bugtraqs param.
         :param pulumi.Input[str] comment: The Comment param. String length must not exceed 256 characters.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] cves: The Cves param.
-        :param pulumi.Input[pulumi.InputType['AntiSpywareSignatureDefaultActionArgs']] default_action: The DefaultAction param.
+        :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']] default_action: The DefaultAction param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] direction: The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] references: The References param.
         :param pulumi.Input[str] severity: The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
-        :param pulumi.Input[pulumi.InputType['AntiSpywareSignatureSignatureArgs']] signature: The Signature param.
+        :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: The Signature param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[int] threat_id: threat id range \\n\\n and \\n\\n. Value must be between 15000 and 70000000.
         :param pulumi.Input[str] threatname: The Threatname param. String length must not exceed 1024 characters.
@@ -572,13 +572,13 @@ class AntiSpywareSignature(pulumi.CustomResource):
                  bugtraqs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  comment: Optional[pulumi.Input[str]] = None,
                  cves: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 default_action: Optional[pulumi.Input[pulumi.InputType['AntiSpywareSignatureDefaultActionArgs']]] = None,
+                 default_action: Optional[pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  direction: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  references: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  severity: Optional[pulumi.Input[str]] = None,
-                 signature: Optional[pulumi.Input[pulumi.InputType['AntiSpywareSignatureSignatureArgs']]] = None,
+                 signature: Optional[pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  threat_id: Optional[pulumi.Input[int]] = None,
                  threatname: Optional[pulumi.Input[str]] = None,
@@ -624,13 +624,13 @@ class AntiSpywareSignature(pulumi.CustomResource):
             bugtraqs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             comment: Optional[pulumi.Input[str]] = None,
             cves: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            default_action: Optional[pulumi.Input[pulumi.InputType['AntiSpywareSignatureDefaultActionArgs']]] = None,
+            default_action: Optional[pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']]] = None,
             device: Optional[pulumi.Input[str]] = None,
             direction: Optional[pulumi.Input[str]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             references: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             severity: Optional[pulumi.Input[str]] = None,
-            signature: Optional[pulumi.Input[pulumi.InputType['AntiSpywareSignatureSignatureArgs']]] = None,
+            signature: Optional[pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None,
             threat_id: Optional[pulumi.Input[int]] = None,
@@ -646,13 +646,13 @@ class AntiSpywareSignature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] bugtraqs: The Bugtraqs param.
         :param pulumi.Input[str] comment: The Comment param. String length must not exceed 256 characters.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] cves: The Cves param.
-        :param pulumi.Input[pulumi.InputType['AntiSpywareSignatureDefaultActionArgs']] default_action: The DefaultAction param.
+        :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']] default_action: The DefaultAction param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] direction: The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] references: The References param.
         :param pulumi.Input[str] severity: The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
-        :param pulumi.Input[pulumi.InputType['AntiSpywareSignatureSignatureArgs']] signature: The Signature param.
+        :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: The Signature param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[int] threat_id: threat id range \\n\\n and \\n\\n. Value must be between 15000 and 70000000.
         :param pulumi.Input[str] threatname: The Threatname param. String length must not exceed 1024 characters.

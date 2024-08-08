@@ -328,7 +328,7 @@ class Snippet(pulumi.CustomResource):
             created_in: Optional[pulumi.Input[str]] = None,
             description: Optional[pulumi.Input[str]] = None,
             display_name: Optional[pulumi.Input[str]] = None,
-            folders: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SnippetFolderArgs']]]]] = None,
+            folders: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SnippetFolderArgs', 'SnippetFolderArgsDict']]]]] = None,
             labels: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             last_update: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
@@ -345,7 +345,7 @@ class Snippet(pulumi.CustomResource):
         :param pulumi.Input[str] created_in: The CreatedIn param.
         :param pulumi.Input[str] description: The Description param.
         :param pulumi.Input[str] display_name: The DisplayName param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SnippetFolderArgs']]]] folders: The Folders param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SnippetFolderArgs', 'SnippetFolderArgsDict']]]] folders: The Folders param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] labels: The Labels param.
         :param pulumi.Input[str] last_update: The LastUpdate param.
         :param pulumi.Input[str] name: The Name param.

@@ -273,7 +273,7 @@ class Service(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 protocol: Optional[pulumi.Input[pulumi.InputType['ServiceProtocolArgs']]] = None,
+                 protocol: Optional[pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  __props__=None):
@@ -295,7 +295,7 @@ class Service(pulumi.CustomResource):
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[pulumi.InputType['ServiceProtocolArgs']] protocol: The Protocol param.
+        :param pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']] protocol: The Protocol param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] tags: Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
         """
@@ -336,7 +336,7 @@ class Service(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 protocol: Optional[pulumi.Input[pulumi.InputType['ServiceProtocolArgs']]] = None,
+                 protocol: Optional[pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  __props__=None):
@@ -372,7 +372,7 @@ class Service(pulumi.CustomResource):
             device: Optional[pulumi.Input[str]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            protocol: Optional[pulumi.Input[pulumi.InputType['ServiceProtocolArgs']]] = None,
+            protocol: Optional[pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tags: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             tfid: Optional[pulumi.Input[str]] = None) -> 'Service':
@@ -387,7 +387,7 @@ class Service(pulumi.CustomResource):
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[pulumi.InputType['ServiceProtocolArgs']] protocol: The Protocol param.
+        :param pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']] protocol: The Protocol param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] tags: Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
         """

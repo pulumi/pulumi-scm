@@ -287,9 +287,9 @@ class RadiusServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 protocol: Optional[pulumi.Input[pulumi.InputType['RadiusServerProfileProtocolArgs']]] = None,
+                 protocol: Optional[pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
                  retries: Optional[pulumi.Input[int]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['RadiusServerProfileServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  timeout: Optional[pulumi.Input[int]] = None,
                  __props__=None):
@@ -300,9 +300,9 @@ class RadiusServerProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[pulumi.InputType['RadiusServerProfileProtocolArgs']] protocol: The Protocol param.
+        :param pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']] protocol: The Protocol param.
         :param pulumi.Input[int] retries: The Retries param. Value must be between 1 and 5.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['RadiusServerProfileServerArgs']]]] servers: The Servers param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]] servers: The Servers param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[int] timeout: The Timeout param. Value must be between 1 and 120.
         """
@@ -332,9 +332,9 @@ class RadiusServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 protocol: Optional[pulumi.Input[pulumi.InputType['RadiusServerProfileProtocolArgs']]] = None,
+                 protocol: Optional[pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
                  retries: Optional[pulumi.Input[int]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['RadiusServerProfileServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  timeout: Optional[pulumi.Input[int]] = None,
                  __props__=None):
@@ -372,9 +372,9 @@ class RadiusServerProfile(pulumi.CustomResource):
             device: Optional[pulumi.Input[str]] = None,
             encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]] = None,
             folder: Optional[pulumi.Input[str]] = None,
-            protocol: Optional[pulumi.Input[pulumi.InputType['RadiusServerProfileProtocolArgs']]] = None,
+            protocol: Optional[pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']]] = None,
             retries: Optional[pulumi.Input[int]] = None,
-            servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['RadiusServerProfileServerArgs']]]]] = None,
+            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None,
             timeout: Optional[pulumi.Input[int]] = None) -> 'RadiusServerProfile':
@@ -388,9 +388,9 @@ class RadiusServerProfile(pulumi.CustomResource):
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[Mapping[str, pulumi.Input[str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[pulumi.InputType['RadiusServerProfileProtocolArgs']] protocol: The Protocol param.
+        :param pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']] protocol: The Protocol param.
         :param pulumi.Input[int] retries: The Retries param. Value must be between 1 and 5.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['RadiusServerProfileServerArgs']]]] servers: The Servers param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]] servers: The Servers param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[int] timeout: The Timeout param. Value must be between 1 and 120.
         """

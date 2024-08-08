@@ -414,12 +414,12 @@ class RemoteNetwork(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  ecmp_load_balancing: Optional[pulumi.Input[str]] = None,
-                 ecmp_tunnels: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['RemoteNetworkEcmpTunnelArgs']]]]] = None,
+                 ecmp_tunnels: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict']]]]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  ipsec_tunnel: Optional[pulumi.Input[str]] = None,
                  license_type: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 protocol: Optional[pulumi.Input[pulumi.InputType['RemoteNetworkProtocolArgs']]] = None,
+                 protocol: Optional[pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict']]] = None,
                  region: Optional[pulumi.Input[str]] = None,
                  secondary_ipsec_tunnel: Optional[pulumi.Input[str]] = None,
                  spn_name: Optional[pulumi.Input[str]] = None,
@@ -440,12 +440,12 @@ class RemoteNetwork(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] ecmp_load_balancing: The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['RemoteNetworkEcmpTunnelArgs']]]] ecmp_tunnels: ecmp*tunnels is required when ecmp*load*balancing is enable.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict']]]] ecmp_tunnels: ecmp*tunnels is required when ecmp*load*balancing is enable.
         :param pulumi.Input[str] folder: The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
         :param pulumi.Input[str] ipsec_tunnel: ipsec*tunnel is required when ecmp*load_balancing is disable.
         :param pulumi.Input[str] license_type: New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[pulumi.InputType['RemoteNetworkProtocolArgs']] protocol: setup the protocol when ecmp*load*balancing is disable.
+        :param pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict']] protocol: setup the protocol when ecmp*load*balancing is disable.
         :param pulumi.Input[str] region: The Region param. String length must exceed 1 characters.
         :param pulumi.Input[str] secondary_ipsec_tunnel: specify secondary ipsec_tunnel if needed.
         :param pulumi.Input[str] spn_name: spn-name is needed when license_type is FWAAS-AGGREGATE.
@@ -485,12 +485,12 @@ class RemoteNetwork(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  ecmp_load_balancing: Optional[pulumi.Input[str]] = None,
-                 ecmp_tunnels: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['RemoteNetworkEcmpTunnelArgs']]]]] = None,
+                 ecmp_tunnels: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict']]]]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  ipsec_tunnel: Optional[pulumi.Input[str]] = None,
                  license_type: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 protocol: Optional[pulumi.Input[pulumi.InputType['RemoteNetworkProtocolArgs']]] = None,
+                 protocol: Optional[pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict']]] = None,
                  region: Optional[pulumi.Input[str]] = None,
                  secondary_ipsec_tunnel: Optional[pulumi.Input[str]] = None,
                  spn_name: Optional[pulumi.Input[str]] = None,
@@ -532,13 +532,13 @@ class RemoteNetwork(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             ecmp_load_balancing: Optional[pulumi.Input[str]] = None,
-            ecmp_tunnels: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['RemoteNetworkEcmpTunnelArgs']]]]] = None,
+            ecmp_tunnels: Optional[pulumi.Input[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict']]]]] = None,
             encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             ipsec_tunnel: Optional[pulumi.Input[str]] = None,
             license_type: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            protocol: Optional[pulumi.Input[pulumi.InputType['RemoteNetworkProtocolArgs']]] = None,
+            protocol: Optional[pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict']]] = None,
             region: Optional[pulumi.Input[str]] = None,
             secondary_ipsec_tunnel: Optional[pulumi.Input[str]] = None,
             spn_name: Optional[pulumi.Input[str]] = None,
@@ -552,13 +552,13 @@ class RemoteNetwork(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] ecmp_load_balancing: The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['RemoteNetworkEcmpTunnelArgs']]]] ecmp_tunnels: ecmp*tunnels is required when ecmp*load*balancing is enable.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['RemoteNetworkEcmpTunnelArgs', 'RemoteNetworkEcmpTunnelArgsDict']]]] ecmp_tunnels: ecmp*tunnels is required when ecmp*load*balancing is enable.
         :param pulumi.Input[Mapping[str, pulumi.Input[str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
         :param pulumi.Input[str] folder: The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
         :param pulumi.Input[str] ipsec_tunnel: ipsec*tunnel is required when ecmp*load_balancing is disable.
         :param pulumi.Input[str] license_type: New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[pulumi.InputType['RemoteNetworkProtocolArgs']] protocol: setup the protocol when ecmp*load*balancing is disable.
+        :param pulumi.Input[Union['RemoteNetworkProtocolArgs', 'RemoteNetworkProtocolArgsDict']] protocol: setup the protocol when ecmp*load*balancing is disable.
         :param pulumi.Input[str] region: The Region param. String length must exceed 1 characters.
         :param pulumi.Input[str] secondary_ipsec_tunnel: specify secondary ipsec_tunnel if needed.
         :param pulumi.Input[str] spn_name: spn-name is needed when license_type is FWAAS-AGGREGATE.

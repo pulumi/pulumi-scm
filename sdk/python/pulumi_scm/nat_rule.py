@@ -715,11 +715,11 @@ class NatRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_active_device_binding: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
-                 destination_translation: Optional[pulumi.Input[pulumi.InputType['NatRuleDestinationTranslationArgs']]] = None,
+                 destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  disabled: Optional[pulumi.Input[bool]] = None,
-                 dynamic_destination_translation: Optional[pulumi.Input[pulumi.InputType['NatRuleDynamicDestinationTranslationArgs']]] = None,
+                 dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  froms: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  group_tag: Optional[pulumi.Input[str]] = None,
@@ -728,10 +728,10 @@ class NatRule(pulumi.CustomResource):
                  position: Optional[pulumi.Input[str]] = None,
                  service: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
-                 source_translation: Optional[pulumi.Input[pulumi.InputType['NatRuleSourceTranslationArgs']]] = None,
+                 source_translation: Optional[pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 target: Optional[pulumi.Input[pulumi.InputType['NatRuleTargetArgs']]] = None,
+                 target: Optional[pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']]] = None,
                  to_interface: Optional[pulumi.Input[str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  __props__=None):
@@ -742,11 +742,11 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
         :param pulumi.Input[str] description: The Description param.
-        :param pulumi.Input[pulumi.InputType['NatRuleDestinationTranslationArgs']] destination_translation: Static destination translation parameter.
+        :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']] destination_translation: Static destination translation parameter.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] destinations: The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
         :param pulumi.Input[str] device: The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param pulumi.Input[bool] disabled: The Disabled param.
-        :param pulumi.Input[pulumi.InputType['NatRuleDynamicDestinationTranslationArgs']] dynamic_destination_translation: Dynamic destination translation parameter.
+        :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']] dynamic_destination_translation: Dynamic destination translation parameter.
         :param pulumi.Input[str] folder: The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] froms: The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
         :param pulumi.Input[str] group_tag: The GroupTag param.
@@ -755,10 +755,10 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
         :param pulumi.Input[str] service: The Service param.
         :param pulumi.Input[str] snippet: The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[pulumi.InputType['NatRuleSourceTranslationArgs']] source_translation: The SourceTranslation param.
+        :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']] source_translation: The SourceTranslation param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] sources: The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] tags: The Tags param.
-        :param pulumi.Input[pulumi.InputType['NatRuleTargetArgs']] target: The Target param.
+        :param pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']] target: The Target param.
         :param pulumi.Input[str] to_interface: The ToInterface param. String must be one of these: `"any"`.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] tos: The destination security zone(s).
         """
@@ -788,11 +788,11 @@ class NatRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_active_device_binding: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
-                 destination_translation: Optional[pulumi.Input[pulumi.InputType['NatRuleDestinationTranslationArgs']]] = None,
+                 destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  disabled: Optional[pulumi.Input[bool]] = None,
-                 dynamic_destination_translation: Optional[pulumi.Input[pulumi.InputType['NatRuleDynamicDestinationTranslationArgs']]] = None,
+                 dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  froms: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  group_tag: Optional[pulumi.Input[str]] = None,
@@ -801,10 +801,10 @@ class NatRule(pulumi.CustomResource):
                  position: Optional[pulumi.Input[str]] = None,
                  service: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
-                 source_translation: Optional[pulumi.Input[pulumi.InputType['NatRuleSourceTranslationArgs']]] = None,
+                 source_translation: Optional[pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 target: Optional[pulumi.Input[pulumi.InputType['NatRuleTargetArgs']]] = None,
+                 target: Optional[pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']]] = None,
                  to_interface: Optional[pulumi.Input[str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  __props__=None):
@@ -860,11 +860,11 @@ class NatRule(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             active_active_device_binding: Optional[pulumi.Input[str]] = None,
             description: Optional[pulumi.Input[str]] = None,
-            destination_translation: Optional[pulumi.Input[pulumi.InputType['NatRuleDestinationTranslationArgs']]] = None,
+            destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
             destinations: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             device: Optional[pulumi.Input[str]] = None,
             disabled: Optional[pulumi.Input[bool]] = None,
-            dynamic_destination_translation: Optional[pulumi.Input[pulumi.InputType['NatRuleDynamicDestinationTranslationArgs']]] = None,
+            dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             froms: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             group_tag: Optional[pulumi.Input[str]] = None,
@@ -873,10 +873,10 @@ class NatRule(pulumi.CustomResource):
             position: Optional[pulumi.Input[str]] = None,
             service: Optional[pulumi.Input[str]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
-            source_translation: Optional[pulumi.Input[pulumi.InputType['NatRuleSourceTranslationArgs']]] = None,
+            source_translation: Optional[pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
             sources: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             tags: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            target: Optional[pulumi.Input[pulumi.InputType['NatRuleTargetArgs']]] = None,
+            target: Optional[pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']]] = None,
             tfid: Optional[pulumi.Input[str]] = None,
             to_interface: Optional[pulumi.Input[str]] = None,
             tos: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None) -> 'NatRule':
@@ -889,11 +889,11 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
         :param pulumi.Input[str] description: The Description param.
-        :param pulumi.Input[pulumi.InputType['NatRuleDestinationTranslationArgs']] destination_translation: Static destination translation parameter.
+        :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']] destination_translation: Static destination translation parameter.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] destinations: The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
         :param pulumi.Input[str] device: The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param pulumi.Input[bool] disabled: The Disabled param.
-        :param pulumi.Input[pulumi.InputType['NatRuleDynamicDestinationTranslationArgs']] dynamic_destination_translation: Dynamic destination translation parameter.
+        :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']] dynamic_destination_translation: Dynamic destination translation parameter.
         :param pulumi.Input[str] folder: The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] froms: The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
         :param pulumi.Input[str] group_tag: The GroupTag param.
@@ -902,10 +902,10 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
         :param pulumi.Input[str] service: The Service param.
         :param pulumi.Input[str] snippet: The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[pulumi.InputType['NatRuleSourceTranslationArgs']] source_translation: The SourceTranslation param.
+        :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']] source_translation: The SourceTranslation param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] sources: The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] tags: The Tags param.
-        :param pulumi.Input[pulumi.InputType['NatRuleTargetArgs']] target: The Target param.
+        :param pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']] target: The Target param.
         :param pulumi.Input[str] to_interface: The ToInterface param. String must be one of these: `"any"`.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] tos: The destination security zone(s).
         """

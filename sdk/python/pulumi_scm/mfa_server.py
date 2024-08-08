@@ -240,7 +240,7 @@ class MfaServer(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  mfa_cert_profile: Optional[pulumi.Input[str]] = None,
-                 mfa_vendor_type: Optional[pulumi.Input[pulumi.InputType['MfaServerMfaVendorTypeArgs']]] = None,
+                 mfa_vendor_type: Optional[pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -261,7 +261,7 @@ class MfaServer(pulumi.CustomResource):
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] mfa_cert_profile: The MfaCertProfile param.
-        :param pulumi.Input[pulumi.InputType['MfaServerMfaVendorTypeArgs']] mfa_vendor_type: The MfaVendorType param.
+        :param pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']] mfa_vendor_type: The MfaVendorType param.
         :param pulumi.Input[str] name: The Name param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
@@ -301,7 +301,7 @@ class MfaServer(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  mfa_cert_profile: Optional[pulumi.Input[str]] = None,
-                 mfa_vendor_type: Optional[pulumi.Input[pulumi.InputType['MfaServerMfaVendorTypeArgs']]] = None,
+                 mfa_vendor_type: Optional[pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -335,7 +335,7 @@ class MfaServer(pulumi.CustomResource):
             device: Optional[pulumi.Input[str]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             mfa_cert_profile: Optional[pulumi.Input[str]] = None,
-            mfa_vendor_type: Optional[pulumi.Input[pulumi.InputType['MfaServerMfaVendorTypeArgs']]] = None,
+            mfa_vendor_type: Optional[pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']]] = None,
             name: Optional[pulumi.Input[str]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None) -> 'MfaServer':
@@ -349,7 +349,7 @@ class MfaServer(pulumi.CustomResource):
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] mfa_cert_profile: The MfaCertProfile param.
-        :param pulumi.Input[pulumi.InputType['MfaServerMfaVendorTypeArgs']] mfa_vendor_type: The MfaVendorType param.
+        :param pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']] mfa_vendor_type: The MfaVendorType param.
         :param pulumi.Input[str] name: The Name param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
