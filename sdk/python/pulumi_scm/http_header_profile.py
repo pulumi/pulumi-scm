@@ -241,7 +241,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 http_header_insertions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['HttpHeaderProfileHttpHeaderInsertionArgs']]]]] = None,
+                 http_header_insertions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['HttpHeaderProfileHttpHeaderInsertionArgs', 'HttpHeaderProfileHttpHeaderInsertionArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -262,7 +262,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
         :param pulumi.Input[str] description: The Description param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['HttpHeaderProfileHttpHeaderInsertionArgs']]]] http_header_insertions: The HttpHeaderInsertions param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['HttpHeaderProfileHttpHeaderInsertionArgs', 'HttpHeaderProfileHttpHeaderInsertionArgsDict']]]] http_header_insertions: The HttpHeaderInsertions param.
         :param pulumi.Input[str] name: The Name param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
@@ -302,7 +302,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 http_header_insertions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['HttpHeaderProfileHttpHeaderInsertionArgs']]]]] = None,
+                 http_header_insertions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['HttpHeaderProfileHttpHeaderInsertionArgs', 'HttpHeaderProfileHttpHeaderInsertionArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -334,7 +334,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
             description: Optional[pulumi.Input[str]] = None,
             device: Optional[pulumi.Input[str]] = None,
             folder: Optional[pulumi.Input[str]] = None,
-            http_header_insertions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['HttpHeaderProfileHttpHeaderInsertionArgs']]]]] = None,
+            http_header_insertions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['HttpHeaderProfileHttpHeaderInsertionArgs', 'HttpHeaderProfileHttpHeaderInsertionArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None) -> 'HttpHeaderProfile':
@@ -348,7 +348,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
         :param pulumi.Input[str] description: The Description param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['HttpHeaderProfileHttpHeaderInsertionArgs']]]] http_header_insertions: The HttpHeaderInsertions param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['HttpHeaderProfileHttpHeaderInsertionArgs', 'HttpHeaderProfileHttpHeaderInsertionArgsDict']]]] http_header_insertions: The HttpHeaderInsertions param.
         :param pulumi.Input[str] name: The Name param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """

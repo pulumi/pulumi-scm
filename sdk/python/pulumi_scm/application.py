@@ -1039,7 +1039,7 @@ class Application(pulumi.CustomResource):
                  category: Optional[pulumi.Input[str]] = None,
                  consume_big_bandwidth: Optional[pulumi.Input[bool]] = None,
                  data_ident: Optional[pulumi.Input[bool]] = None,
-                 default: Optional[pulumi.Input[pulumi.InputType['ApplicationDefaultArgs']]] = None,
+                 default: Optional[pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  evasive_behavior: Optional[pulumi.Input[bool]] = None,
@@ -1052,7 +1052,7 @@ class Application(pulumi.CustomResource):
                  pervasive_use: Optional[pulumi.Input[bool]] = None,
                  prone_to_misuse: Optional[pulumi.Input[bool]] = None,
                  risk: Optional[pulumi.Input[int]] = None,
-                 signatures: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationSignatureArgs']]]]] = None,
+                 signatures: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  subcategory: Optional[pulumi.Input[str]] = None,
                  tcp_half_closed_timeout: Optional[pulumi.Input[int]] = None,
@@ -1085,7 +1085,7 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[str] category: The Category param.
         :param pulumi.Input[bool] consume_big_bandwidth: The ConsumeBigBandwidth param.
         :param pulumi.Input[bool] data_ident: The DataIdent param.
-        :param pulumi.Input[pulumi.InputType['ApplicationDefaultArgs']] default: The Default param.
+        :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']] default: The Default param.
         :param pulumi.Input[str] description: The Description param. String length must not exceed 1023 characters.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[bool] evasive_behavior: The EvasiveBehavior param.
@@ -1098,7 +1098,7 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[bool] pervasive_use: The PervasiveUse param.
         :param pulumi.Input[bool] prone_to_misuse: The ProneToMisuse param.
         :param pulumi.Input[int] risk: The Risk param. Value must be between 1 and 5.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationSignatureArgs']]]] signatures: The Signatures param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: The Signatures param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[str] subcategory: The Subcategory param. String length must not exceed 63 characters.
         :param pulumi.Input[int] tcp_half_closed_timeout: timeout for half-close session in seconds. Value must be between 1 and 604800.
@@ -1150,7 +1150,7 @@ class Application(pulumi.CustomResource):
                  category: Optional[pulumi.Input[str]] = None,
                  consume_big_bandwidth: Optional[pulumi.Input[bool]] = None,
                  data_ident: Optional[pulumi.Input[bool]] = None,
-                 default: Optional[pulumi.Input[pulumi.InputType['ApplicationDefaultArgs']]] = None,
+                 default: Optional[pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  evasive_behavior: Optional[pulumi.Input[bool]] = None,
@@ -1163,7 +1163,7 @@ class Application(pulumi.CustomResource):
                  pervasive_use: Optional[pulumi.Input[bool]] = None,
                  prone_to_misuse: Optional[pulumi.Input[bool]] = None,
                  risk: Optional[pulumi.Input[int]] = None,
-                 signatures: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationSignatureArgs']]]]] = None,
+                 signatures: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  subcategory: Optional[pulumi.Input[str]] = None,
                  tcp_half_closed_timeout: Optional[pulumi.Input[int]] = None,
@@ -1240,7 +1240,7 @@ class Application(pulumi.CustomResource):
             category: Optional[pulumi.Input[str]] = None,
             consume_big_bandwidth: Optional[pulumi.Input[bool]] = None,
             data_ident: Optional[pulumi.Input[bool]] = None,
-            default: Optional[pulumi.Input[pulumi.InputType['ApplicationDefaultArgs']]] = None,
+            default: Optional[pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']]] = None,
             description: Optional[pulumi.Input[str]] = None,
             device: Optional[pulumi.Input[str]] = None,
             evasive_behavior: Optional[pulumi.Input[bool]] = None,
@@ -1253,7 +1253,7 @@ class Application(pulumi.CustomResource):
             pervasive_use: Optional[pulumi.Input[bool]] = None,
             prone_to_misuse: Optional[pulumi.Input[bool]] = None,
             risk: Optional[pulumi.Input[int]] = None,
-            signatures: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationSignatureArgs']]]]] = None,
+            signatures: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             subcategory: Optional[pulumi.Input[str]] = None,
             tcp_half_closed_timeout: Optional[pulumi.Input[int]] = None,
@@ -1279,7 +1279,7 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[str] category: The Category param.
         :param pulumi.Input[bool] consume_big_bandwidth: The ConsumeBigBandwidth param.
         :param pulumi.Input[bool] data_ident: The DataIdent param.
-        :param pulumi.Input[pulumi.InputType['ApplicationDefaultArgs']] default: The Default param.
+        :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']] default: The Default param.
         :param pulumi.Input[str] description: The Description param. String length must not exceed 1023 characters.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[bool] evasive_behavior: The EvasiveBehavior param.
@@ -1292,7 +1292,7 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[bool] pervasive_use: The PervasiveUse param.
         :param pulumi.Input[bool] prone_to_misuse: The ProneToMisuse param.
         :param pulumi.Input[int] risk: The Risk param. Value must be between 1 and 5.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationSignatureArgs']]]] signatures: The Signatures param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: The Signatures param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[str] subcategory: The Subcategory param. String length must not exceed 63 characters.
         :param pulumi.Input[int] tcp_half_closed_timeout: timeout for half-close session in seconds. Value must be between 1 and 604800.

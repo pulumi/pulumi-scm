@@ -318,7 +318,7 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppOverrideRule(String name) {
+    public AppOverrideRule(java.lang.String name) {
         this(name, AppOverrideRuleArgs.Empty);
     }
     /**
@@ -326,7 +326,7 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppOverrideRule(String name, AppOverrideRuleArgs args) {
+    public AppOverrideRule(java.lang.String name, AppOverrideRuleArgs args) {
         this(name, args, null);
     }
     /**
@@ -335,15 +335,22 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppOverrideRule(String name, AppOverrideRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/appOverrideRule:AppOverrideRule", name, args == null ? AppOverrideRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppOverrideRule(java.lang.String name, AppOverrideRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/appOverrideRule:AppOverrideRule", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppOverrideRule(String name, Output<String> id, @Nullable AppOverrideRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/appOverrideRule:AppOverrideRule", name, state, makeResourceOptions(options, id));
+    private AppOverrideRule(java.lang.String name, Output<java.lang.String> id, @Nullable AppOverrideRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/appOverrideRule:AppOverrideRule", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppOverrideRuleArgs makeArgs(AppOverrideRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppOverrideRuleArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -359,7 +366,7 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppOverrideRule get(String name, Output<String> id, @Nullable AppOverrideRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppOverrideRule get(java.lang.String name, Output<java.lang.String> id, @Nullable AppOverrideRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppOverrideRule(name, id, state, options);
     }
 }

@@ -306,10 +306,10 @@ class DecryptionProfile(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
-                 ssl_forward_proxy: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslForwardProxyArgs']]] = None,
-                 ssl_inbound_proxy: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslInboundProxyArgs']]] = None,
-                 ssl_no_proxy: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslNoProxyArgs']]] = None,
-                 ssl_protocol_settings: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslProtocolSettingsArgs']]] = None,
+                 ssl_forward_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']]] = None,
+                 ssl_inbound_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']]] = None,
+                 ssl_no_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']]] = None,
+                 ssl_protocol_settings: Optional[pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']]] = None,
                  __props__=None):
         """
         Retrieves a config item.
@@ -329,10 +329,10 @@ class DecryptionProfile(pulumi.CustomResource):
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\\-\\.\\s]{0,}$`.
         :param pulumi.Input[str] snippet: The Snippet param.
-        :param pulumi.Input[pulumi.InputType['DecryptionProfileSslForwardProxyArgs']] ssl_forward_proxy: The SslForwardProxy param.
-        :param pulumi.Input[pulumi.InputType['DecryptionProfileSslInboundProxyArgs']] ssl_inbound_proxy: The SslInboundProxy param.
-        :param pulumi.Input[pulumi.InputType['DecryptionProfileSslNoProxyArgs']] ssl_no_proxy: The SslNoProxy param.
-        :param pulumi.Input[pulumi.InputType['DecryptionProfileSslProtocolSettingsArgs']] ssl_protocol_settings: The SslProtocolSettings param.
+        :param pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']] ssl_forward_proxy: The SslForwardProxy param.
+        :param pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']] ssl_inbound_proxy: The SslInboundProxy param.
+        :param pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']] ssl_no_proxy: The SslNoProxy param.
+        :param pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']] ssl_protocol_settings: The SslProtocolSettings param.
         """
         ...
     @overload
@@ -371,10 +371,10 @@ class DecryptionProfile(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
-                 ssl_forward_proxy: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslForwardProxyArgs']]] = None,
-                 ssl_inbound_proxy: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslInboundProxyArgs']]] = None,
-                 ssl_no_proxy: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslNoProxyArgs']]] = None,
-                 ssl_protocol_settings: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslProtocolSettingsArgs']]] = None,
+                 ssl_forward_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']]] = None,
+                 ssl_inbound_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']]] = None,
+                 ssl_no_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']]] = None,
+                 ssl_protocol_settings: Optional[pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -407,10 +407,10 @@ class DecryptionProfile(pulumi.CustomResource):
             folder: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
-            ssl_forward_proxy: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslForwardProxyArgs']]] = None,
-            ssl_inbound_proxy: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslInboundProxyArgs']]] = None,
-            ssl_no_proxy: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslNoProxyArgs']]] = None,
-            ssl_protocol_settings: Optional[pulumi.Input[pulumi.InputType['DecryptionProfileSslProtocolSettingsArgs']]] = None,
+            ssl_forward_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']]] = None,
+            ssl_inbound_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']]] = None,
+            ssl_no_proxy: Optional[pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']]] = None,
+            ssl_protocol_settings: Optional[pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']]] = None,
             tfid: Optional[pulumi.Input[str]] = None) -> 'DecryptionProfile':
         """
         Get an existing DecryptionProfile resource's state with the given name, id, and optional extra
@@ -423,10 +423,10 @@ class DecryptionProfile(pulumi.CustomResource):
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\\-\\.\\s]{0,}$`.
         :param pulumi.Input[str] snippet: The Snippet param.
-        :param pulumi.Input[pulumi.InputType['DecryptionProfileSslForwardProxyArgs']] ssl_forward_proxy: The SslForwardProxy param.
-        :param pulumi.Input[pulumi.InputType['DecryptionProfileSslInboundProxyArgs']] ssl_inbound_proxy: The SslInboundProxy param.
-        :param pulumi.Input[pulumi.InputType['DecryptionProfileSslNoProxyArgs']] ssl_no_proxy: The SslNoProxy param.
-        :param pulumi.Input[pulumi.InputType['DecryptionProfileSslProtocolSettingsArgs']] ssl_protocol_settings: The SslProtocolSettings param.
+        :param pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']] ssl_forward_proxy: The SslForwardProxy param.
+        :param pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']] ssl_inbound_proxy: The SslInboundProxy param.
+        :param pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']] ssl_no_proxy: The SslNoProxy param.
+        :param pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']] ssl_protocol_settings: The SslProtocolSettings param.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

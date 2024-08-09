@@ -287,7 +287,7 @@ class TacacsServerProfile(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  protocol: Optional[pulumi.Input[str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TacacsServerProfileServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  timeout: Optional[pulumi.Input[int]] = None,
                  use_single_connection: Optional[pulumi.Input[bool]] = None,
@@ -309,7 +309,7 @@ class TacacsServerProfile(pulumi.CustomResource):
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] protocol: The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TacacsServerProfileServerArgs']]]] servers: The Servers param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]] servers: The Servers param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[int] timeout: The Timeout param. Value must be between 1 and 30.
         :param pulumi.Input[bool] use_single_connection: The UseSingleConnection param.
@@ -350,7 +350,7 @@ class TacacsServerProfile(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  protocol: Optional[pulumi.Input[str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TacacsServerProfileServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  timeout: Optional[pulumi.Input[int]] = None,
                  use_single_connection: Optional[pulumi.Input[bool]] = None,
@@ -392,7 +392,7 @@ class TacacsServerProfile(pulumi.CustomResource):
             encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             protocol: Optional[pulumi.Input[str]] = None,
-            servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TacacsServerProfileServerArgs']]]]] = None,
+            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None,
             timeout: Optional[pulumi.Input[int]] = None,
@@ -408,7 +408,7 @@ class TacacsServerProfile(pulumi.CustomResource):
         :param pulumi.Input[Mapping[str, pulumi.Input[str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] protocol: The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TacacsServerProfileServerArgs']]]] servers: The Servers param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]] servers: The Servers param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[int] timeout: The Timeout param. Value must be between 1 and 30.
         :param pulumi.Input[bool] use_single_connection: The UseSingleConnection param.

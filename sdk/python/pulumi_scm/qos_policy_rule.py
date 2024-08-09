@@ -333,10 +333,10 @@ class QosPolicyRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: Optional[pulumi.Input[pulumi.InputType['QosPolicyRuleActionArgs']]] = None,
+                 action: Optional[pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device: Optional[pulumi.Input[str]] = None,
-                 dscp_tos: Optional[pulumi.Input[pulumi.InputType['QosPolicyRuleDscpTosArgs']]] = None,
+                 dscp_tos: Optional[pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  position: Optional[pulumi.Input[str]] = None,
@@ -357,10 +357,10 @@ class QosPolicyRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['QosPolicyRuleActionArgs']] action: The Action param.
+        :param pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']] action: The Action param.
         :param pulumi.Input[str] description: The Description param.
         :param pulumi.Input[str] device: The Device param.
-        :param pulumi.Input[pulumi.InputType['QosPolicyRuleDscpTosArgs']] dscp_tos: The DscpTos param.
+        :param pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']] dscp_tos: The DscpTos param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: The Name param.
         :param pulumi.Input[str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
@@ -400,10 +400,10 @@ class QosPolicyRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: Optional[pulumi.Input[pulumi.InputType['QosPolicyRuleActionArgs']]] = None,
+                 action: Optional[pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device: Optional[pulumi.Input[str]] = None,
-                 dscp_tos: Optional[pulumi.Input[pulumi.InputType['QosPolicyRuleDscpTosArgs']]] = None,
+                 dscp_tos: Optional[pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  position: Optional[pulumi.Input[str]] = None,
@@ -440,10 +440,10 @@ class QosPolicyRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            action: Optional[pulumi.Input[pulumi.InputType['QosPolicyRuleActionArgs']]] = None,
+            action: Optional[pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']]] = None,
             description: Optional[pulumi.Input[str]] = None,
             device: Optional[pulumi.Input[str]] = None,
-            dscp_tos: Optional[pulumi.Input[pulumi.InputType['QosPolicyRuleDscpTosArgs']]] = None,
+            dscp_tos: Optional[pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             position: Optional[pulumi.Input[str]] = None,
@@ -457,10 +457,10 @@ class QosPolicyRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['QosPolicyRuleActionArgs']] action: The Action param.
+        :param pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']] action: The Action param.
         :param pulumi.Input[str] description: The Description param.
         :param pulumi.Input[str] device: The Device param.
-        :param pulumi.Input[pulumi.InputType['QosPolicyRuleDscpTosArgs']] dscp_tos: The DscpTos param.
+        :param pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']] dscp_tos: The DscpTos param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: The Name param.
         :param pulumi.Input[str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.

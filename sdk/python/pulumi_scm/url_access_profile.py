@@ -627,7 +627,7 @@ class UrlAccessProfile(pulumi.CustomResource):
                  blocks: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  cloud_inline_cat: Optional[pulumi.Input[bool]] = None,
                  continues: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 credential_enforcement: Optional[pulumi.Input[pulumi.InputType['UrlAccessProfileCredentialEnforcementArgs']]] = None,
+                 credential_enforcement: Optional[pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
@@ -660,7 +660,7 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] blocks: The Blocks param.
         :param pulumi.Input[bool] cloud_inline_cat: The CloudInlineCat param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] continues: The Continues param.
-        :param pulumi.Input[pulumi.InputType['UrlAccessProfileCredentialEnforcementArgs']] credential_enforcement: The CredentialEnforcement param.
+        :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']] credential_enforcement: The CredentialEnforcement param.
         :param pulumi.Input[str] description: The Description param. String length must not exceed 255 characters.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
@@ -712,7 +712,7 @@ class UrlAccessProfile(pulumi.CustomResource):
                  blocks: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  cloud_inline_cat: Optional[pulumi.Input[bool]] = None,
                  continues: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 credential_enforcement: Optional[pulumi.Input[pulumi.InputType['UrlAccessProfileCredentialEnforcementArgs']]] = None,
+                 credential_enforcement: Optional[pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
@@ -768,7 +768,7 @@ class UrlAccessProfile(pulumi.CustomResource):
             blocks: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             cloud_inline_cat: Optional[pulumi.Input[bool]] = None,
             continues: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            credential_enforcement: Optional[pulumi.Input[pulumi.InputType['UrlAccessProfileCredentialEnforcementArgs']]] = None,
+            credential_enforcement: Optional[pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']]] = None,
             description: Optional[pulumi.Input[str]] = None,
             device: Optional[pulumi.Input[str]] = None,
             folder: Optional[pulumi.Input[str]] = None,
@@ -794,7 +794,7 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] blocks: The Blocks param.
         :param pulumi.Input[bool] cloud_inline_cat: The CloudInlineCat param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] continues: The Continues param.
-        :param pulumi.Input[pulumi.InputType['UrlAccessProfileCredentialEnforcementArgs']] credential_enforcement: The CredentialEnforcement param.
+        :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']] credential_enforcement: The CredentialEnforcement param.
         :param pulumi.Input[str] description: The Description param. String length must not exceed 255 characters.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.

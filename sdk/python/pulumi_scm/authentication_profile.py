@@ -401,11 +401,11 @@ class AuthenticationProfile(pulumi.CustomResource):
                  allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 lockout: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileLockoutArgs']]] = None,
-                 method: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileMethodArgs']]] = None,
-                 multi_factor_auth: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileMultiFactorAuthArgs']]] = None,
+                 lockout: Optional[pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
+                 method: Optional[pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
+                 multi_factor_auth: Optional[pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 single_sign_on: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileSingleSignOnArgs']]] = None,
+                 single_sign_on: Optional[pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  user_domain: Optional[pulumi.Input[str]] = None,
                  username_modifier: Optional[pulumi.Input[str]] = None,
@@ -427,11 +427,11 @@ class AuthenticationProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] allow_lists: The AllowList param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[pulumi.InputType['AuthenticationProfileLockoutArgs']] lockout: The Lockout param.
-        :param pulumi.Input[pulumi.InputType['AuthenticationProfileMethodArgs']] method: The Method param.
-        :param pulumi.Input[pulumi.InputType['AuthenticationProfileMultiFactorAuthArgs']] multi_factor_auth: The MultiFactorAuth param.
+        :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']] lockout: The Lockout param.
+        :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']] method: The Method param.
+        :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']] multi_factor_auth: The MultiFactorAuth param.
         :param pulumi.Input[str] name: The Name param.
-        :param pulumi.Input[pulumi.InputType['AuthenticationProfileSingleSignOnArgs']] single_sign_on: The SingleSignOn param.
+        :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']] single_sign_on: The SingleSignOn param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[str] user_domain: The UserDomain param. String length must not exceed 63 characters.
         :param pulumi.Input[str] username_modifier: The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\\\%USERINPUT%"`.
@@ -472,11 +472,11 @@ class AuthenticationProfile(pulumi.CustomResource):
                  allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 lockout: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileLockoutArgs']]] = None,
-                 method: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileMethodArgs']]] = None,
-                 multi_factor_auth: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileMultiFactorAuthArgs']]] = None,
+                 lockout: Optional[pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
+                 method: Optional[pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
+                 multi_factor_auth: Optional[pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 single_sign_on: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileSingleSignOnArgs']]] = None,
+                 single_sign_on: Optional[pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  user_domain: Optional[pulumi.Input[str]] = None,
                  username_modifier: Optional[pulumi.Input[str]] = None,
@@ -514,11 +514,11 @@ class AuthenticationProfile(pulumi.CustomResource):
             allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             device: Optional[pulumi.Input[str]] = None,
             folder: Optional[pulumi.Input[str]] = None,
-            lockout: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileLockoutArgs']]] = None,
-            method: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileMethodArgs']]] = None,
-            multi_factor_auth: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileMultiFactorAuthArgs']]] = None,
+            lockout: Optional[pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']]] = None,
+            method: Optional[pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']]] = None,
+            multi_factor_auth: Optional[pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            single_sign_on: Optional[pulumi.Input[pulumi.InputType['AuthenticationProfileSingleSignOnArgs']]] = None,
+            single_sign_on: Optional[pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None,
             user_domain: Optional[pulumi.Input[str]] = None,
@@ -533,11 +533,11 @@ class AuthenticationProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] allow_lists: The AllowList param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[pulumi.InputType['AuthenticationProfileLockoutArgs']] lockout: The Lockout param.
-        :param pulumi.Input[pulumi.InputType['AuthenticationProfileMethodArgs']] method: The Method param.
-        :param pulumi.Input[pulumi.InputType['AuthenticationProfileMultiFactorAuthArgs']] multi_factor_auth: The MultiFactorAuth param.
+        :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']] lockout: The Lockout param.
+        :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']] method: The Method param.
+        :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']] multi_factor_auth: The MultiFactorAuth param.
         :param pulumi.Input[str] name: The Name param.
-        :param pulumi.Input[pulumi.InputType['AuthenticationProfileSingleSignOnArgs']] single_sign_on: The SingleSignOn param.
+        :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']] single_sign_on: The SingleSignOn param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[str] user_domain: The UserDomain param. String length must not exceed 63 characters.
         :param pulumi.Input[str] username_modifier: The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\\\%USERINPUT%"`.

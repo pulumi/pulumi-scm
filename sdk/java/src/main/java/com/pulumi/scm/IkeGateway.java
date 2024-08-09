@@ -248,7 +248,7 @@ public class IkeGateway extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public IkeGateway(String name) {
+    public IkeGateway(java.lang.String name) {
         this(name, IkeGatewayArgs.Empty);
     }
     /**
@@ -256,7 +256,7 @@ public class IkeGateway extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public IkeGateway(String name, IkeGatewayArgs args) {
+    public IkeGateway(java.lang.String name, IkeGatewayArgs args) {
         this(name, args, null);
     }
     /**
@@ -265,15 +265,22 @@ public class IkeGateway extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IkeGateway(String name, IkeGatewayArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/ikeGateway:IkeGateway", name, args == null ? IkeGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public IkeGateway(java.lang.String name, IkeGatewayArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/ikeGateway:IkeGateway", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private IkeGateway(String name, Output<String> id, @Nullable IkeGatewayState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/ikeGateway:IkeGateway", name, state, makeResourceOptions(options, id));
+    private IkeGateway(java.lang.String name, Output<java.lang.String> id, @Nullable IkeGatewayState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/ikeGateway:IkeGateway", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static IkeGatewayArgs makeArgs(IkeGatewayArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? IkeGatewayArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .additionalSecretOutputs(List.of(
@@ -292,7 +299,7 @@ public class IkeGateway extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IkeGateway get(String name, Output<String> id, @Nullable IkeGatewayState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IkeGateway get(java.lang.String name, Output<java.lang.String> id, @Nullable IkeGatewayState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new IkeGateway(name, id, state, options);
     }
 }

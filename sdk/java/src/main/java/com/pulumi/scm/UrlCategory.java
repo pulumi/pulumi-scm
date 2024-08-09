@@ -165,7 +165,7 @@ public class UrlCategory extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public UrlCategory(String name) {
+    public UrlCategory(java.lang.String name) {
         this(name, UrlCategoryArgs.Empty);
     }
     /**
@@ -173,7 +173,7 @@ public class UrlCategory extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public UrlCategory(String name, @Nullable UrlCategoryArgs args) {
+    public UrlCategory(java.lang.String name, @Nullable UrlCategoryArgs args) {
         this(name, args, null);
     }
     /**
@@ -182,15 +182,22 @@ public class UrlCategory extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public UrlCategory(String name, @Nullable UrlCategoryArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/urlCategory:UrlCategory", name, args == null ? UrlCategoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public UrlCategory(java.lang.String name, @Nullable UrlCategoryArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/urlCategory:UrlCategory", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private UrlCategory(String name, Output<String> id, @Nullable UrlCategoryState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/urlCategory:UrlCategory", name, state, makeResourceOptions(options, id));
+    private UrlCategory(java.lang.String name, Output<java.lang.String> id, @Nullable UrlCategoryState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/urlCategory:UrlCategory", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static UrlCategoryArgs makeArgs(@Nullable UrlCategoryArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? UrlCategoryArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -206,7 +213,7 @@ public class UrlCategory extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static UrlCategory get(String name, Output<String> id, @Nullable UrlCategoryState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static UrlCategory get(java.lang.String name, Output<java.lang.String> id, @Nullable UrlCategoryState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new UrlCategory(name, id, state, options);
     }
 }

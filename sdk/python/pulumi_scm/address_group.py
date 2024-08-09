@@ -304,7 +304,7 @@ class AddressGroup(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device: Optional[pulumi.Input[str]] = None,
-                 dynamic_value: Optional[pulumi.Input[pulumi.InputType['AddressGroupDynamicValueArgs']]] = None,
+                 dynamic_value: Optional[pulumi.Input[Union['AddressGroupDynamicValueArgs', 'AddressGroupDynamicValueArgsDict']]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
@@ -335,7 +335,7 @@ class AddressGroup(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: The Description param. String length must not exceed 1023 characters.
         :param pulumi.Input[str] device: The Device param.
-        :param pulumi.Input[pulumi.InputType['AddressGroupDynamicValueArgs']] dynamic_value: The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+        :param pulumi.Input[Union['AddressGroupDynamicValueArgs', 'AddressGroupDynamicValueArgsDict']] dynamic_value: The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
@@ -385,7 +385,7 @@ class AddressGroup(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device: Optional[pulumi.Input[str]] = None,
-                 dynamic_value: Optional[pulumi.Input[pulumi.InputType['AddressGroupDynamicValueArgs']]] = None,
+                 dynamic_value: Optional[pulumi.Input[Union['AddressGroupDynamicValueArgs', 'AddressGroupDynamicValueArgsDict']]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
@@ -421,7 +421,7 @@ class AddressGroup(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: Optional[pulumi.Input[str]] = None,
             device: Optional[pulumi.Input[str]] = None,
-            dynamic_value: Optional[pulumi.Input[pulumi.InputType['AddressGroupDynamicValueArgs']]] = None,
+            dynamic_value: Optional[pulumi.Input[Union['AddressGroupDynamicValueArgs', 'AddressGroupDynamicValueArgsDict']]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
@@ -437,7 +437,7 @@ class AddressGroup(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: The Description param. String length must not exceed 1023 characters.
         :param pulumi.Input[str] device: The Device param.
-        :param pulumi.Input[pulumi.InputType['AddressGroupDynamicValueArgs']] dynamic_value: The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+        :param pulumi.Input[Union['AddressGroupDynamicValueArgs', 'AddressGroupDynamicValueArgsDict']] dynamic_value: The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
         :param pulumi.Input[str] snippet: The Snippet param.

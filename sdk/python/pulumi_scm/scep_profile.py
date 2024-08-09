@@ -571,16 +571,16 @@ class ScepProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 algorithm: Optional[pulumi.Input[pulumi.InputType['ScepProfileAlgorithmArgs']]] = None,
+                 algorithm: Optional[pulumi.Input[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']]] = None,
                  ca_identity_name: Optional[pulumi.Input[str]] = None,
-                 certificate_attributes: Optional[pulumi.Input[pulumi.InputType['ScepProfileCertificateAttributesArgs']]] = None,
+                 certificate_attributes: Optional[pulumi.Input[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  digest: Optional[pulumi.Input[str]] = None,
                  fingerprint: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  scep_ca_cert: Optional[pulumi.Input[str]] = None,
-                 scep_challenge: Optional[pulumi.Input[pulumi.InputType['ScepProfileScepChallengeArgs']]] = None,
+                 scep_challenge: Optional[pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']]] = None,
                  scep_client_cert: Optional[pulumi.Input[str]] = None,
                  scep_url: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
@@ -602,16 +602,16 @@ class ScepProfile(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['ScepProfileAlgorithmArgs']] algorithm: The Algorithm param.
+        :param pulumi.Input[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']] algorithm: The Algorithm param.
         :param pulumi.Input[str] ca_identity_name: The CaIdentityName param.
-        :param pulumi.Input[pulumi.InputType['ScepProfileCertificateAttributesArgs']] certificate_attributes: The CertificateAttributes param.
+        :param pulumi.Input[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']] certificate_attributes: The CertificateAttributes param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] digest: The Digest param.
         :param pulumi.Input[str] fingerprint: The Fingerprint param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
         :param pulumi.Input[str] scep_ca_cert: The ScepCaCert param.
-        :param pulumi.Input[pulumi.InputType['ScepProfileScepChallengeArgs']] scep_challenge: The ScepChallenge param.
+        :param pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']] scep_challenge: The ScepChallenge param.
         :param pulumi.Input[str] scep_client_cert: The ScepClientCert param.
         :param pulumi.Input[str] scep_url: The ScepUrl param.
         :param pulumi.Input[str] snippet: The Snippet param.
@@ -652,16 +652,16 @@ class ScepProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 algorithm: Optional[pulumi.Input[pulumi.InputType['ScepProfileAlgorithmArgs']]] = None,
+                 algorithm: Optional[pulumi.Input[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']]] = None,
                  ca_identity_name: Optional[pulumi.Input[str]] = None,
-                 certificate_attributes: Optional[pulumi.Input[pulumi.InputType['ScepProfileCertificateAttributesArgs']]] = None,
+                 certificate_attributes: Optional[pulumi.Input[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  digest: Optional[pulumi.Input[str]] = None,
                  fingerprint: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  scep_ca_cert: Optional[pulumi.Input[str]] = None,
-                 scep_challenge: Optional[pulumi.Input[pulumi.InputType['ScepProfileScepChallengeArgs']]] = None,
+                 scep_challenge: Optional[pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']]] = None,
                  scep_client_cert: Optional[pulumi.Input[str]] = None,
                  scep_url: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
@@ -713,9 +713,9 @@ class ScepProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            algorithm: Optional[pulumi.Input[pulumi.InputType['ScepProfileAlgorithmArgs']]] = None,
+            algorithm: Optional[pulumi.Input[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']]] = None,
             ca_identity_name: Optional[pulumi.Input[str]] = None,
-            certificate_attributes: Optional[pulumi.Input[pulumi.InputType['ScepProfileCertificateAttributesArgs']]] = None,
+            certificate_attributes: Optional[pulumi.Input[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']]] = None,
             device: Optional[pulumi.Input[str]] = None,
             digest: Optional[pulumi.Input[str]] = None,
             encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]] = None,
@@ -723,7 +723,7 @@ class ScepProfile(pulumi.CustomResource):
             folder: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             scep_ca_cert: Optional[pulumi.Input[str]] = None,
-            scep_challenge: Optional[pulumi.Input[pulumi.InputType['ScepProfileScepChallengeArgs']]] = None,
+            scep_challenge: Optional[pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']]] = None,
             scep_client_cert: Optional[pulumi.Input[str]] = None,
             scep_url: Optional[pulumi.Input[str]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
@@ -738,9 +738,9 @@ class ScepProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['ScepProfileAlgorithmArgs']] algorithm: The Algorithm param.
+        :param pulumi.Input[Union['ScepProfileAlgorithmArgs', 'ScepProfileAlgorithmArgsDict']] algorithm: The Algorithm param.
         :param pulumi.Input[str] ca_identity_name: The CaIdentityName param.
-        :param pulumi.Input[pulumi.InputType['ScepProfileCertificateAttributesArgs']] certificate_attributes: The CertificateAttributes param.
+        :param pulumi.Input[Union['ScepProfileCertificateAttributesArgs', 'ScepProfileCertificateAttributesArgsDict']] certificate_attributes: The CertificateAttributes param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] digest: The Digest param.
         :param pulumi.Input[Mapping[str, pulumi.Input[str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
@@ -748,7 +748,7 @@ class ScepProfile(pulumi.CustomResource):
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
         :param pulumi.Input[str] scep_ca_cert: The ScepCaCert param.
-        :param pulumi.Input[pulumi.InputType['ScepProfileScepChallengeArgs']] scep_challenge: The ScepChallenge param.
+        :param pulumi.Input[Union['ScepProfileScepChallengeArgs', 'ScepProfileScepChallengeArgsDict']] scep_challenge: The ScepChallenge param.
         :param pulumi.Input[str] scep_client_cert: The ScepClientCert param.
         :param pulumi.Input[str] scep_url: The ScepUrl param.
         :param pulumi.Input[str] snippet: The Snippet param.

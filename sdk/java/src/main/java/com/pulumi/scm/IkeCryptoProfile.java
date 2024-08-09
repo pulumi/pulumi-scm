@@ -192,7 +192,7 @@ public class IkeCryptoProfile extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public IkeCryptoProfile(String name) {
+    public IkeCryptoProfile(java.lang.String name) {
         this(name, IkeCryptoProfileArgs.Empty);
     }
     /**
@@ -200,7 +200,7 @@ public class IkeCryptoProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public IkeCryptoProfile(String name, IkeCryptoProfileArgs args) {
+    public IkeCryptoProfile(java.lang.String name, IkeCryptoProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -209,15 +209,22 @@ public class IkeCryptoProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IkeCryptoProfile(String name, IkeCryptoProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/ikeCryptoProfile:IkeCryptoProfile", name, args == null ? IkeCryptoProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public IkeCryptoProfile(java.lang.String name, IkeCryptoProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/ikeCryptoProfile:IkeCryptoProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private IkeCryptoProfile(String name, Output<String> id, @Nullable IkeCryptoProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/ikeCryptoProfile:IkeCryptoProfile", name, state, makeResourceOptions(options, id));
+    private IkeCryptoProfile(java.lang.String name, Output<java.lang.String> id, @Nullable IkeCryptoProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/ikeCryptoProfile:IkeCryptoProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static IkeCryptoProfileArgs makeArgs(IkeCryptoProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? IkeCryptoProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -233,7 +240,7 @@ public class IkeCryptoProfile extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IkeCryptoProfile get(String name, Output<String> id, @Nullable IkeCryptoProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IkeCryptoProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable IkeCryptoProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new IkeCryptoProfile(name, id, state, options);
     }
 }

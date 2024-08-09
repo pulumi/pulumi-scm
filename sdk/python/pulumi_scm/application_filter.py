@@ -767,7 +767,7 @@ class ApplicationFilter(pulumi.CustomResource):
                  saas_risks: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  subcategories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 tagging: Optional[pulumi.Input[pulumi.InputType['ApplicationFilterTaggingArgs']]] = None,
+                 tagging: Optional[pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
                  technologies: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  transfers_files: Optional[pulumi.Input[bool]] = None,
                  tunnels_other_apps: Optional[pulumi.Input[bool]] = None,
@@ -804,7 +804,7 @@ class ApplicationFilter(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] saas_risks: The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] subcategories: The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[pulumi.InputType['ApplicationFilterTaggingArgs']] tagging: The Tagging param.
+        :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']] tagging: The Tagging param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] technologies: The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
         :param pulumi.Input[bool] transfers_files: only True is a valid value.
         :param pulumi.Input[bool] tunnels_other_apps: only True is a valid value.
@@ -860,7 +860,7 @@ class ApplicationFilter(pulumi.CustomResource):
                  saas_risks: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  subcategories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 tagging: Optional[pulumi.Input[pulumi.InputType['ApplicationFilterTaggingArgs']]] = None,
+                 tagging: Optional[pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
                  technologies: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  transfers_files: Optional[pulumi.Input[bool]] = None,
                  tunnels_other_apps: Optional[pulumi.Input[bool]] = None,
@@ -924,7 +924,7 @@ class ApplicationFilter(pulumi.CustomResource):
             saas_risks: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             subcategories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            tagging: Optional[pulumi.Input[pulumi.InputType['ApplicationFilterTaggingArgs']]] = None,
+            tagging: Optional[pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']]] = None,
             technologies: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             tfid: Optional[pulumi.Input[str]] = None,
             transfers_files: Optional[pulumi.Input[bool]] = None,
@@ -954,7 +954,7 @@ class ApplicationFilter(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] saas_risks: The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] subcategories: The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[pulumi.InputType['ApplicationFilterTaggingArgs']] tagging: The Tagging param.
+        :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']] tagging: The Tagging param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] technologies: The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
         :param pulumi.Input[bool] transfers_files: only True is a valid value.
         :param pulumi.Input[bool] tunnels_other_apps: only True is a valid value.

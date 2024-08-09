@@ -404,11 +404,11 @@ class AntiSpywareProfile(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[str]] = None,
                  inline_exception_edl_urls: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  inline_exception_ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 mica_engine_spyware_enabled_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileMicaEngineSpywareEnabledListArgs']]]]] = None,
+                 mica_engine_spyware_enabled_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledListArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledListArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
-                 threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileThreatExceptionArgs']]]]] = None,
+                 threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]]] = None,
                  __props__=None):
         """
         Retrieves a config item.
@@ -430,11 +430,11 @@ class AntiSpywareProfile(pulumi.CustomResource):
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] inline_exception_edl_urls: The InlineExceptionEdlUrls param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] inline_exception_ip_addresses: The InlineExceptionIpAddresses param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileMicaEngineSpywareEnabledListArgs']]]] mica_engine_spyware_enabled_lists: The MicaEngineSpywareEnabledList param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledListArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledListArgsDict']]]] mica_engine_spyware_enabled_lists: The MicaEngineSpywareEnabledList param.
         :param pulumi.Input[str] name: The Name param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileRuleArgs']]]] rules: The Rules param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict']]]] rules: The Rules param.
         :param pulumi.Input[str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileThreatExceptionArgs']]]] threat_exceptions: The ThreatExceptions param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]] threat_exceptions: The ThreatExceptions param.
         """
         ...
     @overload
@@ -475,11 +475,11 @@ class AntiSpywareProfile(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[str]] = None,
                  inline_exception_edl_urls: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  inline_exception_ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 mica_engine_spyware_enabled_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileMicaEngineSpywareEnabledListArgs']]]]] = None,
+                 mica_engine_spyware_enabled_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledListArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledListArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
-                 threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileThreatExceptionArgs']]]]] = None,
+                 threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -517,12 +517,12 @@ class AntiSpywareProfile(pulumi.CustomResource):
             folder: Optional[pulumi.Input[str]] = None,
             inline_exception_edl_urls: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             inline_exception_ip_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            mica_engine_spyware_enabled_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileMicaEngineSpywareEnabledListArgs']]]]] = None,
+            mica_engine_spyware_enabled_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledListArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledListArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileRuleArgs']]]]] = None,
+            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict']]]]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None,
-            threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileThreatExceptionArgs']]]]] = None) -> 'AntiSpywareProfile':
+            threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]]] = None) -> 'AntiSpywareProfile':
         """
         Get an existing AntiSpywareProfile resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -536,11 +536,11 @@ class AntiSpywareProfile(pulumi.CustomResource):
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] inline_exception_edl_urls: The InlineExceptionEdlUrls param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] inline_exception_ip_addresses: The InlineExceptionIpAddresses param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileMicaEngineSpywareEnabledListArgs']]]] mica_engine_spyware_enabled_lists: The MicaEngineSpywareEnabledList param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileMicaEngineSpywareEnabledListArgs', 'AntiSpywareProfileMicaEngineSpywareEnabledListArgsDict']]]] mica_engine_spyware_enabled_lists: The MicaEngineSpywareEnabledList param.
         :param pulumi.Input[str] name: The Name param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileRuleArgs']]]] rules: The Rules param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileRuleArgs', 'AntiSpywareProfileRuleArgsDict']]]] rules: The Rules param.
         :param pulumi.Input[str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AntiSpywareProfileThreatExceptionArgs']]]] threat_exceptions: The ThreatExceptions param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AntiSpywareProfileThreatExceptionArgs', 'AntiSpywareProfileThreatExceptionArgsDict']]]] threat_exceptions: The ThreatExceptions param.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

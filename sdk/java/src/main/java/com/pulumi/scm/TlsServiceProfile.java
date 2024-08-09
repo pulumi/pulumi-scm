@@ -151,7 +151,7 @@ public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public TlsServiceProfile(String name) {
+    public TlsServiceProfile(java.lang.String name) {
         this(name, TlsServiceProfileArgs.Empty);
     }
     /**
@@ -159,7 +159,7 @@ public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TlsServiceProfile(String name, TlsServiceProfileArgs args) {
+    public TlsServiceProfile(java.lang.String name, TlsServiceProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -168,15 +168,22 @@ public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TlsServiceProfile(String name, TlsServiceProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/tlsServiceProfile:TlsServiceProfile", name, args == null ? TlsServiceProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public TlsServiceProfile(java.lang.String name, TlsServiceProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/tlsServiceProfile:TlsServiceProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private TlsServiceProfile(String name, Output<String> id, @Nullable TlsServiceProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/tlsServiceProfile:TlsServiceProfile", name, state, makeResourceOptions(options, id));
+    private TlsServiceProfile(java.lang.String name, Output<java.lang.String> id, @Nullable TlsServiceProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/tlsServiceProfile:TlsServiceProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static TlsServiceProfileArgs makeArgs(TlsServiceProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? TlsServiceProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -192,7 +199,7 @@ public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TlsServiceProfile get(String name, Output<String> id, @Nullable TlsServiceProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TlsServiceProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable TlsServiceProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new TlsServiceProfile(name, id, state, options);
     }
 }

@@ -337,7 +337,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
                  encryptions: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  hashes: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 lifetime: Optional[pulumi.Input[pulumi.InputType['IkeCryptoProfileLifetimeArgs']]] = None,
+                 lifetime: Optional[pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -361,7 +361,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] encryptions: Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] hashes: The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
-        :param pulumi.Input[pulumi.InputType['IkeCryptoProfileLifetimeArgs']] lifetime: The Lifetime param.
+        :param pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']] lifetime: The Lifetime param.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
@@ -404,7 +404,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
                  encryptions: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  hashes: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 lifetime: Optional[pulumi.Input[pulumi.InputType['IkeCryptoProfileLifetimeArgs']]] = None,
+                 lifetime: Optional[pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -448,7 +448,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
             encryptions: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             hashes: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            lifetime: Optional[pulumi.Input[pulumi.InputType['IkeCryptoProfileLifetimeArgs']]] = None,
+            lifetime: Optional[pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']]] = None,
             name: Optional[pulumi.Input[str]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None) -> 'IkeCryptoProfile':
@@ -465,7 +465,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] encryptions: Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] hashes: The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
-        :param pulumi.Input[pulumi.InputType['IkeCryptoProfileLifetimeArgs']] lifetime: The Lifetime param.
+        :param pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']] lifetime: The Lifetime param.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
         """

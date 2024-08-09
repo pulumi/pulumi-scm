@@ -149,7 +149,7 @@ public class QosProfile extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public QosProfile(String name) {
+    public QosProfile(java.lang.String name) {
         this(name, QosProfileArgs.Empty);
     }
     /**
@@ -157,7 +157,7 @@ public class QosProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public QosProfile(String name, @Nullable QosProfileArgs args) {
+    public QosProfile(java.lang.String name, @Nullable QosProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -166,15 +166,22 @@ public class QosProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public QosProfile(String name, @Nullable QosProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/qosProfile:QosProfile", name, args == null ? QosProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public QosProfile(java.lang.String name, @Nullable QosProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/qosProfile:QosProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private QosProfile(String name, Output<String> id, @Nullable QosProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/qosProfile:QosProfile", name, state, makeResourceOptions(options, id));
+    private QosProfile(java.lang.String name, Output<java.lang.String> id, @Nullable QosProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/qosProfile:QosProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static QosProfileArgs makeArgs(@Nullable QosProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? QosProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -190,7 +197,7 @@ public class QosProfile extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static QosProfile get(String name, Output<String> id, @Nullable QosProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static QosProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable QosProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new QosProfile(name, id, state, options);
     }
 }

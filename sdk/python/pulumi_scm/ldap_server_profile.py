@@ -469,7 +469,7 @@ class LdapServerProfile(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[str]] = None,
                  ldap_type: Optional[pulumi.Input[str]] = None,
                  retry_interval: Optional[pulumi.Input[int]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LdapServerProfileServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  ssl: Optional[pulumi.Input[bool]] = None,
                  timelimit: Optional[pulumi.Input[int]] = None,
@@ -497,7 +497,7 @@ class LdapServerProfile(pulumi.CustomResource):
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] ldap_type: The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
         :param pulumi.Input[int] retry_interval: The RetryInterval param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LdapServerProfileServerArgs']]]] servers: The Servers param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]] servers: The Servers param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[bool] ssl: The Ssl param.
         :param pulumi.Input[int] timelimit: The Timelimit param.
@@ -544,7 +544,7 @@ class LdapServerProfile(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[str]] = None,
                  ldap_type: Optional[pulumi.Input[str]] = None,
                  retry_interval: Optional[pulumi.Input[int]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LdapServerProfileServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  ssl: Optional[pulumi.Input[bool]] = None,
                  timelimit: Optional[pulumi.Input[int]] = None,
@@ -594,7 +594,7 @@ class LdapServerProfile(pulumi.CustomResource):
             folder: Optional[pulumi.Input[str]] = None,
             ldap_type: Optional[pulumi.Input[str]] = None,
             retry_interval: Optional[pulumi.Input[int]] = None,
-            servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LdapServerProfileServerArgs']]]]] = None,
+            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             ssl: Optional[pulumi.Input[bool]] = None,
             tfid: Optional[pulumi.Input[str]] = None,
@@ -615,7 +615,7 @@ class LdapServerProfile(pulumi.CustomResource):
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] ldap_type: The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
         :param pulumi.Input[int] retry_interval: The RetryInterval param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LdapServerProfileServerArgs']]]] servers: The Servers param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]] servers: The Servers param.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[bool] ssl: The Ssl param.
         :param pulumi.Input[int] timelimit: The Timelimit param.

@@ -175,7 +175,7 @@ class KerberosServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['KerberosServerProfileServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -194,7 +194,7 @@ class KerberosServerProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['KerberosServerProfileServerArgs']]]] servers: The Servers param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]] servers: The Servers param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
         ...
@@ -232,7 +232,7 @@ class KerberosServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['KerberosServerProfileServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -262,7 +262,7 @@ class KerberosServerProfile(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             device: Optional[pulumi.Input[str]] = None,
             folder: Optional[pulumi.Input[str]] = None,
-            servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['KerberosServerProfileServerArgs']]]]] = None,
+            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None) -> 'KerberosServerProfile':
         """
@@ -274,7 +274,7 @@ class KerberosServerProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['KerberosServerProfileServerArgs']]]] servers: The Servers param.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['KerberosServerProfileServerArgs', 'KerberosServerProfileServerArgsDict']]]] servers: The Servers param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

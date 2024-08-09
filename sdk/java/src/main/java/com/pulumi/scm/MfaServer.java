@@ -148,7 +148,7 @@ public class MfaServer extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public MfaServer(String name) {
+    public MfaServer(java.lang.String name) {
         this(name, MfaServerArgs.Empty);
     }
     /**
@@ -156,7 +156,7 @@ public class MfaServer extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public MfaServer(String name, MfaServerArgs args) {
+    public MfaServer(java.lang.String name, MfaServerArgs args) {
         this(name, args, null);
     }
     /**
@@ -165,15 +165,22 @@ public class MfaServer extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MfaServer(String name, MfaServerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/mfaServer:MfaServer", name, args == null ? MfaServerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public MfaServer(java.lang.String name, MfaServerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/mfaServer:MfaServer", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private MfaServer(String name, Output<String> id, @Nullable MfaServerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/mfaServer:MfaServer", name, state, makeResourceOptions(options, id));
+    private MfaServer(java.lang.String name, Output<java.lang.String> id, @Nullable MfaServerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/mfaServer:MfaServer", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static MfaServerArgs makeArgs(MfaServerArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? MfaServerArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -189,7 +196,7 @@ public class MfaServer extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MfaServer get(String name, Output<String> id, @Nullable MfaServerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static MfaServer get(java.lang.String name, Output<java.lang.String> id, @Nullable MfaServerState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new MfaServer(name, id, state, options);
     }
 }

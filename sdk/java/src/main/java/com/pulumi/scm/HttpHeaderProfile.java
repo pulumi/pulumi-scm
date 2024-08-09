@@ -149,7 +149,7 @@ public class HttpHeaderProfile extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public HttpHeaderProfile(String name) {
+    public HttpHeaderProfile(java.lang.String name) {
         this(name, HttpHeaderProfileArgs.Empty);
     }
     /**
@@ -157,7 +157,7 @@ public class HttpHeaderProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public HttpHeaderProfile(String name, @Nullable HttpHeaderProfileArgs args) {
+    public HttpHeaderProfile(java.lang.String name, @Nullable HttpHeaderProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -166,15 +166,22 @@ public class HttpHeaderProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public HttpHeaderProfile(String name, @Nullable HttpHeaderProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/httpHeaderProfile:HttpHeaderProfile", name, args == null ? HttpHeaderProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public HttpHeaderProfile(java.lang.String name, @Nullable HttpHeaderProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/httpHeaderProfile:HttpHeaderProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private HttpHeaderProfile(String name, Output<String> id, @Nullable HttpHeaderProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/httpHeaderProfile:HttpHeaderProfile", name, state, makeResourceOptions(options, id));
+    private HttpHeaderProfile(java.lang.String name, Output<java.lang.String> id, @Nullable HttpHeaderProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/httpHeaderProfile:HttpHeaderProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static HttpHeaderProfileArgs makeArgs(@Nullable HttpHeaderProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? HttpHeaderProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -190,7 +197,7 @@ public class HttpHeaderProfile extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HttpHeaderProfile get(String name, Output<String> id, @Nullable HttpHeaderProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static HttpHeaderProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable HttpHeaderProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new HttpHeaderProfile(name, id, state, options);
     }
 }

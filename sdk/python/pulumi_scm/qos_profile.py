@@ -238,8 +238,8 @@ class QosProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 aggregate_bandwidth: Optional[pulumi.Input[pulumi.InputType['QosProfileAggregateBandwidthArgs']]] = None,
-                 class_bandwidth_type: Optional[pulumi.Input[pulumi.InputType['QosProfileClassBandwidthTypeArgs']]] = None,
+                 aggregate_bandwidth: Optional[pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']]] = None,
+                 class_bandwidth_type: Optional[pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
@@ -259,8 +259,8 @@ class QosProfile(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['QosProfileAggregateBandwidthArgs']] aggregate_bandwidth: The AggregateBandwidth param.
-        :param pulumi.Input[pulumi.InputType['QosProfileClassBandwidthTypeArgs']] class_bandwidth_type: The ClassBandwidthType param.
+        :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']] aggregate_bandwidth: The AggregateBandwidth param.
+        :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']] class_bandwidth_type: The ClassBandwidthType param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
@@ -299,8 +299,8 @@ class QosProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 aggregate_bandwidth: Optional[pulumi.Input[pulumi.InputType['QosProfileAggregateBandwidthArgs']]] = None,
-                 class_bandwidth_type: Optional[pulumi.Input[pulumi.InputType['QosProfileClassBandwidthTypeArgs']]] = None,
+                 aggregate_bandwidth: Optional[pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']]] = None,
+                 class_bandwidth_type: Optional[pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
@@ -331,8 +331,8 @@ class QosProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            aggregate_bandwidth: Optional[pulumi.Input[pulumi.InputType['QosProfileAggregateBandwidthArgs']]] = None,
-            class_bandwidth_type: Optional[pulumi.Input[pulumi.InputType['QosProfileClassBandwidthTypeArgs']]] = None,
+            aggregate_bandwidth: Optional[pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']]] = None,
+            class_bandwidth_type: Optional[pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']]] = None,
             device: Optional[pulumi.Input[str]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
@@ -345,8 +345,8 @@ class QosProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['QosProfileAggregateBandwidthArgs']] aggregate_bandwidth: The AggregateBandwidth param.
-        :param pulumi.Input[pulumi.InputType['QosProfileClassBandwidthTypeArgs']] class_bandwidth_type: The ClassBandwidthType param.
+        :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']] aggregate_bandwidth: The AggregateBandwidth param.
+        :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']] class_bandwidth_type: The ClassBandwidthType param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.

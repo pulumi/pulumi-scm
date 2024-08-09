@@ -149,7 +149,7 @@ public class FileBlockingProfile extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public FileBlockingProfile(String name) {
+    public FileBlockingProfile(java.lang.String name) {
         this(name, FileBlockingProfileArgs.Empty);
     }
     /**
@@ -157,7 +157,7 @@ public class FileBlockingProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public FileBlockingProfile(String name, @Nullable FileBlockingProfileArgs args) {
+    public FileBlockingProfile(java.lang.String name, @Nullable FileBlockingProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -166,15 +166,22 @@ public class FileBlockingProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FileBlockingProfile(String name, @Nullable FileBlockingProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/fileBlockingProfile:FileBlockingProfile", name, args == null ? FileBlockingProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public FileBlockingProfile(java.lang.String name, @Nullable FileBlockingProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/fileBlockingProfile:FileBlockingProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private FileBlockingProfile(String name, Output<String> id, @Nullable FileBlockingProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/fileBlockingProfile:FileBlockingProfile", name, state, makeResourceOptions(options, id));
+    private FileBlockingProfile(java.lang.String name, Output<java.lang.String> id, @Nullable FileBlockingProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/fileBlockingProfile:FileBlockingProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static FileBlockingProfileArgs makeArgs(@Nullable FileBlockingProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? FileBlockingProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -190,7 +197,7 @@ public class FileBlockingProfile extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FileBlockingProfile get(String name, Output<String> id, @Nullable FileBlockingProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FileBlockingProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable FileBlockingProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new FileBlockingProfile(name, id, state, options);
     }
 }

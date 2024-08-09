@@ -180,7 +180,7 @@ public class TrafficSteeringRule extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public TrafficSteeringRule(String name) {
+    public TrafficSteeringRule(java.lang.String name) {
         this(name, TrafficSteeringRuleArgs.Empty);
     }
     /**
@@ -188,7 +188,7 @@ public class TrafficSteeringRule extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TrafficSteeringRule(String name, TrafficSteeringRuleArgs args) {
+    public TrafficSteeringRule(java.lang.String name, TrafficSteeringRuleArgs args) {
         this(name, args, null);
     }
     /**
@@ -197,15 +197,22 @@ public class TrafficSteeringRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TrafficSteeringRule(String name, TrafficSteeringRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/trafficSteeringRule:TrafficSteeringRule", name, args == null ? TrafficSteeringRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public TrafficSteeringRule(java.lang.String name, TrafficSteeringRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/trafficSteeringRule:TrafficSteeringRule", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private TrafficSteeringRule(String name, Output<String> id, @Nullable TrafficSteeringRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/trafficSteeringRule:TrafficSteeringRule", name, state, makeResourceOptions(options, id));
+    private TrafficSteeringRule(java.lang.String name, Output<java.lang.String> id, @Nullable TrafficSteeringRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/trafficSteeringRule:TrafficSteeringRule", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static TrafficSteeringRuleArgs makeArgs(TrafficSteeringRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? TrafficSteeringRuleArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -221,7 +228,7 @@ public class TrafficSteeringRule extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TrafficSteeringRule get(String name, Output<String> id, @Nullable TrafficSteeringRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TrafficSteeringRule get(java.lang.String name, Output<java.lang.String> id, @Nullable TrafficSteeringRuleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new TrafficSteeringRule(name, id, state, options);
     }
 }

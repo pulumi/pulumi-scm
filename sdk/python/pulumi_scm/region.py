@@ -241,7 +241,7 @@ class Region(pulumi.CustomResource):
                  addresses: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 geo_location: Optional[pulumi.Input[pulumi.InputType['RegionGeoLocationArgs']]] = None,
+                 geo_location: Optional[pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -262,7 +262,7 @@ class Region(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] addresses: The Addresses param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[pulumi.InputType['RegionGeoLocationArgs']] geo_location: The GeoLocation param.
+        :param pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']] geo_location: The GeoLocation param.
         :param pulumi.Input[str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
@@ -302,7 +302,7 @@ class Region(pulumi.CustomResource):
                  addresses: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 geo_location: Optional[pulumi.Input[pulumi.InputType['RegionGeoLocationArgs']]] = None,
+                 geo_location: Optional[pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -334,7 +334,7 @@ class Region(pulumi.CustomResource):
             addresses: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             device: Optional[pulumi.Input[str]] = None,
             folder: Optional[pulumi.Input[str]] = None,
-            geo_location: Optional[pulumi.Input[pulumi.InputType['RegionGeoLocationArgs']]] = None,
+            geo_location: Optional[pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']]] = None,
             name: Optional[pulumi.Input[str]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None) -> 'Region':
@@ -348,7 +348,7 @@ class Region(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] addresses: The Addresses param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[pulumi.InputType['RegionGeoLocationArgs']] geo_location: The GeoLocation param.
+        :param pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']] geo_location: The GeoLocation param.
         :param pulumi.Input[str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
         """

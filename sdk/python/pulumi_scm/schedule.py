@@ -208,7 +208,7 @@ class Schedule(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 schedule_type: Optional[pulumi.Input[pulumi.InputType['ScheduleScheduleTypeArgs']]] = None,
+                 schedule_type: Optional[pulumi.Input[Union['ScheduleScheduleTypeArgs', 'ScheduleScheduleTypeArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -228,7 +228,7 @@ class Schedule(pulumi.CustomResource):
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[pulumi.InputType['ScheduleScheduleTypeArgs']] schedule_type: The ScheduleType param.
+        :param pulumi.Input[Union['ScheduleScheduleTypeArgs', 'ScheduleScheduleTypeArgsDict']] schedule_type: The ScheduleType param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
         ...
@@ -267,7 +267,7 @@ class Schedule(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 schedule_type: Optional[pulumi.Input[pulumi.InputType['ScheduleScheduleTypeArgs']]] = None,
+                 schedule_type: Optional[pulumi.Input[Union['ScheduleScheduleTypeArgs', 'ScheduleScheduleTypeArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -299,7 +299,7 @@ class Schedule(pulumi.CustomResource):
             device: Optional[pulumi.Input[str]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            schedule_type: Optional[pulumi.Input[pulumi.InputType['ScheduleScheduleTypeArgs']]] = None,
+            schedule_type: Optional[pulumi.Input[Union['ScheduleScheduleTypeArgs', 'ScheduleScheduleTypeArgsDict']]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None) -> 'Schedule':
         """
@@ -312,7 +312,7 @@ class Schedule(pulumi.CustomResource):
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[pulumi.InputType['ScheduleScheduleTypeArgs']] schedule_type: The ScheduleType param.
+        :param pulumi.Input[Union['ScheduleScheduleTypeArgs', 'ScheduleScheduleTypeArgsDict']] schedule_type: The ScheduleType param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
