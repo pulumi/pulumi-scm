@@ -788,7 +788,7 @@ class SecurityRule(pulumi.CustomResource):
                  negate_destination: Optional[pulumi.Input[bool]] = None,
                  negate_source: Optional[pulumi.Input[bool]] = None,
                  position: Optional[pulumi.Input[str]] = None,
-                 profile_setting: Optional[pulumi.Input[pulumi.InputType['SecurityRuleProfileSettingArgs']]] = None,
+                 profile_setting: Optional[pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -826,7 +826,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[bool] negate_destination: Negate the destination addresses(es). Default: `false`.
         :param pulumi.Input[bool] negate_source: Negate the source address(es). Default: `false`.
         :param pulumi.Input[str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[pulumi.InputType['SecurityRuleProfileSettingArgs']] profile_setting: The security profile object.
+        :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']] profile_setting: The security profile object.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] services: The service(s) being accessed.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] source_hips: The source Host Integrity Profile(s).
@@ -883,7 +883,7 @@ class SecurityRule(pulumi.CustomResource):
                  negate_destination: Optional[pulumi.Input[bool]] = None,
                  negate_source: Optional[pulumi.Input[bool]] = None,
                  position: Optional[pulumi.Input[str]] = None,
-                 profile_setting: Optional[pulumi.Input[pulumi.InputType['SecurityRuleProfileSettingArgs']]] = None,
+                 profile_setting: Optional[pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -967,7 +967,7 @@ class SecurityRule(pulumi.CustomResource):
             negate_destination: Optional[pulumi.Input[bool]] = None,
             negate_source: Optional[pulumi.Input[bool]] = None,
             position: Optional[pulumi.Input[str]] = None,
-            profile_setting: Optional[pulumi.Input[pulumi.InputType['SecurityRuleProfileSettingArgs']]] = None,
+            profile_setting: Optional[pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
             services: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -998,7 +998,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[bool] negate_destination: Negate the destination addresses(es). Default: `false`.
         :param pulumi.Input[bool] negate_source: Negate the source address(es). Default: `false`.
         :param pulumi.Input[str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[pulumi.InputType['SecurityRuleProfileSettingArgs']] profile_setting: The security profile object.
+        :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']] profile_setting: The security profile object.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] services: The service(s) being accessed.
         :param pulumi.Input[str] snippet: The Snippet param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] source_hips: The source Host Integrity Profile(s).

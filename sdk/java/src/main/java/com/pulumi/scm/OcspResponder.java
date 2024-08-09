@@ -133,7 +133,7 @@ public class OcspResponder extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public OcspResponder(String name) {
+    public OcspResponder(java.lang.String name) {
         this(name, OcspResponderArgs.Empty);
     }
     /**
@@ -141,7 +141,7 @@ public class OcspResponder extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public OcspResponder(String name, OcspResponderArgs args) {
+    public OcspResponder(java.lang.String name, OcspResponderArgs args) {
         this(name, args, null);
     }
     /**
@@ -150,15 +150,22 @@ public class OcspResponder extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public OcspResponder(String name, OcspResponderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/ocspResponder:OcspResponder", name, args == null ? OcspResponderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public OcspResponder(java.lang.String name, OcspResponderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/ocspResponder:OcspResponder", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private OcspResponder(String name, Output<String> id, @Nullable OcspResponderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/ocspResponder:OcspResponder", name, state, makeResourceOptions(options, id));
+    private OcspResponder(java.lang.String name, Output<java.lang.String> id, @Nullable OcspResponderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/ocspResponder:OcspResponder", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static OcspResponderArgs makeArgs(OcspResponderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? OcspResponderArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -174,7 +181,7 @@ public class OcspResponder extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OcspResponder get(String name, Output<String> id, @Nullable OcspResponderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static OcspResponder get(java.lang.String name, Output<java.lang.String> id, @Nullable OcspResponderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new OcspResponder(name, id, state, options);
     }
 }

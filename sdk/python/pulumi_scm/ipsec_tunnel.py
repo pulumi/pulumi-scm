@@ -334,14 +334,14 @@ class IpsecTunnel(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  anti_replay: Optional[pulumi.Input[bool]] = None,
-                 auto_key: Optional[pulumi.Input[pulumi.InputType['IpsecTunnelAutoKeyArgs']]] = None,
+                 auto_key: Optional[pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
                  copy_tos: Optional[pulumi.Input[bool]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  enable_gre_encapsulation: Optional[pulumi.Input[bool]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
-                 tunnel_monitor: Optional[pulumi.Input[pulumi.InputType['IpsecTunnelTunnelMonitorArgs']]] = None,
+                 tunnel_monitor: Optional[pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None,
                  __props__=None):
         """
         Retrieves a config item.
@@ -358,14 +358,14 @@ class IpsecTunnel(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] anti_replay: Enable Anti-Replay check on this tunnel.
-        :param pulumi.Input[pulumi.InputType['IpsecTunnelAutoKeyArgs']] auto_key: The AutoKey param.
+        :param pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']] auto_key: The AutoKey param.
         :param pulumi.Input[bool] copy_tos: Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[bool] enable_gre_encapsulation: allow GRE over IPSec. Default: `false`.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
-        :param pulumi.Input[pulumi.InputType['IpsecTunnelTunnelMonitorArgs']] tunnel_monitor: The TunnelMonitor param.
+        :param pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']] tunnel_monitor: The TunnelMonitor param.
         """
         ...
     @overload
@@ -401,14 +401,14 @@ class IpsecTunnel(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  anti_replay: Optional[pulumi.Input[bool]] = None,
-                 auto_key: Optional[pulumi.Input[pulumi.InputType['IpsecTunnelAutoKeyArgs']]] = None,
+                 auto_key: Optional[pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
                  copy_tos: Optional[pulumi.Input[bool]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  enable_gre_encapsulation: Optional[pulumi.Input[bool]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
-                 tunnel_monitor: Optional[pulumi.Input[pulumi.InputType['IpsecTunnelTunnelMonitorArgs']]] = None,
+                 tunnel_monitor: Optional[pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -441,7 +441,7 @@ class IpsecTunnel(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             anti_replay: Optional[pulumi.Input[bool]] = None,
-            auto_key: Optional[pulumi.Input[pulumi.InputType['IpsecTunnelAutoKeyArgs']]] = None,
+            auto_key: Optional[pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']]] = None,
             copy_tos: Optional[pulumi.Input[bool]] = None,
             device: Optional[pulumi.Input[str]] = None,
             enable_gre_encapsulation: Optional[pulumi.Input[bool]] = None,
@@ -449,7 +449,7 @@ class IpsecTunnel(pulumi.CustomResource):
             name: Optional[pulumi.Input[str]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None,
-            tunnel_monitor: Optional[pulumi.Input[pulumi.InputType['IpsecTunnelTunnelMonitorArgs']]] = None) -> 'IpsecTunnel':
+            tunnel_monitor: Optional[pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']]] = None) -> 'IpsecTunnel':
         """
         Get an existing IpsecTunnel resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -458,14 +458,14 @@ class IpsecTunnel(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] anti_replay: Enable Anti-Replay check on this tunnel.
-        :param pulumi.Input[pulumi.InputType['IpsecTunnelAutoKeyArgs']] auto_key: The AutoKey param.
+        :param pulumi.Input[Union['IpsecTunnelAutoKeyArgs', 'IpsecTunnelAutoKeyArgsDict']] auto_key: The AutoKey param.
         :param pulumi.Input[bool] copy_tos: Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[bool] enable_gre_encapsulation: allow GRE over IPSec. Default: `false`.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
-        :param pulumi.Input[pulumi.InputType['IpsecTunnelTunnelMonitorArgs']] tunnel_monitor: The TunnelMonitor param.
+        :param pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']] tunnel_monitor: The TunnelMonitor param.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

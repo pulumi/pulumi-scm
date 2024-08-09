@@ -379,15 +379,15 @@ class IkeGateway(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication: Optional[pulumi.Input[pulumi.InputType['IkeGatewayAuthenticationArgs']]] = None,
+                 authentication: Optional[pulumi.Input[Union['IkeGatewayAuthenticationArgs', 'IkeGatewayAuthenticationArgsDict']]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 local_id: Optional[pulumi.Input[pulumi.InputType['IkeGatewayLocalIdArgs']]] = None,
+                 local_id: Optional[pulumi.Input[Union['IkeGatewayLocalIdArgs', 'IkeGatewayLocalIdArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 peer_address: Optional[pulumi.Input[pulumi.InputType['IkeGatewayPeerAddressArgs']]] = None,
-                 peer_id: Optional[pulumi.Input[pulumi.InputType['IkeGatewayPeerIdArgs']]] = None,
-                 protocol: Optional[pulumi.Input[pulumi.InputType['IkeGatewayProtocolArgs']]] = None,
-                 protocol_common: Optional[pulumi.Input[pulumi.InputType['IkeGatewayProtocolCommonArgs']]] = None,
+                 peer_address: Optional[pulumi.Input[Union['IkeGatewayPeerAddressArgs', 'IkeGatewayPeerAddressArgsDict']]] = None,
+                 peer_id: Optional[pulumi.Input[Union['IkeGatewayPeerIdArgs', 'IkeGatewayPeerIdArgsDict']]] = None,
+                 protocol: Optional[pulumi.Input[Union['IkeGatewayProtocolArgs', 'IkeGatewayProtocolArgsDict']]] = None,
+                 protocol_common: Optional[pulumi.Input[Union['IkeGatewayProtocolCommonArgs', 'IkeGatewayProtocolCommonArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -395,15 +395,15 @@ class IkeGateway(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayAuthenticationArgs']] authentication: The Authentication param.
+        :param pulumi.Input[Union['IkeGatewayAuthenticationArgs', 'IkeGatewayAuthenticationArgsDict']] authentication: The Authentication param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayLocalIdArgs']] local_id: The LocalId param.
+        :param pulumi.Input[Union['IkeGatewayLocalIdArgs', 'IkeGatewayLocalIdArgsDict']] local_id: The LocalId param.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayPeerAddressArgs']] peer_address: The PeerAddress param.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayPeerIdArgs']] peer_id: The PeerId param.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayProtocolArgs']] protocol: The Protocol param.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayProtocolCommonArgs']] protocol_common: The ProtocolCommon param.
+        :param pulumi.Input[Union['IkeGatewayPeerAddressArgs', 'IkeGatewayPeerAddressArgsDict']] peer_address: The PeerAddress param.
+        :param pulumi.Input[Union['IkeGatewayPeerIdArgs', 'IkeGatewayPeerIdArgsDict']] peer_id: The PeerId param.
+        :param pulumi.Input[Union['IkeGatewayProtocolArgs', 'IkeGatewayProtocolArgsDict']] protocol: The Protocol param.
+        :param pulumi.Input[Union['IkeGatewayProtocolCommonArgs', 'IkeGatewayProtocolCommonArgsDict']] protocol_common: The ProtocolCommon param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
         ...
@@ -430,15 +430,15 @@ class IkeGateway(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication: Optional[pulumi.Input[pulumi.InputType['IkeGatewayAuthenticationArgs']]] = None,
+                 authentication: Optional[pulumi.Input[Union['IkeGatewayAuthenticationArgs', 'IkeGatewayAuthenticationArgsDict']]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 local_id: Optional[pulumi.Input[pulumi.InputType['IkeGatewayLocalIdArgs']]] = None,
+                 local_id: Optional[pulumi.Input[Union['IkeGatewayLocalIdArgs', 'IkeGatewayLocalIdArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 peer_address: Optional[pulumi.Input[pulumi.InputType['IkeGatewayPeerAddressArgs']]] = None,
-                 peer_id: Optional[pulumi.Input[pulumi.InputType['IkeGatewayPeerIdArgs']]] = None,
-                 protocol: Optional[pulumi.Input[pulumi.InputType['IkeGatewayProtocolArgs']]] = None,
-                 protocol_common: Optional[pulumi.Input[pulumi.InputType['IkeGatewayProtocolCommonArgs']]] = None,
+                 peer_address: Optional[pulumi.Input[Union['IkeGatewayPeerAddressArgs', 'IkeGatewayPeerAddressArgsDict']]] = None,
+                 peer_id: Optional[pulumi.Input[Union['IkeGatewayPeerIdArgs', 'IkeGatewayPeerIdArgsDict']]] = None,
+                 protocol: Optional[pulumi.Input[Union['IkeGatewayProtocolArgs', 'IkeGatewayProtocolArgsDict']]] = None,
+                 protocol_common: Optional[pulumi.Input[Union['IkeGatewayProtocolCommonArgs', 'IkeGatewayProtocolCommonArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -479,16 +479,16 @@ class IkeGateway(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication: Optional[pulumi.Input[pulumi.InputType['IkeGatewayAuthenticationArgs']]] = None,
+            authentication: Optional[pulumi.Input[Union['IkeGatewayAuthenticationArgs', 'IkeGatewayAuthenticationArgsDict']]] = None,
             device: Optional[pulumi.Input[str]] = None,
             encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]] = None,
             folder: Optional[pulumi.Input[str]] = None,
-            local_id: Optional[pulumi.Input[pulumi.InputType['IkeGatewayLocalIdArgs']]] = None,
+            local_id: Optional[pulumi.Input[Union['IkeGatewayLocalIdArgs', 'IkeGatewayLocalIdArgsDict']]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            peer_address: Optional[pulumi.Input[pulumi.InputType['IkeGatewayPeerAddressArgs']]] = None,
-            peer_id: Optional[pulumi.Input[pulumi.InputType['IkeGatewayPeerIdArgs']]] = None,
-            protocol: Optional[pulumi.Input[pulumi.InputType['IkeGatewayProtocolArgs']]] = None,
-            protocol_common: Optional[pulumi.Input[pulumi.InputType['IkeGatewayProtocolCommonArgs']]] = None,
+            peer_address: Optional[pulumi.Input[Union['IkeGatewayPeerAddressArgs', 'IkeGatewayPeerAddressArgsDict']]] = None,
+            peer_id: Optional[pulumi.Input[Union['IkeGatewayPeerIdArgs', 'IkeGatewayPeerIdArgsDict']]] = None,
+            protocol: Optional[pulumi.Input[Union['IkeGatewayProtocolArgs', 'IkeGatewayProtocolArgsDict']]] = None,
+            protocol_common: Optional[pulumi.Input[Union['IkeGatewayProtocolCommonArgs', 'IkeGatewayProtocolCommonArgsDict']]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None) -> 'IkeGateway':
         """
@@ -498,16 +498,16 @@ class IkeGateway(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayAuthenticationArgs']] authentication: The Authentication param.
+        :param pulumi.Input[Union['IkeGatewayAuthenticationArgs', 'IkeGatewayAuthenticationArgsDict']] authentication: The Authentication param.
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[Mapping[str, pulumi.Input[str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayLocalIdArgs']] local_id: The LocalId param.
+        :param pulumi.Input[Union['IkeGatewayLocalIdArgs', 'IkeGatewayLocalIdArgsDict']] local_id: The LocalId param.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayPeerAddressArgs']] peer_address: The PeerAddress param.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayPeerIdArgs']] peer_id: The PeerId param.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayProtocolArgs']] protocol: The Protocol param.
-        :param pulumi.Input[pulumi.InputType['IkeGatewayProtocolCommonArgs']] protocol_common: The ProtocolCommon param.
+        :param pulumi.Input[Union['IkeGatewayPeerAddressArgs', 'IkeGatewayPeerAddressArgsDict']] peer_address: The PeerAddress param.
+        :param pulumi.Input[Union['IkeGatewayPeerIdArgs', 'IkeGatewayPeerIdArgsDict']] peer_id: The PeerId param.
+        :param pulumi.Input[Union['IkeGatewayProtocolArgs', 'IkeGatewayProtocolArgsDict']] protocol: The Protocol param.
+        :param pulumi.Input[Union['IkeGatewayProtocolCommonArgs', 'IkeGatewayProtocolCommonArgsDict']] protocol_common: The ProtocolCommon param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

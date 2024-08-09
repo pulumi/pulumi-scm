@@ -291,7 +291,7 @@ public class CertificateProfile extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CertificateProfile(String name) {
+    public CertificateProfile(java.lang.String name) {
         this(name, CertificateProfileArgs.Empty);
     }
     /**
@@ -299,7 +299,7 @@ public class CertificateProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CertificateProfile(String name, CertificateProfileArgs args) {
+    public CertificateProfile(java.lang.String name, CertificateProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -308,15 +308,22 @@ public class CertificateProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CertificateProfile(String name, CertificateProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/certificateProfile:CertificateProfile", name, args == null ? CertificateProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CertificateProfile(java.lang.String name, CertificateProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/certificateProfile:CertificateProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CertificateProfile(String name, Output<String> id, @Nullable CertificateProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/certificateProfile:CertificateProfile", name, state, makeResourceOptions(options, id));
+    private CertificateProfile(java.lang.String name, Output<java.lang.String> id, @Nullable CertificateProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/certificateProfile:CertificateProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CertificateProfileArgs makeArgs(CertificateProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CertificateProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -332,7 +339,7 @@ public class CertificateProfile extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CertificateProfile get(String name, Output<String> id, @Nullable CertificateProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CertificateProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable CertificateProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CertificateProfile(name, id, state, options);
     }
 }
