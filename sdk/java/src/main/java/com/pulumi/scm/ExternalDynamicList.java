@@ -150,7 +150,7 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ExternalDynamicList(String name) {
+    public ExternalDynamicList(java.lang.String name) {
         this(name, ExternalDynamicListArgs.Empty);
     }
     /**
@@ -158,7 +158,7 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ExternalDynamicList(String name, ExternalDynamicListArgs args) {
+    public ExternalDynamicList(java.lang.String name, ExternalDynamicListArgs args) {
         this(name, args, null);
     }
     /**
@@ -167,15 +167,22 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ExternalDynamicList(String name, ExternalDynamicListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/externalDynamicList:ExternalDynamicList", name, args == null ? ExternalDynamicListArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ExternalDynamicList(java.lang.String name, ExternalDynamicListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/externalDynamicList:ExternalDynamicList", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ExternalDynamicList(String name, Output<String> id, @Nullable ExternalDynamicListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/externalDynamicList:ExternalDynamicList", name, state, makeResourceOptions(options, id));
+    private ExternalDynamicList(java.lang.String name, Output<java.lang.String> id, @Nullable ExternalDynamicListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/externalDynamicList:ExternalDynamicList", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ExternalDynamicListArgs makeArgs(ExternalDynamicListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ExternalDynamicListArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .additionalSecretOutputs(List.of(
@@ -194,7 +201,7 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ExternalDynamicList get(String name, Output<String> id, @Nullable ExternalDynamicListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ExternalDynamicList get(java.lang.String name, Output<java.lang.String> id, @Nullable ExternalDynamicListState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ExternalDynamicList(name, id, state, options);
     }
 }

@@ -162,7 +162,7 @@ public class DynamicUserGroup extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public DynamicUserGroup(String name) {
+    public DynamicUserGroup(java.lang.String name) {
         this(name, DynamicUserGroupArgs.Empty);
     }
     /**
@@ -170,7 +170,7 @@ public class DynamicUserGroup extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public DynamicUserGroup(String name, DynamicUserGroupArgs args) {
+    public DynamicUserGroup(java.lang.String name, DynamicUserGroupArgs args) {
         this(name, args, null);
     }
     /**
@@ -179,15 +179,22 @@ public class DynamicUserGroup extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DynamicUserGroup(String name, DynamicUserGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/dynamicUserGroup:DynamicUserGroup", name, args == null ? DynamicUserGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public DynamicUserGroup(java.lang.String name, DynamicUserGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/dynamicUserGroup:DynamicUserGroup", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private DynamicUserGroup(String name, Output<String> id, @Nullable DynamicUserGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/dynamicUserGroup:DynamicUserGroup", name, state, makeResourceOptions(options, id));
+    private DynamicUserGroup(java.lang.String name, Output<java.lang.String> id, @Nullable DynamicUserGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/dynamicUserGroup:DynamicUserGroup", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static DynamicUserGroupArgs makeArgs(DynamicUserGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? DynamicUserGroupArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -203,7 +210,7 @@ public class DynamicUserGroup extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DynamicUserGroup get(String name, Output<String> id, @Nullable DynamicUserGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DynamicUserGroup get(java.lang.String name, Output<java.lang.String> id, @Nullable DynamicUserGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new DynamicUserGroup(name, id, state, options);
     }
 }

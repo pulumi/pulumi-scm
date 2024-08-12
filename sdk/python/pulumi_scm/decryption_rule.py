@@ -862,7 +862,7 @@ class DecryptionRule(pulumi.CustomResource):
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 type: Optional[pulumi.Input[pulumi.InputType['DecryptionRuleTypeArgs']]] = None,
+                 type: Optional[pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']]] = None,
                  __props__=None):
         """
         Retrieves a config item.
@@ -902,7 +902,7 @@ class DecryptionRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] sources: The Sources param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] tags: The Tags param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] tos: The Tos param.
-        :param pulumi.Input[pulumi.InputType['DecryptionRuleTypeArgs']] type: The Type param.
+        :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']] type: The Type param.
         """
         ...
     @overload
@@ -961,7 +961,7 @@ class DecryptionRule(pulumi.CustomResource):
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 type: Optional[pulumi.Input[pulumi.InputType['DecryptionRuleTypeArgs']]] = None,
+                 type: Optional[pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -1048,7 +1048,7 @@ class DecryptionRule(pulumi.CustomResource):
             tags: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             tfid: Optional[pulumi.Input[str]] = None,
             tos: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            type: Optional[pulumi.Input[pulumi.InputType['DecryptionRuleTypeArgs']]] = None) -> 'DecryptionRule':
+            type: Optional[pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']]] = None) -> 'DecryptionRule':
         """
         Get an existing DecryptionRule resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -1080,7 +1080,7 @@ class DecryptionRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] sources: The Sources param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] tags: The Tags param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] tos: The Tos param.
-        :param pulumi.Input[pulumi.InputType['DecryptionRuleTypeArgs']] type: The Type param.
+        :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']] type: The Type param.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

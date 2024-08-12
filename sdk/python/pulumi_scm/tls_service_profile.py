@@ -240,7 +240,7 @@ class TlsServiceProfile(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 protocol_settings: Optional[pulumi.Input[pulumi.InputType['TlsServiceProfileProtocolSettingsArgs']]] = None,
+                 protocol_settings: Optional[pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -261,7 +261,7 @@ class TlsServiceProfile(pulumi.CustomResource):
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[pulumi.InputType['TlsServiceProfileProtocolSettingsArgs']] protocol_settings: The ProtocolSettings param.
+        :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: The ProtocolSettings param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
         ...
@@ -301,7 +301,7 @@ class TlsServiceProfile(pulumi.CustomResource):
                  device: Optional[pulumi.Input[str]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 protocol_settings: Optional[pulumi.Input[pulumi.InputType['TlsServiceProfileProtocolSettingsArgs']]] = None,
+                 protocol_settings: Optional[pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -337,7 +337,7 @@ class TlsServiceProfile(pulumi.CustomResource):
             device: Optional[pulumi.Input[str]] = None,
             folder: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            protocol_settings: Optional[pulumi.Input[pulumi.InputType['TlsServiceProfileProtocolSettingsArgs']]] = None,
+            protocol_settings: Optional[pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None) -> 'TlsServiceProfile':
         """
@@ -351,7 +351,7 @@ class TlsServiceProfile(pulumi.CustomResource):
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[pulumi.InputType['TlsServiceProfileProtocolSettingsArgs']] protocol_settings: The ProtocolSettings param.
+        :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: The ProtocolSettings param.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

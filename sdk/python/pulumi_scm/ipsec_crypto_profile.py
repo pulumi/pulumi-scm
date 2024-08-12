@@ -333,13 +333,13 @@ class IpsecCryptoProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ah: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileAhArgs']]] = None,
+                 ah: Optional[pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  dh_group: Optional[pulumi.Input[str]] = None,
-                 esp: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileEspArgs']]] = None,
+                 esp: Optional[pulumi.Input[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 lifesize: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileLifesizeArgs']]] = None,
-                 lifetime: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileLifetimeArgs']]] = None,
+                 lifesize: Optional[pulumi.Input[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']]] = None,
+                 lifetime: Optional[pulumi.Input[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -357,13 +357,13 @@ class IpsecCryptoProfile(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['IpsecCryptoProfileAhArgs']] ah: The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+        :param pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']] ah: The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] dh_group: phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
-        :param pulumi.Input[pulumi.InputType['IpsecCryptoProfileEspArgs']] esp: The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+        :param pulumi.Input[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']] esp: The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[pulumi.InputType['IpsecCryptoProfileLifesizeArgs']] lifesize: The Lifesize param.
-        :param pulumi.Input[pulumi.InputType['IpsecCryptoProfileLifetimeArgs']] lifetime: The Lifetime param.
+        :param pulumi.Input[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']] lifesize: The Lifesize param.
+        :param pulumi.Input[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']] lifetime: The Lifetime param.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
         """
@@ -400,13 +400,13 @@ class IpsecCryptoProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ah: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileAhArgs']]] = None,
+                 ah: Optional[pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']]] = None,
                  device: Optional[pulumi.Input[str]] = None,
                  dh_group: Optional[pulumi.Input[str]] = None,
-                 esp: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileEspArgs']]] = None,
+                 esp: Optional[pulumi.Input[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
-                 lifesize: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileLifesizeArgs']]] = None,
-                 lifetime: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileLifetimeArgs']]] = None,
+                 lifesize: Optional[pulumi.Input[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']]] = None,
+                 lifetime: Optional[pulumi.Input[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -440,13 +440,13 @@ class IpsecCryptoProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ah: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileAhArgs']]] = None,
+            ah: Optional[pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']]] = None,
             device: Optional[pulumi.Input[str]] = None,
             dh_group: Optional[pulumi.Input[str]] = None,
-            esp: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileEspArgs']]] = None,
+            esp: Optional[pulumi.Input[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']]] = None,
             folder: Optional[pulumi.Input[str]] = None,
-            lifesize: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileLifesizeArgs']]] = None,
-            lifetime: Optional[pulumi.Input[pulumi.InputType['IpsecCryptoProfileLifetimeArgs']]] = None,
+            lifesize: Optional[pulumi.Input[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']]] = None,
+            lifetime: Optional[pulumi.Input[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']]] = None,
             name: Optional[pulumi.Input[str]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None) -> 'IpsecCryptoProfile':
@@ -457,13 +457,13 @@ class IpsecCryptoProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['IpsecCryptoProfileAhArgs']] ah: The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+        :param pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']] ah: The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
         :param pulumi.Input[str] device: The Device param.
         :param pulumi.Input[str] dh_group: phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
-        :param pulumi.Input[pulumi.InputType['IpsecCryptoProfileEspArgs']] esp: The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+        :param pulumi.Input[Union['IpsecCryptoProfileEspArgs', 'IpsecCryptoProfileEspArgsDict']] esp: The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
         :param pulumi.Input[str] folder: The Folder param.
-        :param pulumi.Input[pulumi.InputType['IpsecCryptoProfileLifesizeArgs']] lifesize: The Lifesize param.
-        :param pulumi.Input[pulumi.InputType['IpsecCryptoProfileLifetimeArgs']] lifetime: The Lifetime param.
+        :param pulumi.Input[Union['IpsecCryptoProfileLifesizeArgs', 'IpsecCryptoProfileLifesizeArgsDict']] lifesize: The Lifesize param.
+        :param pulumi.Input[Union['IpsecCryptoProfileLifetimeArgs', 'IpsecCryptoProfileLifetimeArgsDict']] lifetime: The Lifetime param.
         :param pulumi.Input[str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
         """

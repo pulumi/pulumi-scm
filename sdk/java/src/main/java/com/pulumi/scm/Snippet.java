@@ -191,7 +191,7 @@ public class Snippet extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Snippet(String name) {
+    public Snippet(java.lang.String name) {
         this(name, SnippetArgs.Empty);
     }
     /**
@@ -199,7 +199,7 @@ public class Snippet extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Snippet(String name, @Nullable SnippetArgs args) {
+    public Snippet(java.lang.String name, @Nullable SnippetArgs args) {
         this(name, args, null);
     }
     /**
@@ -208,15 +208,22 @@ public class Snippet extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Snippet(String name, @Nullable SnippetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/snippet:Snippet", name, args == null ? SnippetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public Snippet(java.lang.String name, @Nullable SnippetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/snippet:Snippet", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Snippet(String name, Output<String> id, @Nullable SnippetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/snippet:Snippet", name, state, makeResourceOptions(options, id));
+    private Snippet(java.lang.String name, Output<java.lang.String> id, @Nullable SnippetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/snippet:Snippet", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SnippetArgs makeArgs(@Nullable SnippetArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SnippetArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -232,7 +239,7 @@ public class Snippet extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Snippet get(String name, Output<String> id, @Nullable SnippetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Snippet get(java.lang.String name, Output<java.lang.String> id, @Nullable SnippetState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Snippet(name, id, state, options);
     }
 }

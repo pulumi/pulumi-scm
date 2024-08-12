@@ -219,7 +219,7 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SamlServerProfile(String name) {
+    public SamlServerProfile(java.lang.String name) {
         this(name, SamlServerProfileArgs.Empty);
     }
     /**
@@ -227,7 +227,7 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SamlServerProfile(String name, SamlServerProfileArgs args) {
+    public SamlServerProfile(java.lang.String name, SamlServerProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -236,15 +236,22 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SamlServerProfile(String name, SamlServerProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/samlServerProfile:SamlServerProfile", name, args == null ? SamlServerProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SamlServerProfile(java.lang.String name, SamlServerProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/samlServerProfile:SamlServerProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SamlServerProfile(String name, Output<String> id, @Nullable SamlServerProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/samlServerProfile:SamlServerProfile", name, state, makeResourceOptions(options, id));
+    private SamlServerProfile(java.lang.String name, Output<java.lang.String> id, @Nullable SamlServerProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/samlServerProfile:SamlServerProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SamlServerProfileArgs makeArgs(SamlServerProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SamlServerProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -260,7 +267,7 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SamlServerProfile get(String name, Output<String> id, @Nullable SamlServerProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SamlServerProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable SamlServerProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SamlServerProfile(name, id, state, options);
     }
 }
