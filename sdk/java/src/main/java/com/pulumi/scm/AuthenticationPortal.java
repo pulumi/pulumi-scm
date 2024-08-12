@@ -204,7 +204,7 @@ public class AuthenticationPortal extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AuthenticationPortal(String name) {
+    public AuthenticationPortal(java.lang.String name) {
         this(name, AuthenticationPortalArgs.Empty);
     }
     /**
@@ -212,7 +212,7 @@ public class AuthenticationPortal extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AuthenticationPortal(String name, @Nullable AuthenticationPortalArgs args) {
+    public AuthenticationPortal(java.lang.String name, @Nullable AuthenticationPortalArgs args) {
         this(name, args, null);
     }
     /**
@@ -221,15 +221,22 @@ public class AuthenticationPortal extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AuthenticationPortal(String name, @Nullable AuthenticationPortalArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/authenticationPortal:AuthenticationPortal", name, args == null ? AuthenticationPortalArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AuthenticationPortal(java.lang.String name, @Nullable AuthenticationPortalArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/authenticationPortal:AuthenticationPortal", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AuthenticationPortal(String name, Output<String> id, @Nullable AuthenticationPortalState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/authenticationPortal:AuthenticationPortal", name, state, makeResourceOptions(options, id));
+    private AuthenticationPortal(java.lang.String name, Output<java.lang.String> id, @Nullable AuthenticationPortalState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/authenticationPortal:AuthenticationPortal", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AuthenticationPortalArgs makeArgs(@Nullable AuthenticationPortalArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AuthenticationPortalArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -245,7 +252,7 @@ public class AuthenticationPortal extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AuthenticationPortal get(String name, Output<String> id, @Nullable AuthenticationPortalState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AuthenticationPortal get(java.lang.String name, Output<java.lang.String> id, @Nullable AuthenticationPortalState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AuthenticationPortal(name, id, state, options);
     }
 }

@@ -225,7 +225,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
-                 type: Optional[pulumi.Input[pulumi.InputType['ExternalDynamicListTypeArgs']]] = None,
+                 type: Optional[pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']]] = None,
                  __props__=None):
         """
         Retrieves a config item.
@@ -245,7 +245,7 @@ class ExternalDynamicList(pulumi.CustomResource):
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
-        :param pulumi.Input[pulumi.InputType['ExternalDynamicListTypeArgs']] type: The Type param.
+        :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']] type: The Type param.
         """
         ...
     @overload
@@ -284,7 +284,7 @@ class ExternalDynamicList(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  snippet: Optional[pulumi.Input[str]] = None,
-                 type: Optional[pulumi.Input[pulumi.InputType['ExternalDynamicListTypeArgs']]] = None,
+                 type: Optional[pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -321,7 +321,7 @@ class ExternalDynamicList(pulumi.CustomResource):
             name: Optional[pulumi.Input[str]] = None,
             snippet: Optional[pulumi.Input[str]] = None,
             tfid: Optional[pulumi.Input[str]] = None,
-            type: Optional[pulumi.Input[pulumi.InputType['ExternalDynamicListTypeArgs']]] = None) -> 'ExternalDynamicList':
+            type: Optional[pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']]] = None) -> 'ExternalDynamicList':
         """
         Get an existing ExternalDynamicList resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -334,7 +334,7 @@ class ExternalDynamicList(pulumi.CustomResource):
         :param pulumi.Input[str] folder: The Folder param.
         :param pulumi.Input[str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
         :param pulumi.Input[str] snippet: The Snippet param.
-        :param pulumi.Input[pulumi.InputType['ExternalDynamicListTypeArgs']] type: The Type param.
+        :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']] type: The Type param.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

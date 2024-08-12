@@ -300,7 +300,7 @@ class TrafficSteeringRule(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: Optional[pulumi.Input[pulumi.InputType['TrafficSteeringRuleActionArgs']]] = None,
+                 action: Optional[pulumi.Input[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict']]] = None,
                  categories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
@@ -323,7 +323,7 @@ class TrafficSteeringRule(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['TrafficSteeringRuleActionArgs']] action: The Action param.
+        :param pulumi.Input[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict']] action: The Action param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] categories: The Category param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] destinations: The Destination param.
         :param pulumi.Input[str] folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
@@ -365,7 +365,7 @@ class TrafficSteeringRule(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 action: Optional[pulumi.Input[pulumi.InputType['TrafficSteeringRuleActionArgs']]] = None,
+                 action: Optional[pulumi.Input[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict']]] = None,
                  categories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  folder: Optional[pulumi.Input[str]] = None,
@@ -405,7 +405,7 @@ class TrafficSteeringRule(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            action: Optional[pulumi.Input[pulumi.InputType['TrafficSteeringRuleActionArgs']]] = None,
+            action: Optional[pulumi.Input[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict']]] = None,
             categories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             destinations: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             folder: Optional[pulumi.Input[str]] = None,
@@ -421,7 +421,7 @@ class TrafficSteeringRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['TrafficSteeringRuleActionArgs']] action: The Action param.
+        :param pulumi.Input[Union['TrafficSteeringRuleActionArgs', 'TrafficSteeringRuleActionArgsDict']] action: The Action param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] categories: The Category param.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] destinations: The Destination param.
         :param pulumi.Input[str] folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.

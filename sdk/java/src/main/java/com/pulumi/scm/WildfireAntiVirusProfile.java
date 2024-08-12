@@ -197,7 +197,7 @@ public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResourc
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WildfireAntiVirusProfile(String name) {
+    public WildfireAntiVirusProfile(java.lang.String name) {
         this(name, WildfireAntiVirusProfileArgs.Empty);
     }
     /**
@@ -205,7 +205,7 @@ public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResourc
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WildfireAntiVirusProfile(String name, @Nullable WildfireAntiVirusProfileArgs args) {
+    public WildfireAntiVirusProfile(java.lang.String name, @Nullable WildfireAntiVirusProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -214,15 +214,22 @@ public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WildfireAntiVirusProfile(String name, @Nullable WildfireAntiVirusProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile", name, args == null ? WildfireAntiVirusProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public WildfireAntiVirusProfile(java.lang.String name, @Nullable WildfireAntiVirusProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WildfireAntiVirusProfile(String name, Output<String> id, @Nullable WildfireAntiVirusProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile", name, state, makeResourceOptions(options, id));
+    private WildfireAntiVirusProfile(java.lang.String name, Output<java.lang.String> id, @Nullable WildfireAntiVirusProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static WildfireAntiVirusProfileArgs makeArgs(@Nullable WildfireAntiVirusProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WildfireAntiVirusProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -238,7 +245,7 @@ public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WildfireAntiVirusProfile get(String name, Output<String> id, @Nullable WildfireAntiVirusProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WildfireAntiVirusProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable WildfireAntiVirusProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WildfireAntiVirusProfile(name, id, state, options);
     }
 }

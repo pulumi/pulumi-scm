@@ -193,7 +193,7 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public IpsecCryptoProfile(String name) {
+    public IpsecCryptoProfile(java.lang.String name) {
         this(name, IpsecCryptoProfileArgs.Empty);
     }
     /**
@@ -201,7 +201,7 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public IpsecCryptoProfile(String name, IpsecCryptoProfileArgs args) {
+    public IpsecCryptoProfile(java.lang.String name, IpsecCryptoProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -210,15 +210,22 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public IpsecCryptoProfile(String name, IpsecCryptoProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/ipsecCryptoProfile:IpsecCryptoProfile", name, args == null ? IpsecCryptoProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public IpsecCryptoProfile(java.lang.String name, IpsecCryptoProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/ipsecCryptoProfile:IpsecCryptoProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private IpsecCryptoProfile(String name, Output<String> id, @Nullable IpsecCryptoProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("scm:index/ipsecCryptoProfile:IpsecCryptoProfile", name, state, makeResourceOptions(options, id));
+    private IpsecCryptoProfile(java.lang.String name, Output<java.lang.String> id, @Nullable IpsecCryptoProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("scm:index/ipsecCryptoProfile:IpsecCryptoProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static IpsecCryptoProfileArgs makeArgs(IpsecCryptoProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? IpsecCryptoProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -234,7 +241,7 @@ public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IpsecCryptoProfile get(String name, Output<String> id, @Nullable IpsecCryptoProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static IpsecCryptoProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable IpsecCryptoProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new IpsecCryptoProfile(name, id, state, options);
     }
 }
