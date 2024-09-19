@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getServiceConnectionGroupList(args?: GetServiceConnectionGroupListArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceConnectionGroupListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getServiceConnectionGroupList:getServiceConnectionGroupList", {
         "folder": args.folder,
@@ -103,7 +102,14 @@ export interface GetServiceConnectionGroupListResult {
  * ```
  */
 export function getServiceConnectionGroupListOutput(args?: GetServiceConnectionGroupListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceConnectionGroupListResult> {
-    return pulumi.output(args).apply((a: any) => getServiceConnectionGroupList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getServiceConnectionGroupList:getServiceConnectionGroupList", {
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+    }, opts);
 }
 
 /**

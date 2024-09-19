@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getDecryptionExclusion(args: GetDecryptionExclusionArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionExclusionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDecryptionExclusion:getDecryptionExclusion", {
         "id": args.id,
@@ -69,7 +68,10 @@ export interface GetDecryptionExclusionResult {
  * ```
  */
 export function getDecryptionExclusionOutput(args: GetDecryptionExclusionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDecryptionExclusionResult> {
-    return pulumi.output(args).apply((a: any) => getDecryptionExclusion(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getDecryptionExclusion:getDecryptionExclusion", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

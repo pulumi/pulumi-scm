@@ -69,14 +69,20 @@ type LookupDnsSecurityProfileResult struct {
 
 func LookupDnsSecurityProfileOutput(ctx *pulumi.Context, args LookupDnsSecurityProfileOutputArgs, opts ...pulumi.InvokeOption) LookupDnsSecurityProfileResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupDnsSecurityProfileResult, error) {
+		ApplyT(func(v interface{}) (LookupDnsSecurityProfileResultOutput, error) {
 			args := v.(LookupDnsSecurityProfileArgs)
-			r, err := LookupDnsSecurityProfile(ctx, &args, opts...)
-			var s LookupDnsSecurityProfileResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupDnsSecurityProfileResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", args, &rv, "", opts...)
+			if err != nil {
+				return LookupDnsSecurityProfileResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupDnsSecurityProfileResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupDnsSecurityProfileResultOutput), nil
+			}
+			return output, nil
 		}).(LookupDnsSecurityProfileResultOutput)
 }
 

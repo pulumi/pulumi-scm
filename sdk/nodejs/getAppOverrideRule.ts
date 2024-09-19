@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getAppOverrideRule(args: GetAppOverrideRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetAppOverrideRuleResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAppOverrideRule:getAppOverrideRule", {
         "id": args.id,
@@ -117,7 +116,10 @@ export interface GetAppOverrideRuleResult {
  * ```
  */
 export function getAppOverrideRuleOutput(args: GetAppOverrideRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAppOverrideRuleResult> {
-    return pulumi.output(args).apply((a: any) => getAppOverrideRule(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAppOverrideRule:getAppOverrideRule", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

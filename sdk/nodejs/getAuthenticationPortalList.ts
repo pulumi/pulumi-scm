@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getAuthenticationPortalList(args?: GetAuthenticationPortalListArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationPortalListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationPortalList:getAuthenticationPortalList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetAuthenticationPortalListResult {
  * ```
  */
 export function getAuthenticationPortalListOutput(args?: GetAuthenticationPortalListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationPortalListResult> {
-    return pulumi.output(args).apply((a: any) => getAuthenticationPortalList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAuthenticationPortalList:getAuthenticationPortalList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

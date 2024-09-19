@@ -89,14 +89,20 @@ type GetTrustedCertificateAuthorityListResult struct {
 
 func GetTrustedCertificateAuthorityListOutput(ctx *pulumi.Context, args GetTrustedCertificateAuthorityListOutputArgs, opts ...pulumi.InvokeOption) GetTrustedCertificateAuthorityListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetTrustedCertificateAuthorityListResult, error) {
+		ApplyT(func(v interface{}) (GetTrustedCertificateAuthorityListResultOutput, error) {
 			args := v.(GetTrustedCertificateAuthorityListArgs)
-			r, err := GetTrustedCertificateAuthorityList(ctx, &args, opts...)
-			var s GetTrustedCertificateAuthorityListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetTrustedCertificateAuthorityListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getTrustedCertificateAuthorityList:getTrustedCertificateAuthorityList", args, &rv, "", opts...)
+			if err != nil {
+				return GetTrustedCertificateAuthorityListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetTrustedCertificateAuthorityListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetTrustedCertificateAuthorityListResultOutput), nil
+			}
+			return output, nil
 		}).(GetTrustedCertificateAuthorityListResultOutput)
 }
 

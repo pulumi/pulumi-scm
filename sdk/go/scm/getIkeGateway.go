@@ -89,14 +89,20 @@ type LookupIkeGatewayResult struct {
 
 func LookupIkeGatewayOutput(ctx *pulumi.Context, args LookupIkeGatewayOutputArgs, opts ...pulumi.InvokeOption) LookupIkeGatewayResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupIkeGatewayResult, error) {
+		ApplyT(func(v interface{}) (LookupIkeGatewayResultOutput, error) {
 			args := v.(LookupIkeGatewayArgs)
-			r, err := LookupIkeGateway(ctx, &args, opts...)
-			var s LookupIkeGatewayResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupIkeGatewayResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getIkeGateway:getIkeGateway", args, &rv, "", opts...)
+			if err != nil {
+				return LookupIkeGatewayResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupIkeGatewayResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupIkeGatewayResultOutput), nil
+			}
+			return output, nil
 		}).(LookupIkeGatewayResultOutput)
 }
 

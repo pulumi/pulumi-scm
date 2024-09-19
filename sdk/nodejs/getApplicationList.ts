@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getApplicationList(args?: GetApplicationListArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getApplicationList:getApplicationList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetApplicationListResult {
  * ```
  */
 export function getApplicationListOutput(args?: GetApplicationListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationListResult> {
-    return pulumi.output(args).apply((a: any) => getApplicationList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getApplicationList:getApplicationList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

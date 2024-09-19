@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getQosPolicyRule(args: GetQosPolicyRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetQosPolicyRuleResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getQosPolicyRule:getQosPolicyRule", {
         "folder": args.folder,
@@ -92,7 +91,11 @@ export interface GetQosPolicyRuleResult {
  * ```
  */
 export function getQosPolicyRuleOutput(args: GetQosPolicyRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetQosPolicyRuleResult> {
-    return pulumi.output(args).apply((a: any) => getQosPolicyRule(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getQosPolicyRule:getQosPolicyRule", {
+        "folder": args.folder,
+        "id": args.id,
+    }, opts);
 }
 
 /**

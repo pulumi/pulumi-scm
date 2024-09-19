@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getDecryptionProfileList(args?: GetDecryptionProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDecryptionProfileList:getDecryptionProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetDecryptionProfileListResult {
  * ```
  */
 export function getDecryptionProfileListOutput(args?: GetDecryptionProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDecryptionProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getDecryptionProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getDecryptionProfileList:getDecryptionProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getExternalDynamicList(args: GetExternalDynamicListArgs, opts?: pulumi.InvokeOptions): Promise<GetExternalDynamicListResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getExternalDynamicList:getExternalDynamicList", {
         "id": args.id,
@@ -71,7 +70,10 @@ export interface GetExternalDynamicListResult {
  * ```
  */
 export function getExternalDynamicListOutput(args: GetExternalDynamicListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetExternalDynamicListResult> {
-    return pulumi.output(args).apply((a: any) => getExternalDynamicList(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getExternalDynamicList:getExternalDynamicList", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

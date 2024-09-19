@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getApplicationFilterList(args?: GetApplicationFilterListArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationFilterListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getApplicationFilterList:getApplicationFilterList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetApplicationFilterListResult {
  * ```
  */
 export function getApplicationFilterListOutput(args?: GetApplicationFilterListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationFilterListResult> {
-    return pulumi.output(args).apply((a: any) => getApplicationFilterList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getApplicationFilterList:getApplicationFilterList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

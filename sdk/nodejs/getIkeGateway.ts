@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getIkeGateway(args: GetIkeGatewayArgs, opts?: pulumi.InvokeOptions): Promise<GetIkeGatewayResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIkeGateway:getIkeGateway", {
         "device": args.device,
@@ -118,7 +117,13 @@ export interface GetIkeGatewayResult {
  * ```
  */
 export function getIkeGatewayOutput(args: GetIkeGatewayOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIkeGatewayResult> {
-    return pulumi.output(args).apply((a: any) => getIkeGateway(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getIkeGateway:getIkeGateway", {
+        "device": args.device,
+        "folder": args.folder,
+        "id": args.id,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

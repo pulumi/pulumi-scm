@@ -89,14 +89,20 @@ type GetVariableListResult struct {
 
 func GetVariableListOutput(ctx *pulumi.Context, args GetVariableListOutputArgs, opts ...pulumi.InvokeOption) GetVariableListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetVariableListResult, error) {
+		ApplyT(func(v interface{}) (GetVariableListResultOutput, error) {
 			args := v.(GetVariableListArgs)
-			r, err := GetVariableList(ctx, &args, opts...)
-			var s GetVariableListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetVariableListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getVariableList:getVariableList", args, &rv, "", opts...)
+			if err != nil {
+				return GetVariableListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetVariableListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetVariableListResultOutput), nil
+			}
+			return output, nil
 		}).(GetVariableListResultOutput)
 }
 

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSnippet(args: GetSnippetArgs, opts?: pulumi.InvokeOptions): Promise<GetSnippetResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSnippet:getSnippet", {
         "id": args.id,
@@ -99,7 +98,10 @@ export interface GetSnippetResult {
  * ```
  */
 export function getSnippetOutput(args: GetSnippetOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSnippetResult> {
-    return pulumi.output(args).apply((a: any) => getSnippet(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getSnippet:getSnippet", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

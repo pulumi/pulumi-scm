@@ -87,14 +87,20 @@ type LookupIkeCryptoProfileResult struct {
 
 func LookupIkeCryptoProfileOutput(ctx *pulumi.Context, args LookupIkeCryptoProfileOutputArgs, opts ...pulumi.InvokeOption) LookupIkeCryptoProfileResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupIkeCryptoProfileResult, error) {
+		ApplyT(func(v interface{}) (LookupIkeCryptoProfileResultOutput, error) {
 			args := v.(LookupIkeCryptoProfileArgs)
-			r, err := LookupIkeCryptoProfile(ctx, &args, opts...)
-			var s LookupIkeCryptoProfileResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupIkeCryptoProfileResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getIkeCryptoProfile:getIkeCryptoProfile", args, &rv, "", opts...)
+			if err != nil {
+				return LookupIkeCryptoProfileResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupIkeCryptoProfileResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupIkeCryptoProfileResultOutput), nil
+			}
+			return output, nil
 		}).(LookupIkeCryptoProfileResultOutput)
 }
 

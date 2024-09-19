@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getApplicationGroupList(args?: GetApplicationGroupListArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationGroupListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getApplicationGroupList:getApplicationGroupList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetApplicationGroupListResult {
  * ```
  */
 export function getApplicationGroupListOutput(args?: GetApplicationGroupListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationGroupListResult> {
-    return pulumi.output(args).apply((a: any) => getApplicationGroupList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getApplicationGroupList:getApplicationGroupList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

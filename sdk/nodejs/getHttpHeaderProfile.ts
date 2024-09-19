@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getHttpHeaderProfile(args: GetHttpHeaderProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetHttpHeaderProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", {
         "id": args.id,
@@ -75,7 +74,10 @@ export interface GetHttpHeaderProfileResult {
  * ```
  */
 export function getHttpHeaderProfileOutput(args: GetHttpHeaderProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHttpHeaderProfileResult> {
-    return pulumi.output(args).apply((a: any) => getHttpHeaderProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

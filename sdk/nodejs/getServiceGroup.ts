@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getServiceGroup(args: GetServiceGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceGroupResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getServiceGroup:getServiceGroup", {
         "id": args.id,
@@ -73,7 +72,10 @@ export interface GetServiceGroupResult {
  * ```
  */
 export function getServiceGroupOutput(args: GetServiceGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceGroupResult> {
-    return pulumi.output(args).apply((a: any) => getServiceGroup(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getServiceGroup:getServiceGroup", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

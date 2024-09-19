@@ -89,14 +89,20 @@ type GetWildfireAntiVirusProfileListResult struct {
 
 func GetWildfireAntiVirusProfileListOutput(ctx *pulumi.Context, args GetWildfireAntiVirusProfileListOutputArgs, opts ...pulumi.InvokeOption) GetWildfireAntiVirusProfileListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetWildfireAntiVirusProfileListResult, error) {
+		ApplyT(func(v interface{}) (GetWildfireAntiVirusProfileListResultOutput, error) {
 			args := v.(GetWildfireAntiVirusProfileListArgs)
-			r, err := GetWildfireAntiVirusProfileList(ctx, &args, opts...)
-			var s GetWildfireAntiVirusProfileListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetWildfireAntiVirusProfileListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getWildfireAntiVirusProfileList:getWildfireAntiVirusProfileList", args, &rv, "", opts...)
+			if err != nil {
+				return GetWildfireAntiVirusProfileListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetWildfireAntiVirusProfileListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetWildfireAntiVirusProfileListResultOutput), nil
+			}
+			return output, nil
 		}).(GetWildfireAntiVirusProfileListResultOutput)
 }
 

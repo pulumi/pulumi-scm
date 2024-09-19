@@ -23,7 +23,6 @@ import * as utilities from "./utilities";
  */
 export function getSecurityRuleList(args?: GetSecurityRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetSecurityRuleListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSecurityRuleList:getSecurityRuleList", {
         "device": args.device,
@@ -132,7 +131,17 @@ export interface GetSecurityRuleListResult {
  * ```
  */
 export function getSecurityRuleListOutput(args?: GetSecurityRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSecurityRuleListResult> {
-    return pulumi.output(args).apply((a: any) => getSecurityRuleList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getSecurityRuleList:getSecurityRuleList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "position": args.position,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

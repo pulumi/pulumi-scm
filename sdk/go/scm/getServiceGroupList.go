@@ -89,14 +89,20 @@ type GetServiceGroupListResult struct {
 
 func GetServiceGroupListOutput(ctx *pulumi.Context, args GetServiceGroupListOutputArgs, opts ...pulumi.InvokeOption) GetServiceGroupListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetServiceGroupListResult, error) {
+		ApplyT(func(v interface{}) (GetServiceGroupListResultOutput, error) {
 			args := v.(GetServiceGroupListArgs)
-			r, err := GetServiceGroupList(ctx, &args, opts...)
-			var s GetServiceGroupListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetServiceGroupListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getServiceGroupList:getServiceGroupList", args, &rv, "", opts...)
+			if err != nil {
+				return GetServiceGroupListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetServiceGroupListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetServiceGroupListResultOutput), nil
+			}
+			return output, nil
 		}).(GetServiceGroupListResultOutput)
 }
 

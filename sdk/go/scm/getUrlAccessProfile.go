@@ -93,14 +93,20 @@ type LookupUrlAccessProfileResult struct {
 
 func LookupUrlAccessProfileOutput(ctx *pulumi.Context, args LookupUrlAccessProfileOutputArgs, opts ...pulumi.InvokeOption) LookupUrlAccessProfileResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupUrlAccessProfileResult, error) {
+		ApplyT(func(v interface{}) (LookupUrlAccessProfileResultOutput, error) {
 			args := v.(LookupUrlAccessProfileArgs)
-			r, err := LookupUrlAccessProfile(ctx, &args, opts...)
-			var s LookupUrlAccessProfileResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupUrlAccessProfileResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getUrlAccessProfile:getUrlAccessProfile", args, &rv, "", opts...)
+			if err != nil {
+				return LookupUrlAccessProfileResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupUrlAccessProfileResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupUrlAccessProfileResultOutput), nil
+			}
+			return output, nil
 		}).(LookupUrlAccessProfileResultOutput)
 }
 

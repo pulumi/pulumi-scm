@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getDecryptionProfile(args: GetDecryptionProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDecryptionProfile:getDecryptionProfile", {
         "id": args.id,
@@ -83,7 +82,10 @@ export interface GetDecryptionProfileResult {
  * ```
  */
 export function getDecryptionProfileOutput(args: GetDecryptionProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDecryptionProfileResult> {
-    return pulumi.output(args).apply((a: any) => getDecryptionProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getDecryptionProfile:getDecryptionProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

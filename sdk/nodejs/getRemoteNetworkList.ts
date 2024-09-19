@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getRemoteNetworkList(args?: GetRemoteNetworkListArgs, opts?: pulumi.InvokeOptions): Promise<GetRemoteNetworkListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRemoteNetworkList:getRemoteNetworkList", {
         "folder": args.folder,
@@ -103,7 +102,14 @@ export interface GetRemoteNetworkListResult {
  * ```
  */
 export function getRemoteNetworkListOutput(args?: GetRemoteNetworkListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRemoteNetworkListResult> {
-    return pulumi.output(args).apply((a: any) => getRemoteNetworkList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getRemoteNetworkList:getRemoteNetworkList", {
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+    }, opts);
 }
 
 /**

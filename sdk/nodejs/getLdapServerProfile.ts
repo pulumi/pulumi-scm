@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getLdapServerProfile(args: GetLdapServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetLdapServerProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLdapServerProfile:getLdapServerProfile", {
         "id": args.id,
@@ -103,7 +102,10 @@ export interface GetLdapServerProfileResult {
  * ```
  */
 export function getLdapServerProfileOutput(args: GetLdapServerProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLdapServerProfileResult> {
-    return pulumi.output(args).apply((a: any) => getLdapServerProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getLdapServerProfile:getLdapServerProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

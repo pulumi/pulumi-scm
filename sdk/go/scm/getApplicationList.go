@@ -89,14 +89,20 @@ type GetApplicationListResult struct {
 
 func GetApplicationListOutput(ctx *pulumi.Context, args GetApplicationListOutputArgs, opts ...pulumi.InvokeOption) GetApplicationListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetApplicationListResult, error) {
+		ApplyT(func(v interface{}) (GetApplicationListResultOutput, error) {
 			args := v.(GetApplicationListArgs)
-			r, err := GetApplicationList(ctx, &args, opts...)
-			var s GetApplicationListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetApplicationListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getApplicationList:getApplicationList", args, &rv, "", opts...)
+			if err != nil {
+				return GetApplicationListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetApplicationListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetApplicationListResultOutput), nil
+			}
+			return output, nil
 		}).(GetApplicationListResultOutput)
 }
 

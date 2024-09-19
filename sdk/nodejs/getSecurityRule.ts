@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSecurityRule(args: GetSecurityRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetSecurityRuleResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSecurityRule:getSecurityRule", {
         "id": args.id,
@@ -139,7 +138,10 @@ export interface GetSecurityRuleResult {
  * ```
  */
 export function getSecurityRuleOutput(args: GetSecurityRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSecurityRuleResult> {
-    return pulumi.output(args).apply((a: any) => getSecurityRule(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getSecurityRule:getSecurityRule", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

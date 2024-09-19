@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getIpsecCryptoProfileList(args?: GetIpsecCryptoProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetIpsecCryptoProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIpsecCryptoProfileList:getIpsecCryptoProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetIpsecCryptoProfileListResult {
  * ```
  */
 export function getIpsecCryptoProfileListOutput(args?: GetIpsecCryptoProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpsecCryptoProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getIpsecCryptoProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getIpsecCryptoProfileList:getIpsecCryptoProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

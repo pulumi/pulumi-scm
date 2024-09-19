@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getIpsecCryptoProfile(args: GetIpsecCryptoProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetIpsecCryptoProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", {
         "device": args.device,
@@ -114,7 +113,13 @@ export interface GetIpsecCryptoProfileResult {
  * ```
  */
 export function getIpsecCryptoProfileOutput(args: GetIpsecCryptoProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpsecCryptoProfileResult> {
-    return pulumi.output(args).apply((a: any) => getIpsecCryptoProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", {
+        "device": args.device,
+        "folder": args.folder,
+        "id": args.id,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

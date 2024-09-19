@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getOcspResponderList(args?: GetOcspResponderListArgs, opts?: pulumi.InvokeOptions): Promise<GetOcspResponderListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getOcspResponderList:getOcspResponderList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetOcspResponderListResult {
  * ```
  */
 export function getOcspResponderListOutput(args?: GetOcspResponderListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetOcspResponderListResult> {
-    return pulumi.output(args).apply((a: any) => getOcspResponderList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getOcspResponderList:getOcspResponderList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

@@ -89,14 +89,20 @@ type GetLocalUserListResult struct {
 
 func GetLocalUserListOutput(ctx *pulumi.Context, args GetLocalUserListOutputArgs, opts ...pulumi.InvokeOption) GetLocalUserListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetLocalUserListResult, error) {
+		ApplyT(func(v interface{}) (GetLocalUserListResultOutput, error) {
 			args := v.(GetLocalUserListArgs)
-			r, err := GetLocalUserList(ctx, &args, opts...)
-			var s GetLocalUserListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetLocalUserListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getLocalUserList:getLocalUserList", args, &rv, "", opts...)
+			if err != nil {
+				return GetLocalUserListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetLocalUserListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetLocalUserListResultOutput), nil
+			}
+			return output, nil
 		}).(GetLocalUserListResultOutput)
 }
 

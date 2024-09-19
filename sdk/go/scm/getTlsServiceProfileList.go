@@ -89,14 +89,20 @@ type GetTlsServiceProfileListResult struct {
 
 func GetTlsServiceProfileListOutput(ctx *pulumi.Context, args GetTlsServiceProfileListOutputArgs, opts ...pulumi.InvokeOption) GetTlsServiceProfileListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetTlsServiceProfileListResult, error) {
+		ApplyT(func(v interface{}) (GetTlsServiceProfileListResultOutput, error) {
 			args := v.(GetTlsServiceProfileListArgs)
-			r, err := GetTlsServiceProfileList(ctx, &args, opts...)
-			var s GetTlsServiceProfileListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetTlsServiceProfileListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getTlsServiceProfileList:getTlsServiceProfileList", args, &rv, "", opts...)
+			if err != nil {
+				return GetTlsServiceProfileListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetTlsServiceProfileListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetTlsServiceProfileListResultOutput), nil
+			}
+			return output, nil
 		}).(GetTlsServiceProfileListResultOutput)
 }
 

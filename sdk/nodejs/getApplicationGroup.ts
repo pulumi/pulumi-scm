@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getApplicationGroup(args: GetApplicationGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationGroupResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getApplicationGroup:getApplicationGroup", {
         "id": args.id,
@@ -69,7 +68,10 @@ export interface GetApplicationGroupResult {
  * ```
  */
 export function getApplicationGroupOutput(args: GetApplicationGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationGroupResult> {
-    return pulumi.output(args).apply((a: any) => getApplicationGroup(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getApplicationGroup:getApplicationGroup", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

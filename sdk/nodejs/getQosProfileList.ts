@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getQosProfileList(args?: GetQosProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetQosProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getQosProfileList:getQosProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetQosProfileListResult {
  * ```
  */
 export function getQosProfileListOutput(args?: GetQosProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetQosProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getQosProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getQosProfileList:getQosProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getDynamicUserGroupList(args?: GetDynamicUserGroupListArgs, opts?: pulumi.InvokeOptions): Promise<GetDynamicUserGroupListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDynamicUserGroupList:getDynamicUserGroupList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetDynamicUserGroupListResult {
  * ```
  */
 export function getDynamicUserGroupListOutput(args?: GetDynamicUserGroupListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDynamicUserGroupListResult> {
-    return pulumi.output(args).apply((a: any) => getDynamicUserGroupList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getDynamicUserGroupList:getDynamicUserGroupList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

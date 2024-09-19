@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getRadiusServerProfileList(args?: GetRadiusServerProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetRadiusServerProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetRadiusServerProfileListResult {
  * ```
  */
 export function getRadiusServerProfileListOutput(args?: GetRadiusServerProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRadiusServerProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getRadiusServerProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

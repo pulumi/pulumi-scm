@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getHipProfile(args: GetHipProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetHipProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getHipProfile:getHipProfile", {
         "id": args.id,
@@ -73,7 +72,10 @@ export interface GetHipProfileResult {
  * ```
  */
 export function getHipProfileOutput(args: GetHipProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHipProfileResult> {
-    return pulumi.output(args).apply((a: any) => getHipProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getHipProfile:getHipProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

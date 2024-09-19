@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getNatRuleList(args?: GetNatRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetNatRuleListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getNatRuleList:getNatRuleList", {
         "device": args.device,
@@ -126,7 +125,17 @@ export interface GetNatRuleListResult {
  * ```
  */
 export function getNatRuleListOutput(args?: GetNatRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetNatRuleListResult> {
-    return pulumi.output(args).apply((a: any) => getNatRuleList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getNatRuleList:getNatRuleList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "position": args.position,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

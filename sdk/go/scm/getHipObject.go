@@ -89,14 +89,20 @@ type LookupHipObjectResult struct {
 
 func LookupHipObjectOutput(ctx *pulumi.Context, args LookupHipObjectOutputArgs, opts ...pulumi.InvokeOption) LookupHipObjectResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupHipObjectResult, error) {
+		ApplyT(func(v interface{}) (LookupHipObjectResultOutput, error) {
 			args := v.(LookupHipObjectArgs)
-			r, err := LookupHipObject(ctx, &args, opts...)
-			var s LookupHipObjectResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupHipObjectResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getHipObject:getHipObject", args, &rv, "", opts...)
+			if err != nil {
+				return LookupHipObjectResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupHipObjectResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupHipObjectResultOutput), nil
+			}
+			return output, nil
 		}).(LookupHipObjectResultOutput)
 }
 

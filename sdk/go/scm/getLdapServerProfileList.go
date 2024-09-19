@@ -89,14 +89,20 @@ type GetLdapServerProfileListResult struct {
 
 func GetLdapServerProfileListOutput(ctx *pulumi.Context, args GetLdapServerProfileListOutputArgs, opts ...pulumi.InvokeOption) GetLdapServerProfileListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetLdapServerProfileListResult, error) {
+		ApplyT(func(v interface{}) (GetLdapServerProfileListResultOutput, error) {
 			args := v.(GetLdapServerProfileListArgs)
-			r, err := GetLdapServerProfileList(ctx, &args, opts...)
-			var s GetLdapServerProfileListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetLdapServerProfileListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getLdapServerProfileList:getLdapServerProfileList", args, &rv, "", opts...)
+			if err != nil {
+				return GetLdapServerProfileListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetLdapServerProfileListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetLdapServerProfileListResultOutput), nil
+			}
+			return output, nil
 		}).(GetLdapServerProfileListResultOutput)
 }
 

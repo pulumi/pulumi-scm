@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getSnippetList(args?: GetSnippetListArgs, opts?: pulumi.InvokeOptions): Promise<GetSnippetListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSnippetList:getSnippetList", {
         "limit": args.limit,
@@ -90,7 +89,13 @@ export interface GetSnippetListResult {
  * ```
  */
 export function getSnippetListOutput(args?: GetSnippetListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSnippetListResult> {
-    return pulumi.output(args).apply((a: any) => getSnippetList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getSnippetList:getSnippetList", {
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+    }, opts);
 }
 
 /**

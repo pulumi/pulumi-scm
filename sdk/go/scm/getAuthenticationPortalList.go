@@ -89,14 +89,20 @@ type GetAuthenticationPortalListResult struct {
 
 func GetAuthenticationPortalListOutput(ctx *pulumi.Context, args GetAuthenticationPortalListOutputArgs, opts ...pulumi.InvokeOption) GetAuthenticationPortalListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetAuthenticationPortalListResult, error) {
+		ApplyT(func(v interface{}) (GetAuthenticationPortalListResultOutput, error) {
 			args := v.(GetAuthenticationPortalListArgs)
-			r, err := GetAuthenticationPortalList(ctx, &args, opts...)
-			var s GetAuthenticationPortalListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetAuthenticationPortalListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getAuthenticationPortalList:getAuthenticationPortalList", args, &rv, "", opts...)
+			if err != nil {
+				return GetAuthenticationPortalListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetAuthenticationPortalListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetAuthenticationPortalListResultOutput), nil
+			}
+			return output, nil
 		}).(GetAuthenticationPortalListResultOutput)
 }
 

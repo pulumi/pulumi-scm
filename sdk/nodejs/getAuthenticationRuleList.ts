@@ -23,7 +23,6 @@ import * as utilities from "./utilities";
  */
 export function getAuthenticationRuleList(args?: GetAuthenticationRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationRuleListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", {
         "device": args.device,
@@ -132,7 +131,17 @@ export interface GetAuthenticationRuleListResult {
  * ```
  */
 export function getAuthenticationRuleListOutput(args?: GetAuthenticationRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationRuleListResult> {
-    return pulumi.output(args).apply((a: any) => getAuthenticationRuleList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "position": args.position,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

@@ -69,14 +69,20 @@ type LookupHttpHeaderProfileResult struct {
 
 func LookupHttpHeaderProfileOutput(ctx *pulumi.Context, args LookupHttpHeaderProfileOutputArgs, opts ...pulumi.InvokeOption) LookupHttpHeaderProfileResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupHttpHeaderProfileResult, error) {
+		ApplyT(func(v interface{}) (LookupHttpHeaderProfileResultOutput, error) {
 			args := v.(LookupHttpHeaderProfileArgs)
-			r, err := LookupHttpHeaderProfile(ctx, &args, opts...)
-			var s LookupHttpHeaderProfileResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupHttpHeaderProfileResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", args, &rv, "", opts...)
+			if err != nil {
+				return LookupHttpHeaderProfileResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupHttpHeaderProfileResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupHttpHeaderProfileResultOutput), nil
+			}
+			return output, nil
 		}).(LookupHttpHeaderProfileResultOutput)
 }
 

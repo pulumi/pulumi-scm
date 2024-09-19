@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getAddressObject(args: GetAddressObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetAddressObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAddressObject:getAddressObject", {
         "id": args.id,
@@ -93,7 +92,10 @@ export interface GetAddressObjectResult {
  * ```
  */
 export function getAddressObjectOutput(args: GetAddressObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAddressObjectResult> {
-    return pulumi.output(args).apply((a: any) => getAddressObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAddressObject:getAddressObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

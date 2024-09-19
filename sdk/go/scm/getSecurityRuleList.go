@@ -94,14 +94,20 @@ type GetSecurityRuleListResult struct {
 
 func GetSecurityRuleListOutput(ctx *pulumi.Context, args GetSecurityRuleListOutputArgs, opts ...pulumi.InvokeOption) GetSecurityRuleListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSecurityRuleListResult, error) {
+		ApplyT(func(v interface{}) (GetSecurityRuleListResultOutput, error) {
 			args := v.(GetSecurityRuleListArgs)
-			r, err := GetSecurityRuleList(ctx, &args, opts...)
-			var s GetSecurityRuleListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSecurityRuleListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getSecurityRuleList:getSecurityRuleList", args, &rv, "", opts...)
+			if err != nil {
+				return GetSecurityRuleListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSecurityRuleListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSecurityRuleListResultOutput), nil
+			}
+			return output, nil
 		}).(GetSecurityRuleListResultOutput)
 }
 
