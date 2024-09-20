@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getScepProfileList(args?: GetScepProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetScepProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getScepProfileList:getScepProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetScepProfileListResult {
  * ```
  */
 export function getScepProfileListOutput(args?: GetScepProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetScepProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getScepProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getScepProfileList:getScepProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

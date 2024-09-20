@@ -94,14 +94,20 @@ type GetAppOverrideRuleListResult struct {
 
 func GetAppOverrideRuleListOutput(ctx *pulumi.Context, args GetAppOverrideRuleListOutputArgs, opts ...pulumi.InvokeOption) GetAppOverrideRuleListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetAppOverrideRuleListResult, error) {
+		ApplyT(func(v interface{}) (GetAppOverrideRuleListResultOutput, error) {
 			args := v.(GetAppOverrideRuleListArgs)
-			r, err := GetAppOverrideRuleList(ctx, &args, opts...)
-			var s GetAppOverrideRuleListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetAppOverrideRuleListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getAppOverrideRuleList:getAppOverrideRuleList", args, &rv, "", opts...)
+			if err != nil {
+				return GetAppOverrideRuleListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetAppOverrideRuleListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetAppOverrideRuleListResultOutput), nil
+			}
+			return output, nil
 		}).(GetAppOverrideRuleListResultOutput)
 }
 

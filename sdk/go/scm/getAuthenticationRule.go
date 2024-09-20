@@ -105,14 +105,20 @@ type LookupAuthenticationRuleResult struct {
 
 func LookupAuthenticationRuleOutput(ctx *pulumi.Context, args LookupAuthenticationRuleOutputArgs, opts ...pulumi.InvokeOption) LookupAuthenticationRuleResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAuthenticationRuleResult, error) {
+		ApplyT(func(v interface{}) (LookupAuthenticationRuleResultOutput, error) {
 			args := v.(LookupAuthenticationRuleArgs)
-			r, err := LookupAuthenticationRule(ctx, &args, opts...)
-			var s LookupAuthenticationRuleResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAuthenticationRuleResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getAuthenticationRule:getAuthenticationRule", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAuthenticationRuleResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAuthenticationRuleResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAuthenticationRuleResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAuthenticationRuleResultOutput)
 }
 

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getAddressGroupList(args?: GetAddressGroupListArgs, opts?: pulumi.InvokeOptions): Promise<GetAddressGroupListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAddressGroupList:getAddressGroupList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetAddressGroupListResult {
  * ```
  */
 export function getAddressGroupListOutput(args?: GetAddressGroupListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAddressGroupListResult> {
-    return pulumi.output(args).apply((a: any) => getAddressGroupList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAddressGroupList:getAddressGroupList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

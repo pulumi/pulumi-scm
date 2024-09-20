@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getDevice(args: GetDeviceArgs, opts?: pulumi.InvokeOptions): Promise<GetDeviceResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDevice:getDevice", {
         "serial": args.serial,
@@ -203,7 +202,10 @@ export interface GetDeviceResult {
  * ```
  */
 export function getDeviceOutput(args: GetDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDeviceResult> {
-    return pulumi.output(args).apply((a: any) => getDevice(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getDevice:getDevice", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

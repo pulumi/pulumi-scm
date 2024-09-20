@@ -23,7 +23,6 @@ import * as utilities from "./utilities";
  */
 export function getDecryptionRuleList(args?: GetDecryptionRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionRuleListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDecryptionRuleList:getDecryptionRuleList", {
         "device": args.device,
@@ -132,7 +131,17 @@ export interface GetDecryptionRuleListResult {
  * ```
  */
 export function getDecryptionRuleListOutput(args?: GetDecryptionRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDecryptionRuleListResult> {
-    return pulumi.output(args).apply((a: any) => getDecryptionRuleList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getDecryptionRuleList:getDecryptionRuleList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "position": args.position,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

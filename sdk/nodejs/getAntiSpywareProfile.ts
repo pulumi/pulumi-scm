@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getAntiSpywareProfile(args: GetAntiSpywareProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetAntiSpywareProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAntiSpywareProfile:getAntiSpywareProfile", {
         "id": args.id,
@@ -95,7 +94,10 @@ export interface GetAntiSpywareProfileResult {
  * ```
  */
 export function getAntiSpywareProfileOutput(args: GetAntiSpywareProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAntiSpywareProfileResult> {
-    return pulumi.output(args).apply((a: any) => getAntiSpywareProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAntiSpywareProfile:getAntiSpywareProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

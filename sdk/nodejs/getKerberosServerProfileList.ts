@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getKerberosServerProfileList(args?: GetKerberosServerProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetKerberosServerProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getKerberosServerProfileList:getKerberosServerProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetKerberosServerProfileListResult {
  * ```
  */
 export function getKerberosServerProfileListOutput(args?: GetKerberosServerProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetKerberosServerProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getKerberosServerProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getKerberosServerProfileList:getKerberosServerProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

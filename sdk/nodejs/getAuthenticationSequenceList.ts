@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getAuthenticationSequenceList(args?: GetAuthenticationSequenceListArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationSequenceListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationSequenceList:getAuthenticationSequenceList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetAuthenticationSequenceListResult {
  * ```
  */
 export function getAuthenticationSequenceListOutput(args?: GetAuthenticationSequenceListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationSequenceListResult> {
-    return pulumi.output(args).apply((a: any) => getAuthenticationSequenceList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAuthenticationSequenceList:getAuthenticationSequenceList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

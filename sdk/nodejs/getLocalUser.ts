@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getLocalUser(args: GetLocalUserArgs, opts?: pulumi.InvokeOptions): Promise<GetLocalUserResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLocalUser:getLocalUser", {
         "id": args.id,
@@ -73,7 +72,10 @@ export interface GetLocalUserResult {
  * ```
  */
 export function getLocalUserOutput(args: GetLocalUserOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLocalUserResult> {
-    return pulumi.output(args).apply((a: any) => getLocalUser(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getLocalUser:getLocalUser", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

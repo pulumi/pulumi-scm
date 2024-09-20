@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getUrlAccessProfile(args: GetUrlAccessProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetUrlAccessProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getUrlAccessProfile:getUrlAccessProfile", {
         "id": args.id,
@@ -123,7 +122,10 @@ export interface GetUrlAccessProfileResult {
  * ```
  */
 export function getUrlAccessProfileOutput(args: GetUrlAccessProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUrlAccessProfileResult> {
-    return pulumi.output(args).apply((a: any) => getUrlAccessProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getUrlAccessProfile:getUrlAccessProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getAntiSpywareProfileList(args?: GetAntiSpywareProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetAntiSpywareProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAntiSpywareProfileList:getAntiSpywareProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetAntiSpywareProfileListResult {
  * ```
  */
 export function getAntiSpywareProfileListOutput(args?: GetAntiSpywareProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAntiSpywareProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getAntiSpywareProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAntiSpywareProfileList:getAntiSpywareProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

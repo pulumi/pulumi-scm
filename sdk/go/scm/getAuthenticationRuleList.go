@@ -94,14 +94,20 @@ type GetAuthenticationRuleListResult struct {
 
 func GetAuthenticationRuleListOutput(ctx *pulumi.Context, args GetAuthenticationRuleListOutputArgs, opts ...pulumi.InvokeOption) GetAuthenticationRuleListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetAuthenticationRuleListResult, error) {
+		ApplyT(func(v interface{}) (GetAuthenticationRuleListResultOutput, error) {
 			args := v.(GetAuthenticationRuleListArgs)
-			r, err := GetAuthenticationRuleList(ctx, &args, opts...)
-			var s GetAuthenticationRuleListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetAuthenticationRuleListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", args, &rv, "", opts...)
+			if err != nil {
+				return GetAuthenticationRuleListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetAuthenticationRuleListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetAuthenticationRuleListResultOutput), nil
+			}
+			return output, nil
 		}).(GetAuthenticationRuleListResultOutput)
 }
 

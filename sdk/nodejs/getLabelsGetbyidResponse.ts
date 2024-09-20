@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getLabelsGetbyidResponse(args: GetLabelsGetbyidResponseArgs, opts?: pulumi.InvokeOptions): Promise<GetLabelsGetbyidResponseResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLabelsGetbyidResponse:getLabelsGetbyidResponse", {
         "id": args.id,
@@ -77,7 +76,10 @@ export interface GetLabelsGetbyidResponseResult {
  * ```
  */
 export function getLabelsGetbyidResponseOutput(args: GetLabelsGetbyidResponseOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLabelsGetbyidResponseResult> {
-    return pulumi.output(args).apply((a: any) => getLabelsGetbyidResponse(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getLabelsGetbyidResponse:getLabelsGetbyidResponse", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

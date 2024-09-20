@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getInternalDnsServerList(args?: GetInternalDnsServerListArgs, opts?: pulumi.InvokeOptions): Promise<GetInternalDnsServerListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getInternalDnsServerList:getInternalDnsServerList", {
         "limit": args.limit,
@@ -90,7 +89,13 @@ export interface GetInternalDnsServerListResult {
  * ```
  */
 export function getInternalDnsServerListOutput(args?: GetInternalDnsServerListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInternalDnsServerListResult> {
-    return pulumi.output(args).apply((a: any) => getInternalDnsServerList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getInternalDnsServerList:getInternalDnsServerList", {
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+    }, opts);
 }
 
 /**

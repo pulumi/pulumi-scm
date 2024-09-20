@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getFileBlockingProfileList(args?: GetFileBlockingProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetFileBlockingProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getFileBlockingProfileList:getFileBlockingProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetFileBlockingProfileListResult {
  * ```
  */
 export function getFileBlockingProfileListOutput(args?: GetFileBlockingProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFileBlockingProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getFileBlockingProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getFileBlockingProfileList:getFileBlockingProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

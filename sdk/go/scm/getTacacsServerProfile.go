@@ -71,14 +71,20 @@ type LookupTacacsServerProfileResult struct {
 
 func LookupTacacsServerProfileOutput(ctx *pulumi.Context, args LookupTacacsServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupTacacsServerProfileResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTacacsServerProfileResult, error) {
+		ApplyT(func(v interface{}) (LookupTacacsServerProfileResultOutput, error) {
 			args := v.(LookupTacacsServerProfileArgs)
-			r, err := LookupTacacsServerProfile(ctx, &args, opts...)
-			var s LookupTacacsServerProfileResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTacacsServerProfileResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getTacacsServerProfile:getTacacsServerProfile", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTacacsServerProfileResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTacacsServerProfileResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTacacsServerProfileResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTacacsServerProfileResultOutput)
 }
 

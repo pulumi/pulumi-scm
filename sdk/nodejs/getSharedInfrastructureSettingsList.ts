@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getSharedInfrastructureSettingsList(args?: GetSharedInfrastructureSettingsListArgs, opts?: pulumi.InvokeOptions): Promise<GetSharedInfrastructureSettingsListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSharedInfrastructureSettingsList:getSharedInfrastructureSettingsList", {
         "limit": args.limit,
@@ -81,7 +80,12 @@ export interface GetSharedInfrastructureSettingsListResult {
  * ```
  */
 export function getSharedInfrastructureSettingsListOutput(args?: GetSharedInfrastructureSettingsListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSharedInfrastructureSettingsListResult> {
-    return pulumi.output(args).apply((a: any) => getSharedInfrastructureSettingsList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getSharedInfrastructureSettingsList:getSharedInfrastructureSettingsList", {
+        "limit": args.limit,
+        "offset": args.offset,
+    }, opts);
 }
 
 /**

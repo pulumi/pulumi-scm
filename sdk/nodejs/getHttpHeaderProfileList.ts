@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getHttpHeaderProfileList(args?: GetHttpHeaderProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetHttpHeaderProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getHttpHeaderProfileList:getHttpHeaderProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetHttpHeaderProfileListResult {
  * ```
  */
 export function getHttpHeaderProfileListOutput(args?: GetHttpHeaderProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHttpHeaderProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getHttpHeaderProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getHttpHeaderProfileList:getHttpHeaderProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

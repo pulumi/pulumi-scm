@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getRadiusServerProfile(args: GetRadiusServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetRadiusServerProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRadiusServerProfile:getRadiusServerProfile", {
         "id": args.id,
@@ -79,7 +78,10 @@ export interface GetRadiusServerProfileResult {
  * ```
  */
 export function getRadiusServerProfileOutput(args: GetRadiusServerProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRadiusServerProfileResult> {
-    return pulumi.output(args).apply((a: any) => getRadiusServerProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getRadiusServerProfile:getRadiusServerProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

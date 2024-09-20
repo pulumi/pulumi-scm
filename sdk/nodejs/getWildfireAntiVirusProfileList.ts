@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getWildfireAntiVirusProfileList(args?: GetWildfireAntiVirusProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetWildfireAntiVirusProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getWildfireAntiVirusProfileList:getWildfireAntiVirusProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetWildfireAntiVirusProfileListResult {
  * ```
  */
 export function getWildfireAntiVirusProfileListOutput(args?: GetWildfireAntiVirusProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWildfireAntiVirusProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getWildfireAntiVirusProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getWildfireAntiVirusProfileList:getWildfireAntiVirusProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

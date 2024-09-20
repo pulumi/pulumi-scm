@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getHipObject(args: GetHipObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetHipObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getHipObject:getHipObject", {
         "id": args.id,
@@ -115,7 +114,10 @@ export interface GetHipObjectResult {
  * ```
  */
 export function getHipObjectOutput(args: GetHipObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHipObjectResult> {
-    return pulumi.output(args).apply((a: any) => getHipObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getHipObject:getHipObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

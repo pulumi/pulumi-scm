@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getLocalUserGroupList(args?: GetLocalUserGroupListArgs, opts?: pulumi.InvokeOptions): Promise<GetLocalUserGroupListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLocalUserGroupList:getLocalUserGroupList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetLocalUserGroupListResult {
  * ```
  */
 export function getLocalUserGroupListOutput(args?: GetLocalUserGroupListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLocalUserGroupListResult> {
-    return pulumi.output(args).apply((a: any) => getLocalUserGroupList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getLocalUserGroupList:getLocalUserGroupList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getScheduleList(args?: GetScheduleListArgs, opts?: pulumi.InvokeOptions): Promise<GetScheduleListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getScheduleList:getScheduleList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetScheduleListResult {
  * ```
  */
 export function getScheduleListOutput(args?: GetScheduleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetScheduleListResult> {
-    return pulumi.output(args).apply((a: any) => getScheduleList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getScheduleList:getScheduleList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

@@ -77,14 +77,20 @@ type LookupQosPolicyRuleResult struct {
 
 func LookupQosPolicyRuleOutput(ctx *pulumi.Context, args LookupQosPolicyRuleOutputArgs, opts ...pulumi.InvokeOption) LookupQosPolicyRuleResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupQosPolicyRuleResult, error) {
+		ApplyT(func(v interface{}) (LookupQosPolicyRuleResultOutput, error) {
 			args := v.(LookupQosPolicyRuleArgs)
-			r, err := LookupQosPolicyRule(ctx, &args, opts...)
-			var s LookupQosPolicyRuleResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupQosPolicyRuleResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getQosPolicyRule:getQosPolicyRule", args, &rv, "", opts...)
+			if err != nil {
+				return LookupQosPolicyRuleResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupQosPolicyRuleResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupQosPolicyRuleResultOutput), nil
+			}
+			return output, nil
 		}).(LookupQosPolicyRuleResultOutput)
 }
 

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getScepProfile(args: GetScepProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetScepProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getScepProfile:getScepProfile", {
         "id": args.id,
@@ -115,7 +114,10 @@ export interface GetScepProfileResult {
  * ```
  */
 export function getScepProfileOutput(args: GetScepProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetScepProfileResult> {
-    return pulumi.output(args).apply((a: any) => getScepProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getScepProfile:getScepProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

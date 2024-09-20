@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getRegionList(args?: GetRegionListArgs, opts?: pulumi.InvokeOptions): Promise<GetRegionListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRegionList:getRegionList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetRegionListResult {
  * ```
  */
 export function getRegionListOutput(args?: GetRegionListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRegionListResult> {
-    return pulumi.output(args).apply((a: any) => getRegionList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getRegionList:getRegionList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

@@ -89,14 +89,20 @@ type GetUrlFilteringCategoryListResult struct {
 
 func GetUrlFilteringCategoryListOutput(ctx *pulumi.Context, args GetUrlFilteringCategoryListOutputArgs, opts ...pulumi.InvokeOption) GetUrlFilteringCategoryListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetUrlFilteringCategoryListResult, error) {
+		ApplyT(func(v interface{}) (GetUrlFilteringCategoryListResultOutput, error) {
 			args := v.(GetUrlFilteringCategoryListArgs)
-			r, err := GetUrlFilteringCategoryList(ctx, &args, opts...)
-			var s GetUrlFilteringCategoryListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetUrlFilteringCategoryListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getUrlFilteringCategoryList:getUrlFilteringCategoryList", args, &rv, "", opts...)
+			if err != nil {
+				return GetUrlFilteringCategoryListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetUrlFilteringCategoryListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetUrlFilteringCategoryListResultOutput), nil
+			}
+			return output, nil
 		}).(GetUrlFilteringCategoryListResultOutput)
 }
 

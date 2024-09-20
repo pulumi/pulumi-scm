@@ -89,14 +89,20 @@ type GetIpsecTunnelListResult struct {
 
 func GetIpsecTunnelListOutput(ctx *pulumi.Context, args GetIpsecTunnelListOutputArgs, opts ...pulumi.InvokeOption) GetIpsecTunnelListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetIpsecTunnelListResult, error) {
+		ApplyT(func(v interface{}) (GetIpsecTunnelListResultOutput, error) {
 			args := v.(GetIpsecTunnelListArgs)
-			r, err := GetIpsecTunnelList(ctx, &args, opts...)
-			var s GetIpsecTunnelListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetIpsecTunnelListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getIpsecTunnelList:getIpsecTunnelList", args, &rv, "", opts...)
+			if err != nil {
+				return GetIpsecTunnelListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetIpsecTunnelListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetIpsecTunnelListResultOutput), nil
+			}
+			return output, nil
 		}).(GetIpsecTunnelListResultOutput)
 }
 

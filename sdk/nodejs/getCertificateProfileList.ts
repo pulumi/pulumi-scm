@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCertificateProfileList(args?: GetCertificateProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetCertificateProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getCertificateProfileList:getCertificateProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetCertificateProfileListResult {
  * ```
  */
 export function getCertificateProfileListOutput(args?: GetCertificateProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCertificateProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getCertificateProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getCertificateProfileList:getCertificateProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

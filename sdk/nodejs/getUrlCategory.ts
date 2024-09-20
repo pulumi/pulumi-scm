@@ -8,7 +8,6 @@ import * as utilities from "./utilities";
  * Retrieves a config item.
  */
 export function getUrlCategory(args: GetUrlCategoryArgs, opts?: pulumi.InvokeOptions): Promise<GetUrlCategoryResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getUrlCategory:getUrlCategory", {
         "id": args.id,
@@ -55,7 +54,10 @@ export interface GetUrlCategoryResult {
  * Retrieves a config item.
  */
 export function getUrlCategoryOutput(args: GetUrlCategoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUrlCategoryResult> {
-    return pulumi.output(args).apply((a: any) => getUrlCategory(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getUrlCategory:getUrlCategory", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getVariable(args: GetVariableArgs, opts?: pulumi.InvokeOptions): Promise<GetVariableResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getVariable:getVariable", {
         "device": args.device,
@@ -108,7 +107,13 @@ export interface GetVariableResult {
  * ```
  */
 export function getVariableOutput(args: GetVariableOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVariableResult> {
-    return pulumi.output(args).apply((a: any) => getVariable(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getVariable:getVariable", {
+        "device": args.device,
+        "folder": args.folder,
+        "id": args.id,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

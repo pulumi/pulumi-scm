@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getServiceGroupList(args?: GetServiceGroupListArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceGroupListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getServiceGroupList:getServiceGroupList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetServiceGroupListResult {
  * ```
  */
 export function getServiceGroupListOutput(args?: GetServiceGroupListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceGroupListResult> {
-    return pulumi.output(args).apply((a: any) => getServiceGroupList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getServiceGroupList:getServiceGroupList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

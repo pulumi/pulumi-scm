@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getAuthenticationSequence(args: GetAuthenticationSequenceArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationSequenceResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationSequence:getAuthenticationSequence", {
         "id": args.id,
@@ -73,7 +72,10 @@ export interface GetAuthenticationSequenceResult {
  * ```
  */
 export function getAuthenticationSequenceOutput(args: GetAuthenticationSequenceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationSequenceResult> {
-    return pulumi.output(args).apply((a: any) => getAuthenticationSequence(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAuthenticationSequence:getAuthenticationSequence", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

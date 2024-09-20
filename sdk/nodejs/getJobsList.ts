@@ -10,7 +10,6 @@ import * as utilities from "./utilities";
  * Retrieves a listing of config items.
  */
 export function getJobsList(opts?: pulumi.InvokeOptions): Promise<GetJobsListResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getJobsList:getJobsList", {
     }, opts);
@@ -46,5 +45,7 @@ export interface GetJobsListResult {
  * Retrieves a listing of config items.
  */
 export function getJobsListOutput(opts?: pulumi.InvokeOptions): pulumi.Output<GetJobsListResult> {
-    return pulumi.output(getJobsList(opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getJobsList:getJobsList", {
+    }, opts);
 }

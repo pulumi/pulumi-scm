@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getTrafficSteeringRuleList(args?: GetTrafficSteeringRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetTrafficSteeringRuleListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTrafficSteeringRuleList:getTrafficSteeringRuleList", {
         "folder": args.folder,
@@ -103,7 +102,14 @@ export interface GetTrafficSteeringRuleListResult {
  * ```
  */
 export function getTrafficSteeringRuleListOutput(args?: GetTrafficSteeringRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrafficSteeringRuleListResult> {
-    return pulumi.output(args).apply((a: any) => getTrafficSteeringRuleList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getTrafficSteeringRuleList:getTrafficSteeringRuleList", {
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+    }, opts);
 }
 
 /**

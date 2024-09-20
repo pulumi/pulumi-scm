@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getProfileGroup(args: GetProfileGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetProfileGroupResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getProfileGroup:getProfileGroup", {
         "id": args.id,
@@ -93,7 +92,10 @@ export interface GetProfileGroupResult {
  * ```
  */
 export function getProfileGroupOutput(args: GetProfileGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetProfileGroupResult> {
-    return pulumi.output(args).apply((a: any) => getProfileGroup(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getProfileGroup:getProfileGroup", {
+        "id": args.id,
+    }, opts);
 }
 
 /**
