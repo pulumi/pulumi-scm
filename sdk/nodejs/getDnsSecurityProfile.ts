@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getDnsSecurityProfile(args: GetDnsSecurityProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetDnsSecurityProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", {
         "id": args.id,
@@ -75,7 +74,10 @@ export interface GetDnsSecurityProfileResult {
  * ```
  */
 export function getDnsSecurityProfileOutput(args: GetDnsSecurityProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDnsSecurityProfileResult> {
-    return pulumi.output(args).apply((a: any) => getDnsSecurityProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

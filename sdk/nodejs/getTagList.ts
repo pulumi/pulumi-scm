@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getTagList(args?: GetTagListArgs, opts?: pulumi.InvokeOptions): Promise<GetTagListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTagList:getTagList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetTagListResult {
  * ```
  */
 export function getTagListOutput(args?: GetTagListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTagListResult> {
-    return pulumi.output(args).apply((a: any) => getTagList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getTagList:getTagList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

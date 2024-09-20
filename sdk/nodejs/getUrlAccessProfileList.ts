@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getUrlAccessProfileList(args?: GetUrlAccessProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetUrlAccessProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getUrlAccessProfileList:getUrlAccessProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetUrlAccessProfileListResult {
  * ```
  */
 export function getUrlAccessProfileListOutput(args?: GetUrlAccessProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUrlAccessProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getUrlAccessProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getUrlAccessProfileList:getUrlAccessProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

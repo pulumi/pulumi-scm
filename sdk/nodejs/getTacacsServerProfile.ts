@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTacacsServerProfile(args: GetTacacsServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetTacacsServerProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTacacsServerProfile:getTacacsServerProfile", {
         "id": args.id,
@@ -79,7 +78,10 @@ export interface GetTacacsServerProfileResult {
  * ```
  */
 export function getTacacsServerProfileOutput(args: GetTacacsServerProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTacacsServerProfileResult> {
-    return pulumi.output(args).apply((a: any) => getTacacsServerProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getTacacsServerProfile:getTacacsServerProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

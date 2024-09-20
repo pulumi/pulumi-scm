@@ -81,14 +81,20 @@ type GetServiceConnectionGroupListResult struct {
 
 func GetServiceConnectionGroupListOutput(ctx *pulumi.Context, args GetServiceConnectionGroupListOutputArgs, opts ...pulumi.InvokeOption) GetServiceConnectionGroupListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetServiceConnectionGroupListResult, error) {
+		ApplyT(func(v interface{}) (GetServiceConnectionGroupListResultOutput, error) {
 			args := v.(GetServiceConnectionGroupListArgs)
-			r, err := GetServiceConnectionGroupList(ctx, &args, opts...)
-			var s GetServiceConnectionGroupListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetServiceConnectionGroupListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getServiceConnectionGroupList:getServiceConnectionGroupList", args, &rv, "", opts...)
+			if err != nil {
+				return GetServiceConnectionGroupListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetServiceConnectionGroupListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetServiceConnectionGroupListResultOutput), nil
+			}
+			return output, nil
 		}).(GetServiceConnectionGroupListResultOutput)
 }
 

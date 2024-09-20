@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getMfaServer(args: GetMfaServerArgs, opts?: pulumi.InvokeOptions): Promise<GetMfaServerResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getMfaServer:getMfaServer", {
         "id": args.id,
@@ -75,7 +74,10 @@ export interface GetMfaServerResult {
  * ```
  */
 export function getMfaServerOutput(args: GetMfaServerOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetMfaServerResult> {
-    return pulumi.output(args).apply((a: any) => getMfaServer(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getMfaServer:getMfaServer", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

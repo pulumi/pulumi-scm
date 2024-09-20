@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getLabelList(args?: GetLabelListArgs, opts?: pulumi.InvokeOptions): Promise<GetLabelListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLabelList:getLabelList", {
         "limit": args.limit,
@@ -90,7 +89,13 @@ export interface GetLabelListResult {
  * ```
  */
 export function getLabelListOutput(args?: GetLabelListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLabelListResult> {
-    return pulumi.output(args).apply((a: any) => getLabelList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getLabelList:getLabelList", {
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+    }, opts);
 }
 
 /**

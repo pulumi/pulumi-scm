@@ -94,14 +94,20 @@ type LookupServiceConnectionResult struct {
 
 func LookupServiceConnectionOutput(ctx *pulumi.Context, args LookupServiceConnectionOutputArgs, opts ...pulumi.InvokeOption) LookupServiceConnectionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupServiceConnectionResult, error) {
+		ApplyT(func(v interface{}) (LookupServiceConnectionResultOutput, error) {
 			args := v.(LookupServiceConnectionArgs)
-			r, err := LookupServiceConnection(ctx, &args, opts...)
-			var s LookupServiceConnectionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupServiceConnectionResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getServiceConnection:getServiceConnection", args, &rv, "", opts...)
+			if err != nil {
+				return LookupServiceConnectionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupServiceConnectionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupServiceConnectionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupServiceConnectionResultOutput)
 }
 

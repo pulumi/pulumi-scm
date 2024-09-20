@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getRemoteNetwork(args: GetRemoteNetworkArgs, opts?: pulumi.InvokeOptions): Promise<GetRemoteNetworkResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRemoteNetwork:getRemoteNetwork", {
         "folder": args.folder,
@@ -112,7 +111,11 @@ export interface GetRemoteNetworkResult {
  * ```
  */
 export function getRemoteNetworkOutput(args: GetRemoteNetworkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRemoteNetworkResult> {
-    return pulumi.output(args).apply((a: any) => getRemoteNetwork(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getRemoteNetwork:getRemoteNetwork", {
+        "folder": args.folder,
+        "id": args.id,
+    }, opts);
 }
 
 /**

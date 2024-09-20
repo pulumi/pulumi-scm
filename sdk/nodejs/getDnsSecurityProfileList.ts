@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getDnsSecurityProfileList(args?: GetDnsSecurityProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetDnsSecurityProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDnsSecurityProfileList:getDnsSecurityProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetDnsSecurityProfileListResult {
  * ```
  */
 export function getDnsSecurityProfileListOutput(args?: GetDnsSecurityProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDnsSecurityProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getDnsSecurityProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getDnsSecurityProfileList:getDnsSecurityProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

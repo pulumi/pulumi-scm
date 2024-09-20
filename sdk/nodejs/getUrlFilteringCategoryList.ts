@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getUrlFilteringCategoryList(args?: GetUrlFilteringCategoryListArgs, opts?: pulumi.InvokeOptions): Promise<GetUrlFilteringCategoryListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getUrlFilteringCategoryList:getUrlFilteringCategoryList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetUrlFilteringCategoryListResult {
  * ```
  */
 export function getUrlFilteringCategoryListOutput(args?: GetUrlFilteringCategoryListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUrlFilteringCategoryListResult> {
-    return pulumi.output(args).apply((a: any) => getUrlFilteringCategoryList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getUrlFilteringCategoryList:getUrlFilteringCategoryList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

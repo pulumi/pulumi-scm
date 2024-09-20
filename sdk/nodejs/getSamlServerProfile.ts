@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSamlServerProfile(args: GetSamlServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetSamlServerProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSamlServerProfile:getSamlServerProfile", {
         "id": args.id,
@@ -93,7 +92,10 @@ export interface GetSamlServerProfileResult {
  * ```
  */
 export function getSamlServerProfileOutput(args: GetSamlServerProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSamlServerProfileResult> {
-    return pulumi.output(args).apply((a: any) => getSamlServerProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getSamlServerProfile:getSamlServerProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

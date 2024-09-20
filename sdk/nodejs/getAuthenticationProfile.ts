@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getAuthenticationProfile(args: GetAuthenticationProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationProfile:getAuthenticationProfile", {
         "id": args.id,
@@ -95,7 +94,10 @@ export interface GetAuthenticationProfileResult {
  * ```
  */
 export function getAuthenticationProfileOutput(args: GetAuthenticationProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationProfileResult> {
-    return pulumi.output(args).apply((a: any) => getAuthenticationProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAuthenticationProfile:getAuthenticationProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

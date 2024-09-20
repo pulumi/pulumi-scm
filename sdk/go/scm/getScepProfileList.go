@@ -89,14 +89,20 @@ type GetScepProfileListResult struct {
 
 func GetScepProfileListOutput(ctx *pulumi.Context, args GetScepProfileListOutputArgs, opts ...pulumi.InvokeOption) GetScepProfileListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetScepProfileListResult, error) {
+		ApplyT(func(v interface{}) (GetScepProfileListResultOutput, error) {
 			args := v.(GetScepProfileListArgs)
-			r, err := GetScepProfileList(ctx, &args, opts...)
-			var s GetScepProfileListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetScepProfileListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getScepProfileList:getScepProfileList", args, &rv, "", opts...)
+			if err != nil {
+				return GetScepProfileListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetScepProfileListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetScepProfileListResultOutput), nil
+			}
+			return output, nil
 		}).(GetScepProfileListResultOutput)
 }
 

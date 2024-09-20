@@ -94,14 +94,20 @@ type GetDecryptionRuleListResult struct {
 
 func GetDecryptionRuleListOutput(ctx *pulumi.Context, args GetDecryptionRuleListOutputArgs, opts ...pulumi.InvokeOption) GetDecryptionRuleListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetDecryptionRuleListResult, error) {
+		ApplyT(func(v interface{}) (GetDecryptionRuleListResultOutput, error) {
 			args := v.(GetDecryptionRuleListArgs)
-			r, err := GetDecryptionRuleList(ctx, &args, opts...)
-			var s GetDecryptionRuleListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetDecryptionRuleListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getDecryptionRuleList:getDecryptionRuleList", args, &rv, "", opts...)
+			if err != nil {
+				return GetDecryptionRuleListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetDecryptionRuleListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetDecryptionRuleListResultOutput), nil
+			}
+			return output, nil
 		}).(GetDecryptionRuleListResultOutput)
 }
 

@@ -85,14 +85,20 @@ type LookupAntiSpywareSignatureResult struct {
 
 func LookupAntiSpywareSignatureOutput(ctx *pulumi.Context, args LookupAntiSpywareSignatureOutputArgs, opts ...pulumi.InvokeOption) LookupAntiSpywareSignatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAntiSpywareSignatureResult, error) {
+		ApplyT(func(v interface{}) (LookupAntiSpywareSignatureResultOutput, error) {
 			args := v.(LookupAntiSpywareSignatureArgs)
-			r, err := LookupAntiSpywareSignature(ctx, &args, opts...)
-			var s LookupAntiSpywareSignatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAntiSpywareSignatureResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAntiSpywareSignatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAntiSpywareSignatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAntiSpywareSignatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAntiSpywareSignatureResultOutput)
 }
 

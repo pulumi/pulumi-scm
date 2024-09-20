@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getAuthenticationProfileList(args?: GetAuthenticationProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationProfileList:getAuthenticationProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetAuthenticationProfileListResult {
  * ```
  */
 export function getAuthenticationProfileListOutput(args?: GetAuthenticationProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getAuthenticationProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAuthenticationProfileList:getAuthenticationProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

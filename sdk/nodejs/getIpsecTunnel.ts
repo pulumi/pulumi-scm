@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getIpsecTunnel(args: GetIpsecTunnelArgs, opts?: pulumi.InvokeOptions): Promise<GetIpsecTunnelResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIpsecTunnel:getIpsecTunnel", {
         "folder": args.folder,
@@ -96,7 +95,11 @@ export interface GetIpsecTunnelResult {
  * ```
  */
 export function getIpsecTunnelOutput(args: GetIpsecTunnelOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpsecTunnelResult> {
-    return pulumi.output(args).apply((a: any) => getIpsecTunnel(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getIpsecTunnel:getIpsecTunnel", {
+        "folder": args.folder,
+        "id": args.id,
+    }, opts);
 }
 
 /**

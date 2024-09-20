@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getQosProfile(args: GetQosProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetQosProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getQosProfile:getQosProfile", {
         "folder": args.folder,
@@ -84,7 +83,11 @@ export interface GetQosProfileResult {
  * ```
  */
 export function getQosProfileOutput(args: GetQosProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetQosProfileResult> {
-    return pulumi.output(args).apply((a: any) => getQosProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getQosProfile:getQosProfile", {
+        "folder": args.folder,
+        "id": args.id,
+    }, opts);
 }
 
 /**

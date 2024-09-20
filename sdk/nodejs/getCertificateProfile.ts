@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getCertificateProfile(args: GetCertificateProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetCertificateProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getCertificateProfile:getCertificateProfile", {
         "id": args.id,
@@ -115,7 +114,10 @@ export interface GetCertificateProfileResult {
  * ```
  */
 export function getCertificateProfileOutput(args: GetCertificateProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCertificateProfileResult> {
-    return pulumi.output(args).apply((a: any) => getCertificateProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getCertificateProfile:getCertificateProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

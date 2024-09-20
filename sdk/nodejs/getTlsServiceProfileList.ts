@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getTlsServiceProfileList(args?: GetTlsServiceProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetTlsServiceProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTlsServiceProfileList:getTlsServiceProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetTlsServiceProfileListResult {
  * ```
  */
 export function getTlsServiceProfileListOutput(args?: GetTlsServiceProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTlsServiceProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getTlsServiceProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getTlsServiceProfileList:getTlsServiceProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

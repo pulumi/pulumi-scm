@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getNatRule(args: GetNatRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetNatRuleResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getNatRule:getNatRule", {
         "id": args.id,
@@ -143,7 +142,10 @@ export interface GetNatRuleResult {
  * ```
  */
 export function getNatRuleOutput(args: GetNatRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetNatRuleResult> {
-    return pulumi.output(args).apply((a: any) => getNatRule(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getNatRule:getNatRule", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -89,14 +89,20 @@ type GetAuthenticationSequenceListResult struct {
 
 func GetAuthenticationSequenceListOutput(ctx *pulumi.Context, args GetAuthenticationSequenceListOutputArgs, opts ...pulumi.InvokeOption) GetAuthenticationSequenceListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetAuthenticationSequenceListResult, error) {
+		ApplyT(func(v interface{}) (GetAuthenticationSequenceListResultOutput, error) {
 			args := v.(GetAuthenticationSequenceListArgs)
-			r, err := GetAuthenticationSequenceList(ctx, &args, opts...)
-			var s GetAuthenticationSequenceListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetAuthenticationSequenceListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getAuthenticationSequenceList:getAuthenticationSequenceList", args, &rv, "", opts...)
+			if err != nil {
+				return GetAuthenticationSequenceListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetAuthenticationSequenceListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetAuthenticationSequenceListResultOutput), nil
+			}
+			return output, nil
 		}).(GetAuthenticationSequenceListResultOutput)
 }
 

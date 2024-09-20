@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getTrustedCertificateAuthorityList(args?: GetTrustedCertificateAuthorityListArgs, opts?: pulumi.InvokeOptions): Promise<GetTrustedCertificateAuthorityListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTrustedCertificateAuthorityList:getTrustedCertificateAuthorityList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetTrustedCertificateAuthorityListResult {
  * ```
  */
 export function getTrustedCertificateAuthorityListOutput(args?: GetTrustedCertificateAuthorityListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrustedCertificateAuthorityListResult> {
-    return pulumi.output(args).apply((a: any) => getTrustedCertificateAuthorityList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getTrustedCertificateAuthorityList:getTrustedCertificateAuthorityList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

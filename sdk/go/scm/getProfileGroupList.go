@@ -89,14 +89,20 @@ type GetProfileGroupListResult struct {
 
 func GetProfileGroupListOutput(ctx *pulumi.Context, args GetProfileGroupListOutputArgs, opts ...pulumi.InvokeOption) GetProfileGroupListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetProfileGroupListResult, error) {
+		ApplyT(func(v interface{}) (GetProfileGroupListResultOutput, error) {
 			args := v.(GetProfileGroupListArgs)
-			r, err := GetProfileGroupList(ctx, &args, opts...)
-			var s GetProfileGroupListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetProfileGroupListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getProfileGroupList:getProfileGroupList", args, &rv, "", opts...)
+			if err != nil {
+				return GetProfileGroupListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetProfileGroupListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetProfileGroupListResultOutput), nil
+			}
+			return output, nil
 		}).(GetProfileGroupListResultOutput)
 }
 

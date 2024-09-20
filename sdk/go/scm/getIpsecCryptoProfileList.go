@@ -89,14 +89,20 @@ type GetIpsecCryptoProfileListResult struct {
 
 func GetIpsecCryptoProfileListOutput(ctx *pulumi.Context, args GetIpsecCryptoProfileListOutputArgs, opts ...pulumi.InvokeOption) GetIpsecCryptoProfileListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetIpsecCryptoProfileListResult, error) {
+		ApplyT(func(v interface{}) (GetIpsecCryptoProfileListResultOutput, error) {
 			args := v.(GetIpsecCryptoProfileListArgs)
-			r, err := GetIpsecCryptoProfileList(ctx, &args, opts...)
-			var s GetIpsecCryptoProfileListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetIpsecCryptoProfileListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getIpsecCryptoProfileList:getIpsecCryptoProfileList", args, &rv, "", opts...)
+			if err != nil {
+				return GetIpsecCryptoProfileListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetIpsecCryptoProfileListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetIpsecCryptoProfileListResultOutput), nil
+			}
+			return output, nil
 		}).(GetIpsecCryptoProfileListResultOutput)
 }
 

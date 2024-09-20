@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getAntiSpywareSignature(args: GetAntiSpywareSignatureArgs, opts?: pulumi.InvokeOptions): Promise<GetAntiSpywareSignatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", {
         "id": args.id,
@@ -107,7 +106,10 @@ export interface GetAntiSpywareSignatureResult {
  * ```
  */
 export function getAntiSpywareSignatureOutput(args: GetAntiSpywareSignatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAntiSpywareSignatureResult> {
-    return pulumi.output(args).apply((a: any) => getAntiSpywareSignature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

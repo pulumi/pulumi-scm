@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getAutoTagActionsList(args?: GetAutoTagActionsListArgs, opts?: pulumi.InvokeOptions): Promise<GetAutoTagActionsListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAutoTagActionsList:getAutoTagActionsList", {
         "limit": args.limit,
@@ -90,7 +89,13 @@ export interface GetAutoTagActionsListResult {
  * ```
  */
 export function getAutoTagActionsListOutput(args?: GetAutoTagActionsListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAutoTagActionsListResult> {
-    return pulumi.output(args).apply((a: any) => getAutoTagActionsList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAutoTagActionsList:getAutoTagActionsList", {
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+    }, opts);
 }
 
 /**

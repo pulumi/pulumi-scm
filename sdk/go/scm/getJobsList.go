@@ -38,13 +38,19 @@ type GetJobsListResult struct {
 }
 
 func GetJobsListOutput(ctx *pulumi.Context, opts ...pulumi.InvokeOption) GetJobsListResultOutput {
-	return pulumi.ToOutput(0).ApplyT(func(int) (GetJobsListResult, error) {
-		r, err := GetJobsList(ctx, opts...)
-		var s GetJobsListResult
-		if r != nil {
-			s = *r
+	return pulumi.ToOutput(0).ApplyT(func(int) (GetJobsListResultOutput, error) {
+		opts = internal.PkgInvokeDefaultOpts(opts)
+		var rv GetJobsListResult
+		secret, err := ctx.InvokePackageRaw("scm:index/getJobsList:getJobsList", nil, &rv, "", opts...)
+		if err != nil {
+			return GetJobsListResultOutput{}, err
 		}
-		return s, err
+
+		output := pulumi.ToOutput(rv).(GetJobsListResultOutput)
+		if secret {
+			return pulumi.ToSecret(output).(GetJobsListResultOutput), nil
+		}
+		return output, nil
 	}).(GetJobsListResultOutput)
 }
 

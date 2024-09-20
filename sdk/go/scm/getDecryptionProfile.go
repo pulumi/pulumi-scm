@@ -73,14 +73,20 @@ type LookupDecryptionProfileResult struct {
 
 func LookupDecryptionProfileOutput(ctx *pulumi.Context, args LookupDecryptionProfileOutputArgs, opts ...pulumi.InvokeOption) LookupDecryptionProfileResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupDecryptionProfileResult, error) {
+		ApplyT(func(v interface{}) (LookupDecryptionProfileResultOutput, error) {
 			args := v.(LookupDecryptionProfileArgs)
-			r, err := LookupDecryptionProfile(ctx, &args, opts...)
-			var s LookupDecryptionProfileResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupDecryptionProfileResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getDecryptionProfile:getDecryptionProfile", args, &rv, "", opts...)
+			if err != nil {
+				return LookupDecryptionProfileResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupDecryptionProfileResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupDecryptionProfileResultOutput), nil
+			}
+			return output, nil
 		}).(LookupDecryptionProfileResultOutput)
 }
 

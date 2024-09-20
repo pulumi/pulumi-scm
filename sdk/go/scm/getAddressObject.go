@@ -79,14 +79,20 @@ type LookupAddressObjectResult struct {
 
 func LookupAddressObjectOutput(ctx *pulumi.Context, args LookupAddressObjectOutputArgs, opts ...pulumi.InvokeOption) LookupAddressObjectResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAddressObjectResult, error) {
+		ApplyT(func(v interface{}) (LookupAddressObjectResultOutput, error) {
 			args := v.(LookupAddressObjectArgs)
-			r, err := LookupAddressObject(ctx, &args, opts...)
-			var s LookupAddressObjectResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAddressObjectResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getAddressObject:getAddressObject", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAddressObjectResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAddressObjectResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAddressObjectResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAddressObjectResultOutput)
 }
 

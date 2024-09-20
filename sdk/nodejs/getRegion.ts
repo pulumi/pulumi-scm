@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getRegion(args: GetRegionArgs, opts?: pulumi.InvokeOptions): Promise<GetRegionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRegion:getRegion", {
         "id": args.id,
@@ -75,7 +74,10 @@ export interface GetRegionResult {
  * ```
  */
 export function getRegionOutput(args: GetRegionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRegionResult> {
-    return pulumi.output(args).apply((a: any) => getRegion(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getRegion:getRegion", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

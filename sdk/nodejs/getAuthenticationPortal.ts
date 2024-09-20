@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getAuthenticationPortal(args: GetAuthenticationPortalArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationPortalResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationPortal:getAuthenticationPortal", {
         "id": args.id,
@@ -89,7 +88,10 @@ export interface GetAuthenticationPortalResult {
  * ```
  */
 export function getAuthenticationPortalOutput(args: GetAuthenticationPortalOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationPortalResult> {
-    return pulumi.output(args).apply((a: any) => getAuthenticationPortal(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAuthenticationPortal:getAuthenticationPortal", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

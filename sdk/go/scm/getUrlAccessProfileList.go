@@ -89,14 +89,20 @@ type GetUrlAccessProfileListResult struct {
 
 func GetUrlAccessProfileListOutput(ctx *pulumi.Context, args GetUrlAccessProfileListOutputArgs, opts ...pulumi.InvokeOption) GetUrlAccessProfileListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetUrlAccessProfileListResult, error) {
+		ApplyT(func(v interface{}) (GetUrlAccessProfileListResultOutput, error) {
 			args := v.(GetUrlAccessProfileListArgs)
-			r, err := GetUrlAccessProfileList(ctx, &args, opts...)
-			var s GetUrlAccessProfileListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetUrlAccessProfileListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getUrlAccessProfileList:getUrlAccessProfileList", args, &rv, "", opts...)
+			if err != nil {
+				return GetUrlAccessProfileListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetUrlAccessProfileListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetUrlAccessProfileListResultOutput), nil
+			}
+			return output, nil
 		}).(GetUrlAccessProfileListResultOutput)
 }
 

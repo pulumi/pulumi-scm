@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getKerberosServerProfile(args: GetKerberosServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetKerberosServerProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getKerberosServerProfile:getKerberosServerProfile", {
         "id": args.id,
@@ -67,7 +66,10 @@ export interface GetKerberosServerProfileResult {
  * ```
  */
 export function getKerberosServerProfileOutput(args: GetKerberosServerProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetKerberosServerProfileResult> {
-    return pulumi.output(args).apply((a: any) => getKerberosServerProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getKerberosServerProfile:getKerberosServerProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

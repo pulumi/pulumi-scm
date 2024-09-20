@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getDynamicUserGroup(args: GetDynamicUserGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetDynamicUserGroupResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDynamicUserGroup:getDynamicUserGroup", {
         "id": args.id,
@@ -77,7 +76,10 @@ export interface GetDynamicUserGroupResult {
  * ```
  */
 export function getDynamicUserGroupOutput(args: GetDynamicUserGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDynamicUserGroupResult> {
-    return pulumi.output(args).apply((a: any) => getDynamicUserGroup(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getDynamicUserGroup:getDynamicUserGroup", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

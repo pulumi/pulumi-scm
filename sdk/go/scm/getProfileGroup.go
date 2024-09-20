@@ -79,14 +79,20 @@ type LookupProfileGroupResult struct {
 
 func LookupProfileGroupOutput(ctx *pulumi.Context, args LookupProfileGroupOutputArgs, opts ...pulumi.InvokeOption) LookupProfileGroupResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupProfileGroupResult, error) {
+		ApplyT(func(v interface{}) (LookupProfileGroupResultOutput, error) {
 			args := v.(LookupProfileGroupArgs)
-			r, err := LookupProfileGroup(ctx, &args, opts...)
-			var s LookupProfileGroupResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupProfileGroupResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getProfileGroup:getProfileGroup", args, &rv, "", opts...)
+			if err != nil {
+				return LookupProfileGroupResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupProfileGroupResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupProfileGroupResultOutput), nil
+			}
+			return output, nil
 		}).(LookupProfileGroupResultOutput)
 }
 

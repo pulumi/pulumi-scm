@@ -89,14 +89,20 @@ type GetScheduleListResult struct {
 
 func GetScheduleListOutput(ctx *pulumi.Context, args GetScheduleListOutputArgs, opts ...pulumi.InvokeOption) GetScheduleListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetScheduleListResult, error) {
+		ApplyT(func(v interface{}) (GetScheduleListResultOutput, error) {
 			args := v.(GetScheduleListArgs)
-			r, err := GetScheduleList(ctx, &args, opts...)
-			var s GetScheduleListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetScheduleListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getScheduleList:getScheduleList", args, &rv, "", opts...)
+			if err != nil {
+				return GetScheduleListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetScheduleListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetScheduleListResultOutput), nil
+			}
+			return output, nil
 		}).(GetScheduleListResultOutput)
 }
 

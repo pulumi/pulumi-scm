@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getOcspResponder(args: GetOcspResponderArgs, opts?: pulumi.InvokeOptions): Promise<GetOcspResponderResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getOcspResponder:getOcspResponder", {
         "id": args.id,
@@ -69,7 +68,10 @@ export interface GetOcspResponderResult {
  * ```
  */
 export function getOcspResponderOutput(args: GetOcspResponderOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetOcspResponderResult> {
-    return pulumi.output(args).apply((a: any) => getOcspResponder(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getOcspResponder:getOcspResponder", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

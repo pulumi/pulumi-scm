@@ -89,14 +89,20 @@ type GetHttpHeaderProfileListResult struct {
 
 func GetHttpHeaderProfileListOutput(ctx *pulumi.Context, args GetHttpHeaderProfileListOutputArgs, opts ...pulumi.InvokeOption) GetHttpHeaderProfileListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetHttpHeaderProfileListResult, error) {
+		ApplyT(func(v interface{}) (GetHttpHeaderProfileListResultOutput, error) {
 			args := v.(GetHttpHeaderProfileListArgs)
-			r, err := GetHttpHeaderProfileList(ctx, &args, opts...)
-			var s GetHttpHeaderProfileListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetHttpHeaderProfileListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getHttpHeaderProfileList:getHttpHeaderProfileList", args, &rv, "", opts...)
+			if err != nil {
+				return GetHttpHeaderProfileListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetHttpHeaderProfileListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetHttpHeaderProfileListResultOutput), nil
+			}
+			return output, nil
 		}).(GetHttpHeaderProfileListResultOutput)
 }
 

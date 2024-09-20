@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getIkeCryptoProfile(args: GetIkeCryptoProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetIkeCryptoProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIkeCryptoProfile:getIkeCryptoProfile", {
         "device": args.device,
@@ -114,7 +113,13 @@ export interface GetIkeCryptoProfileResult {
  * ```
  */
 export function getIkeCryptoProfileOutput(args: GetIkeCryptoProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIkeCryptoProfileResult> {
-    return pulumi.output(args).apply((a: any) => getIkeCryptoProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getIkeCryptoProfile:getIkeCryptoProfile", {
+        "device": args.device,
+        "folder": args.folder,
+        "id": args.id,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

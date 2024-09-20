@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getHipProfileList(args?: GetHipProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetHipProfileListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getHipProfileList:getHipProfileList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetHipProfileListResult {
  * ```
  */
 export function getHipProfileListOutput(args?: GetHipProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHipProfileListResult> {
-    return pulumi.output(args).apply((a: any) => getHipProfileList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getHipProfileList:getHipProfileList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

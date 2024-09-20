@@ -89,14 +89,20 @@ type GetAuthenticationProfileListResult struct {
 
 func GetAuthenticationProfileListOutput(ctx *pulumi.Context, args GetAuthenticationProfileListOutputArgs, opts ...pulumi.InvokeOption) GetAuthenticationProfileListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetAuthenticationProfileListResult, error) {
+		ApplyT(func(v interface{}) (GetAuthenticationProfileListResultOutput, error) {
 			args := v.(GetAuthenticationProfileListArgs)
-			r, err := GetAuthenticationProfileList(ctx, &args, opts...)
-			var s GetAuthenticationProfileListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetAuthenticationProfileListResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getAuthenticationProfileList:getAuthenticationProfileList", args, &rv, "", opts...)
+			if err != nil {
+				return GetAuthenticationProfileListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetAuthenticationProfileListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetAuthenticationProfileListResultOutput), nil
+			}
+			return output, nil
 		}).(GetAuthenticationProfileListResultOutput)
 }
 

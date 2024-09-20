@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getExternalDynamicListList(args?: GetExternalDynamicListListArgs, opts?: pulumi.InvokeOptions): Promise<GetExternalDynamicListListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getExternalDynamicListList:getExternalDynamicListList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetExternalDynamicListListResult {
  * ```
  */
 export function getExternalDynamicListListOutput(args?: GetExternalDynamicListListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetExternalDynamicListListResult> {
-    return pulumi.output(args).apply((a: any) => getExternalDynamicListList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getExternalDynamicListList:getExternalDynamicListList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

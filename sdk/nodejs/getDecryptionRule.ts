@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getDecryptionRule(args: GetDecryptionRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionRuleResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDecryptionRule:getDecryptionRule", {
         "id": args.id,
@@ -147,7 +146,10 @@ export interface GetDecryptionRuleResult {
  * ```
  */
 export function getDecryptionRuleOutput(args: GetDecryptionRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDecryptionRuleResult> {
-    return pulumi.output(args).apply((a: any) => getDecryptionRule(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getDecryptionRule:getDecryptionRule", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

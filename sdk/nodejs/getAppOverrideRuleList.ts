@@ -23,7 +23,6 @@ import * as utilities from "./utilities";
  */
 export function getAppOverrideRuleList(args?: GetAppOverrideRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetAppOverrideRuleListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAppOverrideRuleList:getAppOverrideRuleList", {
         "device": args.device,
@@ -132,7 +131,17 @@ export interface GetAppOverrideRuleListResult {
  * ```
  */
 export function getAppOverrideRuleListOutput(args?: GetAppOverrideRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAppOverrideRuleListResult> {
-    return pulumi.output(args).apply((a: any) => getAppOverrideRuleList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAppOverrideRuleList:getAppOverrideRuleList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "position": args.position,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

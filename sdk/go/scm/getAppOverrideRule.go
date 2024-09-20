@@ -91,14 +91,20 @@ type LookupAppOverrideRuleResult struct {
 
 func LookupAppOverrideRuleOutput(ctx *pulumi.Context, args LookupAppOverrideRuleOutputArgs, opts ...pulumi.InvokeOption) LookupAppOverrideRuleResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAppOverrideRuleResult, error) {
+		ApplyT(func(v interface{}) (LookupAppOverrideRuleResultOutput, error) {
 			args := v.(LookupAppOverrideRuleArgs)
-			r, err := LookupAppOverrideRule(ctx, &args, opts...)
-			var s LookupAppOverrideRuleResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAppOverrideRuleResult
+			secret, err := ctx.InvokePackageRaw("scm:index/getAppOverrideRule:getAppOverrideRule", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAppOverrideRuleResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAppOverrideRuleResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAppOverrideRuleResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAppOverrideRuleResultOutput)
 }
 

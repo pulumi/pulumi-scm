@@ -10,7 +10,6 @@ import * as utilities from "./utilities";
  * Retrieves a config item.
  */
 export function getTrafficSteeringRule(args: GetTrafficSteeringRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetTrafficSteeringRuleResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", {
         "id": args.id,
@@ -69,7 +68,10 @@ export interface GetTrafficSteeringRuleResult {
  * Retrieves a config item.
  */
 export function getTrafficSteeringRuleOutput(args: GetTrafficSteeringRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrafficSteeringRuleResult> {
-    return pulumi.output(args).apply((a: any) => getTrafficSteeringRule(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

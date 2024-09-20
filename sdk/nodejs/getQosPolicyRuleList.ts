@@ -23,7 +23,6 @@ import * as utilities from "./utilities";
  */
 export function getQosPolicyRuleList(args?: GetQosPolicyRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetQosPolicyRuleListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getQosPolicyRuleList:getQosPolicyRuleList", {
         "device": args.device,
@@ -132,7 +131,17 @@ export interface GetQosPolicyRuleListResult {
  * ```
  */
 export function getQosPolicyRuleListOutput(args?: GetQosPolicyRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetQosPolicyRuleListResult> {
-    return pulumi.output(args).apply((a: any) => getQosPolicyRuleList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getQosPolicyRuleList:getQosPolicyRuleList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "position": args.position,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

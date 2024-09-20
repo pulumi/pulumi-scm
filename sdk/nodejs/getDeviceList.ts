@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getDeviceList(args?: GetDeviceListArgs, opts?: pulumi.InvokeOptions): Promise<GetDeviceListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDeviceList:getDeviceList", {
         "limit": args.limit,
@@ -90,7 +89,13 @@ export interface GetDeviceListResult {
  * ```
  */
 export function getDeviceListOutput(args?: GetDeviceListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDeviceListResult> {
-    return pulumi.output(args).apply((a: any) => getDeviceList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getDeviceList:getDeviceList", {
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+    }, opts);
 }
 
 /**

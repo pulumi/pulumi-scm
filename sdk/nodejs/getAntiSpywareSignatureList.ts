@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getAntiSpywareSignatureList(args?: GetAntiSpywareSignatureListArgs, opts?: pulumi.InvokeOptions): Promise<GetAntiSpywareSignatureListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAntiSpywareSignatureList:getAntiSpywareSignatureList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetAntiSpywareSignatureListResult {
  * ```
  */
 export function getAntiSpywareSignatureListOutput(args?: GetAntiSpywareSignatureListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAntiSpywareSignatureListResult> {
-    return pulumi.output(args).apply((a: any) => getAntiSpywareSignatureList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getAntiSpywareSignatureList:getAntiSpywareSignatureList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getUrlCategoryList(args?: GetUrlCategoryListArgs, opts?: pulumi.InvokeOptions): Promise<GetUrlCategoryListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getUrlCategoryList:getUrlCategoryList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetUrlCategoryListResult {
  * ```
  */
 export function getUrlCategoryListOutput(args?: GetUrlCategoryListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUrlCategoryListResult> {
-    return pulumi.output(args).apply((a: any) => getUrlCategoryList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getUrlCategoryList:getUrlCategoryList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**

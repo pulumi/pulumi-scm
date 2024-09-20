@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getIpsecTunnelList(args?: GetIpsecTunnelListArgs, opts?: pulumi.InvokeOptions): Promise<GetIpsecTunnelListResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIpsecTunnelList:getIpsecTunnelList", {
         "device": args.device,
@@ -121,7 +120,16 @@ export interface GetIpsecTunnelListResult {
  * ```
  */
 export function getIpsecTunnelListOutput(args?: GetIpsecTunnelListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpsecTunnelListResult> {
-    return pulumi.output(args).apply((a: any) => getIpsecTunnelList(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("scm:index/getIpsecTunnelList:getIpsecTunnelList", {
+        "device": args.device,
+        "folder": args.folder,
+        "limit": args.limit,
+        "name": args.name,
+        "offset": args.offset,
+        "snippet": args.snippet,
+    }, opts);
 }
 
 /**
