@@ -15,6 +15,7 @@
 package provider
 
 import (
+	"bytes"
 	"fmt"
 	"path/filepath"
 
@@ -77,6 +78,7 @@ func Provider() tfbridge.ProviderInfo {
 		MetadataInfo:      tfbridge.NewProviderMetadata(bridgeMetadata),
 		TFProviderVersion: "0.2.1",
 		Version:           version.Version,
+		DocRules:          &tfbridge.DocRuleInfo{EditRules: editRules},
 		Config:            map[string]*tfbridge.SchemaInfo{},
 		Resources:         map[string]*tfbridge.ResourceInfo{},
 		DataSources:       map[string]*tfbridge.DataSourceInfo{},
@@ -136,4 +138,32 @@ func Provider() tfbridge.ProviderInfo {
 	prov.MustApplyAutoAliases()
 
 	return prov
+}
+
+func editRules(defaults []tfbridge.DocsEdit) []tfbridge.DocsEdit {
+	return append(
+		defaults,
+		// Fix up the example code for the converter to work
+		tfbridge.DocsEdit{
+			Path: "index.md",
+			Edit: func(_ string, content []byte) ([]byte, error) {
+				b := bytes.ReplaceAll(
+					content,
+					[]byte("paloaltonetworks/terraform-provider-scm"),
+					[]byte("paloaltonetworks/scm"),
+				)
+				return b, nil
+			},
+		},
+		//// Skip "Provider
+		//tfbridge.DocsEdit{
+		//	Path: "index.md",
+		//	Edit: func(_ string, content []byte) ([]byte, error) {
+		//		return tfgen.SkipSectionByHeaderContent(content, func(headerText string) bool {
+		//			return headerText == "Warning"
+		//		})
+		//	},
+		//}
+
+	)
 }
