@@ -14,7 +14,7 @@ The scm provider is available as a package in all Pulumi languages:
 * Java: [`com.pulumi/scm`](https://central.sonatype.com/artifact/com.pulumi/scm)
 ## Overview
 
-The `scm` provider provides resources and data sources to manage and query Strata Cloud Manager.
+The `scm` provider provides resources and functions to manage and query Strata Cloud Manager.
 
 This provider covers the following aspects of Strata Cloud Manager:
 * Unified Networking Security
