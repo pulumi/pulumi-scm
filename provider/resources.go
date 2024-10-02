@@ -17,7 +17,6 @@ package provider
 import (
 	"bytes"
 	"fmt"
-	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
 	"path/filepath"
 
 	// embed is used to store bridge-metadata.json in the compiled binary
@@ -28,6 +27,7 @@ import (
 	pf "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	tfbridgetokens "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
+	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
 
 	"github.com/pulumi/pulumi-scm/provider/pkg/version"
 )
