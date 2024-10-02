@@ -17,6 +17,7 @@ package provider
 import (
 	"bytes"
 	"fmt"
+	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
 	"path/filepath"
 
 	// embed is used to store bridge-metadata.json in the compiled binary
@@ -155,15 +156,14 @@ func editRules(defaults []tfbridge.DocsEdit) []tfbridge.DocsEdit {
 				return b, nil
 			},
 		},
-		//// Skip "Provider
-		//tfbridge.DocsEdit{
-		//	Path: "index.md",
-		//	Edit: func(_ string, content []byte) ([]byte, error) {
-		//		return tfgen.SkipSectionByHeaderContent(content, func(headerText string) bool {
-		//			return headerText == "Warning"
-		//		})
-		//	},
-		//}
-
+		// Skip "Support" section, which concerns the upstream support
+		tfbridge.DocsEdit{
+			Path: "index.md",
+			Edit: func(_ string, content []byte) ([]byte, error) {
+				return tfgen.SkipSectionByHeaderContent(content, func(headerText string) bool {
+					return headerText == "Support"
+				})
+			},
+		},
 	)
 }
