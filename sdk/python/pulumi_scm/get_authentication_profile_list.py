@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -198,9 +203,6 @@ def get_authentication_profile_list(device: Optional[str] = None,
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
-
-
-@_utilities.lift_output_func(get_authentication_profile_list)
 def get_authentication_profile_list_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                                            folder: Optional[pulumi.Input[Optional[str]]] = None,
                                            limit: Optional[pulumi.Input[Optional[int]]] = None,
@@ -228,4 +230,23 @@ def get_authentication_profile_list_output(device: Optional[pulumi.Input[Optiona
     :param int offset: The Offset param. Default: `0`.
     :param str snippet: The Snippet param.
     """
-    ...
+    __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
+    __args__['limit'] = limit
+    __args__['name'] = name
+    __args__['offset'] = offset
+    __args__['snippet'] = snippet
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationProfileList:getAuthenticationProfileList', __args__, opts=opts, typ=GetAuthenticationProfileListResult)
+    return __ret__.apply(lambda __response__: GetAuthenticationProfileListResult(
+        datas=pulumi.get(__response__, 'datas'),
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
+        id=pulumi.get(__response__, 'id'),
+        limit=pulumi.get(__response__, 'limit'),
+        name=pulumi.get(__response__, 'name'),
+        offset=pulumi.get(__response__, 'offset'),
+        snippet=pulumi.get(__response__, 'snippet'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        total=pulumi.get(__response__, 'total')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -118,9 +123,6 @@ def get_mfa_server(id: Optional[str] = None,
         mfa_vendor_type=pulumi.get(__ret__, 'mfa_vendor_type'),
         name=pulumi.get(__ret__, 'name'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_mfa_server)
 def get_mfa_server_output(id: Optional[pulumi.Input[str]] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetMfaServerResult]:
     """
@@ -138,4 +140,13 @@ def get_mfa_server_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getMfaServer:getMfaServer', __args__, opts=opts, typ=GetMfaServerResult)
+    return __ret__.apply(lambda __response__: GetMfaServerResult(
+        id=pulumi.get(__response__, 'id'),
+        mfa_cert_profile=pulumi.get(__response__, 'mfa_cert_profile'),
+        mfa_vendor_type=pulumi.get(__response__, 'mfa_vendor_type'),
+        name=pulumi.get(__response__, 'name'),
+        tfid=pulumi.get(__response__, 'tfid')))

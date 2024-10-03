@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetInternalDnsServerList(ctx, nil, nil)
+//			_, err := scm.GetInternalDnsServerList(ctx, &scm.GetInternalDnsServerListArgs{}, nil)
 //			if err != nil {
 //				return err
 //			}

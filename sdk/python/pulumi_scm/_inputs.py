@@ -4,322 +4,647 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
     'AddressGroupDynamicValueArgs',
+    'AddressGroupDynamicValueArgsDict',
     'AntiSpywareProfileMicaEngineSpywareEnabledListArgs',
+    'AntiSpywareProfileMicaEngineSpywareEnabledListArgsDict',
     'AntiSpywareProfileRuleArgs',
+    'AntiSpywareProfileRuleArgsDict',
     'AntiSpywareProfileRuleActionArgs',
+    'AntiSpywareProfileRuleActionArgsDict',
     'AntiSpywareProfileRuleActionBlockIpArgs',
+    'AntiSpywareProfileRuleActionBlockIpArgsDict',
     'AntiSpywareProfileThreatExceptionArgs',
+    'AntiSpywareProfileThreatExceptionArgsDict',
     'AntiSpywareProfileThreatExceptionActionArgs',
+    'AntiSpywareProfileThreatExceptionActionArgsDict',
     'AntiSpywareProfileThreatExceptionActionBlockIpArgs',
+    'AntiSpywareProfileThreatExceptionActionBlockIpArgsDict',
     'AntiSpywareProfileThreatExceptionExemptIpArgs',
+    'AntiSpywareProfileThreatExceptionExemptIpArgsDict',
     'AntiSpywareSignatureDefaultActionArgs',
+    'AntiSpywareSignatureDefaultActionArgsDict',
     'AntiSpywareSignatureDefaultActionBlockIpArgs',
+    'AntiSpywareSignatureDefaultActionBlockIpArgsDict',
     'AntiSpywareSignatureSignatureArgs',
+    'AntiSpywareSignatureSignatureArgsDict',
     'AntiSpywareSignatureSignatureCombinationArgs',
+    'AntiSpywareSignatureSignatureCombinationArgsDict',
     'AntiSpywareSignatureSignatureCombinationAndConditionArgs',
+    'AntiSpywareSignatureSignatureCombinationAndConditionArgsDict',
     'AntiSpywareSignatureSignatureCombinationAndConditionOrConditionArgs',
+    'AntiSpywareSignatureSignatureCombinationAndConditionOrConditionArgsDict',
     'AntiSpywareSignatureSignatureCombinationTimeAttributeArgs',
+    'AntiSpywareSignatureSignatureCombinationTimeAttributeArgsDict',
     'AntiSpywareSignatureSignatureStandardArgs',
+    'AntiSpywareSignatureSignatureStandardArgsDict',
     'AntiSpywareSignatureSignatureStandardAndConditionArgs',
+    'AntiSpywareSignatureSignatureStandardAndConditionArgsDict',
     'AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgs',
+    'AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgsDict',
     'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgs',
+    'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgsDict',
     'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgs',
+    'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgsDict',
     'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs',
+    'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgsDict',
     'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs',
+    'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgsDict',
     'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs',
+    'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgsDict',
     'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgs',
+    'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgsDict',
     'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs',
+    'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgsDict',
     'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgs',
+    'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgsDict',
     'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgs',
+    'AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgsDict',
     'ApplicationDefaultArgs',
+    'ApplicationDefaultArgsDict',
     'ApplicationDefaultIdentByIcmp6TypeArgs',
+    'ApplicationDefaultIdentByIcmp6TypeArgsDict',
     'ApplicationDefaultIdentByIcmpTypeArgs',
+    'ApplicationDefaultIdentByIcmpTypeArgsDict',
     'ApplicationFilterTaggingArgs',
+    'ApplicationFilterTaggingArgsDict',
     'ApplicationSignatureArgs',
+    'ApplicationSignatureArgsDict',
     'ApplicationSignatureAndConditionArgs',
+    'ApplicationSignatureAndConditionArgsDict',
     'ApplicationSignatureAndConditionOrConditionArgs',
+    'ApplicationSignatureAndConditionOrConditionArgsDict',
     'ApplicationSignatureAndConditionOrConditionOperatorArgs',
+    'ApplicationSignatureAndConditionOrConditionOperatorArgsDict',
     'ApplicationSignatureAndConditionOrConditionOperatorEqualToArgs',
+    'ApplicationSignatureAndConditionOrConditionOperatorEqualToArgsDict',
     'ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgs',
+    'ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgsDict',
     'ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgs',
+    'ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgsDict',
     'ApplicationSignatureAndConditionOrConditionOperatorLessThanArgs',
+    'ApplicationSignatureAndConditionOrConditionOperatorLessThanArgsDict',
     'ApplicationSignatureAndConditionOrConditionOperatorLessThanQualifierArgs',
+    'ApplicationSignatureAndConditionOrConditionOperatorLessThanQualifierArgsDict',
     'ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgs',
+    'ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgsDict',
     'ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierArgs',
+    'ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierArgsDict',
     'AuthenticationProfileLockoutArgs',
+    'AuthenticationProfileLockoutArgsDict',
     'AuthenticationProfileMethodArgs',
+    'AuthenticationProfileMethodArgsDict',
     'AuthenticationProfileMethodCloudArgs',
+    'AuthenticationProfileMethodCloudArgsDict',
     'AuthenticationProfileMethodKerberosArgs',
+    'AuthenticationProfileMethodKerberosArgsDict',
     'AuthenticationProfileMethodLdapArgs',
+    'AuthenticationProfileMethodLdapArgsDict',
     'AuthenticationProfileMethodRadiusArgs',
+    'AuthenticationProfileMethodRadiusArgsDict',
     'AuthenticationProfileMethodSamlIdpArgs',
+    'AuthenticationProfileMethodSamlIdpArgsDict',
     'AuthenticationProfileMethodTacplusArgs',
+    'AuthenticationProfileMethodTacplusArgsDict',
     'AuthenticationProfileMultiFactorAuthArgs',
+    'AuthenticationProfileMultiFactorAuthArgsDict',
     'AuthenticationProfileSingleSignOnArgs',
+    'AuthenticationProfileSingleSignOnArgsDict',
     'CertificateProfileCaCertificateArgs',
+    'CertificateProfileCaCertificateArgsDict',
     'CertificateProfileUsernameFieldArgs',
+    'CertificateProfileUsernameFieldArgsDict',
     'DecryptionProfileSslForwardProxyArgs',
+    'DecryptionProfileSslForwardProxyArgsDict',
     'DecryptionProfileSslInboundProxyArgs',
+    'DecryptionProfileSslInboundProxyArgsDict',
     'DecryptionProfileSslNoProxyArgs',
+    'DecryptionProfileSslNoProxyArgsDict',
     'DecryptionProfileSslProtocolSettingsArgs',
+    'DecryptionProfileSslProtocolSettingsArgsDict',
     'DecryptionRuleTypeArgs',
+    'DecryptionRuleTypeArgsDict',
     'DnsSecurityProfileBotnetDomainsArgs',
+    'DnsSecurityProfileBotnetDomainsArgsDict',
     'DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs',
+    'DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgsDict',
     'DnsSecurityProfileBotnetDomainsListArgs',
+    'DnsSecurityProfileBotnetDomainsListArgsDict',
     'DnsSecurityProfileBotnetDomainsListActionArgs',
+    'DnsSecurityProfileBotnetDomainsListActionArgsDict',
     'DnsSecurityProfileBotnetDomainsSinkholeArgs',
+    'DnsSecurityProfileBotnetDomainsSinkholeArgsDict',
     'DnsSecurityProfileBotnetDomainsWhitelistArgs',
+    'DnsSecurityProfileBotnetDomainsWhitelistArgsDict',
     'ExternalDynamicListTypeArgs',
+    'ExternalDynamicListTypeArgsDict',
     'ExternalDynamicListTypeDomainArgs',
+    'ExternalDynamicListTypeDomainArgsDict',
     'ExternalDynamicListTypeDomainDomainAuthArgs',
+    'ExternalDynamicListTypeDomainDomainAuthArgsDict',
     'ExternalDynamicListTypeDomainRecurringArgs',
+    'ExternalDynamicListTypeDomainRecurringArgsDict',
     'ExternalDynamicListTypeDomainRecurringDailyArgs',
+    'ExternalDynamicListTypeDomainRecurringDailyArgsDict',
     'ExternalDynamicListTypeDomainRecurringMonthlyArgs',
+    'ExternalDynamicListTypeDomainRecurringMonthlyArgsDict',
     'ExternalDynamicListTypeDomainRecurringWeeklyArgs',
+    'ExternalDynamicListTypeDomainRecurringWeeklyArgsDict',
     'ExternalDynamicListTypeImeiArgs',
+    'ExternalDynamicListTypeImeiArgsDict',
     'ExternalDynamicListTypeImeiImeiAuthArgs',
+    'ExternalDynamicListTypeImeiImeiAuthArgsDict',
     'ExternalDynamicListTypeImeiRecurringArgs',
+    'ExternalDynamicListTypeImeiRecurringArgsDict',
     'ExternalDynamicListTypeImeiRecurringDailyArgs',
+    'ExternalDynamicListTypeImeiRecurringDailyArgsDict',
     'ExternalDynamicListTypeImeiRecurringMonthlyArgs',
+    'ExternalDynamicListTypeImeiRecurringMonthlyArgsDict',
     'ExternalDynamicListTypeImeiRecurringWeeklyArgs',
+    'ExternalDynamicListTypeImeiRecurringWeeklyArgsDict',
     'ExternalDynamicListTypeImsiArgs',
+    'ExternalDynamicListTypeImsiArgsDict',
     'ExternalDynamicListTypeImsiImsiAuthArgs',
+    'ExternalDynamicListTypeImsiImsiAuthArgsDict',
     'ExternalDynamicListTypeImsiRecurringArgs',
+    'ExternalDynamicListTypeImsiRecurringArgsDict',
     'ExternalDynamicListTypeImsiRecurringDailyArgs',
+    'ExternalDynamicListTypeImsiRecurringDailyArgsDict',
     'ExternalDynamicListTypeImsiRecurringMonthlyArgs',
+    'ExternalDynamicListTypeImsiRecurringMonthlyArgsDict',
     'ExternalDynamicListTypeImsiRecurringWeeklyArgs',
+    'ExternalDynamicListTypeImsiRecurringWeeklyArgsDict',
     'ExternalDynamicListTypeIpArgs',
+    'ExternalDynamicListTypeIpArgsDict',
     'ExternalDynamicListTypeIpIpAuthArgs',
+    'ExternalDynamicListTypeIpIpAuthArgsDict',
     'ExternalDynamicListTypeIpRecurringArgs',
+    'ExternalDynamicListTypeIpRecurringArgsDict',
     'ExternalDynamicListTypeIpRecurringDailyArgs',
+    'ExternalDynamicListTypeIpRecurringDailyArgsDict',
     'ExternalDynamicListTypeIpRecurringMonthlyArgs',
+    'ExternalDynamicListTypeIpRecurringMonthlyArgsDict',
     'ExternalDynamicListTypeIpRecurringWeeklyArgs',
+    'ExternalDynamicListTypeIpRecurringWeeklyArgsDict',
     'ExternalDynamicListTypePredefinedIpArgs',
+    'ExternalDynamicListTypePredefinedIpArgsDict',
     'ExternalDynamicListTypePredefinedUrlArgs',
+    'ExternalDynamicListTypePredefinedUrlArgsDict',
     'ExternalDynamicListTypeUrlArgs',
+    'ExternalDynamicListTypeUrlArgsDict',
     'ExternalDynamicListTypeUrlRecurringArgs',
+    'ExternalDynamicListTypeUrlRecurringArgsDict',
     'ExternalDynamicListTypeUrlRecurringDailyArgs',
+    'ExternalDynamicListTypeUrlRecurringDailyArgsDict',
     'ExternalDynamicListTypeUrlRecurringMonthlyArgs',
+    'ExternalDynamicListTypeUrlRecurringMonthlyArgsDict',
     'ExternalDynamicListTypeUrlRecurringWeeklyArgs',
+    'ExternalDynamicListTypeUrlRecurringWeeklyArgsDict',
     'ExternalDynamicListTypeUrlUrlAuthArgs',
+    'ExternalDynamicListTypeUrlUrlAuthArgsDict',
     'FileBlockingProfileRuleArgs',
+    'FileBlockingProfileRuleArgsDict',
     'HipObjectAntiMalwareArgs',
+    'HipObjectAntiMalwareArgsDict',
     'HipObjectAntiMalwareCriteriaArgs',
+    'HipObjectAntiMalwareCriteriaArgsDict',
     'HipObjectAntiMalwareCriteriaLastScanTimeArgs',
+    'HipObjectAntiMalwareCriteriaLastScanTimeArgsDict',
     'HipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs',
+    'HipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgsDict',
     'HipObjectAntiMalwareCriteriaLastScanTimeWithinArgs',
+    'HipObjectAntiMalwareCriteriaLastScanTimeWithinArgsDict',
     'HipObjectAntiMalwareCriteriaProductVersionArgs',
+    'HipObjectAntiMalwareCriteriaProductVersionArgsDict',
     'HipObjectAntiMalwareCriteriaProductVersionNotWithinArgs',
+    'HipObjectAntiMalwareCriteriaProductVersionNotWithinArgsDict',
     'HipObjectAntiMalwareCriteriaProductVersionWithinArgs',
+    'HipObjectAntiMalwareCriteriaProductVersionWithinArgsDict',
     'HipObjectAntiMalwareCriteriaVirdefVersionArgs',
+    'HipObjectAntiMalwareCriteriaVirdefVersionArgsDict',
     'HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs',
+    'HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgsDict',
     'HipObjectAntiMalwareCriteriaVirdefVersionWithinArgs',
+    'HipObjectAntiMalwareCriteriaVirdefVersionWithinArgsDict',
     'HipObjectAntiMalwareVendorArgs',
+    'HipObjectAntiMalwareVendorArgsDict',
     'HipObjectCertificateArgs',
+    'HipObjectCertificateArgsDict',
     'HipObjectCertificateCriteriaArgs',
+    'HipObjectCertificateCriteriaArgsDict',
     'HipObjectCertificateCriteriaCertificateAttributeArgs',
+    'HipObjectCertificateCriteriaCertificateAttributeArgsDict',
     'HipObjectCustomChecksArgs',
+    'HipObjectCustomChecksArgsDict',
     'HipObjectCustomChecksCriteriaArgs',
+    'HipObjectCustomChecksCriteriaArgsDict',
     'HipObjectCustomChecksCriteriaPlistArgs',
+    'HipObjectCustomChecksCriteriaPlistArgsDict',
     'HipObjectCustomChecksCriteriaPlistKeyArgs',
+    'HipObjectCustomChecksCriteriaPlistKeyArgsDict',
     'HipObjectCustomChecksCriteriaProcessListArgs',
+    'HipObjectCustomChecksCriteriaProcessListArgsDict',
     'HipObjectCustomChecksCriteriaRegistryKeyArgs',
+    'HipObjectCustomChecksCriteriaRegistryKeyArgsDict',
     'HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs',
+    'HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgsDict',
     'HipObjectDataLossPreventionArgs',
+    'HipObjectDataLossPreventionArgsDict',
     'HipObjectDataLossPreventionCriteriaArgs',
+    'HipObjectDataLossPreventionCriteriaArgsDict',
     'HipObjectDataLossPreventionVendorArgs',
+    'HipObjectDataLossPreventionVendorArgsDict',
     'HipObjectDiskBackupArgs',
+    'HipObjectDiskBackupArgsDict',
     'HipObjectDiskBackupCriteriaArgs',
+    'HipObjectDiskBackupCriteriaArgsDict',
     'HipObjectDiskBackupCriteriaLastBackupTimeArgs',
+    'HipObjectDiskBackupCriteriaLastBackupTimeArgsDict',
     'HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs',
+    'HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgsDict',
     'HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs',
+    'HipObjectDiskBackupCriteriaLastBackupTimeWithinArgsDict',
     'HipObjectDiskBackupVendorArgs',
+    'HipObjectDiskBackupVendorArgsDict',
     'HipObjectDiskEncryptionArgs',
+    'HipObjectDiskEncryptionArgsDict',
     'HipObjectDiskEncryptionCriteriaArgs',
+    'HipObjectDiskEncryptionCriteriaArgsDict',
     'HipObjectDiskEncryptionCriteriaEncryptedLocationArgs',
+    'HipObjectDiskEncryptionCriteriaEncryptedLocationArgsDict',
     'HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs',
+    'HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgsDict',
     'HipObjectDiskEncryptionVendorArgs',
+    'HipObjectDiskEncryptionVendorArgsDict',
     'HipObjectFirewallArgs',
+    'HipObjectFirewallArgsDict',
     'HipObjectFirewallCriteriaArgs',
+    'HipObjectFirewallCriteriaArgsDict',
     'HipObjectFirewallVendorArgs',
+    'HipObjectFirewallVendorArgsDict',
     'HipObjectHostInfoArgs',
+    'HipObjectHostInfoArgsDict',
     'HipObjectHostInfoCriteriaArgs',
+    'HipObjectHostInfoCriteriaArgsDict',
     'HipObjectHostInfoCriteriaClientVersionArgs',
+    'HipObjectHostInfoCriteriaClientVersionArgsDict',
     'HipObjectHostInfoCriteriaDomainArgs',
+    'HipObjectHostInfoCriteriaDomainArgsDict',
     'HipObjectHostInfoCriteriaHostIdArgs',
+    'HipObjectHostInfoCriteriaHostIdArgsDict',
     'HipObjectHostInfoCriteriaHostNameArgs',
+    'HipObjectHostInfoCriteriaHostNameArgsDict',
     'HipObjectHostInfoCriteriaOsArgs',
+    'HipObjectHostInfoCriteriaOsArgsDict',
     'HipObjectHostInfoCriteriaOsContainsArgs',
+    'HipObjectHostInfoCriteriaOsContainsArgsDict',
     'HipObjectHostInfoCriteriaSerialNumberArgs',
+    'HipObjectHostInfoCriteriaSerialNumberArgsDict',
     'HipObjectMobileDeviceArgs',
+    'HipObjectMobileDeviceArgsDict',
     'HipObjectMobileDeviceCriteriaArgs',
+    'HipObjectMobileDeviceCriteriaArgsDict',
     'HipObjectMobileDeviceCriteriaApplicationsArgs',
+    'HipObjectMobileDeviceCriteriaApplicationsArgsDict',
     'HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs',
+    'HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgsDict',
     'HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesArgs',
+    'HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesArgsDict',
     'HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesExcludeArgs',
+    'HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesExcludeArgsDict',
     'HipObjectMobileDeviceCriteriaApplicationsIncludeArgs',
+    'HipObjectMobileDeviceCriteriaApplicationsIncludeArgsDict',
     'HipObjectMobileDeviceCriteriaImeiArgs',
+    'HipObjectMobileDeviceCriteriaImeiArgsDict',
     'HipObjectMobileDeviceCriteriaLastCheckinTimeArgs',
+    'HipObjectMobileDeviceCriteriaLastCheckinTimeArgsDict',
     'HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs',
+    'HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgsDict',
     'HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgs',
+    'HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgsDict',
     'HipObjectMobileDeviceCriteriaModelArgs',
+    'HipObjectMobileDeviceCriteriaModelArgsDict',
     'HipObjectMobileDeviceCriteriaPhoneNumberArgs',
+    'HipObjectMobileDeviceCriteriaPhoneNumberArgsDict',
     'HipObjectMobileDeviceCriteriaTagArgs',
+    'HipObjectMobileDeviceCriteriaTagArgsDict',
     'HipObjectNetworkInfoArgs',
+    'HipObjectNetworkInfoArgsDict',
     'HipObjectNetworkInfoCriteriaArgs',
+    'HipObjectNetworkInfoCriteriaArgsDict',
     'HipObjectNetworkInfoCriteriaNetworkArgs',
+    'HipObjectNetworkInfoCriteriaNetworkArgsDict',
     'HipObjectNetworkInfoCriteriaNetworkIsArgs',
+    'HipObjectNetworkInfoCriteriaNetworkIsArgsDict',
     'HipObjectNetworkInfoCriteriaNetworkIsMobileArgs',
+    'HipObjectNetworkInfoCriteriaNetworkIsMobileArgsDict',
     'HipObjectNetworkInfoCriteriaNetworkIsNotArgs',
+    'HipObjectNetworkInfoCriteriaNetworkIsNotArgsDict',
     'HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgs',
+    'HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgsDict',
     'HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgs',
+    'HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgsDict',
     'HipObjectNetworkInfoCriteriaNetworkIsWifiArgs',
+    'HipObjectNetworkInfoCriteriaNetworkIsWifiArgsDict',
     'HipObjectPatchManagementArgs',
+    'HipObjectPatchManagementArgsDict',
     'HipObjectPatchManagementCriteriaArgs',
+    'HipObjectPatchManagementCriteriaArgsDict',
     'HipObjectPatchManagementCriteriaMissingPatchesArgs',
+    'HipObjectPatchManagementCriteriaMissingPatchesArgsDict',
     'HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs',
+    'HipObjectPatchManagementCriteriaMissingPatchesSeverityArgsDict',
     'HipObjectPatchManagementVendorArgs',
+    'HipObjectPatchManagementVendorArgsDict',
     'HttpHeaderProfileHttpHeaderInsertionArgs',
+    'HttpHeaderProfileHttpHeaderInsertionArgsDict',
     'HttpHeaderProfileHttpHeaderInsertionTypeArgs',
+    'HttpHeaderProfileHttpHeaderInsertionTypeArgsDict',
     'HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs',
+    'HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgsDict',
     'IkeCryptoProfileLifetimeArgs',
+    'IkeCryptoProfileLifetimeArgsDict',
     'IkeGatewayAuthenticationArgs',
+    'IkeGatewayAuthenticationArgsDict',
     'IkeGatewayAuthenticationCertificateArgs',
+    'IkeGatewayAuthenticationCertificateArgsDict',
     'IkeGatewayAuthenticationCertificateLocalCertificateArgs',
+    'IkeGatewayAuthenticationCertificateLocalCertificateArgsDict',
     'IkeGatewayAuthenticationPreSharedKeyArgs',
+    'IkeGatewayAuthenticationPreSharedKeyArgsDict',
     'IkeGatewayLocalIdArgs',
+    'IkeGatewayLocalIdArgsDict',
     'IkeGatewayPeerAddressArgs',
+    'IkeGatewayPeerAddressArgsDict',
     'IkeGatewayPeerIdArgs',
+    'IkeGatewayPeerIdArgsDict',
     'IkeGatewayProtocolArgs',
+    'IkeGatewayProtocolArgsDict',
     'IkeGatewayProtocolCommonArgs',
+    'IkeGatewayProtocolCommonArgsDict',
     'IkeGatewayProtocolCommonFragmentationArgs',
+    'IkeGatewayProtocolCommonFragmentationArgsDict',
     'IkeGatewayProtocolCommonNatTraversalArgs',
+    'IkeGatewayProtocolCommonNatTraversalArgsDict',
     'IkeGatewayProtocolIkev1Args',
+    'IkeGatewayProtocolIkev1ArgsDict',
     'IkeGatewayProtocolIkev1DpdArgs',
+    'IkeGatewayProtocolIkev1DpdArgsDict',
     'IkeGatewayProtocolIkev2Args',
+    'IkeGatewayProtocolIkev2ArgsDict',
     'IkeGatewayProtocolIkev2DpdArgs',
+    'IkeGatewayProtocolIkev2DpdArgsDict',
     'IpsecCryptoProfileAhArgs',
+    'IpsecCryptoProfileAhArgsDict',
     'IpsecCryptoProfileEspArgs',
+    'IpsecCryptoProfileEspArgsDict',
     'IpsecCryptoProfileLifesizeArgs',
+    'IpsecCryptoProfileLifesizeArgsDict',
     'IpsecCryptoProfileLifetimeArgs',
+    'IpsecCryptoProfileLifetimeArgsDict',
     'IpsecTunnelAutoKeyArgs',
+    'IpsecTunnelAutoKeyArgsDict',
     'IpsecTunnelAutoKeyIkeGatewayArgs',
+    'IpsecTunnelAutoKeyIkeGatewayArgsDict',
     'IpsecTunnelAutoKeyProxyIdArgs',
+    'IpsecTunnelAutoKeyProxyIdArgsDict',
     'IpsecTunnelAutoKeyProxyIdProtocolArgs',
+    'IpsecTunnelAutoKeyProxyIdProtocolArgsDict',
     'IpsecTunnelAutoKeyProxyIdProtocolTcpArgs',
+    'IpsecTunnelAutoKeyProxyIdProtocolTcpArgsDict',
     'IpsecTunnelAutoKeyProxyIdProtocolUdpArgs',
+    'IpsecTunnelAutoKeyProxyIdProtocolUdpArgsDict',
     'IpsecTunnelAutoKeyProxyIdV6Args',
+    'IpsecTunnelAutoKeyProxyIdV6ArgsDict',
     'IpsecTunnelAutoKeyProxyIdV6ProtocolArgs',
+    'IpsecTunnelAutoKeyProxyIdV6ProtocolArgsDict',
     'IpsecTunnelAutoKeyProxyIdV6ProtocolTcpArgs',
+    'IpsecTunnelAutoKeyProxyIdV6ProtocolTcpArgsDict',
     'IpsecTunnelAutoKeyProxyIdV6ProtocolUdpArgs',
+    'IpsecTunnelAutoKeyProxyIdV6ProtocolUdpArgsDict',
     'IpsecTunnelTunnelMonitorArgs',
+    'IpsecTunnelTunnelMonitorArgsDict',
     'KerberosServerProfileServerArgs',
+    'KerberosServerProfileServerArgsDict',
     'LdapServerProfileServerArgs',
+    'LdapServerProfileServerArgsDict',
     'MfaServerMfaVendorTypeArgs',
+    'MfaServerMfaVendorTypeArgsDict',
     'MfaServerMfaVendorTypeDuoSecurityV2Args',
+    'MfaServerMfaVendorTypeDuoSecurityV2ArgsDict',
     'MfaServerMfaVendorTypeOktaAdaptiveV1Args',
+    'MfaServerMfaVendorTypeOktaAdaptiveV1ArgsDict',
     'MfaServerMfaVendorTypePingIdentityV1Args',
+    'MfaServerMfaVendorTypePingIdentityV1ArgsDict',
     'MfaServerMfaVendorTypeRsaSecuridAccessV1Args',
+    'MfaServerMfaVendorTypeRsaSecuridAccessV1ArgsDict',
     'NatRuleDestinationTranslationArgs',
+    'NatRuleDestinationTranslationArgsDict',
     'NatRuleDestinationTranslationDnsRewriteArgs',
+    'NatRuleDestinationTranslationDnsRewriteArgsDict',
     'NatRuleDynamicDestinationTranslationArgs',
+    'NatRuleDynamicDestinationTranslationArgsDict',
     'NatRuleSourceTranslationArgs',
+    'NatRuleSourceTranslationArgsDict',
     'NatRuleSourceTranslationFallbackArgs',
+    'NatRuleSourceTranslationFallbackArgsDict',
     'NatRuleTargetArgs',
+    'NatRuleTargetArgsDict',
     'NatRuleTargetDeviceArgs',
+    'NatRuleTargetDeviceArgsDict',
     'QosPolicyRuleActionArgs',
+    'QosPolicyRuleActionArgsDict',
     'QosPolicyRuleDscpTosArgs',
+    'QosPolicyRuleDscpTosArgsDict',
     'QosPolicyRuleDscpTosCodepointArgs',
+    'QosPolicyRuleDscpTosCodepointArgsDict',
     'QosPolicyRuleDscpTosCodepointTypeArgs',
+    'QosPolicyRuleDscpTosCodepointTypeArgsDict',
     'QosPolicyRuleDscpTosCodepointTypeAfArgs',
+    'QosPolicyRuleDscpTosCodepointTypeAfArgsDict',
     'QosPolicyRuleDscpTosCodepointTypeCsArgs',
+    'QosPolicyRuleDscpTosCodepointTypeCsArgsDict',
     'QosPolicyRuleDscpTosCodepointTypeCustomArgs',
+    'QosPolicyRuleDscpTosCodepointTypeCustomArgsDict',
     'QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs',
+    'QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgsDict',
     'QosPolicyRuleDscpTosCodepointTypeTosArgs',
+    'QosPolicyRuleDscpTosCodepointTypeTosArgsDict',
     'QosProfileAggregateBandwidthArgs',
+    'QosProfileAggregateBandwidthArgsDict',
     'QosProfileClassBandwidthTypeArgs',
+    'QosProfileClassBandwidthTypeArgsDict',
     'QosProfileClassBandwidthTypeMbpsArgs',
+    'QosProfileClassBandwidthTypeMbpsArgsDict',
     'QosProfileClassBandwidthTypeMbpsClassArgs',
+    'QosProfileClassBandwidthTypeMbpsClassArgsDict',
     'QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs',
+    'QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgsDict',
     'QosProfileClassBandwidthTypePercentageArgs',
+    'QosProfileClassBandwidthTypePercentageArgsDict',
     'QosProfileClassBandwidthTypePercentageClassArgs',
+    'QosProfileClassBandwidthTypePercentageClassArgsDict',
     'QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs',
+    'QosProfileClassBandwidthTypePercentageClassClassBandwidthArgsDict',
     'RadiusServerProfileProtocolArgs',
+    'RadiusServerProfileProtocolArgsDict',
     'RadiusServerProfileProtocolEapTtlsWithPapArgs',
+    'RadiusServerProfileProtocolEapTtlsWithPapArgsDict',
     'RadiusServerProfileProtocolPeapMschapV2Args',
+    'RadiusServerProfileProtocolPeapMschapV2ArgsDict',
     'RadiusServerProfileProtocolPeapWithGtcArgs',
+    'RadiusServerProfileProtocolPeapWithGtcArgsDict',
     'RadiusServerProfileServerArgs',
+    'RadiusServerProfileServerArgsDict',
     'RegionGeoLocationArgs',
+    'RegionGeoLocationArgsDict',
     'RemoteNetworkEcmpTunnelArgs',
+    'RemoteNetworkEcmpTunnelArgsDict',
     'RemoteNetworkEcmpTunnelProtocolArgs',
+    'RemoteNetworkEcmpTunnelProtocolArgsDict',
     'RemoteNetworkEcmpTunnelProtocolBgpArgs',
+    'RemoteNetworkEcmpTunnelProtocolBgpArgsDict',
     'RemoteNetworkProtocolArgs',
+    'RemoteNetworkProtocolArgsDict',
     'RemoteNetworkProtocolBgpArgs',
+    'RemoteNetworkProtocolBgpArgsDict',
     'RemoteNetworkProtocolBgpPeerArgs',
+    'RemoteNetworkProtocolBgpPeerArgsDict',
     'ScepProfileAlgorithmArgs',
+    'ScepProfileAlgorithmArgsDict',
     'ScepProfileAlgorithmRsaArgs',
+    'ScepProfileAlgorithmRsaArgsDict',
     'ScepProfileCertificateAttributesArgs',
+    'ScepProfileCertificateAttributesArgsDict',
     'ScepProfileScepChallengeArgs',
+    'ScepProfileScepChallengeArgsDict',
     'ScepProfileScepChallengeDynamicChallengeArgs',
+    'ScepProfileScepChallengeDynamicChallengeArgsDict',
     'ScheduleScheduleTypeArgs',
+    'ScheduleScheduleTypeArgsDict',
     'ScheduleScheduleTypeRecurringArgs',
+    'ScheduleScheduleTypeRecurringArgsDict',
     'ScheduleScheduleTypeRecurringWeeklyArgs',
+    'ScheduleScheduleTypeRecurringWeeklyArgsDict',
     'SecurityRuleProfileSettingArgs',
+    'SecurityRuleProfileSettingArgsDict',
     'ServiceConnectionBgpPeerArgs',
+    'ServiceConnectionBgpPeerArgsDict',
     'ServiceConnectionProtocolArgs',
+    'ServiceConnectionProtocolArgsDict',
     'ServiceConnectionProtocolBgpArgs',
+    'ServiceConnectionProtocolBgpArgsDict',
     'ServiceConnectionQosArgs',
+    'ServiceConnectionQosArgsDict',
     'ServiceProtocolArgs',
+    'ServiceProtocolArgsDict',
     'ServiceProtocolTcpArgs',
+    'ServiceProtocolTcpArgsDict',
     'ServiceProtocolTcpOverrideArgs',
+    'ServiceProtocolTcpOverrideArgsDict',
     'ServiceProtocolUdpArgs',
+    'ServiceProtocolUdpArgsDict',
     'ServiceProtocolUdpOverrideArgs',
+    'ServiceProtocolUdpOverrideArgsDict',
     'SnippetFolderArgs',
+    'SnippetFolderArgsDict',
     'TacacsServerProfileServerArgs',
+    'TacacsServerProfileServerArgsDict',
     'TlsServiceProfileProtocolSettingsArgs',
+    'TlsServiceProfileProtocolSettingsArgsDict',
     'TrafficSteeringRuleActionArgs',
+    'TrafficSteeringRuleActionArgsDict',
     'TrafficSteeringRuleActionForwardArgs',
+    'TrafficSteeringRuleActionForwardArgsDict',
     'UrlAccessProfileCredentialEnforcementArgs',
+    'UrlAccessProfileCredentialEnforcementArgsDict',
     'UrlAccessProfileCredentialEnforcementModeArgs',
+    'UrlAccessProfileCredentialEnforcementModeArgsDict',
     'VulnerabilityProtectionProfileRuleArgs',
+    'VulnerabilityProtectionProfileRuleArgsDict',
     'VulnerabilityProtectionProfileRuleActionArgs',
+    'VulnerabilityProtectionProfileRuleActionArgsDict',
     'VulnerabilityProtectionProfileRuleActionBlockIpArgs',
+    'VulnerabilityProtectionProfileRuleActionBlockIpArgsDict',
     'VulnerabilityProtectionProfileThreatExceptionArgs',
+    'VulnerabilityProtectionProfileThreatExceptionArgsDict',
     'VulnerabilityProtectionProfileThreatExceptionActionArgs',
+    'VulnerabilityProtectionProfileThreatExceptionActionArgsDict',
     'VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs',
+    'VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgsDict',
     'VulnerabilityProtectionProfileThreatExceptionExemptIpArgs',
+    'VulnerabilityProtectionProfileThreatExceptionExemptIpArgsDict',
     'VulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs',
+    'VulnerabilityProtectionProfileThreatExceptionTimeAttributeArgsDict',
     'VulnerabilityProtectionSignaturesAffectedHostArgs',
+    'VulnerabilityProtectionSignaturesAffectedHostArgsDict',
     'VulnerabilityProtectionSignaturesDefaultActionArgs',
+    'VulnerabilityProtectionSignaturesDefaultActionArgsDict',
     'VulnerabilityProtectionSignaturesDefaultActionBlockIpArgs',
+    'VulnerabilityProtectionSignaturesDefaultActionBlockIpArgsDict',
     'VulnerabilityProtectionSignaturesSignatureArgs',
+    'VulnerabilityProtectionSignaturesSignatureArgsDict',
     'VulnerabilityProtectionSignaturesSignatureCombinationArgs',
+    'VulnerabilityProtectionSignaturesSignatureCombinationArgsDict',
     'VulnerabilityProtectionSignaturesSignatureCombinationAndConditionArgs',
+    'VulnerabilityProtectionSignaturesSignatureCombinationAndConditionArgsDict',
     'VulnerabilityProtectionSignaturesSignatureCombinationAndConditionOrConditionArgs',
+    'VulnerabilityProtectionSignaturesSignatureCombinationAndConditionOrConditionArgsDict',
     'VulnerabilityProtectionSignaturesSignatureCombinationTimeAttributeArgs',
+    'VulnerabilityProtectionSignaturesSignatureCombinationTimeAttributeArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardAndConditionArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardAndConditionArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchArgsDict',
     'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgs',
+    'VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgsDict',
     'WildfireAntiVirusProfileMlavExceptionArgs',
+    'WildfireAntiVirusProfileMlavExceptionArgsDict',
     'WildfireAntiVirusProfileRuleArgs',
+    'WildfireAntiVirusProfileRuleArgsDict',
     'WildfireAntiVirusProfileThreatExceptionArgs',
+    'WildfireAntiVirusProfileThreatExceptionArgsDict',
 ]
+
+MYPY = False
+
+if not MYPY:
+    class AddressGroupDynamicValueArgsDict(TypedDict):
+        filter: pulumi.Input[str]
+        """
+        Tag based filter defining group membership e.g. `tag1 AND tag2 OR tag3`. String length must not exceed 2047 characters.
+        """
+elif False:
+    AddressGroupDynamicValueArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AddressGroupDynamicValueArgs:
@@ -342,6 +667,19 @@ class AddressGroupDynamicValueArgs:
     def filter(self, value: pulumi.Input[str]):
         pulumi.set(self, "filter", value)
 
+
+if not MYPY:
+    class AntiSpywareProfileMicaEngineSpywareEnabledListArgsDict(TypedDict):
+        inline_policy_action: NotRequired[pulumi.Input[str]]
+        """
+        The InlinePolicyAction param. String must be one of these: `"alert"`, `"allow"`, `"drop"`, `"reset-both"`, `"reset-client"`, `"reset-server"`. Default: `"alert"`.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+elif False:
+    AntiSpywareProfileMicaEngineSpywareEnabledListArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareProfileMicaEngineSpywareEnabledListArgs:
@@ -381,6 +719,35 @@ class AntiSpywareProfileMicaEngineSpywareEnabledListArgs:
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class AntiSpywareProfileRuleArgsDict(TypedDict):
+        action: NotRequired[pulumi.Input['AntiSpywareProfileRuleActionArgsDict']]
+        """
+        The Action param.
+        """
+        category: NotRequired[pulumi.Input[str]]
+        """
+        The Category param. String must be one of these: `"dns-proxy"`, `"backdoor"`, `"data-theft"`, `"autogen"`, `"spyware"`, `"dns-security"`, `"downloader"`, `"dns-phishing"`, `"phishing-kit"`, `"cryptominer"`, `"hacktool"`, `"dns-benign"`, `"dns-wildfire"`, `"botnet"`, `"dns-grayware"`, `"inline-cloud-c2"`, `"keylogger"`, `"p2p-communication"`, `"domain-edl"`, `"webshell"`, `"command-and-control"`, `"dns-ddns"`, `"net-worm"`, `"any"`, `"tls-fingerprint"`, `"dns-new-domain"`, `"dns"`, `"fraud"`, `"dns-c2"`, `"adware"`, `"post-exploitation"`, `"dns-malware"`, `"browser-hijack"`, `"dns-parked"`.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        packet_capture: NotRequired[pulumi.Input[str]]
+        """
+        The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        """
+        severities: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Severities param.
+        """
+        threat_name: NotRequired[pulumi.Input[str]]
+        """
+        The ThreatName param. String length must exceed 4 characters.
+        """
+elif False:
+    AntiSpywareProfileRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareProfileRuleArgs:
@@ -484,6 +851,39 @@ class AntiSpywareProfileRuleArgs:
     def threat_name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "threat_name", value)
 
+
+if not MYPY:
+    class AntiSpywareProfileRuleActionArgsDict(TypedDict):
+        alert: NotRequired[pulumi.Input[bool]]
+        """
+        The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        allow: NotRequired[pulumi.Input[bool]]
+        """
+        The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        block_ip: NotRequired[pulumi.Input['AntiSpywareProfileRuleActionBlockIpArgsDict']]
+        """
+        The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        drop: NotRequired[pulumi.Input[bool]]
+        """
+        The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_both: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_client: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_server: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+elif False:
+    AntiSpywareProfileRuleActionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareProfileRuleActionArgs:
@@ -604,6 +1004,19 @@ class AntiSpywareProfileRuleActionArgs:
         pulumi.set(self, "reset_server", value)
 
 
+if not MYPY:
+    class AntiSpywareProfileRuleActionBlockIpArgsDict(TypedDict):
+        duration: NotRequired[pulumi.Input[int]]
+        """
+        The Duration param. Value must be between 1 and 3600.
+        """
+        track_by: NotRequired[pulumi.Input[str]]
+        """
+        The TrackBy param. String must be one of these: `"source-and-destination"`, `"source"`.
+        """
+elif False:
+    AntiSpywareProfileRuleActionBlockIpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareProfileRuleActionBlockIpArgs:
     def __init__(__self__, *,
@@ -642,6 +1055,31 @@ class AntiSpywareProfileRuleActionBlockIpArgs:
     def track_by(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "track_by", value)
 
+
+if not MYPY:
+    class AntiSpywareProfileThreatExceptionArgsDict(TypedDict):
+        action: NotRequired[pulumi.Input['AntiSpywareProfileThreatExceptionActionArgsDict']]
+        """
+        The Action param.
+        """
+        exempt_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input['AntiSpywareProfileThreatExceptionExemptIpArgsDict']]]]
+        """
+        The ExemptIps param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        notes: NotRequired[pulumi.Input[str]]
+        """
+        The Notes param.
+        """
+        packet_capture: NotRequired[pulumi.Input[str]]
+        """
+        The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        """
+elif False:
+    AntiSpywareProfileThreatExceptionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareProfileThreatExceptionArgs:
@@ -729,6 +1167,43 @@ class AntiSpywareProfileThreatExceptionArgs:
     def packet_capture(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "packet_capture", value)
 
+
+if not MYPY:
+    class AntiSpywareProfileThreatExceptionActionArgsDict(TypedDict):
+        alert: NotRequired[pulumi.Input[bool]]
+        """
+        The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        allow: NotRequired[pulumi.Input[bool]]
+        """
+        The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        block_ip: NotRequired[pulumi.Input['AntiSpywareProfileThreatExceptionActionBlockIpArgsDict']]
+        """
+        The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        default: NotRequired[pulumi.Input[bool]]
+        """
+        The Default param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        drop: NotRequired[pulumi.Input[bool]]
+        """
+        The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_both: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_client: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_server: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+elif False:
+    AntiSpywareProfileThreatExceptionActionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareProfileThreatExceptionActionArgs:
@@ -865,6 +1340,19 @@ class AntiSpywareProfileThreatExceptionActionArgs:
         pulumi.set(self, "reset_server", value)
 
 
+if not MYPY:
+    class AntiSpywareProfileThreatExceptionActionBlockIpArgsDict(TypedDict):
+        duration: NotRequired[pulumi.Input[int]]
+        """
+        The Duration param. Value must be between 1 and 3600.
+        """
+        track_by: NotRequired[pulumi.Input[str]]
+        """
+        The TrackBy param. String must be one of these: `"source-and-destination"`, `"source"`.
+        """
+elif False:
+    AntiSpywareProfileThreatExceptionActionBlockIpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareProfileThreatExceptionActionBlockIpArgs:
     def __init__(__self__, *,
@@ -904,6 +1392,15 @@ class AntiSpywareProfileThreatExceptionActionBlockIpArgs:
         pulumi.set(self, "track_by", value)
 
 
+if not MYPY:
+    class AntiSpywareProfileThreatExceptionExemptIpArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+elif False:
+    AntiSpywareProfileThreatExceptionExemptIpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareProfileThreatExceptionExemptIpArgs:
     def __init__(__self__, *,
@@ -925,6 +1422,39 @@ class AntiSpywareProfileThreatExceptionExemptIpArgs:
     def name(self, value: pulumi.Input[str]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class AntiSpywareSignatureDefaultActionArgsDict(TypedDict):
+        alert: NotRequired[pulumi.Input[bool]]
+        """
+        The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        allow: NotRequired[pulumi.Input[bool]]
+        """
+        The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        block_ip: NotRequired[pulumi.Input['AntiSpywareSignatureDefaultActionBlockIpArgsDict']]
+        """
+        The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        drop: NotRequired[pulumi.Input[bool]]
+        """
+        The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_both: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_client: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_server: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+elif False:
+    AntiSpywareSignatureDefaultActionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareSignatureDefaultActionArgs:
@@ -1045,6 +1575,19 @@ class AntiSpywareSignatureDefaultActionArgs:
         pulumi.set(self, "reset_server", value)
 
 
+if not MYPY:
+    class AntiSpywareSignatureDefaultActionBlockIpArgsDict(TypedDict):
+        duration: NotRequired[pulumi.Input[int]]
+        """
+        The Duration param. Value must be between 1 and 3600.
+        """
+        track_by: NotRequired[pulumi.Input[str]]
+        """
+        The TrackBy param. String must be one of these: `"source-and-destination"`, `"source"`.
+        """
+elif False:
+    AntiSpywareSignatureDefaultActionBlockIpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareSignatureDefaultActionBlockIpArgs:
     def __init__(__self__, *,
@@ -1084,6 +1627,19 @@ class AntiSpywareSignatureDefaultActionBlockIpArgs:
         pulumi.set(self, "track_by", value)
 
 
+if not MYPY:
+    class AntiSpywareSignatureSignatureArgsDict(TypedDict):
+        combination: NotRequired[pulumi.Input['AntiSpywareSignatureSignatureCombinationArgsDict']]
+        """
+        The Combination param. Ensure that only one of the following is specified: `combination`, `standard`
+        """
+        standards: NotRequired[pulumi.Input[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardArgsDict']]]]
+        """
+        The Standards param. Ensure that only one of the following is specified: `combination`, `standard`
+        """
+elif False:
+    AntiSpywareSignatureSignatureArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareSignatureSignatureArgs:
     def __init__(__self__, *,
@@ -1122,6 +1678,23 @@ class AntiSpywareSignatureSignatureArgs:
     def standards(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardArgs']]]]):
         pulumi.set(self, "standards", value)
 
+
+if not MYPY:
+    class AntiSpywareSignatureSignatureCombinationArgsDict(TypedDict):
+        and_conditions: NotRequired[pulumi.Input[Sequence[pulumi.Input['AntiSpywareSignatureSignatureCombinationAndConditionArgsDict']]]]
+        """
+        The AndConditions param.
+        """
+        order_free: NotRequired[pulumi.Input[bool]]
+        """
+        The OrderFree param. Default: `false`.
+        """
+        time_attribute: NotRequired[pulumi.Input['AntiSpywareSignatureSignatureCombinationTimeAttributeArgsDict']]
+        """
+        The TimeAttribute param.
+        """
+elif False:
+    AntiSpywareSignatureSignatureCombinationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareSignatureSignatureCombinationArgs:
@@ -1178,6 +1751,19 @@ class AntiSpywareSignatureSignatureCombinationArgs:
         pulumi.set(self, "time_attribute", value)
 
 
+if not MYPY:
+    class AntiSpywareSignatureSignatureCombinationAndConditionArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        or_conditions: NotRequired[pulumi.Input[Sequence[pulumi.Input['AntiSpywareSignatureSignatureCombinationAndConditionOrConditionArgsDict']]]]
+        """
+        The OrConditions param.
+        """
+elif False:
+    AntiSpywareSignatureSignatureCombinationAndConditionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareSignatureSignatureCombinationAndConditionArgs:
     def __init__(__self__, *,
@@ -1217,6 +1803,19 @@ class AntiSpywareSignatureSignatureCombinationAndConditionArgs:
         pulumi.set(self, "or_conditions", value)
 
 
+if not MYPY:
+    class AntiSpywareSignatureSignatureCombinationAndConditionOrConditionArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        threat_id: NotRequired[pulumi.Input[str]]
+        """
+        The ThreatId param.
+        """
+elif False:
+    AntiSpywareSignatureSignatureCombinationAndConditionOrConditionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareSignatureSignatureCombinationAndConditionOrConditionArgs:
     def __init__(__self__, *,
@@ -1255,6 +1854,23 @@ class AntiSpywareSignatureSignatureCombinationAndConditionOrConditionArgs:
     def threat_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "threat_id", value)
 
+
+if not MYPY:
+    class AntiSpywareSignatureSignatureCombinationTimeAttributeArgsDict(TypedDict):
+        interval: NotRequired[pulumi.Input[int]]
+        """
+        The Interval param. Value must be between 1 and 3600.
+        """
+        threshold: NotRequired[pulumi.Input[int]]
+        """
+        The Threshold param. Value must be between 1 and 255.
+        """
+        track_by: NotRequired[pulumi.Input[str]]
+        """
+        The TrackBy param. String must be one of these: `"source-and-destination"`, `"source"`, `"destination"`.
+        """
+elif False:
+    AntiSpywareSignatureSignatureCombinationTimeAttributeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs:
@@ -1310,6 +1926,31 @@ class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs:
     def track_by(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "track_by", value)
 
+
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+        and_conditions: NotRequired[pulumi.Input[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionArgsDict']]]]
+        """
+        The AndConditions param.
+        """
+        comment: NotRequired[pulumi.Input[str]]
+        """
+        The Comment param. String length must not exceed 256 characters.
+        """
+        order_free: NotRequired[pulumi.Input[bool]]
+        """
+        The OrderFree param. Default: `false`.
+        """
+        scope: NotRequired[pulumi.Input[str]]
+        """
+        The Scope param. String must be one of these: `"protocol-data-unit"`, `"session"`.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardArgs:
@@ -1397,6 +2038,19 @@ class AntiSpywareSignatureSignatureStandardArgs:
         pulumi.set(self, "scope", value)
 
 
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardAndConditionArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        or_conditions: NotRequired[pulumi.Input[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgsDict']]]]
+        """
+        The OrConditions param.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardAndConditionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardAndConditionArgs:
     def __init__(__self__, *,
@@ -1436,6 +2090,19 @@ class AntiSpywareSignatureSignatureStandardAndConditionArgs:
         pulumi.set(self, "or_conditions", value)
 
 
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        operator: NotRequired[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgsDict']]
+        """
+        The Operator param.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgs:
     def __init__(__self__, *,
@@ -1474,6 +2141,27 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgs:
     def operator(self, value: Optional[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgs']]):
         pulumi.set(self, "operator", value)
 
+
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgsDict(TypedDict):
+        equal_to: NotRequired[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgsDict']]
+        """
+        The EqualTo param.
+        """
+        greater_than: NotRequired[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgsDict']]
+        """
+        The GreaterThan param.
+        """
+        less_than: NotRequired[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgsDict']]
+        """
+        The LessThan param.
+        """
+        pattern_match: NotRequired[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgsDict']]
+        """
+        The PatternMatch param.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgs:
@@ -1546,6 +2234,27 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgs:
         pulumi.set(self, "pattern_match", value)
 
 
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgsDict(TypedDict):
+        context: NotRequired[pulumi.Input[str]]
+        """
+        The Context param.
+        """
+        negate: NotRequired[pulumi.Input[bool]]
+        """
+        The Negate param. Default: `false`.
+        """
+        qualifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgsDict']]]]
+        """
+        The Qualifiers param.
+        """
+        value: NotRequired[pulumi.Input[int]]
+        """
+        The Value param. Value must be between 0 and 4294967295.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgs:
     def __init__(__self__, *,
@@ -1617,6 +2326,19 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualT
         pulumi.set(self, "value", value)
 
 
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        The Value param.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs:
     def __init__(__self__, *,
@@ -1655,6 +2377,23 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualT
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgsDict(TypedDict):
+        context: NotRequired[pulumi.Input[str]]
+        """
+        The Context param.
+        """
+        qualifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgsDict']]]]
+        """
+        The Qualifiers param.
+        """
+        value: NotRequired[pulumi.Input[int]]
+        """
+        The Value param. Value must be between 0 and 4294967295.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs:
@@ -1711,6 +2450,19 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreate
         pulumi.set(self, "value", value)
 
 
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        The Value param.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs:
     def __init__(__self__, *,
@@ -1749,6 +2501,23 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreate
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgsDict(TypedDict):
+        context: NotRequired[pulumi.Input[str]]
+        """
+        The Context param.
+        """
+        qualifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgsDict']]]]
+        """
+        The Qualifiers param.
+        """
+        value: NotRequired[pulumi.Input[int]]
+        """
+        The Value param. Value must be between 0 and 4294967295.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgs:
@@ -1805,6 +2574,19 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessTh
         pulumi.set(self, "value", value)
 
 
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        The Value param.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs:
     def __init__(__self__, *,
@@ -1843,6 +2625,27 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessTh
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgsDict(TypedDict):
+        context: NotRequired[pulumi.Input[str]]
+        """
+        The Context param.
+        """
+        negate: NotRequired[pulumi.Input[bool]]
+        """
+        The Negate param. Default: `false`.
+        """
+        pattern: NotRequired[pulumi.Input[str]]
+        """
+        The Pattern param.
+        """
+        qualifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgsDict']]]]
+        """
+        The Qualifiers param.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgs:
@@ -1915,6 +2718,19 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatter
         pulumi.set(self, "qualifiers", value)
 
 
+if not MYPY:
+    class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        The Value param.
+        """
+elif False:
+    AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgs:
     def __init__(__self__, *,
@@ -1953,6 +2769,27 @@ class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatter
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class ApplicationDefaultArgsDict(TypedDict):
+        ident_by_icmp6_type: NotRequired[pulumi.Input['ApplicationDefaultIdentByIcmp6TypeArgsDict']]
+        """
+        The IdentByIcmp6Type param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        """
+        ident_by_icmp_type: NotRequired[pulumi.Input['ApplicationDefaultIdentByIcmpTypeArgsDict']]
+        """
+        The IdentByIcmpType param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        """
+        ident_by_ip_protocol: NotRequired[pulumi.Input[str]]
+        """
+        The IdentByIpProtocol param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        """
+        ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        """
+elif False:
+    ApplicationDefaultArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplicationDefaultArgs:
@@ -2025,6 +2862,19 @@ class ApplicationDefaultArgs:
         pulumi.set(self, "ports", value)
 
 
+if not MYPY:
+    class ApplicationDefaultIdentByIcmp6TypeArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        The Type param.
+        """
+        code: NotRequired[pulumi.Input[str]]
+        """
+        The Code param.
+        """
+elif False:
+    ApplicationDefaultIdentByIcmp6TypeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplicationDefaultIdentByIcmp6TypeArgs:
     def __init__(__self__, *,
@@ -2062,6 +2912,19 @@ class ApplicationDefaultIdentByIcmp6TypeArgs:
     def code(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "code", value)
 
+
+if not MYPY:
+    class ApplicationDefaultIdentByIcmpTypeArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        The Type param.
+        """
+        code: NotRequired[pulumi.Input[str]]
+        """
+        The Code param.
+        """
+elif False:
+    ApplicationDefaultIdentByIcmpTypeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplicationDefaultIdentByIcmpTypeArgs:
@@ -2101,6 +2964,19 @@ class ApplicationDefaultIdentByIcmpTypeArgs:
         pulumi.set(self, "code", value)
 
 
+if not MYPY:
+    class ApplicationFilterTaggingArgsDict(TypedDict):
+        no_tag: NotRequired[pulumi.Input[bool]]
+        """
+        The NoTag param. Ensure that only one of the following is specified: `no_tag`, `tag`
+        """
+        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `no_tag`, `tag`
+        """
+elif False:
+    ApplicationFilterTaggingArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplicationFilterTaggingArgs:
     def __init__(__self__, *,
@@ -2139,6 +3015,31 @@ class ApplicationFilterTaggingArgs:
     def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "tags", value)
 
+
+if not MYPY:
+    class ApplicationSignatureArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        """
+        and_conditions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureAndConditionArgsDict']]]]
+        """
+        The AndConditions param.
+        """
+        comment: NotRequired[pulumi.Input[str]]
+        """
+        The Comment param. String length must not exceed 256 characters.
+        """
+        order_free: NotRequired[pulumi.Input[bool]]
+        """
+        The OrderFree param. Default: `false`.
+        """
+        scope: NotRequired[pulumi.Input[str]]
+        """
+        The Scope param. String must be one of these: `"protocol-data-unit"`, `"session"`. Default: `"protocol-data-unit"`.
+        """
+elif False:
+    ApplicationSignatureArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplicationSignatureArgs:
@@ -2226,6 +3127,19 @@ class ApplicationSignatureArgs:
         pulumi.set(self, "scope", value)
 
 
+if not MYPY:
+    class ApplicationSignatureAndConditionArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        """
+        or_conditions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionArgsDict']]]]
+        """
+        The OrConditions param.
+        """
+elif False:
+    ApplicationSignatureAndConditionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplicationSignatureAndConditionArgs:
     def __init__(__self__, *,
@@ -2264,6 +3178,19 @@ class ApplicationSignatureAndConditionArgs:
         pulumi.set(self, "or_conditions", value)
 
 
+if not MYPY:
+    class ApplicationSignatureAndConditionOrConditionArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        """
+        operator: pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorArgsDict']
+        """
+        The Operator param.
+        """
+elif False:
+    ApplicationSignatureAndConditionOrConditionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplicationSignatureAndConditionOrConditionArgs:
     def __init__(__self__, *,
@@ -2300,6 +3227,27 @@ class ApplicationSignatureAndConditionOrConditionArgs:
     def operator(self, value: pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorArgs']):
         pulumi.set(self, "operator", value)
 
+
+if not MYPY:
+    class ApplicationSignatureAndConditionOrConditionOperatorArgsDict(TypedDict):
+        equal_to: NotRequired[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorEqualToArgsDict']]
+        """
+        The EqualTo param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+        """
+        greater_than: NotRequired[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgsDict']]
+        """
+        The GreaterThan param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+        """
+        less_than: NotRequired[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorLessThanArgsDict']]
+        """
+        The LessThan param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+        """
+        pattern_match: NotRequired[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgsDict']]
+        """
+        The PatternMatch param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+        """
+elif False:
+    ApplicationSignatureAndConditionOrConditionOperatorArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplicationSignatureAndConditionOrConditionOperatorArgs:
@@ -2372,6 +3320,27 @@ class ApplicationSignatureAndConditionOrConditionOperatorArgs:
         pulumi.set(self, "pattern_match", value)
 
 
+if not MYPY:
+    class ApplicationSignatureAndConditionOrConditionOperatorEqualToArgsDict(TypedDict):
+        context: pulumi.Input[str]
+        """
+        The Context param.
+        """
+        value: pulumi.Input[str]
+        """
+        The Value param. String length must not exceed 10 characters.
+        """
+        mask: NotRequired[pulumi.Input[str]]
+        """
+        4-byte hex value. String length must not exceed 10 characters. String validation regex: `^[0][xX][0-9A-Fa-f]{8}$`.
+        """
+        position: NotRequired[pulumi.Input[str]]
+        """
+        The Position param. String length must not exceed 127 characters.
+        """
+elif False:
+    ApplicationSignatureAndConditionOrConditionOperatorEqualToArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplicationSignatureAndConditionOrConditionOperatorEqualToArgs:
     def __init__(__self__, *,
@@ -2441,6 +3410,23 @@ class ApplicationSignatureAndConditionOrConditionOperatorEqualToArgs:
         pulumi.set(self, "position", value)
 
 
+if not MYPY:
+    class ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgsDict(TypedDict):
+        context: pulumi.Input[str]
+        """
+        The Context param. String length must not exceed 127 characters.
+        """
+        value: pulumi.Input[int]
+        """
+        The Value param. Value must be between 0 and 4294967295.
+        """
+        qualifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgsDict']]]]
+        """
+        The Qualifiers param.
+        """
+elif False:
+    ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgs:
     def __init__(__self__, *,
@@ -2494,6 +3480,19 @@ class ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgs:
         pulumi.set(self, "qualifiers", value)
 
 
+if not MYPY:
+    class ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        """
+        value: pulumi.Input[str]
+        """
+        The Value param.
+        """
+elif False:
+    ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgs:
     def __init__(__self__, *,
@@ -2530,6 +3529,23 @@ class ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArg
     def value(self, value: pulumi.Input[str]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class ApplicationSignatureAndConditionOrConditionOperatorLessThanArgsDict(TypedDict):
+        context: pulumi.Input[str]
+        """
+        The Context param. String length must not exceed 127 characters.
+        """
+        value: pulumi.Input[int]
+        """
+        The Value param. Value must be between 0 and 4294967295.
+        """
+        qualifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorLessThanQualifierArgsDict']]]]
+        """
+        The Qualifiers param.
+        """
+elif False:
+    ApplicationSignatureAndConditionOrConditionOperatorLessThanArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplicationSignatureAndConditionOrConditionOperatorLessThanArgs:
@@ -2584,6 +3600,19 @@ class ApplicationSignatureAndConditionOrConditionOperatorLessThanArgs:
         pulumi.set(self, "qualifiers", value)
 
 
+if not MYPY:
+    class ApplicationSignatureAndConditionOrConditionOperatorLessThanQualifierArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        """
+        value: pulumi.Input[str]
+        """
+        The Value param.
+        """
+elif False:
+    ApplicationSignatureAndConditionOrConditionOperatorLessThanQualifierArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplicationSignatureAndConditionOrConditionOperatorLessThanQualifierArgs:
     def __init__(__self__, *,
@@ -2620,6 +3649,23 @@ class ApplicationSignatureAndConditionOrConditionOperatorLessThanQualifierArgs:
     def value(self, value: pulumi.Input[str]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgsDict(TypedDict):
+        context: pulumi.Input[str]
+        """
+        The Context param. String length must not exceed 127 characters.
+        """
+        pattern: pulumi.Input[str]
+        """
+        The Pattern param. String length must not exceed 127 characters.
+        """
+        qualifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierArgsDict']]]]
+        """
+        The Qualifiers param.
+        """
+elif False:
+    ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgs:
@@ -2674,6 +3720,19 @@ class ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgs:
         pulumi.set(self, "qualifiers", value)
 
 
+if not MYPY:
+    class ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        """
+        value: pulumi.Input[str]
+        """
+        The Value param.
+        """
+elif False:
+    ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierArgs:
     def __init__(__self__, *,
@@ -2710,6 +3769,19 @@ class ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierAr
     def value(self, value: pulumi.Input[str]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class AuthenticationProfileLockoutArgsDict(TypedDict):
+        failed_attempts: NotRequired[pulumi.Input[int]]
+        """
+        The FailedAttempts param. Value must be between 0 and 10.
+        """
+        lockout_time: NotRequired[pulumi.Input[int]]
+        """
+        The LockoutTime param. Value must be between 0 and 60.
+        """
+elif False:
+    AuthenticationProfileLockoutArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AuthenticationProfileLockoutArgs:
@@ -2749,6 +3821,39 @@ class AuthenticationProfileLockoutArgs:
     def lockout_time(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "lockout_time", value)
 
+
+if not MYPY:
+    class AuthenticationProfileMethodArgsDict(TypedDict):
+        cloud: NotRequired[pulumi.Input['AuthenticationProfileMethodCloudArgsDict']]
+        """
+        The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        """
+        kerberos: NotRequired[pulumi.Input['AuthenticationProfileMethodKerberosArgsDict']]
+        """
+        The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        """
+        ldap: NotRequired[pulumi.Input['AuthenticationProfileMethodLdapArgsDict']]
+        """
+        The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        """
+        local_database: NotRequired[pulumi.Input[bool]]
+        """
+        The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        """
+        radius: NotRequired[pulumi.Input['AuthenticationProfileMethodRadiusArgsDict']]
+        """
+        The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        """
+        saml_idp: NotRequired[pulumi.Input['AuthenticationProfileMethodSamlIdpArgsDict']]
+        """
+        The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        """
+        tacplus: NotRequired[pulumi.Input['AuthenticationProfileMethodTacplusArgsDict']]
+        """
+        The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        """
+elif False:
+    AuthenticationProfileMethodArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AuthenticationProfileMethodArgs:
@@ -2869,6 +3974,15 @@ class AuthenticationProfileMethodArgs:
         pulumi.set(self, "tacplus", value)
 
 
+if not MYPY:
+    class AuthenticationProfileMethodCloudArgsDict(TypedDict):
+        profile_name: NotRequired[pulumi.Input[str]]
+        """
+        The tenant profile name.
+        """
+elif False:
+    AuthenticationProfileMethodCloudArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AuthenticationProfileMethodCloudArgs:
     def __init__(__self__, *,
@@ -2891,6 +4005,19 @@ class AuthenticationProfileMethodCloudArgs:
     def profile_name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "profile_name", value)
 
+
+if not MYPY:
+    class AuthenticationProfileMethodKerberosArgsDict(TypedDict):
+        realm: NotRequired[pulumi.Input[str]]
+        """
+        The Realm param.
+        """
+        server_profile: NotRequired[pulumi.Input[str]]
+        """
+        The ServerProfile param.
+        """
+elif False:
+    AuthenticationProfileMethodKerberosArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AuthenticationProfileMethodKerberosArgs:
@@ -2930,6 +4057,23 @@ class AuthenticationProfileMethodKerberosArgs:
     def server_profile(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "server_profile", value)
 
+
+if not MYPY:
+    class AuthenticationProfileMethodLdapArgsDict(TypedDict):
+        login_attribute: NotRequired[pulumi.Input[str]]
+        """
+        The LoginAttribute param.
+        """
+        passwd_exp_days: NotRequired[pulumi.Input[int]]
+        """
+        The PasswdExpDays param.
+        """
+        server_profile: NotRequired[pulumi.Input[str]]
+        """
+        The ServerProfile param.
+        """
+elif False:
+    AuthenticationProfileMethodLdapArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AuthenticationProfileMethodLdapArgs:
@@ -2986,6 +4130,19 @@ class AuthenticationProfileMethodLdapArgs:
         pulumi.set(self, "server_profile", value)
 
 
+if not MYPY:
+    class AuthenticationProfileMethodRadiusArgsDict(TypedDict):
+        checkgroup: NotRequired[pulumi.Input[bool]]
+        """
+        The Checkgroup param.
+        """
+        server_profile: NotRequired[pulumi.Input[str]]
+        """
+        The ServerProfile param.
+        """
+elif False:
+    AuthenticationProfileMethodRadiusArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AuthenticationProfileMethodRadiusArgs:
     def __init__(__self__, *,
@@ -3024,6 +4181,35 @@ class AuthenticationProfileMethodRadiusArgs:
     def server_profile(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "server_profile", value)
 
+
+if not MYPY:
+    class AuthenticationProfileMethodSamlIdpArgsDict(TypedDict):
+        attribute_name_usergroup: NotRequired[pulumi.Input[str]]
+        """
+        The AttributeNameUsergroup param. String length must be between 1 and 63 characters.
+        """
+        attribute_name_username: NotRequired[pulumi.Input[str]]
+        """
+        The AttributeNameUsername param. String length must be between 1 and 63 characters.
+        """
+        certificate_profile: NotRequired[pulumi.Input[str]]
+        """
+        The CertificateProfile param. String length must not exceed 31 characters.
+        """
+        enable_single_logout: NotRequired[pulumi.Input[bool]]
+        """
+        The EnableSingleLogout param.
+        """
+        request_signing_certificate: NotRequired[pulumi.Input[str]]
+        """
+        The RequestSigningCertificate param. String length must not exceed 64 characters.
+        """
+        server_profile: NotRequired[pulumi.Input[str]]
+        """
+        The ServerProfile param. String length must not exceed 63 characters.
+        """
+elif False:
+    AuthenticationProfileMethodSamlIdpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AuthenticationProfileMethodSamlIdpArgs:
@@ -3128,6 +4314,19 @@ class AuthenticationProfileMethodSamlIdpArgs:
         pulumi.set(self, "server_profile", value)
 
 
+if not MYPY:
+    class AuthenticationProfileMethodTacplusArgsDict(TypedDict):
+        checkgroup: NotRequired[pulumi.Input[bool]]
+        """
+        The Checkgroup param.
+        """
+        server_profile: NotRequired[pulumi.Input[str]]
+        """
+        The ServerProfile param.
+        """
+elif False:
+    AuthenticationProfileMethodTacplusArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AuthenticationProfileMethodTacplusArgs:
     def __init__(__self__, *,
@@ -3166,6 +4365,19 @@ class AuthenticationProfileMethodTacplusArgs:
     def server_profile(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "server_profile", value)
 
+
+if not MYPY:
+    class AuthenticationProfileMultiFactorAuthArgsDict(TypedDict):
+        factors: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Factors param.
+        """
+        mfa_enable: NotRequired[pulumi.Input[bool]]
+        """
+        The MfaEnable param.
+        """
+elif False:
+    AuthenticationProfileMultiFactorAuthArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AuthenticationProfileMultiFactorAuthArgs:
@@ -3206,6 +4418,19 @@ class AuthenticationProfileMultiFactorAuthArgs:
         pulumi.set(self, "mfa_enable", value)
 
 
+if not MYPY:
+    class AuthenticationProfileSingleSignOnArgsDict(TypedDict):
+        kerberos_keytab: NotRequired[pulumi.Input[str]]
+        """
+        The KerberosKeytab param. String length must not exceed 8192 characters.
+        """
+        realm: NotRequired[pulumi.Input[str]]
+        """
+        The Realm param. String length must not exceed 127 characters.
+        """
+elif False:
+    AuthenticationProfileSingleSignOnArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AuthenticationProfileSingleSignOnArgs:
     def __init__(__self__, *,
@@ -3244,6 +4469,27 @@ class AuthenticationProfileSingleSignOnArgs:
     def realm(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "realm", value)
 
+
+if not MYPY:
+    class CertificateProfileCaCertificateArgsDict(TypedDict):
+        default_ocsp_url: NotRequired[pulumi.Input[str]]
+        """
+        The DefaultOcspUrl param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        ocsp_verify_cert: NotRequired[pulumi.Input[str]]
+        """
+        The OcspVerifyCert param.
+        """
+        template_name: NotRequired[pulumi.Input[str]]
+        """
+        The TemplateName param.
+        """
+elif False:
+    CertificateProfileCaCertificateArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CertificateProfileCaCertificateArgs:
@@ -3316,6 +4562,19 @@ class CertificateProfileCaCertificateArgs:
         pulumi.set(self, "template_name", value)
 
 
+if not MYPY:
+    class CertificateProfileUsernameFieldArgsDict(TypedDict):
+        subject: NotRequired[pulumi.Input[str]]
+        """
+        The Subject param. String must be one of these: `"common-name"`.
+        """
+        subject_alt: NotRequired[pulumi.Input[str]]
+        """
+        The SubjectAlt param. String must be one of these: `"email"`.
+        """
+elif False:
+    CertificateProfileUsernameFieldArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CertificateProfileUsernameFieldArgs:
     def __init__(__self__, *,
@@ -3354,6 +4613,55 @@ class CertificateProfileUsernameFieldArgs:
     def subject_alt(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "subject_alt", value)
 
+
+if not MYPY:
+    class DecryptionProfileSslForwardProxyArgsDict(TypedDict):
+        auto_include_altname: NotRequired[pulumi.Input[bool]]
+        """
+        The AutoIncludeAltname param. Default: `false`.
+        """
+        block_client_cert: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockClientCert param. Default: `false`.
+        """
+        block_expired_certificate: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockExpiredCertificate param. Default: `false`.
+        """
+        block_timeout_cert: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockTimeoutCert param. Default: `false`.
+        """
+        block_tls13_downgrade_no_resource: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockTls13DowngradeNoResource param. Default: `false`.
+        """
+        block_unknown_cert: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockUnknownCert param. Default: `false`.
+        """
+        block_unsupported_cipher: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockUnsupportedCipher param. Default: `false`.
+        """
+        block_unsupported_version: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockUnsupportedVersion param. Default: `false`.
+        """
+        block_untrusted_issuer: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockUntrustedIssuer param. Default: `false`.
+        """
+        restrict_cert_exts: NotRequired[pulumi.Input[bool]]
+        """
+        The RestrictCertExts param. Default: `false`.
+        """
+        strip_alpn: NotRequired[pulumi.Input[bool]]
+        """
+        The StripAlpn param. Default: `false`.
+        """
+elif False:
+    DecryptionProfileSslForwardProxyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class DecryptionProfileSslForwardProxyArgs:
@@ -3538,6 +4846,27 @@ class DecryptionProfileSslForwardProxyArgs:
         pulumi.set(self, "strip_alpn", value)
 
 
+if not MYPY:
+    class DecryptionProfileSslInboundProxyArgsDict(TypedDict):
+        block_if_hsm_unavailable: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockIfHsmUnavailable param. Default: `false`.
+        """
+        block_if_no_resource: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockIfNoResource param. Default: `false`.
+        """
+        block_unsupported_cipher: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockUnsupportedCipher param. Default: `false`.
+        """
+        block_unsupported_version: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockUnsupportedVersion param. Default: `false`.
+        """
+elif False:
+    DecryptionProfileSslInboundProxyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class DecryptionProfileSslInboundProxyArgs:
     def __init__(__self__, *,
@@ -3609,6 +4938,19 @@ class DecryptionProfileSslInboundProxyArgs:
         pulumi.set(self, "block_unsupported_version", value)
 
 
+if not MYPY:
+    class DecryptionProfileSslNoProxyArgsDict(TypedDict):
+        block_expired_certificate: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockExpiredCertificate param. Default: `false`.
+        """
+        block_untrusted_issuer: NotRequired[pulumi.Input[bool]]
+        """
+        The BlockUntrustedIssuer param. Default: `false`.
+        """
+elif False:
+    DecryptionProfileSslNoProxyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class DecryptionProfileSslNoProxyArgs:
     def __init__(__self__, *,
@@ -3647,6 +4989,75 @@ class DecryptionProfileSslNoProxyArgs:
     def block_untrusted_issuer(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "block_untrusted_issuer", value)
 
+
+if not MYPY:
+    class DecryptionProfileSslProtocolSettingsArgsDict(TypedDict):
+        auth_algo_md5: NotRequired[pulumi.Input[bool]]
+        """
+        The AuthAlgoMd5 param. Default: `true`.
+        """
+        auth_algo_sha1: NotRequired[pulumi.Input[bool]]
+        """
+        The AuthAlgoSha1 param. Default: `true`.
+        """
+        auth_algo_sha256: NotRequired[pulumi.Input[bool]]
+        """
+        The AuthAlgoSha256 param. Default: `true`.
+        """
+        auth_algo_sha384: NotRequired[pulumi.Input[bool]]
+        """
+        The AuthAlgoSha384 param. Default: `true`.
+        """
+        enc_algo3des: NotRequired[pulumi.Input[bool]]
+        """
+        The EncAlgo3des param. Default: `true`.
+        """
+        enc_algo_aes128_cbc: NotRequired[pulumi.Input[bool]]
+        """
+        The EncAlgoAes128Cbc param. Default: `true`.
+        """
+        enc_algo_aes128_gcm: NotRequired[pulumi.Input[bool]]
+        """
+        The EncAlgoAes128Gcm param. Default: `true`.
+        """
+        enc_algo_aes256_cbc: NotRequired[pulumi.Input[bool]]
+        """
+        The EncAlgoAes256Cbc param. Default: `true`.
+        """
+        enc_algo_aes256_gcm: NotRequired[pulumi.Input[bool]]
+        """
+        The EncAlgoAes256Gcm param. Default: `true`.
+        """
+        enc_algo_chacha20_poly1305: NotRequired[pulumi.Input[bool]]
+        """
+        The EncAlgoChacha20Poly1305 param. Default: `true`.
+        """
+        enc_algo_rc4: NotRequired[pulumi.Input[bool]]
+        """
+        The EncAlgoRc4 param. Default: `true`.
+        """
+        keyxchg_algo_dhe: NotRequired[pulumi.Input[bool]]
+        """
+        The KeyxchgAlgoDhe param. Default: `true`.
+        """
+        keyxchg_algo_ecdhe: NotRequired[pulumi.Input[bool]]
+        """
+        The KeyxchgAlgoEcdhe param. Default: `true`.
+        """
+        keyxchg_algo_rsa: NotRequired[pulumi.Input[bool]]
+        """
+        The KeyxchgAlgoRsa param. Default: `true`.
+        """
+        max_version: NotRequired[pulumi.Input[str]]
+        """
+        The MaxVersion param. String must be one of these: `"sslv3"`, `"tls1-0"`, `"tls1-1"`, `"tls1-2"`, `"tls1-3"`, `"max"`. Default: `"tls1-2"`.
+        """
+        min_version: NotRequired[pulumi.Input[str]]
+        """
+        The MinVersion param. String must be one of these: `"sslv3"`, `"tls1-0"`, `"tls1-1"`, `"tls1-2"`, `"tls1-3"`. Default: `"tls1-0"`.
+        """
+elif False:
+    DecryptionProfileSslProtocolSettingsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class DecryptionProfileSslProtocolSettingsArgs:
@@ -3911,6 +5322,19 @@ class DecryptionProfileSslProtocolSettingsArgs:
         pulumi.set(self, "min_version", value)
 
 
+if not MYPY:
+    class DecryptionRuleTypeArgsDict(TypedDict):
+        ssl_forward_proxy: NotRequired[pulumi.Input[bool]]
+        """
+        The SslForwardProxy param. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+        """
+        ssl_inbound_inspection: NotRequired[pulumi.Input[str]]
+        """
+        add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+        """
+elif False:
+    DecryptionRuleTypeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class DecryptionRuleTypeArgs:
     def __init__(__self__, *,
@@ -3949,6 +5373,27 @@ class DecryptionRuleTypeArgs:
     def ssl_inbound_inspection(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "ssl_inbound_inspection", value)
 
+
+if not MYPY:
+    class DnsSecurityProfileBotnetDomainsArgsDict(TypedDict):
+        dns_security_categories: NotRequired[pulumi.Input[Sequence[pulumi.Input['DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgsDict']]]]
+        """
+        The DnsSecurityCategories param.
+        """
+        lists: NotRequired[pulumi.Input[Sequence[pulumi.Input['DnsSecurityProfileBotnetDomainsListArgsDict']]]]
+        """
+        The Lists param.
+        """
+        sinkhole: NotRequired[pulumi.Input['DnsSecurityProfileBotnetDomainsSinkholeArgsDict']]
+        """
+        The Sinkhole param.
+        """
+        whitelists: NotRequired[pulumi.Input[Sequence[pulumi.Input['DnsSecurityProfileBotnetDomainsWhitelistArgsDict']]]]
+        """
+        The Whitelists param.
+        """
+elif False:
+    DnsSecurityProfileBotnetDomainsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class DnsSecurityProfileBotnetDomainsArgs:
@@ -4021,6 +5466,27 @@ class DnsSecurityProfileBotnetDomainsArgs:
         pulumi.set(self, "whitelists", value)
 
 
+if not MYPY:
+    class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgsDict(TypedDict):
+        action: NotRequired[pulumi.Input[str]]
+        """
+        The Action param. String must be one of these: `"default"`, `"allow"`, `"block"`, `"sinkhole"`. Default: `"default"`.
+        """
+        log_level: NotRequired[pulumi.Input[str]]
+        """
+        The LogLevel param. String must be one of these: `"default"`, `"none"`, `"low"`, `"informational"`, `"medium"`, `"high"`, `"critical"`. Default: `"default"`.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        packet_capture: NotRequired[pulumi.Input[str]]
+        """
+        The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        """
+elif False:
+    DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs:
     def __init__(__self__, *,
@@ -4092,6 +5558,23 @@ class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs:
         pulumi.set(self, "packet_capture", value)
 
 
+if not MYPY:
+    class DnsSecurityProfileBotnetDomainsListArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+        action: NotRequired[pulumi.Input['DnsSecurityProfileBotnetDomainsListActionArgsDict']]
+        """
+        The Action param.
+        """
+        packet_capture: NotRequired[pulumi.Input[str]]
+        """
+        The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        """
+elif False:
+    DnsSecurityProfileBotnetDomainsListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class DnsSecurityProfileBotnetDomainsListArgs:
     def __init__(__self__, *,
@@ -4145,6 +5628,27 @@ class DnsSecurityProfileBotnetDomainsListArgs:
     def packet_capture(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "packet_capture", value)
 
+
+if not MYPY:
+    class DnsSecurityProfileBotnetDomainsListActionArgsDict(TypedDict):
+        alert: NotRequired[pulumi.Input[bool]]
+        """
+        The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        """
+        allow: NotRequired[pulumi.Input[bool]]
+        """
+        The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        """
+        block: NotRequired[pulumi.Input[bool]]
+        """
+        The Block param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        """
+        sinkhole: NotRequired[pulumi.Input[bool]]
+        """
+        The Sinkhole param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        """
+elif False:
+    DnsSecurityProfileBotnetDomainsListActionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class DnsSecurityProfileBotnetDomainsListActionArgs:
@@ -4217,6 +5721,19 @@ class DnsSecurityProfileBotnetDomainsListActionArgs:
         pulumi.set(self, "sinkhole", value)
 
 
+if not MYPY:
+    class DnsSecurityProfileBotnetDomainsSinkholeArgsDict(TypedDict):
+        ipv4_address: NotRequired[pulumi.Input[str]]
+        """
+        The Ipv4Address param. String must be one of these: `"127.0.0.1"`, `"pan-sinkhole-default-ip"`.
+        """
+        ipv6_address: NotRequired[pulumi.Input[str]]
+        """
+        The Ipv6Address param. String must be one of these: `"::1"`.
+        """
+elif False:
+    DnsSecurityProfileBotnetDomainsSinkholeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class DnsSecurityProfileBotnetDomainsSinkholeArgs:
     def __init__(__self__, *,
@@ -4256,6 +5773,19 @@ class DnsSecurityProfileBotnetDomainsSinkholeArgs:
         pulumi.set(self, "ipv6_address", value)
 
 
+if not MYPY:
+    class DnsSecurityProfileBotnetDomainsWhitelistArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        The Description param.
+        """
+elif False:
+    DnsSecurityProfileBotnetDomainsWhitelistArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class DnsSecurityProfileBotnetDomainsWhitelistArgs:
     def __init__(__self__, *,
@@ -4293,6 +5823,39 @@ class DnsSecurityProfileBotnetDomainsWhitelistArgs:
     def description(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "description", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeArgsDict(TypedDict):
+        domain: NotRequired[pulumi.Input['ExternalDynamicListTypeDomainArgsDict']]
+        """
+        The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        """
+        imei: NotRequired[pulumi.Input['ExternalDynamicListTypeImeiArgsDict']]
+        """
+        The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        """
+        imsi: NotRequired[pulumi.Input['ExternalDynamicListTypeImsiArgsDict']]
+        """
+        The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        """
+        ip: NotRequired[pulumi.Input['ExternalDynamicListTypeIpArgsDict']]
+        """
+        The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        """
+        predefined_ip: NotRequired[pulumi.Input['ExternalDynamicListTypePredefinedIpArgsDict']]
+        """
+        The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        """
+        predefined_url: NotRequired[pulumi.Input['ExternalDynamicListTypePredefinedUrlArgsDict']]
+        """
+        The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        """
+        url: NotRequired[pulumi.Input['ExternalDynamicListTypeUrlArgsDict']]
+        """
+        The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        """
+elif False:
+    ExternalDynamicListTypeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeArgs:
@@ -4413,6 +5976,39 @@ class ExternalDynamicListTypeArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeDomainArgsDict(TypedDict):
+        recurring: pulumi.Input['ExternalDynamicListTypeDomainRecurringArgsDict']
+        """
+        The Recurring param.
+        """
+        certificate_profile: NotRequired[pulumi.Input[str]]
+        """
+        Profile for authenticating client certificates. Default: `"None"`.
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        The Description param. String length must not exceed 255 characters.
+        """
+        domain_auth: NotRequired[pulumi.Input['ExternalDynamicListTypeDomainDomainAuthArgsDict']]
+        """
+        The DomainAuth param.
+        """
+        exception_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+        """
+        expand_domain: NotRequired[pulumi.Input[bool]]
+        """
+        Enable/Disable expand domain. Default: `false`.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The Url param. String length must not exceed 255 characters. Default: `"http://"`.
+        """
+elif False:
+    ExternalDynamicListTypeDomainArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeDomainArgs:
     def __init__(__self__, *,
@@ -4531,6 +6127,19 @@ class ExternalDynamicListTypeDomainArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeDomainDomainAuthArgsDict(TypedDict):
+        password: pulumi.Input[str]
+        """
+        The Password param. String length must not exceed 255 characters.
+        """
+        username: pulumi.Input[str]
+        """
+        The Username param. String length must be between 1 and 255 characters.
+        """
+elif False:
+    ExternalDynamicListTypeDomainDomainAuthArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeDomainDomainAuthArgs:
     def __init__(__self__, *,
@@ -4567,6 +6176,31 @@ class ExternalDynamicListTypeDomainDomainAuthArgs:
     def username(self, value: pulumi.Input[str]):
         pulumi.set(self, "username", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeDomainRecurringArgsDict(TypedDict):
+        daily: NotRequired[pulumi.Input['ExternalDynamicListTypeDomainRecurringDailyArgsDict']]
+        """
+        The Daily param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        five_minute: NotRequired[pulumi.Input[bool]]
+        """
+        The FiveMinute param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        hourly: NotRequired[pulumi.Input[bool]]
+        """
+        The Hourly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        monthly: NotRequired[pulumi.Input['ExternalDynamicListTypeDomainRecurringMonthlyArgsDict']]
+        """
+        The Monthly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        weekly: NotRequired[pulumi.Input['ExternalDynamicListTypeDomainRecurringWeeklyArgsDict']]
+        """
+        The Weekly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+elif False:
+    ExternalDynamicListTypeDomainRecurringArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeDomainRecurringArgs:
@@ -4655,6 +6289,15 @@ class ExternalDynamicListTypeDomainRecurringArgs:
         pulumi.set(self, "weekly", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeDomainRecurringDailyArgsDict(TypedDict):
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeDomainRecurringDailyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeDomainRecurringDailyArgs:
     def __init__(__self__, *,
@@ -4677,6 +6320,19 @@ class ExternalDynamicListTypeDomainRecurringDailyArgs:
     def at(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "at", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeDomainRecurringMonthlyArgsDict(TypedDict):
+        day_of_month: pulumi.Input[int]
+        """
+        The DayOfMonth param. Value must be between 1 and 31.
+        """
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeDomainRecurringMonthlyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeDomainRecurringMonthlyArgs:
@@ -4716,6 +6372,19 @@ class ExternalDynamicListTypeDomainRecurringMonthlyArgs:
         pulumi.set(self, "at", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeDomainRecurringWeeklyArgsDict(TypedDict):
+        day_of_week: pulumi.Input[str]
+        """
+        The DayOfWeek param. String must be one of these: `"sunday"`, `"monday"`, `"tuesday"`, `"wednesday"`, `"thursday"`, `"friday"`, `"saturday"`.
+        """
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeDomainRecurringWeeklyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeDomainRecurringWeeklyArgs:
     def __init__(__self__, *,
@@ -4753,6 +6422,35 @@ class ExternalDynamicListTypeDomainRecurringWeeklyArgs:
     def at(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "at", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeImeiArgsDict(TypedDict):
+        recurring: pulumi.Input['ExternalDynamicListTypeImeiRecurringArgsDict']
+        """
+        The Recurring param.
+        """
+        certificate_profile: NotRequired[pulumi.Input[str]]
+        """
+        Profile for authenticating client certificates. Default: `"None"`.
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        The Description param. String length must not exceed 255 characters.
+        """
+        exception_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        """
+        imei_auth: NotRequired[pulumi.Input['ExternalDynamicListTypeImeiImeiAuthArgsDict']]
+        """
+        The ImeiAuth param.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The Url param. String length must not exceed 255 characters. Default: `"http://"`.
+        """
+elif False:
+    ExternalDynamicListTypeImeiArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeImeiArgs:
@@ -4856,6 +6554,19 @@ class ExternalDynamicListTypeImeiArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeImeiImeiAuthArgsDict(TypedDict):
+        password: pulumi.Input[str]
+        """
+        The Password param. String length must not exceed 255 characters.
+        """
+        username: pulumi.Input[str]
+        """
+        The Username param. String length must be between 1 and 255 characters.
+        """
+elif False:
+    ExternalDynamicListTypeImeiImeiAuthArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeImeiImeiAuthArgs:
     def __init__(__self__, *,
@@ -4892,6 +6603,31 @@ class ExternalDynamicListTypeImeiImeiAuthArgs:
     def username(self, value: pulumi.Input[str]):
         pulumi.set(self, "username", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeImeiRecurringArgsDict(TypedDict):
+        daily: NotRequired[pulumi.Input['ExternalDynamicListTypeImeiRecurringDailyArgsDict']]
+        """
+        The Daily param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        five_minute: NotRequired[pulumi.Input[bool]]
+        """
+        The FiveMinute param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        hourly: NotRequired[pulumi.Input[bool]]
+        """
+        The Hourly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        monthly: NotRequired[pulumi.Input['ExternalDynamicListTypeImeiRecurringMonthlyArgsDict']]
+        """
+        The Monthly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        weekly: NotRequired[pulumi.Input['ExternalDynamicListTypeImeiRecurringWeeklyArgsDict']]
+        """
+        The Weekly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+elif False:
+    ExternalDynamicListTypeImeiRecurringArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeImeiRecurringArgs:
@@ -4980,6 +6716,15 @@ class ExternalDynamicListTypeImeiRecurringArgs:
         pulumi.set(self, "weekly", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeImeiRecurringDailyArgsDict(TypedDict):
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeImeiRecurringDailyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeImeiRecurringDailyArgs:
     def __init__(__self__, *,
@@ -5002,6 +6747,19 @@ class ExternalDynamicListTypeImeiRecurringDailyArgs:
     def at(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "at", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeImeiRecurringMonthlyArgsDict(TypedDict):
+        day_of_month: pulumi.Input[int]
+        """
+        The DayOfMonth param. Value must be between 1 and 31.
+        """
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeImeiRecurringMonthlyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeImeiRecurringMonthlyArgs:
@@ -5041,6 +6799,19 @@ class ExternalDynamicListTypeImeiRecurringMonthlyArgs:
         pulumi.set(self, "at", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeImeiRecurringWeeklyArgsDict(TypedDict):
+        day_of_week: pulumi.Input[str]
+        """
+        The DayOfWeek param. String must be one of these: `"sunday"`, `"monday"`, `"tuesday"`, `"wednesday"`, `"thursday"`, `"friday"`, `"saturday"`.
+        """
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeImeiRecurringWeeklyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeImeiRecurringWeeklyArgs:
     def __init__(__self__, *,
@@ -5078,6 +6849,35 @@ class ExternalDynamicListTypeImeiRecurringWeeklyArgs:
     def at(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "at", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeImsiArgsDict(TypedDict):
+        recurring: pulumi.Input['ExternalDynamicListTypeImsiRecurringArgsDict']
+        """
+        The Recurring param.
+        """
+        certificate_profile: NotRequired[pulumi.Input[str]]
+        """
+        Profile for authenticating client certificates. Default: `"None"`.
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        The Description param. String length must not exceed 255 characters.
+        """
+        exception_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 34 characters.
+        """
+        imsi_auth: NotRequired[pulumi.Input['ExternalDynamicListTypeImsiImsiAuthArgsDict']]
+        """
+        The ImsiAuth param.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The Url param. String length must not exceed 255 characters. Default: `"http://"`.
+        """
+elif False:
+    ExternalDynamicListTypeImsiArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeImsiArgs:
@@ -5181,6 +6981,19 @@ class ExternalDynamicListTypeImsiArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeImsiImsiAuthArgsDict(TypedDict):
+        password: pulumi.Input[str]
+        """
+        The Password param. String length must not exceed 255 characters.
+        """
+        username: pulumi.Input[str]
+        """
+        The Username param. String length must be between 1 and 255 characters.
+        """
+elif False:
+    ExternalDynamicListTypeImsiImsiAuthArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeImsiImsiAuthArgs:
     def __init__(__self__, *,
@@ -5217,6 +7030,31 @@ class ExternalDynamicListTypeImsiImsiAuthArgs:
     def username(self, value: pulumi.Input[str]):
         pulumi.set(self, "username", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeImsiRecurringArgsDict(TypedDict):
+        daily: NotRequired[pulumi.Input['ExternalDynamicListTypeImsiRecurringDailyArgsDict']]
+        """
+        The Daily param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        five_minute: NotRequired[pulumi.Input[bool]]
+        """
+        The FiveMinute param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        hourly: NotRequired[pulumi.Input[bool]]
+        """
+        The Hourly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        monthly: NotRequired[pulumi.Input['ExternalDynamicListTypeImsiRecurringMonthlyArgsDict']]
+        """
+        The Monthly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        weekly: NotRequired[pulumi.Input['ExternalDynamicListTypeImsiRecurringWeeklyArgsDict']]
+        """
+        The Weekly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+elif False:
+    ExternalDynamicListTypeImsiRecurringArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeImsiRecurringArgs:
@@ -5305,6 +7143,15 @@ class ExternalDynamicListTypeImsiRecurringArgs:
         pulumi.set(self, "weekly", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeImsiRecurringDailyArgsDict(TypedDict):
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeImsiRecurringDailyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeImsiRecurringDailyArgs:
     def __init__(__self__, *,
@@ -5327,6 +7174,19 @@ class ExternalDynamicListTypeImsiRecurringDailyArgs:
     def at(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "at", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeImsiRecurringMonthlyArgsDict(TypedDict):
+        day_of_month: pulumi.Input[int]
+        """
+        The DayOfMonth param. Value must be between 1 and 31.
+        """
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeImsiRecurringMonthlyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeImsiRecurringMonthlyArgs:
@@ -5366,6 +7226,19 @@ class ExternalDynamicListTypeImsiRecurringMonthlyArgs:
         pulumi.set(self, "at", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeImsiRecurringWeeklyArgsDict(TypedDict):
+        day_of_week: pulumi.Input[str]
+        """
+        The DayOfWeek param. String must be one of these: `"sunday"`, `"monday"`, `"tuesday"`, `"wednesday"`, `"thursday"`, `"friday"`, `"saturday"`.
+        """
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeImsiRecurringWeeklyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeImsiRecurringWeeklyArgs:
     def __init__(__self__, *,
@@ -5403,6 +7276,35 @@ class ExternalDynamicListTypeImsiRecurringWeeklyArgs:
     def at(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "at", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeIpArgsDict(TypedDict):
+        recurring: pulumi.Input['ExternalDynamicListTypeIpRecurringArgsDict']
+        """
+        The Recurring param.
+        """
+        certificate_profile: NotRequired[pulumi.Input[str]]
+        """
+        Profile for authenticating client certificates. Default: `"None"`.
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        The Description param. String length must not exceed 255 characters.
+        """
+        exception_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+        """
+        ip_auth: NotRequired[pulumi.Input['ExternalDynamicListTypeIpIpAuthArgsDict']]
+        """
+        The IpAuth param.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The Url param. String length must not exceed 255 characters. Default: `"http://"`.
+        """
+elif False:
+    ExternalDynamicListTypeIpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeIpArgs:
@@ -5506,6 +7408,19 @@ class ExternalDynamicListTypeIpArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeIpIpAuthArgsDict(TypedDict):
+        password: pulumi.Input[str]
+        """
+        The Password param. String length must not exceed 255 characters.
+        """
+        username: pulumi.Input[str]
+        """
+        The Username param. String length must be between 1 and 255 characters.
+        """
+elif False:
+    ExternalDynamicListTypeIpIpAuthArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeIpIpAuthArgs:
     def __init__(__self__, *,
@@ -5542,6 +7457,31 @@ class ExternalDynamicListTypeIpIpAuthArgs:
     def username(self, value: pulumi.Input[str]):
         pulumi.set(self, "username", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeIpRecurringArgsDict(TypedDict):
+        daily: NotRequired[pulumi.Input['ExternalDynamicListTypeIpRecurringDailyArgsDict']]
+        """
+        The Daily param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        five_minute: NotRequired[pulumi.Input[bool]]
+        """
+        The FiveMinute param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        hourly: NotRequired[pulumi.Input[bool]]
+        """
+        The Hourly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        monthly: NotRequired[pulumi.Input['ExternalDynamicListTypeIpRecurringMonthlyArgsDict']]
+        """
+        The Monthly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        weekly: NotRequired[pulumi.Input['ExternalDynamicListTypeIpRecurringWeeklyArgsDict']]
+        """
+        The Weekly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+elif False:
+    ExternalDynamicListTypeIpRecurringArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeIpRecurringArgs:
@@ -5630,6 +7570,15 @@ class ExternalDynamicListTypeIpRecurringArgs:
         pulumi.set(self, "weekly", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeIpRecurringDailyArgsDict(TypedDict):
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeIpRecurringDailyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeIpRecurringDailyArgs:
     def __init__(__self__, *,
@@ -5652,6 +7601,19 @@ class ExternalDynamicListTypeIpRecurringDailyArgs:
     def at(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "at", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeIpRecurringMonthlyArgsDict(TypedDict):
+        day_of_month: pulumi.Input[int]
+        """
+        The DayOfMonth param. Value must be between 1 and 31.
+        """
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeIpRecurringMonthlyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeIpRecurringMonthlyArgs:
@@ -5691,6 +7653,19 @@ class ExternalDynamicListTypeIpRecurringMonthlyArgs:
         pulumi.set(self, "at", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeIpRecurringWeeklyArgsDict(TypedDict):
+        day_of_week: pulumi.Input[str]
+        """
+        The DayOfWeek param. String must be one of these: `"sunday"`, `"monday"`, `"tuesday"`, `"wednesday"`, `"thursday"`, `"friday"`, `"saturday"`.
+        """
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeIpRecurringWeeklyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeIpRecurringWeeklyArgs:
     def __init__(__self__, *,
@@ -5728,6 +7703,23 @@ class ExternalDynamicListTypeIpRecurringWeeklyArgs:
     def at(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "at", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypePredefinedIpArgsDict(TypedDict):
+        url: pulumi.Input[str]
+        """
+        The Url param.
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        The Description param. String length must not exceed 255 characters.
+        """
+        exception_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+        """
+elif False:
+    ExternalDynamicListTypePredefinedIpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypePredefinedIpArgs:
@@ -5783,6 +7775,23 @@ class ExternalDynamicListTypePredefinedIpArgs:
         pulumi.set(self, "exception_lists", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypePredefinedUrlArgsDict(TypedDict):
+        url: pulumi.Input[str]
+        """
+        The Url param.
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        The Description param. String length must not exceed 255 characters.
+        """
+        exception_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+        """
+elif False:
+    ExternalDynamicListTypePredefinedUrlArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypePredefinedUrlArgs:
     def __init__(__self__, *,
@@ -5836,6 +7845,35 @@ class ExternalDynamicListTypePredefinedUrlArgs:
     def exception_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "exception_lists", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeUrlArgsDict(TypedDict):
+        recurring: pulumi.Input['ExternalDynamicListTypeUrlRecurringArgsDict']
+        """
+        The Recurring param.
+        """
+        certificate_profile: NotRequired[pulumi.Input[str]]
+        """
+        Profile for authenticating client certificates. Default: `"None"`.
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        The Description param. String length must not exceed 255 characters.
+        """
+        exception_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The Url param. String length must not exceed 255 characters. Default: `"http://"`.
+        """
+        url_auth: NotRequired[pulumi.Input['ExternalDynamicListTypeUrlUrlAuthArgsDict']]
+        """
+        The UrlAuth param.
+        """
+elif False:
+    ExternalDynamicListTypeUrlArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeUrlArgs:
@@ -5939,6 +7977,31 @@ class ExternalDynamicListTypeUrlArgs:
         pulumi.set(self, "url_auth", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeUrlRecurringArgsDict(TypedDict):
+        daily: NotRequired[pulumi.Input['ExternalDynamicListTypeUrlRecurringDailyArgsDict']]
+        """
+        The Daily param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        five_minute: NotRequired[pulumi.Input[bool]]
+        """
+        The FiveMinute param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        hourly: NotRequired[pulumi.Input[bool]]
+        """
+        The Hourly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        monthly: NotRequired[pulumi.Input['ExternalDynamicListTypeUrlRecurringMonthlyArgsDict']]
+        """
+        The Monthly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+        weekly: NotRequired[pulumi.Input['ExternalDynamicListTypeUrlRecurringWeeklyArgsDict']]
+        """
+        The Weekly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        """
+elif False:
+    ExternalDynamicListTypeUrlRecurringArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeUrlRecurringArgs:
     def __init__(__self__, *,
@@ -6026,6 +8089,15 @@ class ExternalDynamicListTypeUrlRecurringArgs:
         pulumi.set(self, "weekly", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeUrlRecurringDailyArgsDict(TypedDict):
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeUrlRecurringDailyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeUrlRecurringDailyArgs:
     def __init__(__self__, *,
@@ -6048,6 +8120,19 @@ class ExternalDynamicListTypeUrlRecurringDailyArgs:
     def at(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "at", value)
 
+
+if not MYPY:
+    class ExternalDynamicListTypeUrlRecurringMonthlyArgsDict(TypedDict):
+        day_of_month: pulumi.Input[int]
+        """
+        The DayOfMonth param. Value must be between 1 and 31.
+        """
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeUrlRecurringMonthlyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ExternalDynamicListTypeUrlRecurringMonthlyArgs:
@@ -6087,6 +8172,19 @@ class ExternalDynamicListTypeUrlRecurringMonthlyArgs:
         pulumi.set(self, "at", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeUrlRecurringWeeklyArgsDict(TypedDict):
+        day_of_week: pulumi.Input[str]
+        """
+        The DayOfWeek param. String must be one of these: `"sunday"`, `"monday"`, `"tuesday"`, `"wednesday"`, `"thursday"`, `"friday"`, `"saturday"`.
+        """
+        at: NotRequired[pulumi.Input[str]]
+        """
+        Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        """
+elif False:
+    ExternalDynamicListTypeUrlRecurringWeeklyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeUrlRecurringWeeklyArgs:
     def __init__(__self__, *,
@@ -6125,6 +8223,19 @@ class ExternalDynamicListTypeUrlRecurringWeeklyArgs:
         pulumi.set(self, "at", value)
 
 
+if not MYPY:
+    class ExternalDynamicListTypeUrlUrlAuthArgsDict(TypedDict):
+        password: pulumi.Input[str]
+        """
+        The Password param. String length must not exceed 255 characters.
+        """
+        username: pulumi.Input[str]
+        """
+        The Username param. String length must be between 1 and 255 characters.
+        """
+elif False:
+    ExternalDynamicListTypeUrlUrlAuthArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExternalDynamicListTypeUrlUrlAuthArgs:
     def __init__(__self__, *,
@@ -6161,6 +8272,31 @@ class ExternalDynamicListTypeUrlUrlAuthArgs:
     def username(self, value: pulumi.Input[str]):
         pulumi.set(self, "username", value)
 
+
+if not MYPY:
+    class FileBlockingProfileRuleArgsDict(TypedDict):
+        applications: pulumi.Input[Sequence[pulumi.Input[str]]]
+        """
+        The Applications param. List must contain at least 1 elements.
+        """
+        file_types: pulumi.Input[Sequence[pulumi.Input[str]]]
+        """
+        The FileTypes param. List must contain at least 1 elements.
+        """
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+        action: NotRequired[pulumi.Input[str]]
+        """
+        The Action param. String must be one of these: `"alert"`, `"block"`, `"continue"`. Default: `"alert"`.
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        The Direction param. String must be one of these: `"download"`, `"upload"`, `"both"`. Default: `"both"`.
+        """
+elif False:
+    FileBlockingProfileRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class FileBlockingProfileRuleArgs:
@@ -6246,6 +8382,23 @@ class FileBlockingProfileRuleArgs:
         pulumi.set(self, "direction", value)
 
 
+if not MYPY:
+    class HipObjectAntiMalwareArgsDict(TypedDict):
+        criteria: NotRequired[pulumi.Input['HipObjectAntiMalwareCriteriaArgsDict']]
+        """
+        The Criteria param.
+        """
+        exclude_vendor: NotRequired[pulumi.Input[bool]]
+        """
+        The ExcludeVendor param. Default: `false`.
+        """
+        vendors: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectAntiMalwareVendorArgsDict']]]]
+        """
+        Vendor name.
+        """
+elif False:
+    HipObjectAntiMalwareArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectAntiMalwareArgs:
     def __init__(__self__, *,
@@ -6300,6 +8453,31 @@ class HipObjectAntiMalwareArgs:
     def vendors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['HipObjectAntiMalwareVendorArgs']]]]):
         pulumi.set(self, "vendors", value)
 
+
+if not MYPY:
+    class HipObjectAntiMalwareCriteriaArgsDict(TypedDict):
+        is_installed: NotRequired[pulumi.Input[bool]]
+        """
+        Is Installed. Default: `true`.
+        """
+        last_scan_time: NotRequired[pulumi.Input['HipObjectAntiMalwareCriteriaLastScanTimeArgsDict']]
+        """
+        The LastScanTime param.
+        """
+        product_version: NotRequired[pulumi.Input['HipObjectAntiMalwareCriteriaProductVersionArgsDict']]
+        """
+        The ProductVersion param.
+        """
+        real_time_protection: NotRequired[pulumi.Input[str]]
+        """
+        real time protection. String must be one of these: `"no"`, `"yes"`, `"not-available"`.
+        """
+        virdef_version: NotRequired[pulumi.Input['HipObjectAntiMalwareCriteriaVirdefVersionArgsDict']]
+        """
+        The VirdefVersion param.
+        """
+elif False:
+    HipObjectAntiMalwareCriteriaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectAntiMalwareCriteriaArgs:
@@ -6388,6 +8566,23 @@ class HipObjectAntiMalwareCriteriaArgs:
         pulumi.set(self, "virdef_version", value)
 
 
+if not MYPY:
+    class HipObjectAntiMalwareCriteriaLastScanTimeArgsDict(TypedDict):
+        not_available: NotRequired[pulumi.Input[bool]]
+        """
+        The NotAvailable param. Ensure that only one of the following is specified: `not_available`, `not_within`, `within`
+        """
+        not_within: NotRequired[pulumi.Input['HipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgsDict']]
+        """
+        The NotWithin param. Ensure that only one of the following is specified: `not_available`, `not_within`, `within`
+        """
+        within: NotRequired[pulumi.Input['HipObjectAntiMalwareCriteriaLastScanTimeWithinArgsDict']]
+        """
+        The Within param. Ensure that only one of the following is specified: `not_available`, `not_within`, `within`
+        """
+elif False:
+    HipObjectAntiMalwareCriteriaLastScanTimeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectAntiMalwareCriteriaLastScanTimeArgs:
     def __init__(__self__, *,
@@ -6443,6 +8638,19 @@ class HipObjectAntiMalwareCriteriaLastScanTimeArgs:
         pulumi.set(self, "within", value)
 
 
+if not MYPY:
+    class HipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgsDict(TypedDict):
+        days: NotRequired[pulumi.Input[int]]
+        """
+        specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+        """
+        hours: NotRequired[pulumi.Input[int]]
+        """
+        specify time in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+        """
+elif False:
+    HipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs:
     def __init__(__self__, *,
@@ -6482,6 +8690,19 @@ class HipObjectAntiMalwareCriteriaLastScanTimeNotWithinArgs:
         pulumi.set(self, "hours", value)
 
 
+if not MYPY:
+    class HipObjectAntiMalwareCriteriaLastScanTimeWithinArgsDict(TypedDict):
+        days: NotRequired[pulumi.Input[int]]
+        """
+        specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+        """
+        hours: NotRequired[pulumi.Input[int]]
+        """
+        specify time in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+        """
+elif False:
+    HipObjectAntiMalwareCriteriaLastScanTimeWithinArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectAntiMalwareCriteriaLastScanTimeWithinArgs:
     def __init__(__self__, *,
@@ -6520,6 +8741,47 @@ class HipObjectAntiMalwareCriteriaLastScanTimeWithinArgs:
     def hours(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "hours", value)
 
+
+if not MYPY:
+    class HipObjectAntiMalwareCriteriaProductVersionArgsDict(TypedDict):
+        contains: NotRequired[pulumi.Input[str]]
+        """
+        The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`, `not_within`, `within`
+        """
+        greater_equal: NotRequired[pulumi.Input[str]]
+        """
+        The GreaterEqual param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`, `not_within`, `within`
+        """
+        greater_than: NotRequired[pulumi.Input[str]]
+        """
+        The GreaterThan param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`, `not_within`, `within`
+        """
+        is_: NotRequired[pulumi.Input[str]]
+        """
+        The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`, `not_within`, `within`
+        """
+        is_not: NotRequired[pulumi.Input[str]]
+        """
+        The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`, `not_within`, `within`
+        """
+        less_equal: NotRequired[pulumi.Input[str]]
+        """
+        The LessEqual param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`, `not_within`, `within`
+        """
+        less_than: NotRequired[pulumi.Input[str]]
+        """
+        The LessThan param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`, `not_within`, `within`
+        """
+        not_within: NotRequired[pulumi.Input['HipObjectAntiMalwareCriteriaProductVersionNotWithinArgsDict']]
+        """
+        The NotWithin param. Ensure that only one of the following is specified: `contains`, `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`, `not_within`, `within`
+        """
+        within: NotRequired[pulumi.Input['HipObjectAntiMalwareCriteriaProductVersionWithinArgsDict']]
+        """
+        The Within param. Ensure that only one of the following is specified: `contains`, `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`, `not_within`, `within`
+        """
+elif False:
+    HipObjectAntiMalwareCriteriaProductVersionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectAntiMalwareCriteriaProductVersionArgs:
@@ -6672,6 +8934,15 @@ class HipObjectAntiMalwareCriteriaProductVersionArgs:
         pulumi.set(self, "within", value)
 
 
+if not MYPY:
+    class HipObjectAntiMalwareCriteriaProductVersionNotWithinArgsDict(TypedDict):
+        versions: NotRequired[pulumi.Input[int]]
+        """
+        versions range. Value must be between 1 and 65535. Default: `1`.
+        """
+elif False:
+    HipObjectAntiMalwareCriteriaProductVersionNotWithinArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectAntiMalwareCriteriaProductVersionNotWithinArgs:
     def __init__(__self__, *,
@@ -6695,6 +8966,15 @@ class HipObjectAntiMalwareCriteriaProductVersionNotWithinArgs:
         pulumi.set(self, "versions", value)
 
 
+if not MYPY:
+    class HipObjectAntiMalwareCriteriaProductVersionWithinArgsDict(TypedDict):
+        versions: NotRequired[pulumi.Input[int]]
+        """
+        versions range. Value must be between 1 and 65535. Default: `1`.
+        """
+elif False:
+    HipObjectAntiMalwareCriteriaProductVersionWithinArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectAntiMalwareCriteriaProductVersionWithinArgs:
     def __init__(__self__, *,
@@ -6717,6 +8997,19 @@ class HipObjectAntiMalwareCriteriaProductVersionWithinArgs:
     def versions(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "versions", value)
 
+
+if not MYPY:
+    class HipObjectAntiMalwareCriteriaVirdefVersionArgsDict(TypedDict):
+        not_within: NotRequired[pulumi.Input['HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgsDict']]
+        """
+        The NotWithin param. Ensure that only one of the following is specified: `not_within`, `within`
+        """
+        within: NotRequired[pulumi.Input['HipObjectAntiMalwareCriteriaVirdefVersionWithinArgsDict']]
+        """
+        The Within param. Ensure that only one of the following is specified: `not_within`, `within`
+        """
+elif False:
+    HipObjectAntiMalwareCriteriaVirdefVersionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectAntiMalwareCriteriaVirdefVersionArgs:
@@ -6757,6 +9050,19 @@ class HipObjectAntiMalwareCriteriaVirdefVersionArgs:
         pulumi.set(self, "within", value)
 
 
+if not MYPY:
+    class HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgsDict(TypedDict):
+        days: NotRequired[pulumi.Input[int]]
+        """
+        specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `versions`
+        """
+        versions: NotRequired[pulumi.Input[int]]
+        """
+        specify versions range. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `versions`
+        """
+elif False:
+    HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs:
     def __init__(__self__, *,
@@ -6795,6 +9101,19 @@ class HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs:
     def versions(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "versions", value)
 
+
+if not MYPY:
+    class HipObjectAntiMalwareCriteriaVirdefVersionWithinArgsDict(TypedDict):
+        days: NotRequired[pulumi.Input[int]]
+        """
+        specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `versions`
+        """
+        versions: NotRequired[pulumi.Input[int]]
+        """
+        specify versions range. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `versions`
+        """
+elif False:
+    HipObjectAntiMalwareCriteriaVirdefVersionWithinArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectAntiMalwareCriteriaVirdefVersionWithinArgs:
@@ -6835,6 +9154,19 @@ class HipObjectAntiMalwareCriteriaVirdefVersionWithinArgs:
         pulumi.set(self, "versions", value)
 
 
+if not MYPY:
+    class HipObjectAntiMalwareVendorArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param. String length must not exceed 103 characters.
+        """
+        products: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectAntiMalwareVendorArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectAntiMalwareVendorArgs:
     def __init__(__self__, *,
@@ -6873,6 +9205,15 @@ class HipObjectAntiMalwareVendorArgs:
         pulumi.set(self, "products", value)
 
 
+if not MYPY:
+    class HipObjectCertificateArgsDict(TypedDict):
+        criteria: NotRequired[pulumi.Input['HipObjectCertificateCriteriaArgsDict']]
+        """
+        The Criteria param.
+        """
+elif False:
+    HipObjectCertificateArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectCertificateArgs:
     def __init__(__self__, *,
@@ -6895,6 +9236,19 @@ class HipObjectCertificateArgs:
     def criteria(self, value: Optional[pulumi.Input['HipObjectCertificateCriteriaArgs']]):
         pulumi.set(self, "criteria", value)
 
+
+if not MYPY:
+    class HipObjectCertificateCriteriaArgsDict(TypedDict):
+        certificate_attributes: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectCertificateCriteriaCertificateAttributeArgsDict']]]]
+        """
+        The CertificateAttributes param.
+        """
+        certificate_profile: NotRequired[pulumi.Input[str]]
+        """
+        Profile for authenticating client certificates.
+        """
+elif False:
+    HipObjectCertificateCriteriaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectCertificateCriteriaArgs:
@@ -6935,6 +9289,19 @@ class HipObjectCertificateCriteriaArgs:
         pulumi.set(self, "certificate_profile", value)
 
 
+if not MYPY:
+    class HipObjectCertificateCriteriaCertificateAttributeArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Attribute Name.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectCertificateCriteriaCertificateAttributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectCertificateCriteriaCertificateAttributeArgs:
     def __init__(__self__, *,
@@ -6973,6 +9340,15 @@ class HipObjectCertificateCriteriaCertificateAttributeArgs:
         pulumi.set(self, "value", value)
 
 
+if not MYPY:
+    class HipObjectCustomChecksArgsDict(TypedDict):
+        criteria: pulumi.Input['HipObjectCustomChecksCriteriaArgsDict']
+        """
+        The Criteria param.
+        """
+elif False:
+    HipObjectCustomChecksArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectCustomChecksArgs:
     def __init__(__self__, *,
@@ -6994,6 +9370,23 @@ class HipObjectCustomChecksArgs:
     def criteria(self, value: pulumi.Input['HipObjectCustomChecksCriteriaArgs']):
         pulumi.set(self, "criteria", value)
 
+
+if not MYPY:
+    class HipObjectCustomChecksCriteriaArgsDict(TypedDict):
+        plists: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaPlistArgsDict']]]]
+        """
+        The Plist param.
+        """
+        process_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaProcessListArgsDict']]]]
+        """
+        The ProcessList param.
+        """
+        registry_keys: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaRegistryKeyArgsDict']]]]
+        """
+        The RegistryKeys param.
+        """
+elif False:
+    HipObjectCustomChecksCriteriaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectCustomChecksCriteriaArgs:
@@ -7050,6 +9443,23 @@ class HipObjectCustomChecksCriteriaArgs:
         pulumi.set(self, "registry_keys", value)
 
 
+if not MYPY:
+    class HipObjectCustomChecksCriteriaPlistArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Preference list. String length must not exceed 1023 characters.
+        """
+        keys: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaPlistKeyArgsDict']]]]
+        """
+        The Keys param.
+        """
+        negate: NotRequired[pulumi.Input[bool]]
+        """
+        Plist does not exist. Default: `false`.
+        """
+elif False:
+    HipObjectCustomChecksCriteriaPlistArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectCustomChecksCriteriaPlistArgs:
     def __init__(__self__, *,
@@ -7103,6 +9513,23 @@ class HipObjectCustomChecksCriteriaPlistArgs:
     def negate(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "negate", value)
 
+
+if not MYPY:
+    class HipObjectCustomChecksCriteriaPlistKeyArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        """
+        negate: NotRequired[pulumi.Input[bool]]
+        """
+        Value does not exist or match specified value data. Default: `false`.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectCustomChecksCriteriaPlistKeyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectCustomChecksCriteriaPlistKeyArgs:
@@ -7158,6 +9585,19 @@ class HipObjectCustomChecksCriteriaPlistKeyArgs:
         pulumi.set(self, "value", value)
 
 
+if not MYPY:
+    class HipObjectCustomChecksCriteriaProcessListArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Process Name. String length must not exceed 1023 characters.
+        """
+        running: NotRequired[pulumi.Input[bool]]
+        """
+        The Running param. Default: `true`.
+        """
+elif False:
+    HipObjectCustomChecksCriteriaProcessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectCustomChecksCriteriaProcessListArgs:
     def __init__(__self__, *,
@@ -7195,6 +9635,27 @@ class HipObjectCustomChecksCriteriaProcessListArgs:
     def running(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "running", value)
 
+
+if not MYPY:
+    class HipObjectCustomChecksCriteriaRegistryKeyArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Registry key. String length must not exceed 1023 characters.
+        """
+        default_value_data: NotRequired[pulumi.Input[str]]
+        """
+        Registry key default value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+        """
+        negate: NotRequired[pulumi.Input[bool]]
+        """
+        Key does not exist or match specified value data. Default: `false`.
+        """
+        registry_values: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgsDict']]]]
+        """
+        The RegistryValues param.
+        """
+elif False:
+    HipObjectCustomChecksCriteriaRegistryKeyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectCustomChecksCriteriaRegistryKeyArgs:
@@ -7266,6 +9727,23 @@ class HipObjectCustomChecksCriteriaRegistryKeyArgs:
         pulumi.set(self, "registry_values", value)
 
 
+if not MYPY:
+    class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Registry value name. String length must not exceed 1023 characters.
+        """
+        negate: NotRequired[pulumi.Input[bool]]
+        """
+        Value does not exist or match specified value data. Default: `false`.
+        """
+        value_data: NotRequired[pulumi.Input[str]]
+        """
+        Registry value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs:
     def __init__(__self__, *,
@@ -7319,6 +9797,23 @@ class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs:
     def value_data(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value_data", value)
 
+
+if not MYPY:
+    class HipObjectDataLossPreventionArgsDict(TypedDict):
+        criteria: NotRequired[pulumi.Input['HipObjectDataLossPreventionCriteriaArgsDict']]
+        """
+        The Criteria param.
+        """
+        exclude_vendor: NotRequired[pulumi.Input[bool]]
+        """
+        The ExcludeVendor param. Default: `false`.
+        """
+        vendors: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectDataLossPreventionVendorArgsDict']]]]
+        """
+        Vendor name.
+        """
+elif False:
+    HipObjectDataLossPreventionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectDataLossPreventionArgs:
@@ -7375,6 +9870,19 @@ class HipObjectDataLossPreventionArgs:
         pulumi.set(self, "vendors", value)
 
 
+if not MYPY:
+    class HipObjectDataLossPreventionCriteriaArgsDict(TypedDict):
+        is_enabled: NotRequired[pulumi.Input[str]]
+        """
+        is enabled. String must be one of these: `"no"`, `"yes"`, `"not-available"`.
+        """
+        is_installed: NotRequired[pulumi.Input[bool]]
+        """
+        Is Installed. Default: `true`.
+        """
+elif False:
+    HipObjectDataLossPreventionCriteriaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectDataLossPreventionCriteriaArgs:
     def __init__(__self__, *,
@@ -7414,6 +9922,19 @@ class HipObjectDataLossPreventionCriteriaArgs:
         pulumi.set(self, "is_installed", value)
 
 
+if not MYPY:
+    class HipObjectDataLossPreventionVendorArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param. String length must not exceed 103 characters.
+        """
+        products: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Product name. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectDataLossPreventionVendorArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectDataLossPreventionVendorArgs:
     def __init__(__self__, *,
@@ -7451,6 +9972,23 @@ class HipObjectDataLossPreventionVendorArgs:
     def products(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "products", value)
 
+
+if not MYPY:
+    class HipObjectDiskBackupArgsDict(TypedDict):
+        criteria: NotRequired[pulumi.Input['HipObjectDiskBackupCriteriaArgsDict']]
+        """
+        The Criteria param.
+        """
+        exclude_vendor: NotRequired[pulumi.Input[bool]]
+        """
+        The ExcludeVendor param. Default: `false`.
+        """
+        vendors: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectDiskBackupVendorArgsDict']]]]
+        """
+        Vendor name.
+        """
+elif False:
+    HipObjectDiskBackupArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectDiskBackupArgs:
@@ -7507,6 +10045,19 @@ class HipObjectDiskBackupArgs:
         pulumi.set(self, "vendors", value)
 
 
+if not MYPY:
+    class HipObjectDiskBackupCriteriaArgsDict(TypedDict):
+        is_installed: NotRequired[pulumi.Input[bool]]
+        """
+        Is Installed. Default: `true`.
+        """
+        last_backup_time: NotRequired[pulumi.Input['HipObjectDiskBackupCriteriaLastBackupTimeArgsDict']]
+        """
+        The LastBackupTime param.
+        """
+elif False:
+    HipObjectDiskBackupCriteriaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectDiskBackupCriteriaArgs:
     def __init__(__self__, *,
@@ -7545,6 +10096,23 @@ class HipObjectDiskBackupCriteriaArgs:
     def last_backup_time(self, value: Optional[pulumi.Input['HipObjectDiskBackupCriteriaLastBackupTimeArgs']]):
         pulumi.set(self, "last_backup_time", value)
 
+
+if not MYPY:
+    class HipObjectDiskBackupCriteriaLastBackupTimeArgsDict(TypedDict):
+        not_available: NotRequired[pulumi.Input[bool]]
+        """
+        The NotAvailable param. Ensure that only one of the following is specified: `not_available`, `not_within`, `within`
+        """
+        not_within: NotRequired[pulumi.Input['HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgsDict']]
+        """
+        The NotWithin param. Ensure that only one of the following is specified: `not_available`, `not_within`, `within`
+        """
+        within: NotRequired[pulumi.Input['HipObjectDiskBackupCriteriaLastBackupTimeWithinArgsDict']]
+        """
+        The Within param. Ensure that only one of the following is specified: `not_available`, `not_within`, `within`
+        """
+elif False:
+    HipObjectDiskBackupCriteriaLastBackupTimeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectDiskBackupCriteriaLastBackupTimeArgs:
@@ -7601,6 +10169,19 @@ class HipObjectDiskBackupCriteriaLastBackupTimeArgs:
         pulumi.set(self, "within", value)
 
 
+if not MYPY:
+    class HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgsDict(TypedDict):
+        days: NotRequired[pulumi.Input[int]]
+        """
+        specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+        """
+        hours: NotRequired[pulumi.Input[int]]
+        """
+        specify time in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+        """
+elif False:
+    HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs:
     def __init__(__self__, *,
@@ -7639,6 +10220,19 @@ class HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs:
     def hours(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "hours", value)
 
+
+if not MYPY:
+    class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgsDict(TypedDict):
+        days: NotRequired[pulumi.Input[int]]
+        """
+        specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+        """
+        hours: NotRequired[pulumi.Input[int]]
+        """
+        specify time in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+        """
+elif False:
+    HipObjectDiskBackupCriteriaLastBackupTimeWithinArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs:
@@ -7679,6 +10273,19 @@ class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs:
         pulumi.set(self, "hours", value)
 
 
+if not MYPY:
+    class HipObjectDiskBackupVendorArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param. String length must not exceed 103 characters.
+        """
+        products: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectDiskBackupVendorArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectDiskBackupVendorArgs:
     def __init__(__self__, *,
@@ -7716,6 +10323,23 @@ class HipObjectDiskBackupVendorArgs:
     def products(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "products", value)
 
+
+if not MYPY:
+    class HipObjectDiskEncryptionArgsDict(TypedDict):
+        criteria: NotRequired[pulumi.Input['HipObjectDiskEncryptionCriteriaArgsDict']]
+        """
+        Encryption locations.
+        """
+        exclude_vendor: NotRequired[pulumi.Input[bool]]
+        """
+        The ExcludeVendor param. Default: `false`.
+        """
+        vendors: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectDiskEncryptionVendorArgsDict']]]]
+        """
+        Vendor name.
+        """
+elif False:
+    HipObjectDiskEncryptionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectDiskEncryptionArgs:
@@ -7772,6 +10396,19 @@ class HipObjectDiskEncryptionArgs:
         pulumi.set(self, "vendors", value)
 
 
+if not MYPY:
+    class HipObjectDiskEncryptionCriteriaArgsDict(TypedDict):
+        encrypted_locations: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectDiskEncryptionCriteriaEncryptedLocationArgsDict']]]]
+        """
+        The EncryptedLocations param.
+        """
+        is_installed: NotRequired[pulumi.Input[bool]]
+        """
+        Is Installed. Default: `true`.
+        """
+elif False:
+    HipObjectDiskEncryptionCriteriaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectDiskEncryptionCriteriaArgs:
     def __init__(__self__, *,
@@ -7811,6 +10448,19 @@ class HipObjectDiskEncryptionCriteriaArgs:
         pulumi.set(self, "is_installed", value)
 
 
+if not MYPY:
+    class HipObjectDiskEncryptionCriteriaEncryptedLocationArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Encryption location. String length must not exceed 1023 characters.
+        """
+        encryption_state: NotRequired[pulumi.Input['HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgsDict']]
+        """
+        The EncryptionState param.
+        """
+elif False:
+    HipObjectDiskEncryptionCriteriaEncryptedLocationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectDiskEncryptionCriteriaEncryptedLocationArgs:
     def __init__(__self__, *,
@@ -7848,6 +10498,19 @@ class HipObjectDiskEncryptionCriteriaEncryptedLocationArgs:
     def encryption_state(self, value: Optional[pulumi.Input['HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs']]):
         pulumi.set(self, "encryption_state", value)
 
+
+if not MYPY:
+    class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgsDict(TypedDict):
+        is_: NotRequired[pulumi.Input[str]]
+        """
+        The Is param. String must be one of these: `"encrypted"`, `"unencrypted"`, `"partial"`, `"unknown"`. Ensure that only one of the following is specified: `is`, `is_not`
+        """
+        is_not: NotRequired[pulumi.Input[str]]
+        """
+        The IsNot param. String must be one of these: `"encrypted"`, `"unencrypted"`, `"partial"`, `"unknown"`. Ensure that only one of the following is specified: `is`, `is_not`
+        """
+elif False:
+    HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs:
@@ -7888,6 +10551,19 @@ class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs:
         pulumi.set(self, "is_not", value)
 
 
+if not MYPY:
+    class HipObjectDiskEncryptionVendorArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param. String length must not exceed 103 characters.
+        """
+        products: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectDiskEncryptionVendorArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectDiskEncryptionVendorArgs:
     def __init__(__self__, *,
@@ -7925,6 +10601,23 @@ class HipObjectDiskEncryptionVendorArgs:
     def products(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "products", value)
 
+
+if not MYPY:
+    class HipObjectFirewallArgsDict(TypedDict):
+        criteria: NotRequired[pulumi.Input['HipObjectFirewallCriteriaArgsDict']]
+        """
+        The Criteria param.
+        """
+        exclude_vendor: NotRequired[pulumi.Input[bool]]
+        """
+        The ExcludeVendor param. Default: `false`.
+        """
+        vendors: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectFirewallVendorArgsDict']]]]
+        """
+        Vendor name.
+        """
+elif False:
+    HipObjectFirewallArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectFirewallArgs:
@@ -7981,6 +10674,19 @@ class HipObjectFirewallArgs:
         pulumi.set(self, "vendors", value)
 
 
+if not MYPY:
+    class HipObjectFirewallCriteriaArgsDict(TypedDict):
+        is_enabled: NotRequired[pulumi.Input[str]]
+        """
+        is enabled. String must be one of these: `"no"`, `"yes"`, `"not-available"`.
+        """
+        is_installed: NotRequired[pulumi.Input[bool]]
+        """
+        Is Installed. Default: `true`.
+        """
+elif False:
+    HipObjectFirewallCriteriaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectFirewallCriteriaArgs:
     def __init__(__self__, *,
@@ -8020,6 +10726,19 @@ class HipObjectFirewallCriteriaArgs:
         pulumi.set(self, "is_installed", value)
 
 
+if not MYPY:
+    class HipObjectFirewallVendorArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param. String length must not exceed 103 characters.
+        """
+        products: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectFirewallVendorArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectFirewallVendorArgs:
     def __init__(__self__, *,
@@ -8058,6 +10777,15 @@ class HipObjectFirewallVendorArgs:
         pulumi.set(self, "products", value)
 
 
+if not MYPY:
+    class HipObjectHostInfoArgsDict(TypedDict):
+        criteria: pulumi.Input['HipObjectHostInfoCriteriaArgsDict']
+        """
+        The Criteria param.
+        """
+elif False:
+    HipObjectHostInfoArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectHostInfoArgs:
     def __init__(__self__, *,
@@ -8079,6 +10807,39 @@ class HipObjectHostInfoArgs:
     def criteria(self, value: pulumi.Input['HipObjectHostInfoCriteriaArgs']):
         pulumi.set(self, "criteria", value)
 
+
+if not MYPY:
+    class HipObjectHostInfoCriteriaArgsDict(TypedDict):
+        client_version: NotRequired[pulumi.Input['HipObjectHostInfoCriteriaClientVersionArgsDict']]
+        """
+        The ClientVersion param.
+        """
+        domain: NotRequired[pulumi.Input['HipObjectHostInfoCriteriaDomainArgsDict']]
+        """
+        The Domain param.
+        """
+        host_id: NotRequired[pulumi.Input['HipObjectHostInfoCriteriaHostIdArgsDict']]
+        """
+        The HostId param.
+        """
+        host_name: NotRequired[pulumi.Input['HipObjectHostInfoCriteriaHostNameArgsDict']]
+        """
+        The HostName param.
+        """
+        managed: NotRequired[pulumi.Input[bool]]
+        """
+        If device is managed.
+        """
+        os: NotRequired[pulumi.Input['HipObjectHostInfoCriteriaOsArgsDict']]
+        """
+        The Os param.
+        """
+        serial_number: NotRequired[pulumi.Input['HipObjectHostInfoCriteriaSerialNumberArgsDict']]
+        """
+        The SerialNumber param.
+        """
+elif False:
+    HipObjectHostInfoCriteriaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectHostInfoCriteriaArgs:
@@ -8199,6 +10960,23 @@ class HipObjectHostInfoCriteriaArgs:
         pulumi.set(self, "serial_number", value)
 
 
+if not MYPY:
+    class HipObjectHostInfoCriteriaClientVersionArgsDict(TypedDict):
+        contains: NotRequired[pulumi.Input[str]]
+        """
+        The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_: NotRequired[pulumi.Input[str]]
+        """
+        The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_not: NotRequired[pulumi.Input[str]]
+        """
+        The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+elif False:
+    HipObjectHostInfoCriteriaClientVersionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectHostInfoCriteriaClientVersionArgs:
     def __init__(__self__, *,
@@ -8253,6 +11031,23 @@ class HipObjectHostInfoCriteriaClientVersionArgs:
     def is_not(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "is_not", value)
 
+
+if not MYPY:
+    class HipObjectHostInfoCriteriaDomainArgsDict(TypedDict):
+        contains: NotRequired[pulumi.Input[str]]
+        """
+        The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_: NotRequired[pulumi.Input[str]]
+        """
+        The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_not: NotRequired[pulumi.Input[str]]
+        """
+        The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+elif False:
+    HipObjectHostInfoCriteriaDomainArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectHostInfoCriteriaDomainArgs:
@@ -8309,6 +11104,23 @@ class HipObjectHostInfoCriteriaDomainArgs:
         pulumi.set(self, "is_not", value)
 
 
+if not MYPY:
+    class HipObjectHostInfoCriteriaHostIdArgsDict(TypedDict):
+        contains: NotRequired[pulumi.Input[str]]
+        """
+        The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_: NotRequired[pulumi.Input[str]]
+        """
+        The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_not: NotRequired[pulumi.Input[str]]
+        """
+        The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+elif False:
+    HipObjectHostInfoCriteriaHostIdArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectHostInfoCriteriaHostIdArgs:
     def __init__(__self__, *,
@@ -8363,6 +11175,23 @@ class HipObjectHostInfoCriteriaHostIdArgs:
     def is_not(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "is_not", value)
 
+
+if not MYPY:
+    class HipObjectHostInfoCriteriaHostNameArgsDict(TypedDict):
+        contains: NotRequired[pulumi.Input[str]]
+        """
+        The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_: NotRequired[pulumi.Input[str]]
+        """
+        The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_not: NotRequired[pulumi.Input[str]]
+        """
+        The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+elif False:
+    HipObjectHostInfoCriteriaHostNameArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectHostInfoCriteriaHostNameArgs:
@@ -8419,6 +11248,15 @@ class HipObjectHostInfoCriteriaHostNameArgs:
         pulumi.set(self, "is_not", value)
 
 
+if not MYPY:
+    class HipObjectHostInfoCriteriaOsArgsDict(TypedDict):
+        contains: NotRequired[pulumi.Input['HipObjectHostInfoCriteriaOsContainsArgsDict']]
+        """
+        The Contains param. Ensure that only one of the following is specified: `contains`
+        """
+elif False:
+    HipObjectHostInfoCriteriaOsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectHostInfoCriteriaOsArgs:
     def __init__(__self__, *,
@@ -8441,6 +11279,31 @@ class HipObjectHostInfoCriteriaOsArgs:
     def contains(self, value: Optional[pulumi.Input['HipObjectHostInfoCriteriaOsContainsArgs']]):
         pulumi.set(self, "contains", value)
 
+
+if not MYPY:
+    class HipObjectHostInfoCriteriaOsContainsArgsDict(TypedDict):
+        apple: NotRequired[pulumi.Input[str]]
+        """
+        Apple vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        """
+        google: NotRequired[pulumi.Input[str]]
+        """
+        Google vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        """
+        linux: NotRequired[pulumi.Input[str]]
+        """
+        Linux vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        """
+        microsoft: NotRequired[pulumi.Input[str]]
+        """
+        Microsoft vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        """
+        other: NotRequired[pulumi.Input[str]]
+        """
+        Other vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        """
+elif False:
+    HipObjectHostInfoCriteriaOsContainsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectHostInfoCriteriaOsContainsArgs:
@@ -8529,6 +11392,23 @@ class HipObjectHostInfoCriteriaOsContainsArgs:
         pulumi.set(self, "other", value)
 
 
+if not MYPY:
+    class HipObjectHostInfoCriteriaSerialNumberArgsDict(TypedDict):
+        contains: NotRequired[pulumi.Input[str]]
+        """
+        The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_: NotRequired[pulumi.Input[str]]
+        """
+        The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_not: NotRequired[pulumi.Input[str]]
+        """
+        The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+elif False:
+    HipObjectHostInfoCriteriaSerialNumberArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectHostInfoCriteriaSerialNumberArgs:
     def __init__(__self__, *,
@@ -8584,6 +11464,15 @@ class HipObjectHostInfoCriteriaSerialNumberArgs:
         pulumi.set(self, "is_not", value)
 
 
+if not MYPY:
+    class HipObjectMobileDeviceArgsDict(TypedDict):
+        criteria: NotRequired[pulumi.Input['HipObjectMobileDeviceCriteriaArgsDict']]
+        """
+        The Criteria param.
+        """
+elif False:
+    HipObjectMobileDeviceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectMobileDeviceArgs:
     def __init__(__self__, *,
@@ -8606,6 +11495,47 @@ class HipObjectMobileDeviceArgs:
     def criteria(self, value: Optional[pulumi.Input['HipObjectMobileDeviceCriteriaArgs']]):
         pulumi.set(self, "criteria", value)
 
+
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaArgsDict(TypedDict):
+        applications: NotRequired[pulumi.Input['HipObjectMobileDeviceCriteriaApplicationsArgsDict']]
+        """
+        The Applications param.
+        """
+        disk_encrypted: NotRequired[pulumi.Input[bool]]
+        """
+        If device's disk is encrypted.
+        """
+        imei: NotRequired[pulumi.Input['HipObjectMobileDeviceCriteriaImeiArgsDict']]
+        """
+        The Imei param.
+        """
+        jailbroken: NotRequired[pulumi.Input[bool]]
+        """
+        If device is by rooted/jailbroken.
+        """
+        last_checkin_time: NotRequired[pulumi.Input['HipObjectMobileDeviceCriteriaLastCheckinTimeArgsDict']]
+        """
+        The LastCheckinTime param.
+        """
+        model: NotRequired[pulumi.Input['HipObjectMobileDeviceCriteriaModelArgsDict']]
+        """
+        The Model param.
+        """
+        passcode_set: NotRequired[pulumi.Input[bool]]
+        """
+        If device's passcode is present.
+        """
+        phone_number: NotRequired[pulumi.Input['HipObjectMobileDeviceCriteriaPhoneNumberArgsDict']]
+        """
+        The PhoneNumber param.
+        """
+        tag: NotRequired[pulumi.Input['HipObjectMobileDeviceCriteriaTagArgsDict']]
+        """
+        The Tag param.
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaArgs:
@@ -8758,6 +11688,23 @@ class HipObjectMobileDeviceCriteriaArgs:
         pulumi.set(self, "tag", value)
 
 
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaApplicationsArgsDict(TypedDict):
+        has_malware: NotRequired[pulumi.Input['HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgsDict']]
+        """
+        The HasMalware param.
+        """
+        has_unmanaged_app: NotRequired[pulumi.Input[bool]]
+        """
+        Has apps that are not managed.
+        """
+        includes: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectMobileDeviceCriteriaApplicationsIncludeArgsDict']]]]
+        """
+        The Includes param.
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaApplicationsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaApplicationsArgs:
     def __init__(__self__, *,
@@ -8813,6 +11760,19 @@ class HipObjectMobileDeviceCriteriaApplicationsArgs:
         pulumi.set(self, "includes", value)
 
 
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgsDict(TypedDict):
+        no: NotRequired[pulumi.Input[bool]]
+        """
+        The No param. Ensure that only one of the following is specified: `no`, `yes`
+        """
+        yes: NotRequired[pulumi.Input['HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesArgsDict']]
+        """
+        The Yes param. Ensure that only one of the following is specified: `no`, `yes`
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs:
     def __init__(__self__, *,
@@ -8852,6 +11812,15 @@ class HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs:
         pulumi.set(self, "yes", value)
 
 
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesArgsDict(TypedDict):
+        excludes: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesExcludeArgsDict']]]]
+        """
+        The Excludes param.
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesArgs:
     def __init__(__self__, *,
@@ -8874,6 +11843,23 @@ class HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesArgs:
     def excludes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesExcludeArgs']]]]):
         pulumi.set(self, "excludes", value)
 
+
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesExcludeArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        """
+        hash: NotRequired[pulumi.Input[str]]
+        """
+        application hash. String length must not exceed 1024 characters. String validation regex: `.*`.
+        """
+        package: NotRequired[pulumi.Input[str]]
+        """
+        application package name. String length must not exceed 1024 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesExcludeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesExcludeArgs:
@@ -8929,6 +11915,23 @@ class HipObjectMobileDeviceCriteriaApplicationsHasMalwareYesExcludeArgs:
         pulumi.set(self, "package", value)
 
 
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaApplicationsIncludeArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param. String length must not exceed 31 characters.
+        """
+        hash: NotRequired[pulumi.Input[str]]
+        """
+        application hash. String length must not exceed 1024 characters. String validation regex: `.*`.
+        """
+        package: NotRequired[pulumi.Input[str]]
+        """
+        application package name. String length must not exceed 1024 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaApplicationsIncludeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaApplicationsIncludeArgs:
     def __init__(__self__, *,
@@ -8982,6 +11985,23 @@ class HipObjectMobileDeviceCriteriaApplicationsIncludeArgs:
     def package(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "package", value)
 
+
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaImeiArgsDict(TypedDict):
+        contains: NotRequired[pulumi.Input[str]]
+        """
+        The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_: NotRequired[pulumi.Input[str]]
+        """
+        The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_not: NotRequired[pulumi.Input[str]]
+        """
+        The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaImeiArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaImeiArgs:
@@ -9038,6 +12058,19 @@ class HipObjectMobileDeviceCriteriaImeiArgs:
         pulumi.set(self, "is_not", value)
 
 
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaLastCheckinTimeArgsDict(TypedDict):
+        not_within: NotRequired[pulumi.Input['HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgsDict']]
+        """
+        The NotWithin param. Ensure that only one of the following is specified: `not_within`, `within`
+        """
+        within: NotRequired[pulumi.Input['HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgsDict']]
+        """
+        The Within param. Ensure that only one of the following is specified: `not_within`, `within`
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaLastCheckinTimeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs:
     def __init__(__self__, *,
@@ -9077,6 +12110,15 @@ class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs:
         pulumi.set(self, "within", value)
 
 
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgsDict(TypedDict):
+        days: NotRequired[pulumi.Input[int]]
+        """
+        specify time in days. Value must be between 1 and 365. Default: `30`.
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs:
     def __init__(__self__, *,
@@ -9100,6 +12142,15 @@ class HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs:
         pulumi.set(self, "days", value)
 
 
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgsDict(TypedDict):
+        days: NotRequired[pulumi.Input[int]]
+        """
+        specify time in days. Value must be between 1 and 365. Default: `30`.
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgs:
     def __init__(__self__, *,
@@ -9122,6 +12173,23 @@ class HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgs:
     def days(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "days", value)
 
+
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaModelArgsDict(TypedDict):
+        contains: NotRequired[pulumi.Input[str]]
+        """
+        The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_: NotRequired[pulumi.Input[str]]
+        """
+        The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_not: NotRequired[pulumi.Input[str]]
+        """
+        The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaModelArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaModelArgs:
@@ -9178,6 +12246,23 @@ class HipObjectMobileDeviceCriteriaModelArgs:
         pulumi.set(self, "is_not", value)
 
 
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaPhoneNumberArgsDict(TypedDict):
+        contains: NotRequired[pulumi.Input[str]]
+        """
+        The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_: NotRequired[pulumi.Input[str]]
+        """
+        The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_not: NotRequired[pulumi.Input[str]]
+        """
+        The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaPhoneNumberArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaPhoneNumberArgs:
     def __init__(__self__, *,
@@ -9232,6 +12317,23 @@ class HipObjectMobileDeviceCriteriaPhoneNumberArgs:
     def is_not(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "is_not", value)
 
+
+if not MYPY:
+    class HipObjectMobileDeviceCriteriaTagArgsDict(TypedDict):
+        contains: NotRequired[pulumi.Input[str]]
+        """
+        The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_: NotRequired[pulumi.Input[str]]
+        """
+        The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+        is_not: NotRequired[pulumi.Input[str]]
+        """
+        The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        """
+elif False:
+    HipObjectMobileDeviceCriteriaTagArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectMobileDeviceCriteriaTagArgs:
@@ -9288,6 +12390,15 @@ class HipObjectMobileDeviceCriteriaTagArgs:
         pulumi.set(self, "is_not", value)
 
 
+if not MYPY:
+    class HipObjectNetworkInfoArgsDict(TypedDict):
+        criteria: NotRequired[pulumi.Input['HipObjectNetworkInfoCriteriaArgsDict']]
+        """
+        The Criteria param.
+        """
+elif False:
+    HipObjectNetworkInfoArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectNetworkInfoArgs:
     def __init__(__self__, *,
@@ -9311,6 +12422,15 @@ class HipObjectNetworkInfoArgs:
         pulumi.set(self, "criteria", value)
 
 
+if not MYPY:
+    class HipObjectNetworkInfoCriteriaArgsDict(TypedDict):
+        network: NotRequired[pulumi.Input['HipObjectNetworkInfoCriteriaNetworkArgsDict']]
+        """
+        The Network param.
+        """
+elif False:
+    HipObjectNetworkInfoCriteriaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectNetworkInfoCriteriaArgs:
     def __init__(__self__, *,
@@ -9333,6 +12453,19 @@ class HipObjectNetworkInfoCriteriaArgs:
     def network(self, value: Optional[pulumi.Input['HipObjectNetworkInfoCriteriaNetworkArgs']]):
         pulumi.set(self, "network", value)
 
+
+if not MYPY:
+    class HipObjectNetworkInfoCriteriaNetworkArgsDict(TypedDict):
+        is_: NotRequired[pulumi.Input['HipObjectNetworkInfoCriteriaNetworkIsArgsDict']]
+        """
+        The Is param. Ensure that only one of the following is specified: `is`, `is_not`
+        """
+        is_not: NotRequired[pulumi.Input['HipObjectNetworkInfoCriteriaNetworkIsNotArgsDict']]
+        """
+        The IsNot param. Ensure that only one of the following is specified: `is`, `is_not`
+        """
+elif False:
+    HipObjectNetworkInfoCriteriaNetworkArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectNetworkInfoCriteriaNetworkArgs:
@@ -9372,6 +12505,23 @@ class HipObjectNetworkInfoCriteriaNetworkArgs:
     def is_not(self, value: Optional[pulumi.Input['HipObjectNetworkInfoCriteriaNetworkIsNotArgs']]):
         pulumi.set(self, "is_not", value)
 
+
+if not MYPY:
+    class HipObjectNetworkInfoCriteriaNetworkIsArgsDict(TypedDict):
+        mobile: NotRequired[pulumi.Input['HipObjectNetworkInfoCriteriaNetworkIsMobileArgsDict']]
+        """
+        The Mobile param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+        """
+        unknown: NotRequired[pulumi.Input[bool]]
+        """
+        The Unknown param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+        """
+        wifi: NotRequired[pulumi.Input['HipObjectNetworkInfoCriteriaNetworkIsWifiArgsDict']]
+        """
+        The Wifi param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+        """
+elif False:
+    HipObjectNetworkInfoCriteriaNetworkIsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectNetworkInfoCriteriaNetworkIsArgs:
@@ -9428,6 +12578,15 @@ class HipObjectNetworkInfoCriteriaNetworkIsArgs:
         pulumi.set(self, "wifi", value)
 
 
+if not MYPY:
+    class HipObjectNetworkInfoCriteriaNetworkIsMobileArgsDict(TypedDict):
+        carrier: NotRequired[pulumi.Input[str]]
+        """
+        The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectNetworkInfoCriteriaNetworkIsMobileArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectNetworkInfoCriteriaNetworkIsMobileArgs:
     def __init__(__self__, *,
@@ -9450,6 +12609,27 @@ class HipObjectNetworkInfoCriteriaNetworkIsMobileArgs:
     def carrier(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "carrier", value)
 
+
+if not MYPY:
+    class HipObjectNetworkInfoCriteriaNetworkIsNotArgsDict(TypedDict):
+        ethernet: NotRequired[pulumi.Input[bool]]
+        """
+        The Ethernet param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        """
+        mobile: NotRequired[pulumi.Input['HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgsDict']]
+        """
+        The Mobile param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        """
+        unknown: NotRequired[pulumi.Input[bool]]
+        """
+        The Unknown param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        """
+        wifi: NotRequired[pulumi.Input['HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgsDict']]
+        """
+        The Wifi param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        """
+elif False:
+    HipObjectNetworkInfoCriteriaNetworkIsNotArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectNetworkInfoCriteriaNetworkIsNotArgs:
@@ -9522,6 +12702,15 @@ class HipObjectNetworkInfoCriteriaNetworkIsNotArgs:
         pulumi.set(self, "wifi", value)
 
 
+if not MYPY:
+    class HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgsDict(TypedDict):
+        carrier: NotRequired[pulumi.Input[str]]
+        """
+        The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgs:
     def __init__(__self__, *,
@@ -9544,6 +12733,15 @@ class HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgs:
     def carrier(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "carrier", value)
 
+
+if not MYPY:
+    class HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgsDict(TypedDict):
+        ssid: NotRequired[pulumi.Input[str]]
+        """
+        SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgs:
@@ -9568,6 +12766,15 @@ class HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgs:
         pulumi.set(self, "ssid", value)
 
 
+if not MYPY:
+    class HipObjectNetworkInfoCriteriaNetworkIsWifiArgsDict(TypedDict):
+        ssid: NotRequired[pulumi.Input[str]]
+        """
+        SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectNetworkInfoCriteriaNetworkIsWifiArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectNetworkInfoCriteriaNetworkIsWifiArgs:
     def __init__(__self__, *,
@@ -9590,6 +12797,23 @@ class HipObjectNetworkInfoCriteriaNetworkIsWifiArgs:
     def ssid(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "ssid", value)
 
+
+if not MYPY:
+    class HipObjectPatchManagementArgsDict(TypedDict):
+        criteria: NotRequired[pulumi.Input['HipObjectPatchManagementCriteriaArgsDict']]
+        """
+        The Criteria param.
+        """
+        exclude_vendor: NotRequired[pulumi.Input[bool]]
+        """
+        The ExcludeVendor param. Default: `false`.
+        """
+        vendors: NotRequired[pulumi.Input[Sequence[pulumi.Input['HipObjectPatchManagementVendorArgsDict']]]]
+        """
+        Vendor name.
+        """
+elif False:
+    HipObjectPatchManagementArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectPatchManagementArgs:
@@ -9646,6 +12870,23 @@ class HipObjectPatchManagementArgs:
         pulumi.set(self, "vendors", value)
 
 
+if not MYPY:
+    class HipObjectPatchManagementCriteriaArgsDict(TypedDict):
+        is_enabled: NotRequired[pulumi.Input[str]]
+        """
+        is enabled. String must be one of these: `"no"`, `"yes"`, `"not-available"`.
+        """
+        is_installed: NotRequired[pulumi.Input[bool]]
+        """
+        Is Installed. Default: `true`.
+        """
+        missing_patches: NotRequired[pulumi.Input['HipObjectPatchManagementCriteriaMissingPatchesArgsDict']]
+        """
+        The MissingPatches param.
+        """
+elif False:
+    HipObjectPatchManagementCriteriaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectPatchManagementCriteriaArgs:
     def __init__(__self__, *,
@@ -9701,6 +12942,23 @@ class HipObjectPatchManagementCriteriaArgs:
         pulumi.set(self, "missing_patches", value)
 
 
+if not MYPY:
+    class HipObjectPatchManagementCriteriaMissingPatchesArgsDict(TypedDict):
+        check: NotRequired[pulumi.Input[str]]
+        """
+        The Check param. String must be one of these: `"has-any"`, `"has-none"`, `"has-all"`. Default: `"has-any"`.
+        """
+        patches: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+        """
+        severity: NotRequired[pulumi.Input['HipObjectPatchManagementCriteriaMissingPatchesSeverityArgsDict']]
+        """
+        The Severity param.
+        """
+elif False:
+    HipObjectPatchManagementCriteriaMissingPatchesArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectPatchManagementCriteriaMissingPatchesArgs:
     def __init__(__self__, *,
@@ -9755,6 +13013,35 @@ class HipObjectPatchManagementCriteriaMissingPatchesArgs:
     def severity(self, value: Optional[pulumi.Input['HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs']]):
         pulumi.set(self, "severity", value)
 
+
+if not MYPY:
+    class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgsDict(TypedDict):
+        greater_equal: NotRequired[pulumi.Input[int]]
+        """
+        The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        """
+        greater_than: NotRequired[pulumi.Input[int]]
+        """
+        The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        """
+        is_: NotRequired[pulumi.Input[int]]
+        """
+        The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        """
+        is_not: NotRequired[pulumi.Input[int]]
+        """
+        The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        """
+        less_equal: NotRequired[pulumi.Input[int]]
+        """
+        The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        """
+        less_than: NotRequired[pulumi.Input[int]]
+        """
+        The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        """
+elif False:
+    HipObjectPatchManagementCriteriaMissingPatchesSeverityArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs:
@@ -9859,6 +13146,19 @@ class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs:
         pulumi.set(self, "less_than", value)
 
 
+if not MYPY:
+    class HipObjectPatchManagementVendorArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param. String length must not exceed 103 characters.
+        """
+        products: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Product name. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+        """
+elif False:
+    HipObjectPatchManagementVendorArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HipObjectPatchManagementVendorArgs:
     def __init__(__self__, *,
@@ -9897,6 +13197,19 @@ class HipObjectPatchManagementVendorArgs:
         pulumi.set(self, "products", value)
 
 
+if not MYPY:
+    class HttpHeaderProfileHttpHeaderInsertionArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+        types: pulumi.Input[Sequence[pulumi.Input['HttpHeaderProfileHttpHeaderInsertionTypeArgsDict']]]
+        """
+        The Types param.
+        """
+elif False:
+    HttpHeaderProfileHttpHeaderInsertionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HttpHeaderProfileHttpHeaderInsertionArgs:
     def __init__(__self__, *,
@@ -9933,6 +13246,23 @@ class HttpHeaderProfileHttpHeaderInsertionArgs:
     def types(self, value: pulumi.Input[Sequence[pulumi.Input['HttpHeaderProfileHttpHeaderInsertionTypeArgs']]]):
         pulumi.set(self, "types", value)
 
+
+if not MYPY:
+    class HttpHeaderProfileHttpHeaderInsertionTypeArgsDict(TypedDict):
+        domains: pulumi.Input[Sequence[pulumi.Input[str]]]
+        """
+        The Domains param.
+        """
+        headers: pulumi.Input[Sequence[pulumi.Input['HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgsDict']]]
+        """
+        The Headers param.
+        """
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+elif False:
+    HttpHeaderProfileHttpHeaderInsertionTypeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HttpHeaderProfileHttpHeaderInsertionTypeArgs:
@@ -9985,6 +13315,27 @@ class HttpHeaderProfileHttpHeaderInsertionTypeArgs:
     def name(self, value: pulumi.Input[str]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgsDict(TypedDict):
+        header: pulumi.Input[str]
+        """
+        The Header param.
+        """
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+        value: pulumi.Input[str]
+        """
+        The Value param.
+        """
+        log: NotRequired[pulumi.Input[bool]]
+        """
+        The Log param. Default: `false`.
+        """
+elif False:
+    HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs:
@@ -10053,6 +13404,27 @@ class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs:
     def log(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "log", value)
 
+
+if not MYPY:
+    class IkeCryptoProfileLifetimeArgsDict(TypedDict):
+        days: NotRequired[pulumi.Input[int]]
+        """
+        specify lifetime in days. Value must be between 1 and 365. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        """
+        hours: NotRequired[pulumi.Input[int]]
+        """
+        specify lifetime in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        """
+        minutes: NotRequired[pulumi.Input[int]]
+        """
+        specify lifetime in minutes. Value must be between 3 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        """
+        seconds: NotRequired[pulumi.Input[int]]
+        """
+        specify lifetime in seconds. Value must be between 180 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        """
+elif False:
+    IkeCryptoProfileLifetimeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IkeCryptoProfileLifetimeArgs:
@@ -10125,6 +13497,19 @@ class IkeCryptoProfileLifetimeArgs:
         pulumi.set(self, "seconds", value)
 
 
+if not MYPY:
+    class IkeGatewayAuthenticationArgsDict(TypedDict):
+        certificate: NotRequired[pulumi.Input['IkeGatewayAuthenticationCertificateArgsDict']]
+        """
+        The Certificate param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+        """
+        pre_shared_key: NotRequired[pulumi.Input['IkeGatewayAuthenticationPreSharedKeyArgsDict']]
+        """
+        The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+        """
+elif False:
+    IkeGatewayAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IkeGatewayAuthenticationArgs:
     def __init__(__self__, *,
@@ -10163,6 +13548,31 @@ class IkeGatewayAuthenticationArgs:
     def pre_shared_key(self, value: Optional[pulumi.Input['IkeGatewayAuthenticationPreSharedKeyArgs']]):
         pulumi.set(self, "pre_shared_key", value)
 
+
+if not MYPY:
+    class IkeGatewayAuthenticationCertificateArgsDict(TypedDict):
+        allow_id_payload_mismatch: NotRequired[pulumi.Input[bool]]
+        """
+        The AllowIdPayloadMismatch param.
+        """
+        certificate_profile: NotRequired[pulumi.Input[str]]
+        """
+        The CertificateProfile param.
+        """
+        local_certificate: NotRequired[pulumi.Input['IkeGatewayAuthenticationCertificateLocalCertificateArgsDict']]
+        """
+        The LocalCertificate param.
+        """
+        strict_validation_revocation: NotRequired[pulumi.Input[bool]]
+        """
+        The StrictValidationRevocation param.
+        """
+        use_management_as_source: NotRequired[pulumi.Input[bool]]
+        """
+        The UseManagementAsSource param.
+        """
+elif False:
+    IkeGatewayAuthenticationCertificateArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IkeGatewayAuthenticationCertificateArgs:
@@ -10251,6 +13661,15 @@ class IkeGatewayAuthenticationCertificateArgs:
         pulumi.set(self, "use_management_as_source", value)
 
 
+if not MYPY:
+    class IkeGatewayAuthenticationCertificateLocalCertificateArgsDict(TypedDict):
+        local_certificate_name: NotRequired[pulumi.Input[str]]
+        """
+        The LocalCertificateName param.
+        """
+elif False:
+    IkeGatewayAuthenticationCertificateLocalCertificateArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IkeGatewayAuthenticationCertificateLocalCertificateArgs:
     def __init__(__self__, *,
@@ -10274,6 +13693,15 @@ class IkeGatewayAuthenticationCertificateLocalCertificateArgs:
         pulumi.set(self, "local_certificate_name", value)
 
 
+if not MYPY:
+    class IkeGatewayAuthenticationPreSharedKeyArgsDict(TypedDict):
+        key: NotRequired[pulumi.Input[str]]
+        """
+        The Key param.
+        """
+elif False:
+    IkeGatewayAuthenticationPreSharedKeyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IkeGatewayAuthenticationPreSharedKeyArgs:
     def __init__(__self__, *,
@@ -10296,6 +13724,19 @@ class IkeGatewayAuthenticationPreSharedKeyArgs:
     def key(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "key", value)
 
+
+if not MYPY:
+    class IkeGatewayLocalIdArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Local ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\\@[a-zA-Z0-9.-]+)$|^([$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\\\,|[^,])+)$`.
+        """
+        type: NotRequired[pulumi.Input[str]]
+        """
+        The Type param.
+        """
+elif False:
+    IkeGatewayLocalIdArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IkeGatewayLocalIdArgs:
@@ -10335,6 +13776,23 @@ class IkeGatewayLocalIdArgs:
     def type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "type", value)
 
+
+if not MYPY:
+    class IkeGatewayPeerAddressArgsDict(TypedDict):
+        dynamic_address: NotRequired[pulumi.Input[bool]]
+        """
+        The DynamicAddress param. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+        """
+        fqdn: NotRequired[pulumi.Input[str]]
+        """
+        peer gateway FQDN name. String length must not exceed 255 characters. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+        """
+        ip: NotRequired[pulumi.Input[str]]
+        """
+        peer gateway has static IP address. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+        """
+elif False:
+    IkeGatewayPeerAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IkeGatewayPeerAddressArgs:
@@ -10391,6 +13849,19 @@ class IkeGatewayPeerAddressArgs:
         pulumi.set(self, "ip", value)
 
 
+if not MYPY:
+    class IkeGatewayPeerIdArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\\@[\\*a-zA-Z0-9.-]+)$|^([\\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\\\,|[^,])+)$`.
+        """
+        type: NotRequired[pulumi.Input[str]]
+        """
+        The Type param. String must be one of these: `"ipaddr"`, `"keyid"`, `"fqdn"`, `"ufqdn"`.
+        """
+elif False:
+    IkeGatewayPeerIdArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IkeGatewayPeerIdArgs:
     def __init__(__self__, *,
@@ -10429,6 +13900,23 @@ class IkeGatewayPeerIdArgs:
     def type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "type", value)
 
+
+if not MYPY:
+    class IkeGatewayProtocolArgsDict(TypedDict):
+        ikev1: NotRequired[pulumi.Input['IkeGatewayProtocolIkev1ArgsDict']]
+        """
+        The Ikev1 param.
+        """
+        ikev2: NotRequired[pulumi.Input['IkeGatewayProtocolIkev2ArgsDict']]
+        """
+        The Ikev2 param.
+        """
+        version: NotRequired[pulumi.Input[str]]
+        """
+        The Version param. String must be one of these: `"ikev2-preferred"`, `"ikev1"`, `"ikev2"`. Default: `"ikev2-preferred"`.
+        """
+elif False:
+    IkeGatewayProtocolArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IkeGatewayProtocolArgs:
@@ -10485,6 +13973,23 @@ class IkeGatewayProtocolArgs:
         pulumi.set(self, "version", value)
 
 
+if not MYPY:
+    class IkeGatewayProtocolCommonArgsDict(TypedDict):
+        fragmentation: NotRequired[pulumi.Input['IkeGatewayProtocolCommonFragmentationArgsDict']]
+        """
+        The Fragmentation param.
+        """
+        nat_traversal: NotRequired[pulumi.Input['IkeGatewayProtocolCommonNatTraversalArgsDict']]
+        """
+        The NatTraversal param.
+        """
+        passive_mode: NotRequired[pulumi.Input[bool]]
+        """
+        The PassiveMode param.
+        """
+elif False:
+    IkeGatewayProtocolCommonArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IkeGatewayProtocolCommonArgs:
     def __init__(__self__, *,
@@ -10540,6 +14045,15 @@ class IkeGatewayProtocolCommonArgs:
         pulumi.set(self, "passive_mode", value)
 
 
+if not MYPY:
+    class IkeGatewayProtocolCommonFragmentationArgsDict(TypedDict):
+        enable: NotRequired[pulumi.Input[bool]]
+        """
+        The Enable param. Default: `false`.
+        """
+elif False:
+    IkeGatewayProtocolCommonFragmentationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IkeGatewayProtocolCommonFragmentationArgs:
     def __init__(__self__, *,
@@ -10563,6 +14077,15 @@ class IkeGatewayProtocolCommonFragmentationArgs:
         pulumi.set(self, "enable", value)
 
 
+if not MYPY:
+    class IkeGatewayProtocolCommonNatTraversalArgsDict(TypedDict):
+        enable: NotRequired[pulumi.Input[bool]]
+        """
+        The Enable param.
+        """
+elif False:
+    IkeGatewayProtocolCommonNatTraversalArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IkeGatewayProtocolCommonNatTraversalArgs:
     def __init__(__self__, *,
@@ -10585,6 +14108,19 @@ class IkeGatewayProtocolCommonNatTraversalArgs:
     def enable(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "enable", value)
 
+
+if not MYPY:
+    class IkeGatewayProtocolIkev1ArgsDict(TypedDict):
+        dpd: NotRequired[pulumi.Input['IkeGatewayProtocolIkev1DpdArgsDict']]
+        """
+        The Dpd param.
+        """
+        ike_crypto_profile: NotRequired[pulumi.Input[str]]
+        """
+        The IkeCryptoProfile param.
+        """
+elif False:
+    IkeGatewayProtocolIkev1ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IkeGatewayProtocolIkev1Args:
@@ -10625,6 +14161,15 @@ class IkeGatewayProtocolIkev1Args:
         pulumi.set(self, "ike_crypto_profile", value)
 
 
+if not MYPY:
+    class IkeGatewayProtocolIkev1DpdArgsDict(TypedDict):
+        enable: NotRequired[pulumi.Input[bool]]
+        """
+        The Enable param.
+        """
+elif False:
+    IkeGatewayProtocolIkev1DpdArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IkeGatewayProtocolIkev1DpdArgs:
     def __init__(__self__, *,
@@ -10647,6 +14192,19 @@ class IkeGatewayProtocolIkev1DpdArgs:
     def enable(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "enable", value)
 
+
+if not MYPY:
+    class IkeGatewayProtocolIkev2ArgsDict(TypedDict):
+        dpd: NotRequired[pulumi.Input['IkeGatewayProtocolIkev2DpdArgsDict']]
+        """
+        The Dpd param.
+        """
+        ike_crypto_profile: NotRequired[pulumi.Input[str]]
+        """
+        The IkeCryptoProfile param.
+        """
+elif False:
+    IkeGatewayProtocolIkev2ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IkeGatewayProtocolIkev2Args:
@@ -10687,6 +14245,15 @@ class IkeGatewayProtocolIkev2Args:
         pulumi.set(self, "ike_crypto_profile", value)
 
 
+if not MYPY:
+    class IkeGatewayProtocolIkev2DpdArgsDict(TypedDict):
+        enable: NotRequired[pulumi.Input[bool]]
+        """
+        The Enable param.
+        """
+elif False:
+    IkeGatewayProtocolIkev2DpdArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IkeGatewayProtocolIkev2DpdArgs:
     def __init__(__self__, *,
@@ -10710,6 +14277,15 @@ class IkeGatewayProtocolIkev2DpdArgs:
         pulumi.set(self, "enable", value)
 
 
+if not MYPY:
+    class IpsecCryptoProfileAhArgsDict(TypedDict):
+        authentications: pulumi.Input[Sequence[pulumi.Input[str]]]
+        """
+        The Authentications param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+        """
+elif False:
+    IpsecCryptoProfileAhArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IpsecCryptoProfileAhArgs:
     def __init__(__self__, *,
@@ -10731,6 +14307,19 @@ class IpsecCryptoProfileAhArgs:
     def authentications(self, value: pulumi.Input[Sequence[pulumi.Input[str]]]):
         pulumi.set(self, "authentications", value)
 
+
+if not MYPY:
+    class IpsecCryptoProfileEspArgsDict(TypedDict):
+        authentications: pulumi.Input[Sequence[pulumi.Input[str]]]
+        """
+        Authentication algorithm.
+        """
+        encryptions: pulumi.Input[Sequence[pulumi.Input[str]]]
+        """
+        Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`, `"null"`.
+        """
+elif False:
+    IpsecCryptoProfileEspArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IpsecCryptoProfileEspArgs:
@@ -10768,6 +14357,27 @@ class IpsecCryptoProfileEspArgs:
     def encryptions(self, value: pulumi.Input[Sequence[pulumi.Input[str]]]):
         pulumi.set(self, "encryptions", value)
 
+
+if not MYPY:
+    class IpsecCryptoProfileLifesizeArgsDict(TypedDict):
+        gb: NotRequired[pulumi.Input[int]]
+        """
+        specify lifesize in gigabytes(GB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+        """
+        kb: NotRequired[pulumi.Input[int]]
+        """
+        specify lifesize in kilobytes(KB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+        """
+        mb: NotRequired[pulumi.Input[int]]
+        """
+        specify lifesize in megabytes(MB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+        """
+        tb: NotRequired[pulumi.Input[int]]
+        """
+        specify lifesize in terabytes(TB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+        """
+elif False:
+    IpsecCryptoProfileLifesizeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IpsecCryptoProfileLifesizeArgs:
@@ -10840,6 +14450,27 @@ class IpsecCryptoProfileLifesizeArgs:
         pulumi.set(self, "tb", value)
 
 
+if not MYPY:
+    class IpsecCryptoProfileLifetimeArgsDict(TypedDict):
+        days: NotRequired[pulumi.Input[int]]
+        """
+        specify lifetime in days. Value must be between 1 and 365. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        """
+        hours: NotRequired[pulumi.Input[int]]
+        """
+        specify lifetime in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        """
+        minutes: NotRequired[pulumi.Input[int]]
+        """
+        specify lifetime in minutes. Value must be between 3 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        """
+        seconds: NotRequired[pulumi.Input[int]]
+        """
+        specify lifetime in seconds. Value must be between 180 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        """
+elif False:
+    IpsecCryptoProfileLifetimeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IpsecCryptoProfileLifetimeArgs:
     def __init__(__self__, *,
@@ -10911,6 +14542,27 @@ class IpsecCryptoProfileLifetimeArgs:
         pulumi.set(self, "seconds", value)
 
 
+if not MYPY:
+    class IpsecTunnelAutoKeyArgsDict(TypedDict):
+        ike_gateways: pulumi.Input[Sequence[pulumi.Input['IpsecTunnelAutoKeyIkeGatewayArgsDict']]]
+        """
+        The IkeGateways param.
+        """
+        ipsec_crypto_profile: pulumi.Input[str]
+        """
+        The IpsecCryptoProfile param.
+        """
+        proxy_id_v6s: NotRequired[pulumi.Input[Sequence[pulumi.Input['IpsecTunnelAutoKeyProxyIdV6ArgsDict']]]]
+        """
+        IPv6 type of proxy*id values.
+        """
+        proxy_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input['IpsecTunnelAutoKeyProxyIdArgsDict']]]]
+        """
+        IPv4 type of proxy*id values.
+        """
+elif False:
+    IpsecTunnelAutoKeyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IpsecTunnelAutoKeyArgs:
     def __init__(__self__, *,
@@ -10980,6 +14632,15 @@ class IpsecTunnelAutoKeyArgs:
         pulumi.set(self, "proxy_ids", value)
 
 
+if not MYPY:
+    class IpsecTunnelAutoKeyIkeGatewayArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+elif False:
+    IpsecTunnelAutoKeyIkeGatewayArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IpsecTunnelAutoKeyIkeGatewayArgs:
     def __init__(__self__, *,
@@ -11002,6 +14663,27 @@ class IpsecTunnelAutoKeyIkeGatewayArgs:
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class IpsecTunnelAutoKeyProxyIdArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+        local: NotRequired[pulumi.Input[str]]
+        """
+        The Local param.
+        """
+        protocol: NotRequired[pulumi.Input['IpsecTunnelAutoKeyProxyIdProtocolArgsDict']]
+        """
+        The Protocol param.
+        """
+        remote: NotRequired[pulumi.Input[str]]
+        """
+        The Remote param.
+        """
+elif False:
+    IpsecTunnelAutoKeyProxyIdArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IpsecTunnelAutoKeyProxyIdArgs:
@@ -11073,6 +14755,23 @@ class IpsecTunnelAutoKeyProxyIdArgs:
         pulumi.set(self, "remote", value)
 
 
+if not MYPY:
+    class IpsecTunnelAutoKeyProxyIdProtocolArgsDict(TypedDict):
+        number: NotRequired[pulumi.Input[int]]
+        """
+        IP protocol number. Value must be between 1 and 254. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+        """
+        tcp: NotRequired[pulumi.Input['IpsecTunnelAutoKeyProxyIdProtocolTcpArgsDict']]
+        """
+        The Tcp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+        """
+        udp: NotRequired[pulumi.Input['IpsecTunnelAutoKeyProxyIdProtocolUdpArgsDict']]
+        """
+        The Udp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+        """
+elif False:
+    IpsecTunnelAutoKeyProxyIdProtocolArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IpsecTunnelAutoKeyProxyIdProtocolArgs:
     def __init__(__self__, *,
@@ -11128,6 +14827,19 @@ class IpsecTunnelAutoKeyProxyIdProtocolArgs:
         pulumi.set(self, "udp", value)
 
 
+if not MYPY:
+    class IpsecTunnelAutoKeyProxyIdProtocolTcpArgsDict(TypedDict):
+        local_port: NotRequired[pulumi.Input[int]]
+        """
+        The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+        """
+        remote_port: NotRequired[pulumi.Input[int]]
+        """
+        The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+        """
+elif False:
+    IpsecTunnelAutoKeyProxyIdProtocolTcpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IpsecTunnelAutoKeyProxyIdProtocolTcpArgs:
     def __init__(__self__, *,
@@ -11167,6 +14879,19 @@ class IpsecTunnelAutoKeyProxyIdProtocolTcpArgs:
         pulumi.set(self, "remote_port", value)
 
 
+if not MYPY:
+    class IpsecTunnelAutoKeyProxyIdProtocolUdpArgsDict(TypedDict):
+        local_port: NotRequired[pulumi.Input[int]]
+        """
+        The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+        """
+        remote_port: NotRequired[pulumi.Input[int]]
+        """
+        The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+        """
+elif False:
+    IpsecTunnelAutoKeyProxyIdProtocolUdpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IpsecTunnelAutoKeyProxyIdProtocolUdpArgs:
     def __init__(__self__, *,
@@ -11205,6 +14930,27 @@ class IpsecTunnelAutoKeyProxyIdProtocolUdpArgs:
     def remote_port(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "remote_port", value)
 
+
+if not MYPY:
+    class IpsecTunnelAutoKeyProxyIdV6ArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+        local: NotRequired[pulumi.Input[str]]
+        """
+        The Local param.
+        """
+        protocol: NotRequired[pulumi.Input['IpsecTunnelAutoKeyProxyIdV6ProtocolArgsDict']]
+        """
+        The Protocol param.
+        """
+        remote: NotRequired[pulumi.Input[str]]
+        """
+        The Remote param.
+        """
+elif False:
+    IpsecTunnelAutoKeyProxyIdV6ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IpsecTunnelAutoKeyProxyIdV6Args:
@@ -11276,6 +15022,23 @@ class IpsecTunnelAutoKeyProxyIdV6Args:
         pulumi.set(self, "remote", value)
 
 
+if not MYPY:
+    class IpsecTunnelAutoKeyProxyIdV6ProtocolArgsDict(TypedDict):
+        number: NotRequired[pulumi.Input[int]]
+        """
+        IP protocol number. Value must be between 1 and 254. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+        """
+        tcp: NotRequired[pulumi.Input['IpsecTunnelAutoKeyProxyIdV6ProtocolTcpArgsDict']]
+        """
+        The Tcp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+        """
+        udp: NotRequired[pulumi.Input['IpsecTunnelAutoKeyProxyIdV6ProtocolUdpArgsDict']]
+        """
+        The Udp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+        """
+elif False:
+    IpsecTunnelAutoKeyProxyIdV6ProtocolArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IpsecTunnelAutoKeyProxyIdV6ProtocolArgs:
     def __init__(__self__, *,
@@ -11331,6 +15094,19 @@ class IpsecTunnelAutoKeyProxyIdV6ProtocolArgs:
         pulumi.set(self, "udp", value)
 
 
+if not MYPY:
+    class IpsecTunnelAutoKeyProxyIdV6ProtocolTcpArgsDict(TypedDict):
+        local_port: NotRequired[pulumi.Input[int]]
+        """
+        The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+        """
+        remote_port: NotRequired[pulumi.Input[int]]
+        """
+        The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+        """
+elif False:
+    IpsecTunnelAutoKeyProxyIdV6ProtocolTcpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IpsecTunnelAutoKeyProxyIdV6ProtocolTcpArgs:
     def __init__(__self__, *,
@@ -11370,6 +15146,19 @@ class IpsecTunnelAutoKeyProxyIdV6ProtocolTcpArgs:
         pulumi.set(self, "remote_port", value)
 
 
+if not MYPY:
+    class IpsecTunnelAutoKeyProxyIdV6ProtocolUdpArgsDict(TypedDict):
+        local_port: NotRequired[pulumi.Input[int]]
+        """
+        The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+        """
+        remote_port: NotRequired[pulumi.Input[int]]
+        """
+        The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+        """
+elif False:
+    IpsecTunnelAutoKeyProxyIdV6ProtocolUdpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IpsecTunnelAutoKeyProxyIdV6ProtocolUdpArgs:
     def __init__(__self__, *,
@@ -11408,6 +15197,23 @@ class IpsecTunnelAutoKeyProxyIdV6ProtocolUdpArgs:
     def remote_port(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "remote_port", value)
 
+
+if not MYPY:
+    class IpsecTunnelTunnelMonitorArgsDict(TypedDict):
+        destination_ip: pulumi.Input[str]
+        """
+        Destination IP to send ICMP probe.
+        """
+        enable: NotRequired[pulumi.Input[bool]]
+        """
+        Enable tunnel monitoring on this tunnel. Default: `true`.
+        """
+        proxy_id: NotRequired[pulumi.Input[str]]
+        """
+        Which proxy-id (or proxy-id-v6) the monitoring traffic will use.
+        """
+elif False:
+    IpsecTunnelTunnelMonitorArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class IpsecTunnelTunnelMonitorArgs:
@@ -11462,6 +15268,23 @@ class IpsecTunnelTunnelMonitorArgs:
     def proxy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "proxy_id", value)
 
+
+if not MYPY:
+    class KerberosServerProfileServerArgsDict(TypedDict):
+        host: NotRequired[pulumi.Input[str]]
+        """
+        The Host param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        port: NotRequired[pulumi.Input[int]]
+        """
+        The Port param. Value must be between 1 and 65535.
+        """
+elif False:
+    KerberosServerProfileServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class KerberosServerProfileServerArgs:
@@ -11518,6 +15341,23 @@ class KerberosServerProfileServerArgs:
         pulumi.set(self, "port", value)
 
 
+if not MYPY:
+    class LdapServerProfileServerArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        The Address param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        port: NotRequired[pulumi.Input[int]]
+        """
+        The Port param. Value must be between 1 and 65535.
+        """
+elif False:
+    LdapServerProfileServerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LdapServerProfileServerArgs:
     def __init__(__self__, *,
@@ -11572,6 +15412,27 @@ class LdapServerProfileServerArgs:
     def port(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "port", value)
 
+
+if not MYPY:
+    class MfaServerMfaVendorTypeArgsDict(TypedDict):
+        duo_security_v2: NotRequired[pulumi.Input['MfaServerMfaVendorTypeDuoSecurityV2ArgsDict']]
+        """
+        The DuoSecurityV2 param. Ensure that only one of the following is specified: `duo_security_v2`, `okta_adaptive_v1`, `ping_identity_v1`, `rsa_securid_access_v1`
+        """
+        okta_adaptive_v1: NotRequired[pulumi.Input['MfaServerMfaVendorTypeOktaAdaptiveV1ArgsDict']]
+        """
+        The OktaAdaptiveV1 param. Ensure that only one of the following is specified: `duo_security_v2`, `okta_adaptive_v1`, `ping_identity_v1`, `rsa_securid_access_v1`
+        """
+        ping_identity_v1: NotRequired[pulumi.Input['MfaServerMfaVendorTypePingIdentityV1ArgsDict']]
+        """
+        The PingIdentityV1 param. Ensure that only one of the following is specified: `duo_security_v2`, `okta_adaptive_v1`, `ping_identity_v1`, `rsa_securid_access_v1`
+        """
+        rsa_securid_access_v1: NotRequired[pulumi.Input['MfaServerMfaVendorTypeRsaSecuridAccessV1ArgsDict']]
+        """
+        The RsaSecuridAccessV1 param. Ensure that only one of the following is specified: `duo_security_v2`, `okta_adaptive_v1`, `ping_identity_v1`, `rsa_securid_access_v1`
+        """
+elif False:
+    MfaServerMfaVendorTypeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class MfaServerMfaVendorTypeArgs:
@@ -11643,6 +15504,31 @@ class MfaServerMfaVendorTypeArgs:
     def rsa_securid_access_v1(self, value: Optional[pulumi.Input['MfaServerMfaVendorTypeRsaSecuridAccessV1Args']]):
         pulumi.set(self, "rsa_securid_access_v1", value)
 
+
+if not MYPY:
+    class MfaServerMfaVendorTypeDuoSecurityV2ArgsDict(TypedDict):
+        duo_api_host: NotRequired[pulumi.Input[str]]
+        """
+        The DuoApiHost param.
+        """
+        duo_baseuri: NotRequired[pulumi.Input[str]]
+        """
+        The DuoBaseuri param.
+        """
+        duo_integration_key: NotRequired[pulumi.Input[str]]
+        """
+        The DuoIntegrationKey param.
+        """
+        duo_secret_key: NotRequired[pulumi.Input[str]]
+        """
+        The DuoSecretKey param.
+        """
+        duo_timeout: NotRequired[pulumi.Input[str]]
+        """
+        The DuoTimeout param.
+        """
+elif False:
+    MfaServerMfaVendorTypeDuoSecurityV2ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class MfaServerMfaVendorTypeDuoSecurityV2Args:
@@ -11731,6 +15617,31 @@ class MfaServerMfaVendorTypeDuoSecurityV2Args:
         pulumi.set(self, "duo_timeout", value)
 
 
+if not MYPY:
+    class MfaServerMfaVendorTypeOktaAdaptiveV1ArgsDict(TypedDict):
+        okta_api_host: NotRequired[pulumi.Input[str]]
+        """
+        The OktaApiHost param.
+        """
+        okta_baseuri: NotRequired[pulumi.Input[str]]
+        """
+        The OktaBaseuri param.
+        """
+        okta_org: NotRequired[pulumi.Input[str]]
+        """
+        The OktaOrg param.
+        """
+        okta_timeout: NotRequired[pulumi.Input[str]]
+        """
+        The OktaTimeout param.
+        """
+        okta_token: NotRequired[pulumi.Input[str]]
+        """
+        The OktaToken param.
+        """
+elif False:
+    MfaServerMfaVendorTypeOktaAdaptiveV1ArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class MfaServerMfaVendorTypeOktaAdaptiveV1Args:
     def __init__(__self__, *,
@@ -11817,6 +15728,35 @@ class MfaServerMfaVendorTypeOktaAdaptiveV1Args:
     def okta_token(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "okta_token", value)
 
+
+if not MYPY:
+    class MfaServerMfaVendorTypePingIdentityV1ArgsDict(TypedDict):
+        ping_api_host: NotRequired[pulumi.Input[str]]
+        """
+        The PingApiHost param.
+        """
+        ping_baseuri: NotRequired[pulumi.Input[str]]
+        """
+        The PingBaseuri param.
+        """
+        ping_org: NotRequired[pulumi.Input[str]]
+        """
+        The PingOrg param.
+        """
+        ping_org_alias: NotRequired[pulumi.Input[str]]
+        """
+        The PingOrgAlias param.
+        """
+        ping_timeout: NotRequired[pulumi.Input[str]]
+        """
+        The PingTimeout param.
+        """
+        ping_token: NotRequired[pulumi.Input[str]]
+        """
+        The PingToken param.
+        """
+elif False:
+    MfaServerMfaVendorTypePingIdentityV1ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class MfaServerMfaVendorTypePingIdentityV1Args:
@@ -11921,6 +15861,35 @@ class MfaServerMfaVendorTypePingIdentityV1Args:
         pulumi.set(self, "ping_token", value)
 
 
+if not MYPY:
+    class MfaServerMfaVendorTypeRsaSecuridAccessV1ArgsDict(TypedDict):
+        rsa_accessid: NotRequired[pulumi.Input[str]]
+        """
+        The RsaAccessid param.
+        """
+        rsa_accesskey: NotRequired[pulumi.Input[str]]
+        """
+        The RsaAccesskey param.
+        """
+        rsa_api_host: NotRequired[pulumi.Input[str]]
+        """
+        The RsaApiHost param.
+        """
+        rsa_assurancepolicyid: NotRequired[pulumi.Input[str]]
+        """
+        The RsaAssurancepolicyid param.
+        """
+        rsa_baseuri: NotRequired[pulumi.Input[str]]
+        """
+        The RsaBaseuri param.
+        """
+        rsa_timeout: NotRequired[pulumi.Input[str]]
+        """
+        The RsaTimeout param.
+        """
+elif False:
+    MfaServerMfaVendorTypeRsaSecuridAccessV1ArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class MfaServerMfaVendorTypeRsaSecuridAccessV1Args:
     def __init__(__self__, *,
@@ -12024,6 +15993,23 @@ class MfaServerMfaVendorTypeRsaSecuridAccessV1Args:
         pulumi.set(self, "rsa_timeout", value)
 
 
+if not MYPY:
+    class NatRuleDestinationTranslationArgsDict(TypedDict):
+        translated_address_single: pulumi.Input[str]
+        """
+        The ip address to be translated. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`.
+        """
+        dns_rewrite: NotRequired[pulumi.Input['NatRuleDestinationTranslationDnsRewriteArgsDict']]
+        """
+        The DnsRewrite param.
+        """
+        translated_port: NotRequired[pulumi.Input[int]]
+        """
+        The TranslatedPort param.
+        """
+elif False:
+    NatRuleDestinationTranslationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class NatRuleDestinationTranslationArgs:
     def __init__(__self__, *,
@@ -12078,6 +16064,15 @@ class NatRuleDestinationTranslationArgs:
         pulumi.set(self, "translated_port", value)
 
 
+if not MYPY:
+    class NatRuleDestinationTranslationDnsRewriteArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        The Direction param. String must be one of these: `"reverse"`, `"forward"`. Default: `"reverse"`.
+        """
+elif False:
+    NatRuleDestinationTranslationDnsRewriteArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class NatRuleDestinationTranslationDnsRewriteArgs:
     def __init__(__self__, *,
@@ -12100,6 +16095,23 @@ class NatRuleDestinationTranslationDnsRewriteArgs:
     def direction(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "direction", value)
 
+
+if not MYPY:
+    class NatRuleDynamicDestinationTranslationArgsDict(TypedDict):
+        translated_address_single: pulumi.Input[str]
+        """
+        The ip address to be translated. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`.
+        """
+        distribution: NotRequired[pulumi.Input[str]]
+        """
+        The Distribution param. String must be one of these: `"round-robin"`, `"source-ip-hash"`, `"ip-modulo"`, `"ip-hash"`, `"least-sessions"`. Default: `"round-robin"`.
+        """
+        translated_port: NotRequired[pulumi.Input[int]]
+        """
+        The TranslatedPort param.
+        """
+elif False:
+    NatRuleDynamicDestinationTranslationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class NatRuleDynamicDestinationTranslationArgs:
@@ -12154,6 +16166,27 @@ class NatRuleDynamicDestinationTranslationArgs:
     def translated_port(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "translated_port", value)
 
+
+if not MYPY:
+    class NatRuleSourceTranslationArgsDict(TypedDict):
+        bi_directional: NotRequired[pulumi.Input[str]]
+        """
+        The BiDirectional param. String must be one of these: `"yes"`, `"no"`.
+        """
+        fallback: NotRequired[pulumi.Input['NatRuleSourceTranslationFallbackArgsDict']]
+        """
+        The Fallback param.
+        """
+        translated_address_arrays: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The TranslatedAddressArray param. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+        """
+        translated_address_single: NotRequired[pulumi.Input[str]]
+        """
+        The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+        """
+elif False:
+    NatRuleSourceTranslationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class NatRuleSourceTranslationArgs:
@@ -12226,6 +16259,15 @@ class NatRuleSourceTranslationArgs:
         pulumi.set(self, "translated_address_single", value)
 
 
+if not MYPY:
+    class NatRuleSourceTranslationFallbackArgsDict(TypedDict):
+        interface: NotRequired[pulumi.Input[str]]
+        """
+        The Interface param. Ensure that only one of the following is specified: `interface`
+        """
+elif False:
+    NatRuleSourceTranslationFallbackArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class NatRuleSourceTranslationFallbackArgs:
     def __init__(__self__, *,
@@ -12248,6 +16290,23 @@ class NatRuleSourceTranslationFallbackArgs:
     def interface(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "interface", value)
 
+
+if not MYPY:
+    class NatRuleTargetArgsDict(TypedDict):
+        devices: NotRequired[pulumi.Input[Sequence[pulumi.Input['NatRuleTargetDeviceArgsDict']]]]
+        """
+        The Devices param.
+        """
+        negate: NotRequired[pulumi.Input[bool]]
+        """
+        The Negate param.
+        """
+        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Tags param.
+        """
+elif False:
+    NatRuleTargetArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class NatRuleTargetArgs:
@@ -12304,6 +16363,15 @@ class NatRuleTargetArgs:
         pulumi.set(self, "tags", value)
 
 
+if not MYPY:
+    class NatRuleTargetDeviceArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+elif False:
+    NatRuleTargetDeviceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class NatRuleTargetDeviceArgs:
     def __init__(__self__, *,
@@ -12326,6 +16394,15 @@ class NatRuleTargetDeviceArgs:
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class QosPolicyRuleActionArgsDict(TypedDict):
+        class_: NotRequired[pulumi.Input[str]]
+        """
+        The Class param.
+        """
+elif False:
+    QosPolicyRuleActionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class QosPolicyRuleActionArgs:
@@ -12350,6 +16427,15 @@ class QosPolicyRuleActionArgs:
         pulumi.set(self, "class_", value)
 
 
+if not MYPY:
+    class QosPolicyRuleDscpTosArgsDict(TypedDict):
+        codepoints: NotRequired[pulumi.Input[Sequence[pulumi.Input['QosPolicyRuleDscpTosCodepointArgsDict']]]]
+        """
+        The Codepoints param.
+        """
+elif False:
+    QosPolicyRuleDscpTosArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class QosPolicyRuleDscpTosArgs:
     def __init__(__self__, *,
@@ -12372,6 +16458,19 @@ class QosPolicyRuleDscpTosArgs:
     def codepoints(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['QosPolicyRuleDscpTosCodepointArgs']]]]):
         pulumi.set(self, "codepoints", value)
 
+
+if not MYPY:
+    class QosPolicyRuleDscpTosCodepointArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        type: NotRequired[pulumi.Input['QosPolicyRuleDscpTosCodepointTypeArgsDict']]
+        """
+        The Type param.
+        """
+elif False:
+    QosPolicyRuleDscpTosCodepointArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class QosPolicyRuleDscpTosCodepointArgs:
@@ -12411,6 +16510,31 @@ class QosPolicyRuleDscpTosCodepointArgs:
     def type(self, value: Optional[pulumi.Input['QosPolicyRuleDscpTosCodepointTypeArgs']]):
         pulumi.set(self, "type", value)
 
+
+if not MYPY:
+    class QosPolicyRuleDscpTosCodepointTypeArgsDict(TypedDict):
+        af: NotRequired[pulumi.Input['QosPolicyRuleDscpTosCodepointTypeAfArgsDict']]
+        """
+        The Af param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+        """
+        cs: NotRequired[pulumi.Input['QosPolicyRuleDscpTosCodepointTypeCsArgsDict']]
+        """
+        The Cs param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+        """
+        custom: NotRequired[pulumi.Input['QosPolicyRuleDscpTosCodepointTypeCustomArgsDict']]
+        """
+        The Custom param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+        """
+        ef: NotRequired[pulumi.Input[bool]]
+        """
+        The Ef param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+        """
+        tos: NotRequired[pulumi.Input['QosPolicyRuleDscpTosCodepointTypeTosArgsDict']]
+        """
+        The Tos param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+        """
+elif False:
+    QosPolicyRuleDscpTosCodepointTypeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class QosPolicyRuleDscpTosCodepointTypeArgs:
@@ -12499,6 +16623,15 @@ class QosPolicyRuleDscpTosCodepointTypeArgs:
         pulumi.set(self, "tos", value)
 
 
+if not MYPY:
+    class QosPolicyRuleDscpTosCodepointTypeAfArgsDict(TypedDict):
+        codepoint: NotRequired[pulumi.Input[str]]
+        """
+        The Codepoint param.
+        """
+elif False:
+    QosPolicyRuleDscpTosCodepointTypeAfArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class QosPolicyRuleDscpTosCodepointTypeAfArgs:
     def __init__(__self__, *,
@@ -12521,6 +16654,15 @@ class QosPolicyRuleDscpTosCodepointTypeAfArgs:
     def codepoint(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "codepoint", value)
 
+
+if not MYPY:
+    class QosPolicyRuleDscpTosCodepointTypeCsArgsDict(TypedDict):
+        codepoint: NotRequired[pulumi.Input[str]]
+        """
+        The Codepoint param.
+        """
+elif False:
+    QosPolicyRuleDscpTosCodepointTypeCsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class QosPolicyRuleDscpTosCodepointTypeCsArgs:
@@ -12545,6 +16687,15 @@ class QosPolicyRuleDscpTosCodepointTypeCsArgs:
         pulumi.set(self, "codepoint", value)
 
 
+if not MYPY:
+    class QosPolicyRuleDscpTosCodepointTypeCustomArgsDict(TypedDict):
+        codepoint: NotRequired[pulumi.Input['QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgsDict']]
+        """
+        The Codepoint param.
+        """
+elif False:
+    QosPolicyRuleDscpTosCodepointTypeCustomArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class QosPolicyRuleDscpTosCodepointTypeCustomArgs:
     def __init__(__self__, *,
@@ -12567,6 +16718,19 @@ class QosPolicyRuleDscpTosCodepointTypeCustomArgs:
     def codepoint(self, value: Optional[pulumi.Input['QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs']]):
         pulumi.set(self, "codepoint", value)
 
+
+if not MYPY:
+    class QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgsDict(TypedDict):
+        binary_value: NotRequired[pulumi.Input[str]]
+        """
+        The BinaryValue param.
+        """
+        codepoint_name: NotRequired[pulumi.Input[str]]
+        """
+        The CodepointName param.
+        """
+elif False:
+    QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs:
@@ -12607,6 +16771,15 @@ class QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs:
         pulumi.set(self, "codepoint_name", value)
 
 
+if not MYPY:
+    class QosPolicyRuleDscpTosCodepointTypeTosArgsDict(TypedDict):
+        codepoint: NotRequired[pulumi.Input[str]]
+        """
+        The Codepoint param.
+        """
+elif False:
+    QosPolicyRuleDscpTosCodepointTypeTosArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class QosPolicyRuleDscpTosCodepointTypeTosArgs:
     def __init__(__self__, *,
@@ -12629,6 +16802,19 @@ class QosPolicyRuleDscpTosCodepointTypeTosArgs:
     def codepoint(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "codepoint", value)
 
+
+if not MYPY:
+    class QosProfileAggregateBandwidthArgsDict(TypedDict):
+        egress_guaranteed: NotRequired[pulumi.Input[int]]
+        """
+        guaranteed sending bandwidth in mbps. Value must be between 0 and 16000.
+        """
+        egress_max: NotRequired[pulumi.Input[int]]
+        """
+        max sending bandwidth in mbps. Value must be between 0 and 60000.
+        """
+elif False:
+    QosProfileAggregateBandwidthArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class QosProfileAggregateBandwidthArgs:
@@ -12669,6 +16855,19 @@ class QosProfileAggregateBandwidthArgs:
         pulumi.set(self, "egress_max", value)
 
 
+if not MYPY:
+    class QosProfileClassBandwidthTypeArgsDict(TypedDict):
+        mbps: NotRequired[pulumi.Input['QosProfileClassBandwidthTypeMbpsArgsDict']]
+        """
+        The Mbps param. Ensure that only one of the following is specified: `mbps`, `percentage`
+        """
+        percentage: NotRequired[pulumi.Input['QosProfileClassBandwidthTypePercentageArgsDict']]
+        """
+        The Percentage param. Ensure that only one of the following is specified: `mbps`, `percentage`
+        """
+elif False:
+    QosProfileClassBandwidthTypeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class QosProfileClassBandwidthTypeArgs:
     def __init__(__self__, *,
@@ -12708,6 +16907,15 @@ class QosProfileClassBandwidthTypeArgs:
         pulumi.set(self, "percentage", value)
 
 
+if not MYPY:
+    class QosProfileClassBandwidthTypeMbpsArgsDict(TypedDict):
+        classes: NotRequired[pulumi.Input[Sequence[pulumi.Input['QosProfileClassBandwidthTypeMbpsClassArgsDict']]]]
+        """
+        QoS setting for traffic classes.
+        """
+elif False:
+    QosProfileClassBandwidthTypeMbpsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class QosProfileClassBandwidthTypeMbpsArgs:
     def __init__(__self__, *,
@@ -12730,6 +16938,23 @@ class QosProfileClassBandwidthTypeMbpsArgs:
     def classes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['QosProfileClassBandwidthTypeMbpsClassArgs']]]]):
         pulumi.set(self, "classes", value)
 
+
+if not MYPY:
+    class QosProfileClassBandwidthTypeMbpsClassArgsDict(TypedDict):
+        class_bandwidth: NotRequired[pulumi.Input['QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgsDict']]
+        """
+        The ClassBandwidth param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Traffic class. String length must not exceed 31 characters.
+        """
+        priority: NotRequired[pulumi.Input[str]]
+        """
+        traffic class priority. String must be one of these: `"real-time"`, `"high"`, `"medium"`, `"low"`. Default: `"medium"`.
+        """
+elif False:
+    QosProfileClassBandwidthTypeMbpsClassArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class QosProfileClassBandwidthTypeMbpsClassArgs:
@@ -12786,6 +17011,19 @@ class QosProfileClassBandwidthTypeMbpsClassArgs:
         pulumi.set(self, "priority", value)
 
 
+if not MYPY:
+    class QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgsDict(TypedDict):
+        egress_guaranteed: NotRequired[pulumi.Input[int]]
+        """
+        guaranteed sending bandwidth in mbps. Value must be between 0 and 60000.
+        """
+        egress_max: NotRequired[pulumi.Input[int]]
+        """
+        max sending bandwidth in mbps. Value must be between 0 and 60000.
+        """
+elif False:
+    QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs:
     def __init__(__self__, *,
@@ -12825,6 +17063,15 @@ class QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs:
         pulumi.set(self, "egress_max", value)
 
 
+if not MYPY:
+    class QosProfileClassBandwidthTypePercentageArgsDict(TypedDict):
+        classes: NotRequired[pulumi.Input[Sequence[pulumi.Input['QosProfileClassBandwidthTypePercentageClassArgsDict']]]]
+        """
+        QoS setting for traffic classes.
+        """
+elif False:
+    QosProfileClassBandwidthTypePercentageArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class QosProfileClassBandwidthTypePercentageArgs:
     def __init__(__self__, *,
@@ -12847,6 +17094,23 @@ class QosProfileClassBandwidthTypePercentageArgs:
     def classes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['QosProfileClassBandwidthTypePercentageClassArgs']]]]):
         pulumi.set(self, "classes", value)
 
+
+if not MYPY:
+    class QosProfileClassBandwidthTypePercentageClassArgsDict(TypedDict):
+        class_bandwidth: NotRequired[pulumi.Input['QosProfileClassBandwidthTypePercentageClassClassBandwidthArgsDict']]
+        """
+        The ClassBandwidth param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Traffic class. String length must not exceed 31 characters.
+        """
+        priority: NotRequired[pulumi.Input[str]]
+        """
+        traffic class priority. String must be one of these: `"real-time"`, `"high"`, `"medium"`, `"low"`. Default: `"medium"`.
+        """
+elif False:
+    QosProfileClassBandwidthTypePercentageClassArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class QosProfileClassBandwidthTypePercentageClassArgs:
@@ -12903,6 +17167,19 @@ class QosProfileClassBandwidthTypePercentageClassArgs:
         pulumi.set(self, "priority", value)
 
 
+if not MYPY:
+    class QosProfileClassBandwidthTypePercentageClassClassBandwidthArgsDict(TypedDict):
+        egress_guaranteed: NotRequired[pulumi.Input[int]]
+        """
+        guaranteed sending bandwidth in percentage. Value must be between 0 and 100.
+        """
+        egress_max: NotRequired[pulumi.Input[int]]
+        """
+        max sending bandwidth in percentage. Value must be between 0 and 100.
+        """
+elif False:
+    QosProfileClassBandwidthTypePercentageClassClassBandwidthArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs:
     def __init__(__self__, *,
@@ -12941,6 +17218,31 @@ class QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs:
     def egress_max(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "egress_max", value)
 
+
+if not MYPY:
+    class RadiusServerProfileProtocolArgsDict(TypedDict):
+        chap: NotRequired[pulumi.Input[bool]]
+        """
+        The Chap param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        """
+        eap_ttls_with_pap: NotRequired[pulumi.Input['RadiusServerProfileProtocolEapTtlsWithPapArgsDict']]
+        """
+        The EapTtlsWithPap param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        """
+        pap: NotRequired[pulumi.Input[bool]]
+        """
+        The Pap param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        """
+        peap_mschap_v2: NotRequired[pulumi.Input['RadiusServerProfileProtocolPeapMschapV2ArgsDict']]
+        """
+        The PeapMschapV2 param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        """
+        peap_with_gtc: NotRequired[pulumi.Input['RadiusServerProfileProtocolPeapWithGtcArgsDict']]
+        """
+        The PeapWithGtc param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        """
+elif False:
+    RadiusServerProfileProtocolArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RadiusServerProfileProtocolArgs:
@@ -13029,6 +17331,19 @@ class RadiusServerProfileProtocolArgs:
         pulumi.set(self, "peap_with_gtc", value)
 
 
+if not MYPY:
+    class RadiusServerProfileProtocolEapTtlsWithPapArgsDict(TypedDict):
+        anon_outer_id: NotRequired[pulumi.Input[bool]]
+        """
+        The AnonOuterId param.
+        """
+        radius_cert_profile: NotRequired[pulumi.Input[str]]
+        """
+        The RadiusCertProfile param.
+        """
+elif False:
+    RadiusServerProfileProtocolEapTtlsWithPapArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class RadiusServerProfileProtocolEapTtlsWithPapArgs:
     def __init__(__self__, *,
@@ -13067,6 +17382,23 @@ class RadiusServerProfileProtocolEapTtlsWithPapArgs:
     def radius_cert_profile(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "radius_cert_profile", value)
 
+
+if not MYPY:
+    class RadiusServerProfileProtocolPeapMschapV2ArgsDict(TypedDict):
+        allow_pwd_change: NotRequired[pulumi.Input[bool]]
+        """
+        The AllowPwdChange param.
+        """
+        anon_outer_id: NotRequired[pulumi.Input[bool]]
+        """
+        The AnonOuterId param.
+        """
+        radius_cert_profile: NotRequired[pulumi.Input[str]]
+        """
+        The RadiusCertProfile param.
+        """
+elif False:
+    RadiusServerProfileProtocolPeapMschapV2ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RadiusServerProfileProtocolPeapMschapV2Args:
@@ -13123,6 +17455,19 @@ class RadiusServerProfileProtocolPeapMschapV2Args:
         pulumi.set(self, "radius_cert_profile", value)
 
 
+if not MYPY:
+    class RadiusServerProfileProtocolPeapWithGtcArgsDict(TypedDict):
+        anon_outer_id: NotRequired[pulumi.Input[bool]]
+        """
+        The AnonOuterId param.
+        """
+        radius_cert_profile: NotRequired[pulumi.Input[str]]
+        """
+        The RadiusCertProfile param.
+        """
+elif False:
+    RadiusServerProfileProtocolPeapWithGtcArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class RadiusServerProfileProtocolPeapWithGtcArgs:
     def __init__(__self__, *,
@@ -13161,6 +17506,27 @@ class RadiusServerProfileProtocolPeapWithGtcArgs:
     def radius_cert_profile(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "radius_cert_profile", value)
 
+
+if not MYPY:
+    class RadiusServerProfileServerArgsDict(TypedDict):
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        The IpAddress param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        port: NotRequired[pulumi.Input[int]]
+        """
+        The Port param. Value must be between 1 and 65535.
+        """
+        secret: NotRequired[pulumi.Input[str]]
+        """
+        The Secret param. String length must not exceed 64 characters.
+        """
+elif False:
+    RadiusServerProfileServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RadiusServerProfileServerArgs:
@@ -13233,6 +17599,19 @@ class RadiusServerProfileServerArgs:
         pulumi.set(self, "secret", value)
 
 
+if not MYPY:
+    class RegionGeoLocationArgsDict(TypedDict):
+        latitude: pulumi.Input[float]
+        """
+        latitude coordinate. Value must be between -90 and 90.
+        """
+        longitude: pulumi.Input[float]
+        """
+        longitude coordinate. Value must be between -180 and 180.
+        """
+elif False:
+    RegionGeoLocationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class RegionGeoLocationArgs:
     def __init__(__self__, *,
@@ -13269,6 +17648,23 @@ class RegionGeoLocationArgs:
     def longitude(self, value: pulumi.Input[float]):
         pulumi.set(self, "longitude", value)
 
+
+if not MYPY:
+    class RemoteNetworkEcmpTunnelArgsDict(TypedDict):
+        ipsec_tunnel: pulumi.Input[str]
+        """
+        The IpsecTunnel param.
+        """
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+        protocol: pulumi.Input['RemoteNetworkEcmpTunnelProtocolArgsDict']
+        """
+        The Protocol param.
+        """
+elif False:
+    RemoteNetworkEcmpTunnelArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RemoteNetworkEcmpTunnelArgs:
@@ -13322,6 +17718,15 @@ class RemoteNetworkEcmpTunnelArgs:
         pulumi.set(self, "protocol", value)
 
 
+if not MYPY:
+    class RemoteNetworkEcmpTunnelProtocolArgsDict(TypedDict):
+        bgp: NotRequired[pulumi.Input['RemoteNetworkEcmpTunnelProtocolBgpArgsDict']]
+        """
+        The Bgp param.
+        """
+elif False:
+    RemoteNetworkEcmpTunnelProtocolArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class RemoteNetworkEcmpTunnelProtocolArgs:
     def __init__(__self__, *,
@@ -13344,6 +17749,47 @@ class RemoteNetworkEcmpTunnelProtocolArgs:
     def bgp(self, value: Optional[pulumi.Input['RemoteNetworkEcmpTunnelProtocolBgpArgs']]):
         pulumi.set(self, "bgp", value)
 
+
+if not MYPY:
+    class RemoteNetworkEcmpTunnelProtocolBgpArgsDict(TypedDict):
+        do_not_export_routes: NotRequired[pulumi.Input[bool]]
+        """
+        The DoNotExportRoutes param.
+        """
+        enable: NotRequired[pulumi.Input[bool]]
+        """
+        to setup bgp protocol, enable need to set as true.
+        """
+        local_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        The LocalIpAddress param.
+        """
+        originate_default_route: NotRequired[pulumi.Input[bool]]
+        """
+        The OriginateDefaultRoute param.
+        """
+        peer_as: NotRequired[pulumi.Input[str]]
+        """
+        The PeerAs param.
+        """
+        peer_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        The PeerIpAddress param.
+        """
+        peering_type: NotRequired[pulumi.Input[str]]
+        """
+        Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `"exchange-v4-over-v4"`, `"exchange-v4-v6-over-v4"`, `"exchange-v4-over-v4-v6-over-v6"`, `"exchange-v6-over-v6"`.
+        """
+        secret: NotRequired[pulumi.Input[str]]
+        """
+        The Secret param.
+        """
+        summarize_mobile_user_routes: NotRequired[pulumi.Input[bool]]
+        """
+        The SummarizeMobileUserRoutes param.
+        """
+elif False:
+    RemoteNetworkEcmpTunnelProtocolBgpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RemoteNetworkEcmpTunnelProtocolBgpArgs:
@@ -13496,6 +17942,19 @@ class RemoteNetworkEcmpTunnelProtocolBgpArgs:
         pulumi.set(self, "summarize_mobile_user_routes", value)
 
 
+if not MYPY:
+    class RemoteNetworkProtocolArgsDict(TypedDict):
+        bgp: NotRequired[pulumi.Input['RemoteNetworkProtocolBgpArgsDict']]
+        """
+        The Bgp param.
+        """
+        bgp_peer: NotRequired[pulumi.Input['RemoteNetworkProtocolBgpPeerArgsDict']]
+        """
+        secondary bgp routing as bgp*peer.
+        """
+elif False:
+    RemoteNetworkProtocolArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class RemoteNetworkProtocolArgs:
     def __init__(__self__, *,
@@ -13534,6 +17993,47 @@ class RemoteNetworkProtocolArgs:
     def bgp_peer(self, value: Optional[pulumi.Input['RemoteNetworkProtocolBgpPeerArgs']]):
         pulumi.set(self, "bgp_peer", value)
 
+
+if not MYPY:
+    class RemoteNetworkProtocolBgpArgsDict(TypedDict):
+        do_not_export_routes: NotRequired[pulumi.Input[bool]]
+        """
+        The DoNotExportRoutes param.
+        """
+        enable: NotRequired[pulumi.Input[bool]]
+        """
+        to setup bgp protocol, enable need to set as true.
+        """
+        local_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        The LocalIpAddress param.
+        """
+        originate_default_route: NotRequired[pulumi.Input[bool]]
+        """
+        The OriginateDefaultRoute param.
+        """
+        peer_as: NotRequired[pulumi.Input[str]]
+        """
+        The PeerAs param.
+        """
+        peer_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        The PeerIpAddress param.
+        """
+        peering_type: NotRequired[pulumi.Input[str]]
+        """
+        Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `"exchange-v4-over-v4"`, `"exchange-v4-v6-over-v4"`, `"exchange-v4-over-v4-v6-over-v6"`, `"exchange-v6-over-v6"`.
+        """
+        secret: NotRequired[pulumi.Input[str]]
+        """
+        The Secret param.
+        """
+        summarize_mobile_user_routes: NotRequired[pulumi.Input[bool]]
+        """
+        The SummarizeMobileUserRoutes param.
+        """
+elif False:
+    RemoteNetworkProtocolBgpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RemoteNetworkProtocolBgpArgs:
@@ -13686,6 +18186,23 @@ class RemoteNetworkProtocolBgpArgs:
         pulumi.set(self, "summarize_mobile_user_routes", value)
 
 
+if not MYPY:
+    class RemoteNetworkProtocolBgpPeerArgsDict(TypedDict):
+        local_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        The LocalIpAddress param.
+        """
+        peer_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        The PeerIpAddress param.
+        """
+        secret: NotRequired[pulumi.Input[str]]
+        """
+        The Secret param.
+        """
+elif False:
+    RemoteNetworkProtocolBgpPeerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class RemoteNetworkProtocolBgpPeerArgs:
     def __init__(__self__, *,
@@ -13741,6 +18258,15 @@ class RemoteNetworkProtocolBgpPeerArgs:
         pulumi.set(self, "secret", value)
 
 
+if not MYPY:
+    class ScepProfileAlgorithmArgsDict(TypedDict):
+        rsa: NotRequired[pulumi.Input['ScepProfileAlgorithmRsaArgsDict']]
+        """
+        The Rsa param.
+        """
+elif False:
+    ScepProfileAlgorithmArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ScepProfileAlgorithmArgs:
     def __init__(__self__, *,
@@ -13764,6 +18290,15 @@ class ScepProfileAlgorithmArgs:
         pulumi.set(self, "rsa", value)
 
 
+if not MYPY:
+    class ScepProfileAlgorithmRsaArgsDict(TypedDict):
+        rsa_nbits: NotRequired[pulumi.Input[str]]
+        """
+        The RsaNbits param.
+        """
+elif False:
+    ScepProfileAlgorithmRsaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ScepProfileAlgorithmRsaArgs:
     def __init__(__self__, *,
@@ -13786,6 +18321,23 @@ class ScepProfileAlgorithmRsaArgs:
     def rsa_nbits(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "rsa_nbits", value)
 
+
+if not MYPY:
+    class ScepProfileCertificateAttributesArgsDict(TypedDict):
+        dnsname: NotRequired[pulumi.Input[str]]
+        """
+        The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+        """
+        rfc822name: NotRequired[pulumi.Input[str]]
+        """
+        The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+        """
+        uniform_resource_identifier: NotRequired[pulumi.Input[str]]
+        """
+        The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+        """
+elif False:
+    ScepProfileCertificateAttributesArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ScepProfileCertificateAttributesArgs:
@@ -13842,6 +18394,23 @@ class ScepProfileCertificateAttributesArgs:
         pulumi.set(self, "uniform_resource_identifier", value)
 
 
+if not MYPY:
+    class ScepProfileScepChallengeArgsDict(TypedDict):
+        dynamic_challenge: NotRequired[pulumi.Input['ScepProfileScepChallengeDynamicChallengeArgsDict']]
+        """
+        The DynamicChallenge param. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+        """
+        fixed: NotRequired[pulumi.Input[str]]
+        """
+        Challenge to use for SCEP server on mobile clients. String length must not exceed 1024 characters. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+        """
+        none: NotRequired[pulumi.Input[str]]
+        """
+        The None param. String must be one of these: `""`. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+        """
+elif False:
+    ScepProfileScepChallengeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ScepProfileScepChallengeArgs:
     def __init__(__self__, *,
@@ -13896,6 +18465,23 @@ class ScepProfileScepChallengeArgs:
     def none(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "none", value)
 
+
+if not MYPY:
+    class ScepProfileScepChallengeDynamicChallengeArgsDict(TypedDict):
+        otp_server_url: NotRequired[pulumi.Input[str]]
+        """
+        The OtpServerUrl param. String length must not exceed 255 characters.
+        """
+        password: NotRequired[pulumi.Input[str]]
+        """
+        The Password param. String length must not exceed 255 characters.
+        """
+        username: NotRequired[pulumi.Input[str]]
+        """
+        The Username param. String length must not exceed 255 characters.
+        """
+elif False:
+    ScepProfileScepChallengeDynamicChallengeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ScepProfileScepChallengeDynamicChallengeArgs:
@@ -13952,6 +18538,19 @@ class ScepProfileScepChallengeDynamicChallengeArgs:
         pulumi.set(self, "username", value)
 
 
+if not MYPY:
+    class ScheduleScheduleTypeArgsDict(TypedDict):
+        non_recurring_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\\/([0][1-9]|[1][0-2])\\/([0-2][0-9]|[3][0-1])@([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\\/([0][1-9]|[1][0-2])\\/([0-2][0-9]|[3][0-1])@([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `non_recurring`, `recurring`
+        """
+        recurring: NotRequired[pulumi.Input['ScheduleScheduleTypeRecurringArgsDict']]
+        """
+        The Recurring param. Ensure that only one of the following is specified: `non_recurring`, `recurring`
+        """
+elif False:
+    ScheduleScheduleTypeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ScheduleScheduleTypeArgs:
     def __init__(__self__, *,
@@ -13991,6 +18590,19 @@ class ScheduleScheduleTypeArgs:
         pulumi.set(self, "recurring", value)
 
 
+if not MYPY:
+    class ScheduleScheduleTypeRecurringArgsDict(TypedDict):
+        daily_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `daily`, `weekly`
+        """
+        weekly: NotRequired[pulumi.Input['ScheduleScheduleTypeRecurringWeeklyArgsDict']]
+        """
+        The Weekly param. Ensure that only one of the following is specified: `daily`, `weekly`
+        """
+elif False:
+    ScheduleScheduleTypeRecurringArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ScheduleScheduleTypeRecurringArgs:
     def __init__(__self__, *,
@@ -14029,6 +18641,39 @@ class ScheduleScheduleTypeRecurringArgs:
     def weekly(self, value: Optional[pulumi.Input['ScheduleScheduleTypeRecurringWeeklyArgs']]):
         pulumi.set(self, "weekly", value)
 
+
+if not MYPY:
+    class ScheduleScheduleTypeRecurringWeeklyArgsDict(TypedDict):
+        friday_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        """
+        monday_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        """
+        saturday_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        """
+        sunday_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        """
+        thursday_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        """
+        tuesday_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        """
+        wednesday_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        """
+elif False:
+    ScheduleScheduleTypeRecurringWeeklyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ScheduleScheduleTypeRecurringWeeklyArgs:
@@ -14149,6 +18794,15 @@ class ScheduleScheduleTypeRecurringWeeklyArgs:
         pulumi.set(self, "wednesday_lists", value)
 
 
+if not MYPY:
+    class SecurityRuleProfileSettingArgsDict(TypedDict):
+        groups: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The security profile group.
+        """
+elif False:
+    SecurityRuleProfileSettingArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SecurityRuleProfileSettingArgs:
     def __init__(__self__, *,
@@ -14171,6 +18825,35 @@ class SecurityRuleProfileSettingArgs:
     def groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "groups", value)
 
+
+if not MYPY:
+    class ServiceConnectionBgpPeerArgsDict(TypedDict):
+        local_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        The LocalIpAddress param.
+        """
+        local_ipv6_address: NotRequired[pulumi.Input[str]]
+        """
+        The LocalIpv6Address param.
+        """
+        peer_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        The PeerIpAddress param.
+        """
+        peer_ipv6_address: NotRequired[pulumi.Input[str]]
+        """
+        The PeerIpv6Address param.
+        """
+        same_as_primary: NotRequired[pulumi.Input[bool]]
+        """
+        The SameAsPrimary param.
+        """
+        secret: NotRequired[pulumi.Input[str]]
+        """
+        The Secret param.
+        """
+elif False:
+    ServiceConnectionBgpPeerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceConnectionBgpPeerArgs:
@@ -14275,6 +18958,15 @@ class ServiceConnectionBgpPeerArgs:
         pulumi.set(self, "secret", value)
 
 
+if not MYPY:
+    class ServiceConnectionProtocolArgsDict(TypedDict):
+        bgp: NotRequired[pulumi.Input['ServiceConnectionProtocolBgpArgsDict']]
+        """
+        The Bgp param.
+        """
+elif False:
+    ServiceConnectionProtocolArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceConnectionProtocolArgs:
     def __init__(__self__, *,
@@ -14297,6 +18989,47 @@ class ServiceConnectionProtocolArgs:
     def bgp(self, value: Optional[pulumi.Input['ServiceConnectionProtocolBgpArgs']]):
         pulumi.set(self, "bgp", value)
 
+
+if not MYPY:
+    class ServiceConnectionProtocolBgpArgsDict(TypedDict):
+        do_not_export_routes: NotRequired[pulumi.Input[bool]]
+        """
+        The DoNotExportRoutes param.
+        """
+        enable: NotRequired[pulumi.Input[bool]]
+        """
+        The Enable param.
+        """
+        fast_failover: NotRequired[pulumi.Input[bool]]
+        """
+        The FastFailover param.
+        """
+        local_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        The LocalIpAddress param.
+        """
+        originate_default_route: NotRequired[pulumi.Input[bool]]
+        """
+        The OriginateDefaultRoute param.
+        """
+        peer_as: NotRequired[pulumi.Input[str]]
+        """
+        The PeerAs param.
+        """
+        peer_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        The PeerIpAddress param.
+        """
+        secret: NotRequired[pulumi.Input[str]]
+        """
+        The Secret param.
+        """
+        summarize_mobile_user_routes: NotRequired[pulumi.Input[bool]]
+        """
+        The SummarizeMobileUserRoutes param.
+        """
+elif False:
+    ServiceConnectionProtocolBgpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceConnectionProtocolBgpArgs:
@@ -14449,6 +19182,19 @@ class ServiceConnectionProtocolBgpArgs:
         pulumi.set(self, "summarize_mobile_user_routes", value)
 
 
+if not MYPY:
+    class ServiceConnectionQosArgsDict(TypedDict):
+        enable: NotRequired[pulumi.Input[bool]]
+        """
+        The Enable param.
+        """
+        qos_profile: NotRequired[pulumi.Input[str]]
+        """
+        The QosProfile param.
+        """
+elif False:
+    ServiceConnectionQosArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceConnectionQosArgs:
     def __init__(__self__, *,
@@ -14488,6 +19234,19 @@ class ServiceConnectionQosArgs:
         pulumi.set(self, "qos_profile", value)
 
 
+if not MYPY:
+    class ServiceProtocolArgsDict(TypedDict):
+        tcp: NotRequired[pulumi.Input['ServiceProtocolTcpArgsDict']]
+        """
+        The Tcp param. Ensure that only one of the following is specified: `tcp`, `udp`
+        """
+        udp: NotRequired[pulumi.Input['ServiceProtocolUdpArgsDict']]
+        """
+        The Udp param. Ensure that only one of the following is specified: `tcp`, `udp`
+        """
+elif False:
+    ServiceProtocolArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceProtocolArgs:
     def __init__(__self__, *,
@@ -14526,6 +19285,23 @@ class ServiceProtocolArgs:
     def udp(self, value: Optional[pulumi.Input['ServiceProtocolUdpArgs']]):
         pulumi.set(self, "udp", value)
 
+
+if not MYPY:
+    class ServiceProtocolTcpArgsDict(TypedDict):
+        port: pulumi.Input[str]
+        """
+        The Port param. String length must be between 1 and 1023 characters.
+        """
+        override: NotRequired[pulumi.Input['ServiceProtocolTcpOverrideArgsDict']]
+        """
+        The Override param.
+        """
+        source_port: NotRequired[pulumi.Input[str]]
+        """
+        The SourcePort param. String length must be between 1 and 1023 characters.
+        """
+elif False:
+    ServiceProtocolTcpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceProtocolTcpArgs:
@@ -14580,6 +19356,23 @@ class ServiceProtocolTcpArgs:
     def source_port(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "source_port", value)
 
+
+if not MYPY:
+    class ServiceProtocolTcpOverrideArgsDict(TypedDict):
+        halfclose_timeout: NotRequired[pulumi.Input[int]]
+        """
+        tcp session half-close timeout value (in second). Value must be between 1 and 604800. Default: `120`.
+        """
+        timeout: NotRequired[pulumi.Input[int]]
+        """
+        tcp session timeout value (in second). Value must be between 1 and 604800. Default: `3600`.
+        """
+        timewait_timeout: NotRequired[pulumi.Input[int]]
+        """
+        tcp session time-wait timeout value (in second). Value must be between 1 and 600. Default: `15`.
+        """
+elif False:
+    ServiceProtocolTcpOverrideArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceProtocolTcpOverrideArgs:
@@ -14636,6 +19429,23 @@ class ServiceProtocolTcpOverrideArgs:
         pulumi.set(self, "timewait_timeout", value)
 
 
+if not MYPY:
+    class ServiceProtocolUdpArgsDict(TypedDict):
+        port: pulumi.Input[str]
+        """
+        The Port param. String length must be between 1 and 1023 characters.
+        """
+        override: NotRequired[pulumi.Input['ServiceProtocolUdpOverrideArgsDict']]
+        """
+        The Override param.
+        """
+        source_port: NotRequired[pulumi.Input[str]]
+        """
+        The SourcePort param. String length must be between 1 and 1023 characters.
+        """
+elif False:
+    ServiceProtocolUdpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceProtocolUdpArgs:
     def __init__(__self__, *,
@@ -14690,6 +19500,15 @@ class ServiceProtocolUdpArgs:
         pulumi.set(self, "source_port", value)
 
 
+if not MYPY:
+    class ServiceProtocolUdpOverrideArgsDict(TypedDict):
+        timeout: NotRequired[pulumi.Input[int]]
+        """
+        udp session timeout value (in second). Value must be between 1 and 604800. Default: `30`.
+        """
+elif False:
+    ServiceProtocolUdpOverrideArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceProtocolUdpOverrideArgs:
     def __init__(__self__, *,
@@ -14712,6 +19531,19 @@ class ServiceProtocolUdpOverrideArgs:
     def timeout(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "timeout", value)
 
+
+if not MYPY:
+    class SnippetFolderArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The Id param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+elif False:
+    SnippetFolderArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SnippetFolderArgs:
@@ -14751,6 +19583,27 @@ class SnippetFolderArgs:
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class TacacsServerProfileServerArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        The Address param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        port: NotRequired[pulumi.Input[int]]
+        """
+        The Port param. Value must be between 1 and 65535.
+        """
+        secret: NotRequired[pulumi.Input[str]]
+        """
+        The Secret param. String length must not exceed 64 characters.
+        """
+elif False:
+    TacacsServerProfileServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TacacsServerProfileServerArgs:
@@ -14822,6 +19675,67 @@ class TacacsServerProfileServerArgs:
     def secret(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "secret", value)
 
+
+if not MYPY:
+    class TlsServiceProfileProtocolSettingsArgsDict(TypedDict):
+        auth_algo_sha1: NotRequired[pulumi.Input[bool]]
+        """
+        Allow authentication SHA1.
+        """
+        auth_algo_sha256: NotRequired[pulumi.Input[bool]]
+        """
+        Allow authentication SHA256.
+        """
+        auth_algo_sha384: NotRequired[pulumi.Input[bool]]
+        """
+        Allow authentication SHA384.
+        """
+        enc_algo3des: NotRequired[pulumi.Input[bool]]
+        """
+        Allow algorithm 3DES.
+        """
+        enc_algo_aes128_cbc: NotRequired[pulumi.Input[bool]]
+        """
+        Allow algorithm AES-128-CBC.
+        """
+        enc_algo_aes128_gcm: NotRequired[pulumi.Input[bool]]
+        """
+        Allow algorithm AES-128-GCM.
+        """
+        enc_algo_aes256_cbc: NotRequired[pulumi.Input[bool]]
+        """
+        Allow algorithm AES-256-CBC.
+        """
+        enc_algo_aes256_gcm: NotRequired[pulumi.Input[bool]]
+        """
+        Allow algorithm AES-256-GCM.
+        """
+        enc_algo_rc4: NotRequired[pulumi.Input[bool]]
+        """
+        Allow algorithm RC4.
+        """
+        keyxchg_algo_dhe: NotRequired[pulumi.Input[bool]]
+        """
+        Allow algorithm DHE.
+        """
+        keyxchg_algo_ecdhe: NotRequired[pulumi.Input[bool]]
+        """
+        Allow algorithm ECDHE.
+        """
+        keyxchg_algo_rsa: NotRequired[pulumi.Input[bool]]
+        """
+        Allow algorithm RSA.
+        """
+        max_version: NotRequired[pulumi.Input[str]]
+        """
+        The MaxVersion param. String must be one of these: `"tls1-0"`, `"tls1-1"`, `"tls1-2"`, `"tls1-3"`, `"max"`. Default: `"max"`.
+        """
+        min_version: NotRequired[pulumi.Input[str]]
+        """
+        The MinVersion param. String must be one of these: `"tls1-0"`, `"tls1-1"`, `"tls1-2"`. Default: `"tls1-0"`.
+        """
+elif False:
+    TlsServiceProfileProtocolSettingsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TlsServiceProfileProtocolSettingsArgs:
@@ -15054,6 +19968,19 @@ class TlsServiceProfileProtocolSettingsArgs:
         pulumi.set(self, "min_version", value)
 
 
+if not MYPY:
+    class TrafficSteeringRuleActionArgsDict(TypedDict):
+        forward: NotRequired[pulumi.Input['TrafficSteeringRuleActionForwardArgsDict']]
+        """
+        The Forward param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+        """
+        no_pbf: NotRequired[pulumi.Input[bool]]
+        """
+        The NoPbf param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+        """
+elif False:
+    TrafficSteeringRuleActionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TrafficSteeringRuleActionArgs:
     def __init__(__self__, *,
@@ -15093,6 +20020,15 @@ class TrafficSteeringRuleActionArgs:
         pulumi.set(self, "no_pbf", value)
 
 
+if not MYPY:
+    class TrafficSteeringRuleActionForwardArgsDict(TypedDict):
+        target: NotRequired[pulumi.Input[str]]
+        """
+        The Target param.
+        """
+elif False:
+    TrafficSteeringRuleActionForwardArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TrafficSteeringRuleActionForwardArgs:
     def __init__(__self__, *,
@@ -15115,6 +20051,35 @@ class TrafficSteeringRuleActionForwardArgs:
     def target(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "target", value)
 
+
+if not MYPY:
+    class UrlAccessProfileCredentialEnforcementArgsDict(TypedDict):
+        alerts: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Alerts param.
+        """
+        allows: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Allows param.
+        """
+        blocks: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Blocks param.
+        """
+        continues: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Continues param.
+        """
+        log_severity: NotRequired[pulumi.Input[str]]
+        """
+        The LogSeverity param. Default: `"medium"`.
+        """
+        mode: NotRequired[pulumi.Input['UrlAccessProfileCredentialEnforcementModeArgsDict']]
+        """
+        The Mode param.
+        """
+elif False:
+    UrlAccessProfileCredentialEnforcementArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class UrlAccessProfileCredentialEnforcementArgs:
@@ -15219,6 +20184,27 @@ class UrlAccessProfileCredentialEnforcementArgs:
         pulumi.set(self, "mode", value)
 
 
+if not MYPY:
+    class UrlAccessProfileCredentialEnforcementModeArgsDict(TypedDict):
+        disabled: NotRequired[pulumi.Input[bool]]
+        """
+        The Disabled param. Default: `false`.
+        """
+        domain_credentials: NotRequired[pulumi.Input[bool]]
+        """
+        The DomainCredentials param. Default: `false`.
+        """
+        group_mapping: NotRequired[pulumi.Input[str]]
+        """
+        The GroupMapping param.
+        """
+        ip_user: NotRequired[pulumi.Input[bool]]
+        """
+        The IpUser param. Default: `false`.
+        """
+elif False:
+    UrlAccessProfileCredentialEnforcementModeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class UrlAccessProfileCredentialEnforcementModeArgs:
     def __init__(__self__, *,
@@ -15289,6 +20275,47 @@ class UrlAccessProfileCredentialEnforcementModeArgs:
     def ip_user(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "ip_user", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionProfileRuleArgsDict(TypedDict):
+        action: NotRequired[pulumi.Input['VulnerabilityProtectionProfileRuleActionArgsDict']]
+        """
+        The Action param.
+        """
+        category: NotRequired[pulumi.Input[str]]
+        """
+        The Category param. String must be one of these: `"any"`, `"brute-force"`, `"code-execution"`, `"code-obfuscation"`, `"command-execution"`, `"dos"`, `"exploit-kit"`, `"info-leak"`, `"insecure-credentials"`, `"overflow"`, `"phishing"`, `"protocol-anomaly"`, `"scan"`, `"sql-injection"`.
+        """
+        cves: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Cves param.
+        """
+        host: NotRequired[pulumi.Input[str]]
+        """
+        The Host param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        packet_capture: NotRequired[pulumi.Input[str]]
+        """
+        The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        """
+        severities: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Severities param.
+        """
+        threat_name: NotRequired[pulumi.Input[str]]
+        """
+        The ThreatName param.
+        """
+        vendor_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The VendorIds param.
+        """
+elif False:
+    VulnerabilityProtectionProfileRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionProfileRuleArgs:
@@ -15441,6 +20468,43 @@ class VulnerabilityProtectionProfileRuleArgs:
         pulumi.set(self, "vendor_ids", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionProfileRuleActionArgsDict(TypedDict):
+        alert: NotRequired[pulumi.Input[bool]]
+        """
+        The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        allow: NotRequired[pulumi.Input[bool]]
+        """
+        The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        block_ip: NotRequired[pulumi.Input['VulnerabilityProtectionProfileRuleActionBlockIpArgsDict']]
+        """
+        The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        default: NotRequired[pulumi.Input[bool]]
+        """
+        The Default param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        drop: NotRequired[pulumi.Input[bool]]
+        """
+        The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_both: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_client: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_server: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+elif False:
+    VulnerabilityProtectionProfileRuleActionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionProfileRuleActionArgs:
     def __init__(__self__, *,
@@ -15576,6 +20640,19 @@ class VulnerabilityProtectionProfileRuleActionArgs:
         pulumi.set(self, "reset_server", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionProfileRuleActionBlockIpArgsDict(TypedDict):
+        duration: NotRequired[pulumi.Input[int]]
+        """
+        The Duration param. Value must be between 1 and 3600.
+        """
+        track_by: NotRequired[pulumi.Input[str]]
+        """
+        The TrackBy param. String must be one of these: `"source-and-destination"`, `"source"`.
+        """
+elif False:
+    VulnerabilityProtectionProfileRuleActionBlockIpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionProfileRuleActionBlockIpArgs:
     def __init__(__self__, *,
@@ -15614,6 +20691,35 @@ class VulnerabilityProtectionProfileRuleActionBlockIpArgs:
     def track_by(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "track_by", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionProfileThreatExceptionArgsDict(TypedDict):
+        action: NotRequired[pulumi.Input['VulnerabilityProtectionProfileThreatExceptionActionArgsDict']]
+        """
+        The Action param.
+        """
+        exempt_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input['VulnerabilityProtectionProfileThreatExceptionExemptIpArgsDict']]]]
+        """
+        The ExemptIps param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        notes: NotRequired[pulumi.Input[str]]
+        """
+        The Notes param.
+        """
+        packet_capture: NotRequired[pulumi.Input[str]]
+        """
+        The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        """
+        time_attribute: NotRequired[pulumi.Input['VulnerabilityProtectionProfileThreatExceptionTimeAttributeArgsDict']]
+        """
+        The TimeAttribute param.
+        """
+elif False:
+    VulnerabilityProtectionProfileThreatExceptionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionProfileThreatExceptionArgs:
@@ -15717,6 +20823,43 @@ class VulnerabilityProtectionProfileThreatExceptionArgs:
     def time_attribute(self, value: Optional[pulumi.Input['VulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs']]):
         pulumi.set(self, "time_attribute", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionProfileThreatExceptionActionArgsDict(TypedDict):
+        alert: NotRequired[pulumi.Input[bool]]
+        """
+        The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        allow: NotRequired[pulumi.Input[bool]]
+        """
+        The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        block_ip: NotRequired[pulumi.Input['VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgsDict']]
+        """
+        The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        default: NotRequired[pulumi.Input[bool]]
+        """
+        The Default param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        drop: NotRequired[pulumi.Input[bool]]
+        """
+        The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_both: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_client: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_server: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `default`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+elif False:
+    VulnerabilityProtectionProfileThreatExceptionActionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionProfileThreatExceptionActionArgs:
@@ -15853,6 +20996,19 @@ class VulnerabilityProtectionProfileThreatExceptionActionArgs:
         pulumi.set(self, "reset_server", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgsDict(TypedDict):
+        duration: NotRequired[pulumi.Input[int]]
+        """
+        The Duration param. Value must be between 1 and 3600.
+        """
+        track_by: NotRequired[pulumi.Input[str]]
+        """
+        The TrackBy param. String must be one of these: `"source-and-destination"`, `"source"`.
+        """
+elif False:
+    VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs:
     def __init__(__self__, *,
@@ -15892,6 +21048,15 @@ class VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs:
         pulumi.set(self, "track_by", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionProfileThreatExceptionExemptIpArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+elif False:
+    VulnerabilityProtectionProfileThreatExceptionExemptIpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionProfileThreatExceptionExemptIpArgs:
     def __init__(__self__, *,
@@ -15913,6 +21078,23 @@ class VulnerabilityProtectionProfileThreatExceptionExemptIpArgs:
     def name(self, value: pulumi.Input[str]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionProfileThreatExceptionTimeAttributeArgsDict(TypedDict):
+        interval: NotRequired[pulumi.Input[int]]
+        """
+        The Interval param. Value must be between 1 and 3600.
+        """
+        threshold: NotRequired[pulumi.Input[int]]
+        """
+        The Threshold param. Value must be between 1 and 65535.
+        """
+        track_by: NotRequired[pulumi.Input[str]]
+        """
+        The TrackBy param. String must be one of these: `"source"`, `"destination"`, `"source-and-destination"`.
+        """
+elif False:
+    VulnerabilityProtectionProfileThreatExceptionTimeAttributeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs:
@@ -15969,6 +21151,19 @@ class VulnerabilityProtectionProfileThreatExceptionTimeAttributeArgs:
         pulumi.set(self, "track_by", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesAffectedHostArgsDict(TypedDict):
+        client: NotRequired[pulumi.Input[bool]]
+        """
+        The Client param. Ensure that only one of the following is specified: `client`, `server`
+        """
+        server: NotRequired[pulumi.Input[bool]]
+        """
+        The Server param. Ensure that only one of the following is specified: `client`, `server`
+        """
+elif False:
+    VulnerabilityProtectionSignaturesAffectedHostArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesAffectedHostArgs:
     def __init__(__self__, *,
@@ -16007,6 +21202,39 @@ class VulnerabilityProtectionSignaturesAffectedHostArgs:
     def server(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "server", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionSignaturesDefaultActionArgsDict(TypedDict):
+        alert: NotRequired[pulumi.Input[bool]]
+        """
+        The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        allow: NotRequired[pulumi.Input[bool]]
+        """
+        The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        block_ip: NotRequired[pulumi.Input['VulnerabilityProtectionSignaturesDefaultActionBlockIpArgsDict']]
+        """
+        The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        drop: NotRequired[pulumi.Input[bool]]
+        """
+        The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_both: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_client: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+        reset_server: NotRequired[pulumi.Input[bool]]
+        """
+        The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+        """
+elif False:
+    VulnerabilityProtectionSignaturesDefaultActionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesDefaultActionArgs:
@@ -16127,6 +21355,19 @@ class VulnerabilityProtectionSignaturesDefaultActionArgs:
         pulumi.set(self, "reset_server", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesDefaultActionBlockIpArgsDict(TypedDict):
+        duration: NotRequired[pulumi.Input[int]]
+        """
+        The Duration param. Value must be between 1 and 3600.
+        """
+        track_by: NotRequired[pulumi.Input[str]]
+        """
+        The TrackBy param. String must be one of these: `"source-and-destination"`, `"source"`.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesDefaultActionBlockIpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesDefaultActionBlockIpArgs:
     def __init__(__self__, *,
@@ -16166,6 +21407,19 @@ class VulnerabilityProtectionSignaturesDefaultActionBlockIpArgs:
         pulumi.set(self, "track_by", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureArgsDict(TypedDict):
+        combination: NotRequired[pulumi.Input['VulnerabilityProtectionSignaturesSignatureCombinationArgsDict']]
+        """
+        The Combination param. Ensure that only one of the following is specified: `combination`, `standard`
+        """
+        standards: NotRequired[pulumi.Input[Sequence[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardArgsDict']]]]
+        """
+        The Standards param. Ensure that only one of the following is specified: `combination`, `standard`
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureArgs:
     def __init__(__self__, *,
@@ -16204,6 +21458,23 @@ class VulnerabilityProtectionSignaturesSignatureArgs:
     def standards(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardArgs']]]]):
         pulumi.set(self, "standards", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureCombinationArgsDict(TypedDict):
+        and_conditions: NotRequired[pulumi.Input[Sequence[pulumi.Input['VulnerabilityProtectionSignaturesSignatureCombinationAndConditionArgsDict']]]]
+        """
+        The AndConditions param.
+        """
+        order_free: NotRequired[pulumi.Input[bool]]
+        """
+        The OrderFree param. Default: `false`.
+        """
+        time_attribute: NotRequired[pulumi.Input['VulnerabilityProtectionSignaturesSignatureCombinationTimeAttributeArgsDict']]
+        """
+        The TimeAttribute param.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureCombinationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureCombinationArgs:
@@ -16260,6 +21531,19 @@ class VulnerabilityProtectionSignaturesSignatureCombinationArgs:
         pulumi.set(self, "time_attribute", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureCombinationAndConditionArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        or_conditions: NotRequired[pulumi.Input[Sequence[pulumi.Input['VulnerabilityProtectionSignaturesSignatureCombinationAndConditionOrConditionArgsDict']]]]
+        """
+        The OrConditions param.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureCombinationAndConditionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureCombinationAndConditionArgs:
     def __init__(__self__, *,
@@ -16299,6 +21583,19 @@ class VulnerabilityProtectionSignaturesSignatureCombinationAndConditionArgs:
         pulumi.set(self, "or_conditions", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureCombinationAndConditionOrConditionArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        threat_id: NotRequired[pulumi.Input[str]]
+        """
+        The ThreatId param.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureCombinationAndConditionOrConditionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureCombinationAndConditionOrConditionArgs:
     def __init__(__self__, *,
@@ -16337,6 +21634,23 @@ class VulnerabilityProtectionSignaturesSignatureCombinationAndConditionOrConditi
     def threat_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "threat_id", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureCombinationTimeAttributeArgsDict(TypedDict):
+        interval: NotRequired[pulumi.Input[int]]
+        """
+        The Interval param. Value must be between 1 and 3600.
+        """
+        threshold: NotRequired[pulumi.Input[int]]
+        """
+        The Threshold param. Value must be between 1 and 255.
+        """
+        track_by: NotRequired[pulumi.Input[str]]
+        """
+        The TrackBy param. String must be one of these: `"source-and-destination"`, `"source"`, `"destination"`.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureCombinationTimeAttributeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureCombinationTimeAttributeArgs:
@@ -16392,6 +21706,31 @@ class VulnerabilityProtectionSignaturesSignatureCombinationTimeAttributeArgs:
     def track_by(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "track_by", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The Name param.
+        """
+        and_conditions: NotRequired[pulumi.Input[Sequence[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionArgsDict']]]]
+        """
+        The AndConditions param.
+        """
+        comment: NotRequired[pulumi.Input[str]]
+        """
+        The Comment param. String length must not exceed 256 characters.
+        """
+        order_free: NotRequired[pulumi.Input[bool]]
+        """
+        The OrderFree param. Default: `false`.
+        """
+        scope: NotRequired[pulumi.Input[str]]
+        """
+        The Scope param. String must be one of these: `"protocol-data-unit"`, `"session"`.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardArgs:
@@ -16479,6 +21818,19 @@ class VulnerabilityProtectionSignaturesSignatureStandardArgs:
         pulumi.set(self, "scope", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardAndConditionArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        or_conditions: NotRequired[pulumi.Input[Sequence[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionArgsDict']]]]
+        """
+        The OrConditions param.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardAndConditionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardAndConditionArgs:
     def __init__(__self__, *,
@@ -16518,6 +21870,19 @@ class VulnerabilityProtectionSignaturesSignatureStandardAndConditionArgs:
         pulumi.set(self, "or_conditions", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        operator: NotRequired[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorArgsDict']]
+        """
+        The Operator param.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionArgs:
     def __init__(__self__, *,
@@ -16556,6 +21921,27 @@ class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionA
     def operator(self, value: Optional[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorArgs']]):
         pulumi.set(self, "operator", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorArgsDict(TypedDict):
+        equal_to: NotRequired[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToArgsDict']]
+        """
+        The EqualTo param.
+        """
+        greater_than: NotRequired[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanArgsDict']]
+        """
+        The GreaterThan param.
+        """
+        less_than: NotRequired[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanArgsDict']]
+        """
+        The LessThan param.
+        """
+        pattern_match: NotRequired[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchArgsDict']]
+        """
+        The PatternMatch param.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorArgs:
@@ -16628,6 +22014,27 @@ class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionO
         pulumi.set(self, "pattern_match", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToArgsDict(TypedDict):
+        context: NotRequired[pulumi.Input[str]]
+        """
+        The Context param.
+        """
+        negate: NotRequired[pulumi.Input[bool]]
+        """
+        The Negate param. Default: `false`.
+        """
+        qualifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgsDict']]]]
+        """
+        The Qualifiers param.
+        """
+        value: NotRequired[pulumi.Input[int]]
+        """
+        The Value param. Value must be between 0 and 4294967295.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToArgs:
     def __init__(__self__, *,
@@ -16699,6 +22106,19 @@ class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionO
         pulumi.set(self, "value", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        The Value param.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs:
     def __init__(__self__, *,
@@ -16737,6 +22157,23 @@ class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionO
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanArgsDict(TypedDict):
+        context: NotRequired[pulumi.Input[str]]
+        """
+        The Context param.
+        """
+        qualifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgsDict']]]]
+        """
+        The Qualifiers param.
+        """
+        value: NotRequired[pulumi.Input[int]]
+        """
+        The Value param. Value must be between 0 and 4294967295.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs:
@@ -16793,6 +22230,19 @@ class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionO
         pulumi.set(self, "value", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        The Value param.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs:
     def __init__(__self__, *,
@@ -16831,6 +22281,23 @@ class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionO
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanArgsDict(TypedDict):
+        context: NotRequired[pulumi.Input[str]]
+        """
+        The Context param.
+        """
+        qualifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgsDict']]]]
+        """
+        The Qualifiers param.
+        """
+        value: NotRequired[pulumi.Input[int]]
+        """
+        The Value param. Value must be between 0 and 4294967295.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanArgs:
@@ -16887,6 +22354,19 @@ class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionO
         pulumi.set(self, "value", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        The Value param.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorLessThanQualifierArgs:
     def __init__(__self__, *,
@@ -16925,6 +22405,27 @@ class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionO
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchArgsDict(TypedDict):
+        context: NotRequired[pulumi.Input[str]]
+        """
+        The Context param.
+        """
+        negate: NotRequired[pulumi.Input[bool]]
+        """
+        The Negate param. Default: `false`.
+        """
+        pattern: NotRequired[pulumi.Input[str]]
+        """
+        The Pattern param.
+        """
+        qualifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgsDict']]]]
+        """
+        The Qualifiers param.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchArgs:
@@ -16997,6 +22498,19 @@ class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionO
         pulumi.set(self, "qualifiers", value)
 
 
+if not MYPY:
+    class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        The Value param.
+        """
+elif False:
+    VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifierArgs:
     def __init__(__self__, *,
@@ -17035,6 +22549,23 @@ class VulnerabilityProtectionSignaturesSignatureStandardAndConditionOrConditionO
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class WildfireAntiVirusProfileMlavExceptionArgsDict(TypedDict):
+        description: NotRequired[pulumi.Input[str]]
+        """
+        The Description param.
+        """
+        filename: NotRequired[pulumi.Input[str]]
+        """
+        The Filename param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+elif False:
+    WildfireAntiVirusProfileMlavExceptionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class WildfireAntiVirusProfileMlavExceptionArgs:
@@ -17090,6 +22621,31 @@ class WildfireAntiVirusProfileMlavExceptionArgs:
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class WildfireAntiVirusProfileRuleArgsDict(TypedDict):
+        analysis: NotRequired[pulumi.Input[str]]
+        """
+        The Analysis param. String must be one of these: `"public-cloud"`, `"private-cloud"`.
+        """
+        applications: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The Applications param.
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        The Direction param. String must be one of these: `"download"`, `"upload"`, `"both"`.
+        """
+        file_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The FileTypes param.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+elif False:
+    WildfireAntiVirusProfileRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class WildfireAntiVirusProfileRuleArgs:
@@ -17177,6 +22733,19 @@ class WildfireAntiVirusProfileRuleArgs:
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class WildfireAntiVirusProfileThreatExceptionArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The Name param.
+        """
+        notes: NotRequired[pulumi.Input[str]]
+        """
+        The Notes param.
+        """
+elif False:
+    WildfireAntiVirusProfileThreatExceptionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class WildfireAntiVirusProfileThreatExceptionArgs:

@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetAutoTagActionsList(ctx, nil, nil)
+//			_, err := scm.GetAutoTagActionsList(ctx, &scm.GetAutoTagActionsListArgs{}, nil)
 //			if err != nil {
 //				return err
 //			}

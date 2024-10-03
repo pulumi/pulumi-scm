@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -134,9 +139,6 @@ def get_qos_profile(folder: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_qos_profile)
 def get_qos_profile_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
                            id: Optional[pulumi.Input[str]] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetQosProfileResult]:
@@ -156,4 +158,15 @@ def get_qos_profile_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
     :param str folder: The Folder param.
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['folder'] = folder
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getQosProfile:getQosProfile', __args__, opts=opts, typ=GetQosProfileResult)
+    return __ret__.apply(lambda __response__: GetQosProfileResult(
+        aggregate_bandwidth=pulumi.get(__response__, 'aggregate_bandwidth'),
+        class_bandwidth_type=pulumi.get(__response__, 'class_bandwidth_type'),
+        folder=pulumi.get(__response__, 'folder'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        tfid=pulumi.get(__response__, 'tfid')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -339,9 +344,6 @@ def get_nat_rule(id: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         to_interface=pulumi.get(__ret__, 'to_interface'),
         tos=pulumi.get(__ret__, 'tos'))
-
-
-@_utilities.lift_output_func(get_nat_rule)
 def get_nat_rule_output(id: Optional[pulumi.Input[str]] = None,
                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetNatRuleResult]:
     """
@@ -359,4 +361,30 @@ def get_nat_rule_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getNatRule:getNatRule', __args__, opts=opts, typ=GetNatRuleResult)
+    return __ret__.apply(lambda __response__: GetNatRuleResult(
+        active_active_device_binding=pulumi.get(__response__, 'active_active_device_binding'),
+        description=pulumi.get(__response__, 'description'),
+        destination_translation=pulumi.get(__response__, 'destination_translation'),
+        destinations=pulumi.get(__response__, 'destinations'),
+        device=pulumi.get(__response__, 'device'),
+        disabled=pulumi.get(__response__, 'disabled'),
+        dynamic_destination_translation=pulumi.get(__response__, 'dynamic_destination_translation'),
+        folder=pulumi.get(__response__, 'folder'),
+        froms=pulumi.get(__response__, 'froms'),
+        group_tag=pulumi.get(__response__, 'group_tag'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        nat_type=pulumi.get(__response__, 'nat_type'),
+        service=pulumi.get(__response__, 'service'),
+        snippet=pulumi.get(__response__, 'snippet'),
+        source_translation=pulumi.get(__response__, 'source_translation'),
+        sources=pulumi.get(__response__, 'sources'),
+        tags=pulumi.get(__response__, 'tags'),
+        target=pulumi.get(__response__, 'target'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        to_interface=pulumi.get(__response__, 'to_interface'),
+        tos=pulumi.get(__response__, 'tos')))

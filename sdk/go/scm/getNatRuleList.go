@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetNatRuleList(ctx, nil, nil)
+//			_, err := scm.GetNatRuleList(ctx, &scm.GetNatRuleListArgs{}, nil)
 //			if err != nil {
 //				return err
 //			}

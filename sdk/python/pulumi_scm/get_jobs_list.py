@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -117,11 +122,17 @@ def get_jobs_list(opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetJo
         offset=pulumi.get(__ret__, 'offset'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
-
-
-@_utilities.lift_output_func(get_jobs_list)
 def get_jobs_list_output(opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetJobsListResult]:
     """
     Retrieves a listing of config items.
     """
-    ...
+    __args__ = dict()
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getJobsList:getJobsList', __args__, opts=opts, typ=GetJobsListResult)
+    return __ret__.apply(lambda __response__: GetJobsListResult(
+        datas=pulumi.get(__response__, 'datas'),
+        id=pulumi.get(__response__, 'id'),
+        limit=pulumi.get(__response__, 'limit'),
+        offset=pulumi.get(__response__, 'offset'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        total=pulumi.get(__response__, 'total')))

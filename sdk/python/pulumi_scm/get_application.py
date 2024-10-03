@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -443,9 +448,6 @@ def get_application(id: Optional[str] = None,
         udp_timeout=pulumi.get(__ret__, 'udp_timeout'),
         used_by_malware=pulumi.get(__ret__, 'used_by_malware'),
         virus_ident=pulumi.get(__ret__, 'virus_ident'))
-
-
-@_utilities.lift_output_func(get_application)
 def get_application_output(id: Optional[pulumi.Input[str]] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplicationResult]:
     """
@@ -463,4 +465,38 @@ def get_application_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getApplication:getApplication', __args__, opts=opts, typ=GetApplicationResult)
+    return __ret__.apply(lambda __response__: GetApplicationResult(
+        able_to_transfer_file=pulumi.get(__response__, 'able_to_transfer_file'),
+        alg_disable_capability=pulumi.get(__response__, 'alg_disable_capability'),
+        category=pulumi.get(__response__, 'category'),
+        consume_big_bandwidth=pulumi.get(__response__, 'consume_big_bandwidth'),
+        data_ident=pulumi.get(__response__, 'data_ident'),
+        default=pulumi.get(__response__, 'default'),
+        description=pulumi.get(__response__, 'description'),
+        evasive_behavior=pulumi.get(__response__, 'evasive_behavior'),
+        file_type_ident=pulumi.get(__response__, 'file_type_ident'),
+        has_known_vulnerability=pulumi.get(__response__, 'has_known_vulnerability'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        no_appid_caching=pulumi.get(__response__, 'no_appid_caching'),
+        parent_app=pulumi.get(__response__, 'parent_app'),
+        pervasive_use=pulumi.get(__response__, 'pervasive_use'),
+        prone_to_misuse=pulumi.get(__response__, 'prone_to_misuse'),
+        risk=pulumi.get(__response__, 'risk'),
+        signatures=pulumi.get(__response__, 'signatures'),
+        subcategory=pulumi.get(__response__, 'subcategory'),
+        tcp_half_closed_timeout=pulumi.get(__response__, 'tcp_half_closed_timeout'),
+        tcp_time_wait_timeout=pulumi.get(__response__, 'tcp_time_wait_timeout'),
+        tcp_timeout=pulumi.get(__response__, 'tcp_timeout'),
+        technology=pulumi.get(__response__, 'technology'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        timeout=pulumi.get(__response__, 'timeout'),
+        tunnel_applications=pulumi.get(__response__, 'tunnel_applications'),
+        tunnel_other_application=pulumi.get(__response__, 'tunnel_other_application'),
+        udp_timeout=pulumi.get(__response__, 'udp_timeout'),
+        used_by_malware=pulumi.get(__response__, 'used_by_malware'),
+        virus_ident=pulumi.get(__response__, 'virus_ident')))

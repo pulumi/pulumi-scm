@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -222,9 +227,6 @@ def get_anti_spyware_signature(id: Optional[str] = None,
         threat_id=pulumi.get(__ret__, 'threat_id'),
         threatname=pulumi.get(__ret__, 'threatname'),
         vendors=pulumi.get(__ret__, 'vendors'))
-
-
-@_utilities.lift_output_func(get_anti_spyware_signature)
 def get_anti_spyware_signature_output(id: Optional[pulumi.Input[str]] = None,
                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAntiSpywareSignatureResult]:
     """
@@ -242,4 +244,21 @@ def get_anti_spyware_signature_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getAntiSpywareSignature:getAntiSpywareSignature', __args__, opts=opts, typ=GetAntiSpywareSignatureResult)
+    return __ret__.apply(lambda __response__: GetAntiSpywareSignatureResult(
+        bugtraqs=pulumi.get(__response__, 'bugtraqs'),
+        comment=pulumi.get(__response__, 'comment'),
+        cves=pulumi.get(__response__, 'cves'),
+        default_action=pulumi.get(__response__, 'default_action'),
+        direction=pulumi.get(__response__, 'direction'),
+        id=pulumi.get(__response__, 'id'),
+        references=pulumi.get(__response__, 'references'),
+        severity=pulumi.get(__response__, 'severity'),
+        signature=pulumi.get(__response__, 'signature'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        threat_id=pulumi.get(__response__, 'threat_id'),
+        threatname=pulumi.get(__response__, 'threatname'),
+        vendors=pulumi.get(__response__, 'vendors')))
