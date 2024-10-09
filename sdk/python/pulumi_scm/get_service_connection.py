@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -265,9 +270,6 @@ def get_service_connection(folder: Optional[str] = None,
         source_nat=pulumi.get(__ret__, 'source_nat'),
         subnets=pulumi.get(__ret__, 'subnets'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_service_connection)
 def get_service_connection_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
                                   id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceConnectionResult]:
@@ -288,4 +290,25 @@ def get_service_connection_output(folder: Optional[pulumi.Input[Optional[str]]] 
     :param str folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['folder'] = folder
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getServiceConnection:getServiceConnection', __args__, opts=opts, typ=GetServiceConnectionResult)
+    return __ret__.apply(lambda __response__: GetServiceConnectionResult(
+        backup_sc=pulumi.get(__response__, 'backup_sc'),
+        bgp_peer=pulumi.get(__response__, 'bgp_peer'),
+        folder=pulumi.get(__response__, 'folder'),
+        id=pulumi.get(__response__, 'id'),
+        ipsec_tunnel=pulumi.get(__response__, 'ipsec_tunnel'),
+        name=pulumi.get(__response__, 'name'),
+        nat_pool=pulumi.get(__response__, 'nat_pool'),
+        no_export_community=pulumi.get(__response__, 'no_export_community'),
+        onboarding_type=pulumi.get(__response__, 'onboarding_type'),
+        protocol=pulumi.get(__response__, 'protocol'),
+        qos=pulumi.get(__response__, 'qos'),
+        region=pulumi.get(__response__, 'region'),
+        secondary_ipsec_tunnel=pulumi.get(__response__, 'secondary_ipsec_tunnel'),
+        source_nat=pulumi.get(__response__, 'source_nat'),
+        subnets=pulumi.get(__response__, 'subnets'),
+        tfid=pulumi.get(__response__, 'tfid')))

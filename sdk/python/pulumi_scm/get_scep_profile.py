@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -248,9 +253,6 @@ def get_scep_profile(id: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         use_as_digital_signature=pulumi.get(__ret__, 'use_as_digital_signature'),
         use_for_key_encipherment=pulumi.get(__ret__, 'use_for_key_encipherment'))
-
-
-@_utilities.lift_output_func(get_scep_profile)
 def get_scep_profile_output(id: Optional[pulumi.Input[str]] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetScepProfileResult]:
     """
@@ -268,4 +270,23 @@ def get_scep_profile_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getScepProfile:getScepProfile', __args__, opts=opts, typ=GetScepProfileResult)
+    return __ret__.apply(lambda __response__: GetScepProfileResult(
+        algorithm=pulumi.get(__response__, 'algorithm'),
+        ca_identity_name=pulumi.get(__response__, 'ca_identity_name'),
+        certificate_attributes=pulumi.get(__response__, 'certificate_attributes'),
+        digest=pulumi.get(__response__, 'digest'),
+        fingerprint=pulumi.get(__response__, 'fingerprint'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        scep_ca_cert=pulumi.get(__response__, 'scep_ca_cert'),
+        scep_challenge=pulumi.get(__response__, 'scep_challenge'),
+        scep_client_cert=pulumi.get(__response__, 'scep_client_cert'),
+        scep_url=pulumi.get(__response__, 'scep_url'),
+        subject=pulumi.get(__response__, 'subject'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        use_as_digital_signature=pulumi.get(__response__, 'use_as_digital_signature'),
+        use_for_key_encipherment=pulumi.get(__response__, 'use_for_key_encipherment')))

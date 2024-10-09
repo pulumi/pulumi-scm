@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -248,9 +253,6 @@ def get_hip_object(id: Optional[str] = None,
         network_info=pulumi.get(__ret__, 'network_info'),
         patch_management=pulumi.get(__ret__, 'patch_management'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_hip_object)
 def get_hip_object_output(id: Optional[pulumi.Input[str]] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetHipObjectResult]:
     """
@@ -268,4 +270,23 @@ def get_hip_object_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getHipObject:getHipObject', __args__, opts=opts, typ=GetHipObjectResult)
+    return __ret__.apply(lambda __response__: GetHipObjectResult(
+        anti_malware=pulumi.get(__response__, 'anti_malware'),
+        certificate=pulumi.get(__response__, 'certificate'),
+        custom_checks=pulumi.get(__response__, 'custom_checks'),
+        data_loss_prevention=pulumi.get(__response__, 'data_loss_prevention'),
+        description=pulumi.get(__response__, 'description'),
+        disk_backup=pulumi.get(__response__, 'disk_backup'),
+        disk_encryption=pulumi.get(__response__, 'disk_encryption'),
+        firewall=pulumi.get(__response__, 'firewall'),
+        host_info=pulumi.get(__response__, 'host_info'),
+        id=pulumi.get(__response__, 'id'),
+        mobile_device=pulumi.get(__response__, 'mobile_device'),
+        name=pulumi.get(__response__, 'name'),
+        network_info=pulumi.get(__response__, 'network_info'),
+        patch_management=pulumi.get(__response__, 'patch_management'),
+        tfid=pulumi.get(__response__, 'tfid')))

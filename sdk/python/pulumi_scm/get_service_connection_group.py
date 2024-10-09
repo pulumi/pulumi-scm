@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -147,9 +152,6 @@ def get_service_connection_group(folder: Optional[str] = None,
         pbf_only=pulumi.get(__ret__, 'pbf_only'),
         targets=pulumi.get(__ret__, 'targets'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_service_connection_group)
 def get_service_connection_group_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
                                         id: Optional[pulumi.Input[str]] = None,
                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceConnectionGroupResult]:
@@ -170,4 +172,16 @@ def get_service_connection_group_output(folder: Optional[pulumi.Input[Optional[s
     :param str folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['folder'] = folder
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getServiceConnectionGroup:getServiceConnectionGroup', __args__, opts=opts, typ=GetServiceConnectionGroupResult)
+    return __ret__.apply(lambda __response__: GetServiceConnectionGroupResult(
+        disable_snat=pulumi.get(__response__, 'disable_snat'),
+        folder=pulumi.get(__response__, 'folder'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        pbf_only=pulumi.get(__response__, 'pbf_only'),
+        targets=pulumi.get(__response__, 'targets'),
+        tfid=pulumi.get(__response__, 'tfid')))

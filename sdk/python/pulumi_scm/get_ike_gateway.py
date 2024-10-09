@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -218,9 +223,6 @@ def get_ike_gateway(device: Optional[str] = None,
         protocol_common=pulumi.get(__ret__, 'protocol_common'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_ike_gateway)
 def get_ike_gateway_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                            folder: Optional[pulumi.Input[Optional[str]]] = None,
                            id: Optional[pulumi.Input[str]] = None,
@@ -244,4 +246,23 @@ def get_ike_gateway_output(device: Optional[pulumi.Input[Optional[str]]] = None,
     :param str id: The Id param.
     :param str snippet: The Snippet param.
     """
-    ...
+    __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
+    __args__['id'] = id
+    __args__['snippet'] = snippet
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getIkeGateway:getIkeGateway', __args__, opts=opts, typ=GetIkeGatewayResult)
+    return __ret__.apply(lambda __response__: GetIkeGatewayResult(
+        authentication=pulumi.get(__response__, 'authentication'),
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
+        id=pulumi.get(__response__, 'id'),
+        local_id=pulumi.get(__response__, 'local_id'),
+        name=pulumi.get(__response__, 'name'),
+        peer_address=pulumi.get(__response__, 'peer_address'),
+        peer_id=pulumi.get(__response__, 'peer_id'),
+        protocol=pulumi.get(__response__, 'protocol'),
+        protocol_common=pulumi.get(__response__, 'protocol_common'),
+        snippet=pulumi.get(__response__, 'snippet'),
+        tfid=pulumi.get(__response__, 'tfid')))

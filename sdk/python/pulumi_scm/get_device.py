@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -534,9 +539,6 @@ def get_device(serial: Optional[str] = None,
         vm_state=pulumi.get(__ret__, 'vm_state'),
         wf_release_date=pulumi.get(__ret__, 'wf_release_date'),
         wf_ver=pulumi.get(__ret__, 'wf_ver'))
-
-
-@_utilities.lift_output_func(get_device)
 def get_device_output(serial: Optional[pulumi.Input[str]] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDeviceResult]:
     """
@@ -554,4 +556,45 @@ def get_device_output(serial: Optional[pulumi.Input[str]] = None,
 
     :param str serial: The Serial param.
     """
-    ...
+    __args__ = dict()
+    __args__['serial'] = serial
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getDevice:getDevice', __args__, opts=opts, typ=GetDeviceResult)
+    return __ret__.apply(lambda __response__: GetDeviceResult(
+        anti_virus_version=pulumi.get(__response__, 'anti_virus_version'),
+        app_release_date=pulumi.get(__response__, 'app_release_date'),
+        app_version=pulumi.get(__response__, 'app_version'),
+        av_release_date=pulumi.get(__response__, 'av_release_date'),
+        available_licensesses=pulumi.get(__response__, 'available_licensesses'),
+        connected_since=pulumi.get(__response__, 'connected_since'),
+        dev_cert_detail=pulumi.get(__response__, 'dev_cert_detail'),
+        dev_cert_expiry_date=pulumi.get(__response__, 'dev_cert_expiry_date'),
+        family=pulumi.get(__response__, 'family'),
+        gp_client_verion=pulumi.get(__response__, 'gp_client_verion'),
+        gp_data_version=pulumi.get(__response__, 'gp_data_version'),
+        ha_peer_serial=pulumi.get(__response__, 'ha_peer_serial'),
+        ha_peer_state=pulumi.get(__response__, 'ha_peer_state'),
+        ha_state=pulumi.get(__response__, 'ha_state'),
+        hostname=pulumi.get(__response__, 'hostname'),
+        id=pulumi.get(__response__, 'id'),
+        installed_licenses=pulumi.get(__response__, 'installed_licenses'),
+        iot_release_date=pulumi.get(__response__, 'iot_release_date'),
+        iot_version=pulumi.get(__response__, 'iot_version'),
+        ip_address=pulumi.get(__response__, 'ip_address'),
+        ip_v6_address=pulumi.get(__response__, 'ip_v6_address'),
+        is_connected=pulumi.get(__response__, 'is_connected'),
+        license_match=pulumi.get(__response__, 'license_match'),
+        log_db_version=pulumi.get(__response__, 'log_db_version'),
+        mac_address=pulumi.get(__response__, 'mac_address'),
+        model=pulumi.get(__response__, 'model'),
+        serial=pulumi.get(__response__, 'serial'),
+        software_version=pulumi.get(__response__, 'software_version'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        threat_release_date=pulumi.get(__response__, 'threat_release_date'),
+        threat_version=pulumi.get(__response__, 'threat_version'),
+        uptime=pulumi.get(__response__, 'uptime'),
+        url_db_type=pulumi.get(__response__, 'url_db_type'),
+        url_db_ver=pulumi.get(__response__, 'url_db_ver'),
+        vm_state=pulumi.get(__response__, 'vm_state'),
+        wf_release_date=pulumi.get(__response__, 'wf_release_date'),
+        wf_ver=pulumi.get(__response__, 'wf_ver')))

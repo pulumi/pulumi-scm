@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -352,9 +357,6 @@ def get_decryption_rule(id: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         tos=pulumi.get(__ret__, 'tos'),
         type=pulumi.get(__ret__, 'type'))
-
-
-@_utilities.lift_output_func(get_decryption_rule)
 def get_decryption_rule_output(id: Optional[pulumi.Input[str]] = None,
                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDecryptionRuleResult]:
     """
@@ -372,4 +374,31 @@ def get_decryption_rule_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getDecryptionRule:getDecryptionRule', __args__, opts=opts, typ=GetDecryptionRuleResult)
+    return __ret__.apply(lambda __response__: GetDecryptionRuleResult(
+        action=pulumi.get(__response__, 'action'),
+        categories=pulumi.get(__response__, 'categories'),
+        description=pulumi.get(__response__, 'description'),
+        destination_hips=pulumi.get(__response__, 'destination_hips'),
+        destinations=pulumi.get(__response__, 'destinations'),
+        disabled=pulumi.get(__response__, 'disabled'),
+        froms=pulumi.get(__response__, 'froms'),
+        id=pulumi.get(__response__, 'id'),
+        log_fail=pulumi.get(__response__, 'log_fail'),
+        log_setting=pulumi.get(__response__, 'log_setting'),
+        log_success=pulumi.get(__response__, 'log_success'),
+        name=pulumi.get(__response__, 'name'),
+        negate_destination=pulumi.get(__response__, 'negate_destination'),
+        negate_source=pulumi.get(__response__, 'negate_source'),
+        profile=pulumi.get(__response__, 'profile'),
+        services=pulumi.get(__response__, 'services'),
+        source_hips=pulumi.get(__response__, 'source_hips'),
+        source_users=pulumi.get(__response__, 'source_users'),
+        sources=pulumi.get(__response__, 'sources'),
+        tags=pulumi.get(__response__, 'tags'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        tos=pulumi.get(__response__, 'tos'),
+        type=pulumi.get(__response__, 'type')))
