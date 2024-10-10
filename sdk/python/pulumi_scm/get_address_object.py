@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -182,9 +187,6 @@ def get_address_object(id: Optional[str] = None,
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'),
         type=pulumi.get(__ret__, 'type'))
-
-
-@_utilities.lift_output_func(get_address_object)
 def get_address_object_output(id: Optional[pulumi.Input[str]] = None,
                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAddressObjectResult]:
     """
@@ -202,4 +204,18 @@ def get_address_object_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getAddressObject:getAddressObject', __args__, opts=opts, typ=GetAddressObjectResult)
+    return __ret__.apply(lambda __response__: GetAddressObjectResult(
+        description=pulumi.get(__response__, 'description'),
+        fqdn=pulumi.get(__response__, 'fqdn'),
+        id=pulumi.get(__response__, 'id'),
+        ip_netmask=pulumi.get(__response__, 'ip_netmask'),
+        ip_range=pulumi.get(__response__, 'ip_range'),
+        ip_wildcard=pulumi.get(__response__, 'ip_wildcard'),
+        name=pulumi.get(__response__, 'name'),
+        tags=pulumi.get(__response__, 'tags'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        type=pulumi.get(__response__, 'type')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -351,9 +356,6 @@ def get_authentication_rule(id: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         timeout=pulumi.get(__ret__, 'timeout'),
         tos=pulumi.get(__ret__, 'tos'))
-
-
-@_utilities.lift_output_func(get_authentication_rule)
 def get_authentication_rule_output(id: Optional[pulumi.Input[str]] = None,
                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthenticationRuleResult]:
     """
@@ -371,4 +373,31 @@ def get_authentication_rule_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationRule:getAuthenticationRule', __args__, opts=opts, typ=GetAuthenticationRuleResult)
+    return __ret__.apply(lambda __response__: GetAuthenticationRuleResult(
+        authentication_enforcement=pulumi.get(__response__, 'authentication_enforcement'),
+        categories=pulumi.get(__response__, 'categories'),
+        description=pulumi.get(__response__, 'description'),
+        destination_hips=pulumi.get(__response__, 'destination_hips'),
+        destinations=pulumi.get(__response__, 'destinations'),
+        disabled=pulumi.get(__response__, 'disabled'),
+        froms=pulumi.get(__response__, 'froms'),
+        group_tag=pulumi.get(__response__, 'group_tag'),
+        hip_profiles=pulumi.get(__response__, 'hip_profiles'),
+        id=pulumi.get(__response__, 'id'),
+        log_authentication_timeout=pulumi.get(__response__, 'log_authentication_timeout'),
+        log_setting=pulumi.get(__response__, 'log_setting'),
+        name=pulumi.get(__response__, 'name'),
+        negate_destination=pulumi.get(__response__, 'negate_destination'),
+        negate_source=pulumi.get(__response__, 'negate_source'),
+        services=pulumi.get(__response__, 'services'),
+        source_hips=pulumi.get(__response__, 'source_hips'),
+        source_users=pulumi.get(__response__, 'source_users'),
+        sources=pulumi.get(__response__, 'sources'),
+        tags=pulumi.get(__response__, 'tags'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        timeout=pulumi.get(__response__, 'timeout'),
+        tos=pulumi.get(__response__, 'tos')))

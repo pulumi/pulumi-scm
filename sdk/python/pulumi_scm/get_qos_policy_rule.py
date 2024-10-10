@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -160,9 +165,6 @@ def get_qos_policy_rule(folder: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         schedule=pulumi.get(__ret__, 'schedule'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_qos_policy_rule)
 def get_qos_policy_rule_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
                                id: Optional[pulumi.Input[str]] = None,
                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetQosPolicyRuleResult]:
@@ -182,4 +184,17 @@ def get_qos_policy_rule_output(folder: Optional[pulumi.Input[Optional[str]]] = N
     :param str folder: The Folder param.
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['folder'] = folder
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getQosPolicyRule:getQosPolicyRule', __args__, opts=opts, typ=GetQosPolicyRuleResult)
+    return __ret__.apply(lambda __response__: GetQosPolicyRuleResult(
+        action=pulumi.get(__response__, 'action'),
+        description=pulumi.get(__response__, 'description'),
+        dscp_tos=pulumi.get(__response__, 'dscp_tos'),
+        folder=pulumi.get(__response__, 'folder'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        schedule=pulumi.get(__response__, 'schedule'),
+        tfid=pulumi.get(__response__, 'tfid')))

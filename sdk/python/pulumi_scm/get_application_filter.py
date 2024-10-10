@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -326,9 +331,6 @@ def get_application_filter(id: Optional[str] = None,
         transfers_files=pulumi.get(__ret__, 'transfers_files'),
         tunnels_other_apps=pulumi.get(__ret__, 'tunnels_other_apps'),
         used_by_malware=pulumi.get(__ret__, 'used_by_malware'))
-
-
-@_utilities.lift_output_func(get_application_filter)
 def get_application_filter_output(id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplicationFilterResult]:
     """
@@ -346,4 +348,29 @@ def get_application_filter_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getApplicationFilter:getApplicationFilter', __args__, opts=opts, typ=GetApplicationFilterResult)
+    return __ret__.apply(lambda __response__: GetApplicationFilterResult(
+        categories=pulumi.get(__response__, 'categories'),
+        evasive=pulumi.get(__response__, 'evasive'),
+        excessive_bandwidth_use=pulumi.get(__response__, 'excessive_bandwidth_use'),
+        excludes=pulumi.get(__response__, 'excludes'),
+        has_known_vulnerabilities=pulumi.get(__response__, 'has_known_vulnerabilities'),
+        id=pulumi.get(__response__, 'id'),
+        is_saas=pulumi.get(__response__, 'is_saas'),
+        name=pulumi.get(__response__, 'name'),
+        new_appid=pulumi.get(__response__, 'new_appid'),
+        pervasive=pulumi.get(__response__, 'pervasive'),
+        prone_to_misuse=pulumi.get(__response__, 'prone_to_misuse'),
+        risks=pulumi.get(__response__, 'risks'),
+        saas_certifications=pulumi.get(__response__, 'saas_certifications'),
+        saas_risks=pulumi.get(__response__, 'saas_risks'),
+        subcategories=pulumi.get(__response__, 'subcategories'),
+        tagging=pulumi.get(__response__, 'tagging'),
+        technologies=pulumi.get(__response__, 'technologies'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        transfers_files=pulumi.get(__response__, 'transfers_files'),
+        tunnels_other_apps=pulumi.get(__response__, 'tunnels_other_apps'),
+        used_by_malware=pulumi.get(__response__, 'used_by_malware')))

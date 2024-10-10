@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetJobs(ctx, nil, nil)
+//			_, err := scm.GetJobs(ctx, &scm.GetJobsArgs{}, nil)
 //			if err != nil {
 //				return err
 //			}

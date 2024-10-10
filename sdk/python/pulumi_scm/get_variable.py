@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -191,9 +196,6 @@ def get_variable(device: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         type=pulumi.get(__ret__, 'type'),
         value=pulumi.get(__ret__, 'value'))
-
-
-@_utilities.lift_output_func(get_variable)
 def get_variable_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                         folder: Optional[pulumi.Input[Optional[str]]] = None,
                         id: Optional[pulumi.Input[str]] = None,
@@ -217,4 +219,21 @@ def get_variable_output(device: Optional[pulumi.Input[Optional[str]]] = None,
     :param str id: The Id param.
     :param str snippet: The Snippet param.
     """
-    ...
+    __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
+    __args__['id'] = id
+    __args__['snippet'] = snippet
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getVariable:getVariable', __args__, opts=opts, typ=GetVariableResult)
+    return __ret__.apply(lambda __response__: GetVariableResult(
+        description=pulumi.get(__response__, 'description'),
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        overridden=pulumi.get(__response__, 'overridden'),
+        snippet=pulumi.get(__response__, 'snippet'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        type=pulumi.get(__response__, 'type'),
+        value=pulumi.get(__response__, 'value')))

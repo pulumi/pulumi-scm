@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -157,9 +162,6 @@ def get_wildfire_anti_virus_profile(id: Optional[str] = None,
         rules=pulumi.get(__ret__, 'rules'),
         tfid=pulumi.get(__ret__, 'tfid'),
         threat_exceptions=pulumi.get(__ret__, 'threat_exceptions'))
-
-
-@_utilities.lift_output_func(get_wildfire_anti_virus_profile)
 def get_wildfire_anti_virus_profile_output(id: Optional[pulumi.Input[str]] = None,
                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWildfireAntiVirusProfileResult]:
     """
@@ -177,4 +179,16 @@ def get_wildfire_anti_virus_profile_output(id: Optional[pulumi.Input[str]] = Non
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile', __args__, opts=opts, typ=GetWildfireAntiVirusProfileResult)
+    return __ret__.apply(lambda __response__: GetWildfireAntiVirusProfileResult(
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        mlav_exceptions=pulumi.get(__response__, 'mlav_exceptions'),
+        name=pulumi.get(__response__, 'name'),
+        packet_capture=pulumi.get(__response__, 'packet_capture'),
+        rules=pulumi.get(__response__, 'rules'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        threat_exceptions=pulumi.get(__response__, 'threat_exceptions')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -150,9 +155,6 @@ def get_snippet_list(limit: Optional[int] = None,
         offset=pulumi.get(__ret__, 'offset'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
-
-
-@_utilities.lift_output_func(get_snippet_list)
 def get_snippet_list_output(limit: Optional[pulumi.Input[Optional[int]]] = None,
                             name: Optional[pulumi.Input[Optional[str]]] = None,
                             offset: Optional[pulumi.Input[Optional[int]]] = None,
@@ -174,4 +176,17 @@ def get_snippet_list_output(limit: Optional[pulumi.Input[Optional[int]]] = None,
     :param str name: The Name param.
     :param int offset: The Offset param. Default: `0`.
     """
-    ...
+    __args__ = dict()
+    __args__['limit'] = limit
+    __args__['name'] = name
+    __args__['offset'] = offset
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getSnippetList:getSnippetList', __args__, opts=opts, typ=GetSnippetListResult)
+    return __ret__.apply(lambda __response__: GetSnippetListResult(
+        datas=pulumi.get(__response__, 'datas'),
+        id=pulumi.get(__response__, 'id'),
+        limit=pulumi.get(__response__, 'limit'),
+        name=pulumi.get(__response__, 'name'),
+        offset=pulumi.get(__response__, 'offset'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        total=pulumi.get(__response__, 'total')))

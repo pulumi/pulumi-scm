@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -260,9 +265,6 @@ def get_jobs(id: Optional[int] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         type_str=pulumi.get(__ret__, 'type_str'),
         uname=pulumi.get(__ret__, 'uname'))
-
-
-@_utilities.lift_output_func(get_jobs)
 def get_jobs_output(id: Optional[pulumi.Input[int]] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetJobsResult]:
     """
@@ -280,4 +282,24 @@ def get_jobs_output(id: Optional[pulumi.Input[int]] = None,
 
     :param int id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getJobs:getJobs', __args__, opts=opts, typ=GetJobsResult)
+    return __ret__.apply(lambda __response__: GetJobsResult(
+        description=pulumi.get(__response__, 'description'),
+        device_name=pulumi.get(__response__, 'device_name'),
+        end_ts=pulumi.get(__response__, 'end_ts'),
+        id=pulumi.get(__response__, 'id'),
+        job_result=pulumi.get(__response__, 'job_result'),
+        job_status=pulumi.get(__response__, 'job_status'),
+        job_type=pulumi.get(__response__, 'job_type'),
+        parent_id=pulumi.get(__response__, 'parent_id'),
+        percent=pulumi.get(__response__, 'percent'),
+        result_str=pulumi.get(__response__, 'result_str'),
+        start_ts=pulumi.get(__response__, 'start_ts'),
+        status_str=pulumi.get(__response__, 'status_str'),
+        summary=pulumi.get(__response__, 'summary'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        type_str=pulumi.get(__response__, 'type_str'),
+        uname=pulumi.get(__response__, 'uname')))
