@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -225,9 +230,6 @@ def get_remote_network(folder: Optional[str] = None,
         spn_name=pulumi.get(__ret__, 'spn_name'),
         subnets=pulumi.get(__ret__, 'subnets'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_remote_network)
 def get_remote_network_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
                               id: Optional[pulumi.Input[str]] = None,
                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetRemoteNetworkResult]:
@@ -247,4 +249,22 @@ def get_remote_network_output(folder: Optional[pulumi.Input[Optional[str]]] = No
     :param str folder: The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['folder'] = folder
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getRemoteNetwork:getRemoteNetwork', __args__, opts=opts, typ=GetRemoteNetworkResult)
+    return __ret__.apply(lambda __response__: GetRemoteNetworkResult(
+        ecmp_load_balancing=pulumi.get(__response__, 'ecmp_load_balancing'),
+        ecmp_tunnels=pulumi.get(__response__, 'ecmp_tunnels'),
+        folder=pulumi.get(__response__, 'folder'),
+        id=pulumi.get(__response__, 'id'),
+        ipsec_tunnel=pulumi.get(__response__, 'ipsec_tunnel'),
+        license_type=pulumi.get(__response__, 'license_type'),
+        name=pulumi.get(__response__, 'name'),
+        protocol=pulumi.get(__response__, 'protocol'),
+        region=pulumi.get(__response__, 'region'),
+        secondary_ipsec_tunnel=pulumi.get(__response__, 'secondary_ipsec_tunnel'),
+        spn_name=pulumi.get(__response__, 'spn_name'),
+        subnets=pulumi.get(__response__, 'subnets'),
+        tfid=pulumi.get(__response__, 'tfid')))

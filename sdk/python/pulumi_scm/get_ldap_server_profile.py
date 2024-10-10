@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -209,9 +214,6 @@ def get_ldap_server_profile(id: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         timelimit=pulumi.get(__ret__, 'timelimit'),
         verify_server_certificate=pulumi.get(__ret__, 'verify_server_certificate'))
-
-
-@_utilities.lift_output_func(get_ldap_server_profile)
 def get_ldap_server_profile_output(id: Optional[pulumi.Input[str]] = None,
                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLdapServerProfileResult]:
     """
@@ -229,4 +231,20 @@ def get_ldap_server_profile_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getLdapServerProfile:getLdapServerProfile', __args__, opts=opts, typ=GetLdapServerProfileResult)
+    return __ret__.apply(lambda __response__: GetLdapServerProfileResult(
+        base=pulumi.get(__response__, 'base'),
+        bind_dn=pulumi.get(__response__, 'bind_dn'),
+        bind_password=pulumi.get(__response__, 'bind_password'),
+        bind_timelimit=pulumi.get(__response__, 'bind_timelimit'),
+        id=pulumi.get(__response__, 'id'),
+        ldap_type=pulumi.get(__response__, 'ldap_type'),
+        retry_interval=pulumi.get(__response__, 'retry_interval'),
+        servers=pulumi.get(__response__, 'servers'),
+        ssl=pulumi.get(__response__, 'ssl'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        timelimit=pulumi.get(__response__, 'timelimit'),
+        verify_server_certificate=pulumi.get(__response__, 'verify_server_certificate')))

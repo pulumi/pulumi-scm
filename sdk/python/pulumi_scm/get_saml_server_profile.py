@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -182,9 +187,6 @@ def get_saml_server_profile(id: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         validate_idp_certificate=pulumi.get(__ret__, 'validate_idp_certificate'),
         want_auth_requests_signed=pulumi.get(__ret__, 'want_auth_requests_signed'))
-
-
-@_utilities.lift_output_func(get_saml_server_profile)
 def get_saml_server_profile_output(id: Optional[pulumi.Input[str]] = None,
                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSamlServerProfileResult]:
     """
@@ -202,4 +204,18 @@ def get_saml_server_profile_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getSamlServerProfile:getSamlServerProfile', __args__, opts=opts, typ=GetSamlServerProfileResult)
+    return __ret__.apply(lambda __response__: GetSamlServerProfileResult(
+        certificate=pulumi.get(__response__, 'certificate'),
+        entity_id=pulumi.get(__response__, 'entity_id'),
+        id=pulumi.get(__response__, 'id'),
+        max_clock_skew=pulumi.get(__response__, 'max_clock_skew'),
+        slo_bindings=pulumi.get(__response__, 'slo_bindings'),
+        sso_bindings=pulumi.get(__response__, 'sso_bindings'),
+        sso_url=pulumi.get(__response__, 'sso_url'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        validate_idp_certificate=pulumi.get(__response__, 'validate_idp_certificate'),
+        want_auth_requests_signed=pulumi.get(__response__, 'want_auth_requests_signed')))

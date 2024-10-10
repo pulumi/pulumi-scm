@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -161,9 +166,6 @@ def get_traffic_steering_rule(id: Optional[str] = None,
         source_users=pulumi.get(__ret__, 'source_users'),
         sources=pulumi.get(__ret__, 'sources'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_traffic_steering_rule)
 def get_traffic_steering_rule_output(id: Optional[pulumi.Input[str]] = None,
                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTrafficSteeringRuleResult]:
     """
@@ -172,4 +174,17 @@ def get_traffic_steering_rule_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getTrafficSteeringRule:getTrafficSteeringRule', __args__, opts=opts, typ=GetTrafficSteeringRuleResult)
+    return __ret__.apply(lambda __response__: GetTrafficSteeringRuleResult(
+        action=pulumi.get(__response__, 'action'),
+        categories=pulumi.get(__response__, 'categories'),
+        destinations=pulumi.get(__response__, 'destinations'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        services=pulumi.get(__response__, 'services'),
+        source_users=pulumi.get(__response__, 'source_users'),
+        sources=pulumi.get(__response__, 'sources'),
+        tfid=pulumi.get(__response__, 'tfid')))

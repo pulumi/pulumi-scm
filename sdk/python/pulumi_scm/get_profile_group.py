@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -182,9 +187,6 @@ def get_profile_group(id: Optional[str] = None,
         url_filterings=pulumi.get(__ret__, 'url_filterings'),
         virus_and_wildfire_analyses=pulumi.get(__ret__, 'virus_and_wildfire_analyses'),
         vulnerabilities=pulumi.get(__ret__, 'vulnerabilities'))
-
-
-@_utilities.lift_output_func(get_profile_group)
 def get_profile_group_output(id: Optional[pulumi.Input[str]] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetProfileGroupResult]:
     """
@@ -202,4 +204,18 @@ def get_profile_group_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getProfileGroup:getProfileGroup', __args__, opts=opts, typ=GetProfileGroupResult)
+    return __ret__.apply(lambda __response__: GetProfileGroupResult(
+        dns_securities=pulumi.get(__response__, 'dns_securities'),
+        file_blockings=pulumi.get(__response__, 'file_blockings'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        saas_securities=pulumi.get(__response__, 'saas_securities'),
+        spywares=pulumi.get(__response__, 'spywares'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        url_filterings=pulumi.get(__response__, 'url_filterings'),
+        virus_and_wildfire_analyses=pulumi.get(__response__, 'virus_and_wildfire_analyses'),
+        vulnerabilities=pulumi.get(__response__, 'vulnerabilities')))

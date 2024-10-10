@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -144,9 +149,6 @@ def get_decryption_profile(id: Optional[str] = None,
         ssl_no_proxy=pulumi.get(__ret__, 'ssl_no_proxy'),
         ssl_protocol_settings=pulumi.get(__ret__, 'ssl_protocol_settings'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_decryption_profile)
 def get_decryption_profile_output(id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDecryptionProfileResult]:
     """
@@ -164,4 +166,15 @@ def get_decryption_profile_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getDecryptionProfile:getDecryptionProfile', __args__, opts=opts, typ=GetDecryptionProfileResult)
+    return __ret__.apply(lambda __response__: GetDecryptionProfileResult(
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        ssl_forward_proxy=pulumi.get(__response__, 'ssl_forward_proxy'),
+        ssl_inbound_proxy=pulumi.get(__response__, 'ssl_inbound_proxy'),
+        ssl_no_proxy=pulumi.get(__response__, 'ssl_no_proxy'),
+        ssl_protocol_settings=pulumi.get(__response__, 'ssl_protocol_settings'),
+        tfid=pulumi.get(__response__, 'tfid')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -121,9 +126,6 @@ def get_url_category(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         tfid=pulumi.get(__ret__, 'tfid'),
         type=pulumi.get(__ret__, 'type'))
-
-
-@_utilities.lift_output_func(get_url_category)
 def get_url_category_output(id: Optional[pulumi.Input[str]] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetUrlCategoryResult]:
     """
@@ -132,4 +134,14 @@ def get_url_category_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getUrlCategory:getUrlCategory', __args__, opts=opts, typ=GetUrlCategoryResult)
+    return __ret__.apply(lambda __response__: GetUrlCategoryResult(
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        lists=pulumi.get(__response__, 'lists'),
+        name=pulumi.get(__response__, 'name'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        type=pulumi.get(__response__, 'type')))

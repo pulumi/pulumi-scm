@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -169,9 +174,6 @@ def get_authentication_portal(id: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         timer=pulumi.get(__ret__, 'timer'),
         tls_service_profile=pulumi.get(__ret__, 'tls_service_profile'))
-
-
-@_utilities.lift_output_func(get_authentication_portal)
 def get_authentication_portal_output(id: Optional[pulumi.Input[str]] = None,
                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthenticationPortalResult]:
     """
@@ -189,4 +191,17 @@ def get_authentication_portal_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationPortal:getAuthenticationPortal', __args__, opts=opts, typ=GetAuthenticationPortalResult)
+    return __ret__.apply(lambda __response__: GetAuthenticationPortalResult(
+        authentication_profile=pulumi.get(__response__, 'authentication_profile'),
+        certificate_profile=pulumi.get(__response__, 'certificate_profile'),
+        gp_udp_port=pulumi.get(__response__, 'gp_udp_port'),
+        id=pulumi.get(__response__, 'id'),
+        idle_timer=pulumi.get(__response__, 'idle_timer'),
+        redirect_host=pulumi.get(__response__, 'redirect_host'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        timer=pulumi.get(__response__, 'timer'),
+        tls_service_profile=pulumi.get(__response__, 'tls_service_profile')))

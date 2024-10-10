@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -144,9 +149,6 @@ def get_address_group(id: Optional[str] = None,
         static_lists=pulumi.get(__ret__, 'static_lists'),
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_address_group)
 def get_address_group_output(id: Optional[pulumi.Input[str]] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAddressGroupResult]:
     """
@@ -164,4 +166,15 @@ def get_address_group_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getAddressGroup:getAddressGroup', __args__, opts=opts, typ=GetAddressGroupResult)
+    return __ret__.apply(lambda __response__: GetAddressGroupResult(
+        description=pulumi.get(__response__, 'description'),
+        dynamic_value=pulumi.get(__response__, 'dynamic_value'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        static_lists=pulumi.get(__response__, 'static_lists'),
+        tags=pulumi.get(__response__, 'tags'),
+        tfid=pulumi.get(__response__, 'tfid')))

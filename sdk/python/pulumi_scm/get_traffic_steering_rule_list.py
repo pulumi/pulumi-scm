@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -166,9 +171,6 @@ def get_traffic_steering_rule_list(folder: Optional[str] = None,
         offset=pulumi.get(__ret__, 'offset'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
-
-
-@_utilities.lift_output_func(get_traffic_steering_rule_list)
 def get_traffic_steering_rule_list_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
                                           limit: Optional[pulumi.Input[Optional[int]]] = None,
                                           name: Optional[pulumi.Input[Optional[str]]] = None,
@@ -192,4 +194,19 @@ def get_traffic_steering_rule_list_output(folder: Optional[pulumi.Input[Optional
     :param str name: The Name param.
     :param int offset: The Offset param. Default: `0`.
     """
-    ...
+    __args__ = dict()
+    __args__['folder'] = folder
+    __args__['limit'] = limit
+    __args__['name'] = name
+    __args__['offset'] = offset
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getTrafficSteeringRuleList:getTrafficSteeringRuleList', __args__, opts=opts, typ=GetTrafficSteeringRuleListResult)
+    return __ret__.apply(lambda __response__: GetTrafficSteeringRuleListResult(
+        datas=pulumi.get(__response__, 'datas'),
+        folder=pulumi.get(__response__, 'folder'),
+        id=pulumi.get(__response__, 'id'),
+        limit=pulumi.get(__response__, 'limit'),
+        name=pulumi.get(__response__, 'name'),
+        offset=pulumi.get(__response__, 'offset'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        total=pulumi.get(__response__, 'total')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -260,9 +265,6 @@ def get_app_override_rule(id: Optional[str] = None,
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'),
         tos=pulumi.get(__ret__, 'tos'))
-
-
-@_utilities.lift_output_func(get_app_override_rule)
 def get_app_override_rule_output(id: Optional[pulumi.Input[str]] = None,
                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAppOverrideRuleResult]:
     """
@@ -280,4 +282,24 @@ def get_app_override_rule_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getAppOverrideRule:getAppOverrideRule', __args__, opts=opts, typ=GetAppOverrideRuleResult)
+    return __ret__.apply(lambda __response__: GetAppOverrideRuleResult(
+        application=pulumi.get(__response__, 'application'),
+        description=pulumi.get(__response__, 'description'),
+        destinations=pulumi.get(__response__, 'destinations'),
+        disabled=pulumi.get(__response__, 'disabled'),
+        froms=pulumi.get(__response__, 'froms'),
+        group_tag=pulumi.get(__response__, 'group_tag'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        negate_destination=pulumi.get(__response__, 'negate_destination'),
+        negate_source=pulumi.get(__response__, 'negate_source'),
+        port=pulumi.get(__response__, 'port'),
+        protocol=pulumi.get(__response__, 'protocol'),
+        sources=pulumi.get(__response__, 'sources'),
+        tags=pulumi.get(__response__, 'tags'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        tos=pulumi.get(__response__, 'tos')))

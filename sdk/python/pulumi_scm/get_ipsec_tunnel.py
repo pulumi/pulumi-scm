@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -173,9 +178,6 @@ def get_ipsec_tunnel(folder: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         tfid=pulumi.get(__ret__, 'tfid'),
         tunnel_monitor=pulumi.get(__ret__, 'tunnel_monitor'))
-
-
-@_utilities.lift_output_func(get_ipsec_tunnel)
 def get_ipsec_tunnel_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
                             id: Optional[pulumi.Input[str]] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetIpsecTunnelResult]:
@@ -195,4 +197,18 @@ def get_ipsec_tunnel_output(folder: Optional[pulumi.Input[Optional[str]]] = None
     :param str folder: The Folder param.
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['folder'] = folder
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getIpsecTunnel:getIpsecTunnel', __args__, opts=opts, typ=GetIpsecTunnelResult)
+    return __ret__.apply(lambda __response__: GetIpsecTunnelResult(
+        anti_replay=pulumi.get(__response__, 'anti_replay'),
+        auto_key=pulumi.get(__response__, 'auto_key'),
+        copy_tos=pulumi.get(__response__, 'copy_tos'),
+        enable_gre_encapsulation=pulumi.get(__response__, 'enable_gre_encapsulation'),
+        folder=pulumi.get(__response__, 'folder'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        tunnel_monitor=pulumi.get(__response__, 'tunnel_monitor')))

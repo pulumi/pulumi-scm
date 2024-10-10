@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -130,9 +135,6 @@ def get_internal_dns_server(id: Optional[str] = None,
         primary=pulumi.get(__ret__, 'primary'),
         secondary=pulumi.get(__ret__, 'secondary'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_internal_dns_server)
 def get_internal_dns_server_output(id: Optional[pulumi.Input[str]] = None,
                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInternalDnsServerResult]:
     """
@@ -150,4 +152,14 @@ def get_internal_dns_server_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getInternalDnsServer:getInternalDnsServer', __args__, opts=opts, typ=GetInternalDnsServerResult)
+    return __ret__.apply(lambda __response__: GetInternalDnsServerResult(
+        domain_names=pulumi.get(__response__, 'domain_names'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        primary=pulumi.get(__response__, 'primary'),
+        secondary=pulumi.get(__response__, 'secondary'),
+        tfid=pulumi.get(__response__, 'tfid')))

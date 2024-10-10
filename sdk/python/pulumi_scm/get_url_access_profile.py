@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -274,9 +279,6 @@ def get_url_access_profile(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         safe_search_enforcement=pulumi.get(__ret__, 'safe_search_enforcement'),
         tfid=pulumi.get(__ret__, 'tfid'))
-
-
-@_utilities.lift_output_func(get_url_access_profile)
 def get_url_access_profile_output(id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetUrlAccessProfileResult]:
     """
@@ -294,4 +296,25 @@ def get_url_access_profile_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getUrlAccessProfile:getUrlAccessProfile', __args__, opts=opts, typ=GetUrlAccessProfileResult)
+    return __ret__.apply(lambda __response__: GetUrlAccessProfileResult(
+        alerts=pulumi.get(__response__, 'alerts'),
+        allows=pulumi.get(__response__, 'allows'),
+        blocks=pulumi.get(__response__, 'blocks'),
+        cloud_inline_cat=pulumi.get(__response__, 'cloud_inline_cat'),
+        continues=pulumi.get(__response__, 'continues'),
+        credential_enforcement=pulumi.get(__response__, 'credential_enforcement'),
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        local_inline_cat=pulumi.get(__response__, 'local_inline_cat'),
+        log_container_page_only=pulumi.get(__response__, 'log_container_page_only'),
+        log_http_hdr_referer=pulumi.get(__response__, 'log_http_hdr_referer'),
+        log_http_hdr_user_agent=pulumi.get(__response__, 'log_http_hdr_user_agent'),
+        log_http_hdr_xff=pulumi.get(__response__, 'log_http_hdr_xff'),
+        mlav_category_exceptions=pulumi.get(__response__, 'mlav_category_exceptions'),
+        name=pulumi.get(__response__, 'name'),
+        safe_search_enforcement=pulumi.get(__response__, 'safe_search_enforcement'),
+        tfid=pulumi.get(__response__, 'tfid')))

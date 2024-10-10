@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -196,9 +201,6 @@ def get_snippet(id: Optional[str] = None,
         shared_in=pulumi.get(__ret__, 'shared_in'),
         tfid=pulumi.get(__ret__, 'tfid'),
         type=pulumi.get(__ret__, 'type'))
-
-
-@_utilities.lift_output_func(get_snippet)
 def get_snippet_output(id: Optional[pulumi.Input[str]] = None,
                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSnippetResult]:
     """
@@ -216,4 +218,19 @@ def get_snippet_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getSnippet:getSnippet', __args__, opts=opts, typ=GetSnippetResult)
+    return __ret__.apply(lambda __response__: GetSnippetResult(
+        created_in=pulumi.get(__response__, 'created_in'),
+        description=pulumi.get(__response__, 'description'),
+        display_name=pulumi.get(__response__, 'display_name'),
+        folders=pulumi.get(__response__, 'folders'),
+        id=pulumi.get(__response__, 'id'),
+        labels=pulumi.get(__response__, 'labels'),
+        last_update=pulumi.get(__response__, 'last_update'),
+        name=pulumi.get(__response__, 'name'),
+        shared_in=pulumi.get(__response__, 'shared_in'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        type=pulumi.get(__response__, 'type')))

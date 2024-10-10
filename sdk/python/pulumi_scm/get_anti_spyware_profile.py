@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -183,9 +188,6 @@ def get_anti_spyware_profile(id: Optional[str] = None,
         rules=pulumi.get(__ret__, 'rules'),
         tfid=pulumi.get(__ret__, 'tfid'),
         threat_exceptions=pulumi.get(__ret__, 'threat_exceptions'))
-
-
-@_utilities.lift_output_func(get_anti_spyware_profile)
 def get_anti_spyware_profile_output(id: Optional[pulumi.Input[str]] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAntiSpywareProfileResult]:
     """
@@ -203,4 +205,18 @@ def get_anti_spyware_profile_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The Id param.
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('scm:index/getAntiSpywareProfile:getAntiSpywareProfile', __args__, opts=opts, typ=GetAntiSpywareProfileResult)
+    return __ret__.apply(lambda __response__: GetAntiSpywareProfileResult(
+        cloud_inline_analysis=pulumi.get(__response__, 'cloud_inline_analysis'),
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        inline_exception_edl_urls=pulumi.get(__response__, 'inline_exception_edl_urls'),
+        inline_exception_ip_addresses=pulumi.get(__response__, 'inline_exception_ip_addresses'),
+        mica_engine_spyware_enabled_lists=pulumi.get(__response__, 'mica_engine_spyware_enabled_lists'),
+        name=pulumi.get(__response__, 'name'),
+        rules=pulumi.get(__response__, 'rules'),
+        tfid=pulumi.get(__response__, 'tfid'),
+        threat_exceptions=pulumi.get(__response__, 'threat_exceptions')))
