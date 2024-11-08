@@ -24,7 +24,7 @@ import (
 
 	"github.com/PaloAltoNetworks/terraform-provider-scm/scm"
 
-	pf "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
+	pf "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	tfbridgetokens "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
