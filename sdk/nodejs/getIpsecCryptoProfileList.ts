@@ -119,7 +119,7 @@ export interface GetIpsecCryptoProfileListResult {
  * });
  * ```
  */
-export function getIpsecCryptoProfileListOutput(args?: GetIpsecCryptoProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpsecCryptoProfileListResult> {
+export function getIpsecCryptoProfileListOutput(args?: GetIpsecCryptoProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpsecCryptoProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIpsecCryptoProfileList:getIpsecCryptoProfileList", {

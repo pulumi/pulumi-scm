@@ -119,7 +119,7 @@ export interface GetDnsSecurityProfileListResult {
  * });
  * ```
  */
-export function getDnsSecurityProfileListOutput(args?: GetDnsSecurityProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDnsSecurityProfileListResult> {
+export function getDnsSecurityProfileListOutput(args?: GetDnsSecurityProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDnsSecurityProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDnsSecurityProfileList:getDnsSecurityProfileList", {

@@ -154,7 +154,7 @@ def get_service_connection_group(folder: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_service_connection_group_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
                                         id: Optional[pulumi.Input[str]] = None,
-                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceConnectionGroupResult]:
+                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceConnectionGroupResult]:
     """
     Retrieves a config item.
 
@@ -175,7 +175,7 @@ def get_service_connection_group_output(folder: Optional[pulumi.Input[Optional[s
     __args__ = dict()
     __args__['folder'] = folder
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getServiceConnectionGroup:getServiceConnectionGroup', __args__, opts=opts, typ=GetServiceConnectionGroupResult)
     return __ret__.apply(lambda __response__: GetServiceConnectionGroupResult(
         disable_snat=pulumi.get(__response__, 'disable_snat'),

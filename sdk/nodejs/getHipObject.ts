@@ -113,7 +113,7 @@ export interface GetHipObjectResult {
  * });
  * ```
  */
-export function getHipObjectOutput(args: GetHipObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHipObjectResult> {
+export function getHipObjectOutput(args: GetHipObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHipObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getHipObject:getHipObject", {
         "id": args.id,

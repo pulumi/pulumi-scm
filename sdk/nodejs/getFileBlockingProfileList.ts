@@ -119,7 +119,7 @@ export interface GetFileBlockingProfileListResult {
  * });
  * ```
  */
-export function getFileBlockingProfileListOutput(args?: GetFileBlockingProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFileBlockingProfileListResult> {
+export function getFileBlockingProfileListOutput(args?: GetFileBlockingProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFileBlockingProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getFileBlockingProfileList:getFileBlockingProfileList", {

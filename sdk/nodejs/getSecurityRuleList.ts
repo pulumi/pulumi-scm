@@ -130,7 +130,7 @@ export interface GetSecurityRuleListResult {
  * });
  * ```
  */
-export function getSecurityRuleListOutput(args?: GetSecurityRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSecurityRuleListResult> {
+export function getSecurityRuleListOutput(args?: GetSecurityRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSecurityRuleListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSecurityRuleList:getSecurityRuleList", {

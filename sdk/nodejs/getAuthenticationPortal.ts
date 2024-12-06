@@ -87,7 +87,7 @@ export interface GetAuthenticationPortalResult {
  * });
  * ```
  */
-export function getAuthenticationPortalOutput(args: GetAuthenticationPortalOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationPortalResult> {
+export function getAuthenticationPortalOutput(args: GetAuthenticationPortalOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationPortalResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationPortal:getAuthenticationPortal", {
         "id": args.id,

@@ -119,7 +119,7 @@ export interface GetAddressObjectListResult {
  * });
  * ```
  */
-export function getAddressObjectListOutput(args?: GetAddressObjectListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAddressObjectListResult> {
+export function getAddressObjectListOutput(args?: GetAddressObjectListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAddressObjectListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAddressObjectList:getAddressObjectList", {

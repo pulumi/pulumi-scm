@@ -119,7 +119,7 @@ export interface GetVariableListResult {
  * });
  * ```
  */
-export function getVariableListOutput(args?: GetVariableListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVariableListResult> {
+export function getVariableListOutput(args?: GetVariableListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVariableListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getVariableList:getVariableList", {

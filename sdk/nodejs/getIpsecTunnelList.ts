@@ -119,7 +119,7 @@ export interface GetIpsecTunnelListResult {
  * });
  * ```
  */
-export function getIpsecTunnelListOutput(args?: GetIpsecTunnelListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpsecTunnelListResult> {
+export function getIpsecTunnelListOutput(args?: GetIpsecTunnelListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpsecTunnelListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIpsecTunnelList:getIpsecTunnelList", {

@@ -119,7 +119,7 @@ export interface GetDecryptionProfileListResult {
  * });
  * ```
  */
-export function getDecryptionProfileListOutput(args?: GetDecryptionProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDecryptionProfileListResult> {
+export function getDecryptionProfileListOutput(args?: GetDecryptionProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDecryptionProfileList:getDecryptionProfileList", {

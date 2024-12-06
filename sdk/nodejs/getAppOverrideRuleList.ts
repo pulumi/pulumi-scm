@@ -130,7 +130,7 @@ export interface GetAppOverrideRuleListResult {
  * });
  * ```
  */
-export function getAppOverrideRuleListOutput(args?: GetAppOverrideRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAppOverrideRuleListResult> {
+export function getAppOverrideRuleListOutput(args?: GetAppOverrideRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAppOverrideRuleListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAppOverrideRuleList:getAppOverrideRuleList", {

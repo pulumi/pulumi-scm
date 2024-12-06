@@ -150,7 +150,7 @@ def get_decryption_profile(id: Optional[str] = None,
         ssl_protocol_settings=pulumi.get(__ret__, 'ssl_protocol_settings'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_decryption_profile_output(id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDecryptionProfileResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDecryptionProfileResult]:
     """
     Retrieves a config item.
 
@@ -168,7 +168,7 @@ def get_decryption_profile_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getDecryptionProfile:getDecryptionProfile', __args__, opts=opts, typ=GetDecryptionProfileResult)
     return __ret__.apply(lambda __response__: GetDecryptionProfileResult(
         id=pulumi.get(__response__, 'id'),

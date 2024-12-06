@@ -88,7 +88,7 @@ export interface GetDeviceListResult {
  * const example = scm.getDeviceList({});
  * ```
  */
-export function getDeviceListOutput(args?: GetDeviceListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDeviceListResult> {
+export function getDeviceListOutput(args?: GetDeviceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDeviceListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDeviceList:getDeviceList", {

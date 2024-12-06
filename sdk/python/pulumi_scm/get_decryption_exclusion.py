@@ -110,7 +110,7 @@ def get_decryption_exclusion(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_decryption_exclusion_output(id: Optional[pulumi.Input[str]] = None,
-                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDecryptionExclusionResult]:
+                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDecryptionExclusionResult]:
     """
     Retrieves a config item.
 
@@ -128,7 +128,7 @@ def get_decryption_exclusion_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getDecryptionExclusion:getDecryptionExclusion', __args__, opts=opts, typ=GetDecryptionExclusionResult)
     return __ret__.apply(lambda __response__: GetDecryptionExclusionResult(
         description=pulumi.get(__response__, 'description'),

@@ -71,7 +71,7 @@ export interface GetServiceGroupResult {
  * });
  * ```
  */
-export function getServiceGroupOutput(args: GetServiceGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceGroupResult> {
+export function getServiceGroupOutput(args: GetServiceGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getServiceGroup:getServiceGroup", {
         "id": args.id,

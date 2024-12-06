@@ -90,7 +90,7 @@ export interface GetQosPolicyRuleResult {
  * });
  * ```
  */
-export function getQosPolicyRuleOutput(args: GetQosPolicyRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetQosPolicyRuleResult> {
+export function getQosPolicyRuleOutput(args: GetQosPolicyRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetQosPolicyRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getQosPolicyRule:getQosPolicyRule", {
         "folder": args.folder,

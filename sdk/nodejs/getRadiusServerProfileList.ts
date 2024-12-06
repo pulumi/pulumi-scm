@@ -119,7 +119,7 @@ export interface GetRadiusServerProfileListResult {
  * });
  * ```
  */
-export function getRadiusServerProfileListOutput(args?: GetRadiusServerProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRadiusServerProfileListResult> {
+export function getRadiusServerProfileListOutput(args?: GetRadiusServerProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRadiusServerProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", {
