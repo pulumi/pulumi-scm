@@ -119,7 +119,7 @@ export interface GetLocalUserListResult {
  * });
  * ```
  */
-export function getLocalUserListOutput(args?: GetLocalUserListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLocalUserListResult> {
+export function getLocalUserListOutput(args?: GetLocalUserListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLocalUserListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLocalUserList:getLocalUserList", {

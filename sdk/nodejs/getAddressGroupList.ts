@@ -119,7 +119,7 @@ export interface GetAddressGroupListResult {
  * });
  * ```
  */
-export function getAddressGroupListOutput(args?: GetAddressGroupListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAddressGroupListResult> {
+export function getAddressGroupListOutput(args?: GetAddressGroupListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAddressGroupListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAddressGroupList:getAddressGroupList", {

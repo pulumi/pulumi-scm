@@ -119,7 +119,7 @@ export interface GetAntiSpywareProfileListResult {
  * });
  * ```
  */
-export function getAntiSpywareProfileListOutput(args?: GetAntiSpywareProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAntiSpywareProfileListResult> {
+export function getAntiSpywareProfileListOutput(args?: GetAntiSpywareProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAntiSpywareProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAntiSpywareProfileList:getAntiSpywareProfileList", {

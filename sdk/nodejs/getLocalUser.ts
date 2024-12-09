@@ -71,7 +71,7 @@ export interface GetLocalUserResult {
  * });
  * ```
  */
-export function getLocalUserOutput(args: GetLocalUserOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLocalUserResult> {
+export function getLocalUserOutput(args: GetLocalUserOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLocalUserResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLocalUser:getLocalUser", {
         "id": args.id,

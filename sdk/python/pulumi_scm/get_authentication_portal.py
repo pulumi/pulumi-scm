@@ -175,7 +175,7 @@ def get_authentication_portal(id: Optional[str] = None,
         timer=pulumi.get(__ret__, 'timer'),
         tls_service_profile=pulumi.get(__ret__, 'tls_service_profile'))
 def get_authentication_portal_output(id: Optional[pulumi.Input[str]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthenticationPortalResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationPortalResult]:
     """
     Retrieves a config item.
 
@@ -193,7 +193,7 @@ def get_authentication_portal_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationPortal:getAuthenticationPortal', __args__, opts=opts, typ=GetAuthenticationPortalResult)
     return __ret__.apply(lambda __response__: GetAuthenticationPortalResult(
         authentication_profile=pulumi.get(__response__, 'authentication_profile'),

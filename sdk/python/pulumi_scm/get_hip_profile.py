@@ -123,7 +123,7 @@ def get_hip_profile(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_hip_profile_output(id: Optional[pulumi.Input[str]] = None,
-                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetHipProfileResult]:
+                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetHipProfileResult]:
     """
     Retrieves a config item.
 
@@ -141,7 +141,7 @@ def get_hip_profile_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getHipProfile:getHipProfile', __args__, opts=opts, typ=GetHipProfileResult)
     return __ret__.apply(lambda __response__: GetHipProfileResult(
         description=pulumi.get(__response__, 'description'),

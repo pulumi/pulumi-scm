@@ -119,7 +119,7 @@ export interface GetHipProfileListResult {
  * });
  * ```
  */
-export function getHipProfileListOutput(args?: GetHipProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHipProfileListResult> {
+export function getHipProfileListOutput(args?: GetHipProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHipProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getHipProfileList:getHipProfileList", {

@@ -137,7 +137,7 @@ export interface GetSecurityRuleResult {
  * });
  * ```
  */
-export function getSecurityRuleOutput(args: GetSecurityRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSecurityRuleResult> {
+export function getSecurityRuleOutput(args: GetSecurityRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSecurityRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSecurityRule:getSecurityRule", {
         "id": args.id,

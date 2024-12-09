@@ -67,7 +67,7 @@ export interface GetDecryptionExclusionResult {
  * });
  * ```
  */
-export function getDecryptionExclusionOutput(args: GetDecryptionExclusionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDecryptionExclusionResult> {
+export function getDecryptionExclusionOutput(args: GetDecryptionExclusionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionExclusionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDecryptionExclusion:getDecryptionExclusion", {
         "id": args.id,

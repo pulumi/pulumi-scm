@@ -67,7 +67,7 @@ export interface GetTrafficSteeringRuleResult {
 /**
  * Retrieves a config item.
  */
-export function getTrafficSteeringRuleOutput(args: GetTrafficSteeringRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrafficSteeringRuleResult> {
+export function getTrafficSteeringRuleOutput(args: GetTrafficSteeringRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTrafficSteeringRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", {
         "id": args.id,

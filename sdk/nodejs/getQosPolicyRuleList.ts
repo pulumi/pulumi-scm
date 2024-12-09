@@ -130,7 +130,7 @@ export interface GetQosPolicyRuleListResult {
  * });
  * ```
  */
-export function getQosPolicyRuleListOutput(args?: GetQosPolicyRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetQosPolicyRuleListResult> {
+export function getQosPolicyRuleListOutput(args?: GetQosPolicyRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetQosPolicyRuleListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getQosPolicyRuleList:getQosPolicyRuleList", {

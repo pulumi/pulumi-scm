@@ -119,7 +119,7 @@ export interface GetApplicationGroupListResult {
  * });
  * ```
  */
-export function getApplicationGroupListOutput(args?: GetApplicationGroupListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationGroupListResult> {
+export function getApplicationGroupListOutput(args?: GetApplicationGroupListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationGroupListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getApplicationGroupList:getApplicationGroupList", {

@@ -124,7 +124,7 @@ def get_tls_service_profile(id: Optional[str] = None,
         protocol_settings=pulumi.get(__ret__, 'protocol_settings'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_tls_service_profile_output(id: Optional[pulumi.Input[str]] = None,
-                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTlsServiceProfileResult]:
+                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTlsServiceProfileResult]:
     """
     Retrieves a config item.
 
@@ -142,7 +142,7 @@ def get_tls_service_profile_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getTlsServiceProfile:getTlsServiceProfile', __args__, opts=opts, typ=GetTlsServiceProfileResult)
     return __ret__.apply(lambda __response__: GetTlsServiceProfileResult(
         certificate=pulumi.get(__response__, 'certificate'),

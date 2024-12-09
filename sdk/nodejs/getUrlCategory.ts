@@ -53,7 +53,7 @@ export interface GetUrlCategoryResult {
 /**
  * Retrieves a config item.
  */
-export function getUrlCategoryOutput(args: GetUrlCategoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUrlCategoryResult> {
+export function getUrlCategoryOutput(args: GetUrlCategoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUrlCategoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getUrlCategory:getUrlCategory", {
         "id": args.id,

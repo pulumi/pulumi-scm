@@ -175,7 +175,7 @@ def get_remote_network_list_output(folder: Optional[pulumi.Input[Optional[str]]]
                                    limit: Optional[pulumi.Input[Optional[int]]] = None,
                                    name: Optional[pulumi.Input[Optional[str]]] = None,
                                    offset: Optional[pulumi.Input[Optional[int]]] = None,
-                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetRemoteNetworkListResult]:
+                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRemoteNetworkListResult]:
     """
     Retrieves a listing of config items.
 
@@ -199,7 +199,7 @@ def get_remote_network_list_output(folder: Optional[pulumi.Input[Optional[str]]]
     __args__['limit'] = limit
     __args__['name'] = name
     __args__['offset'] = offset
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getRemoteNetworkList:getRemoteNetworkList', __args__, opts=opts, typ=GetRemoteNetworkListResult)
     return __ret__.apply(lambda __response__: GetRemoteNetworkListResult(
         datas=pulumi.get(__response__, 'datas'),

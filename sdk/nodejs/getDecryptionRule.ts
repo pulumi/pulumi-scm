@@ -145,7 +145,7 @@ export interface GetDecryptionRuleResult {
  * });
  * ```
  */
-export function getDecryptionRuleOutput(args: GetDecryptionRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDecryptionRuleResult> {
+export function getDecryptionRuleOutput(args: GetDecryptionRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDecryptionRule:getDecryptionRule", {
         "id": args.id,

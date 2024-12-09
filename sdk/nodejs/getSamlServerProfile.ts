@@ -91,7 +91,7 @@ export interface GetSamlServerProfileResult {
  * });
  * ```
  */
-export function getSamlServerProfileOutput(args: GetSamlServerProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSamlServerProfileResult> {
+export function getSamlServerProfileOutput(args: GetSamlServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSamlServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSamlServerProfile:getSamlServerProfile", {
         "id": args.id,

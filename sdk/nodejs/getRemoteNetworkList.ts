@@ -101,7 +101,7 @@ export interface GetRemoteNetworkListResult {
  * });
  * ```
  */
-export function getRemoteNetworkListOutput(args?: GetRemoteNetworkListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRemoteNetworkListResult> {
+export function getRemoteNetworkListOutput(args?: GetRemoteNetworkListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRemoteNetworkListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRemoteNetworkList:getRemoteNetworkList", {

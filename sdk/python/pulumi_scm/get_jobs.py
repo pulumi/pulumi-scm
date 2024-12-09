@@ -266,7 +266,7 @@ def get_jobs(id: Optional[int] = None,
         type_str=pulumi.get(__ret__, 'type_str'),
         uname=pulumi.get(__ret__, 'uname'))
 def get_jobs_output(id: Optional[pulumi.Input[int]] = None,
-                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetJobsResult]:
+                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetJobsResult]:
     """
     Retrieves a config item.
 
@@ -284,7 +284,7 @@ def get_jobs_output(id: Optional[pulumi.Input[int]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getJobs:getJobs', __args__, opts=opts, typ=GetJobsResult)
     return __ret__.apply(lambda __response__: GetJobsResult(
         description=pulumi.get(__response__, 'description'),

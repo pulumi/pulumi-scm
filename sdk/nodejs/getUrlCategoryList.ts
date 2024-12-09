@@ -119,7 +119,7 @@ export interface GetUrlCategoryListResult {
  * });
  * ```
  */
-export function getUrlCategoryListOutput(args?: GetUrlCategoryListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUrlCategoryListResult> {
+export function getUrlCategoryListOutput(args?: GetUrlCategoryListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUrlCategoryListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getUrlCategoryList:getUrlCategoryList", {

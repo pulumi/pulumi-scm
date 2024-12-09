@@ -73,7 +73,7 @@ export interface GetMfaServerResult {
  * });
  * ```
  */
-export function getMfaServerOutput(args: GetMfaServerOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetMfaServerResult> {
+export function getMfaServerOutput(args: GetMfaServerOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetMfaServerResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getMfaServer:getMfaServer", {
         "id": args.id,

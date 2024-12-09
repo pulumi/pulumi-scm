@@ -119,7 +119,7 @@ export interface GetAuthenticationPortalListResult {
  * });
  * ```
  */
-export function getAuthenticationPortalListOutput(args?: GetAuthenticationPortalListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationPortalListResult> {
+export function getAuthenticationPortalListOutput(args?: GetAuthenticationPortalListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationPortalListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationPortalList:getAuthenticationPortalList", {

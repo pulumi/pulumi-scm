@@ -93,7 +93,7 @@ export interface GetAuthenticationProfileResult {
  * });
  * ```
  */
-export function getAuthenticationProfileOutput(args: GetAuthenticationProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationProfileResult> {
+export function getAuthenticationProfileOutput(args: GetAuthenticationProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationProfile:getAuthenticationProfile", {
         "id": args.id,

@@ -332,7 +332,7 @@ def get_security_rule(id: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         tos=pulumi.get(__ret__, 'tos'))
 def get_security_rule_output(id: Optional[pulumi.Input[str]] = None,
-                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSecurityRuleResult]:
+                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSecurityRuleResult]:
     """
     Retrieves a config item.
 
@@ -350,7 +350,7 @@ def get_security_rule_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getSecurityRule:getSecurityRule', __args__, opts=opts, typ=GetSecurityRuleResult)
     return __ret__.apply(lambda __response__: GetSecurityRuleResult(
         action=pulumi.get(__response__, 'action'),

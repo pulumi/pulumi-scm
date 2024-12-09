@@ -119,7 +119,7 @@ export interface GetLdapServerProfileListResult {
  * });
  * ```
  */
-export function getLdapServerProfileListOutput(args?: GetLdapServerProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLdapServerProfileListResult> {
+export function getLdapServerProfileListOutput(args?: GetLdapServerProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLdapServerProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLdapServerProfileList:getLdapServerProfileList", {

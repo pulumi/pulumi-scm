@@ -130,7 +130,7 @@ export interface GetDecryptionRuleListResult {
  * });
  * ```
  */
-export function getDecryptionRuleListOutput(args?: GetDecryptionRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDecryptionRuleListResult> {
+export function getDecryptionRuleListOutput(args?: GetDecryptionRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionRuleListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDecryptionRuleList:getDecryptionRuleList", {

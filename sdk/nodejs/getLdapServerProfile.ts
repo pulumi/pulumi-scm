@@ -101,7 +101,7 @@ export interface GetLdapServerProfileResult {
  * });
  * ```
  */
-export function getLdapServerProfileOutput(args: GetLdapServerProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLdapServerProfileResult> {
+export function getLdapServerProfileOutput(args: GetLdapServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLdapServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLdapServerProfile:getLdapServerProfile", {
         "id": args.id,

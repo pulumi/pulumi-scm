@@ -119,7 +119,7 @@ export interface GetApplicationFilterListResult {
  * });
  * ```
  */
-export function getApplicationFilterListOutput(args?: GetApplicationFilterListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationFilterListResult> {
+export function getApplicationFilterListOutput(args?: GetApplicationFilterListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationFilterListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getApplicationFilterList:getApplicationFilterList", {

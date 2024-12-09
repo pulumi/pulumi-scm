@@ -67,7 +67,7 @@ export interface GetOcspResponderResult {
  * });
  * ```
  */
-export function getOcspResponderOutput(args: GetOcspResponderOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetOcspResponderResult> {
+export function getOcspResponderOutput(args: GetOcspResponderOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetOcspResponderResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getOcspResponder:getOcspResponder", {
         "id": args.id,

@@ -119,7 +119,7 @@ export interface GetTrustedCertificateAuthorityListResult {
  * });
  * ```
  */
-export function getTrustedCertificateAuthorityListOutput(args?: GetTrustedCertificateAuthorityListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrustedCertificateAuthorityListResult> {
+export function getTrustedCertificateAuthorityListOutput(args?: GetTrustedCertificateAuthorityListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTrustedCertificateAuthorityListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTrustedCertificateAuthorityList:getTrustedCertificateAuthorityList", {

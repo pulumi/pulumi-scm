@@ -75,7 +75,7 @@ export interface GetDynamicUserGroupResult {
  * });
  * ```
  */
-export function getDynamicUserGroupOutput(args: GetDynamicUserGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDynamicUserGroupResult> {
+export function getDynamicUserGroupOutput(args: GetDynamicUserGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDynamicUserGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDynamicUserGroup:getDynamicUserGroup", {
         "id": args.id,
