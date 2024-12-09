@@ -71,7 +71,7 @@ export interface GetHipProfileResult {
  * });
  * ```
  */
-export function getHipProfileOutput(args: GetHipProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHipProfileResult> {
+export function getHipProfileOutput(args: GetHipProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHipProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getHipProfile:getHipProfile", {
         "id": args.id,

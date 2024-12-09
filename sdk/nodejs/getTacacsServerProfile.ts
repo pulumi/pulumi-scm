@@ -77,7 +77,7 @@ export interface GetTacacsServerProfileResult {
  * });
  * ```
  */
-export function getTacacsServerProfileOutput(args: GetTacacsServerProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTacacsServerProfileResult> {
+export function getTacacsServerProfileOutput(args: GetTacacsServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTacacsServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTacacsServerProfile:getTacacsServerProfile", {
         "id": args.id,

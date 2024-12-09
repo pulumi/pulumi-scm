@@ -75,7 +75,7 @@ export interface GetLabelsGetbyidResponseResult {
  * });
  * ```
  */
-export function getLabelsGetbyidResponseOutput(args: GetLabelsGetbyidResponseOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLabelsGetbyidResponseResult> {
+export function getLabelsGetbyidResponseOutput(args: GetLabelsGetbyidResponseOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLabelsGetbyidResponseResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLabelsGetbyidResponse:getLabelsGetbyidResponse", {
         "id": args.id,

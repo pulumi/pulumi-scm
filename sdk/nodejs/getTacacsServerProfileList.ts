@@ -119,7 +119,7 @@ export interface GetTacacsServerProfileListResult {
  * });
  * ```
  */
-export function getTacacsServerProfileListOutput(args?: GetTacacsServerProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTacacsServerProfileListResult> {
+export function getTacacsServerProfileListOutput(args?: GetTacacsServerProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTacacsServerProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTacacsServerProfileList:getTacacsServerProfileList", {

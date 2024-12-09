@@ -119,7 +119,7 @@ export interface GetExternalDynamicListListResult {
  * });
  * ```
  */
-export function getExternalDynamicListListOutput(args?: GetExternalDynamicListListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetExternalDynamicListListResult> {
+export function getExternalDynamicListListOutput(args?: GetExternalDynamicListListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetExternalDynamicListListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getExternalDynamicListList:getExternalDynamicListList", {

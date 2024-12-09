@@ -124,7 +124,7 @@ export interface GetNatRuleListResult {
  * const example = scm.getNatRuleList({});
  * ```
  */
-export function getNatRuleListOutput(args?: GetNatRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetNatRuleListResult> {
+export function getNatRuleListOutput(args?: GetNatRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetNatRuleListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getNatRuleList:getNatRuleList", {

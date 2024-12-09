@@ -119,7 +119,7 @@ export interface GetSamlServerProfileListResult {
  * });
  * ```
  */
-export function getSamlServerProfileListOutput(args?: GetSamlServerProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSamlServerProfileListResult> {
+export function getSamlServerProfileListOutput(args?: GetSamlServerProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSamlServerProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSamlServerProfileList:getSamlServerProfileList", {

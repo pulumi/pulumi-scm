@@ -123,7 +123,7 @@ def get_local_user(id: Optional[str] = None,
         password=pulumi.get(__ret__, 'password'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_local_user_output(id: Optional[pulumi.Input[str]] = None,
-                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLocalUserResult]:
+                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLocalUserResult]:
     """
     Retrieves a config item.
 
@@ -141,7 +141,7 @@ def get_local_user_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getLocalUser:getLocalUser', __args__, opts=opts, typ=GetLocalUserResult)
     return __ret__.apply(lambda __response__: GetLocalUserResult(
         disabled=pulumi.get(__response__, 'disabled'),

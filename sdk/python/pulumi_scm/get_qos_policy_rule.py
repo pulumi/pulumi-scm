@@ -167,7 +167,7 @@ def get_qos_policy_rule(folder: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_qos_policy_rule_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
                                id: Optional[pulumi.Input[str]] = None,
-                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetQosPolicyRuleResult]:
+                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetQosPolicyRuleResult]:
     """
     Retrieves a config item.
 
@@ -187,7 +187,7 @@ def get_qos_policy_rule_output(folder: Optional[pulumi.Input[Optional[str]]] = N
     __args__ = dict()
     __args__['folder'] = folder
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getQosPolicyRule:getQosPolicyRule', __args__, opts=opts, typ=GetQosPolicyRuleResult)
     return __ret__.apply(lambda __response__: GetQosPolicyRuleResult(
         action=pulumi.get(__response__, 'action'),

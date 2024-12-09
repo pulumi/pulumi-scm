@@ -119,7 +119,7 @@ export interface GetDynamicUserGroupListResult {
  * });
  * ```
  */
-export function getDynamicUserGroupListOutput(args?: GetDynamicUserGroupListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDynamicUserGroupListResult> {
+export function getDynamicUserGroupListOutput(args?: GetDynamicUserGroupListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDynamicUserGroupListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDynamicUserGroupList:getDynamicUserGroupList", {

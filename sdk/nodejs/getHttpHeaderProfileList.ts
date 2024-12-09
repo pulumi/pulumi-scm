@@ -119,7 +119,7 @@ export interface GetHttpHeaderProfileListResult {
  * });
  * ```
  */
-export function getHttpHeaderProfileListOutput(args?: GetHttpHeaderProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHttpHeaderProfileListResult> {
+export function getHttpHeaderProfileListOutput(args?: GetHttpHeaderProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHttpHeaderProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getHttpHeaderProfileList:getHttpHeaderProfileList", {

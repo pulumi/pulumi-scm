@@ -88,7 +88,7 @@ export interface GetLabelListResult {
  * const example = scm.getLabelList({});
  * ```
  */
-export function getLabelListOutput(args?: GetLabelListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLabelListResult> {
+export function getLabelListOutput(args?: GetLabelListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLabelListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLabelList:getLabelList", {

@@ -254,7 +254,7 @@ def get_scep_profile(id: Optional[str] = None,
         use_as_digital_signature=pulumi.get(__ret__, 'use_as_digital_signature'),
         use_for_key_encipherment=pulumi.get(__ret__, 'use_for_key_encipherment'))
 def get_scep_profile_output(id: Optional[pulumi.Input[str]] = None,
-                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetScepProfileResult]:
+                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetScepProfileResult]:
     """
     Retrieves a config item.
 
@@ -272,7 +272,7 @@ def get_scep_profile_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getScepProfile:getScepProfile', __args__, opts=opts, typ=GetScepProfileResult)
     return __ret__.apply(lambda __response__: GetScepProfileResult(
         algorithm=pulumi.get(__response__, 'algorithm'),

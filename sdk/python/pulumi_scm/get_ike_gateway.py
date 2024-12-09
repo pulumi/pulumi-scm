@@ -227,7 +227,7 @@ def get_ike_gateway_output(device: Optional[pulumi.Input[Optional[str]]] = None,
                            folder: Optional[pulumi.Input[Optional[str]]] = None,
                            id: Optional[pulumi.Input[str]] = None,
                            snippet: Optional[pulumi.Input[Optional[str]]] = None,
-                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetIkeGatewayResult]:
+                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIkeGatewayResult]:
     """
     Retrieves a config item.
 
@@ -251,7 +251,7 @@ def get_ike_gateway_output(device: Optional[pulumi.Input[Optional[str]]] = None,
     __args__['folder'] = folder
     __args__['id'] = id
     __args__['snippet'] = snippet
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getIkeGateway:getIkeGateway', __args__, opts=opts, typ=GetIkeGatewayResult)
     return __ret__.apply(lambda __response__: GetIkeGatewayResult(
         authentication=pulumi.get(__response__, 'authentication'),

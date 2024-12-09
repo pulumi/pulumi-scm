@@ -113,7 +113,7 @@ export interface GetCertificateProfileResult {
  * });
  * ```
  */
-export function getCertificateProfileOutput(args: GetCertificateProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCertificateProfileResult> {
+export function getCertificateProfileOutput(args: GetCertificateProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCertificateProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getCertificateProfile:getCertificateProfile", {
         "id": args.id,

@@ -119,7 +119,7 @@ export interface GetAuthenticationSequenceListResult {
  * });
  * ```
  */
-export function getAuthenticationSequenceListOutput(args?: GetAuthenticationSequenceListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationSequenceListResult> {
+export function getAuthenticationSequenceListOutput(args?: GetAuthenticationSequenceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationSequenceListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationSequenceList:getAuthenticationSequenceList", {

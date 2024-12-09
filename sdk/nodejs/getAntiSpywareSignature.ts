@@ -105,7 +105,7 @@ export interface GetAntiSpywareSignatureResult {
  * });
  * ```
  */
-export function getAntiSpywareSignatureOutput(args: GetAntiSpywareSignatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAntiSpywareSignatureResult> {
+export function getAntiSpywareSignatureOutput(args: GetAntiSpywareSignatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAntiSpywareSignatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", {
         "id": args.id,

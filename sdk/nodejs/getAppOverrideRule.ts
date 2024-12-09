@@ -115,7 +115,7 @@ export interface GetAppOverrideRuleResult {
  * });
  * ```
  */
-export function getAppOverrideRuleOutput(args: GetAppOverrideRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAppOverrideRuleResult> {
+export function getAppOverrideRuleOutput(args: GetAppOverrideRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAppOverrideRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAppOverrideRule:getAppOverrideRule", {
         "id": args.id,

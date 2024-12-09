@@ -88,7 +88,7 @@ export interface GetAutoTagActionsListResult {
  * const example = scm.getAutoTagActionsList({});
  * ```
  */
-export function getAutoTagActionsListOutput(args?: GetAutoTagActionsListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAutoTagActionsListResult> {
+export function getAutoTagActionsListOutput(args?: GetAutoTagActionsListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAutoTagActionsListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAutoTagActionsList:getAutoTagActionsList", {

@@ -209,7 +209,7 @@ def get_certificate_profile_list_output(device: Optional[pulumi.Input[Optional[s
                                         name: Optional[pulumi.Input[Optional[str]]] = None,
                                         offset: Optional[pulumi.Input[Optional[int]]] = None,
                                         snippet: Optional[pulumi.Input[Optional[str]]] = None,
-                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCertificateProfileListResult]:
+                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCertificateProfileListResult]:
     """
     Retrieves a listing of config items.
 
@@ -237,7 +237,7 @@ def get_certificate_profile_list_output(device: Optional[pulumi.Input[Optional[s
     __args__['name'] = name
     __args__['offset'] = offset
     __args__['snippet'] = snippet
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getCertificateProfileList:getCertificateProfileList', __args__, opts=opts, typ=GetCertificateProfileListResult)
     return __ret__.apply(lambda __response__: GetCertificateProfileListResult(
         datas=pulumi.get(__response__, 'datas'),

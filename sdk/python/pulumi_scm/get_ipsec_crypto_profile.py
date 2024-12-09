@@ -214,7 +214,7 @@ def get_ipsec_crypto_profile_output(device: Optional[pulumi.Input[Optional[str]]
                                     folder: Optional[pulumi.Input[Optional[str]]] = None,
                                     id: Optional[pulumi.Input[str]] = None,
                                     snippet: Optional[pulumi.Input[Optional[str]]] = None,
-                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetIpsecCryptoProfileResult]:
+                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIpsecCryptoProfileResult]:
     """
     Retrieves a config item.
 
@@ -238,7 +238,7 @@ def get_ipsec_crypto_profile_output(device: Optional[pulumi.Input[Optional[str]]
     __args__['folder'] = folder
     __args__['id'] = id
     __args__['snippet'] = snippet
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile', __args__, opts=opts, typ=GetIpsecCryptoProfileResult)
     return __ret__.apply(lambda __response__: GetIpsecCryptoProfileResult(
         ah=pulumi.get(__response__, 'ah'),

@@ -215,7 +215,7 @@ def get_ldap_server_profile(id: Optional[str] = None,
         timelimit=pulumi.get(__ret__, 'timelimit'),
         verify_server_certificate=pulumi.get(__ret__, 'verify_server_certificate'))
 def get_ldap_server_profile_output(id: Optional[pulumi.Input[str]] = None,
-                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLdapServerProfileResult]:
+                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLdapServerProfileResult]:
     """
     Retrieves a config item.
 
@@ -233,7 +233,7 @@ def get_ldap_server_profile_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getLdapServerProfile:getLdapServerProfile', __args__, opts=opts, typ=GetLdapServerProfileResult)
     return __ret__.apply(lambda __response__: GetLdapServerProfileResult(
         base=pulumi.get(__response__, 'base'),

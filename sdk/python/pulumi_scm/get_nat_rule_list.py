@@ -226,7 +226,7 @@ def get_nat_rule_list_output(device: Optional[pulumi.Input[Optional[str]]] = Non
                              offset: Optional[pulumi.Input[Optional[int]]] = None,
                              position: Optional[pulumi.Input[Optional[str]]] = None,
                              snippet: Optional[pulumi.Input[Optional[str]]] = None,
-                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetNatRuleListResult]:
+                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetNatRuleListResult]:
     """
     Retrieves a listing of config items.
 
@@ -256,7 +256,7 @@ def get_nat_rule_list_output(device: Optional[pulumi.Input[Optional[str]]] = Non
     __args__['offset'] = offset
     __args__['position'] = position
     __args__['snippet'] = snippet
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getNatRuleList:getNatRuleList', __args__, opts=opts, typ=GetNatRuleListResult)
     return __ret__.apply(lambda __response__: GetNatRuleListResult(
         datas=pulumi.get(__response__, 'datas'),

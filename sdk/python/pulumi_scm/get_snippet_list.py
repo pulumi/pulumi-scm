@@ -158,7 +158,7 @@ def get_snippet_list(limit: Optional[int] = None,
 def get_snippet_list_output(limit: Optional[pulumi.Input[Optional[int]]] = None,
                             name: Optional[pulumi.Input[Optional[str]]] = None,
                             offset: Optional[pulumi.Input[Optional[int]]] = None,
-                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSnippetListResult]:
+                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSnippetListResult]:
     """
     Retrieves a listing of config items.
 
@@ -180,7 +180,7 @@ def get_snippet_list_output(limit: Optional[pulumi.Input[Optional[int]]] = None,
     __args__['limit'] = limit
     __args__['name'] = name
     __args__['offset'] = offset
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getSnippetList:getSnippetList', __args__, opts=opts, typ=GetSnippetListResult)
     return __ret__.apply(lambda __response__: GetSnippetListResult(
         datas=pulumi.get(__response__, 'datas'),

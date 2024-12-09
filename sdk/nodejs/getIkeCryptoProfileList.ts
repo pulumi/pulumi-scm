@@ -119,7 +119,7 @@ export interface GetIkeCryptoProfileListResult {
  * });
  * ```
  */
-export function getIkeCryptoProfileListOutput(args?: GetIkeCryptoProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIkeCryptoProfileListResult> {
+export function getIkeCryptoProfileListOutput(args?: GetIkeCryptoProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIkeCryptoProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIkeCryptoProfileList:getIkeCryptoProfileList", {

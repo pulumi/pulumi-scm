@@ -119,7 +119,7 @@ export interface GetScheduleListResult {
  * });
  * ```
  */
-export function getScheduleListOutput(args?: GetScheduleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetScheduleListResult> {
+export function getScheduleListOutput(args?: GetScheduleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetScheduleListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getScheduleList:getScheduleList", {
