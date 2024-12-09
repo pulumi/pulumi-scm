@@ -136,7 +136,7 @@ def get_internal_dns_server(id: Optional[str] = None,
         secondary=pulumi.get(__ret__, 'secondary'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_internal_dns_server_output(id: Optional[pulumi.Input[str]] = None,
-                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInternalDnsServerResult]:
+                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInternalDnsServerResult]:
     """
     Retrieves a config item.
 
@@ -154,7 +154,7 @@ def get_internal_dns_server_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getInternalDnsServer:getInternalDnsServer', __args__, opts=opts, typ=GetInternalDnsServerResult)
     return __ret__.apply(lambda __response__: GetInternalDnsServerResult(
         domain_names=pulumi.get(__response__, 'domain_names'),

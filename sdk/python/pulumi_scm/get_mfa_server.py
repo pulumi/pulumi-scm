@@ -124,7 +124,7 @@ def get_mfa_server(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_mfa_server_output(id: Optional[pulumi.Input[str]] = None,
-                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetMfaServerResult]:
+                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetMfaServerResult]:
     """
     Retrieves a config item.
 
@@ -142,7 +142,7 @@ def get_mfa_server_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getMfaServer:getMfaServer', __args__, opts=opts, typ=GetMfaServerResult)
     return __ret__.apply(lambda __response__: GetMfaServerResult(
         id=pulumi.get(__response__, 'id'),

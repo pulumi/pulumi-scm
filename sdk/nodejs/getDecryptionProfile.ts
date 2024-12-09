@@ -81,7 +81,7 @@ export interface GetDecryptionProfileResult {
  * });
  * ```
  */
-export function getDecryptionProfileOutput(args: GetDecryptionProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDecryptionProfileResult> {
+export function getDecryptionProfileOutput(args: GetDecryptionProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDecryptionProfile:getDecryptionProfile", {
         "id": args.id,

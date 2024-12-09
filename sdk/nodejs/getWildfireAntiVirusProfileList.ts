@@ -119,7 +119,7 @@ export interface GetWildfireAntiVirusProfileListResult {
  * });
  * ```
  */
-export function getWildfireAntiVirusProfileListOutput(args?: GetWildfireAntiVirusProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWildfireAntiVirusProfileListResult> {
+export function getWildfireAntiVirusProfileListOutput(args?: GetWildfireAntiVirusProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWildfireAntiVirusProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getWildfireAntiVirusProfileList:getWildfireAntiVirusProfileList", {

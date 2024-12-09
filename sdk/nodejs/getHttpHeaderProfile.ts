@@ -73,7 +73,7 @@ export interface GetHttpHeaderProfileResult {
  * });
  * ```
  */
-export function getHttpHeaderProfileOutput(args: GetHttpHeaderProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHttpHeaderProfileResult> {
+export function getHttpHeaderProfileOutput(args: GetHttpHeaderProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHttpHeaderProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", {
         "id": args.id,

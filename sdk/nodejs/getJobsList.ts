@@ -44,7 +44,7 @@ export interface GetJobsListResult {
 /**
  * Retrieves a listing of config items.
  */
-export function getJobsListOutput(opts?: pulumi.InvokeOptions): pulumi.Output<GetJobsListResult> {
+export function getJobsListOutput(opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetJobsListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getJobsList:getJobsList", {
     }, opts);

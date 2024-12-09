@@ -116,7 +116,7 @@ export interface GetIkeGatewayResult {
  * });
  * ```
  */
-export function getIkeGatewayOutput(args: GetIkeGatewayOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIkeGatewayResult> {
+export function getIkeGatewayOutput(args: GetIkeGatewayOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIkeGatewayResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIkeGateway:getIkeGateway", {
         "device": args.device,

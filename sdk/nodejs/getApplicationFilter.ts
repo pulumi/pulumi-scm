@@ -137,7 +137,7 @@ export interface GetApplicationFilterResult {
  * });
  * ```
  */
-export function getApplicationFilterOutput(args: GetApplicationFilterOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationFilterResult> {
+export function getApplicationFilterOutput(args: GetApplicationFilterOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationFilterResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getApplicationFilter:getApplicationFilter", {
         "id": args.id,

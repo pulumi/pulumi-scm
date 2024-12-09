@@ -94,7 +94,7 @@ export interface GetIpsecTunnelResult {
  * });
  * ```
  */
-export function getIpsecTunnelOutput(args: GetIpsecTunnelOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpsecTunnelResult> {
+export function getIpsecTunnelOutput(args: GetIpsecTunnelOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpsecTunnelResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIpsecTunnel:getIpsecTunnel", {
         "folder": args.folder,

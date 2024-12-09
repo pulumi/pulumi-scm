@@ -188,7 +188,7 @@ def get_saml_server_profile(id: Optional[str] = None,
         validate_idp_certificate=pulumi.get(__ret__, 'validate_idp_certificate'),
         want_auth_requests_signed=pulumi.get(__ret__, 'want_auth_requests_signed'))
 def get_saml_server_profile_output(id: Optional[pulumi.Input[str]] = None,
-                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSamlServerProfileResult]:
+                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSamlServerProfileResult]:
     """
     Retrieves a config item.
 
@@ -206,7 +206,7 @@ def get_saml_server_profile_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getSamlServerProfile:getSamlServerProfile', __args__, opts=opts, typ=GetSamlServerProfileResult)
     return __ret__.apply(lambda __response__: GetSamlServerProfileResult(
         certificate=pulumi.get(__response__, 'certificate'),

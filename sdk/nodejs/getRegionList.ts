@@ -119,7 +119,7 @@ export interface GetRegionListResult {
  * });
  * ```
  */
-export function getRegionListOutput(args?: GetRegionListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRegionListResult> {
+export function getRegionListOutput(args?: GetRegionListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRegionListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRegionList:getRegionList", {

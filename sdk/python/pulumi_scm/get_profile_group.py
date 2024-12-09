@@ -188,7 +188,7 @@ def get_profile_group(id: Optional[str] = None,
         virus_and_wildfire_analyses=pulumi.get(__ret__, 'virus_and_wildfire_analyses'),
         vulnerabilities=pulumi.get(__ret__, 'vulnerabilities'))
 def get_profile_group_output(id: Optional[pulumi.Input[str]] = None,
-                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetProfileGroupResult]:
+                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetProfileGroupResult]:
     """
     Retrieves a config item.
 
@@ -206,7 +206,7 @@ def get_profile_group_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getProfileGroup:getProfileGroup', __args__, opts=opts, typ=GetProfileGroupResult)
     return __ret__.apply(lambda __response__: GetProfileGroupResult(
         dns_securities=pulumi.get(__response__, 'dns_securities'),

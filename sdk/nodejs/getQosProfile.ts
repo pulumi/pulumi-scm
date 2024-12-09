@@ -82,7 +82,7 @@ export interface GetQosProfileResult {
  * });
  * ```
  */
-export function getQosProfileOutput(args: GetQosProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetQosProfileResult> {
+export function getQosProfileOutput(args: GetQosProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetQosProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getQosProfile:getQosProfile", {
         "folder": args.folder,

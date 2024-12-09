@@ -88,7 +88,7 @@ export interface GetSnippetListResult {
  * const example = scm.getSnippetList({});
  * ```
  */
-export function getSnippetListOutput(args?: GetSnippetListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSnippetListResult> {
+export function getSnippetListOutput(args?: GetSnippetListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSnippetListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSnippetList:getSnippetList", {

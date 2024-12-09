@@ -137,7 +137,7 @@ def get_radius_server_profile(id: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         timeout=pulumi.get(__ret__, 'timeout'))
 def get_radius_server_profile_output(id: Optional[pulumi.Input[str]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetRadiusServerProfileResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRadiusServerProfileResult]:
     """
     Retrieves a config item.
 
@@ -155,7 +155,7 @@ def get_radius_server_profile_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getRadiusServerProfile:getRadiusServerProfile', __args__, opts=opts, typ=GetRadiusServerProfileResult)
     return __ret__.apply(lambda __response__: GetRadiusServerProfileResult(
         id=pulumi.get(__response__, 'id'),

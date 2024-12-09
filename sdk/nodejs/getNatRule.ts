@@ -141,7 +141,7 @@ export interface GetNatRuleResult {
  * });
  * ```
  */
-export function getNatRuleOutput(args: GetNatRuleOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetNatRuleResult> {
+export function getNatRuleOutput(args: GetNatRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetNatRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getNatRule:getNatRule", {
         "id": args.id,

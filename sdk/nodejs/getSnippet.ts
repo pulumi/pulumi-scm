@@ -97,7 +97,7 @@ export interface GetSnippetResult {
  * });
  * ```
  */
-export function getSnippetOutput(args: GetSnippetOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSnippetResult> {
+export function getSnippetOutput(args: GetSnippetOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSnippetResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSnippet:getSnippet", {
         "id": args.id,

@@ -272,7 +272,7 @@ def get_service_connection(folder: Optional[str] = None,
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_service_connection_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
                                   id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceConnectionResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceConnectionResult]:
     """
     Retrieves a config item.
 
@@ -293,7 +293,7 @@ def get_service_connection_output(folder: Optional[pulumi.Input[Optional[str]]] 
     __args__ = dict()
     __args__['folder'] = folder
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getServiceConnection:getServiceConnection', __args__, opts=opts, typ=GetServiceConnectionResult)
     return __ret__.apply(lambda __response__: GetServiceConnectionResult(
         backup_sc=pulumi.get(__response__, 'backup_sc'),
