@@ -119,7 +119,7 @@ export interface GetUrlAccessProfileListResult {
  * });
  * ```
  */
-export function getUrlAccessProfileListOutput(args?: GetUrlAccessProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUrlAccessProfileListResult> {
+export function getUrlAccessProfileListOutput(args?: GetUrlAccessProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUrlAccessProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getUrlAccessProfileList:getUrlAccessProfileList", {

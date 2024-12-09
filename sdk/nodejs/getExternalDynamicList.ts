@@ -69,7 +69,7 @@ export interface GetExternalDynamicListResult {
  * });
  * ```
  */
-export function getExternalDynamicListOutput(args: GetExternalDynamicListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetExternalDynamicListResult> {
+export function getExternalDynamicListOutput(args: GetExternalDynamicListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetExternalDynamicListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getExternalDynamicList:getExternalDynamicList", {
         "id": args.id,

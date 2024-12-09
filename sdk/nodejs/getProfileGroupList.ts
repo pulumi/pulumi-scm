@@ -119,7 +119,7 @@ export interface GetProfileGroupListResult {
  * });
  * ```
  */
-export function getProfileGroupListOutput(args?: GetProfileGroupListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetProfileGroupListResult> {
+export function getProfileGroupListOutput(args?: GetProfileGroupListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetProfileGroupListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getProfileGroupList:getProfileGroupList", {

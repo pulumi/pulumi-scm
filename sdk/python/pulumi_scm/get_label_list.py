@@ -158,7 +158,7 @@ def get_label_list(limit: Optional[int] = None,
 def get_label_list_output(limit: Optional[pulumi.Input[Optional[int]]] = None,
                           name: Optional[pulumi.Input[Optional[str]]] = None,
                           offset: Optional[pulumi.Input[Optional[int]]] = None,
-                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLabelListResult]:
+                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLabelListResult]:
     """
     Retrieves a listing of config items.
 
@@ -180,7 +180,7 @@ def get_label_list_output(limit: Optional[pulumi.Input[Optional[int]]] = None,
     __args__['limit'] = limit
     __args__['name'] = name
     __args__['offset'] = offset
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getLabelList:getLabelList', __args__, opts=opts, typ=GetLabelListResult)
     return __ret__.apply(lambda __response__: GetLabelListResult(
         datas=pulumi.get(__response__, 'datas'),

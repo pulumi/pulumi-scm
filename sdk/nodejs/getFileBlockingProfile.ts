@@ -73,7 +73,7 @@ export interface GetFileBlockingProfileResult {
  * });
  * ```
  */
-export function getFileBlockingProfileOutput(args: GetFileBlockingProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFileBlockingProfileResult> {
+export function getFileBlockingProfileOutput(args: GetFileBlockingProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFileBlockingProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getFileBlockingProfile:getFileBlockingProfile", {
         "id": args.id,

@@ -101,7 +101,7 @@ export interface GetTrafficSteeringRuleListResult {
  * });
  * ```
  */
-export function getTrafficSteeringRuleListOutput(args?: GetTrafficSteeringRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrafficSteeringRuleListResult> {
+export function getTrafficSteeringRuleListOutput(args?: GetTrafficSteeringRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTrafficSteeringRuleListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTrafficSteeringRuleList:getTrafficSteeringRuleList", {

@@ -227,7 +227,7 @@ def get_authentication_rule_list_output(device: Optional[pulumi.Input[Optional[s
                                         offset: Optional[pulumi.Input[Optional[int]]] = None,
                                         position: Optional[pulumi.Input[Optional[str]]] = None,
                                         snippet: Optional[pulumi.Input[Optional[str]]] = None,
-                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthenticationRuleListResult]:
+                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationRuleListResult]:
     """
     Retrieves a listing of config items.
 
@@ -258,7 +258,7 @@ def get_authentication_rule_list_output(device: Optional[pulumi.Input[Optional[s
     __args__['offset'] = offset
     __args__['position'] = position
     __args__['snippet'] = snippet
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationRuleList:getAuthenticationRuleList', __args__, opts=opts, typ=GetAuthenticationRuleListResult)
     return __ret__.apply(lambda __response__: GetAuthenticationRuleListResult(
         datas=pulumi.get(__response__, 'datas'),

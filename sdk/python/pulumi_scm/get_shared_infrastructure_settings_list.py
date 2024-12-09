@@ -141,7 +141,7 @@ def get_shared_infrastructure_settings_list(limit: Optional[int] = None,
         total=pulumi.get(__ret__, 'total'))
 def get_shared_infrastructure_settings_list_output(limit: Optional[pulumi.Input[Optional[int]]] = None,
                                                    offset: Optional[pulumi.Input[Optional[int]]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSharedInfrastructureSettingsListResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSharedInfrastructureSettingsListResult]:
     """
     Retrieves a listing of config items.
 
@@ -161,7 +161,7 @@ def get_shared_infrastructure_settings_list_output(limit: Optional[pulumi.Input[
     __args__ = dict()
     __args__['limit'] = limit
     __args__['offset'] = offset
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getSharedInfrastructureSettingsList:getSharedInfrastructureSettingsList', __args__, opts=opts, typ=GetSharedInfrastructureSettingsListResult)
     return __ret__.apply(lambda __response__: GetSharedInfrastructureSettingsListResult(
         datas=pulumi.get(__response__, 'datas'),

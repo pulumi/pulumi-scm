@@ -254,7 +254,7 @@ def get_certificate_profile(id: Optional[str] = None,
         use_ocsp=pulumi.get(__ret__, 'use_ocsp'),
         username_field=pulumi.get(__ret__, 'username_field'))
 def get_certificate_profile_output(id: Optional[pulumi.Input[str]] = None,
-                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCertificateProfileResult]:
+                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCertificateProfileResult]:
     """
     Retrieves a config item.
 
@@ -272,7 +272,7 @@ def get_certificate_profile_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getCertificateProfile:getCertificateProfile', __args__, opts=opts, typ=GetCertificateProfileResult)
     return __ret__.apply(lambda __response__: GetCertificateProfileResult(
         block_expired_cert=pulumi.get(__response__, 'block_expired_cert'),

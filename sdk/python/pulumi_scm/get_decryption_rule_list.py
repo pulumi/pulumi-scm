@@ -227,7 +227,7 @@ def get_decryption_rule_list_output(device: Optional[pulumi.Input[Optional[str]]
                                     offset: Optional[pulumi.Input[Optional[int]]] = None,
                                     position: Optional[pulumi.Input[Optional[str]]] = None,
                                     snippet: Optional[pulumi.Input[Optional[str]]] = None,
-                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDecryptionRuleListResult]:
+                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDecryptionRuleListResult]:
     """
     Retrieves a listing of config items.
 
@@ -258,7 +258,7 @@ def get_decryption_rule_list_output(device: Optional[pulumi.Input[Optional[str]]
     __args__['offset'] = offset
     __args__['position'] = position
     __args__['snippet'] = snippet
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getDecryptionRuleList:getDecryptionRuleList', __args__, opts=opts, typ=GetDecryptionRuleListResult)
     return __ret__.apply(lambda __response__: GetDecryptionRuleListResult(
         datas=pulumi.get(__response__, 'datas'),

@@ -130,7 +130,7 @@ export interface GetAuthenticationRuleListResult {
  * });
  * ```
  */
-export function getAuthenticationRuleListOutput(args?: GetAuthenticationRuleListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationRuleListResult> {
+export function getAuthenticationRuleListOutput(args?: GetAuthenticationRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationRuleListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", {

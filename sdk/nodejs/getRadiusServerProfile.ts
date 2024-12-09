@@ -77,7 +77,7 @@ export interface GetRadiusServerProfileResult {
  * });
  * ```
  */
-export function getRadiusServerProfileOutput(args: GetRadiusServerProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRadiusServerProfileResult> {
+export function getRadiusServerProfileOutput(args: GetRadiusServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRadiusServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRadiusServerProfile:getRadiusServerProfile", {
         "id": args.id,

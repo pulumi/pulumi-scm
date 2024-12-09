@@ -119,7 +119,7 @@ export interface GetOcspResponderListResult {
  * });
  * ```
  */
-export function getOcspResponderListOutput(args?: GetOcspResponderListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetOcspResponderListResult> {
+export function getOcspResponderListOutput(args?: GetOcspResponderListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetOcspResponderListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getOcspResponderList:getOcspResponderList", {

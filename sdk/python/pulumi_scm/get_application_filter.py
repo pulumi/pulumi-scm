@@ -332,7 +332,7 @@ def get_application_filter(id: Optional[str] = None,
         tunnels_other_apps=pulumi.get(__ret__, 'tunnels_other_apps'),
         used_by_malware=pulumi.get(__ret__, 'used_by_malware'))
 def get_application_filter_output(id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplicationFilterResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationFilterResult]:
     """
     Retrieves a config item.
 
@@ -350,7 +350,7 @@ def get_application_filter_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getApplicationFilter:getApplicationFilter', __args__, opts=opts, typ=GetApplicationFilterResult)
     return __ret__.apply(lambda __response__: GetApplicationFilterResult(
         categories=pulumi.get(__response__, 'categories'),

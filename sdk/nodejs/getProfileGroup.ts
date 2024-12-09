@@ -91,7 +91,7 @@ export interface GetProfileGroupResult {
  * });
  * ```
  */
-export function getProfileGroupOutput(args: GetProfileGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetProfileGroupResult> {
+export function getProfileGroupOutput(args: GetProfileGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetProfileGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getProfileGroup:getProfileGroup", {
         "id": args.id,

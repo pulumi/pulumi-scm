@@ -119,7 +119,7 @@ export interface GetQosProfileListResult {
  * });
  * ```
  */
-export function getQosProfileListOutput(args?: GetQosProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetQosProfileListResult> {
+export function getQosProfileListOutput(args?: GetQosProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetQosProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getQosProfileList:getQosProfileList", {

@@ -112,7 +112,7 @@ export interface GetIkeCryptoProfileResult {
  * });
  * ```
  */
-export function getIkeCryptoProfileOutput(args: GetIkeCryptoProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIkeCryptoProfileResult> {
+export function getIkeCryptoProfileOutput(args: GetIkeCryptoProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIkeCryptoProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIkeCryptoProfile:getIkeCryptoProfile", {
         "device": args.device,

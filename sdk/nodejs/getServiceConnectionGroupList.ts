@@ -101,7 +101,7 @@ export interface GetServiceConnectionGroupListResult {
  * });
  * ```
  */
-export function getServiceConnectionGroupListOutput(args?: GetServiceConnectionGroupListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceConnectionGroupListResult> {
+export function getServiceConnectionGroupListOutput(args?: GetServiceConnectionGroupListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceConnectionGroupListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getServiceConnectionGroupList:getServiceConnectionGroupList", {

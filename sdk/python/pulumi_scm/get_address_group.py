@@ -150,7 +150,7 @@ def get_address_group(id: Optional[str] = None,
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_address_group_output(id: Optional[pulumi.Input[str]] = None,
-                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAddressGroupResult]:
+                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAddressGroupResult]:
     """
     Retrieves a config item.
 
@@ -168,7 +168,7 @@ def get_address_group_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAddressGroup:getAddressGroup', __args__, opts=opts, typ=GetAddressGroupResult)
     return __ret__.apply(lambda __response__: GetAddressGroupResult(
         description=pulumi.get(__response__, 'description'),

@@ -73,7 +73,7 @@ export interface GetTlsServiceProfileResult {
  * });
  * ```
  */
-export function getTlsServiceProfileOutput(args: GetTlsServiceProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTlsServiceProfileResult> {
+export function getTlsServiceProfileOutput(args: GetTlsServiceProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTlsServiceProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTlsServiceProfile:getTlsServiceProfile", {
         "id": args.id,

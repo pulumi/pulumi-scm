@@ -79,7 +79,7 @@ export interface GetSharedInfrastructureSettingsListResult {
  * const example = scm.getSharedInfrastructureSettingsList({});
  * ```
  */
-export function getSharedInfrastructureSettingsListOutput(args?: GetSharedInfrastructureSettingsListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSharedInfrastructureSettingsListResult> {
+export function getSharedInfrastructureSettingsListOutput(args?: GetSharedInfrastructureSettingsListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSharedInfrastructureSettingsListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSharedInfrastructureSettingsList:getSharedInfrastructureSettingsList", {

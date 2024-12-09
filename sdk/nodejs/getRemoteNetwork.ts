@@ -110,7 +110,7 @@ export interface GetRemoteNetworkResult {
  * });
  * ```
  */
-export function getRemoteNetworkOutput(args: GetRemoteNetworkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRemoteNetworkResult> {
+export function getRemoteNetworkOutput(args: GetRemoteNetworkOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRemoteNetworkResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRemoteNetwork:getRemoteNetwork", {
         "folder": args.folder,

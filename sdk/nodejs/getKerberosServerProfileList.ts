@@ -119,7 +119,7 @@ export interface GetKerberosServerProfileListResult {
  * });
  * ```
  */
-export function getKerberosServerProfileListOutput(args?: GetKerberosServerProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetKerberosServerProfileListResult> {
+export function getKerberosServerProfileListOutput(args?: GetKerberosServerProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetKerberosServerProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getKerberosServerProfileList:getKerberosServerProfileList", {

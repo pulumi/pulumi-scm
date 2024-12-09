@@ -124,7 +124,7 @@ export interface GetServiceConnectionResult {
  * });
  * ```
  */
-export function getServiceConnectionOutput(args: GetServiceConnectionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceConnectionResult> {
+export function getServiceConnectionOutput(args: GetServiceConnectionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceConnectionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getServiceConnection:getServiceConnection", {
         "folder": args.folder,
