@@ -85,7 +85,7 @@ export interface GetWildfireAntiVirusProfileResult {
  * });
  * ```
  */
-export function getWildfireAntiVirusProfileOutput(args: GetWildfireAntiVirusProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWildfireAntiVirusProfileResult> {
+export function getWildfireAntiVirusProfileOutput(args: GetWildfireAntiVirusProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWildfireAntiVirusProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile", {
         "id": args.id,

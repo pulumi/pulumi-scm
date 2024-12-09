@@ -75,7 +75,7 @@ export interface GetInternalDnsServerResult {
  * });
  * ```
  */
-export function getInternalDnsServerOutput(args: GetInternalDnsServerOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInternalDnsServerResult> {
+export function getInternalDnsServerOutput(args: GetInternalDnsServerOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetInternalDnsServerResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getInternalDnsServer:getInternalDnsServer", {
         "id": args.id,

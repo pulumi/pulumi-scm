@@ -112,7 +112,7 @@ export interface GetIpsecCryptoProfileResult {
  * });
  * ```
  */
-export function getIpsecCryptoProfileOutput(args: GetIpsecCryptoProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpsecCryptoProfileResult> {
+export function getIpsecCryptoProfileOutput(args: GetIpsecCryptoProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpsecCryptoProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", {
         "device": args.device,

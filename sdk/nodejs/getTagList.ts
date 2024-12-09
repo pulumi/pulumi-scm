@@ -119,7 +119,7 @@ export interface GetTagListResult {
  * });
  * ```
  */
-export function getTagListOutput(args?: GetTagListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTagListResult> {
+export function getTagListOutput(args?: GetTagListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTagListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTagList:getTagList", {

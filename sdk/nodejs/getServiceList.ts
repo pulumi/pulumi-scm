@@ -119,7 +119,7 @@ export interface GetServiceListResult {
  * });
  * ```
  */
-export function getServiceListOutput(args?: GetServiceListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceListResult> {
+export function getServiceListOutput(args?: GetServiceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getServiceList:getServiceList", {

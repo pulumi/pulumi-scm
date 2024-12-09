@@ -91,7 +91,7 @@ export interface GetAddressObjectResult {
  * });
  * ```
  */
-export function getAddressObjectOutput(args: GetAddressObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAddressObjectResult> {
+export function getAddressObjectOutput(args: GetAddressObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAddressObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAddressObject:getAddressObject", {
         "id": args.id,

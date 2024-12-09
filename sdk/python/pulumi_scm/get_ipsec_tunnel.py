@@ -180,7 +180,7 @@ def get_ipsec_tunnel(folder: Optional[str] = None,
         tunnel_monitor=pulumi.get(__ret__, 'tunnel_monitor'))
 def get_ipsec_tunnel_output(folder: Optional[pulumi.Input[Optional[str]]] = None,
                             id: Optional[pulumi.Input[str]] = None,
-                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetIpsecTunnelResult]:
+                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIpsecTunnelResult]:
     """
     Retrieves a config item.
 
@@ -200,7 +200,7 @@ def get_ipsec_tunnel_output(folder: Optional[pulumi.Input[Optional[str]]] = None
     __args__ = dict()
     __args__['folder'] = folder
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getIpsecTunnel:getIpsecTunnel', __args__, opts=opts, typ=GetIpsecTunnelResult)
     return __ret__.apply(lambda __response__: GetIpsecTunnelResult(
         anti_replay=pulumi.get(__response__, 'anti_replay'),

@@ -136,7 +136,7 @@ def get_labels_getbyid_response(id: Optional[str] = None,
         snippets=pulumi.get(__ret__, 'snippets'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_labels_getbyid_response_output(id: Optional[pulumi.Input[str]] = None,
-                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLabelsGetbyidResponseResult]:
+                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLabelsGetbyidResponseResult]:
     """
     Retrieves a config item.
 
@@ -154,7 +154,7 @@ def get_labels_getbyid_response_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getLabelsGetbyidResponse:getLabelsGetbyidResponse', __args__, opts=opts, typ=GetLabelsGetbyidResponseResult)
     return __ret__.apply(lambda __response__: GetLabelsGetbyidResponseResult(
         description=pulumi.get(__response__, 'description'),

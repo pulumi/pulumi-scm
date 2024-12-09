@@ -71,7 +71,7 @@ export interface GetAuthenticationSequenceResult {
  * });
  * ```
  */
-export function getAuthenticationSequenceOutput(args: GetAuthenticationSequenceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAuthenticationSequenceResult> {
+export function getAuthenticationSequenceOutput(args: GetAuthenticationSequenceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationSequenceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationSequence:getAuthenticationSequence", {
         "id": args.id,

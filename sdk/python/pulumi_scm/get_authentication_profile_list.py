@@ -209,7 +209,7 @@ def get_authentication_profile_list_output(device: Optional[pulumi.Input[Optiona
                                            name: Optional[pulumi.Input[Optional[str]]] = None,
                                            offset: Optional[pulumi.Input[Optional[int]]] = None,
                                            snippet: Optional[pulumi.Input[Optional[str]]] = None,
-                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthenticationProfileListResult]:
+                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationProfileListResult]:
     """
     Retrieves a listing of config items.
 
@@ -237,7 +237,7 @@ def get_authentication_profile_list_output(device: Optional[pulumi.Input[Optiona
     __args__['name'] = name
     __args__['offset'] = offset
     __args__['snippet'] = snippet
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationProfileList:getAuthenticationProfileList', __args__, opts=opts, typ=GetAuthenticationProfileListResult)
     return __ret__.apply(lambda __response__: GetAuthenticationProfileListResult(
         datas=pulumi.get(__response__, 'datas'),

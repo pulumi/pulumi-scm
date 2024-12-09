@@ -280,7 +280,7 @@ def get_url_access_profile(id: Optional[str] = None,
         safe_search_enforcement=pulumi.get(__ret__, 'safe_search_enforcement'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_url_access_profile_output(id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetUrlAccessProfileResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetUrlAccessProfileResult]:
     """
     Retrieves a config item.
 
@@ -298,7 +298,7 @@ def get_url_access_profile_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getUrlAccessProfile:getUrlAccessProfile', __args__, opts=opts, typ=GetUrlAccessProfileResult)
     return __ret__.apply(lambda __response__: GetUrlAccessProfileResult(
         alerts=pulumi.get(__response__, 'alerts'),

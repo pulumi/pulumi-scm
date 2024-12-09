@@ -122,12 +122,12 @@ def get_jobs_list(opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetJo
         offset=pulumi.get(__ret__, 'offset'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
-def get_jobs_list_output(opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetJobsListResult]:
+def get_jobs_list_output(opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetJobsListResult]:
     """
     Retrieves a listing of config items.
     """
     __args__ = dict()
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getJobsList:getJobsList', __args__, opts=opts, typ=GetJobsListResult)
     return __ret__.apply(lambda __response__: GetJobsListResult(
         datas=pulumi.get(__response__, 'datas'),

@@ -73,7 +73,7 @@ export interface GetDnsSecurityProfileResult {
  * });
  * ```
  */
-export function getDnsSecurityProfileOutput(args: GetDnsSecurityProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDnsSecurityProfileResult> {
+export function getDnsSecurityProfileOutput(args: GetDnsSecurityProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDnsSecurityProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", {
         "id": args.id,

@@ -189,7 +189,7 @@ def get_authentication_profile(id: Optional[str] = None,
         user_domain=pulumi.get(__ret__, 'user_domain'),
         username_modifier=pulumi.get(__ret__, 'username_modifier'))
 def get_authentication_profile_output(id: Optional[pulumi.Input[str]] = None,
-                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthenticationProfileResult]:
+                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationProfileResult]:
     """
     Retrieves a config item.
 
@@ -207,7 +207,7 @@ def get_authentication_profile_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationProfile:getAuthenticationProfile', __args__, opts=opts, typ=GetAuthenticationProfileResult)
     return __ret__.apply(lambda __response__: GetAuthenticationProfileResult(
         allow_lists=pulumi.get(__response__, 'allow_lists'),

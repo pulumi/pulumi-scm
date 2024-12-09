@@ -65,7 +65,7 @@ export interface GetKerberosServerProfileResult {
  * });
  * ```
  */
-export function getKerberosServerProfileOutput(args: GetKerberosServerProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetKerberosServerProfileResult> {
+export function getKerberosServerProfileOutput(args: GetKerberosServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetKerberosServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getKerberosServerProfile:getKerberosServerProfile", {
         "id": args.id,

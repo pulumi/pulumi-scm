@@ -111,7 +111,7 @@ export interface GetJobsResult {
  * const example = scm.getJobs({});
  * ```
  */
-export function getJobsOutput(args: GetJobsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetJobsResult> {
+export function getJobsOutput(args: GetJobsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetJobsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getJobs:getJobs", {
         "id": args.id,

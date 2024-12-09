@@ -119,7 +119,7 @@ export interface GetScepProfileListResult {
  * });
  * ```
  */
-export function getScepProfileListOutput(args?: GetScepProfileListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetScepProfileListResult> {
+export function getScepProfileListOutput(args?: GetScepProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetScepProfileListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getScepProfileList:getScepProfileList", {

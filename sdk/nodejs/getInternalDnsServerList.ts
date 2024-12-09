@@ -88,7 +88,7 @@ export interface GetInternalDnsServerListResult {
  * const example = scm.getInternalDnsServerList({});
  * ```
  */
-export function getInternalDnsServerListOutput(args?: GetInternalDnsServerListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInternalDnsServerListResult> {
+export function getInternalDnsServerListOutput(args?: GetInternalDnsServerListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetInternalDnsServerListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getInternalDnsServerList:getInternalDnsServerList", {

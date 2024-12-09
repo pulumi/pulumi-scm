@@ -121,7 +121,7 @@ export interface GetUrlAccessProfileResult {
  * });
  * ```
  */
-export function getUrlAccessProfileOutput(args: GetUrlAccessProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUrlAccessProfileResult> {
+export function getUrlAccessProfileOutput(args: GetUrlAccessProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUrlAccessProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getUrlAccessProfile:getUrlAccessProfile", {
         "id": args.id,

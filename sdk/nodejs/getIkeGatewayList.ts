@@ -119,7 +119,7 @@ export interface GetIkeGatewayListResult {
  * });
  * ```
  */
-export function getIkeGatewayListOutput(args?: GetIkeGatewayListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIkeGatewayListResult> {
+export function getIkeGatewayListOutput(args?: GetIkeGatewayListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIkeGatewayListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIkeGatewayList:getIkeGatewayList", {

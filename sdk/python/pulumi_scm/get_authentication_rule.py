@@ -357,7 +357,7 @@ def get_authentication_rule(id: Optional[str] = None,
         timeout=pulumi.get(__ret__, 'timeout'),
         tos=pulumi.get(__ret__, 'tos'))
 def get_authentication_rule_output(id: Optional[pulumi.Input[str]] = None,
-                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAuthenticationRuleResult]:
+                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationRuleResult]:
     """
     Retrieves a config item.
 
@@ -375,7 +375,7 @@ def get_authentication_rule_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationRule:getAuthenticationRule', __args__, opts=opts, typ=GetAuthenticationRuleResult)
     return __ret__.apply(lambda __response__: GetAuthenticationRuleResult(
         authentication_enforcement=pulumi.get(__response__, 'authentication_enforcement'),
