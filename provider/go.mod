@@ -6,7 +6,7 @@ toolchain go1.22.7
 
 require (
 	github.com/PaloAltoNetworks/terraform-provider-scm v0.0.0
-	github.com/pulumi/pulumi-terraform-bridge/v3 v3.97.0
+	github.com/pulumi/pulumi-terraform-bridge/v3 v3.97.1-0.20241210133859-dc9754666f03
 )
 
 require (
