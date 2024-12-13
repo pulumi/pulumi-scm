@@ -80,21 +80,11 @@ type GetRemoteNetworkListResult struct {
 }
 
 func GetRemoteNetworkListOutput(ctx *pulumi.Context, args GetRemoteNetworkListOutputArgs, opts ...pulumi.InvokeOption) GetRemoteNetworkListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetRemoteNetworkListResultOutput, error) {
 			args := v.(GetRemoteNetworkListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetRemoteNetworkListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getRemoteNetworkList:getRemoteNetworkList", args, &rv, "", opts...)
-			if err != nil {
-				return GetRemoteNetworkListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetRemoteNetworkListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetRemoteNetworkListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getRemoteNetworkList:getRemoteNetworkList", args, GetRemoteNetworkListResultOutput{}, options).(GetRemoteNetworkListResultOutput), nil
 		}).(GetRemoteNetworkListResultOutput)
 }
 

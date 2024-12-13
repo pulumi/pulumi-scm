@@ -68,21 +68,11 @@ type LookupTlsServiceProfileResult struct {
 }
 
 func LookupTlsServiceProfileOutput(ctx *pulumi.Context, args LookupTlsServiceProfileOutputArgs, opts ...pulumi.InvokeOption) LookupTlsServiceProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTlsServiceProfileResultOutput, error) {
 			args := v.(LookupTlsServiceProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTlsServiceProfileResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getTlsServiceProfile:getTlsServiceProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTlsServiceProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTlsServiceProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTlsServiceProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getTlsServiceProfile:getTlsServiceProfile", args, LookupTlsServiceProfileResultOutput{}, options).(LookupTlsServiceProfileResultOutput), nil
 		}).(LookupTlsServiceProfileResultOutput)
 }
 

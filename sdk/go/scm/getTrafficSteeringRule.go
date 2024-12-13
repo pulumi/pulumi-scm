@@ -50,21 +50,11 @@ type LookupTrafficSteeringRuleResult struct {
 }
 
 func LookupTrafficSteeringRuleOutput(ctx *pulumi.Context, args LookupTrafficSteeringRuleOutputArgs, opts ...pulumi.InvokeOption) LookupTrafficSteeringRuleResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTrafficSteeringRuleResultOutput, error) {
 			args := v.(LookupTrafficSteeringRuleArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTrafficSteeringRuleResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTrafficSteeringRuleResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTrafficSteeringRuleResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTrafficSteeringRuleResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", args, LookupTrafficSteeringRuleResultOutput{}, options).(LookupTrafficSteeringRuleResultOutput), nil
 		}).(LookupTrafficSteeringRuleResultOutput)
 }
 

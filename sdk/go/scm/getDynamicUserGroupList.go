@@ -88,21 +88,11 @@ type GetDynamicUserGroupListResult struct {
 }
 
 func GetDynamicUserGroupListOutput(ctx *pulumi.Context, args GetDynamicUserGroupListOutputArgs, opts ...pulumi.InvokeOption) GetDynamicUserGroupListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetDynamicUserGroupListResultOutput, error) {
 			args := v.(GetDynamicUserGroupListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetDynamicUserGroupListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getDynamicUserGroupList:getDynamicUserGroupList", args, &rv, "", opts...)
-			if err != nil {
-				return GetDynamicUserGroupListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetDynamicUserGroupListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetDynamicUserGroupListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getDynamicUserGroupList:getDynamicUserGroupList", args, GetDynamicUserGroupListResultOutput{}, options).(GetDynamicUserGroupListResultOutput), nil
 		}).(GetDynamicUserGroupListResultOutput)
 }
 

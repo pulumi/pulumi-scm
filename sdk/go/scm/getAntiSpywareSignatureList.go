@@ -88,21 +88,11 @@ type GetAntiSpywareSignatureListResult struct {
 }
 
 func GetAntiSpywareSignatureListOutput(ctx *pulumi.Context, args GetAntiSpywareSignatureListOutputArgs, opts ...pulumi.InvokeOption) GetAntiSpywareSignatureListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetAntiSpywareSignatureListResultOutput, error) {
 			args := v.(GetAntiSpywareSignatureListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetAntiSpywareSignatureListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getAntiSpywareSignatureList:getAntiSpywareSignatureList", args, &rv, "", opts...)
-			if err != nil {
-				return GetAntiSpywareSignatureListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetAntiSpywareSignatureListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetAntiSpywareSignatureListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getAntiSpywareSignatureList:getAntiSpywareSignatureList", args, GetAntiSpywareSignatureListResultOutput{}, options).(GetAntiSpywareSignatureListResultOutput), nil
 		}).(GetAntiSpywareSignatureListResultOutput)
 }
 

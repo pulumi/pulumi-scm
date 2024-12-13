@@ -74,21 +74,11 @@ type GetInternalDnsServerListResult struct {
 }
 
 func GetInternalDnsServerListOutput(ctx *pulumi.Context, args GetInternalDnsServerListOutputArgs, opts ...pulumi.InvokeOption) GetInternalDnsServerListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetInternalDnsServerListResultOutput, error) {
 			args := v.(GetInternalDnsServerListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetInternalDnsServerListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getInternalDnsServerList:getInternalDnsServerList", args, &rv, "", opts...)
-			if err != nil {
-				return GetInternalDnsServerListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetInternalDnsServerListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetInternalDnsServerListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getInternalDnsServerList:getInternalDnsServerList", args, GetInternalDnsServerListResultOutput{}, options).(GetInternalDnsServerListResultOutput), nil
 		}).(GetInternalDnsServerListResultOutput)
 }
 

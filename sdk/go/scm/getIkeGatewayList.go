@@ -88,21 +88,11 @@ type GetIkeGatewayListResult struct {
 }
 
 func GetIkeGatewayListOutput(ctx *pulumi.Context, args GetIkeGatewayListOutputArgs, opts ...pulumi.InvokeOption) GetIkeGatewayListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetIkeGatewayListResultOutput, error) {
 			args := v.(GetIkeGatewayListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetIkeGatewayListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getIkeGatewayList:getIkeGatewayList", args, &rv, "", opts...)
-			if err != nil {
-				return GetIkeGatewayListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetIkeGatewayListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetIkeGatewayListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getIkeGatewayList:getIkeGatewayList", args, GetIkeGatewayListResultOutput{}, options).(GetIkeGatewayListResultOutput), nil
 		}).(GetIkeGatewayListResultOutput)
 }
 

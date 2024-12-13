@@ -64,21 +64,11 @@ type LookupKerberosServerProfileResult struct {
 }
 
 func LookupKerberosServerProfileOutput(ctx *pulumi.Context, args LookupKerberosServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupKerberosServerProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupKerberosServerProfileResultOutput, error) {
 			args := v.(LookupKerberosServerProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupKerberosServerProfileResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getKerberosServerProfile:getKerberosServerProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupKerberosServerProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupKerberosServerProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupKerberosServerProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getKerberosServerProfile:getKerberosServerProfile", args, LookupKerberosServerProfileResultOutput{}, options).(LookupKerberosServerProfileResultOutput), nil
 		}).(LookupKerberosServerProfileResultOutput)
 }
 

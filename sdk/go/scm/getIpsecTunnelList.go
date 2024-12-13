@@ -88,21 +88,11 @@ type GetIpsecTunnelListResult struct {
 }
 
 func GetIpsecTunnelListOutput(ctx *pulumi.Context, args GetIpsecTunnelListOutputArgs, opts ...pulumi.InvokeOption) GetIpsecTunnelListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetIpsecTunnelListResultOutput, error) {
 			args := v.(GetIpsecTunnelListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetIpsecTunnelListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getIpsecTunnelList:getIpsecTunnelList", args, &rv, "", opts...)
-			if err != nil {
-				return GetIpsecTunnelListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetIpsecTunnelListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetIpsecTunnelListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getIpsecTunnelList:getIpsecTunnelList", args, GetIpsecTunnelListResultOutput{}, options).(GetIpsecTunnelListResultOutput), nil
 		}).(GetIpsecTunnelListResultOutput)
 }
 

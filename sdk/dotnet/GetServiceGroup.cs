@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetServiceGroupResult> Invoke(GetServiceGroupInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceGroupResult>("scm:index/getServiceGroup:getServiceGroup", args ?? new GetServiceGroupInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetServiceGroup.Invoke(new()
+        ///     {
+        ///         Id = "1234-56-789",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetServiceGroupResult> Invoke(GetServiceGroupInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetServiceGroupResult>("scm:index/getServiceGroup:getServiceGroup", args ?? new GetServiceGroupInvokeArgs(), options.WithDefaults());
     }
 
 

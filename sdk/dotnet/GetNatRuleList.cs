@@ -52,6 +52,27 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetNatRuleListResult> Invoke(GetNatRuleListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetNatRuleListResult>("scm:index/getNatRuleList:getNatRuleList", args ?? new GetNatRuleListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetNatRuleList.Invoke();
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetNatRuleListResult> Invoke(GetNatRuleListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetNatRuleListResult>("scm:index/getNatRuleList:getNatRuleList", args ?? new GetNatRuleListInvokeArgs(), options.WithDefaults());
     }
 
 

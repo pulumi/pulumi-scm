@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetAntiSpywareSignatureResult> Invoke(GetAntiSpywareSignatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAntiSpywareSignatureResult>("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", args ?? new GetAntiSpywareSignatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetAntiSpywareSignature.Invoke(new()
+        ///     {
+        ///         Id = "1234-56-789",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAntiSpywareSignatureResult> Invoke(GetAntiSpywareSignatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAntiSpywareSignatureResult>("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", args ?? new GetAntiSpywareSignatureInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -88,21 +88,11 @@ type GetCertificateProfileListResult struct {
 }
 
 func GetCertificateProfileListOutput(ctx *pulumi.Context, args GetCertificateProfileListOutputArgs, opts ...pulumi.InvokeOption) GetCertificateProfileListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetCertificateProfileListResultOutput, error) {
 			args := v.(GetCertificateProfileListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetCertificateProfileListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getCertificateProfileList:getCertificateProfileList", args, &rv, "", opts...)
-			if err != nil {
-				return GetCertificateProfileListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetCertificateProfileListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetCertificateProfileListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getCertificateProfileList:getCertificateProfileList", args, GetCertificateProfileListResultOutput{}, options).(GetCertificateProfileListResultOutput), nil
 		}).(GetCertificateProfileListResultOutput)
 }
 

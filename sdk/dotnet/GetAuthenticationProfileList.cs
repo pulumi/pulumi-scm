@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetAuthenticationProfileListResult> Invoke(GetAuthenticationProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationProfileListResult>("scm:index/getAuthenticationProfileList:getAuthenticationProfileList", args ?? new GetAuthenticationProfileListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetAuthenticationProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAuthenticationProfileListResult> Invoke(GetAuthenticationProfileListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationProfileListResult>("scm:index/getAuthenticationProfileList:getAuthenticationProfileList", args ?? new GetAuthenticationProfileListInvokeArgs(), options.WithDefaults());
     }
 
 

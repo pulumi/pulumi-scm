@@ -88,21 +88,11 @@ type GetAddressObjectListResult struct {
 }
 
 func GetAddressObjectListOutput(ctx *pulumi.Context, args GetAddressObjectListOutputArgs, opts ...pulumi.InvokeOption) GetAddressObjectListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetAddressObjectListResultOutput, error) {
 			args := v.(GetAddressObjectListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetAddressObjectListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getAddressObjectList:getAddressObjectList", args, &rv, "", opts...)
-			if err != nil {
-				return GetAddressObjectListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetAddressObjectListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetAddressObjectListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getAddressObjectList:getAddressObjectList", args, GetAddressObjectListResultOutput{}, options).(GetAddressObjectListResultOutput), nil
 		}).(GetAddressObjectListResultOutput)
 }
 

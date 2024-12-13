@@ -60,6 +60,31 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetAuthenticationRuleListResult> Invoke(GetAuthenticationRuleListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationRuleListResult>("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", args ?? new GetAuthenticationRuleListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetAuthenticationRuleList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///         Position = "pre",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAuthenticationRuleListResult> Invoke(GetAuthenticationRuleListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationRuleListResult>("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", args ?? new GetAuthenticationRuleListInvokeArgs(), options.WithDefaults());
     }
 
 

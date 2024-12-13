@@ -70,21 +70,11 @@ type GetSharedInfrastructureSettingsListResult struct {
 }
 
 func GetSharedInfrastructureSettingsListOutput(ctx *pulumi.Context, args GetSharedInfrastructureSettingsListOutputArgs, opts ...pulumi.InvokeOption) GetSharedInfrastructureSettingsListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSharedInfrastructureSettingsListResultOutput, error) {
 			args := v.(GetSharedInfrastructureSettingsListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSharedInfrastructureSettingsListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getSharedInfrastructureSettingsList:getSharedInfrastructureSettingsList", args, &rv, "", opts...)
-			if err != nil {
-				return GetSharedInfrastructureSettingsListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSharedInfrastructureSettingsListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSharedInfrastructureSettingsListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getSharedInfrastructureSettingsList:getSharedInfrastructureSettingsList", args, GetSharedInfrastructureSettingsListResultOutput{}, options).(GetSharedInfrastructureSettingsListResultOutput), nil
 		}).(GetSharedInfrastructureSettingsListResultOutput)
 }
 

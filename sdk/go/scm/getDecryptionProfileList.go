@@ -88,21 +88,11 @@ type GetDecryptionProfileListResult struct {
 }
 
 func GetDecryptionProfileListOutput(ctx *pulumi.Context, args GetDecryptionProfileListOutputArgs, opts ...pulumi.InvokeOption) GetDecryptionProfileListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetDecryptionProfileListResultOutput, error) {
 			args := v.(GetDecryptionProfileListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetDecryptionProfileListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getDecryptionProfileList:getDecryptionProfileList", args, &rv, "", opts...)
-			if err != nil {
-				return GetDecryptionProfileListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetDecryptionProfileListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetDecryptionProfileListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getDecryptionProfileList:getDecryptionProfileList", args, GetDecryptionProfileListResultOutput{}, options).(GetDecryptionProfileListResultOutput), nil
 		}).(GetDecryptionProfileListResultOutput)
 }
 

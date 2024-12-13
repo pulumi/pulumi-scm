@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetUrlAccessProfileListResult> Invoke(GetUrlAccessProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetUrlAccessProfileListResult>("scm:index/getUrlAccessProfileList:getUrlAccessProfileList", args ?? new GetUrlAccessProfileListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetUrlAccessProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetUrlAccessProfileListResult> Invoke(GetUrlAccessProfileListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetUrlAccessProfileListResult>("scm:index/getUrlAccessProfileList:getUrlAccessProfileList", args ?? new GetUrlAccessProfileListInvokeArgs(), options.WithDefaults());
     }
 
 

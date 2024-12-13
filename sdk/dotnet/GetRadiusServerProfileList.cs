@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetRadiusServerProfileListResult> Invoke(GetRadiusServerProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetRadiusServerProfileListResult>("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", args ?? new GetRadiusServerProfileListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetRadiusServerProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetRadiusServerProfileListResult> Invoke(GetRadiusServerProfileListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetRadiusServerProfileListResult>("scm:index/getRadiusServerProfileList:getRadiusServerProfileList", args ?? new GetRadiusServerProfileListInvokeArgs(), options.WithDefaults());
     }
 
 

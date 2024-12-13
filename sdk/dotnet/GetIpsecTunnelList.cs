@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetIpsecTunnelListResult> Invoke(GetIpsecTunnelListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetIpsecTunnelListResult>("scm:index/getIpsecTunnelList:getIpsecTunnelList", args ?? new GetIpsecTunnelListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetIpsecTunnelList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetIpsecTunnelListResult> Invoke(GetIpsecTunnelListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetIpsecTunnelListResult>("scm:index/getIpsecTunnelList:getIpsecTunnelList", args ?? new GetIpsecTunnelListInvokeArgs(), options.WithDefaults());
     }
 
 

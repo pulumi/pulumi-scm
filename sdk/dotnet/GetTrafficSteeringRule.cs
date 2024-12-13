@@ -22,6 +22,12 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetTrafficSteeringRuleResult> Invoke(GetTrafficSteeringRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTrafficSteeringRuleResult>("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", args ?? new GetTrafficSteeringRuleInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// </summary>
+        public static Output<GetTrafficSteeringRuleResult> Invoke(GetTrafficSteeringRuleInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetTrafficSteeringRuleResult>("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", args ?? new GetTrafficSteeringRuleInvokeArgs(), options.WithDefaults());
     }
 
 

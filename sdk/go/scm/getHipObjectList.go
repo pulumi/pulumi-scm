@@ -88,21 +88,11 @@ type GetHipObjectListResult struct {
 }
 
 func GetHipObjectListOutput(ctx *pulumi.Context, args GetHipObjectListOutputArgs, opts ...pulumi.InvokeOption) GetHipObjectListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetHipObjectListResultOutput, error) {
 			args := v.(GetHipObjectListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetHipObjectListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getHipObjectList:getHipObjectList", args, &rv, "", opts...)
-			if err != nil {
-				return GetHipObjectListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetHipObjectListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetHipObjectListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getHipObjectList:getHipObjectList", args, GetHipObjectListResultOutput{}, options).(GetHipObjectListResultOutput), nil
 		}).(GetHipObjectListResultOutput)
 }
 

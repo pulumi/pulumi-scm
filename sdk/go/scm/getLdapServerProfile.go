@@ -82,21 +82,11 @@ type LookupLdapServerProfileResult struct {
 }
 
 func LookupLdapServerProfileOutput(ctx *pulumi.Context, args LookupLdapServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupLdapServerProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupLdapServerProfileResultOutput, error) {
 			args := v.(LookupLdapServerProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupLdapServerProfileResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getLdapServerProfile:getLdapServerProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupLdapServerProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupLdapServerProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupLdapServerProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getLdapServerProfile:getLdapServerProfile", args, LookupLdapServerProfileResultOutput{}, options).(LookupLdapServerProfileResultOutput), nil
 		}).(LookupLdapServerProfileResultOutput)
 }
 

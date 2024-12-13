@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetQosPolicyRuleResult> Invoke(GetQosPolicyRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosPolicyRuleResult>("scm:index/getQosPolicyRule:getQosPolicyRule", args ?? new GetQosPolicyRuleInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetQosPolicyRule.Invoke(new()
+        ///     {
+        ///         Id = "1234-56-789",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetQosPolicyRuleResult> Invoke(GetQosPolicyRuleInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetQosPolicyRuleResult>("scm:index/getQosPolicyRule:getQosPolicyRule", args ?? new GetQosPolicyRuleInvokeArgs(), options.WithDefaults());
     }
 
 

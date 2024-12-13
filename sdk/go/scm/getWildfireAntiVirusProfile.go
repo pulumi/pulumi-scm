@@ -74,21 +74,11 @@ type LookupWildfireAntiVirusProfileResult struct {
 }
 
 func LookupWildfireAntiVirusProfileOutput(ctx *pulumi.Context, args LookupWildfireAntiVirusProfileOutputArgs, opts ...pulumi.InvokeOption) LookupWildfireAntiVirusProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupWildfireAntiVirusProfileResultOutput, error) {
 			args := v.(LookupWildfireAntiVirusProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupWildfireAntiVirusProfileResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupWildfireAntiVirusProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupWildfireAntiVirusProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupWildfireAntiVirusProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile", args, LookupWildfireAntiVirusProfileResultOutput{}, options).(LookupWildfireAntiVirusProfileResultOutput), nil
 		}).(LookupWildfireAntiVirusProfileResultOutput)
 }
 

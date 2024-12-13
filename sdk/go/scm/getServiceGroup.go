@@ -68,21 +68,11 @@ type LookupServiceGroupResult struct {
 }
 
 func LookupServiceGroupOutput(ctx *pulumi.Context, args LookupServiceGroupOutputArgs, opts ...pulumi.InvokeOption) LookupServiceGroupResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupServiceGroupResultOutput, error) {
 			args := v.(LookupServiceGroupArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupServiceGroupResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getServiceGroup:getServiceGroup", args, &rv, "", opts...)
-			if err != nil {
-				return LookupServiceGroupResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupServiceGroupResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupServiceGroupResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getServiceGroup:getServiceGroup", args, LookupServiceGroupResultOutput{}, options).(LookupServiceGroupResultOutput), nil
 		}).(LookupServiceGroupResultOutput)
 }
 
