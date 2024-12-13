@@ -88,21 +88,11 @@ type GetAddressGroupListResult struct {
 }
 
 func GetAddressGroupListOutput(ctx *pulumi.Context, args GetAddressGroupListOutputArgs, opts ...pulumi.InvokeOption) GetAddressGroupListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetAddressGroupListResultOutput, error) {
 			args := v.(GetAddressGroupListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetAddressGroupListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getAddressGroupList:getAddressGroupList", args, &rv, "", opts...)
-			if err != nil {
-				return GetAddressGroupListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetAddressGroupListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetAddressGroupListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getAddressGroupList:getAddressGroupList", args, GetAddressGroupListResultOutput{}, options).(GetAddressGroupListResultOutput), nil
 		}).(GetAddressGroupListResultOutput)
 }
 

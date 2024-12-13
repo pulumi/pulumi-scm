@@ -52,6 +52,27 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetAutoTagActionsListResult> Invoke(GetAutoTagActionsListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAutoTagActionsListResult>("scm:index/getAutoTagActionsList:getAutoTagActionsList", args ?? new GetAutoTagActionsListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetAutoTagActionsList.Invoke();
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAutoTagActionsListResult> Invoke(GetAutoTagActionsListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAutoTagActionsListResult>("scm:index/getAutoTagActionsList:getAutoTagActionsList", args ?? new GetAutoTagActionsListInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -70,21 +70,11 @@ type LookupRadiusServerProfileResult struct {
 }
 
 func LookupRadiusServerProfileOutput(ctx *pulumi.Context, args LookupRadiusServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupRadiusServerProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupRadiusServerProfileResultOutput, error) {
 			args := v.(LookupRadiusServerProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupRadiusServerProfileResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getRadiusServerProfile:getRadiusServerProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupRadiusServerProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupRadiusServerProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupRadiusServerProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getRadiusServerProfile:getRadiusServerProfile", args, LookupRadiusServerProfileResultOutput{}, options).(LookupRadiusServerProfileResultOutput), nil
 		}).(LookupRadiusServerProfileResultOutput)
 }
 

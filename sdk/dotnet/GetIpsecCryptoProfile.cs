@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetIpsecCryptoProfileResult> Invoke(GetIpsecCryptoProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetIpsecCryptoProfileResult>("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", args ?? new GetIpsecCryptoProfileInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetIpsecCryptoProfile.Invoke(new()
+        ///     {
+        ///         Id = "1234-56-789",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetIpsecCryptoProfileResult> Invoke(GetIpsecCryptoProfileInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetIpsecCryptoProfileResult>("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", args ?? new GetIpsecCryptoProfileInvokeArgs(), options.WithDefaults());
     }
 
 

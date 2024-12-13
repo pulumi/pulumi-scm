@@ -72,21 +72,11 @@ type LookupAddressGroupResult struct {
 }
 
 func LookupAddressGroupOutput(ctx *pulumi.Context, args LookupAddressGroupOutputArgs, opts ...pulumi.InvokeOption) LookupAddressGroupResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAddressGroupResultOutput, error) {
 			args := v.(LookupAddressGroupArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAddressGroupResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getAddressGroup:getAddressGroup", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAddressGroupResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAddressGroupResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAddressGroupResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getAddressGroup:getAddressGroup", args, LookupAddressGroupResultOutput{}, options).(LookupAddressGroupResultOutput), nil
 		}).(LookupAddressGroupResultOutput)
 }
 

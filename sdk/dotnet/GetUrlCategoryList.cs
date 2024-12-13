@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetUrlCategoryListResult> Invoke(GetUrlCategoryListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetUrlCategoryListResult>("scm:index/getUrlCategoryList:getUrlCategoryList", args ?? new GetUrlCategoryListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetUrlCategoryList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetUrlCategoryListResult> Invoke(GetUrlCategoryListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetUrlCategoryListResult>("scm:index/getUrlCategoryList:getUrlCategoryList", args ?? new GetUrlCategoryListInvokeArgs(), options.WithDefaults());
     }
 
 

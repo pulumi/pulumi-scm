@@ -68,21 +68,11 @@ type LookupAuthenticationSequenceResult struct {
 }
 
 func LookupAuthenticationSequenceOutput(ctx *pulumi.Context, args LookupAuthenticationSequenceOutputArgs, opts ...pulumi.InvokeOption) LookupAuthenticationSequenceResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAuthenticationSequenceResultOutput, error) {
 			args := v.(LookupAuthenticationSequenceArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAuthenticationSequenceResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getAuthenticationSequence:getAuthenticationSequence", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAuthenticationSequenceResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAuthenticationSequenceResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAuthenticationSequenceResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getAuthenticationSequence:getAuthenticationSequence", args, LookupAuthenticationSequenceResultOutput{}, options).(LookupAuthenticationSequenceResultOutput), nil
 		}).(LookupAuthenticationSequenceResultOutput)
 }
 

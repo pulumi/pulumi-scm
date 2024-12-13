@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetIkeCryptoProfileListResult> Invoke(GetIkeCryptoProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetIkeCryptoProfileListResult>("scm:index/getIkeCryptoProfileList:getIkeCryptoProfileList", args ?? new GetIkeCryptoProfileListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetIkeCryptoProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetIkeCryptoProfileListResult> Invoke(GetIkeCryptoProfileListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetIkeCryptoProfileListResult>("scm:index/getIkeCryptoProfileList:getIkeCryptoProfileList", args ?? new GetIkeCryptoProfileListInvokeArgs(), options.WithDefaults());
     }
 
 

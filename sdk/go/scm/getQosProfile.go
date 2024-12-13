@@ -72,21 +72,11 @@ type LookupQosProfileResult struct {
 }
 
 func LookupQosProfileOutput(ctx *pulumi.Context, args LookupQosProfileOutputArgs, opts ...pulumi.InvokeOption) LookupQosProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupQosProfileResultOutput, error) {
 			args := v.(LookupQosProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupQosProfileResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getQosProfile:getQosProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupQosProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupQosProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupQosProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getQosProfile:getQosProfile", args, LookupQosProfileResultOutput{}, options).(LookupQosProfileResultOutput), nil
 		}).(LookupQosProfileResultOutput)
 }
 

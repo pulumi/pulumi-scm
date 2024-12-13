@@ -80,21 +80,11 @@ type LookupSnippetResult struct {
 }
 
 func LookupSnippetOutput(ctx *pulumi.Context, args LookupSnippetOutputArgs, opts ...pulumi.InvokeOption) LookupSnippetResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSnippetResultOutput, error) {
 			args := v.(LookupSnippetArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSnippetResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getSnippet:getSnippet", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSnippetResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSnippetResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSnippetResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getSnippet:getSnippet", args, LookupSnippetResultOutput{}, options).(LookupSnippetResultOutput), nil
 		}).(LookupSnippetResultOutput)
 }
 

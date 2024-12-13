@@ -52,6 +52,27 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetJobsResult> Invoke(GetJobsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetJobsResult>("scm:index/getJobs:getJobs", args ?? new GetJobsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetJobs.Invoke();
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetJobsResult> Invoke(GetJobsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetJobsResult>("scm:index/getJobs:getJobs", args ?? new GetJobsInvokeArgs(), options.WithDefaults());
     }
 
 

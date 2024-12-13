@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetAppOverrideRuleResult> Invoke(GetAppOverrideRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAppOverrideRuleResult>("scm:index/getAppOverrideRule:getAppOverrideRule", args ?? new GetAppOverrideRuleInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetAppOverrideRule.Invoke(new()
+        ///     {
+        ///         Id = "1234-56-789",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAppOverrideRuleResult> Invoke(GetAppOverrideRuleInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAppOverrideRuleResult>("scm:index/getAppOverrideRule:getAppOverrideRule", args ?? new GetAppOverrideRuleInvokeArgs(), options.WithDefaults());
     }
 
 

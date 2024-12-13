@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetWildfireAntiVirusProfileListResult> Invoke(GetWildfireAntiVirusProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWildfireAntiVirusProfileListResult>("scm:index/getWildfireAntiVirusProfileList:getWildfireAntiVirusProfileList", args ?? new GetWildfireAntiVirusProfileListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetWildfireAntiVirusProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWildfireAntiVirusProfileListResult> Invoke(GetWildfireAntiVirusProfileListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWildfireAntiVirusProfileListResult>("scm:index/getWildfireAntiVirusProfileList:getWildfireAntiVirusProfileList", args ?? new GetWildfireAntiVirusProfileListInvokeArgs(), options.WithDefaults());
     }
 
 

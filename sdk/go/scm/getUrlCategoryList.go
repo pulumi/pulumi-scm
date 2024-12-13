@@ -88,21 +88,11 @@ type GetUrlCategoryListResult struct {
 }
 
 func GetUrlCategoryListOutput(ctx *pulumi.Context, args GetUrlCategoryListOutputArgs, opts ...pulumi.InvokeOption) GetUrlCategoryListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetUrlCategoryListResultOutput, error) {
 			args := v.(GetUrlCategoryListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetUrlCategoryListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getUrlCategoryList:getUrlCategoryList", args, &rv, "", opts...)
-			if err != nil {
-				return GetUrlCategoryListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetUrlCategoryListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetUrlCategoryListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getUrlCategoryList:getUrlCategoryList", args, GetUrlCategoryListResultOutput{}, options).(GetUrlCategoryListResultOutput), nil
 		}).(GetUrlCategoryListResultOutput)
 }
 

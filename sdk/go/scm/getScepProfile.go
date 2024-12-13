@@ -88,21 +88,11 @@ type LookupScepProfileResult struct {
 }
 
 func LookupScepProfileOutput(ctx *pulumi.Context, args LookupScepProfileOutputArgs, opts ...pulumi.InvokeOption) LookupScepProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupScepProfileResultOutput, error) {
 			args := v.(LookupScepProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupScepProfileResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getScepProfile:getScepProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupScepProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupScepProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupScepProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getScepProfile:getScepProfile", args, LookupScepProfileResultOutput{}, options).(LookupScepProfileResultOutput), nil
 		}).(LookupScepProfileResultOutput)
 }
 

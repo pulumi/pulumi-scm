@@ -88,21 +88,11 @@ type GetExternalDynamicListListResult struct {
 }
 
 func GetExternalDynamicListListOutput(ctx *pulumi.Context, args GetExternalDynamicListListOutputArgs, opts ...pulumi.InvokeOption) GetExternalDynamicListListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetExternalDynamicListListResultOutput, error) {
 			args := v.(GetExternalDynamicListListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetExternalDynamicListListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getExternalDynamicListList:getExternalDynamicListList", args, &rv, "", opts...)
-			if err != nil {
-				return GetExternalDynamicListListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetExternalDynamicListListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetExternalDynamicListListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getExternalDynamicListList:getExternalDynamicListList", args, GetExternalDynamicListListResultOutput{}, options).(GetExternalDynamicListListResultOutput), nil
 		}).(GetExternalDynamicListListResultOutput)
 }
 

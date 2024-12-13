@@ -66,21 +66,11 @@ type LookupDecryptionExclusionResult struct {
 }
 
 func LookupDecryptionExclusionOutput(ctx *pulumi.Context, args LookupDecryptionExclusionOutputArgs, opts ...pulumi.InvokeOption) LookupDecryptionExclusionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupDecryptionExclusionResultOutput, error) {
 			args := v.(LookupDecryptionExclusionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupDecryptionExclusionResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getDecryptionExclusion:getDecryptionExclusion", args, &rv, "", opts...)
-			if err != nil {
-				return LookupDecryptionExclusionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupDecryptionExclusionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupDecryptionExclusionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getDecryptionExclusion:getDecryptionExclusion", args, LookupDecryptionExclusionResultOutput{}, options).(LookupDecryptionExclusionResultOutput), nil
 		}).(LookupDecryptionExclusionResultOutput)
 }
 

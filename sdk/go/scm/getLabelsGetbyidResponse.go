@@ -70,21 +70,11 @@ type GetLabelsGetbyidResponseResult struct {
 }
 
 func GetLabelsGetbyidResponseOutput(ctx *pulumi.Context, args GetLabelsGetbyidResponseOutputArgs, opts ...pulumi.InvokeOption) GetLabelsGetbyidResponseResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetLabelsGetbyidResponseResultOutput, error) {
 			args := v.(GetLabelsGetbyidResponseArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetLabelsGetbyidResponseResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getLabelsGetbyidResponse:getLabelsGetbyidResponse", args, &rv, "", opts...)
-			if err != nil {
-				return GetLabelsGetbyidResponseResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetLabelsGetbyidResponseResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetLabelsGetbyidResponseResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getLabelsGetbyidResponse:getLabelsGetbyidResponse", args, GetLabelsGetbyidResponseResultOutput{}, options).(GetLabelsGetbyidResponseResultOutput), nil
 		}).(GetLabelsGetbyidResponseResultOutput)
 }
 

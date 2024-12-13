@@ -74,21 +74,11 @@ type GetSnippetListResult struct {
 }
 
 func GetSnippetListOutput(ctx *pulumi.Context, args GetSnippetListOutputArgs, opts ...pulumi.InvokeOption) GetSnippetListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSnippetListResultOutput, error) {
 			args := v.(GetSnippetListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSnippetListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getSnippetList:getSnippetList", args, &rv, "", opts...)
-			if err != nil {
-				return GetSnippetListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSnippetListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSnippetListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getSnippetList:getSnippetList", args, GetSnippetListResultOutput{}, options).(GetSnippetListResultOutput), nil
 		}).(GetSnippetListResultOutput)
 }
 

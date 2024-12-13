@@ -88,21 +88,11 @@ type GetUrlFilteringCategoryListResult struct {
 }
 
 func GetUrlFilteringCategoryListOutput(ctx *pulumi.Context, args GetUrlFilteringCategoryListOutputArgs, opts ...pulumi.InvokeOption) GetUrlFilteringCategoryListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetUrlFilteringCategoryListResultOutput, error) {
 			args := v.(GetUrlFilteringCategoryListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetUrlFilteringCategoryListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getUrlFilteringCategoryList:getUrlFilteringCategoryList", args, &rv, "", opts...)
-			if err != nil {
-				return GetUrlFilteringCategoryListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetUrlFilteringCategoryListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetUrlFilteringCategoryListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getUrlFilteringCategoryList:getUrlFilteringCategoryList", args, GetUrlFilteringCategoryListResultOutput{}, options).(GetUrlFilteringCategoryListResultOutput), nil
 		}).(GetUrlFilteringCategoryListResultOutput)
 }
 

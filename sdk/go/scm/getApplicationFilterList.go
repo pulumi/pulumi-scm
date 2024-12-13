@@ -88,21 +88,11 @@ type GetApplicationFilterListResult struct {
 }
 
 func GetApplicationFilterListOutput(ctx *pulumi.Context, args GetApplicationFilterListOutputArgs, opts ...pulumi.InvokeOption) GetApplicationFilterListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetApplicationFilterListResultOutput, error) {
 			args := v.(GetApplicationFilterListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetApplicationFilterListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getApplicationFilterList:getApplicationFilterList", args, &rv, "", opts...)
-			if err != nil {
-				return GetApplicationFilterListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetApplicationFilterListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetApplicationFilterListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getApplicationFilterList:getApplicationFilterList", args, GetApplicationFilterListResultOutput{}, options).(GetApplicationFilterListResultOutput), nil
 		}).(GetApplicationFilterListResultOutput)
 }
 

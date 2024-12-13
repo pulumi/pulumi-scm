@@ -86,21 +86,11 @@ type LookupIpsecCryptoProfileResult struct {
 }
 
 func LookupIpsecCryptoProfileOutput(ctx *pulumi.Context, args LookupIpsecCryptoProfileOutputArgs, opts ...pulumi.InvokeOption) LookupIpsecCryptoProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupIpsecCryptoProfileResultOutput, error) {
 			args := v.(LookupIpsecCryptoProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupIpsecCryptoProfileResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupIpsecCryptoProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupIpsecCryptoProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupIpsecCryptoProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", args, LookupIpsecCryptoProfileResultOutput{}, options).(LookupIpsecCryptoProfileResultOutput), nil
 		}).(LookupIpsecCryptoProfileResultOutput)
 }
 

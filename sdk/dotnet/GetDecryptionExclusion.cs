@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetDecryptionExclusionResult> Invoke(GetDecryptionExclusionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionExclusionResult>("scm:index/getDecryptionExclusion:getDecryptionExclusion", args ?? new GetDecryptionExclusionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetDecryptionExclusion.Invoke(new()
+        ///     {
+        ///         Id = "1234-56-789",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDecryptionExclusionResult> Invoke(GetDecryptionExclusionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionExclusionResult>("scm:index/getDecryptionExclusion:getDecryptionExclusion", args ?? new GetDecryptionExclusionInvokeArgs(), options.WithDefaults());
     }
 
 

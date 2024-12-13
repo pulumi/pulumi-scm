@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetIpsecCryptoProfileListResult> Invoke(GetIpsecCryptoProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetIpsecCryptoProfileListResult>("scm:index/getIpsecCryptoProfileList:getIpsecCryptoProfileList", args ?? new GetIpsecCryptoProfileListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetIpsecCryptoProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetIpsecCryptoProfileListResult> Invoke(GetIpsecCryptoProfileListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetIpsecCryptoProfileListResult>("scm:index/getIpsecCryptoProfileList:getIpsecCryptoProfileList", args ?? new GetIpsecCryptoProfileListInvokeArgs(), options.WithDefaults());
     }
 
 

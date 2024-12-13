@@ -74,21 +74,11 @@ type GetAutoTagActionsListResult struct {
 }
 
 func GetAutoTagActionsListOutput(ctx *pulumi.Context, args GetAutoTagActionsListOutputArgs, opts ...pulumi.InvokeOption) GetAutoTagActionsListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetAutoTagActionsListResultOutput, error) {
 			args := v.(GetAutoTagActionsListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetAutoTagActionsListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getAutoTagActionsList:getAutoTagActionsList", args, &rv, "", opts...)
-			if err != nil {
-				return GetAutoTagActionsListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetAutoTagActionsListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetAutoTagActionsListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getAutoTagActionsList:getAutoTagActionsList", args, GetAutoTagActionsListResultOutput{}, options).(GetAutoTagActionsListResultOutput), nil
 		}).(GetAutoTagActionsListResultOutput)
 }
 

@@ -70,21 +70,11 @@ type LookupDynamicUserGroupResult struct {
 }
 
 func LookupDynamicUserGroupOutput(ctx *pulumi.Context, args LookupDynamicUserGroupOutputArgs, opts ...pulumi.InvokeOption) LookupDynamicUserGroupResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupDynamicUserGroupResultOutput, error) {
 			args := v.(LookupDynamicUserGroupArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupDynamicUserGroupResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getDynamicUserGroup:getDynamicUserGroup", args, &rv, "", opts...)
-			if err != nil {
-				return LookupDynamicUserGroupResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupDynamicUserGroupResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupDynamicUserGroupResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getDynamicUserGroup:getDynamicUserGroup", args, LookupDynamicUserGroupResultOutput{}, options).(LookupDynamicUserGroupResultOutput), nil
 		}).(LookupDynamicUserGroupResultOutput)
 }
 

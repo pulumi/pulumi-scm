@@ -88,21 +88,11 @@ type GetTagListResult struct {
 }
 
 func GetTagListOutput(ctx *pulumi.Context, args GetTagListOutputArgs, opts ...pulumi.InvokeOption) GetTagListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetTagListResultOutput, error) {
 			args := v.(GetTagListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetTagListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getTagList:getTagList", args, &rv, "", opts...)
-			if err != nil {
-				return GetTagListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetTagListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetTagListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getTagList:getTagList", args, GetTagListResultOutput{}, options).(GetTagListResultOutput), nil
 		}).(GetTagListResultOutput)
 }
 

@@ -90,21 +90,11 @@ type GetNatRuleListResult struct {
 }
 
 func GetNatRuleListOutput(ctx *pulumi.Context, args GetNatRuleListOutputArgs, opts ...pulumi.InvokeOption) GetNatRuleListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetNatRuleListResultOutput, error) {
 			args := v.(GetNatRuleListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetNatRuleListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getNatRuleList:getNatRuleList", args, &rv, "", opts...)
-			if err != nil {
-				return GetNatRuleListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetNatRuleListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetNatRuleListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getNatRuleList:getNatRuleList", args, GetNatRuleListResultOutput{}, options).(GetNatRuleListResultOutput), nil
 		}).(GetNatRuleListResultOutput)
 }
 

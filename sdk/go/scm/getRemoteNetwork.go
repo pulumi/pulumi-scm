@@ -86,21 +86,11 @@ type LookupRemoteNetworkResult struct {
 }
 
 func LookupRemoteNetworkOutput(ctx *pulumi.Context, args LookupRemoteNetworkOutputArgs, opts ...pulumi.InvokeOption) LookupRemoteNetworkResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupRemoteNetworkResultOutput, error) {
 			args := v.(LookupRemoteNetworkArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupRemoteNetworkResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getRemoteNetwork:getRemoteNetwork", args, &rv, "", opts...)
-			if err != nil {
-				return LookupRemoteNetworkResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupRemoteNetworkResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupRemoteNetworkResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getRemoteNetwork:getRemoteNetwork", args, LookupRemoteNetworkResultOutput{}, options).(LookupRemoteNetworkResultOutput), nil
 		}).(LookupRemoteNetworkResultOutput)
 }
 
