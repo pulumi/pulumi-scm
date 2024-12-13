@@ -88,21 +88,11 @@ type GetApplicationGroupListResult struct {
 }
 
 func GetApplicationGroupListOutput(ctx *pulumi.Context, args GetApplicationGroupListOutputArgs, opts ...pulumi.InvokeOption) GetApplicationGroupListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetApplicationGroupListResultOutput, error) {
 			args := v.(GetApplicationGroupListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetApplicationGroupListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getApplicationGroupList:getApplicationGroupList", args, &rv, "", opts...)
-			if err != nil {
-				return GetApplicationGroupListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetApplicationGroupListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetApplicationGroupListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getApplicationGroupList:getApplicationGroupList", args, GetApplicationGroupListResultOutput{}, options).(GetApplicationGroupListResultOutput), nil
 		}).(GetApplicationGroupListResultOutput)
 }
 

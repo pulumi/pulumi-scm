@@ -60,6 +60,31 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetServiceConnectionGroupResult> Invoke(GetServiceConnectionGroupInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceConnectionGroupResult>("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", args ?? new GetServiceConnectionGroupInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetServiceConnectionGroup.Invoke(new()
+        ///     {
+        ///         Id = "1234-56-789",
+        ///         Folder = "Service Connections",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetServiceConnectionGroupResult> Invoke(GetServiceConnectionGroupInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetServiceConnectionGroupResult>("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", args ?? new GetServiceConnectionGroupInvokeArgs(), options.WithDefaults());
     }
 
 

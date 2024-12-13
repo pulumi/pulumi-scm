@@ -52,6 +52,27 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetInternalDnsServerListResult> Invoke(GetInternalDnsServerListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetInternalDnsServerListResult>("scm:index/getInternalDnsServerList:getInternalDnsServerList", args ?? new GetInternalDnsServerListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetInternalDnsServerList.Invoke();
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetInternalDnsServerListResult> Invoke(GetInternalDnsServerListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetInternalDnsServerListResult>("scm:index/getInternalDnsServerList:getInternalDnsServerList", args ?? new GetInternalDnsServerListInvokeArgs(), options.WithDefaults());
     }
 
 

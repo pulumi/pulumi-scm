@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetAuthenticationSequenceResult> Invoke(GetAuthenticationSequenceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationSequenceResult>("scm:index/getAuthenticationSequence:getAuthenticationSequence", args ?? new GetAuthenticationSequenceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetAuthenticationSequence.Invoke(new()
+        ///     {
+        ///         Id = "1234-56-789",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAuthenticationSequenceResult> Invoke(GetAuthenticationSequenceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationSequenceResult>("scm:index/getAuthenticationSequence:getAuthenticationSequence", args ?? new GetAuthenticationSequenceInvokeArgs(), options.WithDefaults());
     }
 
 

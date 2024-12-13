@@ -52,6 +52,27 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetSharedInfrastructureSettingsListResult> Invoke(GetSharedInfrastructureSettingsListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSharedInfrastructureSettingsListResult>("scm:index/getSharedInfrastructureSettingsList:getSharedInfrastructureSettingsList", args ?? new GetSharedInfrastructureSettingsListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetSharedInfrastructureSettingsList.Invoke();
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSharedInfrastructureSettingsListResult> Invoke(GetSharedInfrastructureSettingsListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSharedInfrastructureSettingsListResult>("scm:index/getSharedInfrastructureSettingsList:getSharedInfrastructureSettingsList", args ?? new GetSharedInfrastructureSettingsListInvokeArgs(), options.WithDefaults());
     }
 
 

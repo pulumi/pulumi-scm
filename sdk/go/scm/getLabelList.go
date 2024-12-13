@@ -74,21 +74,11 @@ type GetLabelListResult struct {
 }
 
 func GetLabelListOutput(ctx *pulumi.Context, args GetLabelListOutputArgs, opts ...pulumi.InvokeOption) GetLabelListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetLabelListResultOutput, error) {
 			args := v.(GetLabelListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetLabelListResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getLabelList:getLabelList", args, &rv, "", opts...)
-			if err != nil {
-				return GetLabelListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetLabelListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetLabelListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getLabelList:getLabelList", args, GetLabelListResultOutput{}, options).(GetLabelListResultOutput), nil
 		}).(GetLabelListResultOutput)
 }
 

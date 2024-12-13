@@ -68,21 +68,11 @@ type LookupRegionResult struct {
 }
 
 func LookupRegionOutput(ctx *pulumi.Context, args LookupRegionOutputArgs, opts ...pulumi.InvokeOption) LookupRegionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupRegionResultOutput, error) {
 			args := v.(LookupRegionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupRegionResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getRegion:getRegion", args, &rv, "", opts...)
-			if err != nil {
-				return LookupRegionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupRegionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupRegionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getRegion:getRegion", args, LookupRegionResultOutput{}, options).(LookupRegionResultOutput), nil
 		}).(LookupRegionResultOutput)
 }
 

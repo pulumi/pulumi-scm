@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetHipProfileListResult> Invoke(GetHipProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetHipProfileListResult>("scm:index/getHipProfileList:getHipProfileList", args ?? new GetHipProfileListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetHipProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetHipProfileListResult> Invoke(GetHipProfileListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetHipProfileListResult>("scm:index/getHipProfileList:getHipProfileList", args ?? new GetHipProfileListInvokeArgs(), options.WithDefaults());
     }
 
 

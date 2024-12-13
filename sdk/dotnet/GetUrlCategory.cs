@@ -22,6 +22,12 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetUrlCategoryResult> Invoke(GetUrlCategoryInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetUrlCategoryResult>("scm:index/getUrlCategory:getUrlCategory", args ?? new GetUrlCategoryInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// </summary>
+        public static Output<GetUrlCategoryResult> Invoke(GetUrlCategoryInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetUrlCategoryResult>("scm:index/getUrlCategory:getUrlCategory", args ?? new GetUrlCategoryInvokeArgs(), options.WithDefaults());
     }
 
 

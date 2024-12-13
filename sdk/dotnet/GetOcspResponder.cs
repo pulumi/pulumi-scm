@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetOcspResponderResult> Invoke(GetOcspResponderInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetOcspResponderResult>("scm:index/getOcspResponder:getOcspResponder", args ?? new GetOcspResponderInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetOcspResponder.Invoke(new()
+        ///     {
+        ///         Id = "1234-56-789",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetOcspResponderResult> Invoke(GetOcspResponderInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetOcspResponderResult>("scm:index/getOcspResponder:getOcspResponder", args ?? new GetOcspResponderInvokeArgs(), options.WithDefaults());
     }
 
 

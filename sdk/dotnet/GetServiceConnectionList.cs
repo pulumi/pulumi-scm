@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetServiceConnectionListResult> Invoke(GetServiceConnectionListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceConnectionListResult>("scm:index/getServiceConnectionList:getServiceConnectionList", args ?? new GetServiceConnectionListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetServiceConnectionList.Invoke(new()
+        ///     {
+        ///         Folder = "Service Connections",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetServiceConnectionListResult> Invoke(GetServiceConnectionListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetServiceConnectionListResult>("scm:index/getServiceConnectionList:getServiceConnectionList", args ?? new GetServiceConnectionListInvokeArgs(), options.WithDefaults());
     }
 
 

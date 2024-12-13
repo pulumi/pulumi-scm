@@ -60,6 +60,31 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetQosPolicyRuleListResult> Invoke(GetQosPolicyRuleListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosPolicyRuleListResult>("scm:index/getQosPolicyRuleList:getQosPolicyRuleList", args ?? new GetQosPolicyRuleListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetQosPolicyRuleList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///         Position = "pre",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetQosPolicyRuleListResult> Invoke(GetQosPolicyRuleListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetQosPolicyRuleListResult>("scm:index/getQosPolicyRuleList:getQosPolicyRuleList", args ?? new GetQosPolicyRuleListInvokeArgs(), options.WithDefaults());
     }
 
 

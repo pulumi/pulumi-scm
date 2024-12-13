@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetHipObjectResult> Invoke(GetHipObjectInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetHipObjectResult>("scm:index/getHipObject:getHipObject", args ?? new GetHipObjectInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a config item.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetHipObject.Invoke(new()
+        ///     {
+        ///         Id = "1234-56-789",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetHipObjectResult> Invoke(GetHipObjectInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetHipObjectResult>("scm:index/getHipObject:getHipObject", args ?? new GetHipObjectInvokeArgs(), options.WithDefaults());
     }
 
 

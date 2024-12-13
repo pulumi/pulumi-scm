@@ -68,21 +68,11 @@ type LookupMfaServerResult struct {
 }
 
 func LookupMfaServerOutput(ctx *pulumi.Context, args LookupMfaServerOutputArgs, opts ...pulumi.InvokeOption) LookupMfaServerResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupMfaServerResultOutput, error) {
 			args := v.(LookupMfaServerArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupMfaServerResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getMfaServer:getMfaServer", args, &rv, "", opts...)
-			if err != nil {
-				return LookupMfaServerResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupMfaServerResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupMfaServerResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getMfaServer:getMfaServer", args, LookupMfaServerResultOutput{}, options).(LookupMfaServerResultOutput), nil
 		}).(LookupMfaServerResultOutput)
 }
 

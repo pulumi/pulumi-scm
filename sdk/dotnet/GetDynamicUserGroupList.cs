@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetDynamicUserGroupListResult> Invoke(GetDynamicUserGroupListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDynamicUserGroupListResult>("scm:index/getDynamicUserGroupList:getDynamicUserGroupList", args ?? new GetDynamicUserGroupListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetDynamicUserGroupList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDynamicUserGroupListResult> Invoke(GetDynamicUserGroupListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDynamicUserGroupListResult>("scm:index/getDynamicUserGroupList:getDynamicUserGroupList", args ?? new GetDynamicUserGroupListInvokeArgs(), options.WithDefaults());
     }
 
 

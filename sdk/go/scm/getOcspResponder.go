@@ -66,21 +66,11 @@ type LookupOcspResponderResult struct {
 }
 
 func LookupOcspResponderOutput(ctx *pulumi.Context, args LookupOcspResponderOutputArgs, opts ...pulumi.InvokeOption) LookupOcspResponderResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupOcspResponderResultOutput, error) {
 			args := v.(LookupOcspResponderArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupOcspResponderResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getOcspResponder:getOcspResponder", args, &rv, "", opts...)
-			if err != nil {
-				return LookupOcspResponderResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupOcspResponderResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupOcspResponderResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getOcspResponder:getOcspResponder", args, LookupOcspResponderResultOutput{}, options).(LookupOcspResponderResultOutput), nil
 		}).(LookupOcspResponderResultOutput)
 }
 

@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetRemoteNetworkListResult> Invoke(GetRemoteNetworkListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetRemoteNetworkListResult>("scm:index/getRemoteNetworkList:getRemoteNetworkList", args ?? new GetRemoteNetworkListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetRemoteNetworkList.Invoke(new()
+        ///     {
+        ///         Folder = "Remote Networks",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetRemoteNetworkListResult> Invoke(GetRemoteNetworkListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetRemoteNetworkListResult>("scm:index/getRemoteNetworkList:getRemoteNetworkList", args ?? new GetRemoteNetworkListInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetScepProfileListResult> Invoke(GetScepProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetScepProfileListResult>("scm:index/getScepProfileList:getScepProfileList", args ?? new GetScepProfileListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetScepProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetScepProfileListResult> Invoke(GetScepProfileListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetScepProfileListResult>("scm:index/getScepProfileList:getScepProfileList", args ?? new GetScepProfileListInvokeArgs(), options.WithDefaults());
     }
 
 

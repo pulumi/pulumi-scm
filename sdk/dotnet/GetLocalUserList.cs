@@ -58,6 +58,30 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetLocalUserListResult> Invoke(GetLocalUserListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLocalUserListResult>("scm:index/getLocalUserList:getLocalUserList", args ?? new GetLocalUserListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetLocalUserList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLocalUserListResult> Invoke(GetLocalUserListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLocalUserListResult>("scm:index/getLocalUserList:getLocalUserList", args ?? new GetLocalUserListInvokeArgs(), options.WithDefaults());
     }
 
 

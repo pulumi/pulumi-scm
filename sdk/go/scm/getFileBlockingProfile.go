@@ -68,21 +68,11 @@ type LookupFileBlockingProfileResult struct {
 }
 
 func LookupFileBlockingProfileOutput(ctx *pulumi.Context, args LookupFileBlockingProfileOutputArgs, opts ...pulumi.InvokeOption) LookupFileBlockingProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupFileBlockingProfileResultOutput, error) {
 			args := v.(LookupFileBlockingProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupFileBlockingProfileResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getFileBlockingProfile:getFileBlockingProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupFileBlockingProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupFileBlockingProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupFileBlockingProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getFileBlockingProfile:getFileBlockingProfile", args, LookupFileBlockingProfileResultOutput{}, options).(LookupFileBlockingProfileResultOutput), nil
 		}).(LookupFileBlockingProfileResultOutput)
 }
 

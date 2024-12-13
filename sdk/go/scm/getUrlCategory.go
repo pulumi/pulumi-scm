@@ -44,21 +44,11 @@ type LookupUrlCategoryResult struct {
 }
 
 func LookupUrlCategoryOutput(ctx *pulumi.Context, args LookupUrlCategoryOutputArgs, opts ...pulumi.InvokeOption) LookupUrlCategoryResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupUrlCategoryResultOutput, error) {
 			args := v.(LookupUrlCategoryArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupUrlCategoryResult
-			secret, err := ctx.InvokePackageRaw("scm:index/getUrlCategory:getUrlCategory", args, &rv, "", opts...)
-			if err != nil {
-				return LookupUrlCategoryResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupUrlCategoryResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupUrlCategoryResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("scm:index/getUrlCategory:getUrlCategory", args, LookupUrlCategoryResultOutput{}, options).(LookupUrlCategoryResultOutput), nil
 		}).(LookupUrlCategoryResultOutput)
 }
 

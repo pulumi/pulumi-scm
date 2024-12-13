@@ -52,6 +52,27 @@ namespace Pulumi.Scm
         /// </summary>
         public static Output<GetLabelListResult> Invoke(GetLabelListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLabelListResult>("scm:index/getLabelList:getLabelList", args ?? new GetLabelListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Scm.GetLabelList.Invoke();
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLabelListResult> Invoke(GetLabelListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLabelListResult>("scm:index/getLabelList:getLabelList", args ?? new GetLabelListInvokeArgs(), options.WithDefaults());
     }
 
 
