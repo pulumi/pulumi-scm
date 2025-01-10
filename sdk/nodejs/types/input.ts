@@ -3695,6 +3695,10 @@ export interface RemoteNetworkProtocolBgpPeer {
      */
     peerIpAddress?: pulumi.Input<string>;
     /**
+     * If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+     */
+    sameAsPrimary?: pulumi.Input<boolean>;
+    /**
      * The Secret param.
      */
     secret?: pulumi.Input<string>;
