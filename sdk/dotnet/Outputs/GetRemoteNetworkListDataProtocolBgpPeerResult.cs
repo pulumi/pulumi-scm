@@ -22,6 +22,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string PeerIpAddress;
         /// <summary>
+        /// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+        /// </summary>
+        public readonly bool SameAsPrimary;
+        /// <summary>
         /// The Secret param.
         /// </summary>
         public readonly string Secret;
@@ -32,10 +36,13 @@ namespace Pulumi.Scm.Outputs
 
             string peerIpAddress,
 
+            bool sameAsPrimary,
+
             string secret)
         {
             LocalIpAddress = localIpAddress;
             PeerIpAddress = peerIpAddress;
+            SameAsPrimary = sameAsPrimary;
             Secret = secret;
         }
     }

@@ -14208,6 +14208,8 @@ class RemoteNetworkProtocolBgpPeer(dict):
             suggest = "local_ip_address"
         elif key == "peerIpAddress":
             suggest = "peer_ip_address"
+        elif key == "sameAsPrimary":
+            suggest = "same_as_primary"
 
         if suggest:
             pulumi.log.warn(f"Key '{key}' not found in RemoteNetworkProtocolBgpPeer. Access the value via the '{suggest}' property getter instead.")
@@ -14223,16 +14225,20 @@ class RemoteNetworkProtocolBgpPeer(dict):
     def __init__(__self__, *,
                  local_ip_address: Optional[str] = None,
                  peer_ip_address: Optional[str] = None,
+                 same_as_primary: Optional[bool] = None,
                  secret: Optional[str] = None):
         """
         :param str local_ip_address: The LocalIpAddress param.
         :param str peer_ip_address: The PeerIpAddress param.
+        :param bool same_as_primary: If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
         :param str secret: The Secret param.
         """
         if local_ip_address is not None:
             pulumi.set(__self__, "local_ip_address", local_ip_address)
         if peer_ip_address is not None:
             pulumi.set(__self__, "peer_ip_address", peer_ip_address)
+        if same_as_primary is not None:
+            pulumi.set(__self__, "same_as_primary", same_as_primary)
         if secret is not None:
             pulumi.set(__self__, "secret", secret)
 
@@ -14251,6 +14257,14 @@ class RemoteNetworkProtocolBgpPeer(dict):
         The PeerIpAddress param.
         """
         return pulumi.get(self, "peer_ip_address")
+
+    @property
+    @pulumi.getter(name="sameAsPrimary")
+    def same_as_primary(self) -> Optional[bool]:
+        """
+        If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+        """
+        return pulumi.get(self, "same_as_primary")
 
     @property
     @pulumi.getter
@@ -41851,14 +41865,17 @@ class GetRemoteNetworkListDataProtocolBgpPeerResult(dict):
     def __init__(__self__, *,
                  local_ip_address: str,
                  peer_ip_address: str,
+                 same_as_primary: bool,
                  secret: str):
         """
         :param str local_ip_address: The LocalIpAddress param.
         :param str peer_ip_address: The PeerIpAddress param.
+        :param bool same_as_primary: If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
         :param str secret: The Secret param.
         """
         pulumi.set(__self__, "local_ip_address", local_ip_address)
         pulumi.set(__self__, "peer_ip_address", peer_ip_address)
+        pulumi.set(__self__, "same_as_primary", same_as_primary)
         pulumi.set(__self__, "secret", secret)
 
     @property
@@ -41876,6 +41893,14 @@ class GetRemoteNetworkListDataProtocolBgpPeerResult(dict):
         The PeerIpAddress param.
         """
         return pulumi.get(self, "peer_ip_address")
+
+    @property
+    @pulumi.getter(name="sameAsPrimary")
+    def same_as_primary(self) -> bool:
+        """
+        If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+        """
+        return pulumi.get(self, "same_as_primary")
 
     @property
     @pulumi.getter
@@ -42026,14 +42051,17 @@ class GetRemoteNetworkProtocolBgpPeerResult(dict):
     def __init__(__self__, *,
                  local_ip_address: str,
                  peer_ip_address: str,
+                 same_as_primary: bool,
                  secret: str):
         """
         :param str local_ip_address: The LocalIpAddress param.
         :param str peer_ip_address: The PeerIpAddress param.
+        :param bool same_as_primary: If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
         :param str secret: The Secret param.
         """
         pulumi.set(__self__, "local_ip_address", local_ip_address)
         pulumi.set(__self__, "peer_ip_address", peer_ip_address)
+        pulumi.set(__self__, "same_as_primary", same_as_primary)
         pulumi.set(__self__, "secret", secret)
 
     @property
@@ -42051,6 +42079,14 @@ class GetRemoteNetworkProtocolBgpPeerResult(dict):
         The PeerIpAddress param.
         """
         return pulumi.get(self, "peer_ip_address")
+
+    @property
+    @pulumi.getter(name="sameAsPrimary")
+    def same_as_primary(self) -> bool:
+        """
+        If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+        """
+        return pulumi.get(self, "same_as_primary")
 
     @property
     @pulumi.getter

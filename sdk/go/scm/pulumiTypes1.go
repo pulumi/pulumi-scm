@@ -28742,6 +28742,8 @@ type GetRemoteNetworkListDataProtocolBgpPeer struct {
 	LocalIpAddress string `pulumi:"localIpAddress"`
 	// The PeerIpAddress param.
 	PeerIpAddress string `pulumi:"peerIpAddress"`
+	// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+	SameAsPrimary bool `pulumi:"sameAsPrimary"`
 	// The Secret param.
 	Secret string `pulumi:"secret"`
 }
@@ -28762,6 +28764,8 @@ type GetRemoteNetworkListDataProtocolBgpPeerArgs struct {
 	LocalIpAddress pulumi.StringInput `pulumi:"localIpAddress"`
 	// The PeerIpAddress param.
 	PeerIpAddress pulumi.StringInput `pulumi:"peerIpAddress"`
+	// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+	SameAsPrimary pulumi.BoolInput `pulumi:"sameAsPrimary"`
 	// The Secret param.
 	Secret pulumi.StringInput `pulumi:"secret"`
 }
@@ -28800,6 +28804,11 @@ func (o GetRemoteNetworkListDataProtocolBgpPeerOutput) LocalIpAddress() pulumi.S
 // The PeerIpAddress param.
 func (o GetRemoteNetworkListDataProtocolBgpPeerOutput) PeerIpAddress() pulumi.StringOutput {
 	return o.ApplyT(func(v GetRemoteNetworkListDataProtocolBgpPeer) string { return v.PeerIpAddress }).(pulumi.StringOutput)
+}
+
+// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+func (o GetRemoteNetworkListDataProtocolBgpPeerOutput) SameAsPrimary() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetRemoteNetworkListDataProtocolBgpPeer) bool { return v.SameAsPrimary }).(pulumi.BoolOutput)
 }
 
 // The Secret param.
@@ -28997,6 +29006,8 @@ type GetRemoteNetworkProtocolBgpPeer struct {
 	LocalIpAddress string `pulumi:"localIpAddress"`
 	// The PeerIpAddress param.
 	PeerIpAddress string `pulumi:"peerIpAddress"`
+	// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+	SameAsPrimary bool `pulumi:"sameAsPrimary"`
 	// The Secret param.
 	Secret string `pulumi:"secret"`
 }
@@ -29017,6 +29028,8 @@ type GetRemoteNetworkProtocolBgpPeerArgs struct {
 	LocalIpAddress pulumi.StringInput `pulumi:"localIpAddress"`
 	// The PeerIpAddress param.
 	PeerIpAddress pulumi.StringInput `pulumi:"peerIpAddress"`
+	// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+	SameAsPrimary pulumi.BoolInput `pulumi:"sameAsPrimary"`
 	// The Secret param.
 	Secret pulumi.StringInput `pulumi:"secret"`
 }
@@ -29055,6 +29068,11 @@ func (o GetRemoteNetworkProtocolBgpPeerOutput) LocalIpAddress() pulumi.StringOut
 // The PeerIpAddress param.
 func (o GetRemoteNetworkProtocolBgpPeerOutput) PeerIpAddress() pulumi.StringOutput {
 	return o.ApplyT(func(v GetRemoteNetworkProtocolBgpPeer) string { return v.PeerIpAddress }).(pulumi.StringOutput)
+}
+
+// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+func (o GetRemoteNetworkProtocolBgpPeerOutput) SameAsPrimary() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetRemoteNetworkProtocolBgpPeer) bool { return v.SameAsPrimary }).(pulumi.BoolOutput)
 }
 
 // The Secret param.

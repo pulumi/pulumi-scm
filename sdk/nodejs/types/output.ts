@@ -10684,6 +10684,10 @@ export interface GetRemoteNetworkListDataProtocolBgpPeer {
      */
     peerIpAddress: string;
     /**
+     * If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+     */
+    sameAsPrimary: boolean;
+    /**
      * The Secret param.
      */
     secret: string;
@@ -10748,6 +10752,10 @@ export interface GetRemoteNetworkProtocolBgpPeer {
      * The PeerIpAddress param.
      */
     peerIpAddress: string;
+    /**
+     * If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+     */
+    sameAsPrimary: boolean;
     /**
      * The Secret param.
      */
@@ -15481,6 +15489,10 @@ export interface RemoteNetworkProtocolBgpPeer {
      * The PeerIpAddress param.
      */
     peerIpAddress?: string;
+    /**
+     * If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+     */
+    sameAsPrimary: boolean;
     /**
      * The Secret param.
      */

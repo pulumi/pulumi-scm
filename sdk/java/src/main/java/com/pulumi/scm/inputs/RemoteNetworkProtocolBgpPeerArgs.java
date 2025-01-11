@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,6 +47,21 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
     }
 
     /**
+     * If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+     * 
+     */
+    @Import(name="sameAsPrimary")
+    private @Nullable Output<Boolean> sameAsPrimary;
+
+    /**
+     * @return If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+     * 
+     */
+    public Optional<Output<Boolean>> sameAsPrimary() {
+        return Optional.ofNullable(this.sameAsPrimary);
+    }
+
+    /**
      * The Secret param.
      * 
      */
@@ -65,6 +81,7 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
     private RemoteNetworkProtocolBgpPeerArgs(RemoteNetworkProtocolBgpPeerArgs $) {
         this.localIpAddress = $.localIpAddress;
         this.peerIpAddress = $.peerIpAddress;
+        this.sameAsPrimary = $.sameAsPrimary;
         this.secret = $.secret;
     }
 
@@ -126,6 +143,27 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
          */
         public Builder peerIpAddress(String peerIpAddress) {
             return peerIpAddress(Output.of(peerIpAddress));
+        }
+
+        /**
+         * @param sameAsPrimary If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sameAsPrimary(@Nullable Output<Boolean> sameAsPrimary) {
+            $.sameAsPrimary = sameAsPrimary;
+            return this;
+        }
+
+        /**
+         * @param sameAsPrimary If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sameAsPrimary(Boolean sameAsPrimary) {
+            return sameAsPrimary(Output.of(sameAsPrimary));
         }
 
         /**

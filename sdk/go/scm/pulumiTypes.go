@@ -40599,6 +40599,8 @@ type RemoteNetworkProtocolBgpPeer struct {
 	LocalIpAddress *string `pulumi:"localIpAddress"`
 	// The PeerIpAddress param.
 	PeerIpAddress *string `pulumi:"peerIpAddress"`
+	// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+	SameAsPrimary *bool `pulumi:"sameAsPrimary"`
 	// The Secret param.
 	Secret *string `pulumi:"secret"`
 }
@@ -40619,6 +40621,8 @@ type RemoteNetworkProtocolBgpPeerArgs struct {
 	LocalIpAddress pulumi.StringPtrInput `pulumi:"localIpAddress"`
 	// The PeerIpAddress param.
 	PeerIpAddress pulumi.StringPtrInput `pulumi:"peerIpAddress"`
+	// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+	SameAsPrimary pulumi.BoolPtrInput `pulumi:"sameAsPrimary"`
 	// The Secret param.
 	Secret pulumi.StringPtrInput `pulumi:"secret"`
 }
@@ -40710,6 +40714,11 @@ func (o RemoteNetworkProtocolBgpPeerOutput) PeerIpAddress() pulumi.StringPtrOutp
 	return o.ApplyT(func(v RemoteNetworkProtocolBgpPeer) *string { return v.PeerIpAddress }).(pulumi.StringPtrOutput)
 }
 
+// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+func (o RemoteNetworkProtocolBgpPeerOutput) SameAsPrimary() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v RemoteNetworkProtocolBgpPeer) *bool { return v.SameAsPrimary }).(pulumi.BoolPtrOutput)
+}
+
 // The Secret param.
 func (o RemoteNetworkProtocolBgpPeerOutput) Secret() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v RemoteNetworkProtocolBgpPeer) *string { return v.Secret }).(pulumi.StringPtrOutput)
@@ -40757,6 +40766,16 @@ func (o RemoteNetworkProtocolBgpPeerPtrOutput) PeerIpAddress() pulumi.StringPtrO
 		}
 		return v.PeerIpAddress
 	}).(pulumi.StringPtrOutput)
+}
+
+// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+func (o RemoteNetworkProtocolBgpPeerPtrOutput) SameAsPrimary() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *RemoteNetworkProtocolBgpPeer) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.SameAsPrimary
+	}).(pulumi.BoolPtrOutput)
 }
 
 // The Secret param.

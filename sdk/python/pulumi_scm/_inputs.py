@@ -18196,6 +18196,10 @@ if not MYPY:
         """
         The PeerIpAddress param.
         """
+        same_as_primary: NotRequired[pulumi.Input[bool]]
+        """
+        If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+        """
         secret: NotRequired[pulumi.Input[str]]
         """
         The Secret param.
@@ -18208,16 +18212,20 @@ class RemoteNetworkProtocolBgpPeerArgs:
     def __init__(__self__, *,
                  local_ip_address: Optional[pulumi.Input[str]] = None,
                  peer_ip_address: Optional[pulumi.Input[str]] = None,
+                 same_as_primary: Optional[pulumi.Input[bool]] = None,
                  secret: Optional[pulumi.Input[str]] = None):
         """
         :param pulumi.Input[str] local_ip_address: The LocalIpAddress param.
         :param pulumi.Input[str] peer_ip_address: The PeerIpAddress param.
+        :param pulumi.Input[bool] same_as_primary: If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
         :param pulumi.Input[str] secret: The Secret param.
         """
         if local_ip_address is not None:
             pulumi.set(__self__, "local_ip_address", local_ip_address)
         if peer_ip_address is not None:
             pulumi.set(__self__, "peer_ip_address", peer_ip_address)
+        if same_as_primary is not None:
+            pulumi.set(__self__, "same_as_primary", same_as_primary)
         if secret is not None:
             pulumi.set(__self__, "secret", secret)
 
@@ -18244,6 +18252,18 @@ class RemoteNetworkProtocolBgpPeerArgs:
     @peer_ip_address.setter
     def peer_ip_address(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "peer_ip_address", value)
+
+    @property
+    @pulumi.getter(name="sameAsPrimary")
+    def same_as_primary(self) -> Optional[pulumi.Input[bool]]:
+        """
+        If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+        """
+        return pulumi.get(self, "same_as_primary")
+
+    @same_as_primary.setter
+    def same_as_primary(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "same_as_primary", value)
 
     @property
     @pulumi.getter

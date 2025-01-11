@@ -5278,13 +5278,24 @@
                     "type": "string",
                     "description": "The PeerIpAddress param.\n"
                 },
+                "sameAsPrimary": {
+                    "type": "boolean",
+                    "description": "If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.\n"
+                },
                 "secret": {
                     "type": "string",
                     "description": "The Secret param.\n",
                     "secret": true
                 }
             },
-            "type": "object"
+            "type": "object",
+            "language": {
+                "nodejs": {
+                    "requiredOutputs": [
+                        "sameAsPrimary"
+                    ]
+                }
+            }
         },
         "scm:index/ScepProfileAlgorithm:ScepProfileAlgorithm": {
             "properties": {
@@ -23003,6 +23014,10 @@
                     "type": "string",
                     "description": "The PeerIpAddress param.\n"
                 },
+                "sameAsPrimary": {
+                    "type": "boolean",
+                    "description": "If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.\n"
+                },
                 "secret": {
                     "type": "string",
                     "description": "The Secret param.\n",
@@ -23013,6 +23028,7 @@
             "required": [
                 "localIpAddress",
                 "peerIpAddress",
+                "sameAsPrimary",
                 "secret"
             ],
             "language": {
@@ -23111,6 +23127,10 @@
                     "type": "string",
                     "description": "The PeerIpAddress param.\n"
                 },
+                "sameAsPrimary": {
+                    "type": "boolean",
+                    "description": "If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.\n"
+                },
                 "secret": {
                     "type": "string",
                     "description": "The Secret param.\n",
@@ -23121,6 +23141,7 @@
             "required": [
                 "localIpAddress",
                 "peerIpAddress",
+                "sameAsPrimary",
                 "secret"
             ],
             "language": {
