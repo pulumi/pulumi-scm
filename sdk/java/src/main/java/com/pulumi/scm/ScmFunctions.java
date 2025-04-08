@@ -6482,7 +6482,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getAutoTagActionsList();
+     *         final var example = ScmFunctions.getAutoTagActionsList(GetAutoTagActionsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -6522,7 +6523,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getAutoTagActionsList();
+     *         final var example = ScmFunctions.getAutoTagActionsList(GetAutoTagActionsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -6562,7 +6564,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getAutoTagActionsList();
+     *         final var example = ScmFunctions.getAutoTagActionsList(GetAutoTagActionsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -6602,7 +6605,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getAutoTagActionsList();
+     *         final var example = ScmFunctions.getAutoTagActionsList(GetAutoTagActionsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -6642,7 +6646,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getAutoTagActionsList();
+     *         final var example = ScmFunctions.getAutoTagActionsList(GetAutoTagActionsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -6682,7 +6687,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getAutoTagActionsList();
+     *         final var example = ScmFunctions.getAutoTagActionsList(GetAutoTagActionsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -6722,7 +6728,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getAutoTagActionsList();
+     *         final var example = ScmFunctions.getAutoTagActionsList(GetAutoTagActionsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -8701,7 +8708,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getDeviceList();
+     *         final var example = ScmFunctions.getDeviceList(GetDeviceListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -8741,7 +8749,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getDeviceList();
+     *         final var example = ScmFunctions.getDeviceList(GetDeviceListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -8781,7 +8790,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getDeviceList();
+     *         final var example = ScmFunctions.getDeviceList(GetDeviceListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -8821,7 +8831,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getDeviceList();
+     *         final var example = ScmFunctions.getDeviceList(GetDeviceListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -8861,7 +8872,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getDeviceList();
+     *         final var example = ScmFunctions.getDeviceList(GetDeviceListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -8901,7 +8913,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getDeviceList();
+     *         final var example = ScmFunctions.getDeviceList(GetDeviceListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -8941,7 +8954,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getDeviceList();
+     *         final var example = ScmFunctions.getDeviceList(GetDeviceListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -13727,7 +13741,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getInternalDnsServerList();
+     *         final var example = ScmFunctions.getInternalDnsServerList(GetInternalDnsServerListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -13767,7 +13782,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getInternalDnsServerList();
+     *         final var example = ScmFunctions.getInternalDnsServerList(GetInternalDnsServerListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -13807,7 +13823,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getInternalDnsServerList();
+     *         final var example = ScmFunctions.getInternalDnsServerList(GetInternalDnsServerListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -13847,7 +13864,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getInternalDnsServerList();
+     *         final var example = ScmFunctions.getInternalDnsServerList(GetInternalDnsServerListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -13887,7 +13905,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getInternalDnsServerList();
+     *         final var example = ScmFunctions.getInternalDnsServerList(GetInternalDnsServerListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -13927,7 +13946,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getInternalDnsServerList();
+     *         final var example = ScmFunctions.getInternalDnsServerList(GetInternalDnsServerListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -13967,7 +13987,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getInternalDnsServerList();
+     *         final var example = ScmFunctions.getInternalDnsServerList(GetInternalDnsServerListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -15015,7 +15036,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobs();
+     *         final var example = ScmFunctions.getJobs(GetJobsArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -15055,7 +15077,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobs();
+     *         final var example = ScmFunctions.getJobs(GetJobsArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -15095,7 +15118,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobs();
+     *         final var example = ScmFunctions.getJobs(GetJobsArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -15135,7 +15159,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobs();
+     *         final var example = ScmFunctions.getJobs(GetJobsArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -15175,7 +15200,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobs();
+     *         final var example = ScmFunctions.getJobs(GetJobsArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -15193,33 +15219,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobsList(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15232,33 +15231,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobsList(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15271,33 +15243,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobsList(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15310,33 +15255,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobsList(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15349,33 +15267,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobsList(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15388,33 +15279,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobsList(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15427,33 +15291,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getJobsList(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15992,7 +15829,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getLabelList();
+     *         final var example = ScmFunctions.getLabelList(GetLabelListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -16032,7 +15870,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getLabelList();
+     *         final var example = ScmFunctions.getLabelList(GetLabelListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -16072,7 +15911,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getLabelList();
+     *         final var example = ScmFunctions.getLabelList(GetLabelListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -16112,7 +15952,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getLabelList();
+     *         final var example = ScmFunctions.getLabelList(GetLabelListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -16152,7 +15993,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getLabelList();
+     *         final var example = ScmFunctions.getLabelList(GetLabelListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -16192,7 +16034,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getLabelList();
+     *         final var example = ScmFunctions.getLabelList(GetLabelListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -16232,7 +16075,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getLabelList();
+     *         final var example = ScmFunctions.getLabelList(GetLabelListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -18204,7 +18048,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getNatRuleList();
+     *         final var example = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -18244,7 +18089,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getNatRuleList();
+     *         final var example = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -18284,7 +18130,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getNatRuleList();
+     *         final var example = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -18324,7 +18171,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getNatRuleList();
+     *         final var example = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -18364,7 +18212,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getNatRuleList();
+     *         final var example = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -18404,7 +18253,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getNatRuleList();
+     *         final var example = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -18444,7 +18294,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getNatRuleList();
+     *         final var example = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26068,7 +25919,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList();
+     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList(GetSharedInfrastructureSettingsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26108,7 +25960,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList();
+     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList(GetSharedInfrastructureSettingsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26148,7 +26001,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList();
+     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList(GetSharedInfrastructureSettingsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26188,7 +26042,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList();
+     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList(GetSharedInfrastructureSettingsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26228,7 +26083,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList();
+     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList(GetSharedInfrastructureSettingsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26268,7 +26124,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList();
+     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList(GetSharedInfrastructureSettingsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26308,7 +26165,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList();
+     *         final var example = ScmFunctions.getSharedInfrastructureSettingsList(GetSharedInfrastructureSettingsListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26558,7 +26416,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSnippetList();
+     *         final var example = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26598,7 +26457,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSnippetList();
+     *         final var example = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26638,7 +26498,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSnippetList();
+     *         final var example = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26678,7 +26539,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSnippetList();
+     *         final var example = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26718,7 +26580,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSnippetList();
+     *         final var example = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26758,7 +26621,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSnippetList();
+     *         final var example = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -26798,7 +26662,8 @@ public final class ScmFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getSnippetList();
+     *         final var example = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .build());
      * 
      *     }
      * }
@@ -28328,37 +28193,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import com.pulumi.scm.inputs.GetTrafficSteeringRuleArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getTrafficSteeringRule(GetTrafficSteeringRuleArgs.builder()
-     *             .id("1234-56-789")
-     *             .folder("Service Connections")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -28371,37 +28205,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import com.pulumi.scm.inputs.GetTrafficSteeringRuleArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getTrafficSteeringRule(GetTrafficSteeringRuleArgs.builder()
-     *             .id("1234-56-789")
-     *             .folder("Service Connections")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -28414,37 +28217,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import com.pulumi.scm.inputs.GetTrafficSteeringRuleArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getTrafficSteeringRule(GetTrafficSteeringRuleArgs.builder()
-     *             .id("1234-56-789")
-     *             .folder("Service Connections")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -28457,37 +28229,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import com.pulumi.scm.inputs.GetTrafficSteeringRuleArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getTrafficSteeringRule(GetTrafficSteeringRuleArgs.builder()
-     *             .id("1234-56-789")
-     *             .folder("Service Connections")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -28500,37 +28241,6 @@ public final class ScmFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.scm.ScmFunctions;
-     * import com.pulumi.scm.inputs.GetTrafficSteeringRuleArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = ScmFunctions.getTrafficSteeringRule(GetTrafficSteeringRuleArgs.builder()
-     *             .id("1234-56-789")
-     *             .folder("Service Connections")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
