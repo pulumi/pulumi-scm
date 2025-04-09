@@ -28,56 +28,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.IkeGateway;
- * import com.pulumi.scm.IkeGatewayArgs;
- * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
- * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
- * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev2Args;
- * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev2DpdArgs;
- * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new IkeGateway("example", IkeGatewayArgs.builder()
- *             .folder("Remote Networks")
- *             .name("gw1")
- *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
- *                 .dynamic_address(true)
- *                 .build())
- *             .protocol(IkeGatewayProtocolArgs.builder()
- *                 .version("ikev2")
- *                 .ikev2(IkeGatewayProtocolIkev2Args.builder()
- *                     .dpd(IkeGatewayProtocolIkev2DpdArgs.builder()
- *                         .enable(false)
- *                         .build())
- *                     .build())
- *                 .build())
- *             .authentication(IkeGatewayAuthenticationArgs.builder()
- *                 .pre_shared_key(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */
