@@ -400,6 +400,9 @@ class _AntiSpywareProfileState:
 
 
 class AntiSpywareProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/antiSpywareProfile:AntiSpywareProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

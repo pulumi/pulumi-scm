@@ -286,6 +286,9 @@ class _TacacsServerProfileState:
 
 
 class TacacsServerProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/tacacsServerProfile:TacacsServerProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

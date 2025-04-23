@@ -304,6 +304,9 @@ class _AddressGroupState:
 
 
 class AddressGroup(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/addressGroup:AddressGroup"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

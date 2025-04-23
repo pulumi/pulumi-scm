@@ -254,6 +254,9 @@ class _LocalUserState:
 
 
 class LocalUser(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/localUser:LocalUser"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

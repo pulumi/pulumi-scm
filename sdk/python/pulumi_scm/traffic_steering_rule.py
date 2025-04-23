@@ -302,6 +302,9 @@ class _TrafficSteeringRuleState:
 
 
 class TrafficSteeringRule(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/trafficSteeringRule:TrafficSteeringRule"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

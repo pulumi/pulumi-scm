@@ -238,6 +238,9 @@ class _AuthenticationSequenceState:
 
 
 class AuthenticationSequence(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/authenticationSequence:AuthenticationSequence"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

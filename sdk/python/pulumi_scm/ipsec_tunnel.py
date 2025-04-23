@@ -335,6 +335,9 @@ class _IpsecTunnelState:
 
 
 class IpsecTunnel(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/ipsecTunnel:IpsecTunnel"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

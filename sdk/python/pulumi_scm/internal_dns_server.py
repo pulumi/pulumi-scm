@@ -172,6 +172,9 @@ class _InternalDnsServerState:
 
 
 class InternalDnsServer(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/internalDnsServer:InternalDnsServer"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

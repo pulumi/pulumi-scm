@@ -336,6 +336,9 @@ class _WildfireAntiVirusProfileState:
 
 
 class WildfireAntiVirusProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

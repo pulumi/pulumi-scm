@@ -240,6 +240,9 @@ class _RegionState:
 
 
 class Region(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/region:Region"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

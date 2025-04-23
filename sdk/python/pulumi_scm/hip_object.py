@@ -560,6 +560,9 @@ class _HipObjectState:
 
 
 class HipObject(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/hipObject:HipObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

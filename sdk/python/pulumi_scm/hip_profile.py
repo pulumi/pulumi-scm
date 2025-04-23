@@ -237,6 +237,9 @@ class _HipProfileState:
 
 
 class HipProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/hipProfile:HipProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

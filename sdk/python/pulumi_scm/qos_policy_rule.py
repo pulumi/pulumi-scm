@@ -335,6 +335,9 @@ class _QosPolicyRuleState:
 
 
 class QosPolicyRule(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/qosPolicyRule:QosPolicyRule"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
