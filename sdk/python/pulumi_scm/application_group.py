@@ -205,6 +205,9 @@ class _ApplicationGroupState:
 
 
 class ApplicationGroup(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/applicationGroup:ApplicationGroup"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

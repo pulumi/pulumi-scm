@@ -238,6 +238,9 @@ class _TlsServiceProfileState:
 
 
 class TlsServiceProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/tlsServiceProfile:TlsServiceProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

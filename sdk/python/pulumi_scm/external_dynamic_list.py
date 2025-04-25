@@ -223,6 +223,9 @@ class _ExternalDynamicListState:
 
 
 class ExternalDynamicList(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/externalDynamicList:ExternalDynamicList"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

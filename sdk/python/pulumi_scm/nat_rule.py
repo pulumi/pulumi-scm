@@ -715,6 +715,9 @@ class _NatRuleState:
 
 
 class NatRule(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/natRule:NatRule"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

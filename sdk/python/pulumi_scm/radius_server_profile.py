@@ -287,6 +287,9 @@ class _RadiusServerProfileState:
 
 
 class RadiusServerProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/radiusServerProfile:RadiusServerProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -494,6 +494,9 @@ class _AntiSpywareSignatureState:
 
 
 class AntiSpywareSignature(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/antiSpywareSignature:AntiSpywareSignature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

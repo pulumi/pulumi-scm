@@ -240,6 +240,9 @@ class _SnippetState:
 
 
 class Snippet(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/snippet:Snippet"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

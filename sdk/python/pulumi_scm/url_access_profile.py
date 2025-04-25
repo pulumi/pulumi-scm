@@ -624,6 +624,9 @@ class _UrlAccessProfileState:
 
 
 class UrlAccessProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/urlAccessProfile:UrlAccessProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
