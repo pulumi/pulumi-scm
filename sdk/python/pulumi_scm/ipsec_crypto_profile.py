@@ -335,6 +335,9 @@ class _IpsecCryptoProfileState:
 
 
 class IpsecCryptoProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/ipsecCryptoProfile:IpsecCryptoProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -239,6 +239,9 @@ class _MfaServerState:
 
 
 class MfaServer(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/mfaServer:MfaServer"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

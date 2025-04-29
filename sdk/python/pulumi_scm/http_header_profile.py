@@ -240,6 +240,9 @@ class _HttpHeaderProfileState:
 
 
 class HttpHeaderProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/httpHeaderProfile:HttpHeaderProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -269,6 +269,9 @@ class _DynamicUserGroupState:
 
 
 class DynamicUserGroup(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/dynamicUserGroup:DynamicUserGroup"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

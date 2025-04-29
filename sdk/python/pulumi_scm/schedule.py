@@ -207,6 +207,9 @@ class _ScheduleState:
 
 
 class Schedule(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/schedule:Schedule"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

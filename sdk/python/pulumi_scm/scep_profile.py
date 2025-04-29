@@ -573,6 +573,9 @@ class _ScepProfileState:
 
 
 class ScepProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/scepProfile:ScepProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
