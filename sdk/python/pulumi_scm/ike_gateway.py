@@ -381,6 +381,9 @@ class _IkeGatewayState:
 
 
 class IkeGateway(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/ikeGateway:IkeGateway"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

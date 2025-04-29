@@ -175,6 +175,9 @@ class _KerberosServerProfileState:
 
 
 class KerberosServerProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/kerberosServerProfile:KerberosServerProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

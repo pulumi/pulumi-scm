@@ -846,6 +846,9 @@ class _AuthenticationRuleState:
 
 
 class AuthenticationRule(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/authenticationRule:AuthenticationRule"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

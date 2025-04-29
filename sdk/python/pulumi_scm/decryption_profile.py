@@ -304,6 +304,9 @@ class _DecryptionProfileState:
 
 
 class DecryptionProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/decryptionProfile:DecryptionProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

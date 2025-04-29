@@ -510,6 +510,9 @@ class _ServiceConnectionState:
 
 
 class ServiceConnection(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/serviceConnection:ServiceConnection"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -840,6 +840,9 @@ class _DecryptionRuleState:
 
 
 class DecryptionRule(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/decryptionRule:DecryptionRule"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -240,6 +240,9 @@ class _QosProfileState:
 
 
 class QosProfile(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/qosProfile:QosProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

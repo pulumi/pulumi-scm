@@ -206,6 +206,9 @@ class _DecryptionExclusionState:
 
 
 class DecryptionExclusion(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/decryptionExclusion:DecryptionExclusion"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

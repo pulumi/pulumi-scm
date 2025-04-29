@@ -382,6 +382,9 @@ class _AddressObjectState:
 
 
 class AddressObject(pulumi.CustomResource):
+
+    pulumi_type = "scm:index/addressObject:AddressObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
