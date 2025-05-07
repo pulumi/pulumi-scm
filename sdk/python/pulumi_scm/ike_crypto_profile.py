@@ -332,10 +332,8 @@ class _IkeCryptoProfileState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/ikeCryptoProfile:IkeCryptoProfile")
 class IkeCryptoProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/ikeCryptoProfile:IkeCryptoProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

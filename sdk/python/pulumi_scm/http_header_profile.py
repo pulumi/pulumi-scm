@@ -239,10 +239,8 @@ class _HttpHeaderProfileState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/httpHeaderProfile:HttpHeaderProfile")
 class HttpHeaderProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/httpHeaderProfile:HttpHeaderProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

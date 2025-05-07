@@ -396,10 +396,8 @@ class _SamlServerProfileState:
         pulumi.set(self, "want_auth_requests_signed", value)
 
 
+@pulumi.type_token("scm:index/samlServerProfile:SamlServerProfile")
 class SamlServerProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/samlServerProfile:SamlServerProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

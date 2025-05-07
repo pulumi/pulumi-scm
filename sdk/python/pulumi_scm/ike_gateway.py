@@ -380,10 +380,8 @@ class _IkeGatewayState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/ikeGateway:IkeGateway")
 class IkeGateway(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/ikeGateway:IkeGateway"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -414,10 +414,8 @@ class _RemoteNetworkState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/remoteNetwork:RemoteNetwork")
 class RemoteNetwork(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/remoteNetwork:RemoteNetwork"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

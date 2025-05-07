@@ -239,10 +239,8 @@ class _SnippetState:
         pulumi.set(self, "type", value)
 
 
+@pulumi.type_token("scm:index/snippet:Snippet")
 class Snippet(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/snippet:Snippet"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

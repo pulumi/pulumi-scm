@@ -493,10 +493,8 @@ class _AntiSpywareSignatureState:
         pulumi.set(self, "vendors", value)
 
 
+@pulumi.type_token("scm:index/antiSpywareSignature:AntiSpywareSignature")
 class AntiSpywareSignature(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/antiSpywareSignature:AntiSpywareSignature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

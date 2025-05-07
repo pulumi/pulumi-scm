@@ -253,10 +253,8 @@ class _LocalUserState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/localUser:LocalUser")
 class LocalUser(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/localUser:LocalUser"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

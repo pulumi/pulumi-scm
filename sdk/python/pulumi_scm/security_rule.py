@@ -774,10 +774,8 @@ class _SecurityRuleState:
         pulumi.set(self, "tos", value)
 
 
+@pulumi.type_token("scm:index/securityRule:SecurityRule")
 class SecurityRule(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/securityRule:SecurityRule"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

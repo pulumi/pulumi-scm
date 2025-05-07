@@ -237,10 +237,8 @@ class _AuthenticationSequenceState:
         pulumi.set(self, "use_domain_find_profile", value)
 
 
+@pulumi.type_token("scm:index/authenticationSequence:AuthenticationSequence")
 class AuthenticationSequence(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/authenticationSequence:AuthenticationSequence"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

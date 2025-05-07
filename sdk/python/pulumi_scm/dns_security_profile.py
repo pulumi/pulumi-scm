@@ -239,10 +239,8 @@ class _DnsSecurityProfileState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/dnsSecurityProfile:DnsSecurityProfile")
 class DnsSecurityProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/dnsSecurityProfile:DnsSecurityProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
