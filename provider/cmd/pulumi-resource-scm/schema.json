@@ -27974,6 +27974,9 @@
                 "type": "string",
                 "description": "The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.\n"
             }
+        },
+        "methods": {
+            "terraformConfig": "pulumi:providers:scm/terraformConfig"
         }
     },
     "resources": {
@@ -38054,6 +38057,35 @@
         }
     },
     "functions": {
+        "pulumi:providers:scm/terraformConfig": {
+            "description": "This function returns a Terraform config object with terraform-namecased keys,to be used with the Terraform Module Provider.",
+            "inputs": {
+                "properties": {
+                    "__self__": {
+                        "type": "ref",
+                        "$ref": "#/resources/pulumi:providers:scm"
+                    }
+                },
+                "type": "pulumi:providers:scm/terraformConfig",
+                "required": [
+                    "__self__"
+                ]
+            },
+            "outputs": {
+                "properties": {
+                    "result": {
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        },
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "result"
+                ],
+                "type": "object"
+            }
+        },
         "scm:index/getAddressGroup:getAddressGroup": {
             "description": "Retrieves a config item.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as scm from \"@pulumi/scm\";\n\nconst example = scm.getAddressGroup({\n    id: \"1234-56-789\",\n});\n```\n```python\nimport pulumi\nimport pulumi_scm as scm\n\nexample = scm.get_address_group(id=\"1234-56-789\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Scm = Pulumi.Scm;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Scm.GetAddressGroup.Invoke(new()\n    {\n        Id = \"1234-56-789\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-scm/sdk/go/scm\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := scm.LookupAddressGroup(ctx, \u0026scm.LookupAddressGroupArgs{\n\t\t\tId: \"1234-56-789\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.scm.ScmFunctions;\nimport com.pulumi.scm.inputs.GetAddressGroupArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = ScmFunctions.getAddressGroup(GetAddressGroupArgs.builder()\n            .id(\"1234-56-789\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: scm:getAddressGroup\n      arguments:\n        id: 1234-56-789\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
             "inputs": {
