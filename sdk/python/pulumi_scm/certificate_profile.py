@@ -558,10 +558,8 @@ class _CertificateProfileState:
         pulumi.set(self, "username_field", value)
 
 
+@pulumi.type_token("scm:index/certificateProfile:CertificateProfile")
 class CertificateProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/certificateProfile:CertificateProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

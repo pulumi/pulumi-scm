@@ -270,10 +270,8 @@ class _ServiceState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/service:Service")
 class Service(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/service:Service"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

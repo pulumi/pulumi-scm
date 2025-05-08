@@ -399,10 +399,8 @@ class _AuthenticationProfileState:
         pulumi.set(self, "username_modifier", value)
 
 
+@pulumi.type_token("scm:index/authenticationProfile:AuthenticationProfile")
 class AuthenticationProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/authenticationProfile:AuthenticationProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

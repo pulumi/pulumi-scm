@@ -237,10 +237,8 @@ class _TagState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/tag:Tag")
 class Tag(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/tag:Tag"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

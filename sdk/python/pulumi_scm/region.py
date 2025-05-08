@@ -239,10 +239,8 @@ class _RegionState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/region:Region")
 class Region(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/region:Region"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

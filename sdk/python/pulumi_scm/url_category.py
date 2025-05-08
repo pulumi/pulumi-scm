@@ -269,10 +269,8 @@ class _UrlCategoryState:
         pulumi.set(self, "type", value)
 
 
+@pulumi.type_token("scm:index/urlCategory:UrlCategory")
 class UrlCategory(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/urlCategory:UrlCategory"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

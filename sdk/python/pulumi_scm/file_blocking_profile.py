@@ -239,10 +239,8 @@ class _FileBlockingProfileState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/fileBlockingProfile:FileBlockingProfile")
 class FileBlockingProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/fileBlockingProfile:FileBlockingProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

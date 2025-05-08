@@ -614,10 +614,8 @@ class _AppOverrideRuleState:
         pulumi.set(self, "tos", value)
 
 
+@pulumi.type_token("scm:index/appOverrideRule:AppOverrideRule")
 class AppOverrideRule(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/appOverrideRule:AppOverrideRule"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -365,10 +365,8 @@ class _AuthenticationPortalState:
         pulumi.set(self, "tls_service_profile", value)
 
 
+@pulumi.type_token("scm:index/authenticationPortal:AuthenticationPortal")
 class AuthenticationPortal(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/authenticationPortal:AuthenticationPortal"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

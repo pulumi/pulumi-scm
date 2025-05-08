@@ -334,10 +334,8 @@ class _QosPolicyRuleState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/qosPolicyRule:QosPolicyRule")
 class QosPolicyRule(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/qosPolicyRule:QosPolicyRule"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -238,10 +238,8 @@ class _MfaServerState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/mfaServer:MfaServer")
 class MfaServer(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/mfaServer:MfaServer"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

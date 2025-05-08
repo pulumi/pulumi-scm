@@ -239,10 +239,8 @@ class _QosProfileState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/qosProfile:QosProfile")
 class QosProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/qosProfile:QosProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

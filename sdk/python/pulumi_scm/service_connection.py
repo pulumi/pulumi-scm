@@ -509,10 +509,8 @@ class _ServiceConnectionState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/serviceConnection:ServiceConnection")
 class ServiceConnection(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/serviceConnection:ServiceConnection"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

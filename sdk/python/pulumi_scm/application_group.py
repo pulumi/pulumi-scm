@@ -204,10 +204,8 @@ class _ApplicationGroupState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/applicationGroup:ApplicationGroup")
 class ApplicationGroup(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/applicationGroup:ApplicationGroup"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

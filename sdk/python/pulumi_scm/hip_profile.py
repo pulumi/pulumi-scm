@@ -236,10 +236,8 @@ class _HipProfileState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/hipProfile:HipProfile")
 class HipProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/hipProfile:HipProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

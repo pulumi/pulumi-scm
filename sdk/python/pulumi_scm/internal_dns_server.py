@@ -171,10 +171,8 @@ class _InternalDnsServerState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/internalDnsServer:InternalDnsServer")
 class InternalDnsServer(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/internalDnsServer:InternalDnsServer"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
