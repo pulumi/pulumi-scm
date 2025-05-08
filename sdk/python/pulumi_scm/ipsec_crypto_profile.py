@@ -334,10 +334,8 @@ class _IpsecCryptoProfileState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/ipsecCryptoProfile:IpsecCryptoProfile")
 class IpsecCryptoProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/ipsecCryptoProfile:IpsecCryptoProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

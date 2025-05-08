@@ -462,10 +462,8 @@ class _LdapServerProfileState:
         pulumi.set(self, "verify_server_certificate", value)
 
 
+@pulumi.type_token("scm:index/ldapServerProfile:LdapServerProfile")
 class LdapServerProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/ldapServerProfile:LdapServerProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

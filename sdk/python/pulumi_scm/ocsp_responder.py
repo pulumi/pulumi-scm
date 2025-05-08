@@ -204,10 +204,8 @@ class _OcspResponderState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/ocspResponder:OcspResponder")
 class OcspResponder(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/ocspResponder:OcspResponder"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -397,10 +397,8 @@ class _ProfileGroupState:
         pulumi.set(self, "vulnerabilities", value)
 
 
+@pulumi.type_token("scm:index/profileGroup:ProfileGroup")
 class ProfileGroup(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/profileGroup:ProfileGroup"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

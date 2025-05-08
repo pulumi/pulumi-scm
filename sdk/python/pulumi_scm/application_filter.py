@@ -751,10 +751,8 @@ class _ApplicationFilterState:
         pulumi.set(self, "used_by_malware", value)
 
 
+@pulumi.type_token("scm:index/applicationFilter:ApplicationFilter")
 class ApplicationFilter(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/applicationFilter:ApplicationFilter"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

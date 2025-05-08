@@ -303,10 +303,8 @@ class _AddressGroupState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/addressGroup:AddressGroup")
 class AddressGroup(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/addressGroup:AddressGroup"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

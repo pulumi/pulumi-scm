@@ -572,10 +572,8 @@ class _ScepProfileState:
         pulumi.set(self, "use_for_key_encipherment", value)
 
 
+@pulumi.type_token("scm:index/scepProfile:ScepProfile")
 class ScepProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/scepProfile:ScepProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

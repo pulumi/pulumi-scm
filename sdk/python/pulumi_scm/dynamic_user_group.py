@@ -268,10 +268,8 @@ class _DynamicUserGroupState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/dynamicUserGroup:DynamicUserGroup")
 class DynamicUserGroup(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/dynamicUserGroup:DynamicUserGroup"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

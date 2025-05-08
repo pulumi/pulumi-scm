@@ -204,10 +204,8 @@ class _ServiceConnectionGroupState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/serviceConnectionGroup:ServiceConnectionGroup")
 class ServiceConnectionGroup(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/serviceConnectionGroup:ServiceConnectionGroup"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

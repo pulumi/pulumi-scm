@@ -1035,10 +1035,8 @@ class _ApplicationState:
         pulumi.set(self, "virus_ident", value)
 
 
+@pulumi.type_token("scm:index/application:Application")
 class Application(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/application:Application"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

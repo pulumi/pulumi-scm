@@ -335,10 +335,8 @@ class _WildfireAntiVirusProfileState:
         pulumi.set(self, "threat_exceptions", value)
 
 
+@pulumi.type_token("scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile")
 class WildfireAntiVirusProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

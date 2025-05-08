@@ -623,10 +623,8 @@ class _UrlAccessProfileState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/urlAccessProfile:UrlAccessProfile")
 class UrlAccessProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/urlAccessProfile:UrlAccessProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

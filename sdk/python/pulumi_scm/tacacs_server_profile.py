@@ -285,10 +285,8 @@ class _TacacsServerProfileState:
         pulumi.set(self, "use_single_connection", value)
 
 
+@pulumi.type_token("scm:index/tacacsServerProfile:TacacsServerProfile")
 class TacacsServerProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/tacacsServerProfile:TacacsServerProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

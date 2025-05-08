@@ -301,10 +301,8 @@ class _TrafficSteeringRuleState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/trafficSteeringRule:TrafficSteeringRule")
 class TrafficSteeringRule(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/trafficSteeringRule:TrafficSteeringRule"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

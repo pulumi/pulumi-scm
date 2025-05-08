@@ -206,10 +206,8 @@ class _ScheduleState:
         pulumi.set(self, "tfid", value)
 
 
+@pulumi.type_token("scm:index/schedule:Schedule")
 class Schedule(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/schedule:Schedule"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -399,10 +399,8 @@ class _AntiSpywareProfileState:
         pulumi.set(self, "threat_exceptions", value)
 
 
+@pulumi.type_token("scm:index/antiSpywareProfile:AntiSpywareProfile")
 class AntiSpywareProfile(pulumi.CustomResource):
-
-    pulumi_type = "scm:index/antiSpywareProfile:AntiSpywareProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
