@@ -14,11 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetProfileGroupListDataResult
     {
         /// <summary>
-        /// The DnsSecurities param.
+        /// List of AI security profiles.
+        /// </summary>
+        public readonly ImmutableArray<string> AiSecurities;
+        /// <summary>
+        /// List of DNS security profiles.
         /// </summary>
         public readonly ImmutableArray<string> DnsSecurities;
         /// <summary>
-        /// The FileBlockings param.
+        /// List of file blocking profiles.
         /// </summary>
         public readonly ImmutableArray<string> FileBlockings;
         /// <summary>
@@ -26,32 +30,34 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// The name of the profile group.
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The SaasSecurities param.
+        /// List of HTTP header insertion profiles.
         /// </summary>
         public readonly ImmutableArray<string> SaasSecurities;
         /// <summary>
-        /// The Spywares param.
+        /// List of anti-spyware profiles.
         /// </summary>
         public readonly ImmutableArray<string> Spywares;
         /// <summary>
-        /// The UrlFilterings param.
+        /// List of URL filtering profiles.
         /// </summary>
         public readonly ImmutableArray<string> UrlFilterings;
         /// <summary>
-        /// The VirusAndWildfireAnalyses param.
+        /// List of anti-virus and Wildfire analysis profiles.
         /// </summary>
         public readonly ImmutableArray<string> VirusAndWildfireAnalyses;
         /// <summary>
-        /// The Vulnerabilities param.
+        /// List of vulnerability protection profiles.
         /// </summary>
         public readonly ImmutableArray<string> Vulnerabilities;
 
         [OutputConstructor]
         private GetProfileGroupListDataResult(
+            ImmutableArray<string> aiSecurities,
+
             ImmutableArray<string> dnsSecurities,
 
             ImmutableArray<string> fileBlockings,
@@ -70,6 +76,7 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> vulnerabilities)
         {
+            AiSecurities = aiSecurities;
             DnsSecurities = dnsSecurities;
             FileBlockings = fileBlockings;
             Id = id;

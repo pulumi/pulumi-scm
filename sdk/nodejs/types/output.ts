@@ -6033,6 +6033,33 @@ export interface GetFileBlockingProfileRule {
     name: string;
 }
 
+export interface GetFolderListData {
+    /**
+     * The Description param.
+     */
+    description: string;
+    /**
+     * The Id param.
+     */
+    id: string;
+    /**
+     * The Labels param.
+     */
+    labels: string[];
+    /**
+     * The Name param.
+     */
+    name: string;
+    /**
+     * The Parent param.
+     */
+    parent: string;
+    /**
+     * The Snippets param.
+     */
+    snippets: string[];
+}
+
 export interface GetHipObjectAntiMalware {
     /**
      * The Criteria param.
@@ -9577,7 +9604,7 @@ export interface GetNatRuleListData {
      */
     destinationTranslation: outputs.GetNatRuleListDataDestinationTranslation;
     /**
-     * The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The destination address(es).
      */
     destinations: string[];
     /**
@@ -9597,7 +9624,7 @@ export interface GetNatRuleListData {
      */
     folder: string;
     /**
-     * The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The source security zone(s).
      */
     froms: string[];
     /**
@@ -9629,7 +9656,7 @@ export interface GetNatRuleListData {
      */
     sourceTranslation: outputs.GetNatRuleListDataSourceTranslation;
     /**
-     * The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The source address(es).
      */
     sources: string[];
     /**
@@ -9641,7 +9668,7 @@ export interface GetNatRuleListData {
      */
     target: outputs.GetNatRuleListDataTarget;
     /**
-     * The ToInterface param. String must be one of these: `"any"`.
+     * The ToInterface param.
      */
     toInterface: string;
     /**
@@ -9800,11 +9827,15 @@ export interface GetOcspResponderListData {
 
 export interface GetProfileGroupListData {
     /**
-     * The DnsSecurities param.
+     * List of AI security profiles.
+     */
+    aiSecurities: string[];
+    /**
+     * List of DNS security profiles.
      */
     dnsSecurities: string[];
     /**
-     * The FileBlockings param.
+     * List of file blocking profiles.
      */
     fileBlockings: string[];
     /**
@@ -9812,27 +9843,27 @@ export interface GetProfileGroupListData {
      */
     id: string;
     /**
-     * The Name param.
+     * The name of the profile group.
      */
     name: string;
     /**
-     * The SaasSecurities param.
+     * List of HTTP header insertion profiles.
      */
     saasSecurities: string[];
     /**
-     * The Spywares param.
+     * List of anti-spyware profiles.
      */
     spywares: string[];
     /**
-     * The UrlFilterings param.
+     * List of URL filtering profiles.
      */
     urlFilterings: string[];
     /**
-     * The VirusAndWildfireAnalyses param.
+     * List of anti-virus and Wildfire analysis profiles.
      */
     virusAndWildfireAnalyses: string[];
     /**
-     * The Vulnerabilities param.
+     * List of vulnerability protection profiles.
      */
     vulnerabilities: string[];
 }
@@ -11653,34 +11684,11 @@ export interface GetSharedInfrastructureSettingsListData {
     tunnelMonitorIpAddress: string;
 }
 
-export interface GetSnippetFolder {
-    /**
-     * The Id param.
-     */
-    id: string;
-    /**
-     * The Name param.
-     */
-    name: string;
-}
-
 export interface GetSnippetListData {
-    /**
-     * The CreatedIn param.
-     */
-    createdIn: string;
     /**
      * The Description param.
      */
     description: string;
-    /**
-     * The DisplayName param.
-     */
-    displayName: string;
-    /**
-     * The Folders param.
-     */
-    folders: outputs.GetSnippetListDataFolder[];
     /**
      * The Id param.
      */
@@ -11690,32 +11698,13 @@ export interface GetSnippetListData {
      */
     labels: string[];
     /**
-     * The LastUpdate param.
-     */
-    lastUpdate: string;
-    /**
      * The Name param.
      */
     name: string;
     /**
-     * The SharedIn param.
-     */
-    sharedIn: string;
-    /**
-     * The Type param. String must be one of these: `"predefined"`.
+     * The Type param. String must be one of these: `"predefined"`, `"custom"`.
      */
     type: string;
-}
-
-export interface GetSnippetListDataFolder {
-    /**
-     * The Id param.
-     */
-    id: string;
-    /**
-     * The Name param.
-     */
-    name: string;
 }
 
 export interface GetTacacsServerProfileListData {
@@ -12078,11 +12067,11 @@ export interface GetUrlAccessProfileCredentialEnforcement {
 
 export interface GetUrlAccessProfileCredentialEnforcementMode {
     /**
-     * The Disabled param. Default: `false`.
+     * The Disabled param.
      */
     disabled: boolean;
     /**
-     * The DomainCredentials param. Default: `false`.
+     * The DomainCredentials param.
      */
     domainCredentials: boolean;
     /**
@@ -12090,7 +12079,7 @@ export interface GetUrlAccessProfileCredentialEnforcementMode {
      */
     groupMapping: string;
     /**
-     * The IpUser param. Default: `false`.
+     * The IpUser param.
      */
     ipUser: boolean;
 }
@@ -12191,11 +12180,11 @@ export interface GetUrlAccessProfileListDataCredentialEnforcement {
 
 export interface GetUrlAccessProfileListDataCredentialEnforcementMode {
     /**
-     * The Disabled param. Default: `false`.
+     * The Disabled param.
      */
     disabled: boolean;
     /**
-     * The DomainCredentials param. Default: `false`.
+     * The DomainCredentials param.
      */
     domainCredentials: boolean;
     /**
@@ -12203,7 +12192,7 @@ export interface GetUrlAccessProfileListDataCredentialEnforcementMode {
      */
     groupMapping: string;
     /**
-     * The IpUser param. Default: `false`.
+     * The IpUser param.
      */
     ipUser: boolean;
 }
@@ -15765,17 +15754,6 @@ export interface ServiceProtocolUdpOverride {
     timeout: number;
 }
 
-export interface SnippetFolder {
-    /**
-     * The Id param.
-     */
-    id?: string;
-    /**
-     * The Name param.
-     */
-    name?: string;
-}
-
 export interface TacacsServerProfileServer {
     /**
      * The Address param.
@@ -15901,21 +15879,21 @@ export interface UrlAccessProfileCredentialEnforcement {
 
 export interface UrlAccessProfileCredentialEnforcementMode {
     /**
-     * The Disabled param. Default: `false`.
+     * The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      */
-    disabled: boolean;
+    disabled?: boolean;
     /**
-     * The DomainCredentials param. Default: `false`.
+     * The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      */
-    domainCredentials: boolean;
+    domainCredentials?: boolean;
     /**
-     * The GroupMapping param.
+     * The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      */
     groupMapping?: string;
     /**
-     * The IpUser param. Default: `false`.
+     * The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      */
-    ipUser: boolean;
+    ipUser?: boolean;
 }
 
 export interface VulnerabilityProtectionProfileRule {

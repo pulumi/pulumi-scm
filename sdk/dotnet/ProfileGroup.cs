@@ -31,19 +31,25 @@ namespace Pulumi.Scm
     public partial class ProfileGroup : global::Pulumi.CustomResource
     {
         /// <summary>
+        /// List of AI security profiles.
+        /// </summary>
+        [Output("aiSecurities")]
+        public Output<ImmutableArray<string>> AiSecurities { get; private set; } = null!;
+
+        /// <summary>
         /// The Device param.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The DnsSecurities param.
+        /// List of DNS security profiles.
         /// </summary>
         [Output("dnsSecurities")]
         public Output<ImmutableArray<string>> DnsSecurities { get; private set; } = null!;
 
         /// <summary>
-        /// The FileBlockings param.
+        /// List of file blocking profiles.
         /// </summary>
         [Output("fileBlockings")]
         public Output<ImmutableArray<string>> FileBlockings { get; private set; } = null!;
@@ -55,13 +61,13 @@ namespace Pulumi.Scm
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the profile group.
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The SaasSecurities param.
+        /// List of HTTP header insertion profiles.
         /// </summary>
         [Output("saasSecurities")]
         public Output<ImmutableArray<string>> SaasSecurities { get; private set; } = null!;
@@ -73,7 +79,7 @@ namespace Pulumi.Scm
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The Spywares param.
+        /// List of anti-spyware profiles.
         /// </summary>
         [Output("spywares")]
         public Output<ImmutableArray<string>> Spywares { get; private set; } = null!;
@@ -82,19 +88,19 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The UrlFilterings param.
+        /// List of URL filtering profiles.
         /// </summary>
         [Output("urlFilterings")]
         public Output<ImmutableArray<string>> UrlFilterings { get; private set; } = null!;
 
         /// <summary>
-        /// The VirusAndWildfireAnalyses param.
+        /// List of anti-virus and Wildfire analysis profiles.
         /// </summary>
         [Output("virusAndWildfireAnalyses")]
         public Output<ImmutableArray<string>> VirusAndWildfireAnalyses { get; private set; } = null!;
 
         /// <summary>
-        /// The Vulnerabilities param.
+        /// List of vulnerability protection profiles.
         /// </summary>
         [Output("vulnerabilities")]
         public Output<ImmutableArray<string>> Vulnerabilities { get; private set; } = null!;
@@ -145,6 +151,18 @@ namespace Pulumi.Scm
 
     public sealed class ProfileGroupArgs : global::Pulumi.ResourceArgs
     {
+        [Input("aiSecurities")]
+        private InputList<string>? _aiSecurities;
+
+        /// <summary>
+        /// List of AI security profiles.
+        /// </summary>
+        public InputList<string> AiSecurities
+        {
+            get => _aiSecurities ?? (_aiSecurities = new InputList<string>());
+            set => _aiSecurities = value;
+        }
+
         /// <summary>
         /// The Device param.
         /// </summary>
@@ -155,7 +173,7 @@ namespace Pulumi.Scm
         private InputList<string>? _dnsSecurities;
 
         /// <summary>
-        /// The DnsSecurities param.
+        /// List of DNS security profiles.
         /// </summary>
         public InputList<string> DnsSecurities
         {
@@ -167,7 +185,7 @@ namespace Pulumi.Scm
         private InputList<string>? _fileBlockings;
 
         /// <summary>
-        /// The FileBlockings param.
+        /// List of file blocking profiles.
         /// </summary>
         public InputList<string> FileBlockings
         {
@@ -182,7 +200,7 @@ namespace Pulumi.Scm
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the profile group.
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -191,7 +209,7 @@ namespace Pulumi.Scm
         private InputList<string>? _saasSecurities;
 
         /// <summary>
-        /// The SaasSecurities param.
+        /// List of HTTP header insertion profiles.
         /// </summary>
         public InputList<string> SaasSecurities
         {
@@ -209,7 +227,7 @@ namespace Pulumi.Scm
         private InputList<string>? _spywares;
 
         /// <summary>
-        /// The Spywares param.
+        /// List of anti-spyware profiles.
         /// </summary>
         public InputList<string> Spywares
         {
@@ -221,7 +239,7 @@ namespace Pulumi.Scm
         private InputList<string>? _urlFilterings;
 
         /// <summary>
-        /// The UrlFilterings param.
+        /// List of URL filtering profiles.
         /// </summary>
         public InputList<string> UrlFilterings
         {
@@ -233,7 +251,7 @@ namespace Pulumi.Scm
         private InputList<string>? _virusAndWildfireAnalyses;
 
         /// <summary>
-        /// The VirusAndWildfireAnalyses param.
+        /// List of anti-virus and Wildfire analysis profiles.
         /// </summary>
         public InputList<string> VirusAndWildfireAnalyses
         {
@@ -245,7 +263,7 @@ namespace Pulumi.Scm
         private InputList<string>? _vulnerabilities;
 
         /// <summary>
-        /// The Vulnerabilities param.
+        /// List of vulnerability protection profiles.
         /// </summary>
         public InputList<string> Vulnerabilities
         {
@@ -261,6 +279,18 @@ namespace Pulumi.Scm
 
     public sealed class ProfileGroupState : global::Pulumi.ResourceArgs
     {
+        [Input("aiSecurities")]
+        private InputList<string>? _aiSecurities;
+
+        /// <summary>
+        /// List of AI security profiles.
+        /// </summary>
+        public InputList<string> AiSecurities
+        {
+            get => _aiSecurities ?? (_aiSecurities = new InputList<string>());
+            set => _aiSecurities = value;
+        }
+
         /// <summary>
         /// The Device param.
         /// </summary>
@@ -271,7 +301,7 @@ namespace Pulumi.Scm
         private InputList<string>? _dnsSecurities;
 
         /// <summary>
-        /// The DnsSecurities param.
+        /// List of DNS security profiles.
         /// </summary>
         public InputList<string> DnsSecurities
         {
@@ -283,7 +313,7 @@ namespace Pulumi.Scm
         private InputList<string>? _fileBlockings;
 
         /// <summary>
-        /// The FileBlockings param.
+        /// List of file blocking profiles.
         /// </summary>
         public InputList<string> FileBlockings
         {
@@ -298,7 +328,7 @@ namespace Pulumi.Scm
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the profile group.
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -307,7 +337,7 @@ namespace Pulumi.Scm
         private InputList<string>? _saasSecurities;
 
         /// <summary>
-        /// The SaasSecurities param.
+        /// List of HTTP header insertion profiles.
         /// </summary>
         public InputList<string> SaasSecurities
         {
@@ -325,7 +355,7 @@ namespace Pulumi.Scm
         private InputList<string>? _spywares;
 
         /// <summary>
-        /// The Spywares param.
+        /// List of anti-spyware profiles.
         /// </summary>
         public InputList<string> Spywares
         {
@@ -340,7 +370,7 @@ namespace Pulumi.Scm
         private InputList<string>? _urlFilterings;
 
         /// <summary>
-        /// The UrlFilterings param.
+        /// List of URL filtering profiles.
         /// </summary>
         public InputList<string> UrlFilterings
         {
@@ -352,7 +382,7 @@ namespace Pulumi.Scm
         private InputList<string>? _virusAndWildfireAnalyses;
 
         /// <summary>
-        /// The VirusAndWildfireAnalyses param.
+        /// List of anti-virus and Wildfire analysis profiles.
         /// </summary>
         public InputList<string> VirusAndWildfireAnalyses
         {
@@ -364,7 +394,7 @@ namespace Pulumi.Scm
         private InputList<string>? _vulnerabilities;
 
         /// <summary>
-        /// The Vulnerabilities param.
+        /// List of vulnerability protection profiles.
         /// </summary>
         public InputList<string> Vulnerabilities
         {

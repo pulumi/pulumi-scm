@@ -61,6 +61,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ExternalDynamicList{}
 	case "scm:index/fileBlockingProfile:FileBlockingProfile":
 		r = &FileBlockingProfile{}
+	case "scm:index/folder:Folder":
+		r = &Folder{}
 	case "scm:index/hipObject:HipObject":
 		r = &HipObject{}
 	case "scm:index/hipProfile:HipProfile":
@@ -268,6 +270,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/fileBlockingProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/folder",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

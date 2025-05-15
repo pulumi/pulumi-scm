@@ -34,7 +34,7 @@ namespace Pulumi.Scm
         public Output<Outputs.NatRuleDestinationTranslation?> DestinationTranslation { get; private set; } = null!;
 
         /// <summary>
-        /// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The destination address(es).
         /// </summary>
         [Output("destinations")]
         public Output<ImmutableArray<string>> Destinations { get; private set; } = null!;
@@ -64,7 +64,7 @@ namespace Pulumi.Scm
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The source security zone(s).
         /// </summary>
         [Output("froms")]
         public Output<ImmutableArray<string>> Froms { get; private set; } = null!;
@@ -112,7 +112,7 @@ namespace Pulumi.Scm
         public Output<Outputs.NatRuleSourceTranslation?> SourceTranslation { get; private set; } = null!;
 
         /// <summary>
-        /// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The source address(es).
         /// </summary>
         [Output("sources")]
         public Output<ImmutableArray<string>> Sources { get; private set; } = null!;
@@ -133,7 +133,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The ToInterface param. String must be one of these: `"any"`.
+        /// The ToInterface param.
         /// </summary>
         [Output("toInterface")]
         public Output<string?> ToInterface { get; private set; } = null!;
@@ -212,7 +212,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The destination address(es).
         /// </summary>
         public InputList<string> Destinations
         {
@@ -248,7 +248,7 @@ namespace Pulumi.Scm
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The source security zone(s).
         /// </summary>
         public InputList<string> Froms
         {
@@ -302,7 +302,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The source address(es).
         /// </summary>
         public InputList<string> Sources
         {
@@ -329,7 +329,7 @@ namespace Pulumi.Scm
         public Input<Inputs.NatRuleTargetArgs>? Target { get; set; }
 
         /// <summary>
-        /// The ToInterface param. String must be one of these: `"any"`.
+        /// The ToInterface param.
         /// </summary>
         [Input("toInterface")]
         public Input<string>? ToInterface { get; set; }
@@ -376,7 +376,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The destination address(es).
         /// </summary>
         public InputList<string> Destinations
         {
@@ -412,7 +412,7 @@ namespace Pulumi.Scm
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The source security zone(s).
         /// </summary>
         public InputList<string> Froms
         {
@@ -466,7 +466,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The source address(es).
         /// </summary>
         public InputList<string> Sources
         {
@@ -496,7 +496,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The ToInterface param. String must be one of these: `"any"`.
+        /// The ToInterface param.
         /// </summary>
         [Input("toInterface")]
         public Input<string>? ToInterface { get; set; }

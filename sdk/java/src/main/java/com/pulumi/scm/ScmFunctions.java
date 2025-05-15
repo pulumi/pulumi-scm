@@ -94,6 +94,10 @@ import com.pulumi.scm.inputs.GetFileBlockingProfileArgs;
 import com.pulumi.scm.inputs.GetFileBlockingProfileListArgs;
 import com.pulumi.scm.inputs.GetFileBlockingProfileListPlainArgs;
 import com.pulumi.scm.inputs.GetFileBlockingProfilePlainArgs;
+import com.pulumi.scm.inputs.GetFolderArgs;
+import com.pulumi.scm.inputs.GetFolderListArgs;
+import com.pulumi.scm.inputs.GetFolderListPlainArgs;
+import com.pulumi.scm.inputs.GetFolderPlainArgs;
 import com.pulumi.scm.inputs.GetHipObjectArgs;
 import com.pulumi.scm.inputs.GetHipObjectListArgs;
 import com.pulumi.scm.inputs.GetHipObjectListPlainArgs;
@@ -304,6 +308,8 @@ import com.pulumi.scm.outputs.GetExternalDynamicListListResult;
 import com.pulumi.scm.outputs.GetExternalDynamicListResult;
 import com.pulumi.scm.outputs.GetFileBlockingProfileListResult;
 import com.pulumi.scm.outputs.GetFileBlockingProfileResult;
+import com.pulumi.scm.outputs.GetFolderListResult;
+import com.pulumi.scm.outputs.GetFolderResult;
 import com.pulumi.scm.outputs.GetHipObjectListResult;
 import com.pulumi.scm.outputs.GetHipObjectResult;
 import com.pulumi.scm.outputs.GetHipProfileListResult;
@@ -10982,6 +10988,503 @@ public final class ScmFunctions {
      */
     public static CompletableFuture<GetFileBlockingProfileListResult> getFileBlockingProfileListPlain(GetFileBlockingProfileListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getFileBlockingProfileList:getFileBlockingProfileList", TypeShape.of(GetFileBlockingProfileListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a config item.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolder(GetFolderArgs.builder()
+     *             .id("1234-56-789")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetFolderResult> getFolder(GetFolderArgs args) {
+        return getFolder(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a config item.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolder(GetFolderArgs.builder()
+     *             .id("1234-56-789")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetFolderResult> getFolderPlain(GetFolderPlainArgs args) {
+        return getFolderPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a config item.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolder(GetFolderArgs.builder()
+     *             .id("1234-56-789")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetFolderResult> getFolder(GetFolderArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getFolder:getFolder", TypeShape.of(GetFolderResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a config item.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolder(GetFolderArgs.builder()
+     *             .id("1234-56-789")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetFolderResult> getFolder(GetFolderArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getFolder:getFolder", TypeShape.of(GetFolderResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a config item.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolder(GetFolderArgs.builder()
+     *             .id("1234-56-789")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetFolderResult> getFolderPlain(GetFolderPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getFolder:getFolder", TypeShape.of(GetFolderResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolderList(GetFolderListArgs.builder()
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetFolderListResult> getFolderList() {
+        return getFolderList(GetFolderListArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolderList(GetFolderListArgs.builder()
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetFolderListResult> getFolderListPlain() {
+        return getFolderListPlain(GetFolderListPlainArgs.Empty, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolderList(GetFolderListArgs.builder()
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetFolderListResult> getFolderList(GetFolderListArgs args) {
+        return getFolderList(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolderList(GetFolderListArgs.builder()
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetFolderListResult> getFolderListPlain(GetFolderListPlainArgs args) {
+        return getFolderListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolderList(GetFolderListArgs.builder()
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetFolderListResult> getFolderList(GetFolderListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getFolderList:getFolderList", TypeShape.of(GetFolderListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolderList(GetFolderListArgs.builder()
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetFolderListResult> getFolderList(GetFolderListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getFolderList:getFolderList", TypeShape.of(GetFolderListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = ScmFunctions.getFolderList(GetFolderListArgs.builder()
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetFolderListResult> getFolderListPlain(GetFolderListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getFolderList:getFolderList", TypeShape.of(GetFolderListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a config item.

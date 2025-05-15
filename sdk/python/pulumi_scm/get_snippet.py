@@ -14,7 +14,6 @@ if sys.version_info >= (3, 11):
 else:
     from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
-from . import outputs
 
 __all__ = [
     'GetSnippetResult',
@@ -28,34 +27,19 @@ class GetSnippetResult:
     """
     A collection of values returned by getSnippet.
     """
-    def __init__(__self__, created_in=None, description=None, display_name=None, folders=None, id=None, labels=None, last_update=None, name=None, shared_in=None, tfid=None, type=None):
-        if created_in and not isinstance(created_in, str):
-            raise TypeError("Expected argument 'created_in' to be a str")
-        pulumi.set(__self__, "created_in", created_in)
+    def __init__(__self__, description=None, id=None, labels=None, name=None, tfid=None, type=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
-        if display_name and not isinstance(display_name, str):
-            raise TypeError("Expected argument 'display_name' to be a str")
-        pulumi.set(__self__, "display_name", display_name)
-        if folders and not isinstance(folders, list):
-            raise TypeError("Expected argument 'folders' to be a list")
-        pulumi.set(__self__, "folders", folders)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
         if labels and not isinstance(labels, list):
             raise TypeError("Expected argument 'labels' to be a list")
         pulumi.set(__self__, "labels", labels)
-        if last_update and not isinstance(last_update, str):
-            raise TypeError("Expected argument 'last_update' to be a str")
-        pulumi.set(__self__, "last_update", last_update)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
-        if shared_in and not isinstance(shared_in, str):
-            raise TypeError("Expected argument 'shared_in' to be a str")
-        pulumi.set(__self__, "shared_in", shared_in)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -64,36 +48,12 @@ class GetSnippetResult:
         pulumi.set(__self__, "type", type)
 
     @property
-    @pulumi.getter(name="createdIn")
-    def created_in(self) -> builtins.str:
-        """
-        The CreatedIn param.
-        """
-        return pulumi.get(self, "created_in")
-
-    @property
     @pulumi.getter
     def description(self) -> builtins.str:
         """
         The Description param.
         """
         return pulumi.get(self, "description")
-
-    @property
-    @pulumi.getter(name="displayName")
-    def display_name(self) -> builtins.str:
-        """
-        The DisplayName param.
-        """
-        return pulumi.get(self, "display_name")
-
-    @property
-    @pulumi.getter
-    def folders(self) -> Sequence['outputs.GetSnippetFolderResult']:
-        """
-        The Folders param.
-        """
-        return pulumi.get(self, "folders")
 
     @property
     @pulumi.getter
@@ -112,28 +72,12 @@ class GetSnippetResult:
         return pulumi.get(self, "labels")
 
     @property
-    @pulumi.getter(name="lastUpdate")
-    def last_update(self) -> builtins.str:
-        """
-        The LastUpdate param.
-        """
-        return pulumi.get(self, "last_update")
-
-    @property
     @pulumi.getter
     def name(self) -> builtins.str:
         """
         The Name param.
         """
         return pulumi.get(self, "name")
-
-    @property
-    @pulumi.getter(name="sharedIn")
-    def shared_in(self) -> builtins.str:
-        """
-        The SharedIn param.
-        """
-        return pulumi.get(self, "shared_in")
 
     @property
     @pulumi.getter
@@ -144,7 +88,7 @@ class GetSnippetResult:
     @pulumi.getter
     def type(self) -> builtins.str:
         """
-        The Type param. String must be one of these: `"predefined"`.
+        The Type param. String must be one of these: `"predefined"`, `"custom"`.
         """
         return pulumi.get(self, "type")
 
@@ -155,15 +99,10 @@ class AwaitableGetSnippetResult(GetSnippetResult):
         if False:
             yield self
         return GetSnippetResult(
-            created_in=self.created_in,
             description=self.description,
-            display_name=self.display_name,
-            folders=self.folders,
             id=self.id,
             labels=self.labels,
-            last_update=self.last_update,
             name=self.name,
-            shared_in=self.shared_in,
             tfid=self.tfid,
             type=self.type)
 
@@ -191,15 +130,10 @@ def get_snippet(id: Optional[builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('scm:index/getSnippet:getSnippet', __args__, opts=opts, typ=GetSnippetResult).value
 
     return AwaitableGetSnippetResult(
-        created_in=pulumi.get(__ret__, 'created_in'),
         description=pulumi.get(__ret__, 'description'),
-        display_name=pulumi.get(__ret__, 'display_name'),
-        folders=pulumi.get(__ret__, 'folders'),
         id=pulumi.get(__ret__, 'id'),
         labels=pulumi.get(__ret__, 'labels'),
-        last_update=pulumi.get(__ret__, 'last_update'),
         name=pulumi.get(__ret__, 'name'),
-        shared_in=pulumi.get(__ret__, 'shared_in'),
         tfid=pulumi.get(__ret__, 'tfid'),
         type=pulumi.get(__ret__, 'type'))
 def get_snippet_output(id: Optional[pulumi.Input[builtins.str]] = None,
@@ -224,14 +158,9 @@ def get_snippet_output(id: Optional[pulumi.Input[builtins.str]] = None,
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getSnippet:getSnippet', __args__, opts=opts, typ=GetSnippetResult)
     return __ret__.apply(lambda __response__: GetSnippetResult(
-        created_in=pulumi.get(__response__, 'created_in'),
         description=pulumi.get(__response__, 'description'),
-        display_name=pulumi.get(__response__, 'display_name'),
-        folders=pulumi.get(__response__, 'folders'),
         id=pulumi.get(__response__, 'id'),
         labels=pulumi.get(__response__, 'labels'),
-        last_update=pulumi.get(__response__, 'last_update'),
         name=pulumi.get(__response__, 'name'),
-        shared_in=pulumi.get(__response__, 'shared_in'),
         tfid=pulumi.get(__response__, 'tfid'),
         type=pulumi.get(__response__, 'type')))

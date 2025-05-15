@@ -5,7 +5,6 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.scm.inputs.SnippetFolderArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +15,6 @@ import javax.annotation.Nullable;
 public final class SnippetState extends com.pulumi.resources.ResourceArgs {
 
     public static final SnippetState Empty = new SnippetState();
-
-    /**
-     * The CreatedIn param.
-     * 
-     */
-    @Import(name="createdIn")
-    private @Nullable Output<String> createdIn;
-
-    /**
-     * @return The CreatedIn param.
-     * 
-     */
-    public Optional<Output<String>> createdIn() {
-        return Optional.ofNullable(this.createdIn);
-    }
 
     /**
      * The Description param.
@@ -45,36 +29,6 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
-    }
-
-    /**
-     * The DisplayName param.
-     * 
-     */
-    @Import(name="displayName")
-    private @Nullable Output<String> displayName;
-
-    /**
-     * @return The DisplayName param.
-     * 
-     */
-    public Optional<Output<String>> displayName() {
-        return Optional.ofNullable(this.displayName);
-    }
-
-    /**
-     * The Folders param.
-     * 
-     */
-    @Import(name="folders")
-    private @Nullable Output<List<SnippetFolderArgs>> folders;
-
-    /**
-     * @return The Folders param.
-     * 
-     */
-    public Optional<Output<List<SnippetFolderArgs>>> folders() {
-        return Optional.ofNullable(this.folders);
     }
 
     /**
@@ -93,21 +47,6 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The LastUpdate param.
-     * 
-     */
-    @Import(name="lastUpdate")
-    private @Nullable Output<String> lastUpdate;
-
-    /**
-     * @return The LastUpdate param.
-     * 
-     */
-    public Optional<Output<String>> lastUpdate() {
-        return Optional.ofNullable(this.lastUpdate);
-    }
-
-    /**
      * The Name param.
      * 
      */
@@ -122,21 +61,6 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
-    /**
-     * The SharedIn param.
-     * 
-     */
-    @Import(name="sharedIn")
-    private @Nullable Output<String> sharedIn;
-
-    /**
-     * @return The SharedIn param.
-     * 
-     */
-    public Optional<Output<String>> sharedIn() {
-        return Optional.ofNullable(this.sharedIn);
-    }
-
     @Import(name="tfid")
     private @Nullable Output<String> tfid;
 
@@ -145,14 +69,14 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Type param. String must be one of these: `&#34;predefined&#34;`.
+     * The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return The Type param. String must be one of these: `&#34;predefined&#34;`.
+     * @return The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
      * 
      */
     public Optional<Output<String>> type() {
@@ -162,14 +86,9 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
     private SnippetState() {}
 
     private SnippetState(SnippetState $) {
-        this.createdIn = $.createdIn;
         this.description = $.description;
-        this.displayName = $.displayName;
-        this.folders = $.folders;
         this.labels = $.labels;
-        this.lastUpdate = $.lastUpdate;
         this.name = $.name;
-        this.sharedIn = $.sharedIn;
         this.tfid = $.tfid;
         this.type = $.type;
     }
@@ -193,27 +112,6 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param createdIn The CreatedIn param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder createdIn(@Nullable Output<String> createdIn) {
-            $.createdIn = createdIn;
-            return this;
-        }
-
-        /**
-         * @param createdIn The CreatedIn param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder createdIn(String createdIn) {
-            return createdIn(Output.of(createdIn));
-        }
-
-        /**
          * @param description The Description param.
          * 
          * @return builder
@@ -232,58 +130,6 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder description(String description) {
             return description(Output.of(description));
-        }
-
-        /**
-         * @param displayName The DisplayName param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder displayName(@Nullable Output<String> displayName) {
-            $.displayName = displayName;
-            return this;
-        }
-
-        /**
-         * @param displayName The DisplayName param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder displayName(String displayName) {
-            return displayName(Output.of(displayName));
-        }
-
-        /**
-         * @param folders The Folders param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folders(@Nullable Output<List<SnippetFolderArgs>> folders) {
-            $.folders = folders;
-            return this;
-        }
-
-        /**
-         * @param folders The Folders param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folders(List<SnippetFolderArgs> folders) {
-            return folders(Output.of(folders));
-        }
-
-        /**
-         * @param folders The Folders param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folders(SnippetFolderArgs... folders) {
-            return folders(List.of(folders));
         }
 
         /**
@@ -318,27 +164,6 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param lastUpdate The LastUpdate param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder lastUpdate(@Nullable Output<String> lastUpdate) {
-            $.lastUpdate = lastUpdate;
-            return this;
-        }
-
-        /**
-         * @param lastUpdate The LastUpdate param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder lastUpdate(String lastUpdate) {
-            return lastUpdate(Output.of(lastUpdate));
-        }
-
-        /**
          * @param name The Name param.
          * 
          * @return builder
@@ -359,27 +184,6 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
-        /**
-         * @param sharedIn The SharedIn param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder sharedIn(@Nullable Output<String> sharedIn) {
-            $.sharedIn = sharedIn;
-            return this;
-        }
-
-        /**
-         * @param sharedIn The SharedIn param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder sharedIn(String sharedIn) {
-            return sharedIn(Output.of(sharedIn));
-        }
-
         public Builder tfid(@Nullable Output<String> tfid) {
             $.tfid = tfid;
             return this;
@@ -390,7 +194,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The Type param. String must be one of these: `&#34;predefined&#34;`.
+         * @param type The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
          * 
          * @return builder
          * 
@@ -401,7 +205,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The Type param. String must be one of these: `&#34;predefined&#34;`.
+         * @param type The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
          * 
          * @return builder
          * 

@@ -3970,17 +3970,6 @@ export interface ServiceProtocolUdpOverride {
     timeout?: pulumi.Input<number>;
 }
 
-export interface SnippetFolder {
-    /**
-     * The Id param.
-     */
-    id?: pulumi.Input<string>;
-    /**
-     * The Name param.
-     */
-    name?: pulumi.Input<string>;
-}
-
 export interface TacacsServerProfileServer {
     /**
      * The Address param.
@@ -4106,19 +4095,19 @@ export interface UrlAccessProfileCredentialEnforcement {
 
 export interface UrlAccessProfileCredentialEnforcementMode {
     /**
-     * The Disabled param. Default: `false`.
+     * The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * The DomainCredentials param. Default: `false`.
+     * The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      */
     domainCredentials?: pulumi.Input<boolean>;
     /**
-     * The GroupMapping param.
+     * The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      */
     groupMapping?: pulumi.Input<string>;
     /**
-     * The IpUser param. Default: `false`.
+     * The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      */
     ipUser?: pulumi.Input<boolean>;
 }

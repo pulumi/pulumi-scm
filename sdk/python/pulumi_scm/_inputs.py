@@ -558,8 +558,6 @@ __all__ = [
     'ServiceProtocolUdpArgsDict',
     'ServiceProtocolUdpOverrideArgs',
     'ServiceProtocolUdpOverrideArgsDict',
-    'SnippetFolderArgs',
-    'SnippetFolderArgsDict',
     'TacacsServerProfileServerArgs',
     'TacacsServerProfileServerArgsDict',
     'TlsServiceProfileProtocolSettingsArgs',
@@ -19554,58 +19552,6 @@ class ServiceProtocolUdpOverrideArgs:
 
 
 if not MYPY:
-    class SnippetFolderArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[builtins.str]]
-        """
-        The Id param.
-        """
-        name: NotRequired[pulumi.Input[builtins.str]]
-        """
-        The Name param.
-        """
-elif False:
-    SnippetFolderArgsDict: TypeAlias = Mapping[str, Any]
-
-@pulumi.input_type
-class SnippetFolderArgs:
-    def __init__(__self__, *,
-                 id: Optional[pulumi.Input[builtins.str]] = None,
-                 name: Optional[pulumi.Input[builtins.str]] = None):
-        """
-        :param pulumi.Input[builtins.str] id: The Id param.
-        :param pulumi.Input[builtins.str] name: The Name param.
-        """
-        if id is not None:
-            pulumi.set(__self__, "id", id)
-        if name is not None:
-            pulumi.set(__self__, "name", name)
-
-    @property
-    @pulumi.getter
-    def id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        The Id param.
-        """
-        return pulumi.get(self, "id")
-
-    @id.setter
-    def id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "id", value)
-
-    @property
-    @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        The Name param.
-        """
-        return pulumi.get(self, "name")
-
-    @name.setter
-    def name(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "name", value)
-
-
-if not MYPY:
     class TacacsServerProfileServerArgsDict(TypedDict):
         address: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -20209,19 +20155,19 @@ if not MYPY:
     class UrlAccessProfileCredentialEnforcementModeArgsDict(TypedDict):
         disabled: NotRequired[pulumi.Input[builtins.bool]]
         """
-        The Disabled param. Default: `false`.
+        The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         domain_credentials: NotRequired[pulumi.Input[builtins.bool]]
         """
-        The DomainCredentials param. Default: `false`.
+        The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         group_mapping: NotRequired[pulumi.Input[builtins.str]]
         """
-        The GroupMapping param.
+        The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         ip_user: NotRequired[pulumi.Input[builtins.bool]]
         """
-        The IpUser param. Default: `false`.
+        The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
 elif False:
     UrlAccessProfileCredentialEnforcementModeArgsDict: TypeAlias = Mapping[str, Any]
@@ -20234,10 +20180,10 @@ class UrlAccessProfileCredentialEnforcementModeArgs:
                  group_mapping: Optional[pulumi.Input[builtins.str]] = None,
                  ip_user: Optional[pulumi.Input[builtins.bool]] = None):
         """
-        :param pulumi.Input[builtins.bool] disabled: The Disabled param. Default: `false`.
-        :param pulumi.Input[builtins.bool] domain_credentials: The DomainCredentials param. Default: `false`.
-        :param pulumi.Input[builtins.str] group_mapping: The GroupMapping param.
-        :param pulumi.Input[builtins.bool] ip_user: The IpUser param. Default: `false`.
+        :param pulumi.Input[builtins.bool] disabled: The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+        :param pulumi.Input[builtins.bool] domain_credentials: The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+        :param pulumi.Input[builtins.str] group_mapping: The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+        :param pulumi.Input[builtins.bool] ip_user: The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         if disabled is not None:
             pulumi.set(__self__, "disabled", disabled)
@@ -20252,7 +20198,7 @@ class UrlAccessProfileCredentialEnforcementModeArgs:
     @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[builtins.bool]]:
         """
-        The Disabled param. Default: `false`.
+        The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         return pulumi.get(self, "disabled")
 
@@ -20264,7 +20210,7 @@ class UrlAccessProfileCredentialEnforcementModeArgs:
     @pulumi.getter(name="domainCredentials")
     def domain_credentials(self) -> Optional[pulumi.Input[builtins.bool]]:
         """
-        The DomainCredentials param. Default: `false`.
+        The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         return pulumi.get(self, "domain_credentials")
 
@@ -20276,7 +20222,7 @@ class UrlAccessProfileCredentialEnforcementModeArgs:
     @pulumi.getter(name="groupMapping")
     def group_mapping(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        The GroupMapping param.
+        The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         return pulumi.get(self, "group_mapping")
 
@@ -20288,7 +20234,7 @@ class UrlAccessProfileCredentialEnforcementModeArgs:
     @pulumi.getter(name="ipUser")
     def ip_user(self) -> Optional[pulumi.Input[builtins.bool]]:
         """
-        The IpUser param. Default: `false`.
+        The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         return pulumi.get(self, "ip_user")
 

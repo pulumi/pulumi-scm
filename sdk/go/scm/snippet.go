@@ -39,24 +39,14 @@ import (
 type Snippet struct {
 	pulumi.CustomResourceState
 
-	// The CreatedIn param.
-	CreatedIn pulumi.StringOutput `pulumi:"createdIn"`
 	// The Description param.
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The DisplayName param.
-	DisplayName pulumi.StringOutput `pulumi:"displayName"`
-	// The Folders param.
-	Folders SnippetFolderArrayOutput `pulumi:"folders"`
 	// The Labels param.
 	Labels pulumi.StringArrayOutput `pulumi:"labels"`
-	// The LastUpdate param.
-	LastUpdate pulumi.StringOutput `pulumi:"lastUpdate"`
 	// The Name param.
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The SharedIn param.
-	SharedIn pulumi.StringOutput `pulumi:"sharedIn"`
-	Tfid     pulumi.StringOutput `pulumi:"tfid"`
-	// The Type param. String must be one of these: `"predefined"`.
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
+	// The Type param. String must be one of these: `"predefined"`, `"custom"`.
 	Type pulumi.StringOutput `pulumi:"type"`
 }
 
@@ -90,46 +80,26 @@ func GetSnippet(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering Snippet resources.
 type snippetState struct {
-	// The CreatedIn param.
-	CreatedIn *string `pulumi:"createdIn"`
 	// The Description param.
 	Description *string `pulumi:"description"`
-	// The DisplayName param.
-	DisplayName *string `pulumi:"displayName"`
-	// The Folders param.
-	Folders []SnippetFolder `pulumi:"folders"`
 	// The Labels param.
 	Labels []string `pulumi:"labels"`
-	// The LastUpdate param.
-	LastUpdate *string `pulumi:"lastUpdate"`
 	// The Name param.
 	Name *string `pulumi:"name"`
-	// The SharedIn param.
-	SharedIn *string `pulumi:"sharedIn"`
-	Tfid     *string `pulumi:"tfid"`
-	// The Type param. String must be one of these: `"predefined"`.
+	Tfid *string `pulumi:"tfid"`
+	// The Type param. String must be one of these: `"predefined"`, `"custom"`.
 	Type *string `pulumi:"type"`
 }
 
 type SnippetState struct {
-	// The CreatedIn param.
-	CreatedIn pulumi.StringPtrInput
 	// The Description param.
 	Description pulumi.StringPtrInput
-	// The DisplayName param.
-	DisplayName pulumi.StringPtrInput
-	// The Folders param.
-	Folders SnippetFolderArrayInput
 	// The Labels param.
 	Labels pulumi.StringArrayInput
-	// The LastUpdate param.
-	LastUpdate pulumi.StringPtrInput
 	// The Name param.
 	Name pulumi.StringPtrInput
-	// The SharedIn param.
-	SharedIn pulumi.StringPtrInput
-	Tfid     pulumi.StringPtrInput
-	// The Type param. String must be one of these: `"predefined"`.
+	Tfid pulumi.StringPtrInput
+	// The Type param. String must be one of these: `"predefined"`, `"custom"`.
 	Type pulumi.StringPtrInput
 }
 
@@ -243,24 +213,9 @@ func (o SnippetOutput) ToSnippetOutputWithContext(ctx context.Context) SnippetOu
 	return o
 }
 
-// The CreatedIn param.
-func (o SnippetOutput) CreatedIn() pulumi.StringOutput {
-	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.CreatedIn }).(pulumi.StringOutput)
-}
-
 // The Description param.
 func (o SnippetOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
-}
-
-// The DisplayName param.
-func (o SnippetOutput) DisplayName() pulumi.StringOutput {
-	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.DisplayName }).(pulumi.StringOutput)
-}
-
-// The Folders param.
-func (o SnippetOutput) Folders() SnippetFolderArrayOutput {
-	return o.ApplyT(func(v *Snippet) SnippetFolderArrayOutput { return v.Folders }).(SnippetFolderArrayOutput)
 }
 
 // The Labels param.
@@ -268,26 +223,16 @@ func (o SnippetOutput) Labels() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringArrayOutput { return v.Labels }).(pulumi.StringArrayOutput)
 }
 
-// The LastUpdate param.
-func (o SnippetOutput) LastUpdate() pulumi.StringOutput {
-	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.LastUpdate }).(pulumi.StringOutput)
-}
-
 // The Name param.
 func (o SnippetOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
-}
-
-// The SharedIn param.
-func (o SnippetOutput) SharedIn() pulumi.StringOutput {
-	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.SharedIn }).(pulumi.StringOutput)
 }
 
 func (o SnippetOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Type param. String must be one of these: `"predefined"`.
+// The Type param. String must be one of these: `"predefined"`, `"custom"`.
 func (o SnippetOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.Type }).(pulumi.StringOutput)
 }

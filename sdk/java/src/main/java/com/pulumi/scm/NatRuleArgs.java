@@ -68,14 +68,14 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * The destination address(es).
      * 
      */
     @Import(name="destinations", required=true)
     private Output<List<String>> destinations;
 
     /**
-     * @return The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The destination address(es).
      * 
      */
     public Output<List<String>> destinations() {
@@ -143,14 +143,14 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * The source security zone(s).
      * 
      */
     @Import(name="froms", required=true)
     private Output<List<String>> froms;
 
     /**
-     * @return The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The source security zone(s).
      * 
      */
     public Output<List<String>> froms() {
@@ -263,14 +263,14 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * The source address(es).
      * 
      */
     @Import(name="sources", required=true)
     private Output<List<String>> sources;
 
     /**
-     * @return The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The source address(es).
      * 
      */
     public Output<List<String>> sources() {
@@ -308,14 +308,14 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ToInterface param. String must be one of these: `&#34;any&#34;`.
+     * The ToInterface param.
      * 
      */
     @Import(name="toInterface")
     private @Nullable Output<String> toInterface;
 
     /**
-     * @return The ToInterface param. String must be one of these: `&#34;any&#34;`.
+     * @return The ToInterface param.
      * 
      */
     public Optional<Output<String>> toInterface() {
@@ -445,7 +445,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param destinations The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+         * @param destinations The destination address(es).
          * 
          * @return builder
          * 
@@ -456,7 +456,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param destinations The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+         * @param destinations The destination address(es).
          * 
          * @return builder
          * 
@@ -466,7 +466,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param destinations The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+         * @param destinations The destination address(es).
          * 
          * @return builder
          * 
@@ -560,7 +560,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param froms The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+         * @param froms The source security zone(s).
          * 
          * @return builder
          * 
@@ -571,7 +571,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param froms The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+         * @param froms The source security zone(s).
          * 
          * @return builder
          * 
@@ -581,7 +581,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param froms The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+         * @param froms The source security zone(s).
          * 
          * @return builder
          * 
@@ -738,7 +738,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sources The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+         * @param sources The source address(es).
          * 
          * @return builder
          * 
@@ -749,7 +749,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sources The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+         * @param sources The source address(es).
          * 
          * @return builder
          * 
@@ -759,7 +759,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sources The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+         * @param sources The source address(es).
          * 
          * @return builder
          * 
@@ -821,7 +821,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param toInterface The ToInterface param. String must be one of these: `&#34;any&#34;`.
+         * @param toInterface The ToInterface param.
          * 
          * @return builder
          * 
@@ -832,7 +832,7 @@ public final class NatRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param toInterface The ToInterface param. String must be one of these: `&#34;any&#34;`.
+         * @param toInterface The ToInterface param.
          * 
          * @return builder
          * 

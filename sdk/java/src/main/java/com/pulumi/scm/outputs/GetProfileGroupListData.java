@@ -12,12 +12,17 @@ import java.util.Objects;
 @CustomType
 public final class GetProfileGroupListData {
     /**
-     * @return The DnsSecurities param.
+     * @return List of AI security profiles.
+     * 
+     */
+    private List<String> aiSecurities;
+    /**
+     * @return List of DNS security profiles.
      * 
      */
     private List<String> dnsSecurities;
     /**
-     * @return The FileBlockings param.
+     * @return List of file blocking profiles.
      * 
      */
     private List<String> fileBlockings;
@@ -27,46 +32,53 @@ public final class GetProfileGroupListData {
      */
     private String id;
     /**
-     * @return The Name param.
+     * @return The name of the profile group.
      * 
      */
     private String name;
     /**
-     * @return The SaasSecurities param.
+     * @return List of HTTP header insertion profiles.
      * 
      */
     private List<String> saasSecurities;
     /**
-     * @return The Spywares param.
+     * @return List of anti-spyware profiles.
      * 
      */
     private List<String> spywares;
     /**
-     * @return The UrlFilterings param.
+     * @return List of URL filtering profiles.
      * 
      */
     private List<String> urlFilterings;
     /**
-     * @return The VirusAndWildfireAnalyses param.
+     * @return List of anti-virus and Wildfire analysis profiles.
      * 
      */
     private List<String> virusAndWildfireAnalyses;
     /**
-     * @return The Vulnerabilities param.
+     * @return List of vulnerability protection profiles.
      * 
      */
     private List<String> vulnerabilities;
 
     private GetProfileGroupListData() {}
     /**
-     * @return The DnsSecurities param.
+     * @return List of AI security profiles.
+     * 
+     */
+    public List<String> aiSecurities() {
+        return this.aiSecurities;
+    }
+    /**
+     * @return List of DNS security profiles.
      * 
      */
     public List<String> dnsSecurities() {
         return this.dnsSecurities;
     }
     /**
-     * @return The FileBlockings param.
+     * @return List of file blocking profiles.
      * 
      */
     public List<String> fileBlockings() {
@@ -80,42 +92,42 @@ public final class GetProfileGroupListData {
         return this.id;
     }
     /**
-     * @return The Name param.
+     * @return The name of the profile group.
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The SaasSecurities param.
+     * @return List of HTTP header insertion profiles.
      * 
      */
     public List<String> saasSecurities() {
         return this.saasSecurities;
     }
     /**
-     * @return The Spywares param.
+     * @return List of anti-spyware profiles.
      * 
      */
     public List<String> spywares() {
         return this.spywares;
     }
     /**
-     * @return The UrlFilterings param.
+     * @return List of URL filtering profiles.
      * 
      */
     public List<String> urlFilterings() {
         return this.urlFilterings;
     }
     /**
-     * @return The VirusAndWildfireAnalyses param.
+     * @return List of anti-virus and Wildfire analysis profiles.
      * 
      */
     public List<String> virusAndWildfireAnalyses() {
         return this.virusAndWildfireAnalyses;
     }
     /**
-     * @return The Vulnerabilities param.
+     * @return List of vulnerability protection profiles.
      * 
      */
     public List<String> vulnerabilities() {
@@ -131,6 +143,7 @@ public final class GetProfileGroupListData {
     }
     @CustomType.Builder
     public static final class Builder {
+        private List<String> aiSecurities;
         private List<String> dnsSecurities;
         private List<String> fileBlockings;
         private String id;
@@ -143,6 +156,7 @@ public final class GetProfileGroupListData {
         public Builder() {}
         public Builder(GetProfileGroupListData defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.aiSecurities = defaults.aiSecurities;
     	      this.dnsSecurities = defaults.dnsSecurities;
     	      this.fileBlockings = defaults.fileBlockings;
     	      this.id = defaults.id;
@@ -154,6 +168,17 @@ public final class GetProfileGroupListData {
     	      this.vulnerabilities = defaults.vulnerabilities;
         }
 
+        @CustomType.Setter
+        public Builder aiSecurities(List<String> aiSecurities) {
+            if (aiSecurities == null) {
+              throw new MissingRequiredPropertyException("GetProfileGroupListData", "aiSecurities");
+            }
+            this.aiSecurities = aiSecurities;
+            return this;
+        }
+        public Builder aiSecurities(String... aiSecurities) {
+            return aiSecurities(List.of(aiSecurities));
+        }
         @CustomType.Setter
         public Builder dnsSecurities(List<String> dnsSecurities) {
             if (dnsSecurities == null) {
@@ -249,6 +274,7 @@ public final class GetProfileGroupListData {
         }
         public GetProfileGroupListData build() {
             final var _resultValue = new GetProfileGroupListData();
+            _resultValue.aiSecurities = aiSecurities;
             _resultValue.dnsSecurities = dnsSecurities;
             _resultValue.fileBlockings = fileBlockings;
             _resultValue.id = id;

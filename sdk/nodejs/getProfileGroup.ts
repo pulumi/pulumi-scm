@@ -40,11 +40,15 @@ export interface GetProfileGroupArgs {
  */
 export interface GetProfileGroupResult {
     /**
-     * The DnsSecurities param.
+     * List of AI security profiles.
+     */
+    readonly aiSecurities: string[];
+    /**
+     * List of DNS security profiles.
      */
     readonly dnsSecurities: string[];
     /**
-     * The FileBlockings param.
+     * List of file blocking profiles.
      */
     readonly fileBlockings: string[];
     /**
@@ -52,28 +56,28 @@ export interface GetProfileGroupResult {
      */
     readonly id: string;
     /**
-     * The Name param.
+     * The name of the profile group.
      */
     readonly name: string;
     /**
-     * The SaasSecurities param.
+     * List of HTTP header insertion profiles.
      */
     readonly saasSecurities: string[];
     /**
-     * The Spywares param.
+     * List of anti-spyware profiles.
      */
     readonly spywares: string[];
     readonly tfid: string;
     /**
-     * The UrlFilterings param.
+     * List of URL filtering profiles.
      */
     readonly urlFilterings: string[];
     /**
-     * The VirusAndWildfireAnalyses param.
+     * List of anti-virus and Wildfire analysis profiles.
      */
     readonly virusAndWildfireAnalyses: string[];
     /**
-     * The Vulnerabilities param.
+     * List of vulnerability protection profiles.
      */
     readonly vulnerabilities: string[];
 }

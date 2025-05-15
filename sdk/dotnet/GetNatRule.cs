@@ -130,7 +130,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly Outputs.GetNatRuleDestinationTranslationResult DestinationTranslation;
         /// <summary>
-        /// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The destination address(es).
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
@@ -150,7 +150,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Folder;
         /// <summary>
-        /// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The source security zone(s).
         /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
@@ -182,7 +182,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly Outputs.GetNatRuleSourceTranslationResult SourceTranslation;
         /// <summary>
-        /// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        /// The source address(es).
         /// </summary>
         public readonly ImmutableArray<string> Sources;
         /// <summary>
@@ -195,7 +195,7 @@ namespace Pulumi.Scm
         public readonly Outputs.GetNatRuleTargetResult Target;
         public readonly string Tfid;
         /// <summary>
-        /// The ToInterface param. String must be one of these: `"any"`.
+        /// The ToInterface param.
         /// </summary>
         public readonly string ToInterface;
         /// <summary>

@@ -118,21 +118,9 @@ namespace Pulumi.Scm
     public sealed class GetSnippetResult
     {
         /// <summary>
-        /// The CreatedIn param.
-        /// </summary>
-        public readonly string CreatedIn;
-        /// <summary>
         /// The Description param.
         /// </summary>
         public readonly string Description;
-        /// <summary>
-        /// The DisplayName param.
-        /// </summary>
-        public readonly string DisplayName;
-        /// <summary>
-        /// The Folders param.
-        /// </summary>
-        public readonly ImmutableArray<Outputs.GetSnippetFolderResult> Folders;
         /// <summary>
         /// The Id param.
         /// </summary>
@@ -142,56 +130,33 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly ImmutableArray<string> Labels;
         /// <summary>
-        /// The LastUpdate param.
-        /// </summary>
-        public readonly string LastUpdate;
-        /// <summary>
         /// The Name param.
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The SharedIn param.
-        /// </summary>
-        public readonly string SharedIn;
         public readonly string Tfid;
         /// <summary>
-        /// The Type param. String must be one of these: `"predefined"`.
+        /// The Type param. String must be one of these: `"predefined"`, `"custom"`.
         /// </summary>
         public readonly string Type;
 
         [OutputConstructor]
         private GetSnippetResult(
-            string createdIn,
-
             string description,
-
-            string displayName,
-
-            ImmutableArray<Outputs.GetSnippetFolderResult> folders,
 
             string id,
 
             ImmutableArray<string> labels,
 
-            string lastUpdate,
-
             string name,
-
-            string sharedIn,
 
             string tfid,
 
             string type)
         {
-            CreatedIn = createdIn;
             Description = description;
-            DisplayName = displayName;
-            Folders = folders;
             Id = id;
             Labels = labels;
-            LastUpdate = lastUpdate;
             Name = name;
-            SharedIn = sharedIn;
             Tfid = tfid;
             Type = type;
         }

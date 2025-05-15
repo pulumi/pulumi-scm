@@ -124,7 +124,7 @@ class GetNatRuleResult:
     @pulumi.getter
     def destinations(self) -> Sequence[builtins.str]:
         """
-        The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The destination address(es).
         """
         return pulumi.get(self, "destinations")
 
@@ -164,7 +164,7 @@ class GetNatRuleResult:
     @pulumi.getter
     def froms(self) -> Sequence[builtins.str]:
         """
-        The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The source security zone(s).
         """
         return pulumi.get(self, "froms")
 
@@ -228,7 +228,7 @@ class GetNatRuleResult:
     @pulumi.getter
     def sources(self) -> Sequence[builtins.str]:
         """
-        The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The source address(es).
         """
         return pulumi.get(self, "sources")
 
@@ -257,7 +257,7 @@ class GetNatRuleResult:
     @pulumi.getter(name="toInterface")
     def to_interface(self) -> builtins.str:
         """
-        The ToInterface param. String must be one of these: `"any"`.
+        The ToInterface param.
         """
         return pulumi.get(self, "to_interface")
 

@@ -14,8 +14,6 @@ if sys.version_info >= (3, 11):
 else:
     from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
-from . import outputs
-from ._inputs import *
 
 __all__ = ['SnippetArgs', 'Snippet']
 
@@ -78,60 +76,28 @@ class SnippetArgs:
 @pulumi.input_type
 class _SnippetState:
     def __init__(__self__, *,
-                 created_in: Optional[pulumi.Input[builtins.str]] = None,
                  description: Optional[pulumi.Input[builtins.str]] = None,
-                 display_name: Optional[pulumi.Input[builtins.str]] = None,
-                 folders: Optional[pulumi.Input[Sequence[pulumi.Input['SnippetFolderArgs']]]] = None,
                  labels: Optional[pulumi.Input[Sequence[pulumi.Input[builtins.str]]]] = None,
-                 last_update: Optional[pulumi.Input[builtins.str]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
-                 shared_in: Optional[pulumi.Input[builtins.str]] = None,
                  tfid: Optional[pulumi.Input[builtins.str]] = None,
                  type: Optional[pulumi.Input[builtins.str]] = None):
         """
         Input properties used for looking up and filtering Snippet resources.
-        :param pulumi.Input[builtins.str] created_in: The CreatedIn param.
         :param pulumi.Input[builtins.str] description: The Description param.
-        :param pulumi.Input[builtins.str] display_name: The DisplayName param.
-        :param pulumi.Input[Sequence[pulumi.Input['SnippetFolderArgs']]] folders: The Folders param.
         :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] labels: The Labels param.
-        :param pulumi.Input[builtins.str] last_update: The LastUpdate param.
         :param pulumi.Input[builtins.str] name: The Name param.
-        :param pulumi.Input[builtins.str] shared_in: The SharedIn param.
-        :param pulumi.Input[builtins.str] type: The Type param. String must be one of these: `"predefined"`.
+        :param pulumi.Input[builtins.str] type: The Type param. String must be one of these: `"predefined"`, `"custom"`.
         """
-        if created_in is not None:
-            pulumi.set(__self__, "created_in", created_in)
         if description is not None:
             pulumi.set(__self__, "description", description)
-        if display_name is not None:
-            pulumi.set(__self__, "display_name", display_name)
-        if folders is not None:
-            pulumi.set(__self__, "folders", folders)
         if labels is not None:
             pulumi.set(__self__, "labels", labels)
-        if last_update is not None:
-            pulumi.set(__self__, "last_update", last_update)
         if name is not None:
             pulumi.set(__self__, "name", name)
-        if shared_in is not None:
-            pulumi.set(__self__, "shared_in", shared_in)
         if tfid is not None:
             pulumi.set(__self__, "tfid", tfid)
         if type is not None:
             pulumi.set(__self__, "type", type)
-
-    @property
-    @pulumi.getter(name="createdIn")
-    def created_in(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        The CreatedIn param.
-        """
-        return pulumi.get(self, "created_in")
-
-    @created_in.setter
-    def created_in(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "created_in", value)
 
     @property
     @pulumi.getter
@@ -146,30 +112,6 @@ class _SnippetState:
         pulumi.set(self, "description", value)
 
     @property
-    @pulumi.getter(name="displayName")
-    def display_name(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        The DisplayName param.
-        """
-        return pulumi.get(self, "display_name")
-
-    @display_name.setter
-    def display_name(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "display_name", value)
-
-    @property
-    @pulumi.getter
-    def folders(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SnippetFolderArgs']]]]:
-        """
-        The Folders param.
-        """
-        return pulumi.get(self, "folders")
-
-    @folders.setter
-    def folders(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SnippetFolderArgs']]]]):
-        pulumi.set(self, "folders", value)
-
-    @property
     @pulumi.getter
     def labels(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[builtins.str]]]]:
         """
@@ -180,18 +122,6 @@ class _SnippetState:
     @labels.setter
     def labels(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[builtins.str]]]]):
         pulumi.set(self, "labels", value)
-
-    @property
-    @pulumi.getter(name="lastUpdate")
-    def last_update(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        The LastUpdate param.
-        """
-        return pulumi.get(self, "last_update")
-
-    @last_update.setter
-    def last_update(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "last_update", value)
 
     @property
     @pulumi.getter
@@ -206,18 +136,6 @@ class _SnippetState:
         pulumi.set(self, "name", value)
 
     @property
-    @pulumi.getter(name="sharedIn")
-    def shared_in(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        The SharedIn param.
-        """
-        return pulumi.get(self, "shared_in")
-
-    @shared_in.setter
-    def shared_in(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "shared_in", value)
-
-    @property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[builtins.str]]:
         return pulumi.get(self, "tfid")
@@ -230,7 +148,7 @@ class _SnippetState:
     @pulumi.getter
     def type(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        The Type param. String must be one of these: `"predefined"`.
+        The Type param. String must be one of these: `"predefined"`, `"custom"`.
         """
         return pulumi.get(self, "type")
 
@@ -315,11 +233,6 @@ class Snippet(pulumi.CustomResource):
             __props__.__dict__["description"] = description
             __props__.__dict__["labels"] = labels
             __props__.__dict__["name"] = name
-            __props__.__dict__["created_in"] = None
-            __props__.__dict__["display_name"] = None
-            __props__.__dict__["folders"] = None
-            __props__.__dict__["last_update"] = None
-            __props__.__dict__["shared_in"] = None
             __props__.__dict__["tfid"] = None
             __props__.__dict__["type"] = None
         super(Snippet, __self__).__init__(
@@ -332,14 +245,9 @@ class Snippet(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            created_in: Optional[pulumi.Input[builtins.str]] = None,
             description: Optional[pulumi.Input[builtins.str]] = None,
-            display_name: Optional[pulumi.Input[builtins.str]] = None,
-            folders: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SnippetFolderArgs', 'SnippetFolderArgsDict']]]]] = None,
             labels: Optional[pulumi.Input[Sequence[pulumi.Input[builtins.str]]]] = None,
-            last_update: Optional[pulumi.Input[builtins.str]] = None,
             name: Optional[pulumi.Input[builtins.str]] = None,
-            shared_in: Optional[pulumi.Input[builtins.str]] = None,
             tfid: Optional[pulumi.Input[builtins.str]] = None,
             type: Optional[pulumi.Input[builtins.str]] = None) -> 'Snippet':
         """
@@ -349,39 +257,21 @@ class Snippet(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[builtins.str] created_in: The CreatedIn param.
         :param pulumi.Input[builtins.str] description: The Description param.
-        :param pulumi.Input[builtins.str] display_name: The DisplayName param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['SnippetFolderArgs', 'SnippetFolderArgsDict']]]] folders: The Folders param.
         :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] labels: The Labels param.
-        :param pulumi.Input[builtins.str] last_update: The LastUpdate param.
         :param pulumi.Input[builtins.str] name: The Name param.
-        :param pulumi.Input[builtins.str] shared_in: The SharedIn param.
-        :param pulumi.Input[builtins.str] type: The Type param. String must be one of these: `"predefined"`.
+        :param pulumi.Input[builtins.str] type: The Type param. String must be one of these: `"predefined"`, `"custom"`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
         __props__ = _SnippetState.__new__(_SnippetState)
 
-        __props__.__dict__["created_in"] = created_in
         __props__.__dict__["description"] = description
-        __props__.__dict__["display_name"] = display_name
-        __props__.__dict__["folders"] = folders
         __props__.__dict__["labels"] = labels
-        __props__.__dict__["last_update"] = last_update
         __props__.__dict__["name"] = name
-        __props__.__dict__["shared_in"] = shared_in
         __props__.__dict__["tfid"] = tfid
         __props__.__dict__["type"] = type
         return Snippet(resource_name, opts=opts, __props__=__props__)
-
-    @property
-    @pulumi.getter(name="createdIn")
-    def created_in(self) -> pulumi.Output[builtins.str]:
-        """
-        The CreatedIn param.
-        """
-        return pulumi.get(self, "created_in")
 
     @property
     @pulumi.getter
@@ -392,36 +282,12 @@ class Snippet(pulumi.CustomResource):
         return pulumi.get(self, "description")
 
     @property
-    @pulumi.getter(name="displayName")
-    def display_name(self) -> pulumi.Output[builtins.str]:
-        """
-        The DisplayName param.
-        """
-        return pulumi.get(self, "display_name")
-
-    @property
-    @pulumi.getter
-    def folders(self) -> pulumi.Output[Sequence['outputs.SnippetFolder']]:
-        """
-        The Folders param.
-        """
-        return pulumi.get(self, "folders")
-
-    @property
     @pulumi.getter
     def labels(self) -> pulumi.Output[Optional[Sequence[builtins.str]]]:
         """
         The Labels param.
         """
         return pulumi.get(self, "labels")
-
-    @property
-    @pulumi.getter(name="lastUpdate")
-    def last_update(self) -> pulumi.Output[builtins.str]:
-        """
-        The LastUpdate param.
-        """
-        return pulumi.get(self, "last_update")
 
     @property
     @pulumi.getter
@@ -432,14 +298,6 @@ class Snippet(pulumi.CustomResource):
         return pulumi.get(self, "name")
 
     @property
-    @pulumi.getter(name="sharedIn")
-    def shared_in(self) -> pulumi.Output[builtins.str]:
-        """
-        The SharedIn param.
-        """
-        return pulumi.get(self, "shared_in")
-
-    @property
     @pulumi.getter
     def tfid(self) -> pulumi.Output[builtins.str]:
         return pulumi.get(self, "tfid")
@@ -448,7 +306,7 @@ class Snippet(pulumi.CustomResource):
     @pulumi.getter
     def type(self) -> pulumi.Output[builtins.str]:
         """
-        The Type param. String must be one of these: `"predefined"`.
+        The Type param. String must be one of these: `"predefined"`, `"custom"`.
         """
         return pulumi.get(self, "type")
 

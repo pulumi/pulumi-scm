@@ -62,7 +62,7 @@ type LookupNatRuleResult struct {
 	Description string `pulumi:"description"`
 	// Static destination translation parameter.
 	DestinationTranslation GetNatRuleDestinationTranslation `pulumi:"destinationTranslation"`
-	// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The destination address(es).
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Device string `pulumi:"device"`
@@ -72,7 +72,7 @@ type LookupNatRuleResult struct {
 	DynamicDestinationTranslation GetNatRuleDynamicDestinationTranslation `pulumi:"dynamicDestinationTranslation"`
 	// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Folder string `pulumi:"folder"`
-	// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source security zone(s).
 	Froms []string `pulumi:"froms"`
 	// The GroupTag param.
 	GroupTag string `pulumi:"groupTag"`
@@ -88,14 +88,14 @@ type LookupNatRuleResult struct {
 	Snippet string `pulumi:"snippet"`
 	// The SourceTranslation param.
 	SourceTranslation GetNatRuleSourceTranslation `pulumi:"sourceTranslation"`
-	// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source address(es).
 	Sources []string `pulumi:"sources"`
 	// The Tags param.
 	Tags []string `pulumi:"tags"`
 	// The Target param.
 	Target GetNatRuleTarget `pulumi:"target"`
 	Tfid   string           `pulumi:"tfid"`
-	// The ToInterface param. String must be one of these: `"any"`.
+	// The ToInterface param.
 	ToInterface string `pulumi:"toInterface"`
 	// The destination security zone(s).
 	Tos []string `pulumi:"tos"`
@@ -150,7 +150,7 @@ func (o LookupNatRuleResultOutput) DestinationTranslation() GetNatRuleDestinatio
 	return o.ApplyT(func(v LookupNatRuleResult) GetNatRuleDestinationTranslation { return v.DestinationTranslation }).(GetNatRuleDestinationTranslationOutput)
 }
 
-// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+// The destination address(es).
 func (o LookupNatRuleResultOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) []string { return v.Destinations }).(pulumi.StringArrayOutput)
 }
@@ -177,7 +177,7 @@ func (o LookupNatRuleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+// The source security zone(s).
 func (o LookupNatRuleResultOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) []string { return v.Froms }).(pulumi.StringArrayOutput)
 }
@@ -217,7 +217,7 @@ func (o LookupNatRuleResultOutput) SourceTranslation() GetNatRuleSourceTranslati
 	return o.ApplyT(func(v LookupNatRuleResult) GetNatRuleSourceTranslation { return v.SourceTranslation }).(GetNatRuleSourceTranslationOutput)
 }
 
-// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+// The source address(es).
 func (o LookupNatRuleResultOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
@@ -236,7 +236,7 @@ func (o LookupNatRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The ToInterface param. String must be one of these: `"any"`.
+// The ToInterface param.
 func (o LookupNatRuleResultOutput) ToInterface() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.ToInterface }).(pulumi.StringOutput)
 }

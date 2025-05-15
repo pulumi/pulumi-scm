@@ -54,7 +54,7 @@ export interface GetNatRuleResult {
      */
     readonly destinationTranslation: outputs.GetNatRuleDestinationTranslation;
     /**
-     * The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The destination address(es).
      */
     readonly destinations: string[];
     /**
@@ -74,7 +74,7 @@ export interface GetNatRuleResult {
      */
     readonly folder: string;
     /**
-     * The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The source security zone(s).
      */
     readonly froms: string[];
     /**
@@ -106,7 +106,7 @@ export interface GetNatRuleResult {
      */
     readonly sourceTranslation: outputs.GetNatRuleSourceTranslation;
     /**
-     * The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The source address(es).
      */
     readonly sources: string[];
     /**
@@ -119,7 +119,7 @@ export interface GetNatRuleResult {
     readonly target: outputs.GetNatRuleTarget;
     readonly tfid: string;
     /**
-     * The ToInterface param. String must be one of these: `"any"`.
+     * The ToInterface param.
      */
     readonly toInterface: string;
     /**
