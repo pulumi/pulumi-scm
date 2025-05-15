@@ -476,6 +476,17 @@
                     }
                 }
             },
+            "scm_folder": {
+                "current": "scm:index/folder:Folder",
+                "fields": {
+                    "labels": {
+                        "maxItemsOne": false
+                    },
+                    "snippets": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "scm_hip_object": {
                 "current": "scm:index/hipObject:HipObject",
                 "fields": {
@@ -809,6 +820,9 @@
             "scm_profile_group": {
                 "current": "scm:index/profileGroup:ProfileGroup",
                 "fields": {
+                    "ai_securities": {
+                        "maxItemsOne": false
+                    },
                     "dns_securities": {
                         "maxItemsOne": false
                     },
@@ -1027,9 +1041,6 @@
             "scm_snippet": {
                 "current": "scm:index/snippet:Snippet",
                 "fields": {
-                    "folders": {
-                        "maxItemsOne": false
-                    },
                     "labels": {
                         "maxItemsOne": false
                     }
@@ -2396,6 +2407,35 @@
                     }
                 }
             },
+            "scm_folder": {
+                "current": "scm:index/getFolder:getFolder",
+                "fields": {
+                    "labels": {
+                        "maxItemsOne": false
+                    },
+                    "snippets": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_folder_list": {
+                "current": "scm:index/getFolderList:getFolderList",
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "labels": {
+                                    "maxItemsOne": false
+                                },
+                                "snippets": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "scm_hip_object": {
                 "current": "scm:index/getHipObject:getHipObject",
                 "fields": {
@@ -3184,6 +3224,9 @@
             "scm_profile_group": {
                 "current": "scm:index/getProfileGroup:getProfileGroup",
                 "fields": {
+                    "ai_securities": {
+                        "maxItemsOne": false
+                    },
                     "dns_securities": {
                         "maxItemsOne": false
                     },
@@ -3214,6 +3257,9 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
+                                "ai_securities": {
+                                    "maxItemsOne": false
+                                },
                                 "dns_securities": {
                                     "maxItemsOne": false
                                 },
@@ -3729,9 +3775,6 @@
             "scm_snippet": {
                 "current": "scm:index/getSnippet:getSnippet",
                 "fields": {
-                    "folders": {
-                        "maxItemsOne": false
-                    },
                     "labels": {
                         "maxItemsOne": false
                     }
@@ -3744,9 +3787,6 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
-                                "folders": {
-                                    "maxItemsOne": false
-                                },
                                 "labels": {
                                     "maxItemsOne": false
                                 }
