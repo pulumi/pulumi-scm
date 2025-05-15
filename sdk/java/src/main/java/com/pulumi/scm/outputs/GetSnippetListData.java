@@ -5,7 +5,6 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetSnippetListDataFolder;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,25 +12,10 @@ import java.util.Objects;
 @CustomType
 public final class GetSnippetListData {
     /**
-     * @return The CreatedIn param.
-     * 
-     */
-    private String createdIn;
-    /**
      * @return The Description param.
      * 
      */
     private String description;
-    /**
-     * @return The DisplayName param.
-     * 
-     */
-    private String displayName;
-    /**
-     * @return The Folders param.
-     * 
-     */
-    private List<GetSnippetListDataFolder> folders;
     /**
      * @return The Id param.
      * 
@@ -43,54 +27,23 @@ public final class GetSnippetListData {
      */
     private List<String> labels;
     /**
-     * @return The LastUpdate param.
-     * 
-     */
-    private String lastUpdate;
-    /**
      * @return The Name param.
      * 
      */
     private String name;
     /**
-     * @return The SharedIn param.
-     * 
-     */
-    private String sharedIn;
-    /**
-     * @return The Type param. String must be one of these: `&#34;predefined&#34;`.
+     * @return The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
      * 
      */
     private String type;
 
     private GetSnippetListData() {}
     /**
-     * @return The CreatedIn param.
-     * 
-     */
-    public String createdIn() {
-        return this.createdIn;
-    }
-    /**
      * @return The Description param.
      * 
      */
     public String description() {
         return this.description;
-    }
-    /**
-     * @return The DisplayName param.
-     * 
-     */
-    public String displayName() {
-        return this.displayName;
-    }
-    /**
-     * @return The Folders param.
-     * 
-     */
-    public List<GetSnippetListDataFolder> folders() {
-        return this.folders;
     }
     /**
      * @return The Id param.
@@ -107,13 +60,6 @@ public final class GetSnippetListData {
         return this.labels;
     }
     /**
-     * @return The LastUpdate param.
-     * 
-     */
-    public String lastUpdate() {
-        return this.lastUpdate;
-    }
-    /**
      * @return The Name param.
      * 
      */
@@ -121,14 +67,7 @@ public final class GetSnippetListData {
         return this.name;
     }
     /**
-     * @return The SharedIn param.
-     * 
-     */
-    public String sharedIn() {
-        return this.sharedIn;
-    }
-    /**
-     * @return The Type param. String must be one of these: `&#34;predefined&#34;`.
+     * @return The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
      * 
      */
     public String type() {
@@ -144,39 +83,21 @@ public final class GetSnippetListData {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String createdIn;
         private String description;
-        private String displayName;
-        private List<GetSnippetListDataFolder> folders;
         private String id;
         private List<String> labels;
-        private String lastUpdate;
         private String name;
-        private String sharedIn;
         private String type;
         public Builder() {}
         public Builder(GetSnippetListData defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.createdIn = defaults.createdIn;
     	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.folders = defaults.folders;
     	      this.id = defaults.id;
     	      this.labels = defaults.labels;
-    	      this.lastUpdate = defaults.lastUpdate;
     	      this.name = defaults.name;
-    	      this.sharedIn = defaults.sharedIn;
     	      this.type = defaults.type;
         }
 
-        @CustomType.Setter
-        public Builder createdIn(String createdIn) {
-            if (createdIn == null) {
-              throw new MissingRequiredPropertyException("GetSnippetListData", "createdIn");
-            }
-            this.createdIn = createdIn;
-            return this;
-        }
         @CustomType.Setter
         public Builder description(String description) {
             if (description == null) {
@@ -184,25 +105,6 @@ public final class GetSnippetListData {
             }
             this.description = description;
             return this;
-        }
-        @CustomType.Setter
-        public Builder displayName(String displayName) {
-            if (displayName == null) {
-              throw new MissingRequiredPropertyException("GetSnippetListData", "displayName");
-            }
-            this.displayName = displayName;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder folders(List<GetSnippetListDataFolder> folders) {
-            if (folders == null) {
-              throw new MissingRequiredPropertyException("GetSnippetListData", "folders");
-            }
-            this.folders = folders;
-            return this;
-        }
-        public Builder folders(GetSnippetListDataFolder... folders) {
-            return folders(List.of(folders));
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -224,27 +126,11 @@ public final class GetSnippetListData {
             return labels(List.of(labels));
         }
         @CustomType.Setter
-        public Builder lastUpdate(String lastUpdate) {
-            if (lastUpdate == null) {
-              throw new MissingRequiredPropertyException("GetSnippetListData", "lastUpdate");
-            }
-            this.lastUpdate = lastUpdate;
-            return this;
-        }
-        @CustomType.Setter
         public Builder name(String name) {
             if (name == null) {
               throw new MissingRequiredPropertyException("GetSnippetListData", "name");
             }
             this.name = name;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder sharedIn(String sharedIn) {
-            if (sharedIn == null) {
-              throw new MissingRequiredPropertyException("GetSnippetListData", "sharedIn");
-            }
-            this.sharedIn = sharedIn;
             return this;
         }
         @CustomType.Setter
@@ -257,15 +143,10 @@ public final class GetSnippetListData {
         }
         public GetSnippetListData build() {
             final var _resultValue = new GetSnippetListData();
-            _resultValue.createdIn = createdIn;
             _resultValue.description = description;
-            _resultValue.displayName = displayName;
-            _resultValue.folders = folders;
             _resultValue.id = id;
             _resultValue.labels = labels;
-            _resultValue.lastUpdate = lastUpdate;
             _resultValue.name = name;
-            _resultValue.sharedIn = sharedIn;
             _resultValue.type = type;
             return _resultValue;
         }

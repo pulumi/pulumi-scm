@@ -105,6 +105,11 @@ export type FileBlockingProfile = import("./fileBlockingProfile").FileBlockingPr
 export const FileBlockingProfile: typeof import("./fileBlockingProfile").FileBlockingProfile = null as any;
 utilities.lazyLoad(exports, ["FileBlockingProfile"], () => require("./fileBlockingProfile"));
 
+export { FolderArgs, FolderState } from "./folder";
+export type Folder = import("./folder").Folder;
+export const Folder: typeof import("./folder").Folder = null as any;
+utilities.lazyLoad(exports, ["Folder"], () => require("./folder"));
+
 export { GetAddressGroupArgs, GetAddressGroupResult, GetAddressGroupOutputArgs } from "./getAddressGroup";
 export const getAddressGroup: typeof import("./getAddressGroup").getAddressGroup = null as any;
 export const getAddressGroupOutput: typeof import("./getAddressGroup").getAddressGroupOutput = null as any;
@@ -314,6 +319,16 @@ export { GetFileBlockingProfileListArgs, GetFileBlockingProfileListResult, GetFi
 export const getFileBlockingProfileList: typeof import("./getFileBlockingProfileList").getFileBlockingProfileList = null as any;
 export const getFileBlockingProfileListOutput: typeof import("./getFileBlockingProfileList").getFileBlockingProfileListOutput = null as any;
 utilities.lazyLoad(exports, ["getFileBlockingProfileList","getFileBlockingProfileListOutput"], () => require("./getFileBlockingProfileList"));
+
+export { GetFolderArgs, GetFolderResult, GetFolderOutputArgs } from "./getFolder";
+export const getFolder: typeof import("./getFolder").getFolder = null as any;
+export const getFolderOutput: typeof import("./getFolder").getFolderOutput = null as any;
+utilities.lazyLoad(exports, ["getFolder","getFolderOutput"], () => require("./getFolder"));
+
+export { GetFolderListArgs, GetFolderListResult, GetFolderListOutputArgs } from "./getFolderList";
+export const getFolderList: typeof import("./getFolderList").getFolderList = null as any;
+export const getFolderListOutput: typeof import("./getFolderList").getFolderListOutput = null as any;
+utilities.lazyLoad(exports, ["getFolderList","getFolderListOutput"], () => require("./getFolderList"));
 
 export { GetHipObjectArgs, GetHipObjectResult, GetHipObjectOutputArgs } from "./getHipObject";
 export const getHipObject: typeof import("./getHipObject").getHipObject = null as any;
@@ -992,6 +1007,8 @@ const _module = {
                 return new ExternalDynamicList(name, <any>undefined, { urn })
             case "scm:index/fileBlockingProfile:FileBlockingProfile":
                 return new FileBlockingProfile(name, <any>undefined, { urn })
+            case "scm:index/folder:Folder":
+                return new Folder(name, <any>undefined, { urn })
             case "scm:index/hipObject:HipObject":
                 return new HipObject(name, <any>undefined, { urn })
             case "scm:index/hipProfile:HipProfile":
@@ -1095,6 +1112,7 @@ pulumi.runtime.registerResourceModule("scm", "index/dnsSecurityProfile", _module
 pulumi.runtime.registerResourceModule("scm", "index/dynamicUserGroup", _module)
 pulumi.runtime.registerResourceModule("scm", "index/externalDynamicList", _module)
 pulumi.runtime.registerResourceModule("scm", "index/fileBlockingProfile", _module)
+pulumi.runtime.registerResourceModule("scm", "index/folder", _module)
 pulumi.runtime.registerResourceModule("scm", "index/hipObject", _module)
 pulumi.runtime.registerResourceModule("scm", "index/hipProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/httpHeaderProfile", _module)

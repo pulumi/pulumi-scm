@@ -43919,112 +43919,6 @@ func (o ServiceProtocolUdpOverridePtrOutput) Timeout() pulumi.IntPtrOutput {
 	}).(pulumi.IntPtrOutput)
 }
 
-type SnippetFolder struct {
-	// The Id param.
-	Id *string `pulumi:"id"`
-	// The Name param.
-	Name *string `pulumi:"name"`
-}
-
-// SnippetFolderInput is an input type that accepts SnippetFolderArgs and SnippetFolderOutput values.
-// You can construct a concrete instance of `SnippetFolderInput` via:
-//
-//	SnippetFolderArgs{...}
-type SnippetFolderInput interface {
-	pulumi.Input
-
-	ToSnippetFolderOutput() SnippetFolderOutput
-	ToSnippetFolderOutputWithContext(context.Context) SnippetFolderOutput
-}
-
-type SnippetFolderArgs struct {
-	// The Id param.
-	Id pulumi.StringPtrInput `pulumi:"id"`
-	// The Name param.
-	Name pulumi.StringPtrInput `pulumi:"name"`
-}
-
-func (SnippetFolderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*SnippetFolder)(nil)).Elem()
-}
-
-func (i SnippetFolderArgs) ToSnippetFolderOutput() SnippetFolderOutput {
-	return i.ToSnippetFolderOutputWithContext(context.Background())
-}
-
-func (i SnippetFolderArgs) ToSnippetFolderOutputWithContext(ctx context.Context) SnippetFolderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(SnippetFolderOutput)
-}
-
-// SnippetFolderArrayInput is an input type that accepts SnippetFolderArray and SnippetFolderArrayOutput values.
-// You can construct a concrete instance of `SnippetFolderArrayInput` via:
-//
-//	SnippetFolderArray{ SnippetFolderArgs{...} }
-type SnippetFolderArrayInput interface {
-	pulumi.Input
-
-	ToSnippetFolderArrayOutput() SnippetFolderArrayOutput
-	ToSnippetFolderArrayOutputWithContext(context.Context) SnippetFolderArrayOutput
-}
-
-type SnippetFolderArray []SnippetFolderInput
-
-func (SnippetFolderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]SnippetFolder)(nil)).Elem()
-}
-
-func (i SnippetFolderArray) ToSnippetFolderArrayOutput() SnippetFolderArrayOutput {
-	return i.ToSnippetFolderArrayOutputWithContext(context.Background())
-}
-
-func (i SnippetFolderArray) ToSnippetFolderArrayOutputWithContext(ctx context.Context) SnippetFolderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(SnippetFolderArrayOutput)
-}
-
-type SnippetFolderOutput struct{ *pulumi.OutputState }
-
-func (SnippetFolderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*SnippetFolder)(nil)).Elem()
-}
-
-func (o SnippetFolderOutput) ToSnippetFolderOutput() SnippetFolderOutput {
-	return o
-}
-
-func (o SnippetFolderOutput) ToSnippetFolderOutputWithContext(ctx context.Context) SnippetFolderOutput {
-	return o
-}
-
-// The Id param.
-func (o SnippetFolderOutput) Id() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v SnippetFolder) *string { return v.Id }).(pulumi.StringPtrOutput)
-}
-
-// The Name param.
-func (o SnippetFolderOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v SnippetFolder) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-type SnippetFolderArrayOutput struct{ *pulumi.OutputState }
-
-func (SnippetFolderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]SnippetFolder)(nil)).Elem()
-}
-
-func (o SnippetFolderArrayOutput) ToSnippetFolderArrayOutput() SnippetFolderArrayOutput {
-	return o
-}
-
-func (o SnippetFolderArrayOutput) ToSnippetFolderArrayOutputWithContext(ctx context.Context) SnippetFolderArrayOutput {
-	return o
-}
-
-func (o SnippetFolderArrayOutput) Index(i pulumi.IntInput) SnippetFolderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) SnippetFolder {
-		return vs[0].([]SnippetFolder)[vs[1].(int)]
-	}).(SnippetFolderOutput)
-}
-
 type TacacsServerProfileServer struct {
 	// The Address param.
 	Address *string `pulumi:"address"`
@@ -45061,13 +44955,13 @@ func (o UrlAccessProfileCredentialEnforcementPtrOutput) Mode() UrlAccessProfileC
 }
 
 type UrlAccessProfileCredentialEnforcementMode struct {
-	// The Disabled param. Default: `false`.
+	// The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 	Disabled *bool `pulumi:"disabled"`
-	// The DomainCredentials param. Default: `false`.
+	// The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 	DomainCredentials *bool `pulumi:"domainCredentials"`
-	// The GroupMapping param.
+	// The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 	GroupMapping *string `pulumi:"groupMapping"`
-	// The IpUser param. Default: `false`.
+	// The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 	IpUser *bool `pulumi:"ipUser"`
 }
 
@@ -45083,13 +44977,13 @@ type UrlAccessProfileCredentialEnforcementModeInput interface {
 }
 
 type UrlAccessProfileCredentialEnforcementModeArgs struct {
-	// The Disabled param. Default: `false`.
+	// The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 	Disabled pulumi.BoolPtrInput `pulumi:"disabled"`
-	// The DomainCredentials param. Default: `false`.
+	// The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 	DomainCredentials pulumi.BoolPtrInput `pulumi:"domainCredentials"`
-	// The GroupMapping param.
+	// The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 	GroupMapping pulumi.StringPtrInput `pulumi:"groupMapping"`
-	// The IpUser param. Default: `false`.
+	// The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 	IpUser pulumi.BoolPtrInput `pulumi:"ipUser"`
 }
 
@@ -45170,22 +45064,22 @@ func (o UrlAccessProfileCredentialEnforcementModeOutput) ToUrlAccessProfileCrede
 	}).(UrlAccessProfileCredentialEnforcementModePtrOutput)
 }
 
-// The Disabled param. Default: `false`.
+// The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 func (o UrlAccessProfileCredentialEnforcementModeOutput) Disabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v UrlAccessProfileCredentialEnforcementMode) *bool { return v.Disabled }).(pulumi.BoolPtrOutput)
 }
 
-// The DomainCredentials param. Default: `false`.
+// The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 func (o UrlAccessProfileCredentialEnforcementModeOutput) DomainCredentials() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v UrlAccessProfileCredentialEnforcementMode) *bool { return v.DomainCredentials }).(pulumi.BoolPtrOutput)
 }
 
-// The GroupMapping param.
+// The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 func (o UrlAccessProfileCredentialEnforcementModeOutput) GroupMapping() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v UrlAccessProfileCredentialEnforcementMode) *string { return v.GroupMapping }).(pulumi.StringPtrOutput)
 }
 
-// The IpUser param. Default: `false`.
+// The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 func (o UrlAccessProfileCredentialEnforcementModeOutput) IpUser() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v UrlAccessProfileCredentialEnforcementMode) *bool { return v.IpUser }).(pulumi.BoolPtrOutput)
 }
@@ -45214,7 +45108,7 @@ func (o UrlAccessProfileCredentialEnforcementModePtrOutput) Elem() UrlAccessProf
 	}).(UrlAccessProfileCredentialEnforcementModeOutput)
 }
 
-// The Disabled param. Default: `false`.
+// The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 func (o UrlAccessProfileCredentialEnforcementModePtrOutput) Disabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfileCredentialEnforcementMode) *bool {
 		if v == nil {
@@ -45224,7 +45118,7 @@ func (o UrlAccessProfileCredentialEnforcementModePtrOutput) Disabled() pulumi.Bo
 	}).(pulumi.BoolPtrOutput)
 }
 
-// The DomainCredentials param. Default: `false`.
+// The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 func (o UrlAccessProfileCredentialEnforcementModePtrOutput) DomainCredentials() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfileCredentialEnforcementMode) *bool {
 		if v == nil {
@@ -45234,7 +45128,7 @@ func (o UrlAccessProfileCredentialEnforcementModePtrOutput) DomainCredentials() 
 	}).(pulumi.BoolPtrOutput)
 }
 
-// The GroupMapping param.
+// The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 func (o UrlAccessProfileCredentialEnforcementModePtrOutput) GroupMapping() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfileCredentialEnforcementMode) *string {
 		if v == nil {
@@ -45244,7 +45138,7 @@ func (o UrlAccessProfileCredentialEnforcementModePtrOutput) GroupMapping() pulum
 	}).(pulumi.StringPtrOutput)
 }
 
-// The IpUser param. Default: `false`.
+// The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
 func (o UrlAccessProfileCredentialEnforcementModePtrOutput) IpUser() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfileCredentialEnforcementMode) *bool {
 		if v == nil {
@@ -69156,6 +69050,67 @@ func (o GetExternalDynamicListListDataTypeUrlRecurringWeeklyOutput) DayOfWeek() 
 	return o.ApplyT(func(v GetExternalDynamicListListDataTypeUrlRecurringWeekly) string { return v.DayOfWeek }).(pulumi.StringOutput)
 }
 
+type GetExternalDynamicListListDataTypeUrlUrlAuth struct {
+	// The Password param. String length must not exceed 255 characters.
+	Password string `pulumi:"password"`
+	// The Username param. String length must be between 1 and 255 characters.
+	Username string `pulumi:"username"`
+}
+
+// GetExternalDynamicListListDataTypeUrlUrlAuthInput is an input type that accepts GetExternalDynamicListListDataTypeUrlUrlAuthArgs and GetExternalDynamicListListDataTypeUrlUrlAuthOutput values.
+// You can construct a concrete instance of `GetExternalDynamicListListDataTypeUrlUrlAuthInput` via:
+//
+//	GetExternalDynamicListListDataTypeUrlUrlAuthArgs{...}
+type GetExternalDynamicListListDataTypeUrlUrlAuthInput interface {
+	pulumi.Input
+
+	ToGetExternalDynamicListListDataTypeUrlUrlAuthOutput() GetExternalDynamicListListDataTypeUrlUrlAuthOutput
+	ToGetExternalDynamicListListDataTypeUrlUrlAuthOutputWithContext(context.Context) GetExternalDynamicListListDataTypeUrlUrlAuthOutput
+}
+
+type GetExternalDynamicListListDataTypeUrlUrlAuthArgs struct {
+	// The Password param. String length must not exceed 255 characters.
+	Password pulumi.StringInput `pulumi:"password"`
+	// The Username param. String length must be between 1 and 255 characters.
+	Username pulumi.StringInput `pulumi:"username"`
+}
+
+func (GetExternalDynamicListListDataTypeUrlUrlAuthArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetExternalDynamicListListDataTypeUrlUrlAuth)(nil)).Elem()
+}
+
+func (i GetExternalDynamicListListDataTypeUrlUrlAuthArgs) ToGetExternalDynamicListListDataTypeUrlUrlAuthOutput() GetExternalDynamicListListDataTypeUrlUrlAuthOutput {
+	return i.ToGetExternalDynamicListListDataTypeUrlUrlAuthOutputWithContext(context.Background())
+}
+
+func (i GetExternalDynamicListListDataTypeUrlUrlAuthArgs) ToGetExternalDynamicListListDataTypeUrlUrlAuthOutputWithContext(ctx context.Context) GetExternalDynamicListListDataTypeUrlUrlAuthOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetExternalDynamicListListDataTypeUrlUrlAuthOutput)
+}
+
+type GetExternalDynamicListListDataTypeUrlUrlAuthOutput struct{ *pulumi.OutputState }
+
+func (GetExternalDynamicListListDataTypeUrlUrlAuthOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetExternalDynamicListListDataTypeUrlUrlAuth)(nil)).Elem()
+}
+
+func (o GetExternalDynamicListListDataTypeUrlUrlAuthOutput) ToGetExternalDynamicListListDataTypeUrlUrlAuthOutput() GetExternalDynamicListListDataTypeUrlUrlAuthOutput {
+	return o
+}
+
+func (o GetExternalDynamicListListDataTypeUrlUrlAuthOutput) ToGetExternalDynamicListListDataTypeUrlUrlAuthOutputWithContext(ctx context.Context) GetExternalDynamicListListDataTypeUrlUrlAuthOutput {
+	return o
+}
+
+// The Password param. String length must not exceed 255 characters.
+func (o GetExternalDynamicListListDataTypeUrlUrlAuthOutput) Password() pulumi.StringOutput {
+	return o.ApplyT(func(v GetExternalDynamicListListDataTypeUrlUrlAuth) string { return v.Password }).(pulumi.StringOutput)
+}
+
+// The Username param. String length must be between 1 and 255 characters.
+func (o GetExternalDynamicListListDataTypeUrlUrlAuthOutput) Username() pulumi.StringOutput {
+	return o.ApplyT(func(v GetExternalDynamicListListDataTypeUrlUrlAuth) string { return v.Username }).(pulumi.StringOutput)
+}
+
 func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*AddressGroupDynamicValueInput)(nil)).Elem(), AddressGroupDynamicValueArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AddressGroupDynamicValuePtrInput)(nil)).Elem(), AddressGroupDynamicValueArgs{})
@@ -69697,8 +69652,6 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceProtocolUdpPtrInput)(nil)).Elem(), ServiceProtocolUdpArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceProtocolUdpOverrideInput)(nil)).Elem(), ServiceProtocolUdpOverrideArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceProtocolUdpOverridePtrInput)(nil)).Elem(), ServiceProtocolUdpOverrideArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*SnippetFolderInput)(nil)).Elem(), SnippetFolderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*SnippetFolderArrayInput)(nil)).Elem(), SnippetFolderArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TacacsServerProfileServerInput)(nil)).Elem(), TacacsServerProfileServerArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TacacsServerProfileServerArrayInput)(nil)).Elem(), TacacsServerProfileServerArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*TlsServiceProfileProtocolSettingsInput)(nil)).Elem(), TlsServiceProfileProtocolSettingsArgs{})
@@ -70035,6 +69988,7 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetExternalDynamicListListDataTypeUrlRecurringDailyInput)(nil)).Elem(), GetExternalDynamicListListDataTypeUrlRecurringDailyArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetExternalDynamicListListDataTypeUrlRecurringMonthlyInput)(nil)).Elem(), GetExternalDynamicListListDataTypeUrlRecurringMonthlyArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetExternalDynamicListListDataTypeUrlRecurringWeeklyInput)(nil)).Elem(), GetExternalDynamicListListDataTypeUrlRecurringWeeklyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetExternalDynamicListListDataTypeUrlUrlAuthInput)(nil)).Elem(), GetExternalDynamicListListDataTypeUrlUrlAuthArgs{})
 	pulumi.RegisterOutputType(AddressGroupDynamicValueOutput{})
 	pulumi.RegisterOutputType(AddressGroupDynamicValuePtrOutput{})
 	pulumi.RegisterOutputType(AntiSpywareProfileMicaEngineSpywareEnabledListOutput{})
@@ -70575,8 +70529,6 @@ func init() {
 	pulumi.RegisterOutputType(ServiceProtocolUdpPtrOutput{})
 	pulumi.RegisterOutputType(ServiceProtocolUdpOverrideOutput{})
 	pulumi.RegisterOutputType(ServiceProtocolUdpOverridePtrOutput{})
-	pulumi.RegisterOutputType(SnippetFolderOutput{})
-	pulumi.RegisterOutputType(SnippetFolderArrayOutput{})
 	pulumi.RegisterOutputType(TacacsServerProfileServerOutput{})
 	pulumi.RegisterOutputType(TacacsServerProfileServerArrayOutput{})
 	pulumi.RegisterOutputType(TlsServiceProfileProtocolSettingsOutput{})
@@ -70913,4 +70865,5 @@ func init() {
 	pulumi.RegisterOutputType(GetExternalDynamicListListDataTypeUrlRecurringDailyOutput{})
 	pulumi.RegisterOutputType(GetExternalDynamicListListDataTypeUrlRecurringMonthlyOutput{})
 	pulumi.RegisterOutputType(GetExternalDynamicListListDataTypeUrlRecurringWeeklyOutput{})
+	pulumi.RegisterOutputType(GetExternalDynamicListListDataTypeUrlUrlAuthOutput{})
 }

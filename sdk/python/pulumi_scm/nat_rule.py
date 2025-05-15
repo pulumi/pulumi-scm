@@ -45,10 +45,10 @@ class NatRuleArgs:
                  to_interface: Optional[pulumi.Input[builtins.str]] = None):
         """
         The set of arguments for constructing a NatRule resource.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] destinations: The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] froms: The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] destinations: The destination address(es).
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] froms: The source security zone(s).
         :param pulumi.Input[builtins.str] service: The Service param.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] sources: The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] sources: The source address(es).
         :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] tos: The destination security zone(s).
         :param pulumi.Input[builtins.str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
         :param pulumi.Input[builtins.str] description: The Description param.
@@ -65,7 +65,7 @@ class NatRuleArgs:
         :param pulumi.Input['NatRuleSourceTranslationArgs'] source_translation: The SourceTranslation param.
         :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] tags: The Tags param.
         :param pulumi.Input['NatRuleTargetArgs'] target: The Target param.
-        :param pulumi.Input[builtins.str] to_interface: The ToInterface param. String must be one of these: `"any"`.
+        :param pulumi.Input[builtins.str] to_interface: The ToInterface param.
         """
         pulumi.set(__self__, "destinations", destinations)
         pulumi.set(__self__, "froms", froms)
@@ -109,7 +109,7 @@ class NatRuleArgs:
     @pulumi.getter
     def destinations(self) -> pulumi.Input[Sequence[pulumi.Input[builtins.str]]]:
         """
-        The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The destination address(es).
         """
         return pulumi.get(self, "destinations")
 
@@ -121,7 +121,7 @@ class NatRuleArgs:
     @pulumi.getter
     def froms(self) -> pulumi.Input[Sequence[pulumi.Input[builtins.str]]]:
         """
-        The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The source security zone(s).
         """
         return pulumi.get(self, "froms")
 
@@ -145,7 +145,7 @@ class NatRuleArgs:
     @pulumi.getter
     def sources(self) -> pulumi.Input[Sequence[pulumi.Input[builtins.str]]]:
         """
-        The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The source address(es).
         """
         return pulumi.get(self, "sources")
 
@@ -349,7 +349,7 @@ class NatRuleArgs:
     @pulumi.getter(name="toInterface")
     def to_interface(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        The ToInterface param. String must be one of these: `"any"`.
+        The ToInterface param.
         """
         return pulumi.get(self, "to_interface")
 
@@ -388,12 +388,12 @@ class _NatRuleState:
         :param pulumi.Input[builtins.str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
         :param pulumi.Input[builtins.str] description: The Description param.
         :param pulumi.Input['NatRuleDestinationTranslationArgs'] destination_translation: Static destination translation parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] destinations: The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] destinations: The destination address(es).
         :param pulumi.Input[builtins.str] device: The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param pulumi.Input[builtins.bool] disabled: The Disabled param.
         :param pulumi.Input['NatRuleDynamicDestinationTranslationArgs'] dynamic_destination_translation: Dynamic destination translation parameter.
         :param pulumi.Input[builtins.str] folder: The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] froms: The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] froms: The source security zone(s).
         :param pulumi.Input[builtins.str] group_tag: The GroupTag param.
         :param pulumi.Input[builtins.str] name: The Name param.
         :param pulumi.Input[builtins.str] nat_type: The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
@@ -401,10 +401,10 @@ class _NatRuleState:
         :param pulumi.Input[builtins.str] service: The Service param.
         :param pulumi.Input[builtins.str] snippet: The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param pulumi.Input['NatRuleSourceTranslationArgs'] source_translation: The SourceTranslation param.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] sources: The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] sources: The source address(es).
         :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] tags: The Tags param.
         :param pulumi.Input['NatRuleTargetArgs'] target: The Target param.
-        :param pulumi.Input[builtins.str] to_interface: The ToInterface param. String must be one of these: `"any"`.
+        :param pulumi.Input[builtins.str] to_interface: The ToInterface param.
         :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] tos: The destination security zone(s).
         """
         if active_active_device_binding is not None:
@@ -492,7 +492,7 @@ class _NatRuleState:
     @pulumi.getter
     def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[builtins.str]]]]:
         """
-        The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The destination address(es).
         """
         return pulumi.get(self, "destinations")
 
@@ -552,7 +552,7 @@ class _NatRuleState:
     @pulumi.getter
     def froms(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[builtins.str]]]]:
         """
-        The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The source security zone(s).
         """
         return pulumi.get(self, "froms")
 
@@ -648,7 +648,7 @@ class _NatRuleState:
     @pulumi.getter
     def sources(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[builtins.str]]]]:
         """
-        The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The source address(es).
         """
         return pulumi.get(self, "sources")
 
@@ -693,7 +693,7 @@ class _NatRuleState:
     @pulumi.getter(name="toInterface")
     def to_interface(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        The ToInterface param. String must be one of these: `"any"`.
+        The ToInterface param.
         """
         return pulumi.get(self, "to_interface")
 
@@ -750,12 +750,12 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[builtins.str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
         :param pulumi.Input[builtins.str] description: The Description param.
         :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']] destination_translation: Static destination translation parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] destinations: The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] destinations: The destination address(es).
         :param pulumi.Input[builtins.str] device: The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param pulumi.Input[builtins.bool] disabled: The Disabled param.
         :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']] dynamic_destination_translation: Dynamic destination translation parameter.
         :param pulumi.Input[builtins.str] folder: The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] froms: The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] froms: The source security zone(s).
         :param pulumi.Input[builtins.str] group_tag: The GroupTag param.
         :param pulumi.Input[builtins.str] name: The Name param.
         :param pulumi.Input[builtins.str] nat_type: The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
@@ -763,10 +763,10 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[builtins.str] service: The Service param.
         :param pulumi.Input[builtins.str] snippet: The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']] source_translation: The SourceTranslation param.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] sources: The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] sources: The source address(es).
         :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] tags: The Tags param.
         :param pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']] target: The Target param.
-        :param pulumi.Input[builtins.str] to_interface: The ToInterface param. String must be one of these: `"any"`.
+        :param pulumi.Input[builtins.str] to_interface: The ToInterface param.
         :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] tos: The destination security zone(s).
         """
         ...
@@ -897,12 +897,12 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[builtins.str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
         :param pulumi.Input[builtins.str] description: The Description param.
         :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']] destination_translation: Static destination translation parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] destinations: The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] destinations: The destination address(es).
         :param pulumi.Input[builtins.str] device: The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param pulumi.Input[builtins.bool] disabled: The Disabled param.
         :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']] dynamic_destination_translation: Dynamic destination translation parameter.
         :param pulumi.Input[builtins.str] folder: The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] froms: The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] froms: The source security zone(s).
         :param pulumi.Input[builtins.str] group_tag: The GroupTag param.
         :param pulumi.Input[builtins.str] name: The Name param.
         :param pulumi.Input[builtins.str] nat_type: The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
@@ -910,10 +910,10 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[builtins.str] service: The Service param.
         :param pulumi.Input[builtins.str] snippet: The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']] source_translation: The SourceTranslation param.
-        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] sources: The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] sources: The source address(es).
         :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] tags: The Tags param.
         :param pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']] target: The Target param.
-        :param pulumi.Input[builtins.str] to_interface: The ToInterface param. String must be one of these: `"any"`.
+        :param pulumi.Input[builtins.str] to_interface: The ToInterface param.
         :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] tos: The destination security zone(s).
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -972,7 +972,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def destinations(self) -> pulumi.Output[Sequence[builtins.str]]:
         """
-        The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The destination address(es).
         """
         return pulumi.get(self, "destinations")
 
@@ -1012,7 +1012,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def froms(self) -> pulumi.Output[Sequence[builtins.str]]:
         """
-        The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The source security zone(s).
         """
         return pulumi.get(self, "froms")
 
@@ -1076,7 +1076,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def sources(self) -> pulumi.Output[Sequence[builtins.str]]:
         """
-        The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The source address(es).
         """
         return pulumi.get(self, "sources")
 
@@ -1105,7 +1105,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter(name="toInterface")
     def to_interface(self) -> pulumi.Output[Optional[builtins.str]]:
         """
-        The ToInterface param. String must be one of these: `"any"`.
+        The ToInterface param.
         """
         return pulumi.get(self, "to_interface")
 

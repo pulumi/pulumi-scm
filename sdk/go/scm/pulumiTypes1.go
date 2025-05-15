@@ -13,67 +13,6 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-type GetExternalDynamicListListDataTypeUrlUrlAuth struct {
-	// The Password param. String length must not exceed 255 characters.
-	Password string `pulumi:"password"`
-	// The Username param. String length must be between 1 and 255 characters.
-	Username string `pulumi:"username"`
-}
-
-// GetExternalDynamicListListDataTypeUrlUrlAuthInput is an input type that accepts GetExternalDynamicListListDataTypeUrlUrlAuthArgs and GetExternalDynamicListListDataTypeUrlUrlAuthOutput values.
-// You can construct a concrete instance of `GetExternalDynamicListListDataTypeUrlUrlAuthInput` via:
-//
-//	GetExternalDynamicListListDataTypeUrlUrlAuthArgs{...}
-type GetExternalDynamicListListDataTypeUrlUrlAuthInput interface {
-	pulumi.Input
-
-	ToGetExternalDynamicListListDataTypeUrlUrlAuthOutput() GetExternalDynamicListListDataTypeUrlUrlAuthOutput
-	ToGetExternalDynamicListListDataTypeUrlUrlAuthOutputWithContext(context.Context) GetExternalDynamicListListDataTypeUrlUrlAuthOutput
-}
-
-type GetExternalDynamicListListDataTypeUrlUrlAuthArgs struct {
-	// The Password param. String length must not exceed 255 characters.
-	Password pulumi.StringInput `pulumi:"password"`
-	// The Username param. String length must be between 1 and 255 characters.
-	Username pulumi.StringInput `pulumi:"username"`
-}
-
-func (GetExternalDynamicListListDataTypeUrlUrlAuthArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetExternalDynamicListListDataTypeUrlUrlAuth)(nil)).Elem()
-}
-
-func (i GetExternalDynamicListListDataTypeUrlUrlAuthArgs) ToGetExternalDynamicListListDataTypeUrlUrlAuthOutput() GetExternalDynamicListListDataTypeUrlUrlAuthOutput {
-	return i.ToGetExternalDynamicListListDataTypeUrlUrlAuthOutputWithContext(context.Background())
-}
-
-func (i GetExternalDynamicListListDataTypeUrlUrlAuthArgs) ToGetExternalDynamicListListDataTypeUrlUrlAuthOutputWithContext(ctx context.Context) GetExternalDynamicListListDataTypeUrlUrlAuthOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetExternalDynamicListListDataTypeUrlUrlAuthOutput)
-}
-
-type GetExternalDynamicListListDataTypeUrlUrlAuthOutput struct{ *pulumi.OutputState }
-
-func (GetExternalDynamicListListDataTypeUrlUrlAuthOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetExternalDynamicListListDataTypeUrlUrlAuth)(nil)).Elem()
-}
-
-func (o GetExternalDynamicListListDataTypeUrlUrlAuthOutput) ToGetExternalDynamicListListDataTypeUrlUrlAuthOutput() GetExternalDynamicListListDataTypeUrlUrlAuthOutput {
-	return o
-}
-
-func (o GetExternalDynamicListListDataTypeUrlUrlAuthOutput) ToGetExternalDynamicListListDataTypeUrlUrlAuthOutputWithContext(ctx context.Context) GetExternalDynamicListListDataTypeUrlUrlAuthOutput {
-	return o
-}
-
-// The Password param. String length must not exceed 255 characters.
-func (o GetExternalDynamicListListDataTypeUrlUrlAuthOutput) Password() pulumi.StringOutput {
-	return o.ApplyT(func(v GetExternalDynamicListListDataTypeUrlUrlAuth) string { return v.Password }).(pulumi.StringOutput)
-}
-
-// The Username param. String length must be between 1 and 255 characters.
-func (o GetExternalDynamicListListDataTypeUrlUrlAuthOutput) Username() pulumi.StringOutput {
-	return o.ApplyT(func(v GetExternalDynamicListListDataTypeUrlUrlAuth) string { return v.Username }).(pulumi.StringOutput)
-}
-
 type GetExternalDynamicListType struct {
 	// The Domain param.
 	Domain GetExternalDynamicListTypeDomain `pulumi:"domain"`
@@ -2849,6 +2788,148 @@ func (o GetFileBlockingProfileRuleArrayOutput) Index(i pulumi.IntInput) GetFileB
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetFileBlockingProfileRule {
 		return vs[0].([]GetFileBlockingProfileRule)[vs[1].(int)]
 	}).(GetFileBlockingProfileRuleOutput)
+}
+
+type GetFolderListData struct {
+	// The Description param.
+	Description string `pulumi:"description"`
+	// The Id param.
+	Id string `pulumi:"id"`
+	// The Labels param.
+	Labels []string `pulumi:"labels"`
+	// The Name param.
+	Name string `pulumi:"name"`
+	// The Parent param.
+	Parent string `pulumi:"parent"`
+	// The Snippets param.
+	Snippets []string `pulumi:"snippets"`
+}
+
+// GetFolderListDataInput is an input type that accepts GetFolderListDataArgs and GetFolderListDataOutput values.
+// You can construct a concrete instance of `GetFolderListDataInput` via:
+//
+//	GetFolderListDataArgs{...}
+type GetFolderListDataInput interface {
+	pulumi.Input
+
+	ToGetFolderListDataOutput() GetFolderListDataOutput
+	ToGetFolderListDataOutputWithContext(context.Context) GetFolderListDataOutput
+}
+
+type GetFolderListDataArgs struct {
+	// The Description param.
+	Description pulumi.StringInput `pulumi:"description"`
+	// The Id param.
+	Id pulumi.StringInput `pulumi:"id"`
+	// The Labels param.
+	Labels pulumi.StringArrayInput `pulumi:"labels"`
+	// The Name param.
+	Name pulumi.StringInput `pulumi:"name"`
+	// The Parent param.
+	Parent pulumi.StringInput `pulumi:"parent"`
+	// The Snippets param.
+	Snippets pulumi.StringArrayInput `pulumi:"snippets"`
+}
+
+func (GetFolderListDataArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetFolderListData)(nil)).Elem()
+}
+
+func (i GetFolderListDataArgs) ToGetFolderListDataOutput() GetFolderListDataOutput {
+	return i.ToGetFolderListDataOutputWithContext(context.Background())
+}
+
+func (i GetFolderListDataArgs) ToGetFolderListDataOutputWithContext(ctx context.Context) GetFolderListDataOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetFolderListDataOutput)
+}
+
+// GetFolderListDataArrayInput is an input type that accepts GetFolderListDataArray and GetFolderListDataArrayOutput values.
+// You can construct a concrete instance of `GetFolderListDataArrayInput` via:
+//
+//	GetFolderListDataArray{ GetFolderListDataArgs{...} }
+type GetFolderListDataArrayInput interface {
+	pulumi.Input
+
+	ToGetFolderListDataArrayOutput() GetFolderListDataArrayOutput
+	ToGetFolderListDataArrayOutputWithContext(context.Context) GetFolderListDataArrayOutput
+}
+
+type GetFolderListDataArray []GetFolderListDataInput
+
+func (GetFolderListDataArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetFolderListData)(nil)).Elem()
+}
+
+func (i GetFolderListDataArray) ToGetFolderListDataArrayOutput() GetFolderListDataArrayOutput {
+	return i.ToGetFolderListDataArrayOutputWithContext(context.Background())
+}
+
+func (i GetFolderListDataArray) ToGetFolderListDataArrayOutputWithContext(ctx context.Context) GetFolderListDataArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetFolderListDataArrayOutput)
+}
+
+type GetFolderListDataOutput struct{ *pulumi.OutputState }
+
+func (GetFolderListDataOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetFolderListData)(nil)).Elem()
+}
+
+func (o GetFolderListDataOutput) ToGetFolderListDataOutput() GetFolderListDataOutput {
+	return o
+}
+
+func (o GetFolderListDataOutput) ToGetFolderListDataOutputWithContext(ctx context.Context) GetFolderListDataOutput {
+	return o
+}
+
+// The Description param.
+func (o GetFolderListDataOutput) Description() pulumi.StringOutput {
+	return o.ApplyT(func(v GetFolderListData) string { return v.Description }).(pulumi.StringOutput)
+}
+
+// The Id param.
+func (o GetFolderListDataOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v GetFolderListData) string { return v.Id }).(pulumi.StringOutput)
+}
+
+// The Labels param.
+func (o GetFolderListDataOutput) Labels() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetFolderListData) []string { return v.Labels }).(pulumi.StringArrayOutput)
+}
+
+// The Name param.
+func (o GetFolderListDataOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetFolderListData) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The Parent param.
+func (o GetFolderListDataOutput) Parent() pulumi.StringOutput {
+	return o.ApplyT(func(v GetFolderListData) string { return v.Parent }).(pulumi.StringOutput)
+}
+
+// The Snippets param.
+func (o GetFolderListDataOutput) Snippets() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetFolderListData) []string { return v.Snippets }).(pulumi.StringArrayOutput)
+}
+
+type GetFolderListDataArrayOutput struct{ *pulumi.OutputState }
+
+func (GetFolderListDataArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetFolderListData)(nil)).Elem()
+}
+
+func (o GetFolderListDataArrayOutput) ToGetFolderListDataArrayOutput() GetFolderListDataArrayOutput {
+	return o
+}
+
+func (o GetFolderListDataArrayOutput) ToGetFolderListDataArrayOutputWithContext(ctx context.Context) GetFolderListDataArrayOutput {
+	return o
+}
+
+func (o GetFolderListDataArrayOutput) Index(i pulumi.IntInput) GetFolderListDataOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetFolderListData {
+		return vs[0].([]GetFolderListData)[vs[1].(int)]
+	}).(GetFolderListDataOutput)
 }
 
 type GetHipObjectAntiMalware struct {
@@ -22638,7 +22719,7 @@ type GetNatRuleListData struct {
 	Description string `pulumi:"description"`
 	// Static destination translation parameter.
 	DestinationTranslation GetNatRuleListDataDestinationTranslation `pulumi:"destinationTranslation"`
-	// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The destination address(es).
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Device string `pulumi:"device"`
@@ -22648,7 +22729,7 @@ type GetNatRuleListData struct {
 	DynamicDestinationTranslation GetNatRuleListDataDynamicDestinationTranslation `pulumi:"dynamicDestinationTranslation"`
 	// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Folder string `pulumi:"folder"`
-	// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source security zone(s).
 	Froms []string `pulumi:"froms"`
 	// The GroupTag param.
 	GroupTag string `pulumi:"groupTag"`
@@ -22664,13 +22745,13 @@ type GetNatRuleListData struct {
 	Snippet string `pulumi:"snippet"`
 	// The SourceTranslation param.
 	SourceTranslation GetNatRuleListDataSourceTranslation `pulumi:"sourceTranslation"`
-	// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source address(es).
 	Sources []string `pulumi:"sources"`
 	// The Tags param.
 	Tags []string `pulumi:"tags"`
 	// The Target param.
 	Target GetNatRuleListDataTarget `pulumi:"target"`
-	// The ToInterface param. String must be one of these: `"any"`.
+	// The ToInterface param.
 	ToInterface string `pulumi:"toInterface"`
 	// The destination security zone(s).
 	Tos []string `pulumi:"tos"`
@@ -22694,7 +22775,7 @@ type GetNatRuleListDataArgs struct {
 	Description pulumi.StringInput `pulumi:"description"`
 	// Static destination translation parameter.
 	DestinationTranslation GetNatRuleListDataDestinationTranslationInput `pulumi:"destinationTranslation"`
-	// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The destination address(es).
 	Destinations pulumi.StringArrayInput `pulumi:"destinations"`
 	// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Device pulumi.StringInput `pulumi:"device"`
@@ -22704,7 +22785,7 @@ type GetNatRuleListDataArgs struct {
 	DynamicDestinationTranslation GetNatRuleListDataDynamicDestinationTranslationInput `pulumi:"dynamicDestinationTranslation"`
 	// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Folder pulumi.StringInput `pulumi:"folder"`
-	// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source security zone(s).
 	Froms pulumi.StringArrayInput `pulumi:"froms"`
 	// The GroupTag param.
 	GroupTag pulumi.StringInput `pulumi:"groupTag"`
@@ -22720,13 +22801,13 @@ type GetNatRuleListDataArgs struct {
 	Snippet pulumi.StringInput `pulumi:"snippet"`
 	// The SourceTranslation param.
 	SourceTranslation GetNatRuleListDataSourceTranslationInput `pulumi:"sourceTranslation"`
-	// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source address(es).
 	Sources pulumi.StringArrayInput `pulumi:"sources"`
 	// The Tags param.
 	Tags pulumi.StringArrayInput `pulumi:"tags"`
 	// The Target param.
 	Target GetNatRuleListDataTargetInput `pulumi:"target"`
-	// The ToInterface param. String must be one of these: `"any"`.
+	// The ToInterface param.
 	ToInterface pulumi.StringInput `pulumi:"toInterface"`
 	// The destination security zone(s).
 	Tos pulumi.StringArrayInput `pulumi:"tos"`
@@ -22798,7 +22879,7 @@ func (o GetNatRuleListDataOutput) DestinationTranslation() GetNatRuleListDataDes
 	return o.ApplyT(func(v GetNatRuleListData) GetNatRuleListDataDestinationTranslation { return v.DestinationTranslation }).(GetNatRuleListDataDestinationTranslationOutput)
 }
 
-// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+// The destination address(es).
 func (o GetNatRuleListDataOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetNatRuleListData) []string { return v.Destinations }).(pulumi.StringArrayOutput)
 }
@@ -22825,7 +22906,7 @@ func (o GetNatRuleListDataOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v GetNatRuleListData) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+// The source security zone(s).
 func (o GetNatRuleListDataOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetNatRuleListData) []string { return v.Froms }).(pulumi.StringArrayOutput)
 }
@@ -22865,7 +22946,7 @@ func (o GetNatRuleListDataOutput) SourceTranslation() GetNatRuleListDataSourceTr
 	return o.ApplyT(func(v GetNatRuleListData) GetNatRuleListDataSourceTranslation { return v.SourceTranslation }).(GetNatRuleListDataSourceTranslationOutput)
 }
 
-// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+// The source address(es).
 func (o GetNatRuleListDataOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetNatRuleListData) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
@@ -22880,7 +22961,7 @@ func (o GetNatRuleListDataOutput) Target() GetNatRuleListDataTargetOutput {
 	return o.ApplyT(func(v GetNatRuleListData) GetNatRuleListDataTarget { return v.Target }).(GetNatRuleListDataTargetOutput)
 }
 
-// The ToInterface param. String must be one of these: `"any"`.
+// The ToInterface param.
 func (o GetNatRuleListDataOutput) ToInterface() pulumi.StringOutput {
 	return o.ApplyT(func(v GetNatRuleListData) string { return v.ToInterface }).(pulumi.StringOutput)
 }
@@ -23818,23 +23899,25 @@ func (o GetOcspResponderListDataArrayOutput) Index(i pulumi.IntInput) GetOcspRes
 }
 
 type GetProfileGroupListData struct {
-	// The DnsSecurities param.
+	// List of AI security profiles.
+	AiSecurities []string `pulumi:"aiSecurities"`
+	// List of DNS security profiles.
 	DnsSecurities []string `pulumi:"dnsSecurities"`
-	// The FileBlockings param.
+	// List of file blocking profiles.
 	FileBlockings []string `pulumi:"fileBlockings"`
 	// UUID of the resource.
 	Id string `pulumi:"id"`
-	// The Name param.
+	// The name of the profile group.
 	Name string `pulumi:"name"`
-	// The SaasSecurities param.
+	// List of HTTP header insertion profiles.
 	SaasSecurities []string `pulumi:"saasSecurities"`
-	// The Spywares param.
+	// List of anti-spyware profiles.
 	Spywares []string `pulumi:"spywares"`
-	// The UrlFilterings param.
+	// List of URL filtering profiles.
 	UrlFilterings []string `pulumi:"urlFilterings"`
-	// The VirusAndWildfireAnalyses param.
+	// List of anti-virus and Wildfire analysis profiles.
 	VirusAndWildfireAnalyses []string `pulumi:"virusAndWildfireAnalyses"`
-	// The Vulnerabilities param.
+	// List of vulnerability protection profiles.
 	Vulnerabilities []string `pulumi:"vulnerabilities"`
 }
 
@@ -23850,23 +23933,25 @@ type GetProfileGroupListDataInput interface {
 }
 
 type GetProfileGroupListDataArgs struct {
-	// The DnsSecurities param.
+	// List of AI security profiles.
+	AiSecurities pulumi.StringArrayInput `pulumi:"aiSecurities"`
+	// List of DNS security profiles.
 	DnsSecurities pulumi.StringArrayInput `pulumi:"dnsSecurities"`
-	// The FileBlockings param.
+	// List of file blocking profiles.
 	FileBlockings pulumi.StringArrayInput `pulumi:"fileBlockings"`
 	// UUID of the resource.
 	Id pulumi.StringInput `pulumi:"id"`
-	// The Name param.
+	// The name of the profile group.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The SaasSecurities param.
+	// List of HTTP header insertion profiles.
 	SaasSecurities pulumi.StringArrayInput `pulumi:"saasSecurities"`
-	// The Spywares param.
+	// List of anti-spyware profiles.
 	Spywares pulumi.StringArrayInput `pulumi:"spywares"`
-	// The UrlFilterings param.
+	// List of URL filtering profiles.
 	UrlFilterings pulumi.StringArrayInput `pulumi:"urlFilterings"`
-	// The VirusAndWildfireAnalyses param.
+	// List of anti-virus and Wildfire analysis profiles.
 	VirusAndWildfireAnalyses pulumi.StringArrayInput `pulumi:"virusAndWildfireAnalyses"`
-	// The Vulnerabilities param.
+	// List of vulnerability protection profiles.
 	Vulnerabilities pulumi.StringArrayInput `pulumi:"vulnerabilities"`
 }
 
@@ -23921,12 +24006,17 @@ func (o GetProfileGroupListDataOutput) ToGetProfileGroupListDataOutputWithContex
 	return o
 }
 
-// The DnsSecurities param.
+// List of AI security profiles.
+func (o GetProfileGroupListDataOutput) AiSecurities() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetProfileGroupListData) []string { return v.AiSecurities }).(pulumi.StringArrayOutput)
+}
+
+// List of DNS security profiles.
 func (o GetProfileGroupListDataOutput) DnsSecurities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetProfileGroupListData) []string { return v.DnsSecurities }).(pulumi.StringArrayOutput)
 }
 
-// The FileBlockings param.
+// List of file blocking profiles.
 func (o GetProfileGroupListDataOutput) FileBlockings() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetProfileGroupListData) []string { return v.FileBlockings }).(pulumi.StringArrayOutput)
 }
@@ -23936,32 +24026,32 @@ func (o GetProfileGroupListDataOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetProfileGroupListData) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// The name of the profile group.
 func (o GetProfileGroupListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetProfileGroupListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The SaasSecurities param.
+// List of HTTP header insertion profiles.
 func (o GetProfileGroupListDataOutput) SaasSecurities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetProfileGroupListData) []string { return v.SaasSecurities }).(pulumi.StringArrayOutput)
 }
 
-// The Spywares param.
+// List of anti-spyware profiles.
 func (o GetProfileGroupListDataOutput) Spywares() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetProfileGroupListData) []string { return v.Spywares }).(pulumi.StringArrayOutput)
 }
 
-// The UrlFilterings param.
+// List of URL filtering profiles.
 func (o GetProfileGroupListDataOutput) UrlFilterings() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetProfileGroupListData) []string { return v.UrlFilterings }).(pulumi.StringArrayOutput)
 }
 
-// The VirusAndWildfireAnalyses param.
+// List of anti-virus and Wildfire analysis profiles.
 func (o GetProfileGroupListDataOutput) VirusAndWildfireAnalyses() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetProfileGroupListData) []string { return v.VirusAndWildfireAnalyses }).(pulumi.StringArrayOutput)
 }
 
-// The Vulnerabilities param.
+// List of vulnerability protection profiles.
 func (o GetProfileGroupListDataOutput) Vulnerabilities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetProfileGroupListData) []string { return v.Vulnerabilities }).(pulumi.StringArrayOutput)
 }
@@ -33129,132 +33219,16 @@ func (o GetSharedInfrastructureSettingsListDataArrayOutput) Index(i pulumi.IntIn
 	}).(GetSharedInfrastructureSettingsListDataOutput)
 }
 
-type GetSnippetFolder struct {
-	// The Id param.
-	Id string `pulumi:"id"`
-	// The Name param.
-	Name string `pulumi:"name"`
-}
-
-// GetSnippetFolderInput is an input type that accepts GetSnippetFolderArgs and GetSnippetFolderOutput values.
-// You can construct a concrete instance of `GetSnippetFolderInput` via:
-//
-//	GetSnippetFolderArgs{...}
-type GetSnippetFolderInput interface {
-	pulumi.Input
-
-	ToGetSnippetFolderOutput() GetSnippetFolderOutput
-	ToGetSnippetFolderOutputWithContext(context.Context) GetSnippetFolderOutput
-}
-
-type GetSnippetFolderArgs struct {
-	// The Id param.
-	Id pulumi.StringInput `pulumi:"id"`
-	// The Name param.
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetSnippetFolderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSnippetFolder)(nil)).Elem()
-}
-
-func (i GetSnippetFolderArgs) ToGetSnippetFolderOutput() GetSnippetFolderOutput {
-	return i.ToGetSnippetFolderOutputWithContext(context.Background())
-}
-
-func (i GetSnippetFolderArgs) ToGetSnippetFolderOutputWithContext(ctx context.Context) GetSnippetFolderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSnippetFolderOutput)
-}
-
-// GetSnippetFolderArrayInput is an input type that accepts GetSnippetFolderArray and GetSnippetFolderArrayOutput values.
-// You can construct a concrete instance of `GetSnippetFolderArrayInput` via:
-//
-//	GetSnippetFolderArray{ GetSnippetFolderArgs{...} }
-type GetSnippetFolderArrayInput interface {
-	pulumi.Input
-
-	ToGetSnippetFolderArrayOutput() GetSnippetFolderArrayOutput
-	ToGetSnippetFolderArrayOutputWithContext(context.Context) GetSnippetFolderArrayOutput
-}
-
-type GetSnippetFolderArray []GetSnippetFolderInput
-
-func (GetSnippetFolderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSnippetFolder)(nil)).Elem()
-}
-
-func (i GetSnippetFolderArray) ToGetSnippetFolderArrayOutput() GetSnippetFolderArrayOutput {
-	return i.ToGetSnippetFolderArrayOutputWithContext(context.Background())
-}
-
-func (i GetSnippetFolderArray) ToGetSnippetFolderArrayOutputWithContext(ctx context.Context) GetSnippetFolderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSnippetFolderArrayOutput)
-}
-
-type GetSnippetFolderOutput struct{ *pulumi.OutputState }
-
-func (GetSnippetFolderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSnippetFolder)(nil)).Elem()
-}
-
-func (o GetSnippetFolderOutput) ToGetSnippetFolderOutput() GetSnippetFolderOutput {
-	return o
-}
-
-func (o GetSnippetFolderOutput) ToGetSnippetFolderOutputWithContext(ctx context.Context) GetSnippetFolderOutput {
-	return o
-}
-
-// The Id param.
-func (o GetSnippetFolderOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSnippetFolder) string { return v.Id }).(pulumi.StringOutput)
-}
-
-// The Name param.
-func (o GetSnippetFolderOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSnippetFolder) string { return v.Name }).(pulumi.StringOutput)
-}
-
-type GetSnippetFolderArrayOutput struct{ *pulumi.OutputState }
-
-func (GetSnippetFolderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSnippetFolder)(nil)).Elem()
-}
-
-func (o GetSnippetFolderArrayOutput) ToGetSnippetFolderArrayOutput() GetSnippetFolderArrayOutput {
-	return o
-}
-
-func (o GetSnippetFolderArrayOutput) ToGetSnippetFolderArrayOutputWithContext(ctx context.Context) GetSnippetFolderArrayOutput {
-	return o
-}
-
-func (o GetSnippetFolderArrayOutput) Index(i pulumi.IntInput) GetSnippetFolderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSnippetFolder {
-		return vs[0].([]GetSnippetFolder)[vs[1].(int)]
-	}).(GetSnippetFolderOutput)
-}
-
 type GetSnippetListData struct {
-	// The CreatedIn param.
-	CreatedIn string `pulumi:"createdIn"`
 	// The Description param.
 	Description string `pulumi:"description"`
-	// The DisplayName param.
-	DisplayName string `pulumi:"displayName"`
-	// The Folders param.
-	Folders []GetSnippetListDataFolder `pulumi:"folders"`
 	// The Id param.
 	Id string `pulumi:"id"`
 	// The Labels param.
 	Labels []string `pulumi:"labels"`
-	// The LastUpdate param.
-	LastUpdate string `pulumi:"lastUpdate"`
 	// The Name param.
 	Name string `pulumi:"name"`
-	// The SharedIn param.
-	SharedIn string `pulumi:"sharedIn"`
-	// The Type param. String must be one of these: `"predefined"`.
+	// The Type param. String must be one of these: `"predefined"`, `"custom"`.
 	Type string `pulumi:"type"`
 }
 
@@ -33270,25 +33244,15 @@ type GetSnippetListDataInput interface {
 }
 
 type GetSnippetListDataArgs struct {
-	// The CreatedIn param.
-	CreatedIn pulumi.StringInput `pulumi:"createdIn"`
 	// The Description param.
 	Description pulumi.StringInput `pulumi:"description"`
-	// The DisplayName param.
-	DisplayName pulumi.StringInput `pulumi:"displayName"`
-	// The Folders param.
-	Folders GetSnippetListDataFolderArrayInput `pulumi:"folders"`
 	// The Id param.
 	Id pulumi.StringInput `pulumi:"id"`
 	// The Labels param.
 	Labels pulumi.StringArrayInput `pulumi:"labels"`
-	// The LastUpdate param.
-	LastUpdate pulumi.StringInput `pulumi:"lastUpdate"`
 	// The Name param.
 	Name pulumi.StringInput `pulumi:"name"`
-	// The SharedIn param.
-	SharedIn pulumi.StringInput `pulumi:"sharedIn"`
-	// The Type param. String must be one of these: `"predefined"`.
+	// The Type param. String must be one of these: `"predefined"`, `"custom"`.
 	Type pulumi.StringInput `pulumi:"type"`
 }
 
@@ -33343,24 +33307,9 @@ func (o GetSnippetListDataOutput) ToGetSnippetListDataOutputWithContext(ctx cont
 	return o
 }
 
-// The CreatedIn param.
-func (o GetSnippetListDataOutput) CreatedIn() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSnippetListData) string { return v.CreatedIn }).(pulumi.StringOutput)
-}
-
 // The Description param.
 func (o GetSnippetListDataOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSnippetListData) string { return v.Description }).(pulumi.StringOutput)
-}
-
-// The DisplayName param.
-func (o GetSnippetListDataOutput) DisplayName() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSnippetListData) string { return v.DisplayName }).(pulumi.StringOutput)
-}
-
-// The Folders param.
-func (o GetSnippetListDataOutput) Folders() GetSnippetListDataFolderArrayOutput {
-	return o.ApplyT(func(v GetSnippetListData) []GetSnippetListDataFolder { return v.Folders }).(GetSnippetListDataFolderArrayOutput)
 }
 
 // The Id param.
@@ -33373,22 +33322,12 @@ func (o GetSnippetListDataOutput) Labels() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetSnippetListData) []string { return v.Labels }).(pulumi.StringArrayOutput)
 }
 
-// The LastUpdate param.
-func (o GetSnippetListDataOutput) LastUpdate() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSnippetListData) string { return v.LastUpdate }).(pulumi.StringOutput)
-}
-
 // The Name param.
 func (o GetSnippetListDataOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSnippetListData) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The SharedIn param.
-func (o GetSnippetListDataOutput) SharedIn() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSnippetListData) string { return v.SharedIn }).(pulumi.StringOutput)
-}
-
-// The Type param. String must be one of these: `"predefined"`.
+// The Type param. String must be one of these: `"predefined"`, `"custom"`.
 func (o GetSnippetListDataOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSnippetListData) string { return v.Type }).(pulumi.StringOutput)
 }
@@ -33411,112 +33350,6 @@ func (o GetSnippetListDataArrayOutput) Index(i pulumi.IntInput) GetSnippetListDa
 	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSnippetListData {
 		return vs[0].([]GetSnippetListData)[vs[1].(int)]
 	}).(GetSnippetListDataOutput)
-}
-
-type GetSnippetListDataFolder struct {
-	// The Id param.
-	Id string `pulumi:"id"`
-	// The Name param.
-	Name string `pulumi:"name"`
-}
-
-// GetSnippetListDataFolderInput is an input type that accepts GetSnippetListDataFolderArgs and GetSnippetListDataFolderOutput values.
-// You can construct a concrete instance of `GetSnippetListDataFolderInput` via:
-//
-//	GetSnippetListDataFolderArgs{...}
-type GetSnippetListDataFolderInput interface {
-	pulumi.Input
-
-	ToGetSnippetListDataFolderOutput() GetSnippetListDataFolderOutput
-	ToGetSnippetListDataFolderOutputWithContext(context.Context) GetSnippetListDataFolderOutput
-}
-
-type GetSnippetListDataFolderArgs struct {
-	// The Id param.
-	Id pulumi.StringInput `pulumi:"id"`
-	// The Name param.
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetSnippetListDataFolderArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSnippetListDataFolder)(nil)).Elem()
-}
-
-func (i GetSnippetListDataFolderArgs) ToGetSnippetListDataFolderOutput() GetSnippetListDataFolderOutput {
-	return i.ToGetSnippetListDataFolderOutputWithContext(context.Background())
-}
-
-func (i GetSnippetListDataFolderArgs) ToGetSnippetListDataFolderOutputWithContext(ctx context.Context) GetSnippetListDataFolderOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSnippetListDataFolderOutput)
-}
-
-// GetSnippetListDataFolderArrayInput is an input type that accepts GetSnippetListDataFolderArray and GetSnippetListDataFolderArrayOutput values.
-// You can construct a concrete instance of `GetSnippetListDataFolderArrayInput` via:
-//
-//	GetSnippetListDataFolderArray{ GetSnippetListDataFolderArgs{...} }
-type GetSnippetListDataFolderArrayInput interface {
-	pulumi.Input
-
-	ToGetSnippetListDataFolderArrayOutput() GetSnippetListDataFolderArrayOutput
-	ToGetSnippetListDataFolderArrayOutputWithContext(context.Context) GetSnippetListDataFolderArrayOutput
-}
-
-type GetSnippetListDataFolderArray []GetSnippetListDataFolderInput
-
-func (GetSnippetListDataFolderArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSnippetListDataFolder)(nil)).Elem()
-}
-
-func (i GetSnippetListDataFolderArray) ToGetSnippetListDataFolderArrayOutput() GetSnippetListDataFolderArrayOutput {
-	return i.ToGetSnippetListDataFolderArrayOutputWithContext(context.Background())
-}
-
-func (i GetSnippetListDataFolderArray) ToGetSnippetListDataFolderArrayOutputWithContext(ctx context.Context) GetSnippetListDataFolderArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetSnippetListDataFolderArrayOutput)
-}
-
-type GetSnippetListDataFolderOutput struct{ *pulumi.OutputState }
-
-func (GetSnippetListDataFolderOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSnippetListDataFolder)(nil)).Elem()
-}
-
-func (o GetSnippetListDataFolderOutput) ToGetSnippetListDataFolderOutput() GetSnippetListDataFolderOutput {
-	return o
-}
-
-func (o GetSnippetListDataFolderOutput) ToGetSnippetListDataFolderOutputWithContext(ctx context.Context) GetSnippetListDataFolderOutput {
-	return o
-}
-
-// The Id param.
-func (o GetSnippetListDataFolderOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSnippetListDataFolder) string { return v.Id }).(pulumi.StringOutput)
-}
-
-// The Name param.
-func (o GetSnippetListDataFolderOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSnippetListDataFolder) string { return v.Name }).(pulumi.StringOutput)
-}
-
-type GetSnippetListDataFolderArrayOutput struct{ *pulumi.OutputState }
-
-func (GetSnippetListDataFolderArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetSnippetListDataFolder)(nil)).Elem()
-}
-
-func (o GetSnippetListDataFolderArrayOutput) ToGetSnippetListDataFolderArrayOutput() GetSnippetListDataFolderArrayOutput {
-	return o
-}
-
-func (o GetSnippetListDataFolderArrayOutput) ToGetSnippetListDataFolderArrayOutputWithContext(ctx context.Context) GetSnippetListDataFolderArrayOutput {
-	return o
-}
-
-func (o GetSnippetListDataFolderArrayOutput) Index(i pulumi.IntInput) GetSnippetListDataFolderOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetSnippetListDataFolder {
-		return vs[0].([]GetSnippetListDataFolder)[vs[1].(int)]
-	}).(GetSnippetListDataFolderOutput)
 }
 
 type GetTacacsServerProfileListData struct {
@@ -35154,13 +34987,13 @@ func (o GetUrlAccessProfileCredentialEnforcementOutput) Mode() GetUrlAccessProfi
 }
 
 type GetUrlAccessProfileCredentialEnforcementMode struct {
-	// The Disabled param. Default: `false`.
+	// The Disabled param.
 	Disabled bool `pulumi:"disabled"`
-	// The DomainCredentials param. Default: `false`.
+	// The DomainCredentials param.
 	DomainCredentials bool `pulumi:"domainCredentials"`
 	// The GroupMapping param.
 	GroupMapping string `pulumi:"groupMapping"`
-	// The IpUser param. Default: `false`.
+	// The IpUser param.
 	IpUser bool `pulumi:"ipUser"`
 }
 
@@ -35176,13 +35009,13 @@ type GetUrlAccessProfileCredentialEnforcementModeInput interface {
 }
 
 type GetUrlAccessProfileCredentialEnforcementModeArgs struct {
-	// The Disabled param. Default: `false`.
+	// The Disabled param.
 	Disabled pulumi.BoolInput `pulumi:"disabled"`
-	// The DomainCredentials param. Default: `false`.
+	// The DomainCredentials param.
 	DomainCredentials pulumi.BoolInput `pulumi:"domainCredentials"`
 	// The GroupMapping param.
 	GroupMapping pulumi.StringInput `pulumi:"groupMapping"`
-	// The IpUser param. Default: `false`.
+	// The IpUser param.
 	IpUser pulumi.BoolInput `pulumi:"ipUser"`
 }
 
@@ -35212,12 +35045,12 @@ func (o GetUrlAccessProfileCredentialEnforcementModeOutput) ToGetUrlAccessProfil
 	return o
 }
 
-// The Disabled param. Default: `false`.
+// The Disabled param.
 func (o GetUrlAccessProfileCredentialEnforcementModeOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileCredentialEnforcementMode) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// The DomainCredentials param. Default: `false`.
+// The DomainCredentials param.
 func (o GetUrlAccessProfileCredentialEnforcementModeOutput) DomainCredentials() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileCredentialEnforcementMode) bool { return v.DomainCredentials }).(pulumi.BoolOutput)
 }
@@ -35227,7 +35060,7 @@ func (o GetUrlAccessProfileCredentialEnforcementModeOutput) GroupMapping() pulum
 	return o.ApplyT(func(v GetUrlAccessProfileCredentialEnforcementMode) string { return v.GroupMapping }).(pulumi.StringOutput)
 }
 
-// The IpUser param. Default: `false`.
+// The IpUser param.
 func (o GetUrlAccessProfileCredentialEnforcementModeOutput) IpUser() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileCredentialEnforcementMode) bool { return v.IpUser }).(pulumi.BoolOutput)
 }
@@ -35566,13 +35399,13 @@ func (o GetUrlAccessProfileListDataCredentialEnforcementOutput) Mode() GetUrlAcc
 }
 
 type GetUrlAccessProfileListDataCredentialEnforcementMode struct {
-	// The Disabled param. Default: `false`.
+	// The Disabled param.
 	Disabled bool `pulumi:"disabled"`
-	// The DomainCredentials param. Default: `false`.
+	// The DomainCredentials param.
 	DomainCredentials bool `pulumi:"domainCredentials"`
 	// The GroupMapping param.
 	GroupMapping string `pulumi:"groupMapping"`
-	// The IpUser param. Default: `false`.
+	// The IpUser param.
 	IpUser bool `pulumi:"ipUser"`
 }
 
@@ -35588,13 +35421,13 @@ type GetUrlAccessProfileListDataCredentialEnforcementModeInput interface {
 }
 
 type GetUrlAccessProfileListDataCredentialEnforcementModeArgs struct {
-	// The Disabled param. Default: `false`.
+	// The Disabled param.
 	Disabled pulumi.BoolInput `pulumi:"disabled"`
-	// The DomainCredentials param. Default: `false`.
+	// The DomainCredentials param.
 	DomainCredentials pulumi.BoolInput `pulumi:"domainCredentials"`
 	// The GroupMapping param.
 	GroupMapping pulumi.StringInput `pulumi:"groupMapping"`
-	// The IpUser param. Default: `false`.
+	// The IpUser param.
 	IpUser pulumi.BoolInput `pulumi:"ipUser"`
 }
 
@@ -35624,12 +35457,12 @@ func (o GetUrlAccessProfileListDataCredentialEnforcementModeOutput) ToGetUrlAcce
 	return o
 }
 
-// The Disabled param. Default: `false`.
+// The Disabled param.
 func (o GetUrlAccessProfileListDataCredentialEnforcementModeOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListDataCredentialEnforcementMode) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// The DomainCredentials param. Default: `false`.
+// The DomainCredentials param.
 func (o GetUrlAccessProfileListDataCredentialEnforcementModeOutput) DomainCredentials() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListDataCredentialEnforcementMode) bool { return v.DomainCredentials }).(pulumi.BoolOutput)
 }
@@ -35639,7 +35472,7 @@ func (o GetUrlAccessProfileListDataCredentialEnforcementModeOutput) GroupMapping
 	return o.ApplyT(func(v GetUrlAccessProfileListDataCredentialEnforcementMode) string { return v.GroupMapping }).(pulumi.StringOutput)
 }
 
-// The IpUser param. Default: `false`.
+// The IpUser param.
 func (o GetUrlAccessProfileListDataCredentialEnforcementModeOutput) IpUser() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListDataCredentialEnforcementMode) bool { return v.IpUser }).(pulumi.BoolOutput)
 }
@@ -42657,7 +42490,6 @@ func (o GetWildfireAntiVirusProfileThreatExceptionArrayOutput) Index(i pulumi.In
 }
 
 func init() {
-	pulumi.RegisterInputType(reflect.TypeOf((*GetExternalDynamicListListDataTypeUrlUrlAuthInput)(nil)).Elem(), GetExternalDynamicListListDataTypeUrlUrlAuthArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetExternalDynamicListTypeInput)(nil)).Elem(), GetExternalDynamicListTypeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetExternalDynamicListTypeDomainInput)(nil)).Elem(), GetExternalDynamicListTypeDomainArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetExternalDynamicListTypeDomainDomainAuthInput)(nil)).Elem(), GetExternalDynamicListTypeDomainDomainAuthArgs{})
@@ -42697,6 +42529,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetFileBlockingProfileListDataRuleArrayInput)(nil)).Elem(), GetFileBlockingProfileListDataRuleArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetFileBlockingProfileRuleInput)(nil)).Elem(), GetFileBlockingProfileRuleArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetFileBlockingProfileRuleArrayInput)(nil)).Elem(), GetFileBlockingProfileRuleArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetFolderListDataInput)(nil)).Elem(), GetFolderListDataArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetFolderListDataArrayInput)(nil)).Elem(), GetFolderListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareInput)(nil)).Elem(), GetHipObjectAntiMalwareArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetHipObjectAntiMalwareCriteriaLastScanTimeInput)(nil)).Elem(), GetHipObjectAntiMalwareCriteriaLastScanTimeArgs{})
@@ -43154,12 +42988,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetServiceProtocolUdpOverrideInput)(nil)).Elem(), GetServiceProtocolUdpOverrideArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSharedInfrastructureSettingsListDataInput)(nil)).Elem(), GetSharedInfrastructureSettingsListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSharedInfrastructureSettingsListDataArrayInput)(nil)).Elem(), GetSharedInfrastructureSettingsListDataArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSnippetFolderInput)(nil)).Elem(), GetSnippetFolderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSnippetFolderArrayInput)(nil)).Elem(), GetSnippetFolderArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSnippetListDataInput)(nil)).Elem(), GetSnippetListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetSnippetListDataArrayInput)(nil)).Elem(), GetSnippetListDataArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSnippetListDataFolderInput)(nil)).Elem(), GetSnippetListDataFolderArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetSnippetListDataFolderArrayInput)(nil)).Elem(), GetSnippetListDataFolderArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTacacsServerProfileListDataInput)(nil)).Elem(), GetTacacsServerProfileListDataArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTacacsServerProfileListDataArrayInput)(nil)).Elem(), GetTacacsServerProfileListDataArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetTacacsServerProfileListDataServerInput)(nil)).Elem(), GetTacacsServerProfileListDataServerArgs{})
@@ -43290,7 +43120,6 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWildfireAntiVirusProfileRuleArrayInput)(nil)).Elem(), GetWildfireAntiVirusProfileRuleArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWildfireAntiVirusProfileThreatExceptionInput)(nil)).Elem(), GetWildfireAntiVirusProfileThreatExceptionArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWildfireAntiVirusProfileThreatExceptionArrayInput)(nil)).Elem(), GetWildfireAntiVirusProfileThreatExceptionArray{})
-	pulumi.RegisterOutputType(GetExternalDynamicListListDataTypeUrlUrlAuthOutput{})
 	pulumi.RegisterOutputType(GetExternalDynamicListTypeOutput{})
 	pulumi.RegisterOutputType(GetExternalDynamicListTypeDomainOutput{})
 	pulumi.RegisterOutputType(GetExternalDynamicListTypeDomainDomainAuthOutput{})
@@ -43330,6 +43159,8 @@ func init() {
 	pulumi.RegisterOutputType(GetFileBlockingProfileListDataRuleArrayOutput{})
 	pulumi.RegisterOutputType(GetFileBlockingProfileRuleOutput{})
 	pulumi.RegisterOutputType(GetFileBlockingProfileRuleArrayOutput{})
+	pulumi.RegisterOutputType(GetFolderListDataOutput{})
+	pulumi.RegisterOutputType(GetFolderListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetHipObjectAntiMalwareOutput{})
 	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaOutput{})
 	pulumi.RegisterOutputType(GetHipObjectAntiMalwareCriteriaLastScanTimeOutput{})
@@ -43787,12 +43618,8 @@ func init() {
 	pulumi.RegisterOutputType(GetServiceProtocolUdpOverrideOutput{})
 	pulumi.RegisterOutputType(GetSharedInfrastructureSettingsListDataOutput{})
 	pulumi.RegisterOutputType(GetSharedInfrastructureSettingsListDataArrayOutput{})
-	pulumi.RegisterOutputType(GetSnippetFolderOutput{})
-	pulumi.RegisterOutputType(GetSnippetFolderArrayOutput{})
 	pulumi.RegisterOutputType(GetSnippetListDataOutput{})
 	pulumi.RegisterOutputType(GetSnippetListDataArrayOutput{})
-	pulumi.RegisterOutputType(GetSnippetListDataFolderOutput{})
-	pulumi.RegisterOutputType(GetSnippetListDataFolderArrayOutput{})
 	pulumi.RegisterOutputType(GetTacacsServerProfileListDataOutput{})
 	pulumi.RegisterOutputType(GetTacacsServerProfileListDataArrayOutput{})
 	pulumi.RegisterOutputType(GetTacacsServerProfileListDataServerOutput{})

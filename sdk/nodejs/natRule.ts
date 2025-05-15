@@ -50,7 +50,7 @@ export class NatRule extends pulumi.CustomResource {
      */
     public readonly destinationTranslation!: pulumi.Output<outputs.NatRuleDestinationTranslation | undefined>;
     /**
-     * The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The destination address(es).
      */
     public readonly destinations!: pulumi.Output<string[]>;
     /**
@@ -70,7 +70,7 @@ export class NatRule extends pulumi.CustomResource {
      */
     public readonly folder!: pulumi.Output<string | undefined>;
     /**
-     * The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The source security zone(s).
      */
     public readonly froms!: pulumi.Output<string[]>;
     /**
@@ -102,7 +102,7 @@ export class NatRule extends pulumi.CustomResource {
      */
     public readonly sourceTranslation!: pulumi.Output<outputs.NatRuleSourceTranslation | undefined>;
     /**
-     * The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The source address(es).
      */
     public readonly sources!: pulumi.Output<string[]>;
     /**
@@ -115,7 +115,7 @@ export class NatRule extends pulumi.CustomResource {
     public readonly target!: pulumi.Output<outputs.NatRuleTarget | undefined>;
     public /*out*/ readonly tfid!: pulumi.Output<string>;
     /**
-     * The ToInterface param. String must be one of these: `"any"`.
+     * The ToInterface param.
      */
     public readonly toInterface!: pulumi.Output<string | undefined>;
     /**
@@ -220,7 +220,7 @@ export interface NatRuleState {
      */
     destinationTranslation?: pulumi.Input<inputs.NatRuleDestinationTranslation>;
     /**
-     * The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The destination address(es).
      */
     destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -240,7 +240,7 @@ export interface NatRuleState {
      */
     folder?: pulumi.Input<string>;
     /**
-     * The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The source security zone(s).
      */
     froms?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -272,7 +272,7 @@ export interface NatRuleState {
      */
     sourceTranslation?: pulumi.Input<inputs.NatRuleSourceTranslation>;
     /**
-     * The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The source address(es).
      */
     sources?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -285,7 +285,7 @@ export interface NatRuleState {
     target?: pulumi.Input<inputs.NatRuleTarget>;
     tfid?: pulumi.Input<string>;
     /**
-     * The ToInterface param. String must be one of these: `"any"`.
+     * The ToInterface param.
      */
     toInterface?: pulumi.Input<string>;
     /**
@@ -311,7 +311,7 @@ export interface NatRuleArgs {
      */
     destinationTranslation?: pulumi.Input<inputs.NatRuleDestinationTranslation>;
     /**
-     * The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The destination address(es).
      */
     destinations: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -331,7 +331,7 @@ export interface NatRuleArgs {
      */
     folder?: pulumi.Input<string>;
     /**
-     * The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The source security zone(s).
      */
     froms: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -363,7 +363,7 @@ export interface NatRuleArgs {
      */
     sourceTranslation?: pulumi.Input<inputs.NatRuleSourceTranslation>;
     /**
-     * The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+     * The source address(es).
      */
     sources: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -375,7 +375,7 @@ export interface NatRuleArgs {
      */
     target?: pulumi.Input<inputs.NatRuleTarget>;
     /**
-     * The ToInterface param. String must be one of these: `"any"`.
+     * The ToInterface param.
      */
     toInterface?: pulumi.Input<string>;
     /**

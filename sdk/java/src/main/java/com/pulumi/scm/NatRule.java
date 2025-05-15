@@ -74,14 +74,14 @@ public class NatRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.destinationTranslation);
     }
     /**
-     * The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * The destination address(es).
      * 
      */
     @Export(name="destinations", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> destinations;
 
     /**
-     * @return The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The destination address(es).
      * 
      */
     public Output<List<String>> destinations() {
@@ -144,14 +144,14 @@ public class NatRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.folder);
     }
     /**
-     * The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * The source security zone(s).
      * 
      */
     @Export(name="froms", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> froms;
 
     /**
-     * @return The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The source security zone(s).
      * 
      */
     public Output<List<String>> froms() {
@@ -256,14 +256,14 @@ public class NatRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.sourceTranslation);
     }
     /**
-     * The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * The source address(es).
      * 
      */
     @Export(name="sources", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> sources;
 
     /**
-     * @return The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The source address(es).
      * 
      */
     public Output<List<String>> sources() {
@@ -304,14 +304,14 @@ public class NatRule extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The ToInterface param. String must be one of these: `&#34;any&#34;`.
+     * The ToInterface param.
      * 
      */
     @Export(name="toInterface", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> toInterface;
 
     /**
-     * @return The ToInterface param. String must be one of these: `&#34;any&#34;`.
+     * @return The ToInterface param.
      * 
      */
     public Output<Optional<String>> toInterface() {

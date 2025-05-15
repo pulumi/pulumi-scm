@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetUrlAccessProfileCredentialEnforcementModeResult
     {
         /// <summary>
-        /// The Disabled param. Default: `false`.
+        /// The Disabled param.
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The DomainCredentials param. Default: `false`.
+        /// The DomainCredentials param.
         /// </summary>
         public readonly bool DomainCredentials;
         /// <summary>
@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string GroupMapping;
         /// <summary>
-        /// The IpUser param. Default: `false`.
+        /// The IpUser param.
         /// </summary>
         public readonly bool IpUser;
 

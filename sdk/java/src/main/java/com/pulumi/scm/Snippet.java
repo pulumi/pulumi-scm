@@ -10,7 +10,6 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.SnippetArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.SnippetState;
-import com.pulumi.scm.outputs.SnippetFolder;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -55,20 +54,6 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/snippet:Snippet")
 public class Snippet extends com.pulumi.resources.CustomResource {
     /**
-     * The CreatedIn param.
-     * 
-     */
-    @Export(name="createdIn", refs={String.class}, tree="[0]")
-    private Output<String> createdIn;
-
-    /**
-     * @return The CreatedIn param.
-     * 
-     */
-    public Output<String> createdIn() {
-        return this.createdIn;
-    }
-    /**
      * The Description param.
      * 
      */
@@ -81,34 +66,6 @@ public class Snippet extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
-    }
-    /**
-     * The DisplayName param.
-     * 
-     */
-    @Export(name="displayName", refs={String.class}, tree="[0]")
-    private Output<String> displayName;
-
-    /**
-     * @return The DisplayName param.
-     * 
-     */
-    public Output<String> displayName() {
-        return this.displayName;
-    }
-    /**
-     * The Folders param.
-     * 
-     */
-    @Export(name="folders", refs={List.class,SnippetFolder.class}, tree="[0,1]")
-    private Output<List<SnippetFolder>> folders;
-
-    /**
-     * @return The Folders param.
-     * 
-     */
-    public Output<List<SnippetFolder>> folders() {
-        return this.folders;
     }
     /**
      * The Labels param.
@@ -125,20 +82,6 @@ public class Snippet extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.labels);
     }
     /**
-     * The LastUpdate param.
-     * 
-     */
-    @Export(name="lastUpdate", refs={String.class}, tree="[0]")
-    private Output<String> lastUpdate;
-
-    /**
-     * @return The LastUpdate param.
-     * 
-     */
-    public Output<String> lastUpdate() {
-        return this.lastUpdate;
-    }
-    /**
      * The Name param.
      * 
      */
@@ -152,20 +95,6 @@ public class Snippet extends com.pulumi.resources.CustomResource {
     public Output<String> name() {
         return this.name;
     }
-    /**
-     * The SharedIn param.
-     * 
-     */
-    @Export(name="sharedIn", refs={String.class}, tree="[0]")
-    private Output<String> sharedIn;
-
-    /**
-     * @return The SharedIn param.
-     * 
-     */
-    public Output<String> sharedIn() {
-        return this.sharedIn;
-    }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
 
@@ -173,14 +102,14 @@ public class Snippet extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The Type param. String must be one of these: `&#34;predefined&#34;`.
+     * The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
      * 
      */
     @Export(name="type", refs={String.class}, tree="[0]")
     private Output<String> type;
 
     /**
-     * @return The Type param. String must be one of these: `&#34;predefined&#34;`.
+     * @return The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
      * 
      */
     public Output<String> type() {

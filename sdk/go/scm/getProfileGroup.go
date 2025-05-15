@@ -56,24 +56,26 @@ type LookupProfileGroupArgs struct {
 
 // A collection of values returned by getProfileGroup.
 type LookupProfileGroupResult struct {
-	// The DnsSecurities param.
+	// List of AI security profiles.
+	AiSecurities []string `pulumi:"aiSecurities"`
+	// List of DNS security profiles.
 	DnsSecurities []string `pulumi:"dnsSecurities"`
-	// The FileBlockings param.
+	// List of file blocking profiles.
 	FileBlockings []string `pulumi:"fileBlockings"`
 	// The Id param.
 	Id string `pulumi:"id"`
-	// The Name param.
+	// The name of the profile group.
 	Name string `pulumi:"name"`
-	// The SaasSecurities param.
+	// List of HTTP header insertion profiles.
 	SaasSecurities []string `pulumi:"saasSecurities"`
-	// The Spywares param.
+	// List of anti-spyware profiles.
 	Spywares []string `pulumi:"spywares"`
 	Tfid     string   `pulumi:"tfid"`
-	// The UrlFilterings param.
+	// List of URL filtering profiles.
 	UrlFilterings []string `pulumi:"urlFilterings"`
-	// The VirusAndWildfireAnalyses param.
+	// List of anti-virus and Wildfire analysis profiles.
 	VirusAndWildfireAnalyses []string `pulumi:"virusAndWildfireAnalyses"`
-	// The Vulnerabilities param.
+	// List of vulnerability protection profiles.
 	Vulnerabilities []string `pulumi:"vulnerabilities"`
 }
 
@@ -111,12 +113,17 @@ func (o LookupProfileGroupResultOutput) ToLookupProfileGroupResultOutputWithCont
 	return o
 }
 
-// The DnsSecurities param.
+// List of AI security profiles.
+func (o LookupProfileGroupResultOutput) AiSecurities() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.AiSecurities }).(pulumi.StringArrayOutput)
+}
+
+// List of DNS security profiles.
 func (o LookupProfileGroupResultOutput) DnsSecurities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.DnsSecurities }).(pulumi.StringArrayOutput)
 }
 
-// The FileBlockings param.
+// List of file blocking profiles.
 func (o LookupProfileGroupResultOutput) FileBlockings() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.FileBlockings }).(pulumi.StringArrayOutput)
 }
@@ -126,17 +133,17 @@ func (o LookupProfileGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// The name of the profile group.
 func (o LookupProfileGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The SaasSecurities param.
+// List of HTTP header insertion profiles.
 func (o LookupProfileGroupResultOutput) SaasSecurities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.SaasSecurities }).(pulumi.StringArrayOutput)
 }
 
-// The Spywares param.
+// List of anti-spyware profiles.
 func (o LookupProfileGroupResultOutput) Spywares() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.Spywares }).(pulumi.StringArrayOutput)
 }
@@ -145,17 +152,17 @@ func (o LookupProfileGroupResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The UrlFilterings param.
+// List of URL filtering profiles.
 func (o LookupProfileGroupResultOutput) UrlFilterings() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.UrlFilterings }).(pulumi.StringArrayOutput)
 }
 
-// The VirusAndWildfireAnalyses param.
+// List of anti-virus and Wildfire analysis profiles.
 func (o LookupProfileGroupResultOutput) VirusAndWildfireAnalyses() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.VirusAndWildfireAnalyses }).(pulumi.StringArrayOutput)
 }
 
-// The Vulnerabilities param.
+// List of vulnerability protection profiles.
 func (o LookupProfileGroupResultOutput) Vulnerabilities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.Vulnerabilities }).(pulumi.StringArrayOutput)
 }

@@ -5654,19 +5654,6 @@
                 }
             }
         },
-        "scm:index/SnippetFolder:SnippetFolder": {
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "description": "The Id param.\n"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "The Name param.\n"
-                }
-            },
-            "type": "object"
-        },
         "scm:index/TacacsServerProfileServer:TacacsServerProfileServer": {
             "properties": {
                 "address": {
@@ -5832,31 +5819,22 @@
             "properties": {
                 "disabled": {
                     "type": "boolean",
-                    "description": "The Disabled param. Default: `false`.\n"
+                    "description": "The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`\n"
                 },
                 "domainCredentials": {
                     "type": "boolean",
-                    "description": "The DomainCredentials param. Default: `false`.\n"
+                    "description": "The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`\n"
                 },
                 "groupMapping": {
                     "type": "string",
-                    "description": "The GroupMapping param.\n"
+                    "description": "The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`\n"
                 },
                 "ipUser": {
                     "type": "boolean",
-                    "description": "The IpUser param. Default: `false`.\n"
+                    "description": "The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`\n"
                 }
             },
-            "type": "object",
-            "language": {
-                "nodejs": {
-                    "requiredOutputs": [
-                        "disabled",
-                        "domainCredentials",
-                        "ipUser"
-                    ]
-                }
-            }
+            "type": "object"
         },
         "scm:index/VulnerabilityProtectionProfileRule:VulnerabilityProtectionProfileRule": {
             "properties": {
@@ -14268,6 +14246,54 @@
                 }
             }
         },
+        "scm:index/getFolderListData:getFolderListData": {
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "The Description param.\n"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "The Id param.\n"
+                },
+                "labels": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "The Labels param.\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The Name param.\n"
+                },
+                "parent": {
+                    "type": "string",
+                    "description": "The Parent param.\n"
+                },
+                "snippets": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "The Snippets param.\n"
+                }
+            },
+            "type": "object",
+            "required": [
+                "description",
+                "id",
+                "labels",
+                "name",
+                "parent",
+                "snippets"
+            ],
+            "language": {
+                "nodejs": {
+                    "requiredInputs": []
+                }
+            }
+        },
         "scm:index/getHipObjectAntiMalware:getHipObjectAntiMalware": {
             "properties": {
                 "criteria": {
@@ -20943,7 +20969,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                    "description": "The destination address(es).\n"
                 },
                 "device": {
                     "type": "string",
@@ -20966,7 +20992,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                    "description": "The source security zone(s).\n"
                 },
                 "groupTag": {
                     "type": "string",
@@ -21001,7 +21027,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                    "description": "The source address(es).\n"
                 },
                 "tags": {
                     "type": "array",
@@ -21016,7 +21042,7 @@
                 },
                 "toInterface": {
                     "type": "string",
-                    "description": "The ToInterface param. String must be one of these: `\"any\"`.\n"
+                    "description": "The ToInterface param.\n"
                 },
                 "tos": {
                     "type": "array",
@@ -21360,19 +21386,26 @@
         },
         "scm:index/getProfileGroupListData:getProfileGroupListData": {
             "properties": {
+                "aiSecurities": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of AI security profiles.\n"
+                },
                 "dnsSecurities": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The DnsSecurities param.\n"
+                    "description": "List of DNS security profiles.\n"
                 },
                 "fileBlockings": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The FileBlockings param.\n"
+                    "description": "List of file blocking profiles.\n"
                 },
                 "id": {
                     "type": "string",
@@ -21380,46 +21413,47 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "The Name param.\n"
+                    "description": "The name of the profile group.\n"
                 },
                 "saasSecurities": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The SaasSecurities param.\n"
+                    "description": "List of HTTP header insertion profiles.\n"
                 },
                 "spywares": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The Spywares param.\n"
+                    "description": "List of anti-spyware profiles.\n"
                 },
                 "urlFilterings": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The UrlFilterings param.\n"
+                    "description": "List of URL filtering profiles.\n"
                 },
                 "virusAndWildfireAnalyses": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The VirusAndWildfireAnalyses param.\n"
+                    "description": "List of anti-virus and Wildfire analysis profiles.\n"
                 },
                 "vulnerabilities": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The Vulnerabilities param.\n"
+                    "description": "List of vulnerability protection profiles.\n"
                 }
             },
             "type": "object",
             "required": [
+                "aiSecurities",
                 "dnsSecurities",
                 "fileBlockings",
                 "id",
@@ -24752,48 +24786,11 @@
                 }
             }
         },
-        "scm:index/getSnippetFolder:getSnippetFolder": {
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "description": "The Id param.\n"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "The Name param.\n"
-                }
-            },
-            "type": "object",
-            "required": [
-                "id",
-                "name"
-            ],
-            "language": {
-                "nodejs": {
-                    "requiredInputs": []
-                }
-            }
-        },
         "scm:index/getSnippetListData:getSnippetListData": {
             "properties": {
-                "createdIn": {
-                    "type": "string",
-                    "description": "The CreatedIn param.\n"
-                },
                 "description": {
                     "type": "string",
                     "description": "The Description param.\n"
-                },
-                "displayName": {
-                    "type": "string",
-                    "description": "The DisplayName param.\n"
-                },
-                "folders": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/types/scm:index/getSnippetListDataFolder:getSnippetListDataFolder"
-                    },
-                    "description": "The Folders param.\n"
                 },
                 "id": {
                     "type": "string",
@@ -24806,57 +24803,22 @@
                     },
                     "description": "The Labels param.\n"
                 },
-                "lastUpdate": {
-                    "type": "string",
-                    "description": "The LastUpdate param.\n"
-                },
                 "name": {
                     "type": "string",
                     "description": "The Name param.\n"
-                },
-                "sharedIn": {
-                    "type": "string",
-                    "description": "The SharedIn param.\n"
                 },
                 "type": {
                     "type": "string",
-                    "description": "The Type param. String must be one of these: `\"predefined\"`.\n"
+                    "description": "The Type param. String must be one of these: `\"predefined\"`, `\"custom\"`.\n"
                 }
             },
             "type": "object",
             "required": [
-                "createdIn",
                 "description",
-                "displayName",
-                "folders",
                 "id",
                 "labels",
-                "lastUpdate",
                 "name",
-                "sharedIn",
                 "type"
-            ],
-            "language": {
-                "nodejs": {
-                    "requiredInputs": []
-                }
-            }
-        },
-        "scm:index/getSnippetListDataFolder:getSnippetListDataFolder": {
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "description": "The Id param.\n"
-                },
-                "name": {
-                    "type": "string",
-                    "description": "The Name param.\n"
-                }
-            },
-            "type": "object",
-            "required": [
-                "id",
-                "name"
             ],
             "language": {
                 "nodejs": {
@@ -25463,11 +25425,11 @@
             "properties": {
                 "disabled": {
                     "type": "boolean",
-                    "description": "The Disabled param. Default: `false`.\n"
+                    "description": "The Disabled param.\n"
                 },
                 "domainCredentials": {
                     "type": "boolean",
-                    "description": "The DomainCredentials param. Default: `false`.\n"
+                    "description": "The DomainCredentials param.\n"
                 },
                 "groupMapping": {
                     "type": "string",
@@ -25475,7 +25437,7 @@
                 },
                 "ipUser": {
                     "type": "boolean",
-                    "description": "The IpUser param. Default: `false`.\n"
+                    "description": "The IpUser param.\n"
                 }
             },
             "type": "object",
@@ -25656,11 +25618,11 @@
             "properties": {
                 "disabled": {
                     "type": "boolean",
-                    "description": "The Disabled param. Default: `false`.\n"
+                    "description": "The Disabled param.\n"
                 },
                 "domainCredentials": {
                     "type": "boolean",
-                    "description": "The DomainCredentials param. Default: `false`.\n"
+                    "description": "The DomainCredentials param.\n"
                 },
                 "groupMapping": {
                     "type": "string",
@@ -25668,7 +25630,7 @@
                 },
                 "ipUser": {
                     "type": "boolean",
-                    "description": "The IpUser param. Default: `false`.\n"
+                    "description": "The IpUser param.\n"
                 }
             },
             "type": "object",
@@ -31998,6 +31960,111 @@
                 "type": "object"
             }
         },
+        "scm:index/folder:Folder": {
+            "description": "Retrieves a config item.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as scm from \"@pulumi/scm\";\n\nconst snip1 = new scm.Snippet(\"snip1\", {name: \"foobar\"});\nconst example = new scm.Folder(\"example\", {\n    name: \"my folder\",\n    parent: \"Shared\",\n    description: \"Made by Pulumi\",\n    snippets: [snip1.name],\n});\n```\n```python\nimport pulumi\nimport pulumi_scm as scm\n\nsnip1 = scm.Snippet(\"snip1\", name=\"foobar\")\nexample = scm.Folder(\"example\",\n    name=\"my folder\",\n    parent=\"Shared\",\n    description=\"Made by Pulumi\",\n    snippets=[snip1.name])\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Scm = Pulumi.Scm;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var snip1 = new Scm.Snippet(\"snip1\", new()\n    {\n        Name = \"foobar\",\n    });\n\n    var example = new Scm.Folder(\"example\", new()\n    {\n        Name = \"my folder\",\n        Parent = \"Shared\",\n        Description = \"Made by Pulumi\",\n        Snippets = new[]\n        {\n            snip1.Name,\n        },\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-scm/sdk/go/scm\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\tsnip1, err := scm.NewSnippet(ctx, \"snip1\", \u0026scm.SnippetArgs{\n\t\t\tName: pulumi.String(\"foobar\"),\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\t_, err = scm.NewFolder(ctx, \"example\", \u0026scm.FolderArgs{\n\t\t\tName:        pulumi.String(\"my folder\"),\n\t\t\tParent:      pulumi.String(\"Shared\"),\n\t\t\tDescription: pulumi.String(\"Made by Pulumi\"),\n\t\t\tSnippets: pulumi.StringArray{\n\t\t\t\tsnip1.Name,\n\t\t\t},\n\t\t})\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.scm.Snippet;\nimport com.pulumi.scm.SnippetArgs;\nimport com.pulumi.scm.Folder;\nimport com.pulumi.scm.FolderArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var snip1 = new Snippet(\"snip1\", SnippetArgs.builder()\n            .name(\"foobar\")\n            .build());\n\n        var example = new Folder(\"example\", FolderArgs.builder()\n            .name(\"my folder\")\n            .parent(\"Shared\")\n            .description(\"Made by Pulumi\")\n            .snippets(snip1.name())\n            .build());\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: scm:Folder\n    properties:\n      name: my folder\n      parent: Shared\n      description: Made by Pulumi\n      snippets:\n        - ${snip1.name}\n  snip1:\n    type: scm:Snippet\n    properties:\n      name: foobar\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "properties": {
+                "description": {
+                    "type": "string",
+                    "description": "The Description param.\n"
+                },
+                "labels": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "The Labels param.\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The Name param.\n"
+                },
+                "parent": {
+                    "type": "string",
+                    "description": "The Parent param.\n"
+                },
+                "snippets": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "The Snippets param.\n"
+                },
+                "tfid": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "parent",
+                "tfid"
+            ],
+            "inputProperties": {
+                "description": {
+                    "type": "string",
+                    "description": "The Description param.\n"
+                },
+                "labels": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "The Labels param.\n"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "The Name param.\n"
+                },
+                "parent": {
+                    "type": "string",
+                    "description": "The Parent param.\n"
+                },
+                "snippets": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "The Snippets param.\n"
+                }
+            },
+            "requiredInputs": [
+                "parent"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Folder resources.\n",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "The Description param.\n"
+                    },
+                    "labels": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "The Labels param.\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The Name param.\n"
+                    },
+                    "parent": {
+                        "type": "string",
+                        "description": "The Parent param.\n"
+                    },
+                    "snippets": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "The Snippets param.\n"
+                    },
+                    "tfid": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        },
         "scm:index/hipObject:HipObject": {
             "description": "Retrieves a config item.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```yaml\nresources:\n  example:\n    type: scm:HipObject\n    properties:\n      folder: Shared\n      name: myExample\n      description: Made by Pulumi\n      diskBackup:\n        criteria:\n          isInstalled: true\n          lastBackupTime:\n            within:\n              days: 1\n        exclude_vendor: false\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
             "properties": {
@@ -33621,7 +33688,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                    "description": "The destination address(es).\n"
                 },
                 "device": {
                     "type": "string",
@@ -33644,7 +33711,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                    "description": "The source security zone(s).\n"
                 },
                 "groupTag": {
                     "type": "string",
@@ -33679,7 +33746,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                    "description": "The source address(es).\n"
                 },
                 "tags": {
                     "type": "array",
@@ -33697,7 +33764,7 @@
                 },
                 "toInterface": {
                     "type": "string",
-                    "description": "The ToInterface param. String must be one of these: `\"any\"`.\n"
+                    "description": "The ToInterface param.\n"
                 },
                 "tos": {
                     "type": "array",
@@ -33735,7 +33802,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                    "description": "The destination address(es).\n"
                 },
                 "device": {
                     "type": "string",
@@ -33758,7 +33825,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                    "description": "The source security zone(s).\n"
                 },
                 "groupTag": {
                     "type": "string",
@@ -33793,7 +33860,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                    "description": "The source address(es).\n"
                 },
                 "tags": {
                     "type": "array",
@@ -33808,7 +33875,7 @@
                 },
                 "toInterface": {
                     "type": "string",
-                    "description": "The ToInterface param. String must be one of these: `\"any\"`.\n"
+                    "description": "The ToInterface param.\n"
                 },
                 "tos": {
                     "type": "array",
@@ -33845,7 +33912,7 @@
                         "items": {
                             "type": "string"
                         },
-                        "description": "The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                        "description": "The destination address(es).\n"
                     },
                     "device": {
                         "type": "string",
@@ -33868,7 +33935,7 @@
                         "items": {
                             "type": "string"
                         },
-                        "description": "The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                        "description": "The source security zone(s).\n"
                     },
                     "groupTag": {
                         "type": "string",
@@ -33903,7 +33970,7 @@
                         "items": {
                             "type": "string"
                         },
-                        "description": "The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n"
+                        "description": "The source address(es).\n"
                     },
                     "tags": {
                         "type": "array",
@@ -33921,7 +33988,7 @@
                     },
                     "toInterface": {
                         "type": "string",
-                        "description": "The ToInterface param. String must be one of these: `\"any\"`.\n"
+                        "description": "The ToInterface param.\n"
                     },
                     "tos": {
                         "type": "array",
@@ -34024,6 +34091,13 @@
         "scm:index/profileGroup:ProfileGroup": {
             "description": "Retrieves a config item.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as scm from \"@pulumi/scm\";\n\nconst example = new scm.ProfileGroup(\"example\", {});\n```\n```python\nimport pulumi\nimport pulumi_scm as scm\n\nexample = scm.ProfileGroup(\"example\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Scm = Pulumi.Scm;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Scm.ProfileGroup(\"example\");\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-scm/sdk/go/scm\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := scm.NewProfileGroup(ctx, \"example\", nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.scm.ProfileGroup;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new ProfileGroup(\"example\");\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: scm:ProfileGroup\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
             "properties": {
+                "aiSecurities": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of AI security profiles.\n"
+                },
                 "device": {
                     "type": "string",
                     "description": "The Device param.\n"
@@ -34033,14 +34107,14 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The DnsSecurities param.\n"
+                    "description": "List of DNS security profiles.\n"
                 },
                 "fileBlockings": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The FileBlockings param.\n"
+                    "description": "List of file blocking profiles.\n"
                 },
                 "folder": {
                     "type": "string",
@@ -34048,14 +34122,14 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "The Name param.\n"
+                    "description": "The name of the profile group.\n"
                 },
                 "saasSecurities": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The SaasSecurities param.\n"
+                    "description": "List of HTTP header insertion profiles.\n"
                 },
                 "snippet": {
                     "type": "string",
@@ -34066,7 +34140,7 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The Spywares param.\n"
+                    "description": "List of anti-spyware profiles.\n"
                 },
                 "tfid": {
                     "type": "string"
@@ -34076,21 +34150,21 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The UrlFilterings param.\n"
+                    "description": "List of URL filtering profiles.\n"
                 },
                 "virusAndWildfireAnalyses": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The VirusAndWildfireAnalyses param.\n"
+                    "description": "List of anti-virus and Wildfire analysis profiles.\n"
                 },
                 "vulnerabilities": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The Vulnerabilities param.\n"
+                    "description": "List of vulnerability protection profiles.\n"
                 }
             },
             "required": [
@@ -34098,6 +34172,13 @@
                 "tfid"
             ],
             "inputProperties": {
+                "aiSecurities": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "List of AI security profiles.\n"
+                },
                 "device": {
                     "type": "string",
                     "description": "The Device param.\n"
@@ -34107,14 +34188,14 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The DnsSecurities param.\n"
+                    "description": "List of DNS security profiles.\n"
                 },
                 "fileBlockings": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The FileBlockings param.\n"
+                    "description": "List of file blocking profiles.\n"
                 },
                 "folder": {
                     "type": "string",
@@ -34122,14 +34203,14 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "The Name param.\n"
+                    "description": "The name of the profile group.\n"
                 },
                 "saasSecurities": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The SaasSecurities param.\n"
+                    "description": "List of HTTP header insertion profiles.\n"
                 },
                 "snippet": {
                     "type": "string",
@@ -34140,33 +34221,40 @@
                     "items": {
                         "type": "string"
                     },
-                    "description": "The Spywares param.\n"
+                    "description": "List of anti-spyware profiles.\n"
                 },
                 "urlFilterings": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The UrlFilterings param.\n"
+                    "description": "List of URL filtering profiles.\n"
                 },
                 "virusAndWildfireAnalyses": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The VirusAndWildfireAnalyses param.\n"
+                    "description": "List of anti-virus and Wildfire analysis profiles.\n"
                 },
                 "vulnerabilities": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "The Vulnerabilities param.\n"
+                    "description": "List of vulnerability protection profiles.\n"
                 }
             },
             "stateInputs": {
                 "description": "Input properties used for looking up and filtering ProfileGroup resources.\n",
                 "properties": {
+                    "aiSecurities": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "List of AI security profiles.\n"
+                    },
                     "device": {
                         "type": "string",
                         "description": "The Device param.\n"
@@ -34176,14 +34264,14 @@
                         "items": {
                             "type": "string"
                         },
-                        "description": "The DnsSecurities param.\n"
+                        "description": "List of DNS security profiles.\n"
                     },
                     "fileBlockings": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "description": "The FileBlockings param.\n"
+                        "description": "List of file blocking profiles.\n"
                     },
                     "folder": {
                         "type": "string",
@@ -34191,14 +34279,14 @@
                     },
                     "name": {
                         "type": "string",
-                        "description": "The Name param.\n"
+                        "description": "The name of the profile group.\n"
                     },
                     "saasSecurities": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "description": "The SaasSecurities param.\n"
+                        "description": "List of HTTP header insertion profiles.\n"
                     },
                     "snippet": {
                         "type": "string",
@@ -34209,7 +34297,7 @@
                         "items": {
                             "type": "string"
                         },
-                        "description": "The Spywares param.\n"
+                        "description": "List of anti-spyware profiles.\n"
                     },
                     "tfid": {
                         "type": "string"
@@ -34219,21 +34307,21 @@
                         "items": {
                             "type": "string"
                         },
-                        "description": "The UrlFilterings param.\n"
+                        "description": "List of URL filtering profiles.\n"
                     },
                     "virusAndWildfireAnalyses": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "description": "The VirusAndWildfireAnalyses param.\n"
+                        "description": "List of anti-virus and Wildfire analysis profiles.\n"
                     },
                     "vulnerabilities": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "description": "The Vulnerabilities param.\n"
+                        "description": "List of vulnerability protection profiles.\n"
                     }
                 },
                 "type": "object"
@@ -36376,24 +36464,9 @@
         "scm:index/snippet:Snippet": {
             "description": "Retrieves a config item.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as scm from \"@pulumi/scm\";\n\nconst example = new scm.Snippet(\"example\", {});\n```\n```python\nimport pulumi\nimport pulumi_scm as scm\n\nexample = scm.Snippet(\"example\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Scm = Pulumi.Scm;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = new Scm.Snippet(\"example\");\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-scm/sdk/go/scm\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := scm.NewSnippet(ctx, \"example\", nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.scm.Snippet;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        var example = new Snippet(\"example\");\n\n    }\n}\n```\n```yaml\nresources:\n  example:\n    type: scm:Snippet\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
             "properties": {
-                "createdIn": {
-                    "type": "string",
-                    "description": "The CreatedIn param.\n"
-                },
                 "description": {
                     "type": "string",
                     "description": "The Description param.\n"
-                },
-                "displayName": {
-                    "type": "string",
-                    "description": "The DisplayName param.\n"
-                },
-                "folders": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/types/scm:index/SnippetFolder:SnippetFolder"
-                    },
-                    "description": "The Folders param.\n"
                 },
                 "labels": {
                     "type": "array",
@@ -36402,33 +36475,20 @@
                     },
                     "description": "The Labels param.\n"
                 },
-                "lastUpdate": {
-                    "type": "string",
-                    "description": "The LastUpdate param.\n"
-                },
                 "name": {
                     "type": "string",
                     "description": "The Name param.\n"
-                },
-                "sharedIn": {
-                    "type": "string",
-                    "description": "The SharedIn param.\n"
                 },
                 "tfid": {
                     "type": "string"
                 },
                 "type": {
                     "type": "string",
-                    "description": "The Type param. String must be one of these: `\"predefined\"`.\n"
+                    "description": "The Type param. String must be one of these: `\"predefined\"`, `\"custom\"`.\n"
                 }
             },
             "required": [
-                "createdIn",
-                "displayName",
-                "folders",
-                "lastUpdate",
                 "name",
-                "sharedIn",
                 "tfid",
                 "type"
             ],
@@ -36452,24 +36512,9 @@
             "stateInputs": {
                 "description": "Input properties used for looking up and filtering Snippet resources.\n",
                 "properties": {
-                    "createdIn": {
-                        "type": "string",
-                        "description": "The CreatedIn param.\n"
-                    },
                     "description": {
                         "type": "string",
                         "description": "The Description param.\n"
-                    },
-                    "displayName": {
-                        "type": "string",
-                        "description": "The DisplayName param.\n"
-                    },
-                    "folders": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/types/scm:index/SnippetFolder:SnippetFolder"
-                        },
-                        "description": "The Folders param.\n"
                     },
                     "labels": {
                         "type": "array",
@@ -36478,24 +36523,16 @@
                         },
                         "description": "The Labels param.\n"
                     },
-                    "lastUpdate": {
-                        "type": "string",
-                        "description": "The LastUpdate param.\n"
-                    },
                     "name": {
                         "type": "string",
                         "description": "The Name param.\n"
-                    },
-                    "sharedIn": {
-                        "type": "string",
-                        "description": "The SharedIn param.\n"
                     },
                     "tfid": {
                         "type": "string"
                     },
                     "type": {
                         "type": "string",
-                        "description": "The Type param. String must be one of these: `\"predefined\"`.\n"
+                        "description": "The Type param. String must be one of these: `\"predefined\"`, `\"custom\"`.\n"
                     }
                 },
                 "type": "object"
@@ -41899,6 +41936,135 @@
                 "type": "object"
             }
         },
+        "scm:index/getFolder:getFolder": {
+            "description": "Retrieves a config item.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as scm from \"@pulumi/scm\";\n\nconst example = scm.getFolder({\n    id: \"1234-56-789\",\n});\n```\n```python\nimport pulumi\nimport pulumi_scm as scm\n\nexample = scm.get_folder(id=\"1234-56-789\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Scm = Pulumi.Scm;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Scm.GetFolder.Invoke(new()\n    {\n        Id = \"1234-56-789\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-scm/sdk/go/scm\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := scm.LookupFolder(ctx, \u0026scm.LookupFolderArgs{\n\t\t\tId: \"1234-56-789\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.scm.ScmFunctions;\nimport com.pulumi.scm.inputs.GetFolderArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = ScmFunctions.getFolder(GetFolderArgs.builder()\n            .id(\"1234-56-789\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: scm:getFolder\n      arguments:\n        id: 1234-56-789\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getFolder.\n",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "The Id param.\n"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "id"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getFolder.\n",
+                "properties": {
+                    "description": {
+                        "description": "The Description param.\n",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "The Id param.\n",
+                        "type": "string"
+                    },
+                    "labels": {
+                        "description": "The Labels param.\n",
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "name": {
+                        "description": "The Name param.\n",
+                        "type": "string"
+                    },
+                    "parent": {
+                        "description": "The Parent param.\n",
+                        "type": "string"
+                    },
+                    "snippets": {
+                        "description": "The Snippets param.\n",
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "tfid": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "description",
+                    "id",
+                    "labels",
+                    "name",
+                    "parent",
+                    "snippets",
+                    "tfid"
+                ],
+                "type": "object"
+            }
+        },
+        "scm:index/getFolderList:getFolderList": {
+            "description": "Retrieves a listing of config items.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as scm from \"@pulumi/scm\";\n\nconst example = scm.getFolderList({});\n```\n```python\nimport pulumi\nimport pulumi_scm as scm\n\nexample = scm.get_folder_list()\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Scm = Pulumi.Scm;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Scm.GetFolderList.Invoke();\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-scm/sdk/go/scm\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := scm.GetFolderList(ctx, \u0026scm.GetFolderListArgs{}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.scm.ScmFunctions;\nimport com.pulumi.scm.inputs.GetFolderListArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = ScmFunctions.getFolderList(GetFolderListArgs.builder()\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: scm:getFolderList\n      arguments: {}\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
+            "inputs": {
+                "description": "A collection of arguments for invoking getFolderList.\n",
+                "properties": {
+                    "limit": {
+                        "type": "integer",
+                        "description": "The Limit param. A limit of -1 will return all configured items. Default: `200`.\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The Name param.\n"
+                    },
+                    "offset": {
+                        "type": "integer",
+                        "description": "The Offset param. Default: `0`.\n"
+                    }
+                },
+                "type": "object"
+            },
+            "outputs": {
+                "description": "A collection of values returned by getFolderList.\n",
+                "properties": {
+                    "datas": {
+                        "description": "The Data param.\n",
+                        "items": {
+                            "$ref": "#/types/scm:index/getFolderListData:getFolderListData"
+                        },
+                        "type": "array"
+                    },
+                    "id": {
+                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "type": "string"
+                    },
+                    "limit": {
+                        "description": "The Limit param. A limit of -1 will return all configured items. Default: `200`.\n",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "The Name param.\n",
+                        "type": "string"
+                    },
+                    "offset": {
+                        "description": "The Offset param. Default: `0`.\n",
+                        "type": "integer"
+                    },
+                    "tfid": {
+                        "type": "string"
+                    },
+                    "total": {
+                        "description": "The Total param.\n",
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "datas",
+                    "limit",
+                    "offset",
+                    "tfid",
+                    "total",
+                    "id"
+                ],
+                "type": "object"
+            }
+        },
         "scm:index/getHipObject:getHipObject": {
             "description": "Retrieves a config item.\n\n## Example Usage\n\n\u003c!--Start PulumiCodeChooser --\u003e\n```typescript\nimport * as pulumi from \"@pulumi/pulumi\";\nimport * as scm from \"@pulumi/scm\";\n\nconst example = scm.getHipObject({\n    id: \"1234-56-789\",\n});\n```\n```python\nimport pulumi\nimport pulumi_scm as scm\n\nexample = scm.get_hip_object(id=\"1234-56-789\")\n```\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\nusing Pulumi;\nusing Scm = Pulumi.Scm;\n\nreturn await Deployment.RunAsync(() =\u003e \n{\n    var example = Scm.GetHipObject.Invoke(new()\n    {\n        Id = \"1234-56-789\",\n    });\n\n});\n```\n```go\npackage main\n\nimport (\n\t\"github.com/pulumi/pulumi-scm/sdk/go/scm\"\n\t\"github.com/pulumi/pulumi/sdk/v3/go/pulumi\"\n)\n\nfunc main() {\n\tpulumi.Run(func(ctx *pulumi.Context) error {\n\t\t_, err := scm.LookupHipObject(ctx, \u0026scm.LookupHipObjectArgs{\n\t\t\tId: \"1234-56-789\",\n\t\t}, nil)\n\t\tif err != nil {\n\t\t\treturn err\n\t\t}\n\t\treturn nil\n\t})\n}\n```\n```java\npackage generated_program;\n\nimport com.pulumi.Context;\nimport com.pulumi.Pulumi;\nimport com.pulumi.core.Output;\nimport com.pulumi.scm.ScmFunctions;\nimport com.pulumi.scm.inputs.GetHipObjectArgs;\nimport java.util.List;\nimport java.util.ArrayList;\nimport java.util.Map;\nimport java.io.File;\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\n\npublic class App {\n    public static void main(String[] args) {\n        Pulumi.run(App::stack);\n    }\n\n    public static void stack(Context ctx) {\n        final var example = ScmFunctions.getHipObject(GetHipObjectArgs.builder()\n            .id(\"1234-56-789\")\n            .build());\n\n    }\n}\n```\n```yaml\nvariables:\n  example:\n    fn::invoke:\n      function: scm:getHipObject\n      arguments:\n        id: 1234-56-789\n```\n\u003c!--End PulumiCodeChooser --\u003e\n",
             "inputs": {
@@ -44068,7 +44234,7 @@
                         "description": "Static destination translation parameter.\n"
                     },
                     "destinations": {
-                        "description": "The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n",
+                        "description": "The destination address(es).\n",
                         "items": {
                             "type": "string"
                         },
@@ -44091,7 +44257,7 @@
                         "type": "string"
                     },
                     "froms": {
-                        "description": "The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n",
+                        "description": "The source security zone(s).\n",
                         "items": {
                             "type": "string"
                         },
@@ -44126,7 +44292,7 @@
                         "description": "The SourceTranslation param.\n"
                     },
                     "sources": {
-                        "description": "The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `\"any\"`.\n",
+                        "description": "The source address(es).\n",
                         "items": {
                             "type": "string"
                         },
@@ -44147,7 +44313,7 @@
                         "type": "string"
                     },
                     "toInterface": {
-                        "description": "The ToInterface param. String must be one of these: `\"any\"`.\n",
+                        "description": "The ToInterface param.\n",
                         "type": "string"
                     },
                     "tos": {
@@ -44433,15 +44599,22 @@
             "outputs": {
                 "description": "A collection of values returned by getProfileGroup.\n",
                 "properties": {
+                    "aiSecurities": {
+                        "description": "List of AI security profiles.\n",
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
                     "dnsSecurities": {
-                        "description": "The DnsSecurities param.\n",
+                        "description": "List of DNS security profiles.\n",
                         "items": {
                             "type": "string"
                         },
                         "type": "array"
                     },
                     "fileBlockings": {
-                        "description": "The FileBlockings param.\n",
+                        "description": "List of file blocking profiles.\n",
                         "items": {
                             "type": "string"
                         },
@@ -44452,18 +44625,18 @@
                         "type": "string"
                     },
                     "name": {
-                        "description": "The Name param.\n",
+                        "description": "The name of the profile group.\n",
                         "type": "string"
                     },
                     "saasSecurities": {
-                        "description": "The SaasSecurities param.\n",
+                        "description": "List of HTTP header insertion profiles.\n",
                         "items": {
                             "type": "string"
                         },
                         "type": "array"
                     },
                     "spywares": {
-                        "description": "The Spywares param.\n",
+                        "description": "List of anti-spyware profiles.\n",
                         "items": {
                             "type": "string"
                         },
@@ -44473,21 +44646,21 @@
                         "type": "string"
                     },
                     "urlFilterings": {
-                        "description": "The UrlFilterings param.\n",
+                        "description": "List of URL filtering profiles.\n",
                         "items": {
                             "type": "string"
                         },
                         "type": "array"
                     },
                     "virusAndWildfireAnalyses": {
-                        "description": "The VirusAndWildfireAnalyses param.\n",
+                        "description": "List of anti-virus and Wildfire analysis profiles.\n",
                         "items": {
                             "type": "string"
                         },
                         "type": "array"
                     },
                     "vulnerabilities": {
-                        "description": "The Vulnerabilities param.\n",
+                        "description": "List of vulnerability protection profiles.\n",
                         "items": {
                             "type": "string"
                         },
@@ -44495,6 +44668,7 @@
                     }
                 },
                 "required": [
+                    "aiSecurities",
                     "dnsSecurities",
                     "fileBlockings",
                     "id",
@@ -46790,24 +46964,9 @@
             "outputs": {
                 "description": "A collection of values returned by getSnippet.\n",
                 "properties": {
-                    "createdIn": {
-                        "description": "The CreatedIn param.\n",
-                        "type": "string"
-                    },
                     "description": {
                         "description": "The Description param.\n",
                         "type": "string"
-                    },
-                    "displayName": {
-                        "description": "The DisplayName param.\n",
-                        "type": "string"
-                    },
-                    "folders": {
-                        "description": "The Folders param.\n",
-                        "items": {
-                            "$ref": "#/types/scm:index/getSnippetFolder:getSnippetFolder"
-                        },
-                        "type": "array"
                     },
                     "id": {
                         "description": "The Id param.\n",
@@ -46820,36 +46979,23 @@
                         },
                         "type": "array"
                     },
-                    "lastUpdate": {
-                        "description": "The LastUpdate param.\n",
-                        "type": "string"
-                    },
                     "name": {
                         "description": "The Name param.\n",
-                        "type": "string"
-                    },
-                    "sharedIn": {
-                        "description": "The SharedIn param.\n",
                         "type": "string"
                     },
                     "tfid": {
                         "type": "string"
                     },
                     "type": {
-                        "description": "The Type param. String must be one of these: `\"predefined\"`.\n",
+                        "description": "The Type param. String must be one of these: `\"predefined\"`, `\"custom\"`.\n",
                         "type": "string"
                     }
                 },
                 "required": [
-                    "createdIn",
                     "description",
-                    "displayName",
-                    "folders",
                     "id",
                     "labels",
-                    "lastUpdate",
                     "name",
-                    "sharedIn",
                     "tfid",
                     "type"
                 ],

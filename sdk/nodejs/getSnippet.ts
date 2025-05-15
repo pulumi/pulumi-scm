@@ -2,8 +2,6 @@
 // *** Do not edit by hand unless you're certain you know what you are doing! ***
 
 import * as pulumi from "@pulumi/pulumi";
-import * as inputs from "./types/input";
-import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
@@ -42,21 +40,9 @@ export interface GetSnippetArgs {
  */
 export interface GetSnippetResult {
     /**
-     * The CreatedIn param.
-     */
-    readonly createdIn: string;
-    /**
      * The Description param.
      */
     readonly description: string;
-    /**
-     * The DisplayName param.
-     */
-    readonly displayName: string;
-    /**
-     * The Folders param.
-     */
-    readonly folders: outputs.GetSnippetFolder[];
     /**
      * The Id param.
      */
@@ -66,20 +52,12 @@ export interface GetSnippetResult {
      */
     readonly labels: string[];
     /**
-     * The LastUpdate param.
-     */
-    readonly lastUpdate: string;
-    /**
      * The Name param.
      */
     readonly name: string;
-    /**
-     * The SharedIn param.
-     */
-    readonly sharedIn: string;
     readonly tfid: string;
     /**
-     * The Type param. String must be one of these: `"predefined"`.
+     * The Type param. String must be one of these: `"predefined"`, `"custom"`.
      */
     readonly type: string;
 }

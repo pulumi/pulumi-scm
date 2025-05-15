@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GetUrlAccessProfileListDataCredentialEnforcementMode {
     /**
-     * @return The Disabled param. Default: `false`.
+     * @return The Disabled param.
      * 
      */
     private Boolean disabled;
     /**
-     * @return The DomainCredentials param. Default: `false`.
+     * @return The DomainCredentials param.
      * 
      */
     private Boolean domainCredentials;
@@ -27,21 +27,21 @@ public final class GetUrlAccessProfileListDataCredentialEnforcementMode {
      */
     private String groupMapping;
     /**
-     * @return The IpUser param. Default: `false`.
+     * @return The IpUser param.
      * 
      */
     private Boolean ipUser;
 
     private GetUrlAccessProfileListDataCredentialEnforcementMode() {}
     /**
-     * @return The Disabled param. Default: `false`.
+     * @return The Disabled param.
      * 
      */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * @return The DomainCredentials param. Default: `false`.
+     * @return The DomainCredentials param.
      * 
      */
     public Boolean domainCredentials() {
@@ -55,7 +55,7 @@ public final class GetUrlAccessProfileListDataCredentialEnforcementMode {
         return this.groupMapping;
     }
     /**
-     * @return The IpUser param. Default: `false`.
+     * @return The IpUser param.
      * 
      */
     public Boolean ipUser() {

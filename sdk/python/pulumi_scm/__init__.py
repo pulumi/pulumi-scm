@@ -26,6 +26,7 @@ from .dns_security_profile import *
 from .dynamic_user_group import *
 from .external_dynamic_list import *
 from .file_blocking_profile import *
+from .folder import *
 from .get_address_group import *
 from .get_address_group_list import *
 from .get_address_object import *
@@ -68,6 +69,8 @@ from .get_external_dynamic_list import *
 from .get_external_dynamic_list_list import *
 from .get_file_blocking_profile import *
 from .get_file_blocking_profile_list import *
+from .get_folder import *
+from .get_folder_list import *
 from .get_hip_object import *
 from .get_hip_object_list import *
 from .get_hip_profile import *
@@ -364,6 +367,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/fileBlockingProfile:FileBlockingProfile": "FileBlockingProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/folder",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/folder:Folder": "Folder"
   }
  },
  {

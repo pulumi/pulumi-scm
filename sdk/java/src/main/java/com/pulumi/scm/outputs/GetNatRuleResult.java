@@ -32,7 +32,7 @@ public final class GetNatRuleResult {
      */
     private GetNatRuleDestinationTranslation destinationTranslation;
     /**
-     * @return The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The destination address(es).
      * 
      */
     private List<String> destinations;
@@ -57,7 +57,7 @@ public final class GetNatRuleResult {
      */
     private String folder;
     /**
-     * @return The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The source security zone(s).
      * 
      */
     private List<String> froms;
@@ -97,7 +97,7 @@ public final class GetNatRuleResult {
      */
     private GetNatRuleSourceTranslation sourceTranslation;
     /**
-     * @return The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The source address(es).
      * 
      */
     private List<String> sources;
@@ -113,7 +113,7 @@ public final class GetNatRuleResult {
     private GetNatRuleTarget target;
     private String tfid;
     /**
-     * @return The ToInterface param. String must be one of these: `&#34;any&#34;`.
+     * @return The ToInterface param.
      * 
      */
     private String toInterface;
@@ -146,7 +146,7 @@ public final class GetNatRuleResult {
         return this.destinationTranslation;
     }
     /**
-     * @return The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The destination address(es).
      * 
      */
     public List<String> destinations() {
@@ -181,7 +181,7 @@ public final class GetNatRuleResult {
         return this.folder;
     }
     /**
-     * @return The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The source security zone(s).
      * 
      */
     public List<String> froms() {
@@ -237,7 +237,7 @@ public final class GetNatRuleResult {
         return this.sourceTranslation;
     }
     /**
-     * @return The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `&#34;any&#34;`.
+     * @return The source address(es).
      * 
      */
     public List<String> sources() {
@@ -261,7 +261,7 @@ public final class GetNatRuleResult {
         return this.tfid;
     }
     /**
-     * @return The ToInterface param. String must be one of these: `&#34;any&#34;`.
+     * @return The ToInterface param.
      * 
      */
     public String toInterface() {

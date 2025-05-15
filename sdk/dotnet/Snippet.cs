@@ -31,28 +31,10 @@ namespace Pulumi.Scm
     public partial class Snippet : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The CreatedIn param.
-        /// </summary>
-        [Output("createdIn")]
-        public Output<string> CreatedIn { get; private set; } = null!;
-
-        /// <summary>
         /// The Description param.
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
-
-        /// <summary>
-        /// The DisplayName param.
-        /// </summary>
-        [Output("displayName")]
-        public Output<string> DisplayName { get; private set; } = null!;
-
-        /// <summary>
-        /// The Folders param.
-        /// </summary>
-        [Output("folders")]
-        public Output<ImmutableArray<Outputs.SnippetFolder>> Folders { get; private set; } = null!;
 
         /// <summary>
         /// The Labels param.
@@ -61,28 +43,16 @@ namespace Pulumi.Scm
         public Output<ImmutableArray<string>> Labels { get; private set; } = null!;
 
         /// <summary>
-        /// The LastUpdate param.
-        /// </summary>
-        [Output("lastUpdate")]
-        public Output<string> LastUpdate { get; private set; } = null!;
-
-        /// <summary>
         /// The Name param.
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
-        /// <summary>
-        /// The SharedIn param.
-        /// </summary>
-        [Output("sharedIn")]
-        public Output<string> SharedIn { get; private set; } = null!;
-
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The Type param. String must be one of these: `"predefined"`.
+        /// The Type param. String must be one of these: `"predefined"`, `"custom"`.
         /// </summary>
         [Output("type")]
         public Output<string> Type { get; private set; } = null!;
@@ -166,34 +136,10 @@ namespace Pulumi.Scm
     public sealed class SnippetState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The CreatedIn param.
-        /// </summary>
-        [Input("createdIn")]
-        public Input<string>? CreatedIn { get; set; }
-
-        /// <summary>
         /// The Description param.
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
-
-        /// <summary>
-        /// The DisplayName param.
-        /// </summary>
-        [Input("displayName")]
-        public Input<string>? DisplayName { get; set; }
-
-        [Input("folders")]
-        private InputList<Inputs.SnippetFolderGetArgs>? _folders;
-
-        /// <summary>
-        /// The Folders param.
-        /// </summary>
-        public InputList<Inputs.SnippetFolderGetArgs> Folders
-        {
-            get => _folders ?? (_folders = new InputList<Inputs.SnippetFolderGetArgs>());
-            set => _folders = value;
-        }
 
         [Input("labels")]
         private InputList<string>? _labels;
@@ -208,28 +154,16 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The LastUpdate param.
-        /// </summary>
-        [Input("lastUpdate")]
-        public Input<string>? LastUpdate { get; set; }
-
-        /// <summary>
         /// The Name param.
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        /// <summary>
-        /// The SharedIn param.
-        /// </summary>
-        [Input("sharedIn")]
-        public Input<string>? SharedIn { get; set; }
-
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The Type param. String must be one of these: `"predefined"`.
+        /// The Type param. String must be one of these: `"predefined"`, `"custom"`.
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

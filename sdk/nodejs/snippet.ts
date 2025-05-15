@@ -2,8 +2,6 @@
 // *** Do not edit by hand unless you're certain you know what you are doing! ***
 
 import * as pulumi from "@pulumi/pulumi";
-import * as inputs from "./types/input";
-import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
@@ -47,40 +45,20 @@ export class Snippet extends pulumi.CustomResource {
     }
 
     /**
-     * The CreatedIn param.
-     */
-    public /*out*/ readonly createdIn!: pulumi.Output<string>;
-    /**
      * The Description param.
      */
     public readonly description!: pulumi.Output<string | undefined>;
-    /**
-     * The DisplayName param.
-     */
-    public /*out*/ readonly displayName!: pulumi.Output<string>;
-    /**
-     * The Folders param.
-     */
-    public /*out*/ readonly folders!: pulumi.Output<outputs.SnippetFolder[]>;
     /**
      * The Labels param.
      */
     public readonly labels!: pulumi.Output<string[] | undefined>;
     /**
-     * The LastUpdate param.
-     */
-    public /*out*/ readonly lastUpdate!: pulumi.Output<string>;
-    /**
      * The Name param.
      */
     public readonly name!: pulumi.Output<string>;
-    /**
-     * The SharedIn param.
-     */
-    public /*out*/ readonly sharedIn!: pulumi.Output<string>;
     public /*out*/ readonly tfid!: pulumi.Output<string>;
     /**
-     * The Type param. String must be one of these: `"predefined"`.
+     * The Type param. String must be one of these: `"predefined"`, `"custom"`.
      */
     public /*out*/ readonly type!: pulumi.Output<string>;
 
@@ -97,14 +75,9 @@ export class Snippet extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SnippetState | undefined;
-            resourceInputs["createdIn"] = state ? state.createdIn : undefined;
             resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["displayName"] = state ? state.displayName : undefined;
-            resourceInputs["folders"] = state ? state.folders : undefined;
             resourceInputs["labels"] = state ? state.labels : undefined;
-            resourceInputs["lastUpdate"] = state ? state.lastUpdate : undefined;
             resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["sharedIn"] = state ? state.sharedIn : undefined;
             resourceInputs["tfid"] = state ? state.tfid : undefined;
             resourceInputs["type"] = state ? state.type : undefined;
         } else {
@@ -112,11 +85,6 @@ export class Snippet extends pulumi.CustomResource {
             resourceInputs["description"] = args ? args.description : undefined;
             resourceInputs["labels"] = args ? args.labels : undefined;
             resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["createdIn"] = undefined /*out*/;
-            resourceInputs["displayName"] = undefined /*out*/;
-            resourceInputs["folders"] = undefined /*out*/;
-            resourceInputs["lastUpdate"] = undefined /*out*/;
-            resourceInputs["sharedIn"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
             resourceInputs["type"] = undefined /*out*/;
         }
@@ -130,40 +98,20 @@ export class Snippet extends pulumi.CustomResource {
  */
 export interface SnippetState {
     /**
-     * The CreatedIn param.
-     */
-    createdIn?: pulumi.Input<string>;
-    /**
      * The Description param.
      */
     description?: pulumi.Input<string>;
-    /**
-     * The DisplayName param.
-     */
-    displayName?: pulumi.Input<string>;
-    /**
-     * The Folders param.
-     */
-    folders?: pulumi.Input<pulumi.Input<inputs.SnippetFolder>[]>;
     /**
      * The Labels param.
      */
     labels?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The LastUpdate param.
-     */
-    lastUpdate?: pulumi.Input<string>;
-    /**
      * The Name param.
      */
     name?: pulumi.Input<string>;
-    /**
-     * The SharedIn param.
-     */
-    sharedIn?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The Type param. String must be one of these: `"predefined"`.
+     * The Type param. String must be one of these: `"predefined"`, `"custom"`.
      */
     type?: pulumi.Input<string>;
 }

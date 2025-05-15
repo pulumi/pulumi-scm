@@ -288,7 +288,6 @@ __all__ = [
     'ServiceProtocolTcpOverride',
     'ServiceProtocolUdp',
     'ServiceProtocolUdpOverride',
-    'SnippetFolder',
     'TacacsServerProfileServer',
     'TlsServiceProfileProtocolSettings',
     'TrafficSteeringRuleAction',
@@ -554,6 +553,7 @@ __all__ = [
     'GetFileBlockingProfileListDataResult',
     'GetFileBlockingProfileListDataRuleResult',
     'GetFileBlockingProfileRuleResult',
+    'GetFolderListDataResult',
     'GetHipObjectAntiMalwareResult',
     'GetHipObjectAntiMalwareCriteriaResult',
     'GetHipObjectAntiMalwareCriteriaLastScanTimeResult',
@@ -922,9 +922,7 @@ __all__ = [
     'GetServiceProtocolUdpResult',
     'GetServiceProtocolUdpOverrideResult',
     'GetSharedInfrastructureSettingsListDataResult',
-    'GetSnippetFolderResult',
     'GetSnippetListDataResult',
-    'GetSnippetListDataFolderResult',
     'GetTacacsServerProfileListDataResult',
     'GetTacacsServerProfileListDataServerResult',
     'GetTacacsServerProfileServerResult',
@@ -15292,37 +15290,6 @@ class ServiceProtocolUdpOverride(dict):
 
 
 @pulumi.output_type
-class SnippetFolder(dict):
-    def __init__(__self__, *,
-                 id: Optional[builtins.str] = None,
-                 name: Optional[builtins.str] = None):
-        """
-        :param builtins.str id: The Id param.
-        :param builtins.str name: The Name param.
-        """
-        if id is not None:
-            pulumi.set(__self__, "id", id)
-        if name is not None:
-            pulumi.set(__self__, "name", name)
-
-    @property
-    @pulumi.getter
-    def id(self) -> Optional[builtins.str]:
-        """
-        The Id param.
-        """
-        return pulumi.get(self, "id")
-
-    @property
-    @pulumi.getter
-    def name(self) -> Optional[builtins.str]:
-        """
-        The Name param.
-        """
-        return pulumi.get(self, "name")
-
-
-@pulumi.output_type
 class TacacsServerProfileServer(dict):
     def __init__(__self__, *,
                  address: Optional[builtins.str] = None,
@@ -15787,10 +15754,10 @@ class UrlAccessProfileCredentialEnforcementMode(dict):
                  group_mapping: Optional[builtins.str] = None,
                  ip_user: Optional[builtins.bool] = None):
         """
-        :param builtins.bool disabled: The Disabled param. Default: `false`.
-        :param builtins.bool domain_credentials: The DomainCredentials param. Default: `false`.
-        :param builtins.str group_mapping: The GroupMapping param.
-        :param builtins.bool ip_user: The IpUser param. Default: `false`.
+        :param builtins.bool disabled: The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+        :param builtins.bool domain_credentials: The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+        :param builtins.str group_mapping: The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+        :param builtins.bool ip_user: The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         if disabled is not None:
             pulumi.set(__self__, "disabled", disabled)
@@ -15805,7 +15772,7 @@ class UrlAccessProfileCredentialEnforcementMode(dict):
     @pulumi.getter
     def disabled(self) -> Optional[builtins.bool]:
         """
-        The Disabled param. Default: `false`.
+        The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         return pulumi.get(self, "disabled")
 
@@ -15813,7 +15780,7 @@ class UrlAccessProfileCredentialEnforcementMode(dict):
     @pulumi.getter(name="domainCredentials")
     def domain_credentials(self) -> Optional[builtins.bool]:
         """
-        The DomainCredentials param. Default: `false`.
+        The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         return pulumi.get(self, "domain_credentials")
 
@@ -15821,7 +15788,7 @@ class UrlAccessProfileCredentialEnforcementMode(dict):
     @pulumi.getter(name="groupMapping")
     def group_mapping(self) -> Optional[builtins.str]:
         """
-        The GroupMapping param.
+        The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         return pulumi.get(self, "group_mapping")
 
@@ -15829,7 +15796,7 @@ class UrlAccessProfileCredentialEnforcementMode(dict):
     @pulumi.getter(name="ipUser")
     def ip_user(self) -> Optional[builtins.bool]:
         """
-        The IpUser param. Default: `false`.
+        The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
         """
         return pulumi.get(self, "ip_user")
 
@@ -29498,6 +29465,79 @@ class GetFileBlockingProfileRuleResult(dict):
 
 
 @pulumi.output_type
+class GetFolderListDataResult(dict):
+    def __init__(__self__, *,
+                 description: builtins.str,
+                 id: builtins.str,
+                 labels: Sequence[builtins.str],
+                 name: builtins.str,
+                 parent: builtins.str,
+                 snippets: Sequence[builtins.str]):
+        """
+        :param builtins.str description: The Description param.
+        :param builtins.str id: The Id param.
+        :param Sequence[builtins.str] labels: The Labels param.
+        :param builtins.str name: The Name param.
+        :param builtins.str parent: The Parent param.
+        :param Sequence[builtins.str] snippets: The Snippets param.
+        """
+        pulumi.set(__self__, "description", description)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "labels", labels)
+        pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "parent", parent)
+        pulumi.set(__self__, "snippets", snippets)
+
+    @property
+    @pulumi.getter
+    def description(self) -> builtins.str:
+        """
+        The Description param.
+        """
+        return pulumi.get(self, "description")
+
+    @property
+    @pulumi.getter
+    def id(self) -> builtins.str:
+        """
+        The Id param.
+        """
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter
+    def labels(self) -> Sequence[builtins.str]:
+        """
+        The Labels param.
+        """
+        return pulumi.get(self, "labels")
+
+    @property
+    @pulumi.getter
+    def name(self) -> builtins.str:
+        """
+        The Name param.
+        """
+        return pulumi.get(self, "name")
+
+    @property
+    @pulumi.getter
+    def parent(self) -> builtins.str:
+        """
+        The Parent param.
+        """
+        return pulumi.get(self, "parent")
+
+    @property
+    @pulumi.getter
+    def snippets(self) -> Sequence[builtins.str]:
+        """
+        The Snippets param.
+        """
+        return pulumi.get(self, "snippets")
+
+
+@pulumi.output_type
 class GetHipObjectAntiMalwareResult(dict):
     def __init__(__self__, *,
                  criteria: 'outputs.GetHipObjectAntiMalwareCriteriaResult',
@@ -38925,12 +38965,12 @@ class GetNatRuleListDataResult(dict):
         :param builtins.str active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
         :param builtins.str description: The Description param.
         :param 'GetNatRuleListDataDestinationTranslationArgs' destination_translation: Static destination translation parameter.
-        :param Sequence[builtins.str] destinations: The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param Sequence[builtins.str] destinations: The destination address(es).
         :param builtins.str device: The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param builtins.bool disabled: The Disabled param.
         :param 'GetNatRuleListDataDynamicDestinationTranslationArgs' dynamic_destination_translation: Dynamic destination translation parameter.
         :param builtins.str folder: The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param Sequence[builtins.str] froms: The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param Sequence[builtins.str] froms: The source security zone(s).
         :param builtins.str group_tag: The GroupTag param.
         :param builtins.str id: The Id param.
         :param builtins.str name: The Name param.
@@ -38938,10 +38978,10 @@ class GetNatRuleListDataResult(dict):
         :param builtins.str service: The Service param.
         :param builtins.str snippet: The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
         :param 'GetNatRuleListDataSourceTranslationArgs' source_translation: The SourceTranslation param.
-        :param Sequence[builtins.str] sources: The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        :param Sequence[builtins.str] sources: The source address(es).
         :param Sequence[builtins.str] tags: The Tags param.
         :param 'GetNatRuleListDataTargetArgs' target: The Target param.
-        :param builtins.str to_interface: The ToInterface param. String must be one of these: `"any"`.
+        :param builtins.str to_interface: The ToInterface param.
         :param Sequence[builtins.str] tos: The destination security zone(s).
         """
         pulumi.set(__self__, "active_active_device_binding", active_active_device_binding)
@@ -38994,7 +39034,7 @@ class GetNatRuleListDataResult(dict):
     @pulumi.getter
     def destinations(self) -> Sequence[builtins.str]:
         """
-        The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The destination address(es).
         """
         return pulumi.get(self, "destinations")
 
@@ -39034,7 +39074,7 @@ class GetNatRuleListDataResult(dict):
     @pulumi.getter
     def froms(self) -> Sequence[builtins.str]:
         """
-        The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The source security zone(s).
         """
         return pulumi.get(self, "froms")
 
@@ -39098,7 +39138,7 @@ class GetNatRuleListDataResult(dict):
     @pulumi.getter
     def sources(self) -> Sequence[builtins.str]:
         """
-        The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+        The source address(es).
         """
         return pulumi.get(self, "sources")
 
@@ -39122,7 +39162,7 @@ class GetNatRuleListDataResult(dict):
     @pulumi.getter(name="toInterface")
     def to_interface(self) -> builtins.str:
         """
-        The ToInterface param. String must be one of these: `"any"`.
+        The ToInterface param.
         """
         return pulumi.get(self, "to_interface")
 
@@ -39530,6 +39570,7 @@ class GetOcspResponderListDataResult(dict):
 @pulumi.output_type
 class GetProfileGroupListDataResult(dict):
     def __init__(__self__, *,
+                 ai_securities: Sequence[builtins.str],
                  dns_securities: Sequence[builtins.str],
                  file_blockings: Sequence[builtins.str],
                  id: builtins.str,
@@ -39540,16 +39581,18 @@ class GetProfileGroupListDataResult(dict):
                  virus_and_wildfire_analyses: Sequence[builtins.str],
                  vulnerabilities: Sequence[builtins.str]):
         """
-        :param Sequence[builtins.str] dns_securities: The DnsSecurities param.
-        :param Sequence[builtins.str] file_blockings: The FileBlockings param.
+        :param Sequence[builtins.str] ai_securities: List of AI security profiles.
+        :param Sequence[builtins.str] dns_securities: List of DNS security profiles.
+        :param Sequence[builtins.str] file_blockings: List of file blocking profiles.
         :param builtins.str id: UUID of the resource.
-        :param builtins.str name: The Name param.
-        :param Sequence[builtins.str] saas_securities: The SaasSecurities param.
-        :param Sequence[builtins.str] spywares: The Spywares param.
-        :param Sequence[builtins.str] url_filterings: The UrlFilterings param.
-        :param Sequence[builtins.str] virus_and_wildfire_analyses: The VirusAndWildfireAnalyses param.
-        :param Sequence[builtins.str] vulnerabilities: The Vulnerabilities param.
+        :param builtins.str name: The name of the profile group.
+        :param Sequence[builtins.str] saas_securities: List of HTTP header insertion profiles.
+        :param Sequence[builtins.str] spywares: List of anti-spyware profiles.
+        :param Sequence[builtins.str] url_filterings: List of URL filtering profiles.
+        :param Sequence[builtins.str] virus_and_wildfire_analyses: List of anti-virus and Wildfire analysis profiles.
+        :param Sequence[builtins.str] vulnerabilities: List of vulnerability protection profiles.
         """
+        pulumi.set(__self__, "ai_securities", ai_securities)
         pulumi.set(__self__, "dns_securities", dns_securities)
         pulumi.set(__self__, "file_blockings", file_blockings)
         pulumi.set(__self__, "id", id)
@@ -39561,10 +39604,18 @@ class GetProfileGroupListDataResult(dict):
         pulumi.set(__self__, "vulnerabilities", vulnerabilities)
 
     @property
+    @pulumi.getter(name="aiSecurities")
+    def ai_securities(self) -> Sequence[builtins.str]:
+        """
+        List of AI security profiles.
+        """
+        return pulumi.get(self, "ai_securities")
+
+    @property
     @pulumi.getter(name="dnsSecurities")
     def dns_securities(self) -> Sequence[builtins.str]:
         """
-        The DnsSecurities param.
+        List of DNS security profiles.
         """
         return pulumi.get(self, "dns_securities")
 
@@ -39572,7 +39623,7 @@ class GetProfileGroupListDataResult(dict):
     @pulumi.getter(name="fileBlockings")
     def file_blockings(self) -> Sequence[builtins.str]:
         """
-        The FileBlockings param.
+        List of file blocking profiles.
         """
         return pulumi.get(self, "file_blockings")
 
@@ -39588,7 +39639,7 @@ class GetProfileGroupListDataResult(dict):
     @pulumi.getter
     def name(self) -> builtins.str:
         """
-        The Name param.
+        The name of the profile group.
         """
         return pulumi.get(self, "name")
 
@@ -39596,7 +39647,7 @@ class GetProfileGroupListDataResult(dict):
     @pulumi.getter(name="saasSecurities")
     def saas_securities(self) -> Sequence[builtins.str]:
         """
-        The SaasSecurities param.
+        List of HTTP header insertion profiles.
         """
         return pulumi.get(self, "saas_securities")
 
@@ -39604,7 +39655,7 @@ class GetProfileGroupListDataResult(dict):
     @pulumi.getter
     def spywares(self) -> Sequence[builtins.str]:
         """
-        The Spywares param.
+        List of anti-spyware profiles.
         """
         return pulumi.get(self, "spywares")
 
@@ -39612,7 +39663,7 @@ class GetProfileGroupListDataResult(dict):
     @pulumi.getter(name="urlFilterings")
     def url_filterings(self) -> Sequence[builtins.str]:
         """
-        The UrlFilterings param.
+        List of URL filtering profiles.
         """
         return pulumi.get(self, "url_filterings")
 
@@ -39620,7 +39671,7 @@ class GetProfileGroupListDataResult(dict):
     @pulumi.getter(name="virusAndWildfireAnalyses")
     def virus_and_wildfire_analyses(self) -> Sequence[builtins.str]:
         """
-        The VirusAndWildfireAnalyses param.
+        List of anti-virus and Wildfire analysis profiles.
         """
         return pulumi.get(self, "virus_and_wildfire_analyses")
 
@@ -39628,7 +39679,7 @@ class GetProfileGroupListDataResult(dict):
     @pulumi.getter
     def vulnerabilities(self) -> Sequence[builtins.str]:
         """
-        The Vulnerabilities param.
+        List of vulnerability protection profiles.
         """
         return pulumi.get(self, "vulnerabilities")
 
@@ -44493,77 +44544,25 @@ class GetSharedInfrastructureSettingsListDataResult(dict):
 
 
 @pulumi.output_type
-class GetSnippetFolderResult(dict):
-    def __init__(__self__, *,
-                 id: builtins.str,
-                 name: builtins.str):
-        """
-        :param builtins.str id: The Id param.
-        :param builtins.str name: The Name param.
-        """
-        pulumi.set(__self__, "id", id)
-        pulumi.set(__self__, "name", name)
-
-    @property
-    @pulumi.getter
-    def id(self) -> builtins.str:
-        """
-        The Id param.
-        """
-        return pulumi.get(self, "id")
-
-    @property
-    @pulumi.getter
-    def name(self) -> builtins.str:
-        """
-        The Name param.
-        """
-        return pulumi.get(self, "name")
-
-
-@pulumi.output_type
 class GetSnippetListDataResult(dict):
     def __init__(__self__, *,
-                 created_in: builtins.str,
                  description: builtins.str,
-                 display_name: builtins.str,
-                 folders: Sequence['outputs.GetSnippetListDataFolderResult'],
                  id: builtins.str,
                  labels: Sequence[builtins.str],
-                 last_update: builtins.str,
                  name: builtins.str,
-                 shared_in: builtins.str,
                  type: builtins.str):
         """
-        :param builtins.str created_in: The CreatedIn param.
         :param builtins.str description: The Description param.
-        :param builtins.str display_name: The DisplayName param.
-        :param Sequence['GetSnippetListDataFolderArgs'] folders: The Folders param.
         :param builtins.str id: The Id param.
         :param Sequence[builtins.str] labels: The Labels param.
-        :param builtins.str last_update: The LastUpdate param.
         :param builtins.str name: The Name param.
-        :param builtins.str shared_in: The SharedIn param.
-        :param builtins.str type: The Type param. String must be one of these: `"predefined"`.
+        :param builtins.str type: The Type param. String must be one of these: `"predefined"`, `"custom"`.
         """
-        pulumi.set(__self__, "created_in", created_in)
         pulumi.set(__self__, "description", description)
-        pulumi.set(__self__, "display_name", display_name)
-        pulumi.set(__self__, "folders", folders)
         pulumi.set(__self__, "id", id)
         pulumi.set(__self__, "labels", labels)
-        pulumi.set(__self__, "last_update", last_update)
         pulumi.set(__self__, "name", name)
-        pulumi.set(__self__, "shared_in", shared_in)
         pulumi.set(__self__, "type", type)
-
-    @property
-    @pulumi.getter(name="createdIn")
-    def created_in(self) -> builtins.str:
-        """
-        The CreatedIn param.
-        """
-        return pulumi.get(self, "created_in")
 
     @property
     @pulumi.getter
@@ -44572,22 +44571,6 @@ class GetSnippetListDataResult(dict):
         The Description param.
         """
         return pulumi.get(self, "description")
-
-    @property
-    @pulumi.getter(name="displayName")
-    def display_name(self) -> builtins.str:
-        """
-        The DisplayName param.
-        """
-        return pulumi.get(self, "display_name")
-
-    @property
-    @pulumi.getter
-    def folders(self) -> Sequence['outputs.GetSnippetListDataFolderResult']:
-        """
-        The Folders param.
-        """
-        return pulumi.get(self, "folders")
 
     @property
     @pulumi.getter
@@ -44606,65 +44589,20 @@ class GetSnippetListDataResult(dict):
         return pulumi.get(self, "labels")
 
     @property
-    @pulumi.getter(name="lastUpdate")
-    def last_update(self) -> builtins.str:
-        """
-        The LastUpdate param.
-        """
-        return pulumi.get(self, "last_update")
-
-    @property
     @pulumi.getter
     def name(self) -> builtins.str:
         """
         The Name param.
         """
         return pulumi.get(self, "name")
-
-    @property
-    @pulumi.getter(name="sharedIn")
-    def shared_in(self) -> builtins.str:
-        """
-        The SharedIn param.
-        """
-        return pulumi.get(self, "shared_in")
 
     @property
     @pulumi.getter
     def type(self) -> builtins.str:
         """
-        The Type param. String must be one of these: `"predefined"`.
+        The Type param. String must be one of these: `"predefined"`, `"custom"`.
         """
         return pulumi.get(self, "type")
-
-
-@pulumi.output_type
-class GetSnippetListDataFolderResult(dict):
-    def __init__(__self__, *,
-                 id: builtins.str,
-                 name: builtins.str):
-        """
-        :param builtins.str id: The Id param.
-        :param builtins.str name: The Name param.
-        """
-        pulumi.set(__self__, "id", id)
-        pulumi.set(__self__, "name", name)
-
-    @property
-    @pulumi.getter
-    def id(self) -> builtins.str:
-        """
-        The Id param.
-        """
-        return pulumi.get(self, "id")
-
-    @property
-    @pulumi.getter
-    def name(self) -> builtins.str:
-        """
-        The Name param.
-        """
-        return pulumi.get(self, "name")
 
 
 @pulumi.output_type
@@ -45642,10 +45580,10 @@ class GetUrlAccessProfileCredentialEnforcementModeResult(dict):
                  group_mapping: builtins.str,
                  ip_user: builtins.bool):
         """
-        :param builtins.bool disabled: The Disabled param. Default: `false`.
-        :param builtins.bool domain_credentials: The DomainCredentials param. Default: `false`.
+        :param builtins.bool disabled: The Disabled param.
+        :param builtins.bool domain_credentials: The DomainCredentials param.
         :param builtins.str group_mapping: The GroupMapping param.
-        :param builtins.bool ip_user: The IpUser param. Default: `false`.
+        :param builtins.bool ip_user: The IpUser param.
         """
         pulumi.set(__self__, "disabled", disabled)
         pulumi.set(__self__, "domain_credentials", domain_credentials)
@@ -45656,7 +45594,7 @@ class GetUrlAccessProfileCredentialEnforcementModeResult(dict):
     @pulumi.getter
     def disabled(self) -> builtins.bool:
         """
-        The Disabled param. Default: `false`.
+        The Disabled param.
         """
         return pulumi.get(self, "disabled")
 
@@ -45664,7 +45602,7 @@ class GetUrlAccessProfileCredentialEnforcementModeResult(dict):
     @pulumi.getter(name="domainCredentials")
     def domain_credentials(self) -> builtins.bool:
         """
-        The DomainCredentials param. Default: `false`.
+        The DomainCredentials param.
         """
         return pulumi.get(self, "domain_credentials")
 
@@ -45680,7 +45618,7 @@ class GetUrlAccessProfileCredentialEnforcementModeResult(dict):
     @pulumi.getter(name="ipUser")
     def ip_user(self) -> builtins.bool:
         """
-        The IpUser param. Default: `false`.
+        The IpUser param.
         """
         return pulumi.get(self, "ip_user")
 
@@ -45949,10 +45887,10 @@ class GetUrlAccessProfileListDataCredentialEnforcementModeResult(dict):
                  group_mapping: builtins.str,
                  ip_user: builtins.bool):
         """
-        :param builtins.bool disabled: The Disabled param. Default: `false`.
-        :param builtins.bool domain_credentials: The DomainCredentials param. Default: `false`.
+        :param builtins.bool disabled: The Disabled param.
+        :param builtins.bool domain_credentials: The DomainCredentials param.
         :param builtins.str group_mapping: The GroupMapping param.
-        :param builtins.bool ip_user: The IpUser param. Default: `false`.
+        :param builtins.bool ip_user: The IpUser param.
         """
         pulumi.set(__self__, "disabled", disabled)
         pulumi.set(__self__, "domain_credentials", domain_credentials)
@@ -45963,7 +45901,7 @@ class GetUrlAccessProfileListDataCredentialEnforcementModeResult(dict):
     @pulumi.getter
     def disabled(self) -> builtins.bool:
         """
-        The Disabled param. Default: `false`.
+        The Disabled param.
         """
         return pulumi.get(self, "disabled")
 
@@ -45971,7 +45909,7 @@ class GetUrlAccessProfileListDataCredentialEnforcementModeResult(dict):
     @pulumi.getter(name="domainCredentials")
     def domain_credentials(self) -> builtins.bool:
         """
-        The DomainCredentials param. Default: `false`.
+        The DomainCredentials param.
         """
         return pulumi.get(self, "domain_credentials")
 
@@ -45987,7 +45925,7 @@ class GetUrlAccessProfileListDataCredentialEnforcementModeResult(dict):
     @pulumi.getter(name="ipUser")
     def ip_user(self) -> builtins.bool:
         """
-        The IpUser param. Default: `false`.
+        The IpUser param.
         """
         return pulumi.get(self, "ip_user")
 

@@ -22,7 +22,7 @@ type NatRule struct {
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Static destination translation parameter.
 	DestinationTranslation NatRuleDestinationTranslationPtrOutput `pulumi:"destinationTranslation"`
-	// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The destination address(es).
 	Destinations pulumi.StringArrayOutput `pulumi:"destinations"`
 	// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
@@ -32,7 +32,7 @@ type NatRule struct {
 	DynamicDestinationTranslation NatRuleDynamicDestinationTranslationPtrOutput `pulumi:"dynamicDestinationTranslation"`
 	// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source security zone(s).
 	Froms pulumi.StringArrayOutput `pulumi:"froms"`
 	// The GroupTag param.
 	GroupTag pulumi.StringPtrOutput `pulumi:"groupTag"`
@@ -48,14 +48,14 @@ type NatRule struct {
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The SourceTranslation param.
 	SourceTranslation NatRuleSourceTranslationPtrOutput `pulumi:"sourceTranslation"`
-	// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source address(es).
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
 	// The Tags param.
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
 	// The Target param.
 	Target NatRuleTargetPtrOutput `pulumi:"target"`
 	Tfid   pulumi.StringOutput    `pulumi:"tfid"`
-	// The ToInterface param. String must be one of these: `"any"`.
+	// The ToInterface param.
 	ToInterface pulumi.StringPtrOutput `pulumi:"toInterface"`
 	// The destination security zone(s).
 	Tos pulumi.StringArrayOutput `pulumi:"tos"`
@@ -112,7 +112,7 @@ type natRuleState struct {
 	Description *string `pulumi:"description"`
 	// Static destination translation parameter.
 	DestinationTranslation *NatRuleDestinationTranslation `pulumi:"destinationTranslation"`
-	// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The destination address(es).
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Device *string `pulumi:"device"`
@@ -122,7 +122,7 @@ type natRuleState struct {
 	DynamicDestinationTranslation *NatRuleDynamicDestinationTranslation `pulumi:"dynamicDestinationTranslation"`
 	// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Folder *string `pulumi:"folder"`
-	// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source security zone(s).
 	Froms []string `pulumi:"froms"`
 	// The GroupTag param.
 	GroupTag *string `pulumi:"groupTag"`
@@ -138,14 +138,14 @@ type natRuleState struct {
 	Snippet *string `pulumi:"snippet"`
 	// The SourceTranslation param.
 	SourceTranslation *NatRuleSourceTranslation `pulumi:"sourceTranslation"`
-	// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source address(es).
 	Sources []string `pulumi:"sources"`
 	// The Tags param.
 	Tags []string `pulumi:"tags"`
 	// The Target param.
 	Target *NatRuleTarget `pulumi:"target"`
 	Tfid   *string        `pulumi:"tfid"`
-	// The ToInterface param. String must be one of these: `"any"`.
+	// The ToInterface param.
 	ToInterface *string `pulumi:"toInterface"`
 	// The destination security zone(s).
 	Tos []string `pulumi:"tos"`
@@ -158,7 +158,7 @@ type NatRuleState struct {
 	Description pulumi.StringPtrInput
 	// Static destination translation parameter.
 	DestinationTranslation NatRuleDestinationTranslationPtrInput
-	// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The destination address(es).
 	Destinations pulumi.StringArrayInput
 	// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Device pulumi.StringPtrInput
@@ -168,7 +168,7 @@ type NatRuleState struct {
 	DynamicDestinationTranslation NatRuleDynamicDestinationTranslationPtrInput
 	// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Folder pulumi.StringPtrInput
-	// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source security zone(s).
 	Froms pulumi.StringArrayInput
 	// The GroupTag param.
 	GroupTag pulumi.StringPtrInput
@@ -184,14 +184,14 @@ type NatRuleState struct {
 	Snippet pulumi.StringPtrInput
 	// The SourceTranslation param.
 	SourceTranslation NatRuleSourceTranslationPtrInput
-	// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source address(es).
 	Sources pulumi.StringArrayInput
 	// The Tags param.
 	Tags pulumi.StringArrayInput
 	// The Target param.
 	Target NatRuleTargetPtrInput
 	Tfid   pulumi.StringPtrInput
-	// The ToInterface param. String must be one of these: `"any"`.
+	// The ToInterface param.
 	ToInterface pulumi.StringPtrInput
 	// The destination security zone(s).
 	Tos pulumi.StringArrayInput
@@ -208,7 +208,7 @@ type natRuleArgs struct {
 	Description *string `pulumi:"description"`
 	// Static destination translation parameter.
 	DestinationTranslation *NatRuleDestinationTranslation `pulumi:"destinationTranslation"`
-	// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The destination address(es).
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Device *string `pulumi:"device"`
@@ -218,7 +218,7 @@ type natRuleArgs struct {
 	DynamicDestinationTranslation *NatRuleDynamicDestinationTranslation `pulumi:"dynamicDestinationTranslation"`
 	// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Folder *string `pulumi:"folder"`
-	// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source security zone(s).
 	Froms []string `pulumi:"froms"`
 	// The GroupTag param.
 	GroupTag *string `pulumi:"groupTag"`
@@ -234,13 +234,13 @@ type natRuleArgs struct {
 	Snippet *string `pulumi:"snippet"`
 	// The SourceTranslation param.
 	SourceTranslation *NatRuleSourceTranslation `pulumi:"sourceTranslation"`
-	// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source address(es).
 	Sources []string `pulumi:"sources"`
 	// The Tags param.
 	Tags []string `pulumi:"tags"`
 	// The Target param.
 	Target *NatRuleTarget `pulumi:"target"`
-	// The ToInterface param. String must be one of these: `"any"`.
+	// The ToInterface param.
 	ToInterface *string `pulumi:"toInterface"`
 	// The destination security zone(s).
 	Tos []string `pulumi:"tos"`
@@ -254,7 +254,7 @@ type NatRuleArgs struct {
 	Description pulumi.StringPtrInput
 	// Static destination translation parameter.
 	DestinationTranslation NatRuleDestinationTranslationPtrInput
-	// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The destination address(es).
 	Destinations pulumi.StringArrayInput
 	// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Device pulumi.StringPtrInput
@@ -264,7 +264,7 @@ type NatRuleArgs struct {
 	DynamicDestinationTranslation NatRuleDynamicDestinationTranslationPtrInput
 	// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
 	Folder pulumi.StringPtrInput
-	// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source security zone(s).
 	Froms pulumi.StringArrayInput
 	// The GroupTag param.
 	GroupTag pulumi.StringPtrInput
@@ -280,13 +280,13 @@ type NatRuleArgs struct {
 	Snippet pulumi.StringPtrInput
 	// The SourceTranslation param.
 	SourceTranslation NatRuleSourceTranslationPtrInput
-	// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+	// The source address(es).
 	Sources pulumi.StringArrayInput
 	// The Tags param.
 	Tags pulumi.StringArrayInput
 	// The Target param.
 	Target NatRuleTargetPtrInput
-	// The ToInterface param. String must be one of these: `"any"`.
+	// The ToInterface param.
 	ToInterface pulumi.StringPtrInput
 	// The destination security zone(s).
 	Tos pulumi.StringArrayInput
@@ -394,7 +394,7 @@ func (o NatRuleOutput) DestinationTranslation() NatRuleDestinationTranslationPtr
 	return o.ApplyT(func(v *NatRule) NatRuleDestinationTranslationPtrOutput { return v.DestinationTranslation }).(NatRuleDestinationTranslationPtrOutput)
 }
 
-// The destination address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+// The destination address(es).
 func (o NatRuleOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.StringArrayOutput { return v.Destinations }).(pulumi.StringArrayOutput)
 }
@@ -419,7 +419,7 @@ func (o NatRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The source security zone(s). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+// The source security zone(s).
 func (o NatRuleOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.StringArrayOutput { return v.Froms }).(pulumi.StringArrayOutput)
 }
@@ -459,7 +459,7 @@ func (o NatRuleOutput) SourceTranslation() NatRuleSourceTranslationPtrOutput {
 	return o.ApplyT(func(v *NatRule) NatRuleSourceTranslationPtrOutput { return v.SourceTranslation }).(NatRuleSourceTranslationPtrOutput)
 }
 
-// The source address(es). Individual elements in this list are subject to additional validation. String must be one of these: `"any"`.
+// The source address(es).
 func (o NatRuleOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.StringArrayOutput { return v.Sources }).(pulumi.StringArrayOutput)
 }
@@ -478,7 +478,7 @@ func (o NatRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The ToInterface param. String must be one of these: `"any"`.
+// The ToInterface param.
 func (o NatRuleOutput) ToInterface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.StringPtrOutput { return v.ToInterface }).(pulumi.StringPtrOutput)
 }
