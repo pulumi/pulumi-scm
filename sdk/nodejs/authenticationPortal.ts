@@ -47,44 +47,44 @@ export class AuthenticationPortal extends pulumi.CustomResource {
     /**
      * The AuthenticationProfile param.
      */
-    public readonly authenticationProfile!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationProfile: pulumi.Output<string | undefined>;
     /**
      * The CertificateProfile param.
      */
-    public readonly certificateProfile!: pulumi.Output<string | undefined>;
+    declare public readonly certificateProfile: pulumi.Output<string | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The GpUdpPort param. Value must be between 1 and 65535.
      */
-    public readonly gpUdpPort!: pulumi.Output<number | undefined>;
+    declare public readonly gpUdpPort: pulumi.Output<number | undefined>;
     /**
      * The IdleTimer param. Value must be between 1 and 1440.
      */
-    public readonly idleTimer!: pulumi.Output<number | undefined>;
+    declare public readonly idleTimer: pulumi.Output<number | undefined>;
     /**
      * The RedirectHost param.
      */
-    public readonly redirectHost!: pulumi.Output<string | undefined>;
+    declare public readonly redirectHost: pulumi.Output<string | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The Timer param. Value must be between 1 and 1440.
      */
-    public readonly timer!: pulumi.Output<number | undefined>;
+    declare public readonly timer: pulumi.Output<number | undefined>;
     /**
      * The TlsServiceProfile param.
      */
-    public readonly tlsServiceProfile!: pulumi.Output<string | undefined>;
+    declare public readonly tlsServiceProfile: pulumi.Output<string | undefined>;
 
     /**
      * Create a AuthenticationPortal resource with the given unique name, arguments, and options.
@@ -99,29 +99,29 @@ export class AuthenticationPortal extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AuthenticationPortalState | undefined;
-            resourceInputs["authenticationProfile"] = state ? state.authenticationProfile : undefined;
-            resourceInputs["certificateProfile"] = state ? state.certificateProfile : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["gpUdpPort"] = state ? state.gpUdpPort : undefined;
-            resourceInputs["idleTimer"] = state ? state.idleTimer : undefined;
-            resourceInputs["redirectHost"] = state ? state.redirectHost : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["timer"] = state ? state.timer : undefined;
-            resourceInputs["tlsServiceProfile"] = state ? state.tlsServiceProfile : undefined;
+            resourceInputs["authenticationProfile"] = state?.authenticationProfile;
+            resourceInputs["certificateProfile"] = state?.certificateProfile;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["gpUdpPort"] = state?.gpUdpPort;
+            resourceInputs["idleTimer"] = state?.idleTimer;
+            resourceInputs["redirectHost"] = state?.redirectHost;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["timer"] = state?.timer;
+            resourceInputs["tlsServiceProfile"] = state?.tlsServiceProfile;
         } else {
             const args = argsOrState as AuthenticationPortalArgs | undefined;
-            resourceInputs["authenticationProfile"] = args ? args.authenticationProfile : undefined;
-            resourceInputs["certificateProfile"] = args ? args.certificateProfile : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["gpUdpPort"] = args ? args.gpUdpPort : undefined;
-            resourceInputs["idleTimer"] = args ? args.idleTimer : undefined;
-            resourceInputs["redirectHost"] = args ? args.redirectHost : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["timer"] = args ? args.timer : undefined;
-            resourceInputs["tlsServiceProfile"] = args ? args.tlsServiceProfile : undefined;
+            resourceInputs["authenticationProfile"] = args?.authenticationProfile;
+            resourceInputs["certificateProfile"] = args?.certificateProfile;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["gpUdpPort"] = args?.gpUdpPort;
+            resourceInputs["idleTimer"] = args?.idleTimer;
+            resourceInputs["redirectHost"] = args?.redirectHost;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["timer"] = args?.timer;
+            resourceInputs["tlsServiceProfile"] = args?.tlsServiceProfile;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

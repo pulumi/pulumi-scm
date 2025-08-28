@@ -49,72 +49,72 @@ export class ScepProfile extends pulumi.CustomResource {
     /**
      * The Algorithm param.
      */
-    public readonly algorithm!: pulumi.Output<outputs.ScepProfileAlgorithm | undefined>;
+    declare public readonly algorithm: pulumi.Output<outputs.ScepProfileAlgorithm | undefined>;
     /**
      * The CaIdentityName param.
      */
-    public readonly caIdentityName!: pulumi.Output<string>;
+    declare public readonly caIdentityName: pulumi.Output<string>;
     /**
      * The CertificateAttributes param.
      */
-    public readonly certificateAttributes!: pulumi.Output<outputs.ScepProfileCertificateAttributes | undefined>;
+    declare public readonly certificateAttributes: pulumi.Output<outputs.ScepProfileCertificateAttributes | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Digest param.
      */
-    public readonly digest!: pulumi.Output<string>;
+    declare public readonly digest: pulumi.Output<string>;
     /**
      * (Internal use) Encrypted values returned from the API.
      */
-    public /*out*/ readonly encryptedValues!: pulumi.Output<{[key: string]: string}>;
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The Fingerprint param.
      */
-    public readonly fingerprint!: pulumi.Output<string | undefined>;
+    declare public readonly fingerprint: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The ScepCaCert param.
      */
-    public readonly scepCaCert!: pulumi.Output<string | undefined>;
+    declare public readonly scepCaCert: pulumi.Output<string | undefined>;
     /**
      * The ScepChallenge param.
      */
-    public readonly scepChallenge!: pulumi.Output<outputs.ScepProfileScepChallenge | undefined>;
+    declare public readonly scepChallenge: pulumi.Output<outputs.ScepProfileScepChallenge | undefined>;
     /**
      * The ScepClientCert param.
      */
-    public readonly scepClientCert!: pulumi.Output<string | undefined>;
+    declare public readonly scepClientCert: pulumi.Output<string | undefined>;
     /**
      * The ScepUrl param.
      */
-    public readonly scepUrl!: pulumi.Output<string>;
+    declare public readonly scepUrl: pulumi.Output<string>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * The Subject param.
      */
-    public readonly subject!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly subject: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The UseAsDigitalSignature param.
      */
-    public readonly useAsDigitalSignature!: pulumi.Output<boolean | undefined>;
+    declare public readonly useAsDigitalSignature: pulumi.Output<boolean | undefined>;
     /**
      * The UseForKeyEncipherment param.
      */
-    public readonly useForKeyEncipherment!: pulumi.Output<boolean | undefined>;
+    declare public readonly useForKeyEncipherment: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a ScepProfile resource with the given unique name, arguments, and options.
@@ -129,51 +129,51 @@ export class ScepProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ScepProfileState | undefined;
-            resourceInputs["algorithm"] = state ? state.algorithm : undefined;
-            resourceInputs["caIdentityName"] = state ? state.caIdentityName : undefined;
-            resourceInputs["certificateAttributes"] = state ? state.certificateAttributes : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["digest"] = state ? state.digest : undefined;
-            resourceInputs["encryptedValues"] = state ? state.encryptedValues : undefined;
-            resourceInputs["fingerprint"] = state ? state.fingerprint : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["scepCaCert"] = state ? state.scepCaCert : undefined;
-            resourceInputs["scepChallenge"] = state ? state.scepChallenge : undefined;
-            resourceInputs["scepClientCert"] = state ? state.scepClientCert : undefined;
-            resourceInputs["scepUrl"] = state ? state.scepUrl : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["subject"] = state ? state.subject : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["useAsDigitalSignature"] = state ? state.useAsDigitalSignature : undefined;
-            resourceInputs["useForKeyEncipherment"] = state ? state.useForKeyEncipherment : undefined;
+            resourceInputs["algorithm"] = state?.algorithm;
+            resourceInputs["caIdentityName"] = state?.caIdentityName;
+            resourceInputs["certificateAttributes"] = state?.certificateAttributes;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["digest"] = state?.digest;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
+            resourceInputs["fingerprint"] = state?.fingerprint;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["scepCaCert"] = state?.scepCaCert;
+            resourceInputs["scepChallenge"] = state?.scepChallenge;
+            resourceInputs["scepClientCert"] = state?.scepClientCert;
+            resourceInputs["scepUrl"] = state?.scepUrl;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["subject"] = state?.subject;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["useAsDigitalSignature"] = state?.useAsDigitalSignature;
+            resourceInputs["useForKeyEncipherment"] = state?.useForKeyEncipherment;
         } else {
             const args = argsOrState as ScepProfileArgs | undefined;
-            if ((!args || args.caIdentityName === undefined) && !opts.urn) {
+            if (args?.caIdentityName === undefined && !opts.urn) {
                 throw new Error("Missing required property 'caIdentityName'");
             }
-            if ((!args || args.digest === undefined) && !opts.urn) {
+            if (args?.digest === undefined && !opts.urn) {
                 throw new Error("Missing required property 'digest'");
             }
-            if ((!args || args.scepUrl === undefined) && !opts.urn) {
+            if (args?.scepUrl === undefined && !opts.urn) {
                 throw new Error("Missing required property 'scepUrl'");
             }
-            resourceInputs["algorithm"] = args ? args.algorithm : undefined;
-            resourceInputs["caIdentityName"] = args ? args.caIdentityName : undefined;
-            resourceInputs["certificateAttributes"] = args ? args.certificateAttributes : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["digest"] = args ? args.digest : undefined;
-            resourceInputs["fingerprint"] = args ? args.fingerprint : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["scepCaCert"] = args ? args.scepCaCert : undefined;
-            resourceInputs["scepChallenge"] = args ? args.scepChallenge : undefined;
-            resourceInputs["scepClientCert"] = args ? args.scepClientCert : undefined;
-            resourceInputs["scepUrl"] = args ? args.scepUrl : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["subject"] = args ? args.subject : undefined;
-            resourceInputs["useAsDigitalSignature"] = args ? args.useAsDigitalSignature : undefined;
-            resourceInputs["useForKeyEncipherment"] = args ? args.useForKeyEncipherment : undefined;
+            resourceInputs["algorithm"] = args?.algorithm;
+            resourceInputs["caIdentityName"] = args?.caIdentityName;
+            resourceInputs["certificateAttributes"] = args?.certificateAttributes;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["digest"] = args?.digest;
+            resourceInputs["fingerprint"] = args?.fingerprint;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["scepCaCert"] = args?.scepCaCert;
+            resourceInputs["scepChallenge"] = args?.scepChallenge;
+            resourceInputs["scepClientCert"] = args?.scepClientCert;
+            resourceInputs["scepUrl"] = args?.scepUrl;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["subject"] = args?.subject;
+            resourceInputs["useAsDigitalSignature"] = args?.useAsDigitalSignature;
+            resourceInputs["useForKeyEncipherment"] = args?.useForKeyEncipherment;
             resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }

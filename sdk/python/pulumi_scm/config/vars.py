@@ -30,9 +30,7 @@ class _ExportableConfig(types.ModuleType):
     @_builtins.property
     def auth_url(self) -> Optional[str]:
         """
-        The URL to send auth credentials to which will return a JWT. Default:
-        `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-        file variable: `auth_url`.
+        The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
         """
         return __config__.get('authUrl')
 
@@ -46,48 +44,42 @@ class _ExportableConfig(types.ModuleType):
     @_builtins.property
     def client_secret(self) -> Optional[str]:
         """
-        The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-        `client_secret`.
+        The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
         """
         return __config__.get('clientSecret')
 
     @_builtins.property
     def headers(self) -> Optional[str]:
         """
-        Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
-        `headers`.
+        Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`.
         """
         return __config__.get('headers')
 
     @_builtins.property
     def host(self) -> Optional[str]:
         """
-        The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-        JSON config file variable: `host`.
+        The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
         """
         return __config__.get('host')
 
     @_builtins.property
     def logging(self) -> Optional[str]:
         """
-        The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-        `SCM_LOGGING`. JSON config file variable: `logging`.
+        The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
         """
         return __config__.get('logging')
 
     @_builtins.property
     def port(self) -> Optional[int]:
         """
-        The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
-        config file variable: `port`.
+        The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
         """
         return __config__.get_int('port')
 
     @_builtins.property
     def protocol(self) -> Optional[str]:
         """
-        The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-        JSON config file variable: `protocol`.
+        The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
         """
         return __config__.get('protocol')
 

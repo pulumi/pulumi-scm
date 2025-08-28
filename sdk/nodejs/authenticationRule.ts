@@ -47,104 +47,104 @@ export class AuthenticationRule extends pulumi.CustomResource {
     /**
      * the authentication profile name to apply to authentication rule.
      */
-    public readonly authenticationEnforcement!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationEnforcement: pulumi.Output<string | undefined>;
     /**
      * The Categories param.
      */
-    public readonly categories!: pulumi.Output<string[] | undefined>;
+    declare public readonly categories: pulumi.Output<string[] | undefined>;
     /**
      * The Description param.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The DestinationHips param.
      */
-    public readonly destinationHips!: pulumi.Output<string[] | undefined>;
+    declare public readonly destinationHips: pulumi.Output<string[] | undefined>;
     /**
      * The Destinations param.
      */
-    public readonly destinations!: pulumi.Output<string[] | undefined>;
+    declare public readonly destinations: pulumi.Output<string[] | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Disabled param. Default: `false`.
      */
-    public readonly disabled!: pulumi.Output<boolean>;
+    declare public readonly disabled: pulumi.Output<boolean>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The Froms param.
      */
-    public readonly froms!: pulumi.Output<string[] | undefined>;
+    declare public readonly froms: pulumi.Output<string[] | undefined>;
     /**
      * The GroupTag param.
      */
-    public readonly groupTag!: pulumi.Output<string | undefined>;
+    declare public readonly groupTag: pulumi.Output<string | undefined>;
     /**
      * The HipProfiles param.
      */
-    public readonly hipProfiles!: pulumi.Output<string[] | undefined>;
+    declare public readonly hipProfiles: pulumi.Output<string[] | undefined>;
     /**
      * The LogAuthenticationTimeout param. Default: `false`.
      */
-    public readonly logAuthenticationTimeout!: pulumi.Output<boolean>;
+    declare public readonly logAuthenticationTimeout: pulumi.Output<boolean>;
     /**
      * The LogSetting param.
      */
-    public readonly logSetting!: pulumi.Output<string | undefined>;
+    declare public readonly logSetting: pulumi.Output<string | undefined>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The NegateDestination param. Default: `false`.
      */
-    public readonly negateDestination!: pulumi.Output<boolean>;
+    declare public readonly negateDestination: pulumi.Output<boolean>;
     /**
      * The NegateSource param. Default: `false`.
      */
-    public readonly negateSource!: pulumi.Output<boolean>;
+    declare public readonly negateSource: pulumi.Output<boolean>;
     /**
      * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
      */
-    public readonly position!: pulumi.Output<string>;
+    declare public readonly position: pulumi.Output<string>;
     /**
      * The Services param.
      */
-    public readonly services!: pulumi.Output<string[] | undefined>;
+    declare public readonly services: pulumi.Output<string[] | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * The SourceHips param.
      */
-    public readonly sourceHips!: pulumi.Output<string[] | undefined>;
+    declare public readonly sourceHips: pulumi.Output<string[] | undefined>;
     /**
      * The SourceUsers param.
      */
-    public readonly sourceUsers!: pulumi.Output<string[] | undefined>;
+    declare public readonly sourceUsers: pulumi.Output<string[] | undefined>;
     /**
      * The Sources param.
      */
-    public readonly sources!: pulumi.Output<string[] | undefined>;
+    declare public readonly sources: pulumi.Output<string[] | undefined>;
     /**
      * The Tags param.
      */
-    public readonly tags!: pulumi.Output<string[] | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly tags: pulumi.Output<string[] | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The Timeout param. Value must be between 1 and 1440.
      */
-    public readonly timeout!: pulumi.Output<number | undefined>;
+    declare public readonly timeout: pulumi.Output<number | undefined>;
     /**
      * The Tos param.
      */
-    public readonly tos!: pulumi.Output<string[] | undefined>;
+    declare public readonly tos: pulumi.Output<string[] | undefined>;
 
     /**
      * Create a AuthenticationRule resource with the given unique name, arguments, and options.
@@ -159,59 +159,59 @@ export class AuthenticationRule extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AuthenticationRuleState | undefined;
-            resourceInputs["authenticationEnforcement"] = state ? state.authenticationEnforcement : undefined;
-            resourceInputs["categories"] = state ? state.categories : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["destinationHips"] = state ? state.destinationHips : undefined;
-            resourceInputs["destinations"] = state ? state.destinations : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["disabled"] = state ? state.disabled : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["froms"] = state ? state.froms : undefined;
-            resourceInputs["groupTag"] = state ? state.groupTag : undefined;
-            resourceInputs["hipProfiles"] = state ? state.hipProfiles : undefined;
-            resourceInputs["logAuthenticationTimeout"] = state ? state.logAuthenticationTimeout : undefined;
-            resourceInputs["logSetting"] = state ? state.logSetting : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["negateDestination"] = state ? state.negateDestination : undefined;
-            resourceInputs["negateSource"] = state ? state.negateSource : undefined;
-            resourceInputs["position"] = state ? state.position : undefined;
-            resourceInputs["services"] = state ? state.services : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["sourceHips"] = state ? state.sourceHips : undefined;
-            resourceInputs["sourceUsers"] = state ? state.sourceUsers : undefined;
-            resourceInputs["sources"] = state ? state.sources : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["timeout"] = state ? state.timeout : undefined;
-            resourceInputs["tos"] = state ? state.tos : undefined;
+            resourceInputs["authenticationEnforcement"] = state?.authenticationEnforcement;
+            resourceInputs["categories"] = state?.categories;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["destinationHips"] = state?.destinationHips;
+            resourceInputs["destinations"] = state?.destinations;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["disabled"] = state?.disabled;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["froms"] = state?.froms;
+            resourceInputs["groupTag"] = state?.groupTag;
+            resourceInputs["hipProfiles"] = state?.hipProfiles;
+            resourceInputs["logAuthenticationTimeout"] = state?.logAuthenticationTimeout;
+            resourceInputs["logSetting"] = state?.logSetting;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["negateDestination"] = state?.negateDestination;
+            resourceInputs["negateSource"] = state?.negateSource;
+            resourceInputs["position"] = state?.position;
+            resourceInputs["services"] = state?.services;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["sourceHips"] = state?.sourceHips;
+            resourceInputs["sourceUsers"] = state?.sourceUsers;
+            resourceInputs["sources"] = state?.sources;
+            resourceInputs["tags"] = state?.tags;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["timeout"] = state?.timeout;
+            resourceInputs["tos"] = state?.tos;
         } else {
             const args = argsOrState as AuthenticationRuleArgs | undefined;
-            resourceInputs["authenticationEnforcement"] = args ? args.authenticationEnforcement : undefined;
-            resourceInputs["categories"] = args ? args.categories : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["destinationHips"] = args ? args.destinationHips : undefined;
-            resourceInputs["destinations"] = args ? args.destinations : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["disabled"] = args ? args.disabled : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["froms"] = args ? args.froms : undefined;
-            resourceInputs["groupTag"] = args ? args.groupTag : undefined;
-            resourceInputs["hipProfiles"] = args ? args.hipProfiles : undefined;
-            resourceInputs["logAuthenticationTimeout"] = args ? args.logAuthenticationTimeout : undefined;
-            resourceInputs["logSetting"] = args ? args.logSetting : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["negateDestination"] = args ? args.negateDestination : undefined;
-            resourceInputs["negateSource"] = args ? args.negateSource : undefined;
-            resourceInputs["position"] = args ? args.position : undefined;
-            resourceInputs["services"] = args ? args.services : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["sourceHips"] = args ? args.sourceHips : undefined;
-            resourceInputs["sourceUsers"] = args ? args.sourceUsers : undefined;
-            resourceInputs["sources"] = args ? args.sources : undefined;
-            resourceInputs["tags"] = args ? args.tags : undefined;
-            resourceInputs["timeout"] = args ? args.timeout : undefined;
-            resourceInputs["tos"] = args ? args.tos : undefined;
+            resourceInputs["authenticationEnforcement"] = args?.authenticationEnforcement;
+            resourceInputs["categories"] = args?.categories;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["destinationHips"] = args?.destinationHips;
+            resourceInputs["destinations"] = args?.destinations;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["disabled"] = args?.disabled;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["froms"] = args?.froms;
+            resourceInputs["groupTag"] = args?.groupTag;
+            resourceInputs["hipProfiles"] = args?.hipProfiles;
+            resourceInputs["logAuthenticationTimeout"] = args?.logAuthenticationTimeout;
+            resourceInputs["logSetting"] = args?.logSetting;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["negateDestination"] = args?.negateDestination;
+            resourceInputs["negateSource"] = args?.negateSource;
+            resourceInputs["position"] = args?.position;
+            resourceInputs["services"] = args?.services;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["sourceHips"] = args?.sourceHips;
+            resourceInputs["sourceUsers"] = args?.sourceUsers;
+            resourceInputs["sources"] = args?.sources;
+            resourceInputs["tags"] = args?.tags;
+            resourceInputs["timeout"] = args?.timeout;
+            resourceInputs["tos"] = args?.tos;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

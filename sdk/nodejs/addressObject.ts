@@ -52,48 +52,48 @@ export class AddressObject extends pulumi.CustomResource {
     /**
      * The Description param. String length must not exceed 1023 characters.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      */
-    public readonly fqdn!: pulumi.Output<string | undefined>;
+    declare public readonly fqdn: pulumi.Output<string | undefined>;
     /**
      * The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      */
-    public readonly ipNetmask!: pulumi.Output<string | undefined>;
+    declare public readonly ipNetmask: pulumi.Output<string | undefined>;
     /**
      * The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      */
-    public readonly ipRange!: pulumi.Output<string | undefined>;
+    declare public readonly ipRange: pulumi.Output<string | undefined>;
     /**
      * The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      */
-    public readonly ipWildcard!: pulumi.Output<string | undefined>;
+    declare public readonly ipWildcard: pulumi.Output<string | undefined>;
     /**
      * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * Tags for address object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
      */
-    public readonly tags!: pulumi.Output<string[] | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly tags: pulumi.Output<string[] | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The Type param.
      */
-    public /*out*/ readonly type!: pulumi.Output<string>;
+    declare public /*out*/ readonly type: pulumi.Output<string>;
 
     /**
      * Create a AddressObject resource with the given unique name, arguments, and options.
@@ -108,30 +108,30 @@ export class AddressObject extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AddressObjectState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["fqdn"] = state ? state.fqdn : undefined;
-            resourceInputs["ipNetmask"] = state ? state.ipNetmask : undefined;
-            resourceInputs["ipRange"] = state ? state.ipRange : undefined;
-            resourceInputs["ipWildcard"] = state ? state.ipWildcard : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["fqdn"] = state?.fqdn;
+            resourceInputs["ipNetmask"] = state?.ipNetmask;
+            resourceInputs["ipRange"] = state?.ipRange;
+            resourceInputs["ipWildcard"] = state?.ipWildcard;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tags"] = state?.tags;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["type"] = state?.type;
         } else {
             const args = argsOrState as AddressObjectArgs | undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["fqdn"] = args ? args.fqdn : undefined;
-            resourceInputs["ipNetmask"] = args ? args.ipNetmask : undefined;
-            resourceInputs["ipRange"] = args ? args.ipRange : undefined;
-            resourceInputs["ipWildcard"] = args ? args.ipWildcard : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["tags"] = args ? args.tags : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["fqdn"] = args?.fqdn;
+            resourceInputs["ipNetmask"] = args?.ipNetmask;
+            resourceInputs["ipRange"] = args?.ipRange;
+            resourceInputs["ipWildcard"] = args?.ipWildcard;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["tags"] = args?.tags;
             resourceInputs["tfid"] = undefined /*out*/;
             resourceInputs["type"] = undefined /*out*/;
         }

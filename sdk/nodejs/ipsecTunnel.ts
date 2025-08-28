@@ -49,40 +49,40 @@ export class IpsecTunnel extends pulumi.CustomResource {
     /**
      * Enable Anti-Replay check on this tunnel.
      */
-    public readonly antiReplay!: pulumi.Output<boolean | undefined>;
+    declare public readonly antiReplay: pulumi.Output<boolean | undefined>;
     /**
      * The AutoKey param.
      */
-    public readonly autoKey!: pulumi.Output<outputs.IpsecTunnelAutoKey>;
+    declare public readonly autoKey: pulumi.Output<outputs.IpsecTunnelAutoKey>;
     /**
      * Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
      */
-    public readonly copyTos!: pulumi.Output<boolean>;
+    declare public readonly copyTos: pulumi.Output<boolean>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * allow GRE over IPSec. Default: `false`.
      */
-    public readonly enableGreEncapsulation!: pulumi.Output<boolean>;
+    declare public readonly enableGreEncapsulation: pulumi.Output<boolean>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The TunnelMonitor param.
      */
-    public readonly tunnelMonitor!: pulumi.Output<outputs.IpsecTunnelTunnelMonitor | undefined>;
+    declare public readonly tunnelMonitor: pulumi.Output<outputs.IpsecTunnelTunnelMonitor | undefined>;
 
     /**
      * Create a IpsecTunnel resource with the given unique name, arguments, and options.
@@ -97,30 +97,30 @@ export class IpsecTunnel extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as IpsecTunnelState | undefined;
-            resourceInputs["antiReplay"] = state ? state.antiReplay : undefined;
-            resourceInputs["autoKey"] = state ? state.autoKey : undefined;
-            resourceInputs["copyTos"] = state ? state.copyTos : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["enableGreEncapsulation"] = state ? state.enableGreEncapsulation : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["tunnelMonitor"] = state ? state.tunnelMonitor : undefined;
+            resourceInputs["antiReplay"] = state?.antiReplay;
+            resourceInputs["autoKey"] = state?.autoKey;
+            resourceInputs["copyTos"] = state?.copyTos;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["enableGreEncapsulation"] = state?.enableGreEncapsulation;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["tunnelMonitor"] = state?.tunnelMonitor;
         } else {
             const args = argsOrState as IpsecTunnelArgs | undefined;
-            if ((!args || args.autoKey === undefined) && !opts.urn) {
+            if (args?.autoKey === undefined && !opts.urn) {
                 throw new Error("Missing required property 'autoKey'");
             }
-            resourceInputs["antiReplay"] = args ? args.antiReplay : undefined;
-            resourceInputs["autoKey"] = args ? args.autoKey : undefined;
-            resourceInputs["copyTos"] = args ? args.copyTos : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["enableGreEncapsulation"] = args ? args.enableGreEncapsulation : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["tunnelMonitor"] = args ? args.tunnelMonitor : undefined;
+            resourceInputs["antiReplay"] = args?.antiReplay;
+            resourceInputs["autoKey"] = args?.autoKey;
+            resourceInputs["copyTos"] = args?.copyTos;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["enableGreEncapsulation"] = args?.enableGreEncapsulation;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["tunnelMonitor"] = args?.tunnelMonitor;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

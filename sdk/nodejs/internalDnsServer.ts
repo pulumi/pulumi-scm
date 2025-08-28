@@ -47,20 +47,20 @@ export class InternalDnsServer extends pulumi.CustomResource {
     /**
      * The DomainNames param.
      */
-    public readonly domainNames!: pulumi.Output<string[]>;
+    declare public readonly domainNames: pulumi.Output<string[]>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The Primary param.
      */
-    public readonly primary!: pulumi.Output<string>;
+    declare public readonly primary: pulumi.Output<string>;
     /**
      * The Secondary param.
      */
-    public readonly secondary!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly secondary: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a InternalDnsServer resource with the given unique name, arguments, and options.
@@ -75,23 +75,23 @@ export class InternalDnsServer extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as InternalDnsServerState | undefined;
-            resourceInputs["domainNames"] = state ? state.domainNames : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["primary"] = state ? state.primary : undefined;
-            resourceInputs["secondary"] = state ? state.secondary : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["domainNames"] = state?.domainNames;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["primary"] = state?.primary;
+            resourceInputs["secondary"] = state?.secondary;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as InternalDnsServerArgs | undefined;
-            if ((!args || args.domainNames === undefined) && !opts.urn) {
+            if (args?.domainNames === undefined && !opts.urn) {
                 throw new Error("Missing required property 'domainNames'");
             }
-            if ((!args || args.primary === undefined) && !opts.urn) {
+            if (args?.primary === undefined && !opts.urn) {
                 throw new Error("Missing required property 'primary'");
             }
-            resourceInputs["domainNames"] = args ? args.domainNames : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["primary"] = args ? args.primary : undefined;
-            resourceInputs["secondary"] = args ? args.secondary : undefined;
+            resourceInputs["domainNames"] = args?.domainNames;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["primary"] = args?.primary;
+            resourceInputs["secondary"] = args?.secondary;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

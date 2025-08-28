@@ -49,52 +49,52 @@ export class RemoteNetwork extends pulumi.CustomResource {
     /**
      * The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
      */
-    public readonly ecmpLoadBalancing!: pulumi.Output<string>;
+    declare public readonly ecmpLoadBalancing: pulumi.Output<string>;
     /**
      * ecmp*tunnels is required when ecmp*load*balancing is enable.
      */
-    public readonly ecmpTunnels!: pulumi.Output<outputs.RemoteNetworkEcmpTunnel[] | undefined>;
+    declare public readonly ecmpTunnels: pulumi.Output<outputs.RemoteNetworkEcmpTunnel[] | undefined>;
     /**
      * (Internal use) Encrypted values returned from the API.
      */
-    public /*out*/ readonly encryptedValues!: pulumi.Output<{[key: string]: string}>;
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
      */
-    public readonly folder!: pulumi.Output<string>;
+    declare public readonly folder: pulumi.Output<string>;
     /**
      * ipsec*tunnel is required when ecmp*load_balancing is disable.
      */
-    public readonly ipsecTunnel!: pulumi.Output<string | undefined>;
+    declare public readonly ipsecTunnel: pulumi.Output<string | undefined>;
     /**
      * New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
      */
-    public readonly licenseType!: pulumi.Output<string>;
+    declare public readonly licenseType: pulumi.Output<string>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * setup the protocol when ecmp*load*balancing is disable.
      */
-    public readonly protocol!: pulumi.Output<outputs.RemoteNetworkProtocol | undefined>;
+    declare public readonly protocol: pulumi.Output<outputs.RemoteNetworkProtocol | undefined>;
     /**
      * The Region param. String length must exceed 1 characters.
      */
-    public readonly region!: pulumi.Output<string>;
+    declare public readonly region: pulumi.Output<string>;
     /**
      * specify secondary ipsecTunnel if needed.
      */
-    public readonly secondaryIpsecTunnel!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryIpsecTunnel: pulumi.Output<string | undefined>;
     /**
      * spn-name is needed when licenseType is FWAAS-AGGREGATE.
      */
-    public readonly spnName!: pulumi.Output<string | undefined>;
+    declare public readonly spnName: pulumi.Output<string | undefined>;
     /**
      * The Subnets param.
      */
-    public readonly subnets!: pulumi.Output<string[] | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly subnets: pulumi.Output<string[] | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a RemoteNetwork resource with the given unique name, arguments, and options.
@@ -109,35 +109,35 @@ export class RemoteNetwork extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as RemoteNetworkState | undefined;
-            resourceInputs["ecmpLoadBalancing"] = state ? state.ecmpLoadBalancing : undefined;
-            resourceInputs["ecmpTunnels"] = state ? state.ecmpTunnels : undefined;
-            resourceInputs["encryptedValues"] = state ? state.encryptedValues : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["ipsecTunnel"] = state ? state.ipsecTunnel : undefined;
-            resourceInputs["licenseType"] = state ? state.licenseType : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["protocol"] = state ? state.protocol : undefined;
-            resourceInputs["region"] = state ? state.region : undefined;
-            resourceInputs["secondaryIpsecTunnel"] = state ? state.secondaryIpsecTunnel : undefined;
-            resourceInputs["spnName"] = state ? state.spnName : undefined;
-            resourceInputs["subnets"] = state ? state.subnets : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["ecmpLoadBalancing"] = state?.ecmpLoadBalancing;
+            resourceInputs["ecmpTunnels"] = state?.ecmpTunnels;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["ipsecTunnel"] = state?.ipsecTunnel;
+            resourceInputs["licenseType"] = state?.licenseType;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["protocol"] = state?.protocol;
+            resourceInputs["region"] = state?.region;
+            resourceInputs["secondaryIpsecTunnel"] = state?.secondaryIpsecTunnel;
+            resourceInputs["spnName"] = state?.spnName;
+            resourceInputs["subnets"] = state?.subnets;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as RemoteNetworkArgs | undefined;
-            if ((!args || args.region === undefined) && !opts.urn) {
+            if (args?.region === undefined && !opts.urn) {
                 throw new Error("Missing required property 'region'");
             }
-            resourceInputs["ecmpLoadBalancing"] = args ? args.ecmpLoadBalancing : undefined;
-            resourceInputs["ecmpTunnels"] = args ? args.ecmpTunnels : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["ipsecTunnel"] = args ? args.ipsecTunnel : undefined;
-            resourceInputs["licenseType"] = args ? args.licenseType : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["protocol"] = args ? args.protocol : undefined;
-            resourceInputs["region"] = args ? args.region : undefined;
-            resourceInputs["secondaryIpsecTunnel"] = args ? args.secondaryIpsecTunnel : undefined;
-            resourceInputs["spnName"] = args ? args.spnName : undefined;
-            resourceInputs["subnets"] = args ? args.subnets : undefined;
+            resourceInputs["ecmpLoadBalancing"] = args?.ecmpLoadBalancing;
+            resourceInputs["ecmpTunnels"] = args?.ecmpTunnels;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["ipsecTunnel"] = args?.ipsecTunnel;
+            resourceInputs["licenseType"] = args?.licenseType;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["region"] = args?.region;
+            resourceInputs["secondaryIpsecTunnel"] = args?.secondaryIpsecTunnel;
+            resourceInputs["spnName"] = args?.spnName;
+            resourceInputs["subnets"] = args?.subnets;
             resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }

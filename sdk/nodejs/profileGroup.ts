@@ -47,52 +47,52 @@ export class ProfileGroup extends pulumi.CustomResource {
     /**
      * List of AI security profiles.
      */
-    public readonly aiSecurities!: pulumi.Output<string[] | undefined>;
+    declare public readonly aiSecurities: pulumi.Output<string[] | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * List of DNS security profiles.
      */
-    public readonly dnsSecurities!: pulumi.Output<string[] | undefined>;
+    declare public readonly dnsSecurities: pulumi.Output<string[] | undefined>;
     /**
      * List of file blocking profiles.
      */
-    public readonly fileBlockings!: pulumi.Output<string[] | undefined>;
+    declare public readonly fileBlockings: pulumi.Output<string[] | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The name of the profile group.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * List of HTTP header insertion profiles.
      */
-    public readonly saasSecurities!: pulumi.Output<string[] | undefined>;
+    declare public readonly saasSecurities: pulumi.Output<string[] | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * List of anti-spyware profiles.
      */
-    public readonly spywares!: pulumi.Output<string[] | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly spywares: pulumi.Output<string[] | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * List of URL filtering profiles.
      */
-    public readonly urlFilterings!: pulumi.Output<string[] | undefined>;
+    declare public readonly urlFilterings: pulumi.Output<string[] | undefined>;
     /**
      * List of anti-virus and Wildfire analysis profiles.
      */
-    public readonly virusAndWildfireAnalyses!: pulumi.Output<string[] | undefined>;
+    declare public readonly virusAndWildfireAnalyses: pulumi.Output<string[] | undefined>;
     /**
      * List of vulnerability protection profiles.
      */
-    public readonly vulnerabilities!: pulumi.Output<string[] | undefined>;
+    declare public readonly vulnerabilities: pulumi.Output<string[] | undefined>;
 
     /**
      * Create a ProfileGroup resource with the given unique name, arguments, and options.
@@ -107,33 +107,33 @@ export class ProfileGroup extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ProfileGroupState | undefined;
-            resourceInputs["aiSecurities"] = state ? state.aiSecurities : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["dnsSecurities"] = state ? state.dnsSecurities : undefined;
-            resourceInputs["fileBlockings"] = state ? state.fileBlockings : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["saasSecurities"] = state ? state.saasSecurities : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["spywares"] = state ? state.spywares : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["urlFilterings"] = state ? state.urlFilterings : undefined;
-            resourceInputs["virusAndWildfireAnalyses"] = state ? state.virusAndWildfireAnalyses : undefined;
-            resourceInputs["vulnerabilities"] = state ? state.vulnerabilities : undefined;
+            resourceInputs["aiSecurities"] = state?.aiSecurities;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["dnsSecurities"] = state?.dnsSecurities;
+            resourceInputs["fileBlockings"] = state?.fileBlockings;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["saasSecurities"] = state?.saasSecurities;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["spywares"] = state?.spywares;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["urlFilterings"] = state?.urlFilterings;
+            resourceInputs["virusAndWildfireAnalyses"] = state?.virusAndWildfireAnalyses;
+            resourceInputs["vulnerabilities"] = state?.vulnerabilities;
         } else {
             const args = argsOrState as ProfileGroupArgs | undefined;
-            resourceInputs["aiSecurities"] = args ? args.aiSecurities : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["dnsSecurities"] = args ? args.dnsSecurities : undefined;
-            resourceInputs["fileBlockings"] = args ? args.fileBlockings : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["saasSecurities"] = args ? args.saasSecurities : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["spywares"] = args ? args.spywares : undefined;
-            resourceInputs["urlFilterings"] = args ? args.urlFilterings : undefined;
-            resourceInputs["virusAndWildfireAnalyses"] = args ? args.virusAndWildfireAnalyses : undefined;
-            resourceInputs["vulnerabilities"] = args ? args.vulnerabilities : undefined;
+            resourceInputs["aiSecurities"] = args?.aiSecurities;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["dnsSecurities"] = args?.dnsSecurities;
+            resourceInputs["fileBlockings"] = args?.fileBlockings;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["saasSecurities"] = args?.saasSecurities;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["spywares"] = args?.spywares;
+            resourceInputs["urlFilterings"] = args?.urlFilterings;
+            resourceInputs["virusAndWildfireAnalyses"] = args?.virusAndWildfireAnalyses;
+            resourceInputs["vulnerabilities"] = args?.vulnerabilities;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

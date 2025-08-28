@@ -44,9 +44,7 @@ namespace Pulumi.Scm
 
         private static readonly __Value<string?> _authUrl = new __Value<string?>(() => __config.Get("authUrl"));
         /// <summary>
-        /// The URL to send auth credentials to which will return a JWT. Default:
-        /// `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-        /// file variable: `auth_url`.
+        /// The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
         /// </summary>
         public static string? AuthUrl
         {
@@ -66,8 +64,7 @@ namespace Pulumi.Scm
 
         private static readonly __Value<string?> _clientSecret = new __Value<string?>(() => __config.Get("clientSecret"));
         /// <summary>
-        /// The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-        /// `client_secret`.
+        /// The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
         /// </summary>
         public static string? ClientSecret
         {
@@ -77,8 +74,7 @@ namespace Pulumi.Scm
 
         private static readonly __Value<ImmutableDictionary<string, string>?> _headers = new __Value<ImmutableDictionary<string, string>?>(() => __config.GetObject<ImmutableDictionary<string, string>>("headers"));
         /// <summary>
-        /// Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
-        /// `headers`.
+        /// Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`.
         /// </summary>
         public static ImmutableDictionary<string, string>? Headers
         {
@@ -88,8 +84,7 @@ namespace Pulumi.Scm
 
         private static readonly __Value<string?> _host = new __Value<string?>(() => __config.Get("host"));
         /// <summary>
-        /// The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-        /// JSON config file variable: `host`.
+        /// The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
         /// </summary>
         public static string? Host
         {
@@ -99,8 +94,7 @@ namespace Pulumi.Scm
 
         private static readonly __Value<string?> _logging = new __Value<string?>(() => __config.Get("logging"));
         /// <summary>
-        /// The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-        /// `SCM_LOGGING`. JSON config file variable: `logging`.
+        /// The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
         /// </summary>
         public static string? Logging
         {
@@ -110,8 +104,7 @@ namespace Pulumi.Scm
 
         private static readonly __Value<int?> _port = new __Value<int?>(() => __config.GetInt32("port"));
         /// <summary>
-        /// The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
-        /// config file variable: `port`.
+        /// The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
         /// </summary>
         public static int? Port
         {
@@ -121,8 +114,7 @@ namespace Pulumi.Scm
 
         private static readonly __Value<string?> _protocol = new __Value<string?>(() => __config.Get("protocol"));
         /// <summary>
-        /// The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-        /// JSON config file variable: `protocol`.
+        /// The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
         /// </summary>
         public static string? Protocol
         {

@@ -49,36 +49,36 @@ export class TacacsServerProfile extends pulumi.CustomResource {
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * (Internal use) Encrypted values returned from the API.
      */
-    public /*out*/ readonly encryptedValues!: pulumi.Output<{[key: string]: string}>;
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
      */
-    public readonly protocol!: pulumi.Output<string>;
+    declare public readonly protocol: pulumi.Output<string>;
     /**
      * The Servers param.
      */
-    public readonly servers!: pulumi.Output<outputs.TacacsServerProfileServer[]>;
+    declare public readonly servers: pulumi.Output<outputs.TacacsServerProfileServer[]>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The Timeout param. Value must be between 1 and 30.
      */
-    public readonly timeout!: pulumi.Output<number | undefined>;
+    declare public readonly timeout: pulumi.Output<number | undefined>;
     /**
      * The UseSingleConnection param.
      */
-    public readonly useSingleConnection!: pulumi.Output<boolean | undefined>;
+    declare public readonly useSingleConnection: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a TacacsServerProfile resource with the given unique name, arguments, and options.
@@ -93,30 +93,30 @@ export class TacacsServerProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TacacsServerProfileState | undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["encryptedValues"] = state ? state.encryptedValues : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["protocol"] = state ? state.protocol : undefined;
-            resourceInputs["servers"] = state ? state.servers : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["timeout"] = state ? state.timeout : undefined;
-            resourceInputs["useSingleConnection"] = state ? state.useSingleConnection : undefined;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["protocol"] = state?.protocol;
+            resourceInputs["servers"] = state?.servers;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["timeout"] = state?.timeout;
+            resourceInputs["useSingleConnection"] = state?.useSingleConnection;
         } else {
             const args = argsOrState as TacacsServerProfileArgs | undefined;
-            if ((!args || args.protocol === undefined) && !opts.urn) {
+            if (args?.protocol === undefined && !opts.urn) {
                 throw new Error("Missing required property 'protocol'");
             }
-            if ((!args || args.servers === undefined) && !opts.urn) {
+            if (args?.servers === undefined && !opts.urn) {
                 throw new Error("Missing required property 'servers'");
             }
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["protocol"] = args ? args.protocol : undefined;
-            resourceInputs["servers"] = args ? args.servers : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["timeout"] = args ? args.timeout : undefined;
-            resourceInputs["useSingleConnection"] = args ? args.useSingleConnection : undefined;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["servers"] = args?.servers;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["timeout"] = args?.timeout;
+            resourceInputs["useSingleConnection"] = args?.useSingleConnection;
             resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
