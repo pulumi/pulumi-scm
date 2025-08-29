@@ -49,92 +49,92 @@ export class ApplicationFilter extends pulumi.CustomResource {
     /**
      * The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
      */
-    public readonly categories!: pulumi.Output<string[] | undefined>;
+    declare public readonly categories: pulumi.Output<string[] | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * only True is a valid value.
      */
-    public readonly evasive!: pulumi.Output<boolean | undefined>;
+    declare public readonly evasive: pulumi.Output<boolean | undefined>;
     /**
      * only True is a valid value.
      */
-    public readonly excessiveBandwidthUse!: pulumi.Output<boolean | undefined>;
+    declare public readonly excessiveBandwidthUse: pulumi.Output<boolean | undefined>;
     /**
      * The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
      */
-    public readonly excludes!: pulumi.Output<string[] | undefined>;
+    declare public readonly excludes: pulumi.Output<string[] | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * only True is a valid value.
      */
-    public readonly hasKnownVulnerabilities!: pulumi.Output<boolean | undefined>;
+    declare public readonly hasKnownVulnerabilities: pulumi.Output<boolean | undefined>;
     /**
      * only True is a valid value.
      */
-    public readonly isSaas!: pulumi.Output<boolean | undefined>;
+    declare public readonly isSaas: pulumi.Output<boolean | undefined>;
     /**
      * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * only True is a valid value.
      */
-    public readonly newAppid!: pulumi.Output<boolean | undefined>;
+    declare public readonly newAppid: pulumi.Output<boolean | undefined>;
     /**
      * only True is a valid value.
      */
-    public readonly pervasive!: pulumi.Output<boolean | undefined>;
+    declare public readonly pervasive: pulumi.Output<boolean | undefined>;
     /**
      * only True is a valid value.
      */
-    public readonly proneToMisuse!: pulumi.Output<boolean | undefined>;
+    declare public readonly proneToMisuse: pulumi.Output<boolean | undefined>;
     /**
      * The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
      */
-    public readonly risks!: pulumi.Output<number[] | undefined>;
+    declare public readonly risks: pulumi.Output<number[] | undefined>;
     /**
      * The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
      */
-    public readonly saasCertifications!: pulumi.Output<string[] | undefined>;
+    declare public readonly saasCertifications: pulumi.Output<string[] | undefined>;
     /**
      * The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
      */
-    public readonly saasRisks!: pulumi.Output<string[] | undefined>;
+    declare public readonly saasRisks: pulumi.Output<string[] | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
      */
-    public readonly subcategories!: pulumi.Output<string[] | undefined>;
+    declare public readonly subcategories: pulumi.Output<string[] | undefined>;
     /**
      * The Tagging param.
      */
-    public readonly tagging!: pulumi.Output<outputs.ApplicationFilterTagging | undefined>;
+    declare public readonly tagging: pulumi.Output<outputs.ApplicationFilterTagging | undefined>;
     /**
      * The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
      */
-    public readonly technologies!: pulumi.Output<string[] | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly technologies: pulumi.Output<string[] | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * only True is a valid value.
      */
-    public readonly transfersFiles!: pulumi.Output<boolean | undefined>;
+    declare public readonly transfersFiles: pulumi.Output<boolean | undefined>;
     /**
      * only True is a valid value.
      */
-    public readonly tunnelsOtherApps!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelsOtherApps: pulumi.Output<boolean | undefined>;
     /**
      * only True is a valid value.
      */
-    public readonly usedByMalware!: pulumi.Output<boolean | undefined>;
+    declare public readonly usedByMalware: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a ApplicationFilter resource with the given unique name, arguments, and options.
@@ -149,53 +149,53 @@ export class ApplicationFilter extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplicationFilterState | undefined;
-            resourceInputs["categories"] = state ? state.categories : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["evasive"] = state ? state.evasive : undefined;
-            resourceInputs["excessiveBandwidthUse"] = state ? state.excessiveBandwidthUse : undefined;
-            resourceInputs["excludes"] = state ? state.excludes : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["hasKnownVulnerabilities"] = state ? state.hasKnownVulnerabilities : undefined;
-            resourceInputs["isSaas"] = state ? state.isSaas : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["newAppid"] = state ? state.newAppid : undefined;
-            resourceInputs["pervasive"] = state ? state.pervasive : undefined;
-            resourceInputs["proneToMisuse"] = state ? state.proneToMisuse : undefined;
-            resourceInputs["risks"] = state ? state.risks : undefined;
-            resourceInputs["saasCertifications"] = state ? state.saasCertifications : undefined;
-            resourceInputs["saasRisks"] = state ? state.saasRisks : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["subcategories"] = state ? state.subcategories : undefined;
-            resourceInputs["tagging"] = state ? state.tagging : undefined;
-            resourceInputs["technologies"] = state ? state.technologies : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["transfersFiles"] = state ? state.transfersFiles : undefined;
-            resourceInputs["tunnelsOtherApps"] = state ? state.tunnelsOtherApps : undefined;
-            resourceInputs["usedByMalware"] = state ? state.usedByMalware : undefined;
+            resourceInputs["categories"] = state?.categories;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["evasive"] = state?.evasive;
+            resourceInputs["excessiveBandwidthUse"] = state?.excessiveBandwidthUse;
+            resourceInputs["excludes"] = state?.excludes;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["hasKnownVulnerabilities"] = state?.hasKnownVulnerabilities;
+            resourceInputs["isSaas"] = state?.isSaas;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["newAppid"] = state?.newAppid;
+            resourceInputs["pervasive"] = state?.pervasive;
+            resourceInputs["proneToMisuse"] = state?.proneToMisuse;
+            resourceInputs["risks"] = state?.risks;
+            resourceInputs["saasCertifications"] = state?.saasCertifications;
+            resourceInputs["saasRisks"] = state?.saasRisks;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["subcategories"] = state?.subcategories;
+            resourceInputs["tagging"] = state?.tagging;
+            resourceInputs["technologies"] = state?.technologies;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["transfersFiles"] = state?.transfersFiles;
+            resourceInputs["tunnelsOtherApps"] = state?.tunnelsOtherApps;
+            resourceInputs["usedByMalware"] = state?.usedByMalware;
         } else {
             const args = argsOrState as ApplicationFilterArgs | undefined;
-            resourceInputs["categories"] = args ? args.categories : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["evasive"] = args ? args.evasive : undefined;
-            resourceInputs["excessiveBandwidthUse"] = args ? args.excessiveBandwidthUse : undefined;
-            resourceInputs["excludes"] = args ? args.excludes : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["hasKnownVulnerabilities"] = args ? args.hasKnownVulnerabilities : undefined;
-            resourceInputs["isSaas"] = args ? args.isSaas : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["newAppid"] = args ? args.newAppid : undefined;
-            resourceInputs["pervasive"] = args ? args.pervasive : undefined;
-            resourceInputs["proneToMisuse"] = args ? args.proneToMisuse : undefined;
-            resourceInputs["risks"] = args ? args.risks : undefined;
-            resourceInputs["saasCertifications"] = args ? args.saasCertifications : undefined;
-            resourceInputs["saasRisks"] = args ? args.saasRisks : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["subcategories"] = args ? args.subcategories : undefined;
-            resourceInputs["tagging"] = args ? args.tagging : undefined;
-            resourceInputs["technologies"] = args ? args.technologies : undefined;
-            resourceInputs["transfersFiles"] = args ? args.transfersFiles : undefined;
-            resourceInputs["tunnelsOtherApps"] = args ? args.tunnelsOtherApps : undefined;
-            resourceInputs["usedByMalware"] = args ? args.usedByMalware : undefined;
+            resourceInputs["categories"] = args?.categories;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["evasive"] = args?.evasive;
+            resourceInputs["excessiveBandwidthUse"] = args?.excessiveBandwidthUse;
+            resourceInputs["excludes"] = args?.excludes;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["hasKnownVulnerabilities"] = args?.hasKnownVulnerabilities;
+            resourceInputs["isSaas"] = args?.isSaas;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["newAppid"] = args?.newAppid;
+            resourceInputs["pervasive"] = args?.pervasive;
+            resourceInputs["proneToMisuse"] = args?.proneToMisuse;
+            resourceInputs["risks"] = args?.risks;
+            resourceInputs["saasCertifications"] = args?.saasCertifications;
+            resourceInputs["saasRisks"] = args?.saasRisks;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["subcategories"] = args?.subcategories;
+            resourceInputs["tagging"] = args?.tagging;
+            resourceInputs["technologies"] = args?.technologies;
+            resourceInputs["transfersFiles"] = args?.transfersFiles;
+            resourceInputs["tunnelsOtherApps"] = args?.tunnelsOtherApps;
+            resourceInputs["usedByMalware"] = args?.usedByMalware;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

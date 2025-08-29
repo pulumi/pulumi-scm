@@ -49,28 +49,28 @@ export class DnsSecurityProfile extends pulumi.CustomResource {
     /**
      * The BotnetDomains param.
      */
-    public readonly botnetDomains!: pulumi.Output<outputs.DnsSecurityProfileBotnetDomains | undefined>;
+    declare public readonly botnetDomains: pulumi.Output<outputs.DnsSecurityProfileBotnetDomains | undefined>;
     /**
      * The Description param.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a DnsSecurityProfile resource with the given unique name, arguments, and options.
@@ -85,21 +85,21 @@ export class DnsSecurityProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as DnsSecurityProfileState | undefined;
-            resourceInputs["botnetDomains"] = state ? state.botnetDomains : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["botnetDomains"] = state?.botnetDomains;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as DnsSecurityProfileArgs | undefined;
-            resourceInputs["botnetDomains"] = args ? args.botnetDomains : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
+            resourceInputs["botnetDomains"] = args?.botnetDomains;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["snippet"] = args?.snippet;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

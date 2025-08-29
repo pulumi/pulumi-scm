@@ -49,128 +49,128 @@ export class Application extends pulumi.CustomResource {
     /**
      * The AbleToTransferFile param.
      */
-    public readonly ableToTransferFile!: pulumi.Output<boolean | undefined>;
+    declare public readonly ableToTransferFile: pulumi.Output<boolean | undefined>;
     /**
      * The AlgDisableCapability param. String length must not exceed 127 characters.
      */
-    public readonly algDisableCapability!: pulumi.Output<string | undefined>;
+    declare public readonly algDisableCapability: pulumi.Output<string | undefined>;
     /**
      * The Category param.
      */
-    public readonly category!: pulumi.Output<string>;
+    declare public readonly category: pulumi.Output<string>;
     /**
      * The ConsumeBigBandwidth param.
      */
-    public readonly consumeBigBandwidth!: pulumi.Output<boolean | undefined>;
+    declare public readonly consumeBigBandwidth: pulumi.Output<boolean | undefined>;
     /**
      * The DataIdent param.
      */
-    public readonly dataIdent!: pulumi.Output<boolean | undefined>;
+    declare public readonly dataIdent: pulumi.Output<boolean | undefined>;
     /**
      * The Default param.
      */
-    public readonly default!: pulumi.Output<outputs.ApplicationDefault | undefined>;
+    declare public readonly default: pulumi.Output<outputs.ApplicationDefault | undefined>;
     /**
      * The Description param. String length must not exceed 1023 characters.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The EvasiveBehavior param.
      */
-    public readonly evasiveBehavior!: pulumi.Output<boolean | undefined>;
+    declare public readonly evasiveBehavior: pulumi.Output<boolean | undefined>;
     /**
      * The FileTypeIdent param.
      */
-    public readonly fileTypeIdent!: pulumi.Output<boolean | undefined>;
+    declare public readonly fileTypeIdent: pulumi.Output<boolean | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The HasKnownVulnerability param.
      */
-    public readonly hasKnownVulnerability!: pulumi.Output<boolean | undefined>;
+    declare public readonly hasKnownVulnerability: pulumi.Output<boolean | undefined>;
     /**
      * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The NoAppidCaching param.
      */
-    public readonly noAppidCaching!: pulumi.Output<boolean | undefined>;
+    declare public readonly noAppidCaching: pulumi.Output<boolean | undefined>;
     /**
      * The ParentApp param. String length must not exceed 127 characters.
      */
-    public readonly parentApp!: pulumi.Output<string | undefined>;
+    declare public readonly parentApp: pulumi.Output<string | undefined>;
     /**
      * The PervasiveUse param.
      */
-    public readonly pervasiveUse!: pulumi.Output<boolean | undefined>;
+    declare public readonly pervasiveUse: pulumi.Output<boolean | undefined>;
     /**
      * The ProneToMisuse param.
      */
-    public readonly proneToMisuse!: pulumi.Output<boolean | undefined>;
+    declare public readonly proneToMisuse: pulumi.Output<boolean | undefined>;
     /**
      * The Risk param. Value must be between 1 and 5.
      */
-    public readonly risk!: pulumi.Output<number>;
+    declare public readonly risk: pulumi.Output<number>;
     /**
      * The Signatures param.
      */
-    public readonly signatures!: pulumi.Output<outputs.ApplicationSignature[] | undefined>;
+    declare public readonly signatures: pulumi.Output<outputs.ApplicationSignature[] | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * The Subcategory param. String length must not exceed 63 characters.
      */
-    public readonly subcategory!: pulumi.Output<string>;
+    declare public readonly subcategory: pulumi.Output<string>;
     /**
      * timeout for half-close session in seconds. Value must be between 1 and 604800.
      */
-    public readonly tcpHalfClosedTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly tcpHalfClosedTimeout: pulumi.Output<number | undefined>;
     /**
      * timeout for session in timeWait state in seconds. Value must be between 1 and 600.
      */
-    public readonly tcpTimeWaitTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly tcpTimeWaitTimeout: pulumi.Output<number | undefined>;
     /**
      * timeout in seconds. Value must be between 0 and 604800.
      */
-    public readonly tcpTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly tcpTimeout: pulumi.Output<number | undefined>;
     /**
      * The Technology param. String length must not exceed 63 characters.
      */
-    public readonly technology!: pulumi.Output<string>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly technology: pulumi.Output<string>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * timeout in seconds. Value must be between 0 and 604800.
      */
-    public readonly timeout!: pulumi.Output<number | undefined>;
+    declare public readonly timeout: pulumi.Output<number | undefined>;
     /**
      * The TunnelApplications param.
      */
-    public readonly tunnelApplications!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelApplications: pulumi.Output<boolean | undefined>;
     /**
      * The TunnelOtherApplication param.
      */
-    public readonly tunnelOtherApplication!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelOtherApplication: pulumi.Output<boolean | undefined>;
     /**
      * timeout in seconds. Value must be between 0 and 604800.
      */
-    public readonly udpTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly udpTimeout: pulumi.Output<number | undefined>;
     /**
      * The UsedByMalware param.
      */
-    public readonly usedByMalware!: pulumi.Output<boolean | undefined>;
+    declare public readonly usedByMalware: pulumi.Output<boolean | undefined>;
     /**
      * The VirusIdent param.
      */
-    public readonly virusIdent!: pulumi.Output<boolean | undefined>;
+    declare public readonly virusIdent: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a Application resource with the given unique name, arguments, and options.
@@ -185,83 +185,83 @@ export class Application extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplicationState | undefined;
-            resourceInputs["ableToTransferFile"] = state ? state.ableToTransferFile : undefined;
-            resourceInputs["algDisableCapability"] = state ? state.algDisableCapability : undefined;
-            resourceInputs["category"] = state ? state.category : undefined;
-            resourceInputs["consumeBigBandwidth"] = state ? state.consumeBigBandwidth : undefined;
-            resourceInputs["dataIdent"] = state ? state.dataIdent : undefined;
-            resourceInputs["default"] = state ? state.default : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["evasiveBehavior"] = state ? state.evasiveBehavior : undefined;
-            resourceInputs["fileTypeIdent"] = state ? state.fileTypeIdent : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["hasKnownVulnerability"] = state ? state.hasKnownVulnerability : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["noAppidCaching"] = state ? state.noAppidCaching : undefined;
-            resourceInputs["parentApp"] = state ? state.parentApp : undefined;
-            resourceInputs["pervasiveUse"] = state ? state.pervasiveUse : undefined;
-            resourceInputs["proneToMisuse"] = state ? state.proneToMisuse : undefined;
-            resourceInputs["risk"] = state ? state.risk : undefined;
-            resourceInputs["signatures"] = state ? state.signatures : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["subcategory"] = state ? state.subcategory : undefined;
-            resourceInputs["tcpHalfClosedTimeout"] = state ? state.tcpHalfClosedTimeout : undefined;
-            resourceInputs["tcpTimeWaitTimeout"] = state ? state.tcpTimeWaitTimeout : undefined;
-            resourceInputs["tcpTimeout"] = state ? state.tcpTimeout : undefined;
-            resourceInputs["technology"] = state ? state.technology : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["timeout"] = state ? state.timeout : undefined;
-            resourceInputs["tunnelApplications"] = state ? state.tunnelApplications : undefined;
-            resourceInputs["tunnelOtherApplication"] = state ? state.tunnelOtherApplication : undefined;
-            resourceInputs["udpTimeout"] = state ? state.udpTimeout : undefined;
-            resourceInputs["usedByMalware"] = state ? state.usedByMalware : undefined;
-            resourceInputs["virusIdent"] = state ? state.virusIdent : undefined;
+            resourceInputs["ableToTransferFile"] = state?.ableToTransferFile;
+            resourceInputs["algDisableCapability"] = state?.algDisableCapability;
+            resourceInputs["category"] = state?.category;
+            resourceInputs["consumeBigBandwidth"] = state?.consumeBigBandwidth;
+            resourceInputs["dataIdent"] = state?.dataIdent;
+            resourceInputs["default"] = state?.default;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["evasiveBehavior"] = state?.evasiveBehavior;
+            resourceInputs["fileTypeIdent"] = state?.fileTypeIdent;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["hasKnownVulnerability"] = state?.hasKnownVulnerability;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["noAppidCaching"] = state?.noAppidCaching;
+            resourceInputs["parentApp"] = state?.parentApp;
+            resourceInputs["pervasiveUse"] = state?.pervasiveUse;
+            resourceInputs["proneToMisuse"] = state?.proneToMisuse;
+            resourceInputs["risk"] = state?.risk;
+            resourceInputs["signatures"] = state?.signatures;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["subcategory"] = state?.subcategory;
+            resourceInputs["tcpHalfClosedTimeout"] = state?.tcpHalfClosedTimeout;
+            resourceInputs["tcpTimeWaitTimeout"] = state?.tcpTimeWaitTimeout;
+            resourceInputs["tcpTimeout"] = state?.tcpTimeout;
+            resourceInputs["technology"] = state?.technology;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["timeout"] = state?.timeout;
+            resourceInputs["tunnelApplications"] = state?.tunnelApplications;
+            resourceInputs["tunnelOtherApplication"] = state?.tunnelOtherApplication;
+            resourceInputs["udpTimeout"] = state?.udpTimeout;
+            resourceInputs["usedByMalware"] = state?.usedByMalware;
+            resourceInputs["virusIdent"] = state?.virusIdent;
         } else {
             const args = argsOrState as ApplicationArgs | undefined;
-            if ((!args || args.category === undefined) && !opts.urn) {
+            if (args?.category === undefined && !opts.urn) {
                 throw new Error("Missing required property 'category'");
             }
-            if ((!args || args.risk === undefined) && !opts.urn) {
+            if (args?.risk === undefined && !opts.urn) {
                 throw new Error("Missing required property 'risk'");
             }
-            if ((!args || args.subcategory === undefined) && !opts.urn) {
+            if (args?.subcategory === undefined && !opts.urn) {
                 throw new Error("Missing required property 'subcategory'");
             }
-            if ((!args || args.technology === undefined) && !opts.urn) {
+            if (args?.technology === undefined && !opts.urn) {
                 throw new Error("Missing required property 'technology'");
             }
-            resourceInputs["ableToTransferFile"] = args ? args.ableToTransferFile : undefined;
-            resourceInputs["algDisableCapability"] = args ? args.algDisableCapability : undefined;
-            resourceInputs["category"] = args ? args.category : undefined;
-            resourceInputs["consumeBigBandwidth"] = args ? args.consumeBigBandwidth : undefined;
-            resourceInputs["dataIdent"] = args ? args.dataIdent : undefined;
-            resourceInputs["default"] = args ? args.default : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["evasiveBehavior"] = args ? args.evasiveBehavior : undefined;
-            resourceInputs["fileTypeIdent"] = args ? args.fileTypeIdent : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["hasKnownVulnerability"] = args ? args.hasKnownVulnerability : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["noAppidCaching"] = args ? args.noAppidCaching : undefined;
-            resourceInputs["parentApp"] = args ? args.parentApp : undefined;
-            resourceInputs["pervasiveUse"] = args ? args.pervasiveUse : undefined;
-            resourceInputs["proneToMisuse"] = args ? args.proneToMisuse : undefined;
-            resourceInputs["risk"] = args ? args.risk : undefined;
-            resourceInputs["signatures"] = args ? args.signatures : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["subcategory"] = args ? args.subcategory : undefined;
-            resourceInputs["tcpHalfClosedTimeout"] = args ? args.tcpHalfClosedTimeout : undefined;
-            resourceInputs["tcpTimeWaitTimeout"] = args ? args.tcpTimeWaitTimeout : undefined;
-            resourceInputs["tcpTimeout"] = args ? args.tcpTimeout : undefined;
-            resourceInputs["technology"] = args ? args.technology : undefined;
-            resourceInputs["timeout"] = args ? args.timeout : undefined;
-            resourceInputs["tunnelApplications"] = args ? args.tunnelApplications : undefined;
-            resourceInputs["tunnelOtherApplication"] = args ? args.tunnelOtherApplication : undefined;
-            resourceInputs["udpTimeout"] = args ? args.udpTimeout : undefined;
-            resourceInputs["usedByMalware"] = args ? args.usedByMalware : undefined;
-            resourceInputs["virusIdent"] = args ? args.virusIdent : undefined;
+            resourceInputs["ableToTransferFile"] = args?.ableToTransferFile;
+            resourceInputs["algDisableCapability"] = args?.algDisableCapability;
+            resourceInputs["category"] = args?.category;
+            resourceInputs["consumeBigBandwidth"] = args?.consumeBigBandwidth;
+            resourceInputs["dataIdent"] = args?.dataIdent;
+            resourceInputs["default"] = args?.default;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["evasiveBehavior"] = args?.evasiveBehavior;
+            resourceInputs["fileTypeIdent"] = args?.fileTypeIdent;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["hasKnownVulnerability"] = args?.hasKnownVulnerability;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["noAppidCaching"] = args?.noAppidCaching;
+            resourceInputs["parentApp"] = args?.parentApp;
+            resourceInputs["pervasiveUse"] = args?.pervasiveUse;
+            resourceInputs["proneToMisuse"] = args?.proneToMisuse;
+            resourceInputs["risk"] = args?.risk;
+            resourceInputs["signatures"] = args?.signatures;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["subcategory"] = args?.subcategory;
+            resourceInputs["tcpHalfClosedTimeout"] = args?.tcpHalfClosedTimeout;
+            resourceInputs["tcpTimeWaitTimeout"] = args?.tcpTimeWaitTimeout;
+            resourceInputs["tcpTimeout"] = args?.tcpTimeout;
+            resourceInputs["technology"] = args?.technology;
+            resourceInputs["timeout"] = args?.timeout;
+            resourceInputs["tunnelApplications"] = args?.tunnelApplications;
+            resourceInputs["tunnelOtherApplication"] = args?.tunnelOtherApplication;
+            resourceInputs["udpTimeout"] = args?.udpTimeout;
+            resourceInputs["usedByMalware"] = args?.usedByMalware;
+            resourceInputs["virusIdent"] = args?.virusIdent;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

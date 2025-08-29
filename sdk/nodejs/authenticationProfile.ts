@@ -49,48 +49,48 @@ export class AuthenticationProfile extends pulumi.CustomResource {
     /**
      * The AllowList param.
      */
-    public readonly allowLists!: pulumi.Output<string[] | undefined>;
+    declare public readonly allowLists: pulumi.Output<string[] | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The Lockout param.
      */
-    public readonly lockout!: pulumi.Output<outputs.AuthenticationProfileLockout | undefined>;
+    declare public readonly lockout: pulumi.Output<outputs.AuthenticationProfileLockout | undefined>;
     /**
      * The Method param.
      */
-    public readonly method!: pulumi.Output<outputs.AuthenticationProfileMethod | undefined>;
+    declare public readonly method: pulumi.Output<outputs.AuthenticationProfileMethod | undefined>;
     /**
      * The MultiFactorAuth param.
      */
-    public readonly multiFactorAuth!: pulumi.Output<outputs.AuthenticationProfileMultiFactorAuth | undefined>;
+    declare public readonly multiFactorAuth: pulumi.Output<outputs.AuthenticationProfileMultiFactorAuth | undefined>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The SingleSignOn param.
      */
-    public readonly singleSignOn!: pulumi.Output<outputs.AuthenticationProfileSingleSignOn | undefined>;
+    declare public readonly singleSignOn: pulumi.Output<outputs.AuthenticationProfileSingleSignOn | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The UserDomain param. String length must not exceed 63 characters.
      */
-    public readonly userDomain!: pulumi.Output<string | undefined>;
+    declare public readonly userDomain: pulumi.Output<string | undefined>;
     /**
      * The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
      */
-    public readonly usernameModifier!: pulumi.Output<string | undefined>;
+    declare public readonly usernameModifier: pulumi.Output<string | undefined>;
 
     /**
      * Create a AuthenticationProfile resource with the given unique name, arguments, and options.
@@ -105,31 +105,31 @@ export class AuthenticationProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AuthenticationProfileState | undefined;
-            resourceInputs["allowLists"] = state ? state.allowLists : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["lockout"] = state ? state.lockout : undefined;
-            resourceInputs["method"] = state ? state.method : undefined;
-            resourceInputs["multiFactorAuth"] = state ? state.multiFactorAuth : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["singleSignOn"] = state ? state.singleSignOn : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["userDomain"] = state ? state.userDomain : undefined;
-            resourceInputs["usernameModifier"] = state ? state.usernameModifier : undefined;
+            resourceInputs["allowLists"] = state?.allowLists;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["lockout"] = state?.lockout;
+            resourceInputs["method"] = state?.method;
+            resourceInputs["multiFactorAuth"] = state?.multiFactorAuth;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["singleSignOn"] = state?.singleSignOn;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["userDomain"] = state?.userDomain;
+            resourceInputs["usernameModifier"] = state?.usernameModifier;
         } else {
             const args = argsOrState as AuthenticationProfileArgs | undefined;
-            resourceInputs["allowLists"] = args ? args.allowLists : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["lockout"] = args ? args.lockout : undefined;
-            resourceInputs["method"] = args ? args.method : undefined;
-            resourceInputs["multiFactorAuth"] = args ? args.multiFactorAuth : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["singleSignOn"] = args ? args.singleSignOn : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["userDomain"] = args ? args.userDomain : undefined;
-            resourceInputs["usernameModifier"] = args ? args.usernameModifier : undefined;
+            resourceInputs["allowLists"] = args?.allowLists;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["lockout"] = args?.lockout;
+            resourceInputs["method"] = args?.method;
+            resourceInputs["multiFactorAuth"] = args?.multiFactorAuth;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["singleSignOn"] = args?.singleSignOn;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["userDomain"] = args?.userDomain;
+            resourceInputs["usernameModifier"] = args?.usernameModifier;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

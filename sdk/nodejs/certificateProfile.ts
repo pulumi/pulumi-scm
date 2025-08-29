@@ -49,68 +49,68 @@ export class CertificateProfile extends pulumi.CustomResource {
     /**
      * The BlockExpiredCert param.
      */
-    public readonly blockExpiredCert!: pulumi.Output<boolean | undefined>;
+    declare public readonly blockExpiredCert: pulumi.Output<boolean | undefined>;
     /**
      * The BlockTimeoutCert param.
      */
-    public readonly blockTimeoutCert!: pulumi.Output<boolean | undefined>;
+    declare public readonly blockTimeoutCert: pulumi.Output<boolean | undefined>;
     /**
      * The BlockUnauthenticatedCert param.
      */
-    public readonly blockUnauthenticatedCert!: pulumi.Output<boolean | undefined>;
+    declare public readonly blockUnauthenticatedCert: pulumi.Output<boolean | undefined>;
     /**
      * The BlockUnknownCert param.
      */
-    public readonly blockUnknownCert!: pulumi.Output<boolean | undefined>;
+    declare public readonly blockUnknownCert: pulumi.Output<boolean | undefined>;
     /**
      * The CaCertificates param.
      */
-    public readonly caCertificates!: pulumi.Output<outputs.CertificateProfileCaCertificate[]>;
+    declare public readonly caCertificates: pulumi.Output<outputs.CertificateProfileCaCertificate[]>;
     /**
      * The CertStatusTimeout param.
      */
-    public readonly certStatusTimeout!: pulumi.Output<string | undefined>;
+    declare public readonly certStatusTimeout: pulumi.Output<string | undefined>;
     /**
      * The CrlReceiveTimeout param.
      */
-    public readonly crlReceiveTimeout!: pulumi.Output<string | undefined>;
+    declare public readonly crlReceiveTimeout: pulumi.Output<string | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Domain param.
      */
-    public readonly domain!: pulumi.Output<string | undefined>;
+    declare public readonly domain: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The OcspReceiveTimeout param.
      */
-    public readonly ocspReceiveTimeout!: pulumi.Output<string | undefined>;
+    declare public readonly ocspReceiveTimeout: pulumi.Output<string | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The UseCrl param.
      */
-    public readonly useCrl!: pulumi.Output<boolean | undefined>;
+    declare public readonly useCrl: pulumi.Output<boolean | undefined>;
     /**
      * The UseOcsp param.
      */
-    public readonly useOcsp!: pulumi.Output<boolean | undefined>;
+    declare public readonly useOcsp: pulumi.Output<boolean | undefined>;
     /**
      * The UsernameField param.
      */
-    public readonly usernameField!: pulumi.Output<outputs.CertificateProfileUsernameField | undefined>;
+    declare public readonly usernameField: pulumi.Output<outputs.CertificateProfileUsernameField | undefined>;
 
     /**
      * Create a CertificateProfile resource with the given unique name, arguments, and options.
@@ -125,44 +125,44 @@ export class CertificateProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CertificateProfileState | undefined;
-            resourceInputs["blockExpiredCert"] = state ? state.blockExpiredCert : undefined;
-            resourceInputs["blockTimeoutCert"] = state ? state.blockTimeoutCert : undefined;
-            resourceInputs["blockUnauthenticatedCert"] = state ? state.blockUnauthenticatedCert : undefined;
-            resourceInputs["blockUnknownCert"] = state ? state.blockUnknownCert : undefined;
-            resourceInputs["caCertificates"] = state ? state.caCertificates : undefined;
-            resourceInputs["certStatusTimeout"] = state ? state.certStatusTimeout : undefined;
-            resourceInputs["crlReceiveTimeout"] = state ? state.crlReceiveTimeout : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["domain"] = state ? state.domain : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["ocspReceiveTimeout"] = state ? state.ocspReceiveTimeout : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["useCrl"] = state ? state.useCrl : undefined;
-            resourceInputs["useOcsp"] = state ? state.useOcsp : undefined;
-            resourceInputs["usernameField"] = state ? state.usernameField : undefined;
+            resourceInputs["blockExpiredCert"] = state?.blockExpiredCert;
+            resourceInputs["blockTimeoutCert"] = state?.blockTimeoutCert;
+            resourceInputs["blockUnauthenticatedCert"] = state?.blockUnauthenticatedCert;
+            resourceInputs["blockUnknownCert"] = state?.blockUnknownCert;
+            resourceInputs["caCertificates"] = state?.caCertificates;
+            resourceInputs["certStatusTimeout"] = state?.certStatusTimeout;
+            resourceInputs["crlReceiveTimeout"] = state?.crlReceiveTimeout;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["domain"] = state?.domain;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["ocspReceiveTimeout"] = state?.ocspReceiveTimeout;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["useCrl"] = state?.useCrl;
+            resourceInputs["useOcsp"] = state?.useOcsp;
+            resourceInputs["usernameField"] = state?.usernameField;
         } else {
             const args = argsOrState as CertificateProfileArgs | undefined;
-            if ((!args || args.caCertificates === undefined) && !opts.urn) {
+            if (args?.caCertificates === undefined && !opts.urn) {
                 throw new Error("Missing required property 'caCertificates'");
             }
-            resourceInputs["blockExpiredCert"] = args ? args.blockExpiredCert : undefined;
-            resourceInputs["blockTimeoutCert"] = args ? args.blockTimeoutCert : undefined;
-            resourceInputs["blockUnauthenticatedCert"] = args ? args.blockUnauthenticatedCert : undefined;
-            resourceInputs["blockUnknownCert"] = args ? args.blockUnknownCert : undefined;
-            resourceInputs["caCertificates"] = args ? args.caCertificates : undefined;
-            resourceInputs["certStatusTimeout"] = args ? args.certStatusTimeout : undefined;
-            resourceInputs["crlReceiveTimeout"] = args ? args.crlReceiveTimeout : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["domain"] = args ? args.domain : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["ocspReceiveTimeout"] = args ? args.ocspReceiveTimeout : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["useCrl"] = args ? args.useCrl : undefined;
-            resourceInputs["useOcsp"] = args ? args.useOcsp : undefined;
-            resourceInputs["usernameField"] = args ? args.usernameField : undefined;
+            resourceInputs["blockExpiredCert"] = args?.blockExpiredCert;
+            resourceInputs["blockTimeoutCert"] = args?.blockTimeoutCert;
+            resourceInputs["blockUnauthenticatedCert"] = args?.blockUnauthenticatedCert;
+            resourceInputs["blockUnknownCert"] = args?.blockUnknownCert;
+            resourceInputs["caCertificates"] = args?.caCertificates;
+            resourceInputs["certStatusTimeout"] = args?.certStatusTimeout;
+            resourceInputs["crlReceiveTimeout"] = args?.crlReceiveTimeout;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["domain"] = args?.domain;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["ocspReceiveTimeout"] = args?.ocspReceiveTimeout;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["useCrl"] = args?.useCrl;
+            resourceInputs["useOcsp"] = args?.useOcsp;
+            resourceInputs["usernameField"] = args?.usernameField;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

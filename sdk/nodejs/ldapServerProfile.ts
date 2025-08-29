@@ -49,56 +49,56 @@ export class LdapServerProfile extends pulumi.CustomResource {
     /**
      * The Base param. String length must not exceed 255 characters.
      */
-    public readonly base!: pulumi.Output<string | undefined>;
+    declare public readonly base: pulumi.Output<string | undefined>;
     /**
      * The BindDn param. String length must not exceed 255 characters.
      */
-    public readonly bindDn!: pulumi.Output<string | undefined>;
+    declare public readonly bindDn: pulumi.Output<string | undefined>;
     /**
      * The BindPassword param. String length must not exceed 121 characters.
      */
-    public readonly bindPassword!: pulumi.Output<string | undefined>;
+    declare public readonly bindPassword: pulumi.Output<string | undefined>;
     /**
      * The BindTimelimit param.
      */
-    public readonly bindTimelimit!: pulumi.Output<string | undefined>;
+    declare public readonly bindTimelimit: pulumi.Output<string | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
      */
-    public readonly ldapType!: pulumi.Output<string | undefined>;
+    declare public readonly ldapType: pulumi.Output<string | undefined>;
     /**
      * The RetryInterval param.
      */
-    public readonly retryInterval!: pulumi.Output<number | undefined>;
+    declare public readonly retryInterval: pulumi.Output<number | undefined>;
     /**
      * The Servers param.
      */
-    public readonly servers!: pulumi.Output<outputs.LdapServerProfileServer[]>;
+    declare public readonly servers: pulumi.Output<outputs.LdapServerProfileServer[]>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * The Ssl param.
      */
-    public readonly ssl!: pulumi.Output<boolean | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly ssl: pulumi.Output<boolean | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The Timelimit param.
      */
-    public readonly timelimit!: pulumi.Output<number | undefined>;
+    declare public readonly timelimit: pulumi.Output<number | undefined>;
     /**
      * The VerifyServerCertificate param.
      */
-    public readonly verifyServerCertificate!: pulumi.Output<boolean | undefined>;
+    declare public readonly verifyServerCertificate: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a LdapServerProfile resource with the given unique name, arguments, and options.
@@ -113,38 +113,38 @@ export class LdapServerProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LdapServerProfileState | undefined;
-            resourceInputs["base"] = state ? state.base : undefined;
-            resourceInputs["bindDn"] = state ? state.bindDn : undefined;
-            resourceInputs["bindPassword"] = state ? state.bindPassword : undefined;
-            resourceInputs["bindTimelimit"] = state ? state.bindTimelimit : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["ldapType"] = state ? state.ldapType : undefined;
-            resourceInputs["retryInterval"] = state ? state.retryInterval : undefined;
-            resourceInputs["servers"] = state ? state.servers : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["ssl"] = state ? state.ssl : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["timelimit"] = state ? state.timelimit : undefined;
-            resourceInputs["verifyServerCertificate"] = state ? state.verifyServerCertificate : undefined;
+            resourceInputs["base"] = state?.base;
+            resourceInputs["bindDn"] = state?.bindDn;
+            resourceInputs["bindPassword"] = state?.bindPassword;
+            resourceInputs["bindTimelimit"] = state?.bindTimelimit;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["ldapType"] = state?.ldapType;
+            resourceInputs["retryInterval"] = state?.retryInterval;
+            resourceInputs["servers"] = state?.servers;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["ssl"] = state?.ssl;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["timelimit"] = state?.timelimit;
+            resourceInputs["verifyServerCertificate"] = state?.verifyServerCertificate;
         } else {
             const args = argsOrState as LdapServerProfileArgs | undefined;
-            if ((!args || args.servers === undefined) && !opts.urn) {
+            if (args?.servers === undefined && !opts.urn) {
                 throw new Error("Missing required property 'servers'");
             }
-            resourceInputs["base"] = args ? args.base : undefined;
-            resourceInputs["bindDn"] = args ? args.bindDn : undefined;
+            resourceInputs["base"] = args?.base;
+            resourceInputs["bindDn"] = args?.bindDn;
             resourceInputs["bindPassword"] = args?.bindPassword ? pulumi.secret(args.bindPassword) : undefined;
-            resourceInputs["bindTimelimit"] = args ? args.bindTimelimit : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["ldapType"] = args ? args.ldapType : undefined;
-            resourceInputs["retryInterval"] = args ? args.retryInterval : undefined;
-            resourceInputs["servers"] = args ? args.servers : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["ssl"] = args ? args.ssl : undefined;
-            resourceInputs["timelimit"] = args ? args.timelimit : undefined;
-            resourceInputs["verifyServerCertificate"] = args ? args.verifyServerCertificate : undefined;
+            resourceInputs["bindTimelimit"] = args?.bindTimelimit;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["ldapType"] = args?.ldapType;
+            resourceInputs["retryInterval"] = args?.retryInterval;
+            resourceInputs["servers"] = args?.servers;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["ssl"] = args?.ssl;
+            resourceInputs["timelimit"] = args?.timelimit;
+            resourceInputs["verifyServerCertificate"] = args?.verifyServerCertificate;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

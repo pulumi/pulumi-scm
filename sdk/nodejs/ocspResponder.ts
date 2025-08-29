@@ -47,24 +47,24 @@ export class OcspResponder extends pulumi.CustomResource {
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The HostName param. String length must be between 1 and 255 characters.
      */
-    public readonly hostName!: pulumi.Output<string>;
+    declare public readonly hostName: pulumi.Output<string>;
     /**
      * alphanumeric string [:0-9a-zA-Z._-]. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a OcspResponder resource with the given unique name, arguments, and options.
@@ -79,22 +79,22 @@ export class OcspResponder extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as OcspResponderState | undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["hostName"] = state ? state.hostName : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["hostName"] = state?.hostName;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as OcspResponderArgs | undefined;
-            if ((!args || args.hostName === undefined) && !opts.urn) {
+            if (args?.hostName === undefined && !opts.urn) {
                 throw new Error("Missing required property 'hostName'");
             }
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["hostName"] = args ? args.hostName : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["hostName"] = args?.hostName;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["snippet"] = args?.snippet;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -40,48 +40,48 @@ export class IkeGateway extends pulumi.CustomResource {
     /**
      * The Authentication param.
      */
-    public readonly authentication!: pulumi.Output<outputs.IkeGatewayAuthentication>;
+    declare public readonly authentication: pulumi.Output<outputs.IkeGatewayAuthentication>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * (Internal use) Encrypted values returned from the API.
      */
-    public /*out*/ readonly encryptedValues!: pulumi.Output<{[key: string]: string}>;
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The LocalId param.
      */
-    public readonly localId!: pulumi.Output<outputs.IkeGatewayLocalId | undefined>;
+    declare public readonly localId: pulumi.Output<outputs.IkeGatewayLocalId | undefined>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The PeerAddress param.
      */
-    public readonly peerAddress!: pulumi.Output<outputs.IkeGatewayPeerAddress>;
+    declare public readonly peerAddress: pulumi.Output<outputs.IkeGatewayPeerAddress>;
     /**
      * The PeerId param.
      */
-    public readonly peerId!: pulumi.Output<outputs.IkeGatewayPeerId | undefined>;
+    declare public readonly peerId: pulumi.Output<outputs.IkeGatewayPeerId | undefined>;
     /**
      * The Protocol param.
      */
-    public readonly protocol!: pulumi.Output<outputs.IkeGatewayProtocol>;
+    declare public readonly protocol: pulumi.Output<outputs.IkeGatewayProtocol>;
     /**
      * The ProtocolCommon param.
      */
-    public readonly protocolCommon!: pulumi.Output<outputs.IkeGatewayProtocolCommon | undefined>;
+    declare public readonly protocolCommon: pulumi.Output<outputs.IkeGatewayProtocolCommon | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a IkeGateway resource with the given unique name, arguments, and options.
@@ -96,39 +96,39 @@ export class IkeGateway extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as IkeGatewayState | undefined;
-            resourceInputs["authentication"] = state ? state.authentication : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["encryptedValues"] = state ? state.encryptedValues : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["localId"] = state ? state.localId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["peerAddress"] = state ? state.peerAddress : undefined;
-            resourceInputs["peerId"] = state ? state.peerId : undefined;
-            resourceInputs["protocol"] = state ? state.protocol : undefined;
-            resourceInputs["protocolCommon"] = state ? state.protocolCommon : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["authentication"] = state?.authentication;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["localId"] = state?.localId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["peerAddress"] = state?.peerAddress;
+            resourceInputs["peerId"] = state?.peerId;
+            resourceInputs["protocol"] = state?.protocol;
+            resourceInputs["protocolCommon"] = state?.protocolCommon;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as IkeGatewayArgs | undefined;
-            if ((!args || args.authentication === undefined) && !opts.urn) {
+            if (args?.authentication === undefined && !opts.urn) {
                 throw new Error("Missing required property 'authentication'");
             }
-            if ((!args || args.peerAddress === undefined) && !opts.urn) {
+            if (args?.peerAddress === undefined && !opts.urn) {
                 throw new Error("Missing required property 'peerAddress'");
             }
-            if ((!args || args.protocol === undefined) && !opts.urn) {
+            if (args?.protocol === undefined && !opts.urn) {
                 throw new Error("Missing required property 'protocol'");
             }
-            resourceInputs["authentication"] = args ? args.authentication : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["localId"] = args ? args.localId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["peerAddress"] = args ? args.peerAddress : undefined;
-            resourceInputs["peerId"] = args ? args.peerId : undefined;
-            resourceInputs["protocol"] = args ? args.protocol : undefined;
-            resourceInputs["protocolCommon"] = args ? args.protocolCommon : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
+            resourceInputs["authentication"] = args?.authentication;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["localId"] = args?.localId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["peerAddress"] = args?.peerAddress;
+            resourceInputs["peerId"] = args?.peerId;
+            resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["protocolCommon"] = args?.protocolCommon;
+            resourceInputs["snippet"] = args?.snippet;
             resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }

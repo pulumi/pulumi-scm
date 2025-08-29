@@ -49,48 +49,48 @@ export class AntiSpywareProfile extends pulumi.CustomResource {
     /**
      * The CloudInlineAnalysis param. Default: `false`.
      */
-    public readonly cloudInlineAnalysis!: pulumi.Output<boolean>;
+    declare public readonly cloudInlineAnalysis: pulumi.Output<boolean>;
     /**
      * The Description param.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The InlineExceptionEdlUrls param.
      */
-    public readonly inlineExceptionEdlUrls!: pulumi.Output<string[] | undefined>;
+    declare public readonly inlineExceptionEdlUrls: pulumi.Output<string[] | undefined>;
     /**
      * The InlineExceptionIpAddresses param.
      */
-    public readonly inlineExceptionIpAddresses!: pulumi.Output<string[] | undefined>;
+    declare public readonly inlineExceptionIpAddresses: pulumi.Output<string[] | undefined>;
     /**
      * The MicaEngineSpywareEnabledList param.
      */
-    public readonly micaEngineSpywareEnabledLists!: pulumi.Output<outputs.AntiSpywareProfileMicaEngineSpywareEnabledList[] | undefined>;
+    declare public readonly micaEngineSpywareEnabledLists: pulumi.Output<outputs.AntiSpywareProfileMicaEngineSpywareEnabledList[] | undefined>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The Rules param.
      */
-    public readonly rules!: pulumi.Output<outputs.AntiSpywareProfileRule[] | undefined>;
+    declare public readonly rules: pulumi.Output<outputs.AntiSpywareProfileRule[] | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The ThreatExceptions param.
      */
-    public readonly threatExceptions!: pulumi.Output<outputs.AntiSpywareProfileThreatException[] | undefined>;
+    declare public readonly threatExceptions: pulumi.Output<outputs.AntiSpywareProfileThreatException[] | undefined>;
 
     /**
      * Create a AntiSpywareProfile resource with the given unique name, arguments, and options.
@@ -105,31 +105,31 @@ export class AntiSpywareProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AntiSpywareProfileState | undefined;
-            resourceInputs["cloudInlineAnalysis"] = state ? state.cloudInlineAnalysis : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["inlineExceptionEdlUrls"] = state ? state.inlineExceptionEdlUrls : undefined;
-            resourceInputs["inlineExceptionIpAddresses"] = state ? state.inlineExceptionIpAddresses : undefined;
-            resourceInputs["micaEngineSpywareEnabledLists"] = state ? state.micaEngineSpywareEnabledLists : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["threatExceptions"] = state ? state.threatExceptions : undefined;
+            resourceInputs["cloudInlineAnalysis"] = state?.cloudInlineAnalysis;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["inlineExceptionEdlUrls"] = state?.inlineExceptionEdlUrls;
+            resourceInputs["inlineExceptionIpAddresses"] = state?.inlineExceptionIpAddresses;
+            resourceInputs["micaEngineSpywareEnabledLists"] = state?.micaEngineSpywareEnabledLists;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["rules"] = state?.rules;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["threatExceptions"] = state?.threatExceptions;
         } else {
             const args = argsOrState as AntiSpywareProfileArgs | undefined;
-            resourceInputs["cloudInlineAnalysis"] = args ? args.cloudInlineAnalysis : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["inlineExceptionEdlUrls"] = args ? args.inlineExceptionEdlUrls : undefined;
-            resourceInputs["inlineExceptionIpAddresses"] = args ? args.inlineExceptionIpAddresses : undefined;
-            resourceInputs["micaEngineSpywareEnabledLists"] = args ? args.micaEngineSpywareEnabledLists : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["threatExceptions"] = args ? args.threatExceptions : undefined;
+            resourceInputs["cloudInlineAnalysis"] = args?.cloudInlineAnalysis;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["inlineExceptionEdlUrls"] = args?.inlineExceptionEdlUrls;
+            resourceInputs["inlineExceptionIpAddresses"] = args?.inlineExceptionIpAddresses;
+            resourceInputs["micaEngineSpywareEnabledLists"] = args?.micaEngineSpywareEnabledLists;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["rules"] = args?.rules;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["threatExceptions"] = args?.threatExceptions;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -47,20 +47,20 @@ export class Snippet extends pulumi.CustomResource {
     /**
      * The Description param.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The Labels param.
      */
-    public readonly labels!: pulumi.Output<string[] | undefined>;
+    declare public readonly labels: pulumi.Output<string[] | undefined>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The Type param. String must be one of these: `"predefined"`, `"custom"`.
      */
-    public /*out*/ readonly type!: pulumi.Output<string>;
+    declare public /*out*/ readonly type: pulumi.Output<string>;
 
     /**
      * Create a Snippet resource with the given unique name, arguments, and options.
@@ -75,16 +75,16 @@ export class Snippet extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SnippetState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["labels"] = state ? state.labels : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["labels"] = state?.labels;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["type"] = state?.type;
         } else {
             const args = argsOrState as SnippetArgs | undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["labels"] = args ? args.labels : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["labels"] = args?.labels;
+            resourceInputs["name"] = args?.name;
             resourceInputs["tfid"] = undefined /*out*/;
             resourceInputs["type"] = undefined /*out*/;
         }

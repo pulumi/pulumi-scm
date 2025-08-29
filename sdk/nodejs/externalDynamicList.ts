@@ -49,28 +49,28 @@ export class ExternalDynamicList extends pulumi.CustomResource {
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * (Internal use) Encrypted values returned from the API.
      */
-    public /*out*/ readonly encryptedValues!: pulumi.Output<{[key: string]: string}>;
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The Type param.
      */
-    public readonly type!: pulumi.Output<outputs.ExternalDynamicListType>;
+    declare public readonly type: pulumi.Output<outputs.ExternalDynamicListType>;
 
     /**
      * Create a ExternalDynamicList resource with the given unique name, arguments, and options.
@@ -85,23 +85,23 @@ export class ExternalDynamicList extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ExternalDynamicListState | undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["encryptedValues"] = state ? state.encryptedValues : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["type"] = state?.type;
         } else {
             const args = argsOrState as ExternalDynamicListArgs | undefined;
-            if ((!args || args.type === undefined) && !opts.urn) {
+            if (args?.type === undefined && !opts.urn) {
                 throw new Error("Missing required property 'type'");
             }
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["type"] = args ? args.type : undefined;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["type"] = args?.type;
             resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }

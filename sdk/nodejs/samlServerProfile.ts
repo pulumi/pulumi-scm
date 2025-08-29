@@ -47,48 +47,48 @@ export class SamlServerProfile extends pulumi.CustomResource {
     /**
      * The Certificate param. String length must not exceed 63 characters.
      */
-    public readonly certificate!: pulumi.Output<string>;
+    declare public readonly certificate: pulumi.Output<string>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The EntityId param. String length must be between 1 and 1024 characters.
      */
-    public readonly entityId!: pulumi.Output<string | undefined>;
+    declare public readonly entityId: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The MaxClockSkew param. Value must be between 1 and 900.
      */
-    public readonly maxClockSkew!: pulumi.Output<number | undefined>;
+    declare public readonly maxClockSkew: pulumi.Output<number | undefined>;
     /**
      * The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
      */
-    public readonly sloBindings!: pulumi.Output<string | undefined>;
+    declare public readonly sloBindings: pulumi.Output<string | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
      */
-    public readonly ssoBindings!: pulumi.Output<string | undefined>;
+    declare public readonly ssoBindings: pulumi.Output<string | undefined>;
     /**
      * The SsoUrl param. String length must be between 1 and 255 characters.
      */
-    public readonly ssoUrl!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly ssoUrl: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The ValidateIdpCertificate param.
      */
-    public readonly validateIdpCertificate!: pulumi.Output<boolean | undefined>;
+    declare public readonly validateIdpCertificate: pulumi.Output<boolean | undefined>;
     /**
      * The WantAuthRequestsSigned param.
      */
-    public readonly wantAuthRequestsSigned!: pulumi.Output<boolean | undefined>;
+    declare public readonly wantAuthRequestsSigned: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a SamlServerProfile resource with the given unique name, arguments, and options.
@@ -103,34 +103,34 @@ export class SamlServerProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SamlServerProfileState | undefined;
-            resourceInputs["certificate"] = state ? state.certificate : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["entityId"] = state ? state.entityId : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["maxClockSkew"] = state ? state.maxClockSkew : undefined;
-            resourceInputs["sloBindings"] = state ? state.sloBindings : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["ssoBindings"] = state ? state.ssoBindings : undefined;
-            resourceInputs["ssoUrl"] = state ? state.ssoUrl : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["validateIdpCertificate"] = state ? state.validateIdpCertificate : undefined;
-            resourceInputs["wantAuthRequestsSigned"] = state ? state.wantAuthRequestsSigned : undefined;
+            resourceInputs["certificate"] = state?.certificate;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["entityId"] = state?.entityId;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["maxClockSkew"] = state?.maxClockSkew;
+            resourceInputs["sloBindings"] = state?.sloBindings;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["ssoBindings"] = state?.ssoBindings;
+            resourceInputs["ssoUrl"] = state?.ssoUrl;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["validateIdpCertificate"] = state?.validateIdpCertificate;
+            resourceInputs["wantAuthRequestsSigned"] = state?.wantAuthRequestsSigned;
         } else {
             const args = argsOrState as SamlServerProfileArgs | undefined;
-            if ((!args || args.certificate === undefined) && !opts.urn) {
+            if (args?.certificate === undefined && !opts.urn) {
                 throw new Error("Missing required property 'certificate'");
             }
-            resourceInputs["certificate"] = args ? args.certificate : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["entityId"] = args ? args.entityId : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["maxClockSkew"] = args ? args.maxClockSkew : undefined;
-            resourceInputs["sloBindings"] = args ? args.sloBindings : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["ssoBindings"] = args ? args.ssoBindings : undefined;
-            resourceInputs["ssoUrl"] = args ? args.ssoUrl : undefined;
-            resourceInputs["validateIdpCertificate"] = args ? args.validateIdpCertificate : undefined;
-            resourceInputs["wantAuthRequestsSigned"] = args ? args.wantAuthRequestsSigned : undefined;
+            resourceInputs["certificate"] = args?.certificate;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["entityId"] = args?.entityId;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["maxClockSkew"] = args?.maxClockSkew;
+            resourceInputs["sloBindings"] = args?.sloBindings;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["ssoBindings"] = args?.ssoBindings;
+            resourceInputs["ssoUrl"] = args?.ssoUrl;
+            resourceInputs["validateIdpCertificate"] = args?.validateIdpCertificate;
+            resourceInputs["wantAuthRequestsSigned"] = args?.wantAuthRequestsSigned;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

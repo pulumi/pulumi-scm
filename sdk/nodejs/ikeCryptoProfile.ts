@@ -49,40 +49,40 @@ export class IkeCryptoProfile extends pulumi.CustomResource {
     /**
      * IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
      */
-    public readonly authenticationMultiple!: pulumi.Output<number>;
+    declare public readonly authenticationMultiple: pulumi.Output<number>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
      */
-    public readonly dhGroups!: pulumi.Output<string[]>;
+    declare public readonly dhGroups: pulumi.Output<string[]>;
     /**
      * Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
      */
-    public readonly encryptions!: pulumi.Output<string[]>;
+    declare public readonly encryptions: pulumi.Output<string[]>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
      */
-    public readonly hashes!: pulumi.Output<string[]>;
+    declare public readonly hashes: pulumi.Output<string[]>;
     /**
      * The Lifetime param.
      */
-    public readonly lifetime!: pulumi.Output<outputs.IkeCryptoProfileLifetime | undefined>;
+    declare public readonly lifetime: pulumi.Output<outputs.IkeCryptoProfileLifetime | undefined>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a IkeCryptoProfile resource with the given unique name, arguments, and options.
@@ -97,36 +97,36 @@ export class IkeCryptoProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as IkeCryptoProfileState | undefined;
-            resourceInputs["authenticationMultiple"] = state ? state.authenticationMultiple : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["dhGroups"] = state ? state.dhGroups : undefined;
-            resourceInputs["encryptions"] = state ? state.encryptions : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["hashes"] = state ? state.hashes : undefined;
-            resourceInputs["lifetime"] = state ? state.lifetime : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["authenticationMultiple"] = state?.authenticationMultiple;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["dhGroups"] = state?.dhGroups;
+            resourceInputs["encryptions"] = state?.encryptions;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["hashes"] = state?.hashes;
+            resourceInputs["lifetime"] = state?.lifetime;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as IkeCryptoProfileArgs | undefined;
-            if ((!args || args.dhGroups === undefined) && !opts.urn) {
+            if (args?.dhGroups === undefined && !opts.urn) {
                 throw new Error("Missing required property 'dhGroups'");
             }
-            if ((!args || args.encryptions === undefined) && !opts.urn) {
+            if (args?.encryptions === undefined && !opts.urn) {
                 throw new Error("Missing required property 'encryptions'");
             }
-            if ((!args || args.hashes === undefined) && !opts.urn) {
+            if (args?.hashes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'hashes'");
             }
-            resourceInputs["authenticationMultiple"] = args ? args.authenticationMultiple : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["dhGroups"] = args ? args.dhGroups : undefined;
-            resourceInputs["encryptions"] = args ? args.encryptions : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["hashes"] = args ? args.hashes : undefined;
-            resourceInputs["lifetime"] = args ? args.lifetime : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
+            resourceInputs["authenticationMultiple"] = args?.authenticationMultiple;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["dhGroups"] = args?.dhGroups;
+            resourceInputs["encryptions"] = args?.encryptions;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["hashes"] = args?.hashes;
+            resourceInputs["lifetime"] = args?.lifetime;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["snippet"] = args?.snippet;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

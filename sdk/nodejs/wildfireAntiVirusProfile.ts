@@ -49,40 +49,40 @@ export class WildfireAntiVirusProfile extends pulumi.CustomResource {
     /**
      * The Description param.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The MlavExceptions param.
      */
-    public readonly mlavExceptions!: pulumi.Output<outputs.WildfireAntiVirusProfileMlavException[] | undefined>;
+    declare public readonly mlavExceptions: pulumi.Output<outputs.WildfireAntiVirusProfileMlavException[] | undefined>;
     /**
      * The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The PacketCapture param.
      */
-    public readonly packetCapture!: pulumi.Output<boolean | undefined>;
+    declare public readonly packetCapture: pulumi.Output<boolean | undefined>;
     /**
      * The Rules param.
      */
-    public readonly rules!: pulumi.Output<outputs.WildfireAntiVirusProfileRule[] | undefined>;
+    declare public readonly rules: pulumi.Output<outputs.WildfireAntiVirusProfileRule[] | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The ThreatExceptions param.
      */
-    public readonly threatExceptions!: pulumi.Output<outputs.WildfireAntiVirusProfileThreatException[] | undefined>;
+    declare public readonly threatExceptions: pulumi.Output<outputs.WildfireAntiVirusProfileThreatException[] | undefined>;
 
     /**
      * Create a WildfireAntiVirusProfile resource with the given unique name, arguments, and options.
@@ -97,27 +97,27 @@ export class WildfireAntiVirusProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WildfireAntiVirusProfileState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["mlavExceptions"] = state ? state.mlavExceptions : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["packetCapture"] = state ? state.packetCapture : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["threatExceptions"] = state ? state.threatExceptions : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["mlavExceptions"] = state?.mlavExceptions;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["packetCapture"] = state?.packetCapture;
+            resourceInputs["rules"] = state?.rules;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["threatExceptions"] = state?.threatExceptions;
         } else {
             const args = argsOrState as WildfireAntiVirusProfileArgs | undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["mlavExceptions"] = args ? args.mlavExceptions : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["packetCapture"] = args ? args.packetCapture : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["threatExceptions"] = args ? args.threatExceptions : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["mlavExceptions"] = args?.mlavExceptions;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["packetCapture"] = args?.packetCapture;
+            resourceInputs["rules"] = args?.rules;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["threatExceptions"] = args?.threatExceptions;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

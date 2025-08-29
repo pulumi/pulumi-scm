@@ -40,88 +40,88 @@ export class NatRule extends pulumi.CustomResource {
     /**
      * The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
      */
-    public readonly activeActiveDeviceBinding!: pulumi.Output<string | undefined>;
+    declare public readonly activeActiveDeviceBinding: pulumi.Output<string | undefined>;
     /**
      * The Description param.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Static destination translation parameter.
      */
-    public readonly destinationTranslation!: pulumi.Output<outputs.NatRuleDestinationTranslation | undefined>;
+    declare public readonly destinationTranslation: pulumi.Output<outputs.NatRuleDestinationTranslation | undefined>;
     /**
      * The destination address(es).
      */
-    public readonly destinations!: pulumi.Output<string[]>;
+    declare public readonly destinations: pulumi.Output<string[]>;
     /**
      * The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Disabled param.
      */
-    public readonly disabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly disabled: pulumi.Output<boolean | undefined>;
     /**
      * Dynamic destination translation parameter.
      */
-    public readonly dynamicDestinationTranslation!: pulumi.Output<outputs.NatRuleDynamicDestinationTranslation | undefined>;
+    declare public readonly dynamicDestinationTranslation: pulumi.Output<outputs.NatRuleDynamicDestinationTranslation | undefined>;
     /**
      * The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The source security zone(s).
      */
-    public readonly froms!: pulumi.Output<string[]>;
+    declare public readonly froms: pulumi.Output<string[]>;
     /**
      * The GroupTag param.
      */
-    public readonly groupTag!: pulumi.Output<string | undefined>;
+    declare public readonly groupTag: pulumi.Output<string | undefined>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
      */
-    public readonly natType!: pulumi.Output<string | undefined>;
+    declare public readonly natType: pulumi.Output<string | undefined>;
     /**
      * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
      */
-    public readonly position!: pulumi.Output<string>;
+    declare public readonly position: pulumi.Output<string>;
     /**
      * The Service param.
      */
-    public readonly service!: pulumi.Output<string>;
+    declare public readonly service: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * The SourceTranslation param.
      */
-    public readonly sourceTranslation!: pulumi.Output<outputs.NatRuleSourceTranslation | undefined>;
+    declare public readonly sourceTranslation: pulumi.Output<outputs.NatRuleSourceTranslation | undefined>;
     /**
      * The source address(es).
      */
-    public readonly sources!: pulumi.Output<string[]>;
+    declare public readonly sources: pulumi.Output<string[]>;
     /**
      * The Tags param.
      */
-    public readonly tags!: pulumi.Output<string[] | undefined>;
+    declare public readonly tags: pulumi.Output<string[] | undefined>;
     /**
      * The Target param.
      */
-    public readonly target!: pulumi.Output<outputs.NatRuleTarget | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly target: pulumi.Output<outputs.NatRuleTarget | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The ToInterface param.
      */
-    public readonly toInterface!: pulumi.Output<string | undefined>;
+    declare public readonly toInterface: pulumi.Output<string | undefined>;
     /**
      * The destination security zone(s).
      */
-    public readonly tos!: pulumi.Output<string[]>;
+    declare public readonly tos: pulumi.Output<string[]>;
 
     /**
      * Create a NatRule resource with the given unique name, arguments, and options.
@@ -136,66 +136,66 @@ export class NatRule extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as NatRuleState | undefined;
-            resourceInputs["activeActiveDeviceBinding"] = state ? state.activeActiveDeviceBinding : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["destinationTranslation"] = state ? state.destinationTranslation : undefined;
-            resourceInputs["destinations"] = state ? state.destinations : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["disabled"] = state ? state.disabled : undefined;
-            resourceInputs["dynamicDestinationTranslation"] = state ? state.dynamicDestinationTranslation : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["froms"] = state ? state.froms : undefined;
-            resourceInputs["groupTag"] = state ? state.groupTag : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["natType"] = state ? state.natType : undefined;
-            resourceInputs["position"] = state ? state.position : undefined;
-            resourceInputs["service"] = state ? state.service : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["sourceTranslation"] = state ? state.sourceTranslation : undefined;
-            resourceInputs["sources"] = state ? state.sources : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
-            resourceInputs["target"] = state ? state.target : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["toInterface"] = state ? state.toInterface : undefined;
-            resourceInputs["tos"] = state ? state.tos : undefined;
+            resourceInputs["activeActiveDeviceBinding"] = state?.activeActiveDeviceBinding;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["destinationTranslation"] = state?.destinationTranslation;
+            resourceInputs["destinations"] = state?.destinations;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["disabled"] = state?.disabled;
+            resourceInputs["dynamicDestinationTranslation"] = state?.dynamicDestinationTranslation;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["froms"] = state?.froms;
+            resourceInputs["groupTag"] = state?.groupTag;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["natType"] = state?.natType;
+            resourceInputs["position"] = state?.position;
+            resourceInputs["service"] = state?.service;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["sourceTranslation"] = state?.sourceTranslation;
+            resourceInputs["sources"] = state?.sources;
+            resourceInputs["tags"] = state?.tags;
+            resourceInputs["target"] = state?.target;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["toInterface"] = state?.toInterface;
+            resourceInputs["tos"] = state?.tos;
         } else {
             const args = argsOrState as NatRuleArgs | undefined;
-            if ((!args || args.destinations === undefined) && !opts.urn) {
+            if (args?.destinations === undefined && !opts.urn) {
                 throw new Error("Missing required property 'destinations'");
             }
-            if ((!args || args.froms === undefined) && !opts.urn) {
+            if (args?.froms === undefined && !opts.urn) {
                 throw new Error("Missing required property 'froms'");
             }
-            if ((!args || args.service === undefined) && !opts.urn) {
+            if (args?.service === undefined && !opts.urn) {
                 throw new Error("Missing required property 'service'");
             }
-            if ((!args || args.sources === undefined) && !opts.urn) {
+            if (args?.sources === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sources'");
             }
-            if ((!args || args.tos === undefined) && !opts.urn) {
+            if (args?.tos === undefined && !opts.urn) {
                 throw new Error("Missing required property 'tos'");
             }
-            resourceInputs["activeActiveDeviceBinding"] = args ? args.activeActiveDeviceBinding : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["destinationTranslation"] = args ? args.destinationTranslation : undefined;
-            resourceInputs["destinations"] = args ? args.destinations : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["disabled"] = args ? args.disabled : undefined;
-            resourceInputs["dynamicDestinationTranslation"] = args ? args.dynamicDestinationTranslation : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["froms"] = args ? args.froms : undefined;
-            resourceInputs["groupTag"] = args ? args.groupTag : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["natType"] = args ? args.natType : undefined;
-            resourceInputs["position"] = args ? args.position : undefined;
-            resourceInputs["service"] = args ? args.service : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["sourceTranslation"] = args ? args.sourceTranslation : undefined;
-            resourceInputs["sources"] = args ? args.sources : undefined;
-            resourceInputs["tags"] = args ? args.tags : undefined;
-            resourceInputs["target"] = args ? args.target : undefined;
-            resourceInputs["toInterface"] = args ? args.toInterface : undefined;
-            resourceInputs["tos"] = args ? args.tos : undefined;
+            resourceInputs["activeActiveDeviceBinding"] = args?.activeActiveDeviceBinding;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["destinationTranslation"] = args?.destinationTranslation;
+            resourceInputs["destinations"] = args?.destinations;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["disabled"] = args?.disabled;
+            resourceInputs["dynamicDestinationTranslation"] = args?.dynamicDestinationTranslation;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["froms"] = args?.froms;
+            resourceInputs["groupTag"] = args?.groupTag;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["natType"] = args?.natType;
+            resourceInputs["position"] = args?.position;
+            resourceInputs["service"] = args?.service;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["sourceTranslation"] = args?.sourceTranslation;
+            resourceInputs["sources"] = args?.sources;
+            resourceInputs["tags"] = args?.tags;
+            resourceInputs["target"] = args?.target;
+            resourceInputs["toInterface"] = args?.toInterface;
+            resourceInputs["tos"] = args?.tos;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

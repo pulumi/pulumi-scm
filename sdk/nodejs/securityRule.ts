@@ -49,96 +49,96 @@ export class SecurityRule extends pulumi.CustomResource {
     /**
      * The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
      */
-    public readonly action!: pulumi.Output<string>;
+    declare public readonly action: pulumi.Output<string>;
     /**
      * The application(s) being accessed.
      */
-    public readonly applications!: pulumi.Output<string[]>;
+    declare public readonly applications: pulumi.Output<string[]>;
     /**
      * The URL categories being accessed.
      */
-    public readonly categories!: pulumi.Output<string[]>;
+    declare public readonly categories: pulumi.Output<string[]>;
     /**
      * The description of the security rule.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The destination Host Integrity Profile(s).
      */
-    public readonly destinationHips!: pulumi.Output<string[] | undefined>;
+    declare public readonly destinationHips: pulumi.Output<string[] | undefined>;
     /**
      * The destination address(es).
      */
-    public readonly destinations!: pulumi.Output<string[]>;
+    declare public readonly destinations: pulumi.Output<string[]>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The state of the security rule. Default: `false`.
      */
-    public readonly disabled!: pulumi.Output<boolean>;
+    declare public readonly disabled: pulumi.Output<boolean>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The source security zone(s).
      */
-    public readonly froms!: pulumi.Output<string[]>;
+    declare public readonly froms: pulumi.Output<string[]>;
     /**
      * The external log forwarding profile.
      */
-    public readonly logSetting!: pulumi.Output<string | undefined>;
+    declare public readonly logSetting: pulumi.Output<string | undefined>;
     /**
      * The name of the security rule.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Negate the destination addresses(es). Default: `false`.
      */
-    public readonly negateDestination!: pulumi.Output<boolean>;
+    declare public readonly negateDestination: pulumi.Output<boolean>;
     /**
      * Negate the source address(es). Default: `false`.
      */
-    public readonly negateSource!: pulumi.Output<boolean>;
+    declare public readonly negateSource: pulumi.Output<boolean>;
     /**
      * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
      */
-    public readonly position!: pulumi.Output<string>;
+    declare public readonly position: pulumi.Output<string>;
     /**
      * The security profile object.
      */
-    public readonly profileSetting!: pulumi.Output<outputs.SecurityRuleProfileSetting | undefined>;
+    declare public readonly profileSetting: pulumi.Output<outputs.SecurityRuleProfileSetting | undefined>;
     /**
      * The service(s) being accessed.
      */
-    public readonly services!: pulumi.Output<string[]>;
+    declare public readonly services: pulumi.Output<string[]>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * The source Host Integrity Profile(s).
      */
-    public readonly sourceHips!: pulumi.Output<string[] | undefined>;
+    declare public readonly sourceHips: pulumi.Output<string[] | undefined>;
     /**
      * The source user(s) or group(s).
      */
-    public readonly sourceUsers!: pulumi.Output<string[]>;
+    declare public readonly sourceUsers: pulumi.Output<string[]>;
     /**
      * The source address(es).
      */
-    public readonly sources!: pulumi.Output<string[]>;
+    declare public readonly sources: pulumi.Output<string[]>;
     /**
      * The tags associated with the security rule.
      */
-    public readonly tags!: pulumi.Output<string[] | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly tags: pulumi.Output<string[] | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The destination security zone(s).
      */
-    public readonly tos!: pulumi.Output<string[]>;
+    declare public readonly tos: pulumi.Output<string[]>;
 
     /**
      * Create a SecurityRule resource with the given unique name, arguments, and options.
@@ -153,82 +153,82 @@ export class SecurityRule extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SecurityRuleState | undefined;
-            resourceInputs["action"] = state ? state.action : undefined;
-            resourceInputs["applications"] = state ? state.applications : undefined;
-            resourceInputs["categories"] = state ? state.categories : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["destinationHips"] = state ? state.destinationHips : undefined;
-            resourceInputs["destinations"] = state ? state.destinations : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["disabled"] = state ? state.disabled : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["froms"] = state ? state.froms : undefined;
-            resourceInputs["logSetting"] = state ? state.logSetting : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["negateDestination"] = state ? state.negateDestination : undefined;
-            resourceInputs["negateSource"] = state ? state.negateSource : undefined;
-            resourceInputs["position"] = state ? state.position : undefined;
-            resourceInputs["profileSetting"] = state ? state.profileSetting : undefined;
-            resourceInputs["services"] = state ? state.services : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["sourceHips"] = state ? state.sourceHips : undefined;
-            resourceInputs["sourceUsers"] = state ? state.sourceUsers : undefined;
-            resourceInputs["sources"] = state ? state.sources : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["tos"] = state ? state.tos : undefined;
+            resourceInputs["action"] = state?.action;
+            resourceInputs["applications"] = state?.applications;
+            resourceInputs["categories"] = state?.categories;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["destinationHips"] = state?.destinationHips;
+            resourceInputs["destinations"] = state?.destinations;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["disabled"] = state?.disabled;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["froms"] = state?.froms;
+            resourceInputs["logSetting"] = state?.logSetting;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["negateDestination"] = state?.negateDestination;
+            resourceInputs["negateSource"] = state?.negateSource;
+            resourceInputs["position"] = state?.position;
+            resourceInputs["profileSetting"] = state?.profileSetting;
+            resourceInputs["services"] = state?.services;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["sourceHips"] = state?.sourceHips;
+            resourceInputs["sourceUsers"] = state?.sourceUsers;
+            resourceInputs["sources"] = state?.sources;
+            resourceInputs["tags"] = state?.tags;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["tos"] = state?.tos;
         } else {
             const args = argsOrState as SecurityRuleArgs | undefined;
-            if ((!args || args.action === undefined) && !opts.urn) {
+            if (args?.action === undefined && !opts.urn) {
                 throw new Error("Missing required property 'action'");
             }
-            if ((!args || args.applications === undefined) && !opts.urn) {
+            if (args?.applications === undefined && !opts.urn) {
                 throw new Error("Missing required property 'applications'");
             }
-            if ((!args || args.categories === undefined) && !opts.urn) {
+            if (args?.categories === undefined && !opts.urn) {
                 throw new Error("Missing required property 'categories'");
             }
-            if ((!args || args.destinations === undefined) && !opts.urn) {
+            if (args?.destinations === undefined && !opts.urn) {
                 throw new Error("Missing required property 'destinations'");
             }
-            if ((!args || args.froms === undefined) && !opts.urn) {
+            if (args?.froms === undefined && !opts.urn) {
                 throw new Error("Missing required property 'froms'");
             }
-            if ((!args || args.services === undefined) && !opts.urn) {
+            if (args?.services === undefined && !opts.urn) {
                 throw new Error("Missing required property 'services'");
             }
-            if ((!args || args.sourceUsers === undefined) && !opts.urn) {
+            if (args?.sourceUsers === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sourceUsers'");
             }
-            if ((!args || args.sources === undefined) && !opts.urn) {
+            if (args?.sources === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sources'");
             }
-            if ((!args || args.tos === undefined) && !opts.urn) {
+            if (args?.tos === undefined && !opts.urn) {
                 throw new Error("Missing required property 'tos'");
             }
-            resourceInputs["action"] = args ? args.action : undefined;
-            resourceInputs["applications"] = args ? args.applications : undefined;
-            resourceInputs["categories"] = args ? args.categories : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["destinationHips"] = args ? args.destinationHips : undefined;
-            resourceInputs["destinations"] = args ? args.destinations : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["disabled"] = args ? args.disabled : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["froms"] = args ? args.froms : undefined;
-            resourceInputs["logSetting"] = args ? args.logSetting : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["negateDestination"] = args ? args.negateDestination : undefined;
-            resourceInputs["negateSource"] = args ? args.negateSource : undefined;
-            resourceInputs["position"] = args ? args.position : undefined;
-            resourceInputs["profileSetting"] = args ? args.profileSetting : undefined;
-            resourceInputs["services"] = args ? args.services : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["sourceHips"] = args ? args.sourceHips : undefined;
-            resourceInputs["sourceUsers"] = args ? args.sourceUsers : undefined;
-            resourceInputs["sources"] = args ? args.sources : undefined;
-            resourceInputs["tags"] = args ? args.tags : undefined;
-            resourceInputs["tos"] = args ? args.tos : undefined;
+            resourceInputs["action"] = args?.action;
+            resourceInputs["applications"] = args?.applications;
+            resourceInputs["categories"] = args?.categories;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["destinationHips"] = args?.destinationHips;
+            resourceInputs["destinations"] = args?.destinations;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["disabled"] = args?.disabled;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["froms"] = args?.froms;
+            resourceInputs["logSetting"] = args?.logSetting;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["negateDestination"] = args?.negateDestination;
+            resourceInputs["negateSource"] = args?.negateSource;
+            resourceInputs["position"] = args?.position;
+            resourceInputs["profileSetting"] = args?.profileSetting;
+            resourceInputs["services"] = args?.services;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["sourceHips"] = args?.sourceHips;
+            resourceInputs["sourceUsers"] = args?.sourceUsers;
+            resourceInputs["sources"] = args?.sources;
+            resourceInputs["tags"] = args?.tags;
+            resourceInputs["tos"] = args?.tos;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

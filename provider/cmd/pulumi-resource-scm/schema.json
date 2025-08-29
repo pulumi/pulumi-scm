@@ -61,19 +61,19 @@
         "variables": {
             "authFile": {
                 "type": "string",
-                "description": "The file path to the JSON file with auth creds for SCM.\n"
+                "description": "The file path to the JSON file with auth creds for SCM."
             },
             "authUrl": {
                 "type": "string",
-                "description": "The URL to send auth credentials to which will return a JWT. Default:\n`https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config\nfile variable: `auth_url`.\n"
+                "description": "The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`."
             },
             "clientId": {
                 "type": "string",
-                "description": "The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.\n"
+                "description": "The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`."
             },
             "clientSecret": {
                 "type": "string",
-                "description": "The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:\n`client_secret`.\n",
+                "description": "The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.",
                 "secret": true
             },
             "headers": {
@@ -81,27 +81,27 @@
                 "additionalProperties": {
                     "type": "string"
                 },
-                "description": "Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:\n`headers`.\n"
+                "description": "Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`."
             },
             "host": {
                 "type": "string",
-                "description": "The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.\nJSON config file variable: `host`.\n"
+                "description": "The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`."
             },
             "logging": {
                 "type": "string",
-                "description": "The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:\n`SCM_LOGGING`. JSON config file variable: `logging`.\n"
+                "description": "The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`."
             },
             "port": {
                 "type": "integer",
-                "description": "The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON\nconfig file variable: `port`.\n"
+                "description": "The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`."
             },
             "protocol": {
                 "type": "string",
-                "description": "The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.\nJSON config file variable: `protocol`.\n"
+                "description": "The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`."
             },
             "scope": {
                 "type": "string",
-                "description": "The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.\n"
+                "description": "The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`."
             }
         }
     },
@@ -27848,19 +27848,19 @@
         "properties": {
             "authFile": {
                 "type": "string",
-                "description": "The file path to the JSON file with auth creds for SCM.\n"
+                "description": "The file path to the JSON file with auth creds for SCM."
             },
             "authUrl": {
                 "type": "string",
-                "description": "The URL to send auth credentials to which will return a JWT. Default:\n`https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config\nfile variable: `auth_url`.\n"
+                "description": "The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`."
             },
             "clientId": {
                 "type": "string",
-                "description": "The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.\n"
+                "description": "The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`."
             },
             "clientSecret": {
                 "type": "string",
-                "description": "The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:\n`client_secret`.\n",
+                "description": "The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.",
                 "secret": true
             },
             "headers": {
@@ -27868,45 +27868,45 @@
                 "additionalProperties": {
                     "type": "string"
                 },
-                "description": "Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:\n`headers`.\n"
+                "description": "Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`."
             },
             "host": {
                 "type": "string",
-                "description": "The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.\nJSON config file variable: `host`.\n"
+                "description": "The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`."
             },
             "logging": {
                 "type": "string",
-                "description": "The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:\n`SCM_LOGGING`. JSON config file variable: `logging`.\n"
+                "description": "The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`."
             },
             "port": {
                 "type": "integer",
-                "description": "The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON\nconfig file variable: `port`.\n"
+                "description": "The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`."
             },
             "protocol": {
                 "type": "string",
-                "description": "The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.\nJSON config file variable: `protocol`.\n"
+                "description": "The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`."
             },
             "scope": {
                 "type": "string",
-                "description": "The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.\n"
+                "description": "The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`."
             }
         },
         "inputProperties": {
             "authFile": {
                 "type": "string",
-                "description": "The file path to the JSON file with auth creds for SCM.\n"
+                "description": "The file path to the JSON file with auth creds for SCM."
             },
             "authUrl": {
                 "type": "string",
-                "description": "The URL to send auth credentials to which will return a JWT. Default:\n`https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config\nfile variable: `auth_url`.\n"
+                "description": "The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`."
             },
             "clientId": {
                 "type": "string",
-                "description": "The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.\n"
+                "description": "The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`."
             },
             "clientSecret": {
                 "type": "string",
-                "description": "The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:\n`client_secret`.\n",
+                "description": "The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.",
                 "secret": true
             },
             "headers": {
@@ -27914,27 +27914,27 @@
                 "additionalProperties": {
                     "type": "string"
                 },
-                "description": "Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:\n`headers`.\n"
+                "description": "Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`."
             },
             "host": {
                 "type": "string",
-                "description": "The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.\nJSON config file variable: `host`.\n"
+                "description": "The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`."
             },
             "logging": {
                 "type": "string",
-                "description": "The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:\n`SCM_LOGGING`. JSON config file variable: `logging`.\n"
+                "description": "The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`."
             },
             "port": {
                 "type": "integer",
-                "description": "The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON\nconfig file variable: `port`.\n"
+                "description": "The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`."
             },
             "protocol": {
                 "type": "string",
-                "description": "The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.\nJSON config file variable: `protocol`.\n"
+                "description": "The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`."
             },
             "scope": {
                 "type": "string",
-                "description": "The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.\n"
+                "description": "The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`."
             }
         },
         "methods": {
@@ -38238,7 +38238,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -38403,7 +38403,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -38580,7 +38580,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -38769,7 +38769,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -38980,7 +38980,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -39399,7 +39399,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -39534,7 +39534,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -39623,7 +39623,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -39780,7 +39780,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -39945,7 +39945,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -40209,7 +40209,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -40354,7 +40354,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -40423,7 +40423,7 @@
                         "type": "array"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -40609,7 +40609,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -40799,7 +40799,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -41060,7 +41060,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -41348,7 +41348,7 @@
                         "type": "array"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -41481,7 +41481,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -41626,7 +41626,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -41758,7 +41758,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -41898,7 +41898,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -42031,7 +42031,7 @@
                         "type": "array"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -42214,7 +42214,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -42351,7 +42351,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -42491,7 +42491,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -42676,7 +42676,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -42857,7 +42857,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -42982,7 +42982,7 @@
                         "type": "array"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -43154,7 +43154,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -43314,7 +43314,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -43468,7 +43468,7 @@
                         "type": "array"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -43590,7 +43590,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -43659,7 +43659,7 @@
                         "type": "array"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -43890,7 +43890,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -44028,7 +44028,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -44117,7 +44117,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -44406,7 +44406,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -44543,7 +44543,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -44734,7 +44734,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -44893,7 +44893,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -45043,7 +45043,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -45188,7 +45188,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -45328,7 +45328,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -45503,7 +45503,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -45662,7 +45662,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -45849,7 +45849,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -45981,7 +45981,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -46235,7 +46235,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -46548,7 +46548,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -46622,7 +46622,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -46762,7 +46762,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -46851,7 +46851,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -46916,7 +46916,7 @@
                         "type": "array"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -47033,7 +47033,7 @@
                         "type": "array"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -47174,7 +47174,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -47311,7 +47311,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -47448,7 +47448,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -47608,7 +47608,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -47694,7 +47694,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -47906,7 +47906,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -48051,7 +48051,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -48140,7 +48140,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -48311,7 +48311,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -48459,7 +48459,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -48653,7 +48653,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {
@@ -48814,7 +48814,7 @@
                         "type": "string"
                     },
                     "id": {
-                        "description": "The provider-assigned unique ID for this managed resource.\n",
+                        "description": "The provider-assigned unique ID for this managed resource.",
                         "type": "string"
                     },
                     "limit": {

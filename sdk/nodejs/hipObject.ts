@@ -40,68 +40,68 @@ export class HipObject extends pulumi.CustomResource {
     /**
      * The AntiMalware param.
      */
-    public readonly antiMalware!: pulumi.Output<outputs.HipObjectAntiMalware | undefined>;
+    declare public readonly antiMalware: pulumi.Output<outputs.HipObjectAntiMalware | undefined>;
     /**
      * The Certificate param.
      */
-    public readonly certificate!: pulumi.Output<outputs.HipObjectCertificate | undefined>;
+    declare public readonly certificate: pulumi.Output<outputs.HipObjectCertificate | undefined>;
     /**
      * The CustomChecks param.
      */
-    public readonly customChecks!: pulumi.Output<outputs.HipObjectCustomChecks | undefined>;
+    declare public readonly customChecks: pulumi.Output<outputs.HipObjectCustomChecks | undefined>;
     /**
      * The DataLossPrevention param.
      */
-    public readonly dataLossPrevention!: pulumi.Output<outputs.HipObjectDataLossPrevention | undefined>;
+    declare public readonly dataLossPrevention: pulumi.Output<outputs.HipObjectDataLossPrevention | undefined>;
     /**
      * The Description param. String length must not exceed 255 characters.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The DiskBackup param.
      */
-    public readonly diskBackup!: pulumi.Output<outputs.HipObjectDiskBackup | undefined>;
+    declare public readonly diskBackup: pulumi.Output<outputs.HipObjectDiskBackup | undefined>;
     /**
      * The DiskEncryption param.
      */
-    public readonly diskEncryption!: pulumi.Output<outputs.HipObjectDiskEncryption | undefined>;
+    declare public readonly diskEncryption: pulumi.Output<outputs.HipObjectDiskEncryption | undefined>;
     /**
      * The Firewall param.
      */
-    public readonly firewall!: pulumi.Output<outputs.HipObjectFirewall | undefined>;
+    declare public readonly firewall: pulumi.Output<outputs.HipObjectFirewall | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The HostInfo param.
      */
-    public readonly hostInfo!: pulumi.Output<outputs.HipObjectHostInfo | undefined>;
+    declare public readonly hostInfo: pulumi.Output<outputs.HipObjectHostInfo | undefined>;
     /**
      * The MobileDevice param.
      */
-    public readonly mobileDevice!: pulumi.Output<outputs.HipObjectMobileDevice | undefined>;
+    declare public readonly mobileDevice: pulumi.Output<outputs.HipObjectMobileDevice | undefined>;
     /**
      * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The NetworkInfo param.
      */
-    public readonly networkInfo!: pulumi.Output<outputs.HipObjectNetworkInfo | undefined>;
+    declare public readonly networkInfo: pulumi.Output<outputs.HipObjectNetworkInfo | undefined>;
     /**
      * The PatchManagement param.
      */
-    public readonly patchManagement!: pulumi.Output<outputs.HipObjectPatchManagement | undefined>;
+    declare public readonly patchManagement: pulumi.Output<outputs.HipObjectPatchManagement | undefined>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a HipObject resource with the given unique name, arguments, and options.
@@ -116,41 +116,41 @@ export class HipObject extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as HipObjectState | undefined;
-            resourceInputs["antiMalware"] = state ? state.antiMalware : undefined;
-            resourceInputs["certificate"] = state ? state.certificate : undefined;
-            resourceInputs["customChecks"] = state ? state.customChecks : undefined;
-            resourceInputs["dataLossPrevention"] = state ? state.dataLossPrevention : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["diskBackup"] = state ? state.diskBackup : undefined;
-            resourceInputs["diskEncryption"] = state ? state.diskEncryption : undefined;
-            resourceInputs["firewall"] = state ? state.firewall : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["hostInfo"] = state ? state.hostInfo : undefined;
-            resourceInputs["mobileDevice"] = state ? state.mobileDevice : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkInfo"] = state ? state.networkInfo : undefined;
-            resourceInputs["patchManagement"] = state ? state.patchManagement : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["antiMalware"] = state?.antiMalware;
+            resourceInputs["certificate"] = state?.certificate;
+            resourceInputs["customChecks"] = state?.customChecks;
+            resourceInputs["dataLossPrevention"] = state?.dataLossPrevention;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["diskBackup"] = state?.diskBackup;
+            resourceInputs["diskEncryption"] = state?.diskEncryption;
+            resourceInputs["firewall"] = state?.firewall;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["hostInfo"] = state?.hostInfo;
+            resourceInputs["mobileDevice"] = state?.mobileDevice;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkInfo"] = state?.networkInfo;
+            resourceInputs["patchManagement"] = state?.patchManagement;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as HipObjectArgs | undefined;
-            resourceInputs["antiMalware"] = args ? args.antiMalware : undefined;
-            resourceInputs["certificate"] = args ? args.certificate : undefined;
-            resourceInputs["customChecks"] = args ? args.customChecks : undefined;
-            resourceInputs["dataLossPrevention"] = args ? args.dataLossPrevention : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["diskBackup"] = args ? args.diskBackup : undefined;
-            resourceInputs["diskEncryption"] = args ? args.diskEncryption : undefined;
-            resourceInputs["firewall"] = args ? args.firewall : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["hostInfo"] = args ? args.hostInfo : undefined;
-            resourceInputs["mobileDevice"] = args ? args.mobileDevice : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkInfo"] = args ? args.networkInfo : undefined;
-            resourceInputs["patchManagement"] = args ? args.patchManagement : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
+            resourceInputs["antiMalware"] = args?.antiMalware;
+            resourceInputs["certificate"] = args?.certificate;
+            resourceInputs["customChecks"] = args?.customChecks;
+            resourceInputs["dataLossPrevention"] = args?.dataLossPrevention;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["diskBackup"] = args?.diskBackup;
+            resourceInputs["diskEncryption"] = args?.diskEncryption;
+            resourceInputs["firewall"] = args?.firewall;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["hostInfo"] = args?.hostInfo;
+            resourceInputs["mobileDevice"] = args?.mobileDevice;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkInfo"] = args?.networkInfo;
+            resourceInputs["patchManagement"] = args?.patchManagement;
+            resourceInputs["snippet"] = args?.snippet;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

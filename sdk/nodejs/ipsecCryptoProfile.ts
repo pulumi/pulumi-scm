@@ -49,40 +49,40 @@ export class IpsecCryptoProfile extends pulumi.CustomResource {
     /**
      * The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
      */
-    public readonly ah!: pulumi.Output<outputs.IpsecCryptoProfileAh | undefined>;
+    declare public readonly ah: pulumi.Output<outputs.IpsecCryptoProfileAh | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
      */
-    public readonly dhGroup!: pulumi.Output<string>;
+    declare public readonly dhGroup: pulumi.Output<string>;
     /**
      * The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
      */
-    public readonly esp!: pulumi.Output<outputs.IpsecCryptoProfileEsp | undefined>;
+    declare public readonly esp: pulumi.Output<outputs.IpsecCryptoProfileEsp | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The Lifesize param.
      */
-    public readonly lifesize!: pulumi.Output<outputs.IpsecCryptoProfileLifesize | undefined>;
+    declare public readonly lifesize: pulumi.Output<outputs.IpsecCryptoProfileLifesize | undefined>;
     /**
      * The Lifetime param.
      */
-    public readonly lifetime!: pulumi.Output<outputs.IpsecCryptoProfileLifetime>;
+    declare public readonly lifetime: pulumi.Output<outputs.IpsecCryptoProfileLifetime>;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a IpsecCryptoProfile resource with the given unique name, arguments, and options.
@@ -97,30 +97,30 @@ export class IpsecCryptoProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as IpsecCryptoProfileState | undefined;
-            resourceInputs["ah"] = state ? state.ah : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["dhGroup"] = state ? state.dhGroup : undefined;
-            resourceInputs["esp"] = state ? state.esp : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["lifesize"] = state ? state.lifesize : undefined;
-            resourceInputs["lifetime"] = state ? state.lifetime : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["ah"] = state?.ah;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["dhGroup"] = state?.dhGroup;
+            resourceInputs["esp"] = state?.esp;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["lifesize"] = state?.lifesize;
+            resourceInputs["lifetime"] = state?.lifetime;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as IpsecCryptoProfileArgs | undefined;
-            if ((!args || args.lifetime === undefined) && !opts.urn) {
+            if (args?.lifetime === undefined && !opts.urn) {
                 throw new Error("Missing required property 'lifetime'");
             }
-            resourceInputs["ah"] = args ? args.ah : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["dhGroup"] = args ? args.dhGroup : undefined;
-            resourceInputs["esp"] = args ? args.esp : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["lifesize"] = args ? args.lifesize : undefined;
-            resourceInputs["lifetime"] = args ? args.lifetime : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
+            resourceInputs["ah"] = args?.ah;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["dhGroup"] = args?.dhGroup;
+            resourceInputs["esp"] = args?.esp;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["lifesize"] = args?.lifesize;
+            resourceInputs["lifetime"] = args?.lifetime;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["snippet"] = args?.snippet;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
