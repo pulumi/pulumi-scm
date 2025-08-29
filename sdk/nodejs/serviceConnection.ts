@@ -49,64 +49,64 @@ export class ServiceConnection extends pulumi.CustomResource {
     /**
      * The BackupSC param.
      */
-    public readonly backupSC!: pulumi.Output<string | undefined>;
+    declare public readonly backupSC: pulumi.Output<string | undefined>;
     /**
      * The BgpPeer param.
      */
-    public readonly bgpPeer!: pulumi.Output<outputs.ServiceConnectionBgpPeer | undefined>;
+    declare public readonly bgpPeer: pulumi.Output<outputs.ServiceConnectionBgpPeer | undefined>;
     /**
      * (Internal use) Encrypted values returned from the API.
      */
-    public /*out*/ readonly encryptedValues!: pulumi.Output<{[key: string]: string}>;
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
      */
-    public readonly folder!: pulumi.Output<string>;
+    declare public readonly folder: pulumi.Output<string>;
     /**
      * The IpsecTunnel param.
      */
-    public readonly ipsecTunnel!: pulumi.Output<string>;
+    declare public readonly ipsecTunnel: pulumi.Output<string>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The NatPool param.
      */
-    public readonly natPool!: pulumi.Output<string | undefined>;
+    declare public readonly natPool: pulumi.Output<string | undefined>;
     /**
      * The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
      */
-    public readonly noExportCommunity!: pulumi.Output<string | undefined>;
+    declare public readonly noExportCommunity: pulumi.Output<string | undefined>;
     /**
      * The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
      */
-    public readonly onboardingType!: pulumi.Output<string>;
+    declare public readonly onboardingType: pulumi.Output<string>;
     /**
      * The Protocol param.
      */
-    public readonly protocol!: pulumi.Output<outputs.ServiceConnectionProtocol | undefined>;
+    declare public readonly protocol: pulumi.Output<outputs.ServiceConnectionProtocol | undefined>;
     /**
      * The Qos param.
      */
-    public readonly qos!: pulumi.Output<outputs.ServiceConnectionQos | undefined>;
+    declare public readonly qos: pulumi.Output<outputs.ServiceConnectionQos | undefined>;
     /**
      * The Region param.
      */
-    public readonly region!: pulumi.Output<string>;
+    declare public readonly region: pulumi.Output<string>;
     /**
      * The SecondaryIpsecTunnel param.
      */
-    public readonly secondaryIpsecTunnel!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryIpsecTunnel: pulumi.Output<string | undefined>;
     /**
      * The SourceNat param.
      */
-    public readonly sourceNat!: pulumi.Output<boolean | undefined>;
+    declare public readonly sourceNat: pulumi.Output<boolean | undefined>;
     /**
      * The Subnets param.
      */
-    public readonly subnets!: pulumi.Output<string[] | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly subnets: pulumi.Output<string[] | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a ServiceConnection resource with the given unique name, arguments, and options.
@@ -121,44 +121,44 @@ export class ServiceConnection extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceConnectionState | undefined;
-            resourceInputs["backupSC"] = state ? state.backupSC : undefined;
-            resourceInputs["bgpPeer"] = state ? state.bgpPeer : undefined;
-            resourceInputs["encryptedValues"] = state ? state.encryptedValues : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["ipsecTunnel"] = state ? state.ipsecTunnel : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["natPool"] = state ? state.natPool : undefined;
-            resourceInputs["noExportCommunity"] = state ? state.noExportCommunity : undefined;
-            resourceInputs["onboardingType"] = state ? state.onboardingType : undefined;
-            resourceInputs["protocol"] = state ? state.protocol : undefined;
-            resourceInputs["qos"] = state ? state.qos : undefined;
-            resourceInputs["region"] = state ? state.region : undefined;
-            resourceInputs["secondaryIpsecTunnel"] = state ? state.secondaryIpsecTunnel : undefined;
-            resourceInputs["sourceNat"] = state ? state.sourceNat : undefined;
-            resourceInputs["subnets"] = state ? state.subnets : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["backupSC"] = state?.backupSC;
+            resourceInputs["bgpPeer"] = state?.bgpPeer;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["ipsecTunnel"] = state?.ipsecTunnel;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["natPool"] = state?.natPool;
+            resourceInputs["noExportCommunity"] = state?.noExportCommunity;
+            resourceInputs["onboardingType"] = state?.onboardingType;
+            resourceInputs["protocol"] = state?.protocol;
+            resourceInputs["qos"] = state?.qos;
+            resourceInputs["region"] = state?.region;
+            resourceInputs["secondaryIpsecTunnel"] = state?.secondaryIpsecTunnel;
+            resourceInputs["sourceNat"] = state?.sourceNat;
+            resourceInputs["subnets"] = state?.subnets;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as ServiceConnectionArgs | undefined;
-            if ((!args || args.ipsecTunnel === undefined) && !opts.urn) {
+            if (args?.ipsecTunnel === undefined && !opts.urn) {
                 throw new Error("Missing required property 'ipsecTunnel'");
             }
-            if ((!args || args.region === undefined) && !opts.urn) {
+            if (args?.region === undefined && !opts.urn) {
                 throw new Error("Missing required property 'region'");
             }
-            resourceInputs["backupSC"] = args ? args.backupSC : undefined;
-            resourceInputs["bgpPeer"] = args ? args.bgpPeer : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["ipsecTunnel"] = args ? args.ipsecTunnel : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["natPool"] = args ? args.natPool : undefined;
-            resourceInputs["noExportCommunity"] = args ? args.noExportCommunity : undefined;
-            resourceInputs["onboardingType"] = args ? args.onboardingType : undefined;
-            resourceInputs["protocol"] = args ? args.protocol : undefined;
-            resourceInputs["qos"] = args ? args.qos : undefined;
-            resourceInputs["region"] = args ? args.region : undefined;
-            resourceInputs["secondaryIpsecTunnel"] = args ? args.secondaryIpsecTunnel : undefined;
-            resourceInputs["sourceNat"] = args ? args.sourceNat : undefined;
-            resourceInputs["subnets"] = args ? args.subnets : undefined;
+            resourceInputs["backupSC"] = args?.backupSC;
+            resourceInputs["bgpPeer"] = args?.bgpPeer;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["ipsecTunnel"] = args?.ipsecTunnel;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["natPool"] = args?.natPool;
+            resourceInputs["noExportCommunity"] = args?.noExportCommunity;
+            resourceInputs["onboardingType"] = args?.onboardingType;
+            resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["qos"] = args?.qos;
+            resourceInputs["region"] = args?.region;
+            resourceInputs["secondaryIpsecTunnel"] = args?.secondaryIpsecTunnel;
+            resourceInputs["sourceNat"] = args?.sourceNat;
+            resourceInputs["subnets"] = args?.subnets;
             resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }

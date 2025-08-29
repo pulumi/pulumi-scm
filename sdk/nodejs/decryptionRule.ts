@@ -49,104 +49,104 @@ export class DecryptionRule extends pulumi.CustomResource {
     /**
      * The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
      */
-    public readonly action!: pulumi.Output<string>;
+    declare public readonly action: pulumi.Output<string>;
     /**
      * The Categories param.
      */
-    public readonly categories!: pulumi.Output<string[]>;
+    declare public readonly categories: pulumi.Output<string[]>;
     /**
      * The Description param.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The DestinationHips param.
      */
-    public readonly destinationHips!: pulumi.Output<string[] | undefined>;
+    declare public readonly destinationHips: pulumi.Output<string[] | undefined>;
     /**
      * The Destinations param.
      */
-    public readonly destinations!: pulumi.Output<string[]>;
+    declare public readonly destinations: pulumi.Output<string[]>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Disabled param.
      */
-    public readonly disabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly disabled: pulumi.Output<boolean | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The Froms param.
      */
-    public readonly froms!: pulumi.Output<string[]>;
+    declare public readonly froms: pulumi.Output<string[]>;
     /**
      * The LogFail param.
      */
-    public readonly logFail!: pulumi.Output<boolean | undefined>;
+    declare public readonly logFail: pulumi.Output<boolean | undefined>;
     /**
      * The LogSetting param.
      */
-    public readonly logSetting!: pulumi.Output<string | undefined>;
+    declare public readonly logSetting: pulumi.Output<string | undefined>;
     /**
      * The LogSuccess param.
      */
-    public readonly logSuccess!: pulumi.Output<boolean | undefined>;
+    declare public readonly logSuccess: pulumi.Output<boolean | undefined>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The NegateDestination param.
      */
-    public readonly negateDestination!: pulumi.Output<boolean | undefined>;
+    declare public readonly negateDestination: pulumi.Output<boolean | undefined>;
     /**
      * The NegateSource param.
      */
-    public readonly negateSource!: pulumi.Output<boolean | undefined>;
+    declare public readonly negateSource: pulumi.Output<boolean | undefined>;
     /**
      * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
      */
-    public readonly position!: pulumi.Output<string>;
+    declare public readonly position: pulumi.Output<string>;
     /**
      * The Profile param.
      */
-    public readonly profile!: pulumi.Output<string | undefined>;
+    declare public readonly profile: pulumi.Output<string | undefined>;
     /**
      * The Services param.
      */
-    public readonly services!: pulumi.Output<string[]>;
+    declare public readonly services: pulumi.Output<string[]>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * The SourceHips param.
      */
-    public readonly sourceHips!: pulumi.Output<string[] | undefined>;
+    declare public readonly sourceHips: pulumi.Output<string[] | undefined>;
     /**
      * The SourceUsers param.
      */
-    public readonly sourceUsers!: pulumi.Output<string[]>;
+    declare public readonly sourceUsers: pulumi.Output<string[]>;
     /**
      * The Sources param.
      */
-    public readonly sources!: pulumi.Output<string[]>;
+    declare public readonly sources: pulumi.Output<string[]>;
     /**
      * The Tags param.
      */
-    public readonly tags!: pulumi.Output<string[] | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly tags: pulumi.Output<string[] | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The Tos param.
      */
-    public readonly tos!: pulumi.Output<string[]>;
+    declare public readonly tos: pulumi.Output<string[]>;
     /**
      * The Type param.
      */
-    public readonly type!: pulumi.Output<outputs.DecryptionRuleType | undefined>;
+    declare public readonly type: pulumi.Output<outputs.DecryptionRuleType | undefined>;
 
     /**
      * Create a DecryptionRule resource with the given unique name, arguments, and options.
@@ -161,83 +161,83 @@ export class DecryptionRule extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as DecryptionRuleState | undefined;
-            resourceInputs["action"] = state ? state.action : undefined;
-            resourceInputs["categories"] = state ? state.categories : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["destinationHips"] = state ? state.destinationHips : undefined;
-            resourceInputs["destinations"] = state ? state.destinations : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["disabled"] = state ? state.disabled : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["froms"] = state ? state.froms : undefined;
-            resourceInputs["logFail"] = state ? state.logFail : undefined;
-            resourceInputs["logSetting"] = state ? state.logSetting : undefined;
-            resourceInputs["logSuccess"] = state ? state.logSuccess : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["negateDestination"] = state ? state.negateDestination : undefined;
-            resourceInputs["negateSource"] = state ? state.negateSource : undefined;
-            resourceInputs["position"] = state ? state.position : undefined;
-            resourceInputs["profile"] = state ? state.profile : undefined;
-            resourceInputs["services"] = state ? state.services : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["sourceHips"] = state ? state.sourceHips : undefined;
-            resourceInputs["sourceUsers"] = state ? state.sourceUsers : undefined;
-            resourceInputs["sources"] = state ? state.sources : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["tos"] = state ? state.tos : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
+            resourceInputs["action"] = state?.action;
+            resourceInputs["categories"] = state?.categories;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["destinationHips"] = state?.destinationHips;
+            resourceInputs["destinations"] = state?.destinations;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["disabled"] = state?.disabled;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["froms"] = state?.froms;
+            resourceInputs["logFail"] = state?.logFail;
+            resourceInputs["logSetting"] = state?.logSetting;
+            resourceInputs["logSuccess"] = state?.logSuccess;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["negateDestination"] = state?.negateDestination;
+            resourceInputs["negateSource"] = state?.negateSource;
+            resourceInputs["position"] = state?.position;
+            resourceInputs["profile"] = state?.profile;
+            resourceInputs["services"] = state?.services;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["sourceHips"] = state?.sourceHips;
+            resourceInputs["sourceUsers"] = state?.sourceUsers;
+            resourceInputs["sources"] = state?.sources;
+            resourceInputs["tags"] = state?.tags;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["tos"] = state?.tos;
+            resourceInputs["type"] = state?.type;
         } else {
             const args = argsOrState as DecryptionRuleArgs | undefined;
-            if ((!args || args.action === undefined) && !opts.urn) {
+            if (args?.action === undefined && !opts.urn) {
                 throw new Error("Missing required property 'action'");
             }
-            if ((!args || args.categories === undefined) && !opts.urn) {
+            if (args?.categories === undefined && !opts.urn) {
                 throw new Error("Missing required property 'categories'");
             }
-            if ((!args || args.destinations === undefined) && !opts.urn) {
+            if (args?.destinations === undefined && !opts.urn) {
                 throw new Error("Missing required property 'destinations'");
             }
-            if ((!args || args.froms === undefined) && !opts.urn) {
+            if (args?.froms === undefined && !opts.urn) {
                 throw new Error("Missing required property 'froms'");
             }
-            if ((!args || args.services === undefined) && !opts.urn) {
+            if (args?.services === undefined && !opts.urn) {
                 throw new Error("Missing required property 'services'");
             }
-            if ((!args || args.sourceUsers === undefined) && !opts.urn) {
+            if (args?.sourceUsers === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sourceUsers'");
             }
-            if ((!args || args.sources === undefined) && !opts.urn) {
+            if (args?.sources === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sources'");
             }
-            if ((!args || args.tos === undefined) && !opts.urn) {
+            if (args?.tos === undefined && !opts.urn) {
                 throw new Error("Missing required property 'tos'");
             }
-            resourceInputs["action"] = args ? args.action : undefined;
-            resourceInputs["categories"] = args ? args.categories : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["destinationHips"] = args ? args.destinationHips : undefined;
-            resourceInputs["destinations"] = args ? args.destinations : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["disabled"] = args ? args.disabled : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["froms"] = args ? args.froms : undefined;
-            resourceInputs["logFail"] = args ? args.logFail : undefined;
-            resourceInputs["logSetting"] = args ? args.logSetting : undefined;
-            resourceInputs["logSuccess"] = args ? args.logSuccess : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["negateDestination"] = args ? args.negateDestination : undefined;
-            resourceInputs["negateSource"] = args ? args.negateSource : undefined;
-            resourceInputs["position"] = args ? args.position : undefined;
-            resourceInputs["profile"] = args ? args.profile : undefined;
-            resourceInputs["services"] = args ? args.services : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["sourceHips"] = args ? args.sourceHips : undefined;
-            resourceInputs["sourceUsers"] = args ? args.sourceUsers : undefined;
-            resourceInputs["sources"] = args ? args.sources : undefined;
-            resourceInputs["tags"] = args ? args.tags : undefined;
-            resourceInputs["tos"] = args ? args.tos : undefined;
-            resourceInputs["type"] = args ? args.type : undefined;
+            resourceInputs["action"] = args?.action;
+            resourceInputs["categories"] = args?.categories;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["destinationHips"] = args?.destinationHips;
+            resourceInputs["destinations"] = args?.destinations;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["disabled"] = args?.disabled;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["froms"] = args?.froms;
+            resourceInputs["logFail"] = args?.logFail;
+            resourceInputs["logSetting"] = args?.logSetting;
+            resourceInputs["logSuccess"] = args?.logSuccess;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["negateDestination"] = args?.negateDestination;
+            resourceInputs["negateSource"] = args?.negateSource;
+            resourceInputs["position"] = args?.position;
+            resourceInputs["profile"] = args?.profile;
+            resourceInputs["services"] = args?.services;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["sourceHips"] = args?.sourceHips;
+            resourceInputs["sourceUsers"] = args?.sourceUsers;
+            resourceInputs["sources"] = args?.sources;
+            resourceInputs["tags"] = args?.tags;
+            resourceInputs["tos"] = args?.tos;
+            resourceInputs["type"] = args?.type;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

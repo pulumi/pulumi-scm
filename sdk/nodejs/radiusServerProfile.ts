@@ -40,36 +40,36 @@ export class RadiusServerProfile extends pulumi.CustomResource {
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * (Internal use) Encrypted values returned from the API.
      */
-    public /*out*/ readonly encryptedValues!: pulumi.Output<{[key: string]: string}>;
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The Protocol param.
      */
-    public readonly protocol!: pulumi.Output<outputs.RadiusServerProfileProtocol | undefined>;
+    declare public readonly protocol: pulumi.Output<outputs.RadiusServerProfileProtocol | undefined>;
     /**
      * The Retries param. Value must be between 1 and 5.
      */
-    public readonly retries!: pulumi.Output<number | undefined>;
+    declare public readonly retries: pulumi.Output<number | undefined>;
     /**
      * The Servers param.
      */
-    public readonly servers!: pulumi.Output<outputs.RadiusServerProfileServer[]>;
+    declare public readonly servers: pulumi.Output<outputs.RadiusServerProfileServer[]>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The Timeout param. Value must be between 1 and 120.
      */
-    public readonly timeout!: pulumi.Output<number | undefined>;
+    declare public readonly timeout: pulumi.Output<number | undefined>;
 
     /**
      * Create a RadiusServerProfile resource with the given unique name, arguments, and options.
@@ -84,27 +84,27 @@ export class RadiusServerProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as RadiusServerProfileState | undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["encryptedValues"] = state ? state.encryptedValues : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["protocol"] = state ? state.protocol : undefined;
-            resourceInputs["retries"] = state ? state.retries : undefined;
-            resourceInputs["servers"] = state ? state.servers : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["timeout"] = state ? state.timeout : undefined;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["protocol"] = state?.protocol;
+            resourceInputs["retries"] = state?.retries;
+            resourceInputs["servers"] = state?.servers;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["timeout"] = state?.timeout;
         } else {
             const args = argsOrState as RadiusServerProfileArgs | undefined;
-            if ((!args || args.servers === undefined) && !opts.urn) {
+            if (args?.servers === undefined && !opts.urn) {
                 throw new Error("Missing required property 'servers'");
             }
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["protocol"] = args ? args.protocol : undefined;
-            resourceInputs["retries"] = args ? args.retries : undefined;
-            resourceInputs["servers"] = args ? args.servers : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["timeout"] = args ? args.timeout : undefined;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["retries"] = args?.retries;
+            resourceInputs["servers"] = args?.servers;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["timeout"] = args?.timeout;
             resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }

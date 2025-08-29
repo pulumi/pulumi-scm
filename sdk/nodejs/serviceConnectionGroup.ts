@@ -47,24 +47,24 @@ export class ServiceConnectionGroup extends pulumi.CustomResource {
     /**
      * The DisableSnat param.
      */
-    public readonly disableSnat!: pulumi.Output<boolean | undefined>;
+    declare public readonly disableSnat: pulumi.Output<boolean | undefined>;
     /**
      * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
      */
-    public readonly folder!: pulumi.Output<string>;
+    declare public readonly folder: pulumi.Output<string>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The PbfOnly param.
      */
-    public readonly pbfOnly!: pulumi.Output<boolean | undefined>;
+    declare public readonly pbfOnly: pulumi.Output<boolean | undefined>;
     /**
      * The Targets param.
      */
-    public readonly targets!: pulumi.Output<string[]>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly targets: pulumi.Output<string[]>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a ServiceConnectionGroup resource with the given unique name, arguments, and options.
@@ -79,22 +79,22 @@ export class ServiceConnectionGroup extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceConnectionGroupState | undefined;
-            resourceInputs["disableSnat"] = state ? state.disableSnat : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["pbfOnly"] = state ? state.pbfOnly : undefined;
-            resourceInputs["targets"] = state ? state.targets : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["disableSnat"] = state?.disableSnat;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["pbfOnly"] = state?.pbfOnly;
+            resourceInputs["targets"] = state?.targets;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as ServiceConnectionGroupArgs | undefined;
-            if ((!args || args.targets === undefined) && !opts.urn) {
+            if (args?.targets === undefined && !opts.urn) {
                 throw new Error("Missing required property 'targets'");
             }
-            resourceInputs["disableSnat"] = args ? args.disableSnat : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["pbfOnly"] = args ? args.pbfOnly : undefined;
-            resourceInputs["targets"] = args ? args.targets : undefined;
+            resourceInputs["disableSnat"] = args?.disableSnat;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["pbfOnly"] = args?.pbfOnly;
+            resourceInputs["targets"] = args?.targets;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

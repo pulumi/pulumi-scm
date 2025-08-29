@@ -32,22 +32,14 @@ class ProviderArgs:
         """
         The set of arguments for constructing a Provider resource.
         :param pulumi.Input[_builtins.str] auth_file: The file path to the JSON file with auth creds for SCM.
-        :param pulumi.Input[_builtins.str] auth_url: The URL to send auth credentials to which will return a JWT. Default:
-               `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-               file variable: `auth_url`.
+        :param pulumi.Input[_builtins.str] auth_url: The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
         :param pulumi.Input[_builtins.str] client_id: The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
-        :param pulumi.Input[_builtins.str] client_secret: The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-               `client_secret`.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] headers: Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
-               `headers`.
-        :param pulumi.Input[_builtins.str] host: The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-               JSON config file variable: `host`.
-        :param pulumi.Input[_builtins.str] logging: The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-               `SCM_LOGGING`. JSON config file variable: `logging`.
-        :param pulumi.Input[_builtins.int] port: The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
-               config file variable: `port`.
-        :param pulumi.Input[_builtins.str] protocol: The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-               JSON config file variable: `protocol`.
+        :param pulumi.Input[_builtins.str] client_secret: The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] headers: Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`.
+        :param pulumi.Input[_builtins.str] host: The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
+        :param pulumi.Input[_builtins.str] logging: The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
+        :param pulumi.Input[_builtins.int] port: The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
+        :param pulumi.Input[_builtins.str] protocol: The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
         :param pulumi.Input[_builtins.str] scope: The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
         """
         if auth_file is not None:
@@ -87,9 +79,7 @@ class ProviderArgs:
     @pulumi.getter(name="authUrl")
     def auth_url(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The URL to send auth credentials to which will return a JWT. Default:
-        `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-        file variable: `auth_url`.
+        The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
         """
         return pulumi.get(self, "auth_url")
 
@@ -113,8 +103,7 @@ class ProviderArgs:
     @pulumi.getter(name="clientSecret")
     def client_secret(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-        `client_secret`.
+        The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
         """
         return pulumi.get(self, "client_secret")
 
@@ -126,8 +115,7 @@ class ProviderArgs:
     @pulumi.getter
     def headers(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
-        Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
-        `headers`.
+        Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`.
         """
         return pulumi.get(self, "headers")
 
@@ -139,8 +127,7 @@ class ProviderArgs:
     @pulumi.getter
     def host(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-        JSON config file variable: `host`.
+        The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
         """
         return pulumi.get(self, "host")
 
@@ -152,8 +139,7 @@ class ProviderArgs:
     @pulumi.getter
     def logging(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-        `SCM_LOGGING`. JSON config file variable: `logging`.
+        The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
         """
         return pulumi.get(self, "logging")
 
@@ -165,8 +151,7 @@ class ProviderArgs:
     @pulumi.getter
     def port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
-        config file variable: `port`.
+        The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
         """
         return pulumi.get(self, "port")
 
@@ -178,8 +163,7 @@ class ProviderArgs:
     @pulumi.getter
     def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-        JSON config file variable: `protocol`.
+        The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
         """
         return pulumi.get(self, "protocol")
 
@@ -226,22 +210,14 @@ class Provider(pulumi.ProviderResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] auth_file: The file path to the JSON file with auth creds for SCM.
-        :param pulumi.Input[_builtins.str] auth_url: The URL to send auth credentials to which will return a JWT. Default:
-               `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-               file variable: `auth_url`.
+        :param pulumi.Input[_builtins.str] auth_url: The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
         :param pulumi.Input[_builtins.str] client_id: The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
-        :param pulumi.Input[_builtins.str] client_secret: The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-               `client_secret`.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] headers: Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
-               `headers`.
-        :param pulumi.Input[_builtins.str] host: The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-               JSON config file variable: `host`.
-        :param pulumi.Input[_builtins.str] logging: The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-               `SCM_LOGGING`. JSON config file variable: `logging`.
-        :param pulumi.Input[_builtins.int] port: The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
-               config file variable: `port`.
-        :param pulumi.Input[_builtins.str] protocol: The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-               JSON config file variable: `protocol`.
+        :param pulumi.Input[_builtins.str] client_secret: The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] headers: Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`.
+        :param pulumi.Input[_builtins.str] host: The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
+        :param pulumi.Input[_builtins.str] logging: The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
+        :param pulumi.Input[_builtins.int] port: The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
+        :param pulumi.Input[_builtins.str] protocol: The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
         :param pulumi.Input[_builtins.str] scope: The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
         """
         ...
@@ -320,9 +296,7 @@ class Provider(pulumi.ProviderResource):
     @pulumi.getter(name="authUrl")
     def auth_url(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The URL to send auth credentials to which will return a JWT. Default:
-        `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-        file variable: `auth_url`.
+        The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
         """
         return pulumi.get(self, "auth_url")
 
@@ -338,8 +312,7 @@ class Provider(pulumi.ProviderResource):
     @pulumi.getter(name="clientSecret")
     def client_secret(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-        `client_secret`.
+        The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
         """
         return pulumi.get(self, "client_secret")
 
@@ -347,8 +320,7 @@ class Provider(pulumi.ProviderResource):
     @pulumi.getter
     def host(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-        JSON config file variable: `host`.
+        The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
         """
         return pulumi.get(self, "host")
 
@@ -356,8 +328,7 @@ class Provider(pulumi.ProviderResource):
     @pulumi.getter
     def logging(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-        `SCM_LOGGING`. JSON config file variable: `logging`.
+        The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
         """
         return pulumi.get(self, "logging")
 
@@ -365,8 +336,7 @@ class Provider(pulumi.ProviderResource):
     @pulumi.getter
     def protocol(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-        JSON config file variable: `protocol`.
+        The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
         """
         return pulumi.get(self, "protocol")
 

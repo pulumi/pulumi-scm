@@ -49,36 +49,36 @@ export class DecryptionProfile extends pulumi.CustomResource {
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * The SslForwardProxy param.
      */
-    public readonly sslForwardProxy!: pulumi.Output<outputs.DecryptionProfileSslForwardProxy | undefined>;
+    declare public readonly sslForwardProxy: pulumi.Output<outputs.DecryptionProfileSslForwardProxy | undefined>;
     /**
      * The SslInboundProxy param.
      */
-    public readonly sslInboundProxy!: pulumi.Output<outputs.DecryptionProfileSslInboundProxy | undefined>;
+    declare public readonly sslInboundProxy: pulumi.Output<outputs.DecryptionProfileSslInboundProxy | undefined>;
     /**
      * The SslNoProxy param.
      */
-    public readonly sslNoProxy!: pulumi.Output<outputs.DecryptionProfileSslNoProxy | undefined>;
+    declare public readonly sslNoProxy: pulumi.Output<outputs.DecryptionProfileSslNoProxy | undefined>;
     /**
      * The SslProtocolSettings param.
      */
-    public readonly sslProtocolSettings!: pulumi.Output<outputs.DecryptionProfileSslProtocolSettings | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly sslProtocolSettings: pulumi.Output<outputs.DecryptionProfileSslProtocolSettings | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a DecryptionProfile resource with the given unique name, arguments, and options.
@@ -93,25 +93,25 @@ export class DecryptionProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as DecryptionProfileState | undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["sslForwardProxy"] = state ? state.sslForwardProxy : undefined;
-            resourceInputs["sslInboundProxy"] = state ? state.sslInboundProxy : undefined;
-            resourceInputs["sslNoProxy"] = state ? state.sslNoProxy : undefined;
-            resourceInputs["sslProtocolSettings"] = state ? state.sslProtocolSettings : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["sslForwardProxy"] = state?.sslForwardProxy;
+            resourceInputs["sslInboundProxy"] = state?.sslInboundProxy;
+            resourceInputs["sslNoProxy"] = state?.sslNoProxy;
+            resourceInputs["sslProtocolSettings"] = state?.sslProtocolSettings;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as DecryptionProfileArgs | undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["sslForwardProxy"] = args ? args.sslForwardProxy : undefined;
-            resourceInputs["sslInboundProxy"] = args ? args.sslInboundProxy : undefined;
-            resourceInputs["sslNoProxy"] = args ? args.sslNoProxy : undefined;
-            resourceInputs["sslProtocolSettings"] = args ? args.sslProtocolSettings : undefined;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["sslForwardProxy"] = args?.sslForwardProxy;
+            resourceInputs["sslInboundProxy"] = args?.sslInboundProxy;
+            resourceInputs["sslNoProxy"] = args?.sslNoProxy;
+            resourceInputs["sslProtocolSettings"] = args?.sslProtocolSettings;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

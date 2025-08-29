@@ -33,18 +33,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The URL to send auth credentials to which will return a JWT. Default:
-     * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-     * file variable: `auth_url`.
+     * The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
      * 
      */
     @Import(name="authUrl")
     private @Nullable Output<String> authUrl;
 
     /**
-     * @return The URL to send auth credentials to which will return a JWT. Default:
-     * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-     * file variable: `auth_url`.
+     * @return The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
      * 
      */
     public Optional<Output<String>> authUrl() {
@@ -67,16 +63,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-     * `client_secret`.
+     * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
      * 
      */
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
     /**
-     * @return The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-     * `client_secret`.
+     * @return The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
      * 
      */
     public Optional<Output<String>> clientSecret() {
@@ -84,16 +78,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
-     * `headers`.
+     * Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`.
      * 
      */
     @Import(name="headers", json=true)
     private @Nullable Output<Map<String,String>> headers;
 
     /**
-     * @return Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
-     * `headers`.
+     * @return Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`.
      * 
      */
     public Optional<Output<Map<String,String>>> headers() {
@@ -101,16 +93,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-     * JSON config file variable: `host`.
+     * The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
      * 
      */
     @Import(name="host")
     private @Nullable Output<String> host;
 
     /**
-     * @return The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-     * JSON config file variable: `host`.
+     * @return The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
      * 
      */
     public Optional<Output<String>> host() {
@@ -118,16 +108,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-     * `SCM_LOGGING`. JSON config file variable: `logging`.
+     * The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
      * 
      */
     @Import(name="logging")
     private @Nullable Output<String> logging;
 
     /**
-     * @return The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-     * `SCM_LOGGING`. JSON config file variable: `logging`.
+     * @return The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
      * 
      */
     public Optional<Output<String>> logging() {
@@ -135,16 +123,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
-     * config file variable: `port`.
+     * The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
      * 
      */
     @Import(name="port", json=true)
     private @Nullable Output<Integer> port;
 
     /**
-     * @return The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
-     * config file variable: `port`.
+     * @return The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
      * 
      */
     public Optional<Output<Integer>> port() {
@@ -152,16 +138,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-     * JSON config file variable: `protocol`.
+     * The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
     /**
-     * @return The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-     * JSON config file variable: `protocol`.
+     * @return The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
      * 
      */
     public Optional<Output<String>> protocol() {
@@ -238,9 +222,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authUrl The URL to send auth credentials to which will return a JWT. Default:
-         * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-         * file variable: `auth_url`.
+         * @param authUrl The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
          * 
          * @return builder
          * 
@@ -251,9 +233,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authUrl The URL to send auth credentials to which will return a JWT. Default:
-         * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-         * file variable: `auth_url`.
+         * @param authUrl The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
          * 
          * @return builder
          * 
@@ -284,8 +264,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param clientSecret The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-         * `client_secret`.
+         * @param clientSecret The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
          * 
          * @return builder
          * 
@@ -296,8 +275,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param clientSecret The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-         * `client_secret`.
+         * @param clientSecret The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
          * 
          * @return builder
          * 
@@ -307,8 +285,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param headers Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
-         * `headers`.
+         * @param headers Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`.
          * 
          * @return builder
          * 
@@ -319,8 +296,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param headers Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
-         * `headers`.
+         * @param headers Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`.
          * 
          * @return builder
          * 
@@ -330,8 +306,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param host The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-         * JSON config file variable: `host`.
+         * @param host The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
          * 
          * @return builder
          * 
@@ -342,8 +317,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param host The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-         * JSON config file variable: `host`.
+         * @param host The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
          * 
          * @return builder
          * 
@@ -353,8 +327,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param logging The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-         * `SCM_LOGGING`. JSON config file variable: `logging`.
+         * @param logging The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
          * 
          * @return builder
          * 
@@ -365,8 +338,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param logging The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-         * `SCM_LOGGING`. JSON config file variable: `logging`.
+         * @param logging The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
          * 
          * @return builder
          * 
@@ -376,8 +348,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param port The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
-         * config file variable: `port`.
+         * @param port The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
          * 
          * @return builder
          * 
@@ -388,8 +359,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param port The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
-         * config file variable: `port`.
+         * @param port The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
          * 
          * @return builder
          * 
@@ -399,8 +369,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param protocol The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-         * JSON config file variable: `protocol`.
+         * @param protocol The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
          * 
          * @return builder
          * 
@@ -411,8 +380,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param protocol The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-         * JSON config file variable: `protocol`.
+         * @param protocol The protocol to use for SCM. This should be &#39;http&#39; or &#39;https&#39;. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
          * 
          * @return builder
          * 

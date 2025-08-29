@@ -49,36 +49,36 @@ export class TrafficSteeringRule extends pulumi.CustomResource {
     /**
      * The Action param.
      */
-    public readonly action!: pulumi.Output<outputs.TrafficSteeringRuleAction | undefined>;
+    declare public readonly action: pulumi.Output<outputs.TrafficSteeringRuleAction | undefined>;
     /**
      * The Category param.
      */
-    public readonly categories!: pulumi.Output<string[] | undefined>;
+    declare public readonly categories: pulumi.Output<string[] | undefined>;
     /**
      * The Destination param.
      */
-    public readonly destinations!: pulumi.Output<string[] | undefined>;
+    declare public readonly destinations: pulumi.Output<string[] | undefined>;
     /**
      * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
      */
-    public readonly folder!: pulumi.Output<string>;
+    declare public readonly folder: pulumi.Output<string>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The Service param.
      */
-    public readonly services!: pulumi.Output<string[]>;
+    declare public readonly services: pulumi.Output<string[]>;
     /**
      * The SourceUser param.
      */
-    public readonly sourceUsers!: pulumi.Output<string[] | undefined>;
+    declare public readonly sourceUsers: pulumi.Output<string[] | undefined>;
     /**
      * The Source param.
      */
-    public readonly sources!: pulumi.Output<string[]>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly sources: pulumi.Output<string[]>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a TrafficSteeringRule resource with the given unique name, arguments, and options.
@@ -93,31 +93,31 @@ export class TrafficSteeringRule extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TrafficSteeringRuleState | undefined;
-            resourceInputs["action"] = state ? state.action : undefined;
-            resourceInputs["categories"] = state ? state.categories : undefined;
-            resourceInputs["destinations"] = state ? state.destinations : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["services"] = state ? state.services : undefined;
-            resourceInputs["sourceUsers"] = state ? state.sourceUsers : undefined;
-            resourceInputs["sources"] = state ? state.sources : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["action"] = state?.action;
+            resourceInputs["categories"] = state?.categories;
+            resourceInputs["destinations"] = state?.destinations;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["services"] = state?.services;
+            resourceInputs["sourceUsers"] = state?.sourceUsers;
+            resourceInputs["sources"] = state?.sources;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as TrafficSteeringRuleArgs | undefined;
-            if ((!args || args.services === undefined) && !opts.urn) {
+            if (args?.services === undefined && !opts.urn) {
                 throw new Error("Missing required property 'services'");
             }
-            if ((!args || args.sources === undefined) && !opts.urn) {
+            if (args?.sources === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sources'");
             }
-            resourceInputs["action"] = args ? args.action : undefined;
-            resourceInputs["categories"] = args ? args.categories : undefined;
-            resourceInputs["destinations"] = args ? args.destinations : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["services"] = args ? args.services : undefined;
-            resourceInputs["sourceUsers"] = args ? args.sourceUsers : undefined;
-            resourceInputs["sources"] = args ? args.sources : undefined;
+            resourceInputs["action"] = args?.action;
+            resourceInputs["categories"] = args?.categories;
+            resourceInputs["destinations"] = args?.destinations;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["services"] = args?.services;
+            resourceInputs["sourceUsers"] = args?.sourceUsers;
+            resourceInputs["sources"] = args?.sources;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

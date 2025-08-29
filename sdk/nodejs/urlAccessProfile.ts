@@ -49,76 +49,76 @@ export class UrlAccessProfile extends pulumi.CustomResource {
     /**
      * The Alerts param.
      */
-    public readonly alerts!: pulumi.Output<string[] | undefined>;
+    declare public readonly alerts: pulumi.Output<string[] | undefined>;
     /**
      * The Allows param.
      */
-    public readonly allows!: pulumi.Output<string[] | undefined>;
+    declare public readonly allows: pulumi.Output<string[] | undefined>;
     /**
      * The Blocks param.
      */
-    public readonly blocks!: pulumi.Output<string[] | undefined>;
+    declare public readonly blocks: pulumi.Output<string[] | undefined>;
     /**
      * The CloudInlineCat param.
      */
-    public readonly cloudInlineCat!: pulumi.Output<boolean | undefined>;
+    declare public readonly cloudInlineCat: pulumi.Output<boolean | undefined>;
     /**
      * The Continues param.
      */
-    public readonly continues!: pulumi.Output<string[] | undefined>;
+    declare public readonly continues: pulumi.Output<string[] | undefined>;
     /**
      * The CredentialEnforcement param.
      */
-    public readonly credentialEnforcement!: pulumi.Output<outputs.UrlAccessProfileCredentialEnforcement | undefined>;
+    declare public readonly credentialEnforcement: pulumi.Output<outputs.UrlAccessProfileCredentialEnforcement | undefined>;
     /**
      * The Description param. String length must not exceed 255 characters.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The LocalInlineCat param.
      */
-    public readonly localInlineCat!: pulumi.Output<boolean | undefined>;
+    declare public readonly localInlineCat: pulumi.Output<boolean | undefined>;
     /**
      * The LogContainerPageOnly param. Default: `true`.
      */
-    public readonly logContainerPageOnly!: pulumi.Output<boolean>;
+    declare public readonly logContainerPageOnly: pulumi.Output<boolean>;
     /**
      * The LogHttpHdrReferer param. Default: `false`.
      */
-    public readonly logHttpHdrReferer!: pulumi.Output<boolean>;
+    declare public readonly logHttpHdrReferer: pulumi.Output<boolean>;
     /**
      * The LogHttpHdrUserAgent param. Default: `false`.
      */
-    public readonly logHttpHdrUserAgent!: pulumi.Output<boolean>;
+    declare public readonly logHttpHdrUserAgent: pulumi.Output<boolean>;
     /**
      * The LogHttpHdrXff param. Default: `false`.
      */
-    public readonly logHttpHdrXff!: pulumi.Output<boolean>;
+    declare public readonly logHttpHdrXff: pulumi.Output<boolean>;
     /**
      * The MlavCategoryExceptions param.
      */
-    public readonly mlavCategoryExceptions!: pulumi.Output<string[] | undefined>;
+    declare public readonly mlavCategoryExceptions: pulumi.Output<string[] | undefined>;
     /**
      * The Name param.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The SafeSearchEnforcement param. Default: `false`.
      */
-    public readonly safeSearchEnforcement!: pulumi.Output<boolean>;
+    declare public readonly safeSearchEnforcement: pulumi.Output<boolean>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
      * Create a UrlAccessProfile resource with the given unique name, arguments, and options.
@@ -133,45 +133,45 @@ export class UrlAccessProfile extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as UrlAccessProfileState | undefined;
-            resourceInputs["alerts"] = state ? state.alerts : undefined;
-            resourceInputs["allows"] = state ? state.allows : undefined;
-            resourceInputs["blocks"] = state ? state.blocks : undefined;
-            resourceInputs["cloudInlineCat"] = state ? state.cloudInlineCat : undefined;
-            resourceInputs["continues"] = state ? state.continues : undefined;
-            resourceInputs["credentialEnforcement"] = state ? state.credentialEnforcement : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["localInlineCat"] = state ? state.localInlineCat : undefined;
-            resourceInputs["logContainerPageOnly"] = state ? state.logContainerPageOnly : undefined;
-            resourceInputs["logHttpHdrReferer"] = state ? state.logHttpHdrReferer : undefined;
-            resourceInputs["logHttpHdrUserAgent"] = state ? state.logHttpHdrUserAgent : undefined;
-            resourceInputs["logHttpHdrXff"] = state ? state.logHttpHdrXff : undefined;
-            resourceInputs["mlavCategoryExceptions"] = state ? state.mlavCategoryExceptions : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["safeSearchEnforcement"] = state ? state.safeSearchEnforcement : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
+            resourceInputs["alerts"] = state?.alerts;
+            resourceInputs["allows"] = state?.allows;
+            resourceInputs["blocks"] = state?.blocks;
+            resourceInputs["cloudInlineCat"] = state?.cloudInlineCat;
+            resourceInputs["continues"] = state?.continues;
+            resourceInputs["credentialEnforcement"] = state?.credentialEnforcement;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["localInlineCat"] = state?.localInlineCat;
+            resourceInputs["logContainerPageOnly"] = state?.logContainerPageOnly;
+            resourceInputs["logHttpHdrReferer"] = state?.logHttpHdrReferer;
+            resourceInputs["logHttpHdrUserAgent"] = state?.logHttpHdrUserAgent;
+            resourceInputs["logHttpHdrXff"] = state?.logHttpHdrXff;
+            resourceInputs["mlavCategoryExceptions"] = state?.mlavCategoryExceptions;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["safeSearchEnforcement"] = state?.safeSearchEnforcement;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as UrlAccessProfileArgs | undefined;
-            resourceInputs["alerts"] = args ? args.alerts : undefined;
-            resourceInputs["allows"] = args ? args.allows : undefined;
-            resourceInputs["blocks"] = args ? args.blocks : undefined;
-            resourceInputs["cloudInlineCat"] = args ? args.cloudInlineCat : undefined;
-            resourceInputs["continues"] = args ? args.continues : undefined;
-            resourceInputs["credentialEnforcement"] = args ? args.credentialEnforcement : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["localInlineCat"] = args ? args.localInlineCat : undefined;
-            resourceInputs["logContainerPageOnly"] = args ? args.logContainerPageOnly : undefined;
-            resourceInputs["logHttpHdrReferer"] = args ? args.logHttpHdrReferer : undefined;
-            resourceInputs["logHttpHdrUserAgent"] = args ? args.logHttpHdrUserAgent : undefined;
-            resourceInputs["logHttpHdrXff"] = args ? args.logHttpHdrXff : undefined;
-            resourceInputs["mlavCategoryExceptions"] = args ? args.mlavCategoryExceptions : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["safeSearchEnforcement"] = args ? args.safeSearchEnforcement : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
+            resourceInputs["alerts"] = args?.alerts;
+            resourceInputs["allows"] = args?.allows;
+            resourceInputs["blocks"] = args?.blocks;
+            resourceInputs["cloudInlineCat"] = args?.cloudInlineCat;
+            resourceInputs["continues"] = args?.continues;
+            resourceInputs["credentialEnforcement"] = args?.credentialEnforcement;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["localInlineCat"] = args?.localInlineCat;
+            resourceInputs["logContainerPageOnly"] = args?.logContainerPageOnly;
+            resourceInputs["logHttpHdrReferer"] = args?.logHttpHdrReferer;
+            resourceInputs["logHttpHdrUserAgent"] = args?.logHttpHdrUserAgent;
+            resourceInputs["logHttpHdrXff"] = args?.logHttpHdrXff;
+            resourceInputs["mlavCategoryExceptions"] = args?.mlavCategoryExceptions;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["safeSearchEnforcement"] = args?.safeSearchEnforcement;
+            resourceInputs["snippet"] = args?.snippet;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

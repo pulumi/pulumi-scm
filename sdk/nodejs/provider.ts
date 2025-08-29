@@ -28,41 +28,35 @@ export class Provider extends pulumi.ProviderResource {
     /**
      * The file path to the JSON file with auth creds for SCM.
      */
-    public readonly authFile!: pulumi.Output<string | undefined>;
+    declare public readonly authFile: pulumi.Output<string | undefined>;
     /**
-     * The URL to send auth credentials to which will return a JWT. Default:
-     * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-     * file variable: `authUrl`.
+     * The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `authUrl`.
      */
-    public readonly authUrl!: pulumi.Output<string | undefined>;
+    declare public readonly authUrl: pulumi.Output<string | undefined>;
     /**
      * The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `clientId`.
      */
-    public readonly clientId!: pulumi.Output<string | undefined>;
+    declare public readonly clientId: pulumi.Output<string | undefined>;
     /**
-     * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-     * `clientSecret`.
+     * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `clientSecret`.
      */
-    public readonly clientSecret!: pulumi.Output<string | undefined>;
+    declare public readonly clientSecret: pulumi.Output<string | undefined>;
     /**
-     * The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-     * JSON config file variable: `host`.
+     * The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
      */
-    public readonly host!: pulumi.Output<string | undefined>;
+    declare public readonly host: pulumi.Output<string | undefined>;
     /**
-     * The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-     * `SCM_LOGGING`. JSON config file variable: `logging`.
+     * The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
      */
-    public readonly logging!: pulumi.Output<string | undefined>;
+    declare public readonly logging: pulumi.Output<string | undefined>;
     /**
-     * The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-     * JSON config file variable: `protocol`.
+     * The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
      */
-    public readonly protocol!: pulumi.Output<string | undefined>;
+    declare public readonly protocol: pulumi.Output<string | undefined>;
     /**
      * The client scope. Environment variable: `SCM_SCOPE`. JSON config file variable: `scope`.
      */
-    public readonly scope!: pulumi.Output<string | undefined>;
+    declare public readonly scope: pulumi.Output<string | undefined>;
 
     /**
      * Create a Provider resource with the given unique name, arguments, and options.
@@ -75,16 +69,16 @@ export class Provider extends pulumi.ProviderResource {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
         {
-            resourceInputs["authFile"] = args ? args.authFile : undefined;
-            resourceInputs["authUrl"] = args ? args.authUrl : undefined;
-            resourceInputs["clientId"] = args ? args.clientId : undefined;
+            resourceInputs["authFile"] = args?.authFile;
+            resourceInputs["authUrl"] = args?.authUrl;
+            resourceInputs["clientId"] = args?.clientId;
             resourceInputs["clientSecret"] = args?.clientSecret ? pulumi.secret(args.clientSecret) : undefined;
-            resourceInputs["headers"] = pulumi.output(args ? args.headers : undefined).apply(JSON.stringify);
-            resourceInputs["host"] = args ? args.host : undefined;
-            resourceInputs["logging"] = args ? args.logging : undefined;
-            resourceInputs["port"] = pulumi.output(args ? args.port : undefined).apply(JSON.stringify);
-            resourceInputs["protocol"] = args ? args.protocol : undefined;
-            resourceInputs["scope"] = args ? args.scope : undefined;
+            resourceInputs["headers"] = pulumi.output(args?.headers).apply(JSON.stringify);
+            resourceInputs["host"] = args?.host;
+            resourceInputs["logging"] = args?.logging;
+            resourceInputs["port"] = pulumi.output(args?.port).apply(JSON.stringify);
+            resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["scope"] = args?.scope;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         const secretOpts = { additionalSecretOutputs: ["clientSecret"] };
@@ -111,9 +105,7 @@ export interface ProviderArgs {
      */
     authFile?: pulumi.Input<string>;
     /**
-     * The URL to send auth credentials to which will return a JWT. Default:
-     * `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config
-     * file variable: `authUrl`.
+     * The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `authUrl`.
      */
     authUrl?: pulumi.Input<string>;
     /**
@@ -121,33 +113,27 @@ export interface ProviderArgs {
      */
     clientId?: pulumi.Input<string>;
     /**
-     * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable:
-     * `clientSecret`.
+     * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `clientSecret`.
      */
     clientSecret?: pulumi.Input<string>;
     /**
-     * Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable:
-     * `headers`.
+     * Custom HTTP headers to be sent with all API commands. Environment variable: `SCM_HEADERS`. JSON config file variable: `headers`.
      */
     headers?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
-     * The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`.
-     * JSON config file variable: `host`.
+     * The hostname of Strata Cloud Manager API. Default: `api.sase.paloaltonetworks.com`. Environment variable: `SCM_HOST`. JSON config file variable: `host`.
      */
     host?: pulumi.Input<string>;
     /**
-     * The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable:
-     * `SCM_LOGGING`. JSON config file variable: `logging`.
+     * The logging level of the provider and the underlying communication. Default: `quiet`. Environment variable: `SCM_LOGGING`. JSON config file variable: `logging`.
      */
     logging?: pulumi.Input<string>;
     /**
-     * The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON
-     * config file variable: `port`.
+     * The port number to use for API commands, if non-standard for the given protocol. Environment variable: `SCM_PORT`. JSON config file variable: `port`.
      */
     port?: pulumi.Input<number>;
     /**
-     * The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`.
-     * JSON config file variable: `protocol`.
+     * The protocol to use for SCM. This should be 'http' or 'https'. Default: `https`. Environment variable: `SCM_PROTOCOL`. JSON config file variable: `protocol`.
      */
     protocol?: pulumi.Input<string>;
     /**

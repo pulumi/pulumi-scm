@@ -47,76 +47,76 @@ export class AppOverrideRule extends pulumi.CustomResource {
     /**
      * The Application param.
      */
-    public readonly application!: pulumi.Output<string>;
+    declare public readonly application: pulumi.Output<string>;
     /**
      * The Description param. String length must not exceed 1024 characters.
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The Destinations param.
      */
-    public readonly destinations!: pulumi.Output<string[]>;
+    declare public readonly destinations: pulumi.Output<string[]>;
     /**
      * The Device param.
      */
-    public readonly device!: pulumi.Output<string | undefined>;
+    declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The Disabled param. Default: `false`.
      */
-    public readonly disabled!: pulumi.Output<boolean>;
+    declare public readonly disabled: pulumi.Output<boolean>;
     /**
      * The Folder param.
      */
-    public readonly folder!: pulumi.Output<string | undefined>;
+    declare public readonly folder: pulumi.Output<string | undefined>;
     /**
      * The Froms param.
      */
-    public readonly froms!: pulumi.Output<string[]>;
+    declare public readonly froms: pulumi.Output<string[]>;
     /**
      * The GroupTag param.
      */
-    public readonly groupTag!: pulumi.Output<string | undefined>;
+    declare public readonly groupTag: pulumi.Output<string | undefined>;
     /**
      * The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The NegateDestination param. Default: `false`.
      */
-    public readonly negateDestination!: pulumi.Output<boolean>;
+    declare public readonly negateDestination: pulumi.Output<boolean>;
     /**
      * The NegateSource param. Default: `false`.
      */
-    public readonly negateSource!: pulumi.Output<boolean>;
+    declare public readonly negateSource: pulumi.Output<boolean>;
     /**
      * The Port param. Value must be between 0 and 65535.
      */
-    public readonly port!: pulumi.Output<number>;
+    declare public readonly port: pulumi.Output<number>;
     /**
      * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
      */
-    public readonly position!: pulumi.Output<string>;
+    declare public readonly position: pulumi.Output<string>;
     /**
      * The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
      */
-    public readonly protocol!: pulumi.Output<string>;
+    declare public readonly protocol: pulumi.Output<string>;
     /**
      * The Snippet param.
      */
-    public readonly snippet!: pulumi.Output<string | undefined>;
+    declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
      * The Sources param.
      */
-    public readonly sources!: pulumi.Output<string[]>;
+    declare public readonly sources: pulumi.Output<string[]>;
     /**
      * The Tags param.
      */
-    public readonly tags!: pulumi.Output<string[] | undefined>;
-    public /*out*/ readonly tfid!: pulumi.Output<string>;
+    declare public readonly tags: pulumi.Output<string[] | undefined>;
+    declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The Tos param.
      */
-    public readonly tos!: pulumi.Output<string[]>;
+    declare public readonly tos: pulumi.Output<string[]>;
 
     /**
      * Create a AppOverrideRule resource with the given unique name, arguments, and options.
@@ -131,66 +131,66 @@ export class AppOverrideRule extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AppOverrideRuleState | undefined;
-            resourceInputs["application"] = state ? state.application : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["destinations"] = state ? state.destinations : undefined;
-            resourceInputs["device"] = state ? state.device : undefined;
-            resourceInputs["disabled"] = state ? state.disabled : undefined;
-            resourceInputs["folder"] = state ? state.folder : undefined;
-            resourceInputs["froms"] = state ? state.froms : undefined;
-            resourceInputs["groupTag"] = state ? state.groupTag : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["negateDestination"] = state ? state.negateDestination : undefined;
-            resourceInputs["negateSource"] = state ? state.negateSource : undefined;
-            resourceInputs["port"] = state ? state.port : undefined;
-            resourceInputs["position"] = state ? state.position : undefined;
-            resourceInputs["protocol"] = state ? state.protocol : undefined;
-            resourceInputs["snippet"] = state ? state.snippet : undefined;
-            resourceInputs["sources"] = state ? state.sources : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
-            resourceInputs["tfid"] = state ? state.tfid : undefined;
-            resourceInputs["tos"] = state ? state.tos : undefined;
+            resourceInputs["application"] = state?.application;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["destinations"] = state?.destinations;
+            resourceInputs["device"] = state?.device;
+            resourceInputs["disabled"] = state?.disabled;
+            resourceInputs["folder"] = state?.folder;
+            resourceInputs["froms"] = state?.froms;
+            resourceInputs["groupTag"] = state?.groupTag;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["negateDestination"] = state?.negateDestination;
+            resourceInputs["negateSource"] = state?.negateSource;
+            resourceInputs["port"] = state?.port;
+            resourceInputs["position"] = state?.position;
+            resourceInputs["protocol"] = state?.protocol;
+            resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["sources"] = state?.sources;
+            resourceInputs["tags"] = state?.tags;
+            resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["tos"] = state?.tos;
         } else {
             const args = argsOrState as AppOverrideRuleArgs | undefined;
-            if ((!args || args.application === undefined) && !opts.urn) {
+            if (args?.application === undefined && !opts.urn) {
                 throw new Error("Missing required property 'application'");
             }
-            if ((!args || args.destinations === undefined) && !opts.urn) {
+            if (args?.destinations === undefined && !opts.urn) {
                 throw new Error("Missing required property 'destinations'");
             }
-            if ((!args || args.froms === undefined) && !opts.urn) {
+            if (args?.froms === undefined && !opts.urn) {
                 throw new Error("Missing required property 'froms'");
             }
-            if ((!args || args.port === undefined) && !opts.urn) {
+            if (args?.port === undefined && !opts.urn) {
                 throw new Error("Missing required property 'port'");
             }
-            if ((!args || args.protocol === undefined) && !opts.urn) {
+            if (args?.protocol === undefined && !opts.urn) {
                 throw new Error("Missing required property 'protocol'");
             }
-            if ((!args || args.sources === undefined) && !opts.urn) {
+            if (args?.sources === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sources'");
             }
-            if ((!args || args.tos === undefined) && !opts.urn) {
+            if (args?.tos === undefined && !opts.urn) {
                 throw new Error("Missing required property 'tos'");
             }
-            resourceInputs["application"] = args ? args.application : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["destinations"] = args ? args.destinations : undefined;
-            resourceInputs["device"] = args ? args.device : undefined;
-            resourceInputs["disabled"] = args ? args.disabled : undefined;
-            resourceInputs["folder"] = args ? args.folder : undefined;
-            resourceInputs["froms"] = args ? args.froms : undefined;
-            resourceInputs["groupTag"] = args ? args.groupTag : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["negateDestination"] = args ? args.negateDestination : undefined;
-            resourceInputs["negateSource"] = args ? args.negateSource : undefined;
-            resourceInputs["port"] = args ? args.port : undefined;
-            resourceInputs["position"] = args ? args.position : undefined;
-            resourceInputs["protocol"] = args ? args.protocol : undefined;
-            resourceInputs["snippet"] = args ? args.snippet : undefined;
-            resourceInputs["sources"] = args ? args.sources : undefined;
-            resourceInputs["tags"] = args ? args.tags : undefined;
-            resourceInputs["tos"] = args ? args.tos : undefined;
+            resourceInputs["application"] = args?.application;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["destinations"] = args?.destinations;
+            resourceInputs["device"] = args?.device;
+            resourceInputs["disabled"] = args?.disabled;
+            resourceInputs["folder"] = args?.folder;
+            resourceInputs["froms"] = args?.froms;
+            resourceInputs["groupTag"] = args?.groupTag;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["negateDestination"] = args?.negateDestination;
+            resourceInputs["negateSource"] = args?.negateSource;
+            resourceInputs["port"] = args?.port;
+            resourceInputs["position"] = args?.position;
+            resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["sources"] = args?.sources;
+            resourceInputs["tags"] = args?.tags;
+            resourceInputs["tos"] = args?.tos;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
