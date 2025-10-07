@@ -11,6 +11,41 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Retrieves a config item.
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Scm.HipObject("example", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "myExample",
+    ///         Description = "Made by Pulumi",
+    ///         DiskBackup = new Scm.Inputs.HipObjectDiskBackupArgs
+    ///         {
+    ///             Criteria = new Scm.Inputs.HipObjectDiskBackupCriteriaArgs
+    ///             {
+    ///                 IsInstalled = true,
+    ///                 LastBackupTime = new Scm.Inputs.HipObjectDiskBackupCriteriaLastBackupTimeArgs
+    ///                 {
+    ///                     Within = new Scm.Inputs.HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs
+    ///                     {
+    ///                         Days = 1,
+    ///                     },
+    ///                 },
+    ///             },
+    ///             Exclude_vendor = false,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/hipObject:HipObject")]
     public partial class HipObject : global::Pulumi.CustomResource

@@ -8,6 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a config item.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const example = new scm.NatRule("example", {
+ *     folder: "folder1",
+ *     name: "example_nat1",
+ *     description: "Example source nat",
+ *     sources: ["10.10.10.10/24"],
+ *     froms: ["any"],
+ *     tos: ["untrust"],
+ *     sourceTranslation: {
+ *         translated_address_single: "192.168.10.100",
+ *         bi_directional: "no",
+ *     },
+ * });
+ * ```
  */
 export class NatRule extends pulumi.CustomResource {
     /**

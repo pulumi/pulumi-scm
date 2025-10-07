@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class QosProfileClassBandwidthTypeArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Mbps param. Ensure that only one of the following is specified: `mbps`, `percentage`
+        /// The Mbps param. Ensure that only one of the following is specified: `Mbps`, `Percentage`
         /// </summary>
         [Input("mbps")]
         public Input<Inputs.QosProfileClassBandwidthTypeMbpsArgs>? Mbps { get; set; }
 
         /// <summary>
-        /// The Percentage param. Ensure that only one of the following is specified: `mbps`, `percentage`
+        /// The Percentage param. Ensure that only one of the following is specified: `Mbps`, `Percentage`
         /// </summary>
         [Input("percentage")]
         public Input<Inputs.QosProfileClassBandwidthTypePercentageArgs>? Percentage { get; set; }

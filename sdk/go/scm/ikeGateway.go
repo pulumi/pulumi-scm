@@ -13,6 +13,49 @@ import (
 )
 
 // Retrieves a config item.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewIkeGateway(ctx, "example", &scm.IkeGatewayArgs{
+//				Folder: pulumi.String("Remote Networks"),
+//				Name:   pulumi.String("gw1"),
+//				PeerAddress: &scm.IkeGatewayPeerAddressArgs{
+//					Dynamic_address: true,
+//				},
+//				Protocol: &scm.IkeGatewayProtocolArgs{
+//					Version: pulumi.String("ikev2"),
+//					Ikev2: &scm.IkeGatewayProtocolIkev2Args{
+//						Dpd: &scm.IkeGatewayProtocolIkev2DpdArgs{
+//							Enable: pulumi.Bool(false),
+//						},
+//					},
+//				},
+//				Authentication: &scm.IkeGatewayAuthenticationArgs{
+//					Pre_shared_key: map[string]interface{}{
+//						"key": "secret",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type IkeGateway struct {
 	pulumi.CustomResourceState
 

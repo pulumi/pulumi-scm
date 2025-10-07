@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class QosPolicyRuleDscpTosCodepointType
     {
         /// <summary>
-        /// The Af param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+        /// The Af param. Ensure that only one of the following is specified: `Af`, `Cs`, `Custom`, `Ef`, `Tos`
         /// </summary>
         public readonly Outputs.QosPolicyRuleDscpTosCodepointTypeAf? Af;
         /// <summary>
-        /// The Cs param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+        /// The Cs param. Ensure that only one of the following is specified: `Af`, `Cs`, `Custom`, `Ef`, `Tos`
         /// </summary>
         public readonly Outputs.QosPolicyRuleDscpTosCodepointTypeCs? Cs;
         /// <summary>
-        /// The Custom param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+        /// The Custom param. Ensure that only one of the following is specified: `Af`, `Cs`, `Custom`, `Ef`, `Tos`
         /// </summary>
         public readonly Outputs.QosPolicyRuleDscpTosCodepointTypeCustom? Custom;
         /// <summary>
-        /// The Ef param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+        /// The Ef param. Ensure that only one of the following is specified: `Af`, `Cs`, `Custom`, `Ef`, `Tos`
         /// </summary>
         public readonly bool? Ef;
         /// <summary>
-        /// The Tos param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+        /// The Tos param. Ensure that only one of the following is specified: `Af`, `Cs`, `Custom`, `Ef`, `Tos`
         /// </summary>
         public readonly Outputs.QosPolicyRuleDscpTosCodepointTypeTos? Tos;
 

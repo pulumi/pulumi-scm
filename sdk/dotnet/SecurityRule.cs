@@ -73,7 +73,7 @@ namespace Pulumi.Scm
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The state of the security rule. Default: `false`.
+        /// The state of the security rule. Default: `False`.
         /// </summary>
         [Output("disabled")]
         public Output<bool> Disabled { get; private set; } = null!;
@@ -103,13 +103,13 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Negate the destination addresses(es). Default: `false`.
+        /// Negate the destination addresses(es). Default: `False`.
         /// </summary>
         [Output("negateDestination")]
         public Output<bool> NegateDestination { get; private set; } = null!;
 
         /// <summary>
-        /// Negate the source address(es). Default: `false`.
+        /// Negate the source address(es). Default: `False`.
         /// </summary>
         [Output("negateSource")]
         public Output<bool> NegateSource { get; private set; } = null!;
@@ -284,7 +284,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The state of the security rule. Default: `false`.
+        /// The state of the security rule. Default: `False`.
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
@@ -320,13 +320,13 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Negate the destination addresses(es). Default: `false`.
+        /// Negate the destination addresses(es). Default: `False`.
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// Negate the source address(es). Default: `false`.
+        /// Negate the source address(es). Default: `False`.
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }
@@ -496,7 +496,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The state of the security rule. Default: `false`.
+        /// The state of the security rule. Default: `False`.
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
@@ -532,13 +532,13 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Negate the destination addresses(es). Default: `false`.
+        /// Negate the destination addresses(es). Default: `False`.
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// Negate the source address(es). Default: `false`.
+        /// Negate the source address(es). Default: `False`.
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }

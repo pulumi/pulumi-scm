@@ -48,14 +48,14 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The TranslatedAddressArray param. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+     * The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
      * 
      */
     @Import(name="translatedAddressArrays")
     private @Nullable Output<List<String>> translatedAddressArrays;
 
     /**
-     * @return The TranslatedAddressArray param. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+     * @return The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
      * 
      */
     public Optional<Output<List<String>>> translatedAddressArrays() {
@@ -63,14 +63,14 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+     * The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
      * 
      */
     @Import(name="translatedAddressSingle")
     private @Nullable Output<String> translatedAddressSingle;
 
     /**
-     * @return The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+     * @return The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
      * 
      */
     public Optional<Output<String>> translatedAddressSingle() {
@@ -147,7 +147,7 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param translatedAddressArrays The TranslatedAddressArray param. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+         * @param translatedAddressArrays The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param translatedAddressArrays The TranslatedAddressArray param. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+         * @param translatedAddressArrays The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param translatedAddressArrays The TranslatedAddressArray param. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+         * @param translatedAddressArrays The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param translatedAddressSingle The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+         * @param translatedAddressSingle The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
          * 
          * @return builder
          * 
@@ -189,7 +189,7 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param translatedAddressSingle The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+         * @param translatedAddressSingle The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
          * 
          * @return builder
          * 

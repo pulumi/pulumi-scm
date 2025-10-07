@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class ApplicationSignatureAndConditionOrConditionOperatorGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The EqualTo param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+        /// The EqualTo param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
         /// </summary>
         [Input("equalTo")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorEqualToGetArgs>? EqualTo { get; set; }
 
         /// <summary>
-        /// The GreaterThan param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+        /// The GreaterThan param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
         /// </summary>
         [Input("greaterThan")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorGreaterThanGetArgs>? GreaterThan { get; set; }
 
         /// <summary>
-        /// The LessThan param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+        /// The LessThan param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
         /// </summary>
         [Input("lessThan")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorLessThanGetArgs>? LessThan { get; set; }
 
         /// <summary>
-        /// The PatternMatch param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+        /// The PatternMatch param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
         /// </summary>
         [Input("patternMatch")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorPatternMatchGetArgs>? PatternMatch { get; set; }

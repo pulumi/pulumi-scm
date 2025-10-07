@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayAuthentication {
     /**
-     * @return The Certificate param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+     * @return The Certificate param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
      * 
      */
     private @Nullable IkeGatewayAuthenticationCertificate certificate;
     /**
-     * @return The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+     * @return The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
      * 
      */
     private @Nullable IkeGatewayAuthenticationPreSharedKey preSharedKey;
 
     private IkeGatewayAuthentication() {}
     /**
-     * @return The Certificate param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+     * @return The Certificate param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
      * 
      */
     public Optional<IkeGatewayAuthenticationCertificate> certificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
-     * @return The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+     * @return The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
      * 
      */
     public Optional<IkeGatewayAuthenticationPreSharedKey> preSharedKey() {

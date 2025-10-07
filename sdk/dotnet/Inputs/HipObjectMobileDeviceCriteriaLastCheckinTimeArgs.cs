@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The NotWithin param. Ensure that only one of the following is specified: `not_within`, `within`
+        /// The NotWithin param. Ensure that only one of the following is specified: `NotWithin`, `Within`
         /// </summary>
         [Input("notWithin")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs>? NotWithin { get; set; }
 
         /// <summary>
-        /// The Within param. Ensure that only one of the following is specified: `not_within`, `within`
+        /// The Within param. Ensure that only one of the following is specified: `NotWithin`, `Within`
         /// </summary>
         [Input("within")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgs>? Within { get; set; }

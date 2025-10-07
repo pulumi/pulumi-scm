@@ -55,7 +55,7 @@ namespace Pulumi.Scm
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Disabled param. Default: `false`.
+        /// The Disabled param. Default: `False`.
         /// </summary>
         [Output("disabled")]
         public Output<bool> Disabled { get; private set; } = null!;
@@ -85,13 +85,13 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The NegateDestination param. Default: `false`.
+        /// The NegateDestination param. Default: `False`.
         /// </summary>
         [Output("negateDestination")]
         public Output<bool> NegateDestination { get; private set; } = null!;
 
         /// <summary>
-        /// The NegateSource param. Default: `false`.
+        /// The NegateSource param. Default: `False`.
         /// </summary>
         [Output("negateSource")]
         public Output<bool> NegateSource { get; private set; } = null!;
@@ -218,7 +218,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param. Default: `false`.
+        /// The Disabled param. Default: `False`.
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
@@ -254,13 +254,13 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NegateDestination param. Default: `false`.
+        /// The NegateDestination param. Default: `False`.
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// The NegateSource param. Default: `false`.
+        /// The NegateSource param. Default: `False`.
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }
@@ -364,7 +364,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param. Default: `false`.
+        /// The Disabled param. Default: `False`.
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
@@ -400,13 +400,13 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NegateDestination param. Default: `false`.
+        /// The NegateDestination param. Default: `False`.
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// The NegateSource param. Default: `false`.
+        /// The NegateSource param. Default: `False`.
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }

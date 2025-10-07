@@ -744,6 +744,25 @@ class NatRule(pulumi.CustomResource):
         """
         Retrieves a config item.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example = scm.NatRule("example",
+            folder="folder1",
+            name="example_nat1",
+            description="Example source nat",
+            sources=["10.10.10.10/24"],
+            froms=["any"],
+            tos=["untrust"],
+            source_translation={
+                "translated_address_single": "192.168.10.100",
+                "bi_directional": "no",
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
@@ -776,6 +795,25 @@ class NatRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Retrieves a config item.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example = scm.NatRule("example",
+            folder="folder1",
+            name="example_nat1",
+            description="Example source nat",
+            sources=["10.10.10.10/24"],
+            froms=["any"],
+            tos=["untrust"],
+            source_translation={
+                "translated_address_single": "192.168.10.100",
+                "bi_directional": "no",
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param NatRuleArgs args: The arguments to use to populate this resource's properties.

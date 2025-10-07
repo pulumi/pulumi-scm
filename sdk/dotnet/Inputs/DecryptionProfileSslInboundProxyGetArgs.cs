@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class DecryptionProfileSslInboundProxyGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The BlockIfHsmUnavailable param. Default: `false`.
+        /// The BlockIfHsmUnavailable param. Default: `False`.
         /// </summary>
         [Input("blockIfHsmUnavailable")]
         public Input<bool>? BlockIfHsmUnavailable { get; set; }
 
         /// <summary>
-        /// The BlockIfNoResource param. Default: `false`.
+        /// The BlockIfNoResource param. Default: `False`.
         /// </summary>
         [Input("blockIfNoResource")]
         public Input<bool>? BlockIfNoResource { get; set; }
 
         /// <summary>
-        /// The BlockUnsupportedCipher param. Default: `false`.
+        /// The BlockUnsupportedCipher param. Default: `False`.
         /// </summary>
         [Input("blockUnsupportedCipher")]
         public Input<bool>? BlockUnsupportedCipher { get; set; }
 
         /// <summary>
-        /// The BlockUnsupportedVersion param. Default: `false`.
+        /// The BlockUnsupportedVersion param. Default: `False`.
         /// </summary>
         [Input("blockUnsupportedVersion")]
         public Input<bool>? BlockUnsupportedVersion { get; set; }

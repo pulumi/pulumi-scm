@@ -13,6 +13,47 @@ import (
 )
 
 // Retrieves a config item.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewNatRule(ctx, "example", &scm.NatRuleArgs{
+//				Folder:      pulumi.String("folder1"),
+//				Name:        pulumi.String("example_nat1"),
+//				Description: pulumi.String("Example source nat"),
+//				Sources: pulumi.StringArray{
+//					pulumi.String("10.10.10.10/24"),
+//				},
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				SourceTranslation: &scm.NatRuleSourceTranslationArgs{
+//					Translated_address_single: "192.168.10.100",
+//					Bi_directional:            "no",
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type NatRule struct {
 	pulumi.CustomResourceState
 

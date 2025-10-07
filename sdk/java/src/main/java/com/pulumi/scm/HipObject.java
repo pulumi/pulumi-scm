@@ -28,6 +28,56 @@ import javax.annotation.Nullable;
 /**
  * Retrieves a config item.
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.HipObject;
+ * import com.pulumi.scm.HipObjectArgs;
+ * import com.pulumi.scm.inputs.HipObjectDiskBackupArgs;
+ * import com.pulumi.scm.inputs.HipObjectDiskBackupCriteriaArgs;
+ * import com.pulumi.scm.inputs.HipObjectDiskBackupCriteriaLastBackupTimeArgs;
+ * import com.pulumi.scm.inputs.HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new HipObject("example", HipObjectArgs.builder()
+ *             .folder("Shared")
+ *             .name("myExample")
+ *             .description("Made by Pulumi")
+ *             .diskBackup(HipObjectDiskBackupArgs.builder()
+ *                 .criteria(HipObjectDiskBackupCriteriaArgs.builder()
+ *                     .isInstalled(true)
+ *                     .lastBackupTime(HipObjectDiskBackupCriteriaLastBackupTimeArgs.builder()
+ *                         .within(HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs.builder()
+ *                             .days(1)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .exclude_vendor(false)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/hipObject:HipObject")
 public class HipObject extends com.pulumi.resources.CustomResource {

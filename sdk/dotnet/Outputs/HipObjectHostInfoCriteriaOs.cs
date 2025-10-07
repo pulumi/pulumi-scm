@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectHostInfoCriteriaOs
     {
         /// <summary>
-        /// The Contains param. Ensure that only one of the following is specified: `contains`
+        /// The Contains param. Ensure that only one of the following is specified: `Contains`
         /// </summary>
         public readonly Outputs.HipObjectHostInfoCriteriaOsContains? Contains;
 

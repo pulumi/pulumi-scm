@@ -584,6 +584,29 @@ class HipObject(pulumi.CustomResource):
         """
         Retrieves a config item.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example = scm.HipObject("example",
+            folder="Shared",
+            name="myExample",
+            description="Made by Pulumi",
+            disk_backup={
+                "criteria": {
+                    "is_installed": True,
+                    "last_backup_time": {
+                        "within": {
+                            "days": 1,
+                        },
+                    },
+                },
+                "exclude_vendor": False,
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']] anti_malware: The AntiMalware param.
@@ -611,6 +634,29 @@ class HipObject(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Retrieves a config item.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example = scm.HipObject("example",
+            folder="Shared",
+            name="myExample",
+            description="Made by Pulumi",
+            disk_backup={
+                "criteria": {
+                    "is_installed": True,
+                    "last_backup_time": {
+                        "within": {
+                            "days": 1,
+                        },
+                    },
+                },
+                "exclude_vendor": False,
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param HipObjectArgs args: The arguments to use to populate this resource's properties.

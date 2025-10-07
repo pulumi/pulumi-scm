@@ -94,25 +94,25 @@ namespace Pulumi.Scm
         public Output<bool?> LocalInlineCat { get; private set; } = null!;
 
         /// <summary>
-        /// The LogContainerPageOnly param. Default: `true`.
+        /// The LogContainerPageOnly param. Default: `True`.
         /// </summary>
         [Output("logContainerPageOnly")]
         public Output<bool> LogContainerPageOnly { get; private set; } = null!;
 
         /// <summary>
-        /// The LogHttpHdrReferer param. Default: `false`.
+        /// The LogHttpHdrReferer param. Default: `False`.
         /// </summary>
         [Output("logHttpHdrReferer")]
         public Output<bool> LogHttpHdrReferer { get; private set; } = null!;
 
         /// <summary>
-        /// The LogHttpHdrUserAgent param. Default: `false`.
+        /// The LogHttpHdrUserAgent param. Default: `False`.
         /// </summary>
         [Output("logHttpHdrUserAgent")]
         public Output<bool> LogHttpHdrUserAgent { get; private set; } = null!;
 
         /// <summary>
-        /// The LogHttpHdrXff param. Default: `false`.
+        /// The LogHttpHdrXff param. Default: `False`.
         /// </summary>
         [Output("logHttpHdrXff")]
         public Output<bool> LogHttpHdrXff { get; private set; } = null!;
@@ -130,7 +130,7 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The SafeSearchEnforcement param. Default: `false`.
+        /// The SafeSearchEnforcement param. Default: `False`.
         /// </summary>
         [Output("safeSearchEnforcement")]
         public Output<bool> SafeSearchEnforcement { get; private set; } = null!;
@@ -275,25 +275,25 @@ namespace Pulumi.Scm
         public Input<bool>? LocalInlineCat { get; set; }
 
         /// <summary>
-        /// The LogContainerPageOnly param. Default: `true`.
+        /// The LogContainerPageOnly param. Default: `True`.
         /// </summary>
         [Input("logContainerPageOnly")]
         public Input<bool>? LogContainerPageOnly { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrReferer param. Default: `false`.
+        /// The LogHttpHdrReferer param. Default: `False`.
         /// </summary>
         [Input("logHttpHdrReferer")]
         public Input<bool>? LogHttpHdrReferer { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrUserAgent param. Default: `false`.
+        /// The LogHttpHdrUserAgent param. Default: `False`.
         /// </summary>
         [Input("logHttpHdrUserAgent")]
         public Input<bool>? LogHttpHdrUserAgent { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrXff param. Default: `false`.
+        /// The LogHttpHdrXff param. Default: `False`.
         /// </summary>
         [Input("logHttpHdrXff")]
         public Input<bool>? LogHttpHdrXff { get; set; }
@@ -317,7 +317,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The SafeSearchEnforcement param. Default: `false`.
+        /// The SafeSearchEnforcement param. Default: `False`.
         /// </summary>
         [Input("safeSearchEnforcement")]
         public Input<bool>? SafeSearchEnforcement { get; set; }
@@ -421,25 +421,25 @@ namespace Pulumi.Scm
         public Input<bool>? LocalInlineCat { get; set; }
 
         /// <summary>
-        /// The LogContainerPageOnly param. Default: `true`.
+        /// The LogContainerPageOnly param. Default: `True`.
         /// </summary>
         [Input("logContainerPageOnly")]
         public Input<bool>? LogContainerPageOnly { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrReferer param. Default: `false`.
+        /// The LogHttpHdrReferer param. Default: `False`.
         /// </summary>
         [Input("logHttpHdrReferer")]
         public Input<bool>? LogHttpHdrReferer { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrUserAgent param. Default: `false`.
+        /// The LogHttpHdrUserAgent param. Default: `False`.
         /// </summary>
         [Input("logHttpHdrUserAgent")]
         public Input<bool>? LogHttpHdrUserAgent { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrXff param. Default: `false`.
+        /// The LogHttpHdrXff param. Default: `False`.
         /// </summary>
         [Input("logHttpHdrXff")]
         public Input<bool>? LogHttpHdrXff { get; set; }
@@ -463,7 +463,7 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The SafeSearchEnforcement param. Default: `false`.
+        /// The SafeSearchEnforcement param. Default: `False`.
         /// </summary>
         [Input("safeSearchEnforcement")]
         public Input<bool>? SafeSearchEnforcement { get; set; }

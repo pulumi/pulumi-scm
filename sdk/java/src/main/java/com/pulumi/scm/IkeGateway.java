@@ -25,6 +25,59 @@ import javax.annotation.Nullable;
 /**
  * Retrieves a config item.
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.IkeGateway;
+ * import com.pulumi.scm.IkeGatewayArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev2Args;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev2DpdArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new IkeGateway("example", IkeGatewayArgs.builder()
+ *             .folder("Remote Networks")
+ *             .name("gw1")
+ *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+ *                 .dynamic_address(true)
+ *                 .build())
+ *             .protocol(IkeGatewayProtocolArgs.builder()
+ *                 .version("ikev2")
+ *                 .ikev2(IkeGatewayProtocolIkev2Args.builder()
+ *                     .dpd(IkeGatewayProtocolIkev2DpdArgs.builder()
+ *                         .enable(false)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .authentication(IkeGatewayAuthenticationArgs.builder()
+ *                 .pre_shared_key(Map.of("key", "secret"))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/ikeGateway:IkeGateway")
 public class IkeGateway extends com.pulumi.resources.CustomResource {

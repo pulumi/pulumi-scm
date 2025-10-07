@@ -11,6 +11,47 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Retrieves a config item.
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Scm.IkeGateway("example", new()
+    ///     {
+    ///         Folder = "Remote Networks",
+    ///         Name = "gw1",
+    ///         PeerAddress = new Scm.Inputs.IkeGatewayPeerAddressArgs
+    ///         {
+    ///             Dynamic_address = true,
+    ///         },
+    ///         Protocol = new Scm.Inputs.IkeGatewayProtocolArgs
+    ///         {
+    ///             Version = "ikev2",
+    ///             Ikev2 = new Scm.Inputs.IkeGatewayProtocolIkev2Args
+    ///             {
+    ///                 Dpd = new Scm.Inputs.IkeGatewayProtocolIkev2DpdArgs
+    ///                 {
+    ///                     Enable = false,
+    ///                 },
+    ///             },
+    ///         },
+    ///         Authentication = new Scm.Inputs.IkeGatewayAuthenticationArgs
+    ///         {
+    ///             Pre_shared_key = 
+    ///             {
+    ///                 { "key", "secret" },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/ikeGateway:IkeGateway")]
     public partial class IkeGateway : global::Pulumi.CustomResource

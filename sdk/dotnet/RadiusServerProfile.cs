@@ -11,6 +11,39 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Retrieves a config item.
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Scm.RadiusServerProfile("example", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Retries = 5,
+    ///         Timeout = 7,
+    ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs
+    ///         {
+    ///             Chap = true,
+    ///         },
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.RadiusServerProfileServerArgs
+    ///             {
+    ///                 Name = "server1",
+    ///                 Ip_address = "11.2.3.5",
+    ///                 Secret = "secret",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/radiusServerProfile:RadiusServerProfile")]
     public partial class RadiusServerProfile : global::Pulumi.CustomResource

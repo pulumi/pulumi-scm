@@ -8,6 +8,30 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a config item.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const example = new scm.HipObject("example", {
+ *     folder: "Shared",
+ *     name: "myExample",
+ *     description: "Made by Pulumi",
+ *     diskBackup: {
+ *         criteria: {
+ *             isInstalled: true,
+ *             lastBackupTime: {
+ *                 within: {
+ *                     days: 1,
+ *                 },
+ *             },
+ *         },
+ *         exclude_vendor: false,
+ *     },
+ * });
+ * ```
  */
 export class HipObject extends pulumi.CustomResource {
     /**

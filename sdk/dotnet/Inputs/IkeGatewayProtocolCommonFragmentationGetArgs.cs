@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class IkeGatewayProtocolCommonFragmentationGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Enable param. Default: `false`.
+        /// The Enable param. Default: `False`.
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }

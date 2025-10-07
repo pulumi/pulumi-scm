@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// Value does not exist or match specified value data. Default: `false`.
+        /// Value does not exist or match specified value data. Default: `False`.
         /// </summary>
         [Input("negate")]
         public Input<bool>? Negate { get; set; }

@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Context;
         /// <summary>
-        /// The Negate param. Default: `false`.
+        /// The Negate param. Default: `False`.
         /// </summary>
         public readonly bool Negate;
         /// <summary>

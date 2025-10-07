@@ -18,86 +18,86 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationProfileMethod {
     /**
-     * @return The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     private @Nullable AuthenticationProfileMethodCloud cloud;
     /**
-     * @return The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     private @Nullable AuthenticationProfileMethodKerberos kerberos;
     /**
-     * @return The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     private @Nullable AuthenticationProfileMethodLdap ldap;
     /**
-     * @return The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     private @Nullable Boolean localDatabase;
     /**
-     * @return The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     private @Nullable AuthenticationProfileMethodRadius radius;
     /**
-     * @return The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     private @Nullable AuthenticationProfileMethodSamlIdp samlIdp;
     /**
-     * @return The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     private @Nullable AuthenticationProfileMethodTacplus tacplus;
 
     private AuthenticationProfileMethod() {}
     /**
-     * @return The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<AuthenticationProfileMethodCloud> cloud() {
         return Optional.ofNullable(this.cloud);
     }
     /**
-     * @return The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<AuthenticationProfileMethodKerberos> kerberos() {
         return Optional.ofNullable(this.kerberos);
     }
     /**
-     * @return The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<AuthenticationProfileMethodLdap> ldap() {
         return Optional.ofNullable(this.ldap);
     }
     /**
-     * @return The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<Boolean> localDatabase() {
         return Optional.ofNullable(this.localDatabase);
     }
     /**
-     * @return The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<AuthenticationProfileMethodRadius> radius() {
         return Optional.ofNullable(this.radius);
     }
     /**
-     * @return The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<AuthenticationProfileMethodSamlIdp> samlIdp() {
         return Optional.ofNullable(this.samlIdp);
     }
     /**
-     * @return The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<AuthenticationProfileMethodTacplus> tacplus() {
