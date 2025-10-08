@@ -54,12 +54,12 @@ public final class GetRemoteNetworkListData {
      */
     private String region;
     /**
-     * @return specify secondary ipsec_tunnel if needed.
+     * @return specify secondary ipsecTunnel if needed.
      * 
      */
     private String secondaryIpsecTunnel;
     /**
-     * @return spn-name is needed when license_type is FWAAS-AGGREGATE.
+     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE.
      * 
      */
     private String spnName;
@@ -127,14 +127,14 @@ public final class GetRemoteNetworkListData {
         return this.region;
     }
     /**
-     * @return specify secondary ipsec_tunnel if needed.
+     * @return specify secondary ipsecTunnel if needed.
      * 
      */
     public String secondaryIpsecTunnel() {
         return this.secondaryIpsecTunnel;
     }
     /**
-     * @return spn-name is needed when license_type is FWAAS-AGGREGATE.
+     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE.
      * 
      */
     public String spnName() {

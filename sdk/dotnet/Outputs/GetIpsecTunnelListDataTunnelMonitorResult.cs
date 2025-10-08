@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string DestinationIp;
         /// <summary>
-        /// Enable tunnel monitoring on this tunnel. Default: `true`.
+        /// Enable tunnel monitoring on this tunnel. Default: `True`.
         /// </summary>
         public readonly bool Enable;
         /// <summary>

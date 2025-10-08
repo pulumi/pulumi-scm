@@ -17,14 +17,14 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
     public static final HipObjectNetworkInfoCriteriaNetworkArgs Empty = new HipObjectNetworkInfoCriteriaNetworkArgs();
 
     /**
-     * The Is param. Ensure that only one of the following is specified: `is`, `is_not`
+     * The Is param. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     @Import(name="is")
     private @Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsArgs> is;
 
     /**
-     * @return The Is param. Ensure that only one of the following is specified: `is`, `is_not`
+     * @return The Is param. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsArgs>> is() {
@@ -32,14 +32,14 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
     }
 
     /**
-     * The IsNot param. Ensure that only one of the following is specified: `is`, `is_not`
+     * The IsNot param. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     @Import(name="isNot")
     private @Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsNotArgs> isNot;
 
     /**
-     * @return The IsNot param. Ensure that only one of the following is specified: `is`, `is_not`
+     * @return The IsNot param. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsNotArgs>> isNot() {
@@ -72,7 +72,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
         }
 
         /**
-         * @param is The Is param. Ensure that only one of the following is specified: `is`, `is_not`
+         * @param is The Is param. Ensure that only one of the following is specified: `is`, `isNot`
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
         }
 
         /**
-         * @param is The Is param. Ensure that only one of the following is specified: `is`, `is_not`
+         * @param is The Is param. Ensure that only one of the following is specified: `is`, `isNot`
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
         }
 
         /**
-         * @param isNot The IsNot param. Ensure that only one of the following is specified: `is`, `is_not`
+         * @param isNot The IsNot param. Ensure that only one of the following is specified: `is`, `isNot`
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkArgs extends com.pulumi.re
         }
 
         /**
-         * @param isNot The IsNot param. Ensure that only one of the following is specified: `is`, `is_not`
+         * @param isNot The IsNot param. Ensure that only one of the following is specified: `is`, `isNot`
          * 
          * @return builder
          * 

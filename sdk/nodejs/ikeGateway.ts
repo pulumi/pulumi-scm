@@ -8,6 +8,34 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a config item.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const example = new scm.IkeGateway("example", {
+ *     folder: "Remote Networks",
+ *     name: "gw1",
+ *     peerAddress: {
+ *         dynamic_address: true,
+ *     },
+ *     protocol: {
+ *         version: "ikev2",
+ *         ikev2: {
+ *             dpd: {
+ *                 enable: false,
+ *             },
+ *         },
+ *     },
+ *     authentication: {
+ *         pre_shared_key: {
+ *             key: "secret",
+ *         },
+ *     },
+ * });
+ * ```
  */
 export class IkeGateway extends pulumi.CustomResource {
     /**

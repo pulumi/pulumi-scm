@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _translatedAddressArrays;
 
         /// <summary>
-        /// The TranslatedAddressArray param. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+        /// The TranslatedAddressArray param. Ensure that only one of the following is specified: `TranslatedAddressArray`, `TranslatedAddressSingle`
         /// </summary>
         public InputList<string> TranslatedAddressArrays
         {
@@ -37,7 +37,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+        /// The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `TranslatedAddressArray`, `TranslatedAddressSingle`
         /// </summary>
         [Input("translatedAddressSingle")]
         public Input<string>? TranslatedAddressSingle { get; set; }

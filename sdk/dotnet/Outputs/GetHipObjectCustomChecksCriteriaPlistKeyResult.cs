@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Value does not exist or match specified value data. Default: `false`.
+        /// Value does not exist or match specified value data. Default: `False`.
         /// </summary>
         public readonly bool Negate;
         /// <summary>

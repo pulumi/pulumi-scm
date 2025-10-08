@@ -13,6 +13,44 @@ import (
 )
 
 // Retrieves a config item.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewRadiusServerProfile(ctx, "example", &scm.RadiusServerProfileArgs{
+//				Folder:  pulumi.String("Shared"),
+//				Retries: pulumi.Int(5),
+//				Timeout: pulumi.Int(7),
+//				Protocol: &scm.RadiusServerProfileProtocolArgs{
+//					Chap: pulumi.Bool(true),
+//				},
+//				Servers: scm.RadiusServerProfileServerArray{
+//					&scm.RadiusServerProfileServerArgs{
+//						Name:       pulumi.String("server1"),
+//						Ip_address: "11.2.3.5",
+//						Secret:     pulumi.String("secret"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type RadiusServerProfile struct {
 	pulumi.CustomResourceState
 

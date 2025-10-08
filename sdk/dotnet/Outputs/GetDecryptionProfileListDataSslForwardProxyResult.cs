@@ -14,47 +14,47 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDecryptionProfileListDataSslForwardProxyResult
     {
         /// <summary>
-        /// The AutoIncludeAltname param. Default: `false`.
+        /// The AutoIncludeAltname param. Default: `False`.
         /// </summary>
         public readonly bool AutoIncludeAltname;
         /// <summary>
-        /// The BlockClientCert param. Default: `false`.
+        /// The BlockClientCert param. Default: `False`.
         /// </summary>
         public readonly bool BlockClientCert;
         /// <summary>
-        /// The BlockExpiredCertificate param. Default: `false`.
+        /// The BlockExpiredCertificate param. Default: `False`.
         /// </summary>
         public readonly bool BlockExpiredCertificate;
         /// <summary>
-        /// The BlockTimeoutCert param. Default: `false`.
+        /// The BlockTimeoutCert param. Default: `False`.
         /// </summary>
         public readonly bool BlockTimeoutCert;
         /// <summary>
-        /// The BlockTls13DowngradeNoResource param. Default: `false`.
+        /// The BlockTls13DowngradeNoResource param. Default: `False`.
         /// </summary>
         public readonly bool BlockTls13DowngradeNoResource;
         /// <summary>
-        /// The BlockUnknownCert param. Default: `false`.
+        /// The BlockUnknownCert param. Default: `False`.
         /// </summary>
         public readonly bool BlockUnknownCert;
         /// <summary>
-        /// The BlockUnsupportedCipher param. Default: `false`.
+        /// The BlockUnsupportedCipher param. Default: `False`.
         /// </summary>
         public readonly bool BlockUnsupportedCipher;
         /// <summary>
-        /// The BlockUnsupportedVersion param. Default: `false`.
+        /// The BlockUnsupportedVersion param. Default: `False`.
         /// </summary>
         public readonly bool BlockUnsupportedVersion;
         /// <summary>
-        /// The BlockUntrustedIssuer param. Default: `false`.
+        /// The BlockUntrustedIssuer param. Default: `False`.
         /// </summary>
         public readonly bool BlockUntrustedIssuer;
         /// <summary>
-        /// The RestrictCertExts param. Default: `false`.
+        /// The RestrictCertExts param. Default: `False`.
         /// </summary>
         public readonly bool RestrictCertExts;
         /// <summary>
-        /// The StripAlpn param. Default: `false`.
+        /// The StripAlpn param. Default: `False`.
         /// </summary>
         public readonly bool StripAlpn;
 

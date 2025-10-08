@@ -23,6 +23,49 @@ import javax.annotation.Nullable;
 /**
  * Retrieves a config item.
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.NatRule;
+ * import com.pulumi.scm.NatRuleArgs;
+ * import com.pulumi.scm.inputs.NatRuleSourceTranslationArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new NatRule("example", NatRuleArgs.builder()
+ *             .folder("folder1")
+ *             .name("example_nat1")
+ *             .description("Example source nat")
+ *             .sources("10.10.10.10/24")
+ *             .froms("any")
+ *             .tos("untrust")
+ *             .sourceTranslation(NatRuleSourceTranslationArgs.builder()
+ *                 .translated_address_single("192.168.10.100")
+ *                 .bi_directional("no")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/natRule:NatRule")
 public class NatRule extends com.pulumi.resources.CustomResource {

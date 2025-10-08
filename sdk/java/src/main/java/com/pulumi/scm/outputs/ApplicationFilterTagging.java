@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationFilterTagging {
     /**
-     * @return The NoTag param. Ensure that only one of the following is specified: `no_tag`, `tag`
+     * @return The NoTag param. Ensure that only one of the following is specified: `noTag`, `tag`
      * 
      */
     private @Nullable Boolean noTag;
     /**
-     * @return The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `no_tag`, `tag`
+     * @return The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `noTag`, `tag`
      * 
      */
     private @Nullable List<String> tags;
 
     private ApplicationFilterTagging() {}
     /**
-     * @return The NoTag param. Ensure that only one of the following is specified: `no_tag`, `tag`
+     * @return The NoTag param. Ensure that only one of the following is specified: `noTag`, `tag`
      * 
      */
     public Optional<Boolean> noTag() {
         return Optional.ofNullable(this.noTag);
     }
     /**
-     * @return The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `no_tag`, `tag`
+     * @return The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `noTag`, `tag`
      * 
      */
     public List<String> tags() {

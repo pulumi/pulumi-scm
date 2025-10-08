@@ -8,6 +8,8 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a config item.
+ *
+ * ## Example Usage
  */
 export function getTrafficSteeringRule(args: GetTrafficSteeringRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetTrafficSteeringRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -66,6 +68,8 @@ export interface GetTrafficSteeringRuleResult {
 }
 /**
  * Retrieves a config item.
+ *
+ * ## Example Usage
  */
 export function getTrafficSteeringRuleOutput(args: GetTrafficSteeringRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTrafficSteeringRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

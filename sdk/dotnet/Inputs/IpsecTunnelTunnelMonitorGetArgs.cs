@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string> DestinationIp { get; set; } = null!;
 
         /// <summary>
-        /// Enable tunnel monitoring on this tunnel. Default: `true`.
+        /// Enable tunnel monitoring on this tunnel. Default: `True`.
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }

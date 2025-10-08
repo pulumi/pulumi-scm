@@ -8,6 +8,27 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a config item.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const example = new scm.RadiusServerProfile("example", {
+ *     folder: "Shared",
+ *     retries: 5,
+ *     timeout: 7,
+ *     protocol: {
+ *         chap: true,
+ *     },
+ *     servers: [{
+ *         name: "server1",
+ *         ip_address: "11.2.3.5",
+ *         secret: "secret",
+ *     }],
+ * });
+ * ```
  */
 export class RadiusServerProfile extends pulumi.CustomResource {
     /**

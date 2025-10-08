@@ -12,6 +12,45 @@ import (
 )
 
 // Retrieves a config item.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewHipObject(ctx, "example", &scm.HipObjectArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("myExample"),
+//				Description: pulumi.String("Made by Pulumi"),
+//				DiskBackup: &scm.HipObjectDiskBackupArgs{
+//					Criteria: &scm.HipObjectDiskBackupCriteriaArgs{
+//						IsInstalled: pulumi.Bool(true),
+//						LastBackupTime: &scm.HipObjectDiskBackupCriteriaLastBackupTimeArgs{
+//							Within: &scm.HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs{
+//								Days: pulumi.Int(1),
+//							},
+//						},
+//					},
+//					Exclude_vendor: false,
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type HipObject struct {
 	pulumi.CustomResourceState
 

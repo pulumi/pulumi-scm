@@ -302,6 +302,26 @@ class RadiusServerProfile(pulumi.CustomResource):
         """
         Retrieves a config item.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example = scm.RadiusServerProfile("example",
+            folder="Shared",
+            retries=5,
+            timeout=7,
+            protocol={
+                "chap": True,
+            },
+            servers=[{
+                "name": "server1",
+                "ip_address": "11.2.3.5",
+                "secret": "secret",
+            }])
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The Device param.
@@ -320,6 +340,26 @@ class RadiusServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Retrieves a config item.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example = scm.RadiusServerProfile("example",
+            folder="Shared",
+            retries=5,
+            timeout=7,
+            protocol={
+                "chap": True,
+            },
+            servers=[{
+                "name": "server1",
+                "ip_address": "11.2.3.5",
+                "secret": "secret",
+            }])
+        ```
 
         :param str resource_name: The name of the resource.
         :param RadiusServerProfileArgs args: The arguments to use to populate this resource's properties.

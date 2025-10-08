@@ -11,6 +11,43 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Retrieves a config item.
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Scm.NatRule("example", new()
+    ///     {
+    ///         Folder = "folder1",
+    ///         Name = "example_nat1",
+    ///         Description = "Example source nat",
+    ///         Sources = new[]
+    ///         {
+    ///             "10.10.10.10/24",
+    ///         },
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         SourceTranslation = new Scm.Inputs.NatRuleSourceTranslationArgs
+    ///         {
+    ///             Translated_address_single = "192.168.10.100",
+    ///             Bi_directional = "no",
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/natRule:NatRule")]
     public partial class NatRule : global::Pulumi.CustomResource

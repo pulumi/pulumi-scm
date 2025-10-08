@@ -43,7 +43,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Enable/Disable expand domain. Default: `false`.
+        /// Enable/Disable expand domain. Default: `False`.
         /// </summary>
         [Input("expandDomain")]
         public Input<bool>? ExpandDomain { get; set; }

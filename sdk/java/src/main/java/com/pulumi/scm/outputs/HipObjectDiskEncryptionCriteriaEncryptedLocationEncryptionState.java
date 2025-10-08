@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState {
     /**
-     * @return The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `is_not`
+     * @return The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     private @Nullable String is;
     /**
-     * @return The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `is_not`
+     * @return The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     private @Nullable String isNot;
 
     private HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState() {}
     /**
-     * @return The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `is_not`
+     * @return The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     public Optional<String> is() {
         return Optional.ofNullable(this.is);
     }
     /**
-     * @return The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `is_not`
+     * @return The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     public Optional<String> isNot() {

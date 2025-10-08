@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class UrlAccessProfileCredentialEnforcementMode
     {
         /// <summary>
-        /// The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+        /// The Disabled param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
         /// </summary>
         public readonly bool? Disabled;
         /// <summary>
-        /// The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+        /// The DomainCredentials param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
         /// </summary>
         public readonly bool? DomainCredentials;
         /// <summary>
-        /// The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+        /// The GroupMapping param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
         /// </summary>
         public readonly string? GroupMapping;
         /// <summary>
-        /// The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+        /// The IpUser param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
         /// </summary>
         public readonly bool? IpUser;
 
