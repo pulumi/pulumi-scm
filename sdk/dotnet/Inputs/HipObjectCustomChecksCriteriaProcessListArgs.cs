@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// The Running param. Default: `true`.
+        /// The Running param. Default: `True`.
         /// </summary>
         [Input("running")]
         public Input<bool>? Running { get; set; }

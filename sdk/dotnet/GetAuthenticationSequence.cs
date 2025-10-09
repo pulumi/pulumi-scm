@@ -131,7 +131,7 @@ namespace Pulumi.Scm
         public readonly string Name;
         public readonly string Tfid;
         /// <summary>
-        /// The UseDomainFindProfile param. Default: `true`.
+        /// The UseDomainFindProfile param. Default: `True`.
         /// </summary>
         public readonly bool UseDomainFindProfile;
 

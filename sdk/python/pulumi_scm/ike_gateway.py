@@ -399,6 +399,8 @@ class IkeGateway(pulumi.CustomResource):
         """
         Retrieves a config item.
 
+        ## Example Usage
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['IkeGatewayAuthenticationArgs', 'IkeGatewayAuthenticationArgsDict']] authentication: The Authentication param.
@@ -420,6 +422,8 @@ class IkeGateway(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Retrieves a config item.
+
+        ## Example Usage
 
         :param str resource_name: The name of the resource.
         :param IkeGatewayArgs args: The arguments to use to populate this resource's properties.

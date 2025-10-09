@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class ApplicationDefaultGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The IdentByIcmp6Type param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        /// The IdentByIcmp6Type param. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
         /// </summary>
         [Input("identByIcmp6Type")]
         public Input<Inputs.ApplicationDefaultIdentByIcmp6TypeGetArgs>? IdentByIcmp6Type { get; set; }
 
         /// <summary>
-        /// The IdentByIcmpType param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        /// The IdentByIcmpType param. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
         /// </summary>
         [Input("identByIcmpType")]
         public Input<Inputs.ApplicationDefaultIdentByIcmpTypeGetArgs>? IdentByIcmpType { get; set; }
 
         /// <summary>
-        /// The IdentByIpProtocol param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        /// The IdentByIpProtocol param. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
         /// </summary>
         [Input("identByIpProtocol")]
         public Input<string>? IdentByIpProtocol { get; set; }
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _ports;
 
         /// <summary>
-        /// The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        /// The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
         /// </summary>
         public InputList<string> Ports
         {

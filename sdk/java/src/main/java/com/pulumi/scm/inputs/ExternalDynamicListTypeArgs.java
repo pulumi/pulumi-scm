@@ -22,14 +22,14 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
     public static final ExternalDynamicListTypeArgs Empty = new ExternalDynamicListTypeArgs();
 
     /**
-     * The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     @Import(name="domain")
     private @Nullable Output<ExternalDynamicListTypeDomainArgs> domain;
 
     /**
-     * @return The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * @return The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     public Optional<Output<ExternalDynamicListTypeDomainArgs>> domain() {
@@ -37,14 +37,14 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     @Import(name="imei")
     private @Nullable Output<ExternalDynamicListTypeImeiArgs> imei;
 
     /**
-     * @return The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * @return The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     public Optional<Output<ExternalDynamicListTypeImeiArgs>> imei() {
@@ -52,14 +52,14 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     @Import(name="imsi")
     private @Nullable Output<ExternalDynamicListTypeImsiArgs> imsi;
 
     /**
-     * @return The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * @return The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     public Optional<Output<ExternalDynamicListTypeImsiArgs>> imsi() {
@@ -67,14 +67,14 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     @Import(name="ip")
     private @Nullable Output<ExternalDynamicListTypeIpArgs> ip;
 
     /**
-     * @return The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * @return The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     public Optional<Output<ExternalDynamicListTypeIpArgs>> ip() {
@@ -82,14 +82,14 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     @Import(name="predefinedIp")
     private @Nullable Output<ExternalDynamicListTypePredefinedIpArgs> predefinedIp;
 
     /**
-     * @return The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * @return The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     public Optional<Output<ExternalDynamicListTypePredefinedIpArgs>> predefinedIp() {
@@ -97,14 +97,14 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     @Import(name="predefinedUrl")
     private @Nullable Output<ExternalDynamicListTypePredefinedUrlArgs> predefinedUrl;
 
     /**
-     * @return The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * @return The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     public Optional<Output<ExternalDynamicListTypePredefinedUrlArgs>> predefinedUrl() {
@@ -112,14 +112,14 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     @Import(name="url")
     private @Nullable Output<ExternalDynamicListTypeUrlArgs> url;
 
     /**
-     * @return The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+     * @return The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
      * 
      */
     public Optional<Output<ExternalDynamicListTypeUrlArgs>> url() {
@@ -157,7 +157,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param domain The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param domain The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param domain The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param domain The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param imei The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param imei The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -189,7 +189,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param imei The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param imei The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -199,7 +199,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param imsi The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param imsi The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param imsi The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param imsi The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -220,7 +220,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ip The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param ip The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ip The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param ip The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -241,7 +241,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param predefinedIp The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param predefinedIp The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -252,7 +252,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param predefinedIp The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param predefinedIp The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -262,7 +262,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param predefinedUrl The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param predefinedUrl The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -273,7 +273,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param predefinedUrl The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param predefinedUrl The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -283,7 +283,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param url The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param url The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 
@@ -294,7 +294,7 @@ public final class ExternalDynamicListTypeArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param url The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+         * @param url The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
          * 
          * @return builder
          * 

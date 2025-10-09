@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class IpsecCryptoProfileLifesize
     {
         /// <summary>
-        /// specify lifesize in gigabytes(GB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+        /// specify lifesize in gigabytes(GB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `Gb`, `Kb`, `Mb`, `Tb`
         /// </summary>
         public readonly int? Gb;
         /// <summary>
-        /// specify lifesize in kilobytes(KB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+        /// specify lifesize in kilobytes(KB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `Gb`, `Kb`, `Mb`, `Tb`
         /// </summary>
         public readonly int? Kb;
         /// <summary>
-        /// specify lifesize in megabytes(MB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+        /// specify lifesize in megabytes(MB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `Gb`, `Kb`, `Mb`, `Tb`
         /// </summary>
         public readonly int? Mb;
         /// <summary>
-        /// specify lifesize in terabytes(TB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+        /// specify lifesize in terabytes(TB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `Gb`, `Kb`, `Mb`, `Tb`
         /// </summary>
         public readonly int? Tb;
 

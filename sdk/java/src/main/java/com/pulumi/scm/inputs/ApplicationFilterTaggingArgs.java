@@ -18,14 +18,14 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
     public static final ApplicationFilterTaggingArgs Empty = new ApplicationFilterTaggingArgs();
 
     /**
-     * The NoTag param. Ensure that only one of the following is specified: `no_tag`, `tag`
+     * The NoTag param. Ensure that only one of the following is specified: `noTag`, `tag`
      * 
      */
     @Import(name="noTag")
     private @Nullable Output<Boolean> noTag;
 
     /**
-     * @return The NoTag param. Ensure that only one of the following is specified: `no_tag`, `tag`
+     * @return The NoTag param. Ensure that only one of the following is specified: `noTag`, `tag`
      * 
      */
     public Optional<Output<Boolean>> noTag() {
@@ -33,14 +33,14 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `no_tag`, `tag`
+     * The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `noTag`, `tag`
      * 
      */
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
     /**
-     * @return The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `no_tag`, `tag`
+     * @return The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `noTag`, `tag`
      * 
      */
     public Optional<Output<List<String>>> tags() {
@@ -73,7 +73,7 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param noTag The NoTag param. Ensure that only one of the following is specified: `no_tag`, `tag`
+         * @param noTag The NoTag param. Ensure that only one of the following is specified: `noTag`, `tag`
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param noTag The NoTag param. Ensure that only one of the following is specified: `no_tag`, `tag`
+         * @param noTag The NoTag param. Ensure that only one of the following is specified: `noTag`, `tag`
          * 
          * @return builder
          * 
@@ -94,7 +94,7 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param tags The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `no_tag`, `tag`
+         * @param tags The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `noTag`, `tag`
          * 
          * @return builder
          * 
@@ -105,7 +105,7 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param tags The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `no_tag`, `tag`
+         * @param tags The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `noTag`, `tag`
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class ApplicationFilterTaggingArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param tags The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `no_tag`, `tag`
+         * @param tags The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `noTag`, `tag`
          * 
          * @return builder
          * 

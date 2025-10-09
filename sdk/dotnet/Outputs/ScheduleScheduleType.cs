@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class ScheduleScheduleType
     {
         /// <summary>
-        /// The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1])@([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1])@([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `non_recurring`, `recurring`
+        /// The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1])@([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1])@([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `NonRecurring`, `Recurring`
         /// </summary>
         public readonly ImmutableArray<string> NonRecurringLists;
         /// <summary>
-        /// The Recurring param. Ensure that only one of the following is specified: `non_recurring`, `recurring`
+        /// The Recurring param. Ensure that only one of the following is specified: `NonRecurring`, `Recurring`
         /// </summary>
         public readonly Outputs.ScheduleScheduleTypeRecurring? Recurring;
 

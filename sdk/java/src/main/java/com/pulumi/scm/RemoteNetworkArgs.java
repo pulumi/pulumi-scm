@@ -140,14 +140,14 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * specify secondary ipsec_tunnel if needed.
+     * specify secondary ipsecTunnel if needed.
      * 
      */
     @Import(name="secondaryIpsecTunnel")
     private @Nullable Output<String> secondaryIpsecTunnel;
 
     /**
-     * @return specify secondary ipsec_tunnel if needed.
+     * @return specify secondary ipsecTunnel if needed.
      * 
      */
     public Optional<Output<String>> secondaryIpsecTunnel() {
@@ -155,14 +155,14 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * spn-name is needed when license_type is FWAAS-AGGREGATE.
+     * spn-name is needed when licenseType is FWAAS-AGGREGATE.
      * 
      */
     @Import(name="spnName")
     private @Nullable Output<String> spnName;
 
     /**
-     * @return spn-name is needed when license_type is FWAAS-AGGREGATE.
+     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE.
      * 
      */
     public Optional<Output<String>> spnName() {
@@ -397,7 +397,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param secondaryIpsecTunnel specify secondary ipsec_tunnel if needed.
+         * @param secondaryIpsecTunnel specify secondary ipsecTunnel if needed.
          * 
          * @return builder
          * 
@@ -408,7 +408,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param secondaryIpsecTunnel specify secondary ipsec_tunnel if needed.
+         * @param secondaryIpsecTunnel specify secondary ipsecTunnel if needed.
          * 
          * @return builder
          * 
@@ -418,7 +418,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param spnName spn-name is needed when license_type is FWAAS-AGGREGATE.
+         * @param spnName spn-name is needed when licenseType is FWAAS-AGGREGATE.
          * 
          * @return builder
          * 
@@ -429,7 +429,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param spnName spn-name is needed when license_type is FWAAS-AGGREGATE.
+         * @param spnName spn-name is needed when licenseType is FWAAS-AGGREGATE.
          * 
          * @return builder
          * 

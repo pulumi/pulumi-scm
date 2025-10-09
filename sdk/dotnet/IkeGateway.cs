@@ -11,6 +11,8 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Retrieves a config item.
+    /// 
+    /// ## Example Usage
     /// </summary>
     [ScmResourceType("scm:index/ikeGateway:IkeGateway")]
     public partial class IkeGateway : global::Pulumi.CustomResource

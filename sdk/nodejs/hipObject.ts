@@ -8,6 +8,8 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a config item.
+ *
+ * ## Example Usage
  */
 export class HipObject extends pulumi.CustomResource {
     /**

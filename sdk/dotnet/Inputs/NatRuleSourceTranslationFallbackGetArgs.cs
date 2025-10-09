@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class NatRuleSourceTranslationFallbackGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Interface param. Ensure that only one of the following is specified: `interface`
+        /// The Interface param. Ensure that only one of the following is specified: `Interface`
         /// </summary>
         [Input("interface")]
         public Input<string>? Interface { get; set; }

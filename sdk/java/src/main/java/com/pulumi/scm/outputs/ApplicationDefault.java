@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationDefault {
     /**
-     * @return The IdentByIcmp6Type param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+     * @return The IdentByIcmp6Type param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
      * 
      */
     private @Nullable ApplicationDefaultIdentByIcmp6Type identByIcmp6Type;
     /**
-     * @return The IdentByIcmpType param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+     * @return The IdentByIcmpType param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
      * 
      */
     private @Nullable ApplicationDefaultIdentByIcmpType identByIcmpType;
     /**
-     * @return The IdentByIpProtocol param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+     * @return The IdentByIpProtocol param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
      * 
      */
     private @Nullable String identByIpProtocol;
     /**
-     * @return The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+     * @return The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
      * 
      */
     private @Nullable List<String> ports;
 
     private ApplicationDefault() {}
     /**
-     * @return The IdentByIcmp6Type param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+     * @return The IdentByIcmp6Type param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
      * 
      */
     public Optional<ApplicationDefaultIdentByIcmp6Type> identByIcmp6Type() {
         return Optional.ofNullable(this.identByIcmp6Type);
     }
     /**
-     * @return The IdentByIcmpType param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+     * @return The IdentByIcmpType param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
      * 
      */
     public Optional<ApplicationDefaultIdentByIcmpType> identByIcmpType() {
         return Optional.ofNullable(this.identByIcmpType);
     }
     /**
-     * @return The IdentByIpProtocol param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+     * @return The IdentByIpProtocol param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
      * 
      */
     public Optional<String> identByIpProtocol() {
         return Optional.ofNullable(this.identByIpProtocol);
     }
     /**
-     * @return The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+     * @return The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
      * 
      */
     public List<String> ports() {

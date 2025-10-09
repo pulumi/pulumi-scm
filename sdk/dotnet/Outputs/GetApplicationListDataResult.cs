@@ -94,7 +94,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly int TcpHalfClosedTimeout;
         /// <summary>
-        /// timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+        /// timeout for session in TimeWait state in seconds. Value must be between 1 and 600.
         /// </summary>
         public readonly int TcpTimeWaitTimeout;
         /// <summary>

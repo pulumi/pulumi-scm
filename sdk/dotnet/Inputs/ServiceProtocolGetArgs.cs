@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class ServiceProtocolGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Tcp param. Ensure that only one of the following is specified: `tcp`, `udp`
+        /// The Tcp param. Ensure that only one of the following is specified: `Tcp`, `Udp`
         /// </summary>
         [Input("tcp")]
         public Input<Inputs.ServiceProtocolTcpGetArgs>? Tcp { get; set; }
 
         /// <summary>
-        /// The Udp param. Ensure that only one of the following is specified: `tcp`, `udp`
+        /// The Udp param. Ensure that only one of the following is specified: `Tcp`, `Udp`
         /// </summary>
         [Input("udp")]
         public Input<Inputs.ServiceProtocolUdpGetArgs>? Udp { get; set; }

@@ -17,14 +17,14 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
     public static final DecryptionRuleTypeArgs Empty = new DecryptionRuleTypeArgs();
 
     /**
-     * The SslForwardProxy param. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+     * The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
      * 
      */
     @Import(name="sslForwardProxy")
     private @Nullable Output<Boolean> sslForwardProxy;
 
     /**
-     * @return The SslForwardProxy param. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+     * @return The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
      * 
      */
     public Optional<Output<Boolean>> sslForwardProxy() {
@@ -32,14 +32,14 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+     * add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
      * 
      */
     @Import(name="sslInboundInspection")
     private @Nullable Output<String> sslInboundInspection;
 
     /**
-     * @return add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+     * @return add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
      * 
      */
     public Optional<Output<String>> sslInboundInspection() {
@@ -72,7 +72,7 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sslForwardProxy The SslForwardProxy param. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+         * @param sslForwardProxy The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sslForwardProxy The SslForwardProxy param. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+         * @param sslForwardProxy The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sslInboundInspection add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+         * @param sslInboundInspection add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sslInboundInspection add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+         * @param sslInboundInspection add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
          * 
          * @return builder
          * 

@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDecryptionProfileSslNoProxyResult
     {
         /// <summary>
-        /// The BlockExpiredCertificate param. Default: `false`.
+        /// The BlockExpiredCertificate param. Default: `False`.
         /// </summary>
         public readonly bool BlockExpiredCertificate;
         /// <summary>
-        /// The BlockUntrustedIssuer param. Default: `false`.
+        /// The BlockUntrustedIssuer param. Default: `False`.
         /// </summary>
         public readonly bool BlockUntrustedIssuer;
 

@@ -23,6 +23,8 @@ import javax.annotation.Nullable;
 /**
  * Retrieves a config item.
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="scm:index/natRule:NatRule")
 public class NatRule extends com.pulumi.resources.CustomResource {

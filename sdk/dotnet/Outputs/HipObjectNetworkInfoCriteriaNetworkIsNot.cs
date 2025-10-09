@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectNetworkInfoCriteriaNetworkIsNot
     {
         /// <summary>
-        /// The Ethernet param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        /// The Ethernet param. Ensure that only one of the following is specified: `Ethernet`, `Mobile`, `Unknown`, `Wifi`
         /// </summary>
         public readonly bool? Ethernet;
         /// <summary>
-        /// The Mobile param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        /// The Mobile param. Ensure that only one of the following is specified: `Ethernet`, `Mobile`, `Unknown`, `Wifi`
         /// </summary>
         public readonly Outputs.HipObjectNetworkInfoCriteriaNetworkIsNotMobile? Mobile;
         /// <summary>
-        /// The Unknown param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        /// The Unknown param. Ensure that only one of the following is specified: `Ethernet`, `Mobile`, `Unknown`, `Wifi`
         /// </summary>
         public readonly bool? Unknown;
         /// <summary>
-        /// The Wifi param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        /// The Wifi param. Ensure that only one of the following is specified: `Ethernet`, `Mobile`, `Unknown`, `Wifi`
         /// </summary>
         public readonly Outputs.HipObjectNetworkInfoCriteriaNetworkIsNotWifi? Wifi;
 
