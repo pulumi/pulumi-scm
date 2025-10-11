@@ -55,25 +55,25 @@ namespace Pulumi.Scm
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Output("fqdn")]
         public Output<string?> Fqdn { get; private set; } = null!;
 
         /// <summary>
-        /// The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The IpNetmask param. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Output("ipNetmask")]
         public Output<string?> IpNetmask { get; private set; } = null!;
 
         /// <summary>
-        /// The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The IpRange param. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Output("ipRange")]
         public Output<string?> IpRange { get; private set; } = null!;
 
         /// <summary>
-        /// The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The IpWildcard param. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Output("ipWildcard")]
         public Output<string?> IpWildcard { get; private set; } = null!;
@@ -170,25 +170,25 @@ namespace Pulumi.Scm
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Input("fqdn")]
         public Input<string>? Fqdn { get; set; }
 
         /// <summary>
-        /// The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The IpNetmask param. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Input("ipNetmask")]
         public Input<string>? IpNetmask { get; set; }
 
         /// <summary>
-        /// The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The IpRange param. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Input("ipRange")]
         public Input<string>? IpRange { get; set; }
 
         /// <summary>
-        /// The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The IpWildcard param. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Input("ipWildcard")]
         public Input<string>? IpWildcard { get; set; }
@@ -244,25 +244,25 @@ namespace Pulumi.Scm
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Input("fqdn")]
         public Input<string>? Fqdn { get; set; }
 
         /// <summary>
-        /// The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The IpNetmask param. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Input("ipNetmask")]
         public Input<string>? IpNetmask { get; set; }
 
         /// <summary>
-        /// The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The IpRange param. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Input("ipRange")]
         public Input<string>? IpRange { get; set; }
 
         /// <summary>
-        /// The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+        /// The IpWildcard param. Ensure that only one of the following is specified: `Fqdn`, `IpNetmask`, `IpRange`, `IpWildcard`
         /// </summary>
         [Input("ipWildcard")]
         public Input<string>? IpWildcard { get; set; }

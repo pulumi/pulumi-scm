@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectMobileDeviceCriteriaLastCheckinTime
     {
         /// <summary>
-        /// The NotWithin param. Ensure that only one of the following is specified: `not_within`, `within`
+        /// The NotWithin param. Ensure that only one of the following is specified: `NotWithin`, `Within`
         /// </summary>
         public readonly Outputs.HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin? NotWithin;
         /// <summary>
-        /// The Within param. Ensure that only one of the following is specified: `not_within`, `within`
+        /// The Within param. Ensure that only one of the following is specified: `NotWithin`, `Within`
         /// </summary>
         public readonly Outputs.HipObjectMobileDeviceCriteriaLastCheckinTimeWithin? Within;
 

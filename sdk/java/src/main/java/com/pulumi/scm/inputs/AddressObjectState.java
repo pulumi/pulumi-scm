@@ -62,14 +62,14 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     @Import(name="fqdn")
     private @Nullable Output<String> fqdn;
 
     /**
-     * @return The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * @return The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     public Optional<Output<String>> fqdn() {
@@ -77,14 +77,14 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     @Import(name="ipNetmask")
     private @Nullable Output<String> ipNetmask;
 
     /**
-     * @return The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * @return The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     public Optional<Output<String>> ipNetmask() {
@@ -92,14 +92,14 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     @Import(name="ipRange")
     private @Nullable Output<String> ipRange;
 
     /**
-     * @return The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * @return The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     public Optional<Output<String>> ipRange() {
@@ -107,14 +107,14 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     @Import(name="ipWildcard")
     private @Nullable Output<String> ipWildcard;
 
     /**
-     * @return The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * @return The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     public Optional<Output<String>> ipWildcard() {
@@ -287,7 +287,7 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param fqdn The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+         * @param fqdn The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
          * 
          * @return builder
          * 
@@ -298,7 +298,7 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param fqdn The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+         * @param fqdn The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
          * 
          * @return builder
          * 
@@ -308,7 +308,7 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param ipNetmask The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+         * @param ipNetmask The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
          * 
          * @return builder
          * 
@@ -319,7 +319,7 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param ipNetmask The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+         * @param ipNetmask The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
          * 
          * @return builder
          * 
@@ -329,7 +329,7 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param ipRange The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+         * @param ipRange The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
          * 
          * @return builder
          * 
@@ -340,7 +340,7 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param ipRange The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+         * @param ipRange The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
          * 
          * @return builder
          * 
@@ -350,7 +350,7 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param ipWildcard The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+         * @param ipWildcard The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
          * 
          * @return builder
          * 
@@ -361,7 +361,7 @@ public final class AddressObjectState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param ipWildcard The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+         * @param ipWildcard The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
          * 
          * @return builder
          * 

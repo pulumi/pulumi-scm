@@ -14,27 +14,27 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectPatchManagementCriteriaMissingPatchesSeverity
     {
         /// <summary>
-        /// The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         public readonly int? GreaterEqual;
         /// <summary>
-        /// The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         public readonly int? GreaterThan;
         /// <summary>
-        /// The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         public readonly int? Is;
         /// <summary>
-        /// The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         public readonly int? IsNot;
         /// <summary>
-        /// The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         public readonly int? LessEqual;
         /// <summary>
-        /// The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         public readonly int? LessThan;
 

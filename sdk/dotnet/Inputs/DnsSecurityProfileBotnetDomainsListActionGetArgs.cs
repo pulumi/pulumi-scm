@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class DnsSecurityProfileBotnetDomainsListActionGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        /// The Alert param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
         /// </summary>
         [Input("alert")]
         public Input<bool>? Alert { get; set; }
 
         /// <summary>
-        /// The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        /// The Allow param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
         /// </summary>
         [Input("allow")]
         public Input<bool>? Allow { get; set; }
 
         /// <summary>
-        /// The Block param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        /// The Block param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
         /// </summary>
         [Input("block")]
         public Input<bool>? Block { get; set; }
 
         /// <summary>
-        /// The Sinkhole param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        /// The Sinkhole param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
         /// </summary>
         [Input("sinkhole")]
         public Input<bool>? Sinkhole { get; set; }

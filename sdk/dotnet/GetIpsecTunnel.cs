@@ -138,11 +138,11 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly Outputs.GetIpsecTunnelAutoKeyResult AutoKey;
         /// <summary>
-        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `False`.
         /// </summary>
         public readonly bool CopyTos;
         /// <summary>
-        /// allow GRE over IPSec. Default: `false`.
+        /// allow GRE over IPSec. Default: `False`.
         /// </summary>
         public readonly bool EnableGreEncapsulation;
         /// <summary>

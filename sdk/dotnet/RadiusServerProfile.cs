@@ -11,6 +11,8 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Retrieves a config item.
+    /// 
+    /// ## Example Usage
     /// </summary>
     [ScmResourceType("scm:index/radiusServerProfile:RadiusServerProfile")]
     public partial class RadiusServerProfile : global::Pulumi.CustomResource

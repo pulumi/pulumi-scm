@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationSignatureAndConditionOrConditionOperator {
     /**
-     * @return The EqualTo param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+     * @return The EqualTo param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorEqualTo equalTo;
     /**
-     * @return The GreaterThan param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+     * @return The GreaterThan param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorGreaterThan greaterThan;
     /**
-     * @return The LessThan param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+     * @return The LessThan param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorLessThan lessThan;
     /**
-     * @return The PatternMatch param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+     * @return The PatternMatch param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorPatternMatch patternMatch;
 
     private ApplicationSignatureAndConditionOrConditionOperator() {}
     /**
-     * @return The EqualTo param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+     * @return The EqualTo param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
      * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorEqualTo> equalTo() {
         return Optional.ofNullable(this.equalTo);
     }
     /**
-     * @return The GreaterThan param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+     * @return The GreaterThan param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
      * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorGreaterThan> greaterThan() {
         return Optional.ofNullable(this.greaterThan);
     }
     /**
-     * @return The LessThan param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+     * @return The LessThan param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
      * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorLessThan> lessThan() {
         return Optional.ofNullable(this.lessThan);
     }
     /**
-     * @return The PatternMatch param. Ensure that only one of the following is specified: `equal_to`, `greater_than`, `less_than`, `pattern_match`
+     * @return The PatternMatch param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
      * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorPatternMatch> patternMatch() {
