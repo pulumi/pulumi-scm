@@ -17,14 +17,14 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
     public static final IkeGatewayAuthenticationArgs Empty = new IkeGatewayAuthenticationArgs();
 
     /**
-     * The Certificate param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+     * The Certificate param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
      * 
      */
     @Import(name="certificate")
     private @Nullable Output<IkeGatewayAuthenticationCertificateArgs> certificate;
 
     /**
-     * @return The Certificate param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+     * @return The Certificate param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
      * 
      */
     public Optional<Output<IkeGatewayAuthenticationCertificateArgs>> certificate() {
@@ -32,14 +32,14 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+     * The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
      * 
      */
     @Import(name="preSharedKey")
     private @Nullable Output<IkeGatewayAuthenticationPreSharedKeyArgs> preSharedKey;
 
     /**
-     * @return The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+     * @return The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
      * 
      */
     public Optional<Output<IkeGatewayAuthenticationPreSharedKeyArgs>> preSharedKey() {
@@ -72,7 +72,7 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param certificate The Certificate param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+         * @param certificate The Certificate param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param certificate The Certificate param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+         * @param certificate The Certificate param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param preSharedKey The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+         * @param preSharedKey The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class IkeGatewayAuthenticationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param preSharedKey The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+         * @param preSharedKey The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `preSharedKey`
          * 
          * @return builder
          * 

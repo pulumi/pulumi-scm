@@ -14,59 +14,59 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDecryptionProfileSslProtocolSettingsResult
     {
         /// <summary>
-        /// The AuthAlgoMd5 param. Default: `true`.
+        /// The AuthAlgoMd5 param. Default: `True`.
         /// </summary>
         public readonly bool AuthAlgoMd5;
         /// <summary>
-        /// The AuthAlgoSha1 param. Default: `true`.
+        /// The AuthAlgoSha1 param. Default: `True`.
         /// </summary>
         public readonly bool AuthAlgoSha1;
         /// <summary>
-        /// The AuthAlgoSha256 param. Default: `true`.
+        /// The AuthAlgoSha256 param. Default: `True`.
         /// </summary>
         public readonly bool AuthAlgoSha256;
         /// <summary>
-        /// The AuthAlgoSha384 param. Default: `true`.
+        /// The AuthAlgoSha384 param. Default: `True`.
         /// </summary>
         public readonly bool AuthAlgoSha384;
         /// <summary>
-        /// The EncAlgo3des param. Default: `true`.
+        /// The EncAlgo3des param. Default: `True`.
         /// </summary>
         public readonly bool EncAlgo3des;
         /// <summary>
-        /// The EncAlgoAes128Cbc param. Default: `true`.
+        /// The EncAlgoAes128Cbc param. Default: `True`.
         /// </summary>
         public readonly bool EncAlgoAes128Cbc;
         /// <summary>
-        /// The EncAlgoAes128Gcm param. Default: `true`.
+        /// The EncAlgoAes128Gcm param. Default: `True`.
         /// </summary>
         public readonly bool EncAlgoAes128Gcm;
         /// <summary>
-        /// The EncAlgoAes256Cbc param. Default: `true`.
+        /// The EncAlgoAes256Cbc param. Default: `True`.
         /// </summary>
         public readonly bool EncAlgoAes256Cbc;
         /// <summary>
-        /// The EncAlgoAes256Gcm param. Default: `true`.
+        /// The EncAlgoAes256Gcm param. Default: `True`.
         /// </summary>
         public readonly bool EncAlgoAes256Gcm;
         /// <summary>
-        /// The EncAlgoChacha20Poly1305 param. Default: `true`.
+        /// The EncAlgoChacha20Poly1305 param. Default: `True`.
         /// </summary>
         public readonly bool EncAlgoChacha20Poly1305;
         /// <summary>
-        /// The EncAlgoRc4 param. Default: `true`.
+        /// The EncAlgoRc4 param. Default: `True`.
         /// </summary>
         public readonly bool EncAlgoRc4;
         /// <summary>
-        /// The KeyxchgAlgoDhe param. Default: `true`.
+        /// The KeyxchgAlgoDhe param. Default: `True`.
         /// </summary>
         public readonly bool KeyxchgAlgoDhe;
         /// <summary>
-        /// The KeyxchgAlgoEcdhe param. Default: `true`.
+        /// The KeyxchgAlgoEcdhe param. Default: `True`.
         /// </summary>
         public readonly bool KeyxchgAlgoEcdhe;
         /// <summary>
-        /// The KeyxchgAlgoRsa param. Default: `true`.
+        /// The KeyxchgAlgoRsa param. Default: `True`.
         /// </summary>
         public readonly bool KeyxchgAlgoRsa;
         /// <summary>

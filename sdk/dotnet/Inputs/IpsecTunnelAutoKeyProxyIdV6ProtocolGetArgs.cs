@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class IpsecTunnelAutoKeyProxyIdV6ProtocolGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// IP protocol number. Value must be between 1 and 254. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+        /// IP protocol number. Value must be between 1 and 254. Ensure that only one of the following is specified: `Number`, `Tcp`, `Udp`
         /// </summary>
         [Input("number")]
         public Input<int>? Number { get; set; }
 
         /// <summary>
-        /// The Tcp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+        /// The Tcp param. Ensure that only one of the following is specified: `Number`, `Tcp`, `Udp`
         /// </summary>
         [Input("tcp")]
         public Input<Inputs.IpsecTunnelAutoKeyProxyIdV6ProtocolTcpGetArgs>? Tcp { get; set; }
 
         /// <summary>
-        /// The Udp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+        /// The Udp param. Ensure that only one of the following is specified: `Number`, `Tcp`, `Udp`
         /// </summary>
         [Input("udp")]
         public Input<Inputs.IpsecTunnelAutoKeyProxyIdV6ProtocolUdpGetArgs>? Udp { get; set; }

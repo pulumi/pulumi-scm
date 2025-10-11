@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareSignatureSignatureGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Combination param. Ensure that only one of the following is specified: `combination`, `standard`
+        /// The Combination param. Ensure that only one of the following is specified: `Combination`, `Standard`
         /// </summary>
         [Input("combination")]
         public Input<Inputs.AntiSpywareSignatureSignatureCombinationGetArgs>? Combination { get; set; }
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.AntiSpywareSignatureSignatureStandardGetArgs>? _standards;
 
         /// <summary>
-        /// The Standards param. Ensure that only one of the following is specified: `combination`, `standard`
+        /// The Standards param. Ensure that only one of the following is specified: `Combination`, `Standard`
         /// </summary>
         public InputList<Inputs.AntiSpywareSignatureSignatureStandardGetArgs> Standards
         {

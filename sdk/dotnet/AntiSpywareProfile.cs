@@ -31,7 +31,7 @@ namespace Pulumi.Scm
     public partial class AntiSpywareProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The CloudInlineAnalysis param. Default: `false`.
+        /// The CloudInlineAnalysis param. Default: `False`.
         /// </summary>
         [Output("cloudInlineAnalysis")]
         public Output<bool> CloudInlineAnalysis { get; private set; } = null!;
@@ -146,7 +146,7 @@ namespace Pulumi.Scm
     public sealed class AntiSpywareProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The CloudInlineAnalysis param. Default: `false`.
+        /// The CloudInlineAnalysis param. Default: `False`.
         /// </summary>
         [Input("cloudInlineAnalysis")]
         public Input<bool>? CloudInlineAnalysis { get; set; }
@@ -250,7 +250,7 @@ namespace Pulumi.Scm
     public sealed class AntiSpywareProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The CloudInlineAnalysis param. Default: `false`.
+        /// The CloudInlineAnalysis param. Default: `False`.
         /// </summary>
         [Input("cloudInlineAnalysis")]
         public Input<bool>? CloudInlineAnalysis { get; set; }

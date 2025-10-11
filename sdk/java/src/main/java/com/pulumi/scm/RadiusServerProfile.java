@@ -22,6 +22,8 @@ import javax.annotation.Nullable;
 /**
  * Retrieves a config item.
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="scm:index/radiusServerProfile:RadiusServerProfile")
 public class RadiusServerProfile extends com.pulumi.resources.CustomResource {

@@ -24,12 +24,12 @@ public final class NatRuleSourceTranslation {
      */
     private @Nullable NatRuleSourceTranslationFallback fallback;
     /**
-     * @return The TranslatedAddressArray param. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+     * @return The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
      * 
      */
     private @Nullable List<String> translatedAddressArrays;
     /**
-     * @return The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+     * @return The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
      * 
      */
     private @Nullable String translatedAddressSingle;
@@ -50,14 +50,14 @@ public final class NatRuleSourceTranslation {
         return Optional.ofNullable(this.fallback);
     }
     /**
-     * @return The TranslatedAddressArray param. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+     * @return The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
      * 
      */
     public List<String> translatedAddressArrays() {
         return this.translatedAddressArrays == null ? List.of() : this.translatedAddressArrays;
     }
     /**
-     * @return The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translated_address_array`, `translated_address_single`
+     * @return The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
      * 
      */
     public Optional<String> translatedAddressSingle() {

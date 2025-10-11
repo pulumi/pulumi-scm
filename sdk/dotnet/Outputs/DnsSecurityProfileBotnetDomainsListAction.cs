@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class DnsSecurityProfileBotnetDomainsListAction
     {
         /// <summary>
-        /// The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        /// The Alert param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
         /// </summary>
         public readonly bool? Alert;
         /// <summary>
-        /// The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        /// The Allow param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
         /// </summary>
         public readonly bool? Allow;
         /// <summary>
-        /// The Block param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        /// The Block param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
         /// </summary>
         public readonly bool? Block;
         /// <summary>
-        /// The Sinkhole param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+        /// The Sinkhole param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
         /// </summary>
         public readonly bool? Sinkhole;
 

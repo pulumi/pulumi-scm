@@ -13,18 +13,24 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Task<GetJobsListResult> InvokeAsync(InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetJobsListResult>("scm:index/getJobsList:getJobsList", InvokeArgs.Empty, options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Output<GetJobsListResult> Invoke(InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetJobsListResult>("scm:index/getJobsList:getJobsList", InvokeArgs.Empty, options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
         /// </summary>
         public static Output<GetJobsListResult> Invoke(InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetJobsListResult>("scm:index/getJobsList:getJobsList", InvokeArgs.Empty, options.WithDefaults());

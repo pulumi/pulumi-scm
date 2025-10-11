@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class ApplicationDefault
     {
         /// <summary>
-        /// The IdentByIcmp6Type param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        /// The IdentByIcmp6Type param. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
         /// </summary>
         public readonly Outputs.ApplicationDefaultIdentByIcmp6Type? IdentByIcmp6Type;
         /// <summary>
-        /// The IdentByIcmpType param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        /// The IdentByIcmpType param. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
         /// </summary>
         public readonly Outputs.ApplicationDefaultIdentByIcmpType? IdentByIcmpType;
         /// <summary>
-        /// The IdentByIpProtocol param. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        /// The IdentByIpProtocol param. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
         /// </summary>
         public readonly string? IdentByIpProtocol;
         /// <summary>
-        /// The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `ident_by_icmp6_type`, `ident_by_icmp_type`, `ident_by_ip_protocol`, `port`
+        /// The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
         /// </summary>
         public readonly ImmutableArray<string> Ports;
 

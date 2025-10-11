@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DecryptionRuleType {
     /**
-     * @return The SslForwardProxy param. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+     * @return The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
      * 
      */
     private @Nullable Boolean sslForwardProxy;
     /**
-     * @return add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+     * @return add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
      * 
      */
     private @Nullable String sslInboundInspection;
 
     private DecryptionRuleType() {}
     /**
-     * @return The SslForwardProxy param. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+     * @return The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
      * 
      */
     public Optional<Boolean> sslForwardProxy() {
         return Optional.ofNullable(this.sslForwardProxy);
     }
     /**
-     * @return add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `ssl_forward_proxy`, `ssl_inbound_inspection`
+     * @return add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
      * 
      */
     public Optional<String> sslInboundInspection() {

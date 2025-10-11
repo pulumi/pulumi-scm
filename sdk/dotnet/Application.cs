@@ -163,7 +163,7 @@ namespace Pulumi.Scm
         public Output<int?> TcpHalfClosedTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+        /// timeout for session in TimeWait state in seconds. Value must be between 1 and 600.
         /// </summary>
         [Output("tcpTimeWaitTimeout")]
         public Output<int?> TcpTimeWaitTimeout { get; private set; } = null!;
@@ -404,7 +404,7 @@ namespace Pulumi.Scm
         public Input<int>? TcpHalfClosedTimeout { get; set; }
 
         /// <summary>
-        /// timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+        /// timeout for session in TimeWait state in seconds. Value must be between 1 and 600.
         /// </summary>
         [Input("tcpTimeWaitTimeout")]
         public Input<int>? TcpTimeWaitTimeout { get; set; }
@@ -604,7 +604,7 @@ namespace Pulumi.Scm
         public Input<int>? TcpHalfClosedTimeout { get; set; }
 
         /// <summary>
-        /// timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+        /// timeout for session in TimeWait state in seconds. Value must be between 1 and 600.
         /// </summary>
         [Input("tcpTimeWaitTimeout")]
         public Input<int>? TcpTimeWaitTimeout { get; set; }

@@ -85,13 +85,13 @@ namespace Pulumi.Scm
         public Output<string> Region { get; private set; } = null!;
 
         /// <summary>
-        /// specify secondary ipsec_tunnel if needed.
+        /// specify secondary IpsecTunnel if needed.
         /// </summary>
         [Output("secondaryIpsecTunnel")]
         public Output<string?> SecondaryIpsecTunnel { get; private set; } = null!;
 
         /// <summary>
-        /// spn-name is needed when license_type is FWAAS-AGGREGATE.
+        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE.
         /// </summary>
         [Output("spnName")]
         public Output<string?> SpnName { get; private set; } = null!;
@@ -210,13 +210,13 @@ namespace Pulumi.Scm
         public Input<string> Region { get; set; } = null!;
 
         /// <summary>
-        /// specify secondary ipsec_tunnel if needed.
+        /// specify secondary IpsecTunnel if needed.
         /// </summary>
         [Input("secondaryIpsecTunnel")]
         public Input<string>? SecondaryIpsecTunnel { get; set; }
 
         /// <summary>
-        /// spn-name is needed when license_type is FWAAS-AGGREGATE.
+        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE.
         /// </summary>
         [Input("spnName")]
         public Input<string>? SpnName { get; set; }
@@ -312,13 +312,13 @@ namespace Pulumi.Scm
         public Input<string>? Region { get; set; }
 
         /// <summary>
-        /// specify secondary ipsec_tunnel if needed.
+        /// specify secondary IpsecTunnel if needed.
         /// </summary>
         [Input("secondaryIpsecTunnel")]
         public Input<string>? SecondaryIpsecTunnel { get; set; }
 
         /// <summary>
-        /// spn-name is needed when license_type is FWAAS-AGGREGATE.
+        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE.
         /// </summary>
         [Input("spnName")]
         public Input<string>? SpnName { get; set; }

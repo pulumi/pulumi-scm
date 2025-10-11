@@ -154,19 +154,19 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly bool LocalInlineCat;
         /// <summary>
-        /// The LogContainerPageOnly param. Default: `true`.
+        /// The LogContainerPageOnly param. Default: `True`.
         /// </summary>
         public readonly bool LogContainerPageOnly;
         /// <summary>
-        /// The LogHttpHdrReferer param. Default: `false`.
+        /// The LogHttpHdrReferer param. Default: `False`.
         /// </summary>
         public readonly bool LogHttpHdrReferer;
         /// <summary>
-        /// The LogHttpHdrUserAgent param. Default: `false`.
+        /// The LogHttpHdrUserAgent param. Default: `False`.
         /// </summary>
         public readonly bool LogHttpHdrUserAgent;
         /// <summary>
-        /// The LogHttpHdrXff param. Default: `false`.
+        /// The LogHttpHdrXff param. Default: `False`.
         /// </summary>
         public readonly bool LogHttpHdrXff;
         /// <summary>
@@ -178,7 +178,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The SafeSearchEnforcement param. Default: `false`.
+        /// The SafeSearchEnforcement param. Default: `False`.
         /// </summary>
         public readonly bool SafeSearchEnforcement;
         public readonly string Tfid;

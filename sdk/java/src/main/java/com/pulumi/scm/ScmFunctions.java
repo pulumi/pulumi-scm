@@ -14989,12 +14989,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetJobsListResult> getJobsList() {
         return getJobsList(InvokeArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetJobsListResult> getJobsListPlain() {
@@ -15003,12 +15007,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetJobsListResult> getJobsList(InvokeArgs args) {
         return getJobsList(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetJobsListResult> getJobsListPlain(InvokeArgs args) {
@@ -15017,6 +15025,8 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetJobsListResult> getJobsList(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getJobsList:getJobsList", TypeShape.of(GetJobsListResult.class), args, Utilities.withVersion(options));
@@ -15024,12 +15034,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetJobsListResult> getJobsList(InvokeArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getJobsList:getJobsList", TypeShape.of(GetJobsListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetJobsListResult> getJobsListPlain(InvokeArgs args, InvokeOptions options) {
@@ -27314,12 +27328,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a config item.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetTrafficSteeringRuleResult> getTrafficSteeringRule(GetTrafficSteeringRuleArgs args) {
         return getTrafficSteeringRule(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a config item.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetTrafficSteeringRuleResult> getTrafficSteeringRulePlain(GetTrafficSteeringRulePlainArgs args) {
@@ -27328,6 +27346,8 @@ public final class ScmFunctions {
     /**
      * Retrieves a config item.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetTrafficSteeringRuleResult> getTrafficSteeringRule(GetTrafficSteeringRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", TypeShape.of(GetTrafficSteeringRuleResult.class), args, Utilities.withVersion(options));
@@ -27335,12 +27355,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a config item.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetTrafficSteeringRuleResult> getTrafficSteeringRule(GetTrafficSteeringRuleArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", TypeShape.of(GetTrafficSteeringRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a config item.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetTrafficSteeringRuleResult> getTrafficSteeringRulePlain(GetTrafficSteeringRulePlainArgs args, InvokeOptions options) {

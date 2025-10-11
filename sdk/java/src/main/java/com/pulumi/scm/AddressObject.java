@@ -100,56 +100,56 @@ public class AddressObject extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     @Export(name="fqdn", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> fqdn;
 
     /**
-     * @return The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * @return The Fqdn param. String length must be between 1 and 255 characters. String validation regex: `^a-zA-Z0-9_+[a-zA-Z0-9]$`. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     public Output<Optional<String>> fqdn() {
         return Codegen.optional(this.fqdn);
     }
     /**
-     * The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     @Export(name="ipNetmask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipNetmask;
 
     /**
-     * @return The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * @return The IpNetmask param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     public Output<Optional<String>> ipNetmask() {
         return Codegen.optional(this.ipNetmask);
     }
     /**
-     * The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     @Export(name="ipRange", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipRange;
 
     /**
-     * @return The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * @return The IpRange param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     public Output<Optional<String>> ipRange() {
         return Codegen.optional(this.ipRange);
     }
     /**
-     * The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     @Export(name="ipWildcard", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipWildcard;
 
     /**
-     * @return The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ip_netmask`, `ip_range`, `ip_wildcard`
+     * @return The IpWildcard param. Ensure that only one of the following is specified: `fqdn`, `ipNetmask`, `ipRange`, `ipWildcard`
      * 
      */
     public Output<Optional<String>> ipWildcard() {

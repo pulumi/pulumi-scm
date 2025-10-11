@@ -116,7 +116,7 @@ public final class GetApplicationListData {
      */
     private Integer tcpHalfClosedTimeout;
     /**
-     * @return timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+     * @return timeout for session in timeWait state in seconds. Value must be between 1 and 600.
      * 
      */
     private Integer tcpTimeWaitTimeout;
@@ -303,7 +303,7 @@ public final class GetApplicationListData {
         return this.tcpHalfClosedTimeout;
     }
     /**
-     * @return timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+     * @return timeout for session in timeWait state in seconds. Value must be between 1 and 600.
      * 
      */
     public Integer tcpTimeWaitTimeout() {

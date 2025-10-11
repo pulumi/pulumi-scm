@@ -16,14 +16,14 @@ public final class HipObjectHostInfoCriteriaDomainArgs extends com.pulumi.resour
     public static final HipObjectHostInfoCriteriaDomainArgs Empty = new HipObjectHostInfoCriteriaDomainArgs();
 
     /**
-     * The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     @Import(name="contains")
     private @Nullable Output<String> contains;
 
     /**
-     * @return The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * @return The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     public Optional<Output<String>> contains() {
@@ -31,14 +31,14 @@ public final class HipObjectHostInfoCriteriaDomainArgs extends com.pulumi.resour
     }
 
     /**
-     * The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     @Import(name="is")
     private @Nullable Output<String> is;
 
     /**
-     * @return The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * @return The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     public Optional<Output<String>> is() {
@@ -46,14 +46,14 @@ public final class HipObjectHostInfoCriteriaDomainArgs extends com.pulumi.resour
     }
 
     /**
-     * The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     @Import(name="isNot")
     private @Nullable Output<String> isNot;
 
     /**
-     * @return The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * @return The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     public Optional<Output<String>> isNot() {
@@ -87,7 +87,7 @@ public final class HipObjectHostInfoCriteriaDomainArgs extends com.pulumi.resour
         }
 
         /**
-         * @param contains The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+         * @param contains The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class HipObjectHostInfoCriteriaDomainArgs extends com.pulumi.resour
         }
 
         /**
-         * @param contains The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+         * @param contains The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
          * 
          * @return builder
          * 
@@ -108,7 +108,7 @@ public final class HipObjectHostInfoCriteriaDomainArgs extends com.pulumi.resour
         }
 
         /**
-         * @param is The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+         * @param is The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class HipObjectHostInfoCriteriaDomainArgs extends com.pulumi.resour
         }
 
         /**
-         * @param is The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+         * @param is The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class HipObjectHostInfoCriteriaDomainArgs extends com.pulumi.resour
         }
 
         /**
-         * @param isNot The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+         * @param isNot The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class HipObjectHostInfoCriteriaDomainArgs extends com.pulumi.resour
         }
 
         /**
-         * @param isNot The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+         * @param isNot The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
          * 
          * @return builder
          * 

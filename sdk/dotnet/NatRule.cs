@@ -11,6 +11,8 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Retrieves a config item.
+    /// 
+    /// ## Example Usage
     /// </summary>
     [ScmResourceType("scm:index/natRule:NatRule")]
     public partial class NatRule : global::Pulumi.CustomResource

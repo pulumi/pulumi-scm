@@ -12,38 +12,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectHostInfoCriteriaSerialNumber {
     /**
-     * @return The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * @return The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     private @Nullable String contains;
     /**
-     * @return The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * @return The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     private @Nullable String is;
     /**
-     * @return The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * @return The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     private @Nullable String isNot;
 
     private HipObjectHostInfoCriteriaSerialNumber() {}
     /**
-     * @return The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * @return The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     public Optional<String> contains() {
         return Optional.ofNullable(this.contains);
     }
     /**
-     * @return The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * @return The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     public Optional<String> is() {
         return Optional.ofNullable(this.is);
     }
     /**
-     * @return The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+     * @return The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
      * 
      */
     public Optional<String> isNot() {

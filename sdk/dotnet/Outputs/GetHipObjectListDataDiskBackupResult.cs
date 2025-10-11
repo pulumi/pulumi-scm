@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetHipObjectListDataDiskBackupCriteriaResult Criteria;
         /// <summary>
-        /// The ExcludeVendor param. Default: `false`.
+        /// The ExcludeVendor param. Default: `False`.
         /// </summary>
         public readonly bool ExcludeVendor;
         /// <summary>

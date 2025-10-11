@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The OrderFree param. Default: `false`.
+        /// The OrderFree param. Default: `False`.
         /// </summary>
         [Input("orderFree")]
         public Input<bool>? OrderFree { get; set; }

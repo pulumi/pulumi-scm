@@ -64,7 +64,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The UseDomainFindProfile param. Default: `true`.
+        /// The UseDomainFindProfile param. Default: `True`.
         /// </summary>
         [Output("useDomainFindProfile")]
         public Output<bool> UseDomainFindProfile { get; private set; } = null!;
@@ -152,7 +152,7 @@ namespace Pulumi.Scm
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The UseDomainFindProfile param. Default: `true`.
+        /// The UseDomainFindProfile param. Default: `True`.
         /// </summary>
         [Input("useDomainFindProfile")]
         public Input<bool>? UseDomainFindProfile { get; set; }
@@ -205,7 +205,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The UseDomainFindProfile param. Default: `true`.
+        /// The UseDomainFindProfile param. Default: `True`.
         /// </summary>
         [Input("useDomainFindProfile")]
         public Input<bool>? UseDomainFindProfile { get; set; }

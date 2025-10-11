@@ -28,6 +28,8 @@ import javax.annotation.Nullable;
 /**
  * Retrieves a config item.
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="scm:index/hipObject:HipObject")
 public class HipObject extends com.pulumi.resources.CustomResource {

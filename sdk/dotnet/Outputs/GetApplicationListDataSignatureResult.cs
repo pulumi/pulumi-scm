@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The OrderFree param. Default: `false`.
+        /// The OrderFree param. Default: `False`.
         /// </summary>
         public readonly bool OrderFree;
         /// <summary>

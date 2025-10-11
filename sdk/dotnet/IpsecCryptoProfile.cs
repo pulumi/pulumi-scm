@@ -31,7 +31,7 @@ namespace Pulumi.Scm
     public partial class IpsecCryptoProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+        /// The Ah param. Ensure that only one of the following is specified: `Ah`, `Esp`
         /// </summary>
         [Output("ah")]
         public Output<Outputs.IpsecCryptoProfileAh?> Ah { get; private set; } = null!;
@@ -49,7 +49,7 @@ namespace Pulumi.Scm
         public Output<string> DhGroup { get; private set; } = null!;
 
         /// <summary>
-        /// The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+        /// The Esp param. Ensure that only one of the following is specified: `Ah`, `Esp`
         /// </summary>
         [Output("esp")]
         public Output<Outputs.IpsecCryptoProfileEsp?> Esp { get; private set; } = null!;
@@ -134,7 +134,7 @@ namespace Pulumi.Scm
     public sealed class IpsecCryptoProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+        /// The Ah param. Ensure that only one of the following is specified: `Ah`, `Esp`
         /// </summary>
         [Input("ah")]
         public Input<Inputs.IpsecCryptoProfileAhArgs>? Ah { get; set; }
@@ -152,7 +152,7 @@ namespace Pulumi.Scm
         public Input<string>? DhGroup { get; set; }
 
         /// <summary>
-        /// The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+        /// The Esp param. Ensure that only one of the following is specified: `Ah`, `Esp`
         /// </summary>
         [Input("esp")]
         public Input<Inputs.IpsecCryptoProfileEspArgs>? Esp { get; set; }
@@ -196,7 +196,7 @@ namespace Pulumi.Scm
     public sealed class IpsecCryptoProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+        /// The Ah param. Ensure that only one of the following is specified: `Ah`, `Esp`
         /// </summary>
         [Input("ah")]
         public Input<Inputs.IpsecCryptoProfileAhGetArgs>? Ah { get; set; }
@@ -214,7 +214,7 @@ namespace Pulumi.Scm
         public Input<string>? DhGroup { get; set; }
 
         /// <summary>
-        /// The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+        /// The Esp param. Ensure that only one of the following is specified: `Ah`, `Esp`
         /// </summary>
         [Input("esp")]
         public Input<Inputs.IpsecCryptoProfileEspGetArgs>? Esp { get; set; }

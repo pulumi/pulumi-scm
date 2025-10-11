@@ -13,86 +13,86 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareProfileRuleAction {
     /**
-     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     private @Nullable Boolean alert;
     /**
-     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     private @Nullable Boolean allow;
     /**
-     * @return The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     private @Nullable AntiSpywareProfileRuleActionBlockIp blockIp;
     /**
-     * @return The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     private @Nullable Boolean drop;
     /**
-     * @return The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     private @Nullable Boolean resetBoth;
     /**
-     * @return The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     private @Nullable Boolean resetClient;
     /**
-     * @return The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     private @Nullable Boolean resetServer;
 
     private AntiSpywareProfileRuleAction() {}
     /**
-     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     public Optional<Boolean> alert() {
         return Optional.ofNullable(this.alert);
     }
     /**
-     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     public Optional<Boolean> allow() {
         return Optional.ofNullable(this.allow);
     }
     /**
-     * @return The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     public Optional<AntiSpywareProfileRuleActionBlockIp> blockIp() {
         return Optional.ofNullable(this.blockIp);
     }
     /**
-     * @return The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     public Optional<Boolean> drop() {
         return Optional.ofNullable(this.drop);
     }
     /**
-     * @return The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     public Optional<Boolean> resetBoth() {
         return Optional.ofNullable(this.resetBoth);
     }
     /**
-     * @return The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     public Optional<Boolean> resetClient() {
         return Optional.ofNullable(this.resetClient);
     }
     /**
-     * @return The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `block_ip`, `drop`, `reset_both`, `reset_client`, `reset_server`
+     * @return The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
      * 
      */
     public Optional<Boolean> resetServer() {

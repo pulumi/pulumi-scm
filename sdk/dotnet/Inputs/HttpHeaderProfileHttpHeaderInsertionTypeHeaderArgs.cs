@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string> Header { get; set; } = null!;
 
         /// <summary>
-        /// The Log param. Default: `false`.
+        /// The Log param. Default: `False`.
         /// </summary>
         [Input("log")]
         public Input<bool>? Log { get; set; }

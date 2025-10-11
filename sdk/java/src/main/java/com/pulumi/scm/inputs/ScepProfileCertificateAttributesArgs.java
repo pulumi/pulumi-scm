@@ -16,14 +16,14 @@ public final class ScepProfileCertificateAttributesArgs extends com.pulumi.resou
     public static final ScepProfileCertificateAttributesArgs Empty = new ScepProfileCertificateAttributesArgs();
 
     /**
-     * The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     @Import(name="dnsname")
     private @Nullable Output<String> dnsname;
 
     /**
-     * @return The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * @return The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     public Optional<Output<String>> dnsname() {
@@ -31,14 +31,14 @@ public final class ScepProfileCertificateAttributesArgs extends com.pulumi.resou
     }
 
     /**
-     * The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     @Import(name="rfc822name")
     private @Nullable Output<String> rfc822name;
 
     /**
-     * @return The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * @return The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     public Optional<Output<String>> rfc822name() {
@@ -46,14 +46,14 @@ public final class ScepProfileCertificateAttributesArgs extends com.pulumi.resou
     }
 
     /**
-     * The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     @Import(name="uniformResourceIdentifier")
     private @Nullable Output<String> uniformResourceIdentifier;
 
     /**
-     * @return The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * @return The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     public Optional<Output<String>> uniformResourceIdentifier() {
@@ -87,7 +87,7 @@ public final class ScepProfileCertificateAttributesArgs extends com.pulumi.resou
         }
 
         /**
-         * @param dnsname The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+         * @param dnsname The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class ScepProfileCertificateAttributesArgs extends com.pulumi.resou
         }
 
         /**
-         * @param dnsname The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+         * @param dnsname The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
          * 
          * @return builder
          * 
@@ -108,7 +108,7 @@ public final class ScepProfileCertificateAttributesArgs extends com.pulumi.resou
         }
 
         /**
-         * @param rfc822name The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+         * @param rfc822name The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class ScepProfileCertificateAttributesArgs extends com.pulumi.resou
         }
 
         /**
-         * @param rfc822name The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+         * @param rfc822name The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class ScepProfileCertificateAttributesArgs extends com.pulumi.resou
         }
 
         /**
-         * @param uniformResourceIdentifier The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+         * @param uniformResourceIdentifier The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class ScepProfileCertificateAttributesArgs extends com.pulumi.resou
         }
 
         /**
-         * @param uniformResourceIdentifier The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+         * @param uniformResourceIdentifier The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
          * 
          * @return builder
          * 

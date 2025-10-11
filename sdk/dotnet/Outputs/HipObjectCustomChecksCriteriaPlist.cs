@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Plist does not exist. Default: `false`.
+        /// Plist does not exist. Default: `False`.
         /// </summary>
         public readonly bool? Negate;
 

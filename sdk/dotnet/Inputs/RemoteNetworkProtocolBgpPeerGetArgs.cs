@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? PeerIpAddress { get; set; }
 
         /// <summary>
-        /// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
+        /// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `True`.
         /// </summary>
         [Input("sameAsPrimary")]
         public Input<bool>? SameAsPrimary { get; set; }

@@ -33,14 +33,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
+     * The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `authUrl`.
      * 
      */
     @Import(name="authUrl")
     private @Nullable Output<String> authUrl;
 
     /**
-     * @return The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
+     * @return The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `authUrl`.
      * 
      */
     public Optional<Output<String>> authUrl() {
@@ -48,14 +48,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
+     * The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `clientId`.
      * 
      */
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
     /**
-     * @return The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
+     * @return The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `clientId`.
      * 
      */
     public Optional<Output<String>> clientId() {
@@ -63,14 +63,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
+     * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `clientSecret`.
      * 
      */
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
     /**
-     * @return The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
+     * @return The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `clientSecret`.
      * 
      */
     public Optional<Output<String>> clientSecret() {
@@ -222,7 +222,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authUrl The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
+         * @param authUrl The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `authUrl`.
          * 
          * @return builder
          * 
@@ -233,7 +233,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authUrl The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
+         * @param authUrl The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `authUrl`.
          * 
          * @return builder
          * 
@@ -243,7 +243,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param clientId The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
+         * @param clientId The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `clientId`.
          * 
          * @return builder
          * 
@@ -254,7 +254,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param clientId The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
+         * @param clientId The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `clientId`.
          * 
          * @return builder
          * 
@@ -264,7 +264,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param clientSecret The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
+         * @param clientSecret The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `clientSecret`.
          * 
          * @return builder
          * 
@@ -275,7 +275,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param clientSecret The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
+         * @param clientSecret The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `clientSecret`.
          * 
          * @return builder
          * 

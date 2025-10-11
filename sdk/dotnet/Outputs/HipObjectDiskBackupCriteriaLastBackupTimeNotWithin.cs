@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectDiskBackupCriteriaLastBackupTimeNotWithin
     {
         /// <summary>
-        /// specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+        /// specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `Days`, `Hours`
         /// </summary>
         public readonly int? Days;
         /// <summary>
-        /// specify time in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+        /// specify time in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `Days`, `Hours`
         /// </summary>
         public readonly int? Hours;
 

@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a config item.
+//
+// ## Example Usage
 func LookupTrafficSteeringRule(ctx *pulumi.Context, args *LookupTrafficSteeringRuleArgs, opts ...pulumi.InvokeOption) (*LookupTrafficSteeringRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupTrafficSteeringRuleResult

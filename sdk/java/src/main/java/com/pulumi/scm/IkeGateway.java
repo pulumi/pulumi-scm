@@ -25,6 +25,8 @@ import javax.annotation.Nullable;
 /**
  * Retrieves a config item.
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="scm:index/ikeGateway:IkeGateway")
 public class IkeGateway extends com.pulumi.resources.CustomResource {

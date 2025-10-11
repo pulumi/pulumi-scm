@@ -17,14 +17,14 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
     public static final UrlAccessProfileCredentialEnforcementModeArgs Empty = new UrlAccessProfileCredentialEnforcementModeArgs();
 
     /**
-     * The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
     /**
-     * @return The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     public Optional<Output<Boolean>> disabled() {
@@ -32,14 +32,14 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
     }
 
     /**
-     * The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     @Import(name="domainCredentials")
     private @Nullable Output<Boolean> domainCredentials;
 
     /**
-     * @return The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     public Optional<Output<Boolean>> domainCredentials() {
@@ -47,14 +47,14 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
     }
 
     /**
-     * The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     @Import(name="groupMapping")
     private @Nullable Output<String> groupMapping;
 
     /**
-     * @return The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     public Optional<Output<String>> groupMapping() {
@@ -62,14 +62,14 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
     }
 
     /**
-     * The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     @Import(name="ipUser")
     private @Nullable Output<Boolean> ipUser;
 
     /**
-     * @return The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     public Optional<Output<Boolean>> ipUser() {
@@ -104,7 +104,7 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
         }
 
         /**
-         * @param disabled The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+         * @param disabled The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
         }
 
         /**
-         * @param disabled The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+         * @param disabled The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
          * 
          * @return builder
          * 
@@ -125,7 +125,7 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
         }
 
         /**
-         * @param domainCredentials The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+         * @param domainCredentials The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
         }
 
         /**
-         * @param domainCredentials The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+         * @param domainCredentials The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
         }
 
         /**
-         * @param groupMapping The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+         * @param groupMapping The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
          * 
          * @return builder
          * 
@@ -157,7 +157,7 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
         }
 
         /**
-         * @param groupMapping The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+         * @param groupMapping The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
          * 
          * @return builder
          * 
@@ -167,7 +167,7 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
         }
 
         /**
-         * @param ipUser The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+         * @param ipUser The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
         }
 
         /**
-         * @param ipUser The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+         * @param ipUser The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
          * 
          * @return builder
          * 

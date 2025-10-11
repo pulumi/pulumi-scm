@@ -110,6 +110,8 @@ class AwaitableGetJobsListResult(GetJobsListResult):
 def get_jobs_list(opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetJobsListResult:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
     """
     __args__ = dict()
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
@@ -125,6 +127,8 @@ def get_jobs_list(opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetJo
 def get_jobs_list_output(opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetJobsListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
     """
     __args__ = dict()
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)

@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.HipObjectPatchManagementCriteriaGetArgs>? Criteria { get; set; }
 
         /// <summary>
-        /// The ExcludeVendor param. Default: `false`.
+        /// The ExcludeVendor param. Default: `False`.
         /// </summary>
         [Input("excludeVendor")]
         public Input<bool>? ExcludeVendor { get; set; }

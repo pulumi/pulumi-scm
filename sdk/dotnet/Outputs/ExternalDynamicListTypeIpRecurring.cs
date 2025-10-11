@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeIpRecurring
     {
         /// <summary>
-        /// The Daily param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        /// The Daily param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeIpRecurringDaily? Daily;
         /// <summary>
-        /// The FiveMinute param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        /// The FiveMinute param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
         /// </summary>
         public readonly bool? FiveMinute;
         /// <summary>
-        /// The Hourly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        /// The Hourly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
         /// </summary>
         public readonly bool? Hourly;
         /// <summary>
-        /// The Monthly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        /// The Monthly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeIpRecurringMonthly? Monthly;
         /// <summary>
-        /// The Weekly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        /// The Weekly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeIpRecurringWeekly? Weekly;
 

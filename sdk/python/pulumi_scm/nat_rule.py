@@ -744,6 +744,8 @@ class NatRule(pulumi.CustomResource):
         """
         Retrieves a config item.
 
+        ## Example Usage
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
@@ -776,6 +778,8 @@ class NatRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Retrieves a config item.
+
+        ## Example Usage
 
         :param str resource_name: The name of the resource.
         :param NatRuleArgs args: The arguments to use to populate this resource's properties.

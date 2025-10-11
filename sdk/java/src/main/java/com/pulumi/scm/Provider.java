@@ -38,42 +38,42 @@ public class Provider extends com.pulumi.resources.ProviderResource {
         return Codegen.optional(this.authFile);
     }
     /**
-     * The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
+     * The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `authUrl`.
      * 
      */
     @Export(name="authUrl", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authUrl;
 
     /**
-     * @return The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
+     * @return The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `authUrl`.
      * 
      */
     public Output<Optional<String>> authUrl() {
         return Codegen.optional(this.authUrl);
     }
     /**
-     * The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
+     * The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `clientId`.
      * 
      */
     @Export(name="clientId", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> clientId;
 
     /**
-     * @return The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
+     * @return The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `clientId`.
      * 
      */
     public Output<Optional<String>> clientId() {
         return Codegen.optional(this.clientId);
     }
     /**
-     * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
+     * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `clientSecret`.
      * 
      */
     @Export(name="clientSecret", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> clientSecret;
 
     /**
-     * @return The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
+     * @return The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `clientSecret`.
      * 
      */
     public Output<Optional<String>> clientSecret() {

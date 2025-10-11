@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class IkeGatewayPeerAddressGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The DynamicAddress param. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+        /// The DynamicAddress param. Ensure that only one of the following is specified: `Dynamic`, `Fqdn`, `Ip`
         /// </summary>
         [Input("dynamicAddress")]
         public Input<bool>? DynamicAddress { get; set; }
 
         /// <summary>
-        /// peer gateway FQDN name. String length must not exceed 255 characters. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+        /// peer gateway FQDN name. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Dynamic`, `Fqdn`, `Ip`
         /// </summary>
         [Input("fqdn")]
         public Input<string>? Fqdn { get; set; }
 
         /// <summary>
-        /// peer gateway has static IP address. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+        /// peer gateway has static IP address. Ensure that only one of the following is specified: `Dynamic`, `Fqdn`, `Ip`
         /// </summary>
         [Input("ip")]
         public Input<string>? Ip { get; set; }

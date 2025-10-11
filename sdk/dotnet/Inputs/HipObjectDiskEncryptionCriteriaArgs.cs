@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Is Installed. Default: `true`.
+        /// Is Installed. Default: `True`.
         /// </summary>
         [Input("isInstalled")]
         public Input<bool>? IsInstalled { get; set; }

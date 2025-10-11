@@ -14,31 +14,31 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListType
     {
         /// <summary>
-        /// The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The Domain param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeDomain? Domain;
         /// <summary>
-        /// The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The Imei param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeImei? Imei;
         /// <summary>
-        /// The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The Imsi param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeImsi? Imsi;
         /// <summary>
-        /// The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The Ip param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeIp? Ip;
         /// <summary>
-        /// The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The PredefinedIp param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypePredefinedIp? PredefinedIp;
         /// <summary>
-        /// The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The PredefinedUrl param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypePredefinedUrl? PredefinedUrl;
         /// <summary>
-        /// The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The Url param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeUrl? Url;
 

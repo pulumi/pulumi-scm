@@ -13,85 +13,85 @@ namespace Pulumi.Scm.Inputs
     public sealed class DecryptionProfileSslProtocolSettingsArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The AuthAlgoMd5 param. Default: `true`.
+        /// The AuthAlgoMd5 param. Default: `True`.
         /// </summary>
         [Input("authAlgoMd5")]
         public Input<bool>? AuthAlgoMd5 { get; set; }
 
         /// <summary>
-        /// The AuthAlgoSha1 param. Default: `true`.
+        /// The AuthAlgoSha1 param. Default: `True`.
         /// </summary>
         [Input("authAlgoSha1")]
         public Input<bool>? AuthAlgoSha1 { get; set; }
 
         /// <summary>
-        /// The AuthAlgoSha256 param. Default: `true`.
+        /// The AuthAlgoSha256 param. Default: `True`.
         /// </summary>
         [Input("authAlgoSha256")]
         public Input<bool>? AuthAlgoSha256 { get; set; }
 
         /// <summary>
-        /// The AuthAlgoSha384 param. Default: `true`.
+        /// The AuthAlgoSha384 param. Default: `True`.
         /// </summary>
         [Input("authAlgoSha384")]
         public Input<bool>? AuthAlgoSha384 { get; set; }
 
         /// <summary>
-        /// The EncAlgo3des param. Default: `true`.
+        /// The EncAlgo3des param. Default: `True`.
         /// </summary>
         [Input("encAlgo3des")]
         public Input<bool>? EncAlgo3des { get; set; }
 
         /// <summary>
-        /// The EncAlgoAes128Cbc param. Default: `true`.
+        /// The EncAlgoAes128Cbc param. Default: `True`.
         /// </summary>
         [Input("encAlgoAes128Cbc")]
         public Input<bool>? EncAlgoAes128Cbc { get; set; }
 
         /// <summary>
-        /// The EncAlgoAes128Gcm param. Default: `true`.
+        /// The EncAlgoAes128Gcm param. Default: `True`.
         /// </summary>
         [Input("encAlgoAes128Gcm")]
         public Input<bool>? EncAlgoAes128Gcm { get; set; }
 
         /// <summary>
-        /// The EncAlgoAes256Cbc param. Default: `true`.
+        /// The EncAlgoAes256Cbc param. Default: `True`.
         /// </summary>
         [Input("encAlgoAes256Cbc")]
         public Input<bool>? EncAlgoAes256Cbc { get; set; }
 
         /// <summary>
-        /// The EncAlgoAes256Gcm param. Default: `true`.
+        /// The EncAlgoAes256Gcm param. Default: `True`.
         /// </summary>
         [Input("encAlgoAes256Gcm")]
         public Input<bool>? EncAlgoAes256Gcm { get; set; }
 
         /// <summary>
-        /// The EncAlgoChacha20Poly1305 param. Default: `true`.
+        /// The EncAlgoChacha20Poly1305 param. Default: `True`.
         /// </summary>
         [Input("encAlgoChacha20Poly1305")]
         public Input<bool>? EncAlgoChacha20Poly1305 { get; set; }
 
         /// <summary>
-        /// The EncAlgoRc4 param. Default: `true`.
+        /// The EncAlgoRc4 param. Default: `True`.
         /// </summary>
         [Input("encAlgoRc4")]
         public Input<bool>? EncAlgoRc4 { get; set; }
 
         /// <summary>
-        /// The KeyxchgAlgoDhe param. Default: `true`.
+        /// The KeyxchgAlgoDhe param. Default: `True`.
         /// </summary>
         [Input("keyxchgAlgoDhe")]
         public Input<bool>? KeyxchgAlgoDhe { get; set; }
 
         /// <summary>
-        /// The KeyxchgAlgoEcdhe param. Default: `true`.
+        /// The KeyxchgAlgoEcdhe param. Default: `True`.
         /// </summary>
         [Input("keyxchgAlgoEcdhe")]
         public Input<bool>? KeyxchgAlgoEcdhe { get; set; }
 
         /// <summary>
-        /// The KeyxchgAlgoRsa param. Default: `true`.
+        /// The KeyxchgAlgoRsa param. Default: `True`.
         /// </summary>
         [Input("keyxchgAlgoRsa")]
         public Input<bool>? KeyxchgAlgoRsa { get; set; }

@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Key does not exist or match specified value data. Default: `false`.
+        /// Key does not exist or match specified value data. Default: `False`.
         /// </summary>
         public readonly bool Negate;
         /// <summary>

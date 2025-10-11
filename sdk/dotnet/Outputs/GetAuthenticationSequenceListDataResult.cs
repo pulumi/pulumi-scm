@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The UseDomainFindProfile param. Default: `true`.
+        /// The UseDomainFindProfile param. Default: `True`.
         /// </summary>
         public readonly bool UseDomainFindProfile;
 

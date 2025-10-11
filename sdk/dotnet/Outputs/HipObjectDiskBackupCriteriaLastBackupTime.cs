@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectDiskBackupCriteriaLastBackupTime
     {
         /// <summary>
-        /// The NotAvailable param. Ensure that only one of the following is specified: `not_available`, `not_within`, `within`
+        /// The NotAvailable param. Ensure that only one of the following is specified: `NotAvailable`, `NotWithin`, `Within`
         /// </summary>
         public readonly bool? NotAvailable;
         /// <summary>
-        /// The NotWithin param. Ensure that only one of the following is specified: `not_available`, `not_within`, `within`
+        /// The NotWithin param. Ensure that only one of the following is specified: `NotAvailable`, `NotWithin`, `Within`
         /// </summary>
         public readonly Outputs.HipObjectDiskBackupCriteriaLastBackupTimeNotWithin? NotWithin;
         /// <summary>
-        /// The Within param. Ensure that only one of the following is specified: `not_available`, `not_within`, `within`
+        /// The Within param. Ensure that only one of the following is specified: `NotAvailable`, `NotWithin`, `Within`
         /// </summary>
         public readonly Outputs.HipObjectDiskBackupCriteriaLastBackupTimeWithin? Within;
 

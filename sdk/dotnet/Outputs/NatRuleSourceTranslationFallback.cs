@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class NatRuleSourceTranslationFallback
     {
         /// <summary>
-        /// The Interface param. Ensure that only one of the following is specified: `interface`
+        /// The Interface param. Ensure that only one of the following is specified: `Interface`
         /// </summary>
         public readonly string? Interface;
 

@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UrlAccessProfileCredentialEnforcementMode {
     /**
-     * @return The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     private @Nullable Boolean disabled;
     /**
-     * @return The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     private @Nullable Boolean domainCredentials;
     /**
-     * @return The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     private @Nullable String groupMapping;
     /**
-     * @return The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     private @Nullable Boolean ipUser;
 
     private UrlAccessProfileCredentialEnforcementMode() {}
     /**
-     * @return The Disabled param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     public Optional<Boolean> disabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
-     * @return The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     public Optional<Boolean> domainCredentials() {
         return Optional.ofNullable(this.domainCredentials);
     }
     /**
-     * @return The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     public Optional<String> groupMapping() {
         return Optional.ofNullable(this.groupMapping);
     }
     /**
-     * @return The IpUser param. Ensure that only one of the following is specified: `disabled`, `domain_credentials`, `group_mapping`, `ip_user`
+     * @return The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
      * 
      */
     public Optional<Boolean> ipUser() {

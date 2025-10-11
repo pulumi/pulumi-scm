@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class MfaServerMfaVendorType
     {
         /// <summary>
-        /// The DuoSecurityV2 param. Ensure that only one of the following is specified: `duo_security_v2`, `okta_adaptive_v1`, `ping_identity_v1`, `rsa_securid_access_v1`
+        /// The DuoSecurityV2 param. Ensure that only one of the following is specified: `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, `RsaSecuridAccessV1`
         /// </summary>
         public readonly Outputs.MfaServerMfaVendorTypeDuoSecurityV2? DuoSecurityV2;
         /// <summary>
-        /// The OktaAdaptiveV1 param. Ensure that only one of the following is specified: `duo_security_v2`, `okta_adaptive_v1`, `ping_identity_v1`, `rsa_securid_access_v1`
+        /// The OktaAdaptiveV1 param. Ensure that only one of the following is specified: `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, `RsaSecuridAccessV1`
         /// </summary>
         public readonly Outputs.MfaServerMfaVendorTypeOktaAdaptiveV1? OktaAdaptiveV1;
         /// <summary>
-        /// The PingIdentityV1 param. Ensure that only one of the following is specified: `duo_security_v2`, `okta_adaptive_v1`, `ping_identity_v1`, `rsa_securid_access_v1`
+        /// The PingIdentityV1 param. Ensure that only one of the following is specified: `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, `RsaSecuridAccessV1`
         /// </summary>
         public readonly Outputs.MfaServerMfaVendorTypePingIdentityV1? PingIdentityV1;
         /// <summary>
-        /// The RsaSecuridAccessV1 param. Ensure that only one of the following is specified: `duo_security_v2`, `okta_adaptive_v1`, `ping_identity_v1`, `rsa_securid_access_v1`
+        /// The RsaSecuridAccessV1 param. Ensure that only one of the following is specified: `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, `RsaSecuridAccessV1`
         /// </summary>
         public readonly Outputs.MfaServerMfaVendorTypeRsaSecuridAccessV1? RsaSecuridAccessV1;
 

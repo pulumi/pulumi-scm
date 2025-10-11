@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// Plist does not exist. Default: `false`.
+        /// Plist does not exist. Default: `False`.
         /// </summary>
         [Input("negate")]
         public Input<bool>? Negate { get; set; }

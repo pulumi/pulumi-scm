@@ -11,6 +11,8 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Retrieves a config item.
+    /// 
+    /// ## Example Usage
     /// </summary>
     [ScmResourceType("scm:index/hipObject:HipObject")]
     public partial class HipObject : global::Pulumi.CustomResource

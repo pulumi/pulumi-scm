@@ -13,43 +13,43 @@ namespace Pulumi.Scm.Inputs
     public sealed class AuthenticationProfileMethodGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        /// The Cloud param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
         /// </summary>
         [Input("cloud")]
         public Input<Inputs.AuthenticationProfileMethodCloudGetArgs>? Cloud { get; set; }
 
         /// <summary>
-        /// The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        /// The Kerberos param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
         /// </summary>
         [Input("kerberos")]
         public Input<Inputs.AuthenticationProfileMethodKerberosGetArgs>? Kerberos { get; set; }
 
         /// <summary>
-        /// The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        /// The Ldap param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
         /// </summary>
         [Input("ldap")]
         public Input<Inputs.AuthenticationProfileMethodLdapGetArgs>? Ldap { get; set; }
 
         /// <summary>
-        /// The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        /// The LocalDatabase param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
         /// </summary>
         [Input("localDatabase")]
         public Input<bool>? LocalDatabase { get; set; }
 
         /// <summary>
-        /// The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        /// The Radius param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
         /// </summary>
         [Input("radius")]
         public Input<Inputs.AuthenticationProfileMethodRadiusGetArgs>? Radius { get; set; }
 
         /// <summary>
-        /// The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        /// The SamlIdp param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
         /// </summary>
         [Input("samlIdp")]
         public Input<Inputs.AuthenticationProfileMethodSamlIdpGetArgs>? SamlIdp { get; set; }
 
         /// <summary>
-        /// The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+        /// The Tacplus param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
         /// </summary>
         [Input("tacplus")]
         public Input<Inputs.AuthenticationProfileMethodTacplusGetArgs>? Tacplus { get; set; }

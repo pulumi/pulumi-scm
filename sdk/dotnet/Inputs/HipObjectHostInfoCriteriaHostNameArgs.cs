@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectHostInfoCriteriaHostNameArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        /// The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Contains`, `Is`, `IsNot`
         /// </summary>
         [Input("contains")]
         public Input<string>? Contains { get; set; }
 
         /// <summary>
-        /// The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        /// The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Contains`, `Is`, `IsNot`
         /// </summary>
         [Input("is")]
         public Input<string>? Is { get; set; }
 
         /// <summary>
-        /// The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `is_not`
+        /// The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Contains`, `Is`, `IsNot`
         /// </summary>
         [Input("isNot")]
         public Input<string>? IsNot { get; set; }

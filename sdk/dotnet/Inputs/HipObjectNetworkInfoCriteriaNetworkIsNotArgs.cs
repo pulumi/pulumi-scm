@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectNetworkInfoCriteriaNetworkIsNotArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Ethernet param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        /// The Ethernet param. Ensure that only one of the following is specified: `Ethernet`, `Mobile`, `Unknown`, `Wifi`
         /// </summary>
         [Input("ethernet")]
         public Input<bool>? Ethernet { get; set; }
 
         /// <summary>
-        /// The Mobile param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        /// The Mobile param. Ensure that only one of the following is specified: `Ethernet`, `Mobile`, `Unknown`, `Wifi`
         /// </summary>
         [Input("mobile")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgs>? Mobile { get; set; }
 
         /// <summary>
-        /// The Unknown param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        /// The Unknown param. Ensure that only one of the following is specified: `Ethernet`, `Mobile`, `Unknown`, `Wifi`
         /// </summary>
         [Input("unknown")]
         public Input<bool>? Unknown { get; set; }
 
         /// <summary>
-        /// The Wifi param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+        /// The Wifi param. Ensure that only one of the following is specified: `Ethernet`, `Mobile`, `Unknown`, `Wifi`
         /// </summary>
         [Input("wifi")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgs>? Wifi { get; set; }

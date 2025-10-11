@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a config item.
+//
+// ## Example Usage
 type HipObject struct {
 	pulumi.CustomResourceState
 

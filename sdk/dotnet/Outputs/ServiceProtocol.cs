@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class ServiceProtocol
     {
         /// <summary>
-        /// The Tcp param. Ensure that only one of the following is specified: `tcp`, `udp`
+        /// The Tcp param. Ensure that only one of the following is specified: `Tcp`, `Udp`
         /// </summary>
         public readonly Outputs.ServiceProtocolTcp? Tcp;
         /// <summary>
-        /// The Udp param. Ensure that only one of the following is specified: `tcp`, `udp`
+        /// The Udp param. Ensure that only one of the following is specified: `Tcp`, `Udp`
         /// </summary>
         public readonly Outputs.ServiceProtocolUdp? Udp;
 

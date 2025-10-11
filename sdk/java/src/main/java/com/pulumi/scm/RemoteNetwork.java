@@ -181,28 +181,28 @@ public class RemoteNetwork extends com.pulumi.resources.CustomResource {
         return this.region;
     }
     /**
-     * specify secondary ipsec_tunnel if needed.
+     * specify secondary ipsecTunnel if needed.
      * 
      */
     @Export(name="secondaryIpsecTunnel", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> secondaryIpsecTunnel;
 
     /**
-     * @return specify secondary ipsec_tunnel if needed.
+     * @return specify secondary ipsecTunnel if needed.
      * 
      */
     public Output<Optional<String>> secondaryIpsecTunnel() {
         return Codegen.optional(this.secondaryIpsecTunnel);
     }
     /**
-     * spn-name is needed when license_type is FWAAS-AGGREGATE.
+     * spn-name is needed when licenseType is FWAAS-AGGREGATE.
      * 
      */
     @Export(name="spnName", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> spnName;
 
     /**
-     * @return spn-name is needed when license_type is FWAAS-AGGREGATE.
+     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE.
      * 
      */
     public Output<Optional<String>> spnName() {

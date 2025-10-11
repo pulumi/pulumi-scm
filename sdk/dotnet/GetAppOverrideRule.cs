@@ -130,7 +130,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
-        /// The Disabled param. Default: `false`.
+        /// The Disabled param. Default: `False`.
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
@@ -150,11 +150,11 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NegateDestination param. Default: `false`.
+        /// The NegateDestination param. Default: `False`.
         /// </summary>
         public readonly bool NegateDestination;
         /// <summary>
-        /// The NegateSource param. Default: `false`.
+        /// The NegateSource param. Default: `False`.
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>

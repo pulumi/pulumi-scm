@@ -364,14 +364,14 @@ public class Application extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.tcpHalfClosedTimeout);
     }
     /**
-     * timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+     * timeout for session in timeWait state in seconds. Value must be between 1 and 600.
      * 
      */
     @Export(name="tcpTimeWaitTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpTimeWaitTimeout;
 
     /**
-     * @return timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+     * @return timeout for session in timeWait state in seconds. Value must be between 1 and 600.
      * 
      */
     public Output<Optional<Integer>> tcpTimeWaitTimeout() {

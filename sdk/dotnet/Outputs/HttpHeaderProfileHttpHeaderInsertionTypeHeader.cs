@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Header;
         /// <summary>
-        /// The Log param. Default: `false`.
+        /// The Log param. Default: `False`.
         /// </summary>
         public readonly bool? Log;
         /// <summary>

@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectNetworkInfoCriteriaNetwork {
     /**
-     * @return The Is param. Ensure that only one of the following is specified: `is`, `is_not`
+     * @return The Is param. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIs is;
     /**
-     * @return The IsNot param. Ensure that only one of the following is specified: `is`, `is_not`
+     * @return The IsNot param. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNot isNot;
 
     private HipObjectNetworkInfoCriteriaNetwork() {}
     /**
-     * @return The Is param. Ensure that only one of the following is specified: `is`, `is_not`
+     * @return The Is param. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetworkIs> is() {
         return Optional.ofNullable(this.is);
     }
     /**
-     * @return The IsNot param. Ensure that only one of the following is specified: `is`, `is_not`
+     * @return The IsNot param. Ensure that only one of the following is specified: `is`, `isNot`
      * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetworkIsNot> isNot() {

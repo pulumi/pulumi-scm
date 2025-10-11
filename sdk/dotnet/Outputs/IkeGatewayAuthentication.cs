@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class IkeGatewayAuthentication
     {
         /// <summary>
-        /// The Certificate param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+        /// The Certificate param. Ensure that only one of the following is specified: `Certificate`, `PreSharedKey`
         /// </summary>
         public readonly Outputs.IkeGatewayAuthenticationCertificate? Certificate;
         /// <summary>
-        /// The PreSharedKey param. Ensure that only one of the following is specified: `certificate`, `pre_shared_key`
+        /// The PreSharedKey param. Ensure that only one of the following is specified: `Certificate`, `PreSharedKey`
         /// </summary>
         public readonly Outputs.IkeGatewayAuthenticationPreSharedKey? PreSharedKey;
 

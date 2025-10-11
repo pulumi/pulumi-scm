@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataDiskBackupCriteriaResult
     {
         /// <summary>
-        /// Is Installed. Default: `true`.
+        /// Is Installed. Default: `True`.
         /// </summary>
         public readonly bool IsInstalled;
         /// <summary>

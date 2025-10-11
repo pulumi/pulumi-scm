@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Context { get; set; }
 
         /// <summary>
-        /// The Negate param. Default: `false`.
+        /// The Negate param. Default: `False`.
         /// </summary>
         [Input("negate")]
         public Input<bool>? Negate { get; set; }

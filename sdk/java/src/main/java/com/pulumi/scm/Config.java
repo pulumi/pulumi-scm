@@ -21,21 +21,21 @@ public final class Config {
         return Codegen.stringProp("authFile").config(config).get();
     }
 /**
- * The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `auth_url`.
+ * The URL to send auth credentials to which will return a JWT. Default: `https://auth.apps.paloaltonetworks.com/auth/v1/oauth2/access_token`. Environment variable: `SCM_AUTH_URL`. JSON config file variable: `authUrl`.
  * 
  */
     public Optional<String> authUrl() {
         return Codegen.stringProp("authUrl").config(config).get();
     }
 /**
- * The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `client_id`.
+ * The client ID for the connection. Environment variable: `SCM_CLIENT_ID`. JSON config file variable: `clientId`.
  * 
  */
     public Optional<String> clientId() {
         return Codegen.stringProp("clientId").config(config).get();
     }
 /**
- * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `client_secret`.
+ * The client secret for the connection. Environment variable: `SCM_CLIENT_SECRET`. JSON config file variable: `clientSecret`.
  * 
  */
     public Optional<String> clientSecret() {

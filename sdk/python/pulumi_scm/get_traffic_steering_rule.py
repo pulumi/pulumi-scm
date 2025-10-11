@@ -148,6 +148,8 @@ def get_traffic_steering_rule(id: Optional[_builtins.str] = None,
     """
     Retrieves a config item.
 
+    ## Example Usage
+
 
     :param _builtins.str id: The Id param.
     """
@@ -170,6 +172,8 @@ def get_traffic_steering_rule_output(id: Optional[pulumi.Input[_builtins.str]] =
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTrafficSteeringRuleResult]:
     """
     Retrieves a config item.
+
+    ## Example Usage
 
 
     :param _builtins.str id: The Id param.

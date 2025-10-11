@@ -59,7 +59,7 @@ namespace Pulumi.Scm
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+        /// The DynamicValue param. Ensure that only one of the following is specified: `Dynamic`, `Static`
         /// </summary>
         [Output("dynamicValue")]
         public Output<Outputs.AddressGroupDynamicValue?> DynamicValue { get; private set; } = null!;
@@ -83,7 +83,7 @@ namespace Pulumi.Scm
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+        /// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `Dynamic`, `Static`
         /// </summary>
         [Output("staticLists")]
         public Output<ImmutableArray<string>> StaticLists { get; private set; } = null!;
@@ -156,7 +156,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+        /// The DynamicValue param. Ensure that only one of the following is specified: `Dynamic`, `Static`
         /// </summary>
         [Input("dynamicValue")]
         public Input<Inputs.AddressGroupDynamicValueArgs>? DynamicValue { get; set; }
@@ -183,7 +183,7 @@ namespace Pulumi.Scm
         private InputList<string>? _staticLists;
 
         /// <summary>
-        /// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+        /// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `Dynamic`, `Static`
         /// </summary>
         public InputList<string> StaticLists
         {
@@ -224,7 +224,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+        /// The DynamicValue param. Ensure that only one of the following is specified: `Dynamic`, `Static`
         /// </summary>
         [Input("dynamicValue")]
         public Input<Inputs.AddressGroupDynamicValueGetArgs>? DynamicValue { get; set; }
@@ -251,7 +251,7 @@ namespace Pulumi.Scm
         private InputList<string>? _staticLists;
 
         /// <summary>
-        /// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+        /// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `Dynamic`, `Static`
         /// </summary>
         public InputList<string> StaticLists
         {

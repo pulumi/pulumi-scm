@@ -12,38 +12,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScepProfileCertificateAttributes {
     /**
-     * @return The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * @return The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     private @Nullable String dnsname;
     /**
-     * @return The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * @return The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     private @Nullable String rfc822name;
     /**
-     * @return The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * @return The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     private @Nullable String uniformResourceIdentifier;
 
     private ScepProfileCertificateAttributes() {}
     /**
-     * @return The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * @return The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     public Optional<String> dnsname() {
         return Optional.ofNullable(this.dnsname);
     }
     /**
-     * @return The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * @return The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     public Optional<String> rfc822name() {
         return Optional.ofNullable(this.rfc822name);
     }
     /**
-     * @return The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+     * @return The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniformResourceIdentifier`
      * 
      */
     public Optional<String> uniformResourceIdentifier() {

@@ -166,11 +166,11 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Region;
         /// <summary>
-        /// specify secondary ipsec_tunnel if needed.
+        /// specify secondary IpsecTunnel if needed.
         /// </summary>
         public readonly string SecondaryIpsecTunnel;
         /// <summary>
-        /// spn-name is needed when license_type is FWAAS-AGGREGATE.
+        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE.
         /// </summary>
         public readonly string SpnName;
         /// <summary>

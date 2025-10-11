@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class TrafficSteeringRuleAction
     {
         /// <summary>
-        /// The Forward param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+        /// The Forward param. Ensure that only one of the following is specified: `Forward`, `no-pbf`
         /// </summary>
         public readonly Outputs.TrafficSteeringRuleActionForward? Forward;
         /// <summary>
-        /// The NoPbf param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+        /// The NoPbf param. Ensure that only one of the following is specified: `Forward`, `no-pbf`
         /// </summary>
         public readonly bool? NoPbf;
 

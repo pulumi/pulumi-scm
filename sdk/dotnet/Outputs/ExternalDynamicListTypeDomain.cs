@@ -30,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> ExceptionLists;
         /// <summary>
-        /// Enable/Disable expand domain. Default: `false`.
+        /// Enable/Disable expand domain. Default: `False`.
         /// </summary>
         public readonly bool? ExpandDomain;
         /// <summary>

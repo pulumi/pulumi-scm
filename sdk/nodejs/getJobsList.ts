@@ -8,6 +8,8 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
  */
 export function getJobsList(opts?: pulumi.InvokeOptions): Promise<GetJobsListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -43,6 +45,8 @@ export interface GetJobsListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
  */
 export function getJobsListOutput(opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetJobsListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

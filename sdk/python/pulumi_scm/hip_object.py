@@ -584,6 +584,8 @@ class HipObject(pulumi.CustomResource):
         """
         Retrieves a config item.
 
+        ## Example Usage
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']] anti_malware: The AntiMalware param.
@@ -611,6 +613,8 @@ class HipObject(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Retrieves a config item.
+
+        ## Example Usage
 
         :param str resource_name: The name of the resource.
         :param HipObjectArgs args: The arguments to use to populate this resource's properties.

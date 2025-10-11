@@ -15,62 +15,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListTypeImeiRecurring {
     /**
-     * @return The Daily param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+     * @return The Daily param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
      * 
      */
     private @Nullable ExternalDynamicListTypeImeiRecurringDaily daily;
     /**
-     * @return The FiveMinute param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+     * @return The FiveMinute param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
      * 
      */
     private @Nullable Boolean fiveMinute;
     /**
-     * @return The Hourly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+     * @return The Hourly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
      * 
      */
     private @Nullable Boolean hourly;
     /**
-     * @return The Monthly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+     * @return The Monthly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
      * 
      */
     private @Nullable ExternalDynamicListTypeImeiRecurringMonthly monthly;
     /**
-     * @return The Weekly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+     * @return The Weekly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
      * 
      */
     private @Nullable ExternalDynamicListTypeImeiRecurringWeekly weekly;
 
     private ExternalDynamicListTypeImeiRecurring() {}
     /**
-     * @return The Daily param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+     * @return The Daily param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
      * 
      */
     public Optional<ExternalDynamicListTypeImeiRecurringDaily> daily() {
         return Optional.ofNullable(this.daily);
     }
     /**
-     * @return The FiveMinute param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+     * @return The FiveMinute param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
      * 
      */
     public Optional<Boolean> fiveMinute() {
         return Optional.ofNullable(this.fiveMinute);
     }
     /**
-     * @return The Hourly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+     * @return The Hourly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
      * 
      */
     public Optional<Boolean> hourly() {
         return Optional.ofNullable(this.hourly);
     }
     /**
-     * @return The Monthly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+     * @return The Monthly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
      * 
      */
     public Optional<ExternalDynamicListTypeImeiRecurringMonthly> monthly() {
         return Optional.ofNullable(this.monthly);
     }
     /**
-     * @return The Weekly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+     * @return The Weekly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
      * 
      */
     public Optional<ExternalDynamicListTypeImeiRecurringWeekly> weekly() {

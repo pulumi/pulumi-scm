@@ -38,7 +38,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
-        /// The state of the security rule. Default: `false`.
+        /// The state of the security rule. Default: `False`.
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
@@ -58,11 +58,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Negate the destination addresses(es). Default: `false`.
+        /// Negate the destination addresses(es). Default: `False`.
         /// </summary>
         public readonly bool NegateDestination;
         /// <summary>
-        /// Negate the source address(es). Default: `false`.
+        /// Negate the source address(es). Default: `False`.
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>

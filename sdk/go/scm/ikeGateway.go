@@ -13,6 +13,8 @@ import (
 )
 
 // Retrieves a config item.
+//
+// ## Example Usage
 type IkeGateway struct {
 	pulumi.CustomResourceState
 

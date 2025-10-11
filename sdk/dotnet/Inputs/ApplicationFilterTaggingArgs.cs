@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ApplicationFilterTaggingArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The NoTag param. Ensure that only one of the following is specified: `no_tag`, `tag`
+        /// The NoTag param. Ensure that only one of the following is specified: `NoTag`, `Tag`
         /// </summary>
         [Input("noTag")]
         public Input<bool>? NoTag { get; set; }
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _tags;
 
         /// <summary>
-        /// The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `no_tag`, `tag`
+        /// The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `NoTag`, `Tag`
         /// </summary>
         public InputList<string> Tags
         {

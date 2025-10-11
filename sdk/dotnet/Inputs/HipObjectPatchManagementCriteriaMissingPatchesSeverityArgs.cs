@@ -13,37 +13,37 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         [Input("greaterEqual")]
         public Input<int>? GreaterEqual { get; set; }
 
         /// <summary>
-        /// The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         [Input("greaterThan")]
         public Input<int>? GreaterThan { get; set; }
 
         /// <summary>
-        /// The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         [Input("is")]
         public Input<int>? Is { get; set; }
 
         /// <summary>
-        /// The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         [Input("isNot")]
         public Input<int>? IsNot { get; set; }
 
         /// <summary>
-        /// The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         [Input("lessEqual")]
         public Input<int>? LessEqual { get; set; }
 
         /// <summary>
-        /// The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greater_equal`, `greater_than`, `is`, `is_not`, `less_equal`, `less_than`
+        /// The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
         /// </summary>
         [Input("lessThan")]
         public Input<int>? LessThan { get; set; }

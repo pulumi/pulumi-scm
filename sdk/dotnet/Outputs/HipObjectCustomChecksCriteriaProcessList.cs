@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Running param. Default: `true`.
+        /// The Running param. Default: `True`.
         /// </summary>
         public readonly bool? Running;
 

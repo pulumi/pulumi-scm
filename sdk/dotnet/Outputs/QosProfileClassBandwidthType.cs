@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class QosProfileClassBandwidthType
     {
         /// <summary>
-        /// The Mbps param. Ensure that only one of the following is specified: `mbps`, `percentage`
+        /// The Mbps param. Ensure that only one of the following is specified: `Mbps`, `Percentage`
         /// </summary>
         public readonly Outputs.QosProfileClassBandwidthTypeMbps? Mbps;
         /// <summary>
-        /// The Percentage param. Ensure that only one of the following is specified: `mbps`, `percentage`
+        /// The Percentage param. Ensure that only one of the following is specified: `Mbps`, `Percentage`
         /// </summary>
         public readonly Outputs.QosProfileClassBandwidthTypePercentage? Percentage;
 
