@@ -22,14 +22,14 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
     public static final AuthenticationProfileMethodArgs Empty = new AuthenticationProfileMethodArgs();
 
     /**
-     * The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     @Import(name="cloud")
     private @Nullable Output<AuthenticationProfileMethodCloudArgs> cloud;
 
     /**
-     * @return The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<Output<AuthenticationProfileMethodCloudArgs>> cloud() {
@@ -37,14 +37,14 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
     }
 
     /**
-     * The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     @Import(name="kerberos")
     private @Nullable Output<AuthenticationProfileMethodKerberosArgs> kerberos;
 
     /**
-     * @return The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<Output<AuthenticationProfileMethodKerberosArgs>> kerberos() {
@@ -52,14 +52,14 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
     }
 
     /**
-     * The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     @Import(name="ldap")
     private @Nullable Output<AuthenticationProfileMethodLdapArgs> ldap;
 
     /**
-     * @return The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<Output<AuthenticationProfileMethodLdapArgs>> ldap() {
@@ -67,14 +67,14 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
     }
 
     /**
-     * The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     @Import(name="localDatabase")
     private @Nullable Output<Boolean> localDatabase;
 
     /**
-     * @return The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<Output<Boolean>> localDatabase() {
@@ -82,14 +82,14 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
     }
 
     /**
-     * The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     @Import(name="radius")
     private @Nullable Output<AuthenticationProfileMethodRadiusArgs> radius;
 
     /**
-     * @return The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<Output<AuthenticationProfileMethodRadiusArgs>> radius() {
@@ -97,14 +97,14 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
     }
 
     /**
-     * The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     @Import(name="samlIdp")
     private @Nullable Output<AuthenticationProfileMethodSamlIdpArgs> samlIdp;
 
     /**
-     * @return The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<Output<AuthenticationProfileMethodSamlIdpArgs>> samlIdp() {
@@ -112,14 +112,14 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
     }
 
     /**
-     * The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     @Import(name="tacplus")
     private @Nullable Output<AuthenticationProfileMethodTacplusArgs> tacplus;
 
     /**
-     * @return The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+     * @return The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
      * 
      */
     public Optional<Output<AuthenticationProfileMethodTacplusArgs>> tacplus() {
@@ -157,7 +157,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param cloud The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param cloud The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param cloud The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param cloud The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param kerberos The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param kerberos The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -189,7 +189,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param kerberos The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param kerberos The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -199,7 +199,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param ldap The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param ldap The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param ldap The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param ldap The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -220,7 +220,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param localDatabase The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param localDatabase The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param localDatabase The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param localDatabase The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -241,7 +241,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param radius The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param radius The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -252,7 +252,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param radius The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param radius The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -262,7 +262,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param samlIdp The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param samlIdp The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -273,7 +273,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param samlIdp The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param samlIdp The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -283,7 +283,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param tacplus The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param tacplus The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 
@@ -294,7 +294,7 @@ public final class AuthenticationProfileMethodArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param tacplus The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `local_database`, `radius`, `saml_idp`, `tacplus`
+         * @param tacplus The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
          * 
          * @return builder
          * 

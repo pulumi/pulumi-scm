@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _dailyLists;
 
         /// <summary>
-        /// The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `daily`, `weekly`
+        /// The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `Daily`, `Weekly`
         /// </summary>
         public InputList<string> DailyLists
         {
@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Weekly param. Ensure that only one of the following is specified: `daily`, `weekly`
+        /// The Weekly param. Ensure that only one of the following is specified: `Daily`, `Weekly`
         /// </summary>
         [Input("weekly")]
         public Input<Inputs.ScheduleScheduleTypeRecurringWeeklyArgs>? Weekly { get; set; }

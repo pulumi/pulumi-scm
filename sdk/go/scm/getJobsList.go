@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetJobsList(ctx *pulumi.Context, opts ...pulumi.InvokeOption) (*GetJobsListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetJobsListResult

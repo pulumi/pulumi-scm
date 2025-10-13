@@ -17,14 +17,14 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs extends com.
     public static final HipObjectMobileDeviceCriteriaLastCheckinTimeArgs Empty = new HipObjectMobileDeviceCriteriaLastCheckinTimeArgs();
 
     /**
-     * The NotWithin param. Ensure that only one of the following is specified: `not_within`, `within`
+     * The NotWithin param. Ensure that only one of the following is specified: `notWithin`, `within`
      * 
      */
     @Import(name="notWithin")
     private @Nullable Output<HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs> notWithin;
 
     /**
-     * @return The NotWithin param. Ensure that only one of the following is specified: `not_within`, `within`
+     * @return The NotWithin param. Ensure that only one of the following is specified: `notWithin`, `within`
      * 
      */
     public Optional<Output<HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs>> notWithin() {
@@ -32,14 +32,14 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs extends com.
     }
 
     /**
-     * The Within param. Ensure that only one of the following is specified: `not_within`, `within`
+     * The Within param. Ensure that only one of the following is specified: `notWithin`, `within`
      * 
      */
     @Import(name="within")
     private @Nullable Output<HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgs> within;
 
     /**
-     * @return The Within param. Ensure that only one of the following is specified: `not_within`, `within`
+     * @return The Within param. Ensure that only one of the following is specified: `notWithin`, `within`
      * 
      */
     public Optional<Output<HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgs>> within() {
@@ -72,7 +72,7 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs extends com.
         }
 
         /**
-         * @param notWithin The NotWithin param. Ensure that only one of the following is specified: `not_within`, `within`
+         * @param notWithin The NotWithin param. Ensure that only one of the following is specified: `notWithin`, `within`
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs extends com.
         }
 
         /**
-         * @param notWithin The NotWithin param. Ensure that only one of the following is specified: `not_within`, `within`
+         * @param notWithin The NotWithin param. Ensure that only one of the following is specified: `notWithin`, `within`
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs extends com.
         }
 
         /**
-         * @param within The Within param. Ensure that only one of the following is specified: `not_within`, `within`
+         * @param within The Within param. Ensure that only one of the following is specified: `notWithin`, `within`
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeArgs extends com.
         }
 
         /**
-         * @param within The Within param. Ensure that only one of the following is specified: `not_within`, `within`
+         * @param within The Within param. Ensure that only one of the following is specified: `notWithin`, `within`
          * 
          * @return builder
          * 

@@ -43,7 +43,7 @@ namespace Pulumi.Scm
         public Output<Outputs.IpsecTunnelAutoKey> AutoKey { get; private set; } = null!;
 
         /// <summary>
-        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `False`.
         /// </summary>
         [Output("copyTos")]
         public Output<bool> CopyTos { get; private set; } = null!;
@@ -55,7 +55,7 @@ namespace Pulumi.Scm
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// allow GRE over IPSec. Default: `false`.
+        /// allow GRE over IPSec. Default: `False`.
         /// </summary>
         [Output("enableGreEncapsulation")]
         public Output<bool> EnableGreEncapsulation { get; private set; } = null!;
@@ -146,7 +146,7 @@ namespace Pulumi.Scm
         public Input<Inputs.IpsecTunnelAutoKeyArgs> AutoKey { get; set; } = null!;
 
         /// <summary>
-        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `False`.
         /// </summary>
         [Input("copyTos")]
         public Input<bool>? CopyTos { get; set; }
@@ -158,7 +158,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// allow GRE over IPSec. Default: `false`.
+        /// allow GRE over IPSec. Default: `False`.
         /// </summary>
         [Input("enableGreEncapsulation")]
         public Input<bool>? EnableGreEncapsulation { get; set; }
@@ -208,7 +208,7 @@ namespace Pulumi.Scm
         public Input<Inputs.IpsecTunnelAutoKeyGetArgs>? AutoKey { get; set; }
 
         /// <summary>
-        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `False`.
         /// </summary>
         [Input("copyTos")]
         public Input<bool>? CopyTos { get; set; }
@@ -220,7 +220,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// allow GRE over IPSec. Default: `false`.
+        /// allow GRE over IPSec. Default: `False`.
         /// </summary>
         [Input("enableGreEncapsulation")]
         public Input<bool>? EnableGreEncapsulation { get; set; }

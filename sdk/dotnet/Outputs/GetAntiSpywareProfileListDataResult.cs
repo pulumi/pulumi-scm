@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareProfileListDataResult
     {
         /// <summary>
-        /// The CloudInlineAnalysis param. Default: `false`.
+        /// The CloudInlineAnalysis param. Default: `False`.
         /// </summary>
         public readonly bool CloudInlineAnalysis;
         /// <summary>

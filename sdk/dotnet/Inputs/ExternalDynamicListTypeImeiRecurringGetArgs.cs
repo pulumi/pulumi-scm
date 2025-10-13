@@ -13,31 +13,31 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeImeiRecurringGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Daily param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        /// The Daily param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
         /// </summary>
         [Input("daily")]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringDailyGetArgs>? Daily { get; set; }
 
         /// <summary>
-        /// The FiveMinute param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        /// The FiveMinute param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
         /// </summary>
         [Input("fiveMinute")]
         public Input<bool>? FiveMinute { get; set; }
 
         /// <summary>
-        /// The Hourly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        /// The Hourly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
         /// </summary>
         [Input("hourly")]
         public Input<bool>? Hourly { get; set; }
 
         /// <summary>
-        /// The Monthly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        /// The Monthly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
         /// </summary>
         [Input("monthly")]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringMonthlyGetArgs>? Monthly { get; set; }
 
         /// <summary>
-        /// The Weekly param. Ensure that only one of the following is specified: `daily`, `five_minute`, `hourly`, `monthly`, `weekly`
+        /// The Weekly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
         /// </summary>
         [Input("weekly")]
         public Input<Inputs.ExternalDynamicListTypeImeiRecurringWeeklyGetArgs>? Weekly { get; set; }

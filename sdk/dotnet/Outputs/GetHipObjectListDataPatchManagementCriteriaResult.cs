@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string IsEnabled;
         /// <summary>
-        /// Is Installed. Default: `true`.
+        /// Is Installed. Default: `True`.
         /// </summary>
         public readonly bool IsInstalled;
         /// <summary>

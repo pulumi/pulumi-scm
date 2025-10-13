@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class DecryptionProfileSslNoProxyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The BlockExpiredCertificate param. Default: `false`.
+        /// The BlockExpiredCertificate param. Default: `False`.
         /// </summary>
         [Input("blockExpiredCertificate")]
         public Input<bool>? BlockExpiredCertificate { get; set; }
 
         /// <summary>
-        /// The BlockUntrustedIssuer param. Default: `false`.
+        /// The BlockUntrustedIssuer param. Default: `False`.
         /// </summary>
         [Input("blockUntrustedIssuer")]
         public Input<bool>? BlockUntrustedIssuer { get; set; }

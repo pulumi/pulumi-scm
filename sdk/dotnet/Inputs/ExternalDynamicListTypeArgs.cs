@@ -13,43 +13,43 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The Domain param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         [Input("domain")]
         public Input<Inputs.ExternalDynamicListTypeDomainArgs>? Domain { get; set; }
 
         /// <summary>
-        /// The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The Imei param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         [Input("imei")]
         public Input<Inputs.ExternalDynamicListTypeImeiArgs>? Imei { get; set; }
 
         /// <summary>
-        /// The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The Imsi param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         [Input("imsi")]
         public Input<Inputs.ExternalDynamicListTypeImsiArgs>? Imsi { get; set; }
 
         /// <summary>
-        /// The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The Ip param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         [Input("ip")]
         public Input<Inputs.ExternalDynamicListTypeIpArgs>? Ip { get; set; }
 
         /// <summary>
-        /// The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The PredefinedIp param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         [Input("predefinedIp")]
         public Input<Inputs.ExternalDynamicListTypePredefinedIpArgs>? PredefinedIp { get; set; }
 
         /// <summary>
-        /// The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The PredefinedUrl param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         [Input("predefinedUrl")]
         public Input<Inputs.ExternalDynamicListTypePredefinedUrlArgs>? PredefinedUrl { get; set; }
 
         /// <summary>
-        /// The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefined_ip`, `predefined_url`, `url`
+        /// The Url param. Ensure that only one of the following is specified: `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, `Url`
         /// </summary>
         [Input("url")]
         public Input<Inputs.ExternalDynamicListTypeUrlArgs>? Url { get; set; }
