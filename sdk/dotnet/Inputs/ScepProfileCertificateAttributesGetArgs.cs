@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class ScepProfileCertificateAttributesGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Dnsname param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+        /// The Dnsname param. Ensure that only one of the following is specified: `Dnsname`, `Rfc822name`, `UniformResourceIdentifier`
         /// </summary>
         [Input("dnsname")]
         public Input<string>? Dnsname { get; set; }
 
         /// <summary>
-        /// The Rfc822name param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+        /// The Rfc822name param. Ensure that only one of the following is specified: `Dnsname`, `Rfc822name`, `UniformResourceIdentifier`
         /// </summary>
         [Input("rfc822name")]
         public Input<string>? Rfc822name { get; set; }
 
         /// <summary>
-        /// The UniformResourceIdentifier param. Ensure that only one of the following is specified: `dnsname`, `rfc822name`, `uniform_resource_identifier`
+        /// The UniformResourceIdentifier param. Ensure that only one of the following is specified: `Dnsname`, `Rfc822name`, `UniformResourceIdentifier`
         /// </summary>
         [Input("uniformResourceIdentifier")]
         public Input<string>? UniformResourceIdentifier { get; set; }

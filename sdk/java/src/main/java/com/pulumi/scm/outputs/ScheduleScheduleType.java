@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScheduleScheduleType {
     /**
-     * @return The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `non_recurring`, `recurring`
+     * @return The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
      * 
      */
     private @Nullable List<String> nonRecurringLists;
     /**
-     * @return The Recurring param. Ensure that only one of the following is specified: `non_recurring`, `recurring`
+     * @return The Recurring param. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
      * 
      */
     private @Nullable ScheduleScheduleTypeRecurring recurring;
 
     private ScheduleScheduleType() {}
     /**
-     * @return The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `non_recurring`, `recurring`
+     * @return The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
      * 
      */
     public List<String> nonRecurringLists() {
         return this.nonRecurringLists == null ? List.of() : this.nonRecurringLists;
     }
     /**
-     * @return The Recurring param. Ensure that only one of the following is specified: `non_recurring`, `recurring`
+     * @return The Recurring param. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
      * 
      */
     public Optional<ScheduleScheduleTypeRecurring> recurring() {

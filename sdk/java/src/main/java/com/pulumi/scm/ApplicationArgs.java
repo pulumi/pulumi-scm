@@ -352,14 +352,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+     * timeout for session in timeWait state in seconds. Value must be between 1 and 600.
      * 
      */
     @Import(name="tcpTimeWaitTimeout")
     private @Nullable Output<Integer> tcpTimeWaitTimeout;
 
     /**
-     * @return timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+     * @return timeout for session in timeWait state in seconds. Value must be between 1 and 600.
      * 
      */
     public Optional<Output<Integer>> tcpTimeWaitTimeout() {
@@ -1013,7 +1013,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tcpTimeWaitTimeout timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+         * @param tcpTimeWaitTimeout timeout for session in timeWait state in seconds. Value must be between 1 and 600.
          * 
          * @return builder
          * 
@@ -1024,7 +1024,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tcpTimeWaitTimeout timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+         * @param tcpTimeWaitTimeout timeout for session in timeWait state in seconds. Value must be between 1 and 600.
          * 
          * @return builder
          * 

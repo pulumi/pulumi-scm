@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class IpsecCryptoProfileLifetime
     {
         /// <summary>
-        /// specify lifetime in days. Value must be between 1 and 365. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        /// specify lifetime in days. Value must be between 1 and 365. Ensure that only one of the following is specified: `Days`, `Hours`, `Minutes`, `Seconds`
         /// </summary>
         public readonly int? Days;
         /// <summary>
-        /// specify lifetime in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        /// specify lifetime in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `Days`, `Hours`, `Minutes`, `Seconds`
         /// </summary>
         public readonly int? Hours;
         /// <summary>
-        /// specify lifetime in minutes. Value must be between 3 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        /// specify lifetime in minutes. Value must be between 3 and 65535. Ensure that only one of the following is specified: `Days`, `Hours`, `Minutes`, `Seconds`
         /// </summary>
         public readonly int? Minutes;
         /// <summary>
-        /// specify lifetime in seconds. Value must be between 180 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+        /// specify lifetime in seconds. Value must be between 180 and 65535. Ensure that only one of the following is specified: `Days`, `Hours`, `Minutes`, `Seconds`
         /// </summary>
         public readonly int? Seconds;
 
