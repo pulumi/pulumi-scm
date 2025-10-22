@@ -5,7 +5,7 @@ go 1.24.0
 toolchain go1.24.6
 
 require (
-	github.com/PaloAltoNetworks/terraform-provider-scm v0.0.0
+	github.com/paloaltonetworks/terraform-provider-scm v0.0.0
 	github.com/pulumi/pulumi-terraform-bridge/v3 v3.116.0
 )
 
@@ -122,7 +122,6 @@ require (
 	github.com/opentracing/basictracer-go v1.1.0 // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
 	github.com/paloaltonetworks/scm-go v1.0.2 // indirect
-	github.com/paloaltonetworks/terraform-provider-scm v1.0.2 // indirect
 	github.com/pgavlin/fx v0.1.6 // indirect
 	github.com/pgavlin/goldmark v1.1.33-0.20200616210433-b5eb04559386 // indirect
 	github.com/pjbgf/sha1cd v0.3.2 // indirect
@@ -194,6 +193,6 @@ require (
 	lukechampine.com/frand v1.4.2 // indirect
 )
 
-replace github.com/PaloAltoNetworks/terraform-provider-scm => ../upstream
+replace github.com/paloaltonetworks/terraform-provider-scm => ../upstream
 
 replace github.com/hashicorp/terraform-plugin-sdk/v2 => github.com/pulumi/terraform-plugin-sdk/v2 v2.0.0-20250923233607-7f1981c8674a
