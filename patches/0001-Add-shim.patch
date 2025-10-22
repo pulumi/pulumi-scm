@@ -6,19 +6,19 @@ Subject: [PATCH] Add shim
 
 diff --git a/scm/shim.go b/scm/shim.go
 new file mode 100644
-index 0000000..0fabc68
+index 0000000..e573a39
 --- /dev/null
 +++ b/scm/shim.go
 @@ -0,0 +1,12 @@
 +package scm
 +
 +import (
-+	scm "github.com/PaloAltoNetworks/terraform-provider-scm/internal/provider"
 +	"github.com/hashicorp/terraform-plugin-framework/provider"
++	scm "github.com/paloaltonetworks/terraform-provider-scm/internal/provider"
 +)
 +
 +const version = "dev"
 +
 +func Provider() provider.Provider {
-+	return scm.New(version)()
++	return scm.New(version)
 +}
