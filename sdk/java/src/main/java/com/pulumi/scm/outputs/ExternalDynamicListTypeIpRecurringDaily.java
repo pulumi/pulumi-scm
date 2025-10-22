@@ -4,26 +4,25 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class ExternalDynamicListTypeIpRecurringDaily {
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
-    private @Nullable String at;
+    private String at;
 
     private ExternalDynamicListTypeIpRecurringDaily() {}
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
-    public Optional<String> at() {
-        return Optional.ofNullable(this.at);
+    public String at() {
+        return this.at;
     }
 
     public static Builder builder() {
@@ -35,7 +34,7 @@ public final class ExternalDynamicListTypeIpRecurringDaily {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String at;
+        private String at;
         public Builder() {}
         public Builder(ExternalDynamicListTypeIpRecurringDaily defaults) {
     	      Objects.requireNonNull(defaults);
@@ -43,8 +42,10 @@ public final class ExternalDynamicListTypeIpRecurringDaily {
         }
 
         @CustomType.Setter
-        public Builder at(@Nullable String at) {
-
+        public Builder at(String at) {
+            if (at == null) {
+              throw new MissingRequiredPropertyException("ExternalDynamicListTypeIpRecurringDaily", "at");
+            }
             this.at = at;
             return this;
         }

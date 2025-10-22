@@ -15,9 +15,14 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getUrlAccessProfileList({
+ * //
+ * // Data source to retrieve a list of URL Access Profile objects.
+ * //
+ * // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
+ * const allShared = scm.getUrlAccessProfileList({
  *     folder: "Shared",
  * });
+ * export const urlAccessProfilesListAllShared = allShared.then(allShared => allShared.datas);
  * ```
  */
 export function getUrlAccessProfileList(args?: GetUrlAccessProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetUrlAccessProfileListResult> {
@@ -38,27 +43,27 @@ export function getUrlAccessProfileList(args?: GetUrlAccessProfileListArgs, opts
  */
 export interface GetUrlAccessProfileListArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: string;
 }
@@ -68,15 +73,15 @@ export interface GetUrlAccessProfileListArgs {
  */
 export interface GetUrlAccessProfileListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetUrlAccessProfileListData[];
     /**
-     * The Device param.
+     * The device of the item.
      */
     readonly device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     readonly folder?: string;
     /**
@@ -84,24 +89,24 @@ export interface GetUrlAccessProfileListResult {
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
@@ -114,9 +119,14 @@ export interface GetUrlAccessProfileListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getUrlAccessProfileList({
+ * //
+ * // Data source to retrieve a list of URL Access Profile objects.
+ * //
+ * // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
+ * const allShared = scm.getUrlAccessProfileList({
  *     folder: "Shared",
  * });
+ * export const urlAccessProfilesListAllShared = allShared.then(allShared => allShared.datas);
  * ```
  */
 export function getUrlAccessProfileListOutput(args?: GetUrlAccessProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUrlAccessProfileListResult> {
@@ -137,27 +147,27 @@ export function getUrlAccessProfileListOutput(args?: GetUrlAccessProfileListOutp
  */
 export interface GetUrlAccessProfileListOutputArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: pulumi.Input<string>;
 }

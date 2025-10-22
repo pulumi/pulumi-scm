@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectCertificate {
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     private @Nullable HipObjectCertificateCriteria criteria;
 
     private HipObjectCertificate() {}
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public Optional<HipObjectCertificateCriteria> criteria() {

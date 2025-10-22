@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * AddressGroup resource
  *
  * ## Example Usage
  *
@@ -15,16 +15,51 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const x = new scm.AddressObject("x", {
+ * // This file is embedded using go:embed
+ * // First, create some addresses that will be used in the address group
+ * const scmAddressAg1 = new scm.Address("scm_address_ag_1", {
  *     folder: "Shared",
- *     name: "foo",
- *     description: "Made by Pulumi",
- *     fqdn: "www.example.com",
+ *     name: "scm_address_ag_1",
+ *     description: "First test address",
+ *     ipNetmask: "192.168.1.1/32",
  * });
- * const example = new scm.AddressGroup("example", {
+ * const scmAddressAg2 = new scm.Address("scm_address_ag_2", {
  *     folder: "Shared",
- *     name: "example",
- *     staticLists: [x.name],
+ *     name: "scm_address_ag_2",
+ *     description: "Second test address",
+ *     ipNetmask: "192.168.1.2/32",
+ * });
+ * // Create the address group that references the addresses above
+ * const scmAddressGroup1 = new scm.AddressGroup("scm_address_group_1", {
+ *     folder: "Shared",
+ *     name: "scm_address_group_1",
+ *     description: "Sample address group created with Terraform",
+ *     statics: [
+ *         scmAddressAg1.name,
+ *         scmAddressAg2.name,
+ *     ],
+ * });
+ * // Create tags to be used for dynamic address group
+ * const scmAddressgroupTag1 = new scm.Tag("scm_addressgroup_tag_1", {
+ *     folder: "Shared",
+ *     name: "scm_addressgroup_tag_1",
+ *     comments: "Managed by Pulumi",
+ *     color: "Orange",
+ * });
+ * const scmAddressgroupTag2 = new scm.Tag("scm_addressgroup_tag_2", {
+ *     folder: "Shared",
+ *     name: "scm_addressgroup_tag_2",
+ *     comments: "Managed by Pulumi",
+ *     color: "Blue",
+ * });
+ * // Create a dynamic addressgroup that matches both tags
+ * const scmAddressgroupDynamic = new scm.AddressGroup("scm_addressgroup_dynamic", {
+ *     folder: "Shared",
+ *     name: "scm_addressgroup_dynamic",
+ *     description: "Managed by Pulumi",
+ *     dynamic: {
+ *         filter: "scm_addressgroup_tag_1 and scm_addressgroup_tag_2",
+ *     },
  * });
  * ```
  */
@@ -57,35 +92,35 @@ export class AddressGroup extends pulumi.CustomResource {
     }
 
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+     * Dynamic
      */
-    declare public readonly dynamicValue: pulumi.Output<outputs.AddressGroupDynamicValue | undefined>;
+    declare public readonly dynamic: pulumi.Output<outputs.AddressGroupDynamic | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the address group
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+     * Static
      */
-    declare public readonly staticLists: pulumi.Output<string[] | undefined>;
+    declare public readonly statics: pulumi.Output<string[] | undefined>;
     /**
-     * Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags for address group object
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -105,22 +140,22 @@ export class AddressGroup extends pulumi.CustomResource {
             const state = argsOrState as AddressGroupState | undefined;
             resourceInputs["description"] = state?.description;
             resourceInputs["device"] = state?.device;
-            resourceInputs["dynamicValue"] = state?.dynamicValue;
+            resourceInputs["dynamic"] = state?.dynamic;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["name"] = state?.name;
             resourceInputs["snippet"] = state?.snippet;
-            resourceInputs["staticLists"] = state?.staticLists;
+            resourceInputs["statics"] = state?.statics;
             resourceInputs["tags"] = state?.tags;
             resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as AddressGroupArgs | undefined;
             resourceInputs["description"] = args?.description;
             resourceInputs["device"] = args?.device;
-            resourceInputs["dynamicValue"] = args?.dynamicValue;
+            resourceInputs["dynamic"] = args?.dynamic;
             resourceInputs["folder"] = args?.folder;
             resourceInputs["name"] = args?.name;
             resourceInputs["snippet"] = args?.snippet;
-            resourceInputs["staticLists"] = args?.staticLists;
+            resourceInputs["statics"] = args?.statics;
             resourceInputs["tags"] = args?.tags;
             resourceInputs["tfid"] = undefined /*out*/;
         }
@@ -134,35 +169,35 @@ export class AddressGroup extends pulumi.CustomResource {
  */
 export interface AddressGroupState {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+     * Dynamic
      */
-    dynamicValue?: pulumi.Input<inputs.AddressGroupDynamicValue>;
+    dynamic?: pulumi.Input<inputs.AddressGroupDynamic>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the address group
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+     * Static
      */
-    staticLists?: pulumi.Input<pulumi.Input<string>[]>;
+    statics?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags for address group object
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
@@ -173,35 +208,35 @@ export interface AddressGroupState {
  */
 export interface AddressGroupArgs {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+     * Dynamic
      */
-    dynamicValue?: pulumi.Input<inputs.AddressGroupDynamicValue>;
+    dynamic?: pulumi.Input<inputs.AddressGroupDynamic>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the address group
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+     * Static
      */
-    staticLists?: pulumi.Input<pulumi.Input<string>[]>;
+    statics?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags for address group object
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
 }

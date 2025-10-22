@@ -18,14 +18,14 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
     public static final LocalUserState Empty = new LocalUserState();
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -33,14 +33,14 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Disabled param.
+     * Is the local user disabled?
      * 
      */
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
     /**
-     * @return The Disabled param.
+     * @return Is the local user disabled?
      * 
      */
     public Optional<Output<Boolean>> disabled() {
@@ -48,14 +48,14 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      * 
      */
     @Import(name="encryptedValues")
     private @Nullable Output<Map<String,String>> encryptedValues;
 
     /**
-     * @return (Internal use) Encrypted values returned from the API.
+     * @return Map of sensitive values returned from the API.
      * 
      */
     public Optional<Output<Map<String,String>>> encryptedValues() {
@@ -63,14 +63,14 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -78,14 +78,14 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Name param. String length must not exceed 31 characters.
+     * The name of the local user
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param. String length must not exceed 31 characters.
+     * @return The name of the local user
      * 
      */
     public Optional<Output<String>> name() {
@@ -93,14 +93,14 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Password param. String length must not exceed 63 characters.
+     * The password of the local user
      * 
      */
     @Import(name="password")
     private @Nullable Output<String> password;
 
     /**
-     * @return The Password param. String length must not exceed 63 characters.
+     * @return The password of the local user
      * 
      */
     public Optional<Output<String>> password() {
@@ -108,14 +108,14 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -161,7 +161,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -172,7 +172,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -182,7 +182,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param disabled The Disabled param.
+         * @param disabled Is the local user disabled?
          * 
          * @return builder
          * 
@@ -193,7 +193,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param disabled The Disabled param.
+         * @param disabled Is the local user disabled?
          * 
          * @return builder
          * 
@@ -203,7 +203,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param encryptedValues (Internal use) Encrypted values returned from the API.
+         * @param encryptedValues Map of sensitive values returned from the API.
          * 
          * @return builder
          * 
@@ -214,7 +214,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param encryptedValues (Internal use) Encrypted values returned from the API.
+         * @param encryptedValues Map of sensitive values returned from the API.
          * 
          * @return builder
          * 
@@ -224,7 +224,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -235,7 +235,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -245,7 +245,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param. String length must not exceed 31 characters.
+         * @param name The name of the local user
          * 
          * @return builder
          * 
@@ -256,7 +256,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param. String length must not exceed 31 characters.
+         * @param name The name of the local user
          * 
          * @return builder
          * 
@@ -266,7 +266,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param password The Password param. String length must not exceed 63 characters.
+         * @param password The password of the local user
          * 
          * @return builder
          * 
@@ -277,7 +277,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param password The Password param. String length must not exceed 63 characters.
+         * @param password The password of the local user
          * 
          * @return builder
          * 
@@ -287,7 +287,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -298,7 +298,7 @@ public final class LocalUserState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

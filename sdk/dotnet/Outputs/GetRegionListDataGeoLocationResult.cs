@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRegionListDataGeoLocationResult
     {
         /// <summary>
-        /// latitude coordinate. Value must be between -90 and 90.
+        /// The latitudinal position of the region
         /// </summary>
         public readonly double Latitude;
         /// <summary>
-        /// longitude coordinate. Value must be between -180 and 180.
+        /// The longitudinal postition of the region
         /// </summary>
         public readonly double Longitude;
 

@@ -13,22 +13,28 @@ namespace Pulumi.Scm.Inputs
     public sealed class NatRuleSourceTranslationArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The BiDirectional param. String must be one of these: `"yes"`, `"no"`.
+        /// Bi directional
         /// </summary>
         [Input("biDirectional")]
-        public Input<string>? BiDirectional { get; set; }
+        public Input<bool>? BiDirectional { get; set; }
 
         /// <summary>
-        /// The Fallback param.
+        /// Fallback
         /// </summary>
         [Input("fallback")]
         public Input<Inputs.NatRuleSourceTranslationFallbackArgs>? Fallback { get; set; }
+
+        /// <summary>
+        /// Interface name
+        /// </summary>
+        [Input("interface")]
+        public Input<string>? Interface { get; set; }
 
         [Input("translatedAddressArrays")]
         private InputList<string>? _translatedAddressArrays;
 
         /// <summary>
-        /// The TranslatedAddressArray param. Ensure that only one of the following is specified: `TranslatedAddressArray`, `TranslatedAddressSingle`
+        /// Translated IP addresses
         /// </summary>
         public InputList<string> TranslatedAddressArrays
         {
@@ -37,7 +43,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `TranslatedAddressArray`, `TranslatedAddressSingle`
+        /// Translated IP address
         /// </summary>
         [Input("translatedAddressSingle")]
         public Input<string>? TranslatedAddressSingle { get; set; }

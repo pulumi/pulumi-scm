@@ -11,179 +11,196 @@ import com.pulumi.scm.outputs.GetServiceConnectionListDataQos;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetServiceConnectionListData {
     /**
-     * @return The BackupSC param.
+     * @return Backup s c
      * 
      */
     private String backupSC;
     /**
-     * @return The BgpPeer param.
+     * @return Bgp peer
      * 
      */
     private GetServiceConnectionListDataBgpPeer bgpPeer;
     /**
-     * @return UUID of the resource.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    private Map<String,String> encryptedValues;
+    /**
+     * @return The UUID of the service connection
      * 
      */
     private String id;
     /**
-     * @return The IpsecTunnel param.
+     * @return Ipsec tunnel
      * 
      */
     private String ipsecTunnel;
     /**
-     * @return The Name param.
+     * @return The name of the service connection
      * 
      */
     private String name;
     /**
-     * @return The NatPool param.
+     * @return Nat pool
      * 
      */
     private String natPool;
     /**
-     * @return The NoExportCommunity param. String must be one of these: `&#34;Disabled&#34;`, `&#34;Enabled-In&#34;`, `&#34;Enabled-Out&#34;`, `&#34;Enabled-Both&#34;`.
+     * @return No export community
      * 
      */
     private String noExportCommunity;
     /**
-     * @return The OnboardingType param. String must be one of these: `&#34;classic&#34;`. Default: `&#34;classic&#34;`.
+     * @return Onboarding type
      * 
      */
     private String onboardingType;
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     private GetServiceConnectionListDataProtocol protocol;
     /**
-     * @return The Qos param.
+     * @return Qos
      * 
      */
     private GetServiceConnectionListDataQos qos;
     /**
-     * @return The Region param.
+     * @return Region
      * 
      */
     private String region;
     /**
-     * @return The SecondaryIpsecTunnel param.
+     * @return Secondary ipsec tunnel
      * 
      */
     private String secondaryIpsecTunnel;
     /**
-     * @return The SourceNat param.
+     * @return Source nat
      * 
      */
     private Boolean sourceNat;
     /**
-     * @return The Subnets param.
+     * @return Subnets
      * 
      */
     private List<String> subnets;
+    private String tfid;
 
     private GetServiceConnectionListData() {}
     /**
-     * @return The BackupSC param.
+     * @return Backup s c
      * 
      */
     public String backupSC() {
         return this.backupSC;
     }
     /**
-     * @return The BgpPeer param.
+     * @return Bgp peer
      * 
      */
     public GetServiceConnectionListDataBgpPeer bgpPeer() {
         return this.bgpPeer;
     }
     /**
-     * @return UUID of the resource.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
+     * @return The UUID of the service connection
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The IpsecTunnel param.
+     * @return Ipsec tunnel
      * 
      */
     public String ipsecTunnel() {
         return this.ipsecTunnel;
     }
     /**
-     * @return The Name param.
+     * @return The name of the service connection
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The NatPool param.
+     * @return Nat pool
      * 
      */
     public String natPool() {
         return this.natPool;
     }
     /**
-     * @return The NoExportCommunity param. String must be one of these: `&#34;Disabled&#34;`, `&#34;Enabled-In&#34;`, `&#34;Enabled-Out&#34;`, `&#34;Enabled-Both&#34;`.
+     * @return No export community
      * 
      */
     public String noExportCommunity() {
         return this.noExportCommunity;
     }
     /**
-     * @return The OnboardingType param. String must be one of these: `&#34;classic&#34;`. Default: `&#34;classic&#34;`.
+     * @return Onboarding type
      * 
      */
     public String onboardingType() {
         return this.onboardingType;
     }
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     public GetServiceConnectionListDataProtocol protocol() {
         return this.protocol;
     }
     /**
-     * @return The Qos param.
+     * @return Qos
      * 
      */
     public GetServiceConnectionListDataQos qos() {
         return this.qos;
     }
     /**
-     * @return The Region param.
+     * @return Region
      * 
      */
     public String region() {
         return this.region;
     }
     /**
-     * @return The SecondaryIpsecTunnel param.
+     * @return Secondary ipsec tunnel
      * 
      */
     public String secondaryIpsecTunnel() {
         return this.secondaryIpsecTunnel;
     }
     /**
-     * @return The SourceNat param.
+     * @return Source nat
      * 
      */
     public Boolean sourceNat() {
         return this.sourceNat;
     }
     /**
-     * @return The Subnets param.
+     * @return Subnets
      * 
      */
     public List<String> subnets() {
         return this.subnets;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -197,6 +214,7 @@ public final class GetServiceConnectionListData {
     public static final class Builder {
         private String backupSC;
         private GetServiceConnectionListDataBgpPeer bgpPeer;
+        private Map<String,String> encryptedValues;
         private String id;
         private String ipsecTunnel;
         private String name;
@@ -209,11 +227,13 @@ public final class GetServiceConnectionListData {
         private String secondaryIpsecTunnel;
         private Boolean sourceNat;
         private List<String> subnets;
+        private String tfid;
         public Builder() {}
         public Builder(GetServiceConnectionListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.backupSC = defaults.backupSC;
     	      this.bgpPeer = defaults.bgpPeer;
+    	      this.encryptedValues = defaults.encryptedValues;
     	      this.id = defaults.id;
     	      this.ipsecTunnel = defaults.ipsecTunnel;
     	      this.name = defaults.name;
@@ -226,6 +246,7 @@ public final class GetServiceConnectionListData {
     	      this.secondaryIpsecTunnel = defaults.secondaryIpsecTunnel;
     	      this.sourceNat = defaults.sourceNat;
     	      this.subnets = defaults.subnets;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -242,6 +263,14 @@ public final class GetServiceConnectionListData {
               throw new MissingRequiredPropertyException("GetServiceConnectionListData", "bgpPeer");
             }
             this.bgpPeer = bgpPeer;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetServiceConnectionListData", "encryptedValues");
+            }
+            this.encryptedValues = encryptedValues;
             return this;
         }
         @CustomType.Setter
@@ -343,10 +372,19 @@ public final class GetServiceConnectionListData {
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
         }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetServiceConnectionListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetServiceConnectionListData build() {
             final var _resultValue = new GetServiceConnectionListData();
             _resultValue.backupSC = backupSC;
             _resultValue.bgpPeer = bgpPeer;
+            _resultValue.encryptedValues = encryptedValues;
             _resultValue.id = id;
             _resultValue.ipsecTunnel = ipsecTunnel;
             _resultValue.name = name;
@@ -359,6 +397,7 @@ public final class GetServiceConnectionListData {
             _resultValue.secondaryIpsecTunnel = secondaryIpsecTunnel;
             _resultValue.sourceNat = sourceNat;
             _resultValue.subnets = subnets;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

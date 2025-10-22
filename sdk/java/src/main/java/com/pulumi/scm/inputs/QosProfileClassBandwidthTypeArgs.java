@@ -17,14 +17,14 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
     public static final QosProfileClassBandwidthTypeArgs Empty = new QosProfileClassBandwidthTypeArgs();
 
     /**
-     * The Mbps param. Ensure that only one of the following is specified: `mbps`, `percentage`
+     * Mbps
      * 
      */
     @Import(name="mbps")
     private @Nullable Output<QosProfileClassBandwidthTypeMbpsArgs> mbps;
 
     /**
-     * @return The Mbps param. Ensure that only one of the following is specified: `mbps`, `percentage`
+     * @return Mbps
      * 
      */
     public Optional<Output<QosProfileClassBandwidthTypeMbpsArgs>> mbps() {
@@ -32,14 +32,14 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
     }
 
     /**
-     * The Percentage param. Ensure that only one of the following is specified: `mbps`, `percentage`
+     * Percentage
      * 
      */
     @Import(name="percentage")
     private @Nullable Output<QosProfileClassBandwidthTypePercentageArgs> percentage;
 
     /**
-     * @return The Percentage param. Ensure that only one of the following is specified: `mbps`, `percentage`
+     * @return Percentage
      * 
      */
     public Optional<Output<QosProfileClassBandwidthTypePercentageArgs>> percentage() {
@@ -72,7 +72,7 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param mbps The Mbps param. Ensure that only one of the following is specified: `mbps`, `percentage`
+         * @param mbps Mbps
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param mbps The Mbps param. Ensure that only one of the following is specified: `mbps`, `percentage`
+         * @param mbps Mbps
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param percentage The Percentage param. Ensure that only one of the following is specified: `mbps`, `percentage`
+         * @param percentage Percentage
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param percentage The Percentage param. Ensure that only one of the following is specified: `mbps`, `percentage`
+         * @param percentage Percentage
          * 
          * @return builder
          * 

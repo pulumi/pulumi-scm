@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,14 +21,14 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     public static final LdapServerProfileState Empty = new LdapServerProfileState();
 
     /**
-     * The Base param. String length must not exceed 255 characters.
+     * The base DN
      * 
      */
     @Import(name="base")
     private @Nullable Output<String> base;
 
     /**
-     * @return The Base param. String length must not exceed 255 characters.
+     * @return The base DN
      * 
      */
     public Optional<Output<String>> base() {
@@ -35,14 +36,14 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The BindDn param. String length must not exceed 255 characters.
+     * The bind DN
      * 
      */
     @Import(name="bindDn")
     private @Nullable Output<String> bindDn;
 
     /**
-     * @return The BindDn param. String length must not exceed 255 characters.
+     * @return The bind DN
      * 
      */
     public Optional<Output<String>> bindDn() {
@@ -50,14 +51,14 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The BindPassword param. String length must not exceed 121 characters.
+     * The bind password
      * 
      */
     @Import(name="bindPassword")
     private @Nullable Output<String> bindPassword;
 
     /**
-     * @return The BindPassword param. String length must not exceed 121 characters.
+     * @return The bind password
      * 
      */
     public Optional<Output<String>> bindPassword() {
@@ -65,14 +66,14 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The BindTimelimit param.
+     * The bind timeout (seconds)
      * 
      */
     @Import(name="bindTimelimit")
     private @Nullable Output<String> bindTimelimit;
 
     /**
-     * @return The BindTimelimit param.
+     * @return The bind timeout (seconds)
      * 
      */
     public Optional<Output<String>> bindTimelimit() {
@@ -80,14 +81,14 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -95,14 +96,29 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Folder param.
+     * Map of sensitive values returned from the API.
+     * 
+     */
+    @Import(name="encryptedValues")
+    private @Nullable Output<Map<String,String>> encryptedValues;
+
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Optional<Output<Map<String,String>>> encryptedValues() {
+        return Optional.ofNullable(this.encryptedValues);
+    }
+
+    /**
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -110,14 +126,14 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The LdapType param. String must be one of these: `&#34;active-directory&#34;`, `&#34;e-directory&#34;`, `&#34;sun&#34;`, `&#34;other&#34;`.
+     * The LDAP server time
      * 
      */
     @Import(name="ldapType")
     private @Nullable Output<String> ldapType;
 
     /**
-     * @return The LdapType param. String must be one of these: `&#34;active-directory&#34;`, `&#34;e-directory&#34;`, `&#34;sun&#34;`, `&#34;other&#34;`.
+     * @return The LDAP server time
      * 
      */
     public Optional<Output<String>> ldapType() {
@@ -125,14 +141,29 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The RetryInterval param.
+     * The name of the LDAP server profile
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name of the LDAP server profile
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
+    /**
+     * The search retry interval (seconds)
      * 
      */
     @Import(name="retryInterval")
     private @Nullable Output<Integer> retryInterval;
 
     /**
-     * @return The RetryInterval param.
+     * @return The search retry interval (seconds)
      * 
      */
     public Optional<Output<Integer>> retryInterval() {
@@ -140,14 +171,14 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Servers param.
+     * The LDAP server configuration
      * 
      */
     @Import(name="servers")
     private @Nullable Output<List<LdapServerProfileServerArgs>> servers;
 
     /**
-     * @return The Servers param.
+     * @return The LDAP server configuration
      * 
      */
     public Optional<Output<List<LdapServerProfileServerArgs>>> servers() {
@@ -155,14 +186,14 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -170,14 +201,14 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Ssl param.
+     * Require SSL/TLS secured connection?
      * 
      */
     @Import(name="ssl")
     private @Nullable Output<Boolean> ssl;
 
     /**
-     * @return The Ssl param.
+     * @return Require SSL/TLS secured connection?
      * 
      */
     public Optional<Output<Boolean>> ssl() {
@@ -192,14 +223,14 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Timelimit param.
+     * The search timeout (seconds)
      * 
      */
     @Import(name="timelimit")
     private @Nullable Output<Integer> timelimit;
 
     /**
-     * @return The Timelimit param.
+     * @return The search timeout (seconds)
      * 
      */
     public Optional<Output<Integer>> timelimit() {
@@ -207,14 +238,14 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The VerifyServerCertificate param.
+     * Verify server certificate for SSL sessions?
      * 
      */
     @Import(name="verifyServerCertificate")
     private @Nullable Output<Boolean> verifyServerCertificate;
 
     /**
-     * @return The VerifyServerCertificate param.
+     * @return Verify server certificate for SSL sessions?
      * 
      */
     public Optional<Output<Boolean>> verifyServerCertificate() {
@@ -229,8 +260,10 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         this.bindPassword = $.bindPassword;
         this.bindTimelimit = $.bindTimelimit;
         this.device = $.device;
+        this.encryptedValues = $.encryptedValues;
         this.folder = $.folder;
         this.ldapType = $.ldapType;
+        this.name = $.name;
         this.retryInterval = $.retryInterval;
         this.servers = $.servers;
         this.snippet = $.snippet;
@@ -259,7 +292,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param base The Base param. String length must not exceed 255 characters.
+         * @param base The base DN
          * 
          * @return builder
          * 
@@ -270,7 +303,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param base The Base param. String length must not exceed 255 characters.
+         * @param base The base DN
          * 
          * @return builder
          * 
@@ -280,7 +313,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param bindDn The BindDn param. String length must not exceed 255 characters.
+         * @param bindDn The bind DN
          * 
          * @return builder
          * 
@@ -291,7 +324,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param bindDn The BindDn param. String length must not exceed 255 characters.
+         * @param bindDn The bind DN
          * 
          * @return builder
          * 
@@ -301,7 +334,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param bindPassword The BindPassword param. String length must not exceed 121 characters.
+         * @param bindPassword The bind password
          * 
          * @return builder
          * 
@@ -312,7 +345,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param bindPassword The BindPassword param. String length must not exceed 121 characters.
+         * @param bindPassword The bind password
          * 
          * @return builder
          * 
@@ -322,7 +355,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param bindTimelimit The BindTimelimit param.
+         * @param bindTimelimit The bind timeout (seconds)
          * 
          * @return builder
          * 
@@ -333,7 +366,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param bindTimelimit The BindTimelimit param.
+         * @param bindTimelimit The bind timeout (seconds)
          * 
          * @return builder
          * 
@@ -343,7 +376,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -354,7 +387,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -364,7 +397,28 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param folder The Folder param.
+         * @param encryptedValues Map of sensitive values returned from the API.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encryptedValues(@Nullable Output<Map<String,String>> encryptedValues) {
+            $.encryptedValues = encryptedValues;
+            return this;
+        }
+
+        /**
+         * @param encryptedValues Map of sensitive values returned from the API.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            return encryptedValues(Output.of(encryptedValues));
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -375,7 +429,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -385,7 +439,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ldapType The LdapType param. String must be one of these: `&#34;active-directory&#34;`, `&#34;e-directory&#34;`, `&#34;sun&#34;`, `&#34;other&#34;`.
+         * @param ldapType The LDAP server time
          * 
          * @return builder
          * 
@@ -396,7 +450,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ldapType The LdapType param. String must be one of these: `&#34;active-directory&#34;`, `&#34;e-directory&#34;`, `&#34;sun&#34;`, `&#34;other&#34;`.
+         * @param ldapType The LDAP server time
          * 
          * @return builder
          * 
@@ -406,7 +460,28 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param retryInterval The RetryInterval param.
+         * @param name The name of the LDAP server profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the LDAP server profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param retryInterval The search retry interval (seconds)
          * 
          * @return builder
          * 
@@ -417,7 +492,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param retryInterval The RetryInterval param.
+         * @param retryInterval The search retry interval (seconds)
          * 
          * @return builder
          * 
@@ -427,7 +502,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers The LDAP server configuration
          * 
          * @return builder
          * 
@@ -438,7 +513,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers The LDAP server configuration
          * 
          * @return builder
          * 
@@ -448,7 +523,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers The LDAP server configuration
          * 
          * @return builder
          * 
@@ -458,7 +533,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -469,7 +544,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -479,7 +554,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ssl The Ssl param.
+         * @param ssl Require SSL/TLS secured connection?
          * 
          * @return builder
          * 
@@ -490,7 +565,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ssl The Ssl param.
+         * @param ssl Require SSL/TLS secured connection?
          * 
          * @return builder
          * 
@@ -509,7 +584,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param timelimit The Timelimit param.
+         * @param timelimit The search timeout (seconds)
          * 
          * @return builder
          * 
@@ -520,7 +595,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param timelimit The Timelimit param.
+         * @param timelimit The search timeout (seconds)
          * 
          * @return builder
          * 
@@ -530,7 +605,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param verifyServerCertificate The VerifyServerCertificate param.
+         * @param verifyServerCertificate Verify server certificate for SSL sessions?
          * 
          * @return builder
          * 
@@ -541,7 +616,7 @@ public final class LdapServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param verifyServerCertificate The VerifyServerCertificate param.
+         * @param verifyServerCertificate Verify server certificate for SSL sessions?
          * 
          * @return builder
          * 

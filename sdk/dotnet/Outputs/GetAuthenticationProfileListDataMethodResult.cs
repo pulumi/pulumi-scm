@@ -14,31 +14,31 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAuthenticationProfileListDataMethodResult
     {
         /// <summary>
-        /// The Cloud param.
+        /// Cloud
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodCloudResult Cloud;
         /// <summary>
-        /// The Kerberos param.
+        /// Kerberos
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodKerberosResult Kerberos;
         /// <summary>
-        /// The Ldap param.
+        /// Ldap
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodLdapResult Ldap;
         /// <summary>
-        /// The LocalDatabase param.
+        /// Local database
         /// </summary>
-        public readonly bool LocalDatabase;
+        public readonly Outputs.GetAuthenticationProfileListDataMethodLocalDatabaseResult LocalDatabase;
         /// <summary>
-        /// The Radius param.
+        /// Radius
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodRadiusResult Radius;
         /// <summary>
-        /// The SamlIdp param.
+        /// Saml idp
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodSamlIdpResult SamlIdp;
         /// <summary>
-        /// The Tacplus param.
+        /// Tacplus
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodTacplusResult Tacplus;
 
@@ -50,7 +50,7 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetAuthenticationProfileListDataMethodLdapResult ldap,
 
-            bool localDatabase,
+            Outputs.GetAuthenticationProfileListDataMethodLocalDatabaseResult localDatabase,
 
             Outputs.GetAuthenticationProfileListDataMethodRadiusResult radius,
 

@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetTacacsServerProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetTacacsServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// TacacsServerProfile data source
         /// </summary>
         public static Task<GetTacacsServerProfileResult> InvokeAsync(GetTacacsServerProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetTacacsServerProfileResult>("scm:index/getTacacsServerProfile:getTacacsServerProfile", args ?? new GetTacacsServerProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetTacacsServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// TacacsServerProfile data source
         /// </summary>
         public static Output<GetTacacsServerProfileResult> Invoke(GetTacacsServerProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTacacsServerProfileResult>("scm:index/getTacacsServerProfile:getTacacsServerProfile", args ?? new GetTacacsServerProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetTacacsServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// TacacsServerProfile data source
         /// </summary>
         public static Output<GetTacacsServerProfileResult> Invoke(GetTacacsServerProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetTacacsServerProfileResult>("scm:index/getTacacsServerProfile:getTacacsServerProfile", args ?? new GetTacacsServerProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetTacacsServerProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the TACACS+ server profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the TACACS+ server profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetTacacsServerProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetTacacsServerProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the TACACS+ server profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the TACACS+ server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetTacacsServerProfileInvokeArgs()
         {
@@ -118,34 +76,58 @@ namespace Pulumi.Scm
     public sealed class GetTacacsServerProfileResult
     {
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the TACACS+ server profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+        /// The name of the TACACS+ server profile
+        /// </summary>
+        public readonly string Name;
+        /// <summary>
+        /// The TACACS+ authentication protocol
         /// </summary>
         public readonly string Protocol;
         /// <summary>
-        /// The Servers param.
+        /// The TACACS+ server configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.GetTacacsServerProfileServerResult> Servers;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 30.
+        /// The TACACS+ timeout (seconds)
         /// </summary>
         public readonly int Timeout;
         /// <summary>
-        /// The UseSingleConnection param.
+        /// Use a single TACACS+ connection?
         /// </summary>
         public readonly bool UseSingleConnection;
 
         [OutputConstructor]
         private GetTacacsServerProfileResult(
+            string device,
+
+            string folder,
+
             string id,
+
+            string name,
 
             string protocol,
 
             ImmutableArray<Outputs.GetTacacsServerProfileServerResult> servers,
+
+            string snippet,
 
             string tfid,
 
@@ -153,9 +135,13 @@ namespace Pulumi.Scm
 
             bool useSingleConnection)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
+            Name = name;
             Protocol = protocol;
             Servers = servers;
+            Snippet = snippet;
             Tfid = tfid;
             Timeout = timeout;
             UseSingleConnection = useSingleConnection;

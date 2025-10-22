@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class LdapServerProfileServerGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Address param.
+        /// The LDAP server IP address
         /// </summary>
         [Input("address")]
         public Input<string>? Address { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The LDAP server name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Port param. Value must be between 1 and 65535.
+        /// The LDAP server port
         /// </summary>
         [Input("port")]
         public Input<int>? Port { get; set; }

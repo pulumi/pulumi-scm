@@ -11,50 +11,50 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsSecurityProfileListDataBotnetDomainsDnsSecurityCategory {
     /**
-     * @return The Action param. String must be one of these: `&#34;default&#34;`, `&#34;allow&#34;`, `&#34;block&#34;`, `&#34;sinkhole&#34;`. Default: `&#34;default&#34;`.
+     * @return Action
      * 
      */
     private String action;
     /**
-     * @return The LogLevel param. String must be one of these: `&#34;default&#34;`, `&#34;none&#34;`, `&#34;low&#34;`, `&#34;informational&#34;`, `&#34;medium&#34;`, `&#34;high&#34;`, `&#34;critical&#34;`. Default: `&#34;default&#34;`.
+     * @return Log level
      * 
      */
     private String logLevel;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     private String packetCapture;
 
     private GetDnsSecurityProfileListDataBotnetDomainsDnsSecurityCategory() {}
     /**
-     * @return The Action param. String must be one of these: `&#34;default&#34;`, `&#34;allow&#34;`, `&#34;block&#34;`, `&#34;sinkhole&#34;`. Default: `&#34;default&#34;`.
+     * @return Action
      * 
      */
     public String action() {
         return this.action;
     }
     /**
-     * @return The LogLevel param. String must be one of these: `&#34;default&#34;`, `&#34;none&#34;`, `&#34;low&#34;`, `&#34;informational&#34;`, `&#34;medium&#34;`, `&#34;high&#34;`, `&#34;critical&#34;`. Default: `&#34;default&#34;`.
+     * @return Log level
      * 
      */
     public String logLevel() {
         return this.logLevel;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     public String packetCapture() {

@@ -16,14 +16,14 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
     public static final DecryptionProfileSslForwardProxyArgs Empty = new DecryptionProfileSslForwardProxyArgs();
 
     /**
-     * The AutoIncludeAltname param. Default: `false`.
+     * Auto include altname
      * 
      */
     @Import(name="autoIncludeAltname")
     private @Nullable Output<Boolean> autoIncludeAltname;
 
     /**
-     * @return The AutoIncludeAltname param. Default: `false`.
+     * @return Auto include altname
      * 
      */
     public Optional<Output<Boolean>> autoIncludeAltname() {
@@ -31,14 +31,14 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The BlockClientCert param. Default: `false`.
+     * Block client cert
      * 
      */
     @Import(name="blockClientCert")
     private @Nullable Output<Boolean> blockClientCert;
 
     /**
-     * @return The BlockClientCert param. Default: `false`.
+     * @return Block client cert
      * 
      */
     public Optional<Output<Boolean>> blockClientCert() {
@@ -46,14 +46,14 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The BlockExpiredCertificate param. Default: `false`.
+     * Block expired certificate
      * 
      */
     @Import(name="blockExpiredCertificate")
     private @Nullable Output<Boolean> blockExpiredCertificate;
 
     /**
-     * @return The BlockExpiredCertificate param. Default: `false`.
+     * @return Block expired certificate
      * 
      */
     public Optional<Output<Boolean>> blockExpiredCertificate() {
@@ -61,14 +61,14 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The BlockTimeoutCert param. Default: `false`.
+     * Block timeout cert
      * 
      */
     @Import(name="blockTimeoutCert")
     private @Nullable Output<Boolean> blockTimeoutCert;
 
     /**
-     * @return The BlockTimeoutCert param. Default: `false`.
+     * @return Block timeout cert
      * 
      */
     public Optional<Output<Boolean>> blockTimeoutCert() {
@@ -76,14 +76,14 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The BlockTls13DowngradeNoResource param. Default: `false`.
+     * Block tls13 downgrade no resource
      * 
      */
     @Import(name="blockTls13DowngradeNoResource")
     private @Nullable Output<Boolean> blockTls13DowngradeNoResource;
 
     /**
-     * @return The BlockTls13DowngradeNoResource param. Default: `false`.
+     * @return Block tls13 downgrade no resource
      * 
      */
     public Optional<Output<Boolean>> blockTls13DowngradeNoResource() {
@@ -91,14 +91,14 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The BlockUnknownCert param. Default: `false`.
+     * Block unknown cert
      * 
      */
     @Import(name="blockUnknownCert")
     private @Nullable Output<Boolean> blockUnknownCert;
 
     /**
-     * @return The BlockUnknownCert param. Default: `false`.
+     * @return Block unknown cert
      * 
      */
     public Optional<Output<Boolean>> blockUnknownCert() {
@@ -106,14 +106,14 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The BlockUnsupportedCipher param. Default: `false`.
+     * Block unsupported cipher
      * 
      */
     @Import(name="blockUnsupportedCipher")
     private @Nullable Output<Boolean> blockUnsupportedCipher;
 
     /**
-     * @return The BlockUnsupportedCipher param. Default: `false`.
+     * @return Block unsupported cipher
      * 
      */
     public Optional<Output<Boolean>> blockUnsupportedCipher() {
@@ -121,14 +121,14 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The BlockUnsupportedVersion param. Default: `false`.
+     * Block unsupported version
      * 
      */
     @Import(name="blockUnsupportedVersion")
     private @Nullable Output<Boolean> blockUnsupportedVersion;
 
     /**
-     * @return The BlockUnsupportedVersion param. Default: `false`.
+     * @return Block unsupported version
      * 
      */
     public Optional<Output<Boolean>> blockUnsupportedVersion() {
@@ -136,14 +136,14 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The BlockUntrustedIssuer param. Default: `false`.
+     * Block untrusted issuer
      * 
      */
     @Import(name="blockUntrustedIssuer")
     private @Nullable Output<Boolean> blockUntrustedIssuer;
 
     /**
-     * @return The BlockUntrustedIssuer param. Default: `false`.
+     * @return Block untrusted issuer
      * 
      */
     public Optional<Output<Boolean>> blockUntrustedIssuer() {
@@ -151,14 +151,14 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The RestrictCertExts param. Default: `false`.
+     * Restrict cert exts
      * 
      */
     @Import(name="restrictCertExts")
     private @Nullable Output<Boolean> restrictCertExts;
 
     /**
-     * @return The RestrictCertExts param. Default: `false`.
+     * @return Restrict cert exts
      * 
      */
     public Optional<Output<Boolean>> restrictCertExts() {
@@ -166,14 +166,14 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The StripAlpn param. Default: `false`.
+     * Strip alpn
      * 
      */
     @Import(name="stripAlpn")
     private @Nullable Output<Boolean> stripAlpn;
 
     /**
-     * @return The StripAlpn param. Default: `false`.
+     * @return Strip alpn
      * 
      */
     public Optional<Output<Boolean>> stripAlpn() {
@@ -215,7 +215,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param autoIncludeAltname The AutoIncludeAltname param. Default: `false`.
+         * @param autoIncludeAltname Auto include altname
          * 
          * @return builder
          * 
@@ -226,7 +226,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param autoIncludeAltname The AutoIncludeAltname param. Default: `false`.
+         * @param autoIncludeAltname Auto include altname
          * 
          * @return builder
          * 
@@ -236,7 +236,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockClientCert The BlockClientCert param. Default: `false`.
+         * @param blockClientCert Block client cert
          * 
          * @return builder
          * 
@@ -247,7 +247,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockClientCert The BlockClientCert param. Default: `false`.
+         * @param blockClientCert Block client cert
          * 
          * @return builder
          * 
@@ -257,7 +257,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockExpiredCertificate The BlockExpiredCertificate param. Default: `false`.
+         * @param blockExpiredCertificate Block expired certificate
          * 
          * @return builder
          * 
@@ -268,7 +268,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockExpiredCertificate The BlockExpiredCertificate param. Default: `false`.
+         * @param blockExpiredCertificate Block expired certificate
          * 
          * @return builder
          * 
@@ -278,7 +278,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockTimeoutCert The BlockTimeoutCert param. Default: `false`.
+         * @param blockTimeoutCert Block timeout cert
          * 
          * @return builder
          * 
@@ -289,7 +289,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockTimeoutCert The BlockTimeoutCert param. Default: `false`.
+         * @param blockTimeoutCert Block timeout cert
          * 
          * @return builder
          * 
@@ -299,7 +299,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockTls13DowngradeNoResource The BlockTls13DowngradeNoResource param. Default: `false`.
+         * @param blockTls13DowngradeNoResource Block tls13 downgrade no resource
          * 
          * @return builder
          * 
@@ -310,7 +310,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockTls13DowngradeNoResource The BlockTls13DowngradeNoResource param. Default: `false`.
+         * @param blockTls13DowngradeNoResource Block tls13 downgrade no resource
          * 
          * @return builder
          * 
@@ -320,7 +320,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUnknownCert The BlockUnknownCert param. Default: `false`.
+         * @param blockUnknownCert Block unknown cert
          * 
          * @return builder
          * 
@@ -331,7 +331,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUnknownCert The BlockUnknownCert param. Default: `false`.
+         * @param blockUnknownCert Block unknown cert
          * 
          * @return builder
          * 
@@ -341,7 +341,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUnsupportedCipher The BlockUnsupportedCipher param. Default: `false`.
+         * @param blockUnsupportedCipher Block unsupported cipher
          * 
          * @return builder
          * 
@@ -352,7 +352,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUnsupportedCipher The BlockUnsupportedCipher param. Default: `false`.
+         * @param blockUnsupportedCipher Block unsupported cipher
          * 
          * @return builder
          * 
@@ -362,7 +362,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUnsupportedVersion The BlockUnsupportedVersion param. Default: `false`.
+         * @param blockUnsupportedVersion Block unsupported version
          * 
          * @return builder
          * 
@@ -373,7 +373,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUnsupportedVersion The BlockUnsupportedVersion param. Default: `false`.
+         * @param blockUnsupportedVersion Block unsupported version
          * 
          * @return builder
          * 
@@ -383,7 +383,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUntrustedIssuer The BlockUntrustedIssuer param. Default: `false`.
+         * @param blockUntrustedIssuer Block untrusted issuer
          * 
          * @return builder
          * 
@@ -394,7 +394,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUntrustedIssuer The BlockUntrustedIssuer param. Default: `false`.
+         * @param blockUntrustedIssuer Block untrusted issuer
          * 
          * @return builder
          * 
@@ -404,7 +404,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param restrictCertExts The RestrictCertExts param. Default: `false`.
+         * @param restrictCertExts Restrict cert exts
          * 
          * @return builder
          * 
@@ -415,7 +415,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param restrictCertExts The RestrictCertExts param. Default: `false`.
+         * @param restrictCertExts Restrict cert exts
          * 
          * @return builder
          * 
@@ -425,7 +425,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param stripAlpn The StripAlpn param. Default: `false`.
+         * @param stripAlpn Strip alpn
          * 
          * @return builder
          * 
@@ -436,7 +436,7 @@ public final class DecryptionProfileSslForwardProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param stripAlpn The StripAlpn param. Default: `false`.
+         * @param stripAlpn Strip alpn
          * 
          * @return builder
          * 

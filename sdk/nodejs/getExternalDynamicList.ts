@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * ExternalDynamicList data source
  *
  * ## Example Usage
  *
@@ -15,15 +15,25 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getExternalDynamicList({
- *     id: "1234-56-789",
+ * // Data source to look up a single external dynamic list by its ID.
+ * const scmExternalDynamicListDs = scm.getExternalDynamicList({
+ *     id: "ce39b7b5-f5bc-4276-9fe5-be56613e37ad",
  * });
+ * export const externalDynamicListDetails = {
+ *     id: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.id),
+ *     name: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.name),
+ *     folder: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.folder),
+ *     description: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.type?.domain?.description),
+ *     url: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.type?.domain?.url),
+ *     recurring: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.type?.domain?.recurring),
+ * };
  * ```
  */
 export function getExternalDynamicList(args: GetExternalDynamicListArgs, opts?: pulumi.InvokeOptions): Promise<GetExternalDynamicListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getExternalDynamicList:getExternalDynamicList", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +42,13 @@ export function getExternalDynamicList(args: GetExternalDynamicListArgs, opts?: 
  */
 export interface GetExternalDynamicListArgs {
     /**
-     * The Id param.
+     * The UUID of the external dynamic list
      */
     id: string;
+    /**
+     * The name of the external dynamic list
+     */
+    name?: string;
 }
 
 /**
@@ -42,21 +56,37 @@ export interface GetExternalDynamicListArgs {
  */
 export interface GetExternalDynamicListResult {
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
+    readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the external dynamic list
      */
     readonly id: string;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the external dynamic list
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * The Type param.
+     * Type
      */
     readonly type: outputs.GetExternalDynamicListType;
 }
 /**
- * Retrieves a config item.
+ * ExternalDynamicList data source
  *
  * ## Example Usage
  *
@@ -64,15 +94,25 @@ export interface GetExternalDynamicListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getExternalDynamicList({
- *     id: "1234-56-789",
+ * // Data source to look up a single external dynamic list by its ID.
+ * const scmExternalDynamicListDs = scm.getExternalDynamicList({
+ *     id: "ce39b7b5-f5bc-4276-9fe5-be56613e37ad",
  * });
+ * export const externalDynamicListDetails = {
+ *     id: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.id),
+ *     name: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.name),
+ *     folder: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.folder),
+ *     description: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.type?.domain?.description),
+ *     url: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.type?.domain?.url),
+ *     recurring: scmExternalDynamicListDs.then(scmExternalDynamicListDs => scmExternalDynamicListDs.type?.domain?.recurring),
+ * };
  * ```
  */
 export function getExternalDynamicListOutput(args: GetExternalDynamicListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetExternalDynamicListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getExternalDynamicList:getExternalDynamicList", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -81,7 +121,11 @@ export function getExternalDynamicListOutput(args: GetExternalDynamicListOutputA
  */
 export interface GetExternalDynamicListOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the external dynamic list
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the external dynamic list
+     */
+    name?: pulumi.Input<string>;
 }

@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupSecurityRule(ctx, &scm.LookupSecurityRuleArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// SecurityRule data source
 func LookupSecurityRule(ctx *pulumi.Context, args *LookupSecurityRuleArgs, opts ...pulumi.InvokeOption) (*LookupSecurityRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupSecurityRuleResult
@@ -50,52 +24,88 @@ func LookupSecurityRule(ctx *pulumi.Context, args *LookupSecurityRuleArgs, opts 
 
 // A collection of arguments for invoking getSecurityRule.
 type LookupSecurityRuleArgs struct {
-	// The Id param.
+	// The UUID of the security rule
 	Id string `pulumi:"id"`
+	// The name of the security rule
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getSecurityRule.
 type LookupSecurityRuleResult struct {
-	// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+	// The action to be taken when the rule is matched
 	Action string `pulumi:"action"`
-	// The application(s) being accessed.
+	// Allow url category
+	AllowUrlCategories []GetSecurityRuleAllowUrlCategory `pulumi:"allowUrlCategories"`
+	// Allow web application
+	AllowWebApplications []GetSecurityRuleAllowWebApplication `pulumi:"allowWebApplications"`
+	// The application(s) being accessed
 	Applications []string `pulumi:"applications"`
-	// The URL categories being accessed.
+	// Block url category
+	BlockUrlCategories []string `pulumi:"blockUrlCategories"`
+	// Block web application
+	BlockWebApplications []string `pulumi:"blockWebApplications"`
+	// The URL categories being accessed
 	Categories []string `pulumi:"categories"`
-	// The description of the security rule.
+	// Default profile settings
+	DefaultProfileSettings GetSecurityRuleDefaultProfileSettings `pulumi:"defaultProfileSettings"`
+	// The description of the security rule
 	Description string `pulumi:"description"`
-	// The destination Host Integrity Profile(s).
+	// The destination Host Integrity Profile(s)
 	DestinationHips []string `pulumi:"destinationHips"`
-	// The destination address(es).
+	// The destination address(es)
 	Destinations []string `pulumi:"destinations"`
-	// The state of the security rule. Default: `false`.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Devices
+	Devices []string `pulumi:"devices"`
+	// Is the security rule disabled?
 	Disabled bool `pulumi:"disabled"`
-	// The source security zone(s).
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The source security zone(s)
 	Froms []string `pulumi:"froms"`
-	// The Id param.
+	// The UUID of the security rule
 	Id string `pulumi:"id"`
-	// The external log forwarding profile.
+	// Log at session end?
+	LogEnd bool `pulumi:"logEnd"`
+	// The external log forwarding profile
 	LogSetting string `pulumi:"logSetting"`
-	// The name of the security rule.
+	// Log settings
+	LogSettings GetSecurityRuleLogSettings `pulumi:"logSettings"`
+	// Log at session start?
+	LogStart bool `pulumi:"logStart"`
+	// The name of the security rule
 	Name string `pulumi:"name"`
-	// Negate the destination addresses(es). Default: `false`.
+	// Negate the destination addresses(es)?
 	NegateDestination bool `pulumi:"negateDestination"`
-	// Negate the source address(es). Default: `false`.
+	// Negate the source address(es)?
 	NegateSource bool `pulumi:"negateSource"`
-	// The security profile object.
+	// Negate user
+	NegateUser bool `pulumi:"negateUser"`
+	// Policy type
+	PolicyType string `pulumi:"policyType"`
+	// The security profile object
 	ProfileSetting GetSecurityRuleProfileSetting `pulumi:"profileSetting"`
-	// The service(s) being accessed.
+	// Schedule in which this rule will be applied
+	Schedule string `pulumi:"schedule"`
+	// Security settings
+	SecuritySettings GetSecurityRuleSecuritySettings `pulumi:"securitySettings"`
+	// The service(s) being accessed
 	Services []string `pulumi:"services"`
-	// The source Host Integrity Profile(s).
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// The source Host Integrity Profile(s)
 	SourceHips []string `pulumi:"sourceHips"`
-	// The source user(s) or group(s).
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// The source address(es).
+	// The source addresses(es)
 	Sources []string `pulumi:"sources"`
-	// The tags associated with the security rule.
+	// The tags associated with the security rule
 	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
-	// The destination security zone(s).
+	// Tenant restrictions
+	TenantRestrictions []string `pulumi:"tenantRestrictions"`
+	Tfid               string   `pulumi:"tfid"`
+	// The destination security zone(s)
 	Tos []string `pulumi:"tos"`
 }
 
@@ -110,8 +120,10 @@ func LookupSecurityRuleOutput(ctx *pulumi.Context, args LookupSecurityRuleOutput
 
 // A collection of arguments for invoking getSecurityRule.
 type LookupSecurityRuleOutputArgs struct {
-	// The Id param.
+	// The UUID of the security rule
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the security rule
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupSecurityRuleOutputArgs) ElementType() reflect.Type {
@@ -133,106 +145,193 @@ func (o LookupSecurityRuleResultOutput) ToLookupSecurityRuleResultOutputWithCont
 	return o
 }
 
-// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+// The action to be taken when the rule is matched
 func (o LookupSecurityRuleResultOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Action }).(pulumi.StringOutput)
 }
 
-// The application(s) being accessed.
+// Allow url category
+func (o LookupSecurityRuleResultOutput) AllowUrlCategories() GetSecurityRuleAllowUrlCategoryArrayOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) []GetSecurityRuleAllowUrlCategory { return v.AllowUrlCategories }).(GetSecurityRuleAllowUrlCategoryArrayOutput)
+}
+
+// Allow web application
+func (o LookupSecurityRuleResultOutput) AllowWebApplications() GetSecurityRuleAllowWebApplicationArrayOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) []GetSecurityRuleAllowWebApplication { return v.AllowWebApplications }).(GetSecurityRuleAllowWebApplicationArrayOutput)
+}
+
+// The application(s) being accessed
 func (o LookupSecurityRuleResultOutput) Applications() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.Applications }).(pulumi.StringArrayOutput)
 }
 
-// The URL categories being accessed.
+// Block url category
+func (o LookupSecurityRuleResultOutput) BlockUrlCategories() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.BlockUrlCategories }).(pulumi.StringArrayOutput)
+}
+
+// Block web application
+func (o LookupSecurityRuleResultOutput) BlockWebApplications() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.BlockWebApplications }).(pulumi.StringArrayOutput)
+}
+
+// The URL categories being accessed
 func (o LookupSecurityRuleResultOutput) Categories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.Categories }).(pulumi.StringArrayOutput)
 }
 
-// The description of the security rule.
+// Default profile settings
+func (o LookupSecurityRuleResultOutput) DefaultProfileSettings() GetSecurityRuleDefaultProfileSettingsOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) GetSecurityRuleDefaultProfileSettings {
+		return v.DefaultProfileSettings
+	}).(GetSecurityRuleDefaultProfileSettingsOutput)
+}
+
+// The description of the security rule
 func (o LookupSecurityRuleResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The destination Host Integrity Profile(s).
+// The destination Host Integrity Profile(s)
 func (o LookupSecurityRuleResultOutput) DestinationHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.DestinationHips }).(pulumi.StringArrayOutput)
 }
 
-// The destination address(es).
+// The destination address(es)
 func (o LookupSecurityRuleResultOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.Destinations }).(pulumi.StringArrayOutput)
 }
 
-// The state of the security rule. Default: `false`.
+// The device in which the resource is defined
+func (o LookupSecurityRuleResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Devices
+func (o LookupSecurityRuleResultOutput) Devices() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.Devices }).(pulumi.StringArrayOutput)
+}
+
+// Is the security rule disabled?
 func (o LookupSecurityRuleResultOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// The source security zone(s).
+// The folder in which the resource is defined
+func (o LookupSecurityRuleResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The source security zone(s)
 func (o LookupSecurityRuleResultOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.Froms }).(pulumi.StringArrayOutput)
 }
 
-// The Id param.
+// The UUID of the security rule
 func (o LookupSecurityRuleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The external log forwarding profile.
+// Log at session end?
+func (o LookupSecurityRuleResultOutput) LogEnd() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) bool { return v.LogEnd }).(pulumi.BoolOutput)
+}
+
+// The external log forwarding profile
 func (o LookupSecurityRuleResultOutput) LogSetting() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.LogSetting }).(pulumi.StringOutput)
 }
 
-// The name of the security rule.
+// Log settings
+func (o LookupSecurityRuleResultOutput) LogSettings() GetSecurityRuleLogSettingsOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) GetSecurityRuleLogSettings { return v.LogSettings }).(GetSecurityRuleLogSettingsOutput)
+}
+
+// Log at session start?
+func (o LookupSecurityRuleResultOutput) LogStart() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) bool { return v.LogStart }).(pulumi.BoolOutput)
+}
+
+// The name of the security rule
 func (o LookupSecurityRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Negate the destination addresses(es). Default: `false`.
+// Negate the destination addresses(es)?
 func (o LookupSecurityRuleResultOutput) NegateDestination() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) bool { return v.NegateDestination }).(pulumi.BoolOutput)
 }
 
-// Negate the source address(es). Default: `false`.
+// Negate the source address(es)?
 func (o LookupSecurityRuleResultOutput) NegateSource() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) bool { return v.NegateSource }).(pulumi.BoolOutput)
 }
 
-// The security profile object.
+// Negate user
+func (o LookupSecurityRuleResultOutput) NegateUser() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) bool { return v.NegateUser }).(pulumi.BoolOutput)
+}
+
+// Policy type
+func (o LookupSecurityRuleResultOutput) PolicyType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.PolicyType }).(pulumi.StringOutput)
+}
+
+// The security profile object
 func (o LookupSecurityRuleResultOutput) ProfileSetting() GetSecurityRuleProfileSettingOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) GetSecurityRuleProfileSetting { return v.ProfileSetting }).(GetSecurityRuleProfileSettingOutput)
 }
 
-// The service(s) being accessed.
+// Schedule in which this rule will be applied
+func (o LookupSecurityRuleResultOutput) Schedule() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Schedule }).(pulumi.StringOutput)
+}
+
+// Security settings
+func (o LookupSecurityRuleResultOutput) SecuritySettings() GetSecurityRuleSecuritySettingsOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) GetSecurityRuleSecuritySettings { return v.SecuritySettings }).(GetSecurityRuleSecuritySettingsOutput)
+}
+
+// The service(s) being accessed
 func (o LookupSecurityRuleResultOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.Services }).(pulumi.StringArrayOutput)
 }
 
-// The source Host Integrity Profile(s).
+// The snippet in which the resource is defined
+func (o LookupSecurityRuleResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The source Host Integrity Profile(s)
 func (o LookupSecurityRuleResultOutput) SourceHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.SourceHips }).(pulumi.StringArrayOutput)
 }
 
-// The source user(s) or group(s).
+// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 func (o LookupSecurityRuleResultOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
-// The source address(es).
+// The source addresses(es)
 func (o LookupSecurityRuleResultOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
-// The tags associated with the security rule.
+// The tags associated with the security rule
 func (o LookupSecurityRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
+}
+
+// Tenant restrictions
+func (o LookupSecurityRuleResultOutput) TenantRestrictions() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.TenantRestrictions }).(pulumi.StringArrayOutput)
 }
 
 func (o LookupSecurityRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The destination security zone(s).
+// The destination security zone(s)
 func (o LookupSecurityRuleResultOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.Tos }).(pulumi.StringArrayOutput)
 }

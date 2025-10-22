@@ -12,124 +12,110 @@ import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.MfaServerState;
 import com.pulumi.scm.outputs.MfaServerMfaVendorType;
 import java.lang.String;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.MfaServer;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new MfaServer("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * MfaServer resource
  * 
  */
 @ResourceType(type="scm:index/mfaServer:MfaServer")
 public class MfaServer extends com.pulumi.resources.CustomResource {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * Map of sensitive values returned from the API.
+     * 
+     */
+    @Export(name="encryptedValues", refs={Map.class,String.class}, tree="[0,1,1]")
+    private Output<Map<String,String>> encryptedValues;
+
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Output<Map<String,String>> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The MfaCertProfile param.
+     * The MFA server certificate profile
      * 
      */
     @Export(name="mfaCertProfile", refs={String.class}, tree="[0]")
     private Output<String> mfaCertProfile;
 
     /**
-     * @return The MfaCertProfile param.
+     * @return The MFA server certificate profile
      * 
      */
     public Output<String> mfaCertProfile() {
         return this.mfaCertProfile;
     }
     /**
-     * The MfaVendorType param.
+     * The MFA vendor type
      * 
      */
     @Export(name="mfaVendorType", refs={MfaServerMfaVendorType.class}, tree="[0]")
-    private Output</* @Nullable */ MfaServerMfaVendorType> mfaVendorType;
+    private Output<MfaServerMfaVendorType> mfaVendorType;
 
     /**
-     * @return The MfaVendorType param.
+     * @return The MFA vendor type
      * 
      */
-    public Output<Optional<MfaServerMfaVendorType>> mfaVendorType() {
-        return Codegen.optional(this.mfaVendorType);
+    public Output<MfaServerMfaVendorType> mfaVendorType() {
+        return this.mfaVendorType;
     }
     /**
-     * The Name param.
+     * The name of the MFA server profile
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the MFA server profile
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -181,6 +167,9 @@ public class MfaServer extends com.pulumi.resources.CustomResource {
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
+            .additionalSecretOutputs(List.of(
+                "encryptedValues"
+            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

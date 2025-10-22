@@ -13,110 +13,110 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceConnectionProtocolBgp {
     /**
-     * @return The DoNotExportRoutes param.
+     * @return Do not export routes
      * 
      */
     private @Nullable Boolean doNotExportRoutes;
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     private @Nullable Boolean enable;
     /**
-     * @return The FastFailover param.
+     * @return Fast failover
      * 
      */
     private @Nullable Boolean fastFailover;
     /**
-     * @return The LocalIpAddress param.
+     * @return Local ip address
      * 
      */
     private @Nullable String localIpAddress;
     /**
-     * @return The OriginateDefaultRoute param.
+     * @return Originate default route
      * 
      */
     private @Nullable Boolean originateDefaultRoute;
     /**
-     * @return The PeerAs param.
+     * @return Peer as
      * 
      */
     private @Nullable String peerAs;
     /**
-     * @return The PeerIpAddress param.
+     * @return Peer ip address
      * 
      */
     private @Nullable String peerIpAddress;
     /**
-     * @return The Secret param.
+     * @return Secret
      * 
      */
     private @Nullable String secret;
     /**
-     * @return The SummarizeMobileUserRoutes param.
+     * @return Summarize mobile user routes
      * 
      */
     private @Nullable Boolean summarizeMobileUserRoutes;
 
     private ServiceConnectionProtocolBgp() {}
     /**
-     * @return The DoNotExportRoutes param.
+     * @return Do not export routes
      * 
      */
     public Optional<Boolean> doNotExportRoutes() {
         return Optional.ofNullable(this.doNotExportRoutes);
     }
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * @return The FastFailover param.
+     * @return Fast failover
      * 
      */
     public Optional<Boolean> fastFailover() {
         return Optional.ofNullable(this.fastFailover);
     }
     /**
-     * @return The LocalIpAddress param.
+     * @return Local ip address
      * 
      */
     public Optional<String> localIpAddress() {
         return Optional.ofNullable(this.localIpAddress);
     }
     /**
-     * @return The OriginateDefaultRoute param.
+     * @return Originate default route
      * 
      */
     public Optional<Boolean> originateDefaultRoute() {
         return Optional.ofNullable(this.originateDefaultRoute);
     }
     /**
-     * @return The PeerAs param.
+     * @return Peer as
      * 
      */
     public Optional<String> peerAs() {
         return Optional.ofNullable(this.peerAs);
     }
     /**
-     * @return The PeerIpAddress param.
+     * @return Peer ip address
      * 
      */
     public Optional<String> peerIpAddress() {
         return Optional.ofNullable(this.peerIpAddress);
     }
     /**
-     * @return The Secret param.
+     * @return Secret
      * 
      */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
-     * @return The SummarizeMobileUserRoutes param.
+     * @return Summarize mobile user routes
      * 
      */
     public Optional<Boolean> summarizeMobileUserRoutes() {

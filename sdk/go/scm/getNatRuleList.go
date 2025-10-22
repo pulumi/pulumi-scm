@@ -12,30 +12,6 @@ import (
 )
 
 // Retrieves a listing of config items.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetNatRuleList(ctx, &scm.GetNatRuleListArgs{}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 func GetNatRuleList(ctx *pulumi.Context, args *GetNatRuleListArgs, opts ...pulumi.InvokeOption) (*GetNatRuleListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetNatRuleListResult
@@ -48,44 +24,40 @@ func GetNatRuleList(ctx *pulumi.Context, args *GetNatRuleListArgs, opts ...pulum
 
 // A collection of arguments for invoking getNatRuleList.
 type GetNatRuleListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-	Position *string `pulumi:"position"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getNatRuleList.
 type GetNatRuleListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetNatRuleListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-	Position string `pulumi:"position"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -100,19 +72,17 @@ func GetNatRuleListOutput(ctx *pulumi.Context, args GetNatRuleListOutputArgs, op
 
 // A collection of arguments for invoking getNatRuleList.
 type GetNatRuleListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-	Position pulumi.StringPtrInput `pulumi:"position"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -135,17 +105,17 @@ func (o GetNatRuleListResultOutput) ToGetNatRuleListResultOutputWithContext(ctx 
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetNatRuleListResultOutput) Datas() GetNatRuleListDataArrayOutput {
 	return o.ApplyT(func(v GetNatRuleListResult) []GetNatRuleListData { return v.Datas }).(GetNatRuleListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetNatRuleListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetNatRuleListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetNatRuleListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetNatRuleListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -155,27 +125,22 @@ func (o GetNatRuleListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetNatRuleListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetNatRuleListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetNatRuleListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetNatRuleListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetNatRuleListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetNatRuleListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetNatRuleListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetNatRuleListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetNatRuleListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetNatRuleListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetNatRuleListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-func (o GetNatRuleListResultOutput) Position() pulumi.StringOutput {
-	return o.ApplyT(func(v GetNatRuleListResult) string { return v.Position }).(pulumi.StringOutput)
-}
-
-// The Snippet param.
+// The snippet of the item.
 func (o GetNatRuleListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetNatRuleListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -184,7 +149,7 @@ func (o GetNatRuleListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetNatRuleListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetNatRuleListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetNatRuleListResult) int { return v.Total }).(pulumi.IntOutput)
 }

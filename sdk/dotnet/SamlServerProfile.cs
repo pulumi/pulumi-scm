@@ -10,91 +10,82 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.SamlServerProfile("example");
-    /// 
-    /// });
-    /// ```
+    /// SamlServerProfile resource
     /// </summary>
     [ScmResourceType("scm:index/samlServerProfile:SamlServerProfile")]
     public partial class SamlServerProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Certificate param. String length must not exceed 63 characters.
+        /// The identity provider certificate
         /// </summary>
         [Output("certificate")]
         public Output<string> Certificate { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The EntityId param. String length must be between 1 and 1024 characters.
+        /// The identity provider ID
         /// </summary>
         [Output("entityId")]
-        public Output<string?> EntityId { get; private set; } = null!;
+        public Output<string> EntityId { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The MaxClockSkew param. Value must be between 1 and 900.
+        /// Maxiumum clock skew
         /// </summary>
         [Output("maxClockSkew")]
         public Output<int?> MaxClockSkew { get; private set; } = null!;
 
         /// <summary>
-        /// The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+        /// The name of the SAML server profile
+        /// </summary>
+        [Output("name")]
+        public Output<string> Name { get; private set; } = null!;
+
+        /// <summary>
+        /// SAML HTTP binding for SLO requests to the identity provider
         /// </summary>
         [Output("sloBindings")]
         public Output<string?> SloBindings { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+        /// SAML HTTP binding for SSO requests to the identity provider
         /// </summary>
         [Output("ssoBindings")]
-        public Output<string?> SsoBindings { get; private set; } = null!;
+        public Output<string> SsoBindings { get; private set; } = null!;
 
         /// <summary>
-        /// The SsoUrl param. String length must be between 1 and 255 characters.
+        /// Identity provider SSO URL
         /// </summary>
         [Output("ssoUrl")]
-        public Output<string?> SsoUrl { get; private set; } = null!;
+        public Output<string> SsoUrl { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The ValidateIdpCertificate param.
+        /// Validate the identity provider certificate?
         /// </summary>
         [Output("validateIdpCertificate")]
         public Output<bool?> ValidateIdpCertificate { get; private set; } = null!;
 
         /// <summary>
-        /// The WantAuthRequestsSigned param.
+        /// Sign SAML message to the identity provider?
         /// </summary>
         [Output("wantAuthRequestsSigned")]
         public Output<bool?> WantAuthRequestsSigned { get; private set; } = null!;
@@ -146,67 +137,73 @@ namespace Pulumi.Scm
     public sealed class SamlServerProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Certificate param. String length must not exceed 63 characters.
+        /// The identity provider certificate
         /// </summary>
         [Input("certificate", required: true)]
         public Input<string> Certificate { get; set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The EntityId param. String length must be between 1 and 1024 characters.
+        /// The identity provider ID
         /// </summary>
-        [Input("entityId")]
-        public Input<string>? EntityId { get; set; }
+        [Input("entityId", required: true)]
+        public Input<string> EntityId { get; set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The MaxClockSkew param. Value must be between 1 and 900.
+        /// Maxiumum clock skew
         /// </summary>
         [Input("maxClockSkew")]
         public Input<int>? MaxClockSkew { get; set; }
 
         /// <summary>
-        /// The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+        /// The name of the SAML server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// SAML HTTP binding for SLO requests to the identity provider
         /// </summary>
         [Input("sloBindings")]
         public Input<string>? SloBindings { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+        /// SAML HTTP binding for SSO requests to the identity provider
         /// </summary>
-        [Input("ssoBindings")]
-        public Input<string>? SsoBindings { get; set; }
+        [Input("ssoBindings", required: true)]
+        public Input<string> SsoBindings { get; set; } = null!;
 
         /// <summary>
-        /// The SsoUrl param. String length must be between 1 and 255 characters.
+        /// Identity provider SSO URL
         /// </summary>
-        [Input("ssoUrl")]
-        public Input<string>? SsoUrl { get; set; }
+        [Input("ssoUrl", required: true)]
+        public Input<string> SsoUrl { get; set; } = null!;
 
         /// <summary>
-        /// The ValidateIdpCertificate param.
+        /// Validate the identity provider certificate?
         /// </summary>
         [Input("validateIdpCertificate")]
         public Input<bool>? ValidateIdpCertificate { get; set; }
 
         /// <summary>
-        /// The WantAuthRequestsSigned param.
+        /// Sign SAML message to the identity provider?
         /// </summary>
         [Input("wantAuthRequestsSigned")]
         public Input<bool>? WantAuthRequestsSigned { get; set; }
@@ -220,55 +217,61 @@ namespace Pulumi.Scm
     public sealed class SamlServerProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Certificate param. String length must not exceed 63 characters.
+        /// The identity provider certificate
         /// </summary>
         [Input("certificate")]
         public Input<string>? Certificate { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The EntityId param. String length must be between 1 and 1024 characters.
+        /// The identity provider ID
         /// </summary>
         [Input("entityId")]
         public Input<string>? EntityId { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The MaxClockSkew param. Value must be between 1 and 900.
+        /// Maxiumum clock skew
         /// </summary>
         [Input("maxClockSkew")]
         public Input<int>? MaxClockSkew { get; set; }
 
         /// <summary>
-        /// The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+        /// The name of the SAML server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// SAML HTTP binding for SLO requests to the identity provider
         /// </summary>
         [Input("sloBindings")]
         public Input<string>? SloBindings { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+        /// SAML HTTP binding for SSO requests to the identity provider
         /// </summary>
         [Input("ssoBindings")]
         public Input<string>? SsoBindings { get; set; }
 
         /// <summary>
-        /// The SsoUrl param. String length must be between 1 and 255 characters.
+        /// Identity provider SSO URL
         /// </summary>
         [Input("ssoUrl")]
         public Input<string>? SsoUrl { get; set; }
@@ -277,13 +280,13 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The ValidateIdpCertificate param.
+        /// Validate the identity provider certificate?
         /// </summary>
         [Input("validateIdpCertificate")]
         public Input<bool>? ValidateIdpCertificate { get; set; }
 
         /// <summary>
-        /// The WantAuthRequestsSigned param.
+        /// Sign SAML message to the identity provider?
         /// </summary>
         [Input("wantAuthRequestsSigned")]
         public Input<bool>? WantAuthRequestsSigned { get; set; }

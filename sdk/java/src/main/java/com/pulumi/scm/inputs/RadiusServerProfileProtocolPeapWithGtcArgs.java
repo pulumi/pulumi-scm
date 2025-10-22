@@ -12,19 +12,19 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RadiusServerProfileProtocolPeapWithGtcArgs extends com.pulumi.resources.ResourceArgs {
+public final class RadiusServerProfileProtocolPEAPWithGTCArgs extends com.pulumi.resources.ResourceArgs {
 
-    public static final RadiusServerProfileProtocolPeapWithGtcArgs Empty = new RadiusServerProfileProtocolPeapWithGtcArgs();
+    public static final RadiusServerProfileProtocolPEAPWithGTCArgs Empty = new RadiusServerProfileProtocolPEAPWithGTCArgs();
 
     /**
-     * The AnonOuterId param.
+     * Anon outer id
      * 
      */
     @Import(name="anonOuterId")
     private @Nullable Output<Boolean> anonOuterId;
 
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     public Optional<Output<Boolean>> anonOuterId() {
@@ -32,23 +32,23 @@ public final class RadiusServerProfileProtocolPeapWithGtcArgs extends com.pulumi
     }
 
     /**
-     * The RadiusCertProfile param.
+     * Radius cert profile
      * 
      */
     @Import(name="radiusCertProfile")
     private @Nullable Output<String> radiusCertProfile;
 
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     public Optional<Output<String>> radiusCertProfile() {
         return Optional.ofNullable(this.radiusCertProfile);
     }
 
-    private RadiusServerProfileProtocolPeapWithGtcArgs() {}
+    private RadiusServerProfileProtocolPEAPWithGTCArgs() {}
 
-    private RadiusServerProfileProtocolPeapWithGtcArgs(RadiusServerProfileProtocolPeapWithGtcArgs $) {
+    private RadiusServerProfileProtocolPEAPWithGTCArgs(RadiusServerProfileProtocolPEAPWithGTCArgs $) {
         this.anonOuterId = $.anonOuterId;
         this.radiusCertProfile = $.radiusCertProfile;
     }
@@ -56,23 +56,23 @@ public final class RadiusServerProfileProtocolPeapWithGtcArgs extends com.pulumi
     public static Builder builder() {
         return new Builder();
     }
-    public static Builder builder(RadiusServerProfileProtocolPeapWithGtcArgs defaults) {
+    public static Builder builder(RadiusServerProfileProtocolPEAPWithGTCArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RadiusServerProfileProtocolPeapWithGtcArgs $;
+        private RadiusServerProfileProtocolPEAPWithGTCArgs $;
 
         public Builder() {
-            $ = new RadiusServerProfileProtocolPeapWithGtcArgs();
+            $ = new RadiusServerProfileProtocolPEAPWithGTCArgs();
         }
 
-        public Builder(RadiusServerProfileProtocolPeapWithGtcArgs defaults) {
-            $ = new RadiusServerProfileProtocolPeapWithGtcArgs(Objects.requireNonNull(defaults));
+        public Builder(RadiusServerProfileProtocolPEAPWithGTCArgs defaults) {
+            $ = new RadiusServerProfileProtocolPEAPWithGTCArgs(Objects.requireNonNull(defaults));
         }
 
         /**
-         * @param anonOuterId The AnonOuterId param.
+         * @param anonOuterId Anon outer id
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class RadiusServerProfileProtocolPeapWithGtcArgs extends com.pulumi
         }
 
         /**
-         * @param anonOuterId The AnonOuterId param.
+         * @param anonOuterId Anon outer id
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class RadiusServerProfileProtocolPeapWithGtcArgs extends com.pulumi
         }
 
         /**
-         * @param radiusCertProfile The RadiusCertProfile param.
+         * @param radiusCertProfile Radius cert profile
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class RadiusServerProfileProtocolPeapWithGtcArgs extends com.pulumi
         }
 
         /**
-         * @param radiusCertProfile The RadiusCertProfile param.
+         * @param radiusCertProfile Radius cert profile
          * 
          * @return builder
          * 
@@ -113,7 +113,7 @@ public final class RadiusServerProfileProtocolPeapWithGtcArgs extends com.pulumi
             return radiusCertProfile(Output.of(radiusCertProfile));
         }
 
-        public RadiusServerProfileProtocolPeapWithGtcArgs build() {
+        public RadiusServerProfileProtocolPEAPWithGTCArgs build() {
             return $;
         }
     }

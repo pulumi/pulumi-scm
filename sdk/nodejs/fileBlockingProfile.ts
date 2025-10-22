@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.FileBlockingProfile("example", {});
- * ```
+ * FileBlockingProfile resource
  */
 export class FileBlockingProfile extends pulumi.CustomResource {
     /**
@@ -47,27 +38,27 @@ export class FileBlockingProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Description param.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Name param.
+     * The name of the file blocking profile
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Rules param.
+     * A list of file blocking rules
      */
     declare public readonly rules: pulumi.Output<outputs.FileBlockingProfileRule[] | undefined>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -112,27 +103,27 @@ export class FileBlockingProfile extends pulumi.CustomResource {
  */
 export interface FileBlockingProfileState {
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * The name of the file blocking profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The Rules param.
+     * A list of file blocking rules
      */
     rules?: pulumi.Input<pulumi.Input<inputs.FileBlockingProfileRule>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -143,27 +134,27 @@ export interface FileBlockingProfileState {
  */
 export interface FileBlockingProfileArgs {
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * The name of the file blocking profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The Rules param.
+     * A list of file blocking rules
      */
     rules?: pulumi.Input<pulumi.Input<inputs.FileBlockingProfileRule>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

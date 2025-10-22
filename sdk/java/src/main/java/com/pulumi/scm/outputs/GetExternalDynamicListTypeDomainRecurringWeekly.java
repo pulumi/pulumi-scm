@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeDomainRecurringWeekly {
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
     private String at;
     /**
-     * @return The DayOfWeek param. String must be one of these: `&#34;sunday&#34;`, `&#34;monday&#34;`, `&#34;tuesday&#34;`, `&#34;wednesday&#34;`, `&#34;thursday&#34;`, `&#34;friday&#34;`, `&#34;saturday&#34;`.
+     * @return Day of week
      * 
      */
     private String dayOfWeek;
 
     private GetExternalDynamicListTypeDomainRecurringWeekly() {}
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
     public String at() {
         return this.at;
     }
     /**
-     * @return The DayOfWeek param. String must be one of these: `&#34;sunday&#34;`, `&#34;monday&#34;`, `&#34;tuesday&#34;`, `&#34;wednesday&#34;`, `&#34;thursday&#34;`, `&#34;friday&#34;`, `&#34;saturday&#34;`.
+     * @return Day of week
      * 
      */
     public String dayOfWeek() {

@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayProtocolIkev1 {
     /**
-     * @return The Dpd param.
+     * @return Dpd
      * 
      */
     private @Nullable IkeGatewayProtocolIkev1Dpd dpd;
     /**
-     * @return The IkeCryptoProfile param.
+     * @return Ike crypto profile
      * 
      */
     private @Nullable String ikeCryptoProfile;
 
     private IkeGatewayProtocolIkev1() {}
     /**
-     * @return The Dpd param.
+     * @return Dpd
      * 
      */
     public Optional<IkeGatewayProtocolIkev1Dpd> dpd() {
         return Optional.ofNullable(this.dpd);
     }
     /**
-     * @return The IkeCryptoProfile param.
+     * @return Ike crypto profile
      * 
      */
     public Optional<String> ikeCryptoProfile() {

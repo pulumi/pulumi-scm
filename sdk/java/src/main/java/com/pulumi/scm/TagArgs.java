@@ -16,14 +16,14 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
     public static final TagArgs Empty = new TagArgs();
 
     /**
-     * The Color param. String must be one of these: `&#34;Red&#34;`, `&#34;Green&#34;`, `&#34;Blue&#34;`, `&#34;Yellow&#34;`, `&#34;Copper&#34;`, `&#34;Orange&#34;`, `&#34;Purple&#34;`, `&#34;Gray&#34;`, `&#34;Light Green&#34;`, `&#34;Cyan&#34;`, `&#34;Light Gray&#34;`, `&#34;Blue Gray&#34;`, `&#34;Lime&#34;`, `&#34;Black&#34;`, `&#34;Gold&#34;`, `&#34;Brown&#34;`, `&#34;Olive&#34;`, `&#34;Maroon&#34;`, `&#34;Red-Orange&#34;`, `&#34;Yellow-Orange&#34;`, `&#34;Forest Green&#34;`, `&#34;Turquoise Blue&#34;`, `&#34;Azure Blue&#34;`, `&#34;Cerulean Blue&#34;`, `&#34;Midnight Blue&#34;`, `&#34;Medium Blue&#34;`, `&#34;Cobalt Blue&#34;`, `&#34;Violet Blue&#34;`, `&#34;Blue Violet&#34;`, `&#34;Medium Violet&#34;`, `&#34;Medium Rose&#34;`, `&#34;Lavender&#34;`, `&#34;Orchid&#34;`, `&#34;Thistle&#34;`, `&#34;Peach&#34;`, `&#34;Salmon&#34;`, `&#34;Magenta&#34;`, `&#34;Red Violet&#34;`, `&#34;Mahogany&#34;`, `&#34;Burnt Sienna&#34;`, `&#34;Chestnut&#34;`.
+     * The color of the tag
      * 
      */
     @Import(name="color")
     private @Nullable Output<String> color;
 
     /**
-     * @return The Color param. String must be one of these: `&#34;Red&#34;`, `&#34;Green&#34;`, `&#34;Blue&#34;`, `&#34;Yellow&#34;`, `&#34;Copper&#34;`, `&#34;Orange&#34;`, `&#34;Purple&#34;`, `&#34;Gray&#34;`, `&#34;Light Green&#34;`, `&#34;Cyan&#34;`, `&#34;Light Gray&#34;`, `&#34;Blue Gray&#34;`, `&#34;Lime&#34;`, `&#34;Black&#34;`, `&#34;Gold&#34;`, `&#34;Brown&#34;`, `&#34;Olive&#34;`, `&#34;Maroon&#34;`, `&#34;Red-Orange&#34;`, `&#34;Yellow-Orange&#34;`, `&#34;Forest Green&#34;`, `&#34;Turquoise Blue&#34;`, `&#34;Azure Blue&#34;`, `&#34;Cerulean Blue&#34;`, `&#34;Midnight Blue&#34;`, `&#34;Medium Blue&#34;`, `&#34;Cobalt Blue&#34;`, `&#34;Violet Blue&#34;`, `&#34;Blue Violet&#34;`, `&#34;Medium Violet&#34;`, `&#34;Medium Rose&#34;`, `&#34;Lavender&#34;`, `&#34;Orchid&#34;`, `&#34;Thistle&#34;`, `&#34;Peach&#34;`, `&#34;Salmon&#34;`, `&#34;Magenta&#34;`, `&#34;Red Violet&#34;`, `&#34;Mahogany&#34;`, `&#34;Burnt Sienna&#34;`, `&#34;Chestnut&#34;`.
+     * @return The color of the tag
      * 
      */
     public Optional<Output<String>> color() {
@@ -31,14 +31,14 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Comments param. String length must not exceed 1023 characters.
+     * The description of the tag
      * 
      */
     @Import(name="comments")
     private @Nullable Output<String> comments;
 
     /**
-     * @return The Comments param. String length must not exceed 1023 characters.
+     * @return The description of the tag
      * 
      */
     public Optional<Output<String>> comments() {
@@ -46,14 +46,14 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -61,14 +61,14 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -76,14 +76,14 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Name param. String length must not exceed 127 characters.
+     * The name of the tag
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param. String length must not exceed 127 characters.
+     * @return The name of the tag
      * 
      */
     public Optional<Output<String>> name() {
@@ -91,14 +91,14 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -135,7 +135,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param color The Color param. String must be one of these: `&#34;Red&#34;`, `&#34;Green&#34;`, `&#34;Blue&#34;`, `&#34;Yellow&#34;`, `&#34;Copper&#34;`, `&#34;Orange&#34;`, `&#34;Purple&#34;`, `&#34;Gray&#34;`, `&#34;Light Green&#34;`, `&#34;Cyan&#34;`, `&#34;Light Gray&#34;`, `&#34;Blue Gray&#34;`, `&#34;Lime&#34;`, `&#34;Black&#34;`, `&#34;Gold&#34;`, `&#34;Brown&#34;`, `&#34;Olive&#34;`, `&#34;Maroon&#34;`, `&#34;Red-Orange&#34;`, `&#34;Yellow-Orange&#34;`, `&#34;Forest Green&#34;`, `&#34;Turquoise Blue&#34;`, `&#34;Azure Blue&#34;`, `&#34;Cerulean Blue&#34;`, `&#34;Midnight Blue&#34;`, `&#34;Medium Blue&#34;`, `&#34;Cobalt Blue&#34;`, `&#34;Violet Blue&#34;`, `&#34;Blue Violet&#34;`, `&#34;Medium Violet&#34;`, `&#34;Medium Rose&#34;`, `&#34;Lavender&#34;`, `&#34;Orchid&#34;`, `&#34;Thistle&#34;`, `&#34;Peach&#34;`, `&#34;Salmon&#34;`, `&#34;Magenta&#34;`, `&#34;Red Violet&#34;`, `&#34;Mahogany&#34;`, `&#34;Burnt Sienna&#34;`, `&#34;Chestnut&#34;`.
+         * @param color The color of the tag
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param color The Color param. String must be one of these: `&#34;Red&#34;`, `&#34;Green&#34;`, `&#34;Blue&#34;`, `&#34;Yellow&#34;`, `&#34;Copper&#34;`, `&#34;Orange&#34;`, `&#34;Purple&#34;`, `&#34;Gray&#34;`, `&#34;Light Green&#34;`, `&#34;Cyan&#34;`, `&#34;Light Gray&#34;`, `&#34;Blue Gray&#34;`, `&#34;Lime&#34;`, `&#34;Black&#34;`, `&#34;Gold&#34;`, `&#34;Brown&#34;`, `&#34;Olive&#34;`, `&#34;Maroon&#34;`, `&#34;Red-Orange&#34;`, `&#34;Yellow-Orange&#34;`, `&#34;Forest Green&#34;`, `&#34;Turquoise Blue&#34;`, `&#34;Azure Blue&#34;`, `&#34;Cerulean Blue&#34;`, `&#34;Midnight Blue&#34;`, `&#34;Medium Blue&#34;`, `&#34;Cobalt Blue&#34;`, `&#34;Violet Blue&#34;`, `&#34;Blue Violet&#34;`, `&#34;Medium Violet&#34;`, `&#34;Medium Rose&#34;`, `&#34;Lavender&#34;`, `&#34;Orchid&#34;`, `&#34;Thistle&#34;`, `&#34;Peach&#34;`, `&#34;Salmon&#34;`, `&#34;Magenta&#34;`, `&#34;Red Violet&#34;`, `&#34;Mahogany&#34;`, `&#34;Burnt Sienna&#34;`, `&#34;Chestnut&#34;`.
+         * @param color The color of the tag
          * 
          * @return builder
          * 
@@ -156,7 +156,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param comments The Comments param. String length must not exceed 1023 characters.
+         * @param comments The description of the tag
          * 
          * @return builder
          * 
@@ -167,7 +167,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param comments The Comments param. String length must not exceed 1023 characters.
+         * @param comments The description of the tag
          * 
          * @return builder
          * 
@@ -177,7 +177,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -188,7 +188,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -198,7 +198,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -209,7 +209,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -219,7 +219,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param. String length must not exceed 127 characters.
+         * @param name The name of the tag
          * 
          * @return builder
          * 
@@ -230,7 +230,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param. String length must not exceed 127 characters.
+         * @param name The name of the tag
          * 
          * @return builder
          * 
@@ -240,7 +240,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -251,7 +251,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

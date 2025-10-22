@@ -20,14 +20,14 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
     public static final DnsSecurityProfileBotnetDomainsArgs Empty = new DnsSecurityProfileBotnetDomainsArgs();
 
     /**
-     * The DnsSecurityCategories param.
+     * DNS categories
      * 
      */
     @Import(name="dnsSecurityCategories")
     private @Nullable Output<List<DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs>> dnsSecurityCategories;
 
     /**
-     * @return The DnsSecurityCategories param.
+     * @return DNS categories
      * 
      */
     public Optional<Output<List<DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs>>> dnsSecurityCategories() {
@@ -35,14 +35,14 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
     }
 
     /**
-     * The Lists param.
+     * Dynamic lists of DNS domains
      * 
      */
     @Import(name="lists")
     private @Nullable Output<List<DnsSecurityProfileBotnetDomainsListArgs>> lists;
 
     /**
-     * @return The Lists param.
+     * @return Dynamic lists of DNS domains
      * 
      */
     public Optional<Output<List<DnsSecurityProfileBotnetDomainsListArgs>>> lists() {
@@ -50,14 +50,14 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
     }
 
     /**
-     * The Sinkhole param.
+     * DNS sinkhole settings
      * 
      */
     @Import(name="sinkhole")
     private @Nullable Output<DnsSecurityProfileBotnetDomainsSinkholeArgs> sinkhole;
 
     /**
-     * @return The Sinkhole param.
+     * @return DNS sinkhole settings
      * 
      */
     public Optional<Output<DnsSecurityProfileBotnetDomainsSinkholeArgs>> sinkhole() {
@@ -65,14 +65,14 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
     }
 
     /**
-     * The Whitelists param.
+     * DNS security overrides
      * 
      */
     @Import(name="whitelists")
     private @Nullable Output<List<DnsSecurityProfileBotnetDomainsWhitelistArgs>> whitelists;
 
     /**
-     * @return The Whitelists param.
+     * @return DNS security overrides
      * 
      */
     public Optional<Output<List<DnsSecurityProfileBotnetDomainsWhitelistArgs>>> whitelists() {
@@ -107,7 +107,7 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
         }
 
         /**
-         * @param dnsSecurityCategories The DnsSecurityCategories param.
+         * @param dnsSecurityCategories DNS categories
          * 
          * @return builder
          * 
@@ -118,7 +118,7 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
         }
 
         /**
-         * @param dnsSecurityCategories The DnsSecurityCategories param.
+         * @param dnsSecurityCategories DNS categories
          * 
          * @return builder
          * 
@@ -128,7 +128,7 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
         }
 
         /**
-         * @param dnsSecurityCategories The DnsSecurityCategories param.
+         * @param dnsSecurityCategories DNS categories
          * 
          * @return builder
          * 
@@ -138,7 +138,7 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
         }
 
         /**
-         * @param lists The Lists param.
+         * @param lists Dynamic lists of DNS domains
          * 
          * @return builder
          * 
@@ -149,7 +149,7 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
         }
 
         /**
-         * @param lists The Lists param.
+         * @param lists Dynamic lists of DNS domains
          * 
          * @return builder
          * 
@@ -159,7 +159,7 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
         }
 
         /**
-         * @param lists The Lists param.
+         * @param lists Dynamic lists of DNS domains
          * 
          * @return builder
          * 
@@ -169,7 +169,7 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
         }
 
         /**
-         * @param sinkhole The Sinkhole param.
+         * @param sinkhole DNS sinkhole settings
          * 
          * @return builder
          * 
@@ -180,7 +180,7 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
         }
 
         /**
-         * @param sinkhole The Sinkhole param.
+         * @param sinkhole DNS sinkhole settings
          * 
          * @return builder
          * 
@@ -190,7 +190,7 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
         }
 
         /**
-         * @param whitelists The Whitelists param.
+         * @param whitelists DNS security overrides
          * 
          * @return builder
          * 
@@ -201,7 +201,7 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
         }
 
         /**
-         * @param whitelists The Whitelists param.
+         * @param whitelists DNS security overrides
          * 
          * @return builder
          * 
@@ -211,7 +211,7 @@ public final class DnsSecurityProfileBotnetDomainsArgs extends com.pulumi.resour
         }
 
         /**
-         * @param whitelists The Whitelists param.
+         * @param whitelists DNS security overrides
          * 
          * @return builder
          * 

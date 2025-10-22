@@ -19,14 +19,14 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
     public static final HipObjectCustomChecksCriteriaArgs Empty = new HipObjectCustomChecksCriteriaArgs();
 
     /**
-     * The Plist param.
+     * Plist
      * 
      */
     @Import(name="plists")
     private @Nullable Output<List<HipObjectCustomChecksCriteriaPlistArgs>> plists;
 
     /**
-     * @return The Plist param.
+     * @return Plist
      * 
      */
     public Optional<Output<List<HipObjectCustomChecksCriteriaPlistArgs>>> plists() {
@@ -34,14 +34,14 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
     }
 
     /**
-     * The ProcessList param.
+     * Process list
      * 
      */
     @Import(name="processLists")
     private @Nullable Output<List<HipObjectCustomChecksCriteriaProcessListArgs>> processLists;
 
     /**
-     * @return The ProcessList param.
+     * @return Process list
      * 
      */
     public Optional<Output<List<HipObjectCustomChecksCriteriaProcessListArgs>>> processLists() {
@@ -49,14 +49,14 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
     }
 
     /**
-     * The RegistryKeys param.
+     * Registry key
      * 
      */
     @Import(name="registryKeys")
     private @Nullable Output<List<HipObjectCustomChecksCriteriaRegistryKeyArgs>> registryKeys;
 
     /**
-     * @return The RegistryKeys param.
+     * @return Registry key
      * 
      */
     public Optional<Output<List<HipObjectCustomChecksCriteriaRegistryKeyArgs>>> registryKeys() {
@@ -90,7 +90,7 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param plists The Plist param.
+         * @param plists Plist
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param plists The Plist param.
+         * @param plists Plist
          * 
          * @return builder
          * 
@@ -111,7 +111,7 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param plists The Plist param.
+         * @param plists Plist
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param processLists The ProcessList param.
+         * @param processLists Process list
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param processLists The ProcessList param.
+         * @param processLists Process list
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param processLists The ProcessList param.
+         * @param processLists Process list
          * 
          * @return builder
          * 
@@ -152,7 +152,7 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param registryKeys The RegistryKeys param.
+         * @param registryKeys Registry key
          * 
          * @return builder
          * 
@@ -163,7 +163,7 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param registryKeys The RegistryKeys param.
+         * @param registryKeys Registry key
          * 
          * @return builder
          * 
@@ -173,7 +173,7 @@ public final class HipObjectCustomChecksCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param registryKeys The RegistryKeys param.
+         * @param registryKeys Registry key
          * 
          * @return builder
          * 

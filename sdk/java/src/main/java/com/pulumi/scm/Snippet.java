@@ -16,78 +16,48 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.Snippet;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new Snippet("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * Snippet resource
  * 
  */
 @ResourceType(type="scm:index/snippet:Snippet")
 public class Snippet extends com.pulumi.resources.CustomResource {
     /**
-     * The Description param.
+     * The description of the snippet
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the snippet
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Labels param.
+     * Labels applied to the snippet
      * 
      */
     @Export(name="labels", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> labels;
 
     /**
-     * @return The Labels param.
+     * @return Labels applied to the snippet
      * 
      */
     public Output<Optional<List<String>>> labels() {
         return Codegen.optional(this.labels);
     }
     /**
-     * The Name param.
+     * The name of the snippet
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the snippet
      * 
      */
     public Output<String> name() {
@@ -100,18 +70,18 @@ public class Snippet extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
+     * The snippet type
      * 
      */
     @Export(name="type", refs={String.class}, tree="[0]")
-    private Output<String> type;
+    private Output</* @Nullable */ String> type;
 
     /**
-     * @return The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
+     * @return The snippet type
      * 
      */
-    public Output<String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

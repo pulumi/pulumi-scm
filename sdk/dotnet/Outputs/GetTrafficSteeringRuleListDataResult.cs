@@ -14,37 +14,42 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetTrafficSteeringRuleListDataResult
     {
         /// <summary>
-        /// The Action param.
+        /// Action
         /// </summary>
         public readonly Outputs.GetTrafficSteeringRuleListDataActionResult Action;
         /// <summary>
-        /// The Category param.
+        /// Category
         /// </summary>
         public readonly ImmutableArray<string> Categories;
         /// <summary>
-        /// The Destination param.
+        /// Destination
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
-        /// UUID of the resource.
+        /// The folder containing the traffic steering rule
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the traffic steering rule
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Service param.
+        /// Service
         /// </summary>
         public readonly ImmutableArray<string> Services;
         /// <summary>
-        /// The SourceUser param.
+        /// Source user
         /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
         /// <summary>
-        /// The Source param.
+        /// Source
         /// </summary>
         public readonly ImmutableArray<string> Sources;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetTrafficSteeringRuleListDataResult(
@@ -54,6 +59,8 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> destinations,
 
+            string folder,
+
             string id,
 
             string name,
@@ -62,16 +69,20 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> sourceUsers,
 
-            ImmutableArray<string> sources)
+            ImmutableArray<string> sources,
+
+            string tfid)
         {
             Action = action;
             Categories = categories;
             Destinations = destinations;
+            Folder = folder;
             Id = id;
             Name = name;
             Services = services;
             SourceUsers = sourceUsers;
             Sources = sources;
+            Tfid = tfid;
         }
     }
 }

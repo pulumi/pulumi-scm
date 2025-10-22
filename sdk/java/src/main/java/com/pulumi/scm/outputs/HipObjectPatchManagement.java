@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectPatchManagement {
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     private @Nullable HipObjectPatchManagementCriteria criteria;
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     private @Nullable Boolean excludeVendor;
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     private @Nullable List<HipObjectPatchManagementVendor> vendors;
 
     private HipObjectPatchManagement() {}
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public Optional<HipObjectPatchManagementCriteria> criteria() {
         return Optional.ofNullable(this.criteria);
     }
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     public Optional<Boolean> excludeVendor() {
         return Optional.ofNullable(this.excludeVendor);
     }
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     public List<HipObjectPatchManagementVendor> vendors() {

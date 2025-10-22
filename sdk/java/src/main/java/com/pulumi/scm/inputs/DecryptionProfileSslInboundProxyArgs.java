@@ -16,14 +16,14 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
     public static final DecryptionProfileSslInboundProxyArgs Empty = new DecryptionProfileSslInboundProxyArgs();
 
     /**
-     * The BlockIfHsmUnavailable param. Default: `false`.
+     * Block if hsm unavailable
      * 
      */
     @Import(name="blockIfHsmUnavailable")
     private @Nullable Output<Boolean> blockIfHsmUnavailable;
 
     /**
-     * @return The BlockIfHsmUnavailable param. Default: `false`.
+     * @return Block if hsm unavailable
      * 
      */
     public Optional<Output<Boolean>> blockIfHsmUnavailable() {
@@ -31,14 +31,14 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The BlockIfNoResource param. Default: `false`.
+     * Block if no resource
      * 
      */
     @Import(name="blockIfNoResource")
     private @Nullable Output<Boolean> blockIfNoResource;
 
     /**
-     * @return The BlockIfNoResource param. Default: `false`.
+     * @return Block if no resource
      * 
      */
     public Optional<Output<Boolean>> blockIfNoResource() {
@@ -46,14 +46,14 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The BlockUnsupportedCipher param. Default: `false`.
+     * Block unsupported cipher
      * 
      */
     @Import(name="blockUnsupportedCipher")
     private @Nullable Output<Boolean> blockUnsupportedCipher;
 
     /**
-     * @return The BlockUnsupportedCipher param. Default: `false`.
+     * @return Block unsupported cipher
      * 
      */
     public Optional<Output<Boolean>> blockUnsupportedCipher() {
@@ -61,14 +61,14 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
     }
 
     /**
-     * The BlockUnsupportedVersion param. Default: `false`.
+     * Block unsupported version
      * 
      */
     @Import(name="blockUnsupportedVersion")
     private @Nullable Output<Boolean> blockUnsupportedVersion;
 
     /**
-     * @return The BlockUnsupportedVersion param. Default: `false`.
+     * @return Block unsupported version
      * 
      */
     public Optional<Output<Boolean>> blockUnsupportedVersion() {
@@ -103,7 +103,7 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockIfHsmUnavailable The BlockIfHsmUnavailable param. Default: `false`.
+         * @param blockIfHsmUnavailable Block if hsm unavailable
          * 
          * @return builder
          * 
@@ -114,7 +114,7 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockIfHsmUnavailable The BlockIfHsmUnavailable param. Default: `false`.
+         * @param blockIfHsmUnavailable Block if hsm unavailable
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockIfNoResource The BlockIfNoResource param. Default: `false`.
+         * @param blockIfNoResource Block if no resource
          * 
          * @return builder
          * 
@@ -135,7 +135,7 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockIfNoResource The BlockIfNoResource param. Default: `false`.
+         * @param blockIfNoResource Block if no resource
          * 
          * @return builder
          * 
@@ -145,7 +145,7 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUnsupportedCipher The BlockUnsupportedCipher param. Default: `false`.
+         * @param blockUnsupportedCipher Block unsupported cipher
          * 
          * @return builder
          * 
@@ -156,7 +156,7 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUnsupportedCipher The BlockUnsupportedCipher param. Default: `false`.
+         * @param blockUnsupportedCipher Block unsupported cipher
          * 
          * @return builder
          * 
@@ -166,7 +166,7 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUnsupportedVersion The BlockUnsupportedVersion param. Default: `false`.
+         * @param blockUnsupportedVersion Block unsupported version
          * 
          * @return builder
          * 
@@ -177,7 +177,7 @@ public final class DecryptionProfileSslInboundProxyArgs extends com.pulumi.resou
         }
 
         /**
-         * @param blockUnsupportedVersion The BlockUnsupportedVersion param. Default: `false`.
+         * @param blockUnsupportedVersion Block unsupported version
          * 
          * @return builder
          * 

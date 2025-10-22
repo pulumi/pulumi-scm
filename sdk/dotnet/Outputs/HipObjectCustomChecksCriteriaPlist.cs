@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectCustomChecksCriteriaPlist
     {
         /// <summary>
-        /// The Keys param.
+        /// Key
         /// </summary>
         public readonly ImmutableArray<Outputs.HipObjectCustomChecksCriteriaPlistKey> Keys;
         /// <summary>
-        /// Preference list. String length must not exceed 1023 characters.
+        /// Preference list
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Plist does not exist. Default: `False`.
+        /// Plist does not exist
         /// </summary>
         public readonly bool? Negate;
 

@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// ApplicationGroup resource
     /// 
     /// ## Example Usage
     /// 
@@ -22,7 +22,40 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Scm.ApplicationGroup("example");
+    ///     // First, create some applications that will be used in the application group.
+    ///     var scmAgApp1 = new Scm.Application("scm_ag_app_1", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_ag_app_1",
+    ///         Description = "First test application",
+    ///         Category = "business-systems",
+    ///         Subcategory = "database",
+    ///         Technology = "client-server",
+    ///         Risk = "3",
+    ///     });
+    /// 
+    ///     var scmAgApp2 = new Scm.Application("scm_ag_app_2", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_ag_app_2",
+    ///         Description = "Second test application",
+    ///         Category = "business-systems",
+    ///         Subcategory = "database",
+    ///         Technology = "client-server",
+    ///         Risk = "4",
+    ///     });
+    /// 
+    ///     // Create the application group that references the applications above.
+    ///     var scmAppGroup1 = new Scm.ApplicationGroup("scm_app_group_1", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_app_group_1",
+    ///         Members = new[]
+    ///         {
+    ///             scmAgApp1.Name,
+    ///             scmAgApp2.Name,
+    ///         },
+    ///     });
     /// 
     /// });
     /// ```
@@ -31,31 +64,31 @@ namespace Pulumi.Scm
     public partial class ApplicationGroup : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Members
         /// </summary>
         [Output("members")]
         public Output<ImmutableArray<string>> Members { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -110,13 +143,13 @@ namespace Pulumi.Scm
     public sealed class ApplicationGroupArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -125,7 +158,7 @@ namespace Pulumi.Scm
         private InputList<string>? _members;
 
         /// <summary>
-        /// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Members
         /// </summary>
         public InputList<string> Members
         {
@@ -134,13 +167,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -154,13 +187,13 @@ namespace Pulumi.Scm
     public sealed class ApplicationGroupState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -169,7 +202,7 @@ namespace Pulumi.Scm
         private InputList<string>? _members;
 
         /// <summary>
-        /// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Members
         /// </summary>
         public InputList<string> Members
         {
@@ -178,13 +211,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

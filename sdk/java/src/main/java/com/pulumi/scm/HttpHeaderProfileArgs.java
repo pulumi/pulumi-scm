@@ -18,14 +18,14 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
     public static final HttpHeaderProfileArgs Empty = new HttpHeaderProfileArgs();
 
     /**
-     * The Description param.
+     * The description of the HTTP header profile
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the HTTP header profile
      * 
      */
     public Optional<Output<String>> description() {
@@ -33,14 +33,14 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -48,14 +48,14 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -63,14 +63,14 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The HttpHeaderInsertions param.
+     * A list of HTTP header profile rules
      * 
      */
     @Import(name="httpHeaderInsertions")
     private @Nullable Output<List<HttpHeaderProfileHttpHeaderInsertionArgs>> httpHeaderInsertions;
 
     /**
-     * @return The HttpHeaderInsertions param.
+     * @return A list of HTTP header profile rules
      * 
      */
     public Optional<Output<List<HttpHeaderProfileHttpHeaderInsertionArgs>>> httpHeaderInsertions() {
@@ -78,14 +78,14 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Name param.
+     * The name of the HTTP header profile
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the HTTP header profile
      * 
      */
     public Optional<Output<String>> name() {
@@ -93,14 +93,14 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -137,7 +137,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the HTTP header profile
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the HTTP header profile
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -169,7 +169,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -190,7 +190,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param httpHeaderInsertions The HttpHeaderInsertions param.
+         * @param httpHeaderInsertions A list of HTTP header profile rules
          * 
          * @return builder
          * 
@@ -211,7 +211,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param httpHeaderInsertions The HttpHeaderInsertions param.
+         * @param httpHeaderInsertions A list of HTTP header profile rules
          * 
          * @return builder
          * 
@@ -221,7 +221,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param httpHeaderInsertions The HttpHeaderInsertions param.
+         * @param httpHeaderInsertions A list of HTTP header profile rules
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the HTTP header profile
          * 
          * @return builder
          * 
@@ -242,7 +242,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the HTTP header profile
          * 
          * @return builder
          * 
@@ -252,7 +252,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -263,7 +263,7 @@ public final class HttpHeaderProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

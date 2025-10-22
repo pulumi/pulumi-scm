@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class IpsecTunnelAutoKey
     {
         /// <summary>
-        /// The IkeGateways param.
+        /// Ike gateway
         /// </summary>
         public readonly ImmutableArray<Outputs.IpsecTunnelAutoKeyIkeGateway> IkeGateways;
         /// <summary>
-        /// The IpsecCryptoProfile param.
+        /// Ipsec crypto profile
         /// </summary>
         public readonly string IpsecCryptoProfile;
         /// <summary>
-        /// IPv6 type of proxy*id values.
+        /// IPv6 type of proxy*id values
         /// </summary>
         public readonly ImmutableArray<Outputs.IpsecTunnelAutoKeyProxyIdV6> ProxyIdV6s;
         /// <summary>
-        /// IPv4 type of proxy*id values.
+        /// IPv4 type of proxy*id values
         /// </summary>
         public readonly ImmutableArray<Outputs.IpsecTunnelAutoKeyProxyId> ProxyIds;
 

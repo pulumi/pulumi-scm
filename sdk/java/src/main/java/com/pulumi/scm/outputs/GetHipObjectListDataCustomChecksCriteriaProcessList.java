@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataCustomChecksCriteriaProcessList {
     /**
-     * @return The Name param.
+     * @return Process Name
      * 
      */
     private String name;
     /**
-     * @return The Running param. Default: `true`.
+     * @return Running
      * 
      */
     private Boolean running;
 
     private GetHipObjectListDataCustomChecksCriteriaProcessList() {}
     /**
-     * @return The Name param.
+     * @return Process Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Running param. Default: `true`.
+     * @return Running
      * 
      */
     public Boolean running() {

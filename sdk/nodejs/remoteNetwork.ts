@@ -7,16 +7,9 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * RemoteNetwork resource
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.RemoteNetwork("example", {});
- * ```
  */
 export class RemoteNetwork extends pulumi.CustomResource {
     /**
@@ -47,51 +40,51 @@ export class RemoteNetwork extends pulumi.CustomResource {
     }
 
     /**
-     * The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+     * Ecmp load balancing
      */
     declare public readonly ecmpLoadBalancing: pulumi.Output<string>;
     /**
-     * ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * ecmp*tunnels is required when ecmp*load*balancing is enable
      */
     declare public readonly ecmpTunnels: pulumi.Output<outputs.RemoteNetworkEcmpTunnel[] | undefined>;
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      */
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
-     * The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+     * The folder that contains the remote network
      */
     declare public readonly folder: pulumi.Output<string>;
     /**
-     * ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * ipsec*tunnel is required when ecmp*load_balancing is disable
      */
     declare public readonly ipsecTunnel: pulumi.Output<string | undefined>;
     /**
-     * New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+     * New customer will only be on aggregate bandwidth licensing
      */
     declare public readonly licenseType: pulumi.Output<string>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the remote network
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * setup the protocol when ecmp*load*balancing is disable.
+     * setup the protocol when ecmp*load*balancing is disable
      */
     declare public readonly protocol: pulumi.Output<outputs.RemoteNetworkProtocol | undefined>;
     /**
-     * The Region param. String length must exceed 1 characters.
+     * Region
      */
     declare public readonly region: pulumi.Output<string>;
     /**
-     * specify secondary ipsecTunnel if needed.
+     * specify secondary ipsecTunnel if needed
      */
     declare public readonly secondaryIpsecTunnel: pulumi.Output<string | undefined>;
     /**
-     * spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * spn-name is needed when licenseType is FWAAS-AGGREGATE
      */
     declare public readonly spnName: pulumi.Output<string | undefined>;
     /**
-     * The Subnets param.
+     * Subnets
      */
     declare public readonly subnets: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -124,6 +117,12 @@ export class RemoteNetwork extends pulumi.CustomResource {
             resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as RemoteNetworkArgs | undefined;
+            if (args?.folder === undefined && !opts.urn) {
+                throw new Error("Missing required property 'folder'");
+            }
+            if (args?.licenseType === undefined && !opts.urn) {
+                throw new Error("Missing required property 'licenseType'");
+            }
             if (args?.region === undefined && !opts.urn) {
                 throw new Error("Missing required property 'region'");
             }
@@ -153,51 +152,51 @@ export class RemoteNetwork extends pulumi.CustomResource {
  */
 export interface RemoteNetworkState {
     /**
-     * The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+     * Ecmp load balancing
      */
     ecmpLoadBalancing?: pulumi.Input<string>;
     /**
-     * ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * ecmp*tunnels is required when ecmp*load*balancing is enable
      */
     ecmpTunnels?: pulumi.Input<pulumi.Input<inputs.RemoteNetworkEcmpTunnel>[]>;
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      */
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
-     * The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+     * The folder that contains the remote network
      */
     folder?: pulumi.Input<string>;
     /**
-     * ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * ipsec*tunnel is required when ecmp*load_balancing is disable
      */
     ipsecTunnel?: pulumi.Input<string>;
     /**
-     * New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+     * New customer will only be on aggregate bandwidth licensing
      */
     licenseType?: pulumi.Input<string>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the remote network
      */
     name?: pulumi.Input<string>;
     /**
-     * setup the protocol when ecmp*load*balancing is disable.
+     * setup the protocol when ecmp*load*balancing is disable
      */
     protocol?: pulumi.Input<inputs.RemoteNetworkProtocol>;
     /**
-     * The Region param. String length must exceed 1 characters.
+     * Region
      */
     region?: pulumi.Input<string>;
     /**
-     * specify secondary ipsecTunnel if needed.
+     * specify secondary ipsecTunnel if needed
      */
     secondaryIpsecTunnel?: pulumi.Input<string>;
     /**
-     * spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * spn-name is needed when licenseType is FWAAS-AGGREGATE
      */
     spnName?: pulumi.Input<string>;
     /**
-     * The Subnets param.
+     * Subnets
      */
     subnets?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
@@ -208,47 +207,47 @@ export interface RemoteNetworkState {
  */
 export interface RemoteNetworkArgs {
     /**
-     * The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+     * Ecmp load balancing
      */
     ecmpLoadBalancing?: pulumi.Input<string>;
     /**
-     * ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * ecmp*tunnels is required when ecmp*load*balancing is enable
      */
     ecmpTunnels?: pulumi.Input<pulumi.Input<inputs.RemoteNetworkEcmpTunnel>[]>;
     /**
-     * The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+     * The folder that contains the remote network
      */
-    folder?: pulumi.Input<string>;
+    folder: pulumi.Input<string>;
     /**
-     * ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * ipsec*tunnel is required when ecmp*load_balancing is disable
      */
     ipsecTunnel?: pulumi.Input<string>;
     /**
-     * New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+     * New customer will only be on aggregate bandwidth licensing
      */
-    licenseType?: pulumi.Input<string>;
+    licenseType: pulumi.Input<string>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the remote network
      */
     name?: pulumi.Input<string>;
     /**
-     * setup the protocol when ecmp*load*balancing is disable.
+     * setup the protocol when ecmp*load*balancing is disable
      */
     protocol?: pulumi.Input<inputs.RemoteNetworkProtocol>;
     /**
-     * The Region param. String length must exceed 1 characters.
+     * Region
      */
     region: pulumi.Input<string>;
     /**
-     * specify secondary ipsecTunnel if needed.
+     * specify secondary ipsecTunnel if needed
      */
     secondaryIpsecTunnel?: pulumi.Input<string>;
     /**
-     * spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * spn-name is needed when licenseType is FWAAS-AGGREGATE
      */
     spnName?: pulumi.Input<string>;
     /**
-     * The Subnets param.
+     * Subnets
      */
     subnets?: pulumi.Input<pulumi.Input<string>[]>;
 }

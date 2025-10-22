@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayListDataAuthenticationCertificateResult
     {
         /// <summary>
-        /// The AllowIdPayloadMismatch param.
+        /// Allow id payload mismatch
         /// </summary>
         public readonly bool AllowIdPayloadMismatch;
         /// <summary>
-        /// The CertificateProfile param.
+        /// Certificate profile
         /// </summary>
         public readonly string CertificateProfile;
         /// <summary>
-        /// The LocalCertificate param.
+        /// Local certificate
         /// </summary>
         public readonly Outputs.GetIkeGatewayListDataAuthenticationCertificateLocalCertificateResult LocalCertificate;
         /// <summary>
-        /// The StrictValidationRevocation param.
+        /// Strict validation revocation
         /// </summary>
         public readonly bool StrictValidationRevocation;
         /// <summary>
-        /// The UseManagementAsSource param.
+        /// Use management as source
         /// </summary>
         public readonly bool UseManagementAsSource;
 

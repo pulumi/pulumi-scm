@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetAppOverrideRule
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAppOverrideRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AppOverrideRule data source
         /// </summary>
         public static Task<GetAppOverrideRuleResult> InvokeAsync(GetAppOverrideRuleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAppOverrideRuleResult>("scm:index/getAppOverrideRule:getAppOverrideRule", args ?? new GetAppOverrideRuleArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAppOverrideRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AppOverrideRule data source
         /// </summary>
         public static Output<GetAppOverrideRuleResult> Invoke(GetAppOverrideRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAppOverrideRuleResult>("scm:index/getAppOverrideRule:getAppOverrideRule", args ?? new GetAppOverrideRuleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAppOverrideRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AppOverrideRule data source
         /// </summary>
         public static Output<GetAppOverrideRuleResult> Invoke(GetAppOverrideRuleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAppOverrideRuleResult>("scm:index/getAppOverrideRule:getAppOverrideRule", args ?? new GetAppOverrideRuleInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetAppOverrideRuleArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetAppOverrideRuleArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetAppOverrideRuleInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetAppOverrideRuleInvokeArgs()
         {
@@ -118,64 +76,76 @@ namespace Pulumi.Scm
     public sealed class GetAppOverrideRuleResult
     {
         /// <summary>
-        /// The Application param.
+        /// Application
         /// </summary>
         public readonly string Application;
         /// <summary>
-        /// The Description param. String length must not exceed 1024 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Destinations param.
+        /// Destination
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
-        /// The Disabled param. Default: `False`.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Disabled
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The Froms param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// From
         /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
-        /// The GroupTag param.
+        /// Group tag
         /// </summary>
         public readonly string GroupTag;
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NegateDestination param. Default: `False`.
+        /// Negate destination
         /// </summary>
         public readonly bool NegateDestination;
         /// <summary>
-        /// The NegateSource param. Default: `False`.
+        /// Negate source
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>
-        /// The Port param. Value must be between 0 and 65535.
+        /// Port
         /// </summary>
         public readonly int Port;
         /// <summary>
-        /// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+        /// Protocol
         /// </summary>
         public readonly string Protocol;
         /// <summary>
-        /// The Sources param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Source
         /// </summary>
         public readonly ImmutableArray<string> Sources;
         /// <summary>
-        /// The Tags param.
+        /// Tag
         /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
         /// <summary>
-        /// The Tos param.
+        /// To
         /// </summary>
         public readonly ImmutableArray<string> Tos;
 
@@ -187,7 +157,11 @@ namespace Pulumi.Scm
 
             ImmutableArray<string> destinations,
 
+            string device,
+
             bool disabled,
+
+            string folder,
 
             ImmutableArray<string> froms,
 
@@ -205,6 +179,8 @@ namespace Pulumi.Scm
 
             string protocol,
 
+            string snippet,
+
             ImmutableArray<string> sources,
 
             ImmutableArray<string> tags,
@@ -216,7 +192,9 @@ namespace Pulumi.Scm
             Application = application;
             Description = description;
             Destinations = destinations;
+            Device = device;
             Disabled = disabled;
+            Folder = folder;
             Froms = froms;
             GroupTag = groupTag;
             Id = id;
@@ -225,6 +203,7 @@ namespace Pulumi.Scm
             NegateSource = negateSource;
             Port = port;
             Protocol = protocol;
+            Snippet = snippet;
             Sources = sources;
             Tags = tags;
             Tfid = tfid;

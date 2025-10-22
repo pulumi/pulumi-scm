@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TacacsServerProfileServer {
     /**
-     * @return The Address param.
+     * @return The IP address of the TACACS+ server
      * 
      */
     private @Nullable String address;
     /**
-     * @return The Name param.
+     * @return The name of the TACACS+ server
      * 
      */
     private @Nullable String name;
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The TACACS+ server port
      * 
      */
     private @Nullable Integer port;
     /**
-     * @return The Secret param. String length must not exceed 64 characters.
+     * @return The TACACS+ secret
      * 
      */
     private @Nullable String secret;
 
     private TacacsServerProfileServer() {}
     /**
-     * @return The Address param.
+     * @return The IP address of the TACACS+ server
      * 
      */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
-     * @return The Name param.
+     * @return The name of the TACACS+ server
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The TACACS+ server port
      * 
      */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * @return The Secret param. String length must not exceed 64 characters.
+     * @return The TACACS+ secret
      * 
      */
     public Optional<String> secret() {

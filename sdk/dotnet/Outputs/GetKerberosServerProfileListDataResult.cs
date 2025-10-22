@@ -14,22 +14,54 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetKerberosServerProfileListDataResult
     {
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the Kerberos server profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Servers param.
+        /// The name of the Kerberos server profile
+        /// </summary>
+        public readonly string Name;
+        /// <summary>
+        /// The Kerberos server configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.GetKerberosServerProfileListDataServerResult> Servers;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetKerberosServerProfileListDataResult(
+            string device,
+
+            string folder,
+
             string id,
 
-            ImmutableArray<Outputs.GetKerberosServerProfileListDataServerResult> servers)
+            string name,
+
+            ImmutableArray<Outputs.GetKerberosServerProfileListDataServerResult> servers,
+
+            string snippet,
+
+            string tfid)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
+            Name = name;
             Servers = servers;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

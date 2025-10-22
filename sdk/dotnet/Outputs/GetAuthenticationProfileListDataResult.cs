@@ -14,45 +14,62 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAuthenticationProfileListDataResult
     {
         /// <summary>
-        /// The AllowList param.
+        /// Allow list
         /// </summary>
         public readonly ImmutableArray<string> AllowLists;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the authentication profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Lockout param.
+        /// Lockout
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataLockoutResult Lockout;
         /// <summary>
-        /// The Method param.
+        /// Method
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodResult Method;
         /// <summary>
-        /// The MultiFactorAuth param.
+        /// Multi factor auth
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMultiFactorAuthResult MultiFactorAuth;
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The SingleSignOn param.
+        /// Single sign on
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataSingleSignOnResult SingleSignOn;
         /// <summary>
-        /// The UserDomain param. String length must not exceed 63 characters.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// User domain
         /// </summary>
         public readonly string UserDomain;
         /// <summary>
-        /// The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
+        /// Username modifier
         /// </summary>
         public readonly string UsernameModifier;
 
         [OutputConstructor]
         private GetAuthenticationProfileListDataResult(
             ImmutableArray<string> allowLists,
+
+            string device,
+
+            string folder,
 
             string id,
 
@@ -66,17 +83,25 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetAuthenticationProfileListDataSingleSignOnResult singleSignOn,
 
+            string snippet,
+
+            string tfid,
+
             string userDomain,
 
             string usernameModifier)
         {
             AllowLists = allowLists;
+            Device = device;
+            Folder = folder;
             Id = id;
             Lockout = lockout;
             Method = method;
             MultiFactorAuth = multiFactorAuth;
             Name = name;
             SingleSignOn = singleSignOn;
+            Snippet = snippet;
+            Tfid = tfid;
             UserDomain = userDomain;
             UsernameModifier = usernameModifier;
         }

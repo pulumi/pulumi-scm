@@ -13,62 +13,62 @@ import java.util.Objects;
 @CustomType
 public final class GetIkeGatewayAuthenticationCertificate {
     /**
-     * @return The AllowIdPayloadMismatch param.
+     * @return Allow id payload mismatch
      * 
      */
     private Boolean allowIdPayloadMismatch;
     /**
-     * @return The CertificateProfile param.
+     * @return Certificate profile
      * 
      */
     private String certificateProfile;
     /**
-     * @return The LocalCertificate param.
+     * @return Local certificate
      * 
      */
     private GetIkeGatewayAuthenticationCertificateLocalCertificate localCertificate;
     /**
-     * @return The StrictValidationRevocation param.
+     * @return Strict validation revocation
      * 
      */
     private Boolean strictValidationRevocation;
     /**
-     * @return The UseManagementAsSource param.
+     * @return Use management as source
      * 
      */
     private Boolean useManagementAsSource;
 
     private GetIkeGatewayAuthenticationCertificate() {}
     /**
-     * @return The AllowIdPayloadMismatch param.
+     * @return Allow id payload mismatch
      * 
      */
     public Boolean allowIdPayloadMismatch() {
         return this.allowIdPayloadMismatch;
     }
     /**
-     * @return The CertificateProfile param.
+     * @return Certificate profile
      * 
      */
     public String certificateProfile() {
         return this.certificateProfile;
     }
     /**
-     * @return The LocalCertificate param.
+     * @return Local certificate
      * 
      */
     public GetIkeGatewayAuthenticationCertificateLocalCertificate localCertificate() {
         return this.localCertificate;
     }
     /**
-     * @return The StrictValidationRevocation param.
+     * @return Strict validation revocation
      * 
      */
     public Boolean strictValidationRevocation() {
         return this.strictValidationRevocation;
     }
     /**
-     * @return The UseManagementAsSource param.
+     * @return Use management as source
      * 
      */
     public Boolean useManagementAsSource() {

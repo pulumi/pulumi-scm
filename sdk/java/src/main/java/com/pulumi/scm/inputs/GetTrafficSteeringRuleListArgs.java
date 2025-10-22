@@ -17,14 +17,29 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
     public static final GetTrafficSteeringRuleListArgs Empty = new GetTrafficSteeringRuleListArgs();
 
     /**
-     * The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+     * The device of the item.
+     * 
+     */
+    @Import(name="device")
+    private @Nullable Output<String> device;
+
+    /**
+     * @return The device of the item.
+     * 
+     */
+    public Optional<Output<String>> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    /**
+     * The folder of the item. Default: Shared.
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -32,14 +47,14 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
     }
 
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      * 
      */
     @Import(name="limit")
     private @Nullable Output<Integer> limit;
 
     /**
-     * @return The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * @return The max number of items to return. Default: 200.
      * 
      */
     public Optional<Output<Integer>> limit() {
@@ -47,14 +62,14 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
     }
 
     /**
-     * The Name param.
+     * The name of the item.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the item.
      * 
      */
     public Optional<Output<String>> name() {
@@ -62,27 +77,44 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
     }
 
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      * 
      */
     @Import(name="offset")
     private @Nullable Output<Integer> offset;
 
     /**
-     * @return The Offset param. Default: `0`.
+     * @return The offset of the first item to return.
      * 
      */
     public Optional<Output<Integer>> offset() {
         return Optional.ofNullable(this.offset);
     }
 
+    /**
+     * The snippet of the item.
+     * 
+     */
+    @Import(name="snippet")
+    private @Nullable Output<String> snippet;
+
+    /**
+     * @return The snippet of the item.
+     * 
+     */
+    public Optional<Output<String>> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetTrafficSteeringRuleListArgs() {}
 
     private GetTrafficSteeringRuleListArgs(GetTrafficSteeringRuleListArgs $) {
+        this.device = $.device;
         this.folder = $.folder;
         this.limit = $.limit;
         this.name = $.name;
         this.offset = $.offset;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -104,7 +136,28 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+         * @param device The device of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(@Nullable Output<String> device) {
+            $.device = device;
+            return this;
+        }
+
+        /**
+         * @param device The device of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(String device) {
+            return device(Output.of(device));
+        }
+
+        /**
+         * @param folder The folder of the item. Default: Shared.
          * 
          * @return builder
          * 
@@ -115,7 +168,7 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+         * @param folder The folder of the item. Default: Shared.
          * 
          * @return builder
          * 
@@ -125,7 +178,7 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param limit The Limit param. A limit of -1 will return all configured items. Default: `200`.
+         * @param limit The max number of items to return. Default: 200.
          * 
          * @return builder
          * 
@@ -136,7 +189,7 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param limit The Limit param. A limit of -1 will return all configured items. Default: `200`.
+         * @param limit The max number of items to return. Default: 200.
          * 
          * @return builder
          * 
@@ -146,7 +199,7 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the item.
          * 
          * @return builder
          * 
@@ -157,7 +210,7 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the item.
          * 
          * @return builder
          * 
@@ -167,7 +220,7 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param offset The Offset param. Default: `0`.
+         * @param offset The offset of the first item to return.
          * 
          * @return builder
          * 
@@ -178,13 +231,34 @@ public final class GetTrafficSteeringRuleListArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param offset The Offset param. Default: `0`.
+         * @param offset The offset of the first item to return.
          * 
          * @return builder
          * 
          */
         public Builder offset(Integer offset) {
             return offset(Output.of(offset));
+        }
+
+        /**
+         * @param snippet The snippet of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(@Nullable Output<String> snippet) {
+            $.snippet = snippet;
+            return this;
+        }
+
+        /**
+         * @param snippet The snippet of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(String snippet) {
+            return snippet(Output.of(snippet));
         }
 
         public GetTrafficSteeringRuleListArgs build() {

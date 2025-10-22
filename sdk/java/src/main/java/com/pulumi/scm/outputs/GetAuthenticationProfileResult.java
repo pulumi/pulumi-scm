@@ -16,114 +16,150 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileResult {
     /**
-     * @return The AllowList param.
+     * @return Allow list
      * 
      */
     private List<String> allowLists;
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the authentication profile
      * 
      */
     private String id;
     /**
-     * @return The Lockout param.
+     * @return Lockout
      * 
      */
     private GetAuthenticationProfileLockout lockout;
     /**
-     * @return The Method param.
+     * @return Method
      * 
      */
     private GetAuthenticationProfileMethod method;
     /**
-     * @return The MultiFactorAuth param.
+     * @return Multi factor auth
      * 
      */
     private GetAuthenticationProfileMultiFactorAuth multiFactorAuth;
     /**
-     * @return The Name param.
+     * @return The name of the authentication profile
      * 
      */
     private String name;
     /**
-     * @return The SingleSignOn param.
+     * @return Single sign on
      * 
      */
     private GetAuthenticationProfileSingleSignOn singleSignOn;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
     /**
-     * @return The UserDomain param. String length must not exceed 63 characters.
+     * @return User domain
      * 
      */
     private String userDomain;
     /**
-     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * @return Username modifier
      * 
      */
     private String usernameModifier;
 
     private GetAuthenticationProfileResult() {}
     /**
-     * @return The AllowList param.
+     * @return Allow list
      * 
      */
     public List<String> allowLists() {
         return this.allowLists;
     }
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the authentication profile
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Lockout param.
+     * @return Lockout
      * 
      */
     public GetAuthenticationProfileLockout lockout() {
         return this.lockout;
     }
     /**
-     * @return The Method param.
+     * @return Method
      * 
      */
     public GetAuthenticationProfileMethod method() {
         return this.method;
     }
     /**
-     * @return The MultiFactorAuth param.
+     * @return Multi factor auth
      * 
      */
     public GetAuthenticationProfileMultiFactorAuth multiFactorAuth() {
         return this.multiFactorAuth;
     }
     /**
-     * @return The Name param.
+     * @return The name of the authentication profile
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The SingleSignOn param.
+     * @return Single sign on
      * 
      */
     public GetAuthenticationProfileSingleSignOn singleSignOn() {
         return this.singleSignOn;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
     public String tfid() {
         return this.tfid;
     }
     /**
-     * @return The UserDomain param. String length must not exceed 63 characters.
+     * @return User domain
      * 
      */
     public String userDomain() {
         return this.userDomain;
     }
     /**
-     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * @return Username modifier
      * 
      */
     public String usernameModifier() {
@@ -140,12 +176,15 @@ public final class GetAuthenticationProfileResult {
     @CustomType.Builder
     public static final class Builder {
         private List<String> allowLists;
+        private String device;
+        private String folder;
         private String id;
         private GetAuthenticationProfileLockout lockout;
         private GetAuthenticationProfileMethod method;
         private GetAuthenticationProfileMultiFactorAuth multiFactorAuth;
         private String name;
         private GetAuthenticationProfileSingleSignOn singleSignOn;
+        private String snippet;
         private String tfid;
         private String userDomain;
         private String usernameModifier;
@@ -153,12 +192,15 @@ public final class GetAuthenticationProfileResult {
         public Builder(GetAuthenticationProfileResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.allowLists = defaults.allowLists;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.lockout = defaults.lockout;
     	      this.method = defaults.method;
     	      this.multiFactorAuth = defaults.multiFactorAuth;
     	      this.name = defaults.name;
     	      this.singleSignOn = defaults.singleSignOn;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.userDomain = defaults.userDomain;
     	      this.usernameModifier = defaults.usernameModifier;
@@ -174,6 +216,22 @@ public final class GetAuthenticationProfileResult {
         }
         public Builder allowLists(String... allowLists) {
             return allowLists(List.of(allowLists));
+        }
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationProfileResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationProfileResult", "folder");
+            }
+            this.folder = folder;
+            return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -224,6 +282,14 @@ public final class GetAuthenticationProfileResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationProfileResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetAuthenticationProfileResult", "tfid");
@@ -250,12 +316,15 @@ public final class GetAuthenticationProfileResult {
         public GetAuthenticationProfileResult build() {
             final var _resultValue = new GetAuthenticationProfileResult();
             _resultValue.allowLists = allowLists;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.lockout = lockout;
             _resultValue.method = method;
             _resultValue.multiFactorAuth = multiFactorAuth;
             _resultValue.name = name;
             _resultValue.singleSignOn = singleSignOn;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.userDomain = userDomain;
             _resultValue.usernameModifier = usernameModifier;

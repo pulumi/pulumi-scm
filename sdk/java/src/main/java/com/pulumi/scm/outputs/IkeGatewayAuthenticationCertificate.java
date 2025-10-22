@@ -14,62 +14,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayAuthenticationCertificate {
     /**
-     * @return The AllowIdPayloadMismatch param.
+     * @return Allow id payload mismatch
      * 
      */
     private @Nullable Boolean allowIdPayloadMismatch;
     /**
-     * @return The CertificateProfile param.
+     * @return Certificate profile
      * 
      */
     private @Nullable String certificateProfile;
     /**
-     * @return The LocalCertificate param.
+     * @return Local certificate
      * 
      */
     private @Nullable IkeGatewayAuthenticationCertificateLocalCertificate localCertificate;
     /**
-     * @return The StrictValidationRevocation param.
+     * @return Strict validation revocation
      * 
      */
     private @Nullable Boolean strictValidationRevocation;
     /**
-     * @return The UseManagementAsSource param.
+     * @return Use management as source
      * 
      */
     private @Nullable Boolean useManagementAsSource;
 
     private IkeGatewayAuthenticationCertificate() {}
     /**
-     * @return The AllowIdPayloadMismatch param.
+     * @return Allow id payload mismatch
      * 
      */
     public Optional<Boolean> allowIdPayloadMismatch() {
         return Optional.ofNullable(this.allowIdPayloadMismatch);
     }
     /**
-     * @return The CertificateProfile param.
+     * @return Certificate profile
      * 
      */
     public Optional<String> certificateProfile() {
         return Optional.ofNullable(this.certificateProfile);
     }
     /**
-     * @return The LocalCertificate param.
+     * @return Local certificate
      * 
      */
     public Optional<IkeGatewayAuthenticationCertificateLocalCertificate> localCertificate() {
         return Optional.ofNullable(this.localCertificate);
     }
     /**
-     * @return The StrictValidationRevocation param.
+     * @return Strict validation revocation
      * 
      */
     public Optional<Boolean> strictValidationRevocation() {
         return Optional.ofNullable(this.strictValidationRevocation);
     }
     /**
-     * @return The UseManagementAsSource param.
+     * @return Use management as source
      * 
      */
     public Optional<Boolean> useManagementAsSource() {

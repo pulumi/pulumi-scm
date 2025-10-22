@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupAppOverrideRule(ctx, &scm.LookupAppOverrideRuleArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// AppOverrideRule data source
 func LookupAppOverrideRule(ctx *pulumi.Context, args *LookupAppOverrideRuleArgs, opts ...pulumi.InvokeOption) (*LookupAppOverrideRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupAppOverrideRuleResult
@@ -50,42 +24,50 @@ func LookupAppOverrideRule(ctx *pulumi.Context, args *LookupAppOverrideRuleArgs,
 
 // A collection of arguments for invoking getAppOverrideRule.
 type LookupAppOverrideRuleArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
+	// Name
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getAppOverrideRule.
 type LookupAppOverrideRuleResult struct {
-	// The Application param.
+	// Application
 	Application string `pulumi:"application"`
-	// The Description param. String length must not exceed 1024 characters.
+	// Description
 	Description string `pulumi:"description"`
-	// The Destinations param.
+	// Destination
 	Destinations []string `pulumi:"destinations"`
-	// The Disabled param. Default: `false`.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Disabled
 	Disabled bool `pulumi:"disabled"`
-	// The Froms param.
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// From
 	Froms []string `pulumi:"froms"`
-	// The GroupTag param.
+	// Group tag
 	GroupTag string `pulumi:"groupTag"`
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// Name
 	Name string `pulumi:"name"`
-	// The NegateDestination param. Default: `false`.
+	// Negate destination
 	NegateDestination bool `pulumi:"negateDestination"`
-	// The NegateSource param. Default: `false`.
+	// Negate source
 	NegateSource bool `pulumi:"negateSource"`
-	// The Port param. Value must be between 0 and 65535.
+	// Port
 	Port int `pulumi:"port"`
-	// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+	// Protocol
 	Protocol string `pulumi:"protocol"`
-	// The Sources param.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Source
 	Sources []string `pulumi:"sources"`
-	// The Tags param.
+	// Tag
 	Tags []string `pulumi:"tags"`
 	Tfid string   `pulumi:"tfid"`
-	// The Tos param.
+	// To
 	Tos []string `pulumi:"tos"`
 }
 
@@ -100,8 +82,10 @@ func LookupAppOverrideRuleOutput(ctx *pulumi.Context, args LookupAppOverrideRule
 
 // A collection of arguments for invoking getAppOverrideRule.
 type LookupAppOverrideRuleOutputArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupAppOverrideRuleOutputArgs) ElementType() reflect.Type {
@@ -123,72 +107,87 @@ func (o LookupAppOverrideRuleResultOutput) ToLookupAppOverrideRuleResultOutputWi
 	return o
 }
 
-// The Application param.
+// Application
 func (o LookupAppOverrideRuleResultOutput) Application() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Application }).(pulumi.StringOutput)
 }
 
-// The Description param. String length must not exceed 1024 characters.
+// Description
 func (o LookupAppOverrideRuleResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The Destinations param.
+// Destination
 func (o LookupAppOverrideRuleResultOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) []string { return v.Destinations }).(pulumi.StringArrayOutput)
 }
 
-// The Disabled param. Default: `false`.
+// The device in which the resource is defined
+func (o LookupAppOverrideRuleResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Disabled
 func (o LookupAppOverrideRuleResultOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// The Froms param.
+// The folder in which the resource is defined
+func (o LookupAppOverrideRuleResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// From
 func (o LookupAppOverrideRuleResultOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) []string { return v.Froms }).(pulumi.StringArrayOutput)
 }
 
-// The GroupTag param.
+// Group tag
 func (o LookupAppOverrideRuleResultOutput) GroupTag() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.GroupTag }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// UUID of the resource
 func (o LookupAppOverrideRuleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+// Name
 func (o LookupAppOverrideRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The NegateDestination param. Default: `false`.
+// Negate destination
 func (o LookupAppOverrideRuleResultOutput) NegateDestination() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) bool { return v.NegateDestination }).(pulumi.BoolOutput)
 }
 
-// The NegateSource param. Default: `false`.
+// Negate source
 func (o LookupAppOverrideRuleResultOutput) NegateSource() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) bool { return v.NegateSource }).(pulumi.BoolOutput)
 }
 
-// The Port param. Value must be between 0 and 65535.
+// Port
 func (o LookupAppOverrideRuleResultOutput) Port() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) int { return v.Port }).(pulumi.IntOutput)
 }
 
-// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+// Protocol
 func (o LookupAppOverrideRuleResultOutput) Protocol() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Protocol }).(pulumi.StringOutput)
 }
 
-// The Sources param.
+// The snippet in which the resource is defined
+func (o LookupAppOverrideRuleResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// Source
 func (o LookupAppOverrideRuleResultOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
-// The Tags param.
+// Tag
 func (o LookupAppOverrideRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
@@ -197,7 +196,7 @@ func (o LookupAppOverrideRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Tos param.
+// To
 func (o LookupAppOverrideRuleResultOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) []string { return v.Tos }).(pulumi.StringArrayOutput)
 }

@@ -11,38 +11,38 @@ import java.util.Objects;
 @CustomType
 public final class GetScepProfileListDataCertificateAttributes {
     /**
-     * @return The Dnsname param.
+     * @return Dnsname
      * 
      */
     private String dnsname;
     /**
-     * @return The Rfc822name param.
+     * @return Rfc822name
      * 
      */
     private String rfc822name;
     /**
-     * @return The UniformResourceIdentifier param.
+     * @return Uniform resource identifier
      * 
      */
     private String uniformResourceIdentifier;
 
     private GetScepProfileListDataCertificateAttributes() {}
     /**
-     * @return The Dnsname param.
+     * @return Dnsname
      * 
      */
     public String dnsname() {
         return this.dnsname;
     }
     /**
-     * @return The Rfc822name param.
+     * @return Rfc822name
      * 
      */
     public String rfc822name() {
         return this.rfc822name;
     }
     /**
-     * @return The UniformResourceIdentifier param.
+     * @return Uniform resource identifier
      * 
      */
     public String uniformResourceIdentifier() {

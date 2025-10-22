@@ -12,62 +12,62 @@ import java.util.Objects;
 @CustomType
 public final class GetWildfireAntiVirusProfileListDataRule {
     /**
-     * @return The Analysis param. String must be one of these: `&#34;public-cloud&#34;`, `&#34;private-cloud&#34;`.
+     * @return Analysis
      * 
      */
     private String analysis;
     /**
-     * @return The Applications param.
+     * @return Application
      * 
      */
     private List<String> applications;
     /**
-     * @return The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`.
+     * @return Direction
      * 
      */
     private String direction;
     /**
-     * @return The FileTypes param.
+     * @return File type
      * 
      */
     private List<String> fileTypes;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
 
     private GetWildfireAntiVirusProfileListDataRule() {}
     /**
-     * @return The Analysis param. String must be one of these: `&#34;public-cloud&#34;`, `&#34;private-cloud&#34;`.
+     * @return Analysis
      * 
      */
     public String analysis() {
         return this.analysis;
     }
     /**
-     * @return The Applications param.
+     * @return Application
      * 
      */
     public List<String> applications() {
         return this.applications;
     }
     /**
-     * @return The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`.
+     * @return Direction
      * 
      */
     public String direction() {
         return this.direction;
     }
     /**
-     * @return The FileTypes param.
+     * @return File type
      * 
      */
     public List<String> fileTypes() {
         return this.fileTypes;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {

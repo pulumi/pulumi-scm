@@ -25,18 +25,20 @@ class TacacsServerProfileArgs:
                  servers: pulumi.Input[Sequence[pulumi.Input['TacacsServerProfileServerArgs']]],
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  use_single_connection: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a TacacsServerProfile resource.
-        :param pulumi.Input[_builtins.str] protocol: The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
-        :param pulumi.Input[Sequence[pulumi.Input['TacacsServerProfileServerArgs']]] servers: The Servers param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.int] timeout: The Timeout param. Value must be between 1 and 30.
-        :param pulumi.Input[_builtins.bool] use_single_connection: The UseSingleConnection param.
+        :param pulumi.Input[_builtins.str] protocol: The TACACS+ authentication protocol
+        :param pulumi.Input[Sequence[pulumi.Input['TacacsServerProfileServerArgs']]] servers: The TACACS+ server configuration
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the TACACS+ server profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.int] timeout: The TACACS+ timeout (seconds)
+        :param pulumi.Input[_builtins.bool] use_single_connection: Use a single TACACS+ connection?
         """
         pulumi.set(__self__, "protocol", protocol)
         pulumi.set(__self__, "servers", servers)
@@ -44,6 +46,8 @@ class TacacsServerProfileArgs:
             pulumi.set(__self__, "device", device)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if timeout is not None:
@@ -55,7 +59,7 @@ class TacacsServerProfileArgs:
     @pulumi.getter
     def protocol(self) -> pulumi.Input[_builtins.str]:
         """
-        The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+        The TACACS+ authentication protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -67,7 +71,7 @@ class TacacsServerProfileArgs:
     @pulumi.getter
     def servers(self) -> pulumi.Input[Sequence[pulumi.Input['TacacsServerProfileServerArgs']]]:
         """
-        The Servers param.
+        The TACACS+ server configuration
         """
         return pulumi.get(self, "servers")
 
@@ -79,7 +83,7 @@ class TacacsServerProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -91,7 +95,7 @@ class TacacsServerProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -101,9 +105,21 @@ class TacacsServerProfileArgs:
 
     @_builtins.property
     @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name of the TACACS+ server profile
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -115,7 +131,7 @@ class TacacsServerProfileArgs:
     @pulumi.getter
     def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The Timeout param. Value must be between 1 and 30.
+        The TACACS+ timeout (seconds)
         """
         return pulumi.get(self, "timeout")
 
@@ -127,7 +143,7 @@ class TacacsServerProfileArgs:
     @pulumi.getter(name="useSingleConnection")
     def use_single_connection(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The UseSingleConnection param.
+        Use a single TACACS+ connection?
         """
         return pulumi.get(self, "use_single_connection")
 
@@ -140,8 +156,8 @@ class TacacsServerProfileArgs:
 class _TacacsServerProfileState:
     def __init__(__self__, *,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
-                 encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  servers: Optional[pulumi.Input[Sequence[pulumi.Input['TacacsServerProfileServerArgs']]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -150,21 +166,21 @@ class _TacacsServerProfileState:
                  use_single_connection: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering TacacsServerProfile resources.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] protocol: The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
-        :param pulumi.Input[Sequence[pulumi.Input['TacacsServerProfileServerArgs']]] servers: The Servers param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.int] timeout: The Timeout param. Value must be between 1 and 30.
-        :param pulumi.Input[_builtins.bool] use_single_connection: The UseSingleConnection param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the TACACS+ server profile
+        :param pulumi.Input[_builtins.str] protocol: The TACACS+ authentication protocol
+        :param pulumi.Input[Sequence[pulumi.Input['TacacsServerProfileServerArgs']]] servers: The TACACS+ server configuration
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.int] timeout: The TACACS+ timeout (seconds)
+        :param pulumi.Input[_builtins.bool] use_single_connection: Use a single TACACS+ connection?
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
-        if encrypted_values is not None:
-            pulumi.set(__self__, "encrypted_values", encrypted_values)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
         if protocol is not None:
             pulumi.set(__self__, "protocol", protocol)
         if servers is not None:
@@ -182,7 +198,7 @@ class _TacacsServerProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -191,22 +207,10 @@ class _TacacsServerProfileState:
         pulumi.set(self, "device", value)
 
     @_builtins.property
-    @pulumi.getter(name="encryptedValues")
-    def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
-        """
-        (Internal use) Encrypted values returned from the API.
-        """
-        return pulumi.get(self, "encrypted_values")
-
-    @encrypted_values.setter
-    def encrypted_values(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "encrypted_values", value)
-
-    @_builtins.property
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -216,9 +220,21 @@ class _TacacsServerProfileState:
 
     @_builtins.property
     @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name of the TACACS+ server profile
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
     def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+        The TACACS+ authentication protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -230,7 +246,7 @@ class _TacacsServerProfileState:
     @pulumi.getter
     def servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TacacsServerProfileServerArgs']]]]:
         """
-        The Servers param.
+        The TACACS+ server configuration
         """
         return pulumi.get(self, "servers")
 
@@ -242,7 +258,7 @@ class _TacacsServerProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -263,7 +279,7 @@ class _TacacsServerProfileState:
     @pulumi.getter
     def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The Timeout param. Value must be between 1 and 30.
+        The TACACS+ timeout (seconds)
         """
         return pulumi.get(self, "timeout")
 
@@ -275,7 +291,7 @@ class _TacacsServerProfileState:
     @pulumi.getter(name="useSingleConnection")
     def use_single_connection(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The UseSingleConnection param.
+        Use a single TACACS+ connection?
         """
         return pulumi.get(self, "use_single_connection")
 
@@ -292,6 +308,7 @@ class TacacsServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -299,26 +316,18 @@ class TacacsServerProfile(pulumi.CustomResource):
                  use_single_connection: Optional[pulumi.Input[_builtins.bool]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.TacacsServerProfile("example")
-        ```
+        TacacsServerProfile resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] protocol: The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]] servers: The Servers param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.int] timeout: The Timeout param. Value must be between 1 and 30.
-        :param pulumi.Input[_builtins.bool] use_single_connection: The UseSingleConnection param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the TACACS+ server profile
+        :param pulumi.Input[_builtins.str] protocol: The TACACS+ authentication protocol
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]] servers: The TACACS+ server configuration
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.int] timeout: The TACACS+ timeout (seconds)
+        :param pulumi.Input[_builtins.bool] use_single_connection: Use a single TACACS+ connection?
         """
         ...
     @overload
@@ -327,16 +336,7 @@ class TacacsServerProfile(pulumi.CustomResource):
                  args: TacacsServerProfileArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.TacacsServerProfile("example")
-        ```
+        TacacsServerProfile resource
 
         :param str resource_name: The name of the resource.
         :param TacacsServerProfileArgs args: The arguments to use to populate this resource's properties.
@@ -355,6 +355,7 @@ class TacacsServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -371,6 +372,7 @@ class TacacsServerProfile(pulumi.CustomResource):
 
             __props__.__dict__["device"] = device
             __props__.__dict__["folder"] = folder
+            __props__.__dict__["name"] = name
             if protocol is None and not opts.urn:
                 raise TypeError("Missing required property 'protocol'")
             __props__.__dict__["protocol"] = protocol
@@ -380,10 +382,7 @@ class TacacsServerProfile(pulumi.CustomResource):
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["timeout"] = timeout
             __props__.__dict__["use_single_connection"] = use_single_connection
-            __props__.__dict__["encrypted_values"] = None
             __props__.__dict__["tfid"] = None
-        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["encryptedValues"])
-        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(TacacsServerProfile, __self__).__init__(
             'scm:index/tacacsServerProfile:TacacsServerProfile',
             resource_name,
@@ -395,8 +394,8 @@ class TacacsServerProfile(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             device: Optional[pulumi.Input[_builtins.str]] = None,
-            encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
             folder: Optional[pulumi.Input[_builtins.str]] = None,
+            name: Optional[pulumi.Input[_builtins.str]] = None,
             protocol: Optional[pulumi.Input[_builtins.str]] = None,
             servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -410,22 +409,22 @@ class TacacsServerProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] protocol: The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]] servers: The Servers param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.int] timeout: The Timeout param. Value must be between 1 and 30.
-        :param pulumi.Input[_builtins.bool] use_single_connection: The UseSingleConnection param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the TACACS+ server profile
+        :param pulumi.Input[_builtins.str] protocol: The TACACS+ authentication protocol
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TacacsServerProfileServerArgs', 'TacacsServerProfileServerArgsDict']]]] servers: The TACACS+ server configuration
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.int] timeout: The TACACS+ timeout (seconds)
+        :param pulumi.Input[_builtins.bool] use_single_connection: Use a single TACACS+ connection?
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
         __props__ = _TacacsServerProfileState.__new__(_TacacsServerProfileState)
 
         __props__.__dict__["device"] = device
-        __props__.__dict__["encrypted_values"] = encrypted_values
         __props__.__dict__["folder"] = folder
+        __props__.__dict__["name"] = name
         __props__.__dict__["protocol"] = protocol
         __props__.__dict__["servers"] = servers
         __props__.__dict__["snippet"] = snippet
@@ -438,31 +437,31 @@ class TacacsServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
-
-    @_builtins.property
-    @pulumi.getter(name="encryptedValues")
-    def encrypted_values(self) -> pulumi.Output[Mapping[str, _builtins.str]]:
-        """
-        (Internal use) Encrypted values returned from the API.
-        """
-        return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
+    def name(self) -> pulumi.Output[_builtins.str]:
+        """
+        The name of the TACACS+ server profile
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
     def protocol(self) -> pulumi.Output[_builtins.str]:
         """
-        The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+        The TACACS+ authentication protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -470,7 +469,7 @@ class TacacsServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def servers(self) -> pulumi.Output[Sequence['outputs.TacacsServerProfileServer']]:
         """
-        The Servers param.
+        The TACACS+ server configuration
         """
         return pulumi.get(self, "servers")
 
@@ -478,7 +477,7 @@ class TacacsServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -491,7 +490,7 @@ class TacacsServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        The Timeout param. Value must be between 1 and 30.
+        The TACACS+ timeout (seconds)
         """
         return pulumi.get(self, "timeout")
 
@@ -499,7 +498,7 @@ class TacacsServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="useSingleConnection")
     def use_single_connection(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The UseSingleConnection param.
+        Use a single TACACS+ connection?
         """
         return pulumi.get(self, "use_single_connection")
 

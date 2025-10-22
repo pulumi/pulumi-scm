@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetExternalDynamicListTypeIpIpAuth;
+import com.pulumi.scm.outputs.GetExternalDynamicListTypeIpAuth;
 import com.pulumi.scm.outputs.GetExternalDynamicListTypeIpRecurring;
 import java.lang.String;
 import java.util.List;
@@ -14,74 +14,74 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeIp {
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    private GetExternalDynamicListTypeIpAuth auth;
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     private String certificateProfile;
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return The IpAuth param.
-     * 
-     */
-    private GetExternalDynamicListTypeIpIpAuth ipAuth;
-    /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     private GetExternalDynamicListTypeIpRecurring recurring;
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
     private String url;
 
     private GetExternalDynamicListTypeIp() {}
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    public GetExternalDynamicListTypeIpAuth auth() {
+        return this.auth;
+    }
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     public String certificateProfile() {
         return this.certificateProfile;
     }
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return The IpAuth param.
-     * 
-     */
-    public GetExternalDynamicListTypeIpIpAuth ipAuth() {
-        return this.ipAuth;
-    }
-    /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     public GetExternalDynamicListTypeIpRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
     public String url() {
@@ -97,23 +97,31 @@ public final class GetExternalDynamicListTypeIp {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetExternalDynamicListTypeIpAuth auth;
         private String certificateProfile;
         private String description;
         private List<String> exceptionLists;
-        private GetExternalDynamicListTypeIpIpAuth ipAuth;
         private GetExternalDynamicListTypeIpRecurring recurring;
         private String url;
         public Builder() {}
         public Builder(GetExternalDynamicListTypeIp defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.auth = defaults.auth;
     	      this.certificateProfile = defaults.certificateProfile;
     	      this.description = defaults.description;
     	      this.exceptionLists = defaults.exceptionLists;
-    	      this.ipAuth = defaults.ipAuth;
     	      this.recurring = defaults.recurring;
     	      this.url = defaults.url;
         }
 
+        @CustomType.Setter
+        public Builder auth(GetExternalDynamicListTypeIpAuth auth) {
+            if (auth == null) {
+              throw new MissingRequiredPropertyException("GetExternalDynamicListTypeIp", "auth");
+            }
+            this.auth = auth;
+            return this;
+        }
         @CustomType.Setter
         public Builder certificateProfile(String certificateProfile) {
             if (certificateProfile == null) {
@@ -142,14 +150,6 @@ public final class GetExternalDynamicListTypeIp {
             return exceptionLists(List.of(exceptionLists));
         }
         @CustomType.Setter
-        public Builder ipAuth(GetExternalDynamicListTypeIpIpAuth ipAuth) {
-            if (ipAuth == null) {
-              throw new MissingRequiredPropertyException("GetExternalDynamicListTypeIp", "ipAuth");
-            }
-            this.ipAuth = ipAuth;
-            return this;
-        }
-        @CustomType.Setter
         public Builder recurring(GetExternalDynamicListTypeIpRecurring recurring) {
             if (recurring == null) {
               throw new MissingRequiredPropertyException("GetExternalDynamicListTypeIp", "recurring");
@@ -167,10 +167,10 @@ public final class GetExternalDynamicListTypeIp {
         }
         public GetExternalDynamicListTypeIp build() {
             final var _resultValue = new GetExternalDynamicListTypeIp();
+            _resultValue.auth = auth;
             _resultValue.certificateProfile = certificateProfile;
             _resultValue.description = description;
             _resultValue.exceptionLists = exceptionLists;
-            _resultValue.ipAuth = ipAuth;
             _resultValue.recurring = recurring;
             _resultValue.url = url;
             return _resultValue;

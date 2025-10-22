@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class AuthenticationProfileMethodKerberos
     {
         /// <summary>
-        /// The Realm param.
+        /// Realm
         /// </summary>
         public readonly string? Realm;
         /// <summary>
-        /// The ServerProfile param.
+        /// Server profile
         /// </summary>
         public readonly string? ServerProfile;
 

@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.inputs.HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs;
 import java.lang.String;
 import java.util.List;
@@ -18,29 +19,29 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
     public static final HipObjectPatchManagementCriteriaMissingPatchesArgs Empty = new HipObjectPatchManagementCriteriaMissingPatchesArgs();
 
     /**
-     * The Check param. String must be one of these: `&#34;has-any&#34;`, `&#34;has-none&#34;`, `&#34;has-all&#34;`. Default: `&#34;has-any&#34;`.
+     * Check
      * 
      */
-    @Import(name="check")
-    private @Nullable Output<String> check;
+    @Import(name="check", required=true)
+    private Output<String> check;
 
     /**
-     * @return The Check param. String must be one of these: `&#34;has-any&#34;`, `&#34;has-none&#34;`, `&#34;has-all&#34;`. Default: `&#34;has-any&#34;`.
+     * @return Check
      * 
      */
-    public Optional<Output<String>> check() {
-        return Optional.ofNullable(this.check);
+    public Output<String> check() {
+        return this.check;
     }
 
     /**
-     * The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * Patches
      * 
      */
     @Import(name="patches")
     private @Nullable Output<List<String>> patches;
 
     /**
-     * @return The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Patches
      * 
      */
     public Optional<Output<List<String>>> patches() {
@@ -48,14 +49,14 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
     }
 
     /**
-     * The Severity param.
+     * Severity
      * 
      */
     @Import(name="severity")
     private @Nullable Output<HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs> severity;
 
     /**
-     * @return The Severity param.
+     * @return Severity
      * 
      */
     public Optional<Output<HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs>> severity() {
@@ -89,18 +90,18 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
         }
 
         /**
-         * @param check The Check param. String must be one of these: `&#34;has-any&#34;`, `&#34;has-none&#34;`, `&#34;has-all&#34;`. Default: `&#34;has-any&#34;`.
+         * @param check Check
          * 
          * @return builder
          * 
          */
-        public Builder check(@Nullable Output<String> check) {
+        public Builder check(Output<String> check) {
             $.check = check;
             return this;
         }
 
         /**
-         * @param check The Check param. String must be one of these: `&#34;has-any&#34;`, `&#34;has-none&#34;`, `&#34;has-all&#34;`. Default: `&#34;has-any&#34;`.
+         * @param check Check
          * 
          * @return builder
          * 
@@ -110,7 +111,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
         }
 
         /**
-         * @param patches The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+         * @param patches Patches
          * 
          * @return builder
          * 
@@ -121,7 +122,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
         }
 
         /**
-         * @param patches The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+         * @param patches Patches
          * 
          * @return builder
          * 
@@ -131,7 +132,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
         }
 
         /**
-         * @param patches The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+         * @param patches Patches
          * 
          * @return builder
          * 
@@ -141,7 +142,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
         }
 
         /**
-         * @param severity The Severity param.
+         * @param severity Severity
          * 
          * @return builder
          * 
@@ -152,7 +153,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
         }
 
         /**
-         * @param severity The Severity param.
+         * @param severity Severity
          * 
          * @return builder
          * 
@@ -162,6 +163,9 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesArgs extends co
         }
 
         public HipObjectPatchManagementCriteriaMissingPatchesArgs build() {
+            if ($.check == null) {
+                throw new MissingRequiredPropertyException("HipObjectPatchManagementCriteriaMissingPatchesArgs", "check");
+            }
             return $;
         }
     }

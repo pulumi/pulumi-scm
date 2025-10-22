@@ -16,14 +16,14 @@ public final class QosPolicyRuleDscpTosCodepointTypeCsArgs extends com.pulumi.re
     public static final QosPolicyRuleDscpTosCodepointTypeCsArgs Empty = new QosPolicyRuleDscpTosCodepointTypeCsArgs();
 
     /**
-     * The Codepoint param.
+     * Codepoint
      * 
      */
     @Import(name="codepoint")
     private @Nullable Output<String> codepoint;
 
     /**
-     * @return The Codepoint param.
+     * @return Codepoint
      * 
      */
     public Optional<Output<String>> codepoint() {
@@ -55,7 +55,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeCsArgs extends com.pulumi.re
         }
 
         /**
-         * @param codepoint The Codepoint param.
+         * @param codepoint Codepoint
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeCsArgs extends com.pulumi.re
         }
 
         /**
-         * @param codepoint The Codepoint param.
+         * @param codepoint Codepoint
          * 
          * @return builder
          * 

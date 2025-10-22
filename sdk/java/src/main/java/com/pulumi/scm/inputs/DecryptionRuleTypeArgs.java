@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Boolean;
+import com.pulumi.scm.inputs.DecryptionRuleTypeSslForwardProxyArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,29 +17,29 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
     public static final DecryptionRuleTypeArgs Empty = new DecryptionRuleTypeArgs();
 
     /**
-     * The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+     * Ssl forward proxy
      * 
      */
     @Import(name="sslForwardProxy")
-    private @Nullable Output<Boolean> sslForwardProxy;
+    private @Nullable Output<DecryptionRuleTypeSslForwardProxyArgs> sslForwardProxy;
 
     /**
-     * @return The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+     * @return Ssl forward proxy
      * 
      */
-    public Optional<Output<Boolean>> sslForwardProxy() {
+    public Optional<Output<DecryptionRuleTypeSslForwardProxyArgs>> sslForwardProxy() {
         return Optional.ofNullable(this.sslForwardProxy);
     }
 
     /**
-     * add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+     * add the certificate name for SSL inbound inspection
      * 
      */
     @Import(name="sslInboundInspection")
     private @Nullable Output<String> sslInboundInspection;
 
     /**
-     * @return add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+     * @return add the certificate name for SSL inbound inspection
      * 
      */
     public Optional<Output<String>> sslInboundInspection() {
@@ -72,28 +72,28 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sslForwardProxy The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+         * @param sslForwardProxy Ssl forward proxy
          * 
          * @return builder
          * 
          */
-        public Builder sslForwardProxy(@Nullable Output<Boolean> sslForwardProxy) {
+        public Builder sslForwardProxy(@Nullable Output<DecryptionRuleTypeSslForwardProxyArgs> sslForwardProxy) {
             $.sslForwardProxy = sslForwardProxy;
             return this;
         }
 
         /**
-         * @param sslForwardProxy The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+         * @param sslForwardProxy Ssl forward proxy
          * 
          * @return builder
          * 
          */
-        public Builder sslForwardProxy(Boolean sslForwardProxy) {
+        public Builder sslForwardProxy(DecryptionRuleTypeSslForwardProxyArgs sslForwardProxy) {
             return sslForwardProxy(Output.of(sslForwardProxy));
         }
 
         /**
-         * @param sslInboundInspection add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+         * @param sslInboundInspection add the certificate name for SSL inbound inspection
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sslInboundInspection add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+         * @param sslInboundInspection add the certificate name for SSL inbound inspection
          * 
          * @return builder
          * 

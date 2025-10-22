@@ -12,76 +12,25 @@ namespace Pulumi.Scm
     public static class GetServiceConnection
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// ServiceConnection data source
         /// 
         /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetServiceConnection.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///         Folder = "Service Connections",
-        ///     });
-        /// 
-        /// });
-        /// ```
         /// </summary>
         public static Task<GetServiceConnectionResult> InvokeAsync(GetServiceConnectionArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetServiceConnectionResult>("scm:index/getServiceConnection:getServiceConnection", args ?? new GetServiceConnectionArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ServiceConnection data source
         /// 
         /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetServiceConnection.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///         Folder = "Service Connections",
-        ///     });
-        /// 
-        /// });
-        /// ```
         /// </summary>
         public static Output<GetServiceConnectionResult> Invoke(GetServiceConnectionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceConnectionResult>("scm:index/getServiceConnection:getServiceConnection", args ?? new GetServiceConnectionInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ServiceConnection data source
         /// 
         /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetServiceConnection.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///         Folder = "Service Connections",
-        ///     });
-        /// 
-        /// });
-        /// ```
         /// </summary>
         public static Output<GetServiceConnectionResult> Invoke(GetServiceConnectionInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceConnectionResult>("scm:index/getServiceConnection:getServiceConnection", args ?? new GetServiceConnectionInvokeArgs(), options.WithDefaults());
@@ -91,16 +40,16 @@ namespace Pulumi.Scm
     public sealed class GetServiceConnectionArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-        /// </summary>
-        [Input("folder")]
-        public string? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// The UUID of the service connection
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the service connection
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetServiceConnectionArgs()
         {
@@ -111,16 +60,16 @@ namespace Pulumi.Scm
     public sealed class GetServiceConnectionInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// The UUID of the service connection
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the service connection
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetServiceConnectionInvokeArgs()
         {
@@ -133,63 +82,63 @@ namespace Pulumi.Scm
     public sealed class GetServiceConnectionResult
     {
         /// <summary>
-        /// The BackupSC param.
+        /// Backup s c
         /// </summary>
         public readonly string BackupSC;
         /// <summary>
-        /// The BgpPeer param.
+        /// Bgp peer
         /// </summary>
         public readonly Outputs.GetServiceConnectionBgpPeerResult BgpPeer;
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+        /// Map of sensitive values returned from the API.
         /// </summary>
-        public readonly string Folder;
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
         /// <summary>
-        /// The Id param.
+        /// The UUID of the service connection
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The IpsecTunnel param.
+        /// Ipsec tunnel
         /// </summary>
         public readonly string IpsecTunnel;
         /// <summary>
-        /// The Name param.
+        /// The name of the service connection
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NatPool param.
+        /// Nat pool
         /// </summary>
         public readonly string NatPool;
         /// <summary>
-        /// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+        /// No export community
         /// </summary>
         public readonly string NoExportCommunity;
         /// <summary>
-        /// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+        /// Onboarding type
         /// </summary>
         public readonly string OnboardingType;
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         public readonly Outputs.GetServiceConnectionProtocolResult Protocol;
         /// <summary>
-        /// The Qos param.
+        /// Qos
         /// </summary>
         public readonly Outputs.GetServiceConnectionQosResult Qos;
         /// <summary>
-        /// The Region param.
+        /// Region
         /// </summary>
         public readonly string Region;
         /// <summary>
-        /// The SecondaryIpsecTunnel param.
+        /// Secondary ipsec tunnel
         /// </summary>
         public readonly string SecondaryIpsecTunnel;
         /// <summary>
-        /// The SourceNat param.
+        /// Source nat
         /// </summary>
         public readonly bool SourceNat;
         /// <summary>
-        /// The Subnets param.
+        /// Subnets
         /// </summary>
         public readonly ImmutableArray<string> Subnets;
         public readonly string Tfid;
@@ -200,7 +149,7 @@ namespace Pulumi.Scm
 
             Outputs.GetServiceConnectionBgpPeerResult bgpPeer,
 
-            string folder,
+            ImmutableDictionary<string, string> encryptedValues,
 
             string id,
 
@@ -230,7 +179,7 @@ namespace Pulumi.Scm
         {
             BackupSC = backupSC;
             BgpPeer = bgpPeer;
-            Folder = folder;
+            EncryptedValues = encryptedValues;
             Id = id;
             IpsecTunnel = ipsecTunnel;
             Name = name;

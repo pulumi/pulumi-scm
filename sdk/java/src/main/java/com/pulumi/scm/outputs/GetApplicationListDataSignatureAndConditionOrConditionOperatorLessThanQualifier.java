@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationListDataSignatureAndConditionOrConditionOperatorLessThanQualifier {
     /**
-     * @return The Name param.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     private String name;
     /**
-     * @return The Value param.
+     * @return Value
      * 
      */
     private String value;
 
     private GetApplicationListDataSignatureAndConditionOrConditionOperatorLessThanQualifier() {}
     /**
-     * @return The Name param.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Value param.
+     * @return Value
      * 
      */
     public String value() {

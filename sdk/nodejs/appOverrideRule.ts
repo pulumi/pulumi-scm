@@ -5,16 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.AppOverrideRule("example", {});
- * ```
+ * AppOverrideRule resource
  */
 export class AppOverrideRule extends pulumi.CustomResource {
     /**
@@ -45,76 +36,72 @@ export class AppOverrideRule extends pulumi.CustomResource {
     }
 
     /**
-     * The Application param.
+     * Application
      */
     declare public readonly application: pulumi.Output<string>;
     /**
-     * The Description param. String length must not exceed 1024 characters.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Destinations param.
+     * Destination
      */
     declare public readonly destinations: pulumi.Output<string[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Disabled param. Default: `false`.
+     * Disabled
      */
     declare public readonly disabled: pulumi.Output<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Froms param.
+     * From
      */
     declare public readonly froms: pulumi.Output<string[]>;
     /**
-     * The GroupTag param.
+     * Group tag
      */
     declare public readonly groupTag: pulumi.Output<string | undefined>;
     /**
-     * The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The NegateDestination param. Default: `false`.
+     * Negate destination
      */
     declare public readonly negateDestination: pulumi.Output<boolean>;
     /**
-     * The NegateSource param. Default: `false`.
+     * Negate source
      */
     declare public readonly negateSource: pulumi.Output<boolean>;
     /**
-     * The Port param. Value must be between 0 and 65535.
+     * Port
      */
     declare public readonly port: pulumi.Output<number>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-     */
-    declare public readonly position: pulumi.Output<string>;
-    /**
-     * The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+     * Protocol
      */
     declare public readonly protocol: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The Sources param.
+     * Source
      */
     declare public readonly sources: pulumi.Output<string[]>;
     /**
-     * The Tags param.
+     * Tag
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The Tos param.
+     * To
      */
     declare public readonly tos: pulumi.Output<string[]>;
 
@@ -143,7 +130,6 @@ export class AppOverrideRule extends pulumi.CustomResource {
             resourceInputs["negateDestination"] = state?.negateDestination;
             resourceInputs["negateSource"] = state?.negateSource;
             resourceInputs["port"] = state?.port;
-            resourceInputs["position"] = state?.position;
             resourceInputs["protocol"] = state?.protocol;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["sources"] = state?.sources;
@@ -185,7 +171,6 @@ export class AppOverrideRule extends pulumi.CustomResource {
             resourceInputs["negateDestination"] = args?.negateDestination;
             resourceInputs["negateSource"] = args?.negateSource;
             resourceInputs["port"] = args?.port;
-            resourceInputs["position"] = args?.position;
             resourceInputs["protocol"] = args?.protocol;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["sources"] = args?.sources;
@@ -203,76 +188,72 @@ export class AppOverrideRule extends pulumi.CustomResource {
  */
 export interface AppOverrideRuleState {
     /**
-     * The Application param.
+     * Application
      */
     application?: pulumi.Input<string>;
     /**
-     * The Description param. String length must not exceed 1024 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Destinations param.
+     * Destination
      */
     destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Disabled param. Default: `false`.
+     * Disabled
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Froms param.
+     * From
      */
     froms?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The GroupTag param.
+     * Group tag
      */
     groupTag?: pulumi.Input<string>;
     /**
-     * The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The NegateDestination param. Default: `false`.
+     * Negate destination
      */
     negateDestination?: pulumi.Input<boolean>;
     /**
-     * The NegateSource param. Default: `false`.
+     * Negate source
      */
     negateSource?: pulumi.Input<boolean>;
     /**
-     * The Port param. Value must be between 0 and 65535.
+     * Port
      */
     port?: pulumi.Input<number>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-     */
-    position?: pulumi.Input<string>;
-    /**
-     * The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+     * Protocol
      */
     protocol?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Sources param.
+     * Source
      */
     sources?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tags param.
+     * Tag
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
     /**
-     * The Tos param.
+     * To
      */
     tos?: pulumi.Input<pulumi.Input<string>[]>;
 }
@@ -282,75 +263,71 @@ export interface AppOverrideRuleState {
  */
 export interface AppOverrideRuleArgs {
     /**
-     * The Application param.
+     * Application
      */
     application: pulumi.Input<string>;
     /**
-     * The Description param. String length must not exceed 1024 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Destinations param.
+     * Destination
      */
     destinations: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Disabled param. Default: `false`.
+     * Disabled
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Froms param.
+     * From
      */
     froms: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The GroupTag param.
+     * Group tag
      */
     groupTag?: pulumi.Input<string>;
     /**
-     * The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The NegateDestination param. Default: `false`.
+     * Negate destination
      */
     negateDestination?: pulumi.Input<boolean>;
     /**
-     * The NegateSource param. Default: `false`.
+     * Negate source
      */
     negateSource?: pulumi.Input<boolean>;
     /**
-     * The Port param. Value must be between 0 and 65535.
+     * Port
      */
     port: pulumi.Input<number>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-     */
-    position?: pulumi.Input<string>;
-    /**
-     * The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+     * Protocol
      */
     protocol: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Sources param.
+     * Source
      */
     sources: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tags param.
+     * Tag
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tos param.
+     * To
      */
     tos: pulumi.Input<pulumi.Input<string>[]>;
 }

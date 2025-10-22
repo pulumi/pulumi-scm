@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getAuthenticationProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * AuthenticationProfile data source
  */
 export function getAuthenticationProfile(args: GetAuthenticationProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationProfile:getAuthenticationProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getAuthenticationProfile(args: GetAuthenticationProfileArgs, opt
  */
 export interface GetAuthenticationProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the authentication profile
      */
     id: string;
+    /**
+     * The name of the authentication profile
+     */
+    name?: string;
 }
 
 /**
@@ -42,61 +36,63 @@ export interface GetAuthenticationProfileArgs {
  */
 export interface GetAuthenticationProfileResult {
     /**
-     * The AllowList param.
+     * Allow list
      */
     readonly allowLists: string[];
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the authentication profile
      */
     readonly id: string;
     /**
-     * The Lockout param.
+     * Lockout
      */
     readonly lockout: outputs.GetAuthenticationProfileLockout;
     /**
-     * The Method param.
+     * Method
      */
     readonly method: outputs.GetAuthenticationProfileMethod;
     /**
-     * The MultiFactorAuth param.
+     * Multi factor auth
      */
     readonly multiFactorAuth: outputs.GetAuthenticationProfileMultiFactorAuth;
     /**
-     * The Name param.
+     * The name of the authentication profile
      */
     readonly name: string;
     /**
-     * The SingleSignOn param.
+     * Single sign on
      */
     readonly singleSignOn: outputs.GetAuthenticationProfileSingleSignOn;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * The UserDomain param. String length must not exceed 63 characters.
+     * User domain
      */
     readonly userDomain: string;
     /**
-     * The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
+     * Username modifier
      */
     readonly usernameModifier: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getAuthenticationProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * AuthenticationProfile data source
  */
 export function getAuthenticationProfileOutput(args: GetAuthenticationProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationProfile:getAuthenticationProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -105,7 +101,11 @@ export function getAuthenticationProfileOutput(args: GetAuthenticationProfileOut
  */
 export interface GetAuthenticationProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the authentication profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the authentication profile
+     */
+    name?: pulumi.Input<string>;
 }

@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class CertificateProfileCaCertificateGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The DefaultOcspUrl param.
+        /// Default OCSP URL
         /// </summary>
         [Input("defaultOcspUrl")]
         public Input<string>? DefaultOcspUrl { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// CA certificate name
         /// </summary>
-        [Input("name")]
-        public Input<string>? Name { get; set; }
+        [Input("name", required: true)]
+        public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// The OcspVerifyCert param.
+        /// OCSP verify certificate
         /// </summary>
         [Input("ocspVerifyCert")]
         public Input<string>? OcspVerifyCert { get; set; }
 
         /// <summary>
-        /// The TemplateName param.
+        /// Template name/OID
         /// </summary>
         [Input("templateName")]
         public Input<string>? TemplateName { get; set; }

@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * HipObject resource
  *
  * ## Example Usage
  */
@@ -40,67 +40,67 @@ export class HipObject extends pulumi.CustomResource {
     }
 
     /**
-     * The AntiMalware param.
+     * Anti malware
      */
-    declare public readonly antiMalware: pulumi.Output<outputs.HipObjectAntiMalware | undefined>;
+    declare public readonly antiMalware: pulumi.Output<outputs.HipObjectAntiMalware>;
     /**
-     * The Certificate param.
+     * Certificate
      */
     declare public readonly certificate: pulumi.Output<outputs.HipObjectCertificate | undefined>;
     /**
-     * The CustomChecks param.
+     * Custom checks
      */
     declare public readonly customChecks: pulumi.Output<outputs.HipObjectCustomChecks | undefined>;
     /**
-     * The DataLossPrevention param.
+     * Data loss prevention
      */
-    declare public readonly dataLossPrevention: pulumi.Output<outputs.HipObjectDataLossPrevention | undefined>;
+    declare public readonly dataLossPrevention: pulumi.Output<outputs.HipObjectDataLossPrevention>;
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The DiskBackup param.
+     * Disk backup
      */
-    declare public readonly diskBackup: pulumi.Output<outputs.HipObjectDiskBackup | undefined>;
+    declare public readonly diskBackup: pulumi.Output<outputs.HipObjectDiskBackup>;
     /**
-     * The DiskEncryption param.
+     * Disk encryption
      */
-    declare public readonly diskEncryption: pulumi.Output<outputs.HipObjectDiskEncryption | undefined>;
+    declare public readonly diskEncryption: pulumi.Output<outputs.HipObjectDiskEncryption>;
     /**
-     * The Firewall param.
+     * Firewall
      */
-    declare public readonly firewall: pulumi.Output<outputs.HipObjectFirewall | undefined>;
+    declare public readonly firewall: pulumi.Output<outputs.HipObjectFirewall>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The HostInfo param.
+     * Host info
      */
     declare public readonly hostInfo: pulumi.Output<outputs.HipObjectHostInfo | undefined>;
     /**
-     * The MobileDevice param.
+     * Mobile device
      */
     declare public readonly mobileDevice: pulumi.Output<outputs.HipObjectMobileDevice | undefined>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP object
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The NetworkInfo param.
+     * Network info
      */
     declare public readonly networkInfo: pulumi.Output<outputs.HipObjectNetworkInfo | undefined>;
     /**
-     * The PatchManagement param.
+     * Patch management
      */
-    declare public readonly patchManagement: pulumi.Output<outputs.HipObjectPatchManagement | undefined>;
+    declare public readonly patchManagement: pulumi.Output<outputs.HipObjectPatchManagement>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -165,67 +165,67 @@ export class HipObject extends pulumi.CustomResource {
  */
 export interface HipObjectState {
     /**
-     * The AntiMalware param.
+     * Anti malware
      */
     antiMalware?: pulumi.Input<inputs.HipObjectAntiMalware>;
     /**
-     * The Certificate param.
+     * Certificate
      */
     certificate?: pulumi.Input<inputs.HipObjectCertificate>;
     /**
-     * The CustomChecks param.
+     * Custom checks
      */
     customChecks?: pulumi.Input<inputs.HipObjectCustomChecks>;
     /**
-     * The DataLossPrevention param.
+     * Data loss prevention
      */
     dataLossPrevention?: pulumi.Input<inputs.HipObjectDataLossPrevention>;
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The DiskBackup param.
+     * Disk backup
      */
     diskBackup?: pulumi.Input<inputs.HipObjectDiskBackup>;
     /**
-     * The DiskEncryption param.
+     * Disk encryption
      */
     diskEncryption?: pulumi.Input<inputs.HipObjectDiskEncryption>;
     /**
-     * The Firewall param.
+     * Firewall
      */
     firewall?: pulumi.Input<inputs.HipObjectFirewall>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The HostInfo param.
+     * Host info
      */
     hostInfo?: pulumi.Input<inputs.HipObjectHostInfo>;
     /**
-     * The MobileDevice param.
+     * Mobile device
      */
     mobileDevice?: pulumi.Input<inputs.HipObjectMobileDevice>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP object
      */
     name?: pulumi.Input<string>;
     /**
-     * The NetworkInfo param.
+     * Network info
      */
     networkInfo?: pulumi.Input<inputs.HipObjectNetworkInfo>;
     /**
-     * The PatchManagement param.
+     * Patch management
      */
     patchManagement?: pulumi.Input<inputs.HipObjectPatchManagement>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -236,67 +236,67 @@ export interface HipObjectState {
  */
 export interface HipObjectArgs {
     /**
-     * The AntiMalware param.
+     * Anti malware
      */
     antiMalware?: pulumi.Input<inputs.HipObjectAntiMalware>;
     /**
-     * The Certificate param.
+     * Certificate
      */
     certificate?: pulumi.Input<inputs.HipObjectCertificate>;
     /**
-     * The CustomChecks param.
+     * Custom checks
      */
     customChecks?: pulumi.Input<inputs.HipObjectCustomChecks>;
     /**
-     * The DataLossPrevention param.
+     * Data loss prevention
      */
     dataLossPrevention?: pulumi.Input<inputs.HipObjectDataLossPrevention>;
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The DiskBackup param.
+     * Disk backup
      */
     diskBackup?: pulumi.Input<inputs.HipObjectDiskBackup>;
     /**
-     * The DiskEncryption param.
+     * Disk encryption
      */
     diskEncryption?: pulumi.Input<inputs.HipObjectDiskEncryption>;
     /**
-     * The Firewall param.
+     * Firewall
      */
     firewall?: pulumi.Input<inputs.HipObjectFirewall>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The HostInfo param.
+     * Host info
      */
     hostInfo?: pulumi.Input<inputs.HipObjectHostInfo>;
     /**
-     * The MobileDevice param.
+     * Mobile device
      */
     mobileDevice?: pulumi.Input<inputs.HipObjectMobileDevice>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP object
      */
     name?: pulumi.Input<string>;
     /**
-     * The NetworkInfo param.
+     * Network info
      */
     networkInfo?: pulumi.Input<inputs.HipObjectNetworkInfo>;
     /**
-     * The PatchManagement param.
+     * Patch management
      */
     patchManagement?: pulumi.Input<inputs.HipObjectPatchManagement>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

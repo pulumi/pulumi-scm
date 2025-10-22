@@ -10,58 +10,43 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.HttpHeaderProfile("example");
-    /// 
-    /// });
-    /// ```
+    /// HttpHeaderProfile resource
     /// </summary>
     [ScmResourceType("scm:index/httpHeaderProfile:HttpHeaderProfile")]
     public partial class HttpHeaderProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the HTTP header profile
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The HttpHeaderInsertions param.
+        /// A list of HTTP header profile rules
         /// </summary>
         [Output("httpHeaderInsertions")]
         public Output<ImmutableArray<Outputs.HttpHeaderProfileHttpHeaderInsertion>> HttpHeaderInsertions { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the HTTP header profile
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -116,19 +101,19 @@ namespace Pulumi.Scm
     public sealed class HttpHeaderProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the HTTP header profile
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -137,7 +122,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.HttpHeaderProfileHttpHeaderInsertionArgs>? _httpHeaderInsertions;
 
         /// <summary>
-        /// The HttpHeaderInsertions param.
+        /// A list of HTTP header profile rules
         /// </summary>
         public InputList<Inputs.HttpHeaderProfileHttpHeaderInsertionArgs> HttpHeaderInsertions
         {
@@ -146,13 +131,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the HTTP header profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -166,19 +151,19 @@ namespace Pulumi.Scm
     public sealed class HttpHeaderProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the HTTP header profile
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -187,7 +172,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.HttpHeaderProfileHttpHeaderInsertionGetArgs>? _httpHeaderInsertions;
 
         /// <summary>
-        /// The HttpHeaderInsertions param.
+        /// A list of HTTP header profile rules
         /// </summary>
         public InputList<Inputs.HttpHeaderProfileHttpHeaderInsertionGetArgs> HttpHeaderInsertions
         {
@@ -196,13 +181,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the HTTP header profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

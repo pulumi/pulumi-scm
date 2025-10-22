@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationResult
     {
         /// <summary>
-        /// The EncryptionState param.
+        /// Encryption state
         /// </summary>
         public readonly Outputs.GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionStateResult EncryptionState;
         /// <summary>
-        /// The Name param.
+        /// Encryption location
         /// </summary>
         public readonly string Name;
 

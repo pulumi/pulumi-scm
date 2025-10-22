@@ -20,151 +20,118 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.WildfireAntiVirusProfile;
- * import com.pulumi.scm.WildfireAntiVirusProfileArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new WildfireAntiVirusProfile("example", WildfireAntiVirusProfileArgs.builder()
- *             .folder("Shared")
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
+ * WildfireAntiVirusProfile resource
  * 
  */
 @ResourceType(type="scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile")
 public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The Description param.
+     * Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The MlavExceptions param.
+     * Mlav exception
      * 
      */
     @Export(name="mlavExceptions", refs={List.class,WildfireAntiVirusProfileMlavException.class}, tree="[0,1]")
     private Output</* @Nullable */ List<WildfireAntiVirusProfileMlavException>> mlavExceptions;
 
     /**
-     * @return The MlavExceptions param.
+     * @return Mlav exception
      * 
      */
     public Output<Optional<List<WildfireAntiVirusProfileMlavException>>> mlavExceptions() {
         return Codegen.optional(this.mlavExceptions);
     }
     /**
-     * The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return Name
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The PacketCapture param.
+     * Packet capture
      * 
      */
     @Export(name="packetCapture", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> packetCapture;
 
     /**
-     * @return The PacketCapture param.
+     * @return Packet capture
      * 
      */
     public Output<Optional<Boolean>> packetCapture() {
         return Codegen.optional(this.packetCapture);
     }
     /**
-     * The Rules param.
+     * Rules
      * 
      */
     @Export(name="rules", refs={List.class,WildfireAntiVirusProfileRule.class}, tree="[0,1]")
     private Output</* @Nullable */ List<WildfireAntiVirusProfileRule>> rules;
 
     /**
-     * @return The Rules param.
+     * @return Rules
      * 
      */
     public Output<Optional<List<WildfireAntiVirusProfileRule>>> rules() {
         return Codegen.optional(this.rules);
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -177,14 +144,14 @@ public class WildfireAntiVirusProfile extends com.pulumi.resources.CustomResourc
         return this.tfid;
     }
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      * 
      */
     @Export(name="threatExceptions", refs={List.class,WildfireAntiVirusProfileThreatException.class}, tree="[0,1]")
     private Output</* @Nullable */ List<WildfireAntiVirusProfileThreatException>> threatExceptions;
 
     /**
-     * @return The ThreatExceptions param.
+     * @return Threat exception
      * 
      */
     public Output<Optional<List<WildfireAntiVirusProfileThreatException>>> threatExceptions() {

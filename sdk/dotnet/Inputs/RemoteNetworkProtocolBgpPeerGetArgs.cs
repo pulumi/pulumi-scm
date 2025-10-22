@@ -13,28 +13,22 @@ namespace Pulumi.Scm.Inputs
     public sealed class RemoteNetworkProtocolBgpPeerGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The LocalIpAddress param.
+        /// Local peer IP address (secondary WAN)
         /// </summary>
         [Input("localIpAddress")]
         public Input<string>? LocalIpAddress { get; set; }
 
         /// <summary>
-        /// The PeerIpAddress param.
+        /// Remote peer IP address (secondary WAN)
         /// </summary>
         [Input("peerIpAddress")]
         public Input<string>? PeerIpAddress { get; set; }
-
-        /// <summary>
-        /// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `True`.
-        /// </summary>
-        [Input("sameAsPrimary")]
-        public Input<bool>? SameAsPrimary { get; set; }
 
         [Input("secret")]
         private Input<string>? _secret;
 
         /// <summary>
-        /// The Secret param.
+        /// BGP peering secret (secondary WAN)
         /// </summary>
         public Input<string>? Secret
         {

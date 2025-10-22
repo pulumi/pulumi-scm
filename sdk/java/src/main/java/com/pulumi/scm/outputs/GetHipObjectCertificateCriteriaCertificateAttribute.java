@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectCertificateCriteriaCertificateAttribute {
     /**
-     * @return Attribute Name.
+     * @return Attribute Name
      * 
      */
     private String name;
     /**
-     * @return Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Key value
      * 
      */
     private String value;
 
     private GetHipObjectCertificateCriteriaCertificateAttribute() {}
     /**
-     * @return Attribute Name.
+     * @return Attribute Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Key value
      * 
      */
     public String value() {

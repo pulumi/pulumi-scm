@@ -5,7 +5,6 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.inputs.ServiceProtocolArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,14 +18,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServiceArgs Empty = new ServiceArgs();
 
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -34,14 +33,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -49,14 +48,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -64,14 +63,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the service
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the service
      * 
      */
     public Optional<Output<String>> name() {
@@ -79,29 +78,29 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Protocol param.
+     * Protocol
      * 
      */
-    @Import(name="protocol", required=true)
-    private Output<ServiceProtocolArgs> protocol;
+    @Import(name="protocol")
+    private @Nullable Output<ServiceProtocolArgs> protocol;
 
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
-    public Output<ServiceProtocolArgs> protocol() {
-        return this.protocol;
+    public Optional<Output<ServiceProtocolArgs>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -109,14 +108,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags for service object
      * 
      */
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
     /**
-     * @return Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return Tags for service object
      * 
      */
     public Optional<Output<List<String>>> tags() {
@@ -154,7 +153,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param. String length must not exceed 1023 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -165,7 +164,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param. String length must not exceed 1023 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -175,7 +174,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -186,7 +185,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -196,7 +195,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -207,7 +206,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -217,7 +216,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the service
          * 
          * @return builder
          * 
@@ -228,7 +227,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the service
          * 
          * @return builder
          * 
@@ -238,18 +237,18 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol Protocol
          * 
          * @return builder
          * 
          */
-        public Builder protocol(Output<ServiceProtocolArgs> protocol) {
+        public Builder protocol(@Nullable Output<ServiceProtocolArgs> protocol) {
             $.protocol = protocol;
             return this;
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol Protocol
          * 
          * @return builder
          * 
@@ -259,7 +258,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -270,7 +269,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -280,7 +279,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+         * @param tags Tags for service object
          * 
          * @return builder
          * 
@@ -291,7 +290,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+         * @param tags Tags for service object
          * 
          * @return builder
          * 
@@ -301,7 +300,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+         * @param tags Tags for service object
          * 
          * @return builder
          * 
@@ -311,9 +310,6 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ServiceArgs build() {
-            if ($.protocol == null) {
-                throw new MissingRequiredPropertyException("ServiceArgs", "protocol");
-            }
             return $;
         }
     }

@@ -5,45 +5,45 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.GetIkeGatewayPeerAddressDynamic;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetIkeGatewayPeerAddress {
     /**
-     * @return The DynamicAddress param.
+     * @return Dynamic
      * 
      */
-    private Boolean dynamicAddress;
+    private GetIkeGatewayPeerAddressDynamic dynamic;
     /**
-     * @return peer gateway FQDN name. String length must not exceed 255 characters.
+     * @return peer gateway FQDN name
      * 
      */
     private String fqdn;
     /**
-     * @return peer gateway has static IP address.
+     * @return peer gateway has static IP address
      * 
      */
     private String ip;
 
     private GetIkeGatewayPeerAddress() {}
     /**
-     * @return The DynamicAddress param.
+     * @return Dynamic
      * 
      */
-    public Boolean dynamicAddress() {
-        return this.dynamicAddress;
+    public GetIkeGatewayPeerAddressDynamic dynamic() {
+        return this.dynamic;
     }
     /**
-     * @return peer gateway FQDN name. String length must not exceed 255 characters.
+     * @return peer gateway FQDN name
      * 
      */
     public String fqdn() {
         return this.fqdn;
     }
     /**
-     * @return peer gateway has static IP address.
+     * @return peer gateway has static IP address
      * 
      */
     public String ip() {
@@ -59,23 +59,23 @@ public final class GetIkeGatewayPeerAddress {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean dynamicAddress;
+        private GetIkeGatewayPeerAddressDynamic dynamic;
         private String fqdn;
         private String ip;
         public Builder() {}
         public Builder(GetIkeGatewayPeerAddress defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.dynamicAddress = defaults.dynamicAddress;
+    	      this.dynamic = defaults.dynamic;
     	      this.fqdn = defaults.fqdn;
     	      this.ip = defaults.ip;
         }
 
         @CustomType.Setter
-        public Builder dynamicAddress(Boolean dynamicAddress) {
-            if (dynamicAddress == null) {
-              throw new MissingRequiredPropertyException("GetIkeGatewayPeerAddress", "dynamicAddress");
+        public Builder dynamic(GetIkeGatewayPeerAddressDynamic dynamic) {
+            if (dynamic == null) {
+              throw new MissingRequiredPropertyException("GetIkeGatewayPeerAddress", "dynamic");
             }
-            this.dynamicAddress = dynamicAddress;
+            this.dynamic = dynamic;
             return this;
         }
         @CustomType.Setter
@@ -96,7 +96,7 @@ public final class GetIkeGatewayPeerAddress {
         }
         public GetIkeGatewayPeerAddress build() {
             final var _resultValue = new GetIkeGatewayPeerAddress();
-            _resultValue.dynamicAddress = dynamicAddress;
+            _resultValue.dynamic = dynamic;
             _resultValue.fqdn = fqdn;
             _resultValue.ip = ip;
             return _resultValue;

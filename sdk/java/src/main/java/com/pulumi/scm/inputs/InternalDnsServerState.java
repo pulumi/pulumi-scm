@@ -17,14 +17,14 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
     public static final InternalDnsServerState Empty = new InternalDnsServerState();
 
     /**
-     * The DomainNames param.
+     * The DNS domain name(s)
      * 
      */
     @Import(name="domainNames")
     private @Nullable Output<List<String>> domainNames;
 
     /**
-     * @return The DomainNames param.
+     * @return The DNS domain name(s)
      * 
      */
     public Optional<Output<List<String>>> domainNames() {
@@ -32,14 +32,14 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Name param.
+     * The name of the internet DNS server resource
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the internet DNS server resource
      * 
      */
     public Optional<Output<String>> name() {
@@ -47,14 +47,14 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Primary param.
+     * The IP address of the primary DNS server
      * 
      */
     @Import(name="primary")
     private @Nullable Output<String> primary;
 
     /**
-     * @return The Primary param.
+     * @return The IP address of the primary DNS server
      * 
      */
     public Optional<Output<String>> primary() {
@@ -62,14 +62,14 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Secondary param.
+     * The IP address of the secondary DNS server
      * 
      */
     @Import(name="secondary")
     private @Nullable Output<String> secondary;
 
     /**
-     * @return The Secondary param.
+     * @return The IP address of the secondary DNS server
      * 
      */
     public Optional<Output<String>> secondary() {
@@ -112,7 +112,7 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param domainNames The DomainNames param.
+         * @param domainNames The DNS domain name(s)
          * 
          * @return builder
          * 
@@ -123,7 +123,7 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param domainNames The DomainNames param.
+         * @param domainNames The DNS domain name(s)
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param domainNames The DomainNames param.
+         * @param domainNames The DNS domain name(s)
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the internet DNS server resource
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the internet DNS server resource
          * 
          * @return builder
          * 
@@ -164,7 +164,7 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param primary The Primary param.
+         * @param primary The IP address of the primary DNS server
          * 
          * @return builder
          * 
@@ -175,7 +175,7 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param primary The Primary param.
+         * @param primary The IP address of the primary DNS server
          * 
          * @return builder
          * 
@@ -185,7 +185,7 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param secondary The Secondary param.
+         * @param secondary The IP address of the secondary DNS server
          * 
          * @return builder
          * 
@@ -196,7 +196,7 @@ public final class InternalDnsServerState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param secondary The Secondary param.
+         * @param secondary The IP address of the secondary DNS server
          * 
          * @return builder
          * 

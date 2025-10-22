@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationProfileMethodCloud {
     /**
-     * @return The tenant profile name.
+     * @return The tenant profile name
      * 
      */
     private @Nullable String profileName;
 
     private AuthenticationProfileMethodCloud() {}
     /**
-     * @return The tenant profile name.
+     * @return The tenant profile name
      * 
      */
     public Optional<String> profileName() {

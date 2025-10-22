@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupNatRule(ctx, &scm.LookupNatRuleArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// NatRule data source
 func LookupNatRule(ctx *pulumi.Context, args *LookupNatRuleArgs, opts ...pulumi.InvokeOption) (*LookupNatRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupNatRuleResult
@@ -50,55 +24,57 @@ func LookupNatRule(ctx *pulumi.Context, args *LookupNatRuleArgs, opts ...pulumi.
 
 // A collection of arguments for invoking getNatRule.
 type LookupNatRuleArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
+	// NAT rule name
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getNatRule.
 type LookupNatRuleResult struct {
-	// The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+	// Active active device binding
 	ActiveActiveDeviceBinding string `pulumi:"activeActiveDeviceBinding"`
-	// The Description param.
+	// NAT rule description
 	Description string `pulumi:"description"`
-	// Static destination translation parameter.
-	DestinationTranslation GetNatRuleDestinationTranslation `pulumi:"destinationTranslation"`
-	// The destination address(es).
+	// Destination address(es) of the original packet
 	Destinations []string `pulumi:"destinations"`
-	// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The Disabled param.
+	// Disable NAT rule?
 	Disabled bool `pulumi:"disabled"`
-	// Dynamic destination translation parameter.
-	DynamicDestinationTranslation GetNatRuleDynamicDestinationTranslation `pulumi:"dynamicDestinationTranslation"`
-	// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+	// Distribution method
+	Distribution string `pulumi:"distribution"`
+	// DNS rewrite
+	DnsRewrite GetNatRuleDnsRewrite `pulumi:"dnsRewrite"`
+	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
-	// The source security zone(s).
+	// Source zone(s) of the original packet
 	Froms []string `pulumi:"froms"`
-	// The GroupTag param.
-	GroupTag string `pulumi:"groupTag"`
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The Name param.
+	// NAT rule name
 	Name string `pulumi:"name"`
-	// The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+	// NAT type
 	NatType string `pulumi:"natType"`
-	// The Service param.
+	// The service of the original packet
 	Service string `pulumi:"service"`
-	// The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
-	// The SourceTranslation param.
+	// Source translation
 	SourceTranslation GetNatRuleSourceTranslation `pulumi:"sourceTranslation"`
-	// The source address(es).
+	// Source address(es) of the original packet
 	Sources []string `pulumi:"sources"`
-	// The Tags param.
+	// NAT rule tags
 	Tags []string `pulumi:"tags"`
-	// The Target param.
-	Target GetNatRuleTarget `pulumi:"target"`
-	Tfid   string           `pulumi:"tfid"`
-	// The ToInterface param.
+	Tfid string   `pulumi:"tfid"`
+	// Destination interface of the original packet
 	ToInterface string `pulumi:"toInterface"`
-	// The destination security zone(s).
+	// Destination zone of the original packet
 	Tos []string `pulumi:"tos"`
+	// Translated destination IP address
+	TranslatedAddressSingle string `pulumi:"translatedAddressSingle"`
+	// Translated destination port
+	TranslatedPort int `pulumi:"translatedPort"`
 }
 
 func LookupNatRuleOutput(ctx *pulumi.Context, args LookupNatRuleOutputArgs, opts ...pulumi.InvokeOption) LookupNatRuleResultOutput {
@@ -112,8 +88,10 @@ func LookupNatRuleOutput(ctx *pulumi.Context, args LookupNatRuleOutputArgs, opts
 
 // A collection of arguments for invoking getNatRule.
 type LookupNatRuleOutputArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
+	// NAT rule name
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupNatRuleOutputArgs) ElementType() reflect.Type {
@@ -135,115 +113,113 @@ func (o LookupNatRuleResultOutput) ToLookupNatRuleResultOutputWithContext(ctx co
 	return o
 }
 
-// The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+// Active active device binding
 func (o LookupNatRuleResultOutput) ActiveActiveDeviceBinding() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.ActiveActiveDeviceBinding }).(pulumi.StringOutput)
 }
 
-// The Description param.
+// NAT rule description
 func (o LookupNatRuleResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// Static destination translation parameter.
-func (o LookupNatRuleResultOutput) DestinationTranslation() GetNatRuleDestinationTranslationOutput {
-	return o.ApplyT(func(v LookupNatRuleResult) GetNatRuleDestinationTranslation { return v.DestinationTranslation }).(GetNatRuleDestinationTranslationOutput)
-}
-
-// The destination address(es).
+// Destination address(es) of the original packet
 func (o LookupNatRuleResultOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) []string { return v.Destinations }).(pulumi.StringArrayOutput)
 }
 
-// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+// The device in which the resource is defined
 func (o LookupNatRuleResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The Disabled param.
+// Disable NAT rule?
 func (o LookupNatRuleResultOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// Dynamic destination translation parameter.
-func (o LookupNatRuleResultOutput) DynamicDestinationTranslation() GetNatRuleDynamicDestinationTranslationOutput {
-	return o.ApplyT(func(v LookupNatRuleResult) GetNatRuleDynamicDestinationTranslation {
-		return v.DynamicDestinationTranslation
-	}).(GetNatRuleDynamicDestinationTranslationOutput)
+// Distribution method
+func (o LookupNatRuleResultOutput) Distribution() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Distribution }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+// DNS rewrite
+func (o LookupNatRuleResultOutput) DnsRewrite() GetNatRuleDnsRewriteOutput {
+	return o.ApplyT(func(v LookupNatRuleResult) GetNatRuleDnsRewrite { return v.DnsRewrite }).(GetNatRuleDnsRewriteOutput)
+}
+
+// The folder in which the resource is defined
 func (o LookupNatRuleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// The source security zone(s).
+// Source zone(s) of the original packet
 func (o LookupNatRuleResultOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) []string { return v.Froms }).(pulumi.StringArrayOutput)
 }
 
-// The GroupTag param.
-func (o LookupNatRuleResultOutput) GroupTag() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupNatRuleResult) string { return v.GroupTag }).(pulumi.StringOutput)
-}
-
-// The Id param.
+// UUID of the resource
 func (o LookupNatRuleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// NAT rule name
 func (o LookupNatRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+// NAT type
 func (o LookupNatRuleResultOutput) NatType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.NatType }).(pulumi.StringOutput)
 }
 
-// The Service param.
+// The service of the original packet
 func (o LookupNatRuleResultOutput) Service() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Service }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+// The snippet in which the resource is defined
 func (o LookupNatRuleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// The SourceTranslation param.
+// Source translation
 func (o LookupNatRuleResultOutput) SourceTranslation() GetNatRuleSourceTranslationOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) GetNatRuleSourceTranslation { return v.SourceTranslation }).(GetNatRuleSourceTranslationOutput)
 }
 
-// The source address(es).
+// Source address(es) of the original packet
 func (o LookupNatRuleResultOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
-// The Tags param.
+// NAT rule tags
 func (o LookupNatRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
-}
-
-// The Target param.
-func (o LookupNatRuleResultOutput) Target() GetNatRuleTargetOutput {
-	return o.ApplyT(func(v LookupNatRuleResult) GetNatRuleTarget { return v.Target }).(GetNatRuleTargetOutput)
 }
 
 func (o LookupNatRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The ToInterface param.
+// Destination interface of the original packet
 func (o LookupNatRuleResultOutput) ToInterface() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.ToInterface }).(pulumi.StringOutput)
 }
 
-// The destination security zone(s).
+// Destination zone of the original packet
 func (o LookupNatRuleResultOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) []string { return v.Tos }).(pulumi.StringArrayOutput)
+}
+
+// Translated destination IP address
+func (o LookupNatRuleResultOutput) TranslatedAddressSingle() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupNatRuleResult) string { return v.TranslatedAddressSingle }).(pulumi.StringOutput)
+}
+
+// Translated destination port
+func (o LookupNatRuleResultOutput) TranslatedPort() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupNatRuleResult) int { return v.TranslatedPort }).(pulumi.IntOutput)
 }
 
 func init() {

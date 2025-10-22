@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class IpsecTunnelAutoKeyProxyIdV6ProtocolTcp
     {
         /// <summary>
-        /// The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+        /// Local port
         /// </summary>
         public readonly int? LocalPort;
         /// <summary>
-        /// The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+        /// Remote port
         /// </summary>
         public readonly int? RemotePort;
 

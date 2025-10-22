@@ -17,14 +17,14 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
     public static final UrlCategoryState Empty = new UrlCategoryState();
 
     /**
-     * The Description param.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -32,14 +32,14 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -47,14 +47,14 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -62,14 +62,14 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The List param.
+     * List
      * 
      */
     @Import(name="lists")
     private @Nullable Output<List<String>> lists;
 
     /**
-     * @return The List param.
+     * @return List
      * 
      */
     public Optional<Output<List<String>>> lists() {
@@ -77,14 +77,14 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -92,14 +92,14 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -114,14 +114,14 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Type param. String must be one of these: `&#34;URL List&#34;`, `&#34;Category Match&#34;`. Default: `&#34;URL List&#34;`.
+     * Type
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return The Type param. String must be one of these: `&#34;URL List&#34;`, `&#34;Category Match&#34;`. Default: `&#34;URL List&#34;`.
+     * @return Type
      * 
      */
     public Optional<Output<String>> type() {
@@ -160,7 +160,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -171,7 +171,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -181,7 +181,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -192,7 +192,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -202,7 +202,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -213,7 +213,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -223,7 +223,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param lists The List param.
+         * @param lists List
          * 
          * @return builder
          * 
@@ -234,7 +234,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param lists The List param.
+         * @param lists List
          * 
          * @return builder
          * 
@@ -244,7 +244,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param lists The List param.
+         * @param lists List
          * 
          * @return builder
          * 
@@ -254,7 +254,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -265,7 +265,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -275,7 +275,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -286,7 +286,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -305,7 +305,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The Type param. String must be one of these: `&#34;URL List&#34;`, `&#34;Category Match&#34;`. Default: `&#34;URL List&#34;`.
+         * @param type Type
          * 
          * @return builder
          * 
@@ -316,7 +316,7 @@ public final class UrlCategoryState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The Type param. String must be one of these: `&#34;URL List&#34;`, `&#34;Category Match&#34;`. Default: `&#34;URL List&#34;`.
+         * @param type Type
          * 
          * @return builder
          * 

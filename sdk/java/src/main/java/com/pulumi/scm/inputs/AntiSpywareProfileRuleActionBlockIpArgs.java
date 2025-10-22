@@ -17,14 +17,14 @@ public final class AntiSpywareProfileRuleActionBlockIpArgs extends com.pulumi.re
     public static final AntiSpywareProfileRuleActionBlockIpArgs Empty = new AntiSpywareProfileRuleActionBlockIpArgs();
 
     /**
-     * The Duration param. Value must be between 1 and 3600.
+     * Duration
      * 
      */
     @Import(name="duration")
     private @Nullable Output<Integer> duration;
 
     /**
-     * @return The Duration param. Value must be between 1 and 3600.
+     * @return Duration
      * 
      */
     public Optional<Output<Integer>> duration() {
@@ -32,14 +32,14 @@ public final class AntiSpywareProfileRuleActionBlockIpArgs extends com.pulumi.re
     }
 
     /**
-     * The TrackBy param. String must be one of these: `&#34;source-and-destination&#34;`, `&#34;source&#34;`.
+     * Track by
      * 
      */
     @Import(name="trackBy")
     private @Nullable Output<String> trackBy;
 
     /**
-     * @return The TrackBy param. String must be one of these: `&#34;source-and-destination&#34;`, `&#34;source&#34;`.
+     * @return Track by
      * 
      */
     public Optional<Output<String>> trackBy() {
@@ -72,7 +72,7 @@ public final class AntiSpywareProfileRuleActionBlockIpArgs extends com.pulumi.re
         }
 
         /**
-         * @param duration The Duration param. Value must be between 1 and 3600.
+         * @param duration Duration
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class AntiSpywareProfileRuleActionBlockIpArgs extends com.pulumi.re
         }
 
         /**
-         * @param duration The Duration param. Value must be between 1 and 3600.
+         * @param duration Duration
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class AntiSpywareProfileRuleActionBlockIpArgs extends com.pulumi.re
         }
 
         /**
-         * @param trackBy The TrackBy param. String must be one of these: `&#34;source-and-destination&#34;`, `&#34;source&#34;`.
+         * @param trackBy Track by
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class AntiSpywareProfileRuleActionBlockIpArgs extends com.pulumi.re
         }
 
         /**
-         * @param trackBy The TrackBy param. String must be one of these: `&#34;source-and-destination&#34;`, `&#34;source&#34;`.
+         * @param trackBy Track by
          * 
          * @return builder
          * 

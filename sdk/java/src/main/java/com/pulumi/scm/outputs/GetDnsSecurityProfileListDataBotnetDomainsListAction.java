@@ -5,59 +5,62 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.GetDnsSecurityProfileListDataBotnetDomainsListActionAlert;
+import com.pulumi.scm.outputs.GetDnsSecurityProfileListDataBotnetDomainsListActionAllow;
+import com.pulumi.scm.outputs.GetDnsSecurityProfileListDataBotnetDomainsListActionBlock;
+import com.pulumi.scm.outputs.GetDnsSecurityProfileListDataBotnetDomainsListActionSinkhole;
 import java.util.Objects;
 
 @CustomType
 public final class GetDnsSecurityProfileListDataBotnetDomainsListAction {
     /**
-     * @return The Alert param.
+     * @return Alert
      * 
      */
-    private Boolean alert;
+    private GetDnsSecurityProfileListDataBotnetDomainsListActionAlert alert;
     /**
-     * @return The Allow param.
+     * @return Allow
      * 
      */
-    private Boolean allow;
+    private GetDnsSecurityProfileListDataBotnetDomainsListActionAllow allow;
     /**
-     * @return The Block param.
+     * @return Block
      * 
      */
-    private Boolean block;
+    private GetDnsSecurityProfileListDataBotnetDomainsListActionBlock block;
     /**
-     * @return The Sinkhole param.
+     * @return Sinkhole
      * 
      */
-    private Boolean sinkhole;
+    private GetDnsSecurityProfileListDataBotnetDomainsListActionSinkhole sinkhole;
 
     private GetDnsSecurityProfileListDataBotnetDomainsListAction() {}
     /**
-     * @return The Alert param.
+     * @return Alert
      * 
      */
-    public Boolean alert() {
+    public GetDnsSecurityProfileListDataBotnetDomainsListActionAlert alert() {
         return this.alert;
     }
     /**
-     * @return The Allow param.
+     * @return Allow
      * 
      */
-    public Boolean allow() {
+    public GetDnsSecurityProfileListDataBotnetDomainsListActionAllow allow() {
         return this.allow;
     }
     /**
-     * @return The Block param.
+     * @return Block
      * 
      */
-    public Boolean block() {
+    public GetDnsSecurityProfileListDataBotnetDomainsListActionBlock block() {
         return this.block;
     }
     /**
-     * @return The Sinkhole param.
+     * @return Sinkhole
      * 
      */
-    public Boolean sinkhole() {
+    public GetDnsSecurityProfileListDataBotnetDomainsListActionSinkhole sinkhole() {
         return this.sinkhole;
     }
 
@@ -70,10 +73,10 @@ public final class GetDnsSecurityProfileListDataBotnetDomainsListAction {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean alert;
-        private Boolean allow;
-        private Boolean block;
-        private Boolean sinkhole;
+        private GetDnsSecurityProfileListDataBotnetDomainsListActionAlert alert;
+        private GetDnsSecurityProfileListDataBotnetDomainsListActionAllow allow;
+        private GetDnsSecurityProfileListDataBotnetDomainsListActionBlock block;
+        private GetDnsSecurityProfileListDataBotnetDomainsListActionSinkhole sinkhole;
         public Builder() {}
         public Builder(GetDnsSecurityProfileListDataBotnetDomainsListAction defaults) {
     	      Objects.requireNonNull(defaults);
@@ -84,7 +87,7 @@ public final class GetDnsSecurityProfileListDataBotnetDomainsListAction {
         }
 
         @CustomType.Setter
-        public Builder alert(Boolean alert) {
+        public Builder alert(GetDnsSecurityProfileListDataBotnetDomainsListActionAlert alert) {
             if (alert == null) {
               throw new MissingRequiredPropertyException("GetDnsSecurityProfileListDataBotnetDomainsListAction", "alert");
             }
@@ -92,7 +95,7 @@ public final class GetDnsSecurityProfileListDataBotnetDomainsListAction {
             return this;
         }
         @CustomType.Setter
-        public Builder allow(Boolean allow) {
+        public Builder allow(GetDnsSecurityProfileListDataBotnetDomainsListActionAllow allow) {
             if (allow == null) {
               throw new MissingRequiredPropertyException("GetDnsSecurityProfileListDataBotnetDomainsListAction", "allow");
             }
@@ -100,7 +103,7 @@ public final class GetDnsSecurityProfileListDataBotnetDomainsListAction {
             return this;
         }
         @CustomType.Setter
-        public Builder block(Boolean block) {
+        public Builder block(GetDnsSecurityProfileListDataBotnetDomainsListActionBlock block) {
             if (block == null) {
               throw new MissingRequiredPropertyException("GetDnsSecurityProfileListDataBotnetDomainsListAction", "block");
             }
@@ -108,7 +111,7 @@ public final class GetDnsSecurityProfileListDataBotnetDomainsListAction {
             return this;
         }
         @CustomType.Setter
-        public Builder sinkhole(Boolean sinkhole) {
+        public Builder sinkhole(GetDnsSecurityProfileListDataBotnetDomainsListActionSinkhole sinkhole) {
             if (sinkhole == null) {
               throw new MissingRequiredPropertyException("GetDnsSecurityProfileListDataBotnetDomainsListAction", "sinkhole");
             }

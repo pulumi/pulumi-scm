@@ -17,106 +17,76 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.AuthenticationSequence;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new AuthenticationSequence("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * AuthenticationSequence resource
  * 
  */
 @ResourceType(type="scm:index/authenticationSequence:AuthenticationSequence")
 public class AuthenticationSequence extends com.pulumi.resources.CustomResource {
     /**
-     * The AuthenticationProfiles param.
+     * An ordered list of authentication profiles
      * 
      */
     @Export(name="authenticationProfiles", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> authenticationProfiles;
 
     /**
-     * @return The AuthenticationProfiles param.
+     * @return An ordered list of authentication profiles
      * 
      */
     public Output<Optional<List<String>>> authenticationProfiles() {
         return Codegen.optional(this.authenticationProfiles);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Name param.
+     * The name of the authentication sequence
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the authentication sequence
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -129,14 +99,14 @@ public class AuthenticationSequence extends com.pulumi.resources.CustomResource 
         return this.tfid;
     }
     /**
-     * The UseDomainFindProfile param. Default: `true`.
+     * Use domain to determine authentication profile?
      * 
      */
     @Export(name="useDomainFindProfile", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> useDomainFindProfile;
 
     /**
-     * @return The UseDomainFindProfile param. Default: `true`.
+     * @return Use domain to determine authentication profile?
      * 
      */
     public Output<Boolean> useDomainFindProfile() {

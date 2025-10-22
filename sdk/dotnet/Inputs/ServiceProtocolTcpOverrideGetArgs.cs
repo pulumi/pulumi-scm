@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class ServiceProtocolTcpOverrideGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// tcp session half-close timeout value (in second). Value must be between 1 and 604800. Default: `120`.
+        /// tcp session half-close timeout value (in second)
         /// </summary>
         [Input("halfcloseTimeout")]
         public Input<int>? HalfcloseTimeout { get; set; }
 
         /// <summary>
-        /// tcp session timeout value (in second). Value must be between 1 and 604800. Default: `3600`.
+        /// tcp session timeout value (in second)
         /// </summary>
         [Input("timeout")]
         public Input<int>? Timeout { get; set; }
 
         /// <summary>
-        /// tcp session time-wait timeout value (in second). Value must be between 1 and 600. Default: `15`.
+        /// tcp session time-wait timeout value (in second)
         /// </summary>
         [Input("timewaitTimeout")]
         public Input<int>? TimewaitTimeout { get; set; }

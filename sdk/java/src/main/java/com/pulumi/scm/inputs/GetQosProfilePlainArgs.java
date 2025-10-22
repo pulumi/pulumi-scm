@@ -16,40 +16,40 @@ public final class GetQosProfilePlainArgs extends com.pulumi.resources.InvokeArg
     public static final GetQosProfilePlainArgs Empty = new GetQosProfilePlainArgs();
 
     /**
-     * The Folder param.
-     * 
-     */
-    @Import(name="folder")
-    private @Nullable String folder;
-
-    /**
-     * @return The Folder param.
-     * 
-     */
-    public Optional<String> folder() {
-        return Optional.ofNullable(this.folder);
-    }
-
-    /**
-     * The Id param.
+     * UUID of the resource
      * 
      */
     @Import(name="id", required=true)
     private String id;
 
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
 
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
+    @Import(name="name")
+    private @Nullable String name;
+
+    /**
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     * 
+     */
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetQosProfilePlainArgs() {}
 
     private GetQosProfilePlainArgs(GetQosProfilePlainArgs $) {
-        this.folder = $.folder;
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -71,24 +71,24 @@ public final class GetQosProfilePlainArgs extends com.pulumi.resources.InvokeArg
         }
 
         /**
-         * @param folder The Folder param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(@Nullable String folder) {
-            $.folder = folder;
-            return this;
-        }
-
-        /**
-         * @param id The Id param.
+         * @param id UUID of the resource
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            $.name = name;
             return this;
         }
 

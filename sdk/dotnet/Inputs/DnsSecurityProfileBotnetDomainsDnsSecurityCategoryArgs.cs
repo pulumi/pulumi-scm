@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Action param. String must be one of these: `"default"`, `"allow"`, `"block"`, `"sinkhole"`. Default: `"default"`.
+        /// Action
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }
 
         /// <summary>
-        /// The LogLevel param. String must be one of these: `"default"`, `"none"`, `"low"`, `"informational"`, `"medium"`, `"high"`, `"critical"`. Default: `"default"`.
+        /// Log level
         /// </summary>
         [Input("logLevel")]
         public Input<string>? LogLevel { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        /// Packet capture
         /// </summary>
         [Input("packetCapture")]
         public Input<string>? PacketCapture { get; set; }

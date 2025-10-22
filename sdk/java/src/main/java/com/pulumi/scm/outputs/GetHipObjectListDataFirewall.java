@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataFirewall {
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     private GetHipObjectListDataFirewallCriteria criteria;
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     private Boolean excludeVendor;
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     private List<GetHipObjectListDataFirewallVendor> vendors;
 
     private GetHipObjectListDataFirewall() {}
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public GetHipObjectListDataFirewallCriteria criteria() {
         return this.criteria;
     }
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     public Boolean excludeVendor() {
         return this.excludeVendor;
     }
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     public List<GetHipObjectListDataFirewallVendor> vendors() {

@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetIpsecTunnelListDataAutoKeyIkeGateway {
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
 
     private GetIpsecTunnelListDataAutoKeyIkeGateway() {}
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {

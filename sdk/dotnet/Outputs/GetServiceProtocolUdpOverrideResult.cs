@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetServiceProtocolUdpOverrideResult
     {
         /// <summary>
-        /// udp session timeout value (in second). Value must be between 1 and 604800. Default: `30`.
+        /// udp session timeout value (in second)
         /// </summary>
         public readonly int Timeout;
 

@@ -27,10 +27,16 @@ class GetAuthenticationProfileResult:
     """
     A collection of values returned by getAuthenticationProfile.
     """
-    def __init__(__self__, allow_lists=None, id=None, lockout=None, method=None, multi_factor_auth=None, name=None, single_sign_on=None, tfid=None, user_domain=None, username_modifier=None):
+    def __init__(__self__, allow_lists=None, device=None, folder=None, id=None, lockout=None, method=None, multi_factor_auth=None, name=None, single_sign_on=None, snippet=None, tfid=None, user_domain=None, username_modifier=None):
         if allow_lists and not isinstance(allow_lists, list):
             raise TypeError("Expected argument 'allow_lists' to be a list")
         pulumi.set(__self__, "allow_lists", allow_lists)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -49,6 +55,9 @@ class GetAuthenticationProfileResult:
         if single_sign_on and not isinstance(single_sign_on, dict):
             raise TypeError("Expected argument 'single_sign_on' to be a dict")
         pulumi.set(__self__, "single_sign_on", single_sign_on)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -63,15 +72,31 @@ class GetAuthenticationProfileResult:
     @pulumi.getter(name="allowLists")
     def allow_lists(self) -> Sequence[_builtins.str]:
         """
-        The AllowList param.
+        Allow list
         """
         return pulumi.get(self, "allow_lists")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the authentication profile
         """
         return pulumi.get(self, "id")
 
@@ -79,7 +104,7 @@ class GetAuthenticationProfileResult:
     @pulumi.getter
     def lockout(self) -> 'outputs.GetAuthenticationProfileLockoutResult':
         """
-        The Lockout param.
+        Lockout
         """
         return pulumi.get(self, "lockout")
 
@@ -87,7 +112,7 @@ class GetAuthenticationProfileResult:
     @pulumi.getter
     def method(self) -> 'outputs.GetAuthenticationProfileMethodResult':
         """
-        The Method param.
+        Method
         """
         return pulumi.get(self, "method")
 
@@ -95,7 +120,7 @@ class GetAuthenticationProfileResult:
     @pulumi.getter(name="multiFactorAuth")
     def multi_factor_auth(self) -> 'outputs.GetAuthenticationProfileMultiFactorAuthResult':
         """
-        The MultiFactorAuth param.
+        Multi factor auth
         """
         return pulumi.get(self, "multi_factor_auth")
 
@@ -103,7 +128,7 @@ class GetAuthenticationProfileResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param.
+        The name of the authentication profile
         """
         return pulumi.get(self, "name")
 
@@ -111,9 +136,17 @@ class GetAuthenticationProfileResult:
     @pulumi.getter(name="singleSignOn")
     def single_sign_on(self) -> 'outputs.GetAuthenticationProfileSingleSignOnResult':
         """
-        The SingleSignOn param.
+        Single sign on
         """
         return pulumi.get(self, "single_sign_on")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -124,7 +157,7 @@ class GetAuthenticationProfileResult:
     @pulumi.getter(name="userDomain")
     def user_domain(self) -> _builtins.str:
         """
-        The UserDomain param. String length must not exceed 63 characters.
+        User domain
         """
         return pulumi.get(self, "user_domain")
 
@@ -132,7 +165,7 @@ class GetAuthenticationProfileResult:
     @pulumi.getter(name="usernameModifier")
     def username_modifier(self) -> _builtins.str:
         """
-        The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\\\%USERINPUT%"`.
+        Username modifier
         """
         return pulumi.get(self, "username_modifier")
 
@@ -144,79 +177,76 @@ class AwaitableGetAuthenticationProfileResult(GetAuthenticationProfileResult):
             yield self
         return GetAuthenticationProfileResult(
             allow_lists=self.allow_lists,
+            device=self.device,
+            folder=self.folder,
             id=self.id,
             lockout=self.lockout,
             method=self.method,
             multi_factor_auth=self.multi_factor_auth,
             name=self.name,
             single_sign_on=self.single_sign_on,
+            snippet=self.snippet,
             tfid=self.tfid,
             user_domain=self.user_domain,
             username_modifier=self.username_modifier)
 
 
 def get_authentication_profile(id: Optional[_builtins.str] = None,
+                               name: Optional[_builtins.str] = None,
                                opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAuthenticationProfileResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_authentication_profile(id="1234-56-789")
-    ```
+    AuthenticationProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the authentication profile
+    :param _builtins.str name: The name of the authentication profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getAuthenticationProfile:getAuthenticationProfile', __args__, opts=opts, typ=GetAuthenticationProfileResult).value
 
     return AwaitableGetAuthenticationProfileResult(
         allow_lists=pulumi.get(__ret__, 'allow_lists'),
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         lockout=pulumi.get(__ret__, 'lockout'),
         method=pulumi.get(__ret__, 'method'),
         multi_factor_auth=pulumi.get(__ret__, 'multi_factor_auth'),
         name=pulumi.get(__ret__, 'name'),
         single_sign_on=pulumi.get(__ret__, 'single_sign_on'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         user_domain=pulumi.get(__ret__, 'user_domain'),
         username_modifier=pulumi.get(__ret__, 'username_modifier'))
 def get_authentication_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                      name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationProfileResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_authentication_profile(id="1234-56-789")
-    ```
+    AuthenticationProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the authentication profile
+    :param _builtins.str name: The name of the authentication profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationProfile:getAuthenticationProfile', __args__, opts=opts, typ=GetAuthenticationProfileResult)
     return __ret__.apply(lambda __response__: GetAuthenticationProfileResult(
         allow_lists=pulumi.get(__response__, 'allow_lists'),
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         lockout=pulumi.get(__response__, 'lockout'),
         method=pulumi.get(__response__, 'method'),
         multi_factor_auth=pulumi.get(__response__, 'multi_factor_auth'),
         name=pulumi.get(__response__, 'name'),
         single_sign_on=pulumi.get(__response__, 'single_sign_on'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         user_domain=pulumi.get(__response__, 'user_domain'),
         username_modifier=pulumi.get(__response__, 'username_modifier')))

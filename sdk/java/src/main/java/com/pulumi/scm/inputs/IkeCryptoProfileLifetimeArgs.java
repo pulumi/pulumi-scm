@@ -16,14 +16,14 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
     public static final IkeCryptoProfileLifetimeArgs Empty = new IkeCryptoProfileLifetimeArgs();
 
     /**
-     * specify lifetime in days. Value must be between 1 and 365. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * specify lifetime in days
      * 
      */
     @Import(name="days")
     private @Nullable Output<Integer> days;
 
     /**
-     * @return specify lifetime in days. Value must be between 1 and 365. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in days
      * 
      */
     public Optional<Output<Integer>> days() {
@@ -31,14 +31,14 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * specify lifetime in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * specify lifetime in hours
      * 
      */
     @Import(name="hours")
     private @Nullable Output<Integer> hours;
 
     /**
-     * @return specify lifetime in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in hours
      * 
      */
     public Optional<Output<Integer>> hours() {
@@ -46,14 +46,14 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * specify lifetime in minutes. Value must be between 3 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * specify lifetime in minutes
      * 
      */
     @Import(name="minutes")
     private @Nullable Output<Integer> minutes;
 
     /**
-     * @return specify lifetime in minutes. Value must be between 3 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in minutes
      * 
      */
     public Optional<Output<Integer>> minutes() {
@@ -61,14 +61,14 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * specify lifetime in seconds. Value must be between 180 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * specify lifetime in seconds
      * 
      */
     @Import(name="seconds")
     private @Nullable Output<Integer> seconds;
 
     /**
-     * @return specify lifetime in seconds. Value must be between 180 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in seconds
      * 
      */
     public Optional<Output<Integer>> seconds() {
@@ -103,7 +103,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param days specify lifetime in days. Value must be between 1 and 365. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+         * @param days specify lifetime in days
          * 
          * @return builder
          * 
@@ -114,7 +114,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param days specify lifetime in days. Value must be between 1 and 365. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+         * @param days specify lifetime in days
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param hours specify lifetime in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+         * @param hours specify lifetime in hours
          * 
          * @return builder
          * 
@@ -135,7 +135,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param hours specify lifetime in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+         * @param hours specify lifetime in hours
          * 
          * @return builder
          * 
@@ -145,7 +145,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param minutes specify lifetime in minutes. Value must be between 3 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+         * @param minutes specify lifetime in minutes
          * 
          * @return builder
          * 
@@ -156,7 +156,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param minutes specify lifetime in minutes. Value must be between 3 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+         * @param minutes specify lifetime in minutes
          * 
          * @return builder
          * 
@@ -166,7 +166,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param seconds specify lifetime in seconds. Value must be between 180 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+         * @param seconds specify lifetime in seconds
          * 
          * @return builder
          * 
@@ -177,7 +177,7 @@ public final class IkeCryptoProfileLifetimeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param seconds specify lifetime in seconds. Value must be between 180 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+         * @param seconds specify lifetime in seconds
          * 
          * @return builder
          * 

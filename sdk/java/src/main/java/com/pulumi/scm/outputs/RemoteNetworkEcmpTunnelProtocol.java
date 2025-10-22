@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RemoteNetworkEcmpTunnelProtocol {
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     private @Nullable RemoteNetworkEcmpTunnelProtocolBgp bgp;
 
     private RemoteNetworkEcmpTunnelProtocol() {}
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     public Optional<RemoteNetworkEcmpTunnelProtocolBgp> bgp() {

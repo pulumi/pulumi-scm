@@ -17,14 +17,14 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     public static final ProfileGroupState Empty = new ProfileGroupState();
 
     /**
-     * List of AI security profiles.
+     * Ai security
      * 
      */
     @Import(name="aiSecurities")
     private @Nullable Output<List<String>> aiSecurities;
 
     /**
-     * @return List of AI security profiles.
+     * @return Ai security
      * 
      */
     public Optional<Output<List<String>>> aiSecurities() {
@@ -32,14 +32,29 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * Data filtering
+     * 
+     */
+    @Import(name="dataFilterings")
+    private @Nullable Output<List<String>> dataFilterings;
+
+    /**
+     * @return Data filtering
+     * 
+     */
+    public Optional<Output<List<String>>> dataFilterings() {
+        return Optional.ofNullable(this.dataFilterings);
+    }
+
+    /**
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -47,14 +62,14 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of DNS security profiles.
+     * Dns security
      * 
      */
     @Import(name="dnsSecurities")
     private @Nullable Output<List<String>> dnsSecurities;
 
     /**
-     * @return List of DNS security profiles.
+     * @return Dns security
      * 
      */
     public Optional<Output<List<String>>> dnsSecurities() {
@@ -62,14 +77,14 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of file blocking profiles.
+     * File blocking
      * 
      */
     @Import(name="fileBlockings")
     private @Nullable Output<List<String>> fileBlockings;
 
     /**
-     * @return List of file blocking profiles.
+     * @return File blocking
      * 
      */
     public Optional<Output<List<String>>> fileBlockings() {
@@ -77,14 +92,14 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -92,14 +107,14 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the profile group.
+     * The name of the profile group
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The name of the profile group.
+     * @return The name of the profile group
      * 
      */
     public Optional<Output<String>> name() {
@@ -107,14 +122,14 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of HTTP header insertion profiles.
+     * Saas security
      * 
      */
     @Import(name="saasSecurities")
     private @Nullable Output<List<String>> saasSecurities;
 
     /**
-     * @return List of HTTP header insertion profiles.
+     * @return Saas security
      * 
      */
     public Optional<Output<List<String>>> saasSecurities() {
@@ -122,14 +137,14 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -137,14 +152,14 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of anti-spyware profiles.
+     * Spyware
      * 
      */
     @Import(name="spywares")
     private @Nullable Output<List<String>> spywares;
 
     /**
-     * @return List of anti-spyware profiles.
+     * @return Spyware
      * 
      */
     public Optional<Output<List<String>>> spywares() {
@@ -159,14 +174,14 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of URL filtering profiles.
+     * Url filtering
      * 
      */
     @Import(name="urlFilterings")
     private @Nullable Output<List<String>> urlFilterings;
 
     /**
-     * @return List of URL filtering profiles.
+     * @return Url filtering
      * 
      */
     public Optional<Output<List<String>>> urlFilterings() {
@@ -174,14 +189,14 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of anti-virus and Wildfire analysis profiles.
+     * Virus and wildfire analysis
      * 
      */
     @Import(name="virusAndWildfireAnalyses")
     private @Nullable Output<List<String>> virusAndWildfireAnalyses;
 
     /**
-     * @return List of anti-virus and Wildfire analysis profiles.
+     * @return Virus and wildfire analysis
      * 
      */
     public Optional<Output<List<String>>> virusAndWildfireAnalyses() {
@@ -189,14 +204,14 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * List of vulnerability protection profiles.
+     * Vulnerability
      * 
      */
     @Import(name="vulnerabilities")
     private @Nullable Output<List<String>> vulnerabilities;
 
     /**
-     * @return List of vulnerability protection profiles.
+     * @return Vulnerability
      * 
      */
     public Optional<Output<List<String>>> vulnerabilities() {
@@ -207,6 +222,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
 
     private ProfileGroupState(ProfileGroupState $) {
         this.aiSecurities = $.aiSecurities;
+        this.dataFilterings = $.dataFilterings;
         this.device = $.device;
         this.dnsSecurities = $.dnsSecurities;
         this.fileBlockings = $.fileBlockings;
@@ -240,7 +256,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param aiSecurities List of AI security profiles.
+         * @param aiSecurities Ai security
          * 
          * @return builder
          * 
@@ -251,7 +267,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param aiSecurities List of AI security profiles.
+         * @param aiSecurities Ai security
          * 
          * @return builder
          * 
@@ -261,7 +277,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param aiSecurities List of AI security profiles.
+         * @param aiSecurities Ai security
          * 
          * @return builder
          * 
@@ -271,7 +287,38 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param dataFilterings Data filtering
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataFilterings(@Nullable Output<List<String>> dataFilterings) {
+            $.dataFilterings = dataFilterings;
+            return this;
+        }
+
+        /**
+         * @param dataFilterings Data filtering
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataFilterings(List<String> dataFilterings) {
+            return dataFilterings(Output.of(dataFilterings));
+        }
+
+        /**
+         * @param dataFilterings Data filtering
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataFilterings(String... dataFilterings) {
+            return dataFilterings(List.of(dataFilterings));
+        }
+
+        /**
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -282,7 +329,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -292,7 +339,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dnsSecurities List of DNS security profiles.
+         * @param dnsSecurities Dns security
          * 
          * @return builder
          * 
@@ -303,7 +350,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dnsSecurities List of DNS security profiles.
+         * @param dnsSecurities Dns security
          * 
          * @return builder
          * 
@@ -313,7 +360,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dnsSecurities List of DNS security profiles.
+         * @param dnsSecurities Dns security
          * 
          * @return builder
          * 
@@ -323,7 +370,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fileBlockings List of file blocking profiles.
+         * @param fileBlockings File blocking
          * 
          * @return builder
          * 
@@ -334,7 +381,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fileBlockings List of file blocking profiles.
+         * @param fileBlockings File blocking
          * 
          * @return builder
          * 
@@ -344,7 +391,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fileBlockings List of file blocking profiles.
+         * @param fileBlockings File blocking
          * 
          * @return builder
          * 
@@ -354,7 +401,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -365,7 +412,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -375,7 +422,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The name of the profile group.
+         * @param name The name of the profile group
          * 
          * @return builder
          * 
@@ -386,7 +433,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The name of the profile group.
+         * @param name The name of the profile group
          * 
          * @return builder
          * 
@@ -396,7 +443,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param saasSecurities List of HTTP header insertion profiles.
+         * @param saasSecurities Saas security
          * 
          * @return builder
          * 
@@ -407,7 +454,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param saasSecurities List of HTTP header insertion profiles.
+         * @param saasSecurities Saas security
          * 
          * @return builder
          * 
@@ -417,7 +464,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param saasSecurities List of HTTP header insertion profiles.
+         * @param saasSecurities Saas security
          * 
          * @return builder
          * 
@@ -427,7 +474,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -438,7 +485,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -448,7 +495,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param spywares List of anti-spyware profiles.
+         * @param spywares Spyware
          * 
          * @return builder
          * 
@@ -459,7 +506,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param spywares List of anti-spyware profiles.
+         * @param spywares Spyware
          * 
          * @return builder
          * 
@@ -469,7 +516,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param spywares List of anti-spyware profiles.
+         * @param spywares Spyware
          * 
          * @return builder
          * 
@@ -488,7 +535,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param urlFilterings List of URL filtering profiles.
+         * @param urlFilterings Url filtering
          * 
          * @return builder
          * 
@@ -499,7 +546,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param urlFilterings List of URL filtering profiles.
+         * @param urlFilterings Url filtering
          * 
          * @return builder
          * 
@@ -509,7 +556,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param urlFilterings List of URL filtering profiles.
+         * @param urlFilterings Url filtering
          * 
          * @return builder
          * 
@@ -519,7 +566,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param virusAndWildfireAnalyses List of anti-virus and Wildfire analysis profiles.
+         * @param virusAndWildfireAnalyses Virus and wildfire analysis
          * 
          * @return builder
          * 
@@ -530,7 +577,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param virusAndWildfireAnalyses List of anti-virus and Wildfire analysis profiles.
+         * @param virusAndWildfireAnalyses Virus and wildfire analysis
          * 
          * @return builder
          * 
@@ -540,7 +587,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param virusAndWildfireAnalyses List of anti-virus and Wildfire analysis profiles.
+         * @param virusAndWildfireAnalyses Virus and wildfire analysis
          * 
          * @return builder
          * 
@@ -550,7 +597,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param vulnerabilities List of vulnerability protection profiles.
+         * @param vulnerabilities Vulnerability
          * 
          * @return builder
          * 
@@ -561,7 +608,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param vulnerabilities List of vulnerability protection profiles.
+         * @param vulnerabilities Vulnerability
          * 
          * @return builder
          * 
@@ -571,7 +618,7 @@ public final class ProfileGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param vulnerabilities List of vulnerability protection profiles.
+         * @param vulnerabilities Vulnerability
          * 
          * @return builder
          * 

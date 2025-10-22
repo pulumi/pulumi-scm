@@ -27,10 +27,19 @@ class GetRadiusServerProfileResult:
     """
     A collection of values returned by getRadiusServerProfile.
     """
-    def __init__(__self__, id=None, protocol=None, retries=None, servers=None, tfid=None, timeout=None):
+    def __init__(__self__, device=None, folder=None, id=None, name=None, protocol=None, retries=None, servers=None, snippet=None, tfid=None, timeout=None):
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
+        if name and not isinstance(name, str):
+            raise TypeError("Expected argument 'name' to be a str")
+        pulumi.set(__self__, "name", name)
         if protocol and not isinstance(protocol, dict):
             raise TypeError("Expected argument 'protocol' to be a dict")
         pulumi.set(__self__, "protocol", protocol)
@@ -40,6 +49,9 @@ class GetRadiusServerProfileResult:
         if servers and not isinstance(servers, list):
             raise TypeError("Expected argument 'servers' to be a list")
         pulumi.set(__self__, "servers", servers)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -49,17 +61,41 @@ class GetRadiusServerProfileResult:
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the RADIUS server profile
         """
         return pulumi.get(self, "id")
 
     @_builtins.property
     @pulumi.getter
+    def name(self) -> _builtins.str:
+        """
+        The name of the RADIUS server profile
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
     def protocol(self) -> 'outputs.GetRadiusServerProfileProtocolResult':
         """
-        The Protocol param.
+        The RADIUS authentication protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -67,7 +103,7 @@ class GetRadiusServerProfileResult:
     @pulumi.getter
     def retries(self) -> _builtins.int:
         """
-        The Retries param. Value must be between 1 and 5.
+        The number of RADIUS server retries
         """
         return pulumi.get(self, "retries")
 
@@ -75,9 +111,17 @@ class GetRadiusServerProfileResult:
     @pulumi.getter
     def servers(self) -> Sequence['outputs.GetRadiusServerProfileServerResult']:
         """
-        The Servers param.
+        Server
         """
         return pulumi.get(self, "servers")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -88,7 +132,7 @@ class GetRadiusServerProfileResult:
     @pulumi.getter
     def timeout(self) -> _builtins.int:
         """
-        The Timeout param. Value must be between 1 and 120.
+        The RADIUS server authentication timeout (seconds)
         """
         return pulumi.get(self, "timeout")
 
@@ -99,68 +143,68 @@ class AwaitableGetRadiusServerProfileResult(GetRadiusServerProfileResult):
         if False:
             yield self
         return GetRadiusServerProfileResult(
+            device=self.device,
+            folder=self.folder,
             id=self.id,
+            name=self.name,
             protocol=self.protocol,
             retries=self.retries,
             servers=self.servers,
+            snippet=self.snippet,
             tfid=self.tfid,
             timeout=self.timeout)
 
 
 def get_radius_server_profile(id: Optional[_builtins.str] = None,
+                              name: Optional[_builtins.str] = None,
                               opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetRadiusServerProfileResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_radius_server_profile(id="1234-56-789")
-    ```
+    RadiusServerProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the RADIUS server profile
+    :param _builtins.str name: The name of the RADIUS server profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getRadiusServerProfile:getRadiusServerProfile', __args__, opts=opts, typ=GetRadiusServerProfileResult).value
 
     return AwaitableGetRadiusServerProfileResult(
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
+        name=pulumi.get(__ret__, 'name'),
         protocol=pulumi.get(__ret__, 'protocol'),
         retries=pulumi.get(__ret__, 'retries'),
         servers=pulumi.get(__ret__, 'servers'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         timeout=pulumi.get(__ret__, 'timeout'))
 def get_radius_server_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                     name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRadiusServerProfileResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_radius_server_profile(id="1234-56-789")
-    ```
+    RadiusServerProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the RADIUS server profile
+    :param _builtins.str name: The name of the RADIUS server profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getRadiusServerProfile:getRadiusServerProfile', __args__, opts=opts, typ=GetRadiusServerProfileResult)
     return __ret__.apply(lambda __response__: GetRadiusServerProfileResult(
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
         protocol=pulumi.get(__response__, 'protocol'),
         retries=pulumi.get(__response__, 'retries'),
         servers=pulumi.get(__response__, 'servers'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         timeout=pulumi.get(__response__, 'timeout')))

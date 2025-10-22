@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetQosPolicyRuleListDataDscpTosCodepointTypeTos {
     /**
-     * @return The Codepoint param.
+     * @return Codepoint
      * 
      */
     private String codepoint;
 
     private GetQosPolicyRuleListDataDscpTosCodepointTypeTos() {}
     /**
-     * @return The Codepoint param.
+     * @return Codepoint
      * 
      */
     public String codepoint() {

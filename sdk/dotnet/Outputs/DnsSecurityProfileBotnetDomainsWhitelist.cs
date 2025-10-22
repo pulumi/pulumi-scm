@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class DnsSecurityProfileBotnetDomainsWhitelist
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string? Description;
         /// <summary>
-        /// The Name param.
+        /// DNS domain or FQDN to be whitelisted
         /// </summary>
         public readonly string Name;
 

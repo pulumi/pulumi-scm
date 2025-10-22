@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.String;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScepProfileAlgorithmRsa {
     /**
-     * @return The RsaNbits param.
+     * @return Rsa nbits
      * 
      */
-    private @Nullable String rsaNbits;
+    private @Nullable Integer rsaNbits;
 
     private ScepProfileAlgorithmRsa() {}
     /**
-     * @return The RsaNbits param.
+     * @return Rsa nbits
      * 
      */
-    public Optional<String> rsaNbits() {
+    public Optional<Integer> rsaNbits() {
         return Optional.ofNullable(this.rsaNbits);
     }
 
@@ -35,7 +35,7 @@ public final class ScepProfileAlgorithmRsa {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String rsaNbits;
+        private @Nullable Integer rsaNbits;
         public Builder() {}
         public Builder(ScepProfileAlgorithmRsa defaults) {
     	      Objects.requireNonNull(defaults);
@@ -43,7 +43,7 @@ public final class ScepProfileAlgorithmRsa {
         }
 
         @CustomType.Setter
-        public Builder rsaNbits(@Nullable String rsaNbits) {
+        public Builder rsaNbits(@Nullable Integer rsaNbits) {
 
             this.rsaNbits = rsaNbits;
             return this;

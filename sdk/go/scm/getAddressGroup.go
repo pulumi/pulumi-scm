@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// AddressGroup data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,20 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupAddressGroup(ctx, &scm.LookupAddressGroupArgs{
-//				Id: "1234-56-789",
+//			// Look up the address group by its ID.
+//			scmAddressGroupDs, err := scm.LookupAddressGroup(ctx, &scm.LookupAddressGroupArgs{
+//				Id: "99802bce-76c6-42c9-801e-e2e4529bb335",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("addressGroupOutputs", pulumi.Map{
+//				"groupId":     scmAddressGroupDs.Id,
+//				"folder":      scmAddressGroupDs.Folder,
+//				"name":        scmAddressGroupDs.Name,
+//				"description": scmAddressGroupDs.Description,
+//				"static":      scmAddressGroupDs.Statics,
+//			})
 //			return nil
 //		})
 //	}
@@ -50,23 +58,31 @@ func LookupAddressGroup(ctx *pulumi.Context, args *LookupAddressGroupArgs, opts 
 
 // A collection of arguments for invoking getAddressGroup.
 type LookupAddressGroupArgs struct {
-	// The Id param.
+	// The UUID of the address group
 	Id string `pulumi:"id"`
+	// The name of the address group
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getAddressGroup.
 type LookupAddressGroupResult struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description string `pulumi:"description"`
-	// The DynamicValue param.
-	DynamicValue GetAddressGroupDynamicValue `pulumi:"dynamicValue"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Dynamic
+	Dynamic GetAddressGroupDynamic `pulumi:"dynamic"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the address group
 	Id string `pulumi:"id"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the address group
 	Name string `pulumi:"name"`
-	// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-	StaticLists []string `pulumi:"staticLists"`
-	// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Static
+	Statics []string `pulumi:"statics"`
+	// Tags for address group object
 	Tags []string `pulumi:"tags"`
 	Tfid string   `pulumi:"tfid"`
 }
@@ -82,8 +98,10 @@ func LookupAddressGroupOutput(ctx *pulumi.Context, args LookupAddressGroupOutput
 
 // A collection of arguments for invoking getAddressGroup.
 type LookupAddressGroupOutputArgs struct {
-	// The Id param.
+	// The UUID of the address group
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the address group
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupAddressGroupOutputArgs) ElementType() reflect.Type {
@@ -105,32 +123,47 @@ func (o LookupAddressGroupResultOutput) ToLookupAddressGroupResultOutputWithCont
 	return o
 }
 
-// The Description param. String length must not exceed 1023 characters.
+// Description
 func (o LookupAddressGroupResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The DynamicValue param.
-func (o LookupAddressGroupResultOutput) DynamicValue() GetAddressGroupDynamicValueOutput {
-	return o.ApplyT(func(v LookupAddressGroupResult) GetAddressGroupDynamicValue { return v.DynamicValue }).(GetAddressGroupDynamicValueOutput)
+// The device in which the resource is defined
+func (o LookupAddressGroupResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// Dynamic
+func (o LookupAddressGroupResultOutput) Dynamic() GetAddressGroupDynamicOutput {
+	return o.ApplyT(func(v LookupAddressGroupResult) GetAddressGroupDynamic { return v.Dynamic }).(GetAddressGroupDynamicOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupAddressGroupResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the address group
 func (o LookupAddressGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the address group
 func (o LookupAddressGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-func (o LookupAddressGroupResultOutput) StaticLists() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v LookupAddressGroupResult) []string { return v.StaticLists }).(pulumi.StringArrayOutput)
+// The snippet in which the resource is defined
+func (o LookupAddressGroupResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+// Static
+func (o LookupAddressGroupResultOutput) Statics() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupAddressGroupResult) []string { return v.Statics }).(pulumi.StringArrayOutput)
+}
+
+// Tags for address group object
 func (o LookupAddressGroupResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

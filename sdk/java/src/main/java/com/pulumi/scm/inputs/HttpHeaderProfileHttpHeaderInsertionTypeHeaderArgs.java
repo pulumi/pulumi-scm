@@ -18,14 +18,14 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
     public static final HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs Empty = new HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs();
 
     /**
-     * The Header param.
+     * The HTTP header string
      * 
      */
     @Import(name="header", required=true)
     private Output<String> header;
 
     /**
-     * @return The Header param.
+     * @return The HTTP header string
      * 
      */
     public Output<String> header() {
@@ -33,14 +33,14 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
     }
 
     /**
-     * The Log param. Default: `false`.
+     * Log the use of this HTTP header insertion?
      * 
      */
     @Import(name="log")
     private @Nullable Output<Boolean> log;
 
     /**
-     * @return The Log param. Default: `false`.
+     * @return Log the use of this HTTP header insertion?
      * 
      */
     public Optional<Output<Boolean>> log() {
@@ -48,14 +48,14 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
     }
 
     /**
-     * The Name param.
+     * An auto-generated name (*This should be removed*)
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return An auto-generated name (*This should be removed*)
      * 
      */
     public Output<String> name() {
@@ -63,14 +63,14 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
     }
 
     /**
-     * The Value param.
+     * The value associated with the HTTP header
      * 
      */
     @Import(name="value", required=true)
     private Output<String> value;
 
     /**
-     * @return The Value param.
+     * @return The value associated with the HTTP header
      * 
      */
     public Output<String> value() {
@@ -105,7 +105,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
         }
 
         /**
-         * @param header The Header param.
+         * @param header The HTTP header string
          * 
          * @return builder
          * 
@@ -116,7 +116,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
         }
 
         /**
-         * @param header The Header param.
+         * @param header The HTTP header string
          * 
          * @return builder
          * 
@@ -126,7 +126,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
         }
 
         /**
-         * @param log The Log param. Default: `false`.
+         * @param log Log the use of this HTTP header insertion?
          * 
          * @return builder
          * 
@@ -137,7 +137,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
         }
 
         /**
-         * @param log The Log param. Default: `false`.
+         * @param log Log the use of this HTTP header insertion?
          * 
          * @return builder
          * 
@@ -147,7 +147,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
         }
 
         /**
-         * @param name The Name param.
+         * @param name An auto-generated name (*This should be removed*)
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
         }
 
         /**
-         * @param name The Name param.
+         * @param name An auto-generated name (*This should be removed*)
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
         }
 
         /**
-         * @param value The Value param.
+         * @param value The value associated with the HTTP header
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
         }
 
         /**
-         * @param value The Value param.
+         * @param value The value associated with the HTTP header
          * 
          * @return builder
          * 

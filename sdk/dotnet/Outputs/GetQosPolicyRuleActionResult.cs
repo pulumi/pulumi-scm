@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosPolicyRuleActionResult
     {
         /// <summary>
-        /// The Class param.
+        /// Class
         /// </summary>
         public readonly string Class;
 

@@ -17,14 +17,14 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
     public static final AuthenticationProfileMethodTacplusArgs Empty = new AuthenticationProfileMethodTacplusArgs();
 
     /**
-     * The Checkgroup param.
+     * Checkgroup
      * 
      */
     @Import(name="checkgroup")
     private @Nullable Output<Boolean> checkgroup;
 
     /**
-     * @return The Checkgroup param.
+     * @return Checkgroup
      * 
      */
     public Optional<Output<Boolean>> checkgroup() {
@@ -32,14 +32,14 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
     }
 
     /**
-     * The ServerProfile param.
+     * Server profile
      * 
      */
     @Import(name="serverProfile")
     private @Nullable Output<String> serverProfile;
 
     /**
-     * @return The ServerProfile param.
+     * @return Server profile
      * 
      */
     public Optional<Output<String>> serverProfile() {
@@ -72,7 +72,7 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
         }
 
         /**
-         * @param checkgroup The Checkgroup param.
+         * @param checkgroup Checkgroup
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
         }
 
         /**
-         * @param checkgroup The Checkgroup param.
+         * @param checkgroup Checkgroup
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
         }
 
         /**
-         * @param serverProfile The ServerProfile param.
+         * @param serverProfile Server profile
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
         }
 
         /**
-         * @param serverProfile The ServerProfile param.
+         * @param serverProfile Server profile
          * 
          * @return builder
          * 

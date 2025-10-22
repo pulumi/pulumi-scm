@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToResult
     {
         /// <summary>
-        /// The Context param.
+        /// Context
         /// </summary>
         public readonly string Context;
         /// <summary>
-        /// The Negate param. Default: `False`.
+        /// Negate
         /// </summary>
         public readonly bool Negate;
         /// <summary>
-        /// The Qualifiers param.
+        /// Qualifier
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierResult> Qualifiers;
         /// <summary>
-        /// The Value param. Value must be between 0 and 4294967295.
+        /// Value
         /// </summary>
         public readonly int Value;
 

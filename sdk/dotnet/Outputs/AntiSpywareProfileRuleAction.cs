@@ -14,49 +14,49 @@ namespace Pulumi.Scm.Outputs
     public sealed class AntiSpywareProfileRuleAction
     {
         /// <summary>
-        /// The Alert param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Alert
         /// </summary>
-        public readonly bool? Alert;
+        public readonly Outputs.AntiSpywareProfileRuleActionAlert? Alert;
         /// <summary>
-        /// The Allow param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Allow
         /// </summary>
-        public readonly bool? Allow;
+        public readonly Outputs.AntiSpywareProfileRuleActionAllow? Allow;
         /// <summary>
-        /// The BlockIp param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// anti spyware profiles rules action block ip
         /// </summary>
         public readonly Outputs.AntiSpywareProfileRuleActionBlockIp? BlockIp;
         /// <summary>
-        /// The Drop param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Drop
         /// </summary>
-        public readonly bool? Drop;
+        public readonly Outputs.AntiSpywareProfileRuleActionDrop? Drop;
         /// <summary>
-        /// The ResetBoth param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset both
         /// </summary>
-        public readonly bool? ResetBoth;
+        public readonly Outputs.AntiSpywareProfileRuleActionResetBoth? ResetBoth;
         /// <summary>
-        /// The ResetClient param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset client
         /// </summary>
-        public readonly bool? ResetClient;
+        public readonly Outputs.AntiSpywareProfileRuleActionResetClient? ResetClient;
         /// <summary>
-        /// The ResetServer param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset server
         /// </summary>
-        public readonly bool? ResetServer;
+        public readonly Outputs.AntiSpywareProfileRuleActionResetServer? ResetServer;
 
         [OutputConstructor]
         private AntiSpywareProfileRuleAction(
-            bool? alert,
+            Outputs.AntiSpywareProfileRuleActionAlert? alert,
 
-            bool? allow,
+            Outputs.AntiSpywareProfileRuleActionAllow? allow,
 
             Outputs.AntiSpywareProfileRuleActionBlockIp? blockIp,
 
-            bool? drop,
+            Outputs.AntiSpywareProfileRuleActionDrop? drop,
 
-            bool? resetBoth,
+            Outputs.AntiSpywareProfileRuleActionResetBoth? resetBoth,
 
-            bool? resetClient,
+            Outputs.AntiSpywareProfileRuleActionResetClient? resetClient,
 
-            bool? resetServer)
+            Outputs.AntiSpywareProfileRuleActionResetServer? resetServer)
         {
             Alert = alert;
             Allow = allow;

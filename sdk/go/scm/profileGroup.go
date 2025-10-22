@@ -11,58 +11,36 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewProfileGroup(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// ProfileGroup resource
 type ProfileGroup struct {
 	pulumi.CustomResourceState
 
-	// List of AI security profiles.
+	// Ai security
 	AiSecurities pulumi.StringArrayOutput `pulumi:"aiSecurities"`
-	// The Device param.
+	// Data filtering
+	DataFilterings pulumi.StringArrayOutput `pulumi:"dataFilterings"`
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// List of DNS security profiles.
+	// Dns security
 	DnsSecurities pulumi.StringArrayOutput `pulumi:"dnsSecurities"`
-	// List of file blocking profiles.
+	// File blocking
 	FileBlockings pulumi.StringArrayOutput `pulumi:"fileBlockings"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The name of the profile group.
+	// The name of the profile group
 	Name pulumi.StringOutput `pulumi:"name"`
-	// List of HTTP header insertion profiles.
+	// Saas security
 	SaasSecurities pulumi.StringArrayOutput `pulumi:"saasSecurities"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// List of anti-spyware profiles.
+	// Spyware
 	Spywares pulumi.StringArrayOutput `pulumi:"spywares"`
 	Tfid     pulumi.StringOutput      `pulumi:"tfid"`
-	// List of URL filtering profiles.
+	// Url filtering
 	UrlFilterings pulumi.StringArrayOutput `pulumi:"urlFilterings"`
-	// List of anti-virus and Wildfire analysis profiles.
+	// Virus and wildfire analysis
 	VirusAndWildfireAnalyses pulumi.StringArrayOutput `pulumi:"virusAndWildfireAnalyses"`
-	// List of vulnerability protection profiles.
+	// Vulnerability
 	Vulnerabilities pulumi.StringArrayOutput `pulumi:"vulnerabilities"`
 }
 
@@ -96,58 +74,62 @@ func GetProfileGroup(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ProfileGroup resources.
 type profileGroupState struct {
-	// List of AI security profiles.
+	// Ai security
 	AiSecurities []string `pulumi:"aiSecurities"`
-	// The Device param.
+	// Data filtering
+	DataFilterings []string `pulumi:"dataFilterings"`
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// List of DNS security profiles.
+	// Dns security
 	DnsSecurities []string `pulumi:"dnsSecurities"`
-	// List of file blocking profiles.
+	// File blocking
 	FileBlockings []string `pulumi:"fileBlockings"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The name of the profile group.
+	// The name of the profile group
 	Name *string `pulumi:"name"`
-	// List of HTTP header insertion profiles.
+	// Saas security
 	SaasSecurities []string `pulumi:"saasSecurities"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// List of anti-spyware profiles.
+	// Spyware
 	Spywares []string `pulumi:"spywares"`
 	Tfid     *string  `pulumi:"tfid"`
-	// List of URL filtering profiles.
+	// Url filtering
 	UrlFilterings []string `pulumi:"urlFilterings"`
-	// List of anti-virus and Wildfire analysis profiles.
+	// Virus and wildfire analysis
 	VirusAndWildfireAnalyses []string `pulumi:"virusAndWildfireAnalyses"`
-	// List of vulnerability protection profiles.
+	// Vulnerability
 	Vulnerabilities []string `pulumi:"vulnerabilities"`
 }
 
 type ProfileGroupState struct {
-	// List of AI security profiles.
+	// Ai security
 	AiSecurities pulumi.StringArrayInput
-	// The Device param.
+	// Data filtering
+	DataFilterings pulumi.StringArrayInput
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// List of DNS security profiles.
+	// Dns security
 	DnsSecurities pulumi.StringArrayInput
-	// List of file blocking profiles.
+	// File blocking
 	FileBlockings pulumi.StringArrayInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The name of the profile group.
+	// The name of the profile group
 	Name pulumi.StringPtrInput
-	// List of HTTP header insertion profiles.
+	// Saas security
 	SaasSecurities pulumi.StringArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// List of anti-spyware profiles.
+	// Spyware
 	Spywares pulumi.StringArrayInput
 	Tfid     pulumi.StringPtrInput
-	// List of URL filtering profiles.
+	// Url filtering
 	UrlFilterings pulumi.StringArrayInput
-	// List of anti-virus and Wildfire analysis profiles.
+	// Virus and wildfire analysis
 	VirusAndWildfireAnalyses pulumi.StringArrayInput
-	// List of vulnerability protection profiles.
+	// Vulnerability
 	Vulnerabilities pulumi.StringArrayInput
 }
 
@@ -156,57 +138,61 @@ func (ProfileGroupState) ElementType() reflect.Type {
 }
 
 type profileGroupArgs struct {
-	// List of AI security profiles.
+	// Ai security
 	AiSecurities []string `pulumi:"aiSecurities"`
-	// The Device param.
+	// Data filtering
+	DataFilterings []string `pulumi:"dataFilterings"`
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// List of DNS security profiles.
+	// Dns security
 	DnsSecurities []string `pulumi:"dnsSecurities"`
-	// List of file blocking profiles.
+	// File blocking
 	FileBlockings []string `pulumi:"fileBlockings"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The name of the profile group.
+	// The name of the profile group
 	Name *string `pulumi:"name"`
-	// List of HTTP header insertion profiles.
+	// Saas security
 	SaasSecurities []string `pulumi:"saasSecurities"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// List of anti-spyware profiles.
+	// Spyware
 	Spywares []string `pulumi:"spywares"`
-	// List of URL filtering profiles.
+	// Url filtering
 	UrlFilterings []string `pulumi:"urlFilterings"`
-	// List of anti-virus and Wildfire analysis profiles.
+	// Virus and wildfire analysis
 	VirusAndWildfireAnalyses []string `pulumi:"virusAndWildfireAnalyses"`
-	// List of vulnerability protection profiles.
+	// Vulnerability
 	Vulnerabilities []string `pulumi:"vulnerabilities"`
 }
 
 // The set of arguments for constructing a ProfileGroup resource.
 type ProfileGroupArgs struct {
-	// List of AI security profiles.
+	// Ai security
 	AiSecurities pulumi.StringArrayInput
-	// The Device param.
+	// Data filtering
+	DataFilterings pulumi.StringArrayInput
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// List of DNS security profiles.
+	// Dns security
 	DnsSecurities pulumi.StringArrayInput
-	// List of file blocking profiles.
+	// File blocking
 	FileBlockings pulumi.StringArrayInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The name of the profile group.
+	// The name of the profile group
 	Name pulumi.StringPtrInput
-	// List of HTTP header insertion profiles.
+	// Saas security
 	SaasSecurities pulumi.StringArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// List of anti-spyware profiles.
+	// Spyware
 	Spywares pulumi.StringArrayInput
-	// List of URL filtering profiles.
+	// Url filtering
 	UrlFilterings pulumi.StringArrayInput
-	// List of anti-virus and Wildfire analysis profiles.
+	// Virus and wildfire analysis
 	VirusAndWildfireAnalyses pulumi.StringArrayInput
-	// List of vulnerability protection profiles.
+	// Vulnerability
 	Vulnerabilities pulumi.StringArrayInput
 }
 
@@ -297,47 +283,52 @@ func (o ProfileGroupOutput) ToProfileGroupOutputWithContext(ctx context.Context)
 	return o
 }
 
-// List of AI security profiles.
+// Ai security
 func (o ProfileGroupOutput) AiSecurities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringArrayOutput { return v.AiSecurities }).(pulumi.StringArrayOutput)
 }
 
-// The Device param.
+// Data filtering
+func (o ProfileGroupOutput) DataFilterings() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ProfileGroup) pulumi.StringArrayOutput { return v.DataFilterings }).(pulumi.StringArrayOutput)
+}
+
+// The device in which the resource is defined
 func (o ProfileGroupOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// List of DNS security profiles.
+// Dns security
 func (o ProfileGroupOutput) DnsSecurities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringArrayOutput { return v.DnsSecurities }).(pulumi.StringArrayOutput)
 }
 
-// List of file blocking profiles.
+// File blocking
 func (o ProfileGroupOutput) FileBlockings() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringArrayOutput { return v.FileBlockings }).(pulumi.StringArrayOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o ProfileGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The name of the profile group.
+// The name of the profile group
 func (o ProfileGroupOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// List of HTTP header insertion profiles.
+// Saas security
 func (o ProfileGroupOutput) SaasSecurities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringArrayOutput { return v.SaasSecurities }).(pulumi.StringArrayOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o ProfileGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// List of anti-spyware profiles.
+// Spyware
 func (o ProfileGroupOutput) Spywares() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringArrayOutput { return v.Spywares }).(pulumi.StringArrayOutput)
 }
@@ -346,17 +337,17 @@ func (o ProfileGroupOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// List of URL filtering profiles.
+// Url filtering
 func (o ProfileGroupOutput) UrlFilterings() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringArrayOutput { return v.UrlFilterings }).(pulumi.StringArrayOutput)
 }
 
-// List of anti-virus and Wildfire analysis profiles.
+// Virus and wildfire analysis
 func (o ProfileGroupOutput) VirusAndWildfireAnalyses() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringArrayOutput { return v.VirusAndWildfireAnalyses }).(pulumi.StringArrayOutput)
 }
 
-// List of vulnerability protection profiles.
+// Vulnerability
 func (o ProfileGroupOutput) Vulnerabilities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ProfileGroup) pulumi.StringArrayOutput { return v.Vulnerabilities }).(pulumi.StringArrayOutput)
 }

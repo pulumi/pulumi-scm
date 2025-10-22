@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class TacacsServerProfileServerArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Address param.
+        /// The IP address of the TACACS+ server
         /// </summary>
         [Input("address")]
         public Input<string>? Address { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the TACACS+ server
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Port param. Value must be between 1 and 65535.
+        /// The TACACS+ server port
         /// </summary>
         [Input("port")]
         public Input<int>? Port { get; set; }
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         private Input<string>? _secret;
 
         /// <summary>
-        /// The Secret param. String length must not exceed 64 characters.
+        /// The TACACS+ secret
         /// </summary>
         public Input<string>? Secret
         {

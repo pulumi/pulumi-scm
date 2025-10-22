@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * AntiSpywareProfile data source
  *
  * ## Example Usage
  *
@@ -15,15 +15,24 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getAntiSpywareProfile({
- *     id: "1234-56-789",
+ * // Look up anti-spyware-profile by ID
+ * const scmAntiSpywareProfileDs = scm.getAntiSpywareProfile({
+ *     id: "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
  * });
+ * export const scmAntiSpywareProfileOutput = {
+ *     profileId: scmAntiSpywareProfileDs.then(scmAntiSpywareProfileDs => scmAntiSpywareProfileDs.id),
+ *     folder: scmAntiSpywareProfileDs.then(scmAntiSpywareProfileDs => scmAntiSpywareProfileDs.folder),
+ *     name: scmAntiSpywareProfileDs.then(scmAntiSpywareProfileDs => scmAntiSpywareProfileDs.name),
+ *     description: scmAntiSpywareProfileDs.then(scmAntiSpywareProfileDs => scmAntiSpywareProfileDs.description),
+ *     cloudInlineAnalysis: scmAntiSpywareProfileDs.then(scmAntiSpywareProfileDs => scmAntiSpywareProfileDs.cloudInlineAnalysis),
+ * };
  * ```
  */
 export function getAntiSpywareProfile(args: GetAntiSpywareProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetAntiSpywareProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAntiSpywareProfile:getAntiSpywareProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +41,13 @@ export function getAntiSpywareProfile(args: GetAntiSpywareProfileArgs, opts?: pu
  */
 export interface GetAntiSpywareProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the anti-spyware profile
      */
     id: string;
+    /**
+     * The name of the anti-spyware profile
+     */
+    name?: string;
 }
 
 /**
@@ -42,45 +55,57 @@ export interface GetAntiSpywareProfileArgs {
  */
 export interface GetAntiSpywareProfileResult {
     /**
-     * The CloudInlineAnalysis param. Default: `false`.
+     * Cloud inline analysis
      */
     readonly cloudInlineAnalysis: boolean;
     /**
-     * The Description param.
+     * Description
      */
     readonly description: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the anti-spyware profile
      */
     readonly id: string;
     /**
-     * The InlineExceptionEdlUrls param.
+     * Inline exception edl url
      */
     readonly inlineExceptionEdlUrls: string[];
     /**
-     * The InlineExceptionIpAddresses param.
+     * Inline exception ip address
      */
     readonly inlineExceptionIpAddresses: string[];
     /**
-     * The MicaEngineSpywareEnabledList param.
+     * Mica engine spyware enabled
      */
-    readonly micaEngineSpywareEnabledLists: outputs.GetAntiSpywareProfileMicaEngineSpywareEnabledList[];
+    readonly micaEngineSpywareEnableds: outputs.GetAntiSpywareProfileMicaEngineSpywareEnabled[];
     /**
-     * The Name param.
+     * The name of the anti-spyware profile
      */
     readonly name: string;
     /**
-     * The Rules param.
+     * Rules
      */
     readonly rules: outputs.GetAntiSpywareProfileRule[];
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      */
     readonly threatExceptions: outputs.GetAntiSpywareProfileThreatException[];
 }
 /**
- * Retrieves a config item.
+ * AntiSpywareProfile data source
  *
  * ## Example Usage
  *
@@ -88,15 +113,24 @@ export interface GetAntiSpywareProfileResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getAntiSpywareProfile({
- *     id: "1234-56-789",
+ * // Look up anti-spyware-profile by ID
+ * const scmAntiSpywareProfileDs = scm.getAntiSpywareProfile({
+ *     id: "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
  * });
+ * export const scmAntiSpywareProfileOutput = {
+ *     profileId: scmAntiSpywareProfileDs.then(scmAntiSpywareProfileDs => scmAntiSpywareProfileDs.id),
+ *     folder: scmAntiSpywareProfileDs.then(scmAntiSpywareProfileDs => scmAntiSpywareProfileDs.folder),
+ *     name: scmAntiSpywareProfileDs.then(scmAntiSpywareProfileDs => scmAntiSpywareProfileDs.name),
+ *     description: scmAntiSpywareProfileDs.then(scmAntiSpywareProfileDs => scmAntiSpywareProfileDs.description),
+ *     cloudInlineAnalysis: scmAntiSpywareProfileDs.then(scmAntiSpywareProfileDs => scmAntiSpywareProfileDs.cloudInlineAnalysis),
+ * };
  * ```
  */
 export function getAntiSpywareProfileOutput(args: GetAntiSpywareProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAntiSpywareProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAntiSpywareProfile:getAntiSpywareProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -105,7 +139,11 @@ export function getAntiSpywareProfileOutput(args: GetAntiSpywareProfileOutputArg
  */
 export interface GetAntiSpywareProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the anti-spyware profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the anti-spyware profile
+     */
+    name?: pulumi.Input<string>;
 }

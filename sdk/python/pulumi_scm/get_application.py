@@ -27,7 +27,7 @@ class GetApplicationResult:
     """
     A collection of values returned by getApplication.
     """
-    def __init__(__self__, able_to_transfer_file=None, alg_disable_capability=None, category=None, consume_big_bandwidth=None, data_ident=None, default=None, description=None, evasive_behavior=None, file_type_ident=None, has_known_vulnerability=None, id=None, name=None, no_appid_caching=None, parent_app=None, pervasive_use=None, prone_to_misuse=None, risk=None, signatures=None, subcategory=None, tcp_half_closed_timeout=None, tcp_time_wait_timeout=None, tcp_timeout=None, technology=None, tfid=None, timeout=None, tunnel_applications=None, tunnel_other_application=None, udp_timeout=None, used_by_malware=None, virus_ident=None):
+    def __init__(__self__, able_to_transfer_file=None, alg_disable_capability=None, category=None, consume_big_bandwidth=None, data_ident=None, default=None, description=None, device=None, evasive_behavior=None, file_type_ident=None, folder=None, has_known_vulnerability=None, id=None, name=None, no_appid_caching=None, parent_app=None, pervasive_use=None, prone_to_misuse=None, risk=None, signatures=None, snippet=None, subcategory=None, tcp_half_closed_timeout=None, tcp_time_wait_timeout=None, tcp_timeout=None, technology=None, tfid=None, timeout=None, tunnel_applications=None, tunnel_other_application=None, udp_timeout=None, used_by_malware=None, virus_ident=None):
         if able_to_transfer_file and not isinstance(able_to_transfer_file, bool):
             raise TypeError("Expected argument 'able_to_transfer_file' to be a bool")
         pulumi.set(__self__, "able_to_transfer_file", able_to_transfer_file)
@@ -49,12 +49,18 @@ class GetApplicationResult:
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if evasive_behavior and not isinstance(evasive_behavior, bool):
             raise TypeError("Expected argument 'evasive_behavior' to be a bool")
         pulumi.set(__self__, "evasive_behavior", evasive_behavior)
         if file_type_ident and not isinstance(file_type_ident, bool):
             raise TypeError("Expected argument 'file_type_ident' to be a bool")
         pulumi.set(__self__, "file_type_ident", file_type_ident)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if has_known_vulnerability and not isinstance(has_known_vulnerability, bool):
             raise TypeError("Expected argument 'has_known_vulnerability' to be a bool")
         pulumi.set(__self__, "has_known_vulnerability", has_known_vulnerability)
@@ -76,12 +82,15 @@ class GetApplicationResult:
         if prone_to_misuse and not isinstance(prone_to_misuse, bool):
             raise TypeError("Expected argument 'prone_to_misuse' to be a bool")
         pulumi.set(__self__, "prone_to_misuse", prone_to_misuse)
-        if risk and not isinstance(risk, int):
-            raise TypeError("Expected argument 'risk' to be a int")
+        if risk and not isinstance(risk, str):
+            raise TypeError("Expected argument 'risk' to be a str")
         pulumi.set(__self__, "risk", risk)
         if signatures and not isinstance(signatures, list):
             raise TypeError("Expected argument 'signatures' to be a list")
         pulumi.set(__self__, "signatures", signatures)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if subcategory and not isinstance(subcategory, str):
             raise TypeError("Expected argument 'subcategory' to be a str")
         pulumi.set(__self__, "subcategory", subcategory)
@@ -123,7 +132,7 @@ class GetApplicationResult:
     @pulumi.getter(name="ableToTransferFile")
     def able_to_transfer_file(self) -> _builtins.bool:
         """
-        The AbleToTransferFile param.
+        Able to transfer file
         """
         return pulumi.get(self, "able_to_transfer_file")
 
@@ -131,7 +140,7 @@ class GetApplicationResult:
     @pulumi.getter(name="algDisableCapability")
     def alg_disable_capability(self) -> _builtins.str:
         """
-        The AlgDisableCapability param. String length must not exceed 127 characters.
+        Alg disable capability
         """
         return pulumi.get(self, "alg_disable_capability")
 
@@ -139,7 +148,7 @@ class GetApplicationResult:
     @pulumi.getter
     def category(self) -> _builtins.str:
         """
-        The Category param.
+        Category
         """
         return pulumi.get(self, "category")
 
@@ -147,7 +156,7 @@ class GetApplicationResult:
     @pulumi.getter(name="consumeBigBandwidth")
     def consume_big_bandwidth(self) -> _builtins.bool:
         """
-        The ConsumeBigBandwidth param.
+        Consume big bandwidth
         """
         return pulumi.get(self, "consume_big_bandwidth")
 
@@ -155,7 +164,7 @@ class GetApplicationResult:
     @pulumi.getter(name="dataIdent")
     def data_ident(self) -> _builtins.bool:
         """
-        The DataIdent param.
+        Data ident
         """
         return pulumi.get(self, "data_ident")
 
@@ -163,7 +172,7 @@ class GetApplicationResult:
     @pulumi.getter
     def default(self) -> 'outputs.GetApplicationDefaultResult':
         """
-        The Default param.
+        Default
         """
         return pulumi.get(self, "default")
 
@@ -171,15 +180,23 @@ class GetApplicationResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param. String length must not exceed 1023 characters.
+        Description
         """
         return pulumi.get(self, "description")
+
+    @_builtins.property
+    @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="evasiveBehavior")
     def evasive_behavior(self) -> _builtins.bool:
         """
-        The EvasiveBehavior param.
+        Evasive behavior
         """
         return pulumi.get(self, "evasive_behavior")
 
@@ -187,15 +204,23 @@ class GetApplicationResult:
     @pulumi.getter(name="fileTypeIdent")
     def file_type_ident(self) -> _builtins.bool:
         """
-        The FileTypeIdent param.
+        File type ident
         """
         return pulumi.get(self, "file_type_ident")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="hasKnownVulnerability")
     def has_known_vulnerability(self) -> _builtins.bool:
         """
-        The HasKnownVulnerability param.
+        Has known vulnerability
         """
         return pulumi.get(self, "has_known_vulnerability")
 
@@ -203,7 +228,7 @@ class GetApplicationResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the application
         """
         return pulumi.get(self, "id")
 
@@ -211,7 +236,7 @@ class GetApplicationResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the application
         """
         return pulumi.get(self, "name")
 
@@ -219,7 +244,7 @@ class GetApplicationResult:
     @pulumi.getter(name="noAppidCaching")
     def no_appid_caching(self) -> _builtins.bool:
         """
-        The NoAppidCaching param.
+        No appid caching
         """
         return pulumi.get(self, "no_appid_caching")
 
@@ -227,7 +252,7 @@ class GetApplicationResult:
     @pulumi.getter(name="parentApp")
     def parent_app(self) -> _builtins.str:
         """
-        The ParentApp param. String length must not exceed 127 characters.
+        Parent app
         """
         return pulumi.get(self, "parent_app")
 
@@ -235,7 +260,7 @@ class GetApplicationResult:
     @pulumi.getter(name="pervasiveUse")
     def pervasive_use(self) -> _builtins.bool:
         """
-        The PervasiveUse param.
+        Pervasive use
         """
         return pulumi.get(self, "pervasive_use")
 
@@ -243,15 +268,15 @@ class GetApplicationResult:
     @pulumi.getter(name="proneToMisuse")
     def prone_to_misuse(self) -> _builtins.bool:
         """
-        The ProneToMisuse param.
+        Prone to misuse
         """
         return pulumi.get(self, "prone_to_misuse")
 
     @_builtins.property
     @pulumi.getter
-    def risk(self) -> _builtins.int:
+    def risk(self) -> _builtins.str:
         """
-        The Risk param. Value must be between 1 and 5.
+        Risk
         """
         return pulumi.get(self, "risk")
 
@@ -259,15 +284,23 @@ class GetApplicationResult:
     @pulumi.getter
     def signatures(self) -> Sequence['outputs.GetApplicationSignatureResult']:
         """
-        The Signatures param.
+        Signature
         """
         return pulumi.get(self, "signatures")
 
     @_builtins.property
     @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
+
+    @_builtins.property
+    @pulumi.getter
     def subcategory(self) -> _builtins.str:
         """
-        The Subcategory param. String length must not exceed 63 characters.
+        Subcategory
         """
         return pulumi.get(self, "subcategory")
 
@@ -275,7 +308,7 @@ class GetApplicationResult:
     @pulumi.getter(name="tcpHalfClosedTimeout")
     def tcp_half_closed_timeout(self) -> _builtins.int:
         """
-        timeout for half-close session in seconds. Value must be between 1 and 604800.
+        timeout for half-close session in seconds
         """
         return pulumi.get(self, "tcp_half_closed_timeout")
 
@@ -283,7 +316,7 @@ class GetApplicationResult:
     @pulumi.getter(name="tcpTimeWaitTimeout")
     def tcp_time_wait_timeout(self) -> _builtins.int:
         """
-        timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+        timeout for session in time_wait state in seconds
         """
         return pulumi.get(self, "tcp_time_wait_timeout")
 
@@ -291,7 +324,7 @@ class GetApplicationResult:
     @pulumi.getter(name="tcpTimeout")
     def tcp_timeout(self) -> _builtins.int:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "tcp_timeout")
 
@@ -299,7 +332,7 @@ class GetApplicationResult:
     @pulumi.getter
     def technology(self) -> _builtins.str:
         """
-        The Technology param. String length must not exceed 63 characters.
+        Technology
         """
         return pulumi.get(self, "technology")
 
@@ -312,7 +345,7 @@ class GetApplicationResult:
     @pulumi.getter
     def timeout(self) -> _builtins.int:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "timeout")
 
@@ -320,7 +353,7 @@ class GetApplicationResult:
     @pulumi.getter(name="tunnelApplications")
     def tunnel_applications(self) -> _builtins.bool:
         """
-        The TunnelApplications param.
+        Tunnel applications
         """
         return pulumi.get(self, "tunnel_applications")
 
@@ -328,7 +361,7 @@ class GetApplicationResult:
     @pulumi.getter(name="tunnelOtherApplication")
     def tunnel_other_application(self) -> _builtins.bool:
         """
-        The TunnelOtherApplication param.
+        Tunnel other application
         """
         return pulumi.get(self, "tunnel_other_application")
 
@@ -336,7 +369,7 @@ class GetApplicationResult:
     @pulumi.getter(name="udpTimeout")
     def udp_timeout(self) -> _builtins.int:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "udp_timeout")
 
@@ -344,7 +377,7 @@ class GetApplicationResult:
     @pulumi.getter(name="usedByMalware")
     def used_by_malware(self) -> _builtins.bool:
         """
-        The UsedByMalware param.
+        Used by malware
         """
         return pulumi.get(self, "used_by_malware")
 
@@ -352,7 +385,7 @@ class GetApplicationResult:
     @pulumi.getter(name="virusIdent")
     def virus_ident(self) -> _builtins.bool:
         """
-        The VirusIdent param.
+        Virus ident
         """
         return pulumi.get(self, "virus_ident")
 
@@ -370,8 +403,10 @@ class AwaitableGetApplicationResult(GetApplicationResult):
             data_ident=self.data_ident,
             default=self.default,
             description=self.description,
+            device=self.device,
             evasive_behavior=self.evasive_behavior,
             file_type_ident=self.file_type_ident,
+            folder=self.folder,
             has_known_vulnerability=self.has_known_vulnerability,
             id=self.id,
             name=self.name,
@@ -381,6 +416,7 @@ class AwaitableGetApplicationResult(GetApplicationResult):
             prone_to_misuse=self.prone_to_misuse,
             risk=self.risk,
             signatures=self.signatures,
+            snippet=self.snippet,
             subcategory=self.subcategory,
             tcp_half_closed_timeout=self.tcp_half_closed_timeout,
             tcp_time_wait_timeout=self.tcp_time_wait_timeout,
@@ -396,9 +432,10 @@ class AwaitableGetApplicationResult(GetApplicationResult):
 
 
 def get_application(id: Optional[_builtins.str] = None,
+                    name: Optional[_builtins.str] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetApplicationResult:
     """
-    Retrieves a config item.
+    Application data source
 
     ## Example Usage
 
@@ -406,14 +443,19 @@ def get_application(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_application(id="1234-56-789")
+    # Look up a single application object by its ID.
+    # The ID used here is from the API response log you provided.
+    scm_application_ds = scm.get_application(id="bb16f631-4839-475e-8628-70585319ca75")
+    pulumi.export("applicationDsResult", scm_application_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the application
+    :param _builtins.str name: The name of the application
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getApplication:getApplication', __args__, opts=opts, typ=GetApplicationResult).value
 
@@ -425,8 +467,10 @@ def get_application(id: Optional[_builtins.str] = None,
         data_ident=pulumi.get(__ret__, 'data_ident'),
         default=pulumi.get(__ret__, 'default'),
         description=pulumi.get(__ret__, 'description'),
+        device=pulumi.get(__ret__, 'device'),
         evasive_behavior=pulumi.get(__ret__, 'evasive_behavior'),
         file_type_ident=pulumi.get(__ret__, 'file_type_ident'),
+        folder=pulumi.get(__ret__, 'folder'),
         has_known_vulnerability=pulumi.get(__ret__, 'has_known_vulnerability'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
@@ -436,6 +480,7 @@ def get_application(id: Optional[_builtins.str] = None,
         prone_to_misuse=pulumi.get(__ret__, 'prone_to_misuse'),
         risk=pulumi.get(__ret__, 'risk'),
         signatures=pulumi.get(__ret__, 'signatures'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         subcategory=pulumi.get(__ret__, 'subcategory'),
         tcp_half_closed_timeout=pulumi.get(__ret__, 'tcp_half_closed_timeout'),
         tcp_time_wait_timeout=pulumi.get(__ret__, 'tcp_time_wait_timeout'),
@@ -449,9 +494,10 @@ def get_application(id: Optional[_builtins.str] = None,
         used_by_malware=pulumi.get(__ret__, 'used_by_malware'),
         virus_ident=pulumi.get(__ret__, 'virus_ident'))
 def get_application_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                           name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationResult]:
     """
-    Retrieves a config item.
+    Application data source
 
     ## Example Usage
 
@@ -459,14 +505,19 @@ def get_application_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_application(id="1234-56-789")
+    # Look up a single application object by its ID.
+    # The ID used here is from the API response log you provided.
+    scm_application_ds = scm.get_application(id="bb16f631-4839-475e-8628-70585319ca75")
+    pulumi.export("applicationDsResult", scm_application_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the application
+    :param _builtins.str name: The name of the application
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getApplication:getApplication', __args__, opts=opts, typ=GetApplicationResult)
     return __ret__.apply(lambda __response__: GetApplicationResult(
@@ -477,8 +528,10 @@ def get_application_output(id: Optional[pulumi.Input[_builtins.str]] = None,
         data_ident=pulumi.get(__response__, 'data_ident'),
         default=pulumi.get(__response__, 'default'),
         description=pulumi.get(__response__, 'description'),
+        device=pulumi.get(__response__, 'device'),
         evasive_behavior=pulumi.get(__response__, 'evasive_behavior'),
         file_type_ident=pulumi.get(__response__, 'file_type_ident'),
+        folder=pulumi.get(__response__, 'folder'),
         has_known_vulnerability=pulumi.get(__response__, 'has_known_vulnerability'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
@@ -488,6 +541,7 @@ def get_application_output(id: Optional[pulumi.Input[_builtins.str]] = None,
         prone_to_misuse=pulumi.get(__response__, 'prone_to_misuse'),
         risk=pulumi.get(__response__, 'risk'),
         signatures=pulumi.get(__response__, 'signatures'),
+        snippet=pulumi.get(__response__, 'snippet'),
         subcategory=pulumi.get(__response__, 'subcategory'),
         tcp_half_closed_timeout=pulumi.get(__response__, 'tcp_half_closed_timeout'),
         tcp_time_wait_timeout=pulumi.get(__response__, 'tcp_time_wait_timeout'),

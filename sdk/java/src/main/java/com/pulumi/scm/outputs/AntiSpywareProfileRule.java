@@ -14,74 +14,74 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareProfileRule {
     /**
-     * @return The Action param.
+     * @return anti spyware profiles rules default action
      * 
      */
     private @Nullable AntiSpywareProfileRuleAction action;
     /**
-     * @return The Category param. String must be one of these: `&#34;dns-proxy&#34;`, `&#34;backdoor&#34;`, `&#34;data-theft&#34;`, `&#34;autogen&#34;`, `&#34;spyware&#34;`, `&#34;dns-security&#34;`, `&#34;downloader&#34;`, `&#34;dns-phishing&#34;`, `&#34;phishing-kit&#34;`, `&#34;cryptominer&#34;`, `&#34;hacktool&#34;`, `&#34;dns-benign&#34;`, `&#34;dns-wildfire&#34;`, `&#34;botnet&#34;`, `&#34;dns-grayware&#34;`, `&#34;inline-cloud-c2&#34;`, `&#34;keylogger&#34;`, `&#34;p2p-communication&#34;`, `&#34;domain-edl&#34;`, `&#34;webshell&#34;`, `&#34;command-and-control&#34;`, `&#34;dns-ddns&#34;`, `&#34;net-worm&#34;`, `&#34;any&#34;`, `&#34;tls-fingerprint&#34;`, `&#34;dns-new-domain&#34;`, `&#34;dns&#34;`, `&#34;fraud&#34;`, `&#34;dns-c2&#34;`, `&#34;adware&#34;`, `&#34;post-exploitation&#34;`, `&#34;dns-malware&#34;`, `&#34;browser-hijack&#34;`, `&#34;dns-parked&#34;`.
+     * @return Category
      * 
      */
     private @Nullable String category;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private @Nullable String name;
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     private @Nullable String packetCapture;
     /**
-     * @return The Severities param.
+     * @return Severity
      * 
      */
     private @Nullable List<String> severities;
     /**
-     * @return The ThreatName param. String length must exceed 4 characters.
+     * @return Threat name
      * 
      */
     private @Nullable String threatName;
 
     private AntiSpywareProfileRule() {}
     /**
-     * @return The Action param.
+     * @return anti spyware profiles rules default action
      * 
      */
     public Optional<AntiSpywareProfileRuleAction> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return The Category param. String must be one of these: `&#34;dns-proxy&#34;`, `&#34;backdoor&#34;`, `&#34;data-theft&#34;`, `&#34;autogen&#34;`, `&#34;spyware&#34;`, `&#34;dns-security&#34;`, `&#34;downloader&#34;`, `&#34;dns-phishing&#34;`, `&#34;phishing-kit&#34;`, `&#34;cryptominer&#34;`, `&#34;hacktool&#34;`, `&#34;dns-benign&#34;`, `&#34;dns-wildfire&#34;`, `&#34;botnet&#34;`, `&#34;dns-grayware&#34;`, `&#34;inline-cloud-c2&#34;`, `&#34;keylogger&#34;`, `&#34;p2p-communication&#34;`, `&#34;domain-edl&#34;`, `&#34;webshell&#34;`, `&#34;command-and-control&#34;`, `&#34;dns-ddns&#34;`, `&#34;net-worm&#34;`, `&#34;any&#34;`, `&#34;tls-fingerprint&#34;`, `&#34;dns-new-domain&#34;`, `&#34;dns&#34;`, `&#34;fraud&#34;`, `&#34;dns-c2&#34;`, `&#34;adware&#34;`, `&#34;post-exploitation&#34;`, `&#34;dns-malware&#34;`, `&#34;browser-hijack&#34;`, `&#34;dns-parked&#34;`.
+     * @return Category
      * 
      */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     public Optional<String> packetCapture() {
         return Optional.ofNullable(this.packetCapture);
     }
     /**
-     * @return The Severities param.
+     * @return Severity
      * 
      */
     public List<String> severities() {
         return this.severities == null ? List.of() : this.severities;
     }
     /**
-     * @return The ThreatName param. String length must exceed 4 characters.
+     * @return Threat name
      * 
      */
     public Optional<String> threatName() {

@@ -13,31 +13,31 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeIpRecurringGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Daily param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Daily
         /// </summary>
         [Input("daily")]
         public Input<Inputs.ExternalDynamicListTypeIpRecurringDailyGetArgs>? Daily { get; set; }
 
         /// <summary>
-        /// The FiveMinute param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Five minute
         /// </summary>
         [Input("fiveMinute")]
-        public Input<bool>? FiveMinute { get; set; }
+        public Input<Inputs.ExternalDynamicListTypeIpRecurringFiveMinuteGetArgs>? FiveMinute { get; set; }
 
         /// <summary>
-        /// The Hourly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Hourly
         /// </summary>
         [Input("hourly")]
-        public Input<bool>? Hourly { get; set; }
+        public Input<Inputs.ExternalDynamicListTypeIpRecurringHourlyGetArgs>? Hourly { get; set; }
 
         /// <summary>
-        /// The Monthly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Monthly
         /// </summary>
         [Input("monthly")]
         public Input<Inputs.ExternalDynamicListTypeIpRecurringMonthlyGetArgs>? Monthly { get; set; }
 
         /// <summary>
-        /// The Weekly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Weekly
         /// </summary>
         [Input("weekly")]
         public Input<Inputs.ExternalDynamicListTypeIpRecurringWeeklyGetArgs>? Weekly { get; set; }

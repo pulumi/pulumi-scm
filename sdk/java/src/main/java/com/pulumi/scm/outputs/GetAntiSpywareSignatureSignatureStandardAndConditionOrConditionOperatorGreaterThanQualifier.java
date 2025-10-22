@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier {
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The Value param.
+     * @return Value
      * 
      */
     private String value;
 
     private GetAntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier() {}
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Value param.
+     * @return Value
      * 
      */
     public String value() {

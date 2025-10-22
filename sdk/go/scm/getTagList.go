@@ -27,12 +27,15 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetTagList(ctx, &scm.GetTagListArgs{
+//			// Fetch a list of all application objects.
+//			// This data source will call the "List" API endpoint.
+//			allTags, err := scm.GetTagList(ctx, &scm.GetTagListArgs{
 //				Folder: pulumi.StringRef("Shared"),
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("tagsListRaw", allTags.Datas)
 //			return nil
 //		})
 //	}
@@ -50,40 +53,40 @@ func GetTagList(ctx *pulumi.Context, args *GetTagListArgs, opts ...pulumi.Invoke
 
 // A collection of arguments for invoking getTagList.
 type GetTagListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getTagList.
 type GetTagListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetTagListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +101,17 @@ func GetTagListOutput(ctx *pulumi.Context, args GetTagListOutputArgs, opts ...pu
 
 // A collection of arguments for invoking getTagList.
 type GetTagListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +134,17 @@ func (o GetTagListResultOutput) ToGetTagListResultOutputWithContext(ctx context.
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetTagListResultOutput) Datas() GetTagListDataArrayOutput {
 	return o.ApplyT(func(v GetTagListResult) []GetTagListData { return v.Datas }).(GetTagListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetTagListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetTagListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetTagListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetTagListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +154,22 @@ func (o GetTagListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTagListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetTagListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTagListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetTagListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetTagListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetTagListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetTagListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetTagListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetTagListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetTagListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetTagListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetTagListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetTagListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +178,7 @@ func (o GetTagListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetTagListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetTagListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetTagListResult) int { return v.Total }).(pulumi.IntOutput)
 }

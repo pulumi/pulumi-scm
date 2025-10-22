@@ -27,10 +27,13 @@ class GetRemoteNetworkListResult:
     """
     A collection of values returned by getRemoteNetworkList.
     """
-    def __init__(__self__, datas=None, folder=None, id=None, limit=None, name=None, offset=None, tfid=None, total=None):
+    def __init__(__self__, datas=None, device=None, folder=None, id=None, limit=None, name=None, offset=None, snippet=None, tfid=None, total=None):
         if datas and not isinstance(datas, list):
             raise TypeError("Expected argument 'datas' to be a list")
         pulumi.set(__self__, "datas", datas)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if folder and not isinstance(folder, str):
             raise TypeError("Expected argument 'folder' to be a str")
         pulumi.set(__self__, "folder", folder)
@@ -46,6 +49,9 @@ class GetRemoteNetworkListResult:
         if offset and not isinstance(offset, int):
             raise TypeError("Expected argument 'offset' to be a int")
         pulumi.set(__self__, "offset", offset)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -57,15 +63,23 @@ class GetRemoteNetworkListResult:
     @pulumi.getter
     def datas(self) -> Sequence['outputs.GetRemoteNetworkListDataResult']:
         """
-        The Data param.
+        The data.
         """
         return pulumi.get(self, "datas")
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> _builtins.str:
+    def device(self) -> Optional[_builtins.str]:
         """
-        The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+        The device of the item.
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> Optional[_builtins.str]:
+        """
+        The folder of the item. Default: Shared.
         """
         return pulumi.get(self, "folder")
 
@@ -79,9 +93,9 @@ class GetRemoteNetworkListResult:
 
     @_builtins.property
     @pulumi.getter
-    def limit(self) -> _builtins.int:
+    def limit(self) -> Optional[_builtins.int]:
         """
-        The Limit param. A limit of -1 will return all configured items. Default: `200`.
+        The max number of items to return. Default: 200.
         """
         return pulumi.get(self, "limit")
 
@@ -89,17 +103,25 @@ class GetRemoteNetworkListResult:
     @pulumi.getter
     def name(self) -> Optional[_builtins.str]:
         """
-        The Name param.
+        The name of the item.
         """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
-    def offset(self) -> _builtins.int:
+    def offset(self) -> Optional[_builtins.int]:
         """
-        The Offset param. Default: `0`.
+        The offset of the first item to return.
         """
         return pulumi.get(self, "offset")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> Optional[_builtins.str]:
+        """
+        The snippet of the item.
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -110,7 +132,7 @@ class GetRemoteNetworkListResult:
     @pulumi.getter
     def total(self) -> _builtins.int:
         """
-        The Total param.
+        The total number of items.
         """
         return pulumi.get(self, "total")
 
@@ -122,19 +144,23 @@ class AwaitableGetRemoteNetworkListResult(GetRemoteNetworkListResult):
             yield self
         return GetRemoteNetworkListResult(
             datas=self.datas,
+            device=self.device,
             folder=self.folder,
             id=self.id,
             limit=self.limit,
             name=self.name,
             offset=self.offset,
+            snippet=self.snippet,
             tfid=self.tfid,
             total=self.total)
 
 
-def get_remote_network_list(folder: Optional[_builtins.str] = None,
+def get_remote_network_list(device: Optional[_builtins.str] = None,
+                            folder: Optional[_builtins.str] = None,
                             limit: Optional[_builtins.int] = None,
                             name: Optional[_builtins.str] = None,
                             offset: Optional[_builtins.int] = None,
+                            snippet: Optional[_builtins.str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetRemoteNetworkListResult:
     """
     Retrieves a listing of config items.
@@ -145,36 +171,49 @@ def get_remote_network_list(folder: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
+    #
+    # Data source to retrieve a list of remote_network objects.
+    #
+    # Look up a list of Remote Networks, filtering by folder.
     example = scm.get_remote_network_list(folder="Remote Networks")
+    pulumi.export("remoteNetworkList", [network.name for network in example.datas])
     ```
 
 
-    :param _builtins.str folder: The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-    :param _builtins.int limit: The Limit param. A limit of -1 will return all configured items. Default: `200`.
-    :param _builtins.str name: The Name param.
-    :param _builtins.int offset: The Offset param. Default: `0`.
+    :param _builtins.str device: The device of the item.
+    :param _builtins.str folder: The folder of the item. Default: Shared.
+    :param _builtins.int limit: The max number of items to return. Default: 200.
+    :param _builtins.str name: The name of the item.
+    :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
+    __args__['device'] = device
     __args__['folder'] = folder
     __args__['limit'] = limit
     __args__['name'] = name
     __args__['offset'] = offset
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getRemoteNetworkList:getRemoteNetworkList', __args__, opts=opts, typ=GetRemoteNetworkListResult).value
 
     return AwaitableGetRemoteNetworkListResult(
         datas=pulumi.get(__ret__, 'datas'),
+        device=pulumi.get(__ret__, 'device'),
         folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         limit=pulumi.get(__ret__, 'limit'),
         name=pulumi.get(__ret__, 'name'),
         offset=pulumi.get(__ret__, 'offset'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
-def get_remote_network_list_output(folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_remote_network_list_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                                   folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                    limit: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
                                    name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                    offset: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
+                                   snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRemoteNetworkListResult]:
     """
     Retrieves a listing of config items.
@@ -185,28 +224,39 @@ def get_remote_network_list_output(folder: Optional[pulumi.Input[Optional[_built
     import pulumi
     import pulumi_scm as scm
 
+    #
+    # Data source to retrieve a list of remote_network objects.
+    #
+    # Look up a list of Remote Networks, filtering by folder.
     example = scm.get_remote_network_list(folder="Remote Networks")
+    pulumi.export("remoteNetworkList", [network.name for network in example.datas])
     ```
 
 
-    :param _builtins.str folder: The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-    :param _builtins.int limit: The Limit param. A limit of -1 will return all configured items. Default: `200`.
-    :param _builtins.str name: The Name param.
-    :param _builtins.int offset: The Offset param. Default: `0`.
+    :param _builtins.str device: The device of the item.
+    :param _builtins.str folder: The folder of the item. Default: Shared.
+    :param _builtins.int limit: The max number of items to return. Default: 200.
+    :param _builtins.str name: The name of the item.
+    :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
+    __args__['device'] = device
     __args__['folder'] = folder
     __args__['limit'] = limit
     __args__['name'] = name
     __args__['offset'] = offset
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getRemoteNetworkList:getRemoteNetworkList', __args__, opts=opts, typ=GetRemoteNetworkListResult)
     return __ret__.apply(lambda __response__: GetRemoteNetworkListResult(
         datas=pulumi.get(__response__, 'datas'),
+        device=pulumi.get(__response__, 'device'),
         folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         limit=pulumi.get(__response__, 'limit'),
         name=pulumi.get(__response__, 'name'),
         offset=pulumi.get(__response__, 'offset'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         total=pulumi.get(__response__, 'total')))

@@ -14,69 +14,86 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetUrlAccessProfileListDataResult
     {
         /// <summary>
-        /// The Alerts param.
+        /// Alert
         /// </summary>
         public readonly ImmutableArray<string> Alerts;
         /// <summary>
-        /// The Allows param.
+        /// Allow
         /// </summary>
         public readonly ImmutableArray<string> Allows;
         /// <summary>
-        /// The Blocks param.
+        /// Block
         /// </summary>
         public readonly ImmutableArray<string> Blocks;
         /// <summary>
-        /// The CloudInlineCat param.
+        /// Cloud inline cat
         /// </summary>
         public readonly bool CloudInlineCat;
         /// <summary>
-        /// The Continues param.
+        /// Continue
         /// </summary>
         public readonly ImmutableArray<string> Continues;
         /// <summary>
-        /// The CredentialEnforcement param.
+        /// Credential enforcement
         /// </summary>
         public readonly Outputs.GetUrlAccessProfileListDataCredentialEnforcementResult CredentialEnforcement;
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The LocalInlineCat param.
+        /// Local inline cat
         /// </summary>
         public readonly bool LocalInlineCat;
         /// <summary>
-        /// The LogContainerPageOnly param. Default: `True`.
+        /// Log container page only
         /// </summary>
         public readonly bool LogContainerPageOnly;
         /// <summary>
-        /// The LogHttpHdrReferer param. Default: `False`.
+        /// Log http hdr referer
         /// </summary>
         public readonly bool LogHttpHdrReferer;
         /// <summary>
-        /// The LogHttpHdrUserAgent param. Default: `False`.
+        /// Log http hdr user agent
         /// </summary>
         public readonly bool LogHttpHdrUserAgent;
         /// <summary>
-        /// The LogHttpHdrXff param. Default: `False`.
+        /// Log http hdr xff
         /// </summary>
         public readonly bool LogHttpHdrXff;
         /// <summary>
-        /// The MlavCategoryExceptions param.
+        /// Mlav category exception
         /// </summary>
         public readonly ImmutableArray<string> MlavCategoryExceptions;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The SafeSearchEnforcement param. Default: `False`.
+        /// Redirect
+        /// </summary>
+        public readonly ImmutableArray<string> Redirects;
+        /// <summary>
+        /// Safe search enforcement
         /// </summary>
         public readonly bool SafeSearchEnforcement;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetUrlAccessProfileListDataResult(
@@ -94,6 +111,10 @@ namespace Pulumi.Scm.Outputs
 
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
             bool localInlineCat,
@@ -110,7 +131,13 @@ namespace Pulumi.Scm.Outputs
 
             string name,
 
-            bool safeSearchEnforcement)
+            ImmutableArray<string> redirects,
+
+            bool safeSearchEnforcement,
+
+            string snippet,
+
+            string tfid)
         {
             Alerts = alerts;
             Allows = allows;
@@ -119,6 +146,8 @@ namespace Pulumi.Scm.Outputs
             Continues = continues;
             CredentialEnforcement = credentialEnforcement;
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             LocalInlineCat = localInlineCat;
             LogContainerPageOnly = logContainerPageOnly;
@@ -127,7 +156,10 @@ namespace Pulumi.Scm.Outputs
             LogHttpHdrXff = logHttpHdrXff;
             MlavCategoryExceptions = mlavCategoryExceptions;
             Name = name;
+            Redirects = redirects;
             SafeSearchEnforcement = safeSearchEnforcement;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

@@ -10,127 +10,112 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.ScepProfile("example");
-    /// 
-    /// });
-    /// ```
+    /// ScepProfile resource
     /// </summary>
     [ScmResourceType("scm:index/scepProfile:ScepProfile")]
     public partial class ScepProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Algorithm param.
+        /// Algorithm
         /// </summary>
         [Output("algorithm")]
-        public Output<Outputs.ScepProfileAlgorithm?> Algorithm { get; private set; } = null!;
+        public Output<Outputs.ScepProfileAlgorithm> Algorithm { get; private set; } = null!;
 
         /// <summary>
-        /// The CaIdentityName param.
+        /// Certificate Authority identity
         /// </summary>
         [Output("caIdentityName")]
         public Output<string> CaIdentityName { get; private set; } = null!;
 
         /// <summary>
-        /// The CertificateAttributes param.
+        /// Subject Alternative name type
         /// </summary>
         [Output("certificateAttributes")]
         public Output<Outputs.ScepProfileCertificateAttributes?> CertificateAttributes { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Digest param.
+        /// Digest for CSR
         /// </summary>
         [Output("digest")]
         public Output<string> Digest { get; private set; } = null!;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
+        /// Map of sensitive values returned from the API.
         /// </summary>
         [Output("encryptedValues")]
         public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
 
         /// <summary>
-        /// The Fingerprint param.
+        /// CA certificate fingerprint
         /// </summary>
         [Output("fingerprint")]
         public Output<string?> Fingerprint { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the SCEP profile
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The ScepCaCert param.
+        /// SCEP server CA certificate
         /// </summary>
         [Output("scepCaCert")]
         public Output<string?> ScepCaCert { get; private set; } = null!;
 
         /// <summary>
-        /// The ScepChallenge param.
+        /// One Time Password challenge
         /// </summary>
         [Output("scepChallenge")]
-        public Output<Outputs.ScepProfileScepChallenge?> ScepChallenge { get; private set; } = null!;
+        public Output<Outputs.ScepProfileScepChallenge> ScepChallenge { get; private set; } = null!;
 
         /// <summary>
-        /// The ScepClientCert param.
+        /// SCEP client ceertificate
         /// </summary>
         [Output("scepClientCert")]
         public Output<string?> ScepClientCert { get; private set; } = null!;
 
         /// <summary>
-        /// The ScepUrl param.
+        /// SCEP server URL
         /// </summary>
         [Output("scepUrl")]
         public Output<string> ScepUrl { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The Subject param.
+        /// Subject
         /// </summary>
         [Output("subject")]
-        public Output<string?> Subject { get; private set; } = null!;
+        public Output<string> Subject { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The UseAsDigitalSignature param.
+        /// Use as digital signature?
         /// </summary>
         [Output("useAsDigitalSignature")]
         public Output<bool?> UseAsDigitalSignature { get; private set; } = null!;
 
         /// <summary>
-        /// The UseForKeyEncipherment param.
+        /// Use for key encipherment?
         /// </summary>
         [Output("useForKeyEncipherment")]
         public Output<bool?> UseForKeyEncipherment { get; private set; } = null!;
@@ -186,97 +171,97 @@ namespace Pulumi.Scm
     public sealed class ScepProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Algorithm param.
+        /// Algorithm
         /// </summary>
-        [Input("algorithm")]
-        public Input<Inputs.ScepProfileAlgorithmArgs>? Algorithm { get; set; }
+        [Input("algorithm", required: true)]
+        public Input<Inputs.ScepProfileAlgorithmArgs> Algorithm { get; set; } = null!;
 
         /// <summary>
-        /// The CaIdentityName param.
+        /// Certificate Authority identity
         /// </summary>
         [Input("caIdentityName", required: true)]
         public Input<string> CaIdentityName { get; set; } = null!;
 
         /// <summary>
-        /// The CertificateAttributes param.
+        /// Subject Alternative name type
         /// </summary>
         [Input("certificateAttributes")]
         public Input<Inputs.ScepProfileCertificateAttributesArgs>? CertificateAttributes { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Digest param.
+        /// Digest for CSR
         /// </summary>
         [Input("digest", required: true)]
         public Input<string> Digest { get; set; } = null!;
 
         /// <summary>
-        /// The Fingerprint param.
+        /// CA certificate fingerprint
         /// </summary>
         [Input("fingerprint")]
         public Input<string>? Fingerprint { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the SCEP profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The ScepCaCert param.
+        /// SCEP server CA certificate
         /// </summary>
         [Input("scepCaCert")]
         public Input<string>? ScepCaCert { get; set; }
 
         /// <summary>
-        /// The ScepChallenge param.
+        /// One Time Password challenge
         /// </summary>
-        [Input("scepChallenge")]
-        public Input<Inputs.ScepProfileScepChallengeArgs>? ScepChallenge { get; set; }
+        [Input("scepChallenge", required: true)]
+        public Input<Inputs.ScepProfileScepChallengeArgs> ScepChallenge { get; set; } = null!;
 
         /// <summary>
-        /// The ScepClientCert param.
+        /// SCEP client ceertificate
         /// </summary>
         [Input("scepClientCert")]
         public Input<string>? ScepClientCert { get; set; }
 
         /// <summary>
-        /// The ScepUrl param.
+        /// SCEP server URL
         /// </summary>
         [Input("scepUrl", required: true)]
         public Input<string> ScepUrl { get; set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The Subject param.
+        /// Subject
         /// </summary>
-        [Input("subject")]
-        public Input<string>? Subject { get; set; }
+        [Input("subject", required: true)]
+        public Input<string> Subject { get; set; } = null!;
 
         /// <summary>
-        /// The UseAsDigitalSignature param.
+        /// Use as digital signature?
         /// </summary>
         [Input("useAsDigitalSignature")]
         public Input<bool>? UseAsDigitalSignature { get; set; }
 
         /// <summary>
-        /// The UseForKeyEncipherment param.
+        /// Use for key encipherment?
         /// </summary>
         [Input("useForKeyEncipherment")]
         public Input<bool>? UseForKeyEncipherment { get; set; }
@@ -290,31 +275,31 @@ namespace Pulumi.Scm
     public sealed class ScepProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Algorithm param.
+        /// Algorithm
         /// </summary>
         [Input("algorithm")]
         public Input<Inputs.ScepProfileAlgorithmGetArgs>? Algorithm { get; set; }
 
         /// <summary>
-        /// The CaIdentityName param.
+        /// Certificate Authority identity
         /// </summary>
         [Input("caIdentityName")]
         public Input<string>? CaIdentityName { get; set; }
 
         /// <summary>
-        /// The CertificateAttributes param.
+        /// Subject Alternative name type
         /// </summary>
         [Input("certificateAttributes")]
         public Input<Inputs.ScepProfileCertificateAttributesGetArgs>? CertificateAttributes { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Digest param.
+        /// Digest for CSR
         /// </summary>
         [Input("digest")]
         public Input<string>? Digest { get; set; }
@@ -323,7 +308,7 @@ namespace Pulumi.Scm
         private InputMap<string>? _encryptedValues;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
+        /// Map of sensitive values returned from the API.
         /// </summary>
         public InputMap<string> EncryptedValues
         {
@@ -336,55 +321,55 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Fingerprint param.
+        /// CA certificate fingerprint
         /// </summary>
         [Input("fingerprint")]
         public Input<string>? Fingerprint { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the SCEP profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The ScepCaCert param.
+        /// SCEP server CA certificate
         /// </summary>
         [Input("scepCaCert")]
         public Input<string>? ScepCaCert { get; set; }
 
         /// <summary>
-        /// The ScepChallenge param.
+        /// One Time Password challenge
         /// </summary>
         [Input("scepChallenge")]
         public Input<Inputs.ScepProfileScepChallengeGetArgs>? ScepChallenge { get; set; }
 
         /// <summary>
-        /// The ScepClientCert param.
+        /// SCEP client ceertificate
         /// </summary>
         [Input("scepClientCert")]
         public Input<string>? ScepClientCert { get; set; }
 
         /// <summary>
-        /// The ScepUrl param.
+        /// SCEP server URL
         /// </summary>
         [Input("scepUrl")]
         public Input<string>? ScepUrl { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The Subject param.
+        /// Subject
         /// </summary>
         [Input("subject")]
         public Input<string>? Subject { get; set; }
@@ -393,13 +378,13 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The UseAsDigitalSignature param.
+        /// Use as digital signature?
         /// </summary>
         [Input("useAsDigitalSignature")]
         public Input<bool>? UseAsDigitalSignature { get; set; }
 
         /// <summary>
-        /// The UseForKeyEncipherment param.
+        /// Use for key encipherment?
         /// </summary>
         [Input("useForKeyEncipherment")]
         public Input<bool>? UseForKeyEncipherment { get; set; }

@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * Tag data source
  *
  * ## Example Usage
  *
@@ -13,15 +13,24 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getTag({
- *     id: "1234-56-789",
+ * // Look up the "production" tag by its name.
+ * const scmTagDs = scm.getTag({
+ *     id: "66cbe56c-0300-4905-8455-d384978a0082",
  * });
+ * export const tagOutputs = {
+ *     productionId: scmTagDs.then(scmTagDs => scmTagDs.id),
+ *     productionColor: scmTagDs.then(scmTagDs => scmTagDs.color),
+ *     productionFolder: scmTagDs.then(scmTagDs => scmTagDs.folder),
+ *     productionSnippet: scmTagDs.then(scmTagDs => scmTagDs.snippet),
+ *     productionDevice: scmTagDs.then(scmTagDs => scmTagDs.device),
+ * };
  * ```
  */
 export function getTag(args: GetTagArgs, opts?: pulumi.InvokeOptions): Promise<GetTagResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTag:getTag", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +39,13 @@ export function getTag(args: GetTagArgs, opts?: pulumi.InvokeOptions): Promise<G
  */
 export interface GetTagArgs {
     /**
-     * The Id param.
+     * The UUID of the tag
      */
     id: string;
+    /**
+     * The name of the tag
+     */
+    name?: string;
 }
 
 /**
@@ -40,25 +53,37 @@ export interface GetTagArgs {
  */
 export interface GetTagResult {
     /**
-     * The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+     * The color of the tag
      */
     readonly color: string;
     /**
-     * The Comments param. String length must not exceed 1023 characters.
+     * The description of the tag
      */
     readonly comments: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the tag
      */
     readonly id: string;
     /**
-     * The Name param. String length must not exceed 127 characters.
+     * The name of the tag
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * Tag data source
  *
  * ## Example Usage
  *
@@ -66,15 +91,24 @@ export interface GetTagResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getTag({
- *     id: "1234-56-789",
+ * // Look up the "production" tag by its name.
+ * const scmTagDs = scm.getTag({
+ *     id: "66cbe56c-0300-4905-8455-d384978a0082",
  * });
+ * export const tagOutputs = {
+ *     productionId: scmTagDs.then(scmTagDs => scmTagDs.id),
+ *     productionColor: scmTagDs.then(scmTagDs => scmTagDs.color),
+ *     productionFolder: scmTagDs.then(scmTagDs => scmTagDs.folder),
+ *     productionSnippet: scmTagDs.then(scmTagDs => scmTagDs.snippet),
+ *     productionDevice: scmTagDs.then(scmTagDs => scmTagDs.device),
+ * };
  * ```
  */
 export function getTagOutput(args: GetTagOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTagResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTag:getTag", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -83,7 +117,11 @@ export function getTagOutput(args: GetTagOutputArgs, opts?: pulumi.InvokeOutputO
  */
 export interface GetTagOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the tag
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the tag
+     */
+    name?: pulumi.Input<string>;
 }

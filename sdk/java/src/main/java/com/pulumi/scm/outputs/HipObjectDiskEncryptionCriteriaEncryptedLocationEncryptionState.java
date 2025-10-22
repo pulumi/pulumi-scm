@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState {
     /**
-     * @return The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+     * @return Is
      * 
      */
     private @Nullable String is;
     /**
-     * @return The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+     * @return Is not
      * 
      */
     private @Nullable String isNot;
 
     private HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState() {}
     /**
-     * @return The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+     * @return Is
      * 
      */
     public Optional<String> is() {
         return Optional.ofNullable(this.is);
     }
     /**
-     * @return The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+     * @return Is not
      * 
      */
     public Optional<String> isNot() {

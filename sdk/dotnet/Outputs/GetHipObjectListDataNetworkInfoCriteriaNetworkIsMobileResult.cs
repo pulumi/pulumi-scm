@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobileResult
     {
         /// <summary>
-        /// The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+        /// Carrier
         /// </summary>
         public readonly string Carrier;
 

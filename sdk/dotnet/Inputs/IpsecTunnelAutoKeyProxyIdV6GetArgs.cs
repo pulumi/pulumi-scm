@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class IpsecTunnelAutoKeyProxyIdV6GetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Local param.
+        /// Local
         /// </summary>
         [Input("local")]
         public Input<string>? Local { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// The Protocol param.
+        /// IPv6 type of proxy*id protocol values for protocol
         /// </summary>
         [Input("protocol")]
         public Input<Inputs.IpsecTunnelAutoKeyProxyIdV6ProtocolGetArgs>? Protocol { get; set; }
 
         /// <summary>
-        /// The Remote param.
+        /// Remote
         /// </summary>
         [Input("remote")]
         public Input<string>? Remote { get; set; }

@@ -16,14 +16,14 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
     public static final HipObjectHostInfoCriteriaOsContainsArgs Empty = new HipObjectHostInfoCriteriaOsContainsArgs();
 
     /**
-     * Apple vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * Apple
      * 
      */
     @Import(name="apple")
     private @Nullable Output<String> apple;
 
     /**
-     * @return Apple vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Apple
      * 
      */
     public Optional<Output<String>> apple() {
@@ -31,14 +31,14 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
     }
 
     /**
-     * Google vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * Google
      * 
      */
     @Import(name="google")
     private @Nullable Output<String> google;
 
     /**
-     * @return Google vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Google
      * 
      */
     public Optional<Output<String>> google() {
@@ -46,14 +46,14 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
     }
 
     /**
-     * Linux vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * Linux
      * 
      */
     @Import(name="linux")
     private @Nullable Output<String> linux;
 
     /**
-     * @return Linux vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Linux
      * 
      */
     public Optional<Output<String>> linux() {
@@ -61,14 +61,14 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
     }
 
     /**
-     * Microsoft vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * Microsoft
      * 
      */
     @Import(name="microsoft")
     private @Nullable Output<String> microsoft;
 
     /**
-     * @return Microsoft vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Microsoft
      * 
      */
     public Optional<Output<String>> microsoft() {
@@ -76,14 +76,14 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
     }
 
     /**
-     * Other vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * Other
      * 
      */
     @Import(name="other")
     private @Nullable Output<String> other;
 
     /**
-     * @return Other vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Other
      * 
      */
     public Optional<Output<String>> other() {
@@ -119,7 +119,7 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
         }
 
         /**
-         * @param apple Apple vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+         * @param apple Apple
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
         }
 
         /**
-         * @param apple Apple vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+         * @param apple Apple
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
         }
 
         /**
-         * @param google Google vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+         * @param google Google
          * 
          * @return builder
          * 
@@ -151,7 +151,7 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
         }
 
         /**
-         * @param google Google vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+         * @param google Google
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
         }
 
         /**
-         * @param linux Linux vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+         * @param linux Linux
          * 
          * @return builder
          * 
@@ -172,7 +172,7 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
         }
 
         /**
-         * @param linux Linux vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+         * @param linux Linux
          * 
          * @return builder
          * 
@@ -182,7 +182,7 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
         }
 
         /**
-         * @param microsoft Microsoft vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+         * @param microsoft Microsoft
          * 
          * @return builder
          * 
@@ -193,7 +193,7 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
         }
 
         /**
-         * @param microsoft Microsoft vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+         * @param microsoft Microsoft
          * 
          * @return builder
          * 
@@ -203,7 +203,7 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
         }
 
         /**
-         * @param other Other vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+         * @param other Other
          * 
          * @return builder
          * 
@@ -214,7 +214,7 @@ public final class HipObjectHostInfoCriteriaOsContainsArgs extends com.pulumi.re
         }
 
         /**
-         * @param other Other vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+         * @param other Other
          * 
          * @return builder
          * 

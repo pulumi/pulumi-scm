@@ -12,78 +12,82 @@ import java.util.Objects;
 @CustomType
 public final class GetFolderListData {
     /**
-     * @return The Description param.
+     * @return The description of the folder
      * 
      */
     private String description;
     /**
-     * @return The Id param.
+     * @return The UUID of the folder
      * 
      */
     private String id;
     /**
-     * @return The Labels param.
+     * @return Labels assigned to the folder
      * 
      */
     private List<String> labels;
     /**
-     * @return The Name param.
+     * @return The name of the folder
      * 
      */
     private String name;
     /**
-     * @return The Parent param.
+     * @return The parent folder
      * 
      */
     private String parent;
     /**
-     * @return The Snippets param.
+     * @return Snippets associated with the folder
      * 
      */
     private List<String> snippets;
+    private String tfid;
 
     private GetFolderListData() {}
     /**
-     * @return The Description param.
+     * @return The description of the folder
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The Id param.
+     * @return The UUID of the folder
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Labels param.
+     * @return Labels assigned to the folder
      * 
      */
     public List<String> labels() {
         return this.labels;
     }
     /**
-     * @return The Name param.
+     * @return The name of the folder
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Parent param.
+     * @return The parent folder
      * 
      */
     public String parent() {
         return this.parent;
     }
     /**
-     * @return The Snippets param.
+     * @return Snippets associated with the folder
      * 
      */
     public List<String> snippets() {
         return this.snippets;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -101,6 +105,7 @@ public final class GetFolderListData {
         private String name;
         private String parent;
         private List<String> snippets;
+        private String tfid;
         public Builder() {}
         public Builder(GetFolderListData defaults) {
     	      Objects.requireNonNull(defaults);
@@ -110,6 +115,7 @@ public final class GetFolderListData {
     	      this.name = defaults.name;
     	      this.parent = defaults.parent;
     	      this.snippets = defaults.snippets;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -166,6 +172,14 @@ public final class GetFolderListData {
         public Builder snippets(String... snippets) {
             return snippets(List.of(snippets));
         }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetFolderListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetFolderListData build() {
             final var _resultValue = new GetFolderListData();
             _resultValue.description = description;
@@ -174,6 +188,7 @@ public final class GetFolderListData {
             _resultValue.name = name;
             _resultValue.parent = parent;
             _resultValue.snippets = snippets;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

@@ -13,46 +13,46 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareSignatureDefaultActionGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Alert param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Alert
         /// </summary>
         [Input("alert")]
-        public Input<bool>? Alert { get; set; }
+        public Input<Inputs.AntiSpywareSignatureDefaultActionAlertGetArgs>? Alert { get; set; }
 
         /// <summary>
-        /// The Allow param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Allow
         /// </summary>
         [Input("allow")]
-        public Input<bool>? Allow { get; set; }
+        public Input<Inputs.AntiSpywareSignatureDefaultActionAllowGetArgs>? Allow { get; set; }
 
         /// <summary>
-        /// The BlockIp param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// anti spyware signature block ip
         /// </summary>
         [Input("blockIp")]
         public Input<Inputs.AntiSpywareSignatureDefaultActionBlockIpGetArgs>? BlockIp { get; set; }
 
         /// <summary>
-        /// The Drop param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Drop
         /// </summary>
         [Input("drop")]
-        public Input<bool>? Drop { get; set; }
+        public Input<Inputs.AntiSpywareSignatureDefaultActionDropGetArgs>? Drop { get; set; }
 
         /// <summary>
-        /// The ResetBoth param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset both
         /// </summary>
         [Input("resetBoth")]
-        public Input<bool>? ResetBoth { get; set; }
+        public Input<Inputs.AntiSpywareSignatureDefaultActionResetBothGetArgs>? ResetBoth { get; set; }
 
         /// <summary>
-        /// The ResetClient param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset client
         /// </summary>
         [Input("resetClient")]
-        public Input<bool>? ResetClient { get; set; }
+        public Input<Inputs.AntiSpywareSignatureDefaultActionResetClientGetArgs>? ResetClient { get; set; }
 
         /// <summary>
-        /// The ResetServer param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset server
         /// </summary>
         [Input("resetServer")]
-        public Input<bool>? ResetServer { get; set; }
+        public Input<Inputs.AntiSpywareSignatureDefaultActionResetServerGetArgs>? ResetServer { get; set; }
 
         public AntiSpywareSignatureDefaultActionGetArgs()
         {

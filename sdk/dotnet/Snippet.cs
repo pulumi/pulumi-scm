@@ -10,40 +10,25 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.Snippet("example");
-    /// 
-    /// });
-    /// ```
+    /// Snippet resource
     /// </summary>
     [ScmResourceType("scm:index/snippet:Snippet")]
     public partial class Snippet : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the snippet
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Labels param.
+        /// Labels applied to the snippet
         /// </summary>
         [Output("labels")]
         public Output<ImmutableArray<string>> Labels { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the snippet
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
@@ -52,10 +37,10 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The Type param. String must be one of these: `"predefined"`, `"custom"`.
+        /// The snippet type
         /// </summary>
         [Output("type")]
-        public Output<string> Type { get; private set; } = null!;
+        public Output<string?> Type { get; private set; } = null!;
 
 
         /// <summary>
@@ -104,7 +89,7 @@ namespace Pulumi.Scm
     public sealed class SnippetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the snippet
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -113,7 +98,7 @@ namespace Pulumi.Scm
         private InputList<string>? _labels;
 
         /// <summary>
-        /// The Labels param.
+        /// Labels applied to the snippet
         /// </summary>
         public InputList<string> Labels
         {
@@ -122,10 +107,16 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the snippet
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet type
+        /// </summary>
+        [Input("type")]
+        public Input<string>? Type { get; set; }
 
         public SnippetArgs()
         {
@@ -136,7 +127,7 @@ namespace Pulumi.Scm
     public sealed class SnippetState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the snippet
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -145,7 +136,7 @@ namespace Pulumi.Scm
         private InputList<string>? _labels;
 
         /// <summary>
-        /// The Labels param.
+        /// Labels applied to the snippet
         /// </summary>
         public InputList<string> Labels
         {
@@ -154,7 +145,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the snippet
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -163,7 +154,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The Type param. String must be one of these: `"predefined"`, `"custom"`.
+        /// The snippet type
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

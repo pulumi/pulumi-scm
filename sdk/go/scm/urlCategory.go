@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// UrlCategory resource
 //
 // ## Example Usage
 //
@@ -27,8 +27,16 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates a custom URL Category object.
 //			_, err := scm.NewUrlCategory(ctx, "example", &scm.UrlCategoryArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("example_url_category"),
+//				Description: pulumi.String("Test URL Category for create API"),
+//				Lists: pulumi.StringArray{
+//					pulumi.String("example.com"),
+//					pulumi.String("test-create.com"),
+//				},
+//				Type: pulumi.String("URL List"),
 //			})
 //			if err != nil {
 //				return err
@@ -41,20 +49,20 @@ import (
 type UrlCategory struct {
 	pulumi.CustomResourceState
 
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The List param.
+	// List
 	Lists pulumi.StringArrayOutput `pulumi:"lists"`
-	// The Name param.
+	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
-	// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+	// Type
 	Type pulumi.StringOutput `pulumi:"type"`
 }
 
@@ -88,38 +96,38 @@ func GetUrlCategory(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering UrlCategory resources.
 type urlCategoryState struct {
-	// The Description param.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The List param.
+	// List
 	Lists []string `pulumi:"lists"`
-	// The Name param.
+	// Name
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
-	// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+	// Type
 	Type *string `pulumi:"type"`
 }
 
 type UrlCategoryState struct {
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The List param.
+	// List
 	Lists pulumi.StringArrayInput
-	// The Name param.
+	// Name
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
-	// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+	// Type
 	Type pulumi.StringPtrInput
 }
 
@@ -128,37 +136,37 @@ func (UrlCategoryState) ElementType() reflect.Type {
 }
 
 type urlCategoryArgs struct {
-	// The Description param.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The List param.
+	// List
 	Lists []string `pulumi:"lists"`
-	// The Name param.
+	// Name
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+	// Type
 	Type *string `pulumi:"type"`
 }
 
 // The set of arguments for constructing a UrlCategory resource.
 type UrlCategoryArgs struct {
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The List param.
+	// List
 	Lists pulumi.StringArrayInput
-	// The Name param.
+	// Name
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+	// Type
 	Type pulumi.StringPtrInput
 }
 
@@ -249,32 +257,32 @@ func (o UrlCategoryOutput) ToUrlCategoryOutputWithContext(ctx context.Context) U
 	return o
 }
 
-// The Description param.
+// Description
 func (o UrlCategoryOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlCategory) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o UrlCategoryOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlCategory) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o UrlCategoryOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlCategory) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The List param.
+// List
 func (o UrlCategoryOutput) Lists() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *UrlCategory) pulumi.StringArrayOutput { return v.Lists }).(pulumi.StringArrayOutput)
 }
 
-// The Name param.
+// Name
 func (o UrlCategoryOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *UrlCategory) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o UrlCategoryOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlCategory) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -283,7 +291,7 @@ func (o UrlCategoryOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *UrlCategory) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+// Type
 func (o UrlCategoryOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v *UrlCategory) pulumi.StringOutput { return v.Type }).(pulumi.StringOutput)
 }

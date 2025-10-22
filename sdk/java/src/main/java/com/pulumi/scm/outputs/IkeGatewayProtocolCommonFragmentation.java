@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayProtocolCommonFragmentation {
     /**
-     * @return The Enable param. Default: `false`.
+     * @return Enable
      * 
      */
     private @Nullable Boolean enable;
 
     private IkeGatewayProtocolCommonFragmentation() {}
     /**
-     * @return The Enable param. Default: `false`.
+     * @return Enable
      * 
      */
     public Optional<Boolean> enable() {

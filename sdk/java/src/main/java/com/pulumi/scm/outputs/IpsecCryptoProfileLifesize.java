@@ -12,50 +12,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IpsecCryptoProfileLifesize {
     /**
-     * @return specify lifesize in gigabytes(GB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in gigabytes(GB)
      * 
      */
     private @Nullable Integer gb;
     /**
-     * @return specify lifesize in kilobytes(KB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in kilobytes(KB)
      * 
      */
     private @Nullable Integer kb;
     /**
-     * @return specify lifesize in megabytes(MB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in megabytes(MB)
      * 
      */
     private @Nullable Integer mb;
     /**
-     * @return specify lifesize in terabytes(TB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in terabytes(TB)
      * 
      */
     private @Nullable Integer tb;
 
     private IpsecCryptoProfileLifesize() {}
     /**
-     * @return specify lifesize in gigabytes(GB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in gigabytes(GB)
      * 
      */
     public Optional<Integer> gb() {
         return Optional.ofNullable(this.gb);
     }
     /**
-     * @return specify lifesize in kilobytes(KB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in kilobytes(KB)
      * 
      */
     public Optional<Integer> kb() {
         return Optional.ofNullable(this.kb);
     }
     /**
-     * @return specify lifesize in megabytes(MB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in megabytes(MB)
      * 
      */
     public Optional<Integer> mb() {
         return Optional.ofNullable(this.mb);
     }
     /**
-     * @return specify lifesize in terabytes(TB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in terabytes(TB)
      * 
      */
     public Optional<Integer> tb() {

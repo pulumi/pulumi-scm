@@ -5,57 +5,44 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetRemoteNetworkListDataProtocolBgpPeer {
     /**
-     * @return The LocalIpAddress param.
+     * @return Local peer IP address (secondary WAN)
      * 
      */
     private String localIpAddress;
     /**
-     * @return The PeerIpAddress param.
+     * @return Remote peer IP address (secondary WAN)
      * 
      */
     private String peerIpAddress;
     /**
-     * @return If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
-     * 
-     */
-    private Boolean sameAsPrimary;
-    /**
-     * @return The Secret param.
+     * @return BGP peering secret (secondary WAN)
      * 
      */
     private String secret;
 
     private GetRemoteNetworkListDataProtocolBgpPeer() {}
     /**
-     * @return The LocalIpAddress param.
+     * @return Local peer IP address (secondary WAN)
      * 
      */
     public String localIpAddress() {
         return this.localIpAddress;
     }
     /**
-     * @return The PeerIpAddress param.
+     * @return Remote peer IP address (secondary WAN)
      * 
      */
     public String peerIpAddress() {
         return this.peerIpAddress;
     }
     /**
-     * @return If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
-     * 
-     */
-    public Boolean sameAsPrimary() {
-        return this.sameAsPrimary;
-    }
-    /**
-     * @return The Secret param.
+     * @return BGP peering secret (secondary WAN)
      * 
      */
     public String secret() {
@@ -73,14 +60,12 @@ public final class GetRemoteNetworkListDataProtocolBgpPeer {
     public static final class Builder {
         private String localIpAddress;
         private String peerIpAddress;
-        private Boolean sameAsPrimary;
         private String secret;
         public Builder() {}
         public Builder(GetRemoteNetworkListDataProtocolBgpPeer defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.localIpAddress = defaults.localIpAddress;
     	      this.peerIpAddress = defaults.peerIpAddress;
-    	      this.sameAsPrimary = defaults.sameAsPrimary;
     	      this.secret = defaults.secret;
         }
 
@@ -101,14 +86,6 @@ public final class GetRemoteNetworkListDataProtocolBgpPeer {
             return this;
         }
         @CustomType.Setter
-        public Builder sameAsPrimary(Boolean sameAsPrimary) {
-            if (sameAsPrimary == null) {
-              throw new MissingRequiredPropertyException("GetRemoteNetworkListDataProtocolBgpPeer", "sameAsPrimary");
-            }
-            this.sameAsPrimary = sameAsPrimary;
-            return this;
-        }
-        @CustomType.Setter
         public Builder secret(String secret) {
             if (secret == null) {
               throw new MissingRequiredPropertyException("GetRemoteNetworkListDataProtocolBgpPeer", "secret");
@@ -120,7 +97,6 @@ public final class GetRemoteNetworkListDataProtocolBgpPeer {
             final var _resultValue = new GetRemoteNetworkListDataProtocolBgpPeer();
             _resultValue.localIpAddress = localIpAddress;
             _resultValue.peerIpAddress = peerIpAddress;
-            _resultValue.sameAsPrimary = sameAsPrimary;
             _resultValue.secret = secret;
             return _resultValue;
         }

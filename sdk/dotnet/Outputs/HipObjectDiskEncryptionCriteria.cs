@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectDiskEncryptionCriteria
     {
         /// <summary>
-        /// The EncryptedLocations param.
+        /// Encrypted locations
         /// </summary>
         public readonly ImmutableArray<Outputs.HipObjectDiskEncryptionCriteriaEncryptedLocation> EncryptedLocations;
         /// <summary>
-        /// Is Installed. Default: `True`.
+        /// Is Installed
         /// </summary>
         public readonly bool? IsInstalled;
 

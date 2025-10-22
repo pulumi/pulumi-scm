@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class QosProfileClassBandwidthTypePercentageClassClassBandwidthGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// guaranteed sending bandwidth in percentage. Value must be between 0 and 100.
+        /// guaranteed sending bandwidth in percentage
         /// </summary>
         [Input("egressGuaranteed")]
         public Input<int>? EgressGuaranteed { get; set; }
 
         /// <summary>
-        /// max sending bandwidth in percentage. Value must be between 0 and 100.
+        /// max sending bandwidth in percentage
         /// </summary>
         [Input("egressMax")]
         public Input<int>? EgressMax { get; set; }

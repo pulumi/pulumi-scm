@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class ApplicationSignatureAndConditionOrConditionOperatorGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The EqualTo param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
+        /// Equal to
         /// </summary>
         [Input("equalTo")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorEqualToGetArgs>? EqualTo { get; set; }
 
         /// <summary>
-        /// The GreaterThan param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
+        /// Greater than
         /// </summary>
         [Input("greaterThan")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorGreaterThanGetArgs>? GreaterThan { get; set; }
 
         /// <summary>
-        /// The LessThan param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
+        /// Less than
         /// </summary>
         [Input("lessThan")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorLessThanGetArgs>? LessThan { get; set; }
 
         /// <summary>
-        /// The PatternMatch param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
+        /// Pattern match
         /// </summary>
         [Input("patternMatch")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorPatternMatchGetArgs>? PatternMatch { get; set; }

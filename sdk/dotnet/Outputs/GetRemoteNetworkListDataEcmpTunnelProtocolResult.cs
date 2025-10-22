@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRemoteNetworkListDataEcmpTunnelProtocolResult
     {
         /// <summary>
-        /// The Bgp param.
+        /// Bgp
         /// </summary>
         public readonly Outputs.GetRemoteNetworkListDataEcmpTunnelProtocolBgpResult Bgp;
 

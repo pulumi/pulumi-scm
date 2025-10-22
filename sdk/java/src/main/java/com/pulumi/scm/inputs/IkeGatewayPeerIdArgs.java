@@ -16,14 +16,14 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
     public static final IkeGatewayPeerIdArgs Empty = new IkeGatewayPeerIdArgs();
 
     /**
-     * Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * Peer ID string
      * 
      */
     @Import(name="id")
     private @Nullable Output<String> id;
 
     /**
-     * @return Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * @return Peer ID string
      * 
      */
     public Optional<Output<String>> id() {
@@ -31,14 +31,14 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The Type param. String must be one of these: `&#34;ipaddr&#34;`, `&#34;keyid&#34;`, `&#34;fqdn&#34;`, `&#34;ufqdn&#34;`.
+     * Type
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return The Type param. String must be one of these: `&#34;ipaddr&#34;`, `&#34;keyid&#34;`, `&#34;fqdn&#34;`, `&#34;ufqdn&#34;`.
+     * @return Type
      * 
      */
     public Optional<Output<String>> type() {
@@ -71,7 +71,7 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param id Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+         * @param id Peer ID string
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param id Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+         * @param id Peer ID string
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param type The Type param. String must be one of these: `&#34;ipaddr&#34;`, `&#34;keyid&#34;`, `&#34;fqdn&#34;`, `&#34;ufqdn&#34;`.
+         * @param type Type
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class IkeGatewayPeerIdArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param type The Type param. String must be one of these: `&#34;ipaddr&#34;`, `&#34;keyid&#34;`, `&#34;fqdn&#34;`, `&#34;ufqdn&#34;`.
+         * @param type Type
          * 
          * @return builder
          * 

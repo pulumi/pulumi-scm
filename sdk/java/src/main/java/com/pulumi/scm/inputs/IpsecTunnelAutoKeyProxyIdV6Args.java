@@ -18,14 +18,14 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
     public static final IpsecTunnelAutoKeyProxyIdV6Args Empty = new IpsecTunnelAutoKeyProxyIdV6Args();
 
     /**
-     * The Local param.
+     * Local
      * 
      */
     @Import(name="local")
     private @Nullable Output<String> local;
 
     /**
-     * @return The Local param.
+     * @return Local
      * 
      */
     public Optional<Output<String>> local() {
@@ -33,14 +33,14 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Output<String> name() {
@@ -48,14 +48,14 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
     }
 
     /**
-     * The Protocol param.
+     * IPv6 type of proxy*id protocol values for protocol
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<IpsecTunnelAutoKeyProxyIdV6ProtocolArgs> protocol;
 
     /**
-     * @return The Protocol param.
+     * @return IPv6 type of proxy*id protocol values for protocol
      * 
      */
     public Optional<Output<IpsecTunnelAutoKeyProxyIdV6ProtocolArgs>> protocol() {
@@ -63,14 +63,14 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
     }
 
     /**
-     * The Remote param.
+     * Remote
      * 
      */
     @Import(name="remote")
     private @Nullable Output<String> remote;
 
     /**
-     * @return The Remote param.
+     * @return Remote
      * 
      */
     public Optional<Output<String>> remote() {
@@ -105,7 +105,7 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
         }
 
         /**
-         * @param local The Local param.
+         * @param local Local
          * 
          * @return builder
          * 
@@ -116,7 +116,7 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
         }
 
         /**
-         * @param local The Local param.
+         * @param local Local
          * 
          * @return builder
          * 
@@ -126,7 +126,7 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -137,7 +137,7 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -147,7 +147,7 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol IPv6 type of proxy*id protocol values for protocol
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol IPv6 type of proxy*id protocol values for protocol
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
         }
 
         /**
-         * @param remote The Remote param.
+         * @param remote Remote
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class IpsecTunnelAutoKeyProxyIdV6Args extends com.pulumi.resources.
         }
 
         /**
-         * @param remote The Remote param.
+         * @param remote Remote
          * 
          * @return builder
          * 

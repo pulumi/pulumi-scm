@@ -5,7 +5,10 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Boolean;
+import com.pulumi.scm.inputs.DnsSecurityProfileBotnetDomainsListActionAlertArgs;
+import com.pulumi.scm.inputs.DnsSecurityProfileBotnetDomainsListActionAllowArgs;
+import com.pulumi.scm.inputs.DnsSecurityProfileBotnetDomainsListActionBlockArgs;
+import com.pulumi.scm.inputs.DnsSecurityProfileBotnetDomainsListActionSinkholeArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,62 +19,62 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
     public static final DnsSecurityProfileBotnetDomainsListActionArgs Empty = new DnsSecurityProfileBotnetDomainsListActionArgs();
 
     /**
-     * The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * Alert
      * 
      */
     @Import(name="alert")
-    private @Nullable Output<Boolean> alert;
+    private @Nullable Output<DnsSecurityProfileBotnetDomainsListActionAlertArgs> alert;
 
     /**
-     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Alert
      * 
      */
-    public Optional<Output<Boolean>> alert() {
+    public Optional<Output<DnsSecurityProfileBotnetDomainsListActionAlertArgs>> alert() {
         return Optional.ofNullable(this.alert);
     }
 
     /**
-     * The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * Allow
      * 
      */
     @Import(name="allow")
-    private @Nullable Output<Boolean> allow;
+    private @Nullable Output<DnsSecurityProfileBotnetDomainsListActionAllowArgs> allow;
 
     /**
-     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Allow
      * 
      */
-    public Optional<Output<Boolean>> allow() {
+    public Optional<Output<DnsSecurityProfileBotnetDomainsListActionAllowArgs>> allow() {
         return Optional.ofNullable(this.allow);
     }
 
     /**
-     * The Block param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * Block
      * 
      */
     @Import(name="block")
-    private @Nullable Output<Boolean> block;
+    private @Nullable Output<DnsSecurityProfileBotnetDomainsListActionBlockArgs> block;
 
     /**
-     * @return The Block param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Block
      * 
      */
-    public Optional<Output<Boolean>> block() {
+    public Optional<Output<DnsSecurityProfileBotnetDomainsListActionBlockArgs>> block() {
         return Optional.ofNullable(this.block);
     }
 
     /**
-     * The Sinkhole param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * Sinkhole
      * 
      */
     @Import(name="sinkhole")
-    private @Nullable Output<Boolean> sinkhole;
+    private @Nullable Output<DnsSecurityProfileBotnetDomainsListActionSinkholeArgs> sinkhole;
 
     /**
-     * @return The Sinkhole param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Sinkhole
      * 
      */
-    public Optional<Output<Boolean>> sinkhole() {
+    public Optional<Output<DnsSecurityProfileBotnetDomainsListActionSinkholeArgs>> sinkhole() {
         return Optional.ofNullable(this.sinkhole);
     }
 
@@ -103,86 +106,86 @@ public final class DnsSecurityProfileBotnetDomainsListActionArgs extends com.pul
         }
 
         /**
-         * @param alert The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+         * @param alert Alert
          * 
          * @return builder
          * 
          */
-        public Builder alert(@Nullable Output<Boolean> alert) {
+        public Builder alert(@Nullable Output<DnsSecurityProfileBotnetDomainsListActionAlertArgs> alert) {
             $.alert = alert;
             return this;
         }
 
         /**
-         * @param alert The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+         * @param alert Alert
          * 
          * @return builder
          * 
          */
-        public Builder alert(Boolean alert) {
+        public Builder alert(DnsSecurityProfileBotnetDomainsListActionAlertArgs alert) {
             return alert(Output.of(alert));
         }
 
         /**
-         * @param allow The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+         * @param allow Allow
          * 
          * @return builder
          * 
          */
-        public Builder allow(@Nullable Output<Boolean> allow) {
+        public Builder allow(@Nullable Output<DnsSecurityProfileBotnetDomainsListActionAllowArgs> allow) {
             $.allow = allow;
             return this;
         }
 
         /**
-         * @param allow The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+         * @param allow Allow
          * 
          * @return builder
          * 
          */
-        public Builder allow(Boolean allow) {
+        public Builder allow(DnsSecurityProfileBotnetDomainsListActionAllowArgs allow) {
             return allow(Output.of(allow));
         }
 
         /**
-         * @param block The Block param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+         * @param block Block
          * 
          * @return builder
          * 
          */
-        public Builder block(@Nullable Output<Boolean> block) {
+        public Builder block(@Nullable Output<DnsSecurityProfileBotnetDomainsListActionBlockArgs> block) {
             $.block = block;
             return this;
         }
 
         /**
-         * @param block The Block param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+         * @param block Block
          * 
          * @return builder
          * 
          */
-        public Builder block(Boolean block) {
+        public Builder block(DnsSecurityProfileBotnetDomainsListActionBlockArgs block) {
             return block(Output.of(block));
         }
 
         /**
-         * @param sinkhole The Sinkhole param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+         * @param sinkhole Sinkhole
          * 
          * @return builder
          * 
          */
-        public Builder sinkhole(@Nullable Output<Boolean> sinkhole) {
+        public Builder sinkhole(@Nullable Output<DnsSecurityProfileBotnetDomainsListActionSinkholeArgs> sinkhole) {
             $.sinkhole = sinkhole;
             return this;
         }
 
         /**
-         * @param sinkhole The Sinkhole param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+         * @param sinkhole Sinkhole
          * 
          * @return builder
          * 
          */
-        public Builder sinkhole(Boolean sinkhole) {
+        public Builder sinkhole(DnsSecurityProfileBotnetDomainsListActionSinkholeArgs sinkhole) {
             return sinkhole(Output.of(sinkhole));
         }
 

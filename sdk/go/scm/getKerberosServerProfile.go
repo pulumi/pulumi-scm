@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupKerberosServerProfile(ctx, &scm.LookupKerberosServerProfileArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// KerberosServerProfile data source
 func LookupKerberosServerProfile(ctx *pulumi.Context, args *LookupKerberosServerProfileArgs, opts ...pulumi.InvokeOption) (*LookupKerberosServerProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupKerberosServerProfileResult
@@ -50,17 +24,27 @@ func LookupKerberosServerProfile(ctx *pulumi.Context, args *LookupKerberosServer
 
 // A collection of arguments for invoking getKerberosServerProfile.
 type LookupKerberosServerProfileArgs struct {
-	// The Id param.
+	// The UUID of the Kerberos server profile
 	Id string `pulumi:"id"`
+	// The name of the Kerberos server profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getKerberosServerProfile.
 type LookupKerberosServerProfileResult struct {
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the Kerberos server profile
 	Id string `pulumi:"id"`
-	// The Servers param.
+	// The name of the Kerberos server profile
+	Name string `pulumi:"name"`
+	// The Kerberos server configuration
 	Servers []GetKerberosServerProfileServer `pulumi:"servers"`
-	Tfid    string                           `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupKerberosServerProfileOutput(ctx *pulumi.Context, args LookupKerberosServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupKerberosServerProfileResultOutput {
@@ -74,8 +58,10 @@ func LookupKerberosServerProfileOutput(ctx *pulumi.Context, args LookupKerberosS
 
 // A collection of arguments for invoking getKerberosServerProfile.
 type LookupKerberosServerProfileOutputArgs struct {
-	// The Id param.
+	// The UUID of the Kerberos server profile
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the Kerberos server profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupKerberosServerProfileOutputArgs) ElementType() reflect.Type {
@@ -97,14 +83,34 @@ func (o LookupKerberosServerProfileResultOutput) ToLookupKerberosServerProfileRe
 	return o
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupKerberosServerProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupKerberosServerProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the Kerberos server profile
 func (o LookupKerberosServerProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Servers param.
+// The name of the Kerberos server profile
+func (o LookupKerberosServerProfileResultOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The Kerberos server configuration
 func (o LookupKerberosServerProfileResultOutput) Servers() GetKerberosServerProfileServerArrayOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) []GetKerberosServerProfileServer { return v.Servers }).(GetKerberosServerProfileServerArrayOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupKerberosServerProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupKerberosServerProfileResultOutput) Tfid() pulumi.StringOutput {

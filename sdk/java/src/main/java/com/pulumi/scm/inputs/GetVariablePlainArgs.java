@@ -16,44 +16,14 @@ public final class GetVariablePlainArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetVariablePlainArgs Empty = new GetVariablePlainArgs();
 
     /**
-     * The Device param.
-     * 
-     */
-    @Import(name="device")
-    private @Nullable String device;
-
-    /**
-     * @return The Device param.
-     * 
-     */
-    public Optional<String> device() {
-        return Optional.ofNullable(this.device);
-    }
-
-    /**
-     * The Folder param.
-     * 
-     */
-    @Import(name="folder")
-    private @Nullable String folder;
-
-    /**
-     * @return The Folder param.
-     * 
-     */
-    public Optional<String> folder() {
-        return Optional.ofNullable(this.folder);
-    }
-
-    /**
-     * The Id param.
+     * UUID of the variable
      * 
      */
     @Import(name="id", required=true)
     private String id;
 
     /**
-     * @return The Id param.
+     * @return UUID of the variable
      * 
      */
     public String id() {
@@ -61,27 +31,25 @@ public final class GetVariablePlainArgs extends com.pulumi.resources.InvokeArgs 
     }
 
     /**
-     * The Snippet param.
+     * The name of the variable
      * 
      */
-    @Import(name="snippet")
-    private @Nullable String snippet;
+    @Import(name="name")
+    private @Nullable String name;
 
     /**
-     * @return The Snippet param.
+     * @return The name of the variable
      * 
      */
-    public Optional<String> snippet() {
-        return Optional.ofNullable(this.snippet);
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetVariablePlainArgs() {}
 
     private GetVariablePlainArgs(GetVariablePlainArgs $) {
-        this.device = $.device;
-        this.folder = $.folder;
         this.id = $.id;
-        this.snippet = $.snippet;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -103,29 +71,7 @@ public final class GetVariablePlainArgs extends com.pulumi.resources.InvokeArgs 
         }
 
         /**
-         * @param device The Device param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder device(@Nullable String device) {
-            $.device = device;
-            return this;
-        }
-
-        /**
-         * @param folder The Folder param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(@Nullable String folder) {
-            $.folder = folder;
-            return this;
-        }
-
-        /**
-         * @param id The Id param.
+         * @param id UUID of the variable
          * 
          * @return builder
          * 
@@ -136,13 +82,13 @@ public final class GetVariablePlainArgs extends com.pulumi.resources.InvokeArgs 
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param name The name of the variable
          * 
          * @return builder
          * 
          */
-        public Builder snippet(@Nullable String snippet) {
-            $.snippet = snippet;
+        public Builder name(@Nullable String name) {
+            $.name = name;
             return this;
         }
 

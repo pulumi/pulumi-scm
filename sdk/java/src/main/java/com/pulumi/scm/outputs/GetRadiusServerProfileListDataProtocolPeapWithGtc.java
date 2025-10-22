@@ -10,28 +10,28 @@ import java.lang.String;
 import java.util.Objects;
 
 @CustomType
-public final class GetRadiusServerProfileListDataProtocolPeapWithGtc {
+public final class GetRadiusServerProfileListDataProtocolPEAPWithGTC {
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     private Boolean anonOuterId;
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     private String radiusCertProfile;
 
-    private GetRadiusServerProfileListDataProtocolPeapWithGtc() {}
+    private GetRadiusServerProfileListDataProtocolPEAPWithGTC() {}
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     public Boolean anonOuterId() {
         return this.anonOuterId;
     }
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     public String radiusCertProfile() {
@@ -42,7 +42,7 @@ public final class GetRadiusServerProfileListDataProtocolPeapWithGtc {
         return new Builder();
     }
 
-    public static Builder builder(GetRadiusServerProfileListDataProtocolPeapWithGtc defaults) {
+    public static Builder builder(GetRadiusServerProfileListDataProtocolPEAPWithGTC defaults) {
         return new Builder(defaults);
     }
     @CustomType.Builder
@@ -50,7 +50,7 @@ public final class GetRadiusServerProfileListDataProtocolPeapWithGtc {
         private Boolean anonOuterId;
         private String radiusCertProfile;
         public Builder() {}
-        public Builder(GetRadiusServerProfileListDataProtocolPeapWithGtc defaults) {
+        public Builder(GetRadiusServerProfileListDataProtocolPEAPWithGTC defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.anonOuterId = defaults.anonOuterId;
     	      this.radiusCertProfile = defaults.radiusCertProfile;
@@ -59,7 +59,7 @@ public final class GetRadiusServerProfileListDataProtocolPeapWithGtc {
         @CustomType.Setter
         public Builder anonOuterId(Boolean anonOuterId) {
             if (anonOuterId == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolPeapWithGtc", "anonOuterId");
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolPEAPWithGTC", "anonOuterId");
             }
             this.anonOuterId = anonOuterId;
             return this;
@@ -67,13 +67,13 @@ public final class GetRadiusServerProfileListDataProtocolPeapWithGtc {
         @CustomType.Setter
         public Builder radiusCertProfile(String radiusCertProfile) {
             if (radiusCertProfile == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolPeapWithGtc", "radiusCertProfile");
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolPEAPWithGTC", "radiusCertProfile");
             }
             this.radiusCertProfile = radiusCertProfile;
             return this;
         }
-        public GetRadiusServerProfileListDataProtocolPeapWithGtc build() {
-            final var _resultValue = new GetRadiusServerProfileListDataProtocolPeapWithGtc();
+        public GetRadiusServerProfileListDataProtocolPEAPWithGTC build() {
+            final var _resultValue = new GetRadiusServerProfileListDataProtocolPEAPWithGTC();
             _resultValue.anonOuterId = anonOuterId;
             _resultValue.radiusCertProfile = radiusCertProfile;
             return _resultValue;

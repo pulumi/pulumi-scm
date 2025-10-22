@@ -11,50 +11,50 @@ import java.util.Objects;
 @CustomType
 public final class GetIpsecCryptoProfileLifesize {
     /**
-     * @return specify lifesize in gigabytes(GB). Value must be between 1 and 65535.
+     * @return specify lifesize in gigabytes(GB)
      * 
      */
     private Integer gb;
     /**
-     * @return specify lifesize in kilobytes(KB). Value must be between 1 and 65535.
+     * @return specify lifesize in kilobytes(KB)
      * 
      */
     private Integer kb;
     /**
-     * @return specify lifesize in megabytes(MB). Value must be between 1 and 65535.
+     * @return specify lifesize in megabytes(MB)
      * 
      */
     private Integer mb;
     /**
-     * @return specify lifesize in terabytes(TB). Value must be between 1 and 65535.
+     * @return specify lifesize in terabytes(TB)
      * 
      */
     private Integer tb;
 
     private GetIpsecCryptoProfileLifesize() {}
     /**
-     * @return specify lifesize in gigabytes(GB). Value must be between 1 and 65535.
+     * @return specify lifesize in gigabytes(GB)
      * 
      */
     public Integer gb() {
         return this.gb;
     }
     /**
-     * @return specify lifesize in kilobytes(KB). Value must be between 1 and 65535.
+     * @return specify lifesize in kilobytes(KB)
      * 
      */
     public Integer kb() {
         return this.kb;
     }
     /**
-     * @return specify lifesize in megabytes(MB). Value must be between 1 and 65535.
+     * @return specify lifesize in megabytes(MB)
      * 
      */
     public Integer mb() {
         return this.mb;
     }
     /**
-     * @return specify lifesize in terabytes(TB). Value must be between 1 and 65535.
+     * @return specify lifesize in terabytes(TB)
      * 
      */
     public Integer tb() {

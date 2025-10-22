@@ -18,14 +18,14 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
     public static final MfaServerArgs Empty = new MfaServerArgs();
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -33,14 +33,14 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -48,14 +48,14 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The MfaCertProfile param.
+     * The MFA server certificate profile
      * 
      */
     @Import(name="mfaCertProfile", required=true)
     private Output<String> mfaCertProfile;
 
     /**
-     * @return The MfaCertProfile param.
+     * @return The MFA server certificate profile
      * 
      */
     public Output<String> mfaCertProfile() {
@@ -63,14 +63,14 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The MfaVendorType param.
+     * The MFA vendor type
      * 
      */
     @Import(name="mfaVendorType")
     private @Nullable Output<MfaServerMfaVendorTypeArgs> mfaVendorType;
 
     /**
-     * @return The MfaVendorType param.
+     * @return The MFA vendor type
      * 
      */
     public Optional<Output<MfaServerMfaVendorTypeArgs>> mfaVendorType() {
@@ -78,14 +78,14 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Name param.
+     * The name of the MFA server profile
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the MFA server profile
      * 
      */
     public Optional<Output<String>> name() {
@@ -93,14 +93,14 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -137,7 +137,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -169,7 +169,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mfaCertProfile The MfaCertProfile param.
+         * @param mfaCertProfile The MFA server certificate profile
          * 
          * @return builder
          * 
@@ -190,7 +190,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mfaCertProfile The MfaCertProfile param.
+         * @param mfaCertProfile The MFA server certificate profile
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mfaVendorType The MfaVendorType param.
+         * @param mfaVendorType The MFA vendor type
          * 
          * @return builder
          * 
@@ -211,7 +211,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mfaVendorType The MfaVendorType param.
+         * @param mfaVendorType The MFA vendor type
          * 
          * @return builder
          * 
@@ -221,7 +221,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the MFA server profile
          * 
          * @return builder
          * 
@@ -232,7 +232,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the MFA server profile
          * 
          * @return builder
          * 
@@ -242,7 +242,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -253,7 +253,7 @@ public final class MfaServerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

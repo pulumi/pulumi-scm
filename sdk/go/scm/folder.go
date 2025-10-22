@@ -12,56 +12,19 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			snip1, err := scm.NewSnippet(ctx, "snip1", &scm.SnippetArgs{
-//				Name: pulumi.String("foobar"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = scm.NewFolder(ctx, "example", &scm.FolderArgs{
-//				Name:        pulumi.String("my folder"),
-//				Parent:      pulumi.String("Shared"),
-//				Description: pulumi.String("Made by Pulumi"),
-//				Snippets: pulumi.StringArray{
-//					snip1.Name,
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// Folder resource
 type Folder struct {
 	pulumi.CustomResourceState
 
-	// The Description param.
+	// The description of the folder
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Labels param.
+	// Labels assigned to the folder
 	Labels pulumi.StringArrayOutput `pulumi:"labels"`
-	// The Name param.
+	// The name of the folder
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Parent param.
+	// The parent folder
 	Parent pulumi.StringOutput `pulumi:"parent"`
-	// The Snippets param.
+	// Snippets associated with the folder
 	Snippets pulumi.StringArrayOutput `pulumi:"snippets"`
 	Tfid     pulumi.StringOutput      `pulumi:"tfid"`
 }
@@ -99,29 +62,29 @@ func GetFolder(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering Folder resources.
 type folderState struct {
-	// The Description param.
+	// The description of the folder
 	Description *string `pulumi:"description"`
-	// The Labels param.
+	// Labels assigned to the folder
 	Labels []string `pulumi:"labels"`
-	// The Name param.
+	// The name of the folder
 	Name *string `pulumi:"name"`
-	// The Parent param.
+	// The parent folder
 	Parent *string `pulumi:"parent"`
-	// The Snippets param.
+	// Snippets associated with the folder
 	Snippets []string `pulumi:"snippets"`
 	Tfid     *string  `pulumi:"tfid"`
 }
 
 type FolderState struct {
-	// The Description param.
+	// The description of the folder
 	Description pulumi.StringPtrInput
-	// The Labels param.
+	// Labels assigned to the folder
 	Labels pulumi.StringArrayInput
-	// The Name param.
+	// The name of the folder
 	Name pulumi.StringPtrInput
-	// The Parent param.
+	// The parent folder
 	Parent pulumi.StringPtrInput
-	// The Snippets param.
+	// Snippets associated with the folder
 	Snippets pulumi.StringArrayInput
 	Tfid     pulumi.StringPtrInput
 }
@@ -131,29 +94,29 @@ func (FolderState) ElementType() reflect.Type {
 }
 
 type folderArgs struct {
-	// The Description param.
+	// The description of the folder
 	Description *string `pulumi:"description"`
-	// The Labels param.
+	// Labels assigned to the folder
 	Labels []string `pulumi:"labels"`
-	// The Name param.
+	// The name of the folder
 	Name *string `pulumi:"name"`
-	// The Parent param.
+	// The parent folder
 	Parent string `pulumi:"parent"`
-	// The Snippets param.
+	// Snippets associated with the folder
 	Snippets []string `pulumi:"snippets"`
 }
 
 // The set of arguments for constructing a Folder resource.
 type FolderArgs struct {
-	// The Description param.
+	// The description of the folder
 	Description pulumi.StringPtrInput
-	// The Labels param.
+	// Labels assigned to the folder
 	Labels pulumi.StringArrayInput
-	// The Name param.
+	// The name of the folder
 	Name pulumi.StringPtrInput
-	// The Parent param.
+	// The parent folder
 	Parent pulumi.StringInput
-	// The Snippets param.
+	// Snippets associated with the folder
 	Snippets pulumi.StringArrayInput
 }
 
@@ -244,27 +207,27 @@ func (o FolderOutput) ToFolderOutputWithContext(ctx context.Context) FolderOutpu
 	return o
 }
 
-// The Description param.
+// The description of the folder
 func (o FolderOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Folder) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Labels param.
+// Labels assigned to the folder
 func (o FolderOutput) Labels() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *Folder) pulumi.StringArrayOutput { return v.Labels }).(pulumi.StringArrayOutput)
 }
 
-// The Name param.
+// The name of the folder
 func (o FolderOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Folder) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Parent param.
+// The parent folder
 func (o FolderOutput) Parent() pulumi.StringOutput {
 	return o.ApplyT(func(v *Folder) pulumi.StringOutput { return v.Parent }).(pulumi.StringOutput)
 }
 
-// The Snippets param.
+// Snippets associated with the folder
 func (o FolderOutput) Snippets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *Folder) pulumi.StringArrayOutput { return v.Snippets }).(pulumi.StringArrayOutput)
 }

@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetAuthenticationProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAuthenticationProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AuthenticationProfile data source
         /// </summary>
         public static Task<GetAuthenticationProfileResult> InvokeAsync(GetAuthenticationProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAuthenticationProfileResult>("scm:index/getAuthenticationProfile:getAuthenticationProfile", args ?? new GetAuthenticationProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAuthenticationProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AuthenticationProfile data source
         /// </summary>
         public static Output<GetAuthenticationProfileResult> Invoke(GetAuthenticationProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationProfileResult>("scm:index/getAuthenticationProfile:getAuthenticationProfile", args ?? new GetAuthenticationProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAuthenticationProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AuthenticationProfile data source
         /// </summary>
         public static Output<GetAuthenticationProfileResult> Invoke(GetAuthenticationProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationProfileResult>("scm:index/getAuthenticationProfile:getAuthenticationProfile", args ?? new GetAuthenticationProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetAuthenticationProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the authentication profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the authentication profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetAuthenticationProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetAuthenticationProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the authentication profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the authentication profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetAuthenticationProfileInvokeArgs()
         {
@@ -118,46 +76,62 @@ namespace Pulumi.Scm
     public sealed class GetAuthenticationProfileResult
     {
         /// <summary>
-        /// The AllowList param.
+        /// Allow list
         /// </summary>
         public readonly ImmutableArray<string> AllowLists;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the authentication profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Lockout param.
+        /// Lockout
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileLockoutResult Lockout;
         /// <summary>
-        /// The Method param.
+        /// Method
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileMethodResult Method;
         /// <summary>
-        /// The MultiFactorAuth param.
+        /// Multi factor auth
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileMultiFactorAuthResult MultiFactorAuth;
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The SingleSignOn param.
+        /// Single sign on
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileSingleSignOnResult SingleSignOn;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The UserDomain param. String length must not exceed 63 characters.
+        /// User domain
         /// </summary>
         public readonly string UserDomain;
         /// <summary>
-        /// The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
+        /// Username modifier
         /// </summary>
         public readonly string UsernameModifier;
 
         [OutputConstructor]
         private GetAuthenticationProfileResult(
             ImmutableArray<string> allowLists,
+
+            string device,
+
+            string folder,
 
             string id,
 
@@ -171,6 +145,8 @@ namespace Pulumi.Scm
 
             Outputs.GetAuthenticationProfileSingleSignOnResult singleSignOn,
 
+            string snippet,
+
             string tfid,
 
             string userDomain,
@@ -178,12 +154,15 @@ namespace Pulumi.Scm
             string usernameModifier)
         {
             AllowLists = allowLists;
+            Device = device;
+            Folder = folder;
             Id = id;
             Lockout = lockout;
             Method = method;
             MultiFactorAuth = multiFactorAuth;
             Name = name;
             SingleSignOn = singleSignOn;
+            Snippet = snippet;
             Tfid = tfid;
             UserDomain = userDomain;
             UsernameModifier = usernameModifier;

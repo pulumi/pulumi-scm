@@ -9,143 +9,172 @@ import com.pulumi.scm.outputs.GetRemoteNetworkListDataEcmpTunnel;
 import com.pulumi.scm.outputs.GetRemoteNetworkListDataProtocol;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetRemoteNetworkListData {
     /**
-     * @return The EcmpLoadBalancing param. String must be one of these: `&#34;enable&#34;`, `&#34;disable&#34;`. Default: `&#34;disable&#34;`.
+     * @return Ecmp load balancing
      * 
      */
     private String ecmpLoadBalancing;
     /**
-     * @return ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * @return ecmp*tunnels is required when ecmp*load*balancing is enable
      * 
      */
     private List<GetRemoteNetworkListDataEcmpTunnel> ecmpTunnels;
     /**
-     * @return UUID of the resource.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    private Map<String,String> encryptedValues;
+    /**
+     * @return The folder that contains the remote network
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the remote network
      * 
      */
     private String id;
     /**
-     * @return ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * @return ipsec*tunnel is required when ecmp*load_balancing is disable
      * 
      */
     private String ipsecTunnel;
     /**
-     * @return New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `&#34;FWAAS-AGGREGATE&#34;`.
+     * @return New customer will only be on aggregate bandwidth licensing
      * 
      */
     private String licenseType;
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the remote network
      * 
      */
     private String name;
     /**
-     * @return setup the protocol when ecmp*load*balancing is disable.
+     * @return setup the protocol when ecmp*load*balancing is disable
      * 
      */
     private GetRemoteNetworkListDataProtocol protocol;
     /**
-     * @return The Region param. String length must exceed 1 characters.
+     * @return Region
      * 
      */
     private String region;
     /**
-     * @return specify secondary ipsecTunnel if needed.
+     * @return specify secondary ipsecTunnel if needed
      * 
      */
     private String secondaryIpsecTunnel;
     /**
-     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE
      * 
      */
     private String spnName;
     /**
-     * @return The Subnets param.
+     * @return Subnets
      * 
      */
     private List<String> subnets;
+    private String tfid;
 
     private GetRemoteNetworkListData() {}
     /**
-     * @return The EcmpLoadBalancing param. String must be one of these: `&#34;enable&#34;`, `&#34;disable&#34;`. Default: `&#34;disable&#34;`.
+     * @return Ecmp load balancing
      * 
      */
     public String ecmpLoadBalancing() {
         return this.ecmpLoadBalancing;
     }
     /**
-     * @return ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * @return ecmp*tunnels is required when ecmp*load*balancing is enable
      * 
      */
     public List<GetRemoteNetworkListDataEcmpTunnel> ecmpTunnels() {
         return this.ecmpTunnels;
     }
     /**
-     * @return UUID of the resource.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
+     * @return The folder that contains the remote network
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the remote network
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * @return ipsec*tunnel is required when ecmp*load_balancing is disable
      * 
      */
     public String ipsecTunnel() {
         return this.ipsecTunnel;
     }
     /**
-     * @return New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `&#34;FWAAS-AGGREGATE&#34;`.
+     * @return New customer will only be on aggregate bandwidth licensing
      * 
      */
     public String licenseType() {
         return this.licenseType;
     }
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the remote network
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return setup the protocol when ecmp*load*balancing is disable.
+     * @return setup the protocol when ecmp*load*balancing is disable
      * 
      */
     public GetRemoteNetworkListDataProtocol protocol() {
         return this.protocol;
     }
     /**
-     * @return The Region param. String length must exceed 1 characters.
+     * @return Region
      * 
      */
     public String region() {
         return this.region;
     }
     /**
-     * @return specify secondary ipsecTunnel if needed.
+     * @return specify secondary ipsecTunnel if needed
      * 
      */
     public String secondaryIpsecTunnel() {
         return this.secondaryIpsecTunnel;
     }
     /**
-     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE
      * 
      */
     public String spnName() {
         return this.spnName;
     }
     /**
-     * @return The Subnets param.
+     * @return Subnets
      * 
      */
     public List<String> subnets() {
         return this.subnets;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -159,6 +188,8 @@ public final class GetRemoteNetworkListData {
     public static final class Builder {
         private String ecmpLoadBalancing;
         private List<GetRemoteNetworkListDataEcmpTunnel> ecmpTunnels;
+        private Map<String,String> encryptedValues;
+        private String folder;
         private String id;
         private String ipsecTunnel;
         private String licenseType;
@@ -168,11 +199,14 @@ public final class GetRemoteNetworkListData {
         private String secondaryIpsecTunnel;
         private String spnName;
         private List<String> subnets;
+        private String tfid;
         public Builder() {}
         public Builder(GetRemoteNetworkListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.ecmpLoadBalancing = defaults.ecmpLoadBalancing;
     	      this.ecmpTunnels = defaults.ecmpTunnels;
+    	      this.encryptedValues = defaults.encryptedValues;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.ipsecTunnel = defaults.ipsecTunnel;
     	      this.licenseType = defaults.licenseType;
@@ -182,6 +216,7 @@ public final class GetRemoteNetworkListData {
     	      this.secondaryIpsecTunnel = defaults.secondaryIpsecTunnel;
     	      this.spnName = defaults.spnName;
     	      this.subnets = defaults.subnets;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -202,6 +237,22 @@ public final class GetRemoteNetworkListData {
         }
         public Builder ecmpTunnels(GetRemoteNetworkListDataEcmpTunnel... ecmpTunnels) {
             return ecmpTunnels(List.of(ecmpTunnels));
+        }
+        @CustomType.Setter
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetRemoteNetworkListData", "encryptedValues");
+            }
+            this.encryptedValues = encryptedValues;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetRemoteNetworkListData", "folder");
+            }
+            this.folder = folder;
+            return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -278,10 +329,20 @@ public final class GetRemoteNetworkListData {
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
         }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetRemoteNetworkListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetRemoteNetworkListData build() {
             final var _resultValue = new GetRemoteNetworkListData();
             _resultValue.ecmpLoadBalancing = ecmpLoadBalancing;
             _resultValue.ecmpTunnels = ecmpTunnels;
+            _resultValue.encryptedValues = encryptedValues;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.ipsecTunnel = ipsecTunnel;
             _resultValue.licenseType = licenseType;
@@ -291,6 +352,7 @@ public final class GetRemoteNetworkListData {
             _resultValue.secondaryIpsecTunnel = secondaryIpsecTunnel;
             _resultValue.spnName = spnName;
             _resultValue.subnets = subnets;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

@@ -17,14 +17,14 @@ public final class DnsSecurityProfileBotnetDomainsWhitelistArgs extends com.pulu
     public static final DnsSecurityProfileBotnetDomainsWhitelistArgs Empty = new DnsSecurityProfileBotnetDomainsWhitelistArgs();
 
     /**
-     * The Description param.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -32,14 +32,14 @@ public final class DnsSecurityProfileBotnetDomainsWhitelistArgs extends com.pulu
     }
 
     /**
-     * The Name param.
+     * DNS domain or FQDN to be whitelisted
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return DNS domain or FQDN to be whitelisted
      * 
      */
     public Output<String> name() {
@@ -72,7 +72,7 @@ public final class DnsSecurityProfileBotnetDomainsWhitelistArgs extends com.pulu
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class DnsSecurityProfileBotnetDomainsWhitelistArgs extends com.pulu
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class DnsSecurityProfileBotnetDomainsWhitelistArgs extends com.pulu
         }
 
         /**
-         * @param name The Name param.
+         * @param name DNS domain or FQDN to be whitelisted
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class DnsSecurityProfileBotnetDomainsWhitelistArgs extends com.pulu
         }
 
         /**
-         * @param name The Name param.
+         * @param name DNS domain or FQDN to be whitelisted
          * 
          * @return builder
          * 

@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectMobileDeviceArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Criteria param.
+        /// Criteria
         /// </summary>
         [Input("criteria")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaArgs>? Criteria { get; set; }

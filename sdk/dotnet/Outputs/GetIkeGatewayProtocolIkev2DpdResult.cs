@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayProtocolIkev2DpdResult
     {
         /// <summary>
-        /// The Enable param.
+        /// Enable
         /// </summary>
         public readonly bool Enable;
 

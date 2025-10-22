@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// Tag data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,20 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupTag(ctx, &scm.LookupTagArgs{
-//				Id: "1234-56-789",
+//			// Look up the "production" tag by its name.
+//			scmTagDs, err := scm.LookupTag(ctx, &scm.LookupTagArgs{
+//				Id: "66cbe56c-0300-4905-8455-d384978a0082",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("tagOutputs", pulumi.StringMap{
+//				"productionId":      scmTagDs.Id,
+//				"productionColor":   scmTagDs.Color,
+//				"productionFolder":  scmTagDs.Folder,
+//				"productionSnippet": scmTagDs.Snippet,
+//				"productionDevice":  scmTagDs.Device,
+//			})
 //			return nil
 //		})
 //	}
@@ -50,21 +58,29 @@ func LookupTag(ctx *pulumi.Context, args *LookupTagArgs, opts ...pulumi.InvokeOp
 
 // A collection of arguments for invoking getTag.
 type LookupTagArgs struct {
-	// The Id param.
+	// The UUID of the tag
 	Id string `pulumi:"id"`
+	// The name of the tag
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getTag.
 type LookupTagResult struct {
-	// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+	// The color of the tag
 	Color string `pulumi:"color"`
-	// The Comments param. String length must not exceed 1023 characters.
+	// The description of the tag
 	Comments string `pulumi:"comments"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the tag
 	Id string `pulumi:"id"`
-	// The Name param. String length must not exceed 127 characters.
+	// The name of the tag
 	Name string `pulumi:"name"`
-	Tfid string `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupTagOutput(ctx *pulumi.Context, args LookupTagOutputArgs, opts ...pulumi.InvokeOption) LookupTagResultOutput {
@@ -78,8 +94,10 @@ func LookupTagOutput(ctx *pulumi.Context, args LookupTagOutputArgs, opts ...pulu
 
 // A collection of arguments for invoking getTag.
 type LookupTagOutputArgs struct {
-	// The Id param.
+	// The UUID of the tag
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the tag
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupTagOutputArgs) ElementType() reflect.Type {
@@ -101,24 +119,39 @@ func (o LookupTagResultOutput) ToLookupTagResultOutputWithContext(ctx context.Co
 	return o
 }
 
-// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+// The color of the tag
 func (o LookupTagResultOutput) Color() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Color }).(pulumi.StringOutput)
 }
 
-// The Comments param. String length must not exceed 1023 characters.
+// The description of the tag
 func (o LookupTagResultOutput) Comments() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Comments }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupTagResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTagResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupTagResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTagResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the tag
 func (o LookupTagResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param. String length must not exceed 127 characters.
+// The name of the tag
 func (o LookupTagResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupTagResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTagResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupTagResultOutput) Tfid() pulumi.StringOutput {

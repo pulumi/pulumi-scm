@@ -13,38 +13,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationProfileMethodLdap {
     /**
-     * @return The LoginAttribute param.
+     * @return Login attribute
      * 
      */
     private @Nullable String loginAttribute;
     /**
-     * @return The PasswdExpDays param.
+     * @return Passwd exp days
      * 
      */
     private @Nullable Integer passwdExpDays;
     /**
-     * @return The ServerProfile param.
+     * @return Server profile
      * 
      */
     private @Nullable String serverProfile;
 
     private AuthenticationProfileMethodLdap() {}
     /**
-     * @return The LoginAttribute param.
+     * @return Login attribute
      * 
      */
     public Optional<String> loginAttribute() {
         return Optional.ofNullable(this.loginAttribute);
     }
     /**
-     * @return The PasswdExpDays param.
+     * @return Passwd exp days
      * 
      */
     public Optional<Integer> passwdExpDays() {
         return Optional.ofNullable(this.passwdExpDays);
     }
     /**
-     * @return The ServerProfile param.
+     * @return Server profile
      * 
      */
     public Optional<String> serverProfile() {

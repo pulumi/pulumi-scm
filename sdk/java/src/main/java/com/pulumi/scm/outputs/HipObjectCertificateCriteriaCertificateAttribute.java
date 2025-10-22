@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectCertificateCriteriaCertificateAttribute {
     /**
-     * @return Attribute Name.
+     * @return Attribute Name
      * 
      */
     private String name;
     /**
-     * @return Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Key value
      * 
      */
     private @Nullable String value;
 
     private HipObjectCertificateCriteriaCertificateAttribute() {}
     /**
-     * @return Attribute Name.
+     * @return Attribute Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Key value
      * 
      */
     public Optional<String> value() {

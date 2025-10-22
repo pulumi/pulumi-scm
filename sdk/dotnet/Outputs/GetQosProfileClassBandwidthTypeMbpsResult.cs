@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosProfileClassBandwidthTypeMbpsResult
     {
         /// <summary>
-        /// QoS setting for traffic classes.
+        /// QoS setting for traffic classes
         /// </summary>
         public readonly ImmutableArray<Outputs.GetQosProfileClassBandwidthTypeMbpsClassResult> Classes;
 

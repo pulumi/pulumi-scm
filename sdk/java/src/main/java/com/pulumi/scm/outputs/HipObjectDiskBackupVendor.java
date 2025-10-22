@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectDiskBackupVendor {
     /**
-     * @return The Name param. String length must not exceed 103 characters.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Product
      * 
      */
     private @Nullable List<String> products;
 
     private HipObjectDiskBackupVendor() {}
     /**
-     * @return The Name param. String length must not exceed 103 characters.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Product
      * 
      */
     public List<String> products() {

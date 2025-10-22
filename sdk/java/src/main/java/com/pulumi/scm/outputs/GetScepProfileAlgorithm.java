@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetScepProfileAlgorithm {
     /**
-     * @return The Rsa param.
+     * @return Key length (bits)
      * 
      */
     private GetScepProfileAlgorithmRsa rsa;
 
     private GetScepProfileAlgorithm() {}
     /**
-     * @return The Rsa param.
+     * @return Key length (bits)
      * 
      */
     public GetScepProfileAlgorithmRsa rsa() {

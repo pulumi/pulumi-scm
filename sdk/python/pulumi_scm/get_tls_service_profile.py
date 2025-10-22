@@ -27,10 +27,16 @@ class GetTlsServiceProfileResult:
     """
     A collection of values returned by getTlsServiceProfile.
     """
-    def __init__(__self__, certificate=None, id=None, name=None, protocol_settings=None, tfid=None):
+    def __init__(__self__, certificate=None, device=None, folder=None, id=None, name=None, protocol_settings=None, snippet=None, tfid=None):
         if certificate and not isinstance(certificate, str):
             raise TypeError("Expected argument 'certificate' to be a str")
         pulumi.set(__self__, "certificate", certificate)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -40,6 +46,9 @@ class GetTlsServiceProfileResult:
         if protocol_settings and not isinstance(protocol_settings, dict):
             raise TypeError("Expected argument 'protocol_settings' to be a dict")
         pulumi.set(__self__, "protocol_settings", protocol_settings)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -48,15 +57,31 @@ class GetTlsServiceProfileResult:
     @pulumi.getter
     def certificate(self) -> _builtins.str:
         """
-        SSL certificate file name. String length must not exceed 255 characters.
+        Certificate name
         """
         return pulumi.get(self, "certificate")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the TLS service profile
         """
         return pulumi.get(self, "id")
 
@@ -64,7 +89,7 @@ class GetTlsServiceProfileResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         """
         return pulumi.get(self, "name")
 
@@ -72,9 +97,17 @@ class GetTlsServiceProfileResult:
     @pulumi.getter(name="protocolSettings")
     def protocol_settings(self) -> 'outputs.GetTlsServiceProfileProtocolSettingsResult':
         """
-        The ProtocolSettings param.
+        Protocol settings
         """
         return pulumi.get(self, "protocol_settings")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -89,64 +122,61 @@ class AwaitableGetTlsServiceProfileResult(GetTlsServiceProfileResult):
             yield self
         return GetTlsServiceProfileResult(
             certificate=self.certificate,
+            device=self.device,
+            folder=self.folder,
             id=self.id,
             name=self.name,
             protocol_settings=self.protocol_settings,
+            snippet=self.snippet,
             tfid=self.tfid)
 
 
 def get_tls_service_profile(id: Optional[_builtins.str] = None,
+                            name: Optional[_builtins.str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetTlsServiceProfileResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_tls_service_profile(id="1234-56-789")
-    ```
+    TlsServiceProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the TLS service profile
+    :param _builtins.str name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getTlsServiceProfile:getTlsServiceProfile', __args__, opts=opts, typ=GetTlsServiceProfileResult).value
 
     return AwaitableGetTlsServiceProfileResult(
         certificate=pulumi.get(__ret__, 'certificate'),
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         protocol_settings=pulumi.get(__ret__, 'protocol_settings'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_tls_service_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                   name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTlsServiceProfileResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_tls_service_profile(id="1234-56-789")
-    ```
+    TlsServiceProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the TLS service profile
+    :param _builtins.str name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getTlsServiceProfile:getTlsServiceProfile', __args__, opts=opts, typ=GetTlsServiceProfileResult)
     return __ret__.apply(lambda __response__: GetTlsServiceProfileResult(
         certificate=pulumi.get(__response__, 'certificate'),
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         protocol_settings=pulumi.get(__response__, 'protocol_settings'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid')))

@@ -17,166 +17,150 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.SamlServerProfile;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new SamlServerProfile("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * SamlServerProfile resource
  * 
  */
 @ResourceType(type="scm:index/samlServerProfile:SamlServerProfile")
 public class SamlServerProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The Certificate param. String length must not exceed 63 characters.
+     * The identity provider certificate
      * 
      */
     @Export(name="certificate", refs={String.class}, tree="[0]")
     private Output<String> certificate;
 
     /**
-     * @return The Certificate param. String length must not exceed 63 characters.
+     * @return The identity provider certificate
      * 
      */
     public Output<String> certificate() {
         return this.certificate;
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The EntityId param. String length must be between 1 and 1024 characters.
+     * The identity provider ID
      * 
      */
     @Export(name="entityId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> entityId;
+    private Output<String> entityId;
 
     /**
-     * @return The EntityId param. String length must be between 1 and 1024 characters.
+     * @return The identity provider ID
      * 
      */
-    public Output<Optional<String>> entityId() {
-        return Codegen.optional(this.entityId);
+    public Output<String> entityId() {
+        return this.entityId;
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The MaxClockSkew param. Value must be between 1 and 900.
+     * Maxiumum clock skew
      * 
      */
     @Export(name="maxClockSkew", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> maxClockSkew;
 
     /**
-     * @return The MaxClockSkew param. Value must be between 1 and 900.
+     * @return Maxiumum clock skew
      * 
      */
     public Output<Optional<Integer>> maxClockSkew() {
         return Codegen.optional(this.maxClockSkew);
     }
     /**
-     * The SloBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * The name of the SAML server profile
+     * 
+     */
+    @Export(name="name", refs={String.class}, tree="[0]")
+    private Output<String> name;
+
+    /**
+     * @return The name of the SAML server profile
+     * 
+     */
+    public Output<String> name() {
+        return this.name;
+    }
+    /**
+     * SAML HTTP binding for SLO requests to the identity provider
      * 
      */
     @Export(name="sloBindings", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> sloBindings;
 
     /**
-     * @return The SloBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * @return SAML HTTP binding for SLO requests to the identity provider
      * 
      */
     public Output<Optional<String>> sloBindings() {
         return Codegen.optional(this.sloBindings);
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * The SsoBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * SAML HTTP binding for SSO requests to the identity provider
      * 
      */
     @Export(name="ssoBindings", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> ssoBindings;
+    private Output<String> ssoBindings;
 
     /**
-     * @return The SsoBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * @return SAML HTTP binding for SSO requests to the identity provider
      * 
      */
-    public Output<Optional<String>> ssoBindings() {
-        return Codegen.optional(this.ssoBindings);
+    public Output<String> ssoBindings() {
+        return this.ssoBindings;
     }
     /**
-     * The SsoUrl param. String length must be between 1 and 255 characters.
+     * Identity provider SSO URL
      * 
      */
     @Export(name="ssoUrl", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> ssoUrl;
+    private Output<String> ssoUrl;
 
     /**
-     * @return The SsoUrl param. String length must be between 1 and 255 characters.
+     * @return Identity provider SSO URL
      * 
      */
-    public Output<Optional<String>> ssoUrl() {
-        return Codegen.optional(this.ssoUrl);
+    public Output<String> ssoUrl() {
+        return this.ssoUrl;
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
@@ -185,28 +169,28 @@ public class SamlServerProfile extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The ValidateIdpCertificate param.
+     * Validate the identity provider certificate?
      * 
      */
     @Export(name="validateIdpCertificate", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> validateIdpCertificate;
 
     /**
-     * @return The ValidateIdpCertificate param.
+     * @return Validate the identity provider certificate?
      * 
      */
     public Output<Optional<Boolean>> validateIdpCertificate() {
         return Codegen.optional(this.validateIdpCertificate);
     }
     /**
-     * The WantAuthRequestsSigned param.
+     * Sign SAML message to the identity provider?
      * 
      */
     @Export(name="wantAuthRequestsSigned", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> wantAuthRequestsSigned;
 
     /**
-     * @return The WantAuthRequestsSigned param.
+     * @return Sign SAML message to the identity provider?
      * 
      */
     public Output<Optional<Boolean>> wantAuthRequestsSigned() {

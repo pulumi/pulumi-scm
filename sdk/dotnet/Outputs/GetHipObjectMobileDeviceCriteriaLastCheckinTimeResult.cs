@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectMobileDeviceCriteriaLastCheckinTimeResult
     {
         /// <summary>
-        /// The NotWithin param.
+        /// Not within
         /// </summary>
         public readonly Outputs.GetHipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinResult NotWithin;
         /// <summary>
-        /// The Within param.
+        /// Within
         /// </summary>
         public readonly Outputs.GetHipObjectMobileDeviceCriteriaLastCheckinTimeWithinResult Within;
 

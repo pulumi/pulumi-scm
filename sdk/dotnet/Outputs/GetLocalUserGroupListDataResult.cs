@@ -14,21 +14,53 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetLocalUserGroupListDataResult
     {
         /// <summary>
-        /// The Name param. String length must not exceed 31 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the local user group
+        /// </summary>
+        public readonly string Id;
+        /// <summary>
+        /// The name of the local user group
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Users param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// The local user group users
         /// </summary>
         public readonly ImmutableArray<string> Users;
 
         [OutputConstructor]
         private GetLocalUserGroupListDataResult(
+            string device,
+
+            string folder,
+
+            string id,
+
             string name,
+
+            string snippet,
+
+            string tfid,
 
             ImmutableArray<string> users)
         {
+            Device = device;
+            Folder = folder;
+            Id = id;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
             Users = users;
         }
     }

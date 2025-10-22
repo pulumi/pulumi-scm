@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -12,50 +13,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateProfileCaCertificate {
     /**
-     * @return The DefaultOcspUrl param.
+     * @return Default OCSP URL
      * 
      */
     private @Nullable String defaultOcspUrl;
     /**
-     * @return The Name param.
+     * @return CA certificate name
      * 
      */
-    private @Nullable String name;
+    private String name;
     /**
-     * @return The OcspVerifyCert param.
+     * @return OCSP verify certificate
      * 
      */
     private @Nullable String ocspVerifyCert;
     /**
-     * @return The TemplateName param.
+     * @return Template name/OID
      * 
      */
     private @Nullable String templateName;
 
     private CertificateProfileCaCertificate() {}
     /**
-     * @return The DefaultOcspUrl param.
+     * @return Default OCSP URL
      * 
      */
     public Optional<String> defaultOcspUrl() {
         return Optional.ofNullable(this.defaultOcspUrl);
     }
     /**
-     * @return The Name param.
+     * @return CA certificate name
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public String name() {
+        return this.name;
     }
     /**
-     * @return The OcspVerifyCert param.
+     * @return OCSP verify certificate
      * 
      */
     public Optional<String> ocspVerifyCert() {
         return Optional.ofNullable(this.ocspVerifyCert);
     }
     /**
-     * @return The TemplateName param.
+     * @return Template name/OID
      * 
      */
     public Optional<String> templateName() {
@@ -72,7 +73,7 @@ public final class CertificateProfileCaCertificate {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String defaultOcspUrl;
-        private @Nullable String name;
+        private String name;
         private @Nullable String ocspVerifyCert;
         private @Nullable String templateName;
         public Builder() {}
@@ -91,8 +92,10 @@ public final class CertificateProfileCaCertificate {
             return this;
         }
         @CustomType.Setter
-        public Builder name(@Nullable String name) {
-
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("CertificateProfileCaCertificate", "name");
+            }
             this.name = name;
             return this;
         }

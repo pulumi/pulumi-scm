@@ -17,14 +17,14 @@ public final class ApplicationDefaultIdentByIcmp6TypeArgs extends com.pulumi.res
     public static final ApplicationDefaultIdentByIcmp6TypeArgs Empty = new ApplicationDefaultIdentByIcmp6TypeArgs();
 
     /**
-     * The Code param.
+     * Code
      * 
      */
     @Import(name="code")
     private @Nullable Output<String> code;
 
     /**
-     * @return The Code param.
+     * @return Code
      * 
      */
     public Optional<Output<String>> code() {
@@ -32,14 +32,14 @@ public final class ApplicationDefaultIdentByIcmp6TypeArgs extends com.pulumi.res
     }
 
     /**
-     * The Type param.
+     * Type
      * 
      */
     @Import(name="type", required=true)
     private Output<String> type;
 
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     public Output<String> type() {
@@ -72,7 +72,7 @@ public final class ApplicationDefaultIdentByIcmp6TypeArgs extends com.pulumi.res
         }
 
         /**
-         * @param code The Code param.
+         * @param code Code
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class ApplicationDefaultIdentByIcmp6TypeArgs extends com.pulumi.res
         }
 
         /**
-         * @param code The Code param.
+         * @param code Code
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class ApplicationDefaultIdentByIcmp6TypeArgs extends com.pulumi.res
         }
 
         /**
-         * @param type The Type param.
+         * @param type Type
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class ApplicationDefaultIdentByIcmp6TypeArgs extends com.pulumi.res
         }
 
         /**
-         * @param type The Type param.
+         * @param type Type
          * 
          * @return builder
          * 

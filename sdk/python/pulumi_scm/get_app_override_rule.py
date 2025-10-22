@@ -26,7 +26,7 @@ class GetAppOverrideRuleResult:
     """
     A collection of values returned by getAppOverrideRule.
     """
-    def __init__(__self__, application=None, description=None, destinations=None, disabled=None, froms=None, group_tag=None, id=None, name=None, negate_destination=None, negate_source=None, port=None, protocol=None, sources=None, tags=None, tfid=None, tos=None):
+    def __init__(__self__, application=None, description=None, destinations=None, device=None, disabled=None, folder=None, froms=None, group_tag=None, id=None, name=None, negate_destination=None, negate_source=None, port=None, protocol=None, snippet=None, sources=None, tags=None, tfid=None, tos=None):
         if application and not isinstance(application, str):
             raise TypeError("Expected argument 'application' to be a str")
         pulumi.set(__self__, "application", application)
@@ -36,9 +36,15 @@ class GetAppOverrideRuleResult:
         if destinations and not isinstance(destinations, list):
             raise TypeError("Expected argument 'destinations' to be a list")
         pulumi.set(__self__, "destinations", destinations)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if disabled and not isinstance(disabled, bool):
             raise TypeError("Expected argument 'disabled' to be a bool")
         pulumi.set(__self__, "disabled", disabled)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if froms and not isinstance(froms, list):
             raise TypeError("Expected argument 'froms' to be a list")
         pulumi.set(__self__, "froms", froms)
@@ -63,6 +69,9 @@ class GetAppOverrideRuleResult:
         if protocol and not isinstance(protocol, str):
             raise TypeError("Expected argument 'protocol' to be a str")
         pulumi.set(__self__, "protocol", protocol)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if sources and not isinstance(sources, list):
             raise TypeError("Expected argument 'sources' to be a list")
         pulumi.set(__self__, "sources", sources)
@@ -80,7 +89,7 @@ class GetAppOverrideRuleResult:
     @pulumi.getter
     def application(self) -> _builtins.str:
         """
-        The Application param.
+        Application
         """
         return pulumi.get(self, "application")
 
@@ -88,7 +97,7 @@ class GetAppOverrideRuleResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param. String length must not exceed 1024 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -96,23 +105,39 @@ class GetAppOverrideRuleResult:
     @pulumi.getter
     def destinations(self) -> Sequence[_builtins.str]:
         """
-        The Destinations param.
+        Destination
         """
         return pulumi.get(self, "destinations")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
     def disabled(self) -> _builtins.bool:
         """
-        The Disabled param. Default: `false`.
+        Disabled
         """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
         """
-        The Froms param.
+        From
         """
         return pulumi.get(self, "froms")
 
@@ -120,7 +145,7 @@ class GetAppOverrideRuleResult:
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> _builtins.str:
         """
-        The GroupTag param.
+        Group tag
         """
         return pulumi.get(self, "group_tag")
 
@@ -128,7 +153,7 @@ class GetAppOverrideRuleResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -136,7 +161,7 @@ class GetAppOverrideRuleResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -144,7 +169,7 @@ class GetAppOverrideRuleResult:
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> _builtins.bool:
         """
-        The NegateDestination param. Default: `false`.
+        Negate destination
         """
         return pulumi.get(self, "negate_destination")
 
@@ -152,7 +177,7 @@ class GetAppOverrideRuleResult:
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> _builtins.bool:
         """
-        The NegateSource param. Default: `false`.
+        Negate source
         """
         return pulumi.get(self, "negate_source")
 
@@ -160,7 +185,7 @@ class GetAppOverrideRuleResult:
     @pulumi.getter
     def port(self) -> _builtins.int:
         """
-        The Port param. Value must be between 0 and 65535.
+        Port
         """
         return pulumi.get(self, "port")
 
@@ -168,15 +193,23 @@ class GetAppOverrideRuleResult:
     @pulumi.getter
     def protocol(self) -> _builtins.str:
         """
-        The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
     @_builtins.property
     @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
+
+    @_builtins.property
+    @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
         """
-        The Sources param.
+        Source
         """
         return pulumi.get(self, "sources")
 
@@ -184,7 +217,7 @@ class GetAppOverrideRuleResult:
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
         """
-        The Tags param.
+        Tag
         """
         return pulumi.get(self, "tags")
 
@@ -197,7 +230,7 @@ class GetAppOverrideRuleResult:
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
         """
-        The Tos param.
+        To
         """
         return pulumi.get(self, "tos")
 
@@ -211,7 +244,9 @@ class AwaitableGetAppOverrideRuleResult(GetAppOverrideRuleResult):
             application=self.application,
             description=self.description,
             destinations=self.destinations,
+            device=self.device,
             disabled=self.disabled,
+            folder=self.folder,
             froms=self.froms,
             group_tag=self.group_tag,
             id=self.id,
@@ -220,6 +255,7 @@ class AwaitableGetAppOverrideRuleResult(GetAppOverrideRuleResult):
             negate_source=self.negate_source,
             port=self.port,
             protocol=self.protocol,
+            snippet=self.snippet,
             sources=self.sources,
             tags=self.tags,
             tfid=self.tfid,
@@ -227,24 +263,18 @@ class AwaitableGetAppOverrideRuleResult(GetAppOverrideRuleResult):
 
 
 def get_app_override_rule(id: Optional[_builtins.str] = None,
+                          name: Optional[_builtins.str] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAppOverrideRuleResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_app_override_rule(id="1234-56-789")
-    ```
+    AppOverrideRule data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getAppOverrideRule:getAppOverrideRule', __args__, opts=opts, typ=GetAppOverrideRuleResult).value
 
@@ -252,7 +282,9 @@ def get_app_override_rule(id: Optional[_builtins.str] = None,
         application=pulumi.get(__ret__, 'application'),
         description=pulumi.get(__ret__, 'description'),
         destinations=pulumi.get(__ret__, 'destinations'),
+        device=pulumi.get(__ret__, 'device'),
         disabled=pulumi.get(__ret__, 'disabled'),
+        folder=pulumi.get(__ret__, 'folder'),
         froms=pulumi.get(__ret__, 'froms'),
         group_tag=pulumi.get(__ret__, 'group_tag'),
         id=pulumi.get(__ret__, 'id'),
@@ -261,36 +293,33 @@ def get_app_override_rule(id: Optional[_builtins.str] = None,
         negate_source=pulumi.get(__ret__, 'negate_source'),
         port=pulumi.get(__ret__, 'port'),
         protocol=pulumi.get(__ret__, 'protocol'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         sources=pulumi.get(__ret__, 'sources'),
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'),
         tos=pulumi.get(__ret__, 'tos'))
 def get_app_override_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                 name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAppOverrideRuleResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_app_override_rule(id="1234-56-789")
-    ```
+    AppOverrideRule data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAppOverrideRule:getAppOverrideRule', __args__, opts=opts, typ=GetAppOverrideRuleResult)
     return __ret__.apply(lambda __response__: GetAppOverrideRuleResult(
         application=pulumi.get(__response__, 'application'),
         description=pulumi.get(__response__, 'description'),
         destinations=pulumi.get(__response__, 'destinations'),
+        device=pulumi.get(__response__, 'device'),
         disabled=pulumi.get(__response__, 'disabled'),
+        folder=pulumi.get(__response__, 'folder'),
         froms=pulumi.get(__response__, 'froms'),
         group_tag=pulumi.get(__response__, 'group_tag'),
         id=pulumi.get(__response__, 'id'),
@@ -299,6 +328,7 @@ def get_app_override_rule_output(id: Optional[pulumi.Input[_builtins.str]] = Non
         negate_source=pulumi.get(__response__, 'negate_source'),
         port=pulumi.get(__response__, 'port'),
         protocol=pulumi.get(__response__, 'protocol'),
+        snippet=pulumi.get(__response__, 'snippet'),
         sources=pulumi.get(__response__, 'sources'),
         tags=pulumi.get(__response__, 'tags'),
         tfid=pulumi.get(__response__, 'tfid'),

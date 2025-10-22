@@ -14,21 +14,21 @@ namespace Pulumi.Scm.Outputs
     public sealed class ScheduleScheduleTypeRecurring
     {
         /// <summary>
-        /// The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `Daily`, `Weekly`
+        /// Daily
         /// </summary>
-        public readonly ImmutableArray<string> DailyLists;
+        public readonly ImmutableArray<string> Dailies;
         /// <summary>
-        /// The Weekly param. Ensure that only one of the following is specified: `Daily`, `Weekly`
+        /// Weekly
         /// </summary>
         public readonly Outputs.ScheduleScheduleTypeRecurringWeekly? Weekly;
 
         [OutputConstructor]
         private ScheduleScheduleTypeRecurring(
-            ImmutableArray<string> dailyLists,
+            ImmutableArray<string> dailies,
 
             Outputs.ScheduleScheduleTypeRecurringWeekly? weekly)
         {
-            DailyLists = dailyLists;
+            Dailies = dailies;
             Weekly = weekly;
         }
     }

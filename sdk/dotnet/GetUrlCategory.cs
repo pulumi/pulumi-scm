@@ -12,19 +12,97 @@ namespace Pulumi.Scm
     public static class GetUrlCategory
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// UrlCategory data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single URL Category object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the URL Category you want to find.
+        ///     var example = Scm.GetUrlCategory.Invoke(new()
+        ///     {
+        ///         Id = "5ae04e1a-bc7b-4ea3-99bb-86de23886b45",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["urlCategoryDetails"] = example,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetUrlCategoryResult> InvokeAsync(GetUrlCategoryArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetUrlCategoryResult>("scm:index/getUrlCategory:getUrlCategory", args ?? new GetUrlCategoryArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// UrlCategory data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single URL Category object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the URL Category you want to find.
+        ///     var example = Scm.GetUrlCategory.Invoke(new()
+        ///     {
+        ///         Id = "5ae04e1a-bc7b-4ea3-99bb-86de23886b45",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["urlCategoryDetails"] = example,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetUrlCategoryResult> Invoke(GetUrlCategoryInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetUrlCategoryResult>("scm:index/getUrlCategory:getUrlCategory", args ?? new GetUrlCategoryInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// UrlCategory data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single URL Category object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the URL Category you want to find.
+        ///     var example = Scm.GetUrlCategory.Invoke(new()
+        ///     {
+        ///         Id = "5ae04e1a-bc7b-4ea3-99bb-86de23886b45",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["urlCategoryDetails"] = example,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetUrlCategoryResult> Invoke(GetUrlCategoryInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetUrlCategoryResult>("scm:index/getUrlCategory:getUrlCategory", args ?? new GetUrlCategoryInvokeArgs(), options.WithDefaults());
@@ -34,10 +112,16 @@ namespace Pulumi.Scm
     public sealed class GetUrlCategoryArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetUrlCategoryArgs()
         {
@@ -48,10 +132,16 @@ namespace Pulumi.Scm
     public sealed class GetUrlCategoryInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetUrlCategoryInvokeArgs()
         {
@@ -64,24 +154,36 @@ namespace Pulumi.Scm
     public sealed class GetUrlCategoryResult
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The List param.
+        /// List
         /// </summary>
         public readonly ImmutableArray<string> Lists;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        /// Type
         /// </summary>
         public readonly string Type;
 
@@ -89,20 +191,29 @@ namespace Pulumi.Scm
         private GetUrlCategoryResult(
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
             ImmutableArray<string> lists,
 
             string name,
 
+            string snippet,
+
             string tfid,
 
             string type)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             Lists = lists;
             Name = name;
+            Snippet = snippet;
             Tfid = tfid;
             Type = type;
         }

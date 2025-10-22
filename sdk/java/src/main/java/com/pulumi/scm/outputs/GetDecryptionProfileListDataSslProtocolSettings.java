@@ -12,194 +12,194 @@ import java.util.Objects;
 @CustomType
 public final class GetDecryptionProfileListDataSslProtocolSettings {
     /**
-     * @return The AuthAlgoMd5 param. Default: `true`.
+     * @return Auth algo md5
      * 
      */
     private Boolean authAlgoMd5;
     /**
-     * @return The AuthAlgoSha1 param. Default: `true`.
+     * @return Auth algo sha1
      * 
      */
     private Boolean authAlgoSha1;
     /**
-     * @return The AuthAlgoSha256 param. Default: `true`.
+     * @return Auth algo sha256
      * 
      */
     private Boolean authAlgoSha256;
     /**
-     * @return The AuthAlgoSha384 param. Default: `true`.
+     * @return Auth algo sha384
      * 
      */
     private Boolean authAlgoSha384;
     /**
-     * @return The EncAlgo3des param. Default: `true`.
+     * @return Enc algo3des
      * 
      */
     private Boolean encAlgo3des;
     /**
-     * @return The EncAlgoAes128Cbc param. Default: `true`.
+     * @return Enc algo aes128 cbc
      * 
      */
     private Boolean encAlgoAes128Cbc;
     /**
-     * @return The EncAlgoAes128Gcm param. Default: `true`.
+     * @return Enc algo aes128 gcm
      * 
      */
     private Boolean encAlgoAes128Gcm;
     /**
-     * @return The EncAlgoAes256Cbc param. Default: `true`.
+     * @return Enc algo aes256 cbc
      * 
      */
     private Boolean encAlgoAes256Cbc;
     /**
-     * @return The EncAlgoAes256Gcm param. Default: `true`.
+     * @return Enc algo aes256 gcm
      * 
      */
     private Boolean encAlgoAes256Gcm;
     /**
-     * @return The EncAlgoChacha20Poly1305 param. Default: `true`.
+     * @return Enc algo chacha20 poly1305
      * 
      */
     private Boolean encAlgoChacha20Poly1305;
     /**
-     * @return The EncAlgoRc4 param. Default: `true`.
+     * @return Enc algo rc4
      * 
      */
     private Boolean encAlgoRc4;
     /**
-     * @return The KeyxchgAlgoDhe param. Default: `true`.
+     * @return Keyxchg algo dhe
      * 
      */
     private Boolean keyxchgAlgoDhe;
     /**
-     * @return The KeyxchgAlgoEcdhe param. Default: `true`.
+     * @return Keyxchg algo ecdhe
      * 
      */
     private Boolean keyxchgAlgoEcdhe;
     /**
-     * @return The KeyxchgAlgoRsa param. Default: `true`.
+     * @return Keyxchg algo rsa
      * 
      */
     private Boolean keyxchgAlgoRsa;
     /**
-     * @return The MaxVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;tls1-2&#34;`.
+     * @return Max version
      * 
      */
     private String maxVersion;
     /**
-     * @return The MinVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`. Default: `&#34;tls1-0&#34;`.
+     * @return Min version
      * 
      */
     private String minVersion;
 
     private GetDecryptionProfileListDataSslProtocolSettings() {}
     /**
-     * @return The AuthAlgoMd5 param. Default: `true`.
+     * @return Auth algo md5
      * 
      */
     public Boolean authAlgoMd5() {
         return this.authAlgoMd5;
     }
     /**
-     * @return The AuthAlgoSha1 param. Default: `true`.
+     * @return Auth algo sha1
      * 
      */
     public Boolean authAlgoSha1() {
         return this.authAlgoSha1;
     }
     /**
-     * @return The AuthAlgoSha256 param. Default: `true`.
+     * @return Auth algo sha256
      * 
      */
     public Boolean authAlgoSha256() {
         return this.authAlgoSha256;
     }
     /**
-     * @return The AuthAlgoSha384 param. Default: `true`.
+     * @return Auth algo sha384
      * 
      */
     public Boolean authAlgoSha384() {
         return this.authAlgoSha384;
     }
     /**
-     * @return The EncAlgo3des param. Default: `true`.
+     * @return Enc algo3des
      * 
      */
     public Boolean encAlgo3des() {
         return this.encAlgo3des;
     }
     /**
-     * @return The EncAlgoAes128Cbc param. Default: `true`.
+     * @return Enc algo aes128 cbc
      * 
      */
     public Boolean encAlgoAes128Cbc() {
         return this.encAlgoAes128Cbc;
     }
     /**
-     * @return The EncAlgoAes128Gcm param. Default: `true`.
+     * @return Enc algo aes128 gcm
      * 
      */
     public Boolean encAlgoAes128Gcm() {
         return this.encAlgoAes128Gcm;
     }
     /**
-     * @return The EncAlgoAes256Cbc param. Default: `true`.
+     * @return Enc algo aes256 cbc
      * 
      */
     public Boolean encAlgoAes256Cbc() {
         return this.encAlgoAes256Cbc;
     }
     /**
-     * @return The EncAlgoAes256Gcm param. Default: `true`.
+     * @return Enc algo aes256 gcm
      * 
      */
     public Boolean encAlgoAes256Gcm() {
         return this.encAlgoAes256Gcm;
     }
     /**
-     * @return The EncAlgoChacha20Poly1305 param. Default: `true`.
+     * @return Enc algo chacha20 poly1305
      * 
      */
     public Boolean encAlgoChacha20Poly1305() {
         return this.encAlgoChacha20Poly1305;
     }
     /**
-     * @return The EncAlgoRc4 param. Default: `true`.
+     * @return Enc algo rc4
      * 
      */
     public Boolean encAlgoRc4() {
         return this.encAlgoRc4;
     }
     /**
-     * @return The KeyxchgAlgoDhe param. Default: `true`.
+     * @return Keyxchg algo dhe
      * 
      */
     public Boolean keyxchgAlgoDhe() {
         return this.keyxchgAlgoDhe;
     }
     /**
-     * @return The KeyxchgAlgoEcdhe param. Default: `true`.
+     * @return Keyxchg algo ecdhe
      * 
      */
     public Boolean keyxchgAlgoEcdhe() {
         return this.keyxchgAlgoEcdhe;
     }
     /**
-     * @return The KeyxchgAlgoRsa param. Default: `true`.
+     * @return Keyxchg algo rsa
      * 
      */
     public Boolean keyxchgAlgoRsa() {
         return this.keyxchgAlgoRsa;
     }
     /**
-     * @return The MaxVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;tls1-2&#34;`.
+     * @return Max version
      * 
      */
     public String maxVersion() {
         return this.maxVersion;
     }
     /**
-     * @return The MinVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`. Default: `&#34;tls1-0&#34;`.
+     * @return Min version
      * 
      */
     public String minVersion() {

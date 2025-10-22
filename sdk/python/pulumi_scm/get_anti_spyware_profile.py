@@ -27,13 +27,19 @@ class GetAntiSpywareProfileResult:
     """
     A collection of values returned by getAntiSpywareProfile.
     """
-    def __init__(__self__, cloud_inline_analysis=None, description=None, id=None, inline_exception_edl_urls=None, inline_exception_ip_addresses=None, mica_engine_spyware_enabled_lists=None, name=None, rules=None, tfid=None, threat_exceptions=None):
+    def __init__(__self__, cloud_inline_analysis=None, description=None, device=None, folder=None, id=None, inline_exception_edl_urls=None, inline_exception_ip_addresses=None, mica_engine_spyware_enableds=None, name=None, rules=None, snippet=None, tfid=None, threat_exceptions=None):
         if cloud_inline_analysis and not isinstance(cloud_inline_analysis, bool):
             raise TypeError("Expected argument 'cloud_inline_analysis' to be a bool")
         pulumi.set(__self__, "cloud_inline_analysis", cloud_inline_analysis)
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -43,15 +49,18 @@ class GetAntiSpywareProfileResult:
         if inline_exception_ip_addresses and not isinstance(inline_exception_ip_addresses, list):
             raise TypeError("Expected argument 'inline_exception_ip_addresses' to be a list")
         pulumi.set(__self__, "inline_exception_ip_addresses", inline_exception_ip_addresses)
-        if mica_engine_spyware_enabled_lists and not isinstance(mica_engine_spyware_enabled_lists, list):
-            raise TypeError("Expected argument 'mica_engine_spyware_enabled_lists' to be a list")
-        pulumi.set(__self__, "mica_engine_spyware_enabled_lists", mica_engine_spyware_enabled_lists)
+        if mica_engine_spyware_enableds and not isinstance(mica_engine_spyware_enableds, list):
+            raise TypeError("Expected argument 'mica_engine_spyware_enableds' to be a list")
+        pulumi.set(__self__, "mica_engine_spyware_enableds", mica_engine_spyware_enableds)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
         if rules and not isinstance(rules, list):
             raise TypeError("Expected argument 'rules' to be a list")
         pulumi.set(__self__, "rules", rules)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -63,7 +72,7 @@ class GetAntiSpywareProfileResult:
     @pulumi.getter(name="cloudInlineAnalysis")
     def cloud_inline_analysis(self) -> _builtins.bool:
         """
-        The CloudInlineAnalysis param. Default: `false`.
+        Cloud inline analysis
         """
         return pulumi.get(self, "cloud_inline_analysis")
 
@@ -71,15 +80,31 @@ class GetAntiSpywareProfileResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the anti-spyware profile
         """
         return pulumi.get(self, "id")
 
@@ -87,7 +112,7 @@ class GetAntiSpywareProfileResult:
     @pulumi.getter(name="inlineExceptionEdlUrls")
     def inline_exception_edl_urls(self) -> Sequence[_builtins.str]:
         """
-        The InlineExceptionEdlUrls param.
+        Inline exception edl url
         """
         return pulumi.get(self, "inline_exception_edl_urls")
 
@@ -95,23 +120,23 @@ class GetAntiSpywareProfileResult:
     @pulumi.getter(name="inlineExceptionIpAddresses")
     def inline_exception_ip_addresses(self) -> Sequence[_builtins.str]:
         """
-        The InlineExceptionIpAddresses param.
+        Inline exception ip address
         """
         return pulumi.get(self, "inline_exception_ip_addresses")
 
     @_builtins.property
-    @pulumi.getter(name="micaEngineSpywareEnabledLists")
-    def mica_engine_spyware_enabled_lists(self) -> Sequence['outputs.GetAntiSpywareProfileMicaEngineSpywareEnabledListResult']:
+    @pulumi.getter(name="micaEngineSpywareEnableds")
+    def mica_engine_spyware_enableds(self) -> Sequence['outputs.GetAntiSpywareProfileMicaEngineSpywareEnabledResult']:
         """
-        The MicaEngineSpywareEnabledList param.
+        Mica engine spyware enabled
         """
-        return pulumi.get(self, "mica_engine_spyware_enabled_lists")
+        return pulumi.get(self, "mica_engine_spyware_enableds")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param.
+        The name of the anti-spyware profile
         """
         return pulumi.get(self, "name")
 
@@ -119,9 +144,17 @@ class GetAntiSpywareProfileResult:
     @pulumi.getter
     def rules(self) -> Sequence['outputs.GetAntiSpywareProfileRuleResult']:
         """
-        The Rules param.
+        Rules
         """
         return pulumi.get(self, "rules")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -132,7 +165,7 @@ class GetAntiSpywareProfileResult:
     @pulumi.getter(name="threatExceptions")
     def threat_exceptions(self) -> Sequence['outputs.GetAntiSpywareProfileThreatExceptionResult']:
         """
-        The ThreatExceptions param.
+        Threat exception
         """
         return pulumi.get(self, "threat_exceptions")
 
@@ -145,20 +178,24 @@ class AwaitableGetAntiSpywareProfileResult(GetAntiSpywareProfileResult):
         return GetAntiSpywareProfileResult(
             cloud_inline_analysis=self.cloud_inline_analysis,
             description=self.description,
+            device=self.device,
+            folder=self.folder,
             id=self.id,
             inline_exception_edl_urls=self.inline_exception_edl_urls,
             inline_exception_ip_addresses=self.inline_exception_ip_addresses,
-            mica_engine_spyware_enabled_lists=self.mica_engine_spyware_enabled_lists,
+            mica_engine_spyware_enableds=self.mica_engine_spyware_enableds,
             name=self.name,
             rules=self.rules,
+            snippet=self.snippet,
             tfid=self.tfid,
             threat_exceptions=self.threat_exceptions)
 
 
 def get_anti_spyware_profile(id: Optional[_builtins.str] = None,
+                             name: Optional[_builtins.str] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAntiSpywareProfileResult:
     """
-    Retrieves a config item.
+    AntiSpywareProfile data source
 
     ## Example Usage
 
@@ -166,32 +203,46 @@ def get_anti_spyware_profile(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_anti_spyware_profile(id="1234-56-789")
+    # Look up anti-spyware-profile by ID
+    scm_anti_spyware_profile_ds = scm.get_anti_spyware_profile(id="7720ab77-d9fe-42c1-8001-6ef2202aae8c")
+    pulumi.export("scmAntiSpywareProfileOutput", {
+        "profileId": scm_anti_spyware_profile_ds.id,
+        "folder": scm_anti_spyware_profile_ds.folder,
+        "name": scm_anti_spyware_profile_ds.name,
+        "description": scm_anti_spyware_profile_ds.description,
+        "cloudInlineAnalysis": scm_anti_spyware_profile_ds.cloud_inline_analysis,
+    })
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the anti-spyware profile
+    :param _builtins.str name: The name of the anti-spyware profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getAntiSpywareProfile:getAntiSpywareProfile', __args__, opts=opts, typ=GetAntiSpywareProfileResult).value
 
     return AwaitableGetAntiSpywareProfileResult(
         cloud_inline_analysis=pulumi.get(__ret__, 'cloud_inline_analysis'),
         description=pulumi.get(__ret__, 'description'),
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         inline_exception_edl_urls=pulumi.get(__ret__, 'inline_exception_edl_urls'),
         inline_exception_ip_addresses=pulumi.get(__ret__, 'inline_exception_ip_addresses'),
-        mica_engine_spyware_enabled_lists=pulumi.get(__ret__, 'mica_engine_spyware_enabled_lists'),
+        mica_engine_spyware_enableds=pulumi.get(__ret__, 'mica_engine_spyware_enableds'),
         name=pulumi.get(__ret__, 'name'),
         rules=pulumi.get(__ret__, 'rules'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         threat_exceptions=pulumi.get(__ret__, 'threat_exceptions'))
 def get_anti_spyware_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                    name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAntiSpywareProfileResult]:
     """
-    Retrieves a config item.
+    AntiSpywareProfile data source
 
     ## Example Usage
 
@@ -199,24 +250,37 @@ def get_anti_spyware_profile_output(id: Optional[pulumi.Input[_builtins.str]] = 
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_anti_spyware_profile(id="1234-56-789")
+    # Look up anti-spyware-profile by ID
+    scm_anti_spyware_profile_ds = scm.get_anti_spyware_profile(id="7720ab77-d9fe-42c1-8001-6ef2202aae8c")
+    pulumi.export("scmAntiSpywareProfileOutput", {
+        "profileId": scm_anti_spyware_profile_ds.id,
+        "folder": scm_anti_spyware_profile_ds.folder,
+        "name": scm_anti_spyware_profile_ds.name,
+        "description": scm_anti_spyware_profile_ds.description,
+        "cloudInlineAnalysis": scm_anti_spyware_profile_ds.cloud_inline_analysis,
+    })
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the anti-spyware profile
+    :param _builtins.str name: The name of the anti-spyware profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAntiSpywareProfile:getAntiSpywareProfile', __args__, opts=opts, typ=GetAntiSpywareProfileResult)
     return __ret__.apply(lambda __response__: GetAntiSpywareProfileResult(
         cloud_inline_analysis=pulumi.get(__response__, 'cloud_inline_analysis'),
         description=pulumi.get(__response__, 'description'),
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         inline_exception_edl_urls=pulumi.get(__response__, 'inline_exception_edl_urls'),
         inline_exception_ip_addresses=pulumi.get(__response__, 'inline_exception_ip_addresses'),
-        mica_engine_spyware_enabled_lists=pulumi.get(__response__, 'mica_engine_spyware_enabled_lists'),
+        mica_engine_spyware_enableds=pulumi.get(__response__, 'mica_engine_spyware_enableds'),
         name=pulumi.get(__response__, 'name'),
         rules=pulumi.get(__response__, 'rules'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         threat_exceptions=pulumi.get(__response__, 'threat_exceptions')))

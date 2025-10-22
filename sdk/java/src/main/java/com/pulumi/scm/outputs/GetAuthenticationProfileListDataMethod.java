@@ -8,95 +8,95 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetAuthenticationProfileListDataMethodCloud;
 import com.pulumi.scm.outputs.GetAuthenticationProfileListDataMethodKerberos;
 import com.pulumi.scm.outputs.GetAuthenticationProfileListDataMethodLdap;
+import com.pulumi.scm.outputs.GetAuthenticationProfileListDataMethodLocalDatabase;
 import com.pulumi.scm.outputs.GetAuthenticationProfileListDataMethodRadius;
 import com.pulumi.scm.outputs.GetAuthenticationProfileListDataMethodSamlIdp;
 import com.pulumi.scm.outputs.GetAuthenticationProfileListDataMethodTacplus;
-import java.lang.Boolean;
 import java.util.Objects;
 
 @CustomType
 public final class GetAuthenticationProfileListDataMethod {
     /**
-     * @return The Cloud param.
+     * @return Cloud
      * 
      */
     private GetAuthenticationProfileListDataMethodCloud cloud;
     /**
-     * @return The Kerberos param.
+     * @return Kerberos
      * 
      */
     private GetAuthenticationProfileListDataMethodKerberos kerberos;
     /**
-     * @return The Ldap param.
+     * @return Ldap
      * 
      */
     private GetAuthenticationProfileListDataMethodLdap ldap;
     /**
-     * @return The LocalDatabase param.
+     * @return Local database
      * 
      */
-    private Boolean localDatabase;
+    private GetAuthenticationProfileListDataMethodLocalDatabase localDatabase;
     /**
-     * @return The Radius param.
+     * @return Radius
      * 
      */
     private GetAuthenticationProfileListDataMethodRadius radius;
     /**
-     * @return The SamlIdp param.
+     * @return Saml idp
      * 
      */
     private GetAuthenticationProfileListDataMethodSamlIdp samlIdp;
     /**
-     * @return The Tacplus param.
+     * @return Tacplus
      * 
      */
     private GetAuthenticationProfileListDataMethodTacplus tacplus;
 
     private GetAuthenticationProfileListDataMethod() {}
     /**
-     * @return The Cloud param.
+     * @return Cloud
      * 
      */
     public GetAuthenticationProfileListDataMethodCloud cloud() {
         return this.cloud;
     }
     /**
-     * @return The Kerberos param.
+     * @return Kerberos
      * 
      */
     public GetAuthenticationProfileListDataMethodKerberos kerberos() {
         return this.kerberos;
     }
     /**
-     * @return The Ldap param.
+     * @return Ldap
      * 
      */
     public GetAuthenticationProfileListDataMethodLdap ldap() {
         return this.ldap;
     }
     /**
-     * @return The LocalDatabase param.
+     * @return Local database
      * 
      */
-    public Boolean localDatabase() {
+    public GetAuthenticationProfileListDataMethodLocalDatabase localDatabase() {
         return this.localDatabase;
     }
     /**
-     * @return The Radius param.
+     * @return Radius
      * 
      */
     public GetAuthenticationProfileListDataMethodRadius radius() {
         return this.radius;
     }
     /**
-     * @return The SamlIdp param.
+     * @return Saml idp
      * 
      */
     public GetAuthenticationProfileListDataMethodSamlIdp samlIdp() {
         return this.samlIdp;
     }
     /**
-     * @return The Tacplus param.
+     * @return Tacplus
      * 
      */
     public GetAuthenticationProfileListDataMethodTacplus tacplus() {
@@ -115,7 +115,7 @@ public final class GetAuthenticationProfileListDataMethod {
         private GetAuthenticationProfileListDataMethodCloud cloud;
         private GetAuthenticationProfileListDataMethodKerberos kerberos;
         private GetAuthenticationProfileListDataMethodLdap ldap;
-        private Boolean localDatabase;
+        private GetAuthenticationProfileListDataMethodLocalDatabase localDatabase;
         private GetAuthenticationProfileListDataMethodRadius radius;
         private GetAuthenticationProfileListDataMethodSamlIdp samlIdp;
         private GetAuthenticationProfileListDataMethodTacplus tacplus;
@@ -156,7 +156,7 @@ public final class GetAuthenticationProfileListDataMethod {
             return this;
         }
         @CustomType.Setter
-        public Builder localDatabase(Boolean localDatabase) {
+        public Builder localDatabase(GetAuthenticationProfileListDataMethodLocalDatabase localDatabase) {
             if (localDatabase == null) {
               throw new MissingRequiredPropertyException("GetAuthenticationProfileListDataMethod", "localDatabase");
             }

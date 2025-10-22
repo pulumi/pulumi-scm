@@ -13,26 +13,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHttpHeaderProfileListDataHttpHeaderInsertion {
     /**
-     * @return The Name param.
+     * @return The name of the HTTP header insertion rule
      * 
      */
     private String name;
     /**
-     * @return The Types param.
+     * @return A list of HTTP header insertion definitions (*This should be an object rather than an array*)
      * 
      */
     private List<GetHttpHeaderProfileListDataHttpHeaderInsertionType> types;
 
     private GetHttpHeaderProfileListDataHttpHeaderInsertion() {}
     /**
-     * @return The Name param.
+     * @return The name of the HTTP header insertion rule
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Types param.
+     * @return A list of HTTP header insertion definitions (*This should be an object rather than an array*)
      * 
      */
     public List<GetHttpHeaderProfileListDataHttpHeaderInsertionType> types() {

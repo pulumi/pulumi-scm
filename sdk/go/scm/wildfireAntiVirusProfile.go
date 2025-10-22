@@ -11,54 +11,28 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewWildfireAntiVirusProfile(ctx, "example", &scm.WildfireAntiVirusProfileArgs{
-//				Folder: pulumi.String("Shared"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// WildfireAntiVirusProfile resource
 type WildfireAntiVirusProfile struct {
 	pulumi.CustomResourceState
 
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The MlavExceptions param.
+	// Mlav exception
 	MlavExceptions WildfireAntiVirusProfileMlavExceptionArrayOutput `pulumi:"mlavExceptions"`
-	// The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The PacketCapture param.
+	// Packet capture
 	PacketCapture pulumi.BoolPtrOutput `pulumi:"packetCapture"`
-	// The Rules param.
+	// Rules
 	Rules WildfireAntiVirusProfileRuleArrayOutput `pulumi:"rules"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
-	// The ThreatExceptions param.
+	// Threat exception
 	ThreatExceptions WildfireAntiVirusProfileThreatExceptionArrayOutput `pulumi:"threatExceptions"`
 }
 
@@ -92,46 +66,46 @@ func GetWildfireAntiVirusProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering WildfireAntiVirusProfile resources.
 type wildfireAntiVirusProfileState struct {
-	// The Description param.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The MlavExceptions param.
+	// Mlav exception
 	MlavExceptions []WildfireAntiVirusProfileMlavException `pulumi:"mlavExceptions"`
-	// The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// Name
 	Name *string `pulumi:"name"`
-	// The PacketCapture param.
+	// Packet capture
 	PacketCapture *bool `pulumi:"packetCapture"`
-	// The Rules param.
+	// Rules
 	Rules []WildfireAntiVirusProfileRule `pulumi:"rules"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
-	// The ThreatExceptions param.
+	// Threat exception
 	ThreatExceptions []WildfireAntiVirusProfileThreatException `pulumi:"threatExceptions"`
 }
 
 type WildfireAntiVirusProfileState struct {
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The MlavExceptions param.
+	// Mlav exception
 	MlavExceptions WildfireAntiVirusProfileMlavExceptionArrayInput
-	// The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// Name
 	Name pulumi.StringPtrInput
-	// The PacketCapture param.
+	// Packet capture
 	PacketCapture pulumi.BoolPtrInput
-	// The Rules param.
+	// Rules
 	Rules WildfireAntiVirusProfileRuleArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
-	// The ThreatExceptions param.
+	// Threat exception
 	ThreatExceptions WildfireAntiVirusProfileThreatExceptionArrayInput
 }
 
@@ -140,45 +114,45 @@ func (WildfireAntiVirusProfileState) ElementType() reflect.Type {
 }
 
 type wildfireAntiVirusProfileArgs struct {
-	// The Description param.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The MlavExceptions param.
+	// Mlav exception
 	MlavExceptions []WildfireAntiVirusProfileMlavException `pulumi:"mlavExceptions"`
-	// The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// Name
 	Name *string `pulumi:"name"`
-	// The PacketCapture param.
+	// Packet capture
 	PacketCapture *bool `pulumi:"packetCapture"`
-	// The Rules param.
+	// Rules
 	Rules []WildfireAntiVirusProfileRule `pulumi:"rules"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The ThreatExceptions param.
+	// Threat exception
 	ThreatExceptions []WildfireAntiVirusProfileThreatException `pulumi:"threatExceptions"`
 }
 
 // The set of arguments for constructing a WildfireAntiVirusProfile resource.
 type WildfireAntiVirusProfileArgs struct {
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The MlavExceptions param.
+	// Mlav exception
 	MlavExceptions WildfireAntiVirusProfileMlavExceptionArrayInput
-	// The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// Name
 	Name pulumi.StringPtrInput
-	// The PacketCapture param.
+	// Packet capture
 	PacketCapture pulumi.BoolPtrInput
-	// The Rules param.
+	// Rules
 	Rules WildfireAntiVirusProfileRuleArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The ThreatExceptions param.
+	// Threat exception
 	ThreatExceptions WildfireAntiVirusProfileThreatExceptionArrayInput
 }
 
@@ -269,44 +243,44 @@ func (o WildfireAntiVirusProfileOutput) ToWildfireAntiVirusProfileOutputWithCont
 	return o
 }
 
-// The Description param.
+// Description
 func (o WildfireAntiVirusProfileOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o WildfireAntiVirusProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o WildfireAntiVirusProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The MlavExceptions param.
+// Mlav exception
 func (o WildfireAntiVirusProfileOutput) MlavExceptions() WildfireAntiVirusProfileMlavExceptionArrayOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) WildfireAntiVirusProfileMlavExceptionArrayOutput {
 		return v.MlavExceptions
 	}).(WildfireAntiVirusProfileMlavExceptionArrayOutput)
 }
 
-// The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+// Name
 func (o WildfireAntiVirusProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The PacketCapture param.
+// Packet capture
 func (o WildfireAntiVirusProfileOutput) PacketCapture() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) pulumi.BoolPtrOutput { return v.PacketCapture }).(pulumi.BoolPtrOutput)
 }
 
-// The Rules param.
+// Rules
 func (o WildfireAntiVirusProfileOutput) Rules() WildfireAntiVirusProfileRuleArrayOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) WildfireAntiVirusProfileRuleArrayOutput { return v.Rules }).(WildfireAntiVirusProfileRuleArrayOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o WildfireAntiVirusProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -315,7 +289,7 @@ func (o WildfireAntiVirusProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The ThreatExceptions param.
+// Threat exception
 func (o WildfireAntiVirusProfileOutput) ThreatExceptions() WildfireAntiVirusProfileThreatExceptionArrayOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) WildfireAntiVirusProfileThreatExceptionArrayOutput {
 		return v.ThreatExceptions

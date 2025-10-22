@@ -27,7 +27,7 @@ class GetHipObjectResult:
     """
     A collection of values returned by getHipObject.
     """
-    def __init__(__self__, anti_malware=None, certificate=None, custom_checks=None, data_loss_prevention=None, description=None, disk_backup=None, disk_encryption=None, firewall=None, host_info=None, id=None, mobile_device=None, name=None, network_info=None, patch_management=None, tfid=None):
+    def __init__(__self__, anti_malware=None, certificate=None, custom_checks=None, data_loss_prevention=None, description=None, device=None, disk_backup=None, disk_encryption=None, firewall=None, folder=None, host_info=None, id=None, mobile_device=None, name=None, network_info=None, patch_management=None, snippet=None, tfid=None):
         if anti_malware and not isinstance(anti_malware, dict):
             raise TypeError("Expected argument 'anti_malware' to be a dict")
         pulumi.set(__self__, "anti_malware", anti_malware)
@@ -43,6 +43,9 @@ class GetHipObjectResult:
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if disk_backup and not isinstance(disk_backup, dict):
             raise TypeError("Expected argument 'disk_backup' to be a dict")
         pulumi.set(__self__, "disk_backup", disk_backup)
@@ -52,6 +55,9 @@ class GetHipObjectResult:
         if firewall and not isinstance(firewall, dict):
             raise TypeError("Expected argument 'firewall' to be a dict")
         pulumi.set(__self__, "firewall", firewall)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if host_info and not isinstance(host_info, dict):
             raise TypeError("Expected argument 'host_info' to be a dict")
         pulumi.set(__self__, "host_info", host_info)
@@ -70,6 +76,9 @@ class GetHipObjectResult:
         if patch_management and not isinstance(patch_management, dict):
             raise TypeError("Expected argument 'patch_management' to be a dict")
         pulumi.set(__self__, "patch_management", patch_management)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -78,7 +87,7 @@ class GetHipObjectResult:
     @pulumi.getter(name="antiMalware")
     def anti_malware(self) -> 'outputs.GetHipObjectAntiMalwareResult':
         """
-        The AntiMalware param.
+        Anti malware
         """
         return pulumi.get(self, "anti_malware")
 
@@ -86,7 +95,7 @@ class GetHipObjectResult:
     @pulumi.getter
     def certificate(self) -> 'outputs.GetHipObjectCertificateResult':
         """
-        The Certificate param.
+        Certificate
         """
         return pulumi.get(self, "certificate")
 
@@ -94,7 +103,7 @@ class GetHipObjectResult:
     @pulumi.getter(name="customChecks")
     def custom_checks(self) -> 'outputs.GetHipObjectCustomChecksResult':
         """
-        The CustomChecks param.
+        Custom checks
         """
         return pulumi.get(self, "custom_checks")
 
@@ -102,7 +111,7 @@ class GetHipObjectResult:
     @pulumi.getter(name="dataLossPrevention")
     def data_loss_prevention(self) -> 'outputs.GetHipObjectDataLossPreventionResult':
         """
-        The DataLossPrevention param.
+        Data loss prevention
         """
         return pulumi.get(self, "data_loss_prevention")
 
@@ -110,15 +119,23 @@ class GetHipObjectResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
+
+    @_builtins.property
+    @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="diskBackup")
     def disk_backup(self) -> 'outputs.GetHipObjectDiskBackupResult':
         """
-        The DiskBackup param.
+        Disk backup
         """
         return pulumi.get(self, "disk_backup")
 
@@ -126,7 +143,7 @@ class GetHipObjectResult:
     @pulumi.getter(name="diskEncryption")
     def disk_encryption(self) -> 'outputs.GetHipObjectDiskEncryptionResult':
         """
-        The DiskEncryption param.
+        Disk encryption
         """
         return pulumi.get(self, "disk_encryption")
 
@@ -134,15 +151,23 @@ class GetHipObjectResult:
     @pulumi.getter
     def firewall(self) -> 'outputs.GetHipObjectFirewallResult':
         """
-        The Firewall param.
+        Firewall
         """
         return pulumi.get(self, "firewall")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="hostInfo")
     def host_info(self) -> 'outputs.GetHipObjectHostInfoResult':
         """
-        The HostInfo param.
+        Host info
         """
         return pulumi.get(self, "host_info")
 
@@ -150,7 +175,7 @@ class GetHipObjectResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -158,7 +183,7 @@ class GetHipObjectResult:
     @pulumi.getter(name="mobileDevice")
     def mobile_device(self) -> 'outputs.GetHipObjectMobileDeviceResult':
         """
-        The MobileDevice param.
+        Mobile device
         """
         return pulumi.get(self, "mobile_device")
 
@@ -166,7 +191,7 @@ class GetHipObjectResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the HIP object
         """
         return pulumi.get(self, "name")
 
@@ -174,7 +199,7 @@ class GetHipObjectResult:
     @pulumi.getter(name="networkInfo")
     def network_info(self) -> 'outputs.GetHipObjectNetworkInfoResult':
         """
-        The NetworkInfo param.
+        Network info
         """
         return pulumi.get(self, "network_info")
 
@@ -182,9 +207,17 @@ class GetHipObjectResult:
     @pulumi.getter(name="patchManagement")
     def patch_management(self) -> 'outputs.GetHipObjectPatchManagementResult':
         """
-        The PatchManagement param.
+        Patch management
         """
         return pulumi.get(self, "patch_management")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -203,22 +236,26 @@ class AwaitableGetHipObjectResult(GetHipObjectResult):
             custom_checks=self.custom_checks,
             data_loss_prevention=self.data_loss_prevention,
             description=self.description,
+            device=self.device,
             disk_backup=self.disk_backup,
             disk_encryption=self.disk_encryption,
             firewall=self.firewall,
+            folder=self.folder,
             host_info=self.host_info,
             id=self.id,
             mobile_device=self.mobile_device,
             name=self.name,
             network_info=self.network_info,
             patch_management=self.patch_management,
+            snippet=self.snippet,
             tfid=self.tfid)
 
 
 def get_hip_object(id: Optional[_builtins.str] = None,
+                   name: Optional[_builtins.str] = None,
                    opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetHipObjectResult:
     """
-    Retrieves a config item.
+    HipObject data source
 
     ## Example Usage
 
@@ -226,14 +263,18 @@ def get_hip_object(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_hip_object(id="1234-56-789")
+    # Look up a single HIP Profile by its ID.
+    scm_hip_object_ds = scm.get_hip_object(id="aba16b3c-8d43-4bac-aa76-572f1d36dbc5")
+    pulumi.export("hipObjectsDsResult", scm_hip_object_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: The name of the HIP object
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getHipObject:getHipObject', __args__, opts=opts, typ=GetHipObjectResult).value
 
@@ -243,20 +284,24 @@ def get_hip_object(id: Optional[_builtins.str] = None,
         custom_checks=pulumi.get(__ret__, 'custom_checks'),
         data_loss_prevention=pulumi.get(__ret__, 'data_loss_prevention'),
         description=pulumi.get(__ret__, 'description'),
+        device=pulumi.get(__ret__, 'device'),
         disk_backup=pulumi.get(__ret__, 'disk_backup'),
         disk_encryption=pulumi.get(__ret__, 'disk_encryption'),
         firewall=pulumi.get(__ret__, 'firewall'),
+        folder=pulumi.get(__ret__, 'folder'),
         host_info=pulumi.get(__ret__, 'host_info'),
         id=pulumi.get(__ret__, 'id'),
         mobile_device=pulumi.get(__ret__, 'mobile_device'),
         name=pulumi.get(__ret__, 'name'),
         network_info=pulumi.get(__ret__, 'network_info'),
         patch_management=pulumi.get(__ret__, 'patch_management'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_hip_object_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                          name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetHipObjectResult]:
     """
-    Retrieves a config item.
+    HipObject data source
 
     ## Example Usage
 
@@ -264,14 +309,18 @@ def get_hip_object_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_hip_object(id="1234-56-789")
+    # Look up a single HIP Profile by its ID.
+    scm_hip_object_ds = scm.get_hip_object(id="aba16b3c-8d43-4bac-aa76-572f1d36dbc5")
+    pulumi.export("hipObjectsDsResult", scm_hip_object_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: The name of the HIP object
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getHipObject:getHipObject', __args__, opts=opts, typ=GetHipObjectResult)
     return __ret__.apply(lambda __response__: GetHipObjectResult(
@@ -280,13 +329,16 @@ def get_hip_object_output(id: Optional[pulumi.Input[_builtins.str]] = None,
         custom_checks=pulumi.get(__response__, 'custom_checks'),
         data_loss_prevention=pulumi.get(__response__, 'data_loss_prevention'),
         description=pulumi.get(__response__, 'description'),
+        device=pulumi.get(__response__, 'device'),
         disk_backup=pulumi.get(__response__, 'disk_backup'),
         disk_encryption=pulumi.get(__response__, 'disk_encryption'),
         firewall=pulumi.get(__response__, 'firewall'),
+        folder=pulumi.get(__response__, 'folder'),
         host_info=pulumi.get(__response__, 'host_info'),
         id=pulumi.get(__response__, 'id'),
         mobile_device=pulumi.get(__response__, 'mobile_device'),
         name=pulumi.get(__response__, 'name'),
         network_info=pulumi.get(__response__, 'network_info'),
         patch_management=pulumi.get(__response__, 'patch_management'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid')))

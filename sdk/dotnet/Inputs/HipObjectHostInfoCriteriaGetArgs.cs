@@ -13,43 +13,43 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectHostInfoCriteriaGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The ClientVersion param.
+        /// Client version
         /// </summary>
         [Input("clientVersion")]
         public Input<Inputs.HipObjectHostInfoCriteriaClientVersionGetArgs>? ClientVersion { get; set; }
 
         /// <summary>
-        /// The Domain param.
+        /// Domain
         /// </summary>
         [Input("domain")]
         public Input<Inputs.HipObjectHostInfoCriteriaDomainGetArgs>? Domain { get; set; }
 
         /// <summary>
-        /// The HostId param.
+        /// Host id
         /// </summary>
         [Input("hostId")]
         public Input<Inputs.HipObjectHostInfoCriteriaHostIdGetArgs>? HostId { get; set; }
 
         /// <summary>
-        /// The HostName param.
+        /// Host name
         /// </summary>
         [Input("hostName")]
         public Input<Inputs.HipObjectHostInfoCriteriaHostNameGetArgs>? HostName { get; set; }
 
         /// <summary>
-        /// If device is managed.
+        /// If device is managed
         /// </summary>
         [Input("managed")]
         public Input<bool>? Managed { get; set; }
 
         /// <summary>
-        /// The Os param.
+        /// Os
         /// </summary>
         [Input("os")]
         public Input<Inputs.HipObjectHostInfoCriteriaOsGetArgs>? Os { get; set; }
 
         /// <summary>
-        /// The SerialNumber param.
+        /// Serial number
         /// </summary>
         [Input("serialNumber")]
         public Input<Inputs.HipObjectHostInfoCriteriaSerialNumberGetArgs>? SerialNumber { get; set; }

@@ -14,28 +14,60 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataResult
     {
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the external dynamic list
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the external dynamic list
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Type param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// Type
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeResult Type;
 
         [OutputConstructor]
         private GetExternalDynamicListListDataResult(
+            string device,
+
+            ImmutableDictionary<string, string> encryptedValues,
+
+            string folder,
+
             string id,
 
             string name,
 
+            string snippet,
+
+            string tfid,
+
             Outputs.GetExternalDynamicListListDataTypeResult type)
         {
+            Device = device;
+            EncryptedValues = encryptedValues;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
             Type = type;
         }
     }

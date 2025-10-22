@@ -62,23 +62,23 @@ class GetVariableResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param.
+        The description of the variable
         """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[_builtins.str]:
+    def device(self) -> _builtins.str:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[_builtins.str]:
+    def folder(self) -> _builtins.str:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -86,7 +86,7 @@ class GetVariableResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the variable
         """
         return pulumi.get(self, "id")
 
@@ -94,7 +94,7 @@ class GetVariableResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the variable
         """
         return pulumi.get(self, "name")
 
@@ -102,15 +102,15 @@ class GetVariableResult:
     @pulumi.getter
     def overridden(self) -> _builtins.bool:
         """
-        The Overridden param.
+        Is the variable overridden?
         """
         return pulumi.get(self, "overridden")
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[_builtins.str]:
+    def snippet(self) -> _builtins.str:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -123,7 +123,7 @@ class GetVariableResult:
     @pulumi.getter
     def type(self) -> _builtins.str:
         """
-        The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+        The variable type
         """
         return pulumi.get(self, "type")
 
@@ -131,7 +131,7 @@ class GetVariableResult:
     @pulumi.getter
     def value(self) -> _builtins.str:
         """
-        value can accept either string or integer.
+        The value of the variable
         """
         return pulumi.get(self, "value")
 
@@ -154,13 +154,11 @@ class AwaitableGetVariableResult(GetVariableResult):
             value=self.value)
 
 
-def get_variable(device: Optional[_builtins.str] = None,
-                 folder: Optional[_builtins.str] = None,
-                 id: Optional[_builtins.str] = None,
-                 snippet: Optional[_builtins.str] = None,
+def get_variable(id: Optional[_builtins.str] = None,
+                 name: Optional[_builtins.str] = None,
                  opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetVariableResult:
     """
-    Retrieves a config item.
+    Variable data source
 
     ## Example Usage
 
@@ -168,20 +166,23 @@ def get_variable(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_variable(id="1234-56-789")
+    # Look up the "$example" variable by its name.
+    scm_variable_ds = scm.get_variable(id="66cbe56c-0300-4905-8455-d384978a0081")
+    pulumi.export("variableOutputs", {
+        "exampleId": scm_variable_ds.id,
+        "exampleName": scm_variable_ds.name,
+        "exampleType": scm_variable_ds.type,
+        "exampleValue": scm_variable_ds.value,
+    })
     ```
 
 
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.str id: The Id param.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str id: UUID of the variable
+    :param _builtins.str name: The name of the variable
     """
     __args__ = dict()
-    __args__['device'] = device
-    __args__['folder'] = folder
     __args__['id'] = id
-    __args__['snippet'] = snippet
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getVariable:getVariable', __args__, opts=opts, typ=GetVariableResult).value
 
@@ -196,13 +197,11 @@ def get_variable(device: Optional[_builtins.str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         type=pulumi.get(__ret__, 'type'),
         value=pulumi.get(__ret__, 'value'))
-def get_variable_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                        folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                        id: Optional[pulumi.Input[_builtins.str]] = None,
-                        snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_variable_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                        name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetVariableResult]:
     """
-    Retrieves a config item.
+    Variable data source
 
     ## Example Usage
 
@@ -210,20 +209,23 @@ def get_variable_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] 
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_variable(id="1234-56-789")
+    # Look up the "$example" variable by its name.
+    scm_variable_ds = scm.get_variable(id="66cbe56c-0300-4905-8455-d384978a0081")
+    pulumi.export("variableOutputs", {
+        "exampleId": scm_variable_ds.id,
+        "exampleName": scm_variable_ds.name,
+        "exampleType": scm_variable_ds.type,
+        "exampleValue": scm_variable_ds.value,
+    })
     ```
 
 
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.str id: The Id param.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str id: UUID of the variable
+    :param _builtins.str name: The name of the variable
     """
     __args__ = dict()
-    __args__['device'] = device
-    __args__['folder'] = folder
     __args__['id'] = id
-    __args__['snippet'] = snippet
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getVariable:getVariable', __args__, opts=opts, typ=GetVariableResult)
     return __ret__.apply(lambda __response__: GetVariableResult(

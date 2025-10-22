@@ -7,18 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getAntiSpywareSignature({
- *     id: "1234-56-789",
- * });
- * ```
+ * AntiSpywareSignature data source
  */
 export function getAntiSpywareSignature(args: GetAntiSpywareSignatureArgs, opts?: pulumi.InvokeOptions): Promise<GetAntiSpywareSignatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -32,7 +21,7 @@ export function getAntiSpywareSignature(args: GetAntiSpywareSignatureArgs, opts?
  */
 export interface GetAntiSpywareSignatureArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
 }
@@ -42,68 +31,69 @@ export interface GetAntiSpywareSignatureArgs {
  */
 export interface GetAntiSpywareSignatureResult {
     /**
-     * The Bugtraqs param.
+     * Bugtraq
      */
     readonly bugtraqs: string[];
     /**
-     * The Comment param. String length must not exceed 256 characters.
+     * Comment
      */
     readonly comment: string;
     /**
-     * The Cves param.
+     * Cve
      */
     readonly cves: string[];
     /**
-     * The DefaultAction param.
+     * anti spyware signature default action
      */
     readonly defaultAction: outputs.GetAntiSpywareSignatureDefaultAction;
     /**
-     * The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * Direction
      */
     readonly direction: string;
     /**
-     * The Id param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The References param.
+     * Reference
      */
     readonly references: string[];
     /**
-     * The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+     * Severity
      */
     readonly severity: string;
     /**
-     * The Signature param.
+     * anti spyware signature
      */
     readonly signature: outputs.GetAntiSpywareSignatureSignature;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+     * threat id range \n\n and \n\n
      */
     readonly threatId: number;
     /**
-     * The Threatname param. String length must not exceed 1024 characters.
+     * Threatname
      */
     readonly threatname: string;
     /**
-     * The Vendors param.
+     * Vendor
      */
     readonly vendors: string[];
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getAntiSpywareSignature({
- *     id: "1234-56-789",
- * });
- * ```
+ * AntiSpywareSignature data source
  */
 export function getAntiSpywareSignatureOutput(args: GetAntiSpywareSignatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAntiSpywareSignatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -117,7 +107,7 @@ export function getAntiSpywareSignatureOutput(args: GetAntiSpywareSignatureOutpu
  */
 export interface GetAntiSpywareSignatureOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
 }

@@ -20,14 +20,14 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
     public static final DecryptionProfileArgs Empty = new DecryptionProfileArgs();
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -35,14 +35,14 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -50,14 +50,14 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+     * @return Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      * 
      */
     public Optional<Output<String>> name() {
@@ -65,14 +65,14 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -80,14 +80,14 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The SslForwardProxy param.
+     * Ssl forward proxy
      * 
      */
     @Import(name="sslForwardProxy")
     private @Nullable Output<DecryptionProfileSslForwardProxyArgs> sslForwardProxy;
 
     /**
-     * @return The SslForwardProxy param.
+     * @return Ssl forward proxy
      * 
      */
     public Optional<Output<DecryptionProfileSslForwardProxyArgs>> sslForwardProxy() {
@@ -95,14 +95,14 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The SslInboundProxy param.
+     * Ssl inbound proxy
      * 
      */
     @Import(name="sslInboundProxy")
     private @Nullable Output<DecryptionProfileSslInboundProxyArgs> sslInboundProxy;
 
     /**
-     * @return The SslInboundProxy param.
+     * @return Ssl inbound proxy
      * 
      */
     public Optional<Output<DecryptionProfileSslInboundProxyArgs>> sslInboundProxy() {
@@ -110,14 +110,14 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The SslNoProxy param.
+     * Ssl no proxy
      * 
      */
     @Import(name="sslNoProxy")
     private @Nullable Output<DecryptionProfileSslNoProxyArgs> sslNoProxy;
 
     /**
-     * @return The SslNoProxy param.
+     * @return Ssl no proxy
      * 
      */
     public Optional<Output<DecryptionProfileSslNoProxyArgs>> sslNoProxy() {
@@ -125,14 +125,14 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The SslProtocolSettings param.
+     * Ssl protocol settings
      * 
      */
     @Import(name="sslProtocolSettings")
     private @Nullable Output<DecryptionProfileSslProtocolSettingsArgs> sslProtocolSettings;
 
     /**
-     * @return The SslProtocolSettings param.
+     * @return Ssl protocol settings
      * 
      */
     public Optional<Output<DecryptionProfileSslProtocolSettingsArgs>> sslProtocolSettings() {
@@ -171,7 +171,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -182,7 +182,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -192,7 +192,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -203,7 +203,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -213,7 +213,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+         * @param name Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
          * 
          * @return builder
          * 
@@ -224,7 +224,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+         * @param name Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
          * 
          * @return builder
          * 
@@ -234,7 +234,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -245,7 +245,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -255,7 +255,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param sslForwardProxy The SslForwardProxy param.
+         * @param sslForwardProxy Ssl forward proxy
          * 
          * @return builder
          * 
@@ -266,7 +266,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param sslForwardProxy The SslForwardProxy param.
+         * @param sslForwardProxy Ssl forward proxy
          * 
          * @return builder
          * 
@@ -276,7 +276,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param sslInboundProxy The SslInboundProxy param.
+         * @param sslInboundProxy Ssl inbound proxy
          * 
          * @return builder
          * 
@@ -287,7 +287,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param sslInboundProxy The SslInboundProxy param.
+         * @param sslInboundProxy Ssl inbound proxy
          * 
          * @return builder
          * 
@@ -297,7 +297,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param sslNoProxy The SslNoProxy param.
+         * @param sslNoProxy Ssl no proxy
          * 
          * @return builder
          * 
@@ -308,7 +308,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param sslNoProxy The SslNoProxy param.
+         * @param sslNoProxy Ssl no proxy
          * 
          * @return builder
          * 
@@ -318,7 +318,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param sslProtocolSettings The SslProtocolSettings param.
+         * @param sslProtocolSettings Ssl protocol settings
          * 
          * @return builder
          * 
@@ -329,7 +329,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param sslProtocolSettings The SslProtocolSettings param.
+         * @param sslProtocolSettings Ssl protocol settings
          * 
          * @return builder
          * 

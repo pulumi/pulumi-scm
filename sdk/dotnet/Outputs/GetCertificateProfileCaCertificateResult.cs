@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetCertificateProfileCaCertificateResult
     {
         /// <summary>
-        /// The DefaultOcspUrl param.
+        /// Default OCSP URL
         /// </summary>
         public readonly string DefaultOcspUrl;
         /// <summary>
-        /// The Name param.
+        /// CA certificate name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The OcspVerifyCert param.
+        /// OCSP verify certificate
         /// </summary>
         public readonly string OcspVerifyCert;
         /// <summary>
-        /// The TemplateName param.
+        /// Template name/OID
         /// </summary>
         public readonly string TemplateName;
 

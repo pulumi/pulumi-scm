@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareSignatureListDataSignatureResult
     {
         /// <summary>
-        /// The Combination param.
+        /// anti spyware signature combination
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataSignatureCombinationResult Combination;
         /// <summary>
-        /// The Standards param.
+        /// Standard
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareSignatureListDataSignatureStandardResult> Standards;
 

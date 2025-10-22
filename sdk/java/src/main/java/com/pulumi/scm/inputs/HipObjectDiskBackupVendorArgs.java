@@ -18,14 +18,14 @@ public final class HipObjectDiskBackupVendorArgs extends com.pulumi.resources.Re
     public static final HipObjectDiskBackupVendorArgs Empty = new HipObjectDiskBackupVendorArgs();
 
     /**
-     * The Name param. String length must not exceed 103 characters.
+     * Name
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The Name param. String length must not exceed 103 characters.
+     * @return Name
      * 
      */
     public Output<String> name() {
@@ -33,14 +33,14 @@ public final class HipObjectDiskBackupVendorArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * Product
      * 
      */
     @Import(name="products")
     private @Nullable Output<List<String>> products;
 
     /**
-     * @return The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Product
      * 
      */
     public Optional<Output<List<String>>> products() {
@@ -73,7 +73,7 @@ public final class HipObjectDiskBackupVendorArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name The Name param. String length must not exceed 103 characters.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class HipObjectDiskBackupVendorArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name The Name param. String length must not exceed 103 characters.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -94,7 +94,7 @@ public final class HipObjectDiskBackupVendorArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param products The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+         * @param products Product
          * 
          * @return builder
          * 
@@ -105,7 +105,7 @@ public final class HipObjectDiskBackupVendorArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param products The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+         * @param products Product
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class HipObjectDiskBackupVendorArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param products The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+         * @param products Product
          * 
          * @return builder
          * 

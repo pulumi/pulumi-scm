@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class GetFolderResult {
     /**
-     * @return The Description param.
+     * @return The description of the folder
      * 
      */
     private String description;
     /**
-     * @return The Id param.
+     * @return The UUID of the folder
      * 
      */
     private String id;
     /**
-     * @return The Labels param.
+     * @return Labels assigned to the folder
      * 
      */
     private List<String> labels;
     /**
-     * @return The Name param.
+     * @return The name of the folder
      * 
      */
     private String name;
     /**
-     * @return The Parent param.
+     * @return The parent folder
      * 
      */
     private String parent;
     /**
-     * @return The Snippets param.
+     * @return Snippets associated with the folder
      * 
      */
     private List<String> snippets;
@@ -45,42 +45,42 @@ public final class GetFolderResult {
 
     private GetFolderResult() {}
     /**
-     * @return The Description param.
+     * @return The description of the folder
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The Id param.
+     * @return The UUID of the folder
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Labels param.
+     * @return Labels assigned to the folder
      * 
      */
     public List<String> labels() {
         return this.labels;
     }
     /**
-     * @return The Name param.
+     * @return The name of the folder
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Parent param.
+     * @return The parent folder
      * 
      */
     public String parent() {
         return this.parent;
     }
     /**
-     * @return The Snippets param.
+     * @return Snippets associated with the folder
      * 
      */
     public List<String> snippets() {

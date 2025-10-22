@@ -13,38 +13,38 @@ import java.util.Objects;
 @CustomType
 public final class GetIpsecTunnelAutoKeyProxyIdV6Protocol {
     /**
-     * @return IP protocol number. Value must be between 1 and 254.
+     * @return IP protocol number
      * 
      */
     private Integer number;
     /**
-     * @return The Tcp param.
+     * @return IPv6 type of proxy*id protocol values for TCP protocol
      * 
      */
     private GetIpsecTunnelAutoKeyProxyIdV6ProtocolTcp tcp;
     /**
-     * @return The Udp param.
+     * @return IPv6 type of proxy*id protocol values for UDP protocol
      * 
      */
     private GetIpsecTunnelAutoKeyProxyIdV6ProtocolUdp udp;
 
     private GetIpsecTunnelAutoKeyProxyIdV6Protocol() {}
     /**
-     * @return IP protocol number. Value must be between 1 and 254.
+     * @return IP protocol number
      * 
      */
     public Integer number() {
         return this.number;
     }
     /**
-     * @return The Tcp param.
+     * @return IPv6 type of proxy*id protocol values for TCP protocol
      * 
      */
     public GetIpsecTunnelAutoKeyProxyIdV6ProtocolTcp tcp() {
         return this.tcp;
     }
     /**
-     * @return The Udp param.
+     * @return IPv6 type of proxy*id protocol values for UDP protocol
      * 
      */
     public GetIpsecTunnelAutoKeyProxyIdV6ProtocolUdp udp() {

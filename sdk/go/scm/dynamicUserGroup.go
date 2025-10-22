@@ -12,7 +12,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// DynamicUserGroup resource
 //
 // ## Example Usage
 //
@@ -21,6 +21,8 @@ import (
 //
 // import (
 //
+//	"fmt"
+//
 //	"github.com/pulumi/pulumi-scm/sdk/go/scm"
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 //
@@ -28,7 +30,50 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewDynamicUserGroup(ctx, "example", nil)
+//			// First, create the tags that will be used in the dynamic user group's filter.
+//			scmDugTag1, err := scm.NewTag(ctx, "scm_dug_tag_1", &scm.TagArgs{
+//				Folder: pulumi.String("Shared"),
+//				Name:   pulumi.String("scm_dug_tag_1"),
+//				Color:  pulumi.String("Red"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			scmDugTag2, err := scm.NewTag(ctx, "scm_dug_tag_2", &scm.TagArgs{
+//				Folder: pulumi.String("Shared"),
+//				Name:   pulumi.String("scm_dug_tag_2"),
+//				Color:  pulumi.String("Blue"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			scmDugTag3, err := scm.NewTag(ctx, "scm_dug_tag_3", &scm.TagArgs{
+//				Folder: pulumi.String("Shared"),
+//				Name:   pulumi.String("scm_dug_tag_3"),
+//				Color:  pulumi.String("Green"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Create the dynamic user group that references the tags above.
+//			_, err = scm.NewDynamicUserGroup(ctx, "scm_dug_1", &scm.DynamicUserGroupArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_dug_1"),
+//				Description: pulumi.String("DUG created for Terraform"),
+//				Filter: pulumi.All(scmDugTag1.Name, scmDugTag2.Name, scmDugTag3.Name).ApplyT(func(_args []interface{}) (string, error) {
+//					scmDugTag1Name := _args[0].(string)
+//					scmDugTag2Name := _args[1].(string)
+//					scmDugTag3Name := _args[2].(string)
+//					return fmt.Sprintf("'%v' or '%v' and '%v'", scmDugTag1Name, scmDugTag2Name, scmDugTag3Name), nil
+//				}).(pulumi.StringOutput),
+//				Tags: pulumi.StringArray{
+//					scmDugTag1.Name,
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmDugTag1,
+//				scmDugTag2,
+//				scmDugTag3,
+//			}))
 //			if err != nil {
 //				return err
 //			}
@@ -40,19 +85,19 @@ import (
 type DynamicUserGroup struct {
 	pulumi.CustomResourceState
 
-	// The Description param. String length must not exceed 1023 characters.
+	// The description of the dynamic address group
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// tag-based filter. String length must not exceed 2047 characters.
+	// The tag-based filter for the dynamic user group
 	Filter pulumi.StringOutput `pulumi:"filter"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the dynamic address group
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags associated with the dynamic user group
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
 	Tfid pulumi.StringOutput      `pulumi:"tfid"`
 }
@@ -90,37 +135,37 @@ func GetDynamicUserGroup(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering DynamicUserGroup resources.
 type dynamicUserGroupState struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// The description of the dynamic address group
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// tag-based filter. String length must not exceed 2047 characters.
+	// The tag-based filter for the dynamic user group
 	Filter *string `pulumi:"filter"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the dynamic address group
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags associated with the dynamic user group
 	Tags []string `pulumi:"tags"`
 	Tfid *string  `pulumi:"tfid"`
 }
 
 type DynamicUserGroupState struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// The description of the dynamic address group
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// tag-based filter. String length must not exceed 2047 characters.
+	// The tag-based filter for the dynamic user group
 	Filter pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the dynamic address group
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags associated with the dynamic user group
 	Tags pulumi.StringArrayInput
 	Tfid pulumi.StringPtrInput
 }
@@ -130,37 +175,37 @@ func (DynamicUserGroupState) ElementType() reflect.Type {
 }
 
 type dynamicUserGroupArgs struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// The description of the dynamic address group
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// tag-based filter. String length must not exceed 2047 characters.
+	// The tag-based filter for the dynamic user group
 	Filter string `pulumi:"filter"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the dynamic address group
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags associated with the dynamic user group
 	Tags []string `pulumi:"tags"`
 }
 
 // The set of arguments for constructing a DynamicUserGroup resource.
 type DynamicUserGroupArgs struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// The description of the dynamic address group
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// tag-based filter. String length must not exceed 2047 characters.
+	// The tag-based filter for the dynamic user group
 	Filter pulumi.StringInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the dynamic address group
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags associated with the dynamic user group
 	Tags pulumi.StringArrayInput
 }
 
@@ -251,37 +296,37 @@ func (o DynamicUserGroupOutput) ToDynamicUserGroupOutputWithContext(ctx context.
 	return o
 }
 
-// The Description param. String length must not exceed 1023 characters.
+// The description of the dynamic address group
 func (o DynamicUserGroupOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o DynamicUserGroupOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// tag-based filter. String length must not exceed 2047 characters.
+// The tag-based filter for the dynamic user group
 func (o DynamicUserGroupOutput) Filter() pulumi.StringOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringOutput { return v.Filter }).(pulumi.StringOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o DynamicUserGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the dynamic address group
 func (o DynamicUserGroupOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o DynamicUserGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+// Tags associated with the dynamic user group
 func (o DynamicUserGroupOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }

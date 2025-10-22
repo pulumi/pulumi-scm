@@ -15,50 +15,50 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsSecurityProfileListDataBotnetDomains {
     /**
-     * @return The DnsSecurityCategories param.
+     * @return DNS categories
      * 
      */
     private List<GetDnsSecurityProfileListDataBotnetDomainsDnsSecurityCategory> dnsSecurityCategories;
     /**
-     * @return The Lists param.
+     * @return Dynamic lists of DNS domains
      * 
      */
     private List<GetDnsSecurityProfileListDataBotnetDomainsList> lists;
     /**
-     * @return The Sinkhole param.
+     * @return DNS sinkhole settings
      * 
      */
     private GetDnsSecurityProfileListDataBotnetDomainsSinkhole sinkhole;
     /**
-     * @return The Whitelists param.
+     * @return DNS security overrides
      * 
      */
     private List<GetDnsSecurityProfileListDataBotnetDomainsWhitelist> whitelists;
 
     private GetDnsSecurityProfileListDataBotnetDomains() {}
     /**
-     * @return The DnsSecurityCategories param.
+     * @return DNS categories
      * 
      */
     public List<GetDnsSecurityProfileListDataBotnetDomainsDnsSecurityCategory> dnsSecurityCategories() {
         return this.dnsSecurityCategories;
     }
     /**
-     * @return The Lists param.
+     * @return Dynamic lists of DNS domains
      * 
      */
     public List<GetDnsSecurityProfileListDataBotnetDomainsList> lists() {
         return this.lists;
     }
     /**
-     * @return The Sinkhole param.
+     * @return DNS sinkhole settings
      * 
      */
     public GetDnsSecurityProfileListDataBotnetDomainsSinkhole sinkhole() {
         return this.sinkhole;
     }
     /**
-     * @return The Whitelists param.
+     * @return DNS security overrides
      * 
      */
     public List<GetDnsSecurityProfileListDataBotnetDomainsWhitelist> whitelists() {

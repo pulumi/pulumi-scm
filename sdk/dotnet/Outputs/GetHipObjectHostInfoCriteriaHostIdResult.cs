@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectHostInfoCriteriaHostIdResult
     {
         /// <summary>
-        /// The Contains param. String length must not exceed 255 characters.
+        /// Contains
         /// </summary>
         public readonly string Contains;
         /// <summary>
-        /// The Is param. String length must not exceed 255 characters.
+        /// Is
         /// </summary>
         public readonly string Is;
         /// <summary>
-        /// The IsNot param. String length must not exceed 255 characters.
+        /// Is not
         /// </summary>
         public readonly string IsNot;
 

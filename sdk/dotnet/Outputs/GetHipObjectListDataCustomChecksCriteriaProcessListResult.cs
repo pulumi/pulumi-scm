@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataCustomChecksCriteriaProcessListResult
     {
         /// <summary>
-        /// The Name param.
+        /// Process Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Running param. Default: `True`.
+        /// Running
         /// </summary>
         public readonly bool Running;
 

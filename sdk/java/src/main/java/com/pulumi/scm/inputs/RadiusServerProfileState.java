@@ -10,7 +10,6 @@ import com.pulumi.scm.inputs.RadiusServerProfileServerArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,14 +20,14 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
     public static final RadiusServerProfileState Empty = new RadiusServerProfileState();
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -36,29 +35,14 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * (Internal use) Encrypted values returned from the API.
-     * 
-     */
-    @Import(name="encryptedValues")
-    private @Nullable Output<Map<String,String>> encryptedValues;
-
-    /**
-     * @return (Internal use) Encrypted values returned from the API.
-     * 
-     */
-    public Optional<Output<Map<String,String>>> encryptedValues() {
-        return Optional.ofNullable(this.encryptedValues);
-    }
-
-    /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -66,14 +50,29 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Protocol param.
+     * The name of the RADIUS server profile
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name of the RADIUS server profile
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
+    /**
+     * The RADIUS authentication protocol
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<RadiusServerProfileProtocolArgs> protocol;
 
     /**
-     * @return The Protocol param.
+     * @return The RADIUS authentication protocol
      * 
      */
     public Optional<Output<RadiusServerProfileProtocolArgs>> protocol() {
@@ -81,14 +80,14 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Retries param. Value must be between 1 and 5.
+     * The number of RADIUS server retries
      * 
      */
     @Import(name="retries")
     private @Nullable Output<Integer> retries;
 
     /**
-     * @return The Retries param. Value must be between 1 and 5.
+     * @return The number of RADIUS server retries
      * 
      */
     public Optional<Output<Integer>> retries() {
@@ -96,14 +95,14 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Servers param.
+     * Server
      * 
      */
     @Import(name="servers")
     private @Nullable Output<List<RadiusServerProfileServerArgs>> servers;
 
     /**
-     * @return The Servers param.
+     * @return Server
      * 
      */
     public Optional<Output<List<RadiusServerProfileServerArgs>>> servers() {
@@ -111,14 +110,14 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -133,14 +132,14 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Timeout param. Value must be between 1 and 120.
+     * The RADIUS server authentication timeout (seconds)
      * 
      */
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
     /**
-     * @return The Timeout param. Value must be between 1 and 120.
+     * @return The RADIUS server authentication timeout (seconds)
      * 
      */
     public Optional<Output<Integer>> timeout() {
@@ -151,8 +150,8 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
 
     private RadiusServerProfileState(RadiusServerProfileState $) {
         this.device = $.device;
-        this.encryptedValues = $.encryptedValues;
         this.folder = $.folder;
+        this.name = $.name;
         this.protocol = $.protocol;
         this.retries = $.retries;
         this.servers = $.servers;
@@ -180,7 +179,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -191,7 +190,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -201,28 +200,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param encryptedValues (Internal use) Encrypted values returned from the API.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder encryptedValues(@Nullable Output<Map<String,String>> encryptedValues) {
-            $.encryptedValues = encryptedValues;
-            return this;
-        }
-
-        /**
-         * @param encryptedValues (Internal use) Encrypted values returned from the API.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder encryptedValues(Map<String,String> encryptedValues) {
-            return encryptedValues(Output.of(encryptedValues));
-        }
-
-        /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -233,7 +211,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -243,7 +221,28 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param name The name of the RADIUS server profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the RADIUS server profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param protocol The RADIUS authentication protocol
          * 
          * @return builder
          * 
@@ -254,7 +253,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol The RADIUS authentication protocol
          * 
          * @return builder
          * 
@@ -264,7 +263,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param retries The Retries param. Value must be between 1 and 5.
+         * @param retries The number of RADIUS server retries
          * 
          * @return builder
          * 
@@ -275,7 +274,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param retries The Retries param. Value must be between 1 and 5.
+         * @param retries The number of RADIUS server retries
          * 
          * @return builder
          * 
@@ -285,7 +284,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers Server
          * 
          * @return builder
          * 
@@ -296,7 +295,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers Server
          * 
          * @return builder
          * 
@@ -306,7 +305,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers Server
          * 
          * @return builder
          * 
@@ -316,7 +315,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -327,7 +326,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -346,7 +345,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param timeout The Timeout param. Value must be between 1 and 120.
+         * @param timeout The RADIUS server authentication timeout (seconds)
          * 
          * @return builder
          * 
@@ -357,7 +356,7 @@ public final class RadiusServerProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param timeout The Timeout param. Value must be between 1 and 120.
+         * @param timeout The RADIUS server authentication timeout (seconds)
          * 
          * @return builder
          * 

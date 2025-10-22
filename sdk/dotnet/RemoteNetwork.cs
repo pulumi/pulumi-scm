@@ -10,94 +10,81 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// RemoteNetwork resource
     /// 
     /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.RemoteNetwork("example");
-    /// 
-    /// });
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/remoteNetwork:RemoteNetwork")]
     public partial class RemoteNetwork : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+        /// Ecmp load balancing
         /// </summary>
         [Output("ecmpLoadBalancing")]
         public Output<string> EcmpLoadBalancing { get; private set; } = null!;
 
         /// <summary>
-        /// ecmp*tunnels is required when ecmp*load*balancing is enable.
+        /// ecmp*tunnels is required when ecmp*load*balancing is enable
         /// </summary>
         [Output("ecmpTunnels")]
         public Output<ImmutableArray<Outputs.RemoteNetworkEcmpTunnel>> EcmpTunnels { get; private set; } = null!;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
+        /// Map of sensitive values returned from the API.
         /// </summary>
         [Output("encryptedValues")]
         public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+        /// The folder that contains the remote network
         /// </summary>
         [Output("folder")]
         public Output<string> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// ipsec*tunnel is required when ecmp*load_balancing is disable.
+        /// ipsec*tunnel is required when ecmp*load_balancing is disable
         /// </summary>
         [Output("ipsecTunnel")]
         public Output<string?> IpsecTunnel { get; private set; } = null!;
 
         /// <summary>
-        /// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+        /// New customer will only be on aggregate bandwidth licensing
         /// </summary>
         [Output("licenseType")]
         public Output<string> LicenseType { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the remote network
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// setup the protocol when ecmp*load*balancing is disable.
+        /// setup the protocol when ecmp*load*balancing is disable
         /// </summary>
         [Output("protocol")]
         public Output<Outputs.RemoteNetworkProtocol?> Protocol { get; private set; } = null!;
 
         /// <summary>
-        /// The Region param. String length must exceed 1 characters.
+        /// Region
         /// </summary>
         [Output("region")]
         public Output<string> Region { get; private set; } = null!;
 
         /// <summary>
-        /// specify secondary IpsecTunnel if needed.
+        /// specify secondary IpsecTunnel if needed
         /// </summary>
         [Output("secondaryIpsecTunnel")]
         public Output<string?> SecondaryIpsecTunnel { get; private set; } = null!;
 
         /// <summary>
-        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE.
+        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE
         /// </summary>
         [Output("spnName")]
         public Output<string?> SpnName { get; private set; } = null!;
 
         /// <summary>
-        /// The Subnets param.
+        /// Subnets
         /// </summary>
         [Output("subnets")]
         public Output<ImmutableArray<string>> Subnets { get; private set; } = null!;
@@ -156,7 +143,7 @@ namespace Pulumi.Scm
     public sealed class RemoteNetworkArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+        /// Ecmp load balancing
         /// </summary>
         [Input("ecmpLoadBalancing")]
         public Input<string>? EcmpLoadBalancing { get; set; }
@@ -165,7 +152,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.RemoteNetworkEcmpTunnelArgs>? _ecmpTunnels;
 
         /// <summary>
-        /// ecmp*tunnels is required when ecmp*load*balancing is enable.
+        /// ecmp*tunnels is required when ecmp*load*balancing is enable
         /// </summary>
         public InputList<Inputs.RemoteNetworkEcmpTunnelArgs> EcmpTunnels
         {
@@ -174,49 +161,49 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+        /// The folder that contains the remote network
         /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
+        [Input("folder", required: true)]
+        public Input<string> Folder { get; set; } = null!;
 
         /// <summary>
-        /// ipsec*tunnel is required when ecmp*load_balancing is disable.
+        /// ipsec*tunnel is required when ecmp*load_balancing is disable
         /// </summary>
         [Input("ipsecTunnel")]
         public Input<string>? IpsecTunnel { get; set; }
 
         /// <summary>
-        /// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+        /// New customer will only be on aggregate bandwidth licensing
         /// </summary>
-        [Input("licenseType")]
-        public Input<string>? LicenseType { get; set; }
+        [Input("licenseType", required: true)]
+        public Input<string> LicenseType { get; set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the remote network
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// setup the protocol when ecmp*load*balancing is disable.
+        /// setup the protocol when ecmp*load*balancing is disable
         /// </summary>
         [Input("protocol")]
         public Input<Inputs.RemoteNetworkProtocolArgs>? Protocol { get; set; }
 
         /// <summary>
-        /// The Region param. String length must exceed 1 characters.
+        /// Region
         /// </summary>
         [Input("region", required: true)]
         public Input<string> Region { get; set; } = null!;
 
         /// <summary>
-        /// specify secondary IpsecTunnel if needed.
+        /// specify secondary IpsecTunnel if needed
         /// </summary>
         [Input("secondaryIpsecTunnel")]
         public Input<string>? SecondaryIpsecTunnel { get; set; }
 
         /// <summary>
-        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE.
+        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE
         /// </summary>
         [Input("spnName")]
         public Input<string>? SpnName { get; set; }
@@ -225,7 +212,7 @@ namespace Pulumi.Scm
         private InputList<string>? _subnets;
 
         /// <summary>
-        /// The Subnets param.
+        /// Subnets
         /// </summary>
         public InputList<string> Subnets
         {
@@ -242,7 +229,7 @@ namespace Pulumi.Scm
     public sealed class RemoteNetworkState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+        /// Ecmp load balancing
         /// </summary>
         [Input("ecmpLoadBalancing")]
         public Input<string>? EcmpLoadBalancing { get; set; }
@@ -251,7 +238,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.RemoteNetworkEcmpTunnelGetArgs>? _ecmpTunnels;
 
         /// <summary>
-        /// ecmp*tunnels is required when ecmp*load*balancing is enable.
+        /// ecmp*tunnels is required when ecmp*load*balancing is enable
         /// </summary>
         public InputList<Inputs.RemoteNetworkEcmpTunnelGetArgs> EcmpTunnels
         {
@@ -263,7 +250,7 @@ namespace Pulumi.Scm
         private InputMap<string>? _encryptedValues;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
+        /// Map of sensitive values returned from the API.
         /// </summary>
         public InputMap<string> EncryptedValues
         {
@@ -276,49 +263,49 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+        /// The folder that contains the remote network
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// ipsec*tunnel is required when ecmp*load_balancing is disable.
+        /// ipsec*tunnel is required when ecmp*load_balancing is disable
         /// </summary>
         [Input("ipsecTunnel")]
         public Input<string>? IpsecTunnel { get; set; }
 
         /// <summary>
-        /// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+        /// New customer will only be on aggregate bandwidth licensing
         /// </summary>
         [Input("licenseType")]
         public Input<string>? LicenseType { get; set; }
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the remote network
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// setup the protocol when ecmp*load*balancing is disable.
+        /// setup the protocol when ecmp*load*balancing is disable
         /// </summary>
         [Input("protocol")]
         public Input<Inputs.RemoteNetworkProtocolGetArgs>? Protocol { get; set; }
 
         /// <summary>
-        /// The Region param. String length must exceed 1 characters.
+        /// Region
         /// </summary>
         [Input("region")]
         public Input<string>? Region { get; set; }
 
         /// <summary>
-        /// specify secondary IpsecTunnel if needed.
+        /// specify secondary IpsecTunnel if needed
         /// </summary>
         [Input("secondaryIpsecTunnel")]
         public Input<string>? SecondaryIpsecTunnel { get; set; }
 
         /// <summary>
-        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE.
+        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE
         /// </summary>
         [Input("spnName")]
         public Input<string>? SpnName { get; set; }
@@ -327,7 +314,7 @@ namespace Pulumi.Scm
         private InputList<string>? _subnets;
 
         /// <summary>
-        /// The Subnets param.
+        /// Subnets
         /// </summary>
         public InputList<string> Subnets
         {

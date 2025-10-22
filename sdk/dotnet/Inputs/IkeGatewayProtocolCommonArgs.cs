@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class IkeGatewayProtocolCommonArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Fragmentation param.
+        /// Fragmentation
         /// </summary>
         [Input("fragmentation")]
         public Input<Inputs.IkeGatewayProtocolCommonFragmentationArgs>? Fragmentation { get; set; }
 
         /// <summary>
-        /// The NatTraversal param.
+        /// Enables NAT traversal for the IKE gateway.
         /// </summary>
         [Input("natTraversal")]
         public Input<Inputs.IkeGatewayProtocolCommonNatTraversalArgs>? NatTraversal { get; set; }
 
         /// <summary>
-        /// The PassiveMode param.
+        /// Passive mode
         /// </summary>
         [Input("passiveMode")]
         public Input<bool>? PassiveMode { get; set; }

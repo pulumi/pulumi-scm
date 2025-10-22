@@ -25,10 +25,10 @@ class InternalDnsServerArgs:
                  secondary: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a InternalDnsServer resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: The DomainNames param.
-        :param pulumi.Input[_builtins.str] primary: The Primary param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] secondary: The Secondary param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: The DNS domain name(s)
+        :param pulumi.Input[_builtins.str] primary: The IP address of the primary DNS server
+        :param pulumi.Input[_builtins.str] name: The name of the internet DNS server resource
+        :param pulumi.Input[_builtins.str] secondary: The IP address of the secondary DNS server
         """
         pulumi.set(__self__, "domain_names", domain_names)
         pulumi.set(__self__, "primary", primary)
@@ -41,7 +41,7 @@ class InternalDnsServerArgs:
     @pulumi.getter(name="domainNames")
     def domain_names(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The DomainNames param.
+        The DNS domain name(s)
         """
         return pulumi.get(self, "domain_names")
 
@@ -53,7 +53,7 @@ class InternalDnsServerArgs:
     @pulumi.getter
     def primary(self) -> pulumi.Input[_builtins.str]:
         """
-        The Primary param.
+        The IP address of the primary DNS server
         """
         return pulumi.get(self, "primary")
 
@@ -65,7 +65,7 @@ class InternalDnsServerArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the internet DNS server resource
         """
         return pulumi.get(self, "name")
 
@@ -77,7 +77,7 @@ class InternalDnsServerArgs:
     @pulumi.getter
     def secondary(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Secondary param.
+        The IP address of the secondary DNS server
         """
         return pulumi.get(self, "secondary")
 
@@ -96,10 +96,10 @@ class _InternalDnsServerState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering InternalDnsServer resources.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: The DomainNames param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] primary: The Primary param.
-        :param pulumi.Input[_builtins.str] secondary: The Secondary param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: The DNS domain name(s)
+        :param pulumi.Input[_builtins.str] name: The name of the internet DNS server resource
+        :param pulumi.Input[_builtins.str] primary: The IP address of the primary DNS server
+        :param pulumi.Input[_builtins.str] secondary: The IP address of the secondary DNS server
         """
         if domain_names is not None:
             pulumi.set(__self__, "domain_names", domain_names)
@@ -116,7 +116,7 @@ class _InternalDnsServerState:
     @pulumi.getter(name="domainNames")
     def domain_names(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The DomainNames param.
+        The DNS domain name(s)
         """
         return pulumi.get(self, "domain_names")
 
@@ -128,7 +128,7 @@ class _InternalDnsServerState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the internet DNS server resource
         """
         return pulumi.get(self, "name")
 
@@ -140,7 +140,7 @@ class _InternalDnsServerState:
     @pulumi.getter
     def primary(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Primary param.
+        The IP address of the primary DNS server
         """
         return pulumi.get(self, "primary")
 
@@ -152,7 +152,7 @@ class _InternalDnsServerState:
     @pulumi.getter
     def secondary(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Secondary param.
+        The IP address of the secondary DNS server
         """
         return pulumi.get(self, "secondary")
 
@@ -182,23 +182,14 @@ class InternalDnsServer(pulumi.CustomResource):
                  secondary: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.InternalDnsServer("example")
-        ```
+        InternalDnsServer resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: The DomainNames param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] primary: The Primary param.
-        :param pulumi.Input[_builtins.str] secondary: The Secondary param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: The DNS domain name(s)
+        :param pulumi.Input[_builtins.str] name: The name of the internet DNS server resource
+        :param pulumi.Input[_builtins.str] primary: The IP address of the primary DNS server
+        :param pulumi.Input[_builtins.str] secondary: The IP address of the secondary DNS server
         """
         ...
     @overload
@@ -207,16 +198,7 @@ class InternalDnsServer(pulumi.CustomResource):
                  args: InternalDnsServerArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.InternalDnsServer("example")
-        ```
+        InternalDnsServer resource
 
         :param str resource_name: The name of the resource.
         :param InternalDnsServerArgs args: The arguments to use to populate this resource's properties.
@@ -277,10 +259,10 @@ class InternalDnsServer(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: The DomainNames param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] primary: The Primary param.
-        :param pulumi.Input[_builtins.str] secondary: The Secondary param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: The DNS domain name(s)
+        :param pulumi.Input[_builtins.str] name: The name of the internet DNS server resource
+        :param pulumi.Input[_builtins.str] primary: The IP address of the primary DNS server
+        :param pulumi.Input[_builtins.str] secondary: The IP address of the secondary DNS server
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -297,7 +279,7 @@ class InternalDnsServer(pulumi.CustomResource):
     @pulumi.getter(name="domainNames")
     def domain_names(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The DomainNames param.
+        The DNS domain name(s)
         """
         return pulumi.get(self, "domain_names")
 
@@ -305,7 +287,7 @@ class InternalDnsServer(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        The name of the internet DNS server resource
         """
         return pulumi.get(self, "name")
 
@@ -313,7 +295,7 @@ class InternalDnsServer(pulumi.CustomResource):
     @pulumi.getter
     def primary(self) -> pulumi.Output[_builtins.str]:
         """
-        The Primary param.
+        The IP address of the primary DNS server
         """
         return pulumi.get(self, "primary")
 
@@ -321,7 +303,7 @@ class InternalDnsServer(pulumi.CustomResource):
     @pulumi.getter
     def secondary(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Secondary param.
+        The IP address of the secondary DNS server
         """
         return pulumi.get(self, "secondary")
 

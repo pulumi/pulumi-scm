@@ -7,10 +7,10 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.AuthenticationProfileMethodCloud;
 import com.pulumi.scm.outputs.AuthenticationProfileMethodKerberos;
 import com.pulumi.scm.outputs.AuthenticationProfileMethodLdap;
+import com.pulumi.scm.outputs.AuthenticationProfileMethodLocalDatabase;
 import com.pulumi.scm.outputs.AuthenticationProfileMethodRadius;
 import com.pulumi.scm.outputs.AuthenticationProfileMethodSamlIdp;
 import com.pulumi.scm.outputs.AuthenticationProfileMethodTacplus;
-import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,86 +18,86 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationProfileMethod {
     /**
-     * @return The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Cloud
      * 
      */
     private @Nullable AuthenticationProfileMethodCloud cloud;
     /**
-     * @return The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Kerberos
      * 
      */
     private @Nullable AuthenticationProfileMethodKerberos kerberos;
     /**
-     * @return The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Ldap
      * 
      */
     private @Nullable AuthenticationProfileMethodLdap ldap;
     /**
-     * @return The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Local database
      * 
      */
-    private @Nullable Boolean localDatabase;
+    private @Nullable AuthenticationProfileMethodLocalDatabase localDatabase;
     /**
-     * @return The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Radius
      * 
      */
     private @Nullable AuthenticationProfileMethodRadius radius;
     /**
-     * @return The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Saml idp
      * 
      */
     private @Nullable AuthenticationProfileMethodSamlIdp samlIdp;
     /**
-     * @return The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Tacplus
      * 
      */
     private @Nullable AuthenticationProfileMethodTacplus tacplus;
 
     private AuthenticationProfileMethod() {}
     /**
-     * @return The Cloud param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Cloud
      * 
      */
     public Optional<AuthenticationProfileMethodCloud> cloud() {
         return Optional.ofNullable(this.cloud);
     }
     /**
-     * @return The Kerberos param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Kerberos
      * 
      */
     public Optional<AuthenticationProfileMethodKerberos> kerberos() {
         return Optional.ofNullable(this.kerberos);
     }
     /**
-     * @return The Ldap param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Ldap
      * 
      */
     public Optional<AuthenticationProfileMethodLdap> ldap() {
         return Optional.ofNullable(this.ldap);
     }
     /**
-     * @return The LocalDatabase param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Local database
      * 
      */
-    public Optional<Boolean> localDatabase() {
+    public Optional<AuthenticationProfileMethodLocalDatabase> localDatabase() {
         return Optional.ofNullable(this.localDatabase);
     }
     /**
-     * @return The Radius param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Radius
      * 
      */
     public Optional<AuthenticationProfileMethodRadius> radius() {
         return Optional.ofNullable(this.radius);
     }
     /**
-     * @return The SamlIdp param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Saml idp
      * 
      */
     public Optional<AuthenticationProfileMethodSamlIdp> samlIdp() {
         return Optional.ofNullable(this.samlIdp);
     }
     /**
-     * @return The Tacplus param. Ensure that only one of the following is specified: `cloud`, `kerberos`, `ldap`, `localDatabase`, `radius`, `samlIdp`, `tacplus`
+     * @return Tacplus
      * 
      */
     public Optional<AuthenticationProfileMethodTacplus> tacplus() {
@@ -116,7 +116,7 @@ public final class AuthenticationProfileMethod {
         private @Nullable AuthenticationProfileMethodCloud cloud;
         private @Nullable AuthenticationProfileMethodKerberos kerberos;
         private @Nullable AuthenticationProfileMethodLdap ldap;
-        private @Nullable Boolean localDatabase;
+        private @Nullable AuthenticationProfileMethodLocalDatabase localDatabase;
         private @Nullable AuthenticationProfileMethodRadius radius;
         private @Nullable AuthenticationProfileMethodSamlIdp samlIdp;
         private @Nullable AuthenticationProfileMethodTacplus tacplus;
@@ -151,7 +151,7 @@ public final class AuthenticationProfileMethod {
             return this;
         }
         @CustomType.Setter
-        public Builder localDatabase(@Nullable Boolean localDatabase) {
+        public Builder localDatabase(@Nullable AuthenticationProfileMethodLocalDatabase localDatabase) {
 
             this.localDatabase = localDatabase;
             return this;

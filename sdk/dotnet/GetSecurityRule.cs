@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetSecurityRule
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSecurityRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// SecurityRule data source
         /// </summary>
         public static Task<GetSecurityRuleResult> InvokeAsync(GetSecurityRuleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSecurityRuleResult>("scm:index/getSecurityRule:getSecurityRule", args ?? new GetSecurityRuleArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSecurityRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// SecurityRule data source
         /// </summary>
         public static Output<GetSecurityRuleResult> Invoke(GetSecurityRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSecurityRuleResult>("scm:index/getSecurityRule:getSecurityRule", args ?? new GetSecurityRuleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSecurityRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// SecurityRule data source
         /// </summary>
         public static Output<GetSecurityRuleResult> Invoke(GetSecurityRuleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSecurityRuleResult>("scm:index/getSecurityRule:getSecurityRule", args ?? new GetSecurityRuleInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetSecurityRuleArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the security rule
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the security rule
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetSecurityRuleArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetSecurityRuleInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the security rule
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the security rule
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetSecurityRuleInvokeArgs()
         {
@@ -118,84 +76,152 @@ namespace Pulumi.Scm
     public sealed class GetSecurityRuleResult
     {
         /// <summary>
-        /// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+        /// The action to be taken when the rule is matched
         /// </summary>
         public readonly string Action;
         /// <summary>
-        /// The application(s) being accessed.
+        /// Allow url category
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetSecurityRuleAllowUrlCategoryResult> AllowUrlCategories;
+        /// <summary>
+        /// Allow web application
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetSecurityRuleAllowWebApplicationResult> AllowWebApplications;
+        /// <summary>
+        /// The application(s) being accessed
         /// </summary>
         public readonly ImmutableArray<string> Applications;
         /// <summary>
-        /// The URL categories being accessed.
+        /// Block url category
+        /// </summary>
+        public readonly ImmutableArray<string> BlockUrlCategories;
+        /// <summary>
+        /// Block web application
+        /// </summary>
+        public readonly ImmutableArray<string> BlockWebApplications;
+        /// <summary>
+        /// The URL categories being accessed
         /// </summary>
         public readonly ImmutableArray<string> Categories;
         /// <summary>
-        /// The description of the security rule.
+        /// Default profile settings
+        /// </summary>
+        public readonly Outputs.GetSecurityRuleDefaultProfileSettingsResult DefaultProfileSettings;
+        /// <summary>
+        /// The description of the security rule
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The destination Host Integrity Profile(s).
+        /// The destination Host Integrity Profile(s)
         /// </summary>
         public readonly ImmutableArray<string> DestinationHips;
         /// <summary>
-        /// The destination address(es).
+        /// The destination address(es)
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
-        /// The state of the security rule. Default: `False`.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Devices
+        /// </summary>
+        public readonly ImmutableArray<string> Devices;
+        /// <summary>
+        /// Is the security rule disabled?
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The source security zone(s).
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The source security zone(s)
         /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
-        /// The Id param.
+        /// The UUID of the security rule
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The external log forwarding profile.
+        /// Log at session end?
+        /// </summary>
+        public readonly bool LogEnd;
+        /// <summary>
+        /// The external log forwarding profile
         /// </summary>
         public readonly string LogSetting;
         /// <summary>
-        /// The name of the security rule.
+        /// Log settings
+        /// </summary>
+        public readonly Outputs.GetSecurityRuleLogSettingsResult LogSettings;
+        /// <summary>
+        /// Log at session start?
+        /// </summary>
+        public readonly bool LogStart;
+        /// <summary>
+        /// The name of the security rule
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Negate the destination addresses(es). Default: `False`.
+        /// Negate the destination addresses(es)?
         /// </summary>
         public readonly bool NegateDestination;
         /// <summary>
-        /// Negate the source address(es). Default: `False`.
+        /// Negate the source address(es)?
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>
-        /// The security profile object.
+        /// Negate user
+        /// </summary>
+        public readonly bool NegateUser;
+        /// <summary>
+        /// Policy type
+        /// </summary>
+        public readonly string PolicyType;
+        /// <summary>
+        /// The security profile object
         /// </summary>
         public readonly Outputs.GetSecurityRuleProfileSettingResult ProfileSetting;
         /// <summary>
-        /// The service(s) being accessed.
+        /// Schedule in which this rule will be applied
+        /// </summary>
+        public readonly string Schedule;
+        /// <summary>
+        /// Security settings
+        /// </summary>
+        public readonly Outputs.GetSecurityRuleSecuritySettingsResult SecuritySettings;
+        /// <summary>
+        /// The service(s) being accessed
         /// </summary>
         public readonly ImmutableArray<string> Services;
         /// <summary>
-        /// The source Host Integrity Profile(s).
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// The source Host Integrity Profile(s)
         /// </summary>
         public readonly ImmutableArray<string> SourceHips;
         /// <summary>
-        /// The source user(s) or group(s).
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
         /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
         /// <summary>
-        /// The source address(es).
+        /// The source addresses(es)
         /// </summary>
         public readonly ImmutableArray<string> Sources;
         /// <summary>
-        /// The tags associated with the security rule.
+        /// The tags associated with the security rule
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// Tenant restrictions
+        /// </summary>
+        public readonly ImmutableArray<string> TenantRestrictions;
         public readonly string Tfid;
         /// <summary>
-        /// The destination security zone(s).
+        /// The destination security zone(s)
         /// </summary>
         public readonly ImmutableArray<string> Tos;
 
@@ -203,9 +229,19 @@ namespace Pulumi.Scm
         private GetSecurityRuleResult(
             string action,
 
+            ImmutableArray<Outputs.GetSecurityRuleAllowUrlCategoryResult> allowUrlCategories,
+
+            ImmutableArray<Outputs.GetSecurityRuleAllowWebApplicationResult> allowWebApplications,
+
             ImmutableArray<string> applications,
 
+            ImmutableArray<string> blockUrlCategories,
+
+            ImmutableArray<string> blockWebApplications,
+
             ImmutableArray<string> categories,
+
+            Outputs.GetSecurityRuleDefaultProfileSettingsResult defaultProfileSettings,
 
             string description,
 
@@ -213,13 +249,25 @@ namespace Pulumi.Scm
 
             ImmutableArray<string> destinations,
 
+            string device,
+
+            ImmutableArray<string> devices,
+
             bool disabled,
+
+            string folder,
 
             ImmutableArray<string> froms,
 
             string id,
 
+            bool logEnd,
+
             string logSetting,
+
+            Outputs.GetSecurityRuleLogSettingsResult logSettings,
+
+            bool logStart,
 
             string name,
 
@@ -227,9 +275,19 @@ namespace Pulumi.Scm
 
             bool negateSource,
 
+            bool negateUser,
+
+            string policyType,
+
             Outputs.GetSecurityRuleProfileSettingResult profileSetting,
 
+            string schedule,
+
+            Outputs.GetSecurityRuleSecuritySettingsResult securitySettings,
+
             ImmutableArray<string> services,
+
+            string snippet,
 
             ImmutableArray<string> sourceHips,
 
@@ -239,29 +297,48 @@ namespace Pulumi.Scm
 
             ImmutableArray<string> tags,
 
+            ImmutableArray<string> tenantRestrictions,
+
             string tfid,
 
             ImmutableArray<string> tos)
         {
             Action = action;
+            AllowUrlCategories = allowUrlCategories;
+            AllowWebApplications = allowWebApplications;
             Applications = applications;
+            BlockUrlCategories = blockUrlCategories;
+            BlockWebApplications = blockWebApplications;
             Categories = categories;
+            DefaultProfileSettings = defaultProfileSettings;
             Description = description;
             DestinationHips = destinationHips;
             Destinations = destinations;
+            Device = device;
+            Devices = devices;
             Disabled = disabled;
+            Folder = folder;
             Froms = froms;
             Id = id;
+            LogEnd = logEnd;
             LogSetting = logSetting;
+            LogSettings = logSettings;
+            LogStart = logStart;
             Name = name;
             NegateDestination = negateDestination;
             NegateSource = negateSource;
+            NegateUser = negateUser;
+            PolicyType = policyType;
             ProfileSetting = profileSetting;
+            Schedule = schedule;
+            SecuritySettings = securitySettings;
             Services = services;
+            Snippet = snippet;
             SourceHips = sourceHips;
             SourceUsers = sourceUsers;
             Sources = sources;
             Tags = tags;
+            TenantRestrictions = tenantRestrictions;
             Tfid = tfid;
             Tos = tos;
         }

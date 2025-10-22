@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareSignatureSignatureStandardAndConditionOrCondition {
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private @Nullable String name;
     /**
-     * @return The Operator param.
+     * @return Operator
      * 
      */
     private @Nullable AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperator operator;
 
     private AntiSpywareSignatureSignatureStandardAndConditionOrCondition() {}
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The Operator param.
+     * @return Operator
      * 
      */
     public Optional<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperator> operator() {

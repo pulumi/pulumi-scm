@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// DynamicUserGroup resource
     /// 
     /// ## Example Usage
     /// 
@@ -22,7 +22,54 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Scm.DynamicUserGroup("example");
+    ///     // First, create the tags that will be used in the dynamic user group's filter.
+    ///     var scmDugTag1 = new Scm.Tag("scm_dug_tag_1", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_dug_tag_1",
+    ///         Color = "Red",
+    ///     });
+    /// 
+    ///     var scmDugTag2 = new Scm.Tag("scm_dug_tag_2", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_dug_tag_2",
+    ///         Color = "Blue",
+    ///     });
+    /// 
+    ///     var scmDugTag3 = new Scm.Tag("scm_dug_tag_3", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_dug_tag_3",
+    ///         Color = "Green",
+    ///     });
+    /// 
+    ///     // Create the dynamic user group that references the tags above.
+    ///     var scmDug1 = new Scm.DynamicUserGroup("scm_dug_1", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_dug_1",
+    ///         Description = "DUG created for Terraform",
+    ///         Filter = Output.Tuple(scmDugTag1.Name, scmDugTag2.Name, scmDugTag3.Name).Apply(values =&gt;
+    ///         {
+    ///             var scmDugTag1Name = values.Item1;
+    ///             var scmDugTag2Name = values.Item2;
+    ///             var scmDugTag3Name = values.Item3;
+    ///             return $"'{scmDugTag1Name}' or '{scmDugTag2Name}' and '{scmDugTag3Name}'";
+    ///         }),
+    ///         Tags = new[]
+    ///         {
+    ///             scmDugTag1.Name,
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmDugTag1,
+    ///             scmDugTag2,
+    ///             scmDugTag3,
+    ///         },
+    ///     });
     /// 
     /// });
     /// ```
@@ -31,43 +78,43 @@ namespace Pulumi.Scm
     public partial class DynamicUserGroup : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// The description of the dynamic address group
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// tag-based filter. String length must not exceed 2047 characters.
+        /// The tag-based filter for the dynamic user group
         /// </summary>
         [Output("filter")]
         public Output<string> Filter { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the dynamic address group
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags associated with the dynamic user group
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
@@ -122,37 +169,37 @@ namespace Pulumi.Scm
     public sealed class DynamicUserGroupArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// The description of the dynamic address group
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// tag-based filter. String length must not exceed 2047 characters.
+        /// The tag-based filter for the dynamic user group
         /// </summary>
         [Input("filter", required: true)]
         public Input<string> Filter { get; set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the dynamic address group
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -161,7 +208,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags associated with the dynamic user group
         /// </summary>
         public InputList<string> Tags
         {
@@ -178,37 +225,37 @@ namespace Pulumi.Scm
     public sealed class DynamicUserGroupState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// The description of the dynamic address group
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// tag-based filter. String length must not exceed 2047 characters.
+        /// The tag-based filter for the dynamic user group
         /// </summary>
         [Input("filter")]
         public Input<string>? Filter { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the dynamic address group
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -217,7 +264,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags associated with the dynamic user group
         /// </summary>
         public InputList<string> Tags
         {

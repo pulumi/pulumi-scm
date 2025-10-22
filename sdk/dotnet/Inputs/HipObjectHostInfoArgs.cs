@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectHostInfoArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Criteria param.
+        /// Criteria
         /// </summary>
         [Input("criteria", required: true)]
         public Input<Inputs.HipObjectHostInfoCriteriaArgs> Criteria { get; set; } = null!;

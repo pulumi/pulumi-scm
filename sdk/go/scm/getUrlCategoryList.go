@@ -27,12 +27,26 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetUrlCategoryList(ctx, &scm.GetUrlCategoryListArgs{
+//			// Data source to retrieve a list of URL Category objects.
+//			//
+//			// Example 1: Fetch a list of all URL Categories in the "Shared" folder.
+//			allShared, err := scm.GetUrlCategoryList(ctx, &scm.GetUrlCategoryListArgs{
 //				Folder: pulumi.StringRef("Shared"),
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("urlCategoriesListAllShared", allShared.Datas)
+//			// Example 2: Use pagination to get the first 5 URL Categories by name.
+//			paginated, err := scm.GetUrlCategoryList(ctx, &scm.GetUrlCategoryListArgs{
+//				Folder: pulumi.StringRef("Shared"),
+//				Limit:  pulumi.IntRef(5),
+//				Offset: pulumi.IntRef(0),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("urlCategoriesListPaginated", paginated.Datas)
 //			return nil
 //		})
 //	}
@@ -50,40 +64,40 @@ func GetUrlCategoryList(ctx *pulumi.Context, args *GetUrlCategoryListArgs, opts 
 
 // A collection of arguments for invoking getUrlCategoryList.
 type GetUrlCategoryListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getUrlCategoryList.
 type GetUrlCategoryListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetUrlCategoryListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +112,17 @@ func GetUrlCategoryListOutput(ctx *pulumi.Context, args GetUrlCategoryListOutput
 
 // A collection of arguments for invoking getUrlCategoryList.
 type GetUrlCategoryListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +145,17 @@ func (o GetUrlCategoryListResultOutput) ToGetUrlCategoryListResultOutputWithCont
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetUrlCategoryListResultOutput) Datas() GetUrlCategoryListDataArrayOutput {
 	return o.ApplyT(func(v GetUrlCategoryListResult) []GetUrlCategoryListData { return v.Datas }).(GetUrlCategoryListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetUrlCategoryListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetUrlCategoryListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetUrlCategoryListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetUrlCategoryListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +165,22 @@ func (o GetUrlCategoryListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlCategoryListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetUrlCategoryListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetUrlCategoryListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetUrlCategoryListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetUrlCategoryListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetUrlCategoryListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetUrlCategoryListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetUrlCategoryListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetUrlCategoryListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetUrlCategoryListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetUrlCategoryListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetUrlCategoryListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetUrlCategoryListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +189,7 @@ func (o GetUrlCategoryListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlCategoryListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetUrlCategoryListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetUrlCategoryListResult) int { return v.Total }).(pulumi.IntOutput)
 }

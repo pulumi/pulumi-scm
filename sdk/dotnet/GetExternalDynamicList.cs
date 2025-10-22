@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetExternalDynamicList
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// ExternalDynamicList data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,24 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetExternalDynamicList.Invoke(new()
+        ///     // Data source to look up a single external dynamic list by its ID.
+        ///     var scmExternalDynamicListDs = Scm.GetExternalDynamicList.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "ce39b7b5-f5bc-4276-9fe5-be56613e37ad",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["externalDynamicListDetails"] = 
+        ///         {
+        ///             { "id", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Id) },
+        ///             { "name", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Name) },
+        ///             { "folder", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Folder) },
+        ///             { "description", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Description) },
+        ///             { "url", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Url) },
+        ///             { "recurring", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Recurring) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +49,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetExternalDynamicListResult>("scm:index/getExternalDynamicList:getExternalDynamicList", args ?? new GetExternalDynamicListArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ExternalDynamicList data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +61,24 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetExternalDynamicList.Invoke(new()
+        ///     // Data source to look up a single external dynamic list by its ID.
+        ///     var scmExternalDynamicListDs = Scm.GetExternalDynamicList.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "ce39b7b5-f5bc-4276-9fe5-be56613e37ad",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["externalDynamicListDetails"] = 
+        ///         {
+        ///             { "id", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Id) },
+        ///             { "name", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Name) },
+        ///             { "folder", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Folder) },
+        ///             { "description", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Description) },
+        ///             { "url", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Url) },
+        ///             { "recurring", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Recurring) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +86,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetExternalDynamicListResult>("scm:index/getExternalDynamicList:getExternalDynamicList", args ?? new GetExternalDynamicListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ExternalDynamicList data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +98,24 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetExternalDynamicList.Invoke(new()
+        ///     // Data source to look up a single external dynamic list by its ID.
+        ///     var scmExternalDynamicListDs = Scm.GetExternalDynamicList.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "ce39b7b5-f5bc-4276-9fe5-be56613e37ad",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["externalDynamicListDetails"] = 
+        ///         {
+        ///             { "id", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Id) },
+        ///             { "name", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Name) },
+        ///             { "folder", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Folder) },
+        ///             { "description", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Description) },
+        ///             { "url", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Url) },
+        ///             { "recurring", scmExternalDynamicListDs.Apply(getExternalDynamicListResult =&gt; getExternalDynamicListResult.Type?.Domain?.Recurring) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +127,16 @@ namespace Pulumi.Scm
     public sealed class GetExternalDynamicListArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the external dynamic list
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the external dynamic list
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetExternalDynamicListArgs()
         {
@@ -102,10 +147,16 @@ namespace Pulumi.Scm
     public sealed class GetExternalDynamicListInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the external dynamic list
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the external dynamic list
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetExternalDynamicListInvokeArgs()
         {
@@ -118,31 +169,59 @@ namespace Pulumi.Scm
     public sealed class GetExternalDynamicListResult
     {
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the external dynamic list
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the external dynamic list
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The Type param.
+        /// Type
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeResult Type;
 
         [OutputConstructor]
         private GetExternalDynamicListResult(
+            string device,
+
+            ImmutableDictionary<string, string> encryptedValues,
+
+            string folder,
+
             string id,
 
             string name,
+
+            string snippet,
 
             string tfid,
 
             Outputs.GetExternalDynamicListTypeResult type)
         {
+            Device = device;
+            EncryptedValues = encryptedValues;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
             Tfid = tfid;
             Type = type;
         }

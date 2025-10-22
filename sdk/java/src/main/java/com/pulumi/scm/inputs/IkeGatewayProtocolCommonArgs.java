@@ -18,14 +18,14 @@ public final class IkeGatewayProtocolCommonArgs extends com.pulumi.resources.Res
     public static final IkeGatewayProtocolCommonArgs Empty = new IkeGatewayProtocolCommonArgs();
 
     /**
-     * The Fragmentation param.
+     * Fragmentation
      * 
      */
     @Import(name="fragmentation")
     private @Nullable Output<IkeGatewayProtocolCommonFragmentationArgs> fragmentation;
 
     /**
-     * @return The Fragmentation param.
+     * @return Fragmentation
      * 
      */
     public Optional<Output<IkeGatewayProtocolCommonFragmentationArgs>> fragmentation() {
@@ -33,14 +33,14 @@ public final class IkeGatewayProtocolCommonArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The NatTraversal param.
+     * Enables NAT traversal for the IKE gateway.
      * 
      */
     @Import(name="natTraversal")
     private @Nullable Output<IkeGatewayProtocolCommonNatTraversalArgs> natTraversal;
 
     /**
-     * @return The NatTraversal param.
+     * @return Enables NAT traversal for the IKE gateway.
      * 
      */
     public Optional<Output<IkeGatewayProtocolCommonNatTraversalArgs>> natTraversal() {
@@ -48,14 +48,14 @@ public final class IkeGatewayProtocolCommonArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The PassiveMode param.
+     * Passive mode
      * 
      */
     @Import(name="passiveMode")
     private @Nullable Output<Boolean> passiveMode;
 
     /**
-     * @return The PassiveMode param.
+     * @return Passive mode
      * 
      */
     public Optional<Output<Boolean>> passiveMode() {
@@ -89,7 +89,7 @@ public final class IkeGatewayProtocolCommonArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param fragmentation The Fragmentation param.
+         * @param fragmentation Fragmentation
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class IkeGatewayProtocolCommonArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param fragmentation The Fragmentation param.
+         * @param fragmentation Fragmentation
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class IkeGatewayProtocolCommonArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param natTraversal The NatTraversal param.
+         * @param natTraversal Enables NAT traversal for the IKE gateway.
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class IkeGatewayProtocolCommonArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param natTraversal The NatTraversal param.
+         * @param natTraversal Enables NAT traversal for the IKE gateway.
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class IkeGatewayProtocolCommonArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param passiveMode The PassiveMode param.
+         * @param passiveMode Passive mode
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class IkeGatewayProtocolCommonArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param passiveMode The PassiveMode param.
+         * @param passiveMode Passive mode
          * 
          * @return builder
          * 

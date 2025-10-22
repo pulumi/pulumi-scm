@@ -27,7 +27,7 @@ class GetDecryptionRuleResult:
     """
     A collection of values returned by getDecryptionRule.
     """
-    def __init__(__self__, action=None, categories=None, description=None, destination_hips=None, destinations=None, disabled=None, froms=None, id=None, log_fail=None, log_setting=None, log_success=None, name=None, negate_destination=None, negate_source=None, profile=None, services=None, source_hips=None, source_users=None, sources=None, tags=None, tfid=None, tos=None, type=None):
+    def __init__(__self__, action=None, categories=None, description=None, destination_hips=None, destinations=None, device=None, disabled=None, folder=None, froms=None, id=None, log_fail=None, log_setting=None, log_success=None, name=None, negate_destination=None, negate_source=None, profile=None, services=None, snippet=None, source_hips=None, source_users=None, sources=None, tags=None, tfid=None, tos=None, type=None):
         if action and not isinstance(action, str):
             raise TypeError("Expected argument 'action' to be a str")
         pulumi.set(__self__, "action", action)
@@ -43,9 +43,15 @@ class GetDecryptionRuleResult:
         if destinations and not isinstance(destinations, list):
             raise TypeError("Expected argument 'destinations' to be a list")
         pulumi.set(__self__, "destinations", destinations)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if disabled and not isinstance(disabled, bool):
             raise TypeError("Expected argument 'disabled' to be a bool")
         pulumi.set(__self__, "disabled", disabled)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if froms and not isinstance(froms, list):
             raise TypeError("Expected argument 'froms' to be a list")
         pulumi.set(__self__, "froms", froms)
@@ -76,6 +82,9 @@ class GetDecryptionRuleResult:
         if services and not isinstance(services, list):
             raise TypeError("Expected argument 'services' to be a list")
         pulumi.set(__self__, "services", services)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if source_hips and not isinstance(source_hips, list):
             raise TypeError("Expected argument 'source_hips' to be a list")
         pulumi.set(__self__, "source_hips", source_hips)
@@ -102,7 +111,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def action(self) -> _builtins.str:
         """
-        The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+        The action to be taken
         """
         return pulumi.get(self, "action")
 
@@ -110,7 +119,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def categories(self) -> Sequence[_builtins.str]:
         """
-        The Categories param.
+        The destination URL category
         """
         return pulumi.get(self, "categories")
 
@@ -118,7 +127,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param.
+        The description of the decryption rule
         """
         return pulumi.get(self, "description")
 
@@ -126,7 +135,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter(name="destinationHips")
     def destination_hips(self) -> Sequence[_builtins.str]:
         """
-        The DestinationHips param.
+        The Host Integrity Profile of the destination host
         """
         return pulumi.get(self, "destination_hips")
 
@@ -134,23 +143,39 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def destinations(self) -> Sequence[_builtins.str]:
         """
-        The Destinations param.
+        The destination addresses
         """
         return pulumi.get(self, "destinations")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
     def disabled(self) -> _builtins.bool:
         """
-        The Disabled param.
+        Is the rule disabled?
         """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
         """
-        The Froms param.
+        The source security zone
         """
         return pulumi.get(self, "froms")
 
@@ -158,7 +183,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the decryption rule
         """
         return pulumi.get(self, "id")
 
@@ -166,7 +191,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter(name="logFail")
     def log_fail(self) -> _builtins.bool:
         """
-        The LogFail param.
+        Log failed decryption events?
         """
         return pulumi.get(self, "log_fail")
 
@@ -174,7 +199,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> _builtins.str:
         """
-        The LogSetting param.
+        The log settings of the decryption rule
         """
         return pulumi.get(self, "log_setting")
 
@@ -182,7 +207,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter(name="logSuccess")
     def log_success(self) -> _builtins.bool:
         """
-        The LogSuccess param.
+        Log successful decryption events?
         """
         return pulumi.get(self, "log_success")
 
@@ -190,7 +215,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param.
+        The name of the decryption rule
         """
         return pulumi.get(self, "name")
 
@@ -198,7 +223,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> _builtins.bool:
         """
-        The NegateDestination param.
+        Negate the destination addresses?
         """
         return pulumi.get(self, "negate_destination")
 
@@ -206,7 +231,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> _builtins.bool:
         """
-        The NegateSource param.
+        Negate the source addresses?
         """
         return pulumi.get(self, "negate_source")
 
@@ -214,7 +239,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def profile(self) -> _builtins.str:
         """
-        The Profile param.
+        The decryption profile associated with the decryption rule
         """
         return pulumi.get(self, "profile")
 
@@ -222,15 +247,23 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
         """
-        The Services param.
+        The destination services and/or service groups
         """
         return pulumi.get(self, "services")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> Sequence[_builtins.str]:
         """
-        The SourceHips param.
+        Source hip
         """
         return pulumi.get(self, "source_hips")
 
@@ -238,7 +271,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
         """
-        The SourceUsers param.
+        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         """
         return pulumi.get(self, "source_users")
 
@@ -246,7 +279,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
         """
-        The Sources param.
+        The source addresses
         """
         return pulumi.get(self, "sources")
 
@@ -254,7 +287,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
         """
-        The Tags param.
+        The tags associated with the decryption rule
         """
         return pulumi.get(self, "tags")
 
@@ -267,7 +300,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
         """
-        The Tos param.
+        The destination security zone
         """
         return pulumi.get(self, "tos")
 
@@ -275,7 +308,7 @@ class GetDecryptionRuleResult:
     @pulumi.getter
     def type(self) -> 'outputs.GetDecryptionRuleTypeResult':
         """
-        The Type param.
+        The type of decryption
         """
         return pulumi.get(self, "type")
 
@@ -291,7 +324,9 @@ class AwaitableGetDecryptionRuleResult(GetDecryptionRuleResult):
             description=self.description,
             destination_hips=self.destination_hips,
             destinations=self.destinations,
+            device=self.device,
             disabled=self.disabled,
+            folder=self.folder,
             froms=self.froms,
             id=self.id,
             log_fail=self.log_fail,
@@ -302,6 +337,7 @@ class AwaitableGetDecryptionRuleResult(GetDecryptionRuleResult):
             negate_source=self.negate_source,
             profile=self.profile,
             services=self.services,
+            snippet=self.snippet,
             source_hips=self.source_hips,
             source_users=self.source_users,
             sources=self.sources,
@@ -312,24 +348,18 @@ class AwaitableGetDecryptionRuleResult(GetDecryptionRuleResult):
 
 
 def get_decryption_rule(id: Optional[_builtins.str] = None,
+                        name: Optional[_builtins.str] = None,
                         opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetDecryptionRuleResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_decryption_rule(id="1234-56-789")
-    ```
+    DecryptionRule data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the decryption rule
+    :param _builtins.str name: The name of the decryption rule
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getDecryptionRule:getDecryptionRule', __args__, opts=opts, typ=GetDecryptionRuleResult).value
 
@@ -339,7 +369,9 @@ def get_decryption_rule(id: Optional[_builtins.str] = None,
         description=pulumi.get(__ret__, 'description'),
         destination_hips=pulumi.get(__ret__, 'destination_hips'),
         destinations=pulumi.get(__ret__, 'destinations'),
+        device=pulumi.get(__ret__, 'device'),
         disabled=pulumi.get(__ret__, 'disabled'),
+        folder=pulumi.get(__ret__, 'folder'),
         froms=pulumi.get(__ret__, 'froms'),
         id=pulumi.get(__ret__, 'id'),
         log_fail=pulumi.get(__ret__, 'log_fail'),
@@ -350,6 +382,7 @@ def get_decryption_rule(id: Optional[_builtins.str] = None,
         negate_source=pulumi.get(__ret__, 'negate_source'),
         profile=pulumi.get(__ret__, 'profile'),
         services=pulumi.get(__ret__, 'services'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         source_hips=pulumi.get(__ret__, 'source_hips'),
         source_users=pulumi.get(__ret__, 'source_users'),
         sources=pulumi.get(__ret__, 'sources'),
@@ -358,24 +391,18 @@ def get_decryption_rule(id: Optional[_builtins.str] = None,
         tos=pulumi.get(__ret__, 'tos'),
         type=pulumi.get(__ret__, 'type'))
 def get_decryption_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                               name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDecryptionRuleResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_decryption_rule(id="1234-56-789")
-    ```
+    DecryptionRule data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the decryption rule
+    :param _builtins.str name: The name of the decryption rule
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getDecryptionRule:getDecryptionRule', __args__, opts=opts, typ=GetDecryptionRuleResult)
     return __ret__.apply(lambda __response__: GetDecryptionRuleResult(
@@ -384,7 +411,9 @@ def get_decryption_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
         description=pulumi.get(__response__, 'description'),
         destination_hips=pulumi.get(__response__, 'destination_hips'),
         destinations=pulumi.get(__response__, 'destinations'),
+        device=pulumi.get(__response__, 'device'),
         disabled=pulumi.get(__response__, 'disabled'),
+        folder=pulumi.get(__response__, 'folder'),
         froms=pulumi.get(__response__, 'froms'),
         id=pulumi.get(__response__, 'id'),
         log_fail=pulumi.get(__response__, 'log_fail'),
@@ -395,6 +424,7 @@ def get_decryption_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
         negate_source=pulumi.get(__response__, 'negate_source'),
         profile=pulumi.get(__response__, 'profile'),
         services=pulumi.get(__response__, 'services'),
+        snippet=pulumi.get(__response__, 'snippet'),
         source_hips=pulumi.get(__response__, 'source_hips'),
         source_users=pulumi.get(__response__, 'source_users'),
         sources=pulumi.get(__response__, 'sources'),

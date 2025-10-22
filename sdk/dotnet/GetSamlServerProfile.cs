@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetSamlServerProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSamlServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// SamlServerProfile data source
         /// </summary>
         public static Task<GetSamlServerProfileResult> InvokeAsync(GetSamlServerProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSamlServerProfileResult>("scm:index/getSamlServerProfile:getSamlServerProfile", args ?? new GetSamlServerProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSamlServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// SamlServerProfile data source
         /// </summary>
         public static Output<GetSamlServerProfileResult> Invoke(GetSamlServerProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSamlServerProfileResult>("scm:index/getSamlServerProfile:getSamlServerProfile", args ?? new GetSamlServerProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSamlServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// SamlServerProfile data source
         /// </summary>
         public static Output<GetSamlServerProfileResult> Invoke(GetSamlServerProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSamlServerProfileResult>("scm:index/getSamlServerProfile:getSamlServerProfile", args ?? new GetSamlServerProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetSamlServerProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the SAML server profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the SAML server profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetSamlServerProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetSamlServerProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the SAML server profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the SAML server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetSamlServerProfileInvokeArgs()
         {
@@ -118,40 +76,56 @@ namespace Pulumi.Scm
     public sealed class GetSamlServerProfileResult
     {
         /// <summary>
-        /// The Certificate param. String length must not exceed 63 characters.
+        /// The identity provider certificate
         /// </summary>
         public readonly string Certificate;
         /// <summary>
-        /// The EntityId param. String length must be between 1 and 1024 characters.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The identity provider ID
         /// </summary>
         public readonly string EntityId;
         /// <summary>
-        /// The Id param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the SAML server profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The MaxClockSkew param. Value must be between 1 and 900.
+        /// Maxiumum clock skew
         /// </summary>
         public readonly int MaxClockSkew;
         /// <summary>
-        /// The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+        /// The name of the SAML server profile
+        /// </summary>
+        public readonly string Name;
+        /// <summary>
+        /// SAML HTTP binding for SLO requests to the identity provider
         /// </summary>
         public readonly string SloBindings;
         /// <summary>
-        /// The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// SAML HTTP binding for SSO requests to the identity provider
         /// </summary>
         public readonly string SsoBindings;
         /// <summary>
-        /// The SsoUrl param. String length must be between 1 and 255 characters.
+        /// Identity provider SSO URL
         /// </summary>
         public readonly string SsoUrl;
         public readonly string Tfid;
         /// <summary>
-        /// The ValidateIdpCertificate param.
+        /// Validate the identity provider certificate?
         /// </summary>
         public readonly bool ValidateIdpCertificate;
         /// <summary>
-        /// The WantAuthRequestsSigned param.
+        /// Sign SAML message to the identity provider?
         /// </summary>
         public readonly bool WantAuthRequestsSigned;
 
@@ -159,13 +133,21 @@ namespace Pulumi.Scm
         private GetSamlServerProfileResult(
             string certificate,
 
+            string device,
+
             string entityId,
+
+            string folder,
 
             string id,
 
             int maxClockSkew,
 
+            string name,
+
             string sloBindings,
+
+            string snippet,
 
             string ssoBindings,
 
@@ -178,10 +160,14 @@ namespace Pulumi.Scm
             bool wantAuthRequestsSigned)
         {
             Certificate = certificate;
+            Device = device;
             EntityId = entityId;
+            Folder = folder;
             Id = id;
             MaxClockSkew = maxClockSkew;
+            Name = name;
             SloBindings = sloBindings;
+            Snippet = snippet;
             SsoBindings = ssoBindings;
             SsoUrl = ssoUrl;
             Tfid = tfid;

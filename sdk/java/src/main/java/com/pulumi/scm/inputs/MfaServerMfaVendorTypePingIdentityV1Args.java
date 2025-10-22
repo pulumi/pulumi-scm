@@ -5,6 +5,8 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,59 +18,44 @@ public final class MfaServerMfaVendorTypePingIdentityV1Args extends com.pulumi.r
     public static final MfaServerMfaVendorTypePingIdentityV1Args Empty = new MfaServerMfaVendorTypePingIdentityV1Args();
 
     /**
-     * The PingApiHost param.
+     * Ping Identity API hostname
      * 
      */
-    @Import(name="pingApiHost")
-    private @Nullable Output<String> pingApiHost;
+    @Import(name="pingApiHost", required=true)
+    private Output<String> pingApiHost;
 
     /**
-     * @return The PingApiHost param.
+     * @return Ping Identity API hostname
      * 
      */
-    public Optional<Output<String>> pingApiHost() {
-        return Optional.ofNullable(this.pingApiHost);
+    public Output<String> pingApiHost() {
+        return this.pingApiHost;
     }
 
     /**
-     * The PingBaseuri param.
+     * Ping Identity API base URI
      * 
      */
-    @Import(name="pingBaseuri")
-    private @Nullable Output<String> pingBaseuri;
+    @Import(name="pingBaseuri", required=true)
+    private Output<String> pingBaseuri;
 
     /**
-     * @return The PingBaseuri param.
+     * @return Ping Identity API base URI
      * 
      */
-    public Optional<Output<String>> pingBaseuri() {
-        return Optional.ofNullable(this.pingBaseuri);
+    public Output<String> pingBaseuri() {
+        return this.pingBaseuri;
     }
 
     /**
-     * The PingOrg param.
-     * 
-     */
-    @Import(name="pingOrg")
-    private @Nullable Output<String> pingOrg;
-
-    /**
-     * @return The PingOrg param.
-     * 
-     */
-    public Optional<Output<String>> pingOrg() {
-        return Optional.ofNullable(this.pingOrg);
-    }
-
-    /**
-     * The PingOrgAlias param.
+     * Ping Identity client organization ID
      * 
      */
     @Import(name="pingOrgAlias")
     private @Nullable Output<String> pingOrgAlias;
 
     /**
-     * @return The PingOrgAlias param.
+     * @return Ping Identity client organization ID
      * 
      */
     public Optional<Output<String>> pingOrgAlias() {
@@ -76,33 +63,48 @@ public final class MfaServerMfaVendorTypePingIdentityV1Args extends com.pulumi.r
     }
 
     /**
-     * The PingTimeout param.
+     * Ping Identity timeout (seconds)
      * 
      */
-    @Import(name="pingTimeout")
-    private @Nullable Output<String> pingTimeout;
+    @Import(name="pingTimeout", required=true)
+    private Output<Integer> pingTimeout;
 
     /**
-     * @return The PingTimeout param.
+     * @return Ping Identity timeout (seconds)
      * 
      */
-    public Optional<Output<String>> pingTimeout() {
-        return Optional.ofNullable(this.pingTimeout);
+    public Output<Integer> pingTimeout() {
+        return this.pingTimeout;
     }
 
     /**
-     * The PingToken param.
+     * Ping Identity API token
      * 
      */
-    @Import(name="pingToken")
-    private @Nullable Output<String> pingToken;
+    @Import(name="pingToken", required=true)
+    private Output<String> pingToken;
 
     /**
-     * @return The PingToken param.
+     * @return Ping Identity API token
      * 
      */
-    public Optional<Output<String>> pingToken() {
-        return Optional.ofNullable(this.pingToken);
+    public Output<String> pingToken() {
+        return this.pingToken;
+    }
+
+    /**
+     * Ping Identity Base64 key
+     * 
+     */
+    @Import(name="pingUseBase64Key", required=true)
+    private Output<String> pingUseBase64Key;
+
+    /**
+     * @return Ping Identity Base64 key
+     * 
+     */
+    public Output<String> pingUseBase64Key() {
+        return this.pingUseBase64Key;
     }
 
     private MfaServerMfaVendorTypePingIdentityV1Args() {}
@@ -110,10 +112,10 @@ public final class MfaServerMfaVendorTypePingIdentityV1Args extends com.pulumi.r
     private MfaServerMfaVendorTypePingIdentityV1Args(MfaServerMfaVendorTypePingIdentityV1Args $) {
         this.pingApiHost = $.pingApiHost;
         this.pingBaseuri = $.pingBaseuri;
-        this.pingOrg = $.pingOrg;
         this.pingOrgAlias = $.pingOrgAlias;
         this.pingTimeout = $.pingTimeout;
         this.pingToken = $.pingToken;
+        this.pingUseBase64Key = $.pingUseBase64Key;
     }
 
     public static Builder builder() {
@@ -135,18 +137,18 @@ public final class MfaServerMfaVendorTypePingIdentityV1Args extends com.pulumi.r
         }
 
         /**
-         * @param pingApiHost The PingApiHost param.
+         * @param pingApiHost Ping Identity API hostname
          * 
          * @return builder
          * 
          */
-        public Builder pingApiHost(@Nullable Output<String> pingApiHost) {
+        public Builder pingApiHost(Output<String> pingApiHost) {
             $.pingApiHost = pingApiHost;
             return this;
         }
 
         /**
-         * @param pingApiHost The PingApiHost param.
+         * @param pingApiHost Ping Identity API hostname
          * 
          * @return builder
          * 
@@ -156,18 +158,18 @@ public final class MfaServerMfaVendorTypePingIdentityV1Args extends com.pulumi.r
         }
 
         /**
-         * @param pingBaseuri The PingBaseuri param.
+         * @param pingBaseuri Ping Identity API base URI
          * 
          * @return builder
          * 
          */
-        public Builder pingBaseuri(@Nullable Output<String> pingBaseuri) {
+        public Builder pingBaseuri(Output<String> pingBaseuri) {
             $.pingBaseuri = pingBaseuri;
             return this;
         }
 
         /**
-         * @param pingBaseuri The PingBaseuri param.
+         * @param pingBaseuri Ping Identity API base URI
          * 
          * @return builder
          * 
@@ -177,28 +179,7 @@ public final class MfaServerMfaVendorTypePingIdentityV1Args extends com.pulumi.r
         }
 
         /**
-         * @param pingOrg The PingOrg param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder pingOrg(@Nullable Output<String> pingOrg) {
-            $.pingOrg = pingOrg;
-            return this;
-        }
-
-        /**
-         * @param pingOrg The PingOrg param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder pingOrg(String pingOrg) {
-            return pingOrg(Output.of(pingOrg));
-        }
-
-        /**
-         * @param pingOrgAlias The PingOrgAlias param.
+         * @param pingOrgAlias Ping Identity client organization ID
          * 
          * @return builder
          * 
@@ -209,7 +190,7 @@ public final class MfaServerMfaVendorTypePingIdentityV1Args extends com.pulumi.r
         }
 
         /**
-         * @param pingOrgAlias The PingOrgAlias param.
+         * @param pingOrgAlias Ping Identity client organization ID
          * 
          * @return builder
          * 
@@ -219,39 +200,39 @@ public final class MfaServerMfaVendorTypePingIdentityV1Args extends com.pulumi.r
         }
 
         /**
-         * @param pingTimeout The PingTimeout param.
+         * @param pingTimeout Ping Identity timeout (seconds)
          * 
          * @return builder
          * 
          */
-        public Builder pingTimeout(@Nullable Output<String> pingTimeout) {
+        public Builder pingTimeout(Output<Integer> pingTimeout) {
             $.pingTimeout = pingTimeout;
             return this;
         }
 
         /**
-         * @param pingTimeout The PingTimeout param.
+         * @param pingTimeout Ping Identity timeout (seconds)
          * 
          * @return builder
          * 
          */
-        public Builder pingTimeout(String pingTimeout) {
+        public Builder pingTimeout(Integer pingTimeout) {
             return pingTimeout(Output.of(pingTimeout));
         }
 
         /**
-         * @param pingToken The PingToken param.
+         * @param pingToken Ping Identity API token
          * 
          * @return builder
          * 
          */
-        public Builder pingToken(@Nullable Output<String> pingToken) {
+        public Builder pingToken(Output<String> pingToken) {
             $.pingToken = pingToken;
             return this;
         }
 
         /**
-         * @param pingToken The PingToken param.
+         * @param pingToken Ping Identity API token
          * 
          * @return builder
          * 
@@ -260,7 +241,43 @@ public final class MfaServerMfaVendorTypePingIdentityV1Args extends com.pulumi.r
             return pingToken(Output.of(pingToken));
         }
 
+        /**
+         * @param pingUseBase64Key Ping Identity Base64 key
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pingUseBase64Key(Output<String> pingUseBase64Key) {
+            $.pingUseBase64Key = pingUseBase64Key;
+            return this;
+        }
+
+        /**
+         * @param pingUseBase64Key Ping Identity Base64 key
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pingUseBase64Key(String pingUseBase64Key) {
+            return pingUseBase64Key(Output.of(pingUseBase64Key));
+        }
+
         public MfaServerMfaVendorTypePingIdentityV1Args build() {
+            if ($.pingApiHost == null) {
+                throw new MissingRequiredPropertyException("MfaServerMfaVendorTypePingIdentityV1Args", "pingApiHost");
+            }
+            if ($.pingBaseuri == null) {
+                throw new MissingRequiredPropertyException("MfaServerMfaVendorTypePingIdentityV1Args", "pingBaseuri");
+            }
+            if ($.pingTimeout == null) {
+                throw new MissingRequiredPropertyException("MfaServerMfaVendorTypePingIdentityV1Args", "pingTimeout");
+            }
+            if ($.pingToken == null) {
+                throw new MissingRequiredPropertyException("MfaServerMfaVendorTypePingIdentityV1Args", "pingToken");
+            }
+            if ($.pingUseBase64Key == null) {
+                throw new MissingRequiredPropertyException("MfaServerMfaVendorTypePingIdentityV1Args", "pingUseBase64Key");
+            }
             return $;
         }
     }

@@ -15,242 +15,282 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationFilterListData {
     /**
-     * @return The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * @return Category
      * 
      */
     private List<String> categories;
     /**
-     * @return only True is a valid value.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return only True is a valid value
      * 
      */
     private Boolean evasive;
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     private Boolean excessiveBandwidthUse;
     /**
-     * @return The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Exclude
      * 
      */
     private List<String> excludes;
     /**
-     * @return only True is a valid value.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return only True is a valid value
      * 
      */
     private Boolean hasKnownVulnerabilities;
     /**
-     * @return UUID of the resource.
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     private Boolean isSaas;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     private String name;
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     private Boolean newAppid;
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     private Boolean pervasive;
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     private Boolean proneToMisuse;
     /**
-     * @return The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+     * @return Risk
      * 
      */
     private List<Integer> risks;
     /**
-     * @return The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * @return Saas certifications
      * 
      */
     private List<String> saasCertifications;
     /**
-     * @return The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * @return Saas risk
      * 
      */
     private List<String> saasRisks;
     /**
-     * @return The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return Subcategory
      * 
      */
     private List<String> subcategories;
     /**
-     * @return The Tagging param.
+     * @return Tagging
      * 
      */
     private GetApplicationFilterListDataTagging tagging;
     /**
-     * @return The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * @return Technology
      * 
      */
     private List<String> technologies;
+    private String tfid;
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     private Boolean transfersFiles;
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     private Boolean tunnelsOtherApps;
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     private Boolean usedByMalware;
 
     private GetApplicationFilterListData() {}
     /**
-     * @return The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * @return Category
      * 
      */
     public List<String> categories() {
         return this.categories;
     }
     /**
-     * @return only True is a valid value.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return only True is a valid value
      * 
      */
     public Boolean evasive() {
         return this.evasive;
     }
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Boolean excessiveBandwidthUse() {
         return this.excessiveBandwidthUse;
     }
     /**
-     * @return The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Exclude
      * 
      */
     public List<String> excludes() {
         return this.excludes;
     }
     /**
-     * @return only True is a valid value.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return only True is a valid value
      * 
      */
     public Boolean hasKnownVulnerabilities() {
         return this.hasKnownVulnerabilities;
     }
     /**
-     * @return UUID of the resource.
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Boolean isSaas() {
         return this.isSaas;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Boolean newAppid() {
         return this.newAppid;
     }
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Boolean pervasive() {
         return this.pervasive;
     }
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Boolean proneToMisuse() {
         return this.proneToMisuse;
     }
     /**
-     * @return The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+     * @return Risk
      * 
      */
     public List<Integer> risks() {
         return this.risks;
     }
     /**
-     * @return The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * @return Saas certifications
      * 
      */
     public List<String> saasCertifications() {
         return this.saasCertifications;
     }
     /**
-     * @return The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * @return Saas risk
      * 
      */
     public List<String> saasRisks() {
         return this.saasRisks;
     }
     /**
-     * @return The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return Subcategory
      * 
      */
     public List<String> subcategories() {
         return this.subcategories;
     }
     /**
-     * @return The Tagging param.
+     * @return Tagging
      * 
      */
     public GetApplicationFilterListDataTagging tagging() {
         return this.tagging;
     }
     /**
-     * @return The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * @return Technology
      * 
      */
     public List<String> technologies() {
         return this.technologies;
     }
+    public String tfid() {
+        return this.tfid;
+    }
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Boolean transfersFiles() {
         return this.transfersFiles;
     }
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Boolean tunnelsOtherApps() {
         return this.tunnelsOtherApps;
     }
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Boolean usedByMalware() {
@@ -267,9 +307,11 @@ public final class GetApplicationFilterListData {
     @CustomType.Builder
     public static final class Builder {
         private List<String> categories;
+        private String device;
         private Boolean evasive;
         private Boolean excessiveBandwidthUse;
         private List<String> excludes;
+        private String folder;
         private Boolean hasKnownVulnerabilities;
         private String id;
         private Boolean isSaas;
@@ -280,9 +322,11 @@ public final class GetApplicationFilterListData {
         private List<Integer> risks;
         private List<String> saasCertifications;
         private List<String> saasRisks;
+        private String snippet;
         private List<String> subcategories;
         private GetApplicationFilterListDataTagging tagging;
         private List<String> technologies;
+        private String tfid;
         private Boolean transfersFiles;
         private Boolean tunnelsOtherApps;
         private Boolean usedByMalware;
@@ -290,9 +334,11 @@ public final class GetApplicationFilterListData {
         public Builder(GetApplicationFilterListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.categories = defaults.categories;
+    	      this.device = defaults.device;
     	      this.evasive = defaults.evasive;
     	      this.excessiveBandwidthUse = defaults.excessiveBandwidthUse;
     	      this.excludes = defaults.excludes;
+    	      this.folder = defaults.folder;
     	      this.hasKnownVulnerabilities = defaults.hasKnownVulnerabilities;
     	      this.id = defaults.id;
     	      this.isSaas = defaults.isSaas;
@@ -303,9 +349,11 @@ public final class GetApplicationFilterListData {
     	      this.risks = defaults.risks;
     	      this.saasCertifications = defaults.saasCertifications;
     	      this.saasRisks = defaults.saasRisks;
+    	      this.snippet = defaults.snippet;
     	      this.subcategories = defaults.subcategories;
     	      this.tagging = defaults.tagging;
     	      this.technologies = defaults.technologies;
+    	      this.tfid = defaults.tfid;
     	      this.transfersFiles = defaults.transfersFiles;
     	      this.tunnelsOtherApps = defaults.tunnelsOtherApps;
     	      this.usedByMalware = defaults.usedByMalware;
@@ -321,6 +369,14 @@ public final class GetApplicationFilterListData {
         }
         public Builder categories(String... categories) {
             return categories(List.of(categories));
+        }
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetApplicationFilterListData", "device");
+            }
+            this.device = device;
+            return this;
         }
         @CustomType.Setter
         public Builder evasive(Boolean evasive) {
@@ -348,6 +404,14 @@ public final class GetApplicationFilterListData {
         }
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetApplicationFilterListData", "folder");
+            }
+            this.folder = folder;
+            return this;
         }
         @CustomType.Setter
         public Builder hasKnownVulnerabilities(Boolean hasKnownVulnerabilities) {
@@ -439,6 +503,14 @@ public final class GetApplicationFilterListData {
             return saasRisks(List.of(saasRisks));
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetApplicationFilterListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder subcategories(List<String> subcategories) {
             if (subcategories == null) {
               throw new MissingRequiredPropertyException("GetApplicationFilterListData", "subcategories");
@@ -469,6 +541,14 @@ public final class GetApplicationFilterListData {
             return technologies(List.of(technologies));
         }
         @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetApplicationFilterListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
+        @CustomType.Setter
         public Builder transfersFiles(Boolean transfersFiles) {
             if (transfersFiles == null) {
               throw new MissingRequiredPropertyException("GetApplicationFilterListData", "transfersFiles");
@@ -495,9 +575,11 @@ public final class GetApplicationFilterListData {
         public GetApplicationFilterListData build() {
             final var _resultValue = new GetApplicationFilterListData();
             _resultValue.categories = categories;
+            _resultValue.device = device;
             _resultValue.evasive = evasive;
             _resultValue.excessiveBandwidthUse = excessiveBandwidthUse;
             _resultValue.excludes = excludes;
+            _resultValue.folder = folder;
             _resultValue.hasKnownVulnerabilities = hasKnownVulnerabilities;
             _resultValue.id = id;
             _resultValue.isSaas = isSaas;
@@ -508,9 +590,11 @@ public final class GetApplicationFilterListData {
             _resultValue.risks = risks;
             _resultValue.saasCertifications = saasCertifications;
             _resultValue.saasRisks = saasRisks;
+            _resultValue.snippet = snippet;
             _resultValue.subcategories = subcategories;
             _resultValue.tagging = tagging;
             _resultValue.technologies = technologies;
+            _resultValue.tfid = tfid;
             _resultValue.transfersFiles = transfersFiles;
             _resultValue.tunnelsOtherApps = tunnelsOtherApps;
             _resultValue.usedByMalware = usedByMalware;

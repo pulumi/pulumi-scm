@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// IkeCryptoProfile resource
     /// 
     /// ## Example Usage
     /// 
@@ -22,7 +22,32 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Scm.IkeCryptoProfile("example");
+    ///     // The resource block defines a new IKE Crypto Profile.
+    ///     var scmIkeCryptoProfile2 = new Scm.IkeCryptoProfile("scm_ike_crypto_profile_2", new()
+    ///     {
+    ///         Name = "scm_ike_crypto_profile_2",
+    ///         Folder = "Prisma Access",
+    ///         Hashes = new[]
+    ///         {
+    ///             "sha256",
+    ///             "sha384",
+    ///         },
+    ///         DhGroups = new[]
+    ///         {
+    ///             "group14",
+    ///             "group5",
+    ///         },
+    ///         Encryptions = new[]
+    ///         {
+    ///             "aes-256-cbc",
+    ///             "aes-128-cbc",
+    ///         },
+    ///         Lifetime = new Scm.Inputs.IkeCryptoProfileLifetimeArgs
+    ///         {
+    ///             Hours = 8,
+    ///         },
+    ///         AuthenticationMultiple = 10,
+    ///     });
     /// 
     /// });
     /// ```
@@ -31,55 +56,55 @@ namespace Pulumi.Scm
     public partial class IkeCryptoProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+        /// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
         /// </summary>
         [Output("authenticationMultiple")]
         public Output<int> AuthenticationMultiple { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+        /// Dh group
         /// </summary>
         [Output("dhGroups")]
         public Output<ImmutableArray<string>> DhGroups { get; private set; } = null!;
 
         /// <summary>
-        /// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+        /// Encryption algorithm
         /// </summary>
         [Output("encryptions")]
         public Output<ImmutableArray<string>> Encryptions { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+        /// Hash
         /// </summary>
         [Output("hashes")]
         public Output<ImmutableArray<string>> Hashes { get; private set; } = null!;
 
         /// <summary>
-        /// The Lifetime param.
+        /// Ike crypto profile lifetime
         /// </summary>
         [Output("lifetime")]
         public Output<Outputs.IkeCryptoProfileLifetime?> Lifetime { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -134,13 +159,13 @@ namespace Pulumi.Scm
     public sealed class IkeCryptoProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+        /// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
         /// </summary>
         [Input("authenticationMultiple")]
         public Input<int>? AuthenticationMultiple { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -149,7 +174,7 @@ namespace Pulumi.Scm
         private InputList<string>? _dhGroups;
 
         /// <summary>
-        /// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+        /// Dh group
         /// </summary>
         public InputList<string> DhGroups
         {
@@ -161,7 +186,7 @@ namespace Pulumi.Scm
         private InputList<string>? _encryptions;
 
         /// <summary>
-        /// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+        /// Encryption algorithm
         /// </summary>
         public InputList<string> Encryptions
         {
@@ -170,7 +195,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -179,7 +204,7 @@ namespace Pulumi.Scm
         private InputList<string>? _hashes;
 
         /// <summary>
-        /// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+        /// Hash
         /// </summary>
         public InputList<string> Hashes
         {
@@ -188,19 +213,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Lifetime param.
+        /// Ike crypto profile lifetime
         /// </summary>
         [Input("lifetime")]
         public Input<Inputs.IkeCryptoProfileLifetimeArgs>? Lifetime { get; set; }
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -214,13 +239,13 @@ namespace Pulumi.Scm
     public sealed class IkeCryptoProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+        /// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
         /// </summary>
         [Input("authenticationMultiple")]
         public Input<int>? AuthenticationMultiple { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -229,7 +254,7 @@ namespace Pulumi.Scm
         private InputList<string>? _dhGroups;
 
         /// <summary>
-        /// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+        /// Dh group
         /// </summary>
         public InputList<string> DhGroups
         {
@@ -241,7 +266,7 @@ namespace Pulumi.Scm
         private InputList<string>? _encryptions;
 
         /// <summary>
-        /// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+        /// Encryption algorithm
         /// </summary>
         public InputList<string> Encryptions
         {
@@ -250,7 +275,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -259,7 +284,7 @@ namespace Pulumi.Scm
         private InputList<string>? _hashes;
 
         /// <summary>
-        /// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+        /// Hash
         /// </summary>
         public InputList<string> Hashes
         {
@@ -268,19 +293,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Lifetime param.
+        /// Ike crypto profile lifetime
         /// </summary>
         [Input("lifetime")]
         public Input<Inputs.IkeCryptoProfileLifetimeGetArgs>? Lifetime { get; set; }
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

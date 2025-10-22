@@ -7,24 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getQosPolicyRule({
- *     id: "1234-56-789",
- * });
- * ```
+ * QosPolicyRule data source
  */
 export function getQosPolicyRule(args: GetQosPolicyRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetQosPolicyRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getQosPolicyRule:getQosPolicyRule", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -33,13 +22,13 @@ export function getQosPolicyRule(args: GetQosPolicyRuleArgs, opts?: pulumi.Invok
  */
 export interface GetQosPolicyRuleArgs {
     /**
-     * The Folder param.
-     */
-    folder?: string;
-    /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * Name
+     */
+    name?: string;
 }
 
 /**
@@ -47,54 +36,51 @@ export interface GetQosPolicyRuleArgs {
  */
 export interface GetQosPolicyRuleResult {
     /**
-     * The Action param.
+     * Action
      */
     readonly action: outputs.GetQosPolicyRuleAction;
     /**
-     * The Description param.
+     * Description
      */
     readonly description: string;
     /**
-     * The DscpTos param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * Dscp tos
      */
     readonly dscpTos: outputs.GetQosPolicyRuleDscpTos;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
-    readonly folder?: string;
+    readonly folder: string;
     /**
-     * The Id param.
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The Name param.
+     * Name
      */
     readonly name: string;
     /**
-     * The Schedule param.
+     * Schedule
      */
     readonly schedule: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getQosPolicyRule({
- *     id: "1234-56-789",
- * });
- * ```
+ * QosPolicyRule data source
  */
 export function getQosPolicyRuleOutput(args: GetQosPolicyRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetQosPolicyRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getQosPolicyRule:getQosPolicyRule", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -103,11 +89,11 @@ export function getQosPolicyRuleOutput(args: GetQosPolicyRuleOutputArgs, opts?: 
  */
 export interface GetQosPolicyRuleOutputArgs {
     /**
-     * The Folder param.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
 }

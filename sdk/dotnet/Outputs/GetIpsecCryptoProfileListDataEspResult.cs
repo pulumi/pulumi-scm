@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIpsecCryptoProfileListDataEspResult
     {
         /// <summary>
-        /// Authentication algorithm.
+        /// Authentication algorithm
         /// </summary>
         public readonly ImmutableArray<string> Authentications;
         /// <summary>
-        /// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`, `"null"`.
+        /// Encryption algorithm
         /// </summary>
         public readonly ImmutableArray<string> Encryptions;
 

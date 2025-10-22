@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class QosPolicyRuleDscpTosCodepointTypeCustomGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Codepoint param.
+        /// Codepoint
         /// </summary>
         [Input("codepoint")]
         public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeCustomCodepointGetArgs>? Codepoint { get; set; }

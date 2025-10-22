@@ -17,14 +17,14 @@ public final class ServiceConnectionQosArgs extends com.pulumi.resources.Resourc
     public static final ServiceConnectionQosArgs Empty = new ServiceConnectionQosArgs();
 
     /**
-     * The Enable param.
+     * Enable
      * 
      */
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     public Optional<Output<Boolean>> enable() {
@@ -32,14 +32,14 @@ public final class ServiceConnectionQosArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The QosProfile param.
+     * Qos profile
      * 
      */
     @Import(name="qosProfile")
     private @Nullable Output<String> qosProfile;
 
     /**
-     * @return The QosProfile param.
+     * @return Qos profile
      * 
      */
     public Optional<Output<String>> qosProfile() {
@@ -72,7 +72,7 @@ public final class ServiceConnectionQosArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param enable The Enable param.
+         * @param enable Enable
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class ServiceConnectionQosArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param enable The Enable param.
+         * @param enable Enable
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class ServiceConnectionQosArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param qosProfile The QosProfile param.
+         * @param qosProfile Qos profile
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class ServiceConnectionQosArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param qosProfile The QosProfile param.
+         * @param qosProfile Qos profile
          * 
          * @return builder
          * 

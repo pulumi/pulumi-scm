@@ -12,102 +12,150 @@ import java.util.Objects;
 @CustomType
 public final class GetProfileGroupResult {
     /**
-     * @return List of AI security profiles.
+     * @return Ai security
      * 
      */
     private List<String> aiSecurities;
     /**
-     * @return List of DNS security profiles.
+     * @return Data filtering
+     * 
+     */
+    private List<String> dataFilterings;
+    /**
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Dns security
      * 
      */
     private List<String> dnsSecurities;
     /**
-     * @return List of file blocking profiles.
+     * @return File blocking
      * 
      */
     private List<String> fileBlockings;
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the profile group
      * 
      */
     private String id;
     /**
-     * @return The name of the profile group.
+     * @return The name of the profile group
      * 
      */
     private String name;
     /**
-     * @return List of HTTP header insertion profiles.
+     * @return Saas security
      * 
      */
     private List<String> saasSecurities;
     /**
-     * @return List of anti-spyware profiles.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return Spyware
      * 
      */
     private List<String> spywares;
     private String tfid;
     /**
-     * @return List of URL filtering profiles.
+     * @return Url filtering
      * 
      */
     private List<String> urlFilterings;
     /**
-     * @return List of anti-virus and Wildfire analysis profiles.
+     * @return Virus and wildfire analysis
      * 
      */
     private List<String> virusAndWildfireAnalyses;
     /**
-     * @return List of vulnerability protection profiles.
+     * @return Vulnerability
      * 
      */
     private List<String> vulnerabilities;
 
     private GetProfileGroupResult() {}
     /**
-     * @return List of AI security profiles.
+     * @return Ai security
      * 
      */
     public List<String> aiSecurities() {
         return this.aiSecurities;
     }
     /**
-     * @return List of DNS security profiles.
+     * @return Data filtering
+     * 
+     */
+    public List<String> dataFilterings() {
+        return this.dataFilterings;
+    }
+    /**
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Dns security
      * 
      */
     public List<String> dnsSecurities() {
         return this.dnsSecurities;
     }
     /**
-     * @return List of file blocking profiles.
+     * @return File blocking
      * 
      */
     public List<String> fileBlockings() {
         return this.fileBlockings;
     }
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the profile group
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The name of the profile group.
+     * @return The name of the profile group
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return List of HTTP header insertion profiles.
+     * @return Saas security
      * 
      */
     public List<String> saasSecurities() {
         return this.saasSecurities;
     }
     /**
-     * @return List of anti-spyware profiles.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return Spyware
      * 
      */
     public List<String> spywares() {
@@ -117,21 +165,21 @@ public final class GetProfileGroupResult {
         return this.tfid;
     }
     /**
-     * @return List of URL filtering profiles.
+     * @return Url filtering
      * 
      */
     public List<String> urlFilterings() {
         return this.urlFilterings;
     }
     /**
-     * @return List of anti-virus and Wildfire analysis profiles.
+     * @return Virus and wildfire analysis
      * 
      */
     public List<String> virusAndWildfireAnalyses() {
         return this.virusAndWildfireAnalyses;
     }
     /**
-     * @return List of vulnerability protection profiles.
+     * @return Vulnerability
      * 
      */
     public List<String> vulnerabilities() {
@@ -148,11 +196,15 @@ public final class GetProfileGroupResult {
     @CustomType.Builder
     public static final class Builder {
         private List<String> aiSecurities;
+        private List<String> dataFilterings;
+        private String device;
         private List<String> dnsSecurities;
         private List<String> fileBlockings;
+        private String folder;
         private String id;
         private String name;
         private List<String> saasSecurities;
+        private String snippet;
         private List<String> spywares;
         private String tfid;
         private List<String> urlFilterings;
@@ -162,11 +214,15 @@ public final class GetProfileGroupResult {
         public Builder(GetProfileGroupResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.aiSecurities = defaults.aiSecurities;
+    	      this.dataFilterings = defaults.dataFilterings;
+    	      this.device = defaults.device;
     	      this.dnsSecurities = defaults.dnsSecurities;
     	      this.fileBlockings = defaults.fileBlockings;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.saasSecurities = defaults.saasSecurities;
+    	      this.snippet = defaults.snippet;
     	      this.spywares = defaults.spywares;
     	      this.tfid = defaults.tfid;
     	      this.urlFilterings = defaults.urlFilterings;
@@ -184,6 +240,25 @@ public final class GetProfileGroupResult {
         }
         public Builder aiSecurities(String... aiSecurities) {
             return aiSecurities(List.of(aiSecurities));
+        }
+        @CustomType.Setter
+        public Builder dataFilterings(List<String> dataFilterings) {
+            if (dataFilterings == null) {
+              throw new MissingRequiredPropertyException("GetProfileGroupResult", "dataFilterings");
+            }
+            this.dataFilterings = dataFilterings;
+            return this;
+        }
+        public Builder dataFilterings(String... dataFilterings) {
+            return dataFilterings(List.of(dataFilterings));
+        }
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetProfileGroupResult", "device");
+            }
+            this.device = device;
+            return this;
         }
         @CustomType.Setter
         public Builder dnsSecurities(List<String> dnsSecurities) {
@@ -206,6 +281,14 @@ public final class GetProfileGroupResult {
         }
         public Builder fileBlockings(String... fileBlockings) {
             return fileBlockings(List.of(fileBlockings));
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetProfileGroupResult", "folder");
+            }
+            this.folder = folder;
+            return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -233,6 +316,14 @@ public final class GetProfileGroupResult {
         }
         public Builder saasSecurities(String... saasSecurities) {
             return saasSecurities(List.of(saasSecurities));
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetProfileGroupResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
         }
         @CustomType.Setter
         public Builder spywares(List<String> spywares) {
@@ -289,11 +380,15 @@ public final class GetProfileGroupResult {
         public GetProfileGroupResult build() {
             final var _resultValue = new GetProfileGroupResult();
             _resultValue.aiSecurities = aiSecurities;
+            _resultValue.dataFilterings = dataFilterings;
+            _resultValue.device = device;
             _resultValue.dnsSecurities = dnsSecurities;
             _resultValue.fileBlockings = fileBlockings;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.saasSecurities = saasSecurities;
+            _resultValue.snippet = snippet;
             _resultValue.spywares = spywares;
             _resultValue.tfid = tfid;
             _resultValue.urlFilterings = urlFilterings;

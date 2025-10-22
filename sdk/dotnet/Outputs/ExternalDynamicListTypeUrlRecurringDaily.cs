@@ -14,12 +14,12 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeUrlRecurringDaily
     {
         /// <summary>
-        /// Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        /// Time specification hh (e.g. 20)
         /// </summary>
-        public readonly string? At;
+        public readonly string At;
 
         [OutputConstructor]
-        private ExternalDynamicListTypeUrlRecurringDaily(string? at)
+        private ExternalDynamicListTypeUrlRecurringDaily(string at)
         {
             At = at;
         }

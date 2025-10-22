@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class ScepProfileCertificateAttributes
     {
         /// <summary>
-        /// The Dnsname param. Ensure that only one of the following is specified: `Dnsname`, `Rfc822name`, `UniformResourceIdentifier`
+        /// Dnsname
         /// </summary>
         public readonly string? Dnsname;
         /// <summary>
-        /// The Rfc822name param. Ensure that only one of the following is specified: `Dnsname`, `Rfc822name`, `UniformResourceIdentifier`
+        /// Rfc822name
         /// </summary>
         public readonly string? Rfc822name;
         /// <summary>
-        /// The UniformResourceIdentifier param. Ensure that only one of the following is specified: `Dnsname`, `Rfc822name`, `UniformResourceIdentifier`
+        /// Uniform resource identifier
         /// </summary>
         public readonly string? UniformResourceIdentifier;
 

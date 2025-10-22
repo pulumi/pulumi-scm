@@ -16,14 +16,14 @@ public final class ScepProfileAlgorithmArgs extends com.pulumi.resources.Resourc
     public static final ScepProfileAlgorithmArgs Empty = new ScepProfileAlgorithmArgs();
 
     /**
-     * The Rsa param.
+     * Key length (bits)
      * 
      */
     @Import(name="rsa")
     private @Nullable Output<ScepProfileAlgorithmRsaArgs> rsa;
 
     /**
-     * @return The Rsa param.
+     * @return Key length (bits)
      * 
      */
     public Optional<Output<ScepProfileAlgorithmRsaArgs>> rsa() {
@@ -55,7 +55,7 @@ public final class ScepProfileAlgorithmArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param rsa The Rsa param.
+         * @param rsa Key length (bits)
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class ScepProfileAlgorithmArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param rsa The Rsa param.
+         * @param rsa Key length (bits)
          * 
          * @return builder
          * 

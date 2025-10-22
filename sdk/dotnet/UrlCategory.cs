@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// UrlCategory resource
     /// 
     /// ## Example Usage
     /// 
@@ -22,9 +22,20 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
+    ///     //
+    ///     // Creates a custom URL Category object.
+    ///     //
     ///     var example = new Scm.UrlCategory("example", new()
     ///     {
     ///         Folder = "Shared",
+    ///         Name = "example_url_category",
+    ///         Description = "Test URL Category for create API",
+    ///         Lists = new[]
+    ///         {
+    ///             "example.com",
+    ///             "test-create.com",
+    ///         },
+    ///         Type = "URL List",
     ///     });
     /// 
     /// });
@@ -34,37 +45,37 @@ namespace Pulumi.Scm
     public partial class UrlCategory : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The List param.
+        /// List
         /// </summary>
         [Output("lists")]
         public Output<ImmutableArray<string>> Lists { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -73,7 +84,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        /// Type
         /// </summary>
         [Output("type")]
         public Output<string> Type { get; private set; } = null!;
@@ -125,19 +136,19 @@ namespace Pulumi.Scm
     public sealed class UrlCategoryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -146,7 +157,7 @@ namespace Pulumi.Scm
         private InputList<string>? _lists;
 
         /// <summary>
-        /// The List param.
+        /// List
         /// </summary>
         public InputList<string> Lists
         {
@@ -155,19 +166,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        /// Type
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }
@@ -181,19 +192,19 @@ namespace Pulumi.Scm
     public sealed class UrlCategoryState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -202,7 +213,7 @@ namespace Pulumi.Scm
         private InputList<string>? _lists;
 
         /// <summary>
-        /// The List param.
+        /// List
         /// </summary>
         public InputList<string> Lists
         {
@@ -211,13 +222,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -226,7 +237,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        /// Type
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

@@ -17,151 +17,118 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.TrafficSteeringRule;
- * import com.pulumi.scm.TrafficSteeringRuleArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new TrafficSteeringRule("example", TrafficSteeringRuleArgs.builder()
- *             .folder("Shared")
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
+ * TrafficSteeringRule resource
  * 
  */
 @ResourceType(type="scm:index/trafficSteeringRule:TrafficSteeringRule")
 public class TrafficSteeringRule extends com.pulumi.resources.CustomResource {
     /**
-     * The Action param.
+     * Action
      * 
      */
     @Export(name="action", refs={TrafficSteeringRuleAction.class}, tree="[0]")
     private Output</* @Nullable */ TrafficSteeringRuleAction> action;
 
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     public Output<Optional<TrafficSteeringRuleAction>> action() {
         return Codegen.optional(this.action);
     }
     /**
-     * The Category param.
+     * Category
      * 
      */
     @Export(name="categories", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> categories;
 
     /**
-     * @return The Category param.
+     * @return Category
      * 
      */
     public Output<Optional<List<String>>> categories() {
         return Codegen.optional(this.categories);
     }
     /**
-     * The Destination param.
+     * Destination
      * 
      */
     @Export(name="destinations", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> destinations;
+    private Output<List<String>> destinations;
 
     /**
-     * @return The Destination param.
+     * @return Destination
      * 
      */
-    public Output<Optional<List<String>>> destinations() {
-        return Codegen.optional(this.destinations);
+    public Output<List<String>> destinations() {
+        return this.destinations;
     }
     /**
-     * The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+     * The folder containing the traffic steering rule
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output<String> folder;
 
     /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+     * @return The folder containing the traffic steering rule
      * 
      */
     public Output<String> folder() {
         return this.folder;
     }
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Service param.
+     * Service
      * 
      */
     @Export(name="services", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> services;
 
     /**
-     * @return The Service param.
+     * @return Service
      * 
      */
     public Output<List<String>> services() {
         return this.services;
     }
     /**
-     * The SourceUser param.
+     * Source user
      * 
      */
     @Export(name="sourceUsers", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> sourceUsers;
+    private Output<List<String>> sourceUsers;
 
     /**
-     * @return The SourceUser param.
+     * @return Source user
      * 
      */
-    public Output<Optional<List<String>>> sourceUsers() {
-        return Codegen.optional(this.sourceUsers);
+    public Output<List<String>> sourceUsers() {
+        return this.sourceUsers;
     }
     /**
-     * The Source param.
+     * Source
      * 
      */
     @Export(name="sources", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> sources;
 
     /**
-     * @return The Source param.
+     * @return Source
      * 
      */
     public Output<List<String>> sources() {

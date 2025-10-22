@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _factors;
 
         /// <summary>
-        /// The Factors param.
+        /// Factors
         /// </summary>
         public InputList<string> Factors
         {
@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The MfaEnable param.
+        /// Mfa enable
         /// </summary>
         [Input("mfaEnable")]
         public Input<bool>? MfaEnable { get; set; }

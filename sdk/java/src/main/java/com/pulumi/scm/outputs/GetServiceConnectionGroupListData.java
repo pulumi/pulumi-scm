@@ -13,66 +13,70 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceConnectionGroupListData {
     /**
-     * @return The DisableSnat param.
+     * @return Disable snat
      * 
      */
     private Boolean disableSnat;
     /**
-     * @return UUID of the resource.
+     * @return The UUID of the service connection group
      * 
      */
     private String id;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The PbfOnly param.
+     * @return Pbf only
      * 
      */
     private Boolean pbfOnly;
     /**
-     * @return The Targets param.
+     * @return Target
      * 
      */
     private List<String> targets;
+    private String tfid;
 
     private GetServiceConnectionGroupListData() {}
     /**
-     * @return The DisableSnat param.
+     * @return Disable snat
      * 
      */
     public Boolean disableSnat() {
         return this.disableSnat;
     }
     /**
-     * @return UUID of the resource.
+     * @return The UUID of the service connection group
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The PbfOnly param.
+     * @return Pbf only
      * 
      */
     public Boolean pbfOnly() {
         return this.pbfOnly;
     }
     /**
-     * @return The Targets param.
+     * @return Target
      * 
      */
     public List<String> targets() {
         return this.targets;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -89,6 +93,7 @@ public final class GetServiceConnectionGroupListData {
         private String name;
         private Boolean pbfOnly;
         private List<String> targets;
+        private String tfid;
         public Builder() {}
         public Builder(GetServiceConnectionGroupListData defaults) {
     	      Objects.requireNonNull(defaults);
@@ -97,6 +102,7 @@ public final class GetServiceConnectionGroupListData {
     	      this.name = defaults.name;
     	      this.pbfOnly = defaults.pbfOnly;
     	      this.targets = defaults.targets;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -142,6 +148,14 @@ public final class GetServiceConnectionGroupListData {
         public Builder targets(String... targets) {
             return targets(List.of(targets));
         }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetServiceConnectionGroupListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetServiceConnectionGroupListData build() {
             final var _resultValue = new GetServiceConnectionGroupListData();
             _resultValue.disableSnat = disableSnat;
@@ -149,6 +163,7 @@ public final class GetServiceConnectionGroupListData {
             _resultValue.name = name;
             _resultValue.pbfOnly = pbfOnly;
             _resultValue.targets = targets;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

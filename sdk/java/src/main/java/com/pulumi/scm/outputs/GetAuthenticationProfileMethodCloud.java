@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileMethodCloud {
     /**
-     * @return The tenant profile name.
+     * @return The tenant profile name
      * 
      */
     private String profileName;
 
     private GetAuthenticationProfileMethodCloud() {}
     /**
-     * @return The tenant profile name.
+     * @return The tenant profile name
      * 
      */
     public String profileName() {

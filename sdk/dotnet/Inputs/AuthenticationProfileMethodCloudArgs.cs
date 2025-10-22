@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class AuthenticationProfileMethodCloudArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The tenant profile name.
+        /// The tenant profile name
         /// </summary>
         [Input("profileName")]
         public Input<string>? ProfileName { get; set; }

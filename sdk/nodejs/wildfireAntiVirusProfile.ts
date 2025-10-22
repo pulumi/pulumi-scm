@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.WildfireAntiVirusProfile("example", {folder: "Shared"});
- * ```
+ * WildfireAntiVirusProfile resource
  */
 export class WildfireAntiVirusProfile extends pulumi.CustomResource {
     /**
@@ -47,40 +38,40 @@ export class WildfireAntiVirusProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Description param.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The MlavExceptions param.
+     * Mlav exception
      */
     declare public readonly mlavExceptions: pulumi.Output<outputs.WildfireAntiVirusProfileMlavException[] | undefined>;
     /**
-     * The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The PacketCapture param.
+     * Packet capture
      */
     declare public readonly packetCapture: pulumi.Output<boolean | undefined>;
     /**
-     * The Rules param.
+     * Rules
      */
     declare public readonly rules: pulumi.Output<outputs.WildfireAntiVirusProfileRule[] | undefined>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      */
     declare public readonly threatExceptions: pulumi.Output<outputs.WildfireAntiVirusProfileThreatException[] | undefined>;
 
@@ -130,40 +121,40 @@ export class WildfireAntiVirusProfile extends pulumi.CustomResource {
  */
 export interface WildfireAntiVirusProfileState {
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The MlavExceptions param.
+     * Mlav exception
      */
     mlavExceptions?: pulumi.Input<pulumi.Input<inputs.WildfireAntiVirusProfileMlavException>[]>;
     /**
-     * The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The PacketCapture param.
+     * Packet capture
      */
     packetCapture?: pulumi.Input<boolean>;
     /**
-     * The Rules param.
+     * Rules
      */
     rules?: pulumi.Input<pulumi.Input<inputs.WildfireAntiVirusProfileRule>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      */
     threatExceptions?: pulumi.Input<pulumi.Input<inputs.WildfireAntiVirusProfileThreatException>[]>;
 }
@@ -173,39 +164,39 @@ export interface WildfireAntiVirusProfileState {
  */
 export interface WildfireAntiVirusProfileArgs {
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The MlavExceptions param.
+     * Mlav exception
      */
     mlavExceptions?: pulumi.Input<pulumi.Input<inputs.WildfireAntiVirusProfileMlavException>[]>;
     /**
-     * The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The PacketCapture param.
+     * Packet capture
      */
     packetCapture?: pulumi.Input<boolean>;
     /**
-     * The Rules param.
+     * Rules
      */
     rules?: pulumi.Input<pulumi.Input<inputs.WildfireAntiVirusProfileRule>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      */
     threatExceptions?: pulumi.Input<pulumi.Input<inputs.WildfireAntiVirusProfileThreatException>[]>;
 }

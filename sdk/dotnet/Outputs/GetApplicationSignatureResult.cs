@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetApplicationSignatureResult
     {
         /// <summary>
-        /// The AndConditions param.
+        /// And condition
         /// </summary>
         public readonly ImmutableArray<Outputs.GetApplicationSignatureAndConditionResult> AndConditions;
         /// <summary>
-        /// The Comment param. String length must not exceed 256 characters.
+        /// Comment
         /// </summary>
         public readonly string Comment;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The OrderFree param. Default: `False`.
+        /// Order free
         /// </summary>
         public readonly bool OrderFree;
         /// <summary>
-        /// The Scope param. String must be one of these: `"protocol-data-unit"`, `"session"`. Default: `"protocol-data-unit"`.
+        /// Scope
         /// </summary>
         public readonly string Scope;
 

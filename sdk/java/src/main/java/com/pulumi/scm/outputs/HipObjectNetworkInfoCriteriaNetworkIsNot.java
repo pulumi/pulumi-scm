@@ -4,9 +4,10 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.scm.outputs.HipObjectNetworkInfoCriteriaNetworkIsNotEthernet;
 import com.pulumi.scm.outputs.HipObjectNetworkInfoCriteriaNetworkIsNotMobile;
+import com.pulumi.scm.outputs.HipObjectNetworkInfoCriteriaNetworkIsNotUnknown;
 import com.pulumi.scm.outputs.HipObjectNetworkInfoCriteriaNetworkIsNotWifi;
-import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,50 +15,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
     /**
-     * @return The Ethernet param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Ethernet
      * 
      */
-    private @Nullable Boolean ethernet;
+    private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotEthernet ethernet;
     /**
-     * @return The Mobile param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Mobile
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotMobile mobile;
     /**
-     * @return The Unknown param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Unknown
      * 
      */
-    private @Nullable Boolean unknown;
+    private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotUnknown unknown;
     /**
-     * @return The Wifi param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Wifi
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotWifi wifi;
 
     private HipObjectNetworkInfoCriteriaNetworkIsNot() {}
     /**
-     * @return The Ethernet param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Ethernet
      * 
      */
-    public Optional<Boolean> ethernet() {
+    public Optional<HipObjectNetworkInfoCriteriaNetworkIsNotEthernet> ethernet() {
         return Optional.ofNullable(this.ethernet);
     }
     /**
-     * @return The Mobile param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Mobile
      * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetworkIsNotMobile> mobile() {
         return Optional.ofNullable(this.mobile);
     }
     /**
-     * @return The Unknown param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Unknown
      * 
      */
-    public Optional<Boolean> unknown() {
+    public Optional<HipObjectNetworkInfoCriteriaNetworkIsNotUnknown> unknown() {
         return Optional.ofNullable(this.unknown);
     }
     /**
-     * @return The Wifi param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Wifi
      * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetworkIsNotWifi> wifi() {
@@ -73,9 +74,9 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Boolean ethernet;
+        private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotEthernet ethernet;
         private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotMobile mobile;
-        private @Nullable Boolean unknown;
+        private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotUnknown unknown;
         private @Nullable HipObjectNetworkInfoCriteriaNetworkIsNotWifi wifi;
         public Builder() {}
         public Builder(HipObjectNetworkInfoCriteriaNetworkIsNot defaults) {
@@ -87,7 +88,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
         }
 
         @CustomType.Setter
-        public Builder ethernet(@Nullable Boolean ethernet) {
+        public Builder ethernet(@Nullable HipObjectNetworkInfoCriteriaNetworkIsNotEthernet ethernet) {
 
             this.ethernet = ethernet;
             return this;
@@ -99,7 +100,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNot {
             return this;
         }
         @CustomType.Setter
-        public Builder unknown(@Nullable Boolean unknown) {
+        public Builder unknown(@Nullable HipObjectNetworkInfoCriteriaNetworkIsNotUnknown unknown) {
 
             this.unknown = unknown;
             return this;

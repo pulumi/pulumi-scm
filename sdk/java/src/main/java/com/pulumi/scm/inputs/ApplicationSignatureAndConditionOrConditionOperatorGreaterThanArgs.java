@@ -20,14 +20,14 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorGreaterTha
     public static final ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgs Empty = new ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgs();
 
     /**
-     * The Context param. String length must not exceed 127 characters.
+     * Context
      * 
      */
     @Import(name="context", required=true)
     private Output<String> context;
 
     /**
-     * @return The Context param. String length must not exceed 127 characters.
+     * @return Context
      * 
      */
     public Output<String> context() {
@@ -35,14 +35,14 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorGreaterTha
     }
 
     /**
-     * The Qualifiers param.
+     * Qualifier
      * 
      */
     @Import(name="qualifiers")
     private @Nullable Output<List<ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgs>> qualifiers;
 
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     public Optional<Output<List<ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgs>>> qualifiers() {
@@ -50,14 +50,14 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorGreaterTha
     }
 
     /**
-     * The Value param. Value must be between 0 and 4294967295.
+     * Value
      * 
      */
     @Import(name="value", required=true)
     private Output<Integer> value;
 
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     public Output<Integer> value() {
@@ -91,7 +91,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorGreaterTha
         }
 
         /**
-         * @param context The Context param. String length must not exceed 127 characters.
+         * @param context Context
          * 
          * @return builder
          * 
@@ -102,7 +102,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorGreaterTha
         }
 
         /**
-         * @param context The Context param. String length must not exceed 127 characters.
+         * @param context Context
          * 
          * @return builder
          * 
@@ -112,7 +112,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorGreaterTha
         }
 
         /**
-         * @param qualifiers The Qualifiers param.
+         * @param qualifiers Qualifier
          * 
          * @return builder
          * 
@@ -123,7 +123,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorGreaterTha
         }
 
         /**
-         * @param qualifiers The Qualifiers param.
+         * @param qualifiers Qualifier
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorGreaterTha
         }
 
         /**
-         * @param qualifiers The Qualifiers param.
+         * @param qualifiers Qualifier
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorGreaterTha
         }
 
         /**
-         * @param value The Value param. Value must be between 0 and 4294967295.
+         * @param value Value
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorGreaterTha
         }
 
         /**
-         * @param value The Value param. Value must be between 0 and 4294967295.
+         * @param value Value
          * 
          * @return builder
          * 

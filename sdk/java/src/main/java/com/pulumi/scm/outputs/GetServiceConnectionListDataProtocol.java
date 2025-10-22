@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceConnectionListDataProtocol {
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     private GetServiceConnectionListDataProtocolBgp bgp;
 
     private GetServiceConnectionListDataProtocol() {}
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     public GetServiceConnectionListDataProtocolBgp bgp() {

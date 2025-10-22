@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIpsecTunnelListDataAutoKeyProxyIdV6Result
     {
         /// <summary>
-        /// The Local param.
+        /// Local
         /// </summary>
         public readonly string Local;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Protocol param.
+        /// IPv6 type of proxy*id protocol values for protocol
         /// </summary>
         public readonly Outputs.GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolResult Protocol;
         /// <summary>
-        /// The Remote param.
+        /// Remote
         /// </summary>
         public readonly string Remote;
 

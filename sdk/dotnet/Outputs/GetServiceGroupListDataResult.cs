@@ -14,36 +14,61 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetServiceGroupListDataResult
     {
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the service group
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Members
         /// </summary>
         public readonly ImmutableArray<string> Members;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the service group
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Tags associated with the service group
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetServiceGroupListDataResult(
+            string device,
+
+            string folder,
+
             string id,
 
             ImmutableArray<string> members,
 
             string name,
 
-            ImmutableArray<string> tags)
+            string snippet,
+
+            ImmutableArray<string> tags,
+
+            string tfid)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
             Members = members;
             Name = name;
+            Snippet = snippet;
             Tags = tags;
+            Tfid = tfid;
         }
     }
 }

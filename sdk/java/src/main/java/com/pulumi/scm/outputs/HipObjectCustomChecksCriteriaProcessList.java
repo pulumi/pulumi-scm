@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectCustomChecksCriteriaProcessList {
     /**
-     * @return Process Name. String length must not exceed 1023 characters.
+     * @return Process Name
      * 
      */
     private String name;
     /**
-     * @return The Running param. Default: `true`.
+     * @return Running
      * 
      */
     private @Nullable Boolean running;
 
     private HipObjectCustomChecksCriteriaProcessList() {}
     /**
-     * @return Process Name. String length must not exceed 1023 characters.
+     * @return Process Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Running param. Default: `true`.
+     * @return Running
      * 
      */
     public Optional<Boolean> running() {

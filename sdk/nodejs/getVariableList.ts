@@ -15,9 +15,21 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getVariableList({
- *     folder: "Shared",
+ * //
+ * // Data source to retrieve a list of all variables in a folder.
+ * //
+ * // Example 1: Fetch a list of all variables in the "Global" aka "All" folder.
+ * const allGlobal = scm.getVariableList({
+ *     folder: "All",
  * });
+ * export const scmVariableListGlobal = allGlobal.then(allGlobal => allGlobal.datas);
+ * // Example 2: Use pagination to get the first variables by name.
+ * const paginated = scm.getVariableList({
+ *     folder: "All",
+ *     limit: 5,
+ *     offset: 0,
+ * });
+ * export const scmVariableListPaginated = paginated.then(paginated => paginated.datas);
  * ```
  */
 export function getVariableList(args?: GetVariableListArgs, opts?: pulumi.InvokeOptions): Promise<GetVariableListResult> {
@@ -38,27 +50,27 @@ export function getVariableList(args?: GetVariableListArgs, opts?: pulumi.Invoke
  */
 export interface GetVariableListArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: string;
 }
@@ -68,15 +80,15 @@ export interface GetVariableListArgs {
  */
 export interface GetVariableListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetVariableListData[];
     /**
-     * The Device param.
+     * The device of the item.
      */
     readonly device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     readonly folder?: string;
     /**
@@ -84,24 +96,24 @@ export interface GetVariableListResult {
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
@@ -114,9 +126,21 @@ export interface GetVariableListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getVariableList({
- *     folder: "Shared",
+ * //
+ * // Data source to retrieve a list of all variables in a folder.
+ * //
+ * // Example 1: Fetch a list of all variables in the "Global" aka "All" folder.
+ * const allGlobal = scm.getVariableList({
+ *     folder: "All",
  * });
+ * export const scmVariableListGlobal = allGlobal.then(allGlobal => allGlobal.datas);
+ * // Example 2: Use pagination to get the first variables by name.
+ * const paginated = scm.getVariableList({
+ *     folder: "All",
+ *     limit: 5,
+ *     offset: 0,
+ * });
+ * export const scmVariableListPaginated = paginated.then(paginated => paginated.datas);
  * ```
  */
 export function getVariableListOutput(args?: GetVariableListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVariableListResult> {
@@ -137,27 +161,27 @@ export function getVariableListOutput(args?: GetVariableListOutputArgs, opts?: p
  */
 export interface GetVariableListOutputArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: pulumi.Input<string>;
 }

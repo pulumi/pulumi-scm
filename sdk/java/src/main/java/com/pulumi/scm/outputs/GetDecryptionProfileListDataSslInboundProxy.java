@@ -11,50 +11,50 @@ import java.util.Objects;
 @CustomType
 public final class GetDecryptionProfileListDataSslInboundProxy {
     /**
-     * @return The BlockIfHsmUnavailable param. Default: `false`.
+     * @return Block if hsm unavailable
      * 
      */
     private Boolean blockIfHsmUnavailable;
     /**
-     * @return The BlockIfNoResource param. Default: `false`.
+     * @return Block if no resource
      * 
      */
     private Boolean blockIfNoResource;
     /**
-     * @return The BlockUnsupportedCipher param. Default: `false`.
+     * @return Block unsupported cipher
      * 
      */
     private Boolean blockUnsupportedCipher;
     /**
-     * @return The BlockUnsupportedVersion param. Default: `false`.
+     * @return Block unsupported version
      * 
      */
     private Boolean blockUnsupportedVersion;
 
     private GetDecryptionProfileListDataSslInboundProxy() {}
     /**
-     * @return The BlockIfHsmUnavailable param. Default: `false`.
+     * @return Block if hsm unavailable
      * 
      */
     public Boolean blockIfHsmUnavailable() {
         return this.blockIfHsmUnavailable;
     }
     /**
-     * @return The BlockIfNoResource param. Default: `false`.
+     * @return Block if no resource
      * 
      */
     public Boolean blockIfNoResource() {
         return this.blockIfNoResource;
     }
     /**
-     * @return The BlockUnsupportedCipher param. Default: `false`.
+     * @return Block unsupported cipher
      * 
      */
     public Boolean blockUnsupportedCipher() {
         return this.blockUnsupportedCipher;
     }
     /**
-     * @return The BlockUnsupportedVersion param. Default: `false`.
+     * @return Block unsupported version
      * 
      */
     public Boolean blockUnsupportedVersion() {

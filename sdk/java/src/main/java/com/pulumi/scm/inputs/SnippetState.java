@@ -17,14 +17,14 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
     public static final SnippetState Empty = new SnippetState();
 
     /**
-     * The Description param.
+     * The description of the snippet
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the snippet
      * 
      */
     public Optional<Output<String>> description() {
@@ -32,14 +32,14 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Labels param.
+     * Labels applied to the snippet
      * 
      */
     @Import(name="labels")
     private @Nullable Output<List<String>> labels;
 
     /**
-     * @return The Labels param.
+     * @return Labels applied to the snippet
      * 
      */
     public Optional<Output<List<String>>> labels() {
@@ -47,14 +47,14 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Name param.
+     * The name of the snippet
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the snippet
      * 
      */
     public Optional<Output<String>> name() {
@@ -69,14 +69,14 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
+     * The snippet type
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
+     * @return The snippet type
      * 
      */
     public Optional<Output<String>> type() {
@@ -112,7 +112,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the snippet
          * 
          * @return builder
          * 
@@ -123,7 +123,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the snippet
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param labels The Labels param.
+         * @param labels Labels applied to the snippet
          * 
          * @return builder
          * 
@@ -144,7 +144,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param labels The Labels param.
+         * @param labels Labels applied to the snippet
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param labels The Labels param.
+         * @param labels Labels applied to the snippet
          * 
          * @return builder
          * 
@@ -164,7 +164,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the snippet
          * 
          * @return builder
          * 
@@ -175,7 +175,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the snippet
          * 
          * @return builder
          * 
@@ -194,7 +194,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
+         * @param type The snippet type
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class SnippetState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
+         * @param type The snippet type
          * 
          * @return builder
          * 

@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.AntiSpywareSignatureSignatureCombinationAndConditionGetArgs>? _andConditions;
 
         /// <summary>
-        /// The AndConditions param.
+        /// And condition
         /// </summary>
         public InputList<Inputs.AntiSpywareSignatureSignatureCombinationAndConditionGetArgs> AndConditions
         {
@@ -25,13 +25,13 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The OrderFree param. Default: `False`.
+        /// Order free
         /// </summary>
         [Input("orderFree")]
         public Input<bool>? OrderFree { get; set; }
 
         /// <summary>
-        /// The TimeAttribute param.
+        /// anti spyware time attribute
         /// </summary>
         [Input("timeAttribute")]
         public Input<Inputs.AntiSpywareSignatureSignatureCombinationTimeAttributeGetArgs>? TimeAttribute { get; set; }

@@ -20,14 +20,14 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
     public static final HipObjectCustomChecksCriteriaRegistryKeyArgs Empty = new HipObjectCustomChecksCriteriaRegistryKeyArgs();
 
     /**
-     * Registry key default value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * Registry key default value data
      * 
      */
     @Import(name="defaultValueData")
     private @Nullable Output<String> defaultValueData;
 
     /**
-     * @return Registry key default value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Registry key default value data
      * 
      */
     public Optional<Output<String>> defaultValueData() {
@@ -35,14 +35,14 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
     }
 
     /**
-     * Registry key. String length must not exceed 1023 characters.
+     * Registry key
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return Registry key. String length must not exceed 1023 characters.
+     * @return Registry key
      * 
      */
     public Output<String> name() {
@@ -50,14 +50,14 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
     }
 
     /**
-     * Key does not exist or match specified value data. Default: `false`.
+     * Key does not exist or match specified value data
      * 
      */
     @Import(name="negate")
     private @Nullable Output<Boolean> negate;
 
     /**
-     * @return Key does not exist or match specified value data. Default: `false`.
+     * @return Key does not exist or match specified value data
      * 
      */
     public Optional<Output<Boolean>> negate() {
@@ -65,14 +65,14 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
     }
 
     /**
-     * The RegistryValues param.
+     * Registry value
      * 
      */
     @Import(name="registryValues")
     private @Nullable Output<List<HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs>> registryValues;
 
     /**
-     * @return The RegistryValues param.
+     * @return Registry value
      * 
      */
     public Optional<Output<List<HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs>>> registryValues() {
@@ -107,7 +107,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
         }
 
         /**
-         * @param defaultValueData Registry key default value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+         * @param defaultValueData Registry key default value data
          * 
          * @return builder
          * 
@@ -118,7 +118,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
         }
 
         /**
-         * @param defaultValueData Registry key default value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+         * @param defaultValueData Registry key default value data
          * 
          * @return builder
          * 
@@ -128,7 +128,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
         }
 
         /**
-         * @param name Registry key. String length must not exceed 1023 characters.
+         * @param name Registry key
          * 
          * @return builder
          * 
@@ -139,7 +139,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
         }
 
         /**
-         * @param name Registry key. String length must not exceed 1023 characters.
+         * @param name Registry key
          * 
          * @return builder
          * 
@@ -149,7 +149,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
         }
 
         /**
-         * @param negate Key does not exist or match specified value data. Default: `false`.
+         * @param negate Key does not exist or match specified value data
          * 
          * @return builder
          * 
@@ -160,7 +160,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
         }
 
         /**
-         * @param negate Key does not exist or match specified value data. Default: `false`.
+         * @param negate Key does not exist or match specified value data
          * 
          * @return builder
          * 
@@ -170,7 +170,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
         }
 
         /**
-         * @param registryValues The RegistryValues param.
+         * @param registryValues Registry value
          * 
          * @return builder
          * 
@@ -181,7 +181,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
         }
 
         /**
-         * @param registryValues The RegistryValues param.
+         * @param registryValues Registry value
          * 
          * @return builder
          * 
@@ -191,7 +191,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyArgs extends com.pulu
         }
 
         /**
-         * @param registryValues The RegistryValues param.
+         * @param registryValues Registry value
          * 
          * @return builder
          * 

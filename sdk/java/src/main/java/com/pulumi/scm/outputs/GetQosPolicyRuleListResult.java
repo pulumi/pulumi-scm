@@ -16,17 +16,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetQosPolicyRuleListResult {
     /**
-     * @return The Data param.
+     * @return The data.
      * 
      */
     private List<GetQosPolicyRuleListData> datas;
     /**
-     * @return The Device param.
+     * @return The device of the item.
      * 
      */
     private @Nullable String device;
     /**
-     * @return The Folder param.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private @Nullable String folder;
@@ -36,54 +36,49 @@ public final class GetQosPolicyRuleListResult {
      */
     private String id;
     /**
-     * @return The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * @return The max number of items to return. Default: 200.
      * 
      */
-    private Integer limit;
+    private @Nullable Integer limit;
     /**
-     * @return The Name param.
+     * @return The name of the item.
      * 
      */
     private @Nullable String name;
     /**
-     * @return The Offset param. Default: `0`.
+     * @return The offset of the first item to return.
      * 
      */
-    private Integer offset;
+    private @Nullable Integer offset;
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-     * 
-     */
-    private String position;
-    /**
-     * @return The Snippet param.
+     * @return The snippet of the item.
      * 
      */
     private @Nullable String snippet;
     private String tfid;
     /**
-     * @return The Total param.
+     * @return The total number of items.
      * 
      */
     private Integer total;
 
     private GetQosPolicyRuleListResult() {}
     /**
-     * @return The Data param.
+     * @return The data.
      * 
      */
     public List<GetQosPolicyRuleListData> datas() {
         return this.datas;
     }
     /**
-     * @return The Device param.
+     * @return The device of the item.
      * 
      */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
     /**
-     * @return The Folder param.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public Optional<String> folder() {
@@ -97,35 +92,28 @@ public final class GetQosPolicyRuleListResult {
         return this.id;
     }
     /**
-     * @return The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * @return The max number of items to return. Default: 200.
      * 
      */
-    public Integer limit() {
-        return this.limit;
+    public Optional<Integer> limit() {
+        return Optional.ofNullable(this.limit);
     }
     /**
-     * @return The Name param.
+     * @return The name of the item.
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The Offset param. Default: `0`.
+     * @return The offset of the first item to return.
      * 
      */
-    public Integer offset() {
-        return this.offset;
+    public Optional<Integer> offset() {
+        return Optional.ofNullable(this.offset);
     }
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-     * 
-     */
-    public String position() {
-        return this.position;
-    }
-    /**
-     * @return The Snippet param.
+     * @return The snippet of the item.
      * 
      */
     public Optional<String> snippet() {
@@ -135,7 +123,7 @@ public final class GetQosPolicyRuleListResult {
         return this.tfid;
     }
     /**
-     * @return The Total param.
+     * @return The total number of items.
      * 
      */
     public Integer total() {
@@ -155,10 +143,9 @@ public final class GetQosPolicyRuleListResult {
         private @Nullable String device;
         private @Nullable String folder;
         private String id;
-        private Integer limit;
+        private @Nullable Integer limit;
         private @Nullable String name;
-        private Integer offset;
-        private String position;
+        private @Nullable Integer offset;
         private @Nullable String snippet;
         private String tfid;
         private Integer total;
@@ -172,7 +159,6 @@ public final class GetQosPolicyRuleListResult {
     	      this.limit = defaults.limit;
     	      this.name = defaults.name;
     	      this.offset = defaults.offset;
-    	      this.position = defaults.position;
     	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.total = defaults.total;
@@ -210,10 +196,8 @@ public final class GetQosPolicyRuleListResult {
             return this;
         }
         @CustomType.Setter
-        public Builder limit(Integer limit) {
-            if (limit == null) {
-              throw new MissingRequiredPropertyException("GetQosPolicyRuleListResult", "limit");
-            }
+        public Builder limit(@Nullable Integer limit) {
+
             this.limit = limit;
             return this;
         }
@@ -224,19 +208,9 @@ public final class GetQosPolicyRuleListResult {
             return this;
         }
         @CustomType.Setter
-        public Builder offset(Integer offset) {
-            if (offset == null) {
-              throw new MissingRequiredPropertyException("GetQosPolicyRuleListResult", "offset");
-            }
+        public Builder offset(@Nullable Integer offset) {
+
             this.offset = offset;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder position(String position) {
-            if (position == null) {
-              throw new MissingRequiredPropertyException("GetQosPolicyRuleListResult", "position");
-            }
-            this.position = position;
             return this;
         }
         @CustomType.Setter
@@ -270,7 +244,6 @@ public final class GetQosPolicyRuleListResult {
             _resultValue.limit = limit;
             _resultValue.name = name;
             _resultValue.offset = offset;
-            _resultValue.position = position;
             _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.total = total;

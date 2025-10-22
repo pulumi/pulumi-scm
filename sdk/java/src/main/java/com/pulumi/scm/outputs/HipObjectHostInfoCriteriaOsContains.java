@@ -12,62 +12,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectHostInfoCriteriaOsContains {
     /**
-     * @return Apple vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Apple
      * 
      */
     private @Nullable String apple;
     /**
-     * @return Google vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Google
      * 
      */
     private @Nullable String google;
     /**
-     * @return Linux vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Linux
      * 
      */
     private @Nullable String linux;
     /**
-     * @return Microsoft vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Microsoft
      * 
      */
     private @Nullable String microsoft;
     /**
-     * @return Other vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Other
      * 
      */
     private @Nullable String other;
 
     private HipObjectHostInfoCriteriaOsContains() {}
     /**
-     * @return Apple vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Apple
      * 
      */
     public Optional<String> apple() {
         return Optional.ofNullable(this.apple);
     }
     /**
-     * @return Google vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Google
      * 
      */
     public Optional<String> google() {
         return Optional.ofNullable(this.google);
     }
     /**
-     * @return Linux vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Linux
      * 
      */
     public Optional<String> linux() {
         return Optional.ofNullable(this.linux);
     }
     /**
-     * @return Microsoft vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Microsoft
      * 
      */
     public Optional<String> microsoft() {
         return Optional.ofNullable(this.microsoft);
     }
     /**
-     * @return Other vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+     * @return Other
      * 
      */
     public Optional<String> other() {

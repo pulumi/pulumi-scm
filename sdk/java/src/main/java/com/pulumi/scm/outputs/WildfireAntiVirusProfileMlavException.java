@@ -12,38 +12,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WildfireAntiVirusProfileMlavException {
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     private @Nullable String description;
     /**
-     * @return The Filename param.
+     * @return Filename
      * 
      */
     private @Nullable String filename;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private @Nullable String name;
 
     private WildfireAntiVirusProfileMlavException() {}
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return The Filename param.
+     * @return Filename
      * 
      */
     public Optional<String> filename() {
         return Optional.ofNullable(this.filename);
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<String> name() {

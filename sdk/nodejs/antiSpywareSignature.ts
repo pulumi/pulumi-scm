@@ -7,16 +7,9 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * AntiSpywareSignature resource
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.AntiSpywareSignature("example", {});
- * ```
  */
 export class AntiSpywareSignature extends pulumi.CustomResource {
     /**
@@ -47,60 +40,60 @@ export class AntiSpywareSignature extends pulumi.CustomResource {
     }
 
     /**
-     * The Bugtraqs param.
+     * Bugtraq
      */
     declare public readonly bugtraqs: pulumi.Output<string[] | undefined>;
     /**
-     * The Comment param. String length must not exceed 256 characters.
+     * Comment
      */
     declare public readonly comment: pulumi.Output<string | undefined>;
     /**
-     * The Cves param.
+     * Cve
      */
     declare public readonly cves: pulumi.Output<string[] | undefined>;
     /**
-     * The DefaultAction param.
+     * anti spyware signature default action
      */
     declare public readonly defaultAction: pulumi.Output<outputs.AntiSpywareSignatureDefaultAction | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+     * Direction
      */
     declare public readonly direction: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The References param.
+     * Reference
      */
     declare public readonly references: pulumi.Output<string[] | undefined>;
     /**
-     * The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+     * Severity
      */
     declare public readonly severity: pulumi.Output<string | undefined>;
     /**
-     * The Signature param.
+     * anti spyware signature
      */
-    declare public readonly signature: pulumi.Output<outputs.AntiSpywareSignatureSignature | undefined>;
+    declare public readonly signature: pulumi.Output<outputs.AntiSpywareSignatureSignature>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+     * threat id range \n\n and \n\n
      */
     declare public readonly threatId: pulumi.Output<number>;
     /**
-     * The Threatname param. String length must not exceed 1024 characters.
+     * Threatname
      */
     declare public readonly threatname: pulumi.Output<string>;
     /**
-     * The Vendors param.
+     * Vendor
      */
     declare public readonly vendors: pulumi.Output<string[] | undefined>;
 
@@ -166,60 +159,60 @@ export class AntiSpywareSignature extends pulumi.CustomResource {
  */
 export interface AntiSpywareSignatureState {
     /**
-     * The Bugtraqs param.
+     * Bugtraq
      */
     bugtraqs?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Comment param. String length must not exceed 256 characters.
+     * Comment
      */
     comment?: pulumi.Input<string>;
     /**
-     * The Cves param.
+     * Cve
      */
     cves?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The DefaultAction param.
+     * anti spyware signature default action
      */
     defaultAction?: pulumi.Input<inputs.AntiSpywareSignatureDefaultAction>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+     * Direction
      */
     direction?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The References param.
+     * Reference
      */
     references?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+     * Severity
      */
     severity?: pulumi.Input<string>;
     /**
-     * The Signature param.
+     * anti spyware signature
      */
     signature?: pulumi.Input<inputs.AntiSpywareSignatureSignature>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+     * threat id range \n\n and \n\n
      */
     threatId?: pulumi.Input<number>;
     /**
-     * The Threatname param. String length must not exceed 1024 characters.
+     * Threatname
      */
     threatname?: pulumi.Input<string>;
     /**
-     * The Vendors param.
+     * Vendor
      */
     vendors?: pulumi.Input<pulumi.Input<string>[]>;
 }
@@ -229,59 +222,59 @@ export interface AntiSpywareSignatureState {
  */
 export interface AntiSpywareSignatureArgs {
     /**
-     * The Bugtraqs param.
+     * Bugtraq
      */
     bugtraqs?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Comment param. String length must not exceed 256 characters.
+     * Comment
      */
     comment?: pulumi.Input<string>;
     /**
-     * The Cves param.
+     * Cve
      */
     cves?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The DefaultAction param.
+     * anti spyware signature default action
      */
     defaultAction?: pulumi.Input<inputs.AntiSpywareSignatureDefaultAction>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+     * Direction
      */
     direction?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The References param.
+     * Reference
      */
     references?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+     * Severity
      */
     severity?: pulumi.Input<string>;
     /**
-     * The Signature param.
+     * anti spyware signature
      */
     signature?: pulumi.Input<inputs.AntiSpywareSignatureSignature>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+     * threat id range \n\n and \n\n
      */
     threatId: pulumi.Input<number>;
     /**
-     * The Threatname param. String length must not exceed 1024 characters.
+     * Threatname
      */
     threatname: pulumi.Input<string>;
     /**
-     * The Vendors param.
+     * Vendor
      */
     vendors?: pulumi.Input<pulumi.Input<string>[]>;
 }

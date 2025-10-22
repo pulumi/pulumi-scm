@@ -13,31 +13,31 @@ namespace Pulumi.Scm.Inputs
     public sealed class QosPolicyRuleDscpTosCodepointTypeArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Af param. Ensure that only one of the following is specified: `Af`, `Cs`, `Custom`, `Ef`, `Tos`
+        /// Af
         /// </summary>
         [Input("af")]
         public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeAfArgs>? Af { get; set; }
 
         /// <summary>
-        /// The Cs param. Ensure that only one of the following is specified: `Af`, `Cs`, `Custom`, `Ef`, `Tos`
+        /// Cs
         /// </summary>
         [Input("cs")]
         public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeCsArgs>? Cs { get; set; }
 
         /// <summary>
-        /// The Custom param. Ensure that only one of the following is specified: `Af`, `Cs`, `Custom`, `Ef`, `Tos`
+        /// Custom
         /// </summary>
         [Input("custom")]
         public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeCustomArgs>? Custom { get; set; }
 
         /// <summary>
-        /// The Ef param. Ensure that only one of the following is specified: `Af`, `Cs`, `Custom`, `Ef`, `Tos`
+        /// Ef
         /// </summary>
         [Input("ef")]
-        public Input<bool>? Ef { get; set; }
+        public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeEfArgs>? Ef { get; set; }
 
         /// <summary>
-        /// The Tos param. Ensure that only one of the following is specified: `Af`, `Cs`, `Custom`, `Ef`, `Tos`
+        /// Tos
         /// </summary>
         [Input("tos")]
         public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeTosArgs>? Tos { get; set; }

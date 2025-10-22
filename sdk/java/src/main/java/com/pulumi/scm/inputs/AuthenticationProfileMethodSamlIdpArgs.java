@@ -17,14 +17,14 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
     public static final AuthenticationProfileMethodSamlIdpArgs Empty = new AuthenticationProfileMethodSamlIdpArgs();
 
     /**
-     * The AttributeNameUsergroup param. String length must be between 1 and 63 characters.
+     * Attribute name usergroup
      * 
      */
     @Import(name="attributeNameUsergroup")
     private @Nullable Output<String> attributeNameUsergroup;
 
     /**
-     * @return The AttributeNameUsergroup param. String length must be between 1 and 63 characters.
+     * @return Attribute name usergroup
      * 
      */
     public Optional<Output<String>> attributeNameUsergroup() {
@@ -32,14 +32,14 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
     }
 
     /**
-     * The AttributeNameUsername param. String length must be between 1 and 63 characters.
+     * Attribute name username
      * 
      */
     @Import(name="attributeNameUsername")
     private @Nullable Output<String> attributeNameUsername;
 
     /**
-     * @return The AttributeNameUsername param. String length must be between 1 and 63 characters.
+     * @return Attribute name username
      * 
      */
     public Optional<Output<String>> attributeNameUsername() {
@@ -47,14 +47,14 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
     }
 
     /**
-     * The CertificateProfile param. String length must not exceed 31 characters.
+     * Certificate profile
      * 
      */
     @Import(name="certificateProfile")
     private @Nullable Output<String> certificateProfile;
 
     /**
-     * @return The CertificateProfile param. String length must not exceed 31 characters.
+     * @return Certificate profile
      * 
      */
     public Optional<Output<String>> certificateProfile() {
@@ -62,14 +62,14 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
     }
 
     /**
-     * The EnableSingleLogout param.
+     * Enable single logout
      * 
      */
     @Import(name="enableSingleLogout")
     private @Nullable Output<Boolean> enableSingleLogout;
 
     /**
-     * @return The EnableSingleLogout param.
+     * @return Enable single logout
      * 
      */
     public Optional<Output<Boolean>> enableSingleLogout() {
@@ -77,14 +77,14 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
     }
 
     /**
-     * The RequestSigningCertificate param. String length must not exceed 64 characters.
+     * Request signing certificate
      * 
      */
     @Import(name="requestSigningCertificate")
     private @Nullable Output<String> requestSigningCertificate;
 
     /**
-     * @return The RequestSigningCertificate param. String length must not exceed 64 characters.
+     * @return Request signing certificate
      * 
      */
     public Optional<Output<String>> requestSigningCertificate() {
@@ -92,14 +92,14 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
     }
 
     /**
-     * The ServerProfile param. String length must not exceed 63 characters.
+     * Server profile
      * 
      */
     @Import(name="serverProfile")
     private @Nullable Output<String> serverProfile;
 
     /**
-     * @return The ServerProfile param. String length must not exceed 63 characters.
+     * @return Server profile
      * 
      */
     public Optional<Output<String>> serverProfile() {
@@ -136,7 +136,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param attributeNameUsergroup The AttributeNameUsergroup param. String length must be between 1 and 63 characters.
+         * @param attributeNameUsergroup Attribute name usergroup
          * 
          * @return builder
          * 
@@ -147,7 +147,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param attributeNameUsergroup The AttributeNameUsergroup param. String length must be between 1 and 63 characters.
+         * @param attributeNameUsergroup Attribute name usergroup
          * 
          * @return builder
          * 
@@ -157,7 +157,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param attributeNameUsername The AttributeNameUsername param. String length must be between 1 and 63 characters.
+         * @param attributeNameUsername Attribute name username
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param attributeNameUsername The AttributeNameUsername param. String length must be between 1 and 63 characters.
+         * @param attributeNameUsername Attribute name username
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param certificateProfile The CertificateProfile param. String length must not exceed 31 characters.
+         * @param certificateProfile Certificate profile
          * 
          * @return builder
          * 
@@ -189,7 +189,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param certificateProfile The CertificateProfile param. String length must not exceed 31 characters.
+         * @param certificateProfile Certificate profile
          * 
          * @return builder
          * 
@@ -199,7 +199,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param enableSingleLogout The EnableSingleLogout param.
+         * @param enableSingleLogout Enable single logout
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param enableSingleLogout The EnableSingleLogout param.
+         * @param enableSingleLogout Enable single logout
          * 
          * @return builder
          * 
@@ -220,7 +220,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param requestSigningCertificate The RequestSigningCertificate param. String length must not exceed 64 characters.
+         * @param requestSigningCertificate Request signing certificate
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param requestSigningCertificate The RequestSigningCertificate param. String length must not exceed 64 characters.
+         * @param requestSigningCertificate Request signing certificate
          * 
          * @return builder
          * 
@@ -241,7 +241,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param serverProfile The ServerProfile param. String length must not exceed 63 characters.
+         * @param serverProfile Server profile
          * 
          * @return builder
          * 
@@ -252,7 +252,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param serverProfile The ServerProfile param. String length must not exceed 63 characters.
+         * @param serverProfile Server profile
          * 
          * @return builder
          * 

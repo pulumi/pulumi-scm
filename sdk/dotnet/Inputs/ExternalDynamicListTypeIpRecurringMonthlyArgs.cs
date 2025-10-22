@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeIpRecurringMonthlyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        /// Time specification hh (e.g. 20)
         /// </summary>
-        [Input("at")]
-        public Input<string>? At { get; set; }
+        [Input("at", required: true)]
+        public Input<string> At { get; set; } = null!;
 
         /// <summary>
-        /// The DayOfMonth param. Value must be between 1 and 31.
+        /// Day of month
         /// </summary>
         [Input("dayOfMonth", required: true)]
         public Input<int> DayOfMonth { get; set; } = null!;

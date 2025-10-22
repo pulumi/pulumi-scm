@@ -16,162 +16,146 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.ProfileGroup;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ProfileGroup("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * ProfileGroup resource
  * 
  */
 @ResourceType(type="scm:index/profileGroup:ProfileGroup")
 public class ProfileGroup extends com.pulumi.resources.CustomResource {
     /**
-     * List of AI security profiles.
+     * Ai security
      * 
      */
     @Export(name="aiSecurities", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> aiSecurities;
 
     /**
-     * @return List of AI security profiles.
+     * @return Ai security
      * 
      */
     public Output<Optional<List<String>>> aiSecurities() {
         return Codegen.optional(this.aiSecurities);
     }
     /**
-     * The Device param.
+     * Data filtering
+     * 
+     */
+    @Export(name="dataFilterings", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> dataFilterings;
+
+    /**
+     * @return Data filtering
+     * 
+     */
+    public Output<Optional<List<String>>> dataFilterings() {
+        return Codegen.optional(this.dataFilterings);
+    }
+    /**
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * List of DNS security profiles.
+     * Dns security
      * 
      */
     @Export(name="dnsSecurities", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> dnsSecurities;
 
     /**
-     * @return List of DNS security profiles.
+     * @return Dns security
      * 
      */
     public Output<Optional<List<String>>> dnsSecurities() {
         return Codegen.optional(this.dnsSecurities);
     }
     /**
-     * List of file blocking profiles.
+     * File blocking
      * 
      */
     @Export(name="fileBlockings", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> fileBlockings;
 
     /**
-     * @return List of file blocking profiles.
+     * @return File blocking
      * 
      */
     public Output<Optional<List<String>>> fileBlockings() {
         return Codegen.optional(this.fileBlockings);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The name of the profile group.
+     * The name of the profile group
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The name of the profile group.
+     * @return The name of the profile group
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * List of HTTP header insertion profiles.
+     * Saas security
      * 
      */
     @Export(name="saasSecurities", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> saasSecurities;
 
     /**
-     * @return List of HTTP header insertion profiles.
+     * @return Saas security
      * 
      */
     public Output<Optional<List<String>>> saasSecurities() {
         return Codegen.optional(this.saasSecurities);
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * List of anti-spyware profiles.
+     * Spyware
      * 
      */
     @Export(name="spywares", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> spywares;
 
     /**
-     * @return List of anti-spyware profiles.
+     * @return Spyware
      * 
      */
     public Output<Optional<List<String>>> spywares() {
@@ -184,42 +168,42 @@ public class ProfileGroup extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * List of URL filtering profiles.
+     * Url filtering
      * 
      */
     @Export(name="urlFilterings", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> urlFilterings;
 
     /**
-     * @return List of URL filtering profiles.
+     * @return Url filtering
      * 
      */
     public Output<Optional<List<String>>> urlFilterings() {
         return Codegen.optional(this.urlFilterings);
     }
     /**
-     * List of anti-virus and Wildfire analysis profiles.
+     * Virus and wildfire analysis
      * 
      */
     @Export(name="virusAndWildfireAnalyses", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> virusAndWildfireAnalyses;
 
     /**
-     * @return List of anti-virus and Wildfire analysis profiles.
+     * @return Virus and wildfire analysis
      * 
      */
     public Output<Optional<List<String>>> virusAndWildfireAnalyses() {
         return Codegen.optional(this.virusAndWildfireAnalyses);
     }
     /**
-     * List of vulnerability protection profiles.
+     * Vulnerability
      * 
      */
     @Export(name="vulnerabilities", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> vulnerabilities;
 
     /**
-     * @return List of vulnerability protection profiles.
+     * @return Vulnerability
      * 
      */
     public Output<Optional<List<String>>> vulnerabilities() {

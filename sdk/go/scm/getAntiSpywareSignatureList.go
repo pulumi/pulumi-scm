@@ -27,12 +27,14 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetAntiSpywareSignatureList(ctx, &scm.GetAntiSpywareSignatureListArgs{
+//			// Fetch a list of all anti-spyware profiles
+//			allAntiSpywareSignatures, err := scm.GetAntiSpywareSignatureList(ctx, &scm.GetAntiSpywareSignatureListArgs{
 //				Folder: pulumi.StringRef("Shared"),
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("scmAntiSpywareSignatureList", allAntiSpywareSignatures.Datas)
 //			return nil
 //		})
 //	}
@@ -50,40 +52,40 @@ func GetAntiSpywareSignatureList(ctx *pulumi.Context, args *GetAntiSpywareSignat
 
 // A collection of arguments for invoking getAntiSpywareSignatureList.
 type GetAntiSpywareSignatureListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getAntiSpywareSignatureList.
 type GetAntiSpywareSignatureListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetAntiSpywareSignatureListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +100,17 @@ func GetAntiSpywareSignatureListOutput(ctx *pulumi.Context, args GetAntiSpywareS
 
 // A collection of arguments for invoking getAntiSpywareSignatureList.
 type GetAntiSpywareSignatureListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +133,17 @@ func (o GetAntiSpywareSignatureListResultOutput) ToGetAntiSpywareSignatureListRe
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetAntiSpywareSignatureListResultOutput) Datas() GetAntiSpywareSignatureListDataArrayOutput {
 	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) []GetAntiSpywareSignatureListData { return v.Datas }).(GetAntiSpywareSignatureListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetAntiSpywareSignatureListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetAntiSpywareSignatureListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +153,22 @@ func (o GetAntiSpywareSignatureListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetAntiSpywareSignatureListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetAntiSpywareSignatureListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetAntiSpywareSignatureListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetAntiSpywareSignatureListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetAntiSpywareSignatureListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetAntiSpywareSignatureListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +177,7 @@ func (o GetAntiSpywareSignatureListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetAntiSpywareSignatureListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetAntiSpywareSignatureListResult) int { return v.Total }).(pulumi.IntOutput)
 }

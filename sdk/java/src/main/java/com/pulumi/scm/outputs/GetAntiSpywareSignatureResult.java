@@ -15,150 +15,186 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareSignatureResult {
     /**
-     * @return The Bugtraqs param.
+     * @return Bugtraq
      * 
      */
     private List<String> bugtraqs;
     /**
-     * @return The Comment param. String length must not exceed 256 characters.
+     * @return Comment
      * 
      */
     private String comment;
     /**
-     * @return The Cves param.
+     * @return Cve
      * 
      */
     private List<String> cves;
     /**
-     * @return The DefaultAction param.
+     * @return anti spyware signature default action
      * 
      */
     private GetAntiSpywareSignatureDefaultAction defaultAction;
     /**
-     * @return The Direction param. String must be one of these: `&#34;client2server&#34;`, `&#34;server2client&#34;`, `&#34;both&#34;`.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Direction
      * 
      */
     private String direction;
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return The References param.
+     * @return Reference
      * 
      */
     private List<String> references;
     /**
-     * @return The Severity param. String must be one of these: `&#34;critical&#34;`, `&#34;low&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;informational&#34;`.
+     * @return Severity
      * 
      */
     private String severity;
     /**
-     * @return The Signature param.
+     * @return anti spyware signature
      * 
      */
     private GetAntiSpywareSignatureSignature signature;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
     /**
-     * @return threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+     * @return threat id range \n\n and \n\n
      * 
      */
     private Integer threatId;
     /**
-     * @return The Threatname param. String length must not exceed 1024 characters.
+     * @return Threatname
      * 
      */
     private String threatname;
     /**
-     * @return The Vendors param.
+     * @return Vendor
      * 
      */
     private List<String> vendors;
 
     private GetAntiSpywareSignatureResult() {}
     /**
-     * @return The Bugtraqs param.
+     * @return Bugtraq
      * 
      */
     public List<String> bugtraqs() {
         return this.bugtraqs;
     }
     /**
-     * @return The Comment param. String length must not exceed 256 characters.
+     * @return Comment
      * 
      */
     public String comment() {
         return this.comment;
     }
     /**
-     * @return The Cves param.
+     * @return Cve
      * 
      */
     public List<String> cves() {
         return this.cves;
     }
     /**
-     * @return The DefaultAction param.
+     * @return anti spyware signature default action
      * 
      */
     public GetAntiSpywareSignatureDefaultAction defaultAction() {
         return this.defaultAction;
     }
     /**
-     * @return The Direction param. String must be one of these: `&#34;client2server&#34;`, `&#34;server2client&#34;`, `&#34;both&#34;`.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Direction
      * 
      */
     public String direction() {
         return this.direction;
     }
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The References param.
+     * @return Reference
      * 
      */
     public List<String> references() {
         return this.references;
     }
     /**
-     * @return The Severity param. String must be one of these: `&#34;critical&#34;`, `&#34;low&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;informational&#34;`.
+     * @return Severity
      * 
      */
     public String severity() {
         return this.severity;
     }
     /**
-     * @return The Signature param.
+     * @return anti spyware signature
      * 
      */
     public GetAntiSpywareSignatureSignature signature() {
         return this.signature;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
     public String tfid() {
         return this.tfid;
     }
     /**
-     * @return threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+     * @return threat id range \n\n and \n\n
      * 
      */
     public Integer threatId() {
         return this.threatId;
     }
     /**
-     * @return The Threatname param. String length must not exceed 1024 characters.
+     * @return Threatname
      * 
      */
     public String threatname() {
         return this.threatname;
     }
     /**
-     * @return The Vendors param.
+     * @return Vendor
      * 
      */
     public List<String> vendors() {
@@ -178,11 +214,14 @@ public final class GetAntiSpywareSignatureResult {
         private String comment;
         private List<String> cves;
         private GetAntiSpywareSignatureDefaultAction defaultAction;
+        private String device;
         private String direction;
+        private String folder;
         private String id;
         private List<String> references;
         private String severity;
         private GetAntiSpywareSignatureSignature signature;
+        private String snippet;
         private String tfid;
         private Integer threatId;
         private String threatname;
@@ -194,11 +233,14 @@ public final class GetAntiSpywareSignatureResult {
     	      this.comment = defaults.comment;
     	      this.cves = defaults.cves;
     	      this.defaultAction = defaults.defaultAction;
+    	      this.device = defaults.device;
     	      this.direction = defaults.direction;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.references = defaults.references;
     	      this.severity = defaults.severity;
     	      this.signature = defaults.signature;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.threatId = defaults.threatId;
     	      this.threatname = defaults.threatname;
@@ -244,11 +286,27 @@ public final class GetAntiSpywareSignatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetAntiSpywareSignatureResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder direction(String direction) {
             if (direction == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareSignatureResult", "direction");
             }
             this.direction = direction;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetAntiSpywareSignatureResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -284,6 +342,14 @@ public final class GetAntiSpywareSignatureResult {
               throw new MissingRequiredPropertyException("GetAntiSpywareSignatureResult", "signature");
             }
             this.signature = signature;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetAntiSpywareSignatureResult", "snippet");
+            }
+            this.snippet = snippet;
             return this;
         }
         @CustomType.Setter
@@ -327,11 +393,14 @@ public final class GetAntiSpywareSignatureResult {
             _resultValue.comment = comment;
             _resultValue.cves = cves;
             _resultValue.defaultAction = defaultAction;
+            _resultValue.device = device;
             _resultValue.direction = direction;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.references = references;
             _resultValue.severity = severity;
             _resultValue.signature = signature;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.threatId = threatId;
             _resultValue.threatname = threatname;

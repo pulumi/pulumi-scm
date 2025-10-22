@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationProfileMultiFactorAuth {
     /**
-     * @return The Factors param.
+     * @return Factors
      * 
      */
     private @Nullable List<String> factors;
     /**
-     * @return The MfaEnable param.
+     * @return Mfa enable
      * 
      */
     private @Nullable Boolean mfaEnable;
 
     private AuthenticationProfileMultiFactorAuth() {}
     /**
-     * @return The Factors param.
+     * @return Factors
      * 
      */
     public List<String> factors() {
         return this.factors == null ? List.of() : this.factors;
     }
     /**
-     * @return The MfaEnable param.
+     * @return Mfa enable
      * 
      */
     public Optional<Boolean> mfaEnable() {

@@ -14,17 +14,17 @@ namespace Pulumi.Scm.Outputs
     public sealed class DecryptionRuleType
     {
         /// <summary>
-        /// The SslForwardProxy param. Ensure that only one of the following is specified: `SslForwardProxy`, `SslInboundInspection`
+        /// Ssl forward proxy
         /// </summary>
-        public readonly bool? SslForwardProxy;
+        public readonly Outputs.DecryptionRuleTypeSslForwardProxy? SslForwardProxy;
         /// <summary>
-        /// add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `SslForwardProxy`, `SslInboundInspection`
+        /// add the certificate name for SSL inbound inspection
         /// </summary>
         public readonly string? SslInboundInspection;
 
         [OutputConstructor]
         private DecryptionRuleType(
-            bool? sslForwardProxy,
+            Outputs.DecryptionRuleTypeSslForwardProxy? sslForwardProxy,
 
             string? sslInboundInspection)
         {

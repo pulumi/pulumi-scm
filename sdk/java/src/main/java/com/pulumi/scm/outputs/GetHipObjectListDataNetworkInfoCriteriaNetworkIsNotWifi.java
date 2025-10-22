@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifi {
     /**
-     * @return SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return SSID
      * 
      */
     private String ssid;
 
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifi() {}
     /**
-     * @return SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return SSID
      * 
      */
     public String ssid() {

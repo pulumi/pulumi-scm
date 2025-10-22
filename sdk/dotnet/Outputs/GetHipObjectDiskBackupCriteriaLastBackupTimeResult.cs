@@ -14,21 +14,21 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectDiskBackupCriteriaLastBackupTimeResult
     {
         /// <summary>
-        /// The NotAvailable param.
+        /// Not available
         /// </summary>
-        public readonly bool NotAvailable;
+        public readonly Outputs.GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableResult NotAvailable;
         /// <summary>
-        /// The NotWithin param.
+        /// Not within
         /// </summary>
         public readonly Outputs.GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinResult NotWithin;
         /// <summary>
-        /// The Within param.
+        /// Within
         /// </summary>
         public readonly Outputs.GetHipObjectDiskBackupCriteriaLastBackupTimeWithinResult Within;
 
         [OutputConstructor]
         private GetHipObjectDiskBackupCriteriaLastBackupTimeResult(
-            bool notAvailable,
+            Outputs.GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailableResult notAvailable,
 
             Outputs.GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithinResult notWithin,
 

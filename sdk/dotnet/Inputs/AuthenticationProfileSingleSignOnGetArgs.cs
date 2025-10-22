@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class AuthenticationProfileSingleSignOnGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The KerberosKeytab param. String length must not exceed 8192 characters.
+        /// Kerberos keytab
         /// </summary>
         [Input("kerberosKeytab")]
         public Input<string>? KerberosKeytab { get; set; }
 
         /// <summary>
-        /// The Realm param. String length must not exceed 127 characters.
+        /// Realm
         /// </summary>
         [Input("realm")]
         public Input<string>? Realm { get; set; }

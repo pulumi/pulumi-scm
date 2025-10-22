@@ -12,63 +12,39 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// ServiceConnection resource
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewServiceConnection(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 type ServiceConnection struct {
 	pulumi.CustomResourceState
 
-	// The BackupSC param.
+	// Backup s c
 	BackupSC pulumi.StringPtrOutput `pulumi:"backupSC"`
-	// The BgpPeer param.
+	// Bgp peer
 	BgpPeer ServiceConnectionBgpPeerPtrOutput `pulumi:"bgpPeer"`
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder pulumi.StringOutput `pulumi:"folder"`
-	// The IpsecTunnel param.
+	// Ipsec tunnel
 	IpsecTunnel pulumi.StringOutput `pulumi:"ipsecTunnel"`
-	// The Name param.
+	// The name of the service connection
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The NatPool param.
+	// Nat pool
 	NatPool pulumi.StringPtrOutput `pulumi:"natPool"`
-	// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+	// No export community
 	NoExportCommunity pulumi.StringPtrOutput `pulumi:"noExportCommunity"`
-	// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+	// Onboarding type
 	OnboardingType pulumi.StringOutput `pulumi:"onboardingType"`
-	// The Protocol param.
+	// Protocol
 	Protocol ServiceConnectionProtocolPtrOutput `pulumi:"protocol"`
-	// The Qos param.
+	// Qos
 	Qos ServiceConnectionQosPtrOutput `pulumi:"qos"`
-	// The Region param.
+	// Region
 	Region pulumi.StringOutput `pulumi:"region"`
-	// The SecondaryIpsecTunnel param.
+	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel pulumi.StringPtrOutput `pulumi:"secondaryIpsecTunnel"`
-	// The SourceNat param.
+	// Source nat
 	SourceNat pulumi.BoolPtrOutput `pulumi:"sourceNat"`
-	// The Subnets param.
+	// Subnets
 	Subnets pulumi.StringArrayOutput `pulumi:"subnets"`
 	Tfid    pulumi.StringOutput      `pulumi:"tfid"`
 }
@@ -113,69 +89,65 @@ func GetServiceConnection(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ServiceConnection resources.
 type serviceConnectionState struct {
-	// The BackupSC param.
+	// Backup s c
 	BackupSC *string `pulumi:"backupSC"`
-	// The BgpPeer param.
+	// Bgp peer
 	BgpPeer *ServiceConnectionBgpPeer `pulumi:"bgpPeer"`
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder *string `pulumi:"folder"`
-	// The IpsecTunnel param.
+	// Ipsec tunnel
 	IpsecTunnel *string `pulumi:"ipsecTunnel"`
-	// The Name param.
+	// The name of the service connection
 	Name *string `pulumi:"name"`
-	// The NatPool param.
+	// Nat pool
 	NatPool *string `pulumi:"natPool"`
-	// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+	// No export community
 	NoExportCommunity *string `pulumi:"noExportCommunity"`
-	// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+	// Onboarding type
 	OnboardingType *string `pulumi:"onboardingType"`
-	// The Protocol param.
+	// Protocol
 	Protocol *ServiceConnectionProtocol `pulumi:"protocol"`
-	// The Qos param.
+	// Qos
 	Qos *ServiceConnectionQos `pulumi:"qos"`
-	// The Region param.
+	// Region
 	Region *string `pulumi:"region"`
-	// The SecondaryIpsecTunnel param.
+	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel *string `pulumi:"secondaryIpsecTunnel"`
-	// The SourceNat param.
+	// Source nat
 	SourceNat *bool `pulumi:"sourceNat"`
-	// The Subnets param.
+	// Subnets
 	Subnets []string `pulumi:"subnets"`
 	Tfid    *string  `pulumi:"tfid"`
 }
 
 type ServiceConnectionState struct {
-	// The BackupSC param.
+	// Backup s c
 	BackupSC pulumi.StringPtrInput
-	// The BgpPeer param.
+	// Bgp peer
 	BgpPeer ServiceConnectionBgpPeerPtrInput
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder pulumi.StringPtrInput
-	// The IpsecTunnel param.
+	// Ipsec tunnel
 	IpsecTunnel pulumi.StringPtrInput
-	// The Name param.
+	// The name of the service connection
 	Name pulumi.StringPtrInput
-	// The NatPool param.
+	// Nat pool
 	NatPool pulumi.StringPtrInput
-	// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+	// No export community
 	NoExportCommunity pulumi.StringPtrInput
-	// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+	// Onboarding type
 	OnboardingType pulumi.StringPtrInput
-	// The Protocol param.
+	// Protocol
 	Protocol ServiceConnectionProtocolPtrInput
-	// The Qos param.
+	// Qos
 	Qos ServiceConnectionQosPtrInput
-	// The Region param.
+	// Region
 	Region pulumi.StringPtrInput
-	// The SecondaryIpsecTunnel param.
+	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel pulumi.StringPtrInput
-	// The SourceNat param.
+	// Source nat
 	SourceNat pulumi.BoolPtrInput
-	// The Subnets param.
+	// Subnets
 	Subnets pulumi.StringArrayInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -185,65 +157,61 @@ func (ServiceConnectionState) ElementType() reflect.Type {
 }
 
 type serviceConnectionArgs struct {
-	// The BackupSC param.
+	// Backup s c
 	BackupSC *string `pulumi:"backupSC"`
-	// The BgpPeer param.
+	// Bgp peer
 	BgpPeer *ServiceConnectionBgpPeer `pulumi:"bgpPeer"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder *string `pulumi:"folder"`
-	// The IpsecTunnel param.
+	// Ipsec tunnel
 	IpsecTunnel string `pulumi:"ipsecTunnel"`
-	// The Name param.
+	// The name of the service connection
 	Name *string `pulumi:"name"`
-	// The NatPool param.
+	// Nat pool
 	NatPool *string `pulumi:"natPool"`
-	// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+	// No export community
 	NoExportCommunity *string `pulumi:"noExportCommunity"`
-	// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+	// Onboarding type
 	OnboardingType *string `pulumi:"onboardingType"`
-	// The Protocol param.
+	// Protocol
 	Protocol *ServiceConnectionProtocol `pulumi:"protocol"`
-	// The Qos param.
+	// Qos
 	Qos *ServiceConnectionQos `pulumi:"qos"`
-	// The Region param.
+	// Region
 	Region string `pulumi:"region"`
-	// The SecondaryIpsecTunnel param.
+	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel *string `pulumi:"secondaryIpsecTunnel"`
-	// The SourceNat param.
+	// Source nat
 	SourceNat *bool `pulumi:"sourceNat"`
-	// The Subnets param.
+	// Subnets
 	Subnets []string `pulumi:"subnets"`
 }
 
 // The set of arguments for constructing a ServiceConnection resource.
 type ServiceConnectionArgs struct {
-	// The BackupSC param.
+	// Backup s c
 	BackupSC pulumi.StringPtrInput
-	// The BgpPeer param.
+	// Bgp peer
 	BgpPeer ServiceConnectionBgpPeerPtrInput
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder pulumi.StringPtrInput
-	// The IpsecTunnel param.
+	// Ipsec tunnel
 	IpsecTunnel pulumi.StringInput
-	// The Name param.
+	// The name of the service connection
 	Name pulumi.StringPtrInput
-	// The NatPool param.
+	// Nat pool
 	NatPool pulumi.StringPtrInput
-	// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+	// No export community
 	NoExportCommunity pulumi.StringPtrInput
-	// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+	// Onboarding type
 	OnboardingType pulumi.StringPtrInput
-	// The Protocol param.
+	// Protocol
 	Protocol ServiceConnectionProtocolPtrInput
-	// The Qos param.
+	// Qos
 	Qos ServiceConnectionQosPtrInput
-	// The Region param.
+	// Region
 	Region pulumi.StringInput
-	// The SecondaryIpsecTunnel param.
+	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel pulumi.StringPtrInput
-	// The SourceNat param.
+	// Source nat
 	SourceNat pulumi.BoolPtrInput
-	// The Subnets param.
+	// Subnets
 	Subnets pulumi.StringArrayInput
 }
 
@@ -334,77 +302,72 @@ func (o ServiceConnectionOutput) ToServiceConnectionOutputWithContext(ctx contex
 	return o
 }
 
-// The BackupSC param.
+// Backup s c
 func (o ServiceConnectionOutput) BackupSC() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringPtrOutput { return v.BackupSC }).(pulumi.StringPtrOutput)
 }
 
-// The BgpPeer param.
+// Bgp peer
 func (o ServiceConnectionOutput) BgpPeer() ServiceConnectionBgpPeerPtrOutput {
 	return o.ApplyT(func(v *ServiceConnection) ServiceConnectionBgpPeerPtrOutput { return v.BgpPeer }).(ServiceConnectionBgpPeerPtrOutput)
 }
 
-// (Internal use) Encrypted values returned from the API.
+// Map of sensitive values returned from the API.
 func (o ServiceConnectionOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-func (o ServiceConnectionOutput) Folder() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceConnection) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
-}
-
-// The IpsecTunnel param.
+// Ipsec tunnel
 func (o ServiceConnectionOutput) IpsecTunnel() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringOutput { return v.IpsecTunnel }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// The name of the service connection
 func (o ServiceConnectionOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The NatPool param.
+// Nat pool
 func (o ServiceConnectionOutput) NatPool() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringPtrOutput { return v.NatPool }).(pulumi.StringPtrOutput)
 }
 
-// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+// No export community
 func (o ServiceConnectionOutput) NoExportCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringPtrOutput { return v.NoExportCommunity }).(pulumi.StringPtrOutput)
 }
 
-// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+// Onboarding type
 func (o ServiceConnectionOutput) OnboardingType() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringOutput { return v.OnboardingType }).(pulumi.StringOutput)
 }
 
-// The Protocol param.
+// Protocol
 func (o ServiceConnectionOutput) Protocol() ServiceConnectionProtocolPtrOutput {
 	return o.ApplyT(func(v *ServiceConnection) ServiceConnectionProtocolPtrOutput { return v.Protocol }).(ServiceConnectionProtocolPtrOutput)
 }
 
-// The Qos param.
+// Qos
 func (o ServiceConnectionOutput) Qos() ServiceConnectionQosPtrOutput {
 	return o.ApplyT(func(v *ServiceConnection) ServiceConnectionQosPtrOutput { return v.Qos }).(ServiceConnectionQosPtrOutput)
 }
 
-// The Region param.
+// Region
 func (o ServiceConnectionOutput) Region() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringOutput { return v.Region }).(pulumi.StringOutput)
 }
 
-// The SecondaryIpsecTunnel param.
+// Secondary ipsec tunnel
 func (o ServiceConnectionOutput) SecondaryIpsecTunnel() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringPtrOutput { return v.SecondaryIpsecTunnel }).(pulumi.StringPtrOutput)
 }
 
-// The SourceNat param.
+// Source nat
 func (o ServiceConnectionOutput) SourceNat() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.BoolPtrOutput { return v.SourceNat }).(pulumi.BoolPtrOutput)
 }
 
-// The Subnets param.
+// Subnets
 func (o ServiceConnectionOutput) Subnets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ServiceConnection) pulumi.StringArrayOutput { return v.Subnets }).(pulumi.StringArrayOutput)
 }

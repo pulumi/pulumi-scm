@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayProtocolCommonNatTraversal {
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     private @Nullable Boolean enable;
 
     private IkeGatewayProtocolCommonNatTraversal() {}
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     public Optional<Boolean> enable() {

@@ -12,41 +12,19 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewKerberosServerProfile(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// KerberosServerProfile resource
 type KerberosServerProfile struct {
 	pulumi.CustomResourceState
 
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Servers param.
+	// The name of the Kerberos server profile
+	Name pulumi.StringOutput `pulumi:"name"`
+	// The Kerberos server configuration
 	Servers KerberosServerProfileServerArrayOutput `pulumi:"servers"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -84,25 +62,29 @@ func GetKerberosServerProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering KerberosServerProfile resources.
 type kerberosServerProfileState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Servers param.
+	// The name of the Kerberos server profile
+	Name *string `pulumi:"name"`
+	// The Kerberos server configuration
 	Servers []KerberosServerProfileServer `pulumi:"servers"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type KerberosServerProfileState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Servers param.
+	// The name of the Kerberos server profile
+	Name pulumi.StringPtrInput
+	// The Kerberos server configuration
 	Servers KerberosServerProfileServerArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -112,25 +94,29 @@ func (KerberosServerProfileState) ElementType() reflect.Type {
 }
 
 type kerberosServerProfileArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Servers param.
+	// The name of the Kerberos server profile
+	Name *string `pulumi:"name"`
+	// The Kerberos server configuration
 	Servers []KerberosServerProfileServer `pulumi:"servers"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a KerberosServerProfile resource.
 type KerberosServerProfileArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Servers param.
+	// The name of the Kerberos server profile
+	Name pulumi.StringPtrInput
+	// The Kerberos server configuration
 	Servers KerberosServerProfileServerArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -221,22 +207,27 @@ func (o KerberosServerProfileOutput) ToKerberosServerProfileOutputWithContext(ct
 	return o
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o KerberosServerProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *KerberosServerProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o KerberosServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *KerberosServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Servers param.
+// The name of the Kerberos server profile
+func (o KerberosServerProfileOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v *KerberosServerProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
+}
+
+// The Kerberos server configuration
 func (o KerberosServerProfileOutput) Servers() KerberosServerProfileServerArrayOutput {
 	return o.ApplyT(func(v *KerberosServerProfile) KerberosServerProfileServerArrayOutput { return v.Servers }).(KerberosServerProfileServerArrayOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o KerberosServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *KerberosServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

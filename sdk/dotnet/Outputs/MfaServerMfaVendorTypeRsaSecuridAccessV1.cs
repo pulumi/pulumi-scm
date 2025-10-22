@@ -14,29 +14,29 @@ namespace Pulumi.Scm.Outputs
     public sealed class MfaServerMfaVendorTypeRsaSecuridAccessV1
     {
         /// <summary>
-        /// The RsaAccessid param.
+        /// RSA SecurID access ID
         /// </summary>
         public readonly string? RsaAccessid;
         /// <summary>
-        /// The RsaAccesskey param.
+        /// RSA SecurID access key
         /// </summary>
         public readonly string? RsaAccesskey;
         /// <summary>
-        /// The RsaApiHost param.
+        /// RSA SecurID hostname
         /// </summary>
         public readonly string? RsaApiHost;
         /// <summary>
-        /// The RsaAssurancepolicyid param.
+        /// RSA SecurID assurance level
         /// </summary>
         public readonly string? RsaAssurancepolicyid;
         /// <summary>
-        /// The RsaBaseuri param.
+        /// RSA SecurID API base URI
         /// </summary>
         public readonly string? RsaBaseuri;
         /// <summary>
-        /// The RsaTimeout param.
+        /// RSA SecurID timeout (seconds)
         /// </summary>
-        public readonly string? RsaTimeout;
+        public readonly int? RsaTimeout;
 
         [OutputConstructor]
         private MfaServerMfaVendorTypeRsaSecuridAccessV1(
@@ -50,7 +50,7 @@ namespace Pulumi.Scm.Outputs
 
             string? rsaBaseuri,
 
-            string? rsaTimeout)
+            int? rsaTimeout)
         {
             RsaAccessid = rsaAccessid;
             RsaAccesskey = rsaAccesskey;

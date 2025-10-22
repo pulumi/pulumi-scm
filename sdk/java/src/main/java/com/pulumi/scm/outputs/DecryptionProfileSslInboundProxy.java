@@ -12,50 +12,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DecryptionProfileSslInboundProxy {
     /**
-     * @return The BlockIfHsmUnavailable param. Default: `false`.
+     * @return Block if hsm unavailable
      * 
      */
     private @Nullable Boolean blockIfHsmUnavailable;
     /**
-     * @return The BlockIfNoResource param. Default: `false`.
+     * @return Block if no resource
      * 
      */
     private @Nullable Boolean blockIfNoResource;
     /**
-     * @return The BlockUnsupportedCipher param. Default: `false`.
+     * @return Block unsupported cipher
      * 
      */
     private @Nullable Boolean blockUnsupportedCipher;
     /**
-     * @return The BlockUnsupportedVersion param. Default: `false`.
+     * @return Block unsupported version
      * 
      */
     private @Nullable Boolean blockUnsupportedVersion;
 
     private DecryptionProfileSslInboundProxy() {}
     /**
-     * @return The BlockIfHsmUnavailable param. Default: `false`.
+     * @return Block if hsm unavailable
      * 
      */
     public Optional<Boolean> blockIfHsmUnavailable() {
         return Optional.ofNullable(this.blockIfHsmUnavailable);
     }
     /**
-     * @return The BlockIfNoResource param. Default: `false`.
+     * @return Block if no resource
      * 
      */
     public Optional<Boolean> blockIfNoResource() {
         return Optional.ofNullable(this.blockIfNoResource);
     }
     /**
-     * @return The BlockUnsupportedCipher param. Default: `false`.
+     * @return Block unsupported cipher
      * 
      */
     public Optional<Boolean> blockUnsupportedCipher() {
         return Optional.ofNullable(this.blockUnsupportedCipher);
     }
     /**
-     * @return The BlockUnsupportedVersion param. Default: `false`.
+     * @return Block unsupported version
      * 
      */
     public Optional<Boolean> blockUnsupportedVersion() {

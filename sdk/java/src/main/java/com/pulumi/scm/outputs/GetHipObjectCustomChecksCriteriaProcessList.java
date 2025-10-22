@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectCustomChecksCriteriaProcessList {
     /**
-     * @return Process Name. String length must not exceed 1023 characters.
+     * @return Process Name
      * 
      */
     private String name;
     /**
-     * @return The Running param. Default: `true`.
+     * @return Running
      * 
      */
     private Boolean running;
 
     private GetHipObjectCustomChecksCriteriaProcessList() {}
     /**
-     * @return Process Name. String length must not exceed 1023 characters.
+     * @return Process Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Running param. Default: `true`.
+     * @return Running
      * 
      */
     public Boolean running() {

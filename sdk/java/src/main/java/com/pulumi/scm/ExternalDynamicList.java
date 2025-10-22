@@ -18,106 +18,78 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * ExternalDynamicList resource
  * 
  * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.ExternalDynamicList;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ExternalDynamicList("example");
- * 
- *     }
- * }
- * }
- * </pre>
  * 
  */
 @ResourceType(type="scm:index/externalDynamicList:ExternalDynamicList")
 public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      * 
      */
     @Export(name="encryptedValues", refs={Map.class,String.class}, tree="[0,1,1]")
     private Output<Map<String,String>> encryptedValues;
 
     /**
-     * @return (Internal use) Encrypted values returned from the API.
+     * @return Map of sensitive values returned from the API.
      * 
      */
     public Output<Map<String,String>> encryptedValues() {
         return this.encryptedValues;
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the external dynamic list
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the external dynamic list
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -130,14 +102,14 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The Type param.
+     * Type
      * 
      */
     @Export(name="type", refs={ExternalDynamicListType.class}, tree="[0]")
     private Output<ExternalDynamicListType> type;
 
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     public Output<ExternalDynamicListType> type() {
@@ -156,7 +128,7 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ExternalDynamicList(java.lang.String name, ExternalDynamicListArgs args) {
+    public ExternalDynamicList(java.lang.String name, @Nullable ExternalDynamicListArgs args) {
         this(name, args, null);
     }
     /**
@@ -165,7 +137,7 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ExternalDynamicList(java.lang.String name, ExternalDynamicListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ExternalDynamicList(java.lang.String name, @Nullable ExternalDynamicListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/externalDynamicList:ExternalDynamicList", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -173,7 +145,7 @@ public class ExternalDynamicList extends com.pulumi.resources.CustomResource {
         super("scm:index/externalDynamicList:ExternalDynamicList", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static ExternalDynamicListArgs makeArgs(ExternalDynamicListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static ExternalDynamicListArgs makeArgs(@Nullable ExternalDynamicListArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

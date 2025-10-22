@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosPolicyRuleDscpTosCodepointResult
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Type param.
+        /// Type
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosCodepointTypeResult Type;
 

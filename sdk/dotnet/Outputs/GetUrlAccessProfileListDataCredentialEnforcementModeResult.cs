@@ -14,31 +14,31 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetUrlAccessProfileListDataCredentialEnforcementModeResult
     {
         /// <summary>
-        /// The Disabled param.
+        /// Disabled
         /// </summary>
-        public readonly bool Disabled;
+        public readonly Outputs.GetUrlAccessProfileListDataCredentialEnforcementModeDisabledResult Disabled;
         /// <summary>
-        /// The DomainCredentials param.
+        /// Domain credentials
         /// </summary>
-        public readonly bool DomainCredentials;
+        public readonly Outputs.GetUrlAccessProfileListDataCredentialEnforcementModeDomainCredentialsResult DomainCredentials;
         /// <summary>
-        /// The GroupMapping param.
+        /// Group mapping
         /// </summary>
         public readonly string GroupMapping;
         /// <summary>
-        /// The IpUser param.
+        /// Ip user
         /// </summary>
-        public readonly bool IpUser;
+        public readonly Outputs.GetUrlAccessProfileListDataCredentialEnforcementModeIpUserResult IpUser;
 
         [OutputConstructor]
         private GetUrlAccessProfileListDataCredentialEnforcementModeResult(
-            bool disabled,
+            Outputs.GetUrlAccessProfileListDataCredentialEnforcementModeDisabledResult disabled,
 
-            bool domainCredentials,
+            Outputs.GetUrlAccessProfileListDataCredentialEnforcementModeDomainCredentialsResult domainCredentials,
 
             string groupMapping,
 
-            bool ipUser)
+            Outputs.GetUrlAccessProfileListDataCredentialEnforcementModeIpUserResult ipUser)
         {
             Disabled = disabled;
             DomainCredentials = domainCredentials;

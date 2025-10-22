@@ -12,20 +12,20 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class ScheduleScheduleTypeRecurringArgs : global::Pulumi.ResourceArgs
     {
-        [Input("dailyLists")]
-        private InputList<string>? _dailyLists;
+        [Input("dailies")]
+        private InputList<string>? _dailies;
 
         /// <summary>
-        /// The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `Daily`, `Weekly`
+        /// Daily
         /// </summary>
-        public InputList<string> DailyLists
+        public InputList<string> Dailies
         {
-            get => _dailyLists ?? (_dailyLists = new InputList<string>());
-            set => _dailyLists = value;
+            get => _dailies ?? (_dailies = new InputList<string>());
+            set => _dailies = value;
         }
 
         /// <summary>
-        /// The Weekly param. Ensure that only one of the following is specified: `Daily`, `Weekly`
+        /// Weekly
         /// </summary>
         [Input("weekly")]
         public Input<Inputs.ScheduleScheduleTypeRecurringWeeklyArgs>? Weekly { get; set; }

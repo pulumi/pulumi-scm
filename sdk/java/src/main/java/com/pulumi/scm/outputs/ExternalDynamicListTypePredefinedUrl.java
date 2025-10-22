@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListTypePredefinedUrl {
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     private @Nullable String description;
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     private @Nullable List<String> exceptionLists;
     /**
-     * @return The Url param.
+     * @return Url
      * 
      */
     private String url;
 
     private ExternalDynamicListTypePredefinedUrl() {}
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists == null ? List.of() : this.exceptionLists;
     }
     /**
-     * @return The Url param.
+     * @return Url
      * 
      */
     public String url() {

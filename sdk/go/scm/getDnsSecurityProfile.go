@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupDnsSecurityProfile(ctx, &scm.LookupDnsSecurityProfileArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// DnsSecurityProfile data source
 func LookupDnsSecurityProfile(ctx *pulumi.Context, args *LookupDnsSecurityProfileArgs, opts ...pulumi.InvokeOption) (*LookupDnsSecurityProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupDnsSecurityProfileResult
@@ -50,21 +24,29 @@ func LookupDnsSecurityProfile(ctx *pulumi.Context, args *LookupDnsSecurityProfil
 
 // A collection of arguments for invoking getDnsSecurityProfile.
 type LookupDnsSecurityProfileArgs struct {
-	// The Id param.
+	// The UUID of the DNS security profile
 	Id string `pulumi:"id"`
+	// The name of the DNS security profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getDnsSecurityProfile.
 type LookupDnsSecurityProfileResult struct {
-	// The BotnetDomains param.
+	// Botnet domains
 	BotnetDomains GetDnsSecurityProfileBotnetDomains `pulumi:"botnetDomains"`
-	// The Description param.
+	// The description of the DNS security profile
 	Description string `pulumi:"description"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the DNS security profile
 	Id string `pulumi:"id"`
-	// The Name param.
+	// The name of the DNS security profile
 	Name string `pulumi:"name"`
-	Tfid string `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupDnsSecurityProfileOutput(ctx *pulumi.Context, args LookupDnsSecurityProfileOutputArgs, opts ...pulumi.InvokeOption) LookupDnsSecurityProfileResultOutput {
@@ -78,8 +60,10 @@ func LookupDnsSecurityProfileOutput(ctx *pulumi.Context, args LookupDnsSecurityP
 
 // A collection of arguments for invoking getDnsSecurityProfile.
 type LookupDnsSecurityProfileOutputArgs struct {
-	// The Id param.
+	// The UUID of the DNS security profile
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the DNS security profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupDnsSecurityProfileOutputArgs) ElementType() reflect.Type {
@@ -101,24 +85,39 @@ func (o LookupDnsSecurityProfileResultOutput) ToLookupDnsSecurityProfileResultOu
 	return o
 }
 
-// The BotnetDomains param.
+// Botnet domains
 func (o LookupDnsSecurityProfileResultOutput) BotnetDomains() GetDnsSecurityProfileBotnetDomainsOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) GetDnsSecurityProfileBotnetDomains { return v.BotnetDomains }).(GetDnsSecurityProfileBotnetDomainsOutput)
 }
 
-// The Description param.
+// The description of the DNS security profile
 func (o LookupDnsSecurityProfileResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupDnsSecurityProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupDnsSecurityProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the DNS security profile
 func (o LookupDnsSecurityProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// The name of the DNS security profile
 func (o LookupDnsSecurityProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupDnsSecurityProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDnsSecurityProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupDnsSecurityProfileResultOutput) Tfid() pulumi.StringOutput {

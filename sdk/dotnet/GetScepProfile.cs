@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetScepProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetScepProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// ScepProfile data source
         /// </summary>
         public static Task<GetScepProfileResult> InvokeAsync(GetScepProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetScepProfileResult>("scm:index/getScepProfile:getScepProfile", args ?? new GetScepProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetScepProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// ScepProfile data source
         /// </summary>
         public static Output<GetScepProfileResult> Invoke(GetScepProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetScepProfileResult>("scm:index/getScepProfile:getScepProfile", args ?? new GetScepProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetScepProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// ScepProfile data source
         /// </summary>
         public static Output<GetScepProfileResult> Invoke(GetScepProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetScepProfileResult>("scm:index/getScepProfile:getScepProfile", args ?? new GetScepProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetScepProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the SCEP profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the SCEP profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetScepProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetScepProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the SCEP profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the SCEP profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetScepProfileInvokeArgs()
         {
@@ -118,60 +76,76 @@ namespace Pulumi.Scm
     public sealed class GetScepProfileResult
     {
         /// <summary>
-        /// The Algorithm param.
+        /// Algorithm
         /// </summary>
         public readonly Outputs.GetScepProfileAlgorithmResult Algorithm;
         /// <summary>
-        /// The CaIdentityName param.
+        /// Certificate Authority identity
         /// </summary>
         public readonly string CaIdentityName;
         /// <summary>
-        /// The CertificateAttributes param.
+        /// Subject Alternative name type
         /// </summary>
         public readonly Outputs.GetScepProfileCertificateAttributesResult CertificateAttributes;
         /// <summary>
-        /// The Digest param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Digest for CSR
         /// </summary>
         public readonly string Digest;
         /// <summary>
-        /// The Fingerprint param.
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// CA certificate fingerprint
         /// </summary>
         public readonly string Fingerprint;
         /// <summary>
-        /// The Id param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the SCEP profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the SCEP profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The ScepCaCert param.
+        /// SCEP server CA certificate
         /// </summary>
         public readonly string ScepCaCert;
         /// <summary>
-        /// The ScepChallenge param.
+        /// One Time Password challenge
         /// </summary>
         public readonly Outputs.GetScepProfileScepChallengeResult ScepChallenge;
         /// <summary>
-        /// The ScepClientCert param.
+        /// SCEP client ceertificate
         /// </summary>
         public readonly string ScepClientCert;
         /// <summary>
-        /// The ScepUrl param.
+        /// SCEP server URL
         /// </summary>
         public readonly string ScepUrl;
         /// <summary>
-        /// The Subject param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Subject
         /// </summary>
         public readonly string Subject;
         public readonly string Tfid;
         /// <summary>
-        /// The UseAsDigitalSignature param.
+        /// Use as digital signature?
         /// </summary>
         public readonly bool UseAsDigitalSignature;
         /// <summary>
-        /// The UseForKeyEncipherment param.
+        /// Use for key encipherment?
         /// </summary>
         public readonly bool UseForKeyEncipherment;
 
@@ -183,9 +157,15 @@ namespace Pulumi.Scm
 
             Outputs.GetScepProfileCertificateAttributesResult certificateAttributes,
 
+            string device,
+
             string digest,
 
+            ImmutableDictionary<string, string> encryptedValues,
+
             string fingerprint,
+
+            string folder,
 
             string id,
 
@@ -199,6 +179,8 @@ namespace Pulumi.Scm
 
             string scepUrl,
 
+            string snippet,
+
             string subject,
 
             string tfid,
@@ -210,14 +192,18 @@ namespace Pulumi.Scm
             Algorithm = algorithm;
             CaIdentityName = caIdentityName;
             CertificateAttributes = certificateAttributes;
+            Device = device;
             Digest = digest;
+            EncryptedValues = encryptedValues;
             Fingerprint = fingerprint;
+            Folder = folder;
             Id = id;
             Name = name;
             ScepCaCert = scepCaCert;
             ScepChallenge = scepChallenge;
             ScepClientCert = scepClientCert;
             ScepUrl = scepUrl;
+            Snippet = snippet;
             Subject = subject;
             Tfid = tfid;
             UseAsDigitalSignature = useAsDigitalSignature;

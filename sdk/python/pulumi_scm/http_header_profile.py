@@ -29,12 +29,12 @@ class HttpHeaderProfileArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a HttpHeaderProfile resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input['HttpHeaderProfileHttpHeaderInsertionArgs']]] http_header_insertions: The HttpHeaderInsertions param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] description: The description of the HTTP header profile
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input['HttpHeaderProfileHttpHeaderInsertionArgs']]] http_header_insertions: A list of HTTP header profile rules
+        :param pulumi.Input[_builtins.str] name: The name of the HTTP header profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -53,7 +53,7 @@ class HttpHeaderProfileArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the HTTP header profile
         """
         return pulumi.get(self, "description")
 
@@ -65,7 +65,7 @@ class HttpHeaderProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -77,7 +77,7 @@ class HttpHeaderProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -89,7 +89,7 @@ class HttpHeaderProfileArgs:
     @pulumi.getter(name="httpHeaderInsertions")
     def http_header_insertions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['HttpHeaderProfileHttpHeaderInsertionArgs']]]]:
         """
-        The HttpHeaderInsertions param.
+        A list of HTTP header profile rules
         """
         return pulumi.get(self, "http_header_insertions")
 
@@ -101,7 +101,7 @@ class HttpHeaderProfileArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the HTTP header profile
         """
         return pulumi.get(self, "name")
 
@@ -113,7 +113,7 @@ class HttpHeaderProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -134,12 +134,12 @@ class _HttpHeaderProfileState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering HttpHeaderProfile resources.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input['HttpHeaderProfileHttpHeaderInsertionArgs']]] http_header_insertions: The HttpHeaderInsertions param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] description: The description of the HTTP header profile
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input['HttpHeaderProfileHttpHeaderInsertionArgs']]] http_header_insertions: A list of HTTP header profile rules
+        :param pulumi.Input[_builtins.str] name: The name of the HTTP header profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -160,7 +160,7 @@ class _HttpHeaderProfileState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the HTTP header profile
         """
         return pulumi.get(self, "description")
 
@@ -172,7 +172,7 @@ class _HttpHeaderProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -184,7 +184,7 @@ class _HttpHeaderProfileState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -196,7 +196,7 @@ class _HttpHeaderProfileState:
     @pulumi.getter(name="httpHeaderInsertions")
     def http_header_insertions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['HttpHeaderProfileHttpHeaderInsertionArgs']]]]:
         """
-        The HttpHeaderInsertions param.
+        A list of HTTP header profile rules
         """
         return pulumi.get(self, "http_header_insertions")
 
@@ -208,7 +208,7 @@ class _HttpHeaderProfileState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the HTTP header profile
         """
         return pulumi.get(self, "name")
 
@@ -220,7 +220,7 @@ class _HttpHeaderProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -252,25 +252,16 @@ class HttpHeaderProfile(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.HttpHeaderProfile("example")
-        ```
+        HttpHeaderProfile resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['HttpHeaderProfileHttpHeaderInsertionArgs', 'HttpHeaderProfileHttpHeaderInsertionArgsDict']]]] http_header_insertions: The HttpHeaderInsertions param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] description: The description of the HTTP header profile
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[Union['HttpHeaderProfileHttpHeaderInsertionArgs', 'HttpHeaderProfileHttpHeaderInsertionArgsDict']]]] http_header_insertions: A list of HTTP header profile rules
+        :param pulumi.Input[_builtins.str] name: The name of the HTTP header profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -279,16 +270,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
                  args: Optional[HttpHeaderProfileArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.HttpHeaderProfile("example")
-        ```
+        HttpHeaderProfile resource
 
         :param str resource_name: The name of the resource.
         :param HttpHeaderProfileArgs args: The arguments to use to populate this resource's properties.
@@ -351,12 +333,12 @@ class HttpHeaderProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['HttpHeaderProfileHttpHeaderInsertionArgs', 'HttpHeaderProfileHttpHeaderInsertionArgsDict']]]] http_header_insertions: The HttpHeaderInsertions param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] description: The description of the HTTP header profile
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[Union['HttpHeaderProfileHttpHeaderInsertionArgs', 'HttpHeaderProfileHttpHeaderInsertionArgsDict']]]] http_header_insertions: A list of HTTP header profile rules
+        :param pulumi.Input[_builtins.str] name: The name of the HTTP header profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -375,7 +357,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param.
+        The description of the HTTP header profile
         """
         return pulumi.get(self, "description")
 
@@ -383,7 +365,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -391,7 +373,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -399,7 +381,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
     @pulumi.getter(name="httpHeaderInsertions")
     def http_header_insertions(self) -> pulumi.Output[Optional[Sequence['outputs.HttpHeaderProfileHttpHeaderInsertion']]]:
         """
-        The HttpHeaderInsertions param.
+        A list of HTTP header profile rules
         """
         return pulumi.get(self, "http_header_insertions")
 
@@ -407,7 +389,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        The name of the HTTP header profile
         """
         return pulumi.get(self, "name")
 
@@ -415,7 +397,7 @@ class HttpHeaderProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

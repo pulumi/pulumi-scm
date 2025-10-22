@@ -13,50 +13,90 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationSequenceListData {
     /**
-     * @return The AuthenticationProfiles param.
+     * @return An ordered list of authentication profiles
      * 
      */
     private List<String> authenticationProfiles;
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the authentication sequence
      * 
      */
     private String id;
     /**
-     * @return The Name param.
+     * @return The name of the authentication sequence
      * 
      */
     private String name;
     /**
-     * @return The UseDomainFindProfile param. Default: `true`.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
+    /**
+     * @return Use domain to determine authentication profile?
      * 
      */
     private Boolean useDomainFindProfile;
 
     private GetAuthenticationSequenceListData() {}
     /**
-     * @return The AuthenticationProfiles param.
+     * @return An ordered list of authentication profiles
      * 
      */
     public List<String> authenticationProfiles() {
         return this.authenticationProfiles;
     }
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the authentication sequence
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param.
+     * @return The name of the authentication sequence
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The UseDomainFindProfile param. Default: `true`.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
+    }
+    /**
+     * @return Use domain to determine authentication profile?
      * 
      */
     public Boolean useDomainFindProfile() {
@@ -73,15 +113,23 @@ public final class GetAuthenticationSequenceListData {
     @CustomType.Builder
     public static final class Builder {
         private List<String> authenticationProfiles;
+        private String device;
+        private String folder;
         private String id;
         private String name;
+        private String snippet;
+        private String tfid;
         private Boolean useDomainFindProfile;
         public Builder() {}
         public Builder(GetAuthenticationSequenceListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.authenticationProfiles = defaults.authenticationProfiles;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
     	      this.useDomainFindProfile = defaults.useDomainFindProfile;
         }
 
@@ -95,6 +143,22 @@ public final class GetAuthenticationSequenceListData {
         }
         public Builder authenticationProfiles(String... authenticationProfiles) {
             return authenticationProfiles(List.of(authenticationProfiles));
+        }
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationSequenceListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationSequenceListData", "folder");
+            }
+            this.folder = folder;
+            return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -113,6 +177,22 @@ public final class GetAuthenticationSequenceListData {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationSequenceListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationSequenceListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
+        @CustomType.Setter
         public Builder useDomainFindProfile(Boolean useDomainFindProfile) {
             if (useDomainFindProfile == null) {
               throw new MissingRequiredPropertyException("GetAuthenticationSequenceListData", "useDomainFindProfile");
@@ -123,8 +203,12 @@ public final class GetAuthenticationSequenceListData {
         public GetAuthenticationSequenceListData build() {
             final var _resultValue = new GetAuthenticationSequenceListData();
             _resultValue.authenticationProfiles = authenticationProfiles;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
             _resultValue.useDomainFindProfile = useDomainFindProfile;
             return _resultValue;
         }

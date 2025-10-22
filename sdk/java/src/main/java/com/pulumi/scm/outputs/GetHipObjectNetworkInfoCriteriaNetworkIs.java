@@ -6,45 +6,45 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetHipObjectNetworkInfoCriteriaNetworkIsMobile;
+import com.pulumi.scm.outputs.GetHipObjectNetworkInfoCriteriaNetworkIsUnknown;
 import com.pulumi.scm.outputs.GetHipObjectNetworkInfoCriteriaNetworkIsWifi;
-import java.lang.Boolean;
 import java.util.Objects;
 
 @CustomType
 public final class GetHipObjectNetworkInfoCriteriaNetworkIs {
     /**
-     * @return The Mobile param.
+     * @return Mobile
      * 
      */
     private GetHipObjectNetworkInfoCriteriaNetworkIsMobile mobile;
     /**
-     * @return The Unknown param.
+     * @return Unknown
      * 
      */
-    private Boolean unknown;
+    private GetHipObjectNetworkInfoCriteriaNetworkIsUnknown unknown;
     /**
-     * @return The Wifi param.
+     * @return Wifi
      * 
      */
     private GetHipObjectNetworkInfoCriteriaNetworkIsWifi wifi;
 
     private GetHipObjectNetworkInfoCriteriaNetworkIs() {}
     /**
-     * @return The Mobile param.
+     * @return Mobile
      * 
      */
     public GetHipObjectNetworkInfoCriteriaNetworkIsMobile mobile() {
         return this.mobile;
     }
     /**
-     * @return The Unknown param.
+     * @return Unknown
      * 
      */
-    public Boolean unknown() {
+    public GetHipObjectNetworkInfoCriteriaNetworkIsUnknown unknown() {
         return this.unknown;
     }
     /**
-     * @return The Wifi param.
+     * @return Wifi
      * 
      */
     public GetHipObjectNetworkInfoCriteriaNetworkIsWifi wifi() {
@@ -61,7 +61,7 @@ public final class GetHipObjectNetworkInfoCriteriaNetworkIs {
     @CustomType.Builder
     public static final class Builder {
         private GetHipObjectNetworkInfoCriteriaNetworkIsMobile mobile;
-        private Boolean unknown;
+        private GetHipObjectNetworkInfoCriteriaNetworkIsUnknown unknown;
         private GetHipObjectNetworkInfoCriteriaNetworkIsWifi wifi;
         public Builder() {}
         public Builder(GetHipObjectNetworkInfoCriteriaNetworkIs defaults) {
@@ -80,7 +80,7 @@ public final class GetHipObjectNetworkInfoCriteriaNetworkIs {
             return this;
         }
         @CustomType.Setter
-        public Builder unknown(Boolean unknown) {
+        public Builder unknown(GetHipObjectNetworkInfoCriteriaNetworkIsUnknown unknown) {
             if (unknown == null) {
               throw new MissingRequiredPropertyException("GetHipObjectNetworkInfoCriteriaNetworkIs", "unknown");
             }

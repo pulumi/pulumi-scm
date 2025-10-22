@@ -14,33 +14,33 @@ namespace Pulumi.Scm.Outputs
     public sealed class FileBlockingProfileRule
     {
         /// <summary>
-        /// The Action param. String must be one of these: `"alert"`, `"block"`, `"continue"`. Default: `"alert"`.
+        /// The action to take when the rule match criteria is met
         /// </summary>
-        public readonly string? Action;
+        public readonly string Action;
         /// <summary>
-        /// The Applications param. List must contain at least 1 elements.
+        /// The application transferring the files (App-ID naming)
         /// </summary>
         public readonly ImmutableArray<string> Applications;
         /// <summary>
-        /// The Direction param. String must be one of these: `"download"`, `"upload"`, `"both"`. Default: `"both"`.
+        /// The direction of the file transfer
         /// </summary>
-        public readonly string? Direction;
+        public readonly string Direction;
         /// <summary>
-        /// The FileTypes param. List must contain at least 1 elements.
+        /// The file type
         /// </summary>
         public readonly ImmutableArray<string> FileTypes;
         /// <summary>
-        /// The Name param.
+        /// The name of the file blocking rule
         /// </summary>
         public readonly string Name;
 
         [OutputConstructor]
         private FileBlockingProfileRule(
-            string? action,
+            string action,
 
             ImmutableArray<string> applications,
 
-            string? direction,
+            string direction,
 
             ImmutableArray<string> fileTypes,
 

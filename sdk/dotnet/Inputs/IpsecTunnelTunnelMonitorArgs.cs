@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class IpsecTunnelTunnelMonitorArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Destination IP to send ICMP probe.
+        /// Destination IP to send ICMP probe
         /// </summary>
         [Input("destinationIp", required: true)]
         public Input<string> DestinationIp { get; set; } = null!;
 
         /// <summary>
-        /// Enable tunnel monitoring on this tunnel. Default: `True`.
+        /// Enable tunnel monitoring on this tunnel
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }
 
         /// <summary>
-        /// Which proxy-id (or proxy-id-v6) the monitoring traffic will use.
+        /// Which proxy-id (or proxy-id-v6) the monitoring traffic will use
         /// </summary>
         [Input("proxyId")]
         public Input<string>? ProxyId { get; set; }

@@ -17,14 +17,14 @@ public final class RemoteNetworkProtocolArgs extends com.pulumi.resources.Resour
     public static final RemoteNetworkProtocolArgs Empty = new RemoteNetworkProtocolArgs();
 
     /**
-     * The Bgp param.
+     * Bgp
      * 
      */
     @Import(name="bgp")
     private @Nullable Output<RemoteNetworkProtocolBgpArgs> bgp;
 
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     public Optional<Output<RemoteNetworkProtocolBgpArgs>> bgp() {
@@ -32,14 +32,14 @@ public final class RemoteNetworkProtocolArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * secondary bgp routing as bgp*peer.
+     * secondary bgp routing as bgp*peer
      * 
      */
     @Import(name="bgpPeer")
     private @Nullable Output<RemoteNetworkProtocolBgpPeerArgs> bgpPeer;
 
     /**
-     * @return secondary bgp routing as bgp*peer.
+     * @return secondary bgp routing as bgp*peer
      * 
      */
     public Optional<Output<RemoteNetworkProtocolBgpPeerArgs>> bgpPeer() {
@@ -72,7 +72,7 @@ public final class RemoteNetworkProtocolArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param bgp The Bgp param.
+         * @param bgp Bgp
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class RemoteNetworkProtocolArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param bgp The Bgp param.
+         * @param bgp Bgp
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class RemoteNetworkProtocolArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param bgpPeer secondary bgp routing as bgp*peer.
+         * @param bgpPeer secondary bgp routing as bgp*peer
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class RemoteNetworkProtocolArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param bgpPeer secondary bgp routing as bgp*peer.
+         * @param bgpPeer secondary bgp routing as bgp*peer
          * 
          * @return builder
          * 

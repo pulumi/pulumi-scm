@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetTrafficSteeringRuleListDataActionForward {
     /**
-     * @return The Target param.
+     * @return Target
      * 
      */
     private String target;
 
     private GetTrafficSteeringRuleListDataActionForward() {}
     /**
-     * @return The Target param.
+     * @return Target
      * 
      */
     public String target() {

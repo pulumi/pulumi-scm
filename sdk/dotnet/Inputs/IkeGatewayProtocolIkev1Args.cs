@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class IkeGatewayProtocolIkev1Args : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Dpd param.
+        /// Dpd
         /// </summary>
         [Input("dpd")]
         public Input<Inputs.IkeGatewayProtocolIkev1DpdArgs>? Dpd { get; set; }
 
         /// <summary>
-        /// The IkeCryptoProfile param.
+        /// Ike crypto profile
         /// </summary>
         [Input("ikeCryptoProfile")]
         public Input<string>? IkeCryptoProfile { get; set; }

@@ -11,19 +11,19 @@ namespace Pulumi.Scm.Outputs
 {
 
     [OutputType]
-    public sealed class GetRadiusServerProfileProtocolEapTtlsWithPapResult
+    public sealed class GetRadiusServerProfileProtocolEAPTTLSWithPAPResult
     {
         /// <summary>
-        /// The AnonOuterId param.
+        /// Anon outer id
         /// </summary>
         public readonly bool AnonOuterId;
         /// <summary>
-        /// The RadiusCertProfile param.
+        /// Radius cert profile
         /// </summary>
         public readonly string RadiusCertProfile;
 
         [OutputConstructor]
-        private GetRadiusServerProfileProtocolEapTtlsWithPapResult(
+        private GetRadiusServerProfileProtocolEAPTTLSWithPAPResult(
             bool anonOuterId,
 
             string radiusCertProfile)

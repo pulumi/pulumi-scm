@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupQosPolicyRule(ctx, &scm.LookupQosPolicyRuleArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// QosPolicyRule data source
 func LookupQosPolicyRule(ctx *pulumi.Context, args *LookupQosPolicyRuleArgs, opts ...pulumi.InvokeOption) (*LookupQosPolicyRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupQosPolicyRuleResult
@@ -50,29 +24,33 @@ func LookupQosPolicyRule(ctx *pulumi.Context, args *LookupQosPolicyRuleArgs, opt
 
 // A collection of arguments for invoking getQosPolicyRule.
 type LookupQosPolicyRuleArgs struct {
-	// The Folder param.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
+	// Name
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getQosPolicyRule.
 type LookupQosPolicyRuleResult struct {
-	// The Action param.
+	// Action
 	Action GetQosPolicyRuleAction `pulumi:"action"`
-	// The Description param.
+	// Description
 	Description string `pulumi:"description"`
-	// The DscpTos param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Dscp tos
 	DscpTos GetQosPolicyRuleDscpTos `pulumi:"dscpTos"`
-	// The Folder param.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The Name param.
+	// Name
 	Name string `pulumi:"name"`
-	// The Schedule param.
+	// Schedule
 	Schedule string `pulumi:"schedule"`
-	Tfid     string `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupQosPolicyRuleOutput(ctx *pulumi.Context, args LookupQosPolicyRuleOutputArgs, opts ...pulumi.InvokeOption) LookupQosPolicyRuleResultOutput {
@@ -86,10 +64,10 @@ func LookupQosPolicyRuleOutput(ctx *pulumi.Context, args LookupQosPolicyRuleOutp
 
 // A collection of arguments for invoking getQosPolicyRule.
 type LookupQosPolicyRuleOutputArgs struct {
-	// The Folder param.
-	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupQosPolicyRuleOutputArgs) ElementType() reflect.Type {
@@ -111,39 +89,49 @@ func (o LookupQosPolicyRuleResultOutput) ToLookupQosPolicyRuleResultOutputWithCo
 	return o
 }
 
-// The Action param.
+// Action
 func (o LookupQosPolicyRuleResultOutput) Action() GetQosPolicyRuleActionOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) GetQosPolicyRuleAction { return v.Action }).(GetQosPolicyRuleActionOutput)
 }
 
-// The Description param.
+// Description
 func (o LookupQosPolicyRuleResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The DscpTos param.
+// The device in which the resource is defined
+func (o LookupQosPolicyRuleResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Dscp tos
 func (o LookupQosPolicyRuleResultOutput) DscpTos() GetQosPolicyRuleDscpTosOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) GetQosPolicyRuleDscpTos { return v.DscpTos }).(GetQosPolicyRuleDscpTosOutput)
 }
 
-// The Folder param.
-func (o LookupQosPolicyRuleResultOutput) Folder() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v LookupQosPolicyRuleResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
+// The folder in which the resource is defined
+func (o LookupQosPolicyRuleResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// UUID of the resource
 func (o LookupQosPolicyRuleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// Name
 func (o LookupQosPolicyRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Schedule param.
+// Schedule
 func (o LookupQosPolicyRuleResultOutput) Schedule() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Schedule }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupQosPolicyRuleResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupQosPolicyRuleResultOutput) Tfid() pulumi.StringOutput {

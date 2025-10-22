@@ -7,24 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getQosProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * QosProfile data source
  */
 export function getQosProfile(args: GetQosProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetQosProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getQosProfile:getQosProfile", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -33,13 +22,13 @@ export function getQosProfile(args: GetQosProfileArgs, opts?: pulumi.InvokeOptio
  */
 export interface GetQosProfileArgs {
     /**
-     * The Folder param.
-     */
-    folder?: string;
-    /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
+    name?: string;
 }
 
 /**
@@ -47,46 +36,43 @@ export interface GetQosProfileArgs {
  */
 export interface GetQosProfileResult {
     /**
-     * The AggregateBandwidth param.
+     * Aggregate bandwidth
      */
     readonly aggregateBandwidth: outputs.GetQosProfileAggregateBandwidth;
     /**
-     * The ClassBandwidthType param.
+     * Class bandwidth type
      */
     readonly classBandwidthType: outputs.GetQosProfileClassBandwidthType;
     /**
-     * The Folder param.
+     * The device in which the resource is defined
      */
-    readonly folder?: string;
+    readonly device: string;
     /**
-     * The Id param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getQosProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * QosProfile data source
  */
 export function getQosProfileOutput(args: GetQosProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetQosProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getQosProfile:getQosProfile", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -95,11 +81,11 @@ export function getQosProfileOutput(args: GetQosProfileOutputArgs, opts?: pulumi
  */
 export interface GetQosProfileOutputArgs {
     /**
-     * The Folder param.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
+    name?: pulumi.Input<string>;
 }

@@ -19,190 +19,162 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * AntiSpywareSignature resource
  * 
  * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.AntiSpywareSignature;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new AntiSpywareSignature("example");
- * 
- *     }
- * }
- * }
- * </pre>
  * 
  */
 @ResourceType(type="scm:index/antiSpywareSignature:AntiSpywareSignature")
 public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
     /**
-     * The Bugtraqs param.
+     * Bugtraq
      * 
      */
     @Export(name="bugtraqs", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> bugtraqs;
 
     /**
-     * @return The Bugtraqs param.
+     * @return Bugtraq
      * 
      */
     public Output<Optional<List<String>>> bugtraqs() {
         return Codegen.optional(this.bugtraqs);
     }
     /**
-     * The Comment param. String length must not exceed 256 characters.
+     * Comment
      * 
      */
     @Export(name="comment", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> comment;
 
     /**
-     * @return The Comment param. String length must not exceed 256 characters.
+     * @return Comment
      * 
      */
     public Output<Optional<String>> comment() {
         return Codegen.optional(this.comment);
     }
     /**
-     * The Cves param.
+     * Cve
      * 
      */
     @Export(name="cves", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> cves;
 
     /**
-     * @return The Cves param.
+     * @return Cve
      * 
      */
     public Output<Optional<List<String>>> cves() {
         return Codegen.optional(this.cves);
     }
     /**
-     * The DefaultAction param.
+     * anti spyware signature default action
      * 
      */
     @Export(name="defaultAction", refs={AntiSpywareSignatureDefaultAction.class}, tree="[0]")
     private Output</* @Nullable */ AntiSpywareSignatureDefaultAction> defaultAction;
 
     /**
-     * @return The DefaultAction param.
+     * @return anti spyware signature default action
      * 
      */
     public Output<Optional<AntiSpywareSignatureDefaultAction>> defaultAction() {
         return Codegen.optional(this.defaultAction);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Direction param. String must be one of these: `&#34;client2server&#34;`, `&#34;server2client&#34;`, `&#34;both&#34;`.
+     * Direction
      * 
      */
     @Export(name="direction", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> direction;
 
     /**
-     * @return The Direction param. String must be one of these: `&#34;client2server&#34;`, `&#34;server2client&#34;`, `&#34;both&#34;`.
+     * @return Direction
      * 
      */
     public Output<Optional<String>> direction() {
         return Codegen.optional(this.direction);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The References param.
+     * Reference
      * 
      */
     @Export(name="references", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> references;
 
     /**
-     * @return The References param.
+     * @return Reference
      * 
      */
     public Output<Optional<List<String>>> references() {
         return Codegen.optional(this.references);
     }
     /**
-     * The Severity param. String must be one of these: `&#34;critical&#34;`, `&#34;low&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;informational&#34;`.
+     * Severity
      * 
      */
     @Export(name="severity", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> severity;
 
     /**
-     * @return The Severity param. String must be one of these: `&#34;critical&#34;`, `&#34;low&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;informational&#34;`.
+     * @return Severity
      * 
      */
     public Output<Optional<String>> severity() {
         return Codegen.optional(this.severity);
     }
     /**
-     * The Signature param.
+     * anti spyware signature
      * 
      */
     @Export(name="signature", refs={AntiSpywareSignatureSignature.class}, tree="[0]")
-    private Output</* @Nullable */ AntiSpywareSignatureSignature> signature;
+    private Output<AntiSpywareSignatureSignature> signature;
 
     /**
-     * @return The Signature param.
+     * @return anti spyware signature
      * 
      */
-    public Output<Optional<AntiSpywareSignatureSignature>> signature() {
-        return Codegen.optional(this.signature);
+    public Output<AntiSpywareSignatureSignature> signature() {
+        return this.signature;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -215,42 +187,42 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+     * threat id range \n\n and \n\n
      * 
      */
     @Export(name="threatId", refs={Integer.class}, tree="[0]")
     private Output<Integer> threatId;
 
     /**
-     * @return threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+     * @return threat id range \n\n and \n\n
      * 
      */
     public Output<Integer> threatId() {
         return this.threatId;
     }
     /**
-     * The Threatname param. String length must not exceed 1024 characters.
+     * Threatname
      * 
      */
     @Export(name="threatname", refs={String.class}, tree="[0]")
     private Output<String> threatname;
 
     /**
-     * @return The Threatname param. String length must not exceed 1024 characters.
+     * @return Threatname
      * 
      */
     public Output<String> threatname() {
         return this.threatname;
     }
     /**
-     * The Vendors param.
+     * Vendor
      * 
      */
     @Export(name="vendors", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> vendors;
 
     /**
-     * @return The Vendors param.
+     * @return Vendor
      * 
      */
     public Output<Optional<List<String>>> vendors() {

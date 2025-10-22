@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetWildfireAntiVirusProfileMlavExceptionResult
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Filename param.
+        /// Filename
         /// </summary>
         public readonly string Filename;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
 

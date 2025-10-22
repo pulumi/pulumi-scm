@@ -12,51 +12,29 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// IpsecCryptoProfile resource
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewIpsecCryptoProfile(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 type IpsecCryptoProfile struct {
 	pulumi.CustomResourceState
 
-	// The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+	// Ah
 	Ah IpsecCryptoProfileAhPtrOutput `pulumi:"ah"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+	// phase-2 DH group (PFS DH group)
 	DhGroup pulumi.StringOutput `pulumi:"dhGroup"`
-	// The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+	// Esp
 	Esp IpsecCryptoProfileEspPtrOutput `pulumi:"esp"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Lifesize param.
+	// Lifesize
 	Lifesize IpsecCryptoProfileLifesizePtrOutput `pulumi:"lifesize"`
-	// The Lifetime param.
+	// Ipsec crypto profile lifetime
 	Lifetime IpsecCryptoProfileLifetimeOutput `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -94,45 +72,45 @@ func GetIpsecCryptoProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering IpsecCryptoProfile resources.
 type ipsecCryptoProfileState struct {
-	// The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+	// Ah
 	Ah *IpsecCryptoProfileAh `pulumi:"ah"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+	// phase-2 DH group (PFS DH group)
 	DhGroup *string `pulumi:"dhGroup"`
-	// The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+	// Esp
 	Esp *IpsecCryptoProfileEsp `pulumi:"esp"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Lifesize param.
+	// Lifesize
 	Lifesize *IpsecCryptoProfileLifesize `pulumi:"lifesize"`
-	// The Lifetime param.
+	// Ipsec crypto profile lifetime
 	Lifetime *IpsecCryptoProfileLifetime `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type IpsecCryptoProfileState struct {
-	// The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+	// Ah
 	Ah IpsecCryptoProfileAhPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+	// phase-2 DH group (PFS DH group)
 	DhGroup pulumi.StringPtrInput
-	// The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+	// Esp
 	Esp IpsecCryptoProfileEspPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Lifesize param.
+	// Lifesize
 	Lifesize IpsecCryptoProfileLifesizePtrInput
-	// The Lifetime param.
+	// Ipsec crypto profile lifetime
 	Lifetime IpsecCryptoProfileLifetimePtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -142,45 +120,45 @@ func (IpsecCryptoProfileState) ElementType() reflect.Type {
 }
 
 type ipsecCryptoProfileArgs struct {
-	// The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+	// Ah
 	Ah *IpsecCryptoProfileAh `pulumi:"ah"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+	// phase-2 DH group (PFS DH group)
 	DhGroup *string `pulumi:"dhGroup"`
-	// The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+	// Esp
 	Esp *IpsecCryptoProfileEsp `pulumi:"esp"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Lifesize param.
+	// Lifesize
 	Lifesize *IpsecCryptoProfileLifesize `pulumi:"lifesize"`
-	// The Lifetime param.
+	// Ipsec crypto profile lifetime
 	Lifetime IpsecCryptoProfileLifetime `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a IpsecCryptoProfile resource.
 type IpsecCryptoProfileArgs struct {
-	// The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+	// Ah
 	Ah IpsecCryptoProfileAhPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+	// phase-2 DH group (PFS DH group)
 	DhGroup pulumi.StringPtrInput
-	// The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+	// Esp
 	Esp IpsecCryptoProfileEspPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Lifesize param.
+	// Lifesize
 	Lifesize IpsecCryptoProfileLifesizePtrInput
-	// The Lifetime param.
+	// Ipsec crypto profile lifetime
 	Lifetime IpsecCryptoProfileLifetimeInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -271,47 +249,47 @@ func (o IpsecCryptoProfileOutput) ToIpsecCryptoProfileOutputWithContext(ctx cont
 	return o
 }
 
-// The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+// Ah
 func (o IpsecCryptoProfileOutput) Ah() IpsecCryptoProfileAhPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) IpsecCryptoProfileAhPtrOutput { return v.Ah }).(IpsecCryptoProfileAhPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o IpsecCryptoProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+// phase-2 DH group (PFS DH group)
 func (o IpsecCryptoProfileOutput) DhGroup() pulumi.StringOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) pulumi.StringOutput { return v.DhGroup }).(pulumi.StringOutput)
 }
 
-// The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+// Esp
 func (o IpsecCryptoProfileOutput) Esp() IpsecCryptoProfileEspPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) IpsecCryptoProfileEspPtrOutput { return v.Esp }).(IpsecCryptoProfileEspPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o IpsecCryptoProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Lifesize param.
+// Lifesize
 func (o IpsecCryptoProfileOutput) Lifesize() IpsecCryptoProfileLifesizePtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) IpsecCryptoProfileLifesizePtrOutput { return v.Lifesize }).(IpsecCryptoProfileLifesizePtrOutput)
 }
 
-// The Lifetime param.
+// Ipsec crypto profile lifetime
 func (o IpsecCryptoProfileOutput) Lifetime() IpsecCryptoProfileLifetimeOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) IpsecCryptoProfileLifetimeOutput { return v.Lifetime }).(IpsecCryptoProfileLifetimeOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o IpsecCryptoProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o IpsecCryptoProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

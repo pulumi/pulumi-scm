@@ -20,14 +20,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     public static final ApplicationFilterState Empty = new ApplicationFilterState();
 
     /**
-     * The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Category
      * 
      */
     @Import(name="categories")
     private @Nullable Output<List<String>> categories;
 
     /**
-     * @return The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * @return Category
      * 
      */
     public Optional<Output<List<String>>> categories() {
@@ -35,14 +35,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -50,14 +50,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * only True is a valid value.
+     * only True is a valid value
      * 
      */
     @Import(name="evasive")
     private @Nullable Output<Boolean> evasive;
 
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Optional<Output<Boolean>> evasive() {
@@ -65,14 +65,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * only True is a valid value.
+     * only True is a valid value
      * 
      */
     @Import(name="excessiveBandwidthUse")
     private @Nullable Output<Boolean> excessiveBandwidthUse;
 
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Optional<Output<Boolean>> excessiveBandwidthUse() {
@@ -80,14 +80,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Exclude
      * 
      */
     @Import(name="excludes")
     private @Nullable Output<List<String>> excludes;
 
     /**
-     * @return The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Exclude
      * 
      */
     public Optional<Output<List<String>>> excludes() {
@@ -95,14 +95,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -110,14 +110,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * only True is a valid value.
+     * only True is a valid value
      * 
      */
     @Import(name="hasKnownVulnerabilities")
     private @Nullable Output<Boolean> hasKnownVulnerabilities;
 
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Optional<Output<Boolean>> hasKnownVulnerabilities() {
@@ -125,14 +125,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * only True is a valid value.
+     * only True is a valid value
      * 
      */
     @Import(name="isSaas")
     private @Nullable Output<Boolean> isSaas;
 
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Optional<Output<Boolean>> isSaas() {
@@ -140,14 +140,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public Optional<Output<String>> name() {
@@ -155,14 +155,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * only True is a valid value.
+     * only True is a valid value
      * 
      */
     @Import(name="newAppid")
     private @Nullable Output<Boolean> newAppid;
 
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Optional<Output<Boolean>> newAppid() {
@@ -170,14 +170,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * only True is a valid value.
+     * only True is a valid value
      * 
      */
     @Import(name="pervasive")
     private @Nullable Output<Boolean> pervasive;
 
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Optional<Output<Boolean>> pervasive() {
@@ -185,14 +185,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * only True is a valid value.
+     * only True is a valid value
      * 
      */
     @Import(name="proneToMisuse")
     private @Nullable Output<Boolean> proneToMisuse;
 
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Optional<Output<Boolean>> proneToMisuse() {
@@ -200,14 +200,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+     * Risk
      * 
      */
     @Import(name="risks")
     private @Nullable Output<List<Integer>> risks;
 
     /**
-     * @return The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+     * @return Risk
      * 
      */
     public Optional<Output<List<Integer>>> risks() {
@@ -215,14 +215,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * Saas certifications
      * 
      */
     @Import(name="saasCertifications")
     private @Nullable Output<List<String>> saasCertifications;
 
     /**
-     * @return The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * @return Saas certifications
      * 
      */
     public Optional<Output<List<String>>> saasCertifications() {
@@ -230,14 +230,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * Saas risk
      * 
      */
     @Import(name="saasRisks")
     private @Nullable Output<List<String>> saasRisks;
 
     /**
-     * @return The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * @return Saas risk
      * 
      */
     public Optional<Output<List<String>>> saasRisks() {
@@ -245,14 +245,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -260,14 +260,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Subcategory
      * 
      */
     @Import(name="subcategories")
     private @Nullable Output<List<String>> subcategories;
 
     /**
-     * @return The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * @return Subcategory
      * 
      */
     public Optional<Output<List<String>>> subcategories() {
@@ -275,14 +275,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Tagging param.
+     * Tagging
      * 
      */
     @Import(name="tagging")
     private @Nullable Output<ApplicationFilterTaggingArgs> tagging;
 
     /**
-     * @return The Tagging param.
+     * @return Tagging
      * 
      */
     public Optional<Output<ApplicationFilterTaggingArgs>> tagging() {
@@ -290,14 +290,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Technology
      * 
      */
     @Import(name="technologies")
     private @Nullable Output<List<String>> technologies;
 
     /**
-     * @return The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * @return Technology
      * 
      */
     public Optional<Output<List<String>>> technologies() {
@@ -312,14 +312,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * only True is a valid value.
+     * only True is a valid value
      * 
      */
     @Import(name="transfersFiles")
     private @Nullable Output<Boolean> transfersFiles;
 
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Optional<Output<Boolean>> transfersFiles() {
@@ -327,14 +327,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * only True is a valid value.
+     * only True is a valid value
      * 
      */
     @Import(name="tunnelsOtherApps")
     private @Nullable Output<Boolean> tunnelsOtherApps;
 
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Optional<Output<Boolean>> tunnelsOtherApps() {
@@ -342,14 +342,14 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * only True is a valid value.
+     * only True is a valid value
      * 
      */
     @Import(name="usedByMalware")
     private @Nullable Output<Boolean> usedByMalware;
 
     /**
-     * @return only True is a valid value.
+     * @return only True is a valid value
      * 
      */
     public Optional<Output<Boolean>> usedByMalware() {
@@ -403,7 +403,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param categories The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+         * @param categories Category
          * 
          * @return builder
          * 
@@ -414,7 +414,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param categories The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+         * @param categories Category
          * 
          * @return builder
          * 
@@ -424,7 +424,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param categories The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+         * @param categories Category
          * 
          * @return builder
          * 
@@ -434,7 +434,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -445,7 +445,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -455,7 +455,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param evasive only True is a valid value.
+         * @param evasive only True is a valid value
          * 
          * @return builder
          * 
@@ -466,7 +466,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param evasive only True is a valid value.
+         * @param evasive only True is a valid value
          * 
          * @return builder
          * 
@@ -476,7 +476,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param excessiveBandwidthUse only True is a valid value.
+         * @param excessiveBandwidthUse only True is a valid value
          * 
          * @return builder
          * 
@@ -487,7 +487,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param excessiveBandwidthUse only True is a valid value.
+         * @param excessiveBandwidthUse only True is a valid value
          * 
          * @return builder
          * 
@@ -497,7 +497,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param excludes The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+         * @param excludes Exclude
          * 
          * @return builder
          * 
@@ -508,7 +508,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param excludes The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+         * @param excludes Exclude
          * 
          * @return builder
          * 
@@ -518,7 +518,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param excludes The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+         * @param excludes Exclude
          * 
          * @return builder
          * 
@@ -528,7 +528,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -539,7 +539,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -549,7 +549,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param hasKnownVulnerabilities only True is a valid value.
+         * @param hasKnownVulnerabilities only True is a valid value
          * 
          * @return builder
          * 
@@ -560,7 +560,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param hasKnownVulnerabilities only True is a valid value.
+         * @param hasKnownVulnerabilities only True is a valid value
          * 
          * @return builder
          * 
@@ -570,7 +570,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param isSaas only True is a valid value.
+         * @param isSaas only True is a valid value
          * 
          * @return builder
          * 
@@ -581,7 +581,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param isSaas only True is a valid value.
+         * @param isSaas only True is a valid value
          * 
          * @return builder
          * 
@@ -591,7 +591,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -602,7 +602,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -612,7 +612,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param newAppid only True is a valid value.
+         * @param newAppid only True is a valid value
          * 
          * @return builder
          * 
@@ -623,7 +623,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param newAppid only True is a valid value.
+         * @param newAppid only True is a valid value
          * 
          * @return builder
          * 
@@ -633,7 +633,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param pervasive only True is a valid value.
+         * @param pervasive only True is a valid value
          * 
          * @return builder
          * 
@@ -644,7 +644,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param pervasive only True is a valid value.
+         * @param pervasive only True is a valid value
          * 
          * @return builder
          * 
@@ -654,7 +654,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param proneToMisuse only True is a valid value.
+         * @param proneToMisuse only True is a valid value
          * 
          * @return builder
          * 
@@ -665,7 +665,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param proneToMisuse only True is a valid value.
+         * @param proneToMisuse only True is a valid value
          * 
          * @return builder
          * 
@@ -675,7 +675,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param risks The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+         * @param risks Risk
          * 
          * @return builder
          * 
@@ -686,7 +686,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param risks The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+         * @param risks Risk
          * 
          * @return builder
          * 
@@ -696,7 +696,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param risks The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+         * @param risks Risk
          * 
          * @return builder
          * 
@@ -706,7 +706,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param saasCertifications The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+         * @param saasCertifications Saas certifications
          * 
          * @return builder
          * 
@@ -717,7 +717,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param saasCertifications The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+         * @param saasCertifications Saas certifications
          * 
          * @return builder
          * 
@@ -727,7 +727,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param saasCertifications The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+         * @param saasCertifications Saas certifications
          * 
          * @return builder
          * 
@@ -737,7 +737,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param saasRisks The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+         * @param saasRisks Saas risk
          * 
          * @return builder
          * 
@@ -748,7 +748,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param saasRisks The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+         * @param saasRisks Saas risk
          * 
          * @return builder
          * 
@@ -758,7 +758,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param saasRisks The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+         * @param saasRisks Saas risk
          * 
          * @return builder
          * 
@@ -768,7 +768,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -779,7 +779,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -789,7 +789,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param subcategories The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+         * @param subcategories Subcategory
          * 
          * @return builder
          * 
@@ -800,7 +800,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param subcategories The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+         * @param subcategories Subcategory
          * 
          * @return builder
          * 
@@ -810,7 +810,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param subcategories The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+         * @param subcategories Subcategory
          * 
          * @return builder
          * 
@@ -820,7 +820,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param tagging The Tagging param.
+         * @param tagging Tagging
          * 
          * @return builder
          * 
@@ -831,7 +831,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param tagging The Tagging param.
+         * @param tagging Tagging
          * 
          * @return builder
          * 
@@ -841,7 +841,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param technologies The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+         * @param technologies Technology
          * 
          * @return builder
          * 
@@ -852,7 +852,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param technologies The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+         * @param technologies Technology
          * 
          * @return builder
          * 
@@ -862,7 +862,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param technologies The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+         * @param technologies Technology
          * 
          * @return builder
          * 
@@ -881,7 +881,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param transfersFiles only True is a valid value.
+         * @param transfersFiles only True is a valid value
          * 
          * @return builder
          * 
@@ -892,7 +892,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param transfersFiles only True is a valid value.
+         * @param transfersFiles only True is a valid value
          * 
          * @return builder
          * 
@@ -902,7 +902,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param tunnelsOtherApps only True is a valid value.
+         * @param tunnelsOtherApps only True is a valid value
          * 
          * @return builder
          * 
@@ -913,7 +913,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param tunnelsOtherApps only True is a valid value.
+         * @param tunnelsOtherApps only True is a valid value
          * 
          * @return builder
          * 
@@ -923,7 +923,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param usedByMalware only True is a valid value.
+         * @param usedByMalware only True is a valid value
          * 
          * @return builder
          * 
@@ -934,7 +934,7 @@ public final class ApplicationFilterState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param usedByMalware only True is a valid value.
+         * @param usedByMalware only True is a valid value
          * 
          * @return builder
          * 

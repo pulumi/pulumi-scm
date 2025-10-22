@@ -21,14 +21,14 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
     public static final RadiusServerProfileArgs Empty = new RadiusServerProfileArgs();
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -36,14 +36,14 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -51,29 +51,44 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Protocol param.
+     * The name of the RADIUS server profile
      * 
      */
-    @Import(name="protocol")
-    private @Nullable Output<RadiusServerProfileProtocolArgs> protocol;
+    @Import(name="name")
+    private @Nullable Output<String> name;
 
     /**
-     * @return The Protocol param.
+     * @return The name of the RADIUS server profile
      * 
      */
-    public Optional<Output<RadiusServerProfileProtocolArgs>> protocol() {
-        return Optional.ofNullable(this.protocol);
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
-     * The Retries param. Value must be between 1 and 5.
+     * The RADIUS authentication protocol
+     * 
+     */
+    @Import(name="protocol", required=true)
+    private Output<RadiusServerProfileProtocolArgs> protocol;
+
+    /**
+     * @return The RADIUS authentication protocol
+     * 
+     */
+    public Output<RadiusServerProfileProtocolArgs> protocol() {
+        return this.protocol;
+    }
+
+    /**
+     * The number of RADIUS server retries
      * 
      */
     @Import(name="retries")
     private @Nullable Output<Integer> retries;
 
     /**
-     * @return The Retries param. Value must be between 1 and 5.
+     * @return The number of RADIUS server retries
      * 
      */
     public Optional<Output<Integer>> retries() {
@@ -81,14 +96,14 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Servers param.
+     * Server
      * 
      */
     @Import(name="servers", required=true)
     private Output<List<RadiusServerProfileServerArgs>> servers;
 
     /**
-     * @return The Servers param.
+     * @return Server
      * 
      */
     public Output<List<RadiusServerProfileServerArgs>> servers() {
@@ -96,14 +111,14 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -111,14 +126,14 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Timeout param. Value must be between 1 and 120.
+     * The RADIUS server authentication timeout (seconds)
      * 
      */
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
     /**
-     * @return The Timeout param. Value must be between 1 and 120.
+     * @return The RADIUS server authentication timeout (seconds)
      * 
      */
     public Optional<Output<Integer>> timeout() {
@@ -130,6 +145,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
     private RadiusServerProfileArgs(RadiusServerProfileArgs $) {
         this.device = $.device;
         this.folder = $.folder;
+        this.name = $.name;
         this.protocol = $.protocol;
         this.retries = $.retries;
         this.servers = $.servers;
@@ -156,7 +172,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -167,7 +183,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -177,7 +193,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -188,7 +204,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -198,18 +214,39 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param name The name of the RADIUS server profile
          * 
          * @return builder
          * 
          */
-        public Builder protocol(@Nullable Output<RadiusServerProfileProtocolArgs> protocol) {
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the RADIUS server profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param protocol The RADIUS authentication protocol
+         * 
+         * @return builder
+         * 
+         */
+        public Builder protocol(Output<RadiusServerProfileProtocolArgs> protocol) {
             $.protocol = protocol;
             return this;
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol The RADIUS authentication protocol
          * 
          * @return builder
          * 
@@ -219,7 +256,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param retries The Retries param. Value must be between 1 and 5.
+         * @param retries The number of RADIUS server retries
          * 
          * @return builder
          * 
@@ -230,7 +267,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param retries The Retries param. Value must be between 1 and 5.
+         * @param retries The number of RADIUS server retries
          * 
          * @return builder
          * 
@@ -240,7 +277,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers Server
          * 
          * @return builder
          * 
@@ -251,7 +288,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers Server
          * 
          * @return builder
          * 
@@ -261,7 +298,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers Server
          * 
          * @return builder
          * 
@@ -271,7 +308,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -282,7 +319,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -292,7 +329,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param timeout The Timeout param. Value must be between 1 and 120.
+         * @param timeout The RADIUS server authentication timeout (seconds)
          * 
          * @return builder
          * 
@@ -303,7 +340,7 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param timeout The Timeout param. Value must be between 1 and 120.
+         * @param timeout The RADIUS server authentication timeout (seconds)
          * 
          * @return builder
          * 
@@ -313,6 +350,9 @@ public final class RadiusServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         public RadiusServerProfileArgs build() {
+            if ($.protocol == null) {
+                throw new MissingRequiredPropertyException("RadiusServerProfileArgs", "protocol");
+            }
             if ($.servers == null) {
                 throw new MissingRequiredPropertyException("RadiusServerProfileArgs", "servers");
             }

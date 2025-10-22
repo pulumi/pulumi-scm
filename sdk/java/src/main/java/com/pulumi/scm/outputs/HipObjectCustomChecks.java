@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class HipObjectCustomChecks {
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     private HipObjectCustomChecksCriteria criteria;
 
     private HipObjectCustomChecks() {}
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public HipObjectCustomChecksCriteria criteria() {

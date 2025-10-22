@@ -4,7 +4,6 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -13,50 +12,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RemoteNetworkProtocolBgpPeer {
     /**
-     * @return The LocalIpAddress param.
+     * @return Local peer IP address (secondary WAN)
      * 
      */
     private @Nullable String localIpAddress;
     /**
-     * @return The PeerIpAddress param.
+     * @return Remote peer IP address (secondary WAN)
      * 
      */
     private @Nullable String peerIpAddress;
     /**
-     * @return If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
-     * 
-     */
-    private @Nullable Boolean sameAsPrimary;
-    /**
-     * @return The Secret param.
+     * @return BGP peering secret (secondary WAN)
      * 
      */
     private @Nullable String secret;
 
     private RemoteNetworkProtocolBgpPeer() {}
     /**
-     * @return The LocalIpAddress param.
+     * @return Local peer IP address (secondary WAN)
      * 
      */
     public Optional<String> localIpAddress() {
         return Optional.ofNullable(this.localIpAddress);
     }
     /**
-     * @return The PeerIpAddress param.
+     * @return Remote peer IP address (secondary WAN)
      * 
      */
     public Optional<String> peerIpAddress() {
         return Optional.ofNullable(this.peerIpAddress);
     }
     /**
-     * @return If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
-     * 
-     */
-    public Optional<Boolean> sameAsPrimary() {
-        return Optional.ofNullable(this.sameAsPrimary);
-    }
-    /**
-     * @return The Secret param.
+     * @return BGP peering secret (secondary WAN)
      * 
      */
     public Optional<String> secret() {
@@ -74,14 +61,12 @@ public final class RemoteNetworkProtocolBgpPeer {
     public static final class Builder {
         private @Nullable String localIpAddress;
         private @Nullable String peerIpAddress;
-        private @Nullable Boolean sameAsPrimary;
         private @Nullable String secret;
         public Builder() {}
         public Builder(RemoteNetworkProtocolBgpPeer defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.localIpAddress = defaults.localIpAddress;
     	      this.peerIpAddress = defaults.peerIpAddress;
-    	      this.sameAsPrimary = defaults.sameAsPrimary;
     	      this.secret = defaults.secret;
         }
 
@@ -98,12 +83,6 @@ public final class RemoteNetworkProtocolBgpPeer {
             return this;
         }
         @CustomType.Setter
-        public Builder sameAsPrimary(@Nullable Boolean sameAsPrimary) {
-
-            this.sameAsPrimary = sameAsPrimary;
-            return this;
-        }
-        @CustomType.Setter
         public Builder secret(@Nullable String secret) {
 
             this.secret = secret;
@@ -113,7 +92,6 @@ public final class RemoteNetworkProtocolBgpPeer {
             final var _resultValue = new RemoteNetworkProtocolBgpPeer();
             _resultValue.localIpAddress = localIpAddress;
             _resultValue.peerIpAddress = peerIpAddress;
-            _resultValue.sameAsPrimary = sameAsPrimary;
             _resultValue.secret = secret;
             return _resultValue;
         }

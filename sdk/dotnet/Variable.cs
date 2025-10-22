@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// Variable resource
     /// 
     /// ## Example Usage
     /// 
@@ -22,9 +22,136 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Scm.Variable("example", new()
+    ///     //
+    ///     // Creates a variable in as-number format
+    ///     //
+    ///     var scmVariableAsn = new Scm.Variable("scm_variable_asn", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
+    ///         Name = "$scm_variable_asn",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "as-number",
+    ///         Value = "65535",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a variable in count format
+    ///     //
+    ///     var scmVariableCount = new Scm.Variable("scm_variable_count", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_variable_count",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "count",
+    ///         Value = "15",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a variable in fqdn format
+    ///     //
+    ///     var scmVariableFqdn = new Scm.Variable("scm_variable_fqdn", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_variable_fqdn",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "fqdn",
+    ///         Value = "scm.example.com",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a variable in group-id format
+    ///     //
+    ///     var scmVariableGroupId = new Scm.Variable("scm_variable_group_id", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_variable_group_id",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "group-id",
+    ///         Value = "10",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a variable in ip-range format
+    ///     //
+    ///     var scmVariableIprange = new Scm.Variable("scm_variable_iprange", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_variable_iprange",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "ip-range",
+    ///         Value = "198.18.1.1-198.18.1.100",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a variable in ip-netmask format
+    ///     //
+    ///     var scmVariableIpaddr = new Scm.Variable("scm_variable_ipaddr", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_variable_ipaddr",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "ip-netmask",
+    ///         Value = "198.18.2.0/24",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a variable in ip-wildcard format
+    ///     //
+    ///     var scmVariableIpwildcard = new Scm.Variable("scm_variable_ipwildcard", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_variable_ipwildcard",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "ip-wildcard",
+    ///         Value = "198.18.1.0/0.255.255.255",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a variable in percent format
+    ///     //
+    ///     var scmVariablePercent = new Scm.Variable("scm_variable_percent", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_variable_percent",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "percent",
+    ///         Value = "10",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a variable in router-id format
+    ///     //
+    ///     var scmVariableRouterId = new Scm.Variable("scm_variable_router_id", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_variable_router_id",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "router-id",
+    ///         Value = "198.18.1.1",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a variable in timer format
+    ///     //
+    ///     var scmVariableTimer = new Scm.Variable("scm_variable_timer", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_variable_timer",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "timer",
+    ///         Value = "1440",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a variable in zone format
+    ///     //
+    ///     var scmVariableZone = new Scm.Variable("scm_variable_zone", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_variable_zone",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "zone",
+    ///         Value = "internet",
     ///     });
     /// 
     /// });
@@ -34,37 +161,37 @@ namespace Pulumi.Scm
     public partial class Variable : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the variable
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the variable
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Overridden param.
+        /// Is the variable overridden?
         /// </summary>
         [Output("overridden")]
-        public Output<bool> Overridden { get; private set; } = null!;
+        public Output<bool?> Overridden { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -73,16 +200,16 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+        /// The variable type
         /// </summary>
         [Output("type")]
-        public Output<string?> Type { get; private set; } = null!;
+        public Output<string> Type { get; private set; } = null!;
 
         /// <summary>
-        /// value can accept either string or integer.
+        /// The value of the variable
         /// </summary>
         [Output("value")]
-        public Output<string?> Value { get; private set; } = null!;
+        public Output<string> Value { get; private set; } = null!;
 
 
         /// <summary>
@@ -92,7 +219,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public Variable(string name, VariableArgs? args = null, CustomResourceOptions? options = null)
+        public Variable(string name, VariableArgs args, CustomResourceOptions? options = null)
             : base("scm:index/variable:Variable", name, args ?? new VariableArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -131,46 +258,52 @@ namespace Pulumi.Scm
     public sealed class VariableArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the variable
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the variable
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// Is the variable overridden?
+        /// </summary>
+        [Input("overridden")]
+        public Input<bool>? Overridden { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+        /// The variable type
         /// </summary>
-        [Input("type")]
-        public Input<string>? Type { get; set; }
+        [Input("type", required: true)]
+        public Input<string> Type { get; set; } = null!;
 
         /// <summary>
-        /// value can accept either string or integer.
+        /// The value of the variable
         /// </summary>
-        [Input("value")]
-        public Input<string>? Value { get; set; }
+        [Input("value", required: true)]
+        public Input<string> Value { get; set; } = null!;
 
         public VariableArgs()
         {
@@ -181,37 +314,37 @@ namespace Pulumi.Scm
     public sealed class VariableState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the variable
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the variable
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Overridden param.
+        /// Is the variable overridden?
         /// </summary>
         [Input("overridden")]
         public Input<bool>? Overridden { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -220,13 +353,13 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+        /// The variable type
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }
 
         /// <summary>
-        /// value can accept either string or integer.
+        /// The value of the variable
         /// </summary>
         [Input("value")]
         public Input<string>? Value { get; set; }

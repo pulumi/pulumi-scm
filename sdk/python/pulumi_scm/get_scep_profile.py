@@ -27,7 +27,7 @@ class GetScepProfileResult:
     """
     A collection of values returned by getScepProfile.
     """
-    def __init__(__self__, algorithm=None, ca_identity_name=None, certificate_attributes=None, digest=None, fingerprint=None, id=None, name=None, scep_ca_cert=None, scep_challenge=None, scep_client_cert=None, scep_url=None, subject=None, tfid=None, use_as_digital_signature=None, use_for_key_encipherment=None):
+    def __init__(__self__, algorithm=None, ca_identity_name=None, certificate_attributes=None, device=None, digest=None, encrypted_values=None, fingerprint=None, folder=None, id=None, name=None, scep_ca_cert=None, scep_challenge=None, scep_client_cert=None, scep_url=None, snippet=None, subject=None, tfid=None, use_as_digital_signature=None, use_for_key_encipherment=None):
         if algorithm and not isinstance(algorithm, dict):
             raise TypeError("Expected argument 'algorithm' to be a dict")
         pulumi.set(__self__, "algorithm", algorithm)
@@ -37,12 +37,21 @@ class GetScepProfileResult:
         if certificate_attributes and not isinstance(certificate_attributes, dict):
             raise TypeError("Expected argument 'certificate_attributes' to be a dict")
         pulumi.set(__self__, "certificate_attributes", certificate_attributes)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if digest and not isinstance(digest, str):
             raise TypeError("Expected argument 'digest' to be a str")
         pulumi.set(__self__, "digest", digest)
+        if encrypted_values and not isinstance(encrypted_values, dict):
+            raise TypeError("Expected argument 'encrypted_values' to be a dict")
+        pulumi.set(__self__, "encrypted_values", encrypted_values)
         if fingerprint and not isinstance(fingerprint, str):
             raise TypeError("Expected argument 'fingerprint' to be a str")
         pulumi.set(__self__, "fingerprint", fingerprint)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -61,6 +70,9 @@ class GetScepProfileResult:
         if scep_url and not isinstance(scep_url, str):
             raise TypeError("Expected argument 'scep_url' to be a str")
         pulumi.set(__self__, "scep_url", scep_url)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if subject and not isinstance(subject, str):
             raise TypeError("Expected argument 'subject' to be a str")
         pulumi.set(__self__, "subject", subject)
@@ -78,7 +90,7 @@ class GetScepProfileResult:
     @pulumi.getter
     def algorithm(self) -> 'outputs.GetScepProfileAlgorithmResult':
         """
-        The Algorithm param.
+        Algorithm
         """
         return pulumi.get(self, "algorithm")
 
@@ -86,7 +98,7 @@ class GetScepProfileResult:
     @pulumi.getter(name="caIdentityName")
     def ca_identity_name(self) -> _builtins.str:
         """
-        The CaIdentityName param.
+        Certificate Authority identity
         """
         return pulumi.get(self, "ca_identity_name")
 
@@ -94,31 +106,55 @@ class GetScepProfileResult:
     @pulumi.getter(name="certificateAttributes")
     def certificate_attributes(self) -> 'outputs.GetScepProfileCertificateAttributesResult':
         """
-        The CertificateAttributes param.
+        Subject Alternative name type
         """
         return pulumi.get(self, "certificate_attributes")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
     def digest(self) -> _builtins.str:
         """
-        The Digest param.
+        Digest for CSR
         """
         return pulumi.get(self, "digest")
+
+    @_builtins.property
+    @pulumi.getter(name="encryptedValues")
+    def encrypted_values(self) -> Mapping[str, _builtins.str]:
+        """
+        Map of sensitive values returned from the API.
+        """
+        return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def fingerprint(self) -> _builtins.str:
         """
-        The Fingerprint param.
+        CA certificate fingerprint
         """
         return pulumi.get(self, "fingerprint")
 
     @_builtins.property
     @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the SCEP profile
         """
         return pulumi.get(self, "id")
 
@@ -126,7 +162,7 @@ class GetScepProfileResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the SCEP profile
         """
         return pulumi.get(self, "name")
 
@@ -134,7 +170,7 @@ class GetScepProfileResult:
     @pulumi.getter(name="scepCaCert")
     def scep_ca_cert(self) -> _builtins.str:
         """
-        The ScepCaCert param.
+        SCEP server CA certificate
         """
         return pulumi.get(self, "scep_ca_cert")
 
@@ -142,7 +178,7 @@ class GetScepProfileResult:
     @pulumi.getter(name="scepChallenge")
     def scep_challenge(self) -> 'outputs.GetScepProfileScepChallengeResult':
         """
-        The ScepChallenge param.
+        One Time Password challenge
         """
         return pulumi.get(self, "scep_challenge")
 
@@ -150,7 +186,7 @@ class GetScepProfileResult:
     @pulumi.getter(name="scepClientCert")
     def scep_client_cert(self) -> _builtins.str:
         """
-        The ScepClientCert param.
+        SCEP client ceertificate
         """
         return pulumi.get(self, "scep_client_cert")
 
@@ -158,15 +194,23 @@ class GetScepProfileResult:
     @pulumi.getter(name="scepUrl")
     def scep_url(self) -> _builtins.str:
         """
-        The ScepUrl param.
+        SCEP server URL
         """
         return pulumi.get(self, "scep_url")
 
     @_builtins.property
     @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
+
+    @_builtins.property
+    @pulumi.getter
     def subject(self) -> _builtins.str:
         """
-        The Subject param.
+        Subject
         """
         return pulumi.get(self, "subject")
 
@@ -179,7 +223,7 @@ class GetScepProfileResult:
     @pulumi.getter(name="useAsDigitalSignature")
     def use_as_digital_signature(self) -> _builtins.bool:
         """
-        The UseAsDigitalSignature param.
+        Use as digital signature?
         """
         return pulumi.get(self, "use_as_digital_signature")
 
@@ -187,7 +231,7 @@ class GetScepProfileResult:
     @pulumi.getter(name="useForKeyEncipherment")
     def use_for_key_encipherment(self) -> _builtins.bool:
         """
-        The UseForKeyEncipherment param.
+        Use for key encipherment?
         """
         return pulumi.get(self, "use_for_key_encipherment")
 
@@ -201,14 +245,18 @@ class AwaitableGetScepProfileResult(GetScepProfileResult):
             algorithm=self.algorithm,
             ca_identity_name=self.ca_identity_name,
             certificate_attributes=self.certificate_attributes,
+            device=self.device,
             digest=self.digest,
+            encrypted_values=self.encrypted_values,
             fingerprint=self.fingerprint,
+            folder=self.folder,
             id=self.id,
             name=self.name,
             scep_ca_cert=self.scep_ca_cert,
             scep_challenge=self.scep_challenge,
             scep_client_cert=self.scep_client_cert,
             scep_url=self.scep_url,
+            snippet=self.snippet,
             subject=self.subject,
             tfid=self.tfid,
             use_as_digital_signature=self.use_as_digital_signature,
@@ -216,24 +264,18 @@ class AwaitableGetScepProfileResult(GetScepProfileResult):
 
 
 def get_scep_profile(id: Optional[_builtins.str] = None,
+                     name: Optional[_builtins.str] = None,
                      opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetScepProfileResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_scep_profile(id="1234-56-789")
-    ```
+    ScepProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the SCEP profile
+    :param _builtins.str name: The name of the SCEP profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getScepProfile:getScepProfile', __args__, opts=opts, typ=GetScepProfileResult).value
 
@@ -241,51 +283,53 @@ def get_scep_profile(id: Optional[_builtins.str] = None,
         algorithm=pulumi.get(__ret__, 'algorithm'),
         ca_identity_name=pulumi.get(__ret__, 'ca_identity_name'),
         certificate_attributes=pulumi.get(__ret__, 'certificate_attributes'),
+        device=pulumi.get(__ret__, 'device'),
         digest=pulumi.get(__ret__, 'digest'),
+        encrypted_values=pulumi.get(__ret__, 'encrypted_values'),
         fingerprint=pulumi.get(__ret__, 'fingerprint'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         scep_ca_cert=pulumi.get(__ret__, 'scep_ca_cert'),
         scep_challenge=pulumi.get(__ret__, 'scep_challenge'),
         scep_client_cert=pulumi.get(__ret__, 'scep_client_cert'),
         scep_url=pulumi.get(__ret__, 'scep_url'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         subject=pulumi.get(__ret__, 'subject'),
         tfid=pulumi.get(__ret__, 'tfid'),
         use_as_digital_signature=pulumi.get(__ret__, 'use_as_digital_signature'),
         use_for_key_encipherment=pulumi.get(__ret__, 'use_for_key_encipherment'))
 def get_scep_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                            name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetScepProfileResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_scep_profile(id="1234-56-789")
-    ```
+    ScepProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the SCEP profile
+    :param _builtins.str name: The name of the SCEP profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getScepProfile:getScepProfile', __args__, opts=opts, typ=GetScepProfileResult)
     return __ret__.apply(lambda __response__: GetScepProfileResult(
         algorithm=pulumi.get(__response__, 'algorithm'),
         ca_identity_name=pulumi.get(__response__, 'ca_identity_name'),
         certificate_attributes=pulumi.get(__response__, 'certificate_attributes'),
+        device=pulumi.get(__response__, 'device'),
         digest=pulumi.get(__response__, 'digest'),
+        encrypted_values=pulumi.get(__response__, 'encrypted_values'),
         fingerprint=pulumi.get(__response__, 'fingerprint'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         scep_ca_cert=pulumi.get(__response__, 'scep_ca_cert'),
         scep_challenge=pulumi.get(__response__, 'scep_challenge'),
         scep_client_cert=pulumi.get(__response__, 'scep_client_cert'),
         scep_url=pulumi.get(__response__, 'scep_url'),
+        snippet=pulumi.get(__response__, 'snippet'),
         subject=pulumi.get(__response__, 'subject'),
         tfid=pulumi.get(__response__, 'tfid'),
         use_as_digital_signature=pulumi.get(__response__, 'use_as_digital_signature'),

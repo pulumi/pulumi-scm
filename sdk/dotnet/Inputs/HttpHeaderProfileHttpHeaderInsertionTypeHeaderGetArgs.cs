@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class HttpHeaderProfileHttpHeaderInsertionTypeHeaderGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Header param.
+        /// The HTTP header string
         /// </summary>
         [Input("header", required: true)]
         public Input<string> Header { get; set; } = null!;
 
         /// <summary>
-        /// The Log param. Default: `False`.
+        /// Log the use of this HTTP header insertion?
         /// </summary>
         [Input("log")]
         public Input<bool>? Log { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// An auto-generated name (*This should be removed*)
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// The Value param.
+        /// The value associated with the HTTP header
         /// </summary>
         [Input("value", required: true)]
         public Input<string> Value { get; set; } = null!;

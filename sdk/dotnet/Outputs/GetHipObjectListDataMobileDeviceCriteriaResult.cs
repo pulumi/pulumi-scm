@@ -14,39 +14,39 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataMobileDeviceCriteriaResult
     {
         /// <summary>
-        /// The Applications param.
+        /// Applications
         /// </summary>
         public readonly Outputs.GetHipObjectListDataMobileDeviceCriteriaApplicationsResult Applications;
         /// <summary>
-        /// If device's disk is encrypted.
+        /// If device's disk is encrypted
         /// </summary>
         public readonly bool DiskEncrypted;
         /// <summary>
-        /// The Imei param.
+        /// Imei
         /// </summary>
         public readonly Outputs.GetHipObjectListDataMobileDeviceCriteriaImeiResult Imei;
         /// <summary>
-        /// If device is by rooted/jailbroken.
+        /// If device is by rooted/jailbroken
         /// </summary>
         public readonly bool Jailbroken;
         /// <summary>
-        /// The LastCheckinTime param.
+        /// Last checkin time
         /// </summary>
         public readonly Outputs.GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeResult LastCheckinTime;
         /// <summary>
-        /// The Model param.
+        /// Model
         /// </summary>
         public readonly Outputs.GetHipObjectListDataMobileDeviceCriteriaModelResult Model;
         /// <summary>
-        /// If device's passcode is present.
+        /// If device's passcode is present
         /// </summary>
         public readonly bool PasscodeSet;
         /// <summary>
-        /// The PhoneNumber param.
+        /// Phone number
         /// </summary>
         public readonly Outputs.GetHipObjectListDataMobileDeviceCriteriaPhoneNumberResult PhoneNumber;
         /// <summary>
-        /// The Tag param.
+        /// Tag
         /// </summary>
         public readonly Outputs.GetHipObjectListDataMobileDeviceCriteriaTagResult Tag;
 

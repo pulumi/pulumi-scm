@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectCustomChecksCriteriaProcessListResult
     {
         /// <summary>
-        /// Process Name. String length must not exceed 1023 characters.
+        /// Process Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Running param. Default: `True`.
+        /// Running
         /// </summary>
         public readonly bool Running;
 

@@ -18,14 +18,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionArgs extends
     public static final AntiSpywareSignatureSignatureStandardAndConditionArgs Empty = new AntiSpywareSignatureSignatureStandardAndConditionArgs();
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -33,14 +33,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionArgs extends
     }
 
     /**
-     * The OrConditions param.
+     * Or condition
      * 
      */
     @Import(name="orConditions")
     private @Nullable Output<List<AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgs>> orConditions;
 
     /**
-     * @return The OrConditions param.
+     * @return Or condition
      * 
      */
     public Optional<Output<List<AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgs>>> orConditions() {
@@ -73,7 +73,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionArgs extends
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionArgs extends
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -94,7 +94,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionArgs extends
         }
 
         /**
-         * @param orConditions The OrConditions param.
+         * @param orConditions Or condition
          * 
          * @return builder
          * 
@@ -105,7 +105,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionArgs extends
         }
 
         /**
-         * @param orConditions The OrConditions param.
+         * @param orConditions Or condition
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionArgs extends
         }
 
         /**
-         * @param orConditions The OrConditions param.
+         * @param orConditions Or condition
          * 
          * @return builder
          * 

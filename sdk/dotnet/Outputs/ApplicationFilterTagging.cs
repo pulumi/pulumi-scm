@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class ApplicationFilterTagging
     {
         /// <summary>
-        /// The NoTag param. Ensure that only one of the following is specified: `NoTag`, `Tag`
+        /// No tag
         /// </summary>
         public readonly bool? NoTag;
         /// <summary>
-        /// The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters. Ensure that only one of the following is specified: `NoTag`, `Tag`
+        /// Tag
         /// </summary>
         public readonly ImmutableArray<string> Tags;
 

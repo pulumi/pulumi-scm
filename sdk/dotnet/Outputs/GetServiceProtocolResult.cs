@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetServiceProtocolResult
     {
         /// <summary>
-        /// The Tcp param.
+        /// Tcp
         /// </summary>
         public readonly Outputs.GetServiceProtocolTcpResult Tcp;
         /// <summary>
-        /// The Udp param.
+        /// Udp
         /// </summary>
         public readonly Outputs.GetServiceProtocolUdpResult Udp;
 

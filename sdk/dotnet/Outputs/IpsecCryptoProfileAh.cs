@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class IpsecCryptoProfileAh
     {
         /// <summary>
-        /// The Authentications param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+        /// Authentication
         /// </summary>
         public readonly ImmutableArray<string> Authentications;
 

@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,14 +17,14 @@ public final class CertificateProfileCaCertificateArgs extends com.pulumi.resour
     public static final CertificateProfileCaCertificateArgs Empty = new CertificateProfileCaCertificateArgs();
 
     /**
-     * The DefaultOcspUrl param.
+     * Default OCSP URL
      * 
      */
     @Import(name="defaultOcspUrl")
     private @Nullable Output<String> defaultOcspUrl;
 
     /**
-     * @return The DefaultOcspUrl param.
+     * @return Default OCSP URL
      * 
      */
     public Optional<Output<String>> defaultOcspUrl() {
@@ -31,29 +32,29 @@ public final class CertificateProfileCaCertificateArgs extends com.pulumi.resour
     }
 
     /**
-     * The Name param.
+     * CA certificate name
      * 
      */
-    @Import(name="name")
-    private @Nullable Output<String> name;
+    @Import(name="name", required=true)
+    private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return CA certificate name
      * 
      */
-    public Optional<Output<String>> name() {
-        return Optional.ofNullable(this.name);
+    public Output<String> name() {
+        return this.name;
     }
 
     /**
-     * The OcspVerifyCert param.
+     * OCSP verify certificate
      * 
      */
     @Import(name="ocspVerifyCert")
     private @Nullable Output<String> ocspVerifyCert;
 
     /**
-     * @return The OcspVerifyCert param.
+     * @return OCSP verify certificate
      * 
      */
     public Optional<Output<String>> ocspVerifyCert() {
@@ -61,14 +62,14 @@ public final class CertificateProfileCaCertificateArgs extends com.pulumi.resour
     }
 
     /**
-     * The TemplateName param.
+     * Template name/OID
      * 
      */
     @Import(name="templateName")
     private @Nullable Output<String> templateName;
 
     /**
-     * @return The TemplateName param.
+     * @return Template name/OID
      * 
      */
     public Optional<Output<String>> templateName() {
@@ -103,7 +104,7 @@ public final class CertificateProfileCaCertificateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param defaultOcspUrl The DefaultOcspUrl param.
+         * @param defaultOcspUrl Default OCSP URL
          * 
          * @return builder
          * 
@@ -114,7 +115,7 @@ public final class CertificateProfileCaCertificateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param defaultOcspUrl The DefaultOcspUrl param.
+         * @param defaultOcspUrl Default OCSP URL
          * 
          * @return builder
          * 
@@ -124,18 +125,18 @@ public final class CertificateProfileCaCertificateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param name The Name param.
+         * @param name CA certificate name
          * 
          * @return builder
          * 
          */
-        public Builder name(@Nullable Output<String> name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
         /**
-         * @param name The Name param.
+         * @param name CA certificate name
          * 
          * @return builder
          * 
@@ -145,7 +146,7 @@ public final class CertificateProfileCaCertificateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param ocspVerifyCert The OcspVerifyCert param.
+         * @param ocspVerifyCert OCSP verify certificate
          * 
          * @return builder
          * 
@@ -156,7 +157,7 @@ public final class CertificateProfileCaCertificateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param ocspVerifyCert The OcspVerifyCert param.
+         * @param ocspVerifyCert OCSP verify certificate
          * 
          * @return builder
          * 
@@ -166,7 +167,7 @@ public final class CertificateProfileCaCertificateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param templateName The TemplateName param.
+         * @param templateName Template name/OID
          * 
          * @return builder
          * 
@@ -177,7 +178,7 @@ public final class CertificateProfileCaCertificateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param templateName The TemplateName param.
+         * @param templateName Template name/OID
          * 
          * @return builder
          * 
@@ -187,6 +188,9 @@ public final class CertificateProfileCaCertificateArgs extends com.pulumi.resour
         }
 
         public CertificateProfileCaCertificateArgs build() {
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("CertificateProfileCaCertificateArgs", "name");
+            }
             return $;
         }
     }

@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareProfileThreatExceptionResult
     {
         /// <summary>
-        /// The Action param.
+        /// anti spyware profiles threat exception default action
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileThreatExceptionActionResult Action;
         /// <summary>
-        /// The ExemptIps param.
+        /// Exempt ip
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareProfileThreatExceptionExemptIpResult> ExemptIps;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Notes param.
+        /// Notes
         /// </summary>
         public readonly string Notes;
         /// <summary>
-        /// The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        /// Packet capture
         /// </summary>
         public readonly string PacketCapture;
 

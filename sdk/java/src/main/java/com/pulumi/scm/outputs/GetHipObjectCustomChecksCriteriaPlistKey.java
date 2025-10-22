@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectCustomChecksCriteriaPlistKey {
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Key name
      * 
      */
     private String name;
     /**
-     * @return Value does not exist or match specified value data. Default: `false`.
+     * @return Value does not exist or match specified value data
      * 
      */
     private Boolean negate;
     /**
-     * @return Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Key value
      * 
      */
     private String value;
 
     private GetHipObjectCustomChecksCriteriaPlistKey() {}
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Key name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Value does not exist or match specified value data. Default: `false`.
+     * @return Value does not exist or match specified value data
      * 
      */
     public Boolean negate() {
         return this.negate;
     }
     /**
-     * @return Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Key value
      * 
      */
     public String value() {

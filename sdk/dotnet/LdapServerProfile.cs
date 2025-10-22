@@ -10,88 +10,85 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.LdapServerProfile("example");
-    /// 
-    /// });
-    /// ```
+    /// LdapServerProfile resource
     /// </summary>
     [ScmResourceType("scm:index/ldapServerProfile:LdapServerProfile")]
     public partial class LdapServerProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Base param. String length must not exceed 255 characters.
+        /// The base DN
         /// </summary>
         [Output("base")]
         public Output<string?> Base { get; private set; } = null!;
 
         /// <summary>
-        /// The BindDn param. String length must not exceed 255 characters.
+        /// The bind DN
         /// </summary>
         [Output("bindDn")]
         public Output<string?> BindDn { get; private set; } = null!;
 
         /// <summary>
-        /// The BindPassword param. String length must not exceed 121 characters.
+        /// The bind password
         /// </summary>
         [Output("bindPassword")]
         public Output<string?> BindPassword { get; private set; } = null!;
 
         /// <summary>
-        /// The BindTimelimit param.
+        /// The bind timeout (seconds)
         /// </summary>
         [Output("bindTimelimit")]
         public Output<string?> BindTimelimit { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        [Output("encryptedValues")]
+        public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
+
+        /// <summary>
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+        /// The LDAP server time
         /// </summary>
         [Output("ldapType")]
         public Output<string?> LdapType { get; private set; } = null!;
 
         /// <summary>
-        /// The RetryInterval param.
+        /// The name of the LDAP server profile
+        /// </summary>
+        [Output("name")]
+        public Output<string> Name { get; private set; } = null!;
+
+        /// <summary>
+        /// The search retry interval (seconds)
         /// </summary>
         [Output("retryInterval")]
         public Output<int?> RetryInterval { get; private set; } = null!;
 
         /// <summary>
-        /// The Servers param.
+        /// The LDAP server configuration
         /// </summary>
         [Output("servers")]
         public Output<ImmutableArray<Outputs.LdapServerProfileServer>> Servers { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The Ssl param.
+        /// Require SSL/TLS secured connection?
         /// </summary>
         [Output("ssl")]
         public Output<bool?> Ssl { get; private set; } = null!;
@@ -100,13 +97,13 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The Timelimit param.
+        /// The search timeout (seconds)
         /// </summary>
         [Output("timelimit")]
         public Output<int?> Timelimit { get; private set; } = null!;
 
         /// <summary>
-        /// The VerifyServerCertificate param.
+        /// Verify server certificate for SSL sessions?
         /// </summary>
         [Output("verifyServerCertificate")]
         public Output<bool?> VerifyServerCertificate { get; private set; } = null!;
@@ -137,6 +134,7 @@ namespace Pulumi.Scm
                 AdditionalSecretOutputs =
                 {
                     "bindPassword",
+                    "encryptedValues",
                 },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
@@ -162,13 +160,13 @@ namespace Pulumi.Scm
     public sealed class LdapServerProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Base param. String length must not exceed 255 characters.
+        /// The base DN
         /// </summary>
         [Input("base")]
         public Input<string>? Base { get; set; }
 
         /// <summary>
-        /// The BindDn param. String length must not exceed 255 characters.
+        /// The bind DN
         /// </summary>
         [Input("bindDn")]
         public Input<string>? BindDn { get; set; }
@@ -177,7 +175,7 @@ namespace Pulumi.Scm
         private Input<string>? _bindPassword;
 
         /// <summary>
-        /// The BindPassword param. String length must not exceed 121 characters.
+        /// The bind password
         /// </summary>
         public Input<string>? BindPassword
         {
@@ -190,31 +188,37 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The BindTimelimit param.
+        /// The bind timeout (seconds)
         /// </summary>
         [Input("bindTimelimit")]
         public Input<string>? BindTimelimit { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+        /// The LDAP server time
         /// </summary>
         [Input("ldapType")]
         public Input<string>? LdapType { get; set; }
 
         /// <summary>
-        /// The RetryInterval param.
+        /// The name of the LDAP server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The search retry interval (seconds)
         /// </summary>
         [Input("retryInterval")]
         public Input<int>? RetryInterval { get; set; }
@@ -223,7 +227,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.LdapServerProfileServerArgs>? _servers;
 
         /// <summary>
-        /// The Servers param.
+        /// The LDAP server configuration
         /// </summary>
         public InputList<Inputs.LdapServerProfileServerArgs> Servers
         {
@@ -232,25 +236,25 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The Ssl param.
+        /// Require SSL/TLS secured connection?
         /// </summary>
         [Input("ssl")]
         public Input<bool>? Ssl { get; set; }
 
         /// <summary>
-        /// The Timelimit param.
+        /// The search timeout (seconds)
         /// </summary>
         [Input("timelimit")]
         public Input<int>? Timelimit { get; set; }
 
         /// <summary>
-        /// The VerifyServerCertificate param.
+        /// Verify server certificate for SSL sessions?
         /// </summary>
         [Input("verifyServerCertificate")]
         public Input<bool>? VerifyServerCertificate { get; set; }
@@ -264,13 +268,13 @@ namespace Pulumi.Scm
     public sealed class LdapServerProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Base param. String length must not exceed 255 characters.
+        /// The base DN
         /// </summary>
         [Input("base")]
         public Input<string>? Base { get; set; }
 
         /// <summary>
-        /// The BindDn param. String length must not exceed 255 characters.
+        /// The bind DN
         /// </summary>
         [Input("bindDn")]
         public Input<string>? BindDn { get; set; }
@@ -279,7 +283,7 @@ namespace Pulumi.Scm
         private Input<string>? _bindPassword;
 
         /// <summary>
-        /// The BindPassword param. String length must not exceed 121 characters.
+        /// The bind password
         /// </summary>
         public Input<string>? BindPassword
         {
@@ -292,31 +296,53 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The BindTimelimit param.
+        /// The bind timeout (seconds)
         /// </summary>
         [Input("bindTimelimit")]
         public Input<string>? BindTimelimit { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        [Input("encryptedValues")]
+        private InputMap<string>? _encryptedValues;
+
         /// <summary>
-        /// The Folder param.
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public InputMap<string> EncryptedValues
+        {
+            get => _encryptedValues ?? (_encryptedValues = new InputMap<string>());
+            set
+            {
+                var emptySecret = Output.CreateSecret(ImmutableDictionary.Create<string, string>());
+                _encryptedValues = Output.All(value, emptySecret).Apply(v => v[0]);
+            }
+        }
+
+        /// <summary>
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+        /// The LDAP server time
         /// </summary>
         [Input("ldapType")]
         public Input<string>? LdapType { get; set; }
 
         /// <summary>
-        /// The RetryInterval param.
+        /// The name of the LDAP server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The search retry interval (seconds)
         /// </summary>
         [Input("retryInterval")]
         public Input<int>? RetryInterval { get; set; }
@@ -325,7 +351,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.LdapServerProfileServerGetArgs>? _servers;
 
         /// <summary>
-        /// The Servers param.
+        /// The LDAP server configuration
         /// </summary>
         public InputList<Inputs.LdapServerProfileServerGetArgs> Servers
         {
@@ -334,13 +360,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The Ssl param.
+        /// Require SSL/TLS secured connection?
         /// </summary>
         [Input("ssl")]
         public Input<bool>? Ssl { get; set; }
@@ -349,13 +375,13 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The Timelimit param.
+        /// The search timeout (seconds)
         /// </summary>
         [Input("timelimit")]
         public Input<int>? Timelimit { get; set; }
 
         /// <summary>
-        /// The VerifyServerCertificate param.
+        /// Verify server certificate for SSL sessions?
         /// </summary>
         [Input("verifyServerCertificate")]
         public Input<bool>? VerifyServerCertificate { get; set; }

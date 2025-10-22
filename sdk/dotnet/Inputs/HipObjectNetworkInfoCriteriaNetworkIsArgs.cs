@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectNetworkInfoCriteriaNetworkIsArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Mobile param. Ensure that only one of the following is specified: `Mobile`, `Unknown`, `Wifi`
+        /// Mobile
         /// </summary>
         [Input("mobile")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsMobileArgs>? Mobile { get; set; }
 
         /// <summary>
-        /// The Unknown param. Ensure that only one of the following is specified: `Mobile`, `Unknown`, `Wifi`
+        /// Unknown
         /// </summary>
         [Input("unknown")]
-        public Input<bool>? Unknown { get; set; }
+        public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsUnknownArgs>? Unknown { get; set; }
 
         /// <summary>
-        /// The Wifi param. Ensure that only one of the following is specified: `Mobile`, `Unknown`, `Wifi`
+        /// Wifi
         /// </summary>
         [Input("wifi")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsWifiArgs>? Wifi { get; set; }

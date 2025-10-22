@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThan {
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     private @Nullable String context;
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     private @Nullable List<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier> qualifiers;
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     private @Nullable Integer value;
 
     private AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThan() {}
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     public List<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifier> qualifiers() {
         return this.qualifiers == null ? List.of() : this.qualifiers;
     }
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     public Optional<Integer> value() {

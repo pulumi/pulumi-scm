@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectMobileDeviceCriteriaApplicationsResult
     {
         /// <summary>
-        /// The HasMalware param.
+        /// Has malware
         /// </summary>
         public readonly Outputs.GetHipObjectMobileDeviceCriteriaApplicationsHasMalwareResult HasMalware;
         /// <summary>
-        /// Has apps that are not managed.
+        /// Has apps that are not managed
         /// </summary>
         public readonly bool HasUnmanagedApp;
         /// <summary>
-        /// The Includes param.
+        /// Includes
         /// </summary>
         public readonly ImmutableArray<Outputs.GetHipObjectMobileDeviceCriteriaApplicationsIncludeResult> Includes;
 

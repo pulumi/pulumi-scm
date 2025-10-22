@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.AntiSpywareSignatureSignatureStandardAndConditionGetArgs>? _andConditions;
 
         /// <summary>
-        /// The AndConditions param.
+        /// And condition
         /// </summary>
         public InputList<Inputs.AntiSpywareSignatureSignatureStandardAndConditionGetArgs> AndConditions
         {
@@ -25,25 +25,25 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Comment param. String length must not exceed 256 characters.
+        /// Comment
         /// </summary>
         [Input("comment")]
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// The OrderFree param. Default: `False`.
+        /// Order free
         /// </summary>
         [Input("orderFree")]
         public Input<bool>? OrderFree { get; set; }
 
         /// <summary>
-        /// The Scope param. String must be one of these: `"protocol-data-unit"`, `"session"`.
+        /// Scope
         /// </summary>
         [Input("scope")]
         public Input<string>? Scope { get; set; }

@@ -27,12 +27,12 @@ class HipProfileArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a HipProfile resource.
-        :param pulumi.Input[_builtins.str] match: The Match param. String length must not exceed 2048 characters.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] match: Match
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the HIP profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         pulumi.set(__self__, "match", match)
         if description is not None:
@@ -50,7 +50,7 @@ class HipProfileArgs:
     @pulumi.getter
     def match(self) -> pulumi.Input[_builtins.str]:
         """
-        The Match param. String length must not exceed 2048 characters.
+        Match
         """
         return pulumi.get(self, "match")
 
@@ -62,7 +62,7 @@ class HipProfileArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -74,7 +74,7 @@ class HipProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -86,7 +86,7 @@ class HipProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -98,7 +98,7 @@ class HipProfileArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the HIP profile
         """
         return pulumi.get(self, "name")
 
@@ -110,7 +110,7 @@ class HipProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -131,12 +131,12 @@ class _HipProfileState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering HipProfile resources.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] match: The Match param. String length must not exceed 2048 characters.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] match: Match
+        :param pulumi.Input[_builtins.str] name: The name of the HIP profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -157,7 +157,7 @@ class _HipProfileState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -169,7 +169,7 @@ class _HipProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -181,7 +181,7 @@ class _HipProfileState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -193,7 +193,7 @@ class _HipProfileState:
     @pulumi.getter
     def match(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Match param. String length must not exceed 2048 characters.
+        Match
         """
         return pulumi.get(self, "match")
 
@@ -205,7 +205,7 @@ class _HipProfileState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the HIP profile
         """
         return pulumi.get(self, "name")
 
@@ -217,7 +217,7 @@ class _HipProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -249,7 +249,7 @@ class HipProfile(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        HipProfile resource
 
         ## Example Usage
 
@@ -257,17 +257,22 @@ class HipProfile(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.HipProfile("example")
+        # This resource creates a new HIP Profile.
+        scm_hip_profile1 = scm.HipProfile("scm_hip_profile_1",
+            folder="Shared",
+            name="scm_hip_profile_1",
+            description="A HIP profile created by Terraform",
+            match="\\"is-win\\" and \\"is-anti-malware-and-rtp-enabled\\"")
         ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] match: The Match param. String length must not exceed 2048 characters.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] match: Match
+        :param pulumi.Input[_builtins.str] name: The name of the HIP profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -276,7 +281,7 @@ class HipProfile(pulumi.CustomResource):
                  args: HipProfileArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        HipProfile resource
 
         ## Example Usage
 
@@ -284,7 +289,12 @@ class HipProfile(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.HipProfile("example")
+        # This resource creates a new HIP Profile.
+        scm_hip_profile1 = scm.HipProfile("scm_hip_profile_1",
+            folder="Shared",
+            name="scm_hip_profile_1",
+            description="A HIP profile created by Terraform",
+            match="\\"is-win\\" and \\"is-anti-malware-and-rtp-enabled\\"")
         ```
 
         :param str resource_name: The name of the resource.
@@ -350,12 +360,12 @@ class HipProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] match: The Match param. String length must not exceed 2048 characters.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] match: Match
+        :param pulumi.Input[_builtins.str] name: The name of the HIP profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -374,7 +384,7 @@ class HipProfile(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -382,7 +392,7 @@ class HipProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -390,7 +400,7 @@ class HipProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -398,7 +408,7 @@ class HipProfile(pulumi.CustomResource):
     @pulumi.getter
     def match(self) -> pulumi.Output[_builtins.str]:
         """
-        The Match param. String length must not exceed 2048 characters.
+        Match
         """
         return pulumi.get(self, "match")
 
@@ -406,7 +416,7 @@ class HipProfile(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the HIP profile
         """
         return pulumi.get(self, "name")
 
@@ -414,7 +424,7 @@ class HipProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

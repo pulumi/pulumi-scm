@@ -17,14 +17,14 @@ public final class HipObjectDataLossPreventionCriteriaArgs extends com.pulumi.re
     public static final HipObjectDataLossPreventionCriteriaArgs Empty = new HipObjectDataLossPreventionCriteriaArgs();
 
     /**
-     * is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+     * is enabled
      * 
      */
     @Import(name="isEnabled")
     private @Nullable Output<String> isEnabled;
 
     /**
-     * @return is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+     * @return is enabled
      * 
      */
     public Optional<Output<String>> isEnabled() {
@@ -32,14 +32,14 @@ public final class HipObjectDataLossPreventionCriteriaArgs extends com.pulumi.re
     }
 
     /**
-     * Is Installed. Default: `true`.
+     * Is Installed
      * 
      */
     @Import(name="isInstalled")
     private @Nullable Output<Boolean> isInstalled;
 
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     public Optional<Output<Boolean>> isInstalled() {
@@ -72,7 +72,7 @@ public final class HipObjectDataLossPreventionCriteriaArgs extends com.pulumi.re
         }
 
         /**
-         * @param isEnabled is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+         * @param isEnabled is enabled
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class HipObjectDataLossPreventionCriteriaArgs extends com.pulumi.re
         }
 
         /**
-         * @param isEnabled is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+         * @param isEnabled is enabled
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class HipObjectDataLossPreventionCriteriaArgs extends com.pulumi.re
         }
 
         /**
-         * @param isInstalled Is Installed. Default: `true`.
+         * @param isInstalled Is Installed
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class HipObjectDataLossPreventionCriteriaArgs extends com.pulumi.re
         }
 
         /**
-         * @param isInstalled Is Installed. Default: `true`.
+         * @param isInstalled Is Installed
          * 
          * @return builder
          * 

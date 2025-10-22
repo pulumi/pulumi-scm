@@ -12,50 +12,50 @@ import java.util.Objects;
 @CustomType
 public final class GetIpsecTunnelListDataAutoKeyProxyIdV6 {
     /**
-     * @return The Local param.
+     * @return Local
      * 
      */
     private String local;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The Protocol param.
+     * @return IPv6 type of proxy*id protocol values for protocol
      * 
      */
     private GetIpsecTunnelListDataAutoKeyProxyIdV6Protocol protocol;
     /**
-     * @return The Remote param.
+     * @return Remote
      * 
      */
     private String remote;
 
     private GetIpsecTunnelListDataAutoKeyProxyIdV6() {}
     /**
-     * @return The Local param.
+     * @return Local
      * 
      */
     public String local() {
         return this.local;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Protocol param.
+     * @return IPv6 type of proxy*id protocol values for protocol
      * 
      */
     public GetIpsecTunnelListDataAutoKeyProxyIdV6Protocol protocol() {
         return this.protocol;
     }
     /**
-     * @return The Remote param.
+     * @return Remote
      * 
      */
     public String remote() {

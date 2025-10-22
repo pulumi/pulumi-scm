@@ -27,12 +27,17 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetIkeGatewayList(ctx, &scm.GetIkeGatewayListArgs{
+//			// Data source to retrieve a list of IKE Gateways.
+//			// You can filter the list by folder, snippet, or device.
+//			// This example retrieves all gateways in the "Shared" folder.
+//			exampleListIkeGatewayDs, err := scm.GetIkeGatewayList(ctx, &scm.GetIkeGatewayListArgs{
 //				Folder: pulumi.StringRef("Remote Networks"),
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("ikeGatewayListTotal", exampleListIkeGatewayDs.Total)
+//			ctx.Export("ikeGatewayListData", exampleListIkeGatewayDs.Datas)
 //			return nil
 //		})
 //	}
@@ -50,40 +55,40 @@ func GetIkeGatewayList(ctx *pulumi.Context, args *GetIkeGatewayListArgs, opts ..
 
 // A collection of arguments for invoking getIkeGatewayList.
 type GetIkeGatewayListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getIkeGatewayList.
 type GetIkeGatewayListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetIkeGatewayListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +103,17 @@ func GetIkeGatewayListOutput(ctx *pulumi.Context, args GetIkeGatewayListOutputAr
 
 // A collection of arguments for invoking getIkeGatewayList.
 type GetIkeGatewayListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +136,17 @@ func (o GetIkeGatewayListResultOutput) ToGetIkeGatewayListResultOutputWithContex
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetIkeGatewayListResultOutput) Datas() GetIkeGatewayListDataArrayOutput {
 	return o.ApplyT(func(v GetIkeGatewayListResult) []GetIkeGatewayListData { return v.Datas }).(GetIkeGatewayListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetIkeGatewayListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetIkeGatewayListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetIkeGatewayListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetIkeGatewayListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +156,22 @@ func (o GetIkeGatewayListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetIkeGatewayListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetIkeGatewayListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetIkeGatewayListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetIkeGatewayListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetIkeGatewayListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetIkeGatewayListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetIkeGatewayListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetIkeGatewayListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetIkeGatewayListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetIkeGatewayListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetIkeGatewayListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetIkeGatewayListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +180,7 @@ func (o GetIkeGatewayListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIkeGatewayListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetIkeGatewayListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIkeGatewayListResult) int { return v.Total }).(pulumi.IntOutput)
 }

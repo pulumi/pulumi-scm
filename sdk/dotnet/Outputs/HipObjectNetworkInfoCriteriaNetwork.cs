@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectNetworkInfoCriteriaNetwork
     {
         /// <summary>
-        /// The Is param. Ensure that only one of the following is specified: `Is`, `IsNot`
+        /// Is
         /// </summary>
         public readonly Outputs.HipObjectNetworkInfoCriteriaNetworkIs? Is;
         /// <summary>
-        /// The IsNot param. Ensure that only one of the following is specified: `Is`, `IsNot`
+        /// Is not
         /// </summary>
         public readonly Outputs.HipObjectNetworkInfoCriteriaNetworkIsNot? IsNot;
 

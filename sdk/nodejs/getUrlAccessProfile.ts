@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * UrlAccessProfile data source
  *
  * ## Example Usage
  *
@@ -15,15 +15,21 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
+ * //
+ * // Data source to retrieve a single URL Access Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the URL Access Profile you want to find.
  * const example = scm.getUrlAccessProfile({
- *     id: "1234-56-789",
+ *     id: "e97c7e7e-9906-42d6-90a8-606ed5527125",
  * });
+ * export const urlAccessProfileDetails = example;
  * ```
  */
 export function getUrlAccessProfile(args: GetUrlAccessProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetUrlAccessProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getUrlAccessProfile:getUrlAccessProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +38,13 @@ export function getUrlAccessProfile(args: GetUrlAccessProfileArgs, opts?: pulumi
  */
 export interface GetUrlAccessProfileArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * Name
+     */
+    name?: string;
 }
 
 /**
@@ -42,73 +52,89 @@ export interface GetUrlAccessProfileArgs {
  */
 export interface GetUrlAccessProfileResult {
     /**
-     * The Alerts param.
+     * Alert
      */
     readonly alerts: string[];
     /**
-     * The Allows param.
+     * Allow
      */
     readonly allows: string[];
     /**
-     * The Blocks param.
+     * Block
      */
     readonly blocks: string[];
     /**
-     * The CloudInlineCat param.
+     * Cloud inline cat
      */
     readonly cloudInlineCat: boolean;
     /**
-     * The Continues param.
+     * Continue
      */
     readonly continues: string[];
     /**
-     * The CredentialEnforcement param.
+     * Credential enforcement
      */
     readonly credentialEnforcement: outputs.GetUrlAccessProfileCredentialEnforcement;
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     readonly description: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The LocalInlineCat param.
+     * Local inline cat
      */
     readonly localInlineCat: boolean;
     /**
-     * The LogContainerPageOnly param. Default: `true`.
+     * Log container page only
      */
     readonly logContainerPageOnly: boolean;
     /**
-     * The LogHttpHdrReferer param. Default: `false`.
+     * Log http hdr referer
      */
     readonly logHttpHdrReferer: boolean;
     /**
-     * The LogHttpHdrUserAgent param. Default: `false`.
+     * Log http hdr user agent
      */
     readonly logHttpHdrUserAgent: boolean;
     /**
-     * The LogHttpHdrXff param. Default: `false`.
+     * Log http hdr xff
      */
     readonly logHttpHdrXff: boolean;
     /**
-     * The MlavCategoryExceptions param.
+     * Mlav category exception
      */
     readonly mlavCategoryExceptions: string[];
     /**
-     * The Name param.
+     * Name
      */
     readonly name: string;
     /**
-     * The SafeSearchEnforcement param. Default: `false`.
+     * Redirect
+     */
+    readonly redirects: string[];
+    /**
+     * Safe search enforcement
      */
     readonly safeSearchEnforcement: boolean;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * UrlAccessProfile data source
  *
  * ## Example Usage
  *
@@ -116,15 +142,21 @@ export interface GetUrlAccessProfileResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
+ * //
+ * // Data source to retrieve a single URL Access Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the URL Access Profile you want to find.
  * const example = scm.getUrlAccessProfile({
- *     id: "1234-56-789",
+ *     id: "e97c7e7e-9906-42d6-90a8-606ed5527125",
  * });
+ * export const urlAccessProfileDetails = example;
  * ```
  */
 export function getUrlAccessProfileOutput(args: GetUrlAccessProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUrlAccessProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getUrlAccessProfile:getUrlAccessProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -133,7 +165,11 @@ export function getUrlAccessProfileOutput(args: GetUrlAccessProfileOutputArgs, o
  */
 export interface GetUrlAccessProfileOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
 }

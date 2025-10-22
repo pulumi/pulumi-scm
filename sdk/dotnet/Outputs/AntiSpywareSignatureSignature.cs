@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class AntiSpywareSignatureSignature
     {
         /// <summary>
-        /// The Combination param. Ensure that only one of the following is specified: `Combination`, `Standard`
+        /// anti spyware signature combination
         /// </summary>
         public readonly Outputs.AntiSpywareSignatureSignatureCombination? Combination;
         /// <summary>
-        /// The Standards param. Ensure that only one of the following is specified: `Combination`, `Standard`
+        /// Standard
         /// </summary>
         public readonly ImmutableArray<Outputs.AntiSpywareSignatureSignatureStandard> Standards;
 

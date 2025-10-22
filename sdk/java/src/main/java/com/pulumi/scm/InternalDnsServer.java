@@ -16,92 +16,62 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.InternalDnsServer;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new InternalDnsServer("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * InternalDnsServer resource
  * 
  */
 @ResourceType(type="scm:index/internalDnsServer:InternalDnsServer")
 public class InternalDnsServer extends com.pulumi.resources.CustomResource {
     /**
-     * The DomainNames param.
+     * The DNS domain name(s)
      * 
      */
     @Export(name="domainNames", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> domainNames;
 
     /**
-     * @return The DomainNames param.
+     * @return The DNS domain name(s)
      * 
      */
     public Output<List<String>> domainNames() {
         return this.domainNames;
     }
     /**
-     * The Name param.
+     * The name of the internet DNS server resource
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the internet DNS server resource
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Primary param.
+     * The IP address of the primary DNS server
      * 
      */
     @Export(name="primary", refs={String.class}, tree="[0]")
     private Output<String> primary;
 
     /**
-     * @return The Primary param.
+     * @return The IP address of the primary DNS server
      * 
      */
     public Output<String> primary() {
         return this.primary;
     }
     /**
-     * The Secondary param.
+     * The IP address of the secondary DNS server
      * 
      */
     @Export(name="secondary", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> secondary;
 
     /**
-     * @return The Secondary param.
+     * @return The IP address of the secondary DNS server
      * 
      */
     public Output<Optional<String>> secondary() {

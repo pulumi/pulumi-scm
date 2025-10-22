@@ -17,14 +17,14 @@ public final class AuthenticationProfileMethodLdapArgs extends com.pulumi.resour
     public static final AuthenticationProfileMethodLdapArgs Empty = new AuthenticationProfileMethodLdapArgs();
 
     /**
-     * The LoginAttribute param.
+     * Login attribute
      * 
      */
     @Import(name="loginAttribute")
     private @Nullable Output<String> loginAttribute;
 
     /**
-     * @return The LoginAttribute param.
+     * @return Login attribute
      * 
      */
     public Optional<Output<String>> loginAttribute() {
@@ -32,14 +32,14 @@ public final class AuthenticationProfileMethodLdapArgs extends com.pulumi.resour
     }
 
     /**
-     * The PasswdExpDays param.
+     * Passwd exp days
      * 
      */
     @Import(name="passwdExpDays")
     private @Nullable Output<Integer> passwdExpDays;
 
     /**
-     * @return The PasswdExpDays param.
+     * @return Passwd exp days
      * 
      */
     public Optional<Output<Integer>> passwdExpDays() {
@@ -47,14 +47,14 @@ public final class AuthenticationProfileMethodLdapArgs extends com.pulumi.resour
     }
 
     /**
-     * The ServerProfile param.
+     * Server profile
      * 
      */
     @Import(name="serverProfile")
     private @Nullable Output<String> serverProfile;
 
     /**
-     * @return The ServerProfile param.
+     * @return Server profile
      * 
      */
     public Optional<Output<String>> serverProfile() {
@@ -88,7 +88,7 @@ public final class AuthenticationProfileMethodLdapArgs extends com.pulumi.resour
         }
 
         /**
-         * @param loginAttribute The LoginAttribute param.
+         * @param loginAttribute Login attribute
          * 
          * @return builder
          * 
@@ -99,7 +99,7 @@ public final class AuthenticationProfileMethodLdapArgs extends com.pulumi.resour
         }
 
         /**
-         * @param loginAttribute The LoginAttribute param.
+         * @param loginAttribute Login attribute
          * 
          * @return builder
          * 
@@ -109,7 +109,7 @@ public final class AuthenticationProfileMethodLdapArgs extends com.pulumi.resour
         }
 
         /**
-         * @param passwdExpDays The PasswdExpDays param.
+         * @param passwdExpDays Passwd exp days
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class AuthenticationProfileMethodLdapArgs extends com.pulumi.resour
         }
 
         /**
-         * @param passwdExpDays The PasswdExpDays param.
+         * @param passwdExpDays Passwd exp days
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class AuthenticationProfileMethodLdapArgs extends com.pulumi.resour
         }
 
         /**
-         * @param serverProfile The ServerProfile param.
+         * @param serverProfile Server profile
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class AuthenticationProfileMethodLdapArgs extends com.pulumi.resour
         }
 
         /**
-         * @param serverProfile The ServerProfile param.
+         * @param serverProfile Server profile
          * 
          * @return builder
          * 

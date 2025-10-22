@@ -21,6 +21,16 @@ The `scm` provider provides resources and functions to manage and query Strata C
 
 This provider covers the following aspects of Strata Cloud Manager:
 * Unified Networking Security
+## Beta Release Disclaimer
+
+**This software is a pre-release version and is not ready for production use.**
+
+* **No Warranty:** This software is provided "as is," without any warranty of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose.
+* **Instability:** The beta software may contain defects, may not operate correctly, and may be substantially modified or withdrawn at any time.
+* **Limitation of Liability:** In no event shall the authors or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the beta software or the use or other dealings in the beta software.
+* **Feedback:** We encourage and appreciate your feedback and bug reports. However, you acknowledge that any feedback you provide is non-confidential.
+
+By using this software, you agree to these terms.
 ## Warranty
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
@@ -35,14 +45,18 @@ THIS SOFTWARE IS RELEASED AS A PROOF OF CONCEPT FOR EXPERIMENTAL PURPOSES ONLY. 
 name: configuration-example
 runtime: nodejs
 config:
+    scm:authUrl:
+        value: ""
     scm:clientId:
-        value: your-id@12345
+        value: ""
     scm:clientSecret:
-        value: secret
+        value: ""
     scm:host:
-        value: api.strata.paloaltonetworks.com
+        value: ""
+    scm:logging:
+        value: ""
     scm:scope:
-        value: tsg_id:12345
+        value: ""
 
 ```
 ```typescript
@@ -56,14 +70,18 @@ import * as pulumi from "@pulumi/pulumi";
 name: configuration-example
 runtime: python
 config:
+    scm:authUrl:
+        value: ""
     scm:clientId:
-        value: your-id@12345
+        value: ""
     scm:clientSecret:
-        value: secret
+        value: ""
     scm:host:
-        value: api.strata.paloaltonetworks.com
+        value: ""
+    scm:logging:
+        value: ""
     scm:scope:
-        value: tsg_id:12345
+        value: ""
 
 ```
 ```python
@@ -77,14 +95,18 @@ import pulumi
 name: configuration-example
 runtime: dotnet
 config:
+    scm:authUrl:
+        value: ""
     scm:clientId:
-        value: your-id@12345
+        value: ""
     scm:clientSecret:
-        value: secret
+        value: ""
     scm:host:
-        value: api.strata.paloaltonetworks.com
+        value: ""
+    scm:logging:
+        value: ""
     scm:scope:
-        value: tsg_id:12345
+        value: ""
 
 ```
 ```csharp
@@ -104,14 +126,18 @@ return await Deployment.RunAsync(() =>
 name: configuration-example
 runtime: go
 config:
+    scm:authUrl:
+        value: ""
     scm:clientId:
-        value: your-id@12345
+        value: ""
     scm:clientSecret:
-        value: secret
+        value: ""
     scm:host:
-        value: api.strata.paloaltonetworks.com
+        value: ""
+    scm:logging:
+        value: ""
     scm:scope:
-        value: tsg_id:12345
+        value: ""
 
 ```
 ```go
@@ -134,14 +160,18 @@ func main() {
 name: configuration-example
 runtime: yaml
 config:
+    scm:authUrl:
+        value: ""
     scm:clientId:
-        value: your-id@12345
+        value: ""
     scm:clientSecret:
-        value: secret
+        value: ""
     scm:host:
-        value: api.strata.paloaltonetworks.com
+        value: ""
+    scm:logging:
+        value: ""
     scm:scope:
-        value: tsg_id:12345
+        value: ""
 
 ```
 ```yaml
@@ -154,14 +184,18 @@ config:
 name: configuration-example
 runtime: java
 config:
+    scm:authUrl:
+        value: ""
     scm:clientId:
-        value: your-id@12345
+        value: ""
     scm:clientSecret:
-        value: secret
+        value: ""
     scm:host:
-        value: api.strata.paloaltonetworks.com
+        value: ""
+    scm:logging:
+        value: ""
     scm:scope:
-        value: tsg_id:12345
+        value: ""
 
 ```
 ```java

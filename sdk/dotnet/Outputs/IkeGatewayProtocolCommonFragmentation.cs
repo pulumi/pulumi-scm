@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class IkeGatewayProtocolCommonFragmentation
     {
         /// <summary>
-        /// The Enable param. Default: `False`.
+        /// Enable
         /// </summary>
         public readonly bool? Enable;
 

@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * UrlAccessProfile resource
  *
  * ## Example Usage
  *
@@ -15,7 +15,22 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = new scm.UrlAccessProfile("example", {folder: "Shared"});
+ * //
+ * // Creates a URL Access Profile object.
+ * //
+ * const example = new scm.UrlAccessProfile("example", {
+ *     folder: "Shared",
+ *     name: "example_url_access_profile",
+ *     description: "Test URL Access Profile for create API",
+ *     blocks: [
+ *         "adult",
+ *         "gambling",
+ *     ],
+ *     alerts: [
+ *         "high-risk",
+ *         "phishing",
+ *     ],
+ * });
  * ```
  */
 export class UrlAccessProfile extends pulumi.CustomResource {
@@ -47,75 +62,79 @@ export class UrlAccessProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Alerts param.
+     * Alert
      */
     declare public readonly alerts: pulumi.Output<string[] | undefined>;
     /**
-     * The Allows param.
+     * Allow
      */
     declare public readonly allows: pulumi.Output<string[] | undefined>;
     /**
-     * The Blocks param.
+     * Block
      */
     declare public readonly blocks: pulumi.Output<string[] | undefined>;
     /**
-     * The CloudInlineCat param.
+     * Cloud inline cat
      */
     declare public readonly cloudInlineCat: pulumi.Output<boolean | undefined>;
     /**
-     * The Continues param.
+     * Continue
      */
     declare public readonly continues: pulumi.Output<string[] | undefined>;
     /**
-     * The CredentialEnforcement param.
+     * Credential enforcement
      */
-    declare public readonly credentialEnforcement: pulumi.Output<outputs.UrlAccessProfileCredentialEnforcement | undefined>;
+    declare public readonly credentialEnforcement: pulumi.Output<outputs.UrlAccessProfileCredentialEnforcement>;
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The LocalInlineCat param.
+     * Local inline cat
      */
     declare public readonly localInlineCat: pulumi.Output<boolean | undefined>;
     /**
-     * The LogContainerPageOnly param. Default: `true`.
+     * Log container page only
      */
     declare public readonly logContainerPageOnly: pulumi.Output<boolean>;
     /**
-     * The LogHttpHdrReferer param. Default: `false`.
+     * Log http hdr referer
      */
     declare public readonly logHttpHdrReferer: pulumi.Output<boolean>;
     /**
-     * The LogHttpHdrUserAgent param. Default: `false`.
+     * Log http hdr user agent
      */
     declare public readonly logHttpHdrUserAgent: pulumi.Output<boolean>;
     /**
-     * The LogHttpHdrXff param. Default: `false`.
+     * Log http hdr xff
      */
     declare public readonly logHttpHdrXff: pulumi.Output<boolean>;
     /**
-     * The MlavCategoryExceptions param.
+     * Mlav category exception
      */
     declare public readonly mlavCategoryExceptions: pulumi.Output<string[] | undefined>;
     /**
-     * The Name param.
+     * Name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The SafeSearchEnforcement param. Default: `false`.
+     * Redirect
+     */
+    declare public readonly redirects: pulumi.Output<string[] | undefined>;
+    /**
+     * Safe search enforcement
      */
     declare public readonly safeSearchEnforcement: pulumi.Output<boolean>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -149,6 +168,7 @@ export class UrlAccessProfile extends pulumi.CustomResource {
             resourceInputs["logHttpHdrXff"] = state?.logHttpHdrXff;
             resourceInputs["mlavCategoryExceptions"] = state?.mlavCategoryExceptions;
             resourceInputs["name"] = state?.name;
+            resourceInputs["redirects"] = state?.redirects;
             resourceInputs["safeSearchEnforcement"] = state?.safeSearchEnforcement;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["tfid"] = state?.tfid;
@@ -170,6 +190,7 @@ export class UrlAccessProfile extends pulumi.CustomResource {
             resourceInputs["logHttpHdrXff"] = args?.logHttpHdrXff;
             resourceInputs["mlavCategoryExceptions"] = args?.mlavCategoryExceptions;
             resourceInputs["name"] = args?.name;
+            resourceInputs["redirects"] = args?.redirects;
             resourceInputs["safeSearchEnforcement"] = args?.safeSearchEnforcement;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["tfid"] = undefined /*out*/;
@@ -184,75 +205,79 @@ export class UrlAccessProfile extends pulumi.CustomResource {
  */
 export interface UrlAccessProfileState {
     /**
-     * The Alerts param.
+     * Alert
      */
     alerts?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Allows param.
+     * Allow
      */
     allows?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Blocks param.
+     * Block
      */
     blocks?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The CloudInlineCat param.
+     * Cloud inline cat
      */
     cloudInlineCat?: pulumi.Input<boolean>;
     /**
-     * The Continues param.
+     * Continue
      */
     continues?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The CredentialEnforcement param.
+     * Credential enforcement
      */
     credentialEnforcement?: pulumi.Input<inputs.UrlAccessProfileCredentialEnforcement>;
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The LocalInlineCat param.
+     * Local inline cat
      */
     localInlineCat?: pulumi.Input<boolean>;
     /**
-     * The LogContainerPageOnly param. Default: `true`.
+     * Log container page only
      */
     logContainerPageOnly?: pulumi.Input<boolean>;
     /**
-     * The LogHttpHdrReferer param. Default: `false`.
+     * Log http hdr referer
      */
     logHttpHdrReferer?: pulumi.Input<boolean>;
     /**
-     * The LogHttpHdrUserAgent param. Default: `false`.
+     * Log http hdr user agent
      */
     logHttpHdrUserAgent?: pulumi.Input<boolean>;
     /**
-     * The LogHttpHdrXff param. Default: `false`.
+     * Log http hdr xff
      */
     logHttpHdrXff?: pulumi.Input<boolean>;
     /**
-     * The MlavCategoryExceptions param.
+     * Mlav category exception
      */
     mlavCategoryExceptions?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The SafeSearchEnforcement param. Default: `false`.
+     * Redirect
+     */
+    redirects?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Safe search enforcement
      */
     safeSearchEnforcement?: pulumi.Input<boolean>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -263,75 +288,79 @@ export interface UrlAccessProfileState {
  */
 export interface UrlAccessProfileArgs {
     /**
-     * The Alerts param.
+     * Alert
      */
     alerts?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Allows param.
+     * Allow
      */
     allows?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Blocks param.
+     * Block
      */
     blocks?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The CloudInlineCat param.
+     * Cloud inline cat
      */
     cloudInlineCat?: pulumi.Input<boolean>;
     /**
-     * The Continues param.
+     * Continue
      */
     continues?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The CredentialEnforcement param.
+     * Credential enforcement
      */
     credentialEnforcement?: pulumi.Input<inputs.UrlAccessProfileCredentialEnforcement>;
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The LocalInlineCat param.
+     * Local inline cat
      */
     localInlineCat?: pulumi.Input<boolean>;
     /**
-     * The LogContainerPageOnly param. Default: `true`.
+     * Log container page only
      */
     logContainerPageOnly?: pulumi.Input<boolean>;
     /**
-     * The LogHttpHdrReferer param. Default: `false`.
+     * Log http hdr referer
      */
     logHttpHdrReferer?: pulumi.Input<boolean>;
     /**
-     * The LogHttpHdrUserAgent param. Default: `false`.
+     * Log http hdr user agent
      */
     logHttpHdrUserAgent?: pulumi.Input<boolean>;
     /**
-     * The LogHttpHdrXff param. Default: `false`.
+     * Log http hdr xff
      */
     logHttpHdrXff?: pulumi.Input<boolean>;
     /**
-     * The MlavCategoryExceptions param.
+     * Mlav category exception
      */
     mlavCategoryExceptions?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The SafeSearchEnforcement param. Default: `false`.
+     * Redirect
+     */
+    redirects?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Safe search enforcement
      */
     safeSearchEnforcement?: pulumi.Input<boolean>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

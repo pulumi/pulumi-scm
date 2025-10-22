@@ -8,6 +8,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetTrafficSteeringRuleArgs extends com.pulumi.resources.InvokeArgs {
@@ -15,24 +17,40 @@ public final class GetTrafficSteeringRuleArgs extends com.pulumi.resources.Invok
     public static final GetTrafficSteeringRuleArgs Empty = new GetTrafficSteeringRuleArgs();
 
     /**
-     * The Id param.
+     * The UUID of the traffic steering rule
      * 
      */
     @Import(name="id", required=true)
     private Output<String> id;
 
     /**
-     * @return The Id param.
+     * @return The UUID of the traffic steering rule
      * 
      */
     public Output<String> id() {
         return this.id;
     }
 
+    /**
+     * Name
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return Name
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetTrafficSteeringRuleArgs() {}
 
     private GetTrafficSteeringRuleArgs(GetTrafficSteeringRuleArgs $) {
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -54,7 +72,7 @@ public final class GetTrafficSteeringRuleArgs extends com.pulumi.resources.Invok
         }
 
         /**
-         * @param id The Id param.
+         * @param id The UUID of the traffic steering rule
          * 
          * @return builder
          * 
@@ -65,13 +83,34 @@ public final class GetTrafficSteeringRuleArgs extends com.pulumi.resources.Invok
         }
 
         /**
-         * @param id The Id param.
+         * @param id The UUID of the traffic steering rule
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             return id(Output.of(id));
+        }
+
+        /**
+         * @param name Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetTrafficSteeringRuleArgs build() {

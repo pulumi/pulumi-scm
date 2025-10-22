@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.scm.inputs.ScepProfileScepChallengeDynamicChallengeArgs;
+import com.pulumi.scm.inputs.ScepProfileScepChallengeDynamicArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,29 +17,29 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
     public static final ScepProfileScepChallengeArgs Empty = new ScepProfileScepChallengeArgs();
 
     /**
-     * The DynamicChallenge param. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * Dynamic
      * 
      */
-    @Import(name="dynamicChallenge")
-    private @Nullable Output<ScepProfileScepChallengeDynamicChallengeArgs> dynamicChallenge;
+    @Import(name="dynamic")
+    private @Nullable Output<ScepProfileScepChallengeDynamicArgs> dynamic;
 
     /**
-     * @return The DynamicChallenge param. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * @return Dynamic
      * 
      */
-    public Optional<Output<ScepProfileScepChallengeDynamicChallengeArgs>> dynamicChallenge() {
-        return Optional.ofNullable(this.dynamicChallenge);
+    public Optional<Output<ScepProfileScepChallengeDynamicArgs>> dynamic() {
+        return Optional.ofNullable(this.dynamic);
     }
 
     /**
-     * Challenge to use for SCEP server on mobile clients. String length must not exceed 1024 characters. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * Challenge to use for SCEP server on mobile clients
      * 
      */
     @Import(name="fixed")
     private @Nullable Output<String> fixed;
 
     /**
-     * @return Challenge to use for SCEP server on mobile clients. String length must not exceed 1024 characters. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * @return Challenge to use for SCEP server on mobile clients
      * 
      */
     public Optional<Output<String>> fixed() {
@@ -47,14 +47,14 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The None param. String must be one of these: `&#34;&#34;`. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * No OTP
      * 
      */
     @Import(name="none")
     private @Nullable Output<String> none;
 
     /**
-     * @return The None param. String must be one of these: `&#34;&#34;`. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * @return No OTP
      * 
      */
     public Optional<Output<String>> none() {
@@ -64,7 +64,7 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
     private ScepProfileScepChallengeArgs() {}
 
     private ScepProfileScepChallengeArgs(ScepProfileScepChallengeArgs $) {
-        this.dynamicChallenge = $.dynamicChallenge;
+        this.dynamic = $.dynamic;
         this.fixed = $.fixed;
         this.none = $.none;
     }
@@ -88,28 +88,28 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param dynamicChallenge The DynamicChallenge param. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+         * @param dynamic Dynamic
          * 
          * @return builder
          * 
          */
-        public Builder dynamicChallenge(@Nullable Output<ScepProfileScepChallengeDynamicChallengeArgs> dynamicChallenge) {
-            $.dynamicChallenge = dynamicChallenge;
+        public Builder dynamic(@Nullable Output<ScepProfileScepChallengeDynamicArgs> dynamic) {
+            $.dynamic = dynamic;
             return this;
         }
 
         /**
-         * @param dynamicChallenge The DynamicChallenge param. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+         * @param dynamic Dynamic
          * 
          * @return builder
          * 
          */
-        public Builder dynamicChallenge(ScepProfileScepChallengeDynamicChallengeArgs dynamicChallenge) {
-            return dynamicChallenge(Output.of(dynamicChallenge));
+        public Builder dynamic(ScepProfileScepChallengeDynamicArgs dynamic) {
+            return dynamic(Output.of(dynamic));
         }
 
         /**
-         * @param fixed Challenge to use for SCEP server on mobile clients. String length must not exceed 1024 characters. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+         * @param fixed Challenge to use for SCEP server on mobile clients
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param fixed Challenge to use for SCEP server on mobile clients. String length must not exceed 1024 characters. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+         * @param fixed Challenge to use for SCEP server on mobile clients
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param none The None param. String must be one of these: `&#34;&#34;`. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+         * @param none No OTP
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class ScepProfileScepChallengeArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param none The None param. String must be one of these: `&#34;&#34;`. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+         * @param none No OTP
          * 
          * @return builder
          * 

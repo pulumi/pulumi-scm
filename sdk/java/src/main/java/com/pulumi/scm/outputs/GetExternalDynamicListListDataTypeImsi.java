@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeImsiImsiAuth;
+import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeImsiAuth;
 import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeImsiRecurring;
 import java.lang.String;
 import java.util.List;
@@ -14,74 +14,74 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListListDataTypeImsi {
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    private GetExternalDynamicListListDataTypeImsiAuth auth;
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     private String certificateProfile;
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 34 characters.
+     * @return Exception list
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return The ImsiAuth param.
-     * 
-     */
-    private GetExternalDynamicListListDataTypeImsiImsiAuth imsiAuth;
-    /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     private GetExternalDynamicListListDataTypeImsiRecurring recurring;
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
     private String url;
 
     private GetExternalDynamicListListDataTypeImsi() {}
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    public GetExternalDynamicListListDataTypeImsiAuth auth() {
+        return this.auth;
+    }
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     public String certificateProfile() {
         return this.certificateProfile;
     }
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 34 characters.
+     * @return Exception list
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return The ImsiAuth param.
-     * 
-     */
-    public GetExternalDynamicListListDataTypeImsiImsiAuth imsiAuth() {
-        return this.imsiAuth;
-    }
-    /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     public GetExternalDynamicListListDataTypeImsiRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
     public String url() {
@@ -97,23 +97,31 @@ public final class GetExternalDynamicListListDataTypeImsi {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetExternalDynamicListListDataTypeImsiAuth auth;
         private String certificateProfile;
         private String description;
         private List<String> exceptionLists;
-        private GetExternalDynamicListListDataTypeImsiImsiAuth imsiAuth;
         private GetExternalDynamicListListDataTypeImsiRecurring recurring;
         private String url;
         public Builder() {}
         public Builder(GetExternalDynamicListListDataTypeImsi defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.auth = defaults.auth;
     	      this.certificateProfile = defaults.certificateProfile;
     	      this.description = defaults.description;
     	      this.exceptionLists = defaults.exceptionLists;
-    	      this.imsiAuth = defaults.imsiAuth;
     	      this.recurring = defaults.recurring;
     	      this.url = defaults.url;
         }
 
+        @CustomType.Setter
+        public Builder auth(GetExternalDynamicListListDataTypeImsiAuth auth) {
+            if (auth == null) {
+              throw new MissingRequiredPropertyException("GetExternalDynamicListListDataTypeImsi", "auth");
+            }
+            this.auth = auth;
+            return this;
+        }
         @CustomType.Setter
         public Builder certificateProfile(String certificateProfile) {
             if (certificateProfile == null) {
@@ -142,14 +150,6 @@ public final class GetExternalDynamicListListDataTypeImsi {
             return exceptionLists(List.of(exceptionLists));
         }
         @CustomType.Setter
-        public Builder imsiAuth(GetExternalDynamicListListDataTypeImsiImsiAuth imsiAuth) {
-            if (imsiAuth == null) {
-              throw new MissingRequiredPropertyException("GetExternalDynamicListListDataTypeImsi", "imsiAuth");
-            }
-            this.imsiAuth = imsiAuth;
-            return this;
-        }
-        @CustomType.Setter
         public Builder recurring(GetExternalDynamicListListDataTypeImsiRecurring recurring) {
             if (recurring == null) {
               throw new MissingRequiredPropertyException("GetExternalDynamicListListDataTypeImsi", "recurring");
@@ -167,10 +167,10 @@ public final class GetExternalDynamicListListDataTypeImsi {
         }
         public GetExternalDynamicListListDataTypeImsi build() {
             final var _resultValue = new GetExternalDynamicListListDataTypeImsi();
+            _resultValue.auth = auth;
             _resultValue.certificateProfile = certificateProfile;
             _resultValue.description = description;
             _resultValue.exceptionLists = exceptionLists;
-            _resultValue.imsiAuth = imsiAuth;
             _resultValue.recurring = recurring;
             _resultValue.url = url;
             return _resultValue;

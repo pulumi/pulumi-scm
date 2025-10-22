@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState {
     /**
-     * @return The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`.
+     * @return Is
      * 
      */
     private String is;
     /**
-     * @return The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`.
+     * @return Is not
      * 
      */
     private String isNot;
 
     private GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState() {}
     /**
-     * @return The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`.
+     * @return Is
      * 
      */
     public String is() {
         return this.is;
     }
     /**
-     * @return The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`.
+     * @return Is not
      * 
      */
     public String isNot() {

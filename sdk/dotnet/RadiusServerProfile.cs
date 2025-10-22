@@ -10,51 +10,49 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
+    /// RadiusServerProfile resource
     /// </summary>
     [ScmResourceType("scm:index/radiusServerProfile:RadiusServerProfile")]
     public partial class RadiusServerProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
-        /// </summary>
-        [Output("encryptedValues")]
-        public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
-
-        /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Protocol param.
+        /// The name of the RADIUS server profile
         /// </summary>
-        [Output("protocol")]
-        public Output<Outputs.RadiusServerProfileProtocol?> Protocol { get; private set; } = null!;
+        [Output("name")]
+        public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Retries param. Value must be between 1 and 5.
+        /// The RADIUS authentication protocol
+        /// </summary>
+        [Output("protocol")]
+        public Output<Outputs.RadiusServerProfileProtocol> Protocol { get; private set; } = null!;
+
+        /// <summary>
+        /// The number of RADIUS server retries
         /// </summary>
         [Output("retries")]
         public Output<int?> Retries { get; private set; } = null!;
 
         /// <summary>
-        /// The Servers param.
+        /// Server
         /// </summary>
         [Output("servers")]
         public Output<ImmutableArray<Outputs.RadiusServerProfileServer>> Servers { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -63,7 +61,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 120.
+        /// The RADIUS server authentication timeout (seconds)
         /// </summary>
         [Output("timeout")]
         public Output<int?> Timeout { get; private set; } = null!;
@@ -91,10 +89,6 @@ namespace Pulumi.Scm
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
-                AdditionalSecretOutputs =
-                {
-                    "encryptedValues",
-                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -119,25 +113,31 @@ namespace Pulumi.Scm
     public sealed class RadiusServerProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Protocol param.
+        /// The name of the RADIUS server profile
         /// </summary>
-        [Input("protocol")]
-        public Input<Inputs.RadiusServerProfileProtocolArgs>? Protocol { get; set; }
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Retries param. Value must be between 1 and 5.
+        /// The RADIUS authentication protocol
+        /// </summary>
+        [Input("protocol", required: true)]
+        public Input<Inputs.RadiusServerProfileProtocolArgs> Protocol { get; set; } = null!;
+
+        /// <summary>
+        /// The number of RADIUS server retries
         /// </summary>
         [Input("retries")]
         public Input<int>? Retries { get; set; }
@@ -146,7 +146,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.RadiusServerProfileServerArgs>? _servers;
 
         /// <summary>
-        /// The Servers param.
+        /// Server
         /// </summary>
         public InputList<Inputs.RadiusServerProfileServerArgs> Servers
         {
@@ -155,13 +155,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 120.
+        /// The RADIUS server authentication timeout (seconds)
         /// </summary>
         [Input("timeout")]
         public Input<int>? Timeout { get; set; }
@@ -175,41 +175,31 @@ namespace Pulumi.Scm
     public sealed class RadiusServerProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        [Input("encryptedValues")]
-        private InputMap<string>? _encryptedValues;
-
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
-        /// </summary>
-        public InputMap<string> EncryptedValues
-        {
-            get => _encryptedValues ?? (_encryptedValues = new InputMap<string>());
-            set
-            {
-                var emptySecret = Output.CreateSecret(ImmutableDictionary.Create<string, string>());
-                _encryptedValues = Output.All(value, emptySecret).Apply(v => v[0]);
-            }
-        }
-
-        /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Protocol param.
+        /// The name of the RADIUS server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The RADIUS authentication protocol
         /// </summary>
         [Input("protocol")]
         public Input<Inputs.RadiusServerProfileProtocolGetArgs>? Protocol { get; set; }
 
         /// <summary>
-        /// The Retries param. Value must be between 1 and 5.
+        /// The number of RADIUS server retries
         /// </summary>
         [Input("retries")]
         public Input<int>? Retries { get; set; }
@@ -218,7 +208,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.RadiusServerProfileServerGetArgs>? _servers;
 
         /// <summary>
-        /// The Servers param.
+        /// Server
         /// </summary>
         public InputList<Inputs.RadiusServerProfileServerGetArgs> Servers
         {
@@ -227,7 +217,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -236,7 +226,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 120.
+        /// The RADIUS server authentication timeout (seconds)
         /// </summary>
         [Input("timeout")]
         public Input<int>? Timeout { get; set; }

@@ -13,38 +13,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LdapServerProfileServer {
     /**
-     * @return The Address param.
+     * @return The LDAP server IP address
      * 
      */
     private @Nullable String address;
     /**
-     * @return The Name param.
+     * @return The LDAP server name
      * 
      */
     private @Nullable String name;
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The LDAP server port
      * 
      */
     private @Nullable Integer port;
 
     private LdapServerProfileServer() {}
     /**
-     * @return The Address param.
+     * @return The LDAP server IP address
      * 
      */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
-     * @return The Name param.
+     * @return The LDAP server name
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The LDAP server port
      * 
      */
     public Optional<Integer> port() {

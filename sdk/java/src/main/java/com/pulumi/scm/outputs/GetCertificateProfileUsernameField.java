@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetCertificateProfileUsernameField {
     /**
-     * @return The Subject param. String must be one of these: `&#34;common-name&#34;`.
+     * @return Common name
      * 
      */
     private String subject;
     /**
-     * @return The SubjectAlt param. String must be one of these: `&#34;email&#34;`.
+     * @return Email address
      * 
      */
     private String subjectAlt;
 
     private GetCertificateProfileUsernameField() {}
     /**
-     * @return The Subject param. String must be one of these: `&#34;common-name&#34;`.
+     * @return Common name
      * 
      */
     public String subject() {
         return this.subject;
     }
     /**
-     * @return The SubjectAlt param. String must be one of these: `&#34;email&#34;`.
+     * @return Email address
      * 
      */
     public String subjectAlt() {

@@ -11,34 +11,9 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// ServiceConnection data source
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupServiceConnection(ctx, &scm.LookupServiceConnectionArgs{
-//				Id:     "1234-56-789",
-//				Folder: pulumi.StringRef("Service Connections"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 func LookupServiceConnection(ctx *pulumi.Context, args *LookupServiceConnectionArgs, opts ...pulumi.InvokeOption) (*LookupServiceConnectionResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupServiceConnectionResult
@@ -51,43 +26,43 @@ func LookupServiceConnection(ctx *pulumi.Context, args *LookupServiceConnectionA
 
 // A collection of arguments for invoking getServiceConnection.
 type LookupServiceConnectionArgs struct {
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// The UUID of the service connection
 	Id string `pulumi:"id"`
+	// The name of the service connection
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getServiceConnection.
 type LookupServiceConnectionResult struct {
-	// The BackupSC param.
+	// Backup s c
 	BackupSC string `pulumi:"backupSC"`
-	// The BgpPeer param.
+	// Bgp peer
 	BgpPeer GetServiceConnectionBgpPeer `pulumi:"bgpPeer"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder string `pulumi:"folder"`
-	// The Id param.
+	// Map of sensitive values returned from the API.
+	EncryptedValues map[string]string `pulumi:"encryptedValues"`
+	// The UUID of the service connection
 	Id string `pulumi:"id"`
-	// The IpsecTunnel param.
+	// Ipsec tunnel
 	IpsecTunnel string `pulumi:"ipsecTunnel"`
-	// The Name param.
+	// The name of the service connection
 	Name string `pulumi:"name"`
-	// The NatPool param.
+	// Nat pool
 	NatPool string `pulumi:"natPool"`
-	// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+	// No export community
 	NoExportCommunity string `pulumi:"noExportCommunity"`
-	// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+	// Onboarding type
 	OnboardingType string `pulumi:"onboardingType"`
-	// The Protocol param.
+	// Protocol
 	Protocol GetServiceConnectionProtocol `pulumi:"protocol"`
-	// The Qos param.
+	// Qos
 	Qos GetServiceConnectionQos `pulumi:"qos"`
-	// The Region param.
+	// Region
 	Region string `pulumi:"region"`
-	// The SecondaryIpsecTunnel param.
+	// Secondary ipsec tunnel
 	SecondaryIpsecTunnel string `pulumi:"secondaryIpsecTunnel"`
-	// The SourceNat param.
+	// Source nat
 	SourceNat bool `pulumi:"sourceNat"`
-	// The Subnets param.
+	// Subnets
 	Subnets []string `pulumi:"subnets"`
 	Tfid    string   `pulumi:"tfid"`
 }
@@ -103,10 +78,10 @@ func LookupServiceConnectionOutput(ctx *pulumi.Context, args LookupServiceConnec
 
 // A collection of arguments for invoking getServiceConnection.
 type LookupServiceConnectionOutputArgs struct {
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Id param.
+	// The UUID of the service connection
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the service connection
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupServiceConnectionOutputArgs) ElementType() reflect.Type {
@@ -128,77 +103,77 @@ func (o LookupServiceConnectionResultOutput) ToLookupServiceConnectionResultOutp
 	return o
 }
 
-// The BackupSC param.
+// Backup s c
 func (o LookupServiceConnectionResultOutput) BackupSC() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.BackupSC }).(pulumi.StringOutput)
 }
 
-// The BgpPeer param.
+// Bgp peer
 func (o LookupServiceConnectionResultOutput) BgpPeer() GetServiceConnectionBgpPeerOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) GetServiceConnectionBgpPeer { return v.BgpPeer }).(GetServiceConnectionBgpPeerOutput)
 }
 
-// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-func (o LookupServiceConnectionResultOutput) Folder() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.Folder }).(pulumi.StringOutput)
+// Map of sensitive values returned from the API.
+func (o LookupServiceConnectionResultOutput) EncryptedValues() pulumi.StringMapOutput {
+	return o.ApplyT(func(v LookupServiceConnectionResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The Id param.
+// The UUID of the service connection
 func (o LookupServiceConnectionResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The IpsecTunnel param.
+// Ipsec tunnel
 func (o LookupServiceConnectionResultOutput) IpsecTunnel() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.IpsecTunnel }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// The name of the service connection
 func (o LookupServiceConnectionResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The NatPool param.
+// Nat pool
 func (o LookupServiceConnectionResultOutput) NatPool() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.NatPool }).(pulumi.StringOutput)
 }
 
-// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+// No export community
 func (o LookupServiceConnectionResultOutput) NoExportCommunity() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.NoExportCommunity }).(pulumi.StringOutput)
 }
 
-// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+// Onboarding type
 func (o LookupServiceConnectionResultOutput) OnboardingType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.OnboardingType }).(pulumi.StringOutput)
 }
 
-// The Protocol param.
+// Protocol
 func (o LookupServiceConnectionResultOutput) Protocol() GetServiceConnectionProtocolOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) GetServiceConnectionProtocol { return v.Protocol }).(GetServiceConnectionProtocolOutput)
 }
 
-// The Qos param.
+// Qos
 func (o LookupServiceConnectionResultOutput) Qos() GetServiceConnectionQosOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) GetServiceConnectionQos { return v.Qos }).(GetServiceConnectionQosOutput)
 }
 
-// The Region param.
+// Region
 func (o LookupServiceConnectionResultOutput) Region() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.Region }).(pulumi.StringOutput)
 }
 
-// The SecondaryIpsecTunnel param.
+// Secondary ipsec tunnel
 func (o LookupServiceConnectionResultOutput) SecondaryIpsecTunnel() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) string { return v.SecondaryIpsecTunnel }).(pulumi.StringOutput)
 }
 
-// The SourceNat param.
+// Source nat
 func (o LookupServiceConnectionResultOutput) SourceNat() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) bool { return v.SourceNat }).(pulumi.BoolOutput)
 }
 
-// The Subnets param.
+// Subnets
 func (o LookupServiceConnectionResultOutput) Subnets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceConnectionResult) []string { return v.Subnets }).(pulumi.StringArrayOutput)
 }

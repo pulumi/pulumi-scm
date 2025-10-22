@@ -29,12 +29,12 @@ class QosProfileArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a QosProfile resource.
-        :param pulumi.Input['QosProfileAggregateBandwidthArgs'] aggregate_bandwidth: The AggregateBandwidth param.
-        :param pulumi.Input['QosProfileClassBandwidthTypeArgs'] class_bandwidth_type: The ClassBandwidthType param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input['QosProfileAggregateBandwidthArgs'] aggregate_bandwidth: Aggregate bandwidth
+        :param pulumi.Input['QosProfileClassBandwidthTypeArgs'] class_bandwidth_type: Class bandwidth type
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if aggregate_bandwidth is not None:
             pulumi.set(__self__, "aggregate_bandwidth", aggregate_bandwidth)
@@ -53,7 +53,7 @@ class QosProfileArgs:
     @pulumi.getter(name="aggregateBandwidth")
     def aggregate_bandwidth(self) -> Optional[pulumi.Input['QosProfileAggregateBandwidthArgs']]:
         """
-        The AggregateBandwidth param.
+        Aggregate bandwidth
         """
         return pulumi.get(self, "aggregate_bandwidth")
 
@@ -65,7 +65,7 @@ class QosProfileArgs:
     @pulumi.getter(name="classBandwidthType")
     def class_bandwidth_type(self) -> Optional[pulumi.Input['QosProfileClassBandwidthTypeArgs']]:
         """
-        The ClassBandwidthType param.
+        Class bandwidth type
         """
         return pulumi.get(self, "class_bandwidth_type")
 
@@ -77,7 +77,7 @@ class QosProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -89,7 +89,7 @@ class QosProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -101,7 +101,7 @@ class QosProfileArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -113,7 +113,7 @@ class QosProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -134,12 +134,12 @@ class _QosProfileState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering QosProfile resources.
-        :param pulumi.Input['QosProfileAggregateBandwidthArgs'] aggregate_bandwidth: The AggregateBandwidth param.
-        :param pulumi.Input['QosProfileClassBandwidthTypeArgs'] class_bandwidth_type: The ClassBandwidthType param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input['QosProfileAggregateBandwidthArgs'] aggregate_bandwidth: Aggregate bandwidth
+        :param pulumi.Input['QosProfileClassBandwidthTypeArgs'] class_bandwidth_type: Class bandwidth type
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if aggregate_bandwidth is not None:
             pulumi.set(__self__, "aggregate_bandwidth", aggregate_bandwidth)
@@ -160,7 +160,7 @@ class _QosProfileState:
     @pulumi.getter(name="aggregateBandwidth")
     def aggregate_bandwidth(self) -> Optional[pulumi.Input['QosProfileAggregateBandwidthArgs']]:
         """
-        The AggregateBandwidth param.
+        Aggregate bandwidth
         """
         return pulumi.get(self, "aggregate_bandwidth")
 
@@ -172,7 +172,7 @@ class _QosProfileState:
     @pulumi.getter(name="classBandwidthType")
     def class_bandwidth_type(self) -> Optional[pulumi.Input['QosProfileClassBandwidthTypeArgs']]:
         """
-        The ClassBandwidthType param.
+        Class bandwidth type
         """
         return pulumi.get(self, "class_bandwidth_type")
 
@@ -184,7 +184,7 @@ class _QosProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -196,7 +196,7 @@ class _QosProfileState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -208,7 +208,7 @@ class _QosProfileState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -220,7 +220,7 @@ class _QosProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -252,25 +252,16 @@ class QosProfile(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.QosProfile("example")
-        ```
+        QosProfile resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']] aggregate_bandwidth: The AggregateBandwidth param.
-        :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']] class_bandwidth_type: The ClassBandwidthType param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']] aggregate_bandwidth: Aggregate bandwidth
+        :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']] class_bandwidth_type: Class bandwidth type
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -279,16 +270,7 @@ class QosProfile(pulumi.CustomResource):
                  args: Optional[QosProfileArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.QosProfile("example")
-        ```
+        QosProfile resource
 
         :param str resource_name: The name of the resource.
         :param QosProfileArgs args: The arguments to use to populate this resource's properties.
@@ -351,12 +333,12 @@ class QosProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']] aggregate_bandwidth: The AggregateBandwidth param.
-        :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']] class_bandwidth_type: The ClassBandwidthType param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Union['QosProfileAggregateBandwidthArgs', 'QosProfileAggregateBandwidthArgsDict']] aggregate_bandwidth: Aggregate bandwidth
+        :param pulumi.Input[Union['QosProfileClassBandwidthTypeArgs', 'QosProfileClassBandwidthTypeArgsDict']] class_bandwidth_type: Class bandwidth type
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -375,7 +357,7 @@ class QosProfile(pulumi.CustomResource):
     @pulumi.getter(name="aggregateBandwidth")
     def aggregate_bandwidth(self) -> pulumi.Output[Optional['outputs.QosProfileAggregateBandwidth']]:
         """
-        The AggregateBandwidth param.
+        Aggregate bandwidth
         """
         return pulumi.get(self, "aggregate_bandwidth")
 
@@ -383,7 +365,7 @@ class QosProfile(pulumi.CustomResource):
     @pulumi.getter(name="classBandwidthType")
     def class_bandwidth_type(self) -> pulumi.Output[Optional['outputs.QosProfileClassBandwidthType']]:
         """
-        The ClassBandwidthType param.
+        Class bandwidth type
         """
         return pulumi.get(self, "class_bandwidth_type")
 
@@ -391,7 +373,7 @@ class QosProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -399,7 +381,7 @@ class QosProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -407,7 +389,7 @@ class QosProfile(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -415,7 +397,7 @@ class QosProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

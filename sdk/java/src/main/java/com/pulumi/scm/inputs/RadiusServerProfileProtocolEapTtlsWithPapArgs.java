@@ -12,19 +12,19 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RadiusServerProfileProtocolEapTtlsWithPapArgs extends com.pulumi.resources.ResourceArgs {
+public final class RadiusServerProfileProtocolEAPTTLSWithPAPArgs extends com.pulumi.resources.ResourceArgs {
 
-    public static final RadiusServerProfileProtocolEapTtlsWithPapArgs Empty = new RadiusServerProfileProtocolEapTtlsWithPapArgs();
+    public static final RadiusServerProfileProtocolEAPTTLSWithPAPArgs Empty = new RadiusServerProfileProtocolEAPTTLSWithPAPArgs();
 
     /**
-     * The AnonOuterId param.
+     * Anon outer id
      * 
      */
     @Import(name="anonOuterId")
     private @Nullable Output<Boolean> anonOuterId;
 
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     public Optional<Output<Boolean>> anonOuterId() {
@@ -32,23 +32,23 @@ public final class RadiusServerProfileProtocolEapTtlsWithPapArgs extends com.pul
     }
 
     /**
-     * The RadiusCertProfile param.
+     * Radius cert profile
      * 
      */
     @Import(name="radiusCertProfile")
     private @Nullable Output<String> radiusCertProfile;
 
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     public Optional<Output<String>> radiusCertProfile() {
         return Optional.ofNullable(this.radiusCertProfile);
     }
 
-    private RadiusServerProfileProtocolEapTtlsWithPapArgs() {}
+    private RadiusServerProfileProtocolEAPTTLSWithPAPArgs() {}
 
-    private RadiusServerProfileProtocolEapTtlsWithPapArgs(RadiusServerProfileProtocolEapTtlsWithPapArgs $) {
+    private RadiusServerProfileProtocolEAPTTLSWithPAPArgs(RadiusServerProfileProtocolEAPTTLSWithPAPArgs $) {
         this.anonOuterId = $.anonOuterId;
         this.radiusCertProfile = $.radiusCertProfile;
     }
@@ -56,23 +56,23 @@ public final class RadiusServerProfileProtocolEapTtlsWithPapArgs extends com.pul
     public static Builder builder() {
         return new Builder();
     }
-    public static Builder builder(RadiusServerProfileProtocolEapTtlsWithPapArgs defaults) {
+    public static Builder builder(RadiusServerProfileProtocolEAPTTLSWithPAPArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RadiusServerProfileProtocolEapTtlsWithPapArgs $;
+        private RadiusServerProfileProtocolEAPTTLSWithPAPArgs $;
 
         public Builder() {
-            $ = new RadiusServerProfileProtocolEapTtlsWithPapArgs();
+            $ = new RadiusServerProfileProtocolEAPTTLSWithPAPArgs();
         }
 
-        public Builder(RadiusServerProfileProtocolEapTtlsWithPapArgs defaults) {
-            $ = new RadiusServerProfileProtocolEapTtlsWithPapArgs(Objects.requireNonNull(defaults));
+        public Builder(RadiusServerProfileProtocolEAPTTLSWithPAPArgs defaults) {
+            $ = new RadiusServerProfileProtocolEAPTTLSWithPAPArgs(Objects.requireNonNull(defaults));
         }
 
         /**
-         * @param anonOuterId The AnonOuterId param.
+         * @param anonOuterId Anon outer id
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class RadiusServerProfileProtocolEapTtlsWithPapArgs extends com.pul
         }
 
         /**
-         * @param anonOuterId The AnonOuterId param.
+         * @param anonOuterId Anon outer id
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class RadiusServerProfileProtocolEapTtlsWithPapArgs extends com.pul
         }
 
         /**
-         * @param radiusCertProfile The RadiusCertProfile param.
+         * @param radiusCertProfile Radius cert profile
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class RadiusServerProfileProtocolEapTtlsWithPapArgs extends com.pul
         }
 
         /**
-         * @param radiusCertProfile The RadiusCertProfile param.
+         * @param radiusCertProfile Radius cert profile
          * 
          * @return builder
          * 
@@ -113,7 +113,7 @@ public final class RadiusServerProfileProtocolEapTtlsWithPapArgs extends com.pul
             return radiusCertProfile(Output.of(radiusCertProfile));
         }
 
-        public RadiusServerProfileProtocolEapTtlsWithPapArgs build() {
+        public RadiusServerProfileProtocolEAPTTLSWithPAPArgs build() {
             return $;
         }
     }

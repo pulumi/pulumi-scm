@@ -10,112 +10,93 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// ServiceConnection resource
     /// 
     /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.ServiceConnection("example");
-    /// 
-    /// });
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/serviceConnection:ServiceConnection")]
     public partial class ServiceConnection : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The BackupSC param.
+        /// Backup s c
         /// </summary>
         [Output("backupSC")]
         public Output<string?> BackupSC { get; private set; } = null!;
 
         /// <summary>
-        /// The BgpPeer param.
+        /// Bgp peer
         /// </summary>
         [Output("bgpPeer")]
         public Output<Outputs.ServiceConnectionBgpPeer?> BgpPeer { get; private set; } = null!;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
+        /// Map of sensitive values returned from the API.
         /// </summary>
         [Output("encryptedValues")]
         public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-        /// </summary>
-        [Output("folder")]
-        public Output<string> Folder { get; private set; } = null!;
-
-        /// <summary>
-        /// The IpsecTunnel param.
+        /// Ipsec tunnel
         /// </summary>
         [Output("ipsecTunnel")]
         public Output<string> IpsecTunnel { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the service connection
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The NatPool param.
+        /// Nat pool
         /// </summary>
         [Output("natPool")]
         public Output<string?> NatPool { get; private set; } = null!;
 
         /// <summary>
-        /// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+        /// No export community
         /// </summary>
         [Output("noExportCommunity")]
         public Output<string?> NoExportCommunity { get; private set; } = null!;
 
         /// <summary>
-        /// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+        /// Onboarding type
         /// </summary>
         [Output("onboardingType")]
         public Output<string> OnboardingType { get; private set; } = null!;
 
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         [Output("protocol")]
         public Output<Outputs.ServiceConnectionProtocol?> Protocol { get; private set; } = null!;
 
         /// <summary>
-        /// The Qos param.
+        /// Qos
         /// </summary>
         [Output("qos")]
         public Output<Outputs.ServiceConnectionQos?> Qos { get; private set; } = null!;
 
         /// <summary>
-        /// The Region param.
+        /// Region
         /// </summary>
         [Output("region")]
         public Output<string> Region { get; private set; } = null!;
 
         /// <summary>
-        /// The SecondaryIpsecTunnel param.
+        /// Secondary ipsec tunnel
         /// </summary>
         [Output("secondaryIpsecTunnel")]
         public Output<string?> SecondaryIpsecTunnel { get; private set; } = null!;
 
         /// <summary>
-        /// The SourceNat param.
+        /// Source nat
         /// </summary>
         [Output("sourceNat")]
         public Output<bool?> SourceNat { get; private set; } = null!;
 
         /// <summary>
-        /// The Subnets param.
+        /// Subnets
         /// </summary>
         [Output("subnets")]
         public Output<ImmutableArray<string>> Subnets { get; private set; } = null!;
@@ -174,79 +155,73 @@ namespace Pulumi.Scm
     public sealed class ServiceConnectionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The BackupSC param.
+        /// Backup s c
         /// </summary>
         [Input("backupSC")]
         public Input<string>? BackupSC { get; set; }
 
         /// <summary>
-        /// The BgpPeer param.
+        /// Bgp peer
         /// </summary>
         [Input("bgpPeer")]
         public Input<Inputs.ServiceConnectionBgpPeerArgs>? BgpPeer { get; set; }
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The IpsecTunnel param.
+        /// Ipsec tunnel
         /// </summary>
         [Input("ipsecTunnel", required: true)]
         public Input<string> IpsecTunnel { get; set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the service connection
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NatPool param.
+        /// Nat pool
         /// </summary>
         [Input("natPool")]
         public Input<string>? NatPool { get; set; }
 
         /// <summary>
-        /// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+        /// No export community
         /// </summary>
         [Input("noExportCommunity")]
         public Input<string>? NoExportCommunity { get; set; }
 
         /// <summary>
-        /// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+        /// Onboarding type
         /// </summary>
         [Input("onboardingType")]
         public Input<string>? OnboardingType { get; set; }
 
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         [Input("protocol")]
         public Input<Inputs.ServiceConnectionProtocolArgs>? Protocol { get; set; }
 
         /// <summary>
-        /// The Qos param.
+        /// Qos
         /// </summary>
         [Input("qos")]
         public Input<Inputs.ServiceConnectionQosArgs>? Qos { get; set; }
 
         /// <summary>
-        /// The Region param.
+        /// Region
         /// </summary>
         [Input("region", required: true)]
         public Input<string> Region { get; set; } = null!;
 
         /// <summary>
-        /// The SecondaryIpsecTunnel param.
+        /// Secondary ipsec tunnel
         /// </summary>
         [Input("secondaryIpsecTunnel")]
         public Input<string>? SecondaryIpsecTunnel { get; set; }
 
         /// <summary>
-        /// The SourceNat param.
+        /// Source nat
         /// </summary>
         [Input("sourceNat")]
         public Input<bool>? SourceNat { get; set; }
@@ -255,7 +230,7 @@ namespace Pulumi.Scm
         private InputList<string>? _subnets;
 
         /// <summary>
-        /// The Subnets param.
+        /// Subnets
         /// </summary>
         public InputList<string> Subnets
         {
@@ -272,13 +247,13 @@ namespace Pulumi.Scm
     public sealed class ServiceConnectionState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The BackupSC param.
+        /// Backup s c
         /// </summary>
         [Input("backupSC")]
         public Input<string>? BackupSC { get; set; }
 
         /// <summary>
-        /// The BgpPeer param.
+        /// Bgp peer
         /// </summary>
         [Input("bgpPeer")]
         public Input<Inputs.ServiceConnectionBgpPeerGetArgs>? BgpPeer { get; set; }
@@ -287,7 +262,7 @@ namespace Pulumi.Scm
         private InputMap<string>? _encryptedValues;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
+        /// Map of sensitive values returned from the API.
         /// </summary>
         public InputMap<string> EncryptedValues
         {
@@ -300,67 +275,61 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The IpsecTunnel param.
+        /// Ipsec tunnel
         /// </summary>
         [Input("ipsecTunnel")]
         public Input<string>? IpsecTunnel { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the service connection
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NatPool param.
+        /// Nat pool
         /// </summary>
         [Input("natPool")]
         public Input<string>? NatPool { get; set; }
 
         /// <summary>
-        /// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+        /// No export community
         /// </summary>
         [Input("noExportCommunity")]
         public Input<string>? NoExportCommunity { get; set; }
 
         /// <summary>
-        /// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+        /// Onboarding type
         /// </summary>
         [Input("onboardingType")]
         public Input<string>? OnboardingType { get; set; }
 
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         [Input("protocol")]
         public Input<Inputs.ServiceConnectionProtocolGetArgs>? Protocol { get; set; }
 
         /// <summary>
-        /// The Qos param.
+        /// Qos
         /// </summary>
         [Input("qos")]
         public Input<Inputs.ServiceConnectionQosGetArgs>? Qos { get; set; }
 
         /// <summary>
-        /// The Region param.
+        /// Region
         /// </summary>
         [Input("region")]
         public Input<string>? Region { get; set; }
 
         /// <summary>
-        /// The SecondaryIpsecTunnel param.
+        /// Secondary ipsec tunnel
         /// </summary>
         [Input("secondaryIpsecTunnel")]
         public Input<string>? SecondaryIpsecTunnel { get; set; }
 
         /// <summary>
-        /// The SourceNat param.
+        /// Source nat
         /// </summary>
         [Input("sourceNat")]
         public Input<bool>? SourceNat { get; set; }
@@ -369,7 +338,7 @@ namespace Pulumi.Scm
         private InputList<string>? _subnets;
 
         /// <summary>
-        /// The Subnets param.
+        /// Subnets
         /// </summary>
         public InputList<string> Subnets
         {

@@ -18,14 +18,14 @@ public final class ServiceProtocolUdpArgs extends com.pulumi.resources.ResourceA
     public static final ServiceProtocolUdpArgs Empty = new ServiceProtocolUdpArgs();
 
     /**
-     * The Override param.
+     * Override
      * 
      */
     @Import(name="override")
     private @Nullable Output<ServiceProtocolUdpOverrideArgs> override;
 
     /**
-     * @return The Override param.
+     * @return Override
      * 
      */
     public Optional<Output<ServiceProtocolUdpOverrideArgs>> override() {
@@ -33,14 +33,14 @@ public final class ServiceProtocolUdpArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Port param. String length must be between 1 and 1023 characters.
+     * Port
      * 
      */
     @Import(name="port", required=true)
     private Output<String> port;
 
     /**
-     * @return The Port param. String length must be between 1 and 1023 characters.
+     * @return Port
      * 
      */
     public Output<String> port() {
@@ -48,14 +48,14 @@ public final class ServiceProtocolUdpArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The SourcePort param. String length must be between 1 and 1023 characters.
+     * Source port
      * 
      */
     @Import(name="sourcePort")
     private @Nullable Output<String> sourcePort;
 
     /**
-     * @return The SourcePort param. String length must be between 1 and 1023 characters.
+     * @return Source port
      * 
      */
     public Optional<Output<String>> sourcePort() {
@@ -89,7 +89,7 @@ public final class ServiceProtocolUdpArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param override The Override param.
+         * @param override Override
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class ServiceProtocolUdpArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param override The Override param.
+         * @param override Override
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class ServiceProtocolUdpArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param port The Port param. String length must be between 1 and 1023 characters.
+         * @param port Port
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class ServiceProtocolUdpArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param port The Port param. String length must be between 1 and 1023 characters.
+         * @param port Port
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class ServiceProtocolUdpArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sourcePort The SourcePort param. String length must be between 1 and 1023 characters.
+         * @param sourcePort Source port
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class ServiceProtocolUdpArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sourcePort The SourcePort param. String length must be between 1 and 1023 characters.
+         * @param sourcePort Source port
          * 
          * @return builder
          * 

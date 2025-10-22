@@ -5,23 +5,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getAppOverrideRule({
- *     id: "1234-56-789",
- * });
- * ```
+ * AppOverrideRule data source
  */
 export function getAppOverrideRule(args: GetAppOverrideRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetAppOverrideRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAppOverrideRule:getAppOverrideRule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +20,13 @@ export function getAppOverrideRule(args: GetAppOverrideRuleArgs, opts?: pulumi.I
  */
 export interface GetAppOverrideRuleArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * Name
+     */
+    name?: string;
 }
 
 /**
@@ -40,85 +34,87 @@ export interface GetAppOverrideRuleArgs {
  */
 export interface GetAppOverrideRuleResult {
     /**
-     * The Application param.
+     * Application
      */
     readonly application: string;
     /**
-     * The Description param. String length must not exceed 1024 characters.
+     * Description
      */
     readonly description: string;
     /**
-     * The Destinations param.
+     * Destination
      */
     readonly destinations: string[];
     /**
-     * The Disabled param. Default: `false`.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * Disabled
      */
     readonly disabled: boolean;
     /**
-     * The Froms param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * From
      */
     readonly froms: string[];
     /**
-     * The GroupTag param.
+     * Group tag
      */
     readonly groupTag: string;
     /**
-     * The Id param.
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      */
     readonly name: string;
     /**
-     * The NegateDestination param. Default: `false`.
+     * Negate destination
      */
     readonly negateDestination: boolean;
     /**
-     * The NegateSource param. Default: `false`.
+     * Negate source
      */
     readonly negateSource: boolean;
     /**
-     * The Port param. Value must be between 0 and 65535.
+     * Port
      */
     readonly port: number;
     /**
-     * The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+     * Protocol
      */
     readonly protocol: string;
     /**
-     * The Sources param.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * Source
      */
     readonly sources: string[];
     /**
-     * The Tags param.
+     * Tag
      */
     readonly tags: string[];
     readonly tfid: string;
     /**
-     * The Tos param.
+     * To
      */
     readonly tos: string[];
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getAppOverrideRule({
- *     id: "1234-56-789",
- * });
- * ```
+ * AppOverrideRule data source
  */
 export function getAppOverrideRuleOutput(args: GetAppOverrideRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAppOverrideRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAppOverrideRule:getAppOverrideRule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -127,7 +123,11 @@ export function getAppOverrideRuleOutput(args: GetAppOverrideRuleOutputArgs, opt
  */
 export interface GetAppOverrideRuleOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
 }

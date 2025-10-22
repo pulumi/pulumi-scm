@@ -27,10 +27,16 @@ class GetWildfireAntiVirusProfileResult:
     """
     A collection of values returned by getWildfireAntiVirusProfile.
     """
-    def __init__(__self__, description=None, id=None, mlav_exceptions=None, name=None, packet_capture=None, rules=None, tfid=None, threat_exceptions=None):
+    def __init__(__self__, description=None, device=None, folder=None, id=None, mlav_exceptions=None, name=None, packet_capture=None, rules=None, snippet=None, tfid=None, threat_exceptions=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -46,6 +52,9 @@ class GetWildfireAntiVirusProfileResult:
         if rules and not isinstance(rules, list):
             raise TypeError("Expected argument 'rules' to be a list")
         pulumi.set(__self__, "rules", rules)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -57,15 +66,31 @@ class GetWildfireAntiVirusProfileResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -73,7 +98,7 @@ class GetWildfireAntiVirusProfileResult:
     @pulumi.getter(name="mlavExceptions")
     def mlav_exceptions(self) -> Sequence['outputs.GetWildfireAntiVirusProfileMlavExceptionResult']:
         """
-        The MlavExceptions param.
+        Mlav exception
         """
         return pulumi.get(self, "mlav_exceptions")
 
@@ -81,7 +106,7 @@ class GetWildfireAntiVirusProfileResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -89,7 +114,7 @@ class GetWildfireAntiVirusProfileResult:
     @pulumi.getter(name="packetCapture")
     def packet_capture(self) -> _builtins.bool:
         """
-        The PacketCapture param.
+        Packet capture
         """
         return pulumi.get(self, "packet_capture")
 
@@ -97,9 +122,17 @@ class GetWildfireAntiVirusProfileResult:
     @pulumi.getter
     def rules(self) -> Sequence['outputs.GetWildfireAntiVirusProfileRuleResult']:
         """
-        The Rules param.
+        Rules
         """
         return pulumi.get(self, "rules")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -110,7 +143,7 @@ class GetWildfireAntiVirusProfileResult:
     @pulumi.getter(name="threatExceptions")
     def threat_exceptions(self) -> Sequence['outputs.GetWildfireAntiVirusProfileThreatExceptionResult']:
         """
-        The ThreatExceptions param.
+        Threat exception
         """
         return pulumi.get(self, "threat_exceptions")
 
@@ -122,73 +155,70 @@ class AwaitableGetWildfireAntiVirusProfileResult(GetWildfireAntiVirusProfileResu
             yield self
         return GetWildfireAntiVirusProfileResult(
             description=self.description,
+            device=self.device,
+            folder=self.folder,
             id=self.id,
             mlav_exceptions=self.mlav_exceptions,
             name=self.name,
             packet_capture=self.packet_capture,
             rules=self.rules,
+            snippet=self.snippet,
             tfid=self.tfid,
             threat_exceptions=self.threat_exceptions)
 
 
 def get_wildfire_anti_virus_profile(id: Optional[_builtins.str] = None,
+                                    name: Optional[_builtins.str] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetWildfireAntiVirusProfileResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_wildfire_anti_virus_profile(id="1234-56-789")
-    ```
+    WildfireAntiVirusProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile', __args__, opts=opts, typ=GetWildfireAntiVirusProfileResult).value
 
     return AwaitableGetWildfireAntiVirusProfileResult(
         description=pulumi.get(__ret__, 'description'),
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         mlav_exceptions=pulumi.get(__ret__, 'mlav_exceptions'),
         name=pulumi.get(__ret__, 'name'),
         packet_capture=pulumi.get(__ret__, 'packet_capture'),
         rules=pulumi.get(__ret__, 'rules'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         threat_exceptions=pulumi.get(__ret__, 'threat_exceptions'))
 def get_wildfire_anti_virus_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                           name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWildfireAntiVirusProfileResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_wildfire_anti_virus_profile(id="1234-56-789")
-    ```
+    WildfireAntiVirusProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile', __args__, opts=opts, typ=GetWildfireAntiVirusProfileResult)
     return __ret__.apply(lambda __response__: GetWildfireAntiVirusProfileResult(
         description=pulumi.get(__response__, 'description'),
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         mlav_exceptions=pulumi.get(__response__, 'mlav_exceptions'),
         name=pulumi.get(__response__, 'name'),
         packet_capture=pulumi.get(__response__, 'packet_capture'),
         rules=pulumi.get(__response__, 'rules'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         threat_exceptions=pulumi.get(__response__, 'threat_exceptions')))

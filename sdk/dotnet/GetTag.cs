@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetTag
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// Tag data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetTag.Invoke(new()
+        ///     // Look up the "production" tag by its name.
+        ///     var scmTagDs = Scm.GetTag.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "66cbe56c-0300-4905-8455-d384978a0082",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["tagOutputs"] = 
+        ///         {
+        ///             { "productionId", scmTagDs.Apply(getTagResult =&gt; getTagResult.Id) },
+        ///             { "productionColor", scmTagDs.Apply(getTagResult =&gt; getTagResult.Color) },
+        ///             { "productionFolder", scmTagDs.Apply(getTagResult =&gt; getTagResult.Folder) },
+        ///             { "productionSnippet", scmTagDs.Apply(getTagResult =&gt; getTagResult.Snippet) },
+        ///             { "productionDevice", scmTagDs.Apply(getTagResult =&gt; getTagResult.Device) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +48,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetTagResult>("scm:index/getTag:getTag", args ?? new GetTagArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// Tag data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +60,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetTag.Invoke(new()
+        ///     // Look up the "production" tag by its name.
+        ///     var scmTagDs = Scm.GetTag.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "66cbe56c-0300-4905-8455-d384978a0082",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["tagOutputs"] = 
+        ///         {
+        ///             { "productionId", scmTagDs.Apply(getTagResult =&gt; getTagResult.Id) },
+        ///             { "productionColor", scmTagDs.Apply(getTagResult =&gt; getTagResult.Color) },
+        ///             { "productionFolder", scmTagDs.Apply(getTagResult =&gt; getTagResult.Folder) },
+        ///             { "productionSnippet", scmTagDs.Apply(getTagResult =&gt; getTagResult.Snippet) },
+        ///             { "productionDevice", scmTagDs.Apply(getTagResult =&gt; getTagResult.Device) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +84,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetTagResult>("scm:index/getTag:getTag", args ?? new GetTagInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// Tag data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +96,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetTag.Invoke(new()
+        ///     // Look up the "production" tag by its name.
+        ///     var scmTagDs = Scm.GetTag.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "66cbe56c-0300-4905-8455-d384978a0082",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["tagOutputs"] = 
+        ///         {
+        ///             { "productionId", scmTagDs.Apply(getTagResult =&gt; getTagResult.Id) },
+        ///             { "productionColor", scmTagDs.Apply(getTagResult =&gt; getTagResult.Color) },
+        ///             { "productionFolder", scmTagDs.Apply(getTagResult =&gt; getTagResult.Folder) },
+        ///             { "productionSnippet", scmTagDs.Apply(getTagResult =&gt; getTagResult.Snippet) },
+        ///             { "productionDevice", scmTagDs.Apply(getTagResult =&gt; getTagResult.Device) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +124,16 @@ namespace Pulumi.Scm
     public sealed class GetTagArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the tag
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the tag
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetTagArgs()
         {
@@ -102,10 +144,16 @@ namespace Pulumi.Scm
     public sealed class GetTagInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the tag
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the tag
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetTagInvokeArgs()
         {
@@ -118,21 +166,33 @@ namespace Pulumi.Scm
     public sealed class GetTagResult
     {
         /// <summary>
-        /// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+        /// The color of the tag
         /// </summary>
         public readonly string Color;
         /// <summary>
-        /// The Comments param. String length must not exceed 1023 characters.
+        /// The description of the tag
         /// </summary>
         public readonly string Comments;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the tag
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param. String length must not exceed 127 characters.
+        /// The name of the tag
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
@@ -141,16 +201,25 @@ namespace Pulumi.Scm
 
             string comments,
 
+            string device,
+
+            string folder,
+
             string id,
 
             string name,
+
+            string snippet,
 
             string tfid)
         {
             Color = color;
             Comments = comments;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

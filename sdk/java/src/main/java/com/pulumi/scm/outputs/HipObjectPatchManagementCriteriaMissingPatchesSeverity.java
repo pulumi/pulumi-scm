@@ -12,74 +12,74 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     /**
-     * @return The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Greater equal
      * 
      */
     private @Nullable Integer greaterEqual;
     /**
-     * @return The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Greater than
      * 
      */
     private @Nullable Integer greaterThan;
     /**
-     * @return The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Is
      * 
      */
     private @Nullable Integer is;
     /**
-     * @return The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Is not
      * 
      */
     private @Nullable Integer isNot;
     /**
-     * @return The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Less equal
      * 
      */
     private @Nullable Integer lessEqual;
     /**
-     * @return The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Less than
      * 
      */
     private @Nullable Integer lessThan;
 
     private HipObjectPatchManagementCriteriaMissingPatchesSeverity() {}
     /**
-     * @return The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Greater equal
      * 
      */
     public Optional<Integer> greaterEqual() {
         return Optional.ofNullable(this.greaterEqual);
     }
     /**
-     * @return The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Greater than
      * 
      */
     public Optional<Integer> greaterThan() {
         return Optional.ofNullable(this.greaterThan);
     }
     /**
-     * @return The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Is
      * 
      */
     public Optional<Integer> is() {
         return Optional.ofNullable(this.is);
     }
     /**
-     * @return The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Is not
      * 
      */
     public Optional<Integer> isNot() {
         return Optional.ofNullable(this.isNot);
     }
     /**
-     * @return The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Less equal
      * 
      */
     public Optional<Integer> lessEqual() {
         return Optional.ofNullable(this.lessEqual);
     }
     /**
-     * @return The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Less than
      * 
      */
     public Optional<Integer> lessThan() {

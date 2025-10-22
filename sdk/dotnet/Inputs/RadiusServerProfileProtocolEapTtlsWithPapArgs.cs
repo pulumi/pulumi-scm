@@ -10,23 +10,23 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm.Inputs
 {
 
-    public sealed class RadiusServerProfileProtocolEapTtlsWithPapArgs : global::Pulumi.ResourceArgs
+    public sealed class RadiusServerProfileProtocolEAPTTLSWithPAPArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The AnonOuterId param.
+        /// Anon outer id
         /// </summary>
         [Input("anonOuterId")]
         public Input<bool>? AnonOuterId { get; set; }
 
         /// <summary>
-        /// The RadiusCertProfile param.
+        /// Radius cert profile
         /// </summary>
         [Input("radiusCertProfile")]
         public Input<string>? RadiusCertProfile { get; set; }
 
-        public RadiusServerProfileProtocolEapTtlsWithPapArgs()
+        public RadiusServerProfileProtocolEAPTTLSWithPAPArgs()
         {
         }
-        public static new RadiusServerProfileProtocolEapTtlsWithPapArgs Empty => new RadiusServerProfileProtocolEapTtlsWithPapArgs();
+        public static new RadiusServerProfileProtocolEAPTTLSWithPAPArgs Empty => new RadiusServerProfileProtocolEAPTTLSWithPAPArgs();
     }
 }

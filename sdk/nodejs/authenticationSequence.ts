@@ -5,16 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.AuthenticationSequence("example", {});
- * ```
+ * AuthenticationSequence resource
  */
 export class AuthenticationSequence extends pulumi.CustomResource {
     /**
@@ -45,28 +36,28 @@ export class AuthenticationSequence extends pulumi.CustomResource {
     }
 
     /**
-     * The AuthenticationProfiles param.
+     * An ordered list of authentication profiles
      */
     declare public readonly authenticationProfiles: pulumi.Output<string[] | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Name param.
+     * The name of the authentication sequence
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The UseDomainFindProfile param. Default: `true`.
+     * Use domain to determine authentication profile?
      */
     declare public readonly useDomainFindProfile: pulumi.Output<boolean>;
 
@@ -110,28 +101,28 @@ export class AuthenticationSequence extends pulumi.CustomResource {
  */
 export interface AuthenticationSequenceState {
     /**
-     * The AuthenticationProfiles param.
+     * An ordered list of authentication profiles
      */
     authenticationProfiles?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * The name of the authentication sequence
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The UseDomainFindProfile param. Default: `true`.
+     * Use domain to determine authentication profile?
      */
     useDomainFindProfile?: pulumi.Input<boolean>;
 }
@@ -141,27 +132,27 @@ export interface AuthenticationSequenceState {
  */
 export interface AuthenticationSequenceArgs {
     /**
-     * The AuthenticationProfiles param.
+     * An ordered list of authentication profiles
      */
     authenticationProfiles?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * The name of the authentication sequence
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The UseDomainFindProfile param. Default: `true`.
+     * Use domain to determine authentication profile?
      */
     useDomainFindProfile?: pulumi.Input<boolean>;
 }

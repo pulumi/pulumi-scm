@@ -14,91 +14,104 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDecryptionRuleListDataResult
     {
         /// <summary>
-        /// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+        /// The action to be taken
         /// </summary>
         public readonly string Action;
         /// <summary>
-        /// The Categories param.
+        /// The destination URL category
         /// </summary>
         public readonly ImmutableArray<string> Categories;
         /// <summary>
-        /// The Description param.
+        /// The description of the decryption rule
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The DestinationHips param.
+        /// The Host Integrity Profile of the destination host
         /// </summary>
         public readonly ImmutableArray<string> DestinationHips;
         /// <summary>
-        /// The Destinations param.
+        /// The destination addresses
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
-        /// The Disabled param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Is the rule disabled?
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The Froms param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The source security zone
         /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
-        /// UUID of the resource.
+        /// The UUID of the decryption rule
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The LogFail param.
+        /// Log failed decryption events?
         /// </summary>
         public readonly bool LogFail;
         /// <summary>
-        /// The LogSetting param.
+        /// The log settings of the decryption rule
         /// </summary>
         public readonly string LogSetting;
         /// <summary>
-        /// The LogSuccess param.
+        /// Log successful decryption events?
         /// </summary>
         public readonly bool LogSuccess;
         /// <summary>
-        /// The Name param.
+        /// The name of the decryption rule
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NegateDestination param.
+        /// Negate the destination addresses?
         /// </summary>
         public readonly bool NegateDestination;
         /// <summary>
-        /// The NegateSource param.
+        /// Negate the source addresses?
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>
-        /// The Profile param.
+        /// The decryption profile associated with the decryption rule
         /// </summary>
         public readonly string Profile;
         /// <summary>
-        /// The Services param.
+        /// The destination services and/or service groups
         /// </summary>
         public readonly ImmutableArray<string> Services;
         /// <summary>
-        /// The SourceHips param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Source hip
         /// </summary>
         public readonly ImmutableArray<string> SourceHips;
         /// <summary>
-        /// The SourceUsers param.
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
         /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
         /// <summary>
-        /// The Sources param.
+        /// The source addresses
         /// </summary>
         public readonly ImmutableArray<string> Sources;
         /// <summary>
-        /// The Tags param.
+        /// The tags associated with the decryption rule
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        public readonly string Tfid;
         /// <summary>
-        /// The Tos param.
+        /// The destination security zone
         /// </summary>
         public readonly ImmutableArray<string> Tos;
         /// <summary>
-        /// The Type param.
+        /// The type of decryption
         /// </summary>
         public readonly Outputs.GetDecryptionRuleListDataTypeResult Type;
 
@@ -114,7 +127,11 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> destinations,
 
+            string device,
+
             bool disabled,
+
+            string folder,
 
             ImmutableArray<string> froms,
 
@@ -136,6 +153,8 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> services,
 
+            string snippet,
+
             ImmutableArray<string> sourceHips,
 
             ImmutableArray<string> sourceUsers,
@@ -143,6 +162,8 @@ namespace Pulumi.Scm.Outputs
             ImmutableArray<string> sources,
 
             ImmutableArray<string> tags,
+
+            string tfid,
 
             ImmutableArray<string> tos,
 
@@ -153,7 +174,9 @@ namespace Pulumi.Scm.Outputs
             Description = description;
             DestinationHips = destinationHips;
             Destinations = destinations;
+            Device = device;
             Disabled = disabled;
+            Folder = folder;
             Froms = froms;
             Id = id;
             LogFail = logFail;
@@ -164,10 +187,12 @@ namespace Pulumi.Scm.Outputs
             NegateSource = negateSource;
             Profile = profile;
             Services = services;
+            Snippet = snippet;
             SourceHips = sourceHips;
             SourceUsers = sourceUsers;
             Sources = sources;
             Tags = tags;
+            Tfid = tfid;
             Tos = tos;
             Type = type;
         }

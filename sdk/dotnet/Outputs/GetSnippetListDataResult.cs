@@ -14,23 +14,24 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSnippetListDataResult
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the snippet
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The UUID of the snippet
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Labels param.
+        /// Labels applied to the snippet
         /// </summary>
         public readonly ImmutableArray<string> Labels;
         /// <summary>
-        /// The Name param.
+        /// The name of the snippet
         /// </summary>
         public readonly string Name;
+        public readonly string Tfid;
         /// <summary>
-        /// The Type param. String must be one of these: `"predefined"`, `"custom"`.
+        /// The snippet type
         /// </summary>
         public readonly string Type;
 
@@ -44,12 +45,15 @@ namespace Pulumi.Scm.Outputs
 
             string name,
 
+            string tfid,
+
             string type)
         {
             Description = description;
             Id = id;
             Labels = labels;
             Name = name;
+            Tfid = tfid;
             Type = type;
         }
     }

@@ -18,14 +18,14 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
     public static final IpsecTunnelAutoKeyProxyIdProtocolArgs Empty = new IpsecTunnelAutoKeyProxyIdProtocolArgs();
 
     /**
-     * IP protocol number. Value must be between 1 and 254. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * IP protocol number
      * 
      */
     @Import(name="number")
     private @Nullable Output<Integer> number;
 
     /**
-     * @return IP protocol number. Value must be between 1 and 254. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * @return IP protocol number
      * 
      */
     public Optional<Output<Integer>> number() {
@@ -33,14 +33,14 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
     }
 
     /**
-     * The Tcp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * IPv4 type of proxy*id protocol values for TCP protocol
      * 
      */
     @Import(name="tcp")
     private @Nullable Output<IpsecTunnelAutoKeyProxyIdProtocolTcpArgs> tcp;
 
     /**
-     * @return The Tcp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * @return IPv4 type of proxy*id protocol values for TCP protocol
      * 
      */
     public Optional<Output<IpsecTunnelAutoKeyProxyIdProtocolTcpArgs>> tcp() {
@@ -48,14 +48,14 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
     }
 
     /**
-     * The Udp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * IPv6 type of proxy*id protocol values for UDP protocol
      * 
      */
     @Import(name="udp")
     private @Nullable Output<IpsecTunnelAutoKeyProxyIdProtocolUdpArgs> udp;
 
     /**
-     * @return The Udp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * @return IPv6 type of proxy*id protocol values for UDP protocol
      * 
      */
     public Optional<Output<IpsecTunnelAutoKeyProxyIdProtocolUdpArgs>> udp() {
@@ -89,7 +89,7 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
         }
 
         /**
-         * @param number IP protocol number. Value must be between 1 and 254. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+         * @param number IP protocol number
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
         }
 
         /**
-         * @param number IP protocol number. Value must be between 1 and 254. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+         * @param number IP protocol number
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
         }
 
         /**
-         * @param tcp The Tcp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+         * @param tcp IPv4 type of proxy*id protocol values for TCP protocol
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
         }
 
         /**
-         * @param tcp The Tcp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+         * @param tcp IPv4 type of proxy*id protocol values for TCP protocol
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
         }
 
         /**
-         * @param udp The Udp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+         * @param udp IPv6 type of proxy*id protocol values for UDP protocol
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolArgs extends com.pulumi.reso
         }
 
         /**
-         * @param udp The Udp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+         * @param udp IPv6 type of proxy*id protocol values for UDP protocol
          * 
          * @return builder
          * 

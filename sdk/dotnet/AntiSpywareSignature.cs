@@ -10,88 +10,75 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// AntiSpywareSignature resource
     /// 
     /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.AntiSpywareSignature("example");
-    /// 
-    /// });
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/antiSpywareSignature:AntiSpywareSignature")]
     public partial class AntiSpywareSignature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Bugtraqs param.
+        /// Bugtraq
         /// </summary>
         [Output("bugtraqs")]
         public Output<ImmutableArray<string>> Bugtraqs { get; private set; } = null!;
 
         /// <summary>
-        /// The Comment param. String length must not exceed 256 characters.
+        /// Comment
         /// </summary>
         [Output("comment")]
         public Output<string?> Comment { get; private set; } = null!;
 
         /// <summary>
-        /// The Cves param.
+        /// Cve
         /// </summary>
         [Output("cves")]
         public Output<ImmutableArray<string>> Cves { get; private set; } = null!;
 
         /// <summary>
-        /// The DefaultAction param.
+        /// anti spyware signature default action
         /// </summary>
         [Output("defaultAction")]
         public Output<Outputs.AntiSpywareSignatureDefaultAction?> DefaultAction { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+        /// Direction
         /// </summary>
         [Output("direction")]
         public Output<string?> Direction { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The References param.
+        /// Reference
         /// </summary>
         [Output("references")]
         public Output<ImmutableArray<string>> References { get; private set; } = null!;
 
         /// <summary>
-        /// The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+        /// Severity
         /// </summary>
         [Output("severity")]
         public Output<string?> Severity { get; private set; } = null!;
 
         /// <summary>
-        /// The Signature param.
+        /// anti spyware signature
         /// </summary>
         [Output("signature")]
-        public Output<Outputs.AntiSpywareSignatureSignature?> Signature { get; private set; } = null!;
+        public Output<Outputs.AntiSpywareSignatureSignature> Signature { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -100,19 +87,19 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+        /// threat id range \n\n and \n\n
         /// </summary>
         [Output("threatId")]
         public Output<int> ThreatId { get; private set; } = null!;
 
         /// <summary>
-        /// The Threatname param. String length must not exceed 1024 characters.
+        /// Threatname
         /// </summary>
         [Output("threatname")]
         public Output<string> Threatname { get; private set; } = null!;
 
         /// <summary>
-        /// The Vendors param.
+        /// Vendor
         /// </summary>
         [Output("vendors")]
         public Output<ImmutableArray<string>> Vendors { get; private set; } = null!;
@@ -167,7 +154,7 @@ namespace Pulumi.Scm
         private InputList<string>? _bugtraqs;
 
         /// <summary>
-        /// The Bugtraqs param.
+        /// Bugtraq
         /// </summary>
         public InputList<string> Bugtraqs
         {
@@ -176,7 +163,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Comment param. String length must not exceed 256 characters.
+        /// Comment
         /// </summary>
         [Input("comment")]
         public Input<string>? Comment { get; set; }
@@ -185,7 +172,7 @@ namespace Pulumi.Scm
         private InputList<string>? _cves;
 
         /// <summary>
-        /// The Cves param.
+        /// Cve
         /// </summary>
         public InputList<string> Cves
         {
@@ -194,25 +181,25 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The DefaultAction param.
+        /// anti spyware signature default action
         /// </summary>
         [Input("defaultAction")]
         public Input<Inputs.AntiSpywareSignatureDefaultActionArgs>? DefaultAction { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+        /// Direction
         /// </summary>
         [Input("direction")]
         public Input<string>? Direction { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -221,7 +208,7 @@ namespace Pulumi.Scm
         private InputList<string>? _references;
 
         /// <summary>
-        /// The References param.
+        /// Reference
         /// </summary>
         public InputList<string> References
         {
@@ -230,31 +217,31 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+        /// Severity
         /// </summary>
         [Input("severity")]
         public Input<string>? Severity { get; set; }
 
         /// <summary>
-        /// The Signature param.
+        /// anti spyware signature
         /// </summary>
         [Input("signature")]
         public Input<Inputs.AntiSpywareSignatureSignatureArgs>? Signature { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+        /// threat id range \n\n and \n\n
         /// </summary>
         [Input("threatId", required: true)]
         public Input<int> ThreatId { get; set; } = null!;
 
         /// <summary>
-        /// The Threatname param. String length must not exceed 1024 characters.
+        /// Threatname
         /// </summary>
         [Input("threatname", required: true)]
         public Input<string> Threatname { get; set; } = null!;
@@ -263,7 +250,7 @@ namespace Pulumi.Scm
         private InputList<string>? _vendors;
 
         /// <summary>
-        /// The Vendors param.
+        /// Vendor
         /// </summary>
         public InputList<string> Vendors
         {
@@ -283,7 +270,7 @@ namespace Pulumi.Scm
         private InputList<string>? _bugtraqs;
 
         /// <summary>
-        /// The Bugtraqs param.
+        /// Bugtraq
         /// </summary>
         public InputList<string> Bugtraqs
         {
@@ -292,7 +279,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Comment param. String length must not exceed 256 characters.
+        /// Comment
         /// </summary>
         [Input("comment")]
         public Input<string>? Comment { get; set; }
@@ -301,7 +288,7 @@ namespace Pulumi.Scm
         private InputList<string>? _cves;
 
         /// <summary>
-        /// The Cves param.
+        /// Cve
         /// </summary>
         public InputList<string> Cves
         {
@@ -310,25 +297,25 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The DefaultAction param.
+        /// anti spyware signature default action
         /// </summary>
         [Input("defaultAction")]
         public Input<Inputs.AntiSpywareSignatureDefaultActionGetArgs>? DefaultAction { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+        /// Direction
         /// </summary>
         [Input("direction")]
         public Input<string>? Direction { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -337,7 +324,7 @@ namespace Pulumi.Scm
         private InputList<string>? _references;
 
         /// <summary>
-        /// The References param.
+        /// Reference
         /// </summary>
         public InputList<string> References
         {
@@ -346,19 +333,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+        /// Severity
         /// </summary>
         [Input("severity")]
         public Input<string>? Severity { get; set; }
 
         /// <summary>
-        /// The Signature param.
+        /// anti spyware signature
         /// </summary>
         [Input("signature")]
         public Input<Inputs.AntiSpywareSignatureSignatureGetArgs>? Signature { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -367,13 +354,13 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+        /// threat id range \n\n and \n\n
         /// </summary>
         [Input("threatId")]
         public Input<int>? ThreatId { get; set; }
 
         /// <summary>
-        /// The Threatname param. String length must not exceed 1024 characters.
+        /// Threatname
         /// </summary>
         [Input("threatname")]
         public Input<string>? Threatname { get; set; }
@@ -382,7 +369,7 @@ namespace Pulumi.Scm
         private InputList<string>? _vendors;
 
         /// <summary>
-        /// The Vendors param.
+        /// Vendor
         /// </summary>
         public InputList<string> Vendors
         {

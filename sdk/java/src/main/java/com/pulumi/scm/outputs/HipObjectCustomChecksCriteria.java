@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectCustomChecksCriteria {
     /**
-     * @return The Plist param.
+     * @return Plist
      * 
      */
     private @Nullable List<HipObjectCustomChecksCriteriaPlist> plists;
     /**
-     * @return The ProcessList param.
+     * @return Process list
      * 
      */
     private @Nullable List<HipObjectCustomChecksCriteriaProcessList> processLists;
     /**
-     * @return The RegistryKeys param.
+     * @return Registry key
      * 
      */
     private @Nullable List<HipObjectCustomChecksCriteriaRegistryKey> registryKeys;
 
     private HipObjectCustomChecksCriteria() {}
     /**
-     * @return The Plist param.
+     * @return Plist
      * 
      */
     public List<HipObjectCustomChecksCriteriaPlist> plists() {
         return this.plists == null ? List.of() : this.plists;
     }
     /**
-     * @return The ProcessList param.
+     * @return Process list
      * 
      */
     public List<HipObjectCustomChecksCriteriaProcessList> processLists() {
         return this.processLists == null ? List.of() : this.processLists;
     }
     /**
-     * @return The RegistryKeys param.
+     * @return Registry key
      * 
      */
     public List<HipObjectCustomChecksCriteriaRegistryKey> registryKeys() {

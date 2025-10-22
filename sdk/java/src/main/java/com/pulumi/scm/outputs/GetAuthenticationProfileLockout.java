@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileLockout {
     /**
-     * @return The FailedAttempts param. Value must be between 0 and 10.
+     * @return Failed attempts
      * 
      */
     private Integer failedAttempts;
     /**
-     * @return The LockoutTime param. Value must be between 0 and 60.
+     * @return Lockout time
      * 
      */
     private Integer lockoutTime;
 
     private GetAuthenticationProfileLockout() {}
     /**
-     * @return The FailedAttempts param. Value must be between 0 and 10.
+     * @return Failed attempts
      * 
      */
     public Integer failedAttempts() {
         return this.failedAttempts;
     }
     /**
-     * @return The LockoutTime param. Value must be between 0 and 60.
+     * @return Lockout time
      * 
      */
     public Integer lockoutTime() {

@@ -14,47 +14,68 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetLdapServerProfileListDataResult
     {
         /// <summary>
-        /// The Base param. String length must not exceed 255 characters.
+        /// The base DN
         /// </summary>
         public readonly string Base;
         /// <summary>
-        /// The BindDn param. String length must not exceed 255 characters.
+        /// The bind DN
         /// </summary>
         public readonly string BindDn;
         /// <summary>
-        /// The BindPassword param. String length must not exceed 121 characters.
+        /// The bind password
         /// </summary>
         public readonly string BindPassword;
         /// <summary>
-        /// The BindTimelimit param.
+        /// The bind timeout (seconds)
         /// </summary>
         public readonly string BindTimelimit;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the LDAP server profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+        /// The LDAP server time
         /// </summary>
         public readonly string LdapType;
         /// <summary>
-        /// The RetryInterval param.
+        /// The name of the LDAP server profile
+        /// </summary>
+        public readonly string Name;
+        /// <summary>
+        /// The search retry interval (seconds)
         /// </summary>
         public readonly int RetryInterval;
         /// <summary>
-        /// The Servers param.
+        /// The LDAP server configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.GetLdapServerProfileListDataServerResult> Servers;
         /// <summary>
-        /// The Ssl param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Require SSL/TLS secured connection?
         /// </summary>
         public readonly bool Ssl;
+        public readonly string Tfid;
         /// <summary>
-        /// The Timelimit param.
+        /// The search timeout (seconds)
         /// </summary>
         public readonly int Timelimit;
         /// <summary>
-        /// The VerifyServerCertificate param.
+        /// Verify server certificate for SSL sessions?
         /// </summary>
         public readonly bool VerifyServerCertificate;
 
@@ -68,15 +89,27 @@ namespace Pulumi.Scm.Outputs
 
             string bindTimelimit,
 
+            string device,
+
+            ImmutableDictionary<string, string> encryptedValues,
+
+            string folder,
+
             string id,
 
             string ldapType,
+
+            string name,
 
             int retryInterval,
 
             ImmutableArray<Outputs.GetLdapServerProfileListDataServerResult> servers,
 
+            string snippet,
+
             bool ssl,
+
+            string tfid,
 
             int timelimit,
 
@@ -86,11 +119,17 @@ namespace Pulumi.Scm.Outputs
             BindDn = bindDn;
             BindPassword = bindPassword;
             BindTimelimit = bindTimelimit;
+            Device = device;
+            EncryptedValues = encryptedValues;
+            Folder = folder;
             Id = id;
             LdapType = ldapType;
+            Name = name;
             RetryInterval = retryInterval;
             Servers = servers;
+            Snippet = snippet;
             Ssl = ssl;
+            Tfid = tfid;
             Timelimit = timelimit;
             VerifyServerCertificate = verifyServerCertificate;
         }

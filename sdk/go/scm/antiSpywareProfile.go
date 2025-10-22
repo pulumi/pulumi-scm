@@ -11,56 +11,34 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// AntiSpywareProfile resource
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewAntiSpywareProfile(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 type AntiSpywareProfile struct {
 	pulumi.CustomResourceState
 
-	// The CloudInlineAnalysis param. Default: `false`.
+	// Cloud inline analysis
 	CloudInlineAnalysis pulumi.BoolOutput `pulumi:"cloudInlineAnalysis"`
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The InlineExceptionEdlUrls param.
+	// Inline exception edl url
 	InlineExceptionEdlUrls pulumi.StringArrayOutput `pulumi:"inlineExceptionEdlUrls"`
-	// The InlineExceptionIpAddresses param.
+	// Inline exception ip address
 	InlineExceptionIpAddresses pulumi.StringArrayOutput `pulumi:"inlineExceptionIpAddresses"`
-	// The MicaEngineSpywareEnabledList param.
-	MicaEngineSpywareEnabledLists AntiSpywareProfileMicaEngineSpywareEnabledListArrayOutput `pulumi:"micaEngineSpywareEnabledLists"`
-	// The Name param.
+	// Mica engine spyware enabled
+	MicaEngineSpywareEnableds AntiSpywareProfileMicaEngineSpywareEnabledArrayOutput `pulumi:"micaEngineSpywareEnableds"`
+	// The name of the anti-spyware profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Rules param.
+	// Rules
 	Rules AntiSpywareProfileRuleArrayOutput `pulumi:"rules"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
-	// The ThreatExceptions param.
+	// Threat exception
 	ThreatExceptions AntiSpywareProfileThreatExceptionArrayOutput `pulumi:"threatExceptions"`
 }
 
@@ -94,54 +72,54 @@ func GetAntiSpywareProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AntiSpywareProfile resources.
 type antiSpywareProfileState struct {
-	// The CloudInlineAnalysis param. Default: `false`.
+	// Cloud inline analysis
 	CloudInlineAnalysis *bool `pulumi:"cloudInlineAnalysis"`
-	// The Description param.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The InlineExceptionEdlUrls param.
+	// Inline exception edl url
 	InlineExceptionEdlUrls []string `pulumi:"inlineExceptionEdlUrls"`
-	// The InlineExceptionIpAddresses param.
+	// Inline exception ip address
 	InlineExceptionIpAddresses []string `pulumi:"inlineExceptionIpAddresses"`
-	// The MicaEngineSpywareEnabledList param.
-	MicaEngineSpywareEnabledLists []AntiSpywareProfileMicaEngineSpywareEnabledList `pulumi:"micaEngineSpywareEnabledLists"`
-	// The Name param.
+	// Mica engine spyware enabled
+	MicaEngineSpywareEnableds []AntiSpywareProfileMicaEngineSpywareEnabled `pulumi:"micaEngineSpywareEnableds"`
+	// The name of the anti-spyware profile
 	Name *string `pulumi:"name"`
-	// The Rules param.
+	// Rules
 	Rules []AntiSpywareProfileRule `pulumi:"rules"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
-	// The ThreatExceptions param.
+	// Threat exception
 	ThreatExceptions []AntiSpywareProfileThreatException `pulumi:"threatExceptions"`
 }
 
 type AntiSpywareProfileState struct {
-	// The CloudInlineAnalysis param. Default: `false`.
+	// Cloud inline analysis
 	CloudInlineAnalysis pulumi.BoolPtrInput
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The InlineExceptionEdlUrls param.
+	// Inline exception edl url
 	InlineExceptionEdlUrls pulumi.StringArrayInput
-	// The InlineExceptionIpAddresses param.
+	// Inline exception ip address
 	InlineExceptionIpAddresses pulumi.StringArrayInput
-	// The MicaEngineSpywareEnabledList param.
-	MicaEngineSpywareEnabledLists AntiSpywareProfileMicaEngineSpywareEnabledListArrayInput
-	// The Name param.
+	// Mica engine spyware enabled
+	MicaEngineSpywareEnableds AntiSpywareProfileMicaEngineSpywareEnabledArrayInput
+	// The name of the anti-spyware profile
 	Name pulumi.StringPtrInput
-	// The Rules param.
+	// Rules
 	Rules AntiSpywareProfileRuleArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
-	// The ThreatExceptions param.
+	// Threat exception
 	ThreatExceptions AntiSpywareProfileThreatExceptionArrayInput
 }
 
@@ -150,53 +128,53 @@ func (AntiSpywareProfileState) ElementType() reflect.Type {
 }
 
 type antiSpywareProfileArgs struct {
-	// The CloudInlineAnalysis param. Default: `false`.
+	// Cloud inline analysis
 	CloudInlineAnalysis *bool `pulumi:"cloudInlineAnalysis"`
-	// The Description param.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The InlineExceptionEdlUrls param.
+	// Inline exception edl url
 	InlineExceptionEdlUrls []string `pulumi:"inlineExceptionEdlUrls"`
-	// The InlineExceptionIpAddresses param.
+	// Inline exception ip address
 	InlineExceptionIpAddresses []string `pulumi:"inlineExceptionIpAddresses"`
-	// The MicaEngineSpywareEnabledList param.
-	MicaEngineSpywareEnabledLists []AntiSpywareProfileMicaEngineSpywareEnabledList `pulumi:"micaEngineSpywareEnabledLists"`
-	// The Name param.
+	// Mica engine spyware enabled
+	MicaEngineSpywareEnableds []AntiSpywareProfileMicaEngineSpywareEnabled `pulumi:"micaEngineSpywareEnableds"`
+	// The name of the anti-spyware profile
 	Name *string `pulumi:"name"`
-	// The Rules param.
+	// Rules
 	Rules []AntiSpywareProfileRule `pulumi:"rules"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The ThreatExceptions param.
+	// Threat exception
 	ThreatExceptions []AntiSpywareProfileThreatException `pulumi:"threatExceptions"`
 }
 
 // The set of arguments for constructing a AntiSpywareProfile resource.
 type AntiSpywareProfileArgs struct {
-	// The CloudInlineAnalysis param. Default: `false`.
+	// Cloud inline analysis
 	CloudInlineAnalysis pulumi.BoolPtrInput
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The InlineExceptionEdlUrls param.
+	// Inline exception edl url
 	InlineExceptionEdlUrls pulumi.StringArrayInput
-	// The InlineExceptionIpAddresses param.
+	// Inline exception ip address
 	InlineExceptionIpAddresses pulumi.StringArrayInput
-	// The MicaEngineSpywareEnabledList param.
-	MicaEngineSpywareEnabledLists AntiSpywareProfileMicaEngineSpywareEnabledListArrayInput
-	// The Name param.
+	// Mica engine spyware enabled
+	MicaEngineSpywareEnableds AntiSpywareProfileMicaEngineSpywareEnabledArrayInput
+	// The name of the anti-spyware profile
 	Name pulumi.StringPtrInput
-	// The Rules param.
+	// Rules
 	Rules AntiSpywareProfileRuleArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The ThreatExceptions param.
+	// Threat exception
 	ThreatExceptions AntiSpywareProfileThreatExceptionArrayInput
 }
 
@@ -287,54 +265,54 @@ func (o AntiSpywareProfileOutput) ToAntiSpywareProfileOutputWithContext(ctx cont
 	return o
 }
 
-// The CloudInlineAnalysis param. Default: `false`.
+// Cloud inline analysis
 func (o AntiSpywareProfileOutput) CloudInlineAnalysis() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.BoolOutput { return v.CloudInlineAnalysis }).(pulumi.BoolOutput)
 }
 
-// The Description param.
+// Description
 func (o AntiSpywareProfileOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o AntiSpywareProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o AntiSpywareProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The InlineExceptionEdlUrls param.
+// Inline exception edl url
 func (o AntiSpywareProfileOutput) InlineExceptionEdlUrls() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringArrayOutput { return v.InlineExceptionEdlUrls }).(pulumi.StringArrayOutput)
 }
 
-// The InlineExceptionIpAddresses param.
+// Inline exception ip address
 func (o AntiSpywareProfileOutput) InlineExceptionIpAddresses() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringArrayOutput { return v.InlineExceptionIpAddresses }).(pulumi.StringArrayOutput)
 }
 
-// The MicaEngineSpywareEnabledList param.
-func (o AntiSpywareProfileOutput) MicaEngineSpywareEnabledLists() AntiSpywareProfileMicaEngineSpywareEnabledListArrayOutput {
-	return o.ApplyT(func(v *AntiSpywareProfile) AntiSpywareProfileMicaEngineSpywareEnabledListArrayOutput {
-		return v.MicaEngineSpywareEnabledLists
-	}).(AntiSpywareProfileMicaEngineSpywareEnabledListArrayOutput)
+// Mica engine spyware enabled
+func (o AntiSpywareProfileOutput) MicaEngineSpywareEnableds() AntiSpywareProfileMicaEngineSpywareEnabledArrayOutput {
+	return o.ApplyT(func(v *AntiSpywareProfile) AntiSpywareProfileMicaEngineSpywareEnabledArrayOutput {
+		return v.MicaEngineSpywareEnableds
+	}).(AntiSpywareProfileMicaEngineSpywareEnabledArrayOutput)
 }
 
-// The Name param.
+// The name of the anti-spyware profile
 func (o AntiSpywareProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Rules param.
+// Rules
 func (o AntiSpywareProfileOutput) Rules() AntiSpywareProfileRuleArrayOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) AntiSpywareProfileRuleArrayOutput { return v.Rules }).(AntiSpywareProfileRuleArrayOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o AntiSpywareProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -343,7 +321,7 @@ func (o AntiSpywareProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The ThreatExceptions param.
+// Threat exception
 func (o AntiSpywareProfileOutput) ThreatExceptions() AntiSpywareProfileThreatExceptionArrayOutput {
 	return o.ApplyT(func(v *AntiSpywareProfile) AntiSpywareProfileThreatExceptionArrayOutput { return v.ThreatExceptions }).(AntiSpywareProfileThreatExceptionArrayOutput)
 }

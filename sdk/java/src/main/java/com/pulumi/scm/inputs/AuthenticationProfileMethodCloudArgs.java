@@ -16,14 +16,14 @@ public final class AuthenticationProfileMethodCloudArgs extends com.pulumi.resou
     public static final AuthenticationProfileMethodCloudArgs Empty = new AuthenticationProfileMethodCloudArgs();
 
     /**
-     * The tenant profile name.
+     * The tenant profile name
      * 
      */
     @Import(name="profileName")
     private @Nullable Output<String> profileName;
 
     /**
-     * @return The tenant profile name.
+     * @return The tenant profile name
      * 
      */
     public Optional<Output<String>> profileName() {
@@ -55,7 +55,7 @@ public final class AuthenticationProfileMethodCloudArgs extends com.pulumi.resou
         }
 
         /**
-         * @param profileName The tenant profile name.
+         * @param profileName The tenant profile name
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class AuthenticationProfileMethodCloudArgs extends com.pulumi.resou
         }
 
         /**
-         * @param profileName The tenant profile name.
+         * @param profileName The tenant profile name
          * 
          * @return builder
          * 

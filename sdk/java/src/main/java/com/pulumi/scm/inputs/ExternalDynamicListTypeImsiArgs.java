@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.inputs.ExternalDynamicListTypeImsiImsiAuthArgs;
+import com.pulumi.scm.inputs.ExternalDynamicListTypeImsiAuthArgs;
 import com.pulumi.scm.inputs.ExternalDynamicListTypeImsiRecurringArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,14 +20,29 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
     public static final ExternalDynamicListTypeImsiArgs Empty = new ExternalDynamicListTypeImsiArgs();
 
     /**
-     * Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * Auth
+     * 
+     */
+    @Import(name="auth")
+    private @Nullable Output<ExternalDynamicListTypeImsiAuthArgs> auth;
+
+    /**
+     * @return Auth
+     * 
+     */
+    public Optional<Output<ExternalDynamicListTypeImsiAuthArgs>> auth() {
+        return Optional.ofNullable(this.auth);
+    }
+
+    /**
+     * Profile for authenticating client certificates
      * 
      */
     @Import(name="certificateProfile")
     private @Nullable Output<String> certificateProfile;
 
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Profile for authenticating client certificates
      * 
      */
     public Optional<Output<String>> certificateProfile() {
@@ -35,14 +50,14 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
     }
 
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -50,14 +65,14 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
     }
 
     /**
-     * The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 34 characters.
+     * Exception list
      * 
      */
     @Import(name="exceptionLists")
     private @Nullable Output<List<String>> exceptionLists;
 
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 34 characters.
+     * @return Exception list
      * 
      */
     public Optional<Output<List<String>>> exceptionLists() {
@@ -65,29 +80,14 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
     }
 
     /**
-     * The ImsiAuth param.
-     * 
-     */
-    @Import(name="imsiAuth")
-    private @Nullable Output<ExternalDynamicListTypeImsiImsiAuthArgs> imsiAuth;
-
-    /**
-     * @return The ImsiAuth param.
-     * 
-     */
-    public Optional<Output<ExternalDynamicListTypeImsiImsiAuthArgs>> imsiAuth() {
-        return Optional.ofNullable(this.imsiAuth);
-    }
-
-    /**
-     * The Recurring param.
+     * Recurring
      * 
      */
     @Import(name="recurring", required=true)
     private Output<ExternalDynamicListTypeImsiRecurringArgs> recurring;
 
     /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     public Output<ExternalDynamicListTypeImsiRecurringArgs> recurring() {
@@ -95,27 +95,27 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
     }
 
     /**
-     * The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * Url
      * 
      */
-    @Import(name="url")
-    private @Nullable Output<String> url;
+    @Import(name="url", required=true)
+    private Output<String> url;
 
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
-    public Optional<Output<String>> url() {
-        return Optional.ofNullable(this.url);
+    public Output<String> url() {
+        return this.url;
     }
 
     private ExternalDynamicListTypeImsiArgs() {}
 
     private ExternalDynamicListTypeImsiArgs(ExternalDynamicListTypeImsiArgs $) {
+        this.auth = $.auth;
         this.certificateProfile = $.certificateProfile;
         this.description = $.description;
         this.exceptionLists = $.exceptionLists;
-        this.imsiAuth = $.imsiAuth;
         this.recurring = $.recurring;
         this.url = $.url;
     }
@@ -139,7 +139,28 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param certificateProfile Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+         * @param auth Auth
+         * 
+         * @return builder
+         * 
+         */
+        public Builder auth(@Nullable Output<ExternalDynamicListTypeImsiAuthArgs> auth) {
+            $.auth = auth;
+            return this;
+        }
+
+        /**
+         * @param auth Auth
+         * 
+         * @return builder
+         * 
+         */
+        public Builder auth(ExternalDynamicListTypeImsiAuthArgs auth) {
+            return auth(Output.of(auth));
+        }
+
+        /**
+         * @param certificateProfile Profile for authenticating client certificates
          * 
          * @return builder
          * 
@@ -150,7 +171,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param certificateProfile Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+         * @param certificateProfile Profile for authenticating client certificates
          * 
          * @return builder
          * 
@@ -160,7 +181,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -171,7 +192,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -181,7 +202,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param exceptionLists The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 34 characters.
+         * @param exceptionLists Exception list
          * 
          * @return builder
          * 
@@ -192,7 +213,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param exceptionLists The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 34 characters.
+         * @param exceptionLists Exception list
          * 
          * @return builder
          * 
@@ -202,7 +223,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param exceptionLists The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 34 characters.
+         * @param exceptionLists Exception list
          * 
          * @return builder
          * 
@@ -212,28 +233,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param imsiAuth The ImsiAuth param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder imsiAuth(@Nullable Output<ExternalDynamicListTypeImsiImsiAuthArgs> imsiAuth) {
-            $.imsiAuth = imsiAuth;
-            return this;
-        }
-
-        /**
-         * @param imsiAuth The ImsiAuth param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder imsiAuth(ExternalDynamicListTypeImsiImsiAuthArgs imsiAuth) {
-            return imsiAuth(Output.of(imsiAuth));
-        }
-
-        /**
-         * @param recurring The Recurring param.
+         * @param recurring Recurring
          * 
          * @return builder
          * 
@@ -244,7 +244,7 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param recurring The Recurring param.
+         * @param recurring Recurring
          * 
          * @return builder
          * 
@@ -254,18 +254,18 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param url The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+         * @param url Url
          * 
          * @return builder
          * 
          */
-        public Builder url(@Nullable Output<String> url) {
+        public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
         /**
-         * @param url The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+         * @param url Url
          * 
          * @return builder
          * 
@@ -277,6 +277,9 @@ public final class ExternalDynamicListTypeImsiArgs extends com.pulumi.resources.
         public ExternalDynamicListTypeImsiArgs build() {
             if ($.recurring == null) {
                 throw new MissingRequiredPropertyException("ExternalDynamicListTypeImsiArgs", "recurring");
+            }
+            if ($.url == null) {
+                throw new MissingRequiredPropertyException("ExternalDynamicListTypeImsiArgs", "url");
             }
             return $;
         }

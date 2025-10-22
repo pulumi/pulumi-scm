@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class IkeGatewayLocalIdArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Local ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\@[a-zA-Z0-9.-]+)$|^([$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+        /// Local ID string
         /// </summary>
         [Input("id")]
         public Input<string>? Id { get; set; }
 
         /// <summary>
-        /// The Type param.
+        /// Type
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

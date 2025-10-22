@@ -19,14 +19,14 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final QosPolicyRuleArgs Empty = new QosPolicyRuleArgs();
 
     /**
-     * The Action param.
+     * Action
      * 
      */
     @Import(name="action", required=true)
     private Output<QosPolicyRuleActionArgs> action;
 
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     public Output<QosPolicyRuleActionArgs> action() {
@@ -34,14 +34,14 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Description param.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -49,14 +49,14 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -64,14 +64,14 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The DscpTos param.
+     * Dscp tos
      * 
      */
     @Import(name="dscpTos")
     private @Nullable Output<QosPolicyRuleDscpTosArgs> dscpTos;
 
     /**
-     * @return The DscpTos param.
+     * @return Dscp tos
      * 
      */
     public Optional<Output<QosPolicyRuleDscpTosArgs>> dscpTos() {
@@ -79,14 +79,14 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -94,14 +94,14 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -109,14 +109,14 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * The relative position of the rule
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * @return The relative position of the rule
      * 
      */
     public Optional<Output<String>> position() {
@@ -124,14 +124,14 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Schedule param.
+     * Schedule
      * 
      */
     @Import(name="schedule")
     private @Nullable Output<String> schedule;
 
     /**
-     * @return The Schedule param.
+     * @return Schedule
      * 
      */
     public Optional<Output<String>> schedule() {
@@ -139,14 +139,14 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -186,7 +186,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param action The Action param.
+         * @param action Action
          * 
          * @return builder
          * 
@@ -197,7 +197,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param action The Action param.
+         * @param action Action
          * 
          * @return builder
          * 
@@ -207,7 +207,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -218,7 +218,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -228,7 +228,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -239,7 +239,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -249,7 +249,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dscpTos The DscpTos param.
+         * @param dscpTos Dscp tos
          * 
          * @return builder
          * 
@@ -260,7 +260,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dscpTos The DscpTos param.
+         * @param dscpTos Dscp tos
          * 
          * @return builder
          * 
@@ -270,7 +270,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -281,7 +281,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -291,7 +291,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -302,7 +302,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -312,7 +312,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+         * @param position The relative position of the rule
          * 
          * @return builder
          * 
@@ -323,7 +323,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+         * @param position The relative position of the rule
          * 
          * @return builder
          * 
@@ -333,7 +333,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param schedule The Schedule param.
+         * @param schedule Schedule
          * 
          * @return builder
          * 
@@ -344,7 +344,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param schedule The Schedule param.
+         * @param schedule Schedule
          * 
          * @return builder
          * 
@@ -354,7 +354,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -365,7 +365,7 @@ public final class QosPolicyRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

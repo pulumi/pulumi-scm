@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.QosPolicyRuleDscpTosCodepointGetArgs>? _codepoints;
 
         /// <summary>
-        /// The Codepoints param.
+        /// Codepoints
         /// </summary>
         public InputList<Inputs.QosPolicyRuleDscpTosCodepointGetArgs> Codepoints
         {

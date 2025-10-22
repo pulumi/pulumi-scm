@@ -6,113 +6,179 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetIkeGatewayListDataAuthentication;
+import com.pulumi.scm.outputs.GetIkeGatewayListDataLocalAddress;
 import com.pulumi.scm.outputs.GetIkeGatewayListDataLocalId;
 import com.pulumi.scm.outputs.GetIkeGatewayListDataPeerAddress;
 import com.pulumi.scm.outputs.GetIkeGatewayListDataPeerId;
 import com.pulumi.scm.outputs.GetIkeGatewayListDataProtocol;
 import com.pulumi.scm.outputs.GetIkeGatewayListDataProtocolCommon;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetIkeGatewayListData {
     /**
-     * @return The Authentication param.
+     * @return Authentication
      * 
      */
     private GetIkeGatewayListDataAuthentication authentication;
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    private Map<String,String> encryptedValues;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return The LocalId param.
+     * @return Local address
+     * 
+     */
+    private GetIkeGatewayListDataLocalAddress localAddress;
+    /**
+     * @return Local id
      * 
      */
     private GetIkeGatewayListDataLocalId localId;
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     private String name;
     /**
-     * @return The PeerAddress param.
+     * @return Peer address
      * 
      */
     private GetIkeGatewayListDataPeerAddress peerAddress;
     /**
-     * @return The PeerId param.
+     * @return Peer id
      * 
      */
     private GetIkeGatewayListDataPeerId peerId;
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     private GetIkeGatewayListDataProtocol protocol;
     /**
-     * @return The ProtocolCommon param.
+     * @return Protocol common
      * 
      */
     private GetIkeGatewayListDataProtocolCommon protocolCommon;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
 
     private GetIkeGatewayListData() {}
     /**
-     * @return The Authentication param.
+     * @return Authentication
      * 
      */
     public GetIkeGatewayListDataAuthentication authentication() {
         return this.authentication;
     }
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The LocalId param.
+     * @return Local address
+     * 
+     */
+    public GetIkeGatewayListDataLocalAddress localAddress() {
+        return this.localAddress;
+    }
+    /**
+     * @return Local id
      * 
      */
     public GetIkeGatewayListDataLocalId localId() {
         return this.localId;
     }
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The PeerAddress param.
+     * @return Peer address
      * 
      */
     public GetIkeGatewayListDataPeerAddress peerAddress() {
         return this.peerAddress;
     }
     /**
-     * @return The PeerId param.
+     * @return Peer id
      * 
      */
     public GetIkeGatewayListDataPeerId peerId() {
         return this.peerId;
     }
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     public GetIkeGatewayListDataProtocol protocol() {
         return this.protocol;
     }
     /**
-     * @return The ProtocolCommon param.
+     * @return Protocol common
      * 
      */
     public GetIkeGatewayListDataProtocolCommon protocolCommon() {
         return this.protocolCommon;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -125,24 +191,36 @@ public final class GetIkeGatewayListData {
     @CustomType.Builder
     public static final class Builder {
         private GetIkeGatewayListDataAuthentication authentication;
+        private String device;
+        private Map<String,String> encryptedValues;
+        private String folder;
         private String id;
+        private GetIkeGatewayListDataLocalAddress localAddress;
         private GetIkeGatewayListDataLocalId localId;
         private String name;
         private GetIkeGatewayListDataPeerAddress peerAddress;
         private GetIkeGatewayListDataPeerId peerId;
         private GetIkeGatewayListDataProtocol protocol;
         private GetIkeGatewayListDataProtocolCommon protocolCommon;
+        private String snippet;
+        private String tfid;
         public Builder() {}
         public Builder(GetIkeGatewayListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.authentication = defaults.authentication;
+    	      this.device = defaults.device;
+    	      this.encryptedValues = defaults.encryptedValues;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
+    	      this.localAddress = defaults.localAddress;
     	      this.localId = defaults.localId;
     	      this.name = defaults.name;
     	      this.peerAddress = defaults.peerAddress;
     	      this.peerId = defaults.peerId;
     	      this.protocol = defaults.protocol;
     	      this.protocolCommon = defaults.protocolCommon;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -154,11 +232,43 @@ public final class GetIkeGatewayListData {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetIkeGatewayListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetIkeGatewayListData", "encryptedValues");
+            }
+            this.encryptedValues = encryptedValues;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetIkeGatewayListData", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
+        @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
               throw new MissingRequiredPropertyException("GetIkeGatewayListData", "id");
             }
             this.id = id;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder localAddress(GetIkeGatewayListDataLocalAddress localAddress) {
+            if (localAddress == null) {
+              throw new MissingRequiredPropertyException("GetIkeGatewayListData", "localAddress");
+            }
+            this.localAddress = localAddress;
             return this;
         }
         @CustomType.Setter
@@ -209,16 +319,38 @@ public final class GetIkeGatewayListData {
             this.protocolCommon = protocolCommon;
             return this;
         }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetIkeGatewayListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetIkeGatewayListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetIkeGatewayListData build() {
             final var _resultValue = new GetIkeGatewayListData();
             _resultValue.authentication = authentication;
+            _resultValue.device = device;
+            _resultValue.encryptedValues = encryptedValues;
+            _resultValue.folder = folder;
             _resultValue.id = id;
+            _resultValue.localAddress = localAddress;
             _resultValue.localId = localId;
             _resultValue.name = name;
             _resultValue.peerAddress = peerAddress;
             _resultValue.peerId = peerId;
             _resultValue.protocol = protocol;
             _resultValue.protocolCommon = protocolCommon;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

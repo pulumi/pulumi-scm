@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.QosProfileClassBandwidthTypeMbpsClassGetArgs>? _classes;
 
         /// <summary>
-        /// QoS setting for traffic classes.
+        /// QoS setting for traffic classes
         /// </summary>
         public InputList<Inputs.QosProfileClassBandwidthTypeMbpsClassGetArgs> Classes
         {

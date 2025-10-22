@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectCustomChecksCriteriaProcessListArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Process Name. String length must not exceed 1023 characters.
+        /// Process Name
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// The Running param. Default: `True`.
+        /// Running
         /// </summary>
         [Input("running")]
         public Input<bool>? Running { get; set; }

@@ -12,110 +12,110 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceConnectionListDataProtocolBgp {
     /**
-     * @return The DoNotExportRoutes param.
+     * @return Do not export routes
      * 
      */
     private Boolean doNotExportRoutes;
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     private Boolean enable;
     /**
-     * @return The FastFailover param.
+     * @return Fast failover
      * 
      */
     private Boolean fastFailover;
     /**
-     * @return The LocalIpAddress param.
+     * @return Local ip address
      * 
      */
     private String localIpAddress;
     /**
-     * @return The OriginateDefaultRoute param.
+     * @return Originate default route
      * 
      */
     private Boolean originateDefaultRoute;
     /**
-     * @return The PeerAs param.
+     * @return Peer as
      * 
      */
     private String peerAs;
     /**
-     * @return The PeerIpAddress param.
+     * @return Peer ip address
      * 
      */
     private String peerIpAddress;
     /**
-     * @return The Secret param.
+     * @return Secret
      * 
      */
     private String secret;
     /**
-     * @return The SummarizeMobileUserRoutes param.
+     * @return Summarize mobile user routes
      * 
      */
     private Boolean summarizeMobileUserRoutes;
 
     private GetServiceConnectionListDataProtocolBgp() {}
     /**
-     * @return The DoNotExportRoutes param.
+     * @return Do not export routes
      * 
      */
     public Boolean doNotExportRoutes() {
         return this.doNotExportRoutes;
     }
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     public Boolean enable() {
         return this.enable;
     }
     /**
-     * @return The FastFailover param.
+     * @return Fast failover
      * 
      */
     public Boolean fastFailover() {
         return this.fastFailover;
     }
     /**
-     * @return The LocalIpAddress param.
+     * @return Local ip address
      * 
      */
     public String localIpAddress() {
         return this.localIpAddress;
     }
     /**
-     * @return The OriginateDefaultRoute param.
+     * @return Originate default route
      * 
      */
     public Boolean originateDefaultRoute() {
         return this.originateDefaultRoute;
     }
     /**
-     * @return The PeerAs param.
+     * @return Peer as
      * 
      */
     public String peerAs() {
         return this.peerAs;
     }
     /**
-     * @return The PeerIpAddress param.
+     * @return Peer ip address
      * 
      */
     public String peerIpAddress() {
         return this.peerIpAddress;
     }
     /**
-     * @return The Secret param.
+     * @return Secret
      * 
      */
     public String secret() {
         return this.secret;
     }
     /**
-     * @return The SummarizeMobileUserRoutes param.
+     * @return Summarize mobile user routes
      * 
      */
     public Boolean summarizeMobileUserRoutes() {

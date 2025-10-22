@@ -14,30 +14,6 @@ import (
 // Retrieves a listing of config items.
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetServiceConnectionGroupList(ctx, &scm.GetServiceConnectionGroupListArgs{
-//				Folder: pulumi.StringRef("Service Connections"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 func GetServiceConnectionGroupList(ctx *pulumi.Context, args *GetServiceConnectionGroupListArgs, opts ...pulumi.InvokeOption) (*GetServiceConnectionGroupListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetServiceConnectionGroupListResult
@@ -50,32 +26,40 @@ func GetServiceConnectionGroupList(ctx *pulumi.Context, args *GetServiceConnecti
 
 // A collection of arguments for invoking getServiceConnectionGroupList.
 type GetServiceConnectionGroupListArgs struct {
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+	// The device of the item.
+	Device *string `pulumi:"device"`
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getServiceConnectionGroupList.
 type GetServiceConnectionGroupListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetServiceConnectionGroupListData `pulumi:"datas"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder string `pulumi:"folder"`
+	// The device of the item.
+	Device *string `pulumi:"device"`
+	// The folder of the item. Default: Shared.
+	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int    `pulumi:"offset"`
-	Tfid   string `pulumi:"tfid"`
-	// The Total param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet *string `pulumi:"snippet"`
+	Tfid    string  `pulumi:"tfid"`
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -90,14 +74,18 @@ func GetServiceConnectionGroupListOutput(ctx *pulumi.Context, args GetServiceCon
 
 // A collection of arguments for invoking getServiceConnectionGroupList.
 type GetServiceConnectionGroupListOutputArgs struct {
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+	// The device of the item.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (GetServiceConnectionGroupListOutputArgs) ElementType() reflect.Type {
@@ -119,14 +107,19 @@ func (o GetServiceConnectionGroupListResultOutput) ToGetServiceConnectionGroupLi
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetServiceConnectionGroupListResultOutput) Datas() GetServiceConnectionGroupListDataArrayOutput {
 	return o.ApplyT(func(v GetServiceConnectionGroupListResult) []GetServiceConnectionGroupListData { return v.Datas }).(GetServiceConnectionGroupListDataArrayOutput)
 }
 
-// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-func (o GetServiceConnectionGroupListResultOutput) Folder() pulumi.StringOutput {
-	return o.ApplyT(func(v GetServiceConnectionGroupListResult) string { return v.Folder }).(pulumi.StringOutput)
+// The device of the item.
+func (o GetServiceConnectionGroupListResultOutput) Device() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetServiceConnectionGroupListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetServiceConnectionGroupListResultOutput) Folder() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetServiceConnectionGroupListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
 // The provider-assigned unique ID for this managed resource.
@@ -134,26 +127,31 @@ func (o GetServiceConnectionGroupListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetServiceConnectionGroupListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetServiceConnectionGroupListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetServiceConnectionGroupListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetServiceConnectionGroupListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetServiceConnectionGroupListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetServiceConnectionGroupListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetServiceConnectionGroupListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetServiceConnectionGroupListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetServiceConnectionGroupListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetServiceConnectionGroupListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetServiceConnectionGroupListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
+}
+
+// The snippet of the item.
+func (o GetServiceConnectionGroupListResultOutput) Snippet() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetServiceConnectionGroupListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
 func (o GetServiceConnectionGroupListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetServiceConnectionGroupListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetServiceConnectionGroupListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetServiceConnectionGroupListResult) int { return v.Total }).(pulumi.IntOutput)
 }

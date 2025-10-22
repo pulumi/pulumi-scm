@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareProfileThreatExceptionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Action param.
+        /// anti spyware profiles threat exception default action
         /// </summary>
         [Input("action")]
         public Input<Inputs.AntiSpywareProfileThreatExceptionActionArgs>? Action { get; set; }
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.AntiSpywareProfileThreatExceptionExemptIpArgs>? _exemptIps;
 
         /// <summary>
-        /// The ExemptIps param.
+        /// Exempt ip
         /// </summary>
         public InputList<Inputs.AntiSpywareProfileThreatExceptionExemptIpArgs> ExemptIps
         {
@@ -31,19 +31,19 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Notes param.
+        /// Notes
         /// </summary>
         [Input("notes")]
         public Input<string>? Notes { get; set; }
 
         /// <summary>
-        /// The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        /// Packet capture
         /// </summary>
         [Input("packetCapture")]
         public Input<string>? PacketCapture { get; set; }

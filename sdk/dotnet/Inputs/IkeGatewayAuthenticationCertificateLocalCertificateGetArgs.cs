@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class IkeGatewayAuthenticationCertificateLocalCertificateGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The LocalCertificateName param.
+        /// Local certificate name
         /// </summary>
         [Input("localCertificateName")]
         public Input<string>? LocalCertificateName { get; set; }

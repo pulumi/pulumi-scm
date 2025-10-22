@@ -13,16 +13,16 @@ namespace Pulumi.Scm.Inputs
     public sealed class FileBlockingProfileRuleGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Action param. String must be one of these: `"alert"`, `"block"`, `"continue"`. Default: `"alert"`.
+        /// The action to take when the rule match criteria is met
         /// </summary>
-        [Input("action")]
-        public Input<string>? Action { get; set; }
+        [Input("action", required: true)]
+        public Input<string> Action { get; set; } = null!;
 
         [Input("applications", required: true)]
         private InputList<string>? _applications;
 
         /// <summary>
-        /// The Applications param. List must contain at least 1 elements.
+        /// The application transferring the files (App-ID naming)
         /// </summary>
         public InputList<string> Applications
         {
@@ -31,16 +31,16 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Direction param. String must be one of these: `"download"`, `"upload"`, `"both"`. Default: `"both"`.
+        /// The direction of the file transfer
         /// </summary>
-        [Input("direction")]
-        public Input<string>? Direction { get; set; }
+        [Input("direction", required: true)]
+        public Input<string> Direction { get; set; } = null!;
 
         [Input("fileTypes", required: true)]
         private InputList<string>? _fileTypes;
 
         /// <summary>
-        /// The FileTypes param. List must contain at least 1 elements.
+        /// The file type
         /// </summary>
         public InputList<string> FileTypes
         {
@@ -49,7 +49,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the file blocking rule
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;

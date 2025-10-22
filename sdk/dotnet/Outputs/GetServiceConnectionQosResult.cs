@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetServiceConnectionQosResult
     {
         /// <summary>
-        /// The Enable param.
+        /// Enable
         /// </summary>
         public readonly bool Enable;
         /// <summary>
-        /// The QosProfile param.
+        /// Qos profile
         /// </summary>
         public readonly string QosProfile;
 

@@ -15,9 +15,23 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getServiceList({
+ * // Data source to fetch all services in the "Shared" folder.
+ * const allSharedServices = scm.getServiceList({
  *     folder: "Shared",
  * });
+ * export const allSharedServicesMap = allSharedServices.then(allSharedServices => .reduce((__obj, svc) => ({ ...__obj, [svc.name]: svc })));
+ * // Example of using pagination to get the first 5 services.
+ * const paginatedServices = scm.getServiceList({
+ *     folder: "Shared",
+ *     limit: 5,
+ *     offset: 0,
+ * });
+ * export const paginatedServicesList = paginatedServices.then(paginatedServices => paginatedServices.datas);
+ * export const paginatedServicesDetails = {
+ *     totalInFolder: paginatedServices.then(paginatedServices => paginatedServices.total),
+ *     limitUsed: paginatedServices.then(paginatedServices => paginatedServices.limit),
+ *     offsetUsed: paginatedServices.then(paginatedServices => paginatedServices.offset),
+ * };
  * ```
  */
 export function getServiceList(args?: GetServiceListArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceListResult> {
@@ -38,27 +52,27 @@ export function getServiceList(args?: GetServiceListArgs, opts?: pulumi.InvokeOp
  */
 export interface GetServiceListArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: string;
 }
@@ -68,15 +82,15 @@ export interface GetServiceListArgs {
  */
 export interface GetServiceListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetServiceListData[];
     /**
-     * The Device param.
+     * The device of the item.
      */
     readonly device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     readonly folder?: string;
     /**
@@ -84,24 +98,24 @@ export interface GetServiceListResult {
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
@@ -114,9 +128,23 @@ export interface GetServiceListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getServiceList({
+ * // Data source to fetch all services in the "Shared" folder.
+ * const allSharedServices = scm.getServiceList({
  *     folder: "Shared",
  * });
+ * export const allSharedServicesMap = allSharedServices.then(allSharedServices => .reduce((__obj, svc) => ({ ...__obj, [svc.name]: svc })));
+ * // Example of using pagination to get the first 5 services.
+ * const paginatedServices = scm.getServiceList({
+ *     folder: "Shared",
+ *     limit: 5,
+ *     offset: 0,
+ * });
+ * export const paginatedServicesList = paginatedServices.then(paginatedServices => paginatedServices.datas);
+ * export const paginatedServicesDetails = {
+ *     totalInFolder: paginatedServices.then(paginatedServices => paginatedServices.total),
+ *     limitUsed: paginatedServices.then(paginatedServices => paginatedServices.limit),
+ *     offsetUsed: paginatedServices.then(paginatedServices => paginatedServices.offset),
+ * };
  * ```
  */
 export function getServiceListOutput(args?: GetServiceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceListResult> {
@@ -137,27 +165,27 @@ export function getServiceListOutput(args?: GetServiceListOutputArgs, opts?: pul
  */
 export interface GetServiceListOutputArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: pulumi.Input<string>;
 }

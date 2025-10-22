@@ -14,21 +14,21 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetScheduleScheduleTypeResult
     {
         /// <summary>
-        /// The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1])@([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1])@([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Non recurring
         /// </summary>
-        public readonly ImmutableArray<string> NonRecurringLists;
+        public readonly ImmutableArray<string> NonRecurrings;
         /// <summary>
-        /// The Recurring param.
+        /// Recurring
         /// </summary>
         public readonly Outputs.GetScheduleScheduleTypeRecurringResult Recurring;
 
         [OutputConstructor]
         private GetScheduleScheduleTypeResult(
-            ImmutableArray<string> nonRecurringLists,
+            ImmutableArray<string> nonRecurrings,
 
             Outputs.GetScheduleScheduleTypeRecurringResult recurring)
         {
-            NonRecurringLists = nonRecurringLists;
+            NonRecurrings = nonRecurrings;
             Recurring = recurring;
         }
     }

@@ -5,23 +5,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getLocalUser({
- *     id: "1234-56-789",
- * });
- * ```
+ * LocalUser data source
  */
 export function getLocalUser(args: GetLocalUserArgs, opts?: pulumi.InvokeOptions): Promise<GetLocalUserResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLocalUser:getLocalUser", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +20,13 @@ export function getLocalUser(args: GetLocalUserArgs, opts?: pulumi.InvokeOptions
  */
 export interface GetLocalUserArgs {
     /**
-     * The Id param.
+     * The UUID of the local user
      */
     id: string;
+    /**
+     * The name of the local user
+     */
+    name?: string;
 }
 
 /**
@@ -40,41 +34,47 @@ export interface GetLocalUserArgs {
  */
 export interface GetLocalUserResult {
     /**
-     * The Disabled param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * Is the local user disabled?
      */
     readonly disabled: boolean;
     /**
-     * The Id param.
+     * Map of sensitive values returned from the API.
+     */
+    readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the local user
      */
     readonly id: string;
     /**
-     * The Name param. String length must not exceed 31 characters.
+     * The name of the local user
      */
     readonly name: string;
     /**
-     * The Password param. String length must not exceed 63 characters.
+     * The password of the local user
      */
     readonly password: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getLocalUser({
- *     id: "1234-56-789",
- * });
- * ```
+ * LocalUser data source
  */
 export function getLocalUserOutput(args: GetLocalUserOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLocalUserResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLocalUser:getLocalUser", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -83,7 +83,11 @@ export function getLocalUserOutput(args: GetLocalUserOutputArgs, opts?: pulumi.I
  */
 export interface GetLocalUserOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the local user
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the local user
+     */
+    name?: pulumi.Input<string>;
 }

@@ -18,110 +18,110 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectMobileDeviceCriteria {
     /**
-     * @return The Applications param.
+     * @return Applications
      * 
      */
     private @Nullable HipObjectMobileDeviceCriteriaApplications applications;
     /**
-     * @return If device&#39;s disk is encrypted.
+     * @return If device&#39;s disk is encrypted
      * 
      */
     private @Nullable Boolean diskEncrypted;
     /**
-     * @return The Imei param.
+     * @return Imei
      * 
      */
     private @Nullable HipObjectMobileDeviceCriteriaImei imei;
     /**
-     * @return If device is by rooted/jailbroken.
+     * @return If device is by rooted/jailbroken
      * 
      */
     private @Nullable Boolean jailbroken;
     /**
-     * @return The LastCheckinTime param.
+     * @return Last checkin time
      * 
      */
     private @Nullable HipObjectMobileDeviceCriteriaLastCheckinTime lastCheckinTime;
     /**
-     * @return The Model param.
+     * @return Model
      * 
      */
     private @Nullable HipObjectMobileDeviceCriteriaModel model;
     /**
-     * @return If device&#39;s passcode is present.
+     * @return If device&#39;s passcode is present
      * 
      */
     private @Nullable Boolean passcodeSet;
     /**
-     * @return The PhoneNumber param.
+     * @return Phone number
      * 
      */
     private @Nullable HipObjectMobileDeviceCriteriaPhoneNumber phoneNumber;
     /**
-     * @return The Tag param.
+     * @return Tag
      * 
      */
     private @Nullable HipObjectMobileDeviceCriteriaTag tag;
 
     private HipObjectMobileDeviceCriteria() {}
     /**
-     * @return The Applications param.
+     * @return Applications
      * 
      */
     public Optional<HipObjectMobileDeviceCriteriaApplications> applications() {
         return Optional.ofNullable(this.applications);
     }
     /**
-     * @return If device&#39;s disk is encrypted.
+     * @return If device&#39;s disk is encrypted
      * 
      */
     public Optional<Boolean> diskEncrypted() {
         return Optional.ofNullable(this.diskEncrypted);
     }
     /**
-     * @return The Imei param.
+     * @return Imei
      * 
      */
     public Optional<HipObjectMobileDeviceCriteriaImei> imei() {
         return Optional.ofNullable(this.imei);
     }
     /**
-     * @return If device is by rooted/jailbroken.
+     * @return If device is by rooted/jailbroken
      * 
      */
     public Optional<Boolean> jailbroken() {
         return Optional.ofNullable(this.jailbroken);
     }
     /**
-     * @return The LastCheckinTime param.
+     * @return Last checkin time
      * 
      */
     public Optional<HipObjectMobileDeviceCriteriaLastCheckinTime> lastCheckinTime() {
         return Optional.ofNullable(this.lastCheckinTime);
     }
     /**
-     * @return The Model param.
+     * @return Model
      * 
      */
     public Optional<HipObjectMobileDeviceCriteriaModel> model() {
         return Optional.ofNullable(this.model);
     }
     /**
-     * @return If device&#39;s passcode is present.
+     * @return If device&#39;s passcode is present
      * 
      */
     public Optional<Boolean> passcodeSet() {
         return Optional.ofNullable(this.passcodeSet);
     }
     /**
-     * @return The PhoneNumber param.
+     * @return Phone number
      * 
      */
     public Optional<HipObjectMobileDeviceCriteriaPhoneNumber> phoneNumber() {
         return Optional.ofNullable(this.phoneNumber);
     }
     /**
-     * @return The Tag param.
+     * @return Tag
      * 
      */
     public Optional<HipObjectMobileDeviceCriteriaTag> tag() {

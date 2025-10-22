@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// Service data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,22 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupService(ctx, &scm.LookupServiceArgs{
-//				Id: "1234-56-789",
+//			// Data source to look up a single service by its ID.
+//			scmServiceTcpDs, err := scm.LookupService(ctx, &scm.LookupServiceArgs{
+//				Id: "ff135641-6735-4d7d-85c6-3401bba9dee8",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("serviceDetailsTcp", scmServiceTcpDs)
+//			// Data source to look up a single service by its ID.
+//			scmServiceUdpDs, err := scm.LookupService(ctx, &scm.LookupServiceArgs{
+//				Id: "e087b703-aede-437e-853e-b11576f6dcbe",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("serviceDetailsUdp", scmServiceUdpDs)
 //			return nil
 //		})
 //	}
@@ -50,21 +60,29 @@ func LookupService(ctx *pulumi.Context, args *LookupServiceArgs, opts ...pulumi.
 
 // A collection of arguments for invoking getService.
 type LookupServiceArgs struct {
-	// The Id param.
+	// The UUID of the service
 	Id string `pulumi:"id"`
+	// The name of the service
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getService.
 type LookupServiceResult struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description string `pulumi:"description"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the service
 	Id string `pulumi:"id"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service
 	Name string `pulumi:"name"`
-	// The Protocol param.
+	// Protocol
 	Protocol GetServiceProtocol `pulumi:"protocol"`
-	// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Tags for service object
 	Tags []string `pulumi:"tags"`
 	Tfid string   `pulumi:"tfid"`
 }
@@ -80,8 +98,10 @@ func LookupServiceOutput(ctx *pulumi.Context, args LookupServiceOutputArgs, opts
 
 // A collection of arguments for invoking getService.
 type LookupServiceOutputArgs struct {
-	// The Id param.
+	// The UUID of the service
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the service
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupServiceOutputArgs) ElementType() reflect.Type {
@@ -103,27 +123,42 @@ func (o LookupServiceResultOutput) ToLookupServiceResultOutputWithContext(ctx co
 	return o
 }
 
-// The Description param. String length must not exceed 1023 characters.
+// Description
 func (o LookupServiceResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupServiceResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupServiceResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the service
 func (o LookupServiceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the service
 func (o LookupServiceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Protocol param.
+// Protocol
 func (o LookupServiceResultOutput) Protocol() GetServiceProtocolOutput {
 	return o.ApplyT(func(v LookupServiceResult) GetServiceProtocol { return v.Protocol }).(GetServiceProtocolOutput)
 }
 
-// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+// The snippet in which the resource is defined
+func (o LookupServiceResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceResult) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// Tags for service object
 func (o LookupServiceResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

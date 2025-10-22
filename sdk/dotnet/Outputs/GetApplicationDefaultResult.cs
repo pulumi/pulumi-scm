@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetApplicationDefaultResult
     {
         /// <summary>
-        /// The IdentByIcmp6Type param.
+        /// Ident by icmp6 type
         /// </summary>
         public readonly Outputs.GetApplicationDefaultIdentByIcmp6TypeResult IdentByIcmp6Type;
         /// <summary>
-        /// The IdentByIcmpType param.
+        /// Ident by icmp type
         /// </summary>
         public readonly Outputs.GetApplicationDefaultIdentByIcmpTypeResult IdentByIcmpType;
         /// <summary>
-        /// The IdentByIpProtocol param.
+        /// Ident by ip protocol
         /// </summary>
         public readonly string IdentByIpProtocol;
         /// <summary>
-        /// The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Port
         /// </summary>
         public readonly ImmutableArray<string> Ports;
 

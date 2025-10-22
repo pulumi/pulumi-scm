@@ -5,25 +5,15 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * ServiceConnectionGroup data source
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getServiceConnectionGroup({
- *     id: "1234-56-789",
- *     folder: "Service Connections",
- * });
- * ```
  */
 export function getServiceConnectionGroup(args: GetServiceConnectionGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceConnectionGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,13 +22,13 @@ export function getServiceConnectionGroup(args: GetServiceConnectionGroupArgs, o
  */
 export interface GetServiceConnectionGroupArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-     */
-    folder?: string;
-    /**
-     * The Id param.
+     * The UUID of the service connection group
      */
     id: string;
+    /**
+     * Name
+     */
+    name?: string;
 }
 
 /**
@@ -46,51 +36,37 @@ export interface GetServiceConnectionGroupArgs {
  */
 export interface GetServiceConnectionGroupResult {
     /**
-     * The DisableSnat param.
+     * Disable snat
      */
     readonly disableSnat: boolean;
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-     */
-    readonly folder: string;
-    /**
-     * The Id param.
+     * The UUID of the service connection group
      */
     readonly id: string;
     /**
-     * The Name param.
+     * Name
      */
     readonly name: string;
     /**
-     * The PbfOnly param.
+     * Pbf only
      */
     readonly pbfOnly: boolean;
     /**
-     * The Targets param.
+     * Target
      */
     readonly targets: string[];
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * ServiceConnectionGroup data source
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getServiceConnectionGroup({
- *     id: "1234-56-789",
- *     folder: "Service Connections",
- * });
- * ```
  */
 export function getServiceConnectionGroupOutput(args: GetServiceConnectionGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceConnectionGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -99,11 +75,11 @@ export function getServiceConnectionGroupOutput(args: GetServiceConnectionGroupO
  */
 export interface GetServiceConnectionGroupOutputArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The Id param.
+     * The UUID of the service connection group
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
 }

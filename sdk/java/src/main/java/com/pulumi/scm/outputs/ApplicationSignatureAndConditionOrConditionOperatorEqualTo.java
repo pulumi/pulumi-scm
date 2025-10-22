@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationSignatureAndConditionOrConditionOperatorEqualTo {
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     private String context;
     /**
-     * @return 4-byte hex value. String length must not exceed 10 characters. String validation regex: `^[0][xX][0-9A-Fa-f]{8}$`.
+     * @return 4-byte hex value
      * 
      */
     private @Nullable String mask;
     /**
-     * @return The Position param. String length must not exceed 127 characters.
+     * @return Position
      * 
      */
     private @Nullable String position;
     /**
-     * @return The Value param. String length must not exceed 10 characters.
+     * @return Value
      * 
      */
     private String value;
 
     private ApplicationSignatureAndConditionOrConditionOperatorEqualTo() {}
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     public String context() {
         return this.context;
     }
     /**
-     * @return 4-byte hex value. String length must not exceed 10 characters. String validation regex: `^[0][xX][0-9A-Fa-f]{8}$`.
+     * @return 4-byte hex value
      * 
      */
     public Optional<String> mask() {
         return Optional.ofNullable(this.mask);
     }
     /**
-     * @return The Position param. String length must not exceed 127 characters.
+     * @return Position
      * 
      */
     public Optional<String> position() {
         return Optional.ofNullable(this.position);
     }
     /**
-     * @return The Value param. String length must not exceed 10 characters.
+     * @return Value
      * 
      */
     public String value() {

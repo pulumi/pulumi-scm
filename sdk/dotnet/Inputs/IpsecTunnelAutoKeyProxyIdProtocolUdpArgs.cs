@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class IpsecTunnelAutoKeyProxyIdProtocolUdpArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+        /// Local port
         /// </summary>
         [Input("localPort")]
         public Input<int>? LocalPort { get; set; }
 
         /// <summary>
-        /// The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+        /// Remote port
         /// </summary>
         [Input("remotePort")]
         public Input<int>? RemotePort { get; set; }

@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceProtocolTcp {
     /**
-     * @return The Override param.
+     * @return Override
      * 
      */
     private GetServiceProtocolTcpOverride override;
     /**
-     * @return The Port param. String length must be between 1 and 1023 characters.
+     * @return Port
      * 
      */
     private String port;
     /**
-     * @return The SourcePort param. String length must be between 1 and 1023 characters.
+     * @return Source port
      * 
      */
     private String sourcePort;
 
     private GetServiceProtocolTcp() {}
     /**
-     * @return The Override param.
+     * @return Override
      * 
      */
     public GetServiceProtocolTcpOverride override() {
         return this.override;
     }
     /**
-     * @return The Port param. String length must be between 1 and 1023 characters.
+     * @return Port
      * 
      */
     public String port() {
         return this.port;
     }
     /**
-     * @return The SourcePort param. String length must be between 1 and 1023 characters.
+     * @return Source port
      * 
      */
     public String sourcePort() {

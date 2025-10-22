@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class QosPolicyRuleActionGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Class param.
+        /// Class
         /// </summary>
         [Input("class")]
         public Input<string>? Class { get; set; }

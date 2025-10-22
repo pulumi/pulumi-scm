@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class RemoteNetworkProtocolArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Bgp param.
+        /// Bgp
         /// </summary>
         [Input("bgp")]
         public Input<Inputs.RemoteNetworkProtocolBgpArgs>? Bgp { get; set; }
 
         /// <summary>
-        /// secondary bgp routing as bgp*peer.
+        /// secondary bgp routing as bgp*peer
         /// </summary>
         [Input("bgpPeer")]
         public Input<Inputs.RemoteNetworkProtocolBgpPeerArgs>? BgpPeer { get; set; }

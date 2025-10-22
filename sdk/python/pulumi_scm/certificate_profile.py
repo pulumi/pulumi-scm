@@ -39,22 +39,22 @@ class CertificateProfileArgs:
                  username_field: Optional[pulumi.Input['CertificateProfileUsernameFieldArgs']] = None):
         """
         The set of arguments for constructing a CertificateProfile resource.
-        :param pulumi.Input[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]] ca_certificates: The CaCertificates param.
-        :param pulumi.Input[_builtins.bool] block_expired_cert: The BlockExpiredCert param.
-        :param pulumi.Input[_builtins.bool] block_timeout_cert: The BlockTimeoutCert param.
-        :param pulumi.Input[_builtins.bool] block_unauthenticated_cert: The BlockUnauthenticatedCert param.
-        :param pulumi.Input[_builtins.bool] block_unknown_cert: The BlockUnknownCert param.
-        :param pulumi.Input[_builtins.str] cert_status_timeout: The CertStatusTimeout param.
-        :param pulumi.Input[_builtins.str] crl_receive_timeout: The CrlReceiveTimeout param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] domain: The Domain param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] ocsp_receive_timeout: The OcspReceiveTimeout param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] use_crl: The UseCrl param.
-        :param pulumi.Input[_builtins.bool] use_ocsp: The UseOcsp param.
-        :param pulumi.Input['CertificateProfileUsernameFieldArgs'] username_field: The UsernameField param.
+        :param pulumi.Input[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]] ca_certificates: An ordered list of CA certificates
+        :param pulumi.Input[_builtins.bool] block_expired_cert: Block sessions with expired certificates?
+        :param pulumi.Input[_builtins.bool] block_timeout_cert: Block session if certificate status cannot be retrieved within timeout?
+        :param pulumi.Input[_builtins.bool] block_unauthenticated_cert: Block session if the certificate was not issued to the authenticating device?
+        :param pulumi.Input[_builtins.bool] block_unknown_cert: Block session if certificate status is unknown?
+        :param pulumi.Input[_builtins.str] cert_status_timeout: Certificate status timeout
+        :param pulumi.Input[_builtins.str] crl_receive_timeout: CRL receive timeout (seconds)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] domain: User domain
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the certificate profile
+        :param pulumi.Input[_builtins.str] ocsp_receive_timeout: OCSP receive timeout (seconds)
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] use_crl: Use CRL?
+        :param pulumi.Input[_builtins.bool] use_ocsp: Use OCSP?
+        :param pulumi.Input['CertificateProfileUsernameFieldArgs'] username_field: Certificate username field
         """
         pulumi.set(__self__, "ca_certificates", ca_certificates)
         if block_expired_cert is not None:
@@ -92,7 +92,7 @@ class CertificateProfileArgs:
     @pulumi.getter(name="caCertificates")
     def ca_certificates(self) -> pulumi.Input[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]]:
         """
-        The CaCertificates param.
+        An ordered list of CA certificates
         """
         return pulumi.get(self, "ca_certificates")
 
@@ -104,7 +104,7 @@ class CertificateProfileArgs:
     @pulumi.getter(name="blockExpiredCert")
     def block_expired_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The BlockExpiredCert param.
+        Block sessions with expired certificates?
         """
         return pulumi.get(self, "block_expired_cert")
 
@@ -116,7 +116,7 @@ class CertificateProfileArgs:
     @pulumi.getter(name="blockTimeoutCert")
     def block_timeout_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The BlockTimeoutCert param.
+        Block session if certificate status cannot be retrieved within timeout?
         """
         return pulumi.get(self, "block_timeout_cert")
 
@@ -128,7 +128,7 @@ class CertificateProfileArgs:
     @pulumi.getter(name="blockUnauthenticatedCert")
     def block_unauthenticated_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The BlockUnauthenticatedCert param.
+        Block session if the certificate was not issued to the authenticating device?
         """
         return pulumi.get(self, "block_unauthenticated_cert")
 
@@ -140,7 +140,7 @@ class CertificateProfileArgs:
     @pulumi.getter(name="blockUnknownCert")
     def block_unknown_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The BlockUnknownCert param.
+        Block session if certificate status is unknown?
         """
         return pulumi.get(self, "block_unknown_cert")
 
@@ -152,7 +152,7 @@ class CertificateProfileArgs:
     @pulumi.getter(name="certStatusTimeout")
     def cert_status_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The CertStatusTimeout param.
+        Certificate status timeout
         """
         return pulumi.get(self, "cert_status_timeout")
 
@@ -164,7 +164,7 @@ class CertificateProfileArgs:
     @pulumi.getter(name="crlReceiveTimeout")
     def crl_receive_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The CrlReceiveTimeout param.
+        CRL receive timeout (seconds)
         """
         return pulumi.get(self, "crl_receive_timeout")
 
@@ -176,7 +176,7 @@ class CertificateProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -188,7 +188,7 @@ class CertificateProfileArgs:
     @pulumi.getter
     def domain(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Domain param.
+        User domain
         """
         return pulumi.get(self, "domain")
 
@@ -200,7 +200,7 @@ class CertificateProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -212,7 +212,7 @@ class CertificateProfileArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the certificate profile
         """
         return pulumi.get(self, "name")
 
@@ -224,7 +224,7 @@ class CertificateProfileArgs:
     @pulumi.getter(name="ocspReceiveTimeout")
     def ocsp_receive_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The OcspReceiveTimeout param.
+        OCSP receive timeout (seconds)
         """
         return pulumi.get(self, "ocsp_receive_timeout")
 
@@ -236,7 +236,7 @@ class CertificateProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -248,7 +248,7 @@ class CertificateProfileArgs:
     @pulumi.getter(name="useCrl")
     def use_crl(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The UseCrl param.
+        Use CRL?
         """
         return pulumi.get(self, "use_crl")
 
@@ -260,7 +260,7 @@ class CertificateProfileArgs:
     @pulumi.getter(name="useOcsp")
     def use_ocsp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The UseOcsp param.
+        Use OCSP?
         """
         return pulumi.get(self, "use_ocsp")
 
@@ -272,7 +272,7 @@ class CertificateProfileArgs:
     @pulumi.getter(name="usernameField")
     def username_field(self) -> Optional[pulumi.Input['CertificateProfileUsernameFieldArgs']]:
         """
-        The UsernameField param.
+        Certificate username field
         """
         return pulumi.get(self, "username_field")
 
@@ -303,22 +303,22 @@ class _CertificateProfileState:
                  username_field: Optional[pulumi.Input['CertificateProfileUsernameFieldArgs']] = None):
         """
         Input properties used for looking up and filtering CertificateProfile resources.
-        :param pulumi.Input[_builtins.bool] block_expired_cert: The BlockExpiredCert param.
-        :param pulumi.Input[_builtins.bool] block_timeout_cert: The BlockTimeoutCert param.
-        :param pulumi.Input[_builtins.bool] block_unauthenticated_cert: The BlockUnauthenticatedCert param.
-        :param pulumi.Input[_builtins.bool] block_unknown_cert: The BlockUnknownCert param.
-        :param pulumi.Input[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]] ca_certificates: The CaCertificates param.
-        :param pulumi.Input[_builtins.str] cert_status_timeout: The CertStatusTimeout param.
-        :param pulumi.Input[_builtins.str] crl_receive_timeout: The CrlReceiveTimeout param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] domain: The Domain param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] ocsp_receive_timeout: The OcspReceiveTimeout param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] use_crl: The UseCrl param.
-        :param pulumi.Input[_builtins.bool] use_ocsp: The UseOcsp param.
-        :param pulumi.Input['CertificateProfileUsernameFieldArgs'] username_field: The UsernameField param.
+        :param pulumi.Input[_builtins.bool] block_expired_cert: Block sessions with expired certificates?
+        :param pulumi.Input[_builtins.bool] block_timeout_cert: Block session if certificate status cannot be retrieved within timeout?
+        :param pulumi.Input[_builtins.bool] block_unauthenticated_cert: Block session if the certificate was not issued to the authenticating device?
+        :param pulumi.Input[_builtins.bool] block_unknown_cert: Block session if certificate status is unknown?
+        :param pulumi.Input[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]] ca_certificates: An ordered list of CA certificates
+        :param pulumi.Input[_builtins.str] cert_status_timeout: Certificate status timeout
+        :param pulumi.Input[_builtins.str] crl_receive_timeout: CRL receive timeout (seconds)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] domain: User domain
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the certificate profile
+        :param pulumi.Input[_builtins.str] ocsp_receive_timeout: OCSP receive timeout (seconds)
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] use_crl: Use CRL?
+        :param pulumi.Input[_builtins.bool] use_ocsp: Use OCSP?
+        :param pulumi.Input['CertificateProfileUsernameFieldArgs'] username_field: Certificate username field
         """
         if block_expired_cert is not None:
             pulumi.set(__self__, "block_expired_cert", block_expired_cert)
@@ -359,7 +359,7 @@ class _CertificateProfileState:
     @pulumi.getter(name="blockExpiredCert")
     def block_expired_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The BlockExpiredCert param.
+        Block sessions with expired certificates?
         """
         return pulumi.get(self, "block_expired_cert")
 
@@ -371,7 +371,7 @@ class _CertificateProfileState:
     @pulumi.getter(name="blockTimeoutCert")
     def block_timeout_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The BlockTimeoutCert param.
+        Block session if certificate status cannot be retrieved within timeout?
         """
         return pulumi.get(self, "block_timeout_cert")
 
@@ -383,7 +383,7 @@ class _CertificateProfileState:
     @pulumi.getter(name="blockUnauthenticatedCert")
     def block_unauthenticated_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The BlockUnauthenticatedCert param.
+        Block session if the certificate was not issued to the authenticating device?
         """
         return pulumi.get(self, "block_unauthenticated_cert")
 
@@ -395,7 +395,7 @@ class _CertificateProfileState:
     @pulumi.getter(name="blockUnknownCert")
     def block_unknown_cert(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The BlockUnknownCert param.
+        Block session if certificate status is unknown?
         """
         return pulumi.get(self, "block_unknown_cert")
 
@@ -407,7 +407,7 @@ class _CertificateProfileState:
     @pulumi.getter(name="caCertificates")
     def ca_certificates(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CertificateProfileCaCertificateArgs']]]]:
         """
-        The CaCertificates param.
+        An ordered list of CA certificates
         """
         return pulumi.get(self, "ca_certificates")
 
@@ -419,7 +419,7 @@ class _CertificateProfileState:
     @pulumi.getter(name="certStatusTimeout")
     def cert_status_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The CertStatusTimeout param.
+        Certificate status timeout
         """
         return pulumi.get(self, "cert_status_timeout")
 
@@ -431,7 +431,7 @@ class _CertificateProfileState:
     @pulumi.getter(name="crlReceiveTimeout")
     def crl_receive_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The CrlReceiveTimeout param.
+        CRL receive timeout (seconds)
         """
         return pulumi.get(self, "crl_receive_timeout")
 
@@ -443,7 +443,7 @@ class _CertificateProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -455,7 +455,7 @@ class _CertificateProfileState:
     @pulumi.getter
     def domain(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Domain param.
+        User domain
         """
         return pulumi.get(self, "domain")
 
@@ -467,7 +467,7 @@ class _CertificateProfileState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -479,7 +479,7 @@ class _CertificateProfileState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the certificate profile
         """
         return pulumi.get(self, "name")
 
@@ -491,7 +491,7 @@ class _CertificateProfileState:
     @pulumi.getter(name="ocspReceiveTimeout")
     def ocsp_receive_timeout(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The OcspReceiveTimeout param.
+        OCSP receive timeout (seconds)
         """
         return pulumi.get(self, "ocsp_receive_timeout")
 
@@ -503,7 +503,7 @@ class _CertificateProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -524,7 +524,7 @@ class _CertificateProfileState:
     @pulumi.getter(name="useCrl")
     def use_crl(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The UseCrl param.
+        Use CRL?
         """
         return pulumi.get(self, "use_crl")
 
@@ -536,7 +536,7 @@ class _CertificateProfileState:
     @pulumi.getter(name="useOcsp")
     def use_ocsp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The UseOcsp param.
+        Use OCSP?
         """
         return pulumi.get(self, "use_ocsp")
 
@@ -548,7 +548,7 @@ class _CertificateProfileState:
     @pulumi.getter(name="usernameField")
     def username_field(self) -> Optional[pulumi.Input['CertificateProfileUsernameFieldArgs']]:
         """
-        The UsernameField param.
+        Certificate username field
         """
         return pulumi.get(self, "username_field")
 
@@ -581,35 +581,28 @@ class CertificateProfile(pulumi.CustomResource):
                  username_field: Optional[pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        CertificateProfile resource
 
         ## Example Usage
 
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.CertificateProfile("example")
-        ```
-
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] block_expired_cert: The BlockExpiredCert param.
-        :param pulumi.Input[_builtins.bool] block_timeout_cert: The BlockTimeoutCert param.
-        :param pulumi.Input[_builtins.bool] block_unauthenticated_cert: The BlockUnauthenticatedCert param.
-        :param pulumi.Input[_builtins.bool] block_unknown_cert: The BlockUnknownCert param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]] ca_certificates: The CaCertificates param.
-        :param pulumi.Input[_builtins.str] cert_status_timeout: The CertStatusTimeout param.
-        :param pulumi.Input[_builtins.str] crl_receive_timeout: The CrlReceiveTimeout param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] domain: The Domain param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] ocsp_receive_timeout: The OcspReceiveTimeout param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] use_crl: The UseCrl param.
-        :param pulumi.Input[_builtins.bool] use_ocsp: The UseOcsp param.
-        :param pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']] username_field: The UsernameField param.
+        :param pulumi.Input[_builtins.bool] block_expired_cert: Block sessions with expired certificates?
+        :param pulumi.Input[_builtins.bool] block_timeout_cert: Block session if certificate status cannot be retrieved within timeout?
+        :param pulumi.Input[_builtins.bool] block_unauthenticated_cert: Block session if the certificate was not issued to the authenticating device?
+        :param pulumi.Input[_builtins.bool] block_unknown_cert: Block session if certificate status is unknown?
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]] ca_certificates: An ordered list of CA certificates
+        :param pulumi.Input[_builtins.str] cert_status_timeout: Certificate status timeout
+        :param pulumi.Input[_builtins.str] crl_receive_timeout: CRL receive timeout (seconds)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] domain: User domain
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the certificate profile
+        :param pulumi.Input[_builtins.str] ocsp_receive_timeout: OCSP receive timeout (seconds)
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] use_crl: Use CRL?
+        :param pulumi.Input[_builtins.bool] use_ocsp: Use OCSP?
+        :param pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']] username_field: Certificate username field
         """
         ...
     @overload
@@ -618,16 +611,9 @@ class CertificateProfile(pulumi.CustomResource):
                  args: CertificateProfileArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        CertificateProfile resource
 
         ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.CertificateProfile("example")
-        ```
 
         :param str resource_name: The name of the resource.
         :param CertificateProfileArgs args: The arguments to use to populate this resource's properties.
@@ -722,22 +708,22 @@ class CertificateProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] block_expired_cert: The BlockExpiredCert param.
-        :param pulumi.Input[_builtins.bool] block_timeout_cert: The BlockTimeoutCert param.
-        :param pulumi.Input[_builtins.bool] block_unauthenticated_cert: The BlockUnauthenticatedCert param.
-        :param pulumi.Input[_builtins.bool] block_unknown_cert: The BlockUnknownCert param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]] ca_certificates: The CaCertificates param.
-        :param pulumi.Input[_builtins.str] cert_status_timeout: The CertStatusTimeout param.
-        :param pulumi.Input[_builtins.str] crl_receive_timeout: The CrlReceiveTimeout param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] domain: The Domain param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] ocsp_receive_timeout: The OcspReceiveTimeout param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] use_crl: The UseCrl param.
-        :param pulumi.Input[_builtins.bool] use_ocsp: The UseOcsp param.
-        :param pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']] username_field: The UsernameField param.
+        :param pulumi.Input[_builtins.bool] block_expired_cert: Block sessions with expired certificates?
+        :param pulumi.Input[_builtins.bool] block_timeout_cert: Block session if certificate status cannot be retrieved within timeout?
+        :param pulumi.Input[_builtins.bool] block_unauthenticated_cert: Block session if the certificate was not issued to the authenticating device?
+        :param pulumi.Input[_builtins.bool] block_unknown_cert: Block session if certificate status is unknown?
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CertificateProfileCaCertificateArgs', 'CertificateProfileCaCertificateArgsDict']]]] ca_certificates: An ordered list of CA certificates
+        :param pulumi.Input[_builtins.str] cert_status_timeout: Certificate status timeout
+        :param pulumi.Input[_builtins.str] crl_receive_timeout: CRL receive timeout (seconds)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] domain: User domain
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the certificate profile
+        :param pulumi.Input[_builtins.str] ocsp_receive_timeout: OCSP receive timeout (seconds)
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] use_crl: Use CRL?
+        :param pulumi.Input[_builtins.bool] use_ocsp: Use OCSP?
+        :param pulumi.Input[Union['CertificateProfileUsernameFieldArgs', 'CertificateProfileUsernameFieldArgsDict']] username_field: Certificate username field
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -766,7 +752,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter(name="blockExpiredCert")
     def block_expired_cert(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The BlockExpiredCert param.
+        Block sessions with expired certificates?
         """
         return pulumi.get(self, "block_expired_cert")
 
@@ -774,7 +760,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter(name="blockTimeoutCert")
     def block_timeout_cert(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The BlockTimeoutCert param.
+        Block session if certificate status cannot be retrieved within timeout?
         """
         return pulumi.get(self, "block_timeout_cert")
 
@@ -782,7 +768,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter(name="blockUnauthenticatedCert")
     def block_unauthenticated_cert(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The BlockUnauthenticatedCert param.
+        Block session if the certificate was not issued to the authenticating device?
         """
         return pulumi.get(self, "block_unauthenticated_cert")
 
@@ -790,7 +776,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter(name="blockUnknownCert")
     def block_unknown_cert(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The BlockUnknownCert param.
+        Block session if certificate status is unknown?
         """
         return pulumi.get(self, "block_unknown_cert")
 
@@ -798,7 +784,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter(name="caCertificates")
     def ca_certificates(self) -> pulumi.Output[Sequence['outputs.CertificateProfileCaCertificate']]:
         """
-        The CaCertificates param.
+        An ordered list of CA certificates
         """
         return pulumi.get(self, "ca_certificates")
 
@@ -806,7 +792,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter(name="certStatusTimeout")
     def cert_status_timeout(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The CertStatusTimeout param.
+        Certificate status timeout
         """
         return pulumi.get(self, "cert_status_timeout")
 
@@ -814,7 +800,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter(name="crlReceiveTimeout")
     def crl_receive_timeout(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The CrlReceiveTimeout param.
+        CRL receive timeout (seconds)
         """
         return pulumi.get(self, "crl_receive_timeout")
 
@@ -822,7 +808,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -830,7 +816,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter
     def domain(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Domain param.
+        User domain
         """
         return pulumi.get(self, "domain")
 
@@ -838,7 +824,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -846,7 +832,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the certificate profile
         """
         return pulumi.get(self, "name")
 
@@ -854,7 +840,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter(name="ocspReceiveTimeout")
     def ocsp_receive_timeout(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The OcspReceiveTimeout param.
+        OCSP receive timeout (seconds)
         """
         return pulumi.get(self, "ocsp_receive_timeout")
 
@@ -862,7 +848,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -875,7 +861,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter(name="useCrl")
     def use_crl(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The UseCrl param.
+        Use CRL?
         """
         return pulumi.get(self, "use_crl")
 
@@ -883,7 +869,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter(name="useOcsp")
     def use_ocsp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The UseOcsp param.
+        Use OCSP?
         """
         return pulumi.get(self, "use_ocsp")
 
@@ -891,7 +877,7 @@ class CertificateProfile(pulumi.CustomResource):
     @pulumi.getter(name="usernameField")
     def username_field(self) -> pulumi.Output[Optional['outputs.CertificateProfileUsernameField']]:
         """
-        The UsernameField param.
+        Certificate username field
         """
         return pulumi.get(self, "username_field")
 

@@ -11,45 +11,21 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewQosProfile(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// QosProfile resource
 type QosProfile struct {
 	pulumi.CustomResourceState
 
-	// The AggregateBandwidth param.
+	// Aggregate bandwidth
 	AggregateBandwidth QosProfileAggregateBandwidthPtrOutput `pulumi:"aggregateBandwidth"`
-	// The ClassBandwidthType param.
+	// Class bandwidth type
 	ClassBandwidthType QosProfileClassBandwidthTypePtrOutput `pulumi:"classBandwidthType"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -84,33 +60,33 @@ func GetQosProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering QosProfile resources.
 type qosProfileState struct {
-	// The AggregateBandwidth param.
+	// Aggregate bandwidth
 	AggregateBandwidth *QosProfileAggregateBandwidth `pulumi:"aggregateBandwidth"`
-	// The ClassBandwidthType param.
+	// Class bandwidth type
 	ClassBandwidthType *QosProfileClassBandwidthType `pulumi:"classBandwidthType"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type QosProfileState struct {
-	// The AggregateBandwidth param.
+	// Aggregate bandwidth
 	AggregateBandwidth QosProfileAggregateBandwidthPtrInput
-	// The ClassBandwidthType param.
+	// Class bandwidth type
 	ClassBandwidthType QosProfileClassBandwidthTypePtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -120,33 +96,33 @@ func (QosProfileState) ElementType() reflect.Type {
 }
 
 type qosProfileArgs struct {
-	// The AggregateBandwidth param.
+	// Aggregate bandwidth
 	AggregateBandwidth *QosProfileAggregateBandwidth `pulumi:"aggregateBandwidth"`
-	// The ClassBandwidthType param.
+	// Class bandwidth type
 	ClassBandwidthType *QosProfileClassBandwidthType `pulumi:"classBandwidthType"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a QosProfile resource.
 type QosProfileArgs struct {
-	// The AggregateBandwidth param.
+	// Aggregate bandwidth
 	AggregateBandwidth QosProfileAggregateBandwidthPtrInput
-	// The ClassBandwidthType param.
+	// Class bandwidth type
 	ClassBandwidthType QosProfileClassBandwidthTypePtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -237,32 +213,32 @@ func (o QosProfileOutput) ToQosProfileOutputWithContext(ctx context.Context) Qos
 	return o
 }
 
-// The AggregateBandwidth param.
+// Aggregate bandwidth
 func (o QosProfileOutput) AggregateBandwidth() QosProfileAggregateBandwidthPtrOutput {
 	return o.ApplyT(func(v *QosProfile) QosProfileAggregateBandwidthPtrOutput { return v.AggregateBandwidth }).(QosProfileAggregateBandwidthPtrOutput)
 }
 
-// The ClassBandwidthType param.
+// Class bandwidth type
 func (o QosProfileOutput) ClassBandwidthType() QosProfileClassBandwidthTypePtrOutput {
 	return o.ApplyT(func(v *QosProfile) QosProfileClassBandwidthTypePtrOutput { return v.ClassBandwidthType }).(QosProfileClassBandwidthTypePtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o QosProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o QosProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o QosProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *QosProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o QosProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

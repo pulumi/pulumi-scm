@@ -27,16 +27,16 @@ class GetServiceConnectionResult:
     """
     A collection of values returned by getServiceConnection.
     """
-    def __init__(__self__, backup_sc=None, bgp_peer=None, folder=None, id=None, ipsec_tunnel=None, name=None, nat_pool=None, no_export_community=None, onboarding_type=None, protocol=None, qos=None, region=None, secondary_ipsec_tunnel=None, source_nat=None, subnets=None, tfid=None):
+    def __init__(__self__, backup_sc=None, bgp_peer=None, encrypted_values=None, id=None, ipsec_tunnel=None, name=None, nat_pool=None, no_export_community=None, onboarding_type=None, protocol=None, qos=None, region=None, secondary_ipsec_tunnel=None, source_nat=None, subnets=None, tfid=None):
         if backup_sc and not isinstance(backup_sc, str):
             raise TypeError("Expected argument 'backup_sc' to be a str")
         pulumi.set(__self__, "backup_sc", backup_sc)
         if bgp_peer and not isinstance(bgp_peer, dict):
             raise TypeError("Expected argument 'bgp_peer' to be a dict")
         pulumi.set(__self__, "bgp_peer", bgp_peer)
-        if folder and not isinstance(folder, str):
-            raise TypeError("Expected argument 'folder' to be a str")
-        pulumi.set(__self__, "folder", folder)
+        if encrypted_values and not isinstance(encrypted_values, dict):
+            raise TypeError("Expected argument 'encrypted_values' to be a dict")
+        pulumi.set(__self__, "encrypted_values", encrypted_values)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -81,7 +81,7 @@ class GetServiceConnectionResult:
     @pulumi.getter(name="backupSC")
     def backup_sc(self) -> _builtins.str:
         """
-        The BackupSC param.
+        Backup s c
         """
         return pulumi.get(self, "backup_sc")
 
@@ -89,23 +89,23 @@ class GetServiceConnectionResult:
     @pulumi.getter(name="bgpPeer")
     def bgp_peer(self) -> 'outputs.GetServiceConnectionBgpPeerResult':
         """
-        The BgpPeer param.
+        Bgp peer
         """
         return pulumi.get(self, "bgp_peer")
 
     @_builtins.property
-    @pulumi.getter
-    def folder(self) -> _builtins.str:
+    @pulumi.getter(name="encryptedValues")
+    def encrypted_values(self) -> Mapping[str, _builtins.str]:
         """
-        The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
+        Map of sensitive values returned from the API.
         """
-        return pulumi.get(self, "folder")
+        return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the service connection
         """
         return pulumi.get(self, "id")
 
@@ -113,7 +113,7 @@ class GetServiceConnectionResult:
     @pulumi.getter(name="ipsecTunnel")
     def ipsec_tunnel(self) -> _builtins.str:
         """
-        The IpsecTunnel param.
+        Ipsec tunnel
         """
         return pulumi.get(self, "ipsec_tunnel")
 
@@ -121,7 +121,7 @@ class GetServiceConnectionResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param.
+        The name of the service connection
         """
         return pulumi.get(self, "name")
 
@@ -129,7 +129,7 @@ class GetServiceConnectionResult:
     @pulumi.getter(name="natPool")
     def nat_pool(self) -> _builtins.str:
         """
-        The NatPool param.
+        Nat pool
         """
         return pulumi.get(self, "nat_pool")
 
@@ -137,7 +137,7 @@ class GetServiceConnectionResult:
     @pulumi.getter(name="noExportCommunity")
     def no_export_community(self) -> _builtins.str:
         """
-        The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+        No export community
         """
         return pulumi.get(self, "no_export_community")
 
@@ -145,7 +145,7 @@ class GetServiceConnectionResult:
     @pulumi.getter(name="onboardingType")
     def onboarding_type(self) -> _builtins.str:
         """
-        The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+        Onboarding type
         """
         return pulumi.get(self, "onboarding_type")
 
@@ -153,7 +153,7 @@ class GetServiceConnectionResult:
     @pulumi.getter
     def protocol(self) -> 'outputs.GetServiceConnectionProtocolResult':
         """
-        The Protocol param.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -161,7 +161,7 @@ class GetServiceConnectionResult:
     @pulumi.getter
     def qos(self) -> 'outputs.GetServiceConnectionQosResult':
         """
-        The Qos param.
+        Qos
         """
         return pulumi.get(self, "qos")
 
@@ -169,7 +169,7 @@ class GetServiceConnectionResult:
     @pulumi.getter
     def region(self) -> _builtins.str:
         """
-        The Region param.
+        Region
         """
         return pulumi.get(self, "region")
 
@@ -177,7 +177,7 @@ class GetServiceConnectionResult:
     @pulumi.getter(name="secondaryIpsecTunnel")
     def secondary_ipsec_tunnel(self) -> _builtins.str:
         """
-        The SecondaryIpsecTunnel param.
+        Secondary ipsec tunnel
         """
         return pulumi.get(self, "secondary_ipsec_tunnel")
 
@@ -185,7 +185,7 @@ class GetServiceConnectionResult:
     @pulumi.getter(name="sourceNat")
     def source_nat(self) -> _builtins.bool:
         """
-        The SourceNat param.
+        Source nat
         """
         return pulumi.get(self, "source_nat")
 
@@ -193,7 +193,7 @@ class GetServiceConnectionResult:
     @pulumi.getter
     def subnets(self) -> Sequence[_builtins.str]:
         """
-        The Subnets param.
+        Subnets
         """
         return pulumi.get(self, "subnets")
 
@@ -211,7 +211,7 @@ class AwaitableGetServiceConnectionResult(GetServiceConnectionResult):
         return GetServiceConnectionResult(
             backup_sc=self.backup_sc,
             bgp_peer=self.bgp_peer,
-            folder=self.folder,
+            encrypted_values=self.encrypted_values,
             id=self.id,
             ipsec_tunnel=self.ipsec_tunnel,
             name=self.name,
@@ -227,36 +227,28 @@ class AwaitableGetServiceConnectionResult(GetServiceConnectionResult):
             tfid=self.tfid)
 
 
-def get_service_connection(folder: Optional[_builtins.str] = None,
-                           id: Optional[_builtins.str] = None,
+def get_service_connection(id: Optional[_builtins.str] = None,
+                           name: Optional[_builtins.str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetServiceConnectionResult:
     """
-    Retrieves a config item.
+    ServiceConnection data source
 
     ## Example Usage
 
-    ```python
-    import pulumi
-    import pulumi_scm as scm
 
-    example = scm.get_service_connection(id="1234-56-789",
-        folder="Service Connections")
-    ```
-
-
-    :param _builtins.str folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the service connection
+    :param _builtins.str name: The name of the service connection
     """
     __args__ = dict()
-    __args__['folder'] = folder
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getServiceConnection:getServiceConnection', __args__, opts=opts, typ=GetServiceConnectionResult).value
 
     return AwaitableGetServiceConnectionResult(
         backup_sc=pulumi.get(__ret__, 'backup_sc'),
         bgp_peer=pulumi.get(__ret__, 'bgp_peer'),
-        folder=pulumi.get(__ret__, 'folder'),
+        encrypted_values=pulumi.get(__ret__, 'encrypted_values'),
         id=pulumi.get(__ret__, 'id'),
         ipsec_tunnel=pulumi.get(__ret__, 'ipsec_tunnel'),
         name=pulumi.get(__ret__, 'name'),
@@ -270,35 +262,27 @@ def get_service_connection(folder: Optional[_builtins.str] = None,
         source_nat=pulumi.get(__ret__, 'source_nat'),
         subnets=pulumi.get(__ret__, 'subnets'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_service_connection_output(folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                  id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_service_connection_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceConnectionResult]:
     """
-    Retrieves a config item.
+    ServiceConnection data source
 
     ## Example Usage
 
-    ```python
-    import pulumi
-    import pulumi_scm as scm
 
-    example = scm.get_service_connection(id="1234-56-789",
-        folder="Service Connections")
-    ```
-
-
-    :param _builtins.str folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the service connection
+    :param _builtins.str name: The name of the service connection
     """
     __args__ = dict()
-    __args__['folder'] = folder
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getServiceConnection:getServiceConnection', __args__, opts=opts, typ=GetServiceConnectionResult)
     return __ret__.apply(lambda __response__: GetServiceConnectionResult(
         backup_sc=pulumi.get(__response__, 'backup_sc'),
         bgp_peer=pulumi.get(__response__, 'bgp_peer'),
-        folder=pulumi.get(__response__, 'folder'),
+        encrypted_values=pulumi.get(__response__, 'encrypted_values'),
         id=pulumi.get(__response__, 'id'),
         ipsec_tunnel=pulumi.get(__response__, 'ipsec_tunnel'),
         name=pulumi.get(__response__, 'name'),

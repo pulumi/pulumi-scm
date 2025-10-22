@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectMobileDeviceCriteriaApplicationsIncludeResult
     {
         /// <summary>
-        /// application hash. String length must not exceed 1024 characters. String validation regex: `.*`.
+        /// application hash
         /// </summary>
         public readonly string Hash;
         /// <summary>
-        /// The Name param. String length must not exceed 31 characters.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// application package name. String length must not exceed 1024 characters. String validation regex: `.*`.
+        /// application package name
         /// </summary>
         public readonly string Package;
 

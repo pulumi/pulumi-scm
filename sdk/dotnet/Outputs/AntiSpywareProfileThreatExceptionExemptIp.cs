@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class AntiSpywareProfileThreatExceptionExemptIp
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
 

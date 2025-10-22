@@ -19,14 +19,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     public static final UrlAccessProfileState Empty = new UrlAccessProfileState();
 
     /**
-     * The Alerts param.
+     * Alert
      * 
      */
     @Import(name="alerts")
     private @Nullable Output<List<String>> alerts;
 
     /**
-     * @return The Alerts param.
+     * @return Alert
      * 
      */
     public Optional<Output<List<String>>> alerts() {
@@ -34,14 +34,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Allows param.
+     * Allow
      * 
      */
     @Import(name="allows")
     private @Nullable Output<List<String>> allows;
 
     /**
-     * @return The Allows param.
+     * @return Allow
      * 
      */
     public Optional<Output<List<String>>> allows() {
@@ -49,14 +49,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Blocks param.
+     * Block
      * 
      */
     @Import(name="blocks")
     private @Nullable Output<List<String>> blocks;
 
     /**
-     * @return The Blocks param.
+     * @return Block
      * 
      */
     public Optional<Output<List<String>>> blocks() {
@@ -64,14 +64,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The CloudInlineCat param.
+     * Cloud inline cat
      * 
      */
     @Import(name="cloudInlineCat")
     private @Nullable Output<Boolean> cloudInlineCat;
 
     /**
-     * @return The CloudInlineCat param.
+     * @return Cloud inline cat
      * 
      */
     public Optional<Output<Boolean>> cloudInlineCat() {
@@ -79,14 +79,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Continues param.
+     * Continue
      * 
      */
     @Import(name="continues")
     private @Nullable Output<List<String>> continues;
 
     /**
-     * @return The Continues param.
+     * @return Continue
      * 
      */
     public Optional<Output<List<String>>> continues() {
@@ -94,14 +94,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The CredentialEnforcement param.
+     * Credential enforcement
      * 
      */
     @Import(name="credentialEnforcement")
     private @Nullable Output<UrlAccessProfileCredentialEnforcementArgs> credentialEnforcement;
 
     /**
-     * @return The CredentialEnforcement param.
+     * @return Credential enforcement
      * 
      */
     public Optional<Output<UrlAccessProfileCredentialEnforcementArgs>> credentialEnforcement() {
@@ -109,14 +109,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -124,14 +124,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -139,14 +139,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -154,14 +154,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The LocalInlineCat param.
+     * Local inline cat
      * 
      */
     @Import(name="localInlineCat")
     private @Nullable Output<Boolean> localInlineCat;
 
     /**
-     * @return The LocalInlineCat param.
+     * @return Local inline cat
      * 
      */
     public Optional<Output<Boolean>> localInlineCat() {
@@ -169,14 +169,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The LogContainerPageOnly param. Default: `true`.
+     * Log container page only
      * 
      */
     @Import(name="logContainerPageOnly")
     private @Nullable Output<Boolean> logContainerPageOnly;
 
     /**
-     * @return The LogContainerPageOnly param. Default: `true`.
+     * @return Log container page only
      * 
      */
     public Optional<Output<Boolean>> logContainerPageOnly() {
@@ -184,14 +184,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The LogHttpHdrReferer param. Default: `false`.
+     * Log http hdr referer
      * 
      */
     @Import(name="logHttpHdrReferer")
     private @Nullable Output<Boolean> logHttpHdrReferer;
 
     /**
-     * @return The LogHttpHdrReferer param. Default: `false`.
+     * @return Log http hdr referer
      * 
      */
     public Optional<Output<Boolean>> logHttpHdrReferer() {
@@ -199,14 +199,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The LogHttpHdrUserAgent param. Default: `false`.
+     * Log http hdr user agent
      * 
      */
     @Import(name="logHttpHdrUserAgent")
     private @Nullable Output<Boolean> logHttpHdrUserAgent;
 
     /**
-     * @return The LogHttpHdrUserAgent param. Default: `false`.
+     * @return Log http hdr user agent
      * 
      */
     public Optional<Output<Boolean>> logHttpHdrUserAgent() {
@@ -214,14 +214,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The LogHttpHdrXff param. Default: `false`.
+     * Log http hdr xff
      * 
      */
     @Import(name="logHttpHdrXff")
     private @Nullable Output<Boolean> logHttpHdrXff;
 
     /**
-     * @return The LogHttpHdrXff param. Default: `false`.
+     * @return Log http hdr xff
      * 
      */
     public Optional<Output<Boolean>> logHttpHdrXff() {
@@ -229,14 +229,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The MlavCategoryExceptions param.
+     * Mlav category exception
      * 
      */
     @Import(name="mlavCategoryExceptions")
     private @Nullable Output<List<String>> mlavCategoryExceptions;
 
     /**
-     * @return The MlavCategoryExceptions param.
+     * @return Mlav category exception
      * 
      */
     public Optional<Output<List<String>>> mlavCategoryExceptions() {
@@ -244,14 +244,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -259,14 +259,29 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The SafeSearchEnforcement param. Default: `false`.
+     * Redirect
+     * 
+     */
+    @Import(name="redirects")
+    private @Nullable Output<List<String>> redirects;
+
+    /**
+     * @return Redirect
+     * 
+     */
+    public Optional<Output<List<String>>> redirects() {
+        return Optional.ofNullable(this.redirects);
+    }
+
+    /**
+     * Safe search enforcement
      * 
      */
     @Import(name="safeSearchEnforcement")
     private @Nullable Output<Boolean> safeSearchEnforcement;
 
     /**
-     * @return The SafeSearchEnforcement param. Default: `false`.
+     * @return Safe search enforcement
      * 
      */
     public Optional<Output<Boolean>> safeSearchEnforcement() {
@@ -274,14 +289,14 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -314,6 +329,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         this.logHttpHdrXff = $.logHttpHdrXff;
         this.mlavCategoryExceptions = $.mlavCategoryExceptions;
         this.name = $.name;
+        this.redirects = $.redirects;
         this.safeSearchEnforcement = $.safeSearchEnforcement;
         this.snippet = $.snippet;
         this.tfid = $.tfid;
@@ -338,7 +354,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param alerts The Alerts param.
+         * @param alerts Alert
          * 
          * @return builder
          * 
@@ -349,7 +365,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param alerts The Alerts param.
+         * @param alerts Alert
          * 
          * @return builder
          * 
@@ -359,7 +375,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param alerts The Alerts param.
+         * @param alerts Alert
          * 
          * @return builder
          * 
@@ -369,7 +385,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param allows The Allows param.
+         * @param allows Allow
          * 
          * @return builder
          * 
@@ -380,7 +396,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param allows The Allows param.
+         * @param allows Allow
          * 
          * @return builder
          * 
@@ -390,7 +406,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param allows The Allows param.
+         * @param allows Allow
          * 
          * @return builder
          * 
@@ -400,7 +416,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param blocks The Blocks param.
+         * @param blocks Block
          * 
          * @return builder
          * 
@@ -411,7 +427,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param blocks The Blocks param.
+         * @param blocks Block
          * 
          * @return builder
          * 
@@ -421,7 +437,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param blocks The Blocks param.
+         * @param blocks Block
          * 
          * @return builder
          * 
@@ -431,7 +447,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param cloudInlineCat The CloudInlineCat param.
+         * @param cloudInlineCat Cloud inline cat
          * 
          * @return builder
          * 
@@ -442,7 +458,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param cloudInlineCat The CloudInlineCat param.
+         * @param cloudInlineCat Cloud inline cat
          * 
          * @return builder
          * 
@@ -452,7 +468,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param continues The Continues param.
+         * @param continues Continue
          * 
          * @return builder
          * 
@@ -463,7 +479,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param continues The Continues param.
+         * @param continues Continue
          * 
          * @return builder
          * 
@@ -473,7 +489,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param continues The Continues param.
+         * @param continues Continue
          * 
          * @return builder
          * 
@@ -483,7 +499,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param credentialEnforcement The CredentialEnforcement param.
+         * @param credentialEnforcement Credential enforcement
          * 
          * @return builder
          * 
@@ -494,7 +510,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param credentialEnforcement The CredentialEnforcement param.
+         * @param credentialEnforcement Credential enforcement
          * 
          * @return builder
          * 
@@ -504,7 +520,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -515,7 +531,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -525,7 +541,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -536,7 +552,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -546,7 +562,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -557,7 +573,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -567,7 +583,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param localInlineCat The LocalInlineCat param.
+         * @param localInlineCat Local inline cat
          * 
          * @return builder
          * 
@@ -578,7 +594,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param localInlineCat The LocalInlineCat param.
+         * @param localInlineCat Local inline cat
          * 
          * @return builder
          * 
@@ -588,7 +604,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param logContainerPageOnly The LogContainerPageOnly param. Default: `true`.
+         * @param logContainerPageOnly Log container page only
          * 
          * @return builder
          * 
@@ -599,7 +615,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param logContainerPageOnly The LogContainerPageOnly param. Default: `true`.
+         * @param logContainerPageOnly Log container page only
          * 
          * @return builder
          * 
@@ -609,7 +625,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param logHttpHdrReferer The LogHttpHdrReferer param. Default: `false`.
+         * @param logHttpHdrReferer Log http hdr referer
          * 
          * @return builder
          * 
@@ -620,7 +636,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param logHttpHdrReferer The LogHttpHdrReferer param. Default: `false`.
+         * @param logHttpHdrReferer Log http hdr referer
          * 
          * @return builder
          * 
@@ -630,7 +646,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param logHttpHdrUserAgent The LogHttpHdrUserAgent param. Default: `false`.
+         * @param logHttpHdrUserAgent Log http hdr user agent
          * 
          * @return builder
          * 
@@ -641,7 +657,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param logHttpHdrUserAgent The LogHttpHdrUserAgent param. Default: `false`.
+         * @param logHttpHdrUserAgent Log http hdr user agent
          * 
          * @return builder
          * 
@@ -651,7 +667,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param logHttpHdrXff The LogHttpHdrXff param. Default: `false`.
+         * @param logHttpHdrXff Log http hdr xff
          * 
          * @return builder
          * 
@@ -662,7 +678,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param logHttpHdrXff The LogHttpHdrXff param. Default: `false`.
+         * @param logHttpHdrXff Log http hdr xff
          * 
          * @return builder
          * 
@@ -672,7 +688,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param mlavCategoryExceptions The MlavCategoryExceptions param.
+         * @param mlavCategoryExceptions Mlav category exception
          * 
          * @return builder
          * 
@@ -683,7 +699,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param mlavCategoryExceptions The MlavCategoryExceptions param.
+         * @param mlavCategoryExceptions Mlav category exception
          * 
          * @return builder
          * 
@@ -693,7 +709,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param mlavCategoryExceptions The MlavCategoryExceptions param.
+         * @param mlavCategoryExceptions Mlav category exception
          * 
          * @return builder
          * 
@@ -703,7 +719,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -714,7 +730,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -724,7 +740,38 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param safeSearchEnforcement The SafeSearchEnforcement param. Default: `false`.
+         * @param redirects Redirect
+         * 
+         * @return builder
+         * 
+         */
+        public Builder redirects(@Nullable Output<List<String>> redirects) {
+            $.redirects = redirects;
+            return this;
+        }
+
+        /**
+         * @param redirects Redirect
+         * 
+         * @return builder
+         * 
+         */
+        public Builder redirects(List<String> redirects) {
+            return redirects(Output.of(redirects));
+        }
+
+        /**
+         * @param redirects Redirect
+         * 
+         * @return builder
+         * 
+         */
+        public Builder redirects(String... redirects) {
+            return redirects(List.of(redirects));
+        }
+
+        /**
+         * @param safeSearchEnforcement Safe search enforcement
          * 
          * @return builder
          * 
@@ -735,7 +782,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param safeSearchEnforcement The SafeSearchEnforcement param. Default: `false`.
+         * @param safeSearchEnforcement Safe search enforcement
          * 
          * @return builder
          * 
@@ -745,7 +792,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -756,7 +803,7 @@ public final class UrlAccessProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

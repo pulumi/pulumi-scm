@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectDiskBackupCriteriaArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Is Installed. Default: `True`.
+        /// Is Installed
         /// </summary>
         [Input("isInstalled")]
         public Input<bool>? IsInstalled { get; set; }
 
         /// <summary>
-        /// The LastBackupTime param.
+        /// Last backup time
         /// </summary>
         [Input("lastBackupTime")]
         public Input<Inputs.HipObjectDiskBackupCriteriaLastBackupTimeArgs>? LastBackupTime { get; set; }

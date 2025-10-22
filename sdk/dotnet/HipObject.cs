@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// HipObject resource
     /// 
     /// ## Example Usage
     /// </summary>
@@ -18,97 +18,97 @@ namespace Pulumi.Scm
     public partial class HipObject : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The AntiMalware param.
+        /// Anti malware
         /// </summary>
         [Output("antiMalware")]
-        public Output<Outputs.HipObjectAntiMalware?> AntiMalware { get; private set; } = null!;
+        public Output<Outputs.HipObjectAntiMalware> AntiMalware { get; private set; } = null!;
 
         /// <summary>
-        /// The Certificate param.
+        /// Certificate
         /// </summary>
         [Output("certificate")]
         public Output<Outputs.HipObjectCertificate?> Certificate { get; private set; } = null!;
 
         /// <summary>
-        /// The CustomChecks param.
+        /// Custom checks
         /// </summary>
         [Output("customChecks")]
         public Output<Outputs.HipObjectCustomChecks?> CustomChecks { get; private set; } = null!;
 
         /// <summary>
-        /// The DataLossPrevention param.
+        /// Data loss prevention
         /// </summary>
         [Output("dataLossPrevention")]
-        public Output<Outputs.HipObjectDataLossPrevention?> DataLossPrevention { get; private set; } = null!;
+        public Output<Outputs.HipObjectDataLossPrevention> DataLossPrevention { get; private set; } = null!;
 
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The DiskBackup param.
+        /// Disk backup
         /// </summary>
         [Output("diskBackup")]
-        public Output<Outputs.HipObjectDiskBackup?> DiskBackup { get; private set; } = null!;
+        public Output<Outputs.HipObjectDiskBackup> DiskBackup { get; private set; } = null!;
 
         /// <summary>
-        /// The DiskEncryption param.
+        /// Disk encryption
         /// </summary>
         [Output("diskEncryption")]
-        public Output<Outputs.HipObjectDiskEncryption?> DiskEncryption { get; private set; } = null!;
+        public Output<Outputs.HipObjectDiskEncryption> DiskEncryption { get; private set; } = null!;
 
         /// <summary>
-        /// The Firewall param.
+        /// Firewall
         /// </summary>
         [Output("firewall")]
-        public Output<Outputs.HipObjectFirewall?> Firewall { get; private set; } = null!;
+        public Output<Outputs.HipObjectFirewall> Firewall { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The HostInfo param.
+        /// Host info
         /// </summary>
         [Output("hostInfo")]
         public Output<Outputs.HipObjectHostInfo?> HostInfo { get; private set; } = null!;
 
         /// <summary>
-        /// The MobileDevice param.
+        /// Mobile device
         /// </summary>
         [Output("mobileDevice")]
         public Output<Outputs.HipObjectMobileDevice?> MobileDevice { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the HIP object
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The NetworkInfo param.
+        /// Network info
         /// </summary>
         [Output("networkInfo")]
         public Output<Outputs.HipObjectNetworkInfo?> NetworkInfo { get; private set; } = null!;
 
         /// <summary>
-        /// The PatchManagement param.
+        /// Patch management
         /// </summary>
         [Output("patchManagement")]
-        public Output<Outputs.HipObjectPatchManagement?> PatchManagement { get; private set; } = null!;
+        public Output<Outputs.HipObjectPatchManagement> PatchManagement { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -163,97 +163,97 @@ namespace Pulumi.Scm
     public sealed class HipObjectArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The AntiMalware param.
+        /// Anti malware
         /// </summary>
         [Input("antiMalware")]
         public Input<Inputs.HipObjectAntiMalwareArgs>? AntiMalware { get; set; }
 
         /// <summary>
-        /// The Certificate param.
+        /// Certificate
         /// </summary>
         [Input("certificate")]
         public Input<Inputs.HipObjectCertificateArgs>? Certificate { get; set; }
 
         /// <summary>
-        /// The CustomChecks param.
+        /// Custom checks
         /// </summary>
         [Input("customChecks")]
         public Input<Inputs.HipObjectCustomChecksArgs>? CustomChecks { get; set; }
 
         /// <summary>
-        /// The DataLossPrevention param.
+        /// Data loss prevention
         /// </summary>
         [Input("dataLossPrevention")]
         public Input<Inputs.HipObjectDataLossPreventionArgs>? DataLossPrevention { get; set; }
 
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The DiskBackup param.
+        /// Disk backup
         /// </summary>
         [Input("diskBackup")]
         public Input<Inputs.HipObjectDiskBackupArgs>? DiskBackup { get; set; }
 
         /// <summary>
-        /// The DiskEncryption param.
+        /// Disk encryption
         /// </summary>
         [Input("diskEncryption")]
         public Input<Inputs.HipObjectDiskEncryptionArgs>? DiskEncryption { get; set; }
 
         /// <summary>
-        /// The Firewall param.
+        /// Firewall
         /// </summary>
         [Input("firewall")]
         public Input<Inputs.HipObjectFirewallArgs>? Firewall { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The HostInfo param.
+        /// Host info
         /// </summary>
         [Input("hostInfo")]
         public Input<Inputs.HipObjectHostInfoArgs>? HostInfo { get; set; }
 
         /// <summary>
-        /// The MobileDevice param.
+        /// Mobile device
         /// </summary>
         [Input("mobileDevice")]
         public Input<Inputs.HipObjectMobileDeviceArgs>? MobileDevice { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the HIP object
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NetworkInfo param.
+        /// Network info
         /// </summary>
         [Input("networkInfo")]
         public Input<Inputs.HipObjectNetworkInfoArgs>? NetworkInfo { get; set; }
 
         /// <summary>
-        /// The PatchManagement param.
+        /// Patch management
         /// </summary>
         [Input("patchManagement")]
         public Input<Inputs.HipObjectPatchManagementArgs>? PatchManagement { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -267,97 +267,97 @@ namespace Pulumi.Scm
     public sealed class HipObjectState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The AntiMalware param.
+        /// Anti malware
         /// </summary>
         [Input("antiMalware")]
         public Input<Inputs.HipObjectAntiMalwareGetArgs>? AntiMalware { get; set; }
 
         /// <summary>
-        /// The Certificate param.
+        /// Certificate
         /// </summary>
         [Input("certificate")]
         public Input<Inputs.HipObjectCertificateGetArgs>? Certificate { get; set; }
 
         /// <summary>
-        /// The CustomChecks param.
+        /// Custom checks
         /// </summary>
         [Input("customChecks")]
         public Input<Inputs.HipObjectCustomChecksGetArgs>? CustomChecks { get; set; }
 
         /// <summary>
-        /// The DataLossPrevention param.
+        /// Data loss prevention
         /// </summary>
         [Input("dataLossPrevention")]
         public Input<Inputs.HipObjectDataLossPreventionGetArgs>? DataLossPrevention { get; set; }
 
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The DiskBackup param.
+        /// Disk backup
         /// </summary>
         [Input("diskBackup")]
         public Input<Inputs.HipObjectDiskBackupGetArgs>? DiskBackup { get; set; }
 
         /// <summary>
-        /// The DiskEncryption param.
+        /// Disk encryption
         /// </summary>
         [Input("diskEncryption")]
         public Input<Inputs.HipObjectDiskEncryptionGetArgs>? DiskEncryption { get; set; }
 
         /// <summary>
-        /// The Firewall param.
+        /// Firewall
         /// </summary>
         [Input("firewall")]
         public Input<Inputs.HipObjectFirewallGetArgs>? Firewall { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The HostInfo param.
+        /// Host info
         /// </summary>
         [Input("hostInfo")]
         public Input<Inputs.HipObjectHostInfoGetArgs>? HostInfo { get; set; }
 
         /// <summary>
-        /// The MobileDevice param.
+        /// Mobile device
         /// </summary>
         [Input("mobileDevice")]
         public Input<Inputs.HipObjectMobileDeviceGetArgs>? MobileDevice { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the HIP object
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NetworkInfo param.
+        /// Network info
         /// </summary>
         [Input("networkInfo")]
         public Input<Inputs.HipObjectNetworkInfoGetArgs>? NetworkInfo { get; set; }
 
         /// <summary>
-        /// The PatchManagement param.
+        /// Patch management
         /// </summary>
         [Input("patchManagement")]
         public Input<Inputs.HipObjectPatchManagementGetArgs>? PatchManagement { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

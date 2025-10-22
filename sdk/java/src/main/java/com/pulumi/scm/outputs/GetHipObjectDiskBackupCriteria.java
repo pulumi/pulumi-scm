@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectDiskBackupCriteria {
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     private Boolean isInstalled;
     /**
-     * @return The LastBackupTime param.
+     * @return Last backup time
      * 
      */
     private GetHipObjectDiskBackupCriteriaLastBackupTime lastBackupTime;
 
     private GetHipObjectDiskBackupCriteria() {}
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     public Boolean isInstalled() {
         return this.isInstalled;
     }
     /**
-     * @return The LastBackupTime param.
+     * @return Last backup time
      * 
      */
     public GetHipObjectDiskBackupCriteriaLastBackupTime lastBackupTime() {

@@ -17,14 +17,14 @@ public final class HttpHeaderProfileHttpHeaderInsertionArgs extends com.pulumi.r
     public static final HttpHeaderProfileHttpHeaderInsertionArgs Empty = new HttpHeaderProfileHttpHeaderInsertionArgs();
 
     /**
-     * The Name param.
+     * The name of the HTTP header insertion rule
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the HTTP header insertion rule
      * 
      */
     public Output<String> name() {
@@ -32,14 +32,14 @@ public final class HttpHeaderProfileHttpHeaderInsertionArgs extends com.pulumi.r
     }
 
     /**
-     * The Types param.
+     * A list of HTTP header insertion definitions (*This should be an object rather than an array*)
      * 
      */
     @Import(name="types", required=true)
     private Output<List<HttpHeaderProfileHttpHeaderInsertionTypeArgs>> types;
 
     /**
-     * @return The Types param.
+     * @return A list of HTTP header insertion definitions (*This should be an object rather than an array*)
      * 
      */
     public Output<List<HttpHeaderProfileHttpHeaderInsertionTypeArgs>> types() {
@@ -72,7 +72,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionArgs extends com.pulumi.r
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the HTTP header insertion rule
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionArgs extends com.pulumi.r
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the HTTP header insertion rule
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionArgs extends com.pulumi.r
         }
 
         /**
-         * @param types The Types param.
+         * @param types A list of HTTP header insertion definitions (*This should be an object rather than an array*)
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionArgs extends com.pulumi.r
         }
 
         /**
-         * @param types The Types param.
+         * @param types A list of HTTP header insertion definitions (*This should be an object rather than an array*)
          * 
          * @return builder
          * 
@@ -114,7 +114,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionArgs extends com.pulumi.r
         }
 
         /**
-         * @param types The Types param.
+         * @param types A list of HTTP header insertion definitions (*This should be an object rather than an array*)
          * 
          * @return builder
          * 

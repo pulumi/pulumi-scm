@@ -12,14 +12,14 @@ import java.util.Objects;
 @CustomType
 public final class GetSecurityRuleProfileSetting {
     /**
-     * @return The security profile group.
+     * @return The security profile group
      * 
      */
     private List<String> groups;
 
     private GetSecurityRuleProfileSetting() {}
     /**
-     * @return The security profile group.
+     * @return The security profile group
      * 
      */
     public List<String> groups() {

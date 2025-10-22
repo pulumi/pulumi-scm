@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class GetLdapServerProfileListDataServer {
     /**
-     * @return The Address param.
+     * @return The LDAP server IP address
      * 
      */
     private String address;
     /**
-     * @return The Name param.
+     * @return The LDAP server name
      * 
      */
     private String name;
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The LDAP server port
      * 
      */
     private Integer port;
 
     private GetLdapServerProfileListDataServer() {}
     /**
-     * @return The Address param.
+     * @return The LDAP server IP address
      * 
      */
     public String address() {
         return this.address;
     }
     /**
-     * @return The Name param.
+     * @return The LDAP server name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The LDAP server port
      * 
      */
     public Integer port() {

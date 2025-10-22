@@ -14,50 +14,50 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationSignatureAndConditionOrConditionOperator {
     /**
-     * @return The EqualTo param.
+     * @return Equal to
      * 
      */
     private GetApplicationSignatureAndConditionOrConditionOperatorEqualTo equalTo;
     /**
-     * @return The GreaterThan param.
+     * @return Greater than
      * 
      */
     private GetApplicationSignatureAndConditionOrConditionOperatorGreaterThan greaterThan;
     /**
-     * @return The LessThan param.
+     * @return Less than
      * 
      */
     private GetApplicationSignatureAndConditionOrConditionOperatorLessThan lessThan;
     /**
-     * @return The PatternMatch param.
+     * @return Pattern match
      * 
      */
     private GetApplicationSignatureAndConditionOrConditionOperatorPatternMatch patternMatch;
 
     private GetApplicationSignatureAndConditionOrConditionOperator() {}
     /**
-     * @return The EqualTo param.
+     * @return Equal to
      * 
      */
     public GetApplicationSignatureAndConditionOrConditionOperatorEqualTo equalTo() {
         return this.equalTo;
     }
     /**
-     * @return The GreaterThan param.
+     * @return Greater than
      * 
      */
     public GetApplicationSignatureAndConditionOrConditionOperatorGreaterThan greaterThan() {
         return this.greaterThan;
     }
     /**
-     * @return The LessThan param.
+     * @return Less than
      * 
      */
     public GetApplicationSignatureAndConditionOrConditionOperatorLessThan lessThan() {
         return this.lessThan;
     }
     /**
-     * @return The PatternMatch param.
+     * @return Pattern match
      * 
      */
     public GetApplicationSignatureAndConditionOrConditionOperatorPatternMatch patternMatch() {

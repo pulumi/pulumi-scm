@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileMethodKerberos {
     /**
-     * @return The Realm param.
+     * @return Realm
      * 
      */
     private String realm;
     /**
-     * @return The ServerProfile param.
+     * @return Server profile
      * 
      */
     private String serverProfile;
 
     private GetAuthenticationProfileMethodKerberos() {}
     /**
-     * @return The Realm param.
+     * @return Realm
      * 
      */
     public String realm() {
         return this.realm;
     }
     /**
-     * @return The ServerProfile param.
+     * @return Server profile
      * 
      */
     public String serverProfile() {

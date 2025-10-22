@@ -14,31 +14,31 @@ namespace Pulumi.Scm.Outputs
     public sealed class DnsSecurityProfileBotnetDomainsListAction
     {
         /// <summary>
-        /// The Alert param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
+        /// Alert
         /// </summary>
-        public readonly bool? Alert;
+        public readonly Outputs.DnsSecurityProfileBotnetDomainsListActionAlert? Alert;
         /// <summary>
-        /// The Allow param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
+        /// Allow
         /// </summary>
-        public readonly bool? Allow;
+        public readonly Outputs.DnsSecurityProfileBotnetDomainsListActionAllow? Allow;
         /// <summary>
-        /// The Block param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
+        /// Block
         /// </summary>
-        public readonly bool? Block;
+        public readonly Outputs.DnsSecurityProfileBotnetDomainsListActionBlock? Block;
         /// <summary>
-        /// The Sinkhole param. Ensure that only one of the following is specified: `Alert`, `Allow`, `Block`, `Sinkhole`
+        /// Sinkhole
         /// </summary>
-        public readonly bool? Sinkhole;
+        public readonly Outputs.DnsSecurityProfileBotnetDomainsListActionSinkhole? Sinkhole;
 
         [OutputConstructor]
         private DnsSecurityProfileBotnetDomainsListAction(
-            bool? alert,
+            Outputs.DnsSecurityProfileBotnetDomainsListActionAlert? alert,
 
-            bool? allow,
+            Outputs.DnsSecurityProfileBotnetDomainsListActionAllow? allow,
 
-            bool? block,
+            Outputs.DnsSecurityProfileBotnetDomainsListActionBlock? block,
 
-            bool? sinkhole)
+            Outputs.DnsSecurityProfileBotnetDomainsListActionSinkhole? sinkhole)
         {
             Alert = alert;
             Allow = allow;

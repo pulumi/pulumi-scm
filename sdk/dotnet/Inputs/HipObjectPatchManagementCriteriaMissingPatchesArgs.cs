@@ -13,16 +13,16 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectPatchManagementCriteriaMissingPatchesArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Check param. String must be one of these: `"has-any"`, `"has-none"`, `"has-all"`. Default: `"has-any"`.
+        /// Check
         /// </summary>
-        [Input("check")]
-        public Input<string>? Check { get; set; }
+        [Input("check", required: true)]
+        public Input<string> Check { get; set; } = null!;
 
         [Input("patches")]
         private InputList<string>? _patches;
 
         /// <summary>
-        /// The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+        /// Patches
         /// </summary>
         public InputList<string> Patches
         {
@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Severity param.
+        /// Severity
         /// </summary>
         [Input("severity")]
         public Input<Inputs.HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs>? Severity { get; set; }

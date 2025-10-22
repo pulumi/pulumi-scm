@@ -16,14 +16,14 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
     public static final HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs Empty = new HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs();
 
     /**
-     * The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+     * Is
      * 
      */
     @Import(name="is")
     private @Nullable Output<String> is;
 
     /**
-     * @return The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+     * @return Is
      * 
      */
     public Optional<Output<String>> is() {
@@ -31,14 +31,14 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
     }
 
     /**
-     * The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+     * Is not
      * 
      */
     @Import(name="isNot")
     private @Nullable Output<String> isNot;
 
     /**
-     * @return The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+     * @return Is not
      * 
      */
     public Optional<Output<String>> isNot() {
@@ -71,7 +71,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
         }
 
         /**
-         * @param is The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+         * @param is Is
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
         }
 
         /**
-         * @param is The Is param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+         * @param is Is
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
         }
 
         /**
-         * @param isNot The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+         * @param isNot Is not
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
         }
 
         /**
-         * @param isNot The IsNot param. String must be one of these: `&#34;encrypted&#34;`, `&#34;unencrypted&#34;`, `&#34;partial&#34;`, `&#34;unknown&#34;`. Ensure that only one of the following is specified: `is`, `isNot`
+         * @param isNot Is not
          * 
          * @return builder
          * 

@@ -17,7 +17,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * Service resource
  * 
  * ## Example Usage
  * 
@@ -29,6 +29,11 @@ import javax.annotation.Nullable;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
  * import com.pulumi.scm.Service;
+ * import com.pulumi.scm.ServiceArgs;
+ * import com.pulumi.scm.inputs.ServiceProtocolArgs;
+ * import com.pulumi.scm.inputs.ServiceProtocolTcpArgs;
+ * import com.pulumi.scm.inputs.ServiceProtocolTcpOverrideArgs;
+ * import com.pulumi.scm.inputs.ServiceProtocolUdpArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -42,7 +47,50 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Service("example");
+ *         // TCP Service with multiple destination ports custom timeout
+ *         var scmServiceTcpPorts = new Service("scmServiceTcpPorts", ServiceArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_service_tcp_ports")
+ *             .description("Managed by Pulumi")
+ *             .protocol(ServiceProtocolArgs.builder()
+ *                 .tcp(ServiceProtocolTcpArgs.builder()
+ *                     .port("80,443")
+ *                     .override(ServiceProtocolTcpOverrideArgs.builder()
+ *                         .timeout(3600)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         // TCP Service with source port, destination port and custom timeout values
+ *         var scmServiceTcpPortSrcDst = new Service("scmServiceTcpPortSrcDst", ServiceArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_service_tcp_port_src_dst")
+ *             .description("Managed by Pulumi")
+ *             .protocol(ServiceProtocolArgs.builder()
+ *                 .tcp(ServiceProtocolTcpArgs.builder()
+ *                     .port("80")
+ *                     .sourcePort("49152-65535")
+ *                     .override(ServiceProtocolTcpOverrideArgs.builder()
+ *                         .timeout(3600)
+ *                         .halfcloseTimeout(240)
+ *                         .timewaitTimeout(30)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         // UDP Service with single destination port
+ *         var scmServiceUdpPort = new Service("scmServiceUdpPort", ServiceArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_service_udp_port")
+ *             .description("Managed by Pulumi")
+ *             .protocol(ServiceProtocolArgs.builder()
+ *                 .udp(ServiceProtocolUdpArgs.builder()
+ *                     .port("53")
+ *                     .build())
+ *                 .build())
+ *             .build());
  * 
  *     }
  * }
@@ -53,98 +101,98 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/service:Service")
 public class Service extends com.pulumi.resources.CustomResource {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the service
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the service
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Protocol param.
+     * Protocol
      * 
      */
     @Export(name="protocol", refs={ServiceProtocol.class}, tree="[0]")
     private Output<ServiceProtocol> protocol;
 
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     public Output<ServiceProtocol> protocol() {
         return this.protocol;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags for service object
      * 
      */
     @Export(name="tags", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> tags;
 
     /**
-     * @return Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return Tags for service object
      * 
      */
     public Output<Optional<List<String>>> tags() {
@@ -169,7 +217,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Service(java.lang.String name, ServiceArgs args) {
+    public Service(java.lang.String name, @Nullable ServiceArgs args) {
         this(name, args, null);
     }
     /**
@@ -178,7 +226,7 @@ public class Service extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Service(java.lang.String name, ServiceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Service(java.lang.String name, @Nullable ServiceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/service:Service", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -186,7 +234,7 @@ public class Service extends com.pulumi.resources.CustomResource {
         super("scm:index/service:Service", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static ServiceArgs makeArgs(ServiceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static ServiceArgs makeArgs(@Nullable ServiceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

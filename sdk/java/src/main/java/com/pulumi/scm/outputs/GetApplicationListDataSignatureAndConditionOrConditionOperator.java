@@ -14,50 +14,50 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationListDataSignatureAndConditionOrConditionOperator {
     /**
-     * @return The EqualTo param.
+     * @return Equal to
      * 
      */
     private GetApplicationListDataSignatureAndConditionOrConditionOperatorEqualTo equalTo;
     /**
-     * @return The GreaterThan param.
+     * @return Greater than
      * 
      */
     private GetApplicationListDataSignatureAndConditionOrConditionOperatorGreaterThan greaterThan;
     /**
-     * @return The LessThan param.
+     * @return Less than
      * 
      */
     private GetApplicationListDataSignatureAndConditionOrConditionOperatorLessThan lessThan;
     /**
-     * @return The PatternMatch param.
+     * @return Pattern match
      * 
      */
     private GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatch patternMatch;
 
     private GetApplicationListDataSignatureAndConditionOrConditionOperator() {}
     /**
-     * @return The EqualTo param.
+     * @return Equal to
      * 
      */
     public GetApplicationListDataSignatureAndConditionOrConditionOperatorEqualTo equalTo() {
         return this.equalTo;
     }
     /**
-     * @return The GreaterThan param.
+     * @return Greater than
      * 
      */
     public GetApplicationListDataSignatureAndConditionOrConditionOperatorGreaterThan greaterThan() {
         return this.greaterThan;
     }
     /**
-     * @return The LessThan param.
+     * @return Less than
      * 
      */
     public GetApplicationListDataSignatureAndConditionOrConditionOperatorLessThan lessThan() {
         return this.lessThan;
     }
     /**
-     * @return The PatternMatch param.
+     * @return Pattern match
      * 
      */
     public GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatch patternMatch() {

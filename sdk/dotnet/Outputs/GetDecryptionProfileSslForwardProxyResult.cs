@@ -14,47 +14,47 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDecryptionProfileSslForwardProxyResult
     {
         /// <summary>
-        /// The AutoIncludeAltname param. Default: `False`.
+        /// Auto include altname
         /// </summary>
         public readonly bool AutoIncludeAltname;
         /// <summary>
-        /// The BlockClientCert param. Default: `False`.
+        /// Block client cert
         /// </summary>
         public readonly bool BlockClientCert;
         /// <summary>
-        /// The BlockExpiredCertificate param. Default: `False`.
+        /// Block expired certificate
         /// </summary>
         public readonly bool BlockExpiredCertificate;
         /// <summary>
-        /// The BlockTimeoutCert param. Default: `False`.
+        /// Block timeout cert
         /// </summary>
         public readonly bool BlockTimeoutCert;
         /// <summary>
-        /// The BlockTls13DowngradeNoResource param. Default: `False`.
+        /// Block tls13 downgrade no resource
         /// </summary>
         public readonly bool BlockTls13DowngradeNoResource;
         /// <summary>
-        /// The BlockUnknownCert param. Default: `False`.
+        /// Block unknown cert
         /// </summary>
         public readonly bool BlockUnknownCert;
         /// <summary>
-        /// The BlockUnsupportedCipher param. Default: `False`.
+        /// Block unsupported cipher
         /// </summary>
         public readonly bool BlockUnsupportedCipher;
         /// <summary>
-        /// The BlockUnsupportedVersion param. Default: `False`.
+        /// Block unsupported version
         /// </summary>
         public readonly bool BlockUnsupportedVersion;
         /// <summary>
-        /// The BlockUntrustedIssuer param. Default: `False`.
+        /// Block untrusted issuer
         /// </summary>
         public readonly bool BlockUntrustedIssuer;
         /// <summary>
-        /// The RestrictCertExts param. Default: `False`.
+        /// Restrict cert exts
         /// </summary>
         public readonly bool RestrictCertExts;
         /// <summary>
-        /// The StripAlpn param. Default: `False`.
+        /// Strip alpn
         /// </summary>
         public readonly bool StripAlpn;
 

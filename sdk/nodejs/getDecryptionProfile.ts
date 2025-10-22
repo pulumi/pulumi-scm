@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getDecryptionProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * DecryptionProfile data source
  */
 export function getDecryptionProfile(args: GetDecryptionProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDecryptionProfile:getDecryptionProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getDecryptionProfile(args: GetDecryptionProfileArgs, opts?: pulu
  */
 export interface GetDecryptionProfileArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+     */
+    name?: string;
 }
 
 /**
@@ -42,49 +36,51 @@ export interface GetDecryptionProfileArgs {
  */
 export interface GetDecryptionProfileResult {
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      */
     readonly name: string;
     /**
-     * The SslForwardProxy param.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * Ssl forward proxy
      */
     readonly sslForwardProxy: outputs.GetDecryptionProfileSslForwardProxy;
     /**
-     * The SslInboundProxy param.
+     * Ssl inbound proxy
      */
     readonly sslInboundProxy: outputs.GetDecryptionProfileSslInboundProxy;
     /**
-     * The SslNoProxy param.
+     * Ssl no proxy
      */
     readonly sslNoProxy: outputs.GetDecryptionProfileSslNoProxy;
     /**
-     * The SslProtocolSettings param.
+     * Ssl protocol settings
      */
     readonly sslProtocolSettings: outputs.GetDecryptionProfileSslProtocolSettings;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getDecryptionProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * DecryptionProfile data source
  */
 export function getDecryptionProfileOutput(args: GetDecryptionProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDecryptionProfile:getDecryptionProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -93,7 +89,11 @@ export function getDecryptionProfileOutput(args: GetDecryptionProfileOutputArgs,
  */
 export interface GetDecryptionProfileOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+     */
+    name?: pulumi.Input<string>;
 }

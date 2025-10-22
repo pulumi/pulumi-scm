@@ -6,8 +6,8 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.HipObjectNetworkInfoCriteriaNetworkIsMobileArgs;
+import com.pulumi.scm.inputs.HipObjectNetworkInfoCriteriaNetworkIsUnknownArgs;
 import com.pulumi.scm.inputs.HipObjectNetworkInfoCriteriaNetworkIsWifiArgs;
-import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
     public static final HipObjectNetworkInfoCriteriaNetworkIsArgs Empty = new HipObjectNetworkInfoCriteriaNetworkIsArgs();
 
     /**
-     * The Mobile param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+     * Mobile
      * 
      */
     @Import(name="mobile")
     private @Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsMobileArgs> mobile;
 
     /**
-     * @return The Mobile param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+     * @return Mobile
      * 
      */
     public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsMobileArgs>> mobile() {
@@ -33,29 +33,29 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
     }
 
     /**
-     * The Unknown param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+     * Unknown
      * 
      */
     @Import(name="unknown")
-    private @Nullable Output<Boolean> unknown;
+    private @Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsUnknownArgs> unknown;
 
     /**
-     * @return The Unknown param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+     * @return Unknown
      * 
      */
-    public Optional<Output<Boolean>> unknown() {
+    public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsUnknownArgs>> unknown() {
         return Optional.ofNullable(this.unknown);
     }
 
     /**
-     * The Wifi param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+     * Wifi
      * 
      */
     @Import(name="wifi")
     private @Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsWifiArgs> wifi;
 
     /**
-     * @return The Wifi param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+     * @return Wifi
      * 
      */
     public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsWifiArgs>> wifi() {
@@ -89,7 +89,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
         }
 
         /**
-         * @param mobile The Mobile param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+         * @param mobile Mobile
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
         }
 
         /**
-         * @param mobile The Mobile param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+         * @param mobile Mobile
          * 
          * @return builder
          * 
@@ -110,28 +110,28 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
         }
 
         /**
-         * @param unknown The Unknown param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+         * @param unknown Unknown
          * 
          * @return builder
          * 
          */
-        public Builder unknown(@Nullable Output<Boolean> unknown) {
+        public Builder unknown(@Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsUnknownArgs> unknown) {
             $.unknown = unknown;
             return this;
         }
 
         /**
-         * @param unknown The Unknown param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+         * @param unknown Unknown
          * 
          * @return builder
          * 
          */
-        public Builder unknown(Boolean unknown) {
+        public Builder unknown(HipObjectNetworkInfoCriteriaNetworkIsUnknownArgs unknown) {
             return unknown(Output.of(unknown));
         }
 
         /**
-         * @param wifi The Wifi param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+         * @param wifi Wifi
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsArgs extends com.pulumi.
         }
 
         /**
-         * @param wifi The Wifi param. Ensure that only one of the following is specified: `mobile`, `unknown`, `wifi`
+         * @param wifi Wifi
          * 
          * @return builder
          * 

@@ -4,7 +4,6 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -13,74 +12,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceConnectionBgpPeer {
     /**
-     * @return The LocalIpAddress param.
+     * @return Local ip address
      * 
      */
     private @Nullable String localIpAddress;
     /**
-     * @return The LocalIpv6Address param.
+     * @return Local ipv6 address
      * 
      */
     private @Nullable String localIpv6Address;
     /**
-     * @return The PeerIpAddress param.
+     * @return Peer ip address
      * 
      */
     private @Nullable String peerIpAddress;
     /**
-     * @return The PeerIpv6Address param.
+     * @return Peer ipv6 address
      * 
      */
     private @Nullable String peerIpv6Address;
     /**
-     * @return The SameAsPrimary param.
-     * 
-     */
-    private @Nullable Boolean sameAsPrimary;
-    /**
-     * @return The Secret param.
+     * @return Secret
      * 
      */
     private @Nullable String secret;
 
     private ServiceConnectionBgpPeer() {}
     /**
-     * @return The LocalIpAddress param.
+     * @return Local ip address
      * 
      */
     public Optional<String> localIpAddress() {
         return Optional.ofNullable(this.localIpAddress);
     }
     /**
-     * @return The LocalIpv6Address param.
+     * @return Local ipv6 address
      * 
      */
     public Optional<String> localIpv6Address() {
         return Optional.ofNullable(this.localIpv6Address);
     }
     /**
-     * @return The PeerIpAddress param.
+     * @return Peer ip address
      * 
      */
     public Optional<String> peerIpAddress() {
         return Optional.ofNullable(this.peerIpAddress);
     }
     /**
-     * @return The PeerIpv6Address param.
+     * @return Peer ipv6 address
      * 
      */
     public Optional<String> peerIpv6Address() {
         return Optional.ofNullable(this.peerIpv6Address);
     }
     /**
-     * @return The SameAsPrimary param.
-     * 
-     */
-    public Optional<Boolean> sameAsPrimary() {
-        return Optional.ofNullable(this.sameAsPrimary);
-    }
-    /**
-     * @return The Secret param.
+     * @return Secret
      * 
      */
     public Optional<String> secret() {
@@ -100,7 +87,6 @@ public final class ServiceConnectionBgpPeer {
         private @Nullable String localIpv6Address;
         private @Nullable String peerIpAddress;
         private @Nullable String peerIpv6Address;
-        private @Nullable Boolean sameAsPrimary;
         private @Nullable String secret;
         public Builder() {}
         public Builder(ServiceConnectionBgpPeer defaults) {
@@ -109,7 +95,6 @@ public final class ServiceConnectionBgpPeer {
     	      this.localIpv6Address = defaults.localIpv6Address;
     	      this.peerIpAddress = defaults.peerIpAddress;
     	      this.peerIpv6Address = defaults.peerIpv6Address;
-    	      this.sameAsPrimary = defaults.sameAsPrimary;
     	      this.secret = defaults.secret;
         }
 
@@ -138,12 +123,6 @@ public final class ServiceConnectionBgpPeer {
             return this;
         }
         @CustomType.Setter
-        public Builder sameAsPrimary(@Nullable Boolean sameAsPrimary) {
-
-            this.sameAsPrimary = sameAsPrimary;
-            return this;
-        }
-        @CustomType.Setter
         public Builder secret(@Nullable String secret) {
 
             this.secret = secret;
@@ -155,7 +134,6 @@ public final class ServiceConnectionBgpPeer {
             _resultValue.localIpv6Address = localIpv6Address;
             _resultValue.peerIpAddress = peerIpAddress;
             _resultValue.peerIpv6Address = peerIpv6Address;
-            _resultValue.sameAsPrimary = sameAsPrimary;
             _resultValue.secret = secret;
             return _resultValue;
         }

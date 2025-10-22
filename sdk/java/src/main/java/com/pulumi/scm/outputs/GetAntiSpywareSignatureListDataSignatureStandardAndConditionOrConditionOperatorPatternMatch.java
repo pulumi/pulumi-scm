@@ -14,50 +14,50 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatch {
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     private String context;
     /**
-     * @return The Negate param. Default: `false`.
+     * @return Negate
      * 
      */
     private Boolean negate;
     /**
-     * @return The Pattern param.
+     * @return Pattern
      * 
      */
     private String pattern;
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     private List<GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifier> qualifiers;
 
     private GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatch() {}
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     public String context() {
         return this.context;
     }
     /**
-     * @return The Negate param. Default: `false`.
+     * @return Negate
      * 
      */
     public Boolean negate() {
         return this.negate;
     }
     /**
-     * @return The Pattern param.
+     * @return Pattern
      * 
      */
     public String pattern() {
         return this.pattern;
     }
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     public List<GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchQualifier> qualifiers() {

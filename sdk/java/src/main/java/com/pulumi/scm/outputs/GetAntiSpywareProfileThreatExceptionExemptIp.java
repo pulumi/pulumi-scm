@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareProfileThreatExceptionExemptIp {
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
 
     private GetAntiSpywareProfileThreatExceptionExemptIp() {}
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {

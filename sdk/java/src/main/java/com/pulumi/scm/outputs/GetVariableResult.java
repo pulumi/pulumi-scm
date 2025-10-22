@@ -8,120 +8,118 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVariableResult {
     /**
-     * @return The Description param.
+     * @return The description of the variable
      * 
      */
     private String description;
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
-    private @Nullable String device;
+    private String device;
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
-    private @Nullable String folder;
+    private String folder;
     /**
-     * @return The Id param.
+     * @return UUID of the variable
      * 
      */
     private String id;
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the variable
      * 
      */
     private String name;
     /**
-     * @return The Overridden param.
+     * @return Is the variable overridden?
      * 
      */
     private Boolean overridden;
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
-    private @Nullable String snippet;
+    private String snippet;
     private String tfid;
     /**
-     * @return The Type param. String must be one of these: `&#34;percent&#34;`, `&#34;count&#34;`, `&#34;ip-netmask&#34;`, `&#34;zone&#34;`, `&#34;ip-range&#34;`, `&#34;ip-wildcard&#34;`, `&#34;device-priority&#34;`, `&#34;device-id&#34;`, `&#34;egress-max&#34;`, `&#34;as-number&#34;`, `&#34;fqdn&#34;`, `&#34;port&#34;`, `&#34;link-tag&#34;`, `&#34;group-id&#34;`, `&#34;rate&#34;`, `&#34;router-id&#34;`, `&#34;qos-profile&#34;`, `&#34;timer&#34;`.
+     * @return The variable type
      * 
      */
     private String type;
     /**
-     * @return value can accept either string or integer.
+     * @return The value of the variable
      * 
      */
     private String value;
 
     private GetVariableResult() {}
     /**
-     * @return The Description param.
+     * @return The description of the variable
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
-    public Optional<String> device() {
-        return Optional.ofNullable(this.device);
+    public String device() {
+        return this.device;
     }
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
-    public Optional<String> folder() {
-        return Optional.ofNullable(this.folder);
+    public String folder() {
+        return this.folder;
     }
     /**
-     * @return The Id param.
+     * @return UUID of the variable
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the variable
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Overridden param.
+     * @return Is the variable overridden?
      * 
      */
     public Boolean overridden() {
         return this.overridden;
     }
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
-    public Optional<String> snippet() {
-        return Optional.ofNullable(this.snippet);
+    public String snippet() {
+        return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
     /**
-     * @return The Type param. String must be one of these: `&#34;percent&#34;`, `&#34;count&#34;`, `&#34;ip-netmask&#34;`, `&#34;zone&#34;`, `&#34;ip-range&#34;`, `&#34;ip-wildcard&#34;`, `&#34;device-priority&#34;`, `&#34;device-id&#34;`, `&#34;egress-max&#34;`, `&#34;as-number&#34;`, `&#34;fqdn&#34;`, `&#34;port&#34;`, `&#34;link-tag&#34;`, `&#34;group-id&#34;`, `&#34;rate&#34;`, `&#34;router-id&#34;`, `&#34;qos-profile&#34;`, `&#34;timer&#34;`.
+     * @return The variable type
      * 
      */
     public String type() {
         return this.type;
     }
     /**
-     * @return value can accept either string or integer.
+     * @return The value of the variable
      * 
      */
     public String value() {
@@ -138,12 +136,12 @@ public final class GetVariableResult {
     @CustomType.Builder
     public static final class Builder {
         private String description;
-        private @Nullable String device;
-        private @Nullable String folder;
+        private String device;
+        private String folder;
         private String id;
         private String name;
         private Boolean overridden;
-        private @Nullable String snippet;
+        private String snippet;
         private String tfid;
         private String type;
         private String value;
@@ -171,14 +169,18 @@ public final class GetVariableResult {
             return this;
         }
         @CustomType.Setter
-        public Builder device(@Nullable String device) {
-
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetVariableResult", "device");
+            }
             this.device = device;
             return this;
         }
         @CustomType.Setter
-        public Builder folder(@Nullable String folder) {
-
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetVariableResult", "folder");
+            }
             this.folder = folder;
             return this;
         }
@@ -207,8 +209,10 @@ public final class GetVariableResult {
             return this;
         }
         @CustomType.Setter
-        public Builder snippet(@Nullable String snippet) {
-
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetVariableResult", "snippet");
+            }
             this.snippet = snippet;
             return this;
         }

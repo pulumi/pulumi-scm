@@ -11,23 +11,23 @@ namespace Pulumi.Scm.Outputs
 {
 
     [OutputType]
-    public sealed class RadiusServerProfileProtocolPeapMschapV2
+    public sealed class RadiusServerProfileProtocolPEAPMSCHAPv2
     {
         /// <summary>
-        /// The AllowPwdChange param.
+        /// Allow pwd change
         /// </summary>
         public readonly bool? AllowPwdChange;
         /// <summary>
-        /// The AnonOuterId param.
+        /// Anon outer id
         /// </summary>
         public readonly bool? AnonOuterId;
         /// <summary>
-        /// The RadiusCertProfile param.
+        /// Radius cert profile
         /// </summary>
         public readonly string? RadiusCertProfile;
 
         [OutputConstructor]
-        private RadiusServerProfileProtocolPeapMschapV2(
+        private RadiusServerProfileProtocolPEAPMSCHAPv2(
             bool? allowPwdChange,
 
             bool? anonOuterId,

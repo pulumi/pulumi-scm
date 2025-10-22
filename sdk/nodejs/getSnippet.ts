@@ -5,23 +5,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getSnippet({
- *     id: "1234-56-789",
- * });
- * ```
+ * Snippet data source
  */
 export function getSnippet(args: GetSnippetArgs, opts?: pulumi.InvokeOptions): Promise<GetSnippetResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSnippet:getSnippet", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +20,13 @@ export function getSnippet(args: GetSnippetArgs, opts?: pulumi.InvokeOptions): P
  */
 export interface GetSnippetArgs {
     /**
-     * The Id param.
+     * The UUID of the snippet
      */
     id: string;
+    /**
+     * The name of the snippet
+     */
+    name?: string;
 }
 
 /**
@@ -40,45 +34,35 @@ export interface GetSnippetArgs {
  */
 export interface GetSnippetResult {
     /**
-     * The Description param.
+     * The description of the snippet
      */
     readonly description: string;
     /**
-     * The Id param.
+     * The UUID of the snippet
      */
     readonly id: string;
     /**
-     * The Labels param.
+     * Labels applied to the snippet
      */
     readonly labels: string[];
     /**
-     * The Name param.
+     * The name of the snippet
      */
     readonly name: string;
     readonly tfid: string;
     /**
-     * The Type param. String must be one of these: `"predefined"`, `"custom"`.
+     * The snippet type
      */
     readonly type: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getSnippet({
- *     id: "1234-56-789",
- * });
- * ```
+ * Snippet data source
  */
 export function getSnippetOutput(args: GetSnippetOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSnippetResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSnippet:getSnippet", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -87,7 +71,11 @@ export function getSnippetOutput(args: GetSnippetOutputArgs, opts?: pulumi.Invok
  */
 export interface GetSnippetOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the snippet
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the snippet
+     */
+    name?: pulumi.Input<string>;
 }

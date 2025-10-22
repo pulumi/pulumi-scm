@@ -14,43 +14,72 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayListDataResult
     {
         /// <summary>
-        /// The Authentication param.
+        /// Authentication
         /// </summary>
         public readonly Outputs.GetIkeGatewayListDataAuthenticationResult Authentication;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The LocalId param.
+        /// Local address
+        /// </summary>
+        public readonly Outputs.GetIkeGatewayListDataLocalAddressResult LocalAddress;
+        /// <summary>
+        /// Local id
         /// </summary>
         public readonly Outputs.GetIkeGatewayListDataLocalIdResult LocalId;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The PeerAddress param.
+        /// Peer address
         /// </summary>
         public readonly Outputs.GetIkeGatewayListDataPeerAddressResult PeerAddress;
         /// <summary>
-        /// The PeerId param.
+        /// Peer id
         /// </summary>
         public readonly Outputs.GetIkeGatewayListDataPeerIdResult PeerId;
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         public readonly Outputs.GetIkeGatewayListDataProtocolResult Protocol;
         /// <summary>
-        /// The ProtocolCommon param.
+        /// Protocol common
         /// </summary>
         public readonly Outputs.GetIkeGatewayListDataProtocolCommonResult ProtocolCommon;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetIkeGatewayListDataResult(
             Outputs.GetIkeGatewayListDataAuthenticationResult authentication,
 
+            string device,
+
+            ImmutableDictionary<string, string> encryptedValues,
+
+            string folder,
+
             string id,
+
+            Outputs.GetIkeGatewayListDataLocalAddressResult localAddress,
 
             Outputs.GetIkeGatewayListDataLocalIdResult localId,
 
@@ -62,16 +91,26 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetIkeGatewayListDataProtocolResult protocol,
 
-            Outputs.GetIkeGatewayListDataProtocolCommonResult protocolCommon)
+            Outputs.GetIkeGatewayListDataProtocolCommonResult protocolCommon,
+
+            string snippet,
+
+            string tfid)
         {
             Authentication = authentication;
+            Device = device;
+            EncryptedValues = encryptedValues;
+            Folder = folder;
             Id = id;
+            LocalAddress = localAddress;
             LocalId = localId;
             Name = name;
             PeerAddress = peerAddress;
             PeerId = peerId;
             Protocol = protocol;
             ProtocolCommon = protocolCommon;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

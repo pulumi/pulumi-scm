@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationListDataDefaultIdentByIcmpType {
     /**
-     * @return The Code param.
+     * @return Code
      * 
      */
     private String code;
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     private String type;
 
     private GetApplicationListDataDefaultIdentByIcmpType() {}
     /**
-     * @return The Code param.
+     * @return Code
      * 
      */
     public String code() {
         return this.code;
     }
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     public String type() {

@@ -12,53 +12,33 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// IpsecTunnel resource
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewIpsecTunnel(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 type IpsecTunnel struct {
 	pulumi.CustomResourceState
 
-	// Enable Anti-Replay check on this tunnel.
+	// Enable Anti-Replay check on this tunnel
 	AntiReplay pulumi.BoolPtrOutput `pulumi:"antiReplay"`
-	// The AutoKey param.
+	// Auto key
 	AutoKey IpsecTunnelAutoKeyOutput `pulumi:"autoKey"`
-	// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+	// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
 	CopyTos pulumi.BoolOutput `pulumi:"copyTos"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// allow GRE over IPSec. Default: `false`.
+	// allow GRE over IPSec
 	EnableGreEncapsulation pulumi.BoolOutput `pulumi:"enableGreEncapsulation"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
-	// The TunnelMonitor param.
-	TunnelMonitor IpsecTunnelTunnelMonitorPtrOutput `pulumi:"tunnelMonitor"`
+	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+	TunnelInterface pulumi.StringOutput `pulumi:"tunnelInterface"`
+	// Tunnel monitor
+	TunnelMonitor IpsecTunnelTunnelMonitorOutput `pulumi:"tunnelMonitor"`
 }
 
 // NewIpsecTunnel registers a new resource with the given unique name, arguments, and options.
@@ -94,46 +74,50 @@ func GetIpsecTunnel(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering IpsecTunnel resources.
 type ipsecTunnelState struct {
-	// Enable Anti-Replay check on this tunnel.
+	// Enable Anti-Replay check on this tunnel
 	AntiReplay *bool `pulumi:"antiReplay"`
-	// The AutoKey param.
+	// Auto key
 	AutoKey *IpsecTunnelAutoKey `pulumi:"autoKey"`
-	// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+	// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
 	CopyTos *bool `pulumi:"copyTos"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// allow GRE over IPSec. Default: `false`.
+	// allow GRE over IPSec
 	EnableGreEncapsulation *bool `pulumi:"enableGreEncapsulation"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
-	// The TunnelMonitor param.
+	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+	TunnelInterface *string `pulumi:"tunnelInterface"`
+	// Tunnel monitor
 	TunnelMonitor *IpsecTunnelTunnelMonitor `pulumi:"tunnelMonitor"`
 }
 
 type IpsecTunnelState struct {
-	// Enable Anti-Replay check on this tunnel.
+	// Enable Anti-Replay check on this tunnel
 	AntiReplay pulumi.BoolPtrInput
-	// The AutoKey param.
+	// Auto key
 	AutoKey IpsecTunnelAutoKeyPtrInput
-	// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+	// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
 	CopyTos pulumi.BoolPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// allow GRE over IPSec. Default: `false`.
+	// allow GRE over IPSec
 	EnableGreEncapsulation pulumi.BoolPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
-	// The TunnelMonitor param.
+	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+	TunnelInterface pulumi.StringPtrInput
+	// Tunnel monitor
 	TunnelMonitor IpsecTunnelTunnelMonitorPtrInput
 }
 
@@ -142,45 +126,49 @@ func (IpsecTunnelState) ElementType() reflect.Type {
 }
 
 type ipsecTunnelArgs struct {
-	// Enable Anti-Replay check on this tunnel.
+	// Enable Anti-Replay check on this tunnel
 	AntiReplay *bool `pulumi:"antiReplay"`
-	// The AutoKey param.
+	// Auto key
 	AutoKey IpsecTunnelAutoKey `pulumi:"autoKey"`
-	// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+	// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
 	CopyTos *bool `pulumi:"copyTos"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// allow GRE over IPSec. Default: `false`.
+	// allow GRE over IPSec
 	EnableGreEncapsulation *bool `pulumi:"enableGreEncapsulation"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The TunnelMonitor param.
+	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+	TunnelInterface *string `pulumi:"tunnelInterface"`
+	// Tunnel monitor
 	TunnelMonitor *IpsecTunnelTunnelMonitor `pulumi:"tunnelMonitor"`
 }
 
 // The set of arguments for constructing a IpsecTunnel resource.
 type IpsecTunnelArgs struct {
-	// Enable Anti-Replay check on this tunnel.
+	// Enable Anti-Replay check on this tunnel
 	AntiReplay pulumi.BoolPtrInput
-	// The AutoKey param.
+	// Auto key
 	AutoKey IpsecTunnelAutoKeyInput
-	// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+	// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
 	CopyTos pulumi.BoolPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// allow GRE over IPSec. Default: `false`.
+	// allow GRE over IPSec
 	EnableGreEncapsulation pulumi.BoolPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The TunnelMonitor param.
+	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+	TunnelInterface pulumi.StringPtrInput
+	// Tunnel monitor
 	TunnelMonitor IpsecTunnelTunnelMonitorPtrInput
 }
 
@@ -271,42 +259,42 @@ func (o IpsecTunnelOutput) ToIpsecTunnelOutputWithContext(ctx context.Context) I
 	return o
 }
 
-// Enable Anti-Replay check on this tunnel.
+// Enable Anti-Replay check on this tunnel
 func (o IpsecTunnelOutput) AntiReplay() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.BoolPtrOutput { return v.AntiReplay }).(pulumi.BoolPtrOutput)
 }
 
-// The AutoKey param.
+// Auto key
 func (o IpsecTunnelOutput) AutoKey() IpsecTunnelAutoKeyOutput {
 	return o.ApplyT(func(v *IpsecTunnel) IpsecTunnelAutoKeyOutput { return v.AutoKey }).(IpsecTunnelAutoKeyOutput)
 }
 
-// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
 func (o IpsecTunnelOutput) CopyTos() pulumi.BoolOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.BoolOutput { return v.CopyTos }).(pulumi.BoolOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o IpsecTunnelOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// allow GRE over IPSec. Default: `false`.
+// allow GRE over IPSec
 func (o IpsecTunnelOutput) EnableGreEncapsulation() pulumi.BoolOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.BoolOutput { return v.EnableGreEncapsulation }).(pulumi.BoolOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o IpsecTunnelOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o IpsecTunnelOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o IpsecTunnelOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -315,9 +303,14 @@ func (o IpsecTunnelOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The TunnelMonitor param.
-func (o IpsecTunnelOutput) TunnelMonitor() IpsecTunnelTunnelMonitorPtrOutput {
-	return o.ApplyT(func(v *IpsecTunnel) IpsecTunnelTunnelMonitorPtrOutput { return v.TunnelMonitor }).(IpsecTunnelTunnelMonitorPtrOutput)
+// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+func (o IpsecTunnelOutput) TunnelInterface() pulumi.StringOutput {
+	return o.ApplyT(func(v *IpsecTunnel) pulumi.StringOutput { return v.TunnelInterface }).(pulumi.StringOutput)
+}
+
+// Tunnel monitor
+func (o IpsecTunnelOutput) TunnelMonitor() IpsecTunnelTunnelMonitorOutput {
+	return o.ApplyT(func(v *IpsecTunnel) IpsecTunnelTunnelMonitorOutput { return v.TunnelMonitor }).(IpsecTunnelTunnelMonitorOutput)
 }
 
 type IpsecTunnelArrayOutput struct{ *pulumi.OutputState }

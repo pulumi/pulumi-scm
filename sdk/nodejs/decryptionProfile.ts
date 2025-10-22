@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.DecryptionProfile("example", {});
- * ```
+ * DecryptionProfile resource
  */
 export class DecryptionProfile extends pulumi.CustomResource {
     /**
@@ -47,37 +38,37 @@ export class DecryptionProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The SslForwardProxy param.
+     * Ssl forward proxy
      */
-    declare public readonly sslForwardProxy: pulumi.Output<outputs.DecryptionProfileSslForwardProxy | undefined>;
+    declare public readonly sslForwardProxy: pulumi.Output<outputs.DecryptionProfileSslForwardProxy>;
     /**
-     * The SslInboundProxy param.
+     * Ssl inbound proxy
      */
-    declare public readonly sslInboundProxy: pulumi.Output<outputs.DecryptionProfileSslInboundProxy | undefined>;
+    declare public readonly sslInboundProxy: pulumi.Output<outputs.DecryptionProfileSslInboundProxy>;
     /**
-     * The SslNoProxy param.
+     * Ssl no proxy
      */
-    declare public readonly sslNoProxy: pulumi.Output<outputs.DecryptionProfileSslNoProxy | undefined>;
+    declare public readonly sslNoProxy: pulumi.Output<outputs.DecryptionProfileSslNoProxy>;
     /**
-     * The SslProtocolSettings param.
+     * Ssl protocol settings
      */
-    declare public readonly sslProtocolSettings: pulumi.Output<outputs.DecryptionProfileSslProtocolSettings | undefined>;
+    declare public readonly sslProtocolSettings: pulumi.Output<outputs.DecryptionProfileSslProtocolSettings>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
@@ -124,35 +115,35 @@ export class DecryptionProfile extends pulumi.CustomResource {
  */
 export interface DecryptionProfileState {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The SslForwardProxy param.
+     * Ssl forward proxy
      */
     sslForwardProxy?: pulumi.Input<inputs.DecryptionProfileSslForwardProxy>;
     /**
-     * The SslInboundProxy param.
+     * Ssl inbound proxy
      */
     sslInboundProxy?: pulumi.Input<inputs.DecryptionProfileSslInboundProxy>;
     /**
-     * The SslNoProxy param.
+     * Ssl no proxy
      */
     sslNoProxy?: pulumi.Input<inputs.DecryptionProfileSslNoProxy>;
     /**
-     * The SslProtocolSettings param.
+     * Ssl protocol settings
      */
     sslProtocolSettings?: pulumi.Input<inputs.DecryptionProfileSslProtocolSettings>;
     tfid?: pulumi.Input<string>;
@@ -163,35 +154,35 @@ export interface DecryptionProfileState {
  */
 export interface DecryptionProfileArgs {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The SslForwardProxy param.
+     * Ssl forward proxy
      */
     sslForwardProxy?: pulumi.Input<inputs.DecryptionProfileSslForwardProxy>;
     /**
-     * The SslInboundProxy param.
+     * Ssl inbound proxy
      */
     sslInboundProxy?: pulumi.Input<inputs.DecryptionProfileSslInboundProxy>;
     /**
-     * The SslNoProxy param.
+     * Ssl no proxy
      */
     sslNoProxy?: pulumi.Input<inputs.DecryptionProfileSslNoProxy>;
     /**
-     * The SslProtocolSettings param.
+     * Ssl protocol settings
      */
     sslProtocolSettings?: pulumi.Input<inputs.DecryptionProfileSslProtocolSettings>;
 }

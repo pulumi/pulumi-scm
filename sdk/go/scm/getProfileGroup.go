@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupProfileGroup(ctx, &scm.LookupProfileGroupArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// ProfileGroup data source
 func LookupProfileGroup(ctx *pulumi.Context, args *LookupProfileGroupArgs, opts ...pulumi.InvokeOption) (*LookupProfileGroupResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupProfileGroupResult
@@ -50,32 +24,42 @@ func LookupProfileGroup(ctx *pulumi.Context, args *LookupProfileGroupArgs, opts 
 
 // A collection of arguments for invoking getProfileGroup.
 type LookupProfileGroupArgs struct {
-	// The Id param.
+	// The UUID of the profile group
 	Id string `pulumi:"id"`
+	// The name of the profile group
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getProfileGroup.
 type LookupProfileGroupResult struct {
-	// List of AI security profiles.
+	// Ai security
 	AiSecurities []string `pulumi:"aiSecurities"`
-	// List of DNS security profiles.
+	// Data filtering
+	DataFilterings []string `pulumi:"dataFilterings"`
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Dns security
 	DnsSecurities []string `pulumi:"dnsSecurities"`
-	// List of file blocking profiles.
+	// File blocking
 	FileBlockings []string `pulumi:"fileBlockings"`
-	// The Id param.
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the profile group
 	Id string `pulumi:"id"`
-	// The name of the profile group.
+	// The name of the profile group
 	Name string `pulumi:"name"`
-	// List of HTTP header insertion profiles.
+	// Saas security
 	SaasSecurities []string `pulumi:"saasSecurities"`
-	// List of anti-spyware profiles.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Spyware
 	Spywares []string `pulumi:"spywares"`
 	Tfid     string   `pulumi:"tfid"`
-	// List of URL filtering profiles.
+	// Url filtering
 	UrlFilterings []string `pulumi:"urlFilterings"`
-	// List of anti-virus and Wildfire analysis profiles.
+	// Virus and wildfire analysis
 	VirusAndWildfireAnalyses []string `pulumi:"virusAndWildfireAnalyses"`
-	// List of vulnerability protection profiles.
+	// Vulnerability
 	Vulnerabilities []string `pulumi:"vulnerabilities"`
 }
 
@@ -90,8 +74,10 @@ func LookupProfileGroupOutput(ctx *pulumi.Context, args LookupProfileGroupOutput
 
 // A collection of arguments for invoking getProfileGroup.
 type LookupProfileGroupOutputArgs struct {
-	// The Id param.
+	// The UUID of the profile group
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the profile group
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupProfileGroupOutputArgs) ElementType() reflect.Type {
@@ -113,37 +99,57 @@ func (o LookupProfileGroupResultOutput) ToLookupProfileGroupResultOutputWithCont
 	return o
 }
 
-// List of AI security profiles.
+// Ai security
 func (o LookupProfileGroupResultOutput) AiSecurities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.AiSecurities }).(pulumi.StringArrayOutput)
 }
 
-// List of DNS security profiles.
+// Data filtering
+func (o LookupProfileGroupResultOutput) DataFilterings() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.DataFilterings }).(pulumi.StringArrayOutput)
+}
+
+// The device in which the resource is defined
+func (o LookupProfileGroupResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupProfileGroupResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Dns security
 func (o LookupProfileGroupResultOutput) DnsSecurities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.DnsSecurities }).(pulumi.StringArrayOutput)
 }
 
-// List of file blocking profiles.
+// File blocking
 func (o LookupProfileGroupResultOutput) FileBlockings() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.FileBlockings }).(pulumi.StringArrayOutput)
 }
 
-// The Id param.
+// The folder in which the resource is defined
+func (o LookupProfileGroupResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupProfileGroupResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the profile group
 func (o LookupProfileGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The name of the profile group.
+// The name of the profile group
 func (o LookupProfileGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// List of HTTP header insertion profiles.
+// Saas security
 func (o LookupProfileGroupResultOutput) SaasSecurities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.SaasSecurities }).(pulumi.StringArrayOutput)
 }
 
-// List of anti-spyware profiles.
+// The snippet in which the resource is defined
+func (o LookupProfileGroupResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupProfileGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// Spyware
 func (o LookupProfileGroupResultOutput) Spywares() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.Spywares }).(pulumi.StringArrayOutput)
 }
@@ -152,17 +158,17 @@ func (o LookupProfileGroupResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// List of URL filtering profiles.
+// Url filtering
 func (o LookupProfileGroupResultOutput) UrlFilterings() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.UrlFilterings }).(pulumi.StringArrayOutput)
 }
 
-// List of anti-virus and Wildfire analysis profiles.
+// Virus and wildfire analysis
 func (o LookupProfileGroupResultOutput) VirusAndWildfireAnalyses() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.VirusAndWildfireAnalyses }).(pulumi.StringArrayOutput)
 }
 
-// List of vulnerability protection profiles.
+// Vulnerability
 func (o LookupProfileGroupResultOutput) Vulnerabilities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupProfileGroupResult) []string { return v.Vulnerabilities }).(pulumi.StringArrayOutput)
 }

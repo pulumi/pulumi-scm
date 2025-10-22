@@ -5,6 +5,7 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,14 +20,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     public static final AuthenticationRuleArgs Empty = new AuthenticationRuleArgs();
 
     /**
-     * the authentication profile name to apply to authentication rule.
+     * The authentication profile name
      * 
      */
     @Import(name="authenticationEnforcement")
     private @Nullable Output<String> authenticationEnforcement;
 
     /**
-     * @return the authentication profile name to apply to authentication rule.
+     * @return The authentication profile name
      * 
      */
     public Optional<Output<String>> authenticationEnforcement() {
@@ -34,14 +35,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Categories param.
+     * The destination URL categories
      * 
      */
     @Import(name="categories")
     private @Nullable Output<List<String>> categories;
 
     /**
-     * @return The Categories param.
+     * @return The destination URL categories
      * 
      */
     public Optional<Output<List<String>>> categories() {
@@ -49,14 +50,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Description param.
+     * The description of the authentication rule
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the authentication rule
      * 
      */
     public Optional<Output<String>> description() {
@@ -64,14 +65,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The DestinationHips param.
+     * The destination Host Integrity Profile (HIP)
      * 
      */
     @Import(name="destinationHips")
     private @Nullable Output<List<String>> destinationHips;
 
     /**
-     * @return The DestinationHips param.
+     * @return The destination Host Integrity Profile (HIP)
      * 
      */
     public Optional<Output<List<String>>> destinationHips() {
@@ -79,29 +80,29 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Destinations param.
+     * The destination addresses
      * 
      */
-    @Import(name="destinations")
-    private @Nullable Output<List<String>> destinations;
+    @Import(name="destinations", required=true)
+    private Output<List<String>> destinations;
 
     /**
-     * @return The Destinations param.
+     * @return The destination addresses
      * 
      */
-    public Optional<Output<List<String>>> destinations() {
-        return Optional.ofNullable(this.destinations);
+    public Output<List<String>> destinations() {
+        return this.destinations;
     }
 
     /**
-     * The Device param.
+     * Device
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return Device
      * 
      */
     public Optional<Output<String>> device() {
@@ -109,14 +110,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Disabled param. Default: `false`.
+     * Is the authentication rule disabled?
      * 
      */
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
     /**
-     * @return The Disabled param. Default: `false`.
+     * @return Is the authentication rule disabled?
      * 
      */
     public Optional<Output<Boolean>> disabled() {
@@ -124,14 +125,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Folder param.
+     * Folder
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return Folder
      * 
      */
     public Optional<Output<String>> folder() {
@@ -139,29 +140,29 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Froms param.
+     * The source security zones
      * 
      */
-    @Import(name="froms")
-    private @Nullable Output<List<String>> froms;
+    @Import(name="froms", required=true)
+    private Output<List<String>> froms;
 
     /**
-     * @return The Froms param.
+     * @return The source security zones
      * 
      */
-    public Optional<Output<List<String>>> froms() {
-        return Optional.ofNullable(this.froms);
+    public Output<List<String>> froms() {
+        return this.froms;
     }
 
     /**
-     * The GroupTag param.
+     * Group tag
      * 
      */
     @Import(name="groupTag")
     private @Nullable Output<String> groupTag;
 
     /**
-     * @return The GroupTag param.
+     * @return Group tag
      * 
      */
     public Optional<Output<String>> groupTag() {
@@ -169,14 +170,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The HipProfiles param.
+     * The source Host Integrity Profile (HIP)
      * 
      */
     @Import(name="hipProfiles")
     private @Nullable Output<List<String>> hipProfiles;
 
     /**
-     * @return The HipProfiles param.
+     * @return The source Host Integrity Profile (HIP)
      * 
      */
     public Optional<Output<List<String>>> hipProfiles() {
@@ -184,14 +185,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The LogAuthenticationTimeout param. Default: `false`.
+     * Log authentication timeouts?
      * 
      */
     @Import(name="logAuthenticationTimeout")
     private @Nullable Output<Boolean> logAuthenticationTimeout;
 
     /**
-     * @return The LogAuthenticationTimeout param. Default: `false`.
+     * @return Log authentication timeouts?
      * 
      */
     public Optional<Output<Boolean>> logAuthenticationTimeout() {
@@ -199,14 +200,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The LogSetting param.
+     * The log forwarding profile name
      * 
      */
     @Import(name="logSetting")
     private @Nullable Output<String> logSetting;
 
     /**
-     * @return The LogSetting param.
+     * @return The log forwarding profile name
      * 
      */
     public Optional<Output<String>> logSetting() {
@@ -214,14 +215,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Name param.
+     * The name of the authentication rule
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the authentication rule
      * 
      */
     public Optional<Output<String>> name() {
@@ -229,14 +230,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The NegateDestination param. Default: `false`.
+     * Are the destination addresses negated?
      * 
      */
     @Import(name="negateDestination")
     private @Nullable Output<Boolean> negateDestination;
 
     /**
-     * @return The NegateDestination param. Default: `false`.
+     * @return Are the destination addresses negated?
      * 
      */
     public Optional<Output<Boolean>> negateDestination() {
@@ -244,14 +245,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The NegateSource param. Default: `false`.
+     * Are the source addresses negated?
      * 
      */
     @Import(name="negateSource")
     private @Nullable Output<Boolean> negateSource;
 
     /**
-     * @return The NegateSource param. Default: `false`.
+     * @return Are the source addresses negated?
      * 
      */
     public Optional<Output<Boolean>> negateSource() {
@@ -259,14 +260,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * The relative position of the rule
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * @return The relative position of the rule
      * 
      */
     public Optional<Output<String>> position() {
@@ -274,29 +275,29 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Services param.
+     * The destination ports
      * 
      */
-    @Import(name="services")
-    private @Nullable Output<List<String>> services;
+    @Import(name="services", required=true)
+    private Output<List<String>> services;
 
     /**
-     * @return The Services param.
+     * @return The destination ports
      * 
      */
-    public Optional<Output<List<String>>> services() {
-        return Optional.ofNullable(this.services);
+    public Output<List<String>> services() {
+        return this.services;
     }
 
     /**
-     * The Snippet param.
+     * Snippet
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return Snippet
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -304,14 +305,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The SourceHips param.
+     * The source Host Integrity Profile (HIP)
      * 
      */
     @Import(name="sourceHips")
     private @Nullable Output<List<String>> sourceHips;
 
     /**
-     * @return The SourceHips param.
+     * @return The source Host Integrity Profile (HIP)
      * 
      */
     public Optional<Output<List<String>>> sourceHips() {
@@ -319,14 +320,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The SourceUsers param.
+     * The source users
      * 
      */
     @Import(name="sourceUsers")
     private @Nullable Output<List<String>> sourceUsers;
 
     /**
-     * @return The SourceUsers param.
+     * @return The source users
      * 
      */
     public Optional<Output<List<String>>> sourceUsers() {
@@ -334,29 +335,29 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Sources param.
+     * The source addresses
      * 
      */
-    @Import(name="sources")
-    private @Nullable Output<List<String>> sources;
+    @Import(name="sources", required=true)
+    private Output<List<String>> sources;
 
     /**
-     * @return The Sources param.
+     * @return The source addresses
      * 
      */
-    public Optional<Output<List<String>>> sources() {
-        return Optional.ofNullable(this.sources);
+    public Output<List<String>> sources() {
+        return this.sources;
     }
 
     /**
-     * The Tags param.
+     * The authentication rule tags
      * 
      */
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
     /**
-     * @return The Tags param.
+     * @return The authentication rule tags
      * 
      */
     public Optional<Output<List<String>>> tags() {
@@ -364,14 +365,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Timeout param. Value must be between 1 and 1440.
+     * The authentication session timeout (seconds)
      * 
      */
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
     /**
-     * @return The Timeout param. Value must be between 1 and 1440.
+     * @return The authentication session timeout (seconds)
      * 
      */
     public Optional<Output<Integer>> timeout() {
@@ -379,18 +380,18 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Tos param.
+     * The destination security zones
      * 
      */
-    @Import(name="tos")
-    private @Nullable Output<List<String>> tos;
+    @Import(name="tos", required=true)
+    private Output<List<String>> tos;
 
     /**
-     * @return The Tos param.
+     * @return The destination security zones
      * 
      */
-    public Optional<Output<List<String>>> tos() {
-        return Optional.ofNullable(this.tos);
+    public Output<List<String>> tos() {
+        return this.tos;
     }
 
     private AuthenticationRuleArgs() {}
@@ -442,7 +443,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param authenticationEnforcement the authentication profile name to apply to authentication rule.
+         * @param authenticationEnforcement The authentication profile name
          * 
          * @return builder
          * 
@@ -453,7 +454,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param authenticationEnforcement the authentication profile name to apply to authentication rule.
+         * @param authenticationEnforcement The authentication profile name
          * 
          * @return builder
          * 
@@ -463,7 +464,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param categories The Categories param.
+         * @param categories The destination URL categories
          * 
          * @return builder
          * 
@@ -474,7 +475,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param categories The Categories param.
+         * @param categories The destination URL categories
          * 
          * @return builder
          * 
@@ -484,7 +485,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param categories The Categories param.
+         * @param categories The destination URL categories
          * 
          * @return builder
          * 
@@ -494,7 +495,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the authentication rule
          * 
          * @return builder
          * 
@@ -505,7 +506,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the authentication rule
          * 
          * @return builder
          * 
@@ -515,7 +516,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param destinationHips The DestinationHips param.
+         * @param destinationHips The destination Host Integrity Profile (HIP)
          * 
          * @return builder
          * 
@@ -526,7 +527,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param destinationHips The DestinationHips param.
+         * @param destinationHips The destination Host Integrity Profile (HIP)
          * 
          * @return builder
          * 
@@ -536,7 +537,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param destinationHips The DestinationHips param.
+         * @param destinationHips The destination Host Integrity Profile (HIP)
          * 
          * @return builder
          * 
@@ -546,18 +547,18 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param destinations The Destinations param.
+         * @param destinations The destination addresses
          * 
          * @return builder
          * 
          */
-        public Builder destinations(@Nullable Output<List<String>> destinations) {
+        public Builder destinations(Output<List<String>> destinations) {
             $.destinations = destinations;
             return this;
         }
 
         /**
-         * @param destinations The Destinations param.
+         * @param destinations The destination addresses
          * 
          * @return builder
          * 
@@ -567,7 +568,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param destinations The Destinations param.
+         * @param destinations The destination addresses
          * 
          * @return builder
          * 
@@ -577,7 +578,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param device The Device param.
+         * @param device Device
          * 
          * @return builder
          * 
@@ -588,7 +589,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param device The Device param.
+         * @param device Device
          * 
          * @return builder
          * 
@@ -598,7 +599,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param disabled The Disabled param. Default: `false`.
+         * @param disabled Is the authentication rule disabled?
          * 
          * @return builder
          * 
@@ -609,7 +610,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param disabled The Disabled param. Default: `false`.
+         * @param disabled Is the authentication rule disabled?
          * 
          * @return builder
          * 
@@ -619,7 +620,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder Folder
          * 
          * @return builder
          * 
@@ -630,7 +631,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder Folder
          * 
          * @return builder
          * 
@@ -640,18 +641,18 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param froms The Froms param.
+         * @param froms The source security zones
          * 
          * @return builder
          * 
          */
-        public Builder froms(@Nullable Output<List<String>> froms) {
+        public Builder froms(Output<List<String>> froms) {
             $.froms = froms;
             return this;
         }
 
         /**
-         * @param froms The Froms param.
+         * @param froms The source security zones
          * 
          * @return builder
          * 
@@ -661,7 +662,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param froms The Froms param.
+         * @param froms The source security zones
          * 
          * @return builder
          * 
@@ -671,7 +672,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param groupTag The GroupTag param.
+         * @param groupTag Group tag
          * 
          * @return builder
          * 
@@ -682,7 +683,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param groupTag The GroupTag param.
+         * @param groupTag Group tag
          * 
          * @return builder
          * 
@@ -692,7 +693,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param hipProfiles The HipProfiles param.
+         * @param hipProfiles The source Host Integrity Profile (HIP)
          * 
          * @return builder
          * 
@@ -703,7 +704,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param hipProfiles The HipProfiles param.
+         * @param hipProfiles The source Host Integrity Profile (HIP)
          * 
          * @return builder
          * 
@@ -713,7 +714,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param hipProfiles The HipProfiles param.
+         * @param hipProfiles The source Host Integrity Profile (HIP)
          * 
          * @return builder
          * 
@@ -723,7 +724,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param logAuthenticationTimeout The LogAuthenticationTimeout param. Default: `false`.
+         * @param logAuthenticationTimeout Log authentication timeouts?
          * 
          * @return builder
          * 
@@ -734,7 +735,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param logAuthenticationTimeout The LogAuthenticationTimeout param. Default: `false`.
+         * @param logAuthenticationTimeout Log authentication timeouts?
          * 
          * @return builder
          * 
@@ -744,7 +745,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param logSetting The LogSetting param.
+         * @param logSetting The log forwarding profile name
          * 
          * @return builder
          * 
@@ -755,7 +756,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param logSetting The LogSetting param.
+         * @param logSetting The log forwarding profile name
          * 
          * @return builder
          * 
@@ -765,7 +766,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the authentication rule
          * 
          * @return builder
          * 
@@ -776,7 +777,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the authentication rule
          * 
          * @return builder
          * 
@@ -786,7 +787,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param negateDestination The NegateDestination param. Default: `false`.
+         * @param negateDestination Are the destination addresses negated?
          * 
          * @return builder
          * 
@@ -797,7 +798,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param negateDestination The NegateDestination param. Default: `false`.
+         * @param negateDestination Are the destination addresses negated?
          * 
          * @return builder
          * 
@@ -807,7 +808,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param negateSource The NegateSource param. Default: `false`.
+         * @param negateSource Are the source addresses negated?
          * 
          * @return builder
          * 
@@ -818,7 +819,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param negateSource The NegateSource param. Default: `false`.
+         * @param negateSource Are the source addresses negated?
          * 
          * @return builder
          * 
@@ -828,7 +829,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+         * @param position The relative position of the rule
          * 
          * @return builder
          * 
@@ -839,7 +840,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+         * @param position The relative position of the rule
          * 
          * @return builder
          * 
@@ -849,18 +850,18 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param services The Services param.
+         * @param services The destination ports
          * 
          * @return builder
          * 
          */
-        public Builder services(@Nullable Output<List<String>> services) {
+        public Builder services(Output<List<String>> services) {
             $.services = services;
             return this;
         }
 
         /**
-         * @param services The Services param.
+         * @param services The destination ports
          * 
          * @return builder
          * 
@@ -870,7 +871,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param services The Services param.
+         * @param services The destination ports
          * 
          * @return builder
          * 
@@ -880,7 +881,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet Snippet
          * 
          * @return builder
          * 
@@ -891,7 +892,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet Snippet
          * 
          * @return builder
          * 
@@ -901,7 +902,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sourceHips The SourceHips param.
+         * @param sourceHips The source Host Integrity Profile (HIP)
          * 
          * @return builder
          * 
@@ -912,7 +913,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sourceHips The SourceHips param.
+         * @param sourceHips The source Host Integrity Profile (HIP)
          * 
          * @return builder
          * 
@@ -922,7 +923,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sourceHips The SourceHips param.
+         * @param sourceHips The source Host Integrity Profile (HIP)
          * 
          * @return builder
          * 
@@ -932,7 +933,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sourceUsers The SourceUsers param.
+         * @param sourceUsers The source users
          * 
          * @return builder
          * 
@@ -943,7 +944,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sourceUsers The SourceUsers param.
+         * @param sourceUsers The source users
          * 
          * @return builder
          * 
@@ -953,7 +954,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sourceUsers The SourceUsers param.
+         * @param sourceUsers The source users
          * 
          * @return builder
          * 
@@ -963,18 +964,18 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sources The Sources param.
+         * @param sources The source addresses
          * 
          * @return builder
          * 
          */
-        public Builder sources(@Nullable Output<List<String>> sources) {
+        public Builder sources(Output<List<String>> sources) {
             $.sources = sources;
             return this;
         }
 
         /**
-         * @param sources The Sources param.
+         * @param sources The source addresses
          * 
          * @return builder
          * 
@@ -984,7 +985,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sources The Sources param.
+         * @param sources The source addresses
          * 
          * @return builder
          * 
@@ -994,7 +995,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags The authentication rule tags
          * 
          * @return builder
          * 
@@ -1005,7 +1006,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags The authentication rule tags
          * 
          * @return builder
          * 
@@ -1015,7 +1016,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags The authentication rule tags
          * 
          * @return builder
          * 
@@ -1025,7 +1026,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param timeout The Timeout param. Value must be between 1 and 1440.
+         * @param timeout The authentication session timeout (seconds)
          * 
          * @return builder
          * 
@@ -1036,7 +1037,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param timeout The Timeout param. Value must be between 1 and 1440.
+         * @param timeout The authentication session timeout (seconds)
          * 
          * @return builder
          * 
@@ -1046,18 +1047,18 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param tos The Tos param.
+         * @param tos The destination security zones
          * 
          * @return builder
          * 
          */
-        public Builder tos(@Nullable Output<List<String>> tos) {
+        public Builder tos(Output<List<String>> tos) {
             $.tos = tos;
             return this;
         }
 
         /**
-         * @param tos The Tos param.
+         * @param tos The destination security zones
          * 
          * @return builder
          * 
@@ -1067,7 +1068,7 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param tos The Tos param.
+         * @param tos The destination security zones
          * 
          * @return builder
          * 
@@ -1077,6 +1078,21 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         public AuthenticationRuleArgs build() {
+            if ($.destinations == null) {
+                throw new MissingRequiredPropertyException("AuthenticationRuleArgs", "destinations");
+            }
+            if ($.froms == null) {
+                throw new MissingRequiredPropertyException("AuthenticationRuleArgs", "froms");
+            }
+            if ($.services == null) {
+                throw new MissingRequiredPropertyException("AuthenticationRuleArgs", "services");
+            }
+            if ($.sources == null) {
+                throw new MissingRequiredPropertyException("AuthenticationRuleArgs", "sources");
+            }
+            if ($.tos == null) {
+                throw new MissingRequiredPropertyException("AuthenticationRuleArgs", "tos");
+            }
             return $;
         }
     }

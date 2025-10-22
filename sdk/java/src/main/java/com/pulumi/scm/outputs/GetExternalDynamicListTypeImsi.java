@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetExternalDynamicListTypeImsiImsiAuth;
+import com.pulumi.scm.outputs.GetExternalDynamicListTypeImsiAuth;
 import com.pulumi.scm.outputs.GetExternalDynamicListTypeImsiRecurring;
 import java.lang.String;
 import java.util.List;
@@ -14,74 +14,74 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeImsi {
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    private GetExternalDynamicListTypeImsiAuth auth;
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     private String certificateProfile;
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 34 characters.
+     * @return Exception list
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return The ImsiAuth param.
-     * 
-     */
-    private GetExternalDynamicListTypeImsiImsiAuth imsiAuth;
-    /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     private GetExternalDynamicListTypeImsiRecurring recurring;
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
     private String url;
 
     private GetExternalDynamicListTypeImsi() {}
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    public GetExternalDynamicListTypeImsiAuth auth() {
+        return this.auth;
+    }
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     public String certificateProfile() {
         return this.certificateProfile;
     }
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 34 characters.
+     * @return Exception list
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return The ImsiAuth param.
-     * 
-     */
-    public GetExternalDynamicListTypeImsiImsiAuth imsiAuth() {
-        return this.imsiAuth;
-    }
-    /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     public GetExternalDynamicListTypeImsiRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
     public String url() {
@@ -97,23 +97,31 @@ public final class GetExternalDynamicListTypeImsi {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetExternalDynamicListTypeImsiAuth auth;
         private String certificateProfile;
         private String description;
         private List<String> exceptionLists;
-        private GetExternalDynamicListTypeImsiImsiAuth imsiAuth;
         private GetExternalDynamicListTypeImsiRecurring recurring;
         private String url;
         public Builder() {}
         public Builder(GetExternalDynamicListTypeImsi defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.auth = defaults.auth;
     	      this.certificateProfile = defaults.certificateProfile;
     	      this.description = defaults.description;
     	      this.exceptionLists = defaults.exceptionLists;
-    	      this.imsiAuth = defaults.imsiAuth;
     	      this.recurring = defaults.recurring;
     	      this.url = defaults.url;
         }
 
+        @CustomType.Setter
+        public Builder auth(GetExternalDynamicListTypeImsiAuth auth) {
+            if (auth == null) {
+              throw new MissingRequiredPropertyException("GetExternalDynamicListTypeImsi", "auth");
+            }
+            this.auth = auth;
+            return this;
+        }
         @CustomType.Setter
         public Builder certificateProfile(String certificateProfile) {
             if (certificateProfile == null) {
@@ -142,14 +150,6 @@ public final class GetExternalDynamicListTypeImsi {
             return exceptionLists(List.of(exceptionLists));
         }
         @CustomType.Setter
-        public Builder imsiAuth(GetExternalDynamicListTypeImsiImsiAuth imsiAuth) {
-            if (imsiAuth == null) {
-              throw new MissingRequiredPropertyException("GetExternalDynamicListTypeImsi", "imsiAuth");
-            }
-            this.imsiAuth = imsiAuth;
-            return this;
-        }
-        @CustomType.Setter
         public Builder recurring(GetExternalDynamicListTypeImsiRecurring recurring) {
             if (recurring == null) {
               throw new MissingRequiredPropertyException("GetExternalDynamicListTypeImsi", "recurring");
@@ -167,10 +167,10 @@ public final class GetExternalDynamicListTypeImsi {
         }
         public GetExternalDynamicListTypeImsi build() {
             final var _resultValue = new GetExternalDynamicListTypeImsi();
+            _resultValue.auth = auth;
             _resultValue.certificateProfile = certificateProfile;
             _resultValue.description = description;
             _resultValue.exceptionLists = exceptionLists;
-            _resultValue.imsiAuth = imsiAuth;
             _resultValue.recurring = recurring;
             _resultValue.url = url;
             return _resultValue;

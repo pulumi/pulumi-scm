@@ -16,14 +16,14 @@ public final class QosPolicyRuleActionArgs extends com.pulumi.resources.Resource
     public static final QosPolicyRuleActionArgs Empty = new QosPolicyRuleActionArgs();
 
     /**
-     * The Class param.
+     * Class
      * 
      */
     @Import(name="class")
     private @Nullable Output<String> class_;
 
     /**
-     * @return The Class param.
+     * @return Class
      * 
      */
     public Optional<Output<String>> class_() {
@@ -55,7 +55,7 @@ public final class QosPolicyRuleActionArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param class_ The Class param.
+         * @param class_ Class
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class QosPolicyRuleActionArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param class_ The Class param.
+         * @param class_ Class
          * 
          * @return builder
          * 

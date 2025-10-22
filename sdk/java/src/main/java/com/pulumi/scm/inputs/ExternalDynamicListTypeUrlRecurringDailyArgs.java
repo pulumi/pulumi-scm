@@ -5,10 +5,9 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class ExternalDynamicListTypeUrlRecurringDailyArgs extends com.pulumi.resources.ResourceArgs {
@@ -16,18 +15,18 @@ public final class ExternalDynamicListTypeUrlRecurringDailyArgs extends com.pulu
     public static final ExternalDynamicListTypeUrlRecurringDailyArgs Empty = new ExternalDynamicListTypeUrlRecurringDailyArgs();
 
     /**
-     * Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * Time specification hh (e.g. 20)
      * 
      */
-    @Import(name="at")
-    private @Nullable Output<String> at;
+    @Import(name="at", required=true)
+    private Output<String> at;
 
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
-    public Optional<Output<String>> at() {
-        return Optional.ofNullable(this.at);
+    public Output<String> at() {
+        return this.at;
     }
 
     private ExternalDynamicListTypeUrlRecurringDailyArgs() {}
@@ -55,18 +54,18 @@ public final class ExternalDynamicListTypeUrlRecurringDailyArgs extends com.pulu
         }
 
         /**
-         * @param at Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+         * @param at Time specification hh (e.g. 20)
          * 
          * @return builder
          * 
          */
-        public Builder at(@Nullable Output<String> at) {
+        public Builder at(Output<String> at) {
             $.at = at;
             return this;
         }
 
         /**
-         * @param at Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+         * @param at Time specification hh (e.g. 20)
          * 
          * @return builder
          * 
@@ -76,6 +75,9 @@ public final class ExternalDynamicListTypeUrlRecurringDailyArgs extends com.pulu
         }
 
         public ExternalDynamicListTypeUrlRecurringDailyArgs build() {
+            if ($.at == null) {
+                throw new MissingRequiredPropertyException("ExternalDynamicListTypeUrlRecurringDailyArgs", "at");
+            }
             return $;
         }
     }

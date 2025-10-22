@@ -45,28 +45,28 @@ class ApplicationFilterArgs:
                  used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ApplicationFilter resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] evasive: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.bool] new_appid: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] pervasive: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] prone_to_misuse: only True is a valid value.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] risks: The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input['ApplicationFilterTaggingArgs'] tagging: The Tagging param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] tunnels_other_apps: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] used_by_malware: only True is a valid value.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] evasive: only True is a valid value
+        :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
+        :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.bool] new_appid: only True is a valid value
+        :param pulumi.Input[_builtins.bool] pervasive: only True is a valid value
+        :param pulumi.Input[_builtins.bool] prone_to_misuse: only True is a valid value
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] risks: Risk
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
+        :param pulumi.Input['ApplicationFilterTaggingArgs'] tagging: Tagging
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
+        :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value
+        :param pulumi.Input[_builtins.bool] tunnels_other_apps: only True is a valid value
+        :param pulumi.Input[_builtins.bool] used_by_malware: only True is a valid value
         """
         if categories is not None:
             pulumi.set(__self__, "categories", categories)
@@ -117,7 +117,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Category
         """
         return pulumi.get(self, "categories")
 
@@ -129,7 +129,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -141,7 +141,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def evasive(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "evasive")
 
@@ -153,7 +153,7 @@ class ApplicationFilterArgs:
     @pulumi.getter(name="excessiveBandwidthUse")
     def excessive_bandwidth_use(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "excessive_bandwidth_use")
 
@@ -165,7 +165,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def excludes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Exclude
         """
         return pulumi.get(self, "excludes")
 
@@ -177,7 +177,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -189,7 +189,7 @@ class ApplicationFilterArgs:
     @pulumi.getter(name="hasKnownVulnerabilities")
     def has_known_vulnerabilities(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "has_known_vulnerabilities")
 
@@ -201,7 +201,7 @@ class ApplicationFilterArgs:
     @pulumi.getter(name="isSaas")
     def is_saas(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "is_saas")
 
@@ -213,7 +213,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string [ 0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -225,7 +225,7 @@ class ApplicationFilterArgs:
     @pulumi.getter(name="newAppid")
     def new_appid(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "new_appid")
 
@@ -237,7 +237,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def pervasive(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "pervasive")
 
@@ -249,7 +249,7 @@ class ApplicationFilterArgs:
     @pulumi.getter(name="proneToMisuse")
     def prone_to_misuse(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "prone_to_misuse")
 
@@ -261,7 +261,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def risks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
         """
-        The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+        Risk
         """
         return pulumi.get(self, "risks")
 
@@ -273,7 +273,7 @@ class ApplicationFilterArgs:
     @pulumi.getter(name="saasCertifications")
     def saas_certifications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        Saas certifications
         """
         return pulumi.get(self, "saas_certifications")
 
@@ -285,7 +285,7 @@ class ApplicationFilterArgs:
     @pulumi.getter(name="saasRisks")
     def saas_risks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        Saas risk
         """
         return pulumi.get(self, "saas_risks")
 
@@ -297,7 +297,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -309,7 +309,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def subcategories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Subcategory
         """
         return pulumi.get(self, "subcategories")
 
@@ -321,7 +321,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def tagging(self) -> Optional[pulumi.Input['ApplicationFilterTaggingArgs']]:
         """
-        The Tagging param.
+        Tagging
         """
         return pulumi.get(self, "tagging")
 
@@ -333,7 +333,7 @@ class ApplicationFilterArgs:
     @pulumi.getter
     def technologies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Technology
         """
         return pulumi.get(self, "technologies")
 
@@ -345,7 +345,7 @@ class ApplicationFilterArgs:
     @pulumi.getter(name="transfersFiles")
     def transfers_files(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "transfers_files")
 
@@ -357,7 +357,7 @@ class ApplicationFilterArgs:
     @pulumi.getter(name="tunnelsOtherApps")
     def tunnels_other_apps(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "tunnels_other_apps")
 
@@ -369,7 +369,7 @@ class ApplicationFilterArgs:
     @pulumi.getter(name="usedByMalware")
     def used_by_malware(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "used_by_malware")
 
@@ -406,28 +406,28 @@ class _ApplicationFilterState:
                  used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ApplicationFilter resources.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] evasive: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.bool] new_appid: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] pervasive: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] prone_to_misuse: only True is a valid value.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] risks: The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input['ApplicationFilterTaggingArgs'] tagging: The Tagging param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] tunnels_other_apps: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] used_by_malware: only True is a valid value.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] evasive: only True is a valid value
+        :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
+        :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.bool] new_appid: only True is a valid value
+        :param pulumi.Input[_builtins.bool] pervasive: only True is a valid value
+        :param pulumi.Input[_builtins.bool] prone_to_misuse: only True is a valid value
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] risks: Risk
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
+        :param pulumi.Input['ApplicationFilterTaggingArgs'] tagging: Tagging
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
+        :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value
+        :param pulumi.Input[_builtins.bool] tunnels_other_apps: only True is a valid value
+        :param pulumi.Input[_builtins.bool] used_by_malware: only True is a valid value
         """
         if categories is not None:
             pulumi.set(__self__, "categories", categories)
@@ -480,7 +480,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Category
         """
         return pulumi.get(self, "categories")
 
@@ -492,7 +492,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -504,7 +504,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def evasive(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "evasive")
 
@@ -516,7 +516,7 @@ class _ApplicationFilterState:
     @pulumi.getter(name="excessiveBandwidthUse")
     def excessive_bandwidth_use(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "excessive_bandwidth_use")
 
@@ -528,7 +528,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def excludes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Exclude
         """
         return pulumi.get(self, "excludes")
 
@@ -540,7 +540,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -552,7 +552,7 @@ class _ApplicationFilterState:
     @pulumi.getter(name="hasKnownVulnerabilities")
     def has_known_vulnerabilities(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "has_known_vulnerabilities")
 
@@ -564,7 +564,7 @@ class _ApplicationFilterState:
     @pulumi.getter(name="isSaas")
     def is_saas(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "is_saas")
 
@@ -576,7 +576,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string [ 0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -588,7 +588,7 @@ class _ApplicationFilterState:
     @pulumi.getter(name="newAppid")
     def new_appid(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "new_appid")
 
@@ -600,7 +600,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def pervasive(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "pervasive")
 
@@ -612,7 +612,7 @@ class _ApplicationFilterState:
     @pulumi.getter(name="proneToMisuse")
     def prone_to_misuse(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "prone_to_misuse")
 
@@ -624,7 +624,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def risks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
         """
-        The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+        Risk
         """
         return pulumi.get(self, "risks")
 
@@ -636,7 +636,7 @@ class _ApplicationFilterState:
     @pulumi.getter(name="saasCertifications")
     def saas_certifications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        Saas certifications
         """
         return pulumi.get(self, "saas_certifications")
 
@@ -648,7 +648,7 @@ class _ApplicationFilterState:
     @pulumi.getter(name="saasRisks")
     def saas_risks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        Saas risk
         """
         return pulumi.get(self, "saas_risks")
 
@@ -660,7 +660,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -672,7 +672,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def subcategories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Subcategory
         """
         return pulumi.get(self, "subcategories")
 
@@ -684,7 +684,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def tagging(self) -> Optional[pulumi.Input['ApplicationFilterTaggingArgs']]:
         """
-        The Tagging param.
+        Tagging
         """
         return pulumi.get(self, "tagging")
 
@@ -696,7 +696,7 @@ class _ApplicationFilterState:
     @pulumi.getter
     def technologies(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Technology
         """
         return pulumi.get(self, "technologies")
 
@@ -717,7 +717,7 @@ class _ApplicationFilterState:
     @pulumi.getter(name="transfersFiles")
     def transfers_files(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "transfers_files")
 
@@ -729,7 +729,7 @@ class _ApplicationFilterState:
     @pulumi.getter(name="tunnelsOtherApps")
     def tunnels_other_apps(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "tunnels_other_apps")
 
@@ -741,7 +741,7 @@ class _ApplicationFilterState:
     @pulumi.getter(name="usedByMalware")
     def used_by_malware(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "used_by_malware")
 
@@ -780,41 +780,34 @@ class ApplicationFilter(pulumi.CustomResource):
                  used_by_malware: Optional[pulumi.Input[_builtins.bool]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        ApplicationFilter resource
 
         ## Example Usage
 
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.ApplicationFilter("example")
-        ```
-
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] evasive: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.bool] new_appid: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] pervasive: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] prone_to_misuse: only True is a valid value.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] risks: The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']] tagging: The Tagging param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] tunnels_other_apps: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] used_by_malware: only True is a valid value.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] evasive: only True is a valid value
+        :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
+        :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.bool] new_appid: only True is a valid value
+        :param pulumi.Input[_builtins.bool] pervasive: only True is a valid value
+        :param pulumi.Input[_builtins.bool] prone_to_misuse: only True is a valid value
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] risks: Risk
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
+        :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']] tagging: Tagging
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
+        :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value
+        :param pulumi.Input[_builtins.bool] tunnels_other_apps: only True is a valid value
+        :param pulumi.Input[_builtins.bool] used_by_malware: only True is a valid value
         """
         ...
     @overload
@@ -823,16 +816,9 @@ class ApplicationFilter(pulumi.CustomResource):
                  args: Optional[ApplicationFilterArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        ApplicationFilter resource
 
         ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.ApplicationFilter("example")
-        ```
 
         :param str resource_name: The name of the resource.
         :param ApplicationFilterArgs args: The arguments to use to populate this resource's properties.
@@ -943,28 +929,28 @@ class ApplicationFilter(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] evasive: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.bool] new_appid: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] pervasive: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] prone_to_misuse: only True is a valid value.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] risks: The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']] tagging: The Tagging param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
-        :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] tunnels_other_apps: only True is a valid value.
-        :param pulumi.Input[_builtins.bool] used_by_malware: only True is a valid value.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] evasive: only True is a valid value
+        :param pulumi.Input[_builtins.bool] excessive_bandwidth_use: only True is a valid value
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Exclude
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] has_known_vulnerabilities: only True is a valid value
+        :param pulumi.Input[_builtins.bool] is_saas: only True is a valid value
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.bool] new_appid: only True is a valid value
+        :param pulumi.Input[_builtins.bool] pervasive: only True is a valid value
+        :param pulumi.Input[_builtins.bool] prone_to_misuse: only True is a valid value
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] risks: Risk
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_certifications: Saas certifications
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_risks: Saas risk
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subcategories: Subcategory
+        :param pulumi.Input[Union['ApplicationFilterTaggingArgs', 'ApplicationFilterTaggingArgsDict']] tagging: Tagging
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] technologies: Technology
+        :param pulumi.Input[_builtins.bool] transfers_files: only True is a valid value
+        :param pulumi.Input[_builtins.bool] tunnels_other_apps: only True is a valid value
+        :param pulumi.Input[_builtins.bool] used_by_malware: only True is a valid value
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -999,7 +985,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def categories(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Category
         """
         return pulumi.get(self, "categories")
 
@@ -1007,7 +993,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -1015,7 +1001,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def evasive(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "evasive")
 
@@ -1023,7 +1009,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter(name="excessiveBandwidthUse")
     def excessive_bandwidth_use(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "excessive_bandwidth_use")
 
@@ -1031,7 +1017,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def excludes(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Exclude
         """
         return pulumi.get(self, "excludes")
 
@@ -1039,7 +1025,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -1047,7 +1033,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter(name="hasKnownVulnerabilities")
     def has_known_vulnerabilities(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "has_known_vulnerabilities")
 
@@ -1055,7 +1041,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter(name="isSaas")
     def is_saas(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "is_saas")
 
@@ -1063,7 +1049,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string [ 0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -1071,7 +1057,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter(name="newAppid")
     def new_appid(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "new_appid")
 
@@ -1079,7 +1065,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def pervasive(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "pervasive")
 
@@ -1087,7 +1073,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter(name="proneToMisuse")
     def prone_to_misuse(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "prone_to_misuse")
 
@@ -1095,7 +1081,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def risks(self) -> pulumi.Output[Optional[Sequence[_builtins.int]]]:
         """
-        The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+        Risk
         """
         return pulumi.get(self, "risks")
 
@@ -1103,7 +1089,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter(name="saasCertifications")
     def saas_certifications(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        Saas certifications
         """
         return pulumi.get(self, "saas_certifications")
 
@@ -1111,7 +1097,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter(name="saasRisks")
     def saas_risks(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        Saas risk
         """
         return pulumi.get(self, "saas_risks")
 
@@ -1119,7 +1105,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -1127,7 +1113,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def subcategories(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Subcategory
         """
         return pulumi.get(self, "subcategories")
 
@@ -1135,7 +1121,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def tagging(self) -> pulumi.Output[Optional['outputs.ApplicationFilterTagging']]:
         """
-        The Tagging param.
+        Tagging
         """
         return pulumi.get(self, "tagging")
 
@@ -1143,7 +1129,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter
     def technologies(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Technology
         """
         return pulumi.get(self, "technologies")
 
@@ -1156,7 +1142,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter(name="transfersFiles")
     def transfers_files(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "transfers_files")
 
@@ -1164,7 +1150,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter(name="tunnelsOtherApps")
     def tunnels_other_apps(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "tunnels_other_apps")
 
@@ -1172,7 +1158,7 @@ class ApplicationFilter(pulumi.CustomResource):
     @pulumi.getter(name="usedByMalware")
     def used_by_malware(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "used_by_malware")
 

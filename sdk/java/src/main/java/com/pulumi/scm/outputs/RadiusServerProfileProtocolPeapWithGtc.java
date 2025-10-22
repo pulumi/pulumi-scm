@@ -11,28 +11,28 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
-public final class RadiusServerProfileProtocolPeapWithGtc {
+public final class RadiusServerProfileProtocolPEAPWithGTC {
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     private @Nullable Boolean anonOuterId;
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     private @Nullable String radiusCertProfile;
 
-    private RadiusServerProfileProtocolPeapWithGtc() {}
+    private RadiusServerProfileProtocolPEAPWithGTC() {}
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     public Optional<Boolean> anonOuterId() {
         return Optional.ofNullable(this.anonOuterId);
     }
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     public Optional<String> radiusCertProfile() {
@@ -43,7 +43,7 @@ public final class RadiusServerProfileProtocolPeapWithGtc {
         return new Builder();
     }
 
-    public static Builder builder(RadiusServerProfileProtocolPeapWithGtc defaults) {
+    public static Builder builder(RadiusServerProfileProtocolPEAPWithGTC defaults) {
         return new Builder(defaults);
     }
     @CustomType.Builder
@@ -51,7 +51,7 @@ public final class RadiusServerProfileProtocolPeapWithGtc {
         private @Nullable Boolean anonOuterId;
         private @Nullable String radiusCertProfile;
         public Builder() {}
-        public Builder(RadiusServerProfileProtocolPeapWithGtc defaults) {
+        public Builder(RadiusServerProfileProtocolPEAPWithGTC defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.anonOuterId = defaults.anonOuterId;
     	      this.radiusCertProfile = defaults.radiusCertProfile;
@@ -69,8 +69,8 @@ public final class RadiusServerProfileProtocolPeapWithGtc {
             this.radiusCertProfile = radiusCertProfile;
             return this;
         }
-        public RadiusServerProfileProtocolPeapWithGtc build() {
-            final var _resultValue = new RadiusServerProfileProtocolPeapWithGtc();
+        public RadiusServerProfileProtocolPEAPWithGTC build() {
+            final var _resultValue = new RadiusServerProfileProtocolPEAPWithGTC();
             _resultValue.anonOuterId = anonOuterId;
             _resultValue.radiusCertProfile = radiusCertProfile;
             return _resultValue;

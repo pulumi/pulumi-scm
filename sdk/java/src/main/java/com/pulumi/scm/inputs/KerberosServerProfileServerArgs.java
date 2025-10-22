@@ -17,14 +17,14 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
     public static final KerberosServerProfileServerArgs Empty = new KerberosServerProfileServerArgs();
 
     /**
-     * The Host param.
+     * The Kerberos server IP address
      * 
      */
     @Import(name="host")
     private @Nullable Output<String> host;
 
     /**
-     * @return The Host param.
+     * @return The Kerberos server IP address
      * 
      */
     public Optional<Output<String>> host() {
@@ -32,14 +32,14 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
     }
 
     /**
-     * The Name param.
+     * The Kerberos server name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The Kerberos server name
      * 
      */
     public Optional<Output<String>> name() {
@@ -47,14 +47,14 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
     }
 
     /**
-     * The Port param. Value must be between 1 and 65535.
+     * The Kerberos server port
      * 
      */
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The Kerberos server port
      * 
      */
     public Optional<Output<Integer>> port() {
@@ -88,7 +88,7 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param host The Host param.
+         * @param host The Kerberos server IP address
          * 
          * @return builder
          * 
@@ -99,7 +99,7 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param host The Host param.
+         * @param host The Kerberos server IP address
          * 
          * @return builder
          * 
@@ -109,7 +109,7 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param name The Name param.
+         * @param name The Kerberos server name
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param name The Name param.
+         * @param name The Kerberos server name
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param port The Port param. Value must be between 1 and 65535.
+         * @param port The Kerberos server port
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class KerberosServerProfileServerArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param port The Port param. Value must be between 1 and 65535.
+         * @param port The Kerberos server port
          * 
          * @return builder
          * 

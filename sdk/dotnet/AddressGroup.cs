@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// AddressGroup resource
     /// 
     /// ## Example Usage
     /// 
@@ -22,21 +22,63 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var x = new Scm.AddressObject("x", new()
+    ///     // This file is embedded using go:embed
+    ///     // First, create some addresses that will be used in the address group
+    ///     var scmAddressAg1 = new Scm.Address("scm_address_ag_1", new()
     ///     {
     ///         Folder = "Shared",
-    ///         Name = "foo",
-    ///         Description = "Made by Pulumi",
-    ///         Fqdn = "www.example.com",
+    ///         Name = "scm_address_ag_1",
+    ///         Description = "First test address",
+    ///         IpNetmask = "192.168.1.1/32",
     ///     });
     /// 
-    ///     var example = new Scm.AddressGroup("example", new()
+    ///     var scmAddressAg2 = new Scm.Address("scm_address_ag_2", new()
     ///     {
     ///         Folder = "Shared",
-    ///         Name = "example",
-    ///         StaticLists = new[]
+    ///         Name = "scm_address_ag_2",
+    ///         Description = "Second test address",
+    ///         IpNetmask = "192.168.1.2/32",
+    ///     });
+    /// 
+    ///     // Create the address group that references the addresses above
+    ///     var scmAddressGroup1 = new Scm.AddressGroup("scm_address_group_1", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_address_group_1",
+    ///         Description = "Sample address group created with Terraform",
+    ///         Statics = new[]
     ///         {
-    ///             x.Name,
+    ///             scmAddressAg1.Name,
+    ///             scmAddressAg2.Name,
+    ///         },
+    ///     });
+    /// 
+    ///     // Create tags to be used for dynamic address group
+    ///     var scmAddressgroupTag1 = new Scm.Tag("scm_addressgroup_tag_1", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_addressgroup_tag_1",
+    ///         Comments = "Managed by Pulumi",
+    ///         Color = "Orange",
+    ///     });
+    /// 
+    ///     var scmAddressgroupTag2 = new Scm.Tag("scm_addressgroup_tag_2", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_addressgroup_tag_2",
+    ///         Comments = "Managed by Pulumi",
+    ///         Color = "Blue",
+    ///     });
+    /// 
+    ///     // Create a dynamic addressgroup that matches both tags
+    ///     var scmAddressgroupDynamic = new Scm.AddressGroup("scm_addressgroup_dynamic", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_addressgroup_dynamic",
+    ///         Description = "Managed by Pulumi",
+    ///         Dynamic = new Scm.Inputs.AddressGroupDynamicArgs
+    ///         {
+    ///             Filter = "scm_addressgroup_tag_1 and scm_addressgroup_tag_2",
     ///         },
     ///     });
     /// 
@@ -47,49 +89,49 @@ namespace Pulumi.Scm
     public partial class AddressGroup : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// Description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The DynamicValue param. Ensure that only one of the following is specified: `Dynamic`, `Static`
+        /// Dynamic
         /// </summary>
-        [Output("dynamicValue")]
-        public Output<Outputs.AddressGroupDynamicValue?> DynamicValue { get; private set; } = null!;
+        [Output("dynamic")]
+        public Output<Outputs.AddressGroupDynamic?> Dynamic { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the address group
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `Dynamic`, `Static`
+        /// Static
         /// </summary>
-        [Output("staticLists")]
-        public Output<ImmutableArray<string>> StaticLists { get; private set; } = null!;
+        [Output("statics")]
+        public Output<ImmutableArray<string>> Statics { get; private set; } = null!;
 
         /// <summary>
-        /// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags for address group object
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
@@ -144,58 +186,58 @@ namespace Pulumi.Scm
     public sealed class AddressGroupArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The DynamicValue param. Ensure that only one of the following is specified: `Dynamic`, `Static`
+        /// Dynamic
         /// </summary>
-        [Input("dynamicValue")]
-        public Input<Inputs.AddressGroupDynamicValueArgs>? DynamicValue { get; set; }
+        [Input("dynamic")]
+        public Input<Inputs.AddressGroupDynamicArgs>? Dynamic { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the address group
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
-        [Input("staticLists")]
-        private InputList<string>? _staticLists;
+        [Input("statics")]
+        private InputList<string>? _statics;
 
         /// <summary>
-        /// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `Dynamic`, `Static`
+        /// Static
         /// </summary>
-        public InputList<string> StaticLists
+        public InputList<string> Statics
         {
-            get => _staticLists ?? (_staticLists = new InputList<string>());
-            set => _staticLists = value;
+            get => _statics ?? (_statics = new InputList<string>());
+            set => _statics = value;
         }
 
         [Input("tags")]
         private InputList<string>? _tags;
 
         /// <summary>
-        /// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags for address group object
         /// </summary>
         public InputList<string> Tags
         {
@@ -212,58 +254,58 @@ namespace Pulumi.Scm
     public sealed class AddressGroupState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The DynamicValue param. Ensure that only one of the following is specified: `Dynamic`, `Static`
+        /// Dynamic
         /// </summary>
-        [Input("dynamicValue")]
-        public Input<Inputs.AddressGroupDynamicValueGetArgs>? DynamicValue { get; set; }
+        [Input("dynamic")]
+        public Input<Inputs.AddressGroupDynamicGetArgs>? Dynamic { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the address group
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
-        [Input("staticLists")]
-        private InputList<string>? _staticLists;
+        [Input("statics")]
+        private InputList<string>? _statics;
 
         /// <summary>
-        /// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `Dynamic`, `Static`
+        /// Static
         /// </summary>
-        public InputList<string> StaticLists
+        public InputList<string> Statics
         {
-            get => _staticLists ?? (_staticLists = new InputList<string>());
-            set => _staticLists = value;
+            get => _statics ?? (_statics = new InputList<string>());
+            set => _statics = value;
         }
 
         [Input("tags")]
         private InputList<string>? _tags;
 
         /// <summary>
-        /// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags for address group object
         /// </summary>
         public InputList<string> Tags
         {

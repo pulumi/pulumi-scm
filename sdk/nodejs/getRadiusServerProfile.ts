@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getRadiusServerProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * RadiusServerProfile data source
  */
 export function getRadiusServerProfile(args: GetRadiusServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetRadiusServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRadiusServerProfile:getRadiusServerProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getRadiusServerProfile(args: GetRadiusServerProfileArgs, opts?: 
  */
 export interface GetRadiusServerProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the RADIUS server profile
      */
     id: string;
+    /**
+     * The name of the RADIUS server profile
+     */
+    name?: string;
 }
 
 /**
@@ -42,45 +36,51 @@ export interface GetRadiusServerProfileArgs {
  */
 export interface GetRadiusServerProfileResult {
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the RADIUS server profile
      */
     readonly id: string;
     /**
-     * The Protocol param.
+     * The name of the RADIUS server profile
+     */
+    readonly name: string;
+    /**
+     * The RADIUS authentication protocol
      */
     readonly protocol: outputs.GetRadiusServerProfileProtocol;
     /**
-     * The Retries param. Value must be between 1 and 5.
+     * The number of RADIUS server retries
      */
     readonly retries: number;
     /**
-     * The Servers param.
+     * Server
      */
     readonly servers: outputs.GetRadiusServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * The Timeout param. Value must be between 1 and 120.
+     * The RADIUS server authentication timeout (seconds)
      */
     readonly timeout: number;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getRadiusServerProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * RadiusServerProfile data source
  */
 export function getRadiusServerProfileOutput(args: GetRadiusServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRadiusServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRadiusServerProfile:getRadiusServerProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -89,7 +89,11 @@ export function getRadiusServerProfileOutput(args: GetRadiusServerProfileOutputA
  */
 export interface GetRadiusServerProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the RADIUS server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the RADIUS server profile
+     */
+    name?: pulumi.Input<string>;
 }

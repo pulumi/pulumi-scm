@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class RemoteNetworkEcmpTunnelGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The IpsecTunnel param.
+        /// Ipsec tunnel
         /// </summary>
         [Input("ipsecTunnel", required: true)]
         public Input<string> IpsecTunnel { get; set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         [Input("protocol", required: true)]
         public Input<Inputs.RemoteNetworkEcmpTunnelProtocolGetArgs> Protocol { get; set; } = null!;

@@ -14,55 +14,55 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareProfileThreatExceptionActionResult
     {
         /// <summary>
-        /// The Alert param.
+        /// Alert
         /// </summary>
-        public readonly bool Alert;
+        public readonly Outputs.GetAntiSpywareProfileThreatExceptionActionAlertResult Alert;
         /// <summary>
-        /// The Allow param.
+        /// Allow
         /// </summary>
-        public readonly bool Allow;
+        public readonly Outputs.GetAntiSpywareProfileThreatExceptionActionAllowResult Allow;
         /// <summary>
-        /// The BlockIp param.
+        /// anti spyware profiles threat exception action block ip
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileThreatExceptionActionBlockIpResult BlockIp;
         /// <summary>
-        /// The Default param.
+        /// Default
         /// </summary>
-        public readonly bool Default;
+        public readonly Outputs.GetAntiSpywareProfileThreatExceptionActionDefaultResult Default;
         /// <summary>
-        /// The Drop param.
+        /// Drop
         /// </summary>
-        public readonly bool Drop;
+        public readonly Outputs.GetAntiSpywareProfileThreatExceptionActionDropResult Drop;
         /// <summary>
-        /// The ResetBoth param.
+        /// Reset both
         /// </summary>
-        public readonly bool ResetBoth;
+        public readonly Outputs.GetAntiSpywareProfileThreatExceptionActionResetBothResult ResetBoth;
         /// <summary>
-        /// The ResetClient param.
+        /// Reset client
         /// </summary>
-        public readonly bool ResetClient;
+        public readonly Outputs.GetAntiSpywareProfileThreatExceptionActionResetClientResult ResetClient;
         /// <summary>
-        /// The ResetServer param.
+        /// Reset server
         /// </summary>
-        public readonly bool ResetServer;
+        public readonly Outputs.GetAntiSpywareProfileThreatExceptionActionResetServerResult ResetServer;
 
         [OutputConstructor]
         private GetAntiSpywareProfileThreatExceptionActionResult(
-            bool alert,
+            Outputs.GetAntiSpywareProfileThreatExceptionActionAlertResult alert,
 
-            bool allow,
+            Outputs.GetAntiSpywareProfileThreatExceptionActionAllowResult allow,
 
             Outputs.GetAntiSpywareProfileThreatExceptionActionBlockIpResult blockIp,
 
-            bool @default,
+            Outputs.GetAntiSpywareProfileThreatExceptionActionDefaultResult @default,
 
-            bool drop,
+            Outputs.GetAntiSpywareProfileThreatExceptionActionDropResult drop,
 
-            bool resetBoth,
+            Outputs.GetAntiSpywareProfileThreatExceptionActionResetBothResult resetBoth,
 
-            bool resetClient,
+            Outputs.GetAntiSpywareProfileThreatExceptionActionResetClientResult resetClient,
 
-            bool resetServer)
+            Outputs.GetAntiSpywareProfileThreatExceptionActionResetServerResult resetServer)
         {
             Alert = alert;
             Allow = allow;

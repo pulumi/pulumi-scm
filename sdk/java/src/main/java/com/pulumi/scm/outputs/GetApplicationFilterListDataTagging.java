@@ -13,26 +13,26 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationFilterListDataTagging {
     /**
-     * @return The NoTag param.
+     * @return No tag
      * 
      */
     private Boolean noTag;
     /**
-     * @return The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return Tag
      * 
      */
     private List<String> tags;
 
     private GetApplicationFilterListDataTagging() {}
     /**
-     * @return The NoTag param.
+     * @return No tag
      * 
      */
     public Boolean noTag() {
         return this.noTag;
     }
     /**
-     * @return The Tags param. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return Tag
      * 
      */
     public List<String> tags() {

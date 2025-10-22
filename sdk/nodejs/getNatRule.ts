@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getNatRule({
- *     id: "1234-56-789",
- * });
- * ```
+ * NatRule data source
  */
 export function getNatRule(args: GetNatRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetNatRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getNatRule:getNatRule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getNatRule(args: GetNatRuleArgs, opts?: pulumi.InvokeOptions): P
  */
 export interface GetNatRuleArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * NAT rule name
+     */
+    name?: string;
 }
 
 /**
@@ -42,109 +36,99 @@ export interface GetNatRuleArgs {
  */
 export interface GetNatRuleResult {
     /**
-     * The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+     * Active active device binding
      */
     readonly activeActiveDeviceBinding: string;
     /**
-     * The Description param.
+     * NAT rule description
      */
     readonly description: string;
     /**
-     * Static destination translation parameter.
-     */
-    readonly destinationTranslation: outputs.GetNatRuleDestinationTranslation;
-    /**
-     * The destination address(es).
+     * Destination address(es) of the original packet
      */
     readonly destinations: string[];
     /**
-     * The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The device in which the resource is defined
      */
     readonly device: string;
     /**
-     * The Disabled param.
+     * Disable NAT rule?
      */
     readonly disabled: boolean;
     /**
-     * Dynamic destination translation parameter.
+     * Distribution method
      */
-    readonly dynamicDestinationTranslation: outputs.GetNatRuleDynamicDestinationTranslation;
+    readonly distribution: string;
     /**
-     * The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * DNS rewrite
+     */
+    readonly dnsRewrite: outputs.GetNatRuleDnsRewrite;
+    /**
+     * The folder in which the resource is defined
      */
     readonly folder: string;
     /**
-     * The source security zone(s).
+     * Source zone(s) of the original packet
      */
     readonly froms: string[];
     /**
-     * The GroupTag param.
-     */
-    readonly groupTag: string;
-    /**
-     * The Id param.
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The Name param.
+     * NAT rule name
      */
     readonly name: string;
     /**
-     * The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+     * NAT type
      */
     readonly natType: string;
     /**
-     * The Service param.
+     * The service of the original packet
      */
     readonly service: string;
     /**
-     * The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The snippet in which the resource is defined
      */
     readonly snippet: string;
     /**
-     * The SourceTranslation param.
+     * Source translation
      */
     readonly sourceTranslation: outputs.GetNatRuleSourceTranslation;
     /**
-     * The source address(es).
+     * Source address(es) of the original packet
      */
     readonly sources: string[];
     /**
-     * The Tags param.
+     * NAT rule tags
      */
     readonly tags: string[];
-    /**
-     * The Target param.
-     */
-    readonly target: outputs.GetNatRuleTarget;
     readonly tfid: string;
     /**
-     * The ToInterface param.
+     * Destination interface of the original packet
      */
     readonly toInterface: string;
     /**
-     * The destination security zone(s).
+     * Destination zone of the original packet
      */
     readonly tos: string[];
+    /**
+     * Translated destination IP address
+     */
+    readonly translatedAddressSingle: string;
+    /**
+     * Translated destination port
+     */
+    readonly translatedPort: number;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getNatRule({
- *     id: "1234-56-789",
- * });
- * ```
+ * NatRule data source
  */
 export function getNatRuleOutput(args: GetNatRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetNatRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getNatRule:getNatRule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -153,7 +137,11 @@ export function getNatRuleOutput(args: GetNatRuleOutputArgs, opts?: pulumi.Invok
  */
 export interface GetNatRuleOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * NAT rule name
+     */
+    name?: pulumi.Input<string>;
 }

@@ -14,62 +14,62 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareSignatureListDataSignatureStandard {
     /**
-     * @return The AndConditions param.
+     * @return And condition
      * 
      */
     private List<GetAntiSpywareSignatureListDataSignatureStandardAndCondition> andConditions;
     /**
-     * @return The Comment param. String length must not exceed 256 characters.
+     * @return Comment
      * 
      */
     private String comment;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The OrderFree param. Default: `false`.
+     * @return Order free
      * 
      */
     private Boolean orderFree;
     /**
-     * @return The Scope param. String must be one of these: `&#34;protocol-data-unit&#34;`, `&#34;session&#34;`.
+     * @return Scope
      * 
      */
     private String scope;
 
     private GetAntiSpywareSignatureListDataSignatureStandard() {}
     /**
-     * @return The AndConditions param.
+     * @return And condition
      * 
      */
     public List<GetAntiSpywareSignatureListDataSignatureStandardAndCondition> andConditions() {
         return this.andConditions;
     }
     /**
-     * @return The Comment param. String length must not exceed 256 characters.
+     * @return Comment
      * 
      */
     public String comment() {
         return this.comment;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The OrderFree param. Default: `false`.
+     * @return Order free
      * 
      */
     public Boolean orderFree() {
         return this.orderFree;
     }
     /**
-     * @return The Scope param. String must be one of these: `&#34;protocol-data-unit&#34;`, `&#34;session&#34;`.
+     * @return Scope
      * 
      */
     public String scope() {

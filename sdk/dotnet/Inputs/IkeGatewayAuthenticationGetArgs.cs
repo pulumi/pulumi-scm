@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class IkeGatewayAuthenticationGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Certificate param. Ensure that only one of the following is specified: `Certificate`, `PreSharedKey`
+        /// Certificate
         /// </summary>
         [Input("certificate")]
         public Input<Inputs.IkeGatewayAuthenticationCertificateGetArgs>? Certificate { get; set; }
 
         /// <summary>
-        /// The PreSharedKey param. Ensure that only one of the following is specified: `Certificate`, `PreSharedKey`
+        /// Pre shared key
         /// </summary>
         [Input("preSharedKey")]
         public Input<Inputs.IkeGatewayAuthenticationPreSharedKeyGetArgs>? PreSharedKey { get; set; }

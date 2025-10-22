@@ -14,21 +14,34 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDnsSecurityProfileListDataResult
     {
         /// <summary>
-        /// The BotnetDomains param.
+        /// Botnet domains
         /// </summary>
         public readonly Outputs.GetDnsSecurityProfileListDataBotnetDomainsResult BotnetDomains;
         /// <summary>
-        /// The Description param.
+        /// The description of the DNS security profile
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the DNS security profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// The name of the DNS security profile
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetDnsSecurityProfileListDataResult(
@@ -36,14 +49,26 @@ namespace Pulumi.Scm.Outputs
 
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
-            string name)
+            string name,
+
+            string snippet,
+
+            string tfid)
         {
             BotnetDomains = botnetDomains;
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

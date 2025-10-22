@@ -19,204 +19,176 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * RemoteNetwork resource
  * 
  * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.RemoteNetwork;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new RemoteNetwork("example");
- * 
- *     }
- * }
- * }
- * </pre>
  * 
  */
 @ResourceType(type="scm:index/remoteNetwork:RemoteNetwork")
 public class RemoteNetwork extends com.pulumi.resources.CustomResource {
     /**
-     * The EcmpLoadBalancing param. String must be one of these: `&#34;enable&#34;`, `&#34;disable&#34;`. Default: `&#34;disable&#34;`.
+     * Ecmp load balancing
      * 
      */
     @Export(name="ecmpLoadBalancing", refs={String.class}, tree="[0]")
     private Output<String> ecmpLoadBalancing;
 
     /**
-     * @return The EcmpLoadBalancing param. String must be one of these: `&#34;enable&#34;`, `&#34;disable&#34;`. Default: `&#34;disable&#34;`.
+     * @return Ecmp load balancing
      * 
      */
     public Output<String> ecmpLoadBalancing() {
         return this.ecmpLoadBalancing;
     }
     /**
-     * ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * ecmp*tunnels is required when ecmp*load*balancing is enable
      * 
      */
     @Export(name="ecmpTunnels", refs={List.class,RemoteNetworkEcmpTunnel.class}, tree="[0,1]")
     private Output</* @Nullable */ List<RemoteNetworkEcmpTunnel>> ecmpTunnels;
 
     /**
-     * @return ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * @return ecmp*tunnels is required when ecmp*load*balancing is enable
      * 
      */
     public Output<Optional<List<RemoteNetworkEcmpTunnel>>> ecmpTunnels() {
         return Codegen.optional(this.ecmpTunnels);
     }
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      * 
      */
     @Export(name="encryptedValues", refs={Map.class,String.class}, tree="[0,1,1]")
     private Output<Map<String,String>> encryptedValues;
 
     /**
-     * @return (Internal use) Encrypted values returned from the API.
+     * @return Map of sensitive values returned from the API.
      * 
      */
     public Output<Map<String,String>> encryptedValues() {
         return this.encryptedValues;
     }
     /**
-     * The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
+     * The folder that contains the remote network
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output<String> folder;
 
     /**
-     * @return The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
+     * @return The folder that contains the remote network
      * 
      */
     public Output<String> folder() {
         return this.folder;
     }
     /**
-     * ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * ipsec*tunnel is required when ecmp*load_balancing is disable
      * 
      */
     @Export(name="ipsecTunnel", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipsecTunnel;
 
     /**
-     * @return ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * @return ipsec*tunnel is required when ecmp*load_balancing is disable
      * 
      */
     public Output<Optional<String>> ipsecTunnel() {
         return Codegen.optional(this.ipsecTunnel);
     }
     /**
-     * New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `&#34;FWAAS-AGGREGATE&#34;`.
+     * New customer will only be on aggregate bandwidth licensing
      * 
      */
     @Export(name="licenseType", refs={String.class}, tree="[0]")
     private Output<String> licenseType;
 
     /**
-     * @return New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `&#34;FWAAS-AGGREGATE&#34;`.
+     * @return New customer will only be on aggregate bandwidth licensing
      * 
      */
     public Output<String> licenseType() {
         return this.licenseType;
     }
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the remote network
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the remote network
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * setup the protocol when ecmp*load*balancing is disable.
+     * setup the protocol when ecmp*load*balancing is disable
      * 
      */
     @Export(name="protocol", refs={RemoteNetworkProtocol.class}, tree="[0]")
     private Output</* @Nullable */ RemoteNetworkProtocol> protocol;
 
     /**
-     * @return setup the protocol when ecmp*load*balancing is disable.
+     * @return setup the protocol when ecmp*load*balancing is disable
      * 
      */
     public Output<Optional<RemoteNetworkProtocol>> protocol() {
         return Codegen.optional(this.protocol);
     }
     /**
-     * The Region param. String length must exceed 1 characters.
+     * Region
      * 
      */
     @Export(name="region", refs={String.class}, tree="[0]")
     private Output<String> region;
 
     /**
-     * @return The Region param. String length must exceed 1 characters.
+     * @return Region
      * 
      */
     public Output<String> region() {
         return this.region;
     }
     /**
-     * specify secondary ipsecTunnel if needed.
+     * specify secondary ipsecTunnel if needed
      * 
      */
     @Export(name="secondaryIpsecTunnel", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> secondaryIpsecTunnel;
 
     /**
-     * @return specify secondary ipsecTunnel if needed.
+     * @return specify secondary ipsecTunnel if needed
      * 
      */
     public Output<Optional<String>> secondaryIpsecTunnel() {
         return Codegen.optional(this.secondaryIpsecTunnel);
     }
     /**
-     * spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * spn-name is needed when licenseType is FWAAS-AGGREGATE
      * 
      */
     @Export(name="spnName", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> spnName;
 
     /**
-     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE
      * 
      */
     public Output<Optional<String>> spnName() {
         return Codegen.optional(this.spnName);
     }
     /**
-     * The Subnets param.
+     * Subnets
      * 
      */
     @Export(name="subnets", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> subnets;
 
     /**
-     * @return The Subnets param.
+     * @return Subnets
      * 
      */
     public Output<Optional<List<String>>> subnets() {

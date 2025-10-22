@@ -10,58 +10,43 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.FileBlockingProfile("example");
-    /// 
-    /// });
-    /// ```
+    /// FileBlockingProfile resource
     /// </summary>
     [ScmResourceType("scm:index/fileBlockingProfile:FileBlockingProfile")]
     public partial class FileBlockingProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the file blocking profile
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Rules param.
+        /// A list of file blocking rules
         /// </summary>
         [Output("rules")]
         public Output<ImmutableArray<Outputs.FileBlockingProfileRule>> Rules { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -116,25 +101,25 @@ namespace Pulumi.Scm
     public sealed class FileBlockingProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the file blocking profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -143,7 +128,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.FileBlockingProfileRuleArgs>? _rules;
 
         /// <summary>
-        /// The Rules param.
+        /// A list of file blocking rules
         /// </summary>
         public InputList<Inputs.FileBlockingProfileRuleArgs> Rules
         {
@@ -152,7 +137,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -166,25 +151,25 @@ namespace Pulumi.Scm
     public sealed class FileBlockingProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the file blocking profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -193,7 +178,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.FileBlockingProfileRuleGetArgs>? _rules;
 
         /// <summary>
-        /// The Rules param.
+        /// A list of file blocking rules
         /// </summary>
         public InputList<Inputs.FileBlockingProfileRuleGetArgs> Rules
         {
@@ -202,7 +187,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

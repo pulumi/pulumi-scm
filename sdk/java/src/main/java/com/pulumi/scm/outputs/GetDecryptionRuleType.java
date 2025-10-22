@@ -5,33 +5,33 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.GetDecryptionRuleTypeSslForwardProxy;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetDecryptionRuleType {
     /**
-     * @return The SslForwardProxy param.
+     * @return Ssl forward proxy
      * 
      */
-    private Boolean sslForwardProxy;
+    private GetDecryptionRuleTypeSslForwardProxy sslForwardProxy;
     /**
-     * @return add the certificate name for SSL inbound inspection.
+     * @return add the certificate name for SSL inbound inspection
      * 
      */
     private String sslInboundInspection;
 
     private GetDecryptionRuleType() {}
     /**
-     * @return The SslForwardProxy param.
+     * @return Ssl forward proxy
      * 
      */
-    public Boolean sslForwardProxy() {
+    public GetDecryptionRuleTypeSslForwardProxy sslForwardProxy() {
         return this.sslForwardProxy;
     }
     /**
-     * @return add the certificate name for SSL inbound inspection.
+     * @return add the certificate name for SSL inbound inspection
      * 
      */
     public String sslInboundInspection() {
@@ -47,7 +47,7 @@ public final class GetDecryptionRuleType {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean sslForwardProxy;
+        private GetDecryptionRuleTypeSslForwardProxy sslForwardProxy;
         private String sslInboundInspection;
         public Builder() {}
         public Builder(GetDecryptionRuleType defaults) {
@@ -57,7 +57,7 @@ public final class GetDecryptionRuleType {
         }
 
         @CustomType.Setter
-        public Builder sslForwardProxy(Boolean sslForwardProxy) {
+        public Builder sslForwardProxy(GetDecryptionRuleTypeSslForwardProxy sslForwardProxy) {
             if (sslForwardProxy == null) {
               throw new MissingRequiredPropertyException("GetDecryptionRuleType", "sslForwardProxy");
             }

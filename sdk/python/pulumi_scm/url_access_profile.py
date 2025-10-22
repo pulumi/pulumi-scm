@@ -37,28 +37,30 @@ class UrlAccessProfileArgs:
                  log_http_hdr_xff: Optional[pulumi.Input[_builtins.bool]] = None,
                  mlav_category_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 redirects: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  safe_search_enforcement: Optional[pulumi.Input[_builtins.bool]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a UrlAccessProfile resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: The Alerts param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allows: The Allows param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: The Blocks param.
-        :param pulumi.Input[_builtins.bool] cloud_inline_cat: The CloudInlineCat param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] continues: The Continues param.
-        :param pulumi.Input['UrlAccessProfileCredentialEnforcementArgs'] credential_enforcement: The CredentialEnforcement param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] local_inline_cat: The LocalInlineCat param.
-        :param pulumi.Input[_builtins.bool] log_container_page_only: The LogContainerPageOnly param. Default: `true`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_referer: The LogHttpHdrReferer param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_user_agent: The LogHttpHdrUserAgent param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_xff: The LogHttpHdrXff param. Default: `false`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] mlav_category_exceptions: The MlavCategoryExceptions param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] safe_search_enforcement: The SafeSearchEnforcement param. Default: `false`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: Alert
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allows: Allow
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: Block
+        :param pulumi.Input[_builtins.bool] cloud_inline_cat: Cloud inline cat
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] continues: Continue
+        :param pulumi.Input['UrlAccessProfileCredentialEnforcementArgs'] credential_enforcement: Credential enforcement
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
+        :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
+        :param pulumi.Input[_builtins.bool] log_http_hdr_referer: Log http hdr referer
+        :param pulumi.Input[_builtins.bool] log_http_hdr_user_agent: Log http hdr user agent
+        :param pulumi.Input[_builtins.bool] log_http_hdr_xff: Log http hdr xff
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] mlav_category_exceptions: Mlav category exception
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
+        :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if alerts is not None:
             pulumi.set(__self__, "alerts", alerts)
@@ -92,6 +94,8 @@ class UrlAccessProfileArgs:
             pulumi.set(__self__, "mlav_category_exceptions", mlav_category_exceptions)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if redirects is not None:
+            pulumi.set(__self__, "redirects", redirects)
         if safe_search_enforcement is not None:
             pulumi.set(__self__, "safe_search_enforcement", safe_search_enforcement)
         if snippet is not None:
@@ -101,7 +105,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter
     def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Alerts param.
+        Alert
         """
         return pulumi.get(self, "alerts")
 
@@ -113,7 +117,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter
     def allows(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Allows param.
+        Allow
         """
         return pulumi.get(self, "allows")
 
@@ -125,7 +129,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter
     def blocks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Blocks param.
+        Block
         """
         return pulumi.get(self, "blocks")
 
@@ -137,7 +141,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter(name="cloudInlineCat")
     def cloud_inline_cat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The CloudInlineCat param.
+        Cloud inline cat
         """
         return pulumi.get(self, "cloud_inline_cat")
 
@@ -149,7 +153,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter
     def continues(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Continues param.
+        Continue
         """
         return pulumi.get(self, "continues")
 
@@ -161,7 +165,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter(name="credentialEnforcement")
     def credential_enforcement(self) -> Optional[pulumi.Input['UrlAccessProfileCredentialEnforcementArgs']]:
         """
-        The CredentialEnforcement param.
+        Credential enforcement
         """
         return pulumi.get(self, "credential_enforcement")
 
@@ -173,7 +177,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -185,7 +189,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -197,7 +201,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -209,7 +213,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter(name="localInlineCat")
     def local_inline_cat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LocalInlineCat param.
+        Local inline cat
         """
         return pulumi.get(self, "local_inline_cat")
 
@@ -221,7 +225,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter(name="logContainerPageOnly")
     def log_container_page_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogContainerPageOnly param. Default: `true`.
+        Log container page only
         """
         return pulumi.get(self, "log_container_page_only")
 
@@ -233,7 +237,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter(name="logHttpHdrReferer")
     def log_http_hdr_referer(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogHttpHdrReferer param. Default: `false`.
+        Log http hdr referer
         """
         return pulumi.get(self, "log_http_hdr_referer")
 
@@ -245,7 +249,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter(name="logHttpHdrUserAgent")
     def log_http_hdr_user_agent(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogHttpHdrUserAgent param. Default: `false`.
+        Log http hdr user agent
         """
         return pulumi.get(self, "log_http_hdr_user_agent")
 
@@ -257,7 +261,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter(name="logHttpHdrXff")
     def log_http_hdr_xff(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogHttpHdrXff param. Default: `false`.
+        Log http hdr xff
         """
         return pulumi.get(self, "log_http_hdr_xff")
 
@@ -269,7 +273,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter(name="mlavCategoryExceptions")
     def mlav_category_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The MlavCategoryExceptions param.
+        Mlav category exception
         """
         return pulumi.get(self, "mlav_category_exceptions")
 
@@ -281,7 +285,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -290,10 +294,22 @@ class UrlAccessProfileArgs:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter
+    def redirects(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Redirect
+        """
+        return pulumi.get(self, "redirects")
+
+    @redirects.setter
+    def redirects(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "redirects", value)
+
+    @_builtins.property
     @pulumi.getter(name="safeSearchEnforcement")
     def safe_search_enforcement(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The SafeSearchEnforcement param. Default: `false`.
+        Safe search enforcement
         """
         return pulumi.get(self, "safe_search_enforcement")
 
@@ -305,7 +321,7 @@ class UrlAccessProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -333,29 +349,31 @@ class _UrlAccessProfileState:
                  log_http_hdr_xff: Optional[pulumi.Input[_builtins.bool]] = None,
                  mlav_category_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 redirects: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  safe_search_enforcement: Optional[pulumi.Input[_builtins.bool]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering UrlAccessProfile resources.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: The Alerts param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allows: The Allows param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: The Blocks param.
-        :param pulumi.Input[_builtins.bool] cloud_inline_cat: The CloudInlineCat param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] continues: The Continues param.
-        :param pulumi.Input['UrlAccessProfileCredentialEnforcementArgs'] credential_enforcement: The CredentialEnforcement param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] local_inline_cat: The LocalInlineCat param.
-        :param pulumi.Input[_builtins.bool] log_container_page_only: The LogContainerPageOnly param. Default: `true`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_referer: The LogHttpHdrReferer param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_user_agent: The LogHttpHdrUserAgent param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_xff: The LogHttpHdrXff param. Default: `false`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] mlav_category_exceptions: The MlavCategoryExceptions param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] safe_search_enforcement: The SafeSearchEnforcement param. Default: `false`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: Alert
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allows: Allow
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: Block
+        :param pulumi.Input[_builtins.bool] cloud_inline_cat: Cloud inline cat
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] continues: Continue
+        :param pulumi.Input['UrlAccessProfileCredentialEnforcementArgs'] credential_enforcement: Credential enforcement
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
+        :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
+        :param pulumi.Input[_builtins.bool] log_http_hdr_referer: Log http hdr referer
+        :param pulumi.Input[_builtins.bool] log_http_hdr_user_agent: Log http hdr user agent
+        :param pulumi.Input[_builtins.bool] log_http_hdr_xff: Log http hdr xff
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] mlav_category_exceptions: Mlav category exception
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
+        :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if alerts is not None:
             pulumi.set(__self__, "alerts", alerts)
@@ -389,6 +407,8 @@ class _UrlAccessProfileState:
             pulumi.set(__self__, "mlav_category_exceptions", mlav_category_exceptions)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if redirects is not None:
+            pulumi.set(__self__, "redirects", redirects)
         if safe_search_enforcement is not None:
             pulumi.set(__self__, "safe_search_enforcement", safe_search_enforcement)
         if snippet is not None:
@@ -400,7 +420,7 @@ class _UrlAccessProfileState:
     @pulumi.getter
     def alerts(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Alerts param.
+        Alert
         """
         return pulumi.get(self, "alerts")
 
@@ -412,7 +432,7 @@ class _UrlAccessProfileState:
     @pulumi.getter
     def allows(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Allows param.
+        Allow
         """
         return pulumi.get(self, "allows")
 
@@ -424,7 +444,7 @@ class _UrlAccessProfileState:
     @pulumi.getter
     def blocks(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Blocks param.
+        Block
         """
         return pulumi.get(self, "blocks")
 
@@ -436,7 +456,7 @@ class _UrlAccessProfileState:
     @pulumi.getter(name="cloudInlineCat")
     def cloud_inline_cat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The CloudInlineCat param.
+        Cloud inline cat
         """
         return pulumi.get(self, "cloud_inline_cat")
 
@@ -448,7 +468,7 @@ class _UrlAccessProfileState:
     @pulumi.getter
     def continues(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Continues param.
+        Continue
         """
         return pulumi.get(self, "continues")
 
@@ -460,7 +480,7 @@ class _UrlAccessProfileState:
     @pulumi.getter(name="credentialEnforcement")
     def credential_enforcement(self) -> Optional[pulumi.Input['UrlAccessProfileCredentialEnforcementArgs']]:
         """
-        The CredentialEnforcement param.
+        Credential enforcement
         """
         return pulumi.get(self, "credential_enforcement")
 
@@ -472,7 +492,7 @@ class _UrlAccessProfileState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -484,7 +504,7 @@ class _UrlAccessProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -496,7 +516,7 @@ class _UrlAccessProfileState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -508,7 +528,7 @@ class _UrlAccessProfileState:
     @pulumi.getter(name="localInlineCat")
     def local_inline_cat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LocalInlineCat param.
+        Local inline cat
         """
         return pulumi.get(self, "local_inline_cat")
 
@@ -520,7 +540,7 @@ class _UrlAccessProfileState:
     @pulumi.getter(name="logContainerPageOnly")
     def log_container_page_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogContainerPageOnly param. Default: `true`.
+        Log container page only
         """
         return pulumi.get(self, "log_container_page_only")
 
@@ -532,7 +552,7 @@ class _UrlAccessProfileState:
     @pulumi.getter(name="logHttpHdrReferer")
     def log_http_hdr_referer(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogHttpHdrReferer param. Default: `false`.
+        Log http hdr referer
         """
         return pulumi.get(self, "log_http_hdr_referer")
 
@@ -544,7 +564,7 @@ class _UrlAccessProfileState:
     @pulumi.getter(name="logHttpHdrUserAgent")
     def log_http_hdr_user_agent(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogHttpHdrUserAgent param. Default: `false`.
+        Log http hdr user agent
         """
         return pulumi.get(self, "log_http_hdr_user_agent")
 
@@ -556,7 +576,7 @@ class _UrlAccessProfileState:
     @pulumi.getter(name="logHttpHdrXff")
     def log_http_hdr_xff(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogHttpHdrXff param. Default: `false`.
+        Log http hdr xff
         """
         return pulumi.get(self, "log_http_hdr_xff")
 
@@ -568,7 +588,7 @@ class _UrlAccessProfileState:
     @pulumi.getter(name="mlavCategoryExceptions")
     def mlav_category_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The MlavCategoryExceptions param.
+        Mlav category exception
         """
         return pulumi.get(self, "mlav_category_exceptions")
 
@@ -580,7 +600,7 @@ class _UrlAccessProfileState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -589,10 +609,22 @@ class _UrlAccessProfileState:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter
+    def redirects(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Redirect
+        """
+        return pulumi.get(self, "redirects")
+
+    @redirects.setter
+    def redirects(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "redirects", value)
+
+    @_builtins.property
     @pulumi.getter(name="safeSearchEnforcement")
     def safe_search_enforcement(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The SafeSearchEnforcement param. Default: `false`.
+        Safe search enforcement
         """
         return pulumi.get(self, "safe_search_enforcement")
 
@@ -604,7 +636,7 @@ class _UrlAccessProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -644,11 +676,12 @@ class UrlAccessProfile(pulumi.CustomResource):
                  log_http_hdr_xff: Optional[pulumi.Input[_builtins.bool]] = None,
                  mlav_category_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 redirects: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  safe_search_enforcement: Optional[pulumi.Input[_builtins.bool]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        UrlAccessProfile resource
 
         ## Example Usage
 
@@ -656,29 +689,44 @@ class UrlAccessProfile(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.UrlAccessProfile("example", folder="Shared")
+        #
+        # Creates a URL Access Profile object.
+        #
+        example = scm.UrlAccessProfile("example",
+            folder="Shared",
+            name="example_url_access_profile",
+            description="Test URL Access Profile for create API",
+            blocks=[
+                "adult",
+                "gambling",
+            ],
+            alerts=[
+                "high-risk",
+                "phishing",
+            ])
         ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: The Alerts param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allows: The Allows param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: The Blocks param.
-        :param pulumi.Input[_builtins.bool] cloud_inline_cat: The CloudInlineCat param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] continues: The Continues param.
-        :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']] credential_enforcement: The CredentialEnforcement param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] local_inline_cat: The LocalInlineCat param.
-        :param pulumi.Input[_builtins.bool] log_container_page_only: The LogContainerPageOnly param. Default: `true`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_referer: The LogHttpHdrReferer param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_user_agent: The LogHttpHdrUserAgent param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_xff: The LogHttpHdrXff param. Default: `false`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] mlav_category_exceptions: The MlavCategoryExceptions param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] safe_search_enforcement: The SafeSearchEnforcement param. Default: `false`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: Alert
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allows: Allow
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: Block
+        :param pulumi.Input[_builtins.bool] cloud_inline_cat: Cloud inline cat
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] continues: Continue
+        :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']] credential_enforcement: Credential enforcement
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
+        :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
+        :param pulumi.Input[_builtins.bool] log_http_hdr_referer: Log http hdr referer
+        :param pulumi.Input[_builtins.bool] log_http_hdr_user_agent: Log http hdr user agent
+        :param pulumi.Input[_builtins.bool] log_http_hdr_xff: Log http hdr xff
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] mlav_category_exceptions: Mlav category exception
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
+        :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -687,7 +735,7 @@ class UrlAccessProfile(pulumi.CustomResource):
                  args: Optional[UrlAccessProfileArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        UrlAccessProfile resource
 
         ## Example Usage
 
@@ -695,7 +743,21 @@ class UrlAccessProfile(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.UrlAccessProfile("example", folder="Shared")
+        #
+        # Creates a URL Access Profile object.
+        #
+        example = scm.UrlAccessProfile("example",
+            folder="Shared",
+            name="example_url_access_profile",
+            description="Test URL Access Profile for create API",
+            blocks=[
+                "adult",
+                "gambling",
+            ],
+            alerts=[
+                "high-risk",
+                "phishing",
+            ])
         ```
 
         :param str resource_name: The name of the resource.
@@ -729,6 +791,7 @@ class UrlAccessProfile(pulumi.CustomResource):
                  log_http_hdr_xff: Optional[pulumi.Input[_builtins.bool]] = None,
                  mlav_category_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 redirects: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  safe_search_enforcement: Optional[pulumi.Input[_builtins.bool]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -756,6 +819,7 @@ class UrlAccessProfile(pulumi.CustomResource):
             __props__.__dict__["log_http_hdr_xff"] = log_http_hdr_xff
             __props__.__dict__["mlav_category_exceptions"] = mlav_category_exceptions
             __props__.__dict__["name"] = name
+            __props__.__dict__["redirects"] = redirects
             __props__.__dict__["safe_search_enforcement"] = safe_search_enforcement
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["tfid"] = None
@@ -785,6 +849,7 @@ class UrlAccessProfile(pulumi.CustomResource):
             log_http_hdr_xff: Optional[pulumi.Input[_builtins.bool]] = None,
             mlav_category_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
+            redirects: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             safe_search_enforcement: Optional[pulumi.Input[_builtins.bool]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'UrlAccessProfile':
@@ -795,24 +860,25 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: The Alerts param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allows: The Allows param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: The Blocks param.
-        :param pulumi.Input[_builtins.bool] cloud_inline_cat: The CloudInlineCat param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] continues: The Continues param.
-        :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']] credential_enforcement: The CredentialEnforcement param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] local_inline_cat: The LocalInlineCat param.
-        :param pulumi.Input[_builtins.bool] log_container_page_only: The LogContainerPageOnly param. Default: `true`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_referer: The LogHttpHdrReferer param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_user_agent: The LogHttpHdrUserAgent param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] log_http_hdr_xff: The LogHttpHdrXff param. Default: `false`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] mlav_category_exceptions: The MlavCategoryExceptions param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] safe_search_enforcement: The SafeSearchEnforcement param. Default: `false`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: Alert
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allows: Allow
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] blocks: Block
+        :param pulumi.Input[_builtins.bool] cloud_inline_cat: Cloud inline cat
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] continues: Continue
+        :param pulumi.Input[Union['UrlAccessProfileCredentialEnforcementArgs', 'UrlAccessProfileCredentialEnforcementArgsDict']] credential_enforcement: Credential enforcement
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
+        :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
+        :param pulumi.Input[_builtins.bool] log_http_hdr_referer: Log http hdr referer
+        :param pulumi.Input[_builtins.bool] log_http_hdr_user_agent: Log http hdr user agent
+        :param pulumi.Input[_builtins.bool] log_http_hdr_xff: Log http hdr xff
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] mlav_category_exceptions: Mlav category exception
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
+        :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -834,6 +900,7 @@ class UrlAccessProfile(pulumi.CustomResource):
         __props__.__dict__["log_http_hdr_xff"] = log_http_hdr_xff
         __props__.__dict__["mlav_category_exceptions"] = mlav_category_exceptions
         __props__.__dict__["name"] = name
+        __props__.__dict__["redirects"] = redirects
         __props__.__dict__["safe_search_enforcement"] = safe_search_enforcement
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["tfid"] = tfid
@@ -843,7 +910,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter
     def alerts(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Alerts param.
+        Alert
         """
         return pulumi.get(self, "alerts")
 
@@ -851,7 +918,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter
     def allows(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Allows param.
+        Allow
         """
         return pulumi.get(self, "allows")
 
@@ -859,7 +926,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter
     def blocks(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Blocks param.
+        Block
         """
         return pulumi.get(self, "blocks")
 
@@ -867,7 +934,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter(name="cloudInlineCat")
     def cloud_inline_cat(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The CloudInlineCat param.
+        Cloud inline cat
         """
         return pulumi.get(self, "cloud_inline_cat")
 
@@ -875,15 +942,15 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter
     def continues(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Continues param.
+        Continue
         """
         return pulumi.get(self, "continues")
 
     @_builtins.property
     @pulumi.getter(name="credentialEnforcement")
-    def credential_enforcement(self) -> pulumi.Output[Optional['outputs.UrlAccessProfileCredentialEnforcement']]:
+    def credential_enforcement(self) -> pulumi.Output['outputs.UrlAccessProfileCredentialEnforcement']:
         """
-        The CredentialEnforcement param.
+        Credential enforcement
         """
         return pulumi.get(self, "credential_enforcement")
 
@@ -891,7 +958,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -899,7 +966,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -907,7 +974,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -915,7 +982,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter(name="localInlineCat")
     def local_inline_cat(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The LocalInlineCat param.
+        Local inline cat
         """
         return pulumi.get(self, "local_inline_cat")
 
@@ -923,7 +990,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter(name="logContainerPageOnly")
     def log_container_page_only(self) -> pulumi.Output[_builtins.bool]:
         """
-        The LogContainerPageOnly param. Default: `true`.
+        Log container page only
         """
         return pulumi.get(self, "log_container_page_only")
 
@@ -931,7 +998,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter(name="logHttpHdrReferer")
     def log_http_hdr_referer(self) -> pulumi.Output[_builtins.bool]:
         """
-        The LogHttpHdrReferer param. Default: `false`.
+        Log http hdr referer
         """
         return pulumi.get(self, "log_http_hdr_referer")
 
@@ -939,7 +1006,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter(name="logHttpHdrUserAgent")
     def log_http_hdr_user_agent(self) -> pulumi.Output[_builtins.bool]:
         """
-        The LogHttpHdrUserAgent param. Default: `false`.
+        Log http hdr user agent
         """
         return pulumi.get(self, "log_http_hdr_user_agent")
 
@@ -947,7 +1014,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter(name="logHttpHdrXff")
     def log_http_hdr_xff(self) -> pulumi.Output[_builtins.bool]:
         """
-        The LogHttpHdrXff param. Default: `false`.
+        Log http hdr xff
         """
         return pulumi.get(self, "log_http_hdr_xff")
 
@@ -955,7 +1022,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter(name="mlavCategoryExceptions")
     def mlav_category_exceptions(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The MlavCategoryExceptions param.
+        Mlav category exception
         """
         return pulumi.get(self, "mlav_category_exceptions")
 
@@ -963,15 +1030,23 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
+    def redirects(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+        """
+        Redirect
+        """
+        return pulumi.get(self, "redirects")
 
     @_builtins.property
     @pulumi.getter(name="safeSearchEnforcement")
     def safe_search_enforcement(self) -> pulumi.Output[_builtins.bool]:
         """
-        The SafeSearchEnforcement param. Default: `false`.
+        Safe search enforcement
         """
         return pulumi.get(self, "safe_search_enforcement")
 
@@ -979,7 +1054,7 @@ class UrlAccessProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

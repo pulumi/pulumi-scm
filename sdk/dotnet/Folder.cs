@@ -10,66 +10,37 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var snip1 = new Scm.Snippet("snip1", new()
-    ///     {
-    ///         Name = "foobar",
-    ///     });
-    /// 
-    ///     var example = new Scm.Folder("example", new()
-    ///     {
-    ///         Name = "my folder",
-    ///         Parent = "Shared",
-    ///         Description = "Made by Pulumi",
-    ///         Snippets = new[]
-    ///         {
-    ///             snip1.Name,
-    ///         },
-    ///     });
-    /// 
-    /// });
-    /// ```
+    /// Folder resource
     /// </summary>
     [ScmResourceType("scm:index/folder:Folder")]
     public partial class Folder : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the folder
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Labels param.
+        /// Labels assigned to the folder
         /// </summary>
         [Output("labels")]
         public Output<ImmutableArray<string>> Labels { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the folder
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Parent param.
+        /// The parent folder
         /// </summary>
         [Output("parent")]
         public Output<string> Parent { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippets param.
+        /// Snippets associated with the folder
         /// </summary>
         [Output("snippets")]
         public Output<ImmutableArray<string>> Snippets { get; private set; } = null!;
@@ -124,7 +95,7 @@ namespace Pulumi.Scm
     public sealed class FolderArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the folder
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -133,7 +104,7 @@ namespace Pulumi.Scm
         private InputList<string>? _labels;
 
         /// <summary>
-        /// The Labels param.
+        /// Labels assigned to the folder
         /// </summary>
         public InputList<string> Labels
         {
@@ -142,13 +113,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the folder
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Parent param.
+        /// The parent folder
         /// </summary>
         [Input("parent", required: true)]
         public Input<string> Parent { get; set; } = null!;
@@ -157,7 +128,7 @@ namespace Pulumi.Scm
         private InputList<string>? _snippets;
 
         /// <summary>
-        /// The Snippets param.
+        /// Snippets associated with the folder
         /// </summary>
         public InputList<string> Snippets
         {
@@ -174,7 +145,7 @@ namespace Pulumi.Scm
     public sealed class FolderState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the folder
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -183,7 +154,7 @@ namespace Pulumi.Scm
         private InputList<string>? _labels;
 
         /// <summary>
-        /// The Labels param.
+        /// Labels assigned to the folder
         /// </summary>
         public InputList<string> Labels
         {
@@ -192,13 +163,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the folder
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Parent param.
+        /// The parent folder
         /// </summary>
         [Input("parent")]
         public Input<string>? Parent { get; set; }
@@ -207,7 +178,7 @@ namespace Pulumi.Scm
         private InputList<string>? _snippets;
 
         /// <summary>
-        /// The Snippets param.
+        /// Snippets associated with the folder
         /// </summary>
         public InputList<string> Snippets
         {

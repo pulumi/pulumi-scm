@@ -15,14 +15,14 @@ public final class RegionGeoLocationArgs extends com.pulumi.resources.ResourceAr
     public static final RegionGeoLocationArgs Empty = new RegionGeoLocationArgs();
 
     /**
-     * latitude coordinate. Value must be between -90 and 90.
+     * The latitudinal position of the region
      * 
      */
     @Import(name="latitude", required=true)
     private Output<Double> latitude;
 
     /**
-     * @return latitude coordinate. Value must be between -90 and 90.
+     * @return The latitudinal position of the region
      * 
      */
     public Output<Double> latitude() {
@@ -30,14 +30,14 @@ public final class RegionGeoLocationArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * longitude coordinate. Value must be between -180 and 180.
+     * The longitudinal postition of the region
      * 
      */
     @Import(name="longitude", required=true)
     private Output<Double> longitude;
 
     /**
-     * @return longitude coordinate. Value must be between -180 and 180.
+     * @return The longitudinal postition of the region
      * 
      */
     public Output<Double> longitude() {
@@ -70,7 +70,7 @@ public final class RegionGeoLocationArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param latitude latitude coordinate. Value must be between -90 and 90.
+         * @param latitude The latitudinal position of the region
          * 
          * @return builder
          * 
@@ -81,7 +81,7 @@ public final class RegionGeoLocationArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param latitude latitude coordinate. Value must be between -90 and 90.
+         * @param latitude The latitudinal position of the region
          * 
          * @return builder
          * 
@@ -91,7 +91,7 @@ public final class RegionGeoLocationArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param longitude longitude coordinate. Value must be between -180 and 180.
+         * @param longitude The longitudinal postition of the region
          * 
          * @return builder
          * 
@@ -102,7 +102,7 @@ public final class RegionGeoLocationArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param longitude longitude coordinate. Value must be between -180 and 180.
+         * @param longitude The longitudinal postition of the region
          * 
          * @return builder
          * 

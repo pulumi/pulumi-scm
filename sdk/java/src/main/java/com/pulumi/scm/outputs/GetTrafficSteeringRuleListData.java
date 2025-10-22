@@ -13,102 +13,118 @@ import java.util.Objects;
 @CustomType
 public final class GetTrafficSteeringRuleListData {
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     private GetTrafficSteeringRuleListDataAction action;
     /**
-     * @return The Category param.
+     * @return Category
      * 
      */
     private List<String> categories;
     /**
-     * @return The Destination param.
+     * @return Destination
      * 
      */
     private List<String> destinations;
     /**
-     * @return UUID of the resource.
+     * @return The folder containing the traffic steering rule
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the traffic steering rule
      * 
      */
     private String id;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The Service param.
+     * @return Service
      * 
      */
     private List<String> services;
     /**
-     * @return The SourceUser param.
+     * @return Source user
      * 
      */
     private List<String> sourceUsers;
     /**
-     * @return The Source param.
+     * @return Source
      * 
      */
     private List<String> sources;
+    private String tfid;
 
     private GetTrafficSteeringRuleListData() {}
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     public GetTrafficSteeringRuleListDataAction action() {
         return this.action;
     }
     /**
-     * @return The Category param.
+     * @return Category
      * 
      */
     public List<String> categories() {
         return this.categories;
     }
     /**
-     * @return The Destination param.
+     * @return Destination
      * 
      */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
-     * @return UUID of the resource.
+     * @return The folder containing the traffic steering rule
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the traffic steering rule
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Service param.
+     * @return Service
      * 
      */
     public List<String> services() {
         return this.services;
     }
     /**
-     * @return The SourceUser param.
+     * @return Source user
      * 
      */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
     /**
-     * @return The Source param.
+     * @return Source
      * 
      */
     public List<String> sources() {
         return this.sources;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -123,22 +139,26 @@ public final class GetTrafficSteeringRuleListData {
         private GetTrafficSteeringRuleListDataAction action;
         private List<String> categories;
         private List<String> destinations;
+        private String folder;
         private String id;
         private String name;
         private List<String> services;
         private List<String> sourceUsers;
         private List<String> sources;
+        private String tfid;
         public Builder() {}
         public Builder(GetTrafficSteeringRuleListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.action = defaults.action;
     	      this.categories = defaults.categories;
     	      this.destinations = defaults.destinations;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.services = defaults.services;
     	      this.sourceUsers = defaults.sourceUsers;
     	      this.sources = defaults.sources;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -170,6 +190,14 @@ public final class GetTrafficSteeringRuleListData {
         }
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetTrafficSteeringRuleListData", "folder");
+            }
+            this.folder = folder;
+            return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -220,16 +248,26 @@ public final class GetTrafficSteeringRuleListData {
         public Builder sources(String... sources) {
             return sources(List.of(sources));
         }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetTrafficSteeringRuleListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetTrafficSteeringRuleListData build() {
             final var _resultValue = new GetTrafficSteeringRuleListData();
             _resultValue.action = action;
             _resultValue.categories = categories;
             _resultValue.destinations = destinations;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.services = services;
             _resultValue.sourceUsers = sourceUsers;
             _resultValue.sources = sources;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

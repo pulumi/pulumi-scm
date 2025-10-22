@@ -6,70 +6,71 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeUrlRecurringDaily;
+import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeUrlRecurringFiveMinute;
+import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeUrlRecurringHourly;
 import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeUrlRecurringMonthly;
 import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeUrlRecurringWeekly;
-import java.lang.Boolean;
 import java.util.Objects;
 
 @CustomType
 public final class GetExternalDynamicListListDataTypeUrlRecurring {
     /**
-     * @return The Daily param.
+     * @return Daily
      * 
      */
     private GetExternalDynamicListListDataTypeUrlRecurringDaily daily;
     /**
-     * @return The FiveMinute param.
+     * @return Five minute
      * 
      */
-    private Boolean fiveMinute;
+    private GetExternalDynamicListListDataTypeUrlRecurringFiveMinute fiveMinute;
     /**
-     * @return The Hourly param.
+     * @return Hourly
      * 
      */
-    private Boolean hourly;
+    private GetExternalDynamicListListDataTypeUrlRecurringHourly hourly;
     /**
-     * @return The Monthly param.
+     * @return Monthly
      * 
      */
     private GetExternalDynamicListListDataTypeUrlRecurringMonthly monthly;
     /**
-     * @return The Weekly param.
+     * @return Weekly
      * 
      */
     private GetExternalDynamicListListDataTypeUrlRecurringWeekly weekly;
 
     private GetExternalDynamicListListDataTypeUrlRecurring() {}
     /**
-     * @return The Daily param.
+     * @return Daily
      * 
      */
     public GetExternalDynamicListListDataTypeUrlRecurringDaily daily() {
         return this.daily;
     }
     /**
-     * @return The FiveMinute param.
+     * @return Five minute
      * 
      */
-    public Boolean fiveMinute() {
+    public GetExternalDynamicListListDataTypeUrlRecurringFiveMinute fiveMinute() {
         return this.fiveMinute;
     }
     /**
-     * @return The Hourly param.
+     * @return Hourly
      * 
      */
-    public Boolean hourly() {
+    public GetExternalDynamicListListDataTypeUrlRecurringHourly hourly() {
         return this.hourly;
     }
     /**
-     * @return The Monthly param.
+     * @return Monthly
      * 
      */
     public GetExternalDynamicListListDataTypeUrlRecurringMonthly monthly() {
         return this.monthly;
     }
     /**
-     * @return The Weekly param.
+     * @return Weekly
      * 
      */
     public GetExternalDynamicListListDataTypeUrlRecurringWeekly weekly() {
@@ -86,8 +87,8 @@ public final class GetExternalDynamicListListDataTypeUrlRecurring {
     @CustomType.Builder
     public static final class Builder {
         private GetExternalDynamicListListDataTypeUrlRecurringDaily daily;
-        private Boolean fiveMinute;
-        private Boolean hourly;
+        private GetExternalDynamicListListDataTypeUrlRecurringFiveMinute fiveMinute;
+        private GetExternalDynamicListListDataTypeUrlRecurringHourly hourly;
         private GetExternalDynamicListListDataTypeUrlRecurringMonthly monthly;
         private GetExternalDynamicListListDataTypeUrlRecurringWeekly weekly;
         public Builder() {}
@@ -109,7 +110,7 @@ public final class GetExternalDynamicListListDataTypeUrlRecurring {
             return this;
         }
         @CustomType.Setter
-        public Builder fiveMinute(Boolean fiveMinute) {
+        public Builder fiveMinute(GetExternalDynamicListListDataTypeUrlRecurringFiveMinute fiveMinute) {
             if (fiveMinute == null) {
               throw new MissingRequiredPropertyException("GetExternalDynamicListListDataTypeUrlRecurring", "fiveMinute");
             }
@@ -117,7 +118,7 @@ public final class GetExternalDynamicListListDataTypeUrlRecurring {
             return this;
         }
         @CustomType.Setter
-        public Builder hourly(Boolean hourly) {
+        public Builder hourly(GetExternalDynamicListListDataTypeUrlRecurringHourly hourly) {
             if (hourly == null) {
               throw new MissingRequiredPropertyException("GetExternalDynamicListListDataTypeUrlRecurring", "hourly");
             }

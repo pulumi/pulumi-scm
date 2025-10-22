@@ -48,31 +48,31 @@ class DecryptionRuleArgs:
                  type: Optional[pulumi.Input['DecryptionRuleTypeArgs']] = None):
         """
         The set of arguments for constructing a DecryptionRule resource.
-        :param pulumi.Input[_builtins.str] action: The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The Services param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The SourceUsers param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The DestinationHips param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] log_fail: The LogFail param.
-        :param pulumi.Input[_builtins.str] log_setting: The LogSetting param.
-        :param pulumi.Input[_builtins.bool] log_success: The LogSuccess param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] profile: The Profile param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The SourceHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input['DecryptionRuleTypeArgs'] type: The Type param.
+        :param pulumi.Input[_builtins.str] action: The action to be taken
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL category
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination addresses
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination services and/or service groups
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
+        :param pulumi.Input[_builtins.str] description: The description of the decryption rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The Host Integrity Profile of the destination host
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Is the rule disabled?
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] log_fail: Log failed decryption events?
+        :param pulumi.Input[_builtins.str] log_setting: The log settings of the decryption rule
+        :param pulumi.Input[_builtins.bool] log_success: Log successful decryption events?
+        :param pulumi.Input[_builtins.str] name: The name of the decryption rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses?
+        :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
+        :param pulumi.Input['DecryptionRuleTypeArgs'] type: The type of decryption
         """
         pulumi.set(__self__, "action", action)
         pulumi.set(__self__, "categories", categories)
@@ -121,7 +121,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def action(self) -> pulumi.Input[_builtins.str]:
         """
-        The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+        The action to be taken
         """
         return pulumi.get(self, "action")
 
@@ -133,7 +133,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def categories(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Categories param.
+        The destination URL category
         """
         return pulumi.get(self, "categories")
 
@@ -145,7 +145,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def destinations(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Destinations param.
+        The destination addresses
         """
         return pulumi.get(self, "destinations")
 
@@ -157,7 +157,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def froms(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Froms param.
+        The source security zone
         """
         return pulumi.get(self, "froms")
 
@@ -169,7 +169,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def services(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Services param.
+        The destination services and/or service groups
         """
         return pulumi.get(self, "services")
 
@@ -181,7 +181,7 @@ class DecryptionRuleArgs:
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The SourceUsers param.
+        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         """
         return pulumi.get(self, "source_users")
 
@@ -193,7 +193,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def sources(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Sources param.
+        The source addresses
         """
         return pulumi.get(self, "sources")
 
@@ -205,7 +205,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def tos(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Tos param.
+        The destination security zone
         """
         return pulumi.get(self, "tos")
 
@@ -217,7 +217,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the decryption rule
         """
         return pulumi.get(self, "description")
 
@@ -229,7 +229,7 @@ class DecryptionRuleArgs:
     @pulumi.getter(name="destinationHips")
     def destination_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The DestinationHips param.
+        The Host Integrity Profile of the destination host
         """
         return pulumi.get(self, "destination_hips")
 
@@ -241,7 +241,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -253,7 +253,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Disabled param.
+        Is the rule disabled?
         """
         return pulumi.get(self, "disabled")
 
@@ -265,7 +265,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -277,7 +277,7 @@ class DecryptionRuleArgs:
     @pulumi.getter(name="logFail")
     def log_fail(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogFail param.
+        Log failed decryption events?
         """
         return pulumi.get(self, "log_fail")
 
@@ -289,7 +289,7 @@ class DecryptionRuleArgs:
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The LogSetting param.
+        The log settings of the decryption rule
         """
         return pulumi.get(self, "log_setting")
 
@@ -301,7 +301,7 @@ class DecryptionRuleArgs:
     @pulumi.getter(name="logSuccess")
     def log_success(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogSuccess param.
+        Log successful decryption events?
         """
         return pulumi.get(self, "log_success")
 
@@ -313,7 +313,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the decryption rule
         """
         return pulumi.get(self, "name")
 
@@ -325,7 +325,7 @@ class DecryptionRuleArgs:
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateDestination param.
+        Negate the destination addresses?
         """
         return pulumi.get(self, "negate_destination")
 
@@ -337,7 +337,7 @@ class DecryptionRuleArgs:
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateSource param.
+        Negate the source addresses?
         """
         return pulumi.get(self, "negate_source")
 
@@ -349,7 +349,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def position(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The position of a security rule
         """
         return pulumi.get(self, "position")
 
@@ -361,7 +361,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def profile(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Profile param.
+        The decryption profile associated with the decryption rule
         """
         return pulumi.get(self, "profile")
 
@@ -373,7 +373,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -385,7 +385,7 @@ class DecryptionRuleArgs:
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The SourceHips param.
+        Source hip
         """
         return pulumi.get(self, "source_hips")
 
@@ -397,7 +397,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Tags param.
+        The tags associated with the decryption rule
         """
         return pulumi.get(self, "tags")
 
@@ -409,7 +409,7 @@ class DecryptionRuleArgs:
     @pulumi.getter
     def type(self) -> Optional[pulumi.Input['DecryptionRuleTypeArgs']]:
         """
-        The Type param.
+        The type of decryption
         """
         return pulumi.get(self, "type")
 
@@ -449,31 +449,31 @@ class _DecryptionRuleState:
                  type: Optional[pulumi.Input['DecryptionRuleTypeArgs']] = None):
         """
         Input properties used for looking up and filtering DecryptionRule resources.
-        :param pulumi.Input[_builtins.str] action: The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The DestinationHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[_builtins.bool] log_fail: The LogFail param.
-        :param pulumi.Input[_builtins.str] log_setting: The LogSetting param.
-        :param pulumi.Input[_builtins.bool] log_success: The LogSuccess param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] profile: The Profile param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The Services param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The SourceHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The SourceUsers param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
-        :param pulumi.Input['DecryptionRuleTypeArgs'] type: The Type param.
+        :param pulumi.Input[_builtins.str] action: The action to be taken
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL category
+        :param pulumi.Input[_builtins.str] description: The description of the decryption rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The Host Integrity Profile of the destination host
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination addresses
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Is the rule disabled?
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone
+        :param pulumi.Input[_builtins.bool] log_fail: Log failed decryption events?
+        :param pulumi.Input[_builtins.str] log_setting: The log settings of the decryption rule
+        :param pulumi.Input[_builtins.bool] log_success: Log successful decryption events?
+        :param pulumi.Input[_builtins.str] name: The name of the decryption rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses?
+        :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination services and/or service groups
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
+        :param pulumi.Input['DecryptionRuleTypeArgs'] type: The type of decryption
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -532,7 +532,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+        The action to be taken
         """
         return pulumi.get(self, "action")
 
@@ -544,7 +544,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Categories param.
+        The destination URL category
         """
         return pulumi.get(self, "categories")
 
@@ -556,7 +556,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the decryption rule
         """
         return pulumi.get(self, "description")
 
@@ -568,7 +568,7 @@ class _DecryptionRuleState:
     @pulumi.getter(name="destinationHips")
     def destination_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The DestinationHips param.
+        The Host Integrity Profile of the destination host
         """
         return pulumi.get(self, "destination_hips")
 
@@ -580,7 +580,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Destinations param.
+        The destination addresses
         """
         return pulumi.get(self, "destinations")
 
@@ -592,7 +592,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -604,7 +604,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Disabled param.
+        Is the rule disabled?
         """
         return pulumi.get(self, "disabled")
 
@@ -616,7 +616,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -628,7 +628,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def froms(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Froms param.
+        The source security zone
         """
         return pulumi.get(self, "froms")
 
@@ -640,7 +640,7 @@ class _DecryptionRuleState:
     @pulumi.getter(name="logFail")
     def log_fail(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogFail param.
+        Log failed decryption events?
         """
         return pulumi.get(self, "log_fail")
 
@@ -652,7 +652,7 @@ class _DecryptionRuleState:
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The LogSetting param.
+        The log settings of the decryption rule
         """
         return pulumi.get(self, "log_setting")
 
@@ -664,7 +664,7 @@ class _DecryptionRuleState:
     @pulumi.getter(name="logSuccess")
     def log_success(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogSuccess param.
+        Log successful decryption events?
         """
         return pulumi.get(self, "log_success")
 
@@ -676,7 +676,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the decryption rule
         """
         return pulumi.get(self, "name")
 
@@ -688,7 +688,7 @@ class _DecryptionRuleState:
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateDestination param.
+        Negate the destination addresses?
         """
         return pulumi.get(self, "negate_destination")
 
@@ -700,7 +700,7 @@ class _DecryptionRuleState:
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateSource param.
+        Negate the source addresses?
         """
         return pulumi.get(self, "negate_source")
 
@@ -712,7 +712,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def position(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The position of a security rule
         """
         return pulumi.get(self, "position")
 
@@ -724,7 +724,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def profile(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Profile param.
+        The decryption profile associated with the decryption rule
         """
         return pulumi.get(self, "profile")
 
@@ -736,7 +736,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def services(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Services param.
+        The destination services and/or service groups
         """
         return pulumi.get(self, "services")
 
@@ -748,7 +748,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -760,7 +760,7 @@ class _DecryptionRuleState:
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The SourceHips param.
+        Source hip
         """
         return pulumi.get(self, "source_hips")
 
@@ -772,7 +772,7 @@ class _DecryptionRuleState:
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The SourceUsers param.
+        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         """
         return pulumi.get(self, "source_users")
 
@@ -784,7 +784,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def sources(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Sources param.
+        The source addresses
         """
         return pulumi.get(self, "sources")
 
@@ -796,7 +796,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Tags param.
+        The tags associated with the decryption rule
         """
         return pulumi.get(self, "tags")
 
@@ -817,7 +817,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def tos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Tos param.
+        The destination security zone
         """
         return pulumi.get(self, "tos")
 
@@ -829,7 +829,7 @@ class _DecryptionRuleState:
     @pulumi.getter
     def type(self) -> Optional[pulumi.Input['DecryptionRuleTypeArgs']]:
         """
-        The Type param.
+        The type of decryption
         """
         return pulumi.get(self, "type")
 
@@ -871,44 +871,35 @@ class DecryptionRule(pulumi.CustomResource):
                  type: Optional[pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.DecryptionRule("example")
-        ```
+        DecryptionRule resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] action: The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The DestinationHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[_builtins.bool] log_fail: The LogFail param.
-        :param pulumi.Input[_builtins.str] log_setting: The LogSetting param.
-        :param pulumi.Input[_builtins.bool] log_success: The LogSuccess param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] profile: The Profile param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The Services param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The SourceHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The SourceUsers param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
-        :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']] type: The Type param.
+        :param pulumi.Input[_builtins.str] action: The action to be taken
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL category
+        :param pulumi.Input[_builtins.str] description: The description of the decryption rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The Host Integrity Profile of the destination host
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination addresses
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Is the rule disabled?
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone
+        :param pulumi.Input[_builtins.bool] log_fail: Log failed decryption events?
+        :param pulumi.Input[_builtins.str] log_setting: The log settings of the decryption rule
+        :param pulumi.Input[_builtins.bool] log_success: Log successful decryption events?
+        :param pulumi.Input[_builtins.str] name: The name of the decryption rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses?
+        :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination services and/or service groups
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
+        :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']] type: The type of decryption
         """
         ...
     @overload
@@ -917,16 +908,7 @@ class DecryptionRule(pulumi.CustomResource):
                  args: DecryptionRuleArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.DecryptionRule("example")
-        ```
+        DecryptionRule resource
 
         :param str resource_name: The name of the resource.
         :param DecryptionRuleArgs args: The arguments to use to populate this resource's properties.
@@ -1062,31 +1044,31 @@ class DecryptionRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] action: The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The DestinationHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[_builtins.bool] log_fail: The LogFail param.
-        :param pulumi.Input[_builtins.str] log_setting: The LogSetting param.
-        :param pulumi.Input[_builtins.bool] log_success: The LogSuccess param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] profile: The Profile param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The Services param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The SourceHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The SourceUsers param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
-        :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']] type: The Type param.
+        :param pulumi.Input[_builtins.str] action: The action to be taken
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL category
+        :param pulumi.Input[_builtins.str] description: The description of the decryption rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The Host Integrity Profile of the destination host
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination addresses
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Is the rule disabled?
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone
+        :param pulumi.Input[_builtins.bool] log_fail: Log failed decryption events?
+        :param pulumi.Input[_builtins.str] log_setting: The log settings of the decryption rule
+        :param pulumi.Input[_builtins.bool] log_success: Log successful decryption events?
+        :param pulumi.Input[_builtins.str] name: The name of the decryption rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses?
+        :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination services and/or service groups
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
+        :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']] type: The type of decryption
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -1124,7 +1106,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def action(self) -> pulumi.Output[_builtins.str]:
         """
-        The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+        The action to be taken
         """
         return pulumi.get(self, "action")
 
@@ -1132,7 +1114,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def categories(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Categories param.
+        The destination URL category
         """
         return pulumi.get(self, "categories")
 
@@ -1140,7 +1122,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param.
+        The description of the decryption rule
         """
         return pulumi.get(self, "description")
 
@@ -1148,7 +1130,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter(name="destinationHips")
     def destination_hips(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The DestinationHips param.
+        The Host Integrity Profile of the destination host
         """
         return pulumi.get(self, "destination_hips")
 
@@ -1156,7 +1138,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def destinations(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Destinations param.
+        The destination addresses
         """
         return pulumi.get(self, "destinations")
 
@@ -1164,7 +1146,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -1172,7 +1154,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def disabled(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The Disabled param.
+        Is the rule disabled?
         """
         return pulumi.get(self, "disabled")
 
@@ -1180,7 +1162,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -1188,7 +1170,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def froms(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Froms param.
+        The source security zone
         """
         return pulumi.get(self, "froms")
 
@@ -1196,7 +1178,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter(name="logFail")
     def log_fail(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The LogFail param.
+        Log failed decryption events?
         """
         return pulumi.get(self, "log_fail")
 
@@ -1204,7 +1186,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The LogSetting param.
+        The log settings of the decryption rule
         """
         return pulumi.get(self, "log_setting")
 
@@ -1212,7 +1194,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter(name="logSuccess")
     def log_success(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The LogSuccess param.
+        Log successful decryption events?
         """
         return pulumi.get(self, "log_success")
 
@@ -1220,7 +1202,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        The name of the decryption rule
         """
         return pulumi.get(self, "name")
 
@@ -1228,7 +1210,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The NegateDestination param.
+        Negate the destination addresses?
         """
         return pulumi.get(self, "negate_destination")
 
@@ -1236,7 +1218,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The NegateSource param.
+        Negate the source addresses?
         """
         return pulumi.get(self, "negate_source")
 
@@ -1244,7 +1226,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def position(self) -> pulumi.Output[_builtins.str]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The position of a security rule
         """
         return pulumi.get(self, "position")
 
@@ -1252,7 +1234,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def profile(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Profile param.
+        The decryption profile associated with the decryption rule
         """
         return pulumi.get(self, "profile")
 
@@ -1260,7 +1242,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def services(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Services param.
+        The destination services and/or service groups
         """
         return pulumi.get(self, "services")
 
@@ -1268,7 +1250,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -1276,7 +1258,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The SourceHips param.
+        Source hip
         """
         return pulumi.get(self, "source_hips")
 
@@ -1284,7 +1266,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The SourceUsers param.
+        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         """
         return pulumi.get(self, "source_users")
 
@@ -1292,7 +1274,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def sources(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Sources param.
+        The source addresses
         """
         return pulumi.get(self, "sources")
 
@@ -1300,7 +1282,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def tags(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Tags param.
+        The tags associated with the decryption rule
         """
         return pulumi.get(self, "tags")
 
@@ -1313,7 +1295,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def tos(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Tos param.
+        The destination security zone
         """
         return pulumi.get(self, "tos")
 
@@ -1321,7 +1303,7 @@ class DecryptionRule(pulumi.CustomResource):
     @pulumi.getter
     def type(self) -> pulumi.Output[Optional['outputs.DecryptionRuleType']]:
         """
-        The Type param.
+        The type of decryption
         """
         return pulumi.get(self, "type")
 

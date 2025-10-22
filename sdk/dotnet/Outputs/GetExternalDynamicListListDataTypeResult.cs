@@ -14,31 +14,31 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataTypeResult
     {
         /// <summary>
-        /// The Domain param.
+        /// Domain
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeDomainResult Domain;
         /// <summary>
-        /// The Imei param.
+        /// Imei
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeImeiResult Imei;
         /// <summary>
-        /// The Imsi param.
+        /// Imsi
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeImsiResult Imsi;
         /// <summary>
-        /// The Ip param.
+        /// Ip
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeIpResult Ip;
         /// <summary>
-        /// The PredefinedIp param.
+        /// Predefined ip
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypePredefinedIpResult PredefinedIp;
         /// <summary>
-        /// The PredefinedUrl param.
+        /// Predefined url
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypePredefinedUrlResult PredefinedUrl;
         /// <summary>
-        /// The Url param.
+        /// Url
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeUrlResult Url;
 

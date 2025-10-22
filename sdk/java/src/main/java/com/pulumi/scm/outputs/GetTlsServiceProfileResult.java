@@ -12,55 +12,91 @@ import java.util.Objects;
 @CustomType
 public final class GetTlsServiceProfileResult {
     /**
-     * @return SSL certificate file name. String length must not exceed 255 characters.
+     * @return Certificate name
      * 
      */
     private String certificate;
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the TLS service profile
      * 
      */
     private String id;
     /**
-     * @return SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      * 
      */
     private String name;
     /**
-     * @return The ProtocolSettings param.
+     * @return Protocol settings
      * 
      */
     private GetTlsServiceProfileProtocolSettings protocolSettings;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
 
     private GetTlsServiceProfileResult() {}
     /**
-     * @return SSL certificate file name. String length must not exceed 255 characters.
+     * @return Certificate name
      * 
      */
     public String certificate() {
         return this.certificate;
     }
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the TLS service profile
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The ProtocolSettings param.
+     * @return Protocol settings
      * 
      */
     public GetTlsServiceProfileProtocolSettings protocolSettings() {
         return this.protocolSettings;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
     }
     public String tfid() {
         return this.tfid;
@@ -76,17 +112,23 @@ public final class GetTlsServiceProfileResult {
     @CustomType.Builder
     public static final class Builder {
         private String certificate;
+        private String device;
+        private String folder;
         private String id;
         private String name;
         private GetTlsServiceProfileProtocolSettings protocolSettings;
+        private String snippet;
         private String tfid;
         public Builder() {}
         public Builder(GetTlsServiceProfileResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.certificate = defaults.certificate;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.protocolSettings = defaults.protocolSettings;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
         }
 
@@ -96,6 +138,22 @@ public final class GetTlsServiceProfileResult {
               throw new MissingRequiredPropertyException("GetTlsServiceProfileResult", "certificate");
             }
             this.certificate = certificate;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetTlsServiceProfileResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetTlsServiceProfileResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -123,6 +181,14 @@ public final class GetTlsServiceProfileResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetTlsServiceProfileResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetTlsServiceProfileResult", "tfid");
@@ -133,9 +199,12 @@ public final class GetTlsServiceProfileResult {
         public GetTlsServiceProfileResult build() {
             final var _resultValue = new GetTlsServiceProfileResult();
             _resultValue.certificate = certificate;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.protocolSettings = protocolSettings;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             return _resultValue;
         }

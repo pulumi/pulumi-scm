@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataCustomChecksCriteriaPlist {
     /**
-     * @return The Keys param.
+     * @return Key
      * 
      */
     private List<GetHipObjectListDataCustomChecksCriteriaPlistKey> keys;
     /**
-     * @return The Name param.
+     * @return Preference list
      * 
      */
     private String name;
     /**
-     * @return Plist does not exist. Default: `false`.
+     * @return Plist does not exist
      * 
      */
     private Boolean negate;
 
     private GetHipObjectListDataCustomChecksCriteriaPlist() {}
     /**
-     * @return The Keys param.
+     * @return Key
      * 
      */
     public List<GetHipObjectListDataCustomChecksCriteriaPlistKey> keys() {
         return this.keys;
     }
     /**
-     * @return The Name param.
+     * @return Preference list
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Plist does not exist. Default: `false`.
+     * @return Plist does not exist
      * 
      */
     public Boolean negate() {

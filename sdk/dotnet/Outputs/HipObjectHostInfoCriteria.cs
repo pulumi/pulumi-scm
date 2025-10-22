@@ -14,31 +14,31 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectHostInfoCriteria
     {
         /// <summary>
-        /// The ClientVersion param.
+        /// Client version
         /// </summary>
         public readonly Outputs.HipObjectHostInfoCriteriaClientVersion? ClientVersion;
         /// <summary>
-        /// The Domain param.
+        /// Domain
         /// </summary>
         public readonly Outputs.HipObjectHostInfoCriteriaDomain? Domain;
         /// <summary>
-        /// The HostId param.
+        /// Host id
         /// </summary>
         public readonly Outputs.HipObjectHostInfoCriteriaHostId? HostId;
         /// <summary>
-        /// The HostName param.
+        /// Host name
         /// </summary>
         public readonly Outputs.HipObjectHostInfoCriteriaHostName? HostName;
         /// <summary>
-        /// If device is managed.
+        /// If device is managed
         /// </summary>
         public readonly bool? Managed;
         /// <summary>
-        /// The Os param.
+        /// Os
         /// </summary>
         public readonly Outputs.HipObjectHostInfoCriteriaOs? Os;
         /// <summary>
-        /// The SerialNumber param.
+        /// Serial number
         /// </summary>
         public readonly Outputs.HipObjectHostInfoCriteriaSerialNumber? SerialNumber;
 

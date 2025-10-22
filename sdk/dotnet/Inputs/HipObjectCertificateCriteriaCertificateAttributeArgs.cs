@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectCertificateCriteriaCertificateAttributeArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Attribute Name.
+        /// Attribute Name
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+        /// Key value
         /// </summary>
         [Input("value")]
         public Input<string>? Value { get; set; }

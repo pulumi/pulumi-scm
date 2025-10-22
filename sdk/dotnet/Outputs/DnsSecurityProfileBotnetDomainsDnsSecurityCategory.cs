@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class DnsSecurityProfileBotnetDomainsDnsSecurityCategory
     {
         /// <summary>
-        /// The Action param. String must be one of these: `"default"`, `"allow"`, `"block"`, `"sinkhole"`. Default: `"default"`.
+        /// Action
         /// </summary>
         public readonly string? Action;
         /// <summary>
-        /// The LogLevel param. String must be one of these: `"default"`, `"none"`, `"low"`, `"informational"`, `"medium"`, `"high"`, `"critical"`. Default: `"default"`.
+        /// Log level
         /// </summary>
         public readonly string? LogLevel;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string? Name;
         /// <summary>
-        /// The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        /// Packet capture
         /// </summary>
         public readonly string? PacketCapture;
 

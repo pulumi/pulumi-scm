@@ -11,78 +11,56 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// ApplicationFilter resource
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewApplicationFilter(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 type ApplicationFilter struct {
 	pulumi.CustomResourceState
 
-	// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Category
 	Categories pulumi.StringArrayOutput `pulumi:"categories"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// only True is a valid value.
+	// only True is a valid value
 	Evasive pulumi.BoolPtrOutput `pulumi:"evasive"`
-	// only True is a valid value.
+	// only True is a valid value
 	ExcessiveBandwidthUse pulumi.BoolPtrOutput `pulumi:"excessiveBandwidthUse"`
-	// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Exclude
 	Excludes pulumi.StringArrayOutput `pulumi:"excludes"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// only True is a valid value.
+	// only True is a valid value
 	HasKnownVulnerabilities pulumi.BoolPtrOutput `pulumi:"hasKnownVulnerabilities"`
-	// only True is a valid value.
+	// only True is a valid value
 	IsSaas pulumi.BoolPtrOutput `pulumi:"isSaas"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
-	// only True is a valid value.
+	// only True is a valid value
 	NewAppid pulumi.BoolPtrOutput `pulumi:"newAppid"`
-	// only True is a valid value.
+	// only True is a valid value
 	Pervasive pulumi.BoolPtrOutput `pulumi:"pervasive"`
-	// only True is a valid value.
+	// only True is a valid value
 	ProneToMisuse pulumi.BoolPtrOutput `pulumi:"proneToMisuse"`
-	// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+	// Risk
 	Risks pulumi.IntArrayOutput `pulumi:"risks"`
-	// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas certifications
 	SaasCertifications pulumi.StringArrayOutput `pulumi:"saasCertifications"`
-	// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas risk
 	SaasRisks pulumi.StringArrayOutput `pulumi:"saasRisks"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Subcategory
 	Subcategories pulumi.StringArrayOutput `pulumi:"subcategories"`
-	// The Tagging param.
+	// Tagging
 	Tagging ApplicationFilterTaggingPtrOutput `pulumi:"tagging"`
-	// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Technology
 	Technologies pulumi.StringArrayOutput `pulumi:"technologies"`
 	Tfid         pulumi.StringOutput      `pulumi:"tfid"`
-	// only True is a valid value.
+	// only True is a valid value
 	TransfersFiles pulumi.BoolPtrOutput `pulumi:"transfersFiles"`
-	// only True is a valid value.
+	// only True is a valid value
 	TunnelsOtherApps pulumi.BoolPtrOutput `pulumi:"tunnelsOtherApps"`
-	// only True is a valid value.
+	// only True is a valid value
 	UsedByMalware pulumi.BoolPtrOutput `pulumi:"usedByMalware"`
 }
 
@@ -116,98 +94,98 @@ func GetApplicationFilter(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ApplicationFilter resources.
 type applicationFilterState struct {
-	// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Category
 	Categories []string `pulumi:"categories"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// only True is a valid value.
+	// only True is a valid value
 	Evasive *bool `pulumi:"evasive"`
-	// only True is a valid value.
+	// only True is a valid value
 	ExcessiveBandwidthUse *bool `pulumi:"excessiveBandwidthUse"`
-	// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Exclude
 	Excludes []string `pulumi:"excludes"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// only True is a valid value.
+	// only True is a valid value
 	HasKnownVulnerabilities *bool `pulumi:"hasKnownVulnerabilities"`
-	// only True is a valid value.
+	// only True is a valid value
 	IsSaas *bool `pulumi:"isSaas"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// only True is a valid value.
+	// only True is a valid value
 	NewAppid *bool `pulumi:"newAppid"`
-	// only True is a valid value.
+	// only True is a valid value
 	Pervasive *bool `pulumi:"pervasive"`
-	// only True is a valid value.
+	// only True is a valid value
 	ProneToMisuse *bool `pulumi:"proneToMisuse"`
-	// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+	// Risk
 	Risks []int `pulumi:"risks"`
-	// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas certifications
 	SaasCertifications []string `pulumi:"saasCertifications"`
-	// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas risk
 	SaasRisks []string `pulumi:"saasRisks"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Subcategory
 	Subcategories []string `pulumi:"subcategories"`
-	// The Tagging param.
+	// Tagging
 	Tagging *ApplicationFilterTagging `pulumi:"tagging"`
-	// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Technology
 	Technologies []string `pulumi:"technologies"`
 	Tfid         *string  `pulumi:"tfid"`
-	// only True is a valid value.
+	// only True is a valid value
 	TransfersFiles *bool `pulumi:"transfersFiles"`
-	// only True is a valid value.
+	// only True is a valid value
 	TunnelsOtherApps *bool `pulumi:"tunnelsOtherApps"`
-	// only True is a valid value.
+	// only True is a valid value
 	UsedByMalware *bool `pulumi:"usedByMalware"`
 }
 
 type ApplicationFilterState struct {
-	// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Category
 	Categories pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	Evasive pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	ExcessiveBandwidthUse pulumi.BoolPtrInput
-	// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Exclude
 	Excludes pulumi.StringArrayInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	HasKnownVulnerabilities pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	IsSaas pulumi.BoolPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	NewAppid pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	Pervasive pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	ProneToMisuse pulumi.BoolPtrInput
-	// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+	// Risk
 	Risks pulumi.IntArrayInput
-	// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas certifications
 	SaasCertifications pulumi.StringArrayInput
-	// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas risk
 	SaasRisks pulumi.StringArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Subcategory
 	Subcategories pulumi.StringArrayInput
-	// The Tagging param.
+	// Tagging
 	Tagging ApplicationFilterTaggingPtrInput
-	// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Technology
 	Technologies pulumi.StringArrayInput
 	Tfid         pulumi.StringPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	TransfersFiles pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	TunnelsOtherApps pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	UsedByMalware pulumi.BoolPtrInput
 }
 
@@ -216,97 +194,97 @@ func (ApplicationFilterState) ElementType() reflect.Type {
 }
 
 type applicationFilterArgs struct {
-	// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Category
 	Categories []string `pulumi:"categories"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// only True is a valid value.
+	// only True is a valid value
 	Evasive *bool `pulumi:"evasive"`
-	// only True is a valid value.
+	// only True is a valid value
 	ExcessiveBandwidthUse *bool `pulumi:"excessiveBandwidthUse"`
-	// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Exclude
 	Excludes []string `pulumi:"excludes"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// only True is a valid value.
+	// only True is a valid value
 	HasKnownVulnerabilities *bool `pulumi:"hasKnownVulnerabilities"`
-	// only True is a valid value.
+	// only True is a valid value
 	IsSaas *bool `pulumi:"isSaas"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// only True is a valid value.
+	// only True is a valid value
 	NewAppid *bool `pulumi:"newAppid"`
-	// only True is a valid value.
+	// only True is a valid value
 	Pervasive *bool `pulumi:"pervasive"`
-	// only True is a valid value.
+	// only True is a valid value
 	ProneToMisuse *bool `pulumi:"proneToMisuse"`
-	// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+	// Risk
 	Risks []int `pulumi:"risks"`
-	// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas certifications
 	SaasCertifications []string `pulumi:"saasCertifications"`
-	// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas risk
 	SaasRisks []string `pulumi:"saasRisks"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Subcategory
 	Subcategories []string `pulumi:"subcategories"`
-	// The Tagging param.
+	// Tagging
 	Tagging *ApplicationFilterTagging `pulumi:"tagging"`
-	// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Technology
 	Technologies []string `pulumi:"technologies"`
-	// only True is a valid value.
+	// only True is a valid value
 	TransfersFiles *bool `pulumi:"transfersFiles"`
-	// only True is a valid value.
+	// only True is a valid value
 	TunnelsOtherApps *bool `pulumi:"tunnelsOtherApps"`
-	// only True is a valid value.
+	// only True is a valid value
 	UsedByMalware *bool `pulumi:"usedByMalware"`
 }
 
 // The set of arguments for constructing a ApplicationFilter resource.
 type ApplicationFilterArgs struct {
-	// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Category
 	Categories pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	Evasive pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	ExcessiveBandwidthUse pulumi.BoolPtrInput
-	// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Exclude
 	Excludes pulumi.StringArrayInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	HasKnownVulnerabilities pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	IsSaas pulumi.BoolPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	NewAppid pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	Pervasive pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	ProneToMisuse pulumi.BoolPtrInput
-	// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+	// Risk
 	Risks pulumi.IntArrayInput
-	// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas certifications
 	SaasCertifications pulumi.StringArrayInput
-	// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas risk
 	SaasRisks pulumi.StringArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Subcategory
 	Subcategories pulumi.StringArrayInput
-	// The Tagging param.
+	// Tagging
 	Tagging ApplicationFilterTaggingPtrInput
-	// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Technology
 	Technologies pulumi.StringArrayInput
-	// only True is a valid value.
+	// only True is a valid value
 	TransfersFiles pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	TunnelsOtherApps pulumi.BoolPtrInput
-	// only True is a valid value.
+	// only True is a valid value
 	UsedByMalware pulumi.BoolPtrInput
 }
 
@@ -397,97 +375,97 @@ func (o ApplicationFilterOutput) ToApplicationFilterOutputWithContext(ctx contex
 	return o
 }
 
-// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+// Category
 func (o ApplicationFilterOutput) Categories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringArrayOutput { return v.Categories }).(pulumi.StringArrayOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o ApplicationFilterOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o ApplicationFilterOutput) Evasive() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.BoolPtrOutput { return v.Evasive }).(pulumi.BoolPtrOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o ApplicationFilterOutput) ExcessiveBandwidthUse() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.BoolPtrOutput { return v.ExcessiveBandwidthUse }).(pulumi.BoolPtrOutput)
 }
 
-// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+// Exclude
 func (o ApplicationFilterOutput) Excludes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringArrayOutput { return v.Excludes }).(pulumi.StringArrayOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o ApplicationFilterOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o ApplicationFilterOutput) HasKnownVulnerabilities() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.BoolPtrOutput { return v.HasKnownVulnerabilities }).(pulumi.BoolPtrOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o ApplicationFilterOutput) IsSaas() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.BoolPtrOutput { return v.IsSaas }).(pulumi.BoolPtrOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// Alphanumeric string [ 0-9a-zA-Z._-]
 func (o ApplicationFilterOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o ApplicationFilterOutput) NewAppid() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.BoolPtrOutput { return v.NewAppid }).(pulumi.BoolPtrOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o ApplicationFilterOutput) Pervasive() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.BoolPtrOutput { return v.Pervasive }).(pulumi.BoolPtrOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o ApplicationFilterOutput) ProneToMisuse() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.BoolPtrOutput { return v.ProneToMisuse }).(pulumi.BoolPtrOutput)
 }
 
-// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+// Risk
 func (o ApplicationFilterOutput) Risks() pulumi.IntArrayOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.IntArrayOutput { return v.Risks }).(pulumi.IntArrayOutput)
 }
 
-// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+// Saas certifications
 func (o ApplicationFilterOutput) SaasCertifications() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringArrayOutput { return v.SaasCertifications }).(pulumi.StringArrayOutput)
 }
 
-// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+// Saas risk
 func (o ApplicationFilterOutput) SaasRisks() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringArrayOutput { return v.SaasRisks }).(pulumi.StringArrayOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o ApplicationFilterOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+// Subcategory
 func (o ApplicationFilterOutput) Subcategories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringArrayOutput { return v.Subcategories }).(pulumi.StringArrayOutput)
 }
 
-// The Tagging param.
+// Tagging
 func (o ApplicationFilterOutput) Tagging() ApplicationFilterTaggingPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) ApplicationFilterTaggingPtrOutput { return v.Tagging }).(ApplicationFilterTaggingPtrOutput)
 }
 
-// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+// Technology
 func (o ApplicationFilterOutput) Technologies() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringArrayOutput { return v.Technologies }).(pulumi.StringArrayOutput)
 }
@@ -496,17 +474,17 @@ func (o ApplicationFilterOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o ApplicationFilterOutput) TransfersFiles() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.BoolPtrOutput { return v.TransfersFiles }).(pulumi.BoolPtrOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o ApplicationFilterOutput) TunnelsOtherApps() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.BoolPtrOutput { return v.TunnelsOtherApps }).(pulumi.BoolPtrOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o ApplicationFilterOutput) UsedByMalware() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ApplicationFilter) pulumi.BoolPtrOutput { return v.UsedByMalware }).(pulumi.BoolPtrOutput)
 }

@@ -14,266 +14,306 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationRuleListData {
     /**
-     * @return the authentication profile name to apply to authentication rule.
+     * @return The authentication profile name
      * 
      */
     private String authenticationEnforcement;
     /**
-     * @return The Categories param.
+     * @return The destination URL categories
      * 
      */
     private List<String> categories;
     /**
-     * @return The Description param.
+     * @return The description of the authentication rule
      * 
      */
     private String description;
     /**
-     * @return The DestinationHips param.
+     * @return The destination Host Integrity Profile (HIP)
      * 
      */
     private List<String> destinationHips;
     /**
-     * @return The Destinations param.
+     * @return The destination addresses
      * 
      */
     private List<String> destinations;
     /**
-     * @return The Disabled param. Default: `false`.
+     * @return Device
+     * 
+     */
+    private String device;
+    /**
+     * @return Is the authentication rule disabled?
      * 
      */
     private Boolean disabled;
     /**
-     * @return The Froms param.
+     * @return Folder
+     * 
+     */
+    private String folder;
+    /**
+     * @return The source security zones
      * 
      */
     private List<String> froms;
     /**
-     * @return The GroupTag param.
+     * @return Group tag
      * 
      */
     private String groupTag;
     /**
-     * @return The HipProfiles param.
+     * @return The source Host Integrity Profile (HIP)
      * 
      */
     private List<String> hipProfiles;
     /**
-     * @return UUID of the resource.
+     * @return The UUID of the authentication rule
      * 
      */
     private String id;
     /**
-     * @return The LogAuthenticationTimeout param. Default: `false`.
+     * @return Log authentication timeouts?
      * 
      */
     private Boolean logAuthenticationTimeout;
     /**
-     * @return The LogSetting param.
+     * @return The log forwarding profile name
      * 
      */
     private String logSetting;
     /**
-     * @return The Name param.
+     * @return The name of the authentication rule
      * 
      */
     private String name;
     /**
-     * @return The NegateDestination param. Default: `false`.
+     * @return Are the destination addresses negated?
      * 
      */
     private Boolean negateDestination;
     /**
-     * @return The NegateSource param. Default: `false`.
+     * @return Are the source addresses negated?
      * 
      */
     private Boolean negateSource;
     /**
-     * @return The Services param.
+     * @return The destination ports
      * 
      */
     private List<String> services;
     /**
-     * @return The SourceHips param.
+     * @return Snippet
+     * 
+     */
+    private String snippet;
+    /**
+     * @return The source Host Integrity Profile (HIP)
      * 
      */
     private List<String> sourceHips;
     /**
-     * @return The SourceUsers param.
+     * @return The source users
      * 
      */
     private List<String> sourceUsers;
     /**
-     * @return The Sources param.
+     * @return The source addresses
      * 
      */
     private List<String> sources;
     /**
-     * @return The Tags param.
+     * @return The authentication rule tags
      * 
      */
     private List<String> tags;
+    private String tfid;
     /**
-     * @return The Timeout param. Value must be between 1 and 1440.
+     * @return The authentication session timeout (seconds)
      * 
      */
     private Integer timeout;
     /**
-     * @return The Tos param.
+     * @return The destination security zones
      * 
      */
     private List<String> tos;
 
     private GetAuthenticationRuleListData() {}
     /**
-     * @return the authentication profile name to apply to authentication rule.
+     * @return The authentication profile name
      * 
      */
     public String authenticationEnforcement() {
         return this.authenticationEnforcement;
     }
     /**
-     * @return The Categories param.
+     * @return The destination URL categories
      * 
      */
     public List<String> categories() {
         return this.categories;
     }
     /**
-     * @return The Description param.
+     * @return The description of the authentication rule
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The DestinationHips param.
+     * @return The destination Host Integrity Profile (HIP)
      * 
      */
     public List<String> destinationHips() {
         return this.destinationHips;
     }
     /**
-     * @return The Destinations param.
+     * @return The destination addresses
      * 
      */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
-     * @return The Disabled param. Default: `false`.
+     * @return Device
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Is the authentication rule disabled?
      * 
      */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * @return The Froms param.
+     * @return Folder
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The source security zones
      * 
      */
     public List<String> froms() {
         return this.froms;
     }
     /**
-     * @return The GroupTag param.
+     * @return Group tag
      * 
      */
     public String groupTag() {
         return this.groupTag;
     }
     /**
-     * @return The HipProfiles param.
+     * @return The source Host Integrity Profile (HIP)
      * 
      */
     public List<String> hipProfiles() {
         return this.hipProfiles;
     }
     /**
-     * @return UUID of the resource.
+     * @return The UUID of the authentication rule
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The LogAuthenticationTimeout param. Default: `false`.
+     * @return Log authentication timeouts?
      * 
      */
     public Boolean logAuthenticationTimeout() {
         return this.logAuthenticationTimeout;
     }
     /**
-     * @return The LogSetting param.
+     * @return The log forwarding profile name
      * 
      */
     public String logSetting() {
         return this.logSetting;
     }
     /**
-     * @return The Name param.
+     * @return The name of the authentication rule
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The NegateDestination param. Default: `false`.
+     * @return Are the destination addresses negated?
      * 
      */
     public Boolean negateDestination() {
         return this.negateDestination;
     }
     /**
-     * @return The NegateSource param. Default: `false`.
+     * @return Are the source addresses negated?
      * 
      */
     public Boolean negateSource() {
         return this.negateSource;
     }
     /**
-     * @return The Services param.
+     * @return The destination ports
      * 
      */
     public List<String> services() {
         return this.services;
     }
     /**
-     * @return The SourceHips param.
+     * @return Snippet
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return The source Host Integrity Profile (HIP)
      * 
      */
     public List<String> sourceHips() {
         return this.sourceHips;
     }
     /**
-     * @return The SourceUsers param.
+     * @return The source users
      * 
      */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
     /**
-     * @return The Sources param.
+     * @return The source addresses
      * 
      */
     public List<String> sources() {
         return this.sources;
     }
     /**
-     * @return The Tags param.
+     * @return The authentication rule tags
      * 
      */
     public List<String> tags() {
         return this.tags;
     }
+    public String tfid() {
+        return this.tfid;
+    }
     /**
-     * @return The Timeout param. Value must be between 1 and 1440.
+     * @return The authentication session timeout (seconds)
      * 
      */
     public Integer timeout() {
         return this.timeout;
     }
     /**
-     * @return The Tos param.
+     * @return The destination security zones
      * 
      */
     public List<String> tos() {
@@ -294,7 +334,9 @@ public final class GetAuthenticationRuleListData {
         private String description;
         private List<String> destinationHips;
         private List<String> destinations;
+        private String device;
         private Boolean disabled;
+        private String folder;
         private List<String> froms;
         private String groupTag;
         private List<String> hipProfiles;
@@ -305,10 +347,12 @@ public final class GetAuthenticationRuleListData {
         private Boolean negateDestination;
         private Boolean negateSource;
         private List<String> services;
+        private String snippet;
         private List<String> sourceHips;
         private List<String> sourceUsers;
         private List<String> sources;
         private List<String> tags;
+        private String tfid;
         private Integer timeout;
         private List<String> tos;
         public Builder() {}
@@ -319,7 +363,9 @@ public final class GetAuthenticationRuleListData {
     	      this.description = defaults.description;
     	      this.destinationHips = defaults.destinationHips;
     	      this.destinations = defaults.destinations;
+    	      this.device = defaults.device;
     	      this.disabled = defaults.disabled;
+    	      this.folder = defaults.folder;
     	      this.froms = defaults.froms;
     	      this.groupTag = defaults.groupTag;
     	      this.hipProfiles = defaults.hipProfiles;
@@ -330,10 +376,12 @@ public final class GetAuthenticationRuleListData {
     	      this.negateDestination = defaults.negateDestination;
     	      this.negateSource = defaults.negateSource;
     	      this.services = defaults.services;
+    	      this.snippet = defaults.snippet;
     	      this.sourceHips = defaults.sourceHips;
     	      this.sourceUsers = defaults.sourceUsers;
     	      this.sources = defaults.sources;
     	      this.tags = defaults.tags;
+    	      this.tfid = defaults.tfid;
     	      this.timeout = defaults.timeout;
     	      this.tos = defaults.tos;
         }
@@ -388,11 +436,27 @@ public final class GetAuthenticationRuleListData {
             return destinations(List.of(destinations));
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder disabled(Boolean disabled) {
             if (disabled == null) {
               throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "disabled");
             }
             this.disabled = disabled;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -485,6 +549,14 @@ public final class GetAuthenticationRuleListData {
             return services(List.of(services));
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder sourceHips(List<String> sourceHips) {
             if (sourceHips == null) {
               throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "sourceHips");
@@ -529,6 +601,14 @@ public final class GetAuthenticationRuleListData {
             return tags(List.of(tags));
         }
         @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
+        @CustomType.Setter
         public Builder timeout(Integer timeout) {
             if (timeout == null) {
               throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "timeout");
@@ -554,7 +634,9 @@ public final class GetAuthenticationRuleListData {
             _resultValue.description = description;
             _resultValue.destinationHips = destinationHips;
             _resultValue.destinations = destinations;
+            _resultValue.device = device;
             _resultValue.disabled = disabled;
+            _resultValue.folder = folder;
             _resultValue.froms = froms;
             _resultValue.groupTag = groupTag;
             _resultValue.hipProfiles = hipProfiles;
@@ -565,10 +647,12 @@ public final class GetAuthenticationRuleListData {
             _resultValue.negateDestination = negateDestination;
             _resultValue.negateSource = negateSource;
             _resultValue.services = services;
+            _resultValue.snippet = snippet;
             _resultValue.sourceHips = sourceHips;
             _resultValue.sourceUsers = sourceUsers;
             _resultValue.sources = sources;
             _resultValue.tags = tags;
+            _resultValue.tfid = tfid;
             _resultValue.timeout = timeout;
             _resultValue.tos = tos;
             return _resultValue;

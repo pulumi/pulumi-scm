@@ -14,27 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class ServiceConnectionBgpPeer
     {
         /// <summary>
-        /// The LocalIpAddress param.
+        /// Local ip address
         /// </summary>
         public readonly string? LocalIpAddress;
         /// <summary>
-        /// The LocalIpv6Address param.
+        /// Local ipv6 address
         /// </summary>
         public readonly string? LocalIpv6Address;
         /// <summary>
-        /// The PeerIpAddress param.
+        /// Peer ip address
         /// </summary>
         public readonly string? PeerIpAddress;
         /// <summary>
-        /// The PeerIpv6Address param.
+        /// Peer ipv6 address
         /// </summary>
         public readonly string? PeerIpv6Address;
         /// <summary>
-        /// The SameAsPrimary param.
-        /// </summary>
-        public readonly bool? SameAsPrimary;
-        /// <summary>
-        /// The Secret param.
+        /// Secret
         /// </summary>
         public readonly string? Secret;
 
@@ -48,15 +44,12 @@ namespace Pulumi.Scm.Outputs
 
             string? peerIpv6Address,
 
-            bool? sameAsPrimary,
-
             string? secret)
         {
             LocalIpAddress = localIpAddress;
             LocalIpv6Address = localIpv6Address;
             PeerIpAddress = peerIpAddress;
             PeerIpv6Address = peerIpv6Address;
-            SameAsPrimary = sameAsPrimary;
             Secret = secret;
         }
     }

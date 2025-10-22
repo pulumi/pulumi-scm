@@ -11,50 +11,50 @@ import java.util.Objects;
 @CustomType
 public final class GetCertificateProfileListDataCaCertificate {
     /**
-     * @return The DefaultOcspUrl param.
+     * @return Default OCSP URL
      * 
      */
     private String defaultOcspUrl;
     /**
-     * @return The Name param.
+     * @return CA certificate name
      * 
      */
     private String name;
     /**
-     * @return The OcspVerifyCert param.
+     * @return OCSP verify certificate
      * 
      */
     private String ocspVerifyCert;
     /**
-     * @return The TemplateName param.
+     * @return Template name/OID
      * 
      */
     private String templateName;
 
     private GetCertificateProfileListDataCaCertificate() {}
     /**
-     * @return The DefaultOcspUrl param.
+     * @return Default OCSP URL
      * 
      */
     public String defaultOcspUrl() {
         return this.defaultOcspUrl;
     }
     /**
-     * @return The Name param.
+     * @return CA certificate name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The OcspVerifyCert param.
+     * @return OCSP verify certificate
      * 
      */
     public String ocspVerifyCert() {
         return this.ocspVerifyCert;
     }
     /**
-     * @return The TemplateName param.
+     * @return Template name/OID
      * 
      */
     public String templateName() {

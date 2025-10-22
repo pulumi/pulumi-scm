@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataPatchManagementVendor {
     /**
-     * @return The Name param. String length must not exceed 103 characters.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return Product name. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Product name
      * 
      */
     private List<String> products;
 
     private GetHipObjectListDataPatchManagementVendor() {}
     /**
-     * @return The Name param. String length must not exceed 103 characters.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Product name. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Product name
      * 
      */
     public List<String> products() {

@@ -5,9 +5,9 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.HipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs;
 import com.pulumi.scm.inputs.HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs;
 import com.pulumi.scm.inputs.HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs;
-import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,29 +18,29 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeArgs extends com.pul
     public static final HipObjectDiskBackupCriteriaLastBackupTimeArgs Empty = new HipObjectDiskBackupCriteriaLastBackupTimeArgs();
 
     /**
-     * The NotAvailable param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+     * Not available
      * 
      */
     @Import(name="notAvailable")
-    private @Nullable Output<Boolean> notAvailable;
+    private @Nullable Output<HipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs> notAvailable;
 
     /**
-     * @return The NotAvailable param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+     * @return Not available
      * 
      */
-    public Optional<Output<Boolean>> notAvailable() {
+    public Optional<Output<HipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs>> notAvailable() {
         return Optional.ofNullable(this.notAvailable);
     }
 
     /**
-     * The NotWithin param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+     * Not within
      * 
      */
     @Import(name="notWithin")
     private @Nullable Output<HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs> notWithin;
 
     /**
-     * @return The NotWithin param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+     * @return Not within
      * 
      */
     public Optional<Output<HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs>> notWithin() {
@@ -48,14 +48,14 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeArgs extends com.pul
     }
 
     /**
-     * The Within param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+     * Within
      * 
      */
     @Import(name="within")
     private @Nullable Output<HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs> within;
 
     /**
-     * @return The Within param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+     * @return Within
      * 
      */
     public Optional<Output<HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs>> within() {
@@ -89,28 +89,28 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeArgs extends com.pul
         }
 
         /**
-         * @param notAvailable The NotAvailable param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+         * @param notAvailable Not available
          * 
          * @return builder
          * 
          */
-        public Builder notAvailable(@Nullable Output<Boolean> notAvailable) {
+        public Builder notAvailable(@Nullable Output<HipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs> notAvailable) {
             $.notAvailable = notAvailable;
             return this;
         }
 
         /**
-         * @param notAvailable The NotAvailable param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+         * @param notAvailable Not available
          * 
          * @return builder
          * 
          */
-        public Builder notAvailable(Boolean notAvailable) {
+        public Builder notAvailable(HipObjectDiskBackupCriteriaLastBackupTimeNotAvailableArgs notAvailable) {
             return notAvailable(Output.of(notAvailable));
         }
 
         /**
-         * @param notWithin The NotWithin param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+         * @param notWithin Not within
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeArgs extends com.pul
         }
 
         /**
-         * @param notWithin The NotWithin param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+         * @param notWithin Not within
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeArgs extends com.pul
         }
 
         /**
-         * @param within The Within param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+         * @param within Within
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeArgs extends com.pul
         }
 
         /**
-         * @param within The Within param. Ensure that only one of the following is specified: `notAvailable`, `notWithin`, `within`
+         * @param within Within
          * 
          * @return builder
          * 

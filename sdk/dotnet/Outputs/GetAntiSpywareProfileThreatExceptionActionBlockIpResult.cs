@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareProfileThreatExceptionActionBlockIpResult
     {
         /// <summary>
-        /// The Duration param. Value must be between 1 and 3600.
+        /// Duration
         /// </summary>
         public readonly int Duration;
         /// <summary>
-        /// The TrackBy param. String must be one of these: `"source-and-destination"`, `"source"`.
+        /// Track by
         /// </summary>
         public readonly string TrackBy;
 

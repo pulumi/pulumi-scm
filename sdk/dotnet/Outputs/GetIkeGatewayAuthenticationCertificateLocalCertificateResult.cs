@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayAuthenticationCertificateLocalCertificateResult
     {
         /// <summary>
-        /// The LocalCertificateName param.
+        /// Local certificate name
         /// </summary>
         public readonly string LocalCertificateName;
 

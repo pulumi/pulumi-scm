@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * CertificateProfile data source
  *
  * ## Example Usage
  *
@@ -15,15 +15,19 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getCertificateProfile({
- *     id: "1234-56-789",
+ * // Look up a single certificate profile object by its ID.
+ * // The ID used here is from the API response log you provided.
+ * const scmCertificateProfileDs = scm.getCertificateProfile({
+ *     id: "8e64859b-eba9-4e25-9005-754c90c2b02d",
  * });
+ * export const exampleCpDsResult = scmCertificateProfileDs;
  * ```
  */
 export function getCertificateProfile(args: GetCertificateProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetCertificateProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getCertificateProfile:getCertificateProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +36,13 @@ export function getCertificateProfile(args: GetCertificateProfileArgs, opts?: pu
  */
 export interface GetCertificateProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the certificate profile
      */
     id: string;
+    /**
+     * The name of the certificate profile
+     */
+    name?: string;
 }
 
 /**
@@ -42,65 +50,77 @@ export interface GetCertificateProfileArgs {
  */
 export interface GetCertificateProfileResult {
     /**
-     * The BlockExpiredCert param.
+     * Block sessions with expired certificates?
      */
     readonly blockExpiredCert: boolean;
     /**
-     * The BlockTimeoutCert param.
+     * Block session if certificate status cannot be retrieved within timeout?
      */
     readonly blockTimeoutCert: boolean;
     /**
-     * The BlockUnauthenticatedCert param.
+     * Block session if the certificate was not issued to the authenticating device?
      */
     readonly blockUnauthenticatedCert: boolean;
     /**
-     * The BlockUnknownCert param.
+     * Block session if certificate status is unknown?
      */
     readonly blockUnknownCert: boolean;
     /**
-     * The CaCertificates param.
+     * An ordered list of CA certificates
      */
     readonly caCertificates: outputs.GetCertificateProfileCaCertificate[];
     /**
-     * The CertStatusTimeout param.
+     * Certificate status timeout
      */
     readonly certStatusTimeout: string;
     /**
-     * The CrlReceiveTimeout param.
+     * CRL receive timeout (seconds)
      */
     readonly crlReceiveTimeout: string;
     /**
-     * The Domain param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * User domain
      */
     readonly domain: string;
     /**
-     * The Id param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the certificate profile
      */
     readonly id: string;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the certificate profile
      */
     readonly name: string;
     /**
-     * The OcspReceiveTimeout param.
+     * OCSP receive timeout (seconds)
      */
     readonly ocspReceiveTimeout: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * The UseCrl param.
+     * Use CRL?
      */
     readonly useCrl: boolean;
     /**
-     * The UseOcsp param.
+     * Use OCSP?
      */
     readonly useOcsp: boolean;
     /**
-     * The UsernameField param.
+     * Certificate username field
      */
     readonly usernameField: outputs.GetCertificateProfileUsernameField;
 }
 /**
- * Retrieves a config item.
+ * CertificateProfile data source
  *
  * ## Example Usage
  *
@@ -108,15 +128,19 @@ export interface GetCertificateProfileResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getCertificateProfile({
- *     id: "1234-56-789",
+ * // Look up a single certificate profile object by its ID.
+ * // The ID used here is from the API response log you provided.
+ * const scmCertificateProfileDs = scm.getCertificateProfile({
+ *     id: "8e64859b-eba9-4e25-9005-754c90c2b02d",
  * });
+ * export const exampleCpDsResult = scmCertificateProfileDs;
  * ```
  */
 export function getCertificateProfileOutput(args: GetCertificateProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCertificateProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getCertificateProfile:getCertificateProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -125,7 +149,11 @@ export function getCertificateProfileOutput(args: GetCertificateProfileOutputArg
  */
 export interface GetCertificateProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the certificate profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the certificate profile
+     */
+    name?: pulumi.Input<string>;
 }

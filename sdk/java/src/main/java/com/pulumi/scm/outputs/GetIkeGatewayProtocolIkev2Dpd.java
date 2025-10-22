@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetIkeGatewayProtocolIkev2Dpd {
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     private Boolean enable;
 
     private GetIkeGatewayProtocolIkev2Dpd() {}
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     public Boolean enable() {

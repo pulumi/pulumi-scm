@@ -20,14 +20,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
     public static final AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgs Empty = new AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgs();
 
     /**
-     * The Context param.
+     * Context
      * 
      */
     @Import(name="context")
     private @Nullable Output<String> context;
 
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     public Optional<Output<String>> context() {
@@ -35,14 +35,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
     }
 
     /**
-     * The Negate param. Default: `false`.
+     * Negate
      * 
      */
     @Import(name="negate")
     private @Nullable Output<Boolean> negate;
 
     /**
-     * @return The Negate param. Default: `false`.
+     * @return Negate
      * 
      */
     public Optional<Output<Boolean>> negate() {
@@ -50,14 +50,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
     }
 
     /**
-     * The Qualifiers param.
+     * Qualifier
      * 
      */
     @Import(name="qualifiers")
     private @Nullable Output<List<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs>> qualifiers;
 
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     public Optional<Output<List<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierArgs>>> qualifiers() {
@@ -65,14 +65,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
     }
 
     /**
-     * The Value param. Value must be between 0 and 4294967295.
+     * Value
      * 
      */
     @Import(name="value")
     private @Nullable Output<Integer> value;
 
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     public Optional<Output<Integer>> value() {
@@ -107,7 +107,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param context The Context param.
+         * @param context Context
          * 
          * @return builder
          * 
@@ -118,7 +118,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param context The Context param.
+         * @param context Context
          * 
          * @return builder
          * 
@@ -128,7 +128,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param negate The Negate param. Default: `false`.
+         * @param negate Negate
          * 
          * @return builder
          * 
@@ -139,7 +139,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param negate The Negate param. Default: `false`.
+         * @param negate Negate
          * 
          * @return builder
          * 
@@ -149,7 +149,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param qualifiers The Qualifiers param.
+         * @param qualifiers Qualifier
          * 
          * @return builder
          * 
@@ -160,7 +160,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param qualifiers The Qualifiers param.
+         * @param qualifiers Qualifier
          * 
          * @return builder
          * 
@@ -170,7 +170,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param qualifiers The Qualifiers param.
+         * @param qualifiers Qualifier
          * 
          * @return builder
          * 
@@ -180,7 +180,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param value The Value param. Value must be between 0 and 4294967295.
+         * @param value Value
          * 
          * @return builder
          * 
@@ -191,7 +191,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param value The Value param. Value must be between 0 and 4294967295.
+         * @param value Value
          * 
          * @return builder
          * 

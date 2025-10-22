@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScheduleScheduleType {
     /**
-     * @return The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+     * @return Non recurring
      * 
      */
-    private @Nullable List<String> nonRecurringLists;
+    private @Nullable List<String> nonRecurrings;
     /**
-     * @return The Recurring param. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+     * @return Recurring
      * 
      */
     private @Nullable ScheduleScheduleTypeRecurring recurring;
 
     private ScheduleScheduleType() {}
     /**
-     * @return The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+     * @return Non recurring
      * 
      */
-    public List<String> nonRecurringLists() {
-        return this.nonRecurringLists == null ? List.of() : this.nonRecurringLists;
+    public List<String> nonRecurrings() {
+        return this.nonRecurrings == null ? List.of() : this.nonRecurrings;
     }
     /**
-     * @return The Recurring param. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+     * @return Recurring
      * 
      */
     public Optional<ScheduleScheduleTypeRecurring> recurring() {
@@ -49,23 +49,23 @@ public final class ScheduleScheduleType {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable List<String> nonRecurringLists;
+        private @Nullable List<String> nonRecurrings;
         private @Nullable ScheduleScheduleTypeRecurring recurring;
         public Builder() {}
         public Builder(ScheduleScheduleType defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.nonRecurringLists = defaults.nonRecurringLists;
+    	      this.nonRecurrings = defaults.nonRecurrings;
     	      this.recurring = defaults.recurring;
         }
 
         @CustomType.Setter
-        public Builder nonRecurringLists(@Nullable List<String> nonRecurringLists) {
+        public Builder nonRecurrings(@Nullable List<String> nonRecurrings) {
 
-            this.nonRecurringLists = nonRecurringLists;
+            this.nonRecurrings = nonRecurrings;
             return this;
         }
-        public Builder nonRecurringLists(String... nonRecurringLists) {
-            return nonRecurringLists(List.of(nonRecurringLists));
+        public Builder nonRecurrings(String... nonRecurrings) {
+            return nonRecurrings(List.of(nonRecurrings));
         }
         @CustomType.Setter
         public Builder recurring(@Nullable ScheduleScheduleTypeRecurring recurring) {
@@ -75,7 +75,7 @@ public final class ScheduleScheduleType {
         }
         public ScheduleScheduleType build() {
             final var _resultValue = new ScheduleScheduleType();
-            _resultValue.nonRecurringLists = nonRecurringLists;
+            _resultValue.nonRecurrings = nonRecurrings;
             _resultValue.recurring = recurring;
             return _resultValue;
         }

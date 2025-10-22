@@ -8,6 +8,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetDecryptionProfileArgs extends com.pulumi.resources.InvokeArgs {
@@ -15,24 +17,40 @@ public final class GetDecryptionProfileArgs extends com.pulumi.resources.InvokeA
     public static final GetDecryptionProfileArgs Empty = new GetDecryptionProfileArgs();
 
     /**
-     * The Id param.
+     * UUID of the resource
      * 
      */
     @Import(name="id", required=true)
     private Output<String> id;
 
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public Output<String> id() {
         return this.id;
     }
 
+    /**
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetDecryptionProfileArgs() {}
 
     private GetDecryptionProfileArgs(GetDecryptionProfileArgs $) {
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -54,7 +72,7 @@ public final class GetDecryptionProfileArgs extends com.pulumi.resources.InvokeA
         }
 
         /**
-         * @param id The Id param.
+         * @param id UUID of the resource
          * 
          * @return builder
          * 
@@ -65,13 +83,34 @@ public final class GetDecryptionProfileArgs extends com.pulumi.resources.InvokeA
         }
 
         /**
-         * @param id The Id param.
+         * @param id UUID of the resource
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             return id(Output.of(id));
+        }
+
+        /**
+         * @param name Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetDecryptionProfileArgs build() {

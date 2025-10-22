@@ -14,19 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRemoteNetworkProtocolBgpPeerResult
     {
         /// <summary>
-        /// The LocalIpAddress param.
+        /// Local peer IP address (secondary WAN)
         /// </summary>
         public readonly string LocalIpAddress;
         /// <summary>
-        /// The PeerIpAddress param.
+        /// Remote peer IP address (secondary WAN)
         /// </summary>
         public readonly string PeerIpAddress;
         /// <summary>
-        /// If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `True`.
-        /// </summary>
-        public readonly bool SameAsPrimary;
-        /// <summary>
-        /// The Secret param.
+        /// BGP peering secret (secondary WAN)
         /// </summary>
         public readonly string Secret;
 
@@ -36,13 +32,10 @@ namespace Pulumi.Scm.Outputs
 
             string peerIpAddress,
 
-            bool sameAsPrimary,
-
             string secret)
         {
             LocalIpAddress = localIpAddress;
             PeerIpAddress = peerIpAddress;
-            SameAsPrimary = sameAsPrimary;
             Secret = secret;
         }
     }

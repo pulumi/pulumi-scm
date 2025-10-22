@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIpsecCryptoProfileLifesizeResult
     {
         /// <summary>
-        /// specify lifesize in gigabytes(GB). Value must be between 1 and 65535.
+        /// specify lifesize in gigabytes(GB)
         /// </summary>
         public readonly int Gb;
         /// <summary>
-        /// specify lifesize in kilobytes(KB). Value must be between 1 and 65535.
+        /// specify lifesize in kilobytes(KB)
         /// </summary>
         public readonly int Kb;
         /// <summary>
-        /// specify lifesize in megabytes(MB). Value must be between 1 and 65535.
+        /// specify lifesize in megabytes(MB)
         /// </summary>
         public readonly int Mb;
         /// <summary>
-        /// specify lifesize in terabytes(TB). Value must be between 1 and 65535.
+        /// specify lifesize in terabytes(TB)
         /// </summary>
         public readonly int Tb;
 

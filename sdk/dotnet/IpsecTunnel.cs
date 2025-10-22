@@ -10,70 +10,57 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// IpsecTunnel resource
     /// 
     /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.IpsecTunnel("example");
-    /// 
-    /// });
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/ipsecTunnel:IpsecTunnel")]
     public partial class IpsecTunnel : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Enable Anti-Replay check on this tunnel.
+        /// Enable Anti-Replay check on this tunnel
         /// </summary>
         [Output("antiReplay")]
         public Output<bool?> AntiReplay { get; private set; } = null!;
 
         /// <summary>
-        /// The AutoKey param.
+        /// Auto key
         /// </summary>
         [Output("autoKey")]
         public Output<Outputs.IpsecTunnelAutoKey> AutoKey { get; private set; } = null!;
 
         /// <summary>
-        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `False`.
+        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
         /// </summary>
         [Output("copyTos")]
         public Output<bool> CopyTos { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// allow GRE over IPSec. Default: `False`.
+        /// allow GRE over IPSec
         /// </summary>
         [Output("enableGreEncapsulation")]
         public Output<bool> EnableGreEncapsulation { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -82,10 +69,16 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The TunnelMonitor param.
+        /// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+        /// </summary>
+        [Output("tunnelInterface")]
+        public Output<string> TunnelInterface { get; private set; } = null!;
+
+        /// <summary>
+        /// Tunnel monitor
         /// </summary>
         [Output("tunnelMonitor")]
-        public Output<Outputs.IpsecTunnelTunnelMonitor?> TunnelMonitor { get; private set; } = null!;
+        public Output<Outputs.IpsecTunnelTunnelMonitor> TunnelMonitor { get; private set; } = null!;
 
 
         /// <summary>
@@ -134,55 +127,61 @@ namespace Pulumi.Scm
     public sealed class IpsecTunnelArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable Anti-Replay check on this tunnel.
+        /// Enable Anti-Replay check on this tunnel
         /// </summary>
         [Input("antiReplay")]
         public Input<bool>? AntiReplay { get; set; }
 
         /// <summary>
-        /// The AutoKey param.
+        /// Auto key
         /// </summary>
         [Input("autoKey", required: true)]
         public Input<Inputs.IpsecTunnelAutoKeyArgs> AutoKey { get; set; } = null!;
 
         /// <summary>
-        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `False`.
+        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
         /// </summary>
         [Input("copyTos")]
         public Input<bool>? CopyTos { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// allow GRE over IPSec. Default: `False`.
+        /// allow GRE over IPSec
         /// </summary>
         [Input("enableGreEncapsulation")]
         public Input<bool>? EnableGreEncapsulation { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The TunnelMonitor param.
+        /// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+        /// </summary>
+        [Input("tunnelInterface")]
+        public Input<string>? TunnelInterface { get; set; }
+
+        /// <summary>
+        /// Tunnel monitor
         /// </summary>
         [Input("tunnelMonitor")]
         public Input<Inputs.IpsecTunnelTunnelMonitorArgs>? TunnelMonitor { get; set; }
@@ -196,49 +195,49 @@ namespace Pulumi.Scm
     public sealed class IpsecTunnelState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable Anti-Replay check on this tunnel.
+        /// Enable Anti-Replay check on this tunnel
         /// </summary>
         [Input("antiReplay")]
         public Input<bool>? AntiReplay { get; set; }
 
         /// <summary>
-        /// The AutoKey param.
+        /// Auto key
         /// </summary>
         [Input("autoKey")]
         public Input<Inputs.IpsecTunnelAutoKeyGetArgs>? AutoKey { get; set; }
 
         /// <summary>
-        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `False`.
+        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
         /// </summary>
         [Input("copyTos")]
         public Input<bool>? CopyTos { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// allow GRE over IPSec. Default: `False`.
+        /// allow GRE over IPSec
         /// </summary>
         [Input("enableGreEncapsulation")]
         public Input<bool>? EnableGreEncapsulation { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -247,7 +246,13 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The TunnelMonitor param.
+        /// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+        /// </summary>
+        [Input("tunnelInterface")]
+        public Input<string>? TunnelInterface { get; set; }
+
+        /// <summary>
+        /// Tunnel monitor
         /// </summary>
         [Input("tunnelMonitor")]
         public Input<Inputs.IpsecTunnelTunnelMonitorGetArgs>? TunnelMonitor { get; set; }

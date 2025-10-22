@@ -18,14 +18,14 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
     public static final FolderArgs Empty = new FolderArgs();
 
     /**
-     * The Description param.
+     * The description of the folder
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the folder
      * 
      */
     public Optional<Output<String>> description() {
@@ -33,14 +33,14 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Labels param.
+     * Labels assigned to the folder
      * 
      */
     @Import(name="labels")
     private @Nullable Output<List<String>> labels;
 
     /**
-     * @return The Labels param.
+     * @return Labels assigned to the folder
      * 
      */
     public Optional<Output<List<String>>> labels() {
@@ -48,14 +48,14 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Name param.
+     * The name of the folder
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the folder
      * 
      */
     public Optional<Output<String>> name() {
@@ -63,14 +63,14 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Parent param.
+     * The parent folder
      * 
      */
     @Import(name="parent", required=true)
     private Output<String> parent;
 
     /**
-     * @return The Parent param.
+     * @return The parent folder
      * 
      */
     public Output<String> parent() {
@@ -78,14 +78,14 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippets param.
+     * Snippets associated with the folder
      * 
      */
     @Import(name="snippets")
     private @Nullable Output<List<String>> snippets;
 
     /**
-     * @return The Snippets param.
+     * @return Snippets associated with the folder
      * 
      */
     public Optional<Output<List<String>>> snippets() {
@@ -121,7 +121,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the folder
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the folder
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param labels The Labels param.
+         * @param labels Labels assigned to the folder
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param labels The Labels param.
+         * @param labels Labels assigned to the folder
          * 
          * @return builder
          * 
@@ -163,7 +163,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param labels The Labels param.
+         * @param labels Labels assigned to the folder
          * 
          * @return builder
          * 
@@ -173,7 +173,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the folder
          * 
          * @return builder
          * 
@@ -184,7 +184,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the folder
          * 
          * @return builder
          * 
@@ -194,7 +194,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param parent The Parent param.
+         * @param parent The parent folder
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param parent The Parent param.
+         * @param parent The parent folder
          * 
          * @return builder
          * 
@@ -215,7 +215,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippets The Snippets param.
+         * @param snippets Snippets associated with the folder
          * 
          * @return builder
          * 
@@ -226,7 +226,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippets The Snippets param.
+         * @param snippets Snippets associated with the folder
          * 
          * @return builder
          * 
@@ -236,7 +236,7 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippets The Snippets param.
+         * @param snippets Snippets associated with the folder
          * 
          * @return builder
          * 

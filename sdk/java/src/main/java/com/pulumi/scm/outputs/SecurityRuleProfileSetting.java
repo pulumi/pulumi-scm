@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityRuleProfileSetting {
     /**
-     * @return The security profile group.
+     * @return The security profile group
      * 
      */
     private @Nullable List<String> groups;
 
     private SecurityRuleProfileSetting() {}
     /**
-     * @return The security profile group.
+     * @return The security profile group
      * 
      */
     public List<String> groups() {

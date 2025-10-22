@@ -11,46 +11,22 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewAuthenticationSequence(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// AuthenticationSequence resource
 type AuthenticationSequence struct {
 	pulumi.CustomResourceState
 
-	// The AuthenticationProfiles param.
+	// An ordered list of authentication profiles
 	AuthenticationProfiles pulumi.StringArrayOutput `pulumi:"authenticationProfiles"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Name param.
+	// The name of the authentication sequence
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
-	// The UseDomainFindProfile param. Default: `true`.
+	// Use domain to determine authentication profile?
 	UseDomainFindProfile pulumi.BoolOutput `pulumi:"useDomainFindProfile"`
 }
 
@@ -84,34 +60,34 @@ func GetAuthenticationSequence(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AuthenticationSequence resources.
 type authenticationSequenceState struct {
-	// The AuthenticationProfiles param.
+	// An ordered list of authentication profiles
 	AuthenticationProfiles []string `pulumi:"authenticationProfiles"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Name param.
+	// The name of the authentication sequence
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
-	// The UseDomainFindProfile param. Default: `true`.
+	// Use domain to determine authentication profile?
 	UseDomainFindProfile *bool `pulumi:"useDomainFindProfile"`
 }
 
 type AuthenticationSequenceState struct {
-	// The AuthenticationProfiles param.
+	// An ordered list of authentication profiles
 	AuthenticationProfiles pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Name param.
+	// The name of the authentication sequence
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
-	// The UseDomainFindProfile param. Default: `true`.
+	// Use domain to determine authentication profile?
 	UseDomainFindProfile pulumi.BoolPtrInput
 }
 
@@ -120,33 +96,33 @@ func (AuthenticationSequenceState) ElementType() reflect.Type {
 }
 
 type authenticationSequenceArgs struct {
-	// The AuthenticationProfiles param.
+	// An ordered list of authentication profiles
 	AuthenticationProfiles []string `pulumi:"authenticationProfiles"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Name param.
+	// The name of the authentication sequence
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The UseDomainFindProfile param. Default: `true`.
+	// Use domain to determine authentication profile?
 	UseDomainFindProfile *bool `pulumi:"useDomainFindProfile"`
 }
 
 // The set of arguments for constructing a AuthenticationSequence resource.
 type AuthenticationSequenceArgs struct {
-	// The AuthenticationProfiles param.
+	// An ordered list of authentication profiles
 	AuthenticationProfiles pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Name param.
+	// The name of the authentication sequence
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The UseDomainFindProfile param. Default: `true`.
+	// Use domain to determine authentication profile?
 	UseDomainFindProfile pulumi.BoolPtrInput
 }
 
@@ -237,27 +213,27 @@ func (o AuthenticationSequenceOutput) ToAuthenticationSequenceOutputWithContext(
 	return o
 }
 
-// The AuthenticationProfiles param.
+// An ordered list of authentication profiles
 func (o AuthenticationSequenceOutput) AuthenticationProfiles() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.StringArrayOutput { return v.AuthenticationProfiles }).(pulumi.StringArrayOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o AuthenticationSequenceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o AuthenticationSequenceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Name param.
+// The name of the authentication sequence
 func (o AuthenticationSequenceOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o AuthenticationSequenceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -266,7 +242,7 @@ func (o AuthenticationSequenceOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The UseDomainFindProfile param. Default: `true`.
+// Use domain to determine authentication profile?
 func (o AuthenticationSequenceOutput) UseDomainFindProfile() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthenticationSequence) pulumi.BoolOutput { return v.UseDomainFindProfile }).(pulumi.BoolOutput)
 }

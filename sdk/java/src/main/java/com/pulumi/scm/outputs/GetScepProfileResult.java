@@ -10,162 +10,211 @@ import com.pulumi.scm.outputs.GetScepProfileCertificateAttributes;
 import com.pulumi.scm.outputs.GetScepProfileScepChallenge;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetScepProfileResult {
     /**
-     * @return The Algorithm param.
+     * @return Algorithm
      * 
      */
     private GetScepProfileAlgorithm algorithm;
     /**
-     * @return The CaIdentityName param.
+     * @return Certificate Authority identity
      * 
      */
     private String caIdentityName;
     /**
-     * @return The CertificateAttributes param.
+     * @return Subject Alternative name type
      * 
      */
     private GetScepProfileCertificateAttributes certificateAttributes;
     /**
-     * @return The Digest param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Digest for CSR
      * 
      */
     private String digest;
     /**
-     * @return The Fingerprint param.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    private Map<String,String> encryptedValues;
+    /**
+     * @return CA certificate fingerprint
      * 
      */
     private String fingerprint;
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the SCEP profile
      * 
      */
     private String id;
     /**
-     * @return alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the SCEP profile
      * 
      */
     private String name;
     /**
-     * @return The ScepCaCert param.
+     * @return SCEP server CA certificate
      * 
      */
     private String scepCaCert;
     /**
-     * @return The ScepChallenge param.
+     * @return One Time Password challenge
      * 
      */
     private GetScepProfileScepChallenge scepChallenge;
     /**
-     * @return The ScepClientCert param.
+     * @return SCEP client ceertificate
      * 
      */
     private String scepClientCert;
     /**
-     * @return The ScepUrl param.
+     * @return SCEP server URL
      * 
      */
     private String scepUrl;
     /**
-     * @return The Subject param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return Subject
      * 
      */
     private String subject;
     private String tfid;
     /**
-     * @return The UseAsDigitalSignature param.
+     * @return Use as digital signature?
      * 
      */
     private Boolean useAsDigitalSignature;
     /**
-     * @return The UseForKeyEncipherment param.
+     * @return Use for key encipherment?
      * 
      */
     private Boolean useForKeyEncipherment;
 
     private GetScepProfileResult() {}
     /**
-     * @return The Algorithm param.
+     * @return Algorithm
      * 
      */
     public GetScepProfileAlgorithm algorithm() {
         return this.algorithm;
     }
     /**
-     * @return The CaIdentityName param.
+     * @return Certificate Authority identity
      * 
      */
     public String caIdentityName() {
         return this.caIdentityName;
     }
     /**
-     * @return The CertificateAttributes param.
+     * @return Subject Alternative name type
      * 
      */
     public GetScepProfileCertificateAttributes certificateAttributes() {
         return this.certificateAttributes;
     }
     /**
-     * @return The Digest param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Digest for CSR
      * 
      */
     public String digest() {
         return this.digest;
     }
     /**
-     * @return The Fingerprint param.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
+     * @return CA certificate fingerprint
      * 
      */
     public String fingerprint() {
         return this.fingerprint;
     }
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the SCEP profile
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the SCEP profile
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The ScepCaCert param.
+     * @return SCEP server CA certificate
      * 
      */
     public String scepCaCert() {
         return this.scepCaCert;
     }
     /**
-     * @return The ScepChallenge param.
+     * @return One Time Password challenge
      * 
      */
     public GetScepProfileScepChallenge scepChallenge() {
         return this.scepChallenge;
     }
     /**
-     * @return The ScepClientCert param.
+     * @return SCEP client ceertificate
      * 
      */
     public String scepClientCert() {
         return this.scepClientCert;
     }
     /**
-     * @return The ScepUrl param.
+     * @return SCEP server URL
      * 
      */
     public String scepUrl() {
         return this.scepUrl;
     }
     /**
-     * @return The Subject param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return Subject
      * 
      */
     public String subject() {
@@ -175,14 +224,14 @@ public final class GetScepProfileResult {
         return this.tfid;
     }
     /**
-     * @return The UseAsDigitalSignature param.
+     * @return Use as digital signature?
      * 
      */
     public Boolean useAsDigitalSignature() {
         return this.useAsDigitalSignature;
     }
     /**
-     * @return The UseForKeyEncipherment param.
+     * @return Use for key encipherment?
      * 
      */
     public Boolean useForKeyEncipherment() {
@@ -201,14 +250,18 @@ public final class GetScepProfileResult {
         private GetScepProfileAlgorithm algorithm;
         private String caIdentityName;
         private GetScepProfileCertificateAttributes certificateAttributes;
+        private String device;
         private String digest;
+        private Map<String,String> encryptedValues;
         private String fingerprint;
+        private String folder;
         private String id;
         private String name;
         private String scepCaCert;
         private GetScepProfileScepChallenge scepChallenge;
         private String scepClientCert;
         private String scepUrl;
+        private String snippet;
         private String subject;
         private String tfid;
         private Boolean useAsDigitalSignature;
@@ -219,14 +272,18 @@ public final class GetScepProfileResult {
     	      this.algorithm = defaults.algorithm;
     	      this.caIdentityName = defaults.caIdentityName;
     	      this.certificateAttributes = defaults.certificateAttributes;
+    	      this.device = defaults.device;
     	      this.digest = defaults.digest;
+    	      this.encryptedValues = defaults.encryptedValues;
     	      this.fingerprint = defaults.fingerprint;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.scepCaCert = defaults.scepCaCert;
     	      this.scepChallenge = defaults.scepChallenge;
     	      this.scepClientCert = defaults.scepClientCert;
     	      this.scepUrl = defaults.scepUrl;
+    	      this.snippet = defaults.snippet;
     	      this.subject = defaults.subject;
     	      this.tfid = defaults.tfid;
     	      this.useAsDigitalSignature = defaults.useAsDigitalSignature;
@@ -258,6 +315,14 @@ public final class GetScepProfileResult {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetScepProfileResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder digest(String digest) {
             if (digest == null) {
               throw new MissingRequiredPropertyException("GetScepProfileResult", "digest");
@@ -266,11 +331,27 @@ public final class GetScepProfileResult {
             return this;
         }
         @CustomType.Setter
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetScepProfileResult", "encryptedValues");
+            }
+            this.encryptedValues = encryptedValues;
+            return this;
+        }
+        @CustomType.Setter
         public Builder fingerprint(String fingerprint) {
             if (fingerprint == null) {
               throw new MissingRequiredPropertyException("GetScepProfileResult", "fingerprint");
             }
             this.fingerprint = fingerprint;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetScepProfileResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -322,6 +403,14 @@ public final class GetScepProfileResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetScepProfileResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder subject(String subject) {
             if (subject == null) {
               throw new MissingRequiredPropertyException("GetScepProfileResult", "subject");
@@ -358,14 +447,18 @@ public final class GetScepProfileResult {
             _resultValue.algorithm = algorithm;
             _resultValue.caIdentityName = caIdentityName;
             _resultValue.certificateAttributes = certificateAttributes;
+            _resultValue.device = device;
             _resultValue.digest = digest;
+            _resultValue.encryptedValues = encryptedValues;
             _resultValue.fingerprint = fingerprint;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.scepCaCert = scepCaCert;
             _resultValue.scepChallenge = scepChallenge;
             _resultValue.scepClientCert = scepClientCert;
             _resultValue.scepUrl = scepUrl;
+            _resultValue.snippet = snippet;
             _resultValue.subject = subject;
             _resultValue.tfid = tfid;
             _resultValue.useAsDigitalSignature = useAsDigitalSignature;

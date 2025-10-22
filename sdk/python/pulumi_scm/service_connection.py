@@ -25,7 +25,6 @@ class ServiceConnectionArgs:
                  region: pulumi.Input[_builtins.str],
                  backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
                  bgp_peer: Optional[pulumi.Input['ServiceConnectionBgpPeerArgs']] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
                  no_export_community: Optional[pulumi.Input[_builtins.str]] = None,
@@ -37,20 +36,19 @@ class ServiceConnectionArgs:
                  subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a ServiceConnection resource.
-        :param pulumi.Input[_builtins.str] ipsec_tunnel: The IpsecTunnel param.
-        :param pulumi.Input[_builtins.str] region: The Region param.
-        :param pulumi.Input[_builtins.str] backup_sc: The BackupSC param.
-        :param pulumi.Input['ServiceConnectionBgpPeerArgs'] bgp_peer: The BgpPeer param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] nat_pool: The NatPool param.
-        :param pulumi.Input[_builtins.str] no_export_community: The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
-        :param pulumi.Input[_builtins.str] onboarding_type: The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
-        :param pulumi.Input['ServiceConnectionProtocolArgs'] protocol: The Protocol param.
-        :param pulumi.Input['ServiceConnectionQosArgs'] qos: The Qos param.
-        :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: The SecondaryIpsecTunnel param.
-        :param pulumi.Input[_builtins.bool] source_nat: The SourceNat param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: The Subnets param.
+        :param pulumi.Input[_builtins.str] ipsec_tunnel: Ipsec tunnel
+        :param pulumi.Input[_builtins.str] region: Region
+        :param pulumi.Input[_builtins.str] backup_sc: Backup s c
+        :param pulumi.Input['ServiceConnectionBgpPeerArgs'] bgp_peer: Bgp peer
+        :param pulumi.Input[_builtins.str] name: The name of the service connection
+        :param pulumi.Input[_builtins.str] nat_pool: Nat pool
+        :param pulumi.Input[_builtins.str] no_export_community: No export community
+        :param pulumi.Input[_builtins.str] onboarding_type: Onboarding type
+        :param pulumi.Input['ServiceConnectionProtocolArgs'] protocol: Protocol
+        :param pulumi.Input['ServiceConnectionQosArgs'] qos: Qos
+        :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel
+        :param pulumi.Input[_builtins.bool] source_nat: Source nat
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
         """
         pulumi.set(__self__, "ipsec_tunnel", ipsec_tunnel)
         pulumi.set(__self__, "region", region)
@@ -58,8 +56,6 @@ class ServiceConnectionArgs:
             pulumi.set(__self__, "backup_sc", backup_sc)
         if bgp_peer is not None:
             pulumi.set(__self__, "bgp_peer", bgp_peer)
-        if folder is not None:
-            pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if nat_pool is not None:
@@ -83,7 +79,7 @@ class ServiceConnectionArgs:
     @pulumi.getter(name="ipsecTunnel")
     def ipsec_tunnel(self) -> pulumi.Input[_builtins.str]:
         """
-        The IpsecTunnel param.
+        Ipsec tunnel
         """
         return pulumi.get(self, "ipsec_tunnel")
 
@@ -95,7 +91,7 @@ class ServiceConnectionArgs:
     @pulumi.getter
     def region(self) -> pulumi.Input[_builtins.str]:
         """
-        The Region param.
+        Region
         """
         return pulumi.get(self, "region")
 
@@ -107,7 +103,7 @@ class ServiceConnectionArgs:
     @pulumi.getter(name="backupSC")
     def backup_sc(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The BackupSC param.
+        Backup s c
         """
         return pulumi.get(self, "backup_sc")
 
@@ -119,7 +115,7 @@ class ServiceConnectionArgs:
     @pulumi.getter(name="bgpPeer")
     def bgp_peer(self) -> Optional[pulumi.Input['ServiceConnectionBgpPeerArgs']]:
         """
-        The BgpPeer param.
+        Bgp peer
         """
         return pulumi.get(self, "bgp_peer")
 
@@ -129,21 +125,9 @@ class ServiceConnectionArgs:
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        """
-        return pulumi.get(self, "folder")
-
-    @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "folder", value)
-
-    @_builtins.property
-    @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the service connection
         """
         return pulumi.get(self, "name")
 
@@ -155,7 +139,7 @@ class ServiceConnectionArgs:
     @pulumi.getter(name="natPool")
     def nat_pool(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The NatPool param.
+        Nat pool
         """
         return pulumi.get(self, "nat_pool")
 
@@ -167,7 +151,7 @@ class ServiceConnectionArgs:
     @pulumi.getter(name="noExportCommunity")
     def no_export_community(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+        No export community
         """
         return pulumi.get(self, "no_export_community")
 
@@ -179,7 +163,7 @@ class ServiceConnectionArgs:
     @pulumi.getter(name="onboardingType")
     def onboarding_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+        Onboarding type
         """
         return pulumi.get(self, "onboarding_type")
 
@@ -191,7 +175,7 @@ class ServiceConnectionArgs:
     @pulumi.getter
     def protocol(self) -> Optional[pulumi.Input['ServiceConnectionProtocolArgs']]:
         """
-        The Protocol param.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -203,7 +187,7 @@ class ServiceConnectionArgs:
     @pulumi.getter
     def qos(self) -> Optional[pulumi.Input['ServiceConnectionQosArgs']]:
         """
-        The Qos param.
+        Qos
         """
         return pulumi.get(self, "qos")
 
@@ -215,7 +199,7 @@ class ServiceConnectionArgs:
     @pulumi.getter(name="secondaryIpsecTunnel")
     def secondary_ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The SecondaryIpsecTunnel param.
+        Secondary ipsec tunnel
         """
         return pulumi.get(self, "secondary_ipsec_tunnel")
 
@@ -227,7 +211,7 @@ class ServiceConnectionArgs:
     @pulumi.getter(name="sourceNat")
     def source_nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The SourceNat param.
+        Source nat
         """
         return pulumi.get(self, "source_nat")
 
@@ -239,7 +223,7 @@ class ServiceConnectionArgs:
     @pulumi.getter
     def subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Subnets param.
+        Subnets
         """
         return pulumi.get(self, "subnets")
 
@@ -254,7 +238,6 @@ class _ServiceConnectionState:
                  backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
                  bgp_peer: Optional[pulumi.Input['ServiceConnectionBgpPeerArgs']] = None,
                  encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
@@ -269,21 +252,20 @@ class _ServiceConnectionState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ServiceConnection resources.
-        :param pulumi.Input[_builtins.str] backup_sc: The BackupSC param.
-        :param pulumi.Input['ServiceConnectionBgpPeerArgs'] bgp_peer: The BgpPeer param.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
-        :param pulumi.Input[_builtins.str] folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        :param pulumi.Input[_builtins.str] ipsec_tunnel: The IpsecTunnel param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] nat_pool: The NatPool param.
-        :param pulumi.Input[_builtins.str] no_export_community: The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
-        :param pulumi.Input[_builtins.str] onboarding_type: The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
-        :param pulumi.Input['ServiceConnectionProtocolArgs'] protocol: The Protocol param.
-        :param pulumi.Input['ServiceConnectionQosArgs'] qos: The Qos param.
-        :param pulumi.Input[_builtins.str] region: The Region param.
-        :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: The SecondaryIpsecTunnel param.
-        :param pulumi.Input[_builtins.bool] source_nat: The SourceNat param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: The Subnets param.
+        :param pulumi.Input[_builtins.str] backup_sc: Backup s c
+        :param pulumi.Input['ServiceConnectionBgpPeerArgs'] bgp_peer: Bgp peer
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] ipsec_tunnel: Ipsec tunnel
+        :param pulumi.Input[_builtins.str] name: The name of the service connection
+        :param pulumi.Input[_builtins.str] nat_pool: Nat pool
+        :param pulumi.Input[_builtins.str] no_export_community: No export community
+        :param pulumi.Input[_builtins.str] onboarding_type: Onboarding type
+        :param pulumi.Input['ServiceConnectionProtocolArgs'] protocol: Protocol
+        :param pulumi.Input['ServiceConnectionQosArgs'] qos: Qos
+        :param pulumi.Input[_builtins.str] region: Region
+        :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel
+        :param pulumi.Input[_builtins.bool] source_nat: Source nat
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
         """
         if backup_sc is not None:
             pulumi.set(__self__, "backup_sc", backup_sc)
@@ -291,8 +273,6 @@ class _ServiceConnectionState:
             pulumi.set(__self__, "bgp_peer", bgp_peer)
         if encrypted_values is not None:
             pulumi.set(__self__, "encrypted_values", encrypted_values)
-        if folder is not None:
-            pulumi.set(__self__, "folder", folder)
         if ipsec_tunnel is not None:
             pulumi.set(__self__, "ipsec_tunnel", ipsec_tunnel)
         if name is not None:
@@ -322,7 +302,7 @@ class _ServiceConnectionState:
     @pulumi.getter(name="backupSC")
     def backup_sc(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The BackupSC param.
+        Backup s c
         """
         return pulumi.get(self, "backup_sc")
 
@@ -334,7 +314,7 @@ class _ServiceConnectionState:
     @pulumi.getter(name="bgpPeer")
     def bgp_peer(self) -> Optional[pulumi.Input['ServiceConnectionBgpPeerArgs']]:
         """
-        The BgpPeer param.
+        Bgp peer
         """
         return pulumi.get(self, "bgp_peer")
 
@@ -346,7 +326,7 @@ class _ServiceConnectionState:
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
-        (Internal use) Encrypted values returned from the API.
+        Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
@@ -355,22 +335,10 @@ class _ServiceConnectionState:
         pulumi.set(self, "encrypted_values", value)
 
     @_builtins.property
-    @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        """
-        return pulumi.get(self, "folder")
-
-    @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "folder", value)
-
-    @_builtins.property
     @pulumi.getter(name="ipsecTunnel")
     def ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The IpsecTunnel param.
+        Ipsec tunnel
         """
         return pulumi.get(self, "ipsec_tunnel")
 
@@ -382,7 +350,7 @@ class _ServiceConnectionState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the service connection
         """
         return pulumi.get(self, "name")
 
@@ -394,7 +362,7 @@ class _ServiceConnectionState:
     @pulumi.getter(name="natPool")
     def nat_pool(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The NatPool param.
+        Nat pool
         """
         return pulumi.get(self, "nat_pool")
 
@@ -406,7 +374,7 @@ class _ServiceConnectionState:
     @pulumi.getter(name="noExportCommunity")
     def no_export_community(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+        No export community
         """
         return pulumi.get(self, "no_export_community")
 
@@ -418,7 +386,7 @@ class _ServiceConnectionState:
     @pulumi.getter(name="onboardingType")
     def onboarding_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+        Onboarding type
         """
         return pulumi.get(self, "onboarding_type")
 
@@ -430,7 +398,7 @@ class _ServiceConnectionState:
     @pulumi.getter
     def protocol(self) -> Optional[pulumi.Input['ServiceConnectionProtocolArgs']]:
         """
-        The Protocol param.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -442,7 +410,7 @@ class _ServiceConnectionState:
     @pulumi.getter
     def qos(self) -> Optional[pulumi.Input['ServiceConnectionQosArgs']]:
         """
-        The Qos param.
+        Qos
         """
         return pulumi.get(self, "qos")
 
@@ -454,7 +422,7 @@ class _ServiceConnectionState:
     @pulumi.getter
     def region(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Region param.
+        Region
         """
         return pulumi.get(self, "region")
 
@@ -466,7 +434,7 @@ class _ServiceConnectionState:
     @pulumi.getter(name="secondaryIpsecTunnel")
     def secondary_ipsec_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The SecondaryIpsecTunnel param.
+        Secondary ipsec tunnel
         """
         return pulumi.get(self, "secondary_ipsec_tunnel")
 
@@ -478,7 +446,7 @@ class _ServiceConnectionState:
     @pulumi.getter(name="sourceNat")
     def source_nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The SourceNat param.
+        Source nat
         """
         return pulumi.get(self, "source_nat")
 
@@ -490,7 +458,7 @@ class _ServiceConnectionState:
     @pulumi.getter
     def subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Subnets param.
+        Subnets
         """
         return pulumi.get(self, "subnets")
 
@@ -516,7 +484,6 @@ class ServiceConnection(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
                  bgp_peer: Optional[pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
@@ -530,33 +497,25 @@ class ServiceConnection(pulumi.CustomResource):
                  subnets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        ServiceConnection resource
 
         ## Example Usage
 
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.ServiceConnection("example")
-        ```
-
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] backup_sc: The BackupSC param.
-        :param pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']] bgp_peer: The BgpPeer param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        :param pulumi.Input[_builtins.str] ipsec_tunnel: The IpsecTunnel param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] nat_pool: The NatPool param.
-        :param pulumi.Input[_builtins.str] no_export_community: The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
-        :param pulumi.Input[_builtins.str] onboarding_type: The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
-        :param pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']] protocol: The Protocol param.
-        :param pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']] qos: The Qos param.
-        :param pulumi.Input[_builtins.str] region: The Region param.
-        :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: The SecondaryIpsecTunnel param.
-        :param pulumi.Input[_builtins.bool] source_nat: The SourceNat param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: The Subnets param.
+        :param pulumi.Input[_builtins.str] backup_sc: Backup s c
+        :param pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']] bgp_peer: Bgp peer
+        :param pulumi.Input[_builtins.str] ipsec_tunnel: Ipsec tunnel
+        :param pulumi.Input[_builtins.str] name: The name of the service connection
+        :param pulumi.Input[_builtins.str] nat_pool: Nat pool
+        :param pulumi.Input[_builtins.str] no_export_community: No export community
+        :param pulumi.Input[_builtins.str] onboarding_type: Onboarding type
+        :param pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']] protocol: Protocol
+        :param pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']] qos: Qos
+        :param pulumi.Input[_builtins.str] region: Region
+        :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel
+        :param pulumi.Input[_builtins.bool] source_nat: Source nat
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
         """
         ...
     @overload
@@ -565,16 +524,9 @@ class ServiceConnection(pulumi.CustomResource):
                  args: ServiceConnectionArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        ServiceConnection resource
 
         ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.ServiceConnection("example")
-        ```
 
         :param str resource_name: The name of the resource.
         :param ServiceConnectionArgs args: The arguments to use to populate this resource's properties.
@@ -593,7 +545,6 @@ class ServiceConnection(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
                  bgp_peer: Optional[pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
@@ -616,7 +567,6 @@ class ServiceConnection(pulumi.CustomResource):
 
             __props__.__dict__["backup_sc"] = backup_sc
             __props__.__dict__["bgp_peer"] = bgp_peer
-            __props__.__dict__["folder"] = folder
             if ipsec_tunnel is None and not opts.urn:
                 raise TypeError("Missing required property 'ipsec_tunnel'")
             __props__.__dict__["ipsec_tunnel"] = ipsec_tunnel
@@ -649,7 +599,6 @@ class ServiceConnection(pulumi.CustomResource):
             backup_sc: Optional[pulumi.Input[_builtins.str]] = None,
             bgp_peer: Optional[pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']]] = None,
             encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
             ipsec_tunnel: Optional[pulumi.Input[_builtins.str]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             nat_pool: Optional[pulumi.Input[_builtins.str]] = None,
@@ -669,21 +618,20 @@ class ServiceConnection(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] backup_sc: The BackupSC param.
-        :param pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']] bgp_peer: The BgpPeer param.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
-        :param pulumi.Input[_builtins.str] folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        :param pulumi.Input[_builtins.str] ipsec_tunnel: The IpsecTunnel param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] nat_pool: The NatPool param.
-        :param pulumi.Input[_builtins.str] no_export_community: The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
-        :param pulumi.Input[_builtins.str] onboarding_type: The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
-        :param pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']] protocol: The Protocol param.
-        :param pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']] qos: The Qos param.
-        :param pulumi.Input[_builtins.str] region: The Region param.
-        :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: The SecondaryIpsecTunnel param.
-        :param pulumi.Input[_builtins.bool] source_nat: The SourceNat param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: The Subnets param.
+        :param pulumi.Input[_builtins.str] backup_sc: Backup s c
+        :param pulumi.Input[Union['ServiceConnectionBgpPeerArgs', 'ServiceConnectionBgpPeerArgsDict']] bgp_peer: Bgp peer
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] ipsec_tunnel: Ipsec tunnel
+        :param pulumi.Input[_builtins.str] name: The name of the service connection
+        :param pulumi.Input[_builtins.str] nat_pool: Nat pool
+        :param pulumi.Input[_builtins.str] no_export_community: No export community
+        :param pulumi.Input[_builtins.str] onboarding_type: Onboarding type
+        :param pulumi.Input[Union['ServiceConnectionProtocolArgs', 'ServiceConnectionProtocolArgsDict']] protocol: Protocol
+        :param pulumi.Input[Union['ServiceConnectionQosArgs', 'ServiceConnectionQosArgsDict']] qos: Qos
+        :param pulumi.Input[_builtins.str] region: Region
+        :param pulumi.Input[_builtins.str] secondary_ipsec_tunnel: Secondary ipsec tunnel
+        :param pulumi.Input[_builtins.bool] source_nat: Source nat
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] subnets: Subnets
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -692,7 +640,6 @@ class ServiceConnection(pulumi.CustomResource):
         __props__.__dict__["backup_sc"] = backup_sc
         __props__.__dict__["bgp_peer"] = bgp_peer
         __props__.__dict__["encrypted_values"] = encrypted_values
-        __props__.__dict__["folder"] = folder
         __props__.__dict__["ipsec_tunnel"] = ipsec_tunnel
         __props__.__dict__["name"] = name
         __props__.__dict__["nat_pool"] = nat_pool
@@ -711,7 +658,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter(name="backupSC")
     def backup_sc(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The BackupSC param.
+        Backup s c
         """
         return pulumi.get(self, "backup_sc")
 
@@ -719,7 +666,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter(name="bgpPeer")
     def bgp_peer(self) -> pulumi.Output[Optional['outputs.ServiceConnectionBgpPeer']]:
         """
-        The BgpPeer param.
+        Bgp peer
         """
         return pulumi.get(self, "bgp_peer")
 
@@ -727,23 +674,15 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> pulumi.Output[Mapping[str, _builtins.str]]:
         """
-        (Internal use) Encrypted values returned from the API.
+        Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
-
-    @_builtins.property
-    @pulumi.getter
-    def folder(self) -> pulumi.Output[_builtins.str]:
-        """
-        The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        """
-        return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="ipsecTunnel")
     def ipsec_tunnel(self) -> pulumi.Output[_builtins.str]:
         """
-        The IpsecTunnel param.
+        Ipsec tunnel
         """
         return pulumi.get(self, "ipsec_tunnel")
 
@@ -751,7 +690,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        The name of the service connection
         """
         return pulumi.get(self, "name")
 
@@ -759,7 +698,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter(name="natPool")
     def nat_pool(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The NatPool param.
+        Nat pool
         """
         return pulumi.get(self, "nat_pool")
 
@@ -767,7 +706,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter(name="noExportCommunity")
     def no_export_community(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+        No export community
         """
         return pulumi.get(self, "no_export_community")
 
@@ -775,7 +714,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter(name="onboardingType")
     def onboarding_type(self) -> pulumi.Output[_builtins.str]:
         """
-        The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+        Onboarding type
         """
         return pulumi.get(self, "onboarding_type")
 
@@ -783,7 +722,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter
     def protocol(self) -> pulumi.Output[Optional['outputs.ServiceConnectionProtocol']]:
         """
-        The Protocol param.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -791,7 +730,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter
     def qos(self) -> pulumi.Output[Optional['outputs.ServiceConnectionQos']]:
         """
-        The Qos param.
+        Qos
         """
         return pulumi.get(self, "qos")
 
@@ -799,7 +738,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter
     def region(self) -> pulumi.Output[_builtins.str]:
         """
-        The Region param.
+        Region
         """
         return pulumi.get(self, "region")
 
@@ -807,7 +746,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter(name="secondaryIpsecTunnel")
     def secondary_ipsec_tunnel(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The SecondaryIpsecTunnel param.
+        Secondary ipsec tunnel
         """
         return pulumi.get(self, "secondary_ipsec_tunnel")
 
@@ -815,7 +754,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter(name="sourceNat")
     def source_nat(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The SourceNat param.
+        Source nat
         """
         return pulumi.get(self, "source_nat")
 
@@ -823,7 +762,7 @@ class ServiceConnection(pulumi.CustomResource):
     @pulumi.getter
     def subnets(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Subnets param.
+        Subnets
         """
         return pulumi.get(self, "subnets")
 

@@ -14,74 +14,74 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UrlAccessProfileCredentialEnforcement {
     /**
-     * @return The Alerts param.
+     * @return Alert
      * 
      */
     private @Nullable List<String> alerts;
     /**
-     * @return The Allows param.
+     * @return Allow
      * 
      */
     private @Nullable List<String> allows;
     /**
-     * @return The Blocks param.
+     * @return Block
      * 
      */
     private @Nullable List<String> blocks;
     /**
-     * @return The Continues param.
+     * @return Continue
      * 
      */
     private @Nullable List<String> continues;
     /**
-     * @return The LogSeverity param. Default: `&#34;medium&#34;`.
+     * @return Log severity
      * 
      */
     private @Nullable String logSeverity;
     /**
-     * @return The Mode param.
+     * @return Mode
      * 
      */
     private @Nullable UrlAccessProfileCredentialEnforcementMode mode;
 
     private UrlAccessProfileCredentialEnforcement() {}
     /**
-     * @return The Alerts param.
+     * @return Alert
      * 
      */
     public List<String> alerts() {
         return this.alerts == null ? List.of() : this.alerts;
     }
     /**
-     * @return The Allows param.
+     * @return Allow
      * 
      */
     public List<String> allows() {
         return this.allows == null ? List.of() : this.allows;
     }
     /**
-     * @return The Blocks param.
+     * @return Block
      * 
      */
     public List<String> blocks() {
         return this.blocks == null ? List.of() : this.blocks;
     }
     /**
-     * @return The Continues param.
+     * @return Continue
      * 
      */
     public List<String> continues() {
         return this.continues == null ? List.of() : this.continues;
     }
     /**
-     * @return The LogSeverity param. Default: `&#34;medium&#34;`.
+     * @return Log severity
      * 
      */
     public Optional<String> logSeverity() {
         return Optional.ofNullable(this.logSeverity);
     }
     /**
-     * @return The Mode param.
+     * @return Mode
      * 
      */
     public Optional<UrlAccessProfileCredentialEnforcementMode> mode() {

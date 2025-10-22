@@ -10,133 +10,131 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIkeCryptoProfileResult {
     /**
-     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
      * 
      */
     private Integer authenticationMultiple;
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
-    private @Nullable String device;
+    private String device;
     /**
-     * @return The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`.
+     * @return Dh group
      * 
      */
     private List<String> dhGroups;
     /**
-     * @return Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`.
+     * @return Encryption algorithm
      * 
      */
     private List<String> encryptions;
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
-    private @Nullable String folder;
+    private String folder;
     /**
-     * @return The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+     * @return Hash
      * 
      */
     private List<String> hashes;
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return The Lifetime param.
+     * @return Ike crypto profile lifetime
      * 
      */
     private GetIkeCryptoProfileLifetime lifetime;
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     private String name;
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
-    private @Nullable String snippet;
+    private String snippet;
     private String tfid;
 
     private GetIkeCryptoProfileResult() {}
     /**
-     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
      * 
      */
     public Integer authenticationMultiple() {
         return this.authenticationMultiple;
     }
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
-    public Optional<String> device() {
-        return Optional.ofNullable(this.device);
+    public String device() {
+        return this.device;
     }
     /**
-     * @return The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`.
+     * @return Dh group
      * 
      */
     public List<String> dhGroups() {
         return this.dhGroups;
     }
     /**
-     * @return Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`.
+     * @return Encryption algorithm
      * 
      */
     public List<String> encryptions() {
         return this.encryptions;
     }
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
-    public Optional<String> folder() {
-        return Optional.ofNullable(this.folder);
+    public String folder() {
+        return this.folder;
     }
     /**
-     * @return The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+     * @return Hash
      * 
      */
     public List<String> hashes() {
         return this.hashes;
     }
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Lifetime param.
+     * @return Ike crypto profile lifetime
      * 
      */
     public GetIkeCryptoProfileLifetime lifetime() {
         return this.lifetime;
     }
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
-    public Optional<String> snippet() {
-        return Optional.ofNullable(this.snippet);
+    public String snippet() {
+        return this.snippet;
     }
     public String tfid() {
         return this.tfid;
@@ -152,15 +150,15 @@ public final class GetIkeCryptoProfileResult {
     @CustomType.Builder
     public static final class Builder {
         private Integer authenticationMultiple;
-        private @Nullable String device;
+        private String device;
         private List<String> dhGroups;
         private List<String> encryptions;
-        private @Nullable String folder;
+        private String folder;
         private List<String> hashes;
         private String id;
         private GetIkeCryptoProfileLifetime lifetime;
         private String name;
-        private @Nullable String snippet;
+        private String snippet;
         private String tfid;
         public Builder() {}
         public Builder(GetIkeCryptoProfileResult defaults) {
@@ -187,8 +185,10 @@ public final class GetIkeCryptoProfileResult {
             return this;
         }
         @CustomType.Setter
-        public Builder device(@Nullable String device) {
-
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetIkeCryptoProfileResult", "device");
+            }
             this.device = device;
             return this;
         }
@@ -215,8 +215,10 @@ public final class GetIkeCryptoProfileResult {
             return encryptions(List.of(encryptions));
         }
         @CustomType.Setter
-        public Builder folder(@Nullable String folder) {
-
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetIkeCryptoProfileResult", "folder");
+            }
             this.folder = folder;
             return this;
         }
@@ -256,8 +258,10 @@ public final class GetIkeCryptoProfileResult {
             return this;
         }
         @CustomType.Setter
-        public Builder snippet(@Nullable String snippet) {
-
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetIkeCryptoProfileResult", "snippet");
+            }
             this.snippet = snippet;
             return this;
         }

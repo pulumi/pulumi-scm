@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListListDataTypePredefinedUrl {
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return The Url param.
+     * @return Url
      * 
      */
     private String url;
 
     private GetExternalDynamicListListDataTypePredefinedUrl() {}
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return The Url param.
+     * @return Url
      * 
      */
     public String url() {

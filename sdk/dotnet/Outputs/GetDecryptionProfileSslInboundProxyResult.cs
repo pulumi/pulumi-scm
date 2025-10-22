@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDecryptionProfileSslInboundProxyResult
     {
         /// <summary>
-        /// The BlockIfHsmUnavailable param. Default: `False`.
+        /// Block if hsm unavailable
         /// </summary>
         public readonly bool BlockIfHsmUnavailable;
         /// <summary>
-        /// The BlockIfNoResource param. Default: `False`.
+        /// Block if no resource
         /// </summary>
         public readonly bool BlockIfNoResource;
         /// <summary>
-        /// The BlockUnsupportedCipher param. Default: `False`.
+        /// Block unsupported cipher
         /// </summary>
         public readonly bool BlockUnsupportedCipher;
         /// <summary>
-        /// The BlockUnsupportedVersion param. Default: `False`.
+        /// Block unsupported version
         /// </summary>
         public readonly bool BlockUnsupportedVersion;
 

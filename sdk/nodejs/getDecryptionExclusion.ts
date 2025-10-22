@@ -5,23 +5,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getDecryptionExclusion({
- *     id: "1234-56-789",
- * });
- * ```
+ * DecryptionExclusion data source
  */
 export function getDecryptionExclusion(args: GetDecryptionExclusionArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionExclusionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDecryptionExclusion:getDecryptionExclusion", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +20,13 @@ export function getDecryptionExclusion(args: GetDecryptionExclusionArgs, opts?: 
  */
 export interface GetDecryptionExclusionArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * Name
+     */
+    name?: string;
 }
 
 /**
@@ -40,37 +34,39 @@ export interface GetDecryptionExclusionArgs {
  */
 export interface GetDecryptionExclusionResult {
     /**
-     * The Description param.
+     * Description
      */
     readonly description: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The Name param.
+     * Name
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getDecryptionExclusion({
- *     id: "1234-56-789",
- * });
- * ```
+ * DecryptionExclusion data source
  */
 export function getDecryptionExclusionOutput(args: GetDecryptionExclusionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionExclusionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDecryptionExclusion:getDecryptionExclusion", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -79,7 +75,11 @@ export function getDecryptionExclusionOutput(args: GetDecryptionExclusionOutputA
  */
 export interface GetDecryptionExclusionOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
 }

@@ -16,14 +16,14 @@ public final class QosPolicyRuleDscpTosCodepointTypeCustomArgs extends com.pulum
     public static final QosPolicyRuleDscpTosCodepointTypeCustomArgs Empty = new QosPolicyRuleDscpTosCodepointTypeCustomArgs();
 
     /**
-     * The Codepoint param.
+     * Codepoint
      * 
      */
     @Import(name="codepoint")
     private @Nullable Output<QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs> codepoint;
 
     /**
-     * @return The Codepoint param.
+     * @return Codepoint
      * 
      */
     public Optional<Output<QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs>> codepoint() {
@@ -55,7 +55,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeCustomArgs extends com.pulum
         }
 
         /**
-         * @param codepoint The Codepoint param.
+         * @param codepoint Codepoint
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeCustomArgs extends com.pulum
         }
 
         /**
-         * @param codepoint The Codepoint param.
+         * @param codepoint Codepoint
          * 
          * @return builder
          * 

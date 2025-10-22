@@ -8,8 +8,6 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class ExternalDynamicListTypeImeiRecurringWeeklyArgs extends com.pulumi.resources.ResourceArgs {
@@ -17,29 +15,29 @@ public final class ExternalDynamicListTypeImeiRecurringWeeklyArgs extends com.pu
     public static final ExternalDynamicListTypeImeiRecurringWeeklyArgs Empty = new ExternalDynamicListTypeImeiRecurringWeeklyArgs();
 
     /**
-     * Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * Time specification hh (e.g. 20)
      * 
      */
-    @Import(name="at")
-    private @Nullable Output<String> at;
+    @Import(name="at", required=true)
+    private Output<String> at;
 
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
-    public Optional<Output<String>> at() {
-        return Optional.ofNullable(this.at);
+    public Output<String> at() {
+        return this.at;
     }
 
     /**
-     * The DayOfWeek param. String must be one of these: `&#34;sunday&#34;`, `&#34;monday&#34;`, `&#34;tuesday&#34;`, `&#34;wednesday&#34;`, `&#34;thursday&#34;`, `&#34;friday&#34;`, `&#34;saturday&#34;`.
+     * Day of week
      * 
      */
     @Import(name="dayOfWeek", required=true)
     private Output<String> dayOfWeek;
 
     /**
-     * @return The DayOfWeek param. String must be one of these: `&#34;sunday&#34;`, `&#34;monday&#34;`, `&#34;tuesday&#34;`, `&#34;wednesday&#34;`, `&#34;thursday&#34;`, `&#34;friday&#34;`, `&#34;saturday&#34;`.
+     * @return Day of week
      * 
      */
     public Output<String> dayOfWeek() {
@@ -72,18 +70,18 @@ public final class ExternalDynamicListTypeImeiRecurringWeeklyArgs extends com.pu
         }
 
         /**
-         * @param at Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+         * @param at Time specification hh (e.g. 20)
          * 
          * @return builder
          * 
          */
-        public Builder at(@Nullable Output<String> at) {
+        public Builder at(Output<String> at) {
             $.at = at;
             return this;
         }
 
         /**
-         * @param at Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+         * @param at Time specification hh (e.g. 20)
          * 
          * @return builder
          * 
@@ -93,7 +91,7 @@ public final class ExternalDynamicListTypeImeiRecurringWeeklyArgs extends com.pu
         }
 
         /**
-         * @param dayOfWeek The DayOfWeek param. String must be one of these: `&#34;sunday&#34;`, `&#34;monday&#34;`, `&#34;tuesday&#34;`, `&#34;wednesday&#34;`, `&#34;thursday&#34;`, `&#34;friday&#34;`, `&#34;saturday&#34;`.
+         * @param dayOfWeek Day of week
          * 
          * @return builder
          * 
@@ -104,7 +102,7 @@ public final class ExternalDynamicListTypeImeiRecurringWeeklyArgs extends com.pu
         }
 
         /**
-         * @param dayOfWeek The DayOfWeek param. String must be one of these: `&#34;sunday&#34;`, `&#34;monday&#34;`, `&#34;tuesday&#34;`, `&#34;wednesday&#34;`, `&#34;thursday&#34;`, `&#34;friday&#34;`, `&#34;saturday&#34;`.
+         * @param dayOfWeek Day of week
          * 
          * @return builder
          * 
@@ -114,6 +112,9 @@ public final class ExternalDynamicListTypeImeiRecurringWeeklyArgs extends com.pu
         }
 
         public ExternalDynamicListTypeImeiRecurringWeeklyArgs build() {
+            if ($.at == null) {
+                throw new MissingRequiredPropertyException("ExternalDynamicListTypeImeiRecurringWeeklyArgs", "at");
+            }
             if ($.dayOfWeek == null) {
                 throw new MissingRequiredPropertyException("ExternalDynamicListTypeImeiRecurringWeeklyArgs", "dayOfWeek");
             }

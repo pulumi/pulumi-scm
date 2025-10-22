@@ -10,69 +10,49 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.LocalUser("example", new()
-    ///     {
-    ///         Folder = "Shared",
-    ///         Name = "user1",
-    ///         Password = "secret",
-    ///     });
-    /// 
-    /// });
-    /// ```
+    /// LocalUser resource
     /// </summary>
     [ScmResourceType("scm:index/localUser:LocalUser")]
     public partial class LocalUser : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Disabled param.
+        /// Is the local user disabled?
         /// </summary>
         [Output("disabled")]
-        public Output<bool?> Disabled { get; private set; } = null!;
+        public Output<bool> Disabled { get; private set; } = null!;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
+        /// Map of sensitive values returned from the API.
         /// </summary>
         [Output("encryptedValues")]
         public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param. String length must not exceed 31 characters.
+        /// The name of the local user
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Password param. String length must not exceed 63 characters.
+        /// The password of the local user
         /// </summary>
         [Output("password")]
-        public Output<string?> Password { get; private set; } = null!;
+        public Output<string> Password { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -88,7 +68,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public LocalUser(string name, LocalUserArgs? args = null, CustomResourceOptions? options = null)
+        public LocalUser(string name, LocalUserArgs args, CustomResourceOptions? options = null)
             : base("scm:index/localUser:LocalUser", name, args ?? new LocalUserArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -132,34 +112,34 @@ namespace Pulumi.Scm
     public sealed class LocalUserArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param.
+        /// Is the local user disabled?
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Name param. String length must not exceed 31 characters.
+        /// The name of the local user
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        [Input("password")]
+        [Input("password", required: true)]
         private Input<string>? _password;
 
         /// <summary>
-        /// The Password param. String length must not exceed 63 characters.
+        /// The password of the local user
         /// </summary>
         public Input<string>? Password
         {
@@ -172,7 +152,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -186,13 +166,13 @@ namespace Pulumi.Scm
     public sealed class LocalUserState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param.
+        /// Is the local user disabled?
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
@@ -201,7 +181,7 @@ namespace Pulumi.Scm
         private InputMap<string>? _encryptedValues;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
+        /// Map of sensitive values returned from the API.
         /// </summary>
         public InputMap<string> EncryptedValues
         {
@@ -214,13 +194,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Name param. String length must not exceed 31 characters.
+        /// The name of the local user
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -229,7 +209,7 @@ namespace Pulumi.Scm
         private Input<string>? _password;
 
         /// <summary>
-        /// The Password param. String length must not exceed 63 characters.
+        /// The password of the local user
         /// </summary>
         public Input<string>? Password
         {
@@ -242,7 +222,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

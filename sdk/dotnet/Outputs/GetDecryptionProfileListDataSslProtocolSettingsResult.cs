@@ -14,67 +14,67 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDecryptionProfileListDataSslProtocolSettingsResult
     {
         /// <summary>
-        /// The AuthAlgoMd5 param. Default: `True`.
+        /// Auth algo md5
         /// </summary>
         public readonly bool AuthAlgoMd5;
         /// <summary>
-        /// The AuthAlgoSha1 param. Default: `True`.
+        /// Auth algo sha1
         /// </summary>
         public readonly bool AuthAlgoSha1;
         /// <summary>
-        /// The AuthAlgoSha256 param. Default: `True`.
+        /// Auth algo sha256
         /// </summary>
         public readonly bool AuthAlgoSha256;
         /// <summary>
-        /// The AuthAlgoSha384 param. Default: `True`.
+        /// Auth algo sha384
         /// </summary>
         public readonly bool AuthAlgoSha384;
         /// <summary>
-        /// The EncAlgo3des param. Default: `True`.
+        /// Enc algo3des
         /// </summary>
         public readonly bool EncAlgo3des;
         /// <summary>
-        /// The EncAlgoAes128Cbc param. Default: `True`.
+        /// Enc algo aes128 cbc
         /// </summary>
         public readonly bool EncAlgoAes128Cbc;
         /// <summary>
-        /// The EncAlgoAes128Gcm param. Default: `True`.
+        /// Enc algo aes128 gcm
         /// </summary>
         public readonly bool EncAlgoAes128Gcm;
         /// <summary>
-        /// The EncAlgoAes256Cbc param. Default: `True`.
+        /// Enc algo aes256 cbc
         /// </summary>
         public readonly bool EncAlgoAes256Cbc;
         /// <summary>
-        /// The EncAlgoAes256Gcm param. Default: `True`.
+        /// Enc algo aes256 gcm
         /// </summary>
         public readonly bool EncAlgoAes256Gcm;
         /// <summary>
-        /// The EncAlgoChacha20Poly1305 param. Default: `True`.
+        /// Enc algo chacha20 poly1305
         /// </summary>
         public readonly bool EncAlgoChacha20Poly1305;
         /// <summary>
-        /// The EncAlgoRc4 param. Default: `True`.
+        /// Enc algo rc4
         /// </summary>
         public readonly bool EncAlgoRc4;
         /// <summary>
-        /// The KeyxchgAlgoDhe param. Default: `True`.
+        /// Keyxchg algo dhe
         /// </summary>
         public readonly bool KeyxchgAlgoDhe;
         /// <summary>
-        /// The KeyxchgAlgoEcdhe param. Default: `True`.
+        /// Keyxchg algo ecdhe
         /// </summary>
         public readonly bool KeyxchgAlgoEcdhe;
         /// <summary>
-        /// The KeyxchgAlgoRsa param. Default: `True`.
+        /// Keyxchg algo rsa
         /// </summary>
         public readonly bool KeyxchgAlgoRsa;
         /// <summary>
-        /// The MaxVersion param. String must be one of these: `"sslv3"`, `"tls1-0"`, `"tls1-1"`, `"tls1-2"`, `"tls1-3"`, `"max"`. Default: `"tls1-2"`.
+        /// Max version
         /// </summary>
         public readonly string MaxVersion;
         /// <summary>
-        /// The MinVersion param. String must be one of these: `"sslv3"`, `"tls1-0"`, `"tls1-1"`, `"tls1-2"`, `"tls1-3"`. Default: `"tls1-0"`.
+        /// Min version
         /// </summary>
         public readonly string MinVersion;
 

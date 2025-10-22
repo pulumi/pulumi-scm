@@ -15,14 +15,14 @@ public final class HipObjectHostInfoArgs extends com.pulumi.resources.ResourceAr
     public static final HipObjectHostInfoArgs Empty = new HipObjectHostInfoArgs();
 
     /**
-     * The Criteria param.
+     * Criteria
      * 
      */
     @Import(name="criteria", required=true)
     private Output<HipObjectHostInfoCriteriaArgs> criteria;
 
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public Output<HipObjectHostInfoCriteriaArgs> criteria() {
@@ -54,7 +54,7 @@ public final class HipObjectHostInfoArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param criteria The Criteria param.
+         * @param criteria Criteria
          * 
          * @return builder
          * 
@@ -65,7 +65,7 @@ public final class HipObjectHostInfoArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param criteria The Criteria param.
+         * @param criteria Criteria
          * 
          * @return builder
          * 

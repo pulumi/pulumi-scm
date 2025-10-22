@@ -11,42 +11,46 @@ import java.util.Objects;
 @CustomType
 public final class GetLabelListData {
     /**
-     * @return The Description param.
+     * @return The description of the label
      * 
      */
     private String description;
     /**
-     * @return The Id param.
+     * @return The UUID of the label
      * 
      */
     private String id;
     /**
-     * @return The Name param.
+     * @return The name of the label
      * 
      */
     private String name;
+    private String tfid;
 
     private GetLabelListData() {}
     /**
-     * @return The Description param.
+     * @return The description of the label
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The Id param.
+     * @return The UUID of the label
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param.
+     * @return The name of the label
      * 
      */
     public String name() {
         return this.name;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -61,12 +65,14 @@ public final class GetLabelListData {
         private String description;
         private String id;
         private String name;
+        private String tfid;
         public Builder() {}
         public Builder(GetLabelListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -93,11 +99,20 @@ public final class GetLabelListData {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetLabelListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetLabelListData build() {
             final var _resultValue = new GetLabelListData();
             _resultValue.description = description;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

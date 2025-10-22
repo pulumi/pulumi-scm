@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataPatchManagementCriteriaResult
     {
         /// <summary>
-        /// is enabled. String must be one of these: `"no"`, `"yes"`, `"not-available"`.
+        /// is enabled
         /// </summary>
         public readonly string IsEnabled;
         /// <summary>
-        /// Is Installed. Default: `True`.
+        /// Is Installed
         /// </summary>
         public readonly bool IsInstalled;
         /// <summary>
-        /// The MissingPatches param.
+        /// Missing patches
         /// </summary>
         public readonly Outputs.GetHipObjectListDataPatchManagementCriteriaMissingPatchesResult MissingPatches;
 

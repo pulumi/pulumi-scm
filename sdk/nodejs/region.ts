@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.Region("example", {});
- * ```
+ * Region resource
  */
 export class Region extends pulumi.CustomResource {
     /**
@@ -47,27 +38,27 @@ export class Region extends pulumi.CustomResource {
     }
 
     /**
-     * The Addresses param.
+     * Address
      */
     declare public readonly addresses: pulumi.Output<string[] | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The GeoLocation param.
+     * Geo location
      */
     declare public readonly geoLocation: pulumi.Output<outputs.RegionGeoLocation | undefined>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the region
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -112,27 +103,27 @@ export class Region extends pulumi.CustomResource {
  */
 export interface RegionState {
     /**
-     * The Addresses param.
+     * Address
      */
     addresses?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The GeoLocation param.
+     * Geo location
      */
     geoLocation?: pulumi.Input<inputs.RegionGeoLocation>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the region
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -143,27 +134,27 @@ export interface RegionState {
  */
 export interface RegionArgs {
     /**
-     * The Addresses param.
+     * Address
      */
     addresses?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The GeoLocation param.
+     * Geo location
      */
     geoLocation?: pulumi.Input<inputs.RegionGeoLocation>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the region
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolUdp {
     /**
-     * @return The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+     * @return Local port
      * 
      */
     private Integer localPort;
     /**
-     * @return The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+     * @return Remote port
      * 
      */
     private Integer remotePort;
 
     private GetIpsecTunnelListDataAutoKeyProxyIdV6ProtocolUdp() {}
     /**
-     * @return The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+     * @return Local port
      * 
      */
     public Integer localPort() {
         return this.localPort;
     }
     /**
-     * @return The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+     * @return Remote port
      * 
      */
     public Integer remotePort() {

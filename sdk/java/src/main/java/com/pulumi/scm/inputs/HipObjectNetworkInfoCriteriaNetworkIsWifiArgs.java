@@ -16,14 +16,14 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsWifiArgs extends com.pul
     public static final HipObjectNetworkInfoCriteriaNetworkIsWifiArgs Empty = new HipObjectNetworkInfoCriteriaNetworkIsWifiArgs();
 
     /**
-     * SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * SSID
      * 
      */
     @Import(name="ssid")
     private @Nullable Output<String> ssid;
 
     /**
-     * @return SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return SSID
      * 
      */
     public Optional<Output<String>> ssid() {
@@ -55,7 +55,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsWifiArgs extends com.pul
         }
 
         /**
-         * @param ssid SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+         * @param ssid SSID
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsWifiArgs extends com.pul
         }
 
         /**
-         * @param ssid SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+         * @param ssid SSID
          * 
          * @return builder
          * 

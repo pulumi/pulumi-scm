@@ -17,14 +17,14 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
     public static final ServiceConnectionProtocolBgpArgs Empty = new ServiceConnectionProtocolBgpArgs();
 
     /**
-     * The DoNotExportRoutes param.
+     * Do not export routes
      * 
      */
     @Import(name="doNotExportRoutes")
     private @Nullable Output<Boolean> doNotExportRoutes;
 
     /**
-     * @return The DoNotExportRoutes param.
+     * @return Do not export routes
      * 
      */
     public Optional<Output<Boolean>> doNotExportRoutes() {
@@ -32,14 +32,14 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
     }
 
     /**
-     * The Enable param.
+     * Enable
      * 
      */
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     public Optional<Output<Boolean>> enable() {
@@ -47,14 +47,14 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
     }
 
     /**
-     * The FastFailover param.
+     * Fast failover
      * 
      */
     @Import(name="fastFailover")
     private @Nullable Output<Boolean> fastFailover;
 
     /**
-     * @return The FastFailover param.
+     * @return Fast failover
      * 
      */
     public Optional<Output<Boolean>> fastFailover() {
@@ -62,14 +62,14 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
     }
 
     /**
-     * The LocalIpAddress param.
+     * Local ip address
      * 
      */
     @Import(name="localIpAddress")
     private @Nullable Output<String> localIpAddress;
 
     /**
-     * @return The LocalIpAddress param.
+     * @return Local ip address
      * 
      */
     public Optional<Output<String>> localIpAddress() {
@@ -77,14 +77,14 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
     }
 
     /**
-     * The OriginateDefaultRoute param.
+     * Originate default route
      * 
      */
     @Import(name="originateDefaultRoute")
     private @Nullable Output<Boolean> originateDefaultRoute;
 
     /**
-     * @return The OriginateDefaultRoute param.
+     * @return Originate default route
      * 
      */
     public Optional<Output<Boolean>> originateDefaultRoute() {
@@ -92,14 +92,14 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
     }
 
     /**
-     * The PeerAs param.
+     * Peer as
      * 
      */
     @Import(name="peerAs")
     private @Nullable Output<String> peerAs;
 
     /**
-     * @return The PeerAs param.
+     * @return Peer as
      * 
      */
     public Optional<Output<String>> peerAs() {
@@ -107,14 +107,14 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
     }
 
     /**
-     * The PeerIpAddress param.
+     * Peer ip address
      * 
      */
     @Import(name="peerIpAddress")
     private @Nullable Output<String> peerIpAddress;
 
     /**
-     * @return The PeerIpAddress param.
+     * @return Peer ip address
      * 
      */
     public Optional<Output<String>> peerIpAddress() {
@@ -122,14 +122,14 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
     }
 
     /**
-     * The Secret param.
+     * Secret
      * 
      */
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
     /**
-     * @return The Secret param.
+     * @return Secret
      * 
      */
     public Optional<Output<String>> secret() {
@@ -137,14 +137,14 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
     }
 
     /**
-     * The SummarizeMobileUserRoutes param.
+     * Summarize mobile user routes
      * 
      */
     @Import(name="summarizeMobileUserRoutes")
     private @Nullable Output<Boolean> summarizeMobileUserRoutes;
 
     /**
-     * @return The SummarizeMobileUserRoutes param.
+     * @return Summarize mobile user routes
      * 
      */
     public Optional<Output<Boolean>> summarizeMobileUserRoutes() {
@@ -184,7 +184,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param doNotExportRoutes The DoNotExportRoutes param.
+         * @param doNotExportRoutes Do not export routes
          * 
          * @return builder
          * 
@@ -195,7 +195,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param doNotExportRoutes The DoNotExportRoutes param.
+         * @param doNotExportRoutes Do not export routes
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param enable The Enable param.
+         * @param enable Enable
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param enable The Enable param.
+         * @param enable Enable
          * 
          * @return builder
          * 
@@ -226,7 +226,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param fastFailover The FastFailover param.
+         * @param fastFailover Fast failover
          * 
          * @return builder
          * 
@@ -237,7 +237,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param fastFailover The FastFailover param.
+         * @param fastFailover Fast failover
          * 
          * @return builder
          * 
@@ -247,7 +247,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param localIpAddress The LocalIpAddress param.
+         * @param localIpAddress Local ip address
          * 
          * @return builder
          * 
@@ -258,7 +258,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param localIpAddress The LocalIpAddress param.
+         * @param localIpAddress Local ip address
          * 
          * @return builder
          * 
@@ -268,7 +268,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param originateDefaultRoute The OriginateDefaultRoute param.
+         * @param originateDefaultRoute Originate default route
          * 
          * @return builder
          * 
@@ -279,7 +279,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param originateDefaultRoute The OriginateDefaultRoute param.
+         * @param originateDefaultRoute Originate default route
          * 
          * @return builder
          * 
@@ -289,7 +289,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param peerAs The PeerAs param.
+         * @param peerAs Peer as
          * 
          * @return builder
          * 
@@ -300,7 +300,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param peerAs The PeerAs param.
+         * @param peerAs Peer as
          * 
          * @return builder
          * 
@@ -310,7 +310,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param peerIpAddress The PeerIpAddress param.
+         * @param peerIpAddress Peer ip address
          * 
          * @return builder
          * 
@@ -321,7 +321,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param peerIpAddress The PeerIpAddress param.
+         * @param peerIpAddress Peer ip address
          * 
          * @return builder
          * 
@@ -331,7 +331,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param secret The Secret param.
+         * @param secret Secret
          * 
          * @return builder
          * 
@@ -342,7 +342,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param secret The Secret param.
+         * @param secret Secret
          * 
          * @return builder
          * 
@@ -352,7 +352,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param summarizeMobileUserRoutes The SummarizeMobileUserRoutes param.
+         * @param summarizeMobileUserRoutes Summarize mobile user routes
          * 
          * @return builder
          * 
@@ -363,7 +363,7 @@ public final class ServiceConnectionProtocolBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param summarizeMobileUserRoutes The SummarizeMobileUserRoutes param.
+         * @param summarizeMobileUserRoutes Summarize mobile user routes
          * 
          * @return builder
          * 

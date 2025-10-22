@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.QosPolicyRule("example", {});
- * ```
+ * QosPolicyRule resource
  */
 export class QosPolicyRule extends pulumi.CustomResource {
     /**
@@ -47,39 +38,39 @@ export class QosPolicyRule extends pulumi.CustomResource {
     }
 
     /**
-     * The Action param.
+     * Action
      */
     declare public readonly action: pulumi.Output<outputs.QosPolicyRuleAction>;
     /**
-     * The Description param.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The DscpTos param.
+     * Dscp tos
      */
     declare public readonly dscpTos: pulumi.Output<outputs.QosPolicyRuleDscpTos | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Name param.
+     * Name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The relative position of the rule
      */
     declare public readonly position: pulumi.Output<string>;
     /**
-     * The Schedule param.
+     * Schedule
      */
     declare public readonly schedule: pulumi.Output<string | undefined>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -133,39 +124,39 @@ export class QosPolicyRule extends pulumi.CustomResource {
  */
 export interface QosPolicyRuleState {
     /**
-     * The Action param.
+     * Action
      */
     action?: pulumi.Input<inputs.QosPolicyRuleAction>;
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The DscpTos param.
+     * Dscp tos
      */
     dscpTos?: pulumi.Input<inputs.QosPolicyRuleDscpTos>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The relative position of the rule
      */
     position?: pulumi.Input<string>;
     /**
-     * The Schedule param.
+     * Schedule
      */
     schedule?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -176,39 +167,39 @@ export interface QosPolicyRuleState {
  */
 export interface QosPolicyRuleArgs {
     /**
-     * The Action param.
+     * Action
      */
     action: pulumi.Input<inputs.QosPolicyRuleAction>;
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The DscpTos param.
+     * Dscp tos
      */
     dscpTos?: pulumi.Input<inputs.QosPolicyRuleDscpTos>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The relative position of the rule
      */
     position?: pulumi.Input<string>;
     /**
-     * The Schedule param.
+     * Schedule
      */
     schedule?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

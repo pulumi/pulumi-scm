@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRadiusServerProfileServerResult
     {
         /// <summary>
-        /// The IpAddress param.
+        /// The IP address of the RADIUS server
         /// </summary>
         public readonly string IpAddress;
         /// <summary>
-        /// The Name param.
+        /// The name of the RADIUS server
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Port param. Value must be between 1 and 65535.
+        /// The RADIUS server port
         /// </summary>
         public readonly int Port;
         /// <summary>
-        /// The Secret param. String length must not exceed 64 characters.
+        /// The RADIUS secret
         /// </summary>
         public readonly string Secret;
 

@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupDecryptionExclusion(ctx, &scm.LookupDecryptionExclusionArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// DecryptionExclusion data source
 func LookupDecryptionExclusion(ctx *pulumi.Context, args *LookupDecryptionExclusionArgs, opts ...pulumi.InvokeOption) (*LookupDecryptionExclusionResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupDecryptionExclusionResult
@@ -50,19 +24,27 @@ func LookupDecryptionExclusion(ctx *pulumi.Context, args *LookupDecryptionExclus
 
 // A collection of arguments for invoking getDecryptionExclusion.
 type LookupDecryptionExclusionArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
+	// Name
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getDecryptionExclusion.
 type LookupDecryptionExclusionResult struct {
-	// The Description param.
+	// Description
 	Description string `pulumi:"description"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The Name param.
+	// Name
 	Name string `pulumi:"name"`
-	Tfid string `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupDecryptionExclusionOutput(ctx *pulumi.Context, args LookupDecryptionExclusionOutputArgs, opts ...pulumi.InvokeOption) LookupDecryptionExclusionResultOutput {
@@ -76,8 +58,10 @@ func LookupDecryptionExclusionOutput(ctx *pulumi.Context, args LookupDecryptionE
 
 // A collection of arguments for invoking getDecryptionExclusion.
 type LookupDecryptionExclusionOutputArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupDecryptionExclusionOutputArgs) ElementType() reflect.Type {
@@ -99,19 +83,34 @@ func (o LookupDecryptionExclusionResultOutput) ToLookupDecryptionExclusionResult
 	return o
 }
 
-// The Description param.
+// Description
 func (o LookupDecryptionExclusionResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupDecryptionExclusionResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupDecryptionExclusionResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
 func (o LookupDecryptionExclusionResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// Name
 func (o LookupDecryptionExclusionResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupDecryptionExclusionResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionExclusionResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupDecryptionExclusionResultOutput) Tfid() pulumi.StringOutput {

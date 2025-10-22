@@ -13,34 +13,44 @@ namespace Pulumi.Scm.Inputs
     public sealed class MfaServerMfaVendorTypeDuoSecurityV2Args : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The DuoApiHost param.
+        /// Duo Security API hostname
         /// </summary>
-        [Input("duoApiHost")]
-        public Input<string>? DuoApiHost { get; set; }
+        [Input("duoApiHost", required: true)]
+        public Input<string> DuoApiHost { get; set; } = null!;
 
         /// <summary>
-        /// The DuoBaseuri param.
+        /// Duo Security API base URI
         /// </summary>
-        [Input("duoBaseuri")]
-        public Input<string>? DuoBaseuri { get; set; }
+        [Input("duoBaseuri", required: true)]
+        public Input<string> DuoBaseuri { get; set; } = null!;
 
         /// <summary>
-        /// The DuoIntegrationKey param.
+        /// Duo Security integration key
         /// </summary>
-        [Input("duoIntegrationKey")]
-        public Input<string>? DuoIntegrationKey { get; set; }
+        [Input("duoIntegrationKey", required: true)]
+        public Input<string> DuoIntegrationKey { get; set; } = null!;
+
+        [Input("duoSecretKey", required: true)]
+        private Input<string>? _duoSecretKey;
 
         /// <summary>
-        /// The DuoSecretKey param.
+        /// Duo Security secret key
         /// </summary>
-        [Input("duoSecretKey")]
-        public Input<string>? DuoSecretKey { get; set; }
+        public Input<string>? DuoSecretKey
+        {
+            get => _duoSecretKey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _duoSecretKey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         /// <summary>
-        /// The DuoTimeout param.
+        /// Duo Security timeout (seconds)
         /// </summary>
-        [Input("duoTimeout")]
-        public Input<string>? DuoTimeout { get; set; }
+        [Input("duoTimeout", required: true)]
+        public Input<int> DuoTimeout { get; set; } = null!;
 
         public MfaServerMfaVendorTypeDuoSecurityV2Args()
         {

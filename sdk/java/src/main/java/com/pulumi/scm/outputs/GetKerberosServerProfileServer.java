@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class GetKerberosServerProfileServer {
     /**
-     * @return The Host param.
+     * @return The Kerberos server IP address
      * 
      */
     private String host;
     /**
-     * @return The Name param.
+     * @return The Kerberos server name
      * 
      */
     private String name;
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The Kerberos server port
      * 
      */
     private Integer port;
 
     private GetKerberosServerProfileServer() {}
     /**
-     * @return The Host param.
+     * @return The Kerberos server IP address
      * 
      */
     public String host() {
         return this.host;
     }
     /**
-     * @return The Name param.
+     * @return The Kerberos server name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The Kerberos server port
      * 
      */
     public Integer port() {

@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WildfireAntiVirusProfileThreatException {
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private @Nullable String name;
     /**
-     * @return The Notes param.
+     * @return Notes
      * 
      */
     private @Nullable String notes;
 
     private WildfireAntiVirusProfileThreatException() {}
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The Notes param.
+     * @return Notes
      * 
      */
     public Optional<String> notes() {

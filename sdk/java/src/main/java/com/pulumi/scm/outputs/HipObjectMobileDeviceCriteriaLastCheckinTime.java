@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectMobileDeviceCriteriaLastCheckinTime {
     /**
-     * @return The NotWithin param. Ensure that only one of the following is specified: `notWithin`, `within`
+     * @return Not within
      * 
      */
     private @Nullable HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin notWithin;
     /**
-     * @return The Within param. Ensure that only one of the following is specified: `notWithin`, `within`
+     * @return Within
      * 
      */
     private @Nullable HipObjectMobileDeviceCriteriaLastCheckinTimeWithin within;
 
     private HipObjectMobileDeviceCriteriaLastCheckinTime() {}
     /**
-     * @return The NotWithin param. Ensure that only one of the following is specified: `notWithin`, `within`
+     * @return Not within
      * 
      */
     public Optional<HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin> notWithin() {
         return Optional.ofNullable(this.notWithin);
     }
     /**
-     * @return The Within param. Ensure that only one of the following is specified: `notWithin`, `within`
+     * @return Within
      * 
      */
     public Optional<HipObjectMobileDeviceCriteriaLastCheckinTimeWithin> within() {

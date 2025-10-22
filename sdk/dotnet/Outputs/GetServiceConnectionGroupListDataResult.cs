@@ -14,25 +14,26 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetServiceConnectionGroupListDataResult
     {
         /// <summary>
-        /// The DisableSnat param.
+        /// Disable snat
         /// </summary>
         public readonly bool DisableSnat;
         /// <summary>
-        /// UUID of the resource.
+        /// The UUID of the service connection group
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The PbfOnly param.
+        /// Pbf only
         /// </summary>
         public readonly bool PbfOnly;
         /// <summary>
-        /// The Targets param.
+        /// Target
         /// </summary>
         public readonly ImmutableArray<string> Targets;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetServiceConnectionGroupListDataResult(
@@ -44,13 +45,16 @@ namespace Pulumi.Scm.Outputs
 
             bool pbfOnly,
 
-            ImmutableArray<string> targets)
+            ImmutableArray<string> targets,
+
+            string tfid)
         {
             DisableSnat = disableSnat;
             Id = id;
             Name = name;
             PbfOnly = pbfOnly;
             Targets = targets;
+            Tfid = tfid;
         }
     }
 }

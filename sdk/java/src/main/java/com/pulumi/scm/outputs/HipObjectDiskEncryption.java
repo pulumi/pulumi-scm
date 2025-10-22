@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectDiskEncryption {
     /**
-     * @return Encryption locations.
+     * @return Encryption locations
      * 
      */
     private @Nullable HipObjectDiskEncryptionCriteria criteria;
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     private @Nullable Boolean excludeVendor;
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     private @Nullable List<HipObjectDiskEncryptionVendor> vendors;
 
     private HipObjectDiskEncryption() {}
     /**
-     * @return Encryption locations.
+     * @return Encryption locations
      * 
      */
     public Optional<HipObjectDiskEncryptionCriteria> criteria() {
         return Optional.ofNullable(this.criteria);
     }
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     public Optional<Boolean> excludeVendor() {
         return Optional.ofNullable(this.excludeVendor);
     }
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     public List<HipObjectDiskEncryptionVendor> vendors() {

@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectNetworkInfoCriteriaNetworkIsNotMobileGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+        /// Carrier
         /// </summary>
         [Input("carrier")]
         public Input<string>? Carrier { get; set; }

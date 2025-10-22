@@ -12,76 +12,25 @@ namespace Pulumi.Scm
     public static class GetServiceConnectionGroup
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// ServiceConnectionGroup data source
         /// 
         /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetServiceConnectionGroup.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///         Folder = "Service Connections",
-        ///     });
-        /// 
-        /// });
-        /// ```
         /// </summary>
         public static Task<GetServiceConnectionGroupResult> InvokeAsync(GetServiceConnectionGroupArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetServiceConnectionGroupResult>("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", args ?? new GetServiceConnectionGroupArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ServiceConnectionGroup data source
         /// 
         /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetServiceConnectionGroup.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///         Folder = "Service Connections",
-        ///     });
-        /// 
-        /// });
-        /// ```
         /// </summary>
         public static Output<GetServiceConnectionGroupResult> Invoke(GetServiceConnectionGroupInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceConnectionGroupResult>("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", args ?? new GetServiceConnectionGroupInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ServiceConnectionGroup data source
         /// 
         /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetServiceConnectionGroup.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///         Folder = "Service Connections",
-        ///     });
-        /// 
-        /// });
-        /// ```
         /// </summary>
         public static Output<GetServiceConnectionGroupResult> Invoke(GetServiceConnectionGroupInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceConnectionGroupResult>("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", args ?? new GetServiceConnectionGroupInvokeArgs(), options.WithDefaults());
@@ -91,16 +40,16 @@ namespace Pulumi.Scm
     public sealed class GetServiceConnectionGroupArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-        /// </summary>
-        [Input("folder")]
-        public string? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// The UUID of the service connection group
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetServiceConnectionGroupArgs()
         {
@@ -111,16 +60,16 @@ namespace Pulumi.Scm
     public sealed class GetServiceConnectionGroupInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// The UUID of the service connection group
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetServiceConnectionGroupInvokeArgs()
         {
@@ -133,27 +82,23 @@ namespace Pulumi.Scm
     public sealed class GetServiceConnectionGroupResult
     {
         /// <summary>
-        /// The DisableSnat param.
+        /// Disable snat
         /// </summary>
         public readonly bool DisableSnat;
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-        /// </summary>
-        public readonly string Folder;
-        /// <summary>
-        /// The Id param.
+        /// The UUID of the service connection group
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The PbfOnly param.
+        /// Pbf only
         /// </summary>
         public readonly bool PbfOnly;
         /// <summary>
-        /// The Targets param.
+        /// Target
         /// </summary>
         public readonly ImmutableArray<string> Targets;
         public readonly string Tfid;
@@ -161,8 +106,6 @@ namespace Pulumi.Scm
         [OutputConstructor]
         private GetServiceConnectionGroupResult(
             bool disableSnat,
-
-            string folder,
 
             string id,
 
@@ -175,7 +118,6 @@ namespace Pulumi.Scm
             string tfid)
         {
             DisableSnat = disableSnat;
-            Folder = folder;
             Id = id;
             Name = name;
             PbfOnly = pbfOnly;

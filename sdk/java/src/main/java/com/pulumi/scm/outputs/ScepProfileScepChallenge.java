@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.scm.outputs.ScepProfileScepChallengeDynamicChallenge;
+import com.pulumi.scm.outputs.ScepProfileScepChallengeDynamic;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -13,38 +13,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScepProfileScepChallenge {
     /**
-     * @return The DynamicChallenge param. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * @return Dynamic
      * 
      */
-    private @Nullable ScepProfileScepChallengeDynamicChallenge dynamicChallenge;
+    private @Nullable ScepProfileScepChallengeDynamic dynamic;
     /**
-     * @return Challenge to use for SCEP server on mobile clients. String length must not exceed 1024 characters. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * @return Challenge to use for SCEP server on mobile clients
      * 
      */
     private @Nullable String fixed;
     /**
-     * @return The None param. String must be one of these: `&#34;&#34;`. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * @return No OTP
      * 
      */
     private @Nullable String none;
 
     private ScepProfileScepChallenge() {}
     /**
-     * @return The DynamicChallenge param. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * @return Dynamic
      * 
      */
-    public Optional<ScepProfileScepChallengeDynamicChallenge> dynamicChallenge() {
-        return Optional.ofNullable(this.dynamicChallenge);
+    public Optional<ScepProfileScepChallengeDynamic> dynamic() {
+        return Optional.ofNullable(this.dynamic);
     }
     /**
-     * @return Challenge to use for SCEP server on mobile clients. String length must not exceed 1024 characters. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * @return Challenge to use for SCEP server on mobile clients
      * 
      */
     public Optional<String> fixed() {
         return Optional.ofNullable(this.fixed);
     }
     /**
-     * @return The None param. String must be one of these: `&#34;&#34;`. Ensure that only one of the following is specified: `dynamic`, `fixed`, `none`
+     * @return No OTP
      * 
      */
     public Optional<String> none() {
@@ -60,21 +60,21 @@ public final class ScepProfileScepChallenge {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable ScepProfileScepChallengeDynamicChallenge dynamicChallenge;
+        private @Nullable ScepProfileScepChallengeDynamic dynamic;
         private @Nullable String fixed;
         private @Nullable String none;
         public Builder() {}
         public Builder(ScepProfileScepChallenge defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.dynamicChallenge = defaults.dynamicChallenge;
+    	      this.dynamic = defaults.dynamic;
     	      this.fixed = defaults.fixed;
     	      this.none = defaults.none;
         }
 
         @CustomType.Setter
-        public Builder dynamicChallenge(@Nullable ScepProfileScepChallengeDynamicChallenge dynamicChallenge) {
+        public Builder dynamic(@Nullable ScepProfileScepChallengeDynamic dynamic) {
 
-            this.dynamicChallenge = dynamicChallenge;
+            this.dynamic = dynamic;
             return this;
         }
         @CustomType.Setter
@@ -91,7 +91,7 @@ public final class ScepProfileScepChallenge {
         }
         public ScepProfileScepChallenge build() {
             final var _resultValue = new ScepProfileScepChallenge();
-            _resultValue.dynamicChallenge = dynamicChallenge;
+            _resultValue.dynamic = dynamic;
             _resultValue.fixed = fixed;
             _resultValue.none = none;
             return _resultValue;

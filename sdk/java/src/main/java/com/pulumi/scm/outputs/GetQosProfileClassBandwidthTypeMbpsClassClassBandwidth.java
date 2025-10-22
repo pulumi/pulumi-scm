@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetQosProfileClassBandwidthTypeMbpsClassClassBandwidth {
     /**
-     * @return guaranteed sending bandwidth in mbps. Value must be between 0 and 60000.
+     * @return guaranteed sending bandwidth in mbps
      * 
      */
     private Integer egressGuaranteed;
     /**
-     * @return max sending bandwidth in mbps. Value must be between 0 and 60000.
+     * @return max sending bandwidth in mbps
      * 
      */
     private Integer egressMax;
 
     private GetQosProfileClassBandwidthTypeMbpsClassClassBandwidth() {}
     /**
-     * @return guaranteed sending bandwidth in mbps. Value must be between 0 and 60000.
+     * @return guaranteed sending bandwidth in mbps
      * 
      */
     public Integer egressGuaranteed() {
         return this.egressGuaranteed;
     }
     /**
-     * @return max sending bandwidth in mbps. Value must be between 0 and 60000.
+     * @return max sending bandwidth in mbps
      * 
      */
     public Integer egressMax() {

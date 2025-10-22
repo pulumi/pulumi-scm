@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// AddressGroup resource
 //
 // ## Example Usage
 //
@@ -27,20 +27,65 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			x, err := scm.NewAddressObject(ctx, "x", &scm.AddressObjectArgs{
+//			// This file is embedded using go:embed
+//			// First, create some addresses that will be used in the address group
+//			scmAddressAg1, err := scm.NewAddress(ctx, "scm_address_ag_1", &scm.AddressArgs{
 //				Folder:      pulumi.String("Shared"),
-//				Name:        pulumi.String("foo"),
-//				Description: pulumi.String("Made by Pulumi"),
-//				Fqdn:        pulumi.String("www.example.com"),
+//				Name:        pulumi.String("scm_address_ag_1"),
+//				Description: pulumi.String("First test address"),
+//				IpNetmask:   pulumi.String("192.168.1.1/32"),
 //			})
 //			if err != nil {
 //				return err
 //			}
-//			_, err = scm.NewAddressGroup(ctx, "example", &scm.AddressGroupArgs{
-//				Folder: pulumi.String("Shared"),
-//				Name:   pulumi.String("example"),
-//				StaticLists: pulumi.StringArray{
-//					x.Name,
+//			scmAddressAg2, err := scm.NewAddress(ctx, "scm_address_ag_2", &scm.AddressArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_address_ag_2"),
+//				Description: pulumi.String("Second test address"),
+//				IpNetmask:   pulumi.String("192.168.1.2/32"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Create the address group that references the addresses above
+//			_, err = scm.NewAddressGroup(ctx, "scm_address_group_1", &scm.AddressGroupArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_address_group_1"),
+//				Description: pulumi.String("Sample address group created with Terraform"),
+//				Statics: pulumi.StringArray{
+//					scmAddressAg1.Name,
+//					scmAddressAg2.Name,
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Create tags to be used for dynamic address group
+//			_, err = scm.NewTag(ctx, "scm_addressgroup_tag_1", &scm.TagArgs{
+//				Folder:   pulumi.String("Shared"),
+//				Name:     pulumi.String("scm_addressgroup_tag_1"),
+//				Comments: pulumi.String("Managed by Pulumi"),
+//				Color:    pulumi.String("Orange"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewTag(ctx, "scm_addressgroup_tag_2", &scm.TagArgs{
+//				Folder:   pulumi.String("Shared"),
+//				Name:     pulumi.String("scm_addressgroup_tag_2"),
+//				Comments: pulumi.String("Managed by Pulumi"),
+//				Color:    pulumi.String("Blue"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Create a dynamic addressgroup that matches both tags
+//			_, err = scm.NewAddressGroup(ctx, "scm_addressgroup_dynamic", &scm.AddressGroupArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_addressgroup_dynamic"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Dynamic: &scm.AddressGroupDynamicArgs{
+//					Filter: pulumi.String("scm_addressgroup_tag_1 and scm_addressgroup_tag_2"),
 //				},
 //			})
 //			if err != nil {
@@ -54,21 +99,21 @@ import (
 type AddressGroup struct {
 	pulumi.CustomResourceState
 
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
-	DynamicValue AddressGroupDynamicValuePtrOutput `pulumi:"dynamicValue"`
-	// The Folder param.
+	// Dynamic
+	Dynamic AddressGroupDynamicPtrOutput `pulumi:"dynamic"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the address group
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
-	StaticLists pulumi.StringArrayOutput `pulumi:"staticLists"`
-	// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Static
+	Statics pulumi.StringArrayOutput `pulumi:"statics"`
+	// Tags for address group object
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
 	Tfid pulumi.StringOutput      `pulumi:"tfid"`
 }
@@ -103,41 +148,41 @@ func GetAddressGroup(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AddressGroup resources.
 type addressGroupState struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
-	DynamicValue *AddressGroupDynamicValue `pulumi:"dynamicValue"`
-	// The Folder param.
+	// Dynamic
+	Dynamic *AddressGroupDynamic `pulumi:"dynamic"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the address group
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
-	StaticLists []string `pulumi:"staticLists"`
-	// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Static
+	Statics []string `pulumi:"statics"`
+	// Tags for address group object
 	Tags []string `pulumi:"tags"`
 	Tfid *string  `pulumi:"tfid"`
 }
 
 type AddressGroupState struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
-	DynamicValue AddressGroupDynamicValuePtrInput
-	// The Folder param.
+	// Dynamic
+	Dynamic AddressGroupDynamicPtrInput
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the address group
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
-	StaticLists pulumi.StringArrayInput
-	// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Static
+	Statics pulumi.StringArrayInput
+	// Tags for address group object
 	Tags pulumi.StringArrayInput
 	Tfid pulumi.StringPtrInput
 }
@@ -147,41 +192,41 @@ func (AddressGroupState) ElementType() reflect.Type {
 }
 
 type addressGroupArgs struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
-	DynamicValue *AddressGroupDynamicValue `pulumi:"dynamicValue"`
-	// The Folder param.
+	// Dynamic
+	Dynamic *AddressGroupDynamic `pulumi:"dynamic"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the address group
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
-	StaticLists []string `pulumi:"staticLists"`
-	// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Static
+	Statics []string `pulumi:"statics"`
+	// Tags for address group object
 	Tags []string `pulumi:"tags"`
 }
 
 // The set of arguments for constructing a AddressGroup resource.
 type AddressGroupArgs struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
-	DynamicValue AddressGroupDynamicValuePtrInput
-	// The Folder param.
+	// Dynamic
+	Dynamic AddressGroupDynamicPtrInput
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the address group
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
-	StaticLists pulumi.StringArrayInput
-	// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Static
+	Statics pulumi.StringArrayInput
+	// Tags for address group object
 	Tags pulumi.StringArrayInput
 }
 
@@ -272,42 +317,42 @@ func (o AddressGroupOutput) ToAddressGroupOutputWithContext(ctx context.Context)
 	return o
 }
 
-// The Description param. String length must not exceed 1023 characters.
+// Description
 func (o AddressGroupOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AddressGroup) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o AddressGroupOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AddressGroup) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
-func (o AddressGroupOutput) DynamicValue() AddressGroupDynamicValuePtrOutput {
-	return o.ApplyT(func(v *AddressGroup) AddressGroupDynamicValuePtrOutput { return v.DynamicValue }).(AddressGroupDynamicValuePtrOutput)
+// Dynamic
+func (o AddressGroupOutput) Dynamic() AddressGroupDynamicPtrOutput {
+	return o.ApplyT(func(v *AddressGroup) AddressGroupDynamicPtrOutput { return v.Dynamic }).(AddressGroupDynamicPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o AddressGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AddressGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the address group
 func (o AddressGroupOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *AddressGroup) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o AddressGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AddressGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
-func (o AddressGroupOutput) StaticLists() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *AddressGroup) pulumi.StringArrayOutput { return v.StaticLists }).(pulumi.StringArrayOutput)
+// Static
+func (o AddressGroupOutput) Statics() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *AddressGroup) pulumi.StringArrayOutput { return v.Statics }).(pulumi.StringArrayOutput)
 }
 
-// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+// Tags for address group object
 func (o AddressGroupOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AddressGroup) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }

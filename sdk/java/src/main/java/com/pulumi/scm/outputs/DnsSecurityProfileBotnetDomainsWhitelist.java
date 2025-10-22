@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsSecurityProfileBotnetDomainsWhitelist {
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     private @Nullable String description;
     /**
-     * @return The Name param.
+     * @return DNS domain or FQDN to be whitelisted
      * 
      */
     private String name;
 
     private DnsSecurityProfileBotnetDomainsWhitelist() {}
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return The Name param.
+     * @return DNS domain or FQDN to be whitelisted
      * 
      */
     public String name() {

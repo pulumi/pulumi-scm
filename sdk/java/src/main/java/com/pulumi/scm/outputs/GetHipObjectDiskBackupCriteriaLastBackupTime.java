@@ -5,46 +5,46 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable;
 import com.pulumi.scm.outputs.GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin;
 import com.pulumi.scm.outputs.GetHipObjectDiskBackupCriteriaLastBackupTimeWithin;
-import java.lang.Boolean;
 import java.util.Objects;
 
 @CustomType
 public final class GetHipObjectDiskBackupCriteriaLastBackupTime {
     /**
-     * @return The NotAvailable param.
+     * @return Not available
      * 
      */
-    private Boolean notAvailable;
+    private GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable notAvailable;
     /**
-     * @return The NotWithin param.
+     * @return Not within
      * 
      */
     private GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin notWithin;
     /**
-     * @return The Within param.
+     * @return Within
      * 
      */
     private GetHipObjectDiskBackupCriteriaLastBackupTimeWithin within;
 
     private GetHipObjectDiskBackupCriteriaLastBackupTime() {}
     /**
-     * @return The NotAvailable param.
+     * @return Not available
      * 
      */
-    public Boolean notAvailable() {
+    public GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable notAvailable() {
         return this.notAvailable;
     }
     /**
-     * @return The NotWithin param.
+     * @return Not within
      * 
      */
     public GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin notWithin() {
         return this.notWithin;
     }
     /**
-     * @return The Within param.
+     * @return Within
      * 
      */
     public GetHipObjectDiskBackupCriteriaLastBackupTimeWithin within() {
@@ -60,7 +60,7 @@ public final class GetHipObjectDiskBackupCriteriaLastBackupTime {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean notAvailable;
+        private GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable notAvailable;
         private GetHipObjectDiskBackupCriteriaLastBackupTimeNotWithin notWithin;
         private GetHipObjectDiskBackupCriteriaLastBackupTimeWithin within;
         public Builder() {}
@@ -72,7 +72,7 @@ public final class GetHipObjectDiskBackupCriteriaLastBackupTime {
         }
 
         @CustomType.Setter
-        public Builder notAvailable(Boolean notAvailable) {
+        public Builder notAvailable(GetHipObjectDiskBackupCriteriaLastBackupTimeNotAvailable notAvailable) {
             if (notAvailable == null) {
               throw new MissingRequiredPropertyException("GetHipObjectDiskBackupCriteriaLastBackupTime", "notAvailable");
             }

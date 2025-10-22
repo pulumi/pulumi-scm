@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetAddressGroup
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// AddressGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetAddressGroup.Invoke(new()
+        ///     // Look up the address group by its ID.
+        ///     var scmAddressGroupDs = Scm.GetAddressGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "99802bce-76c6-42c9-801e-e2e4529bb335",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["addressGroupOutputs"] = 
+        ///         {
+        ///             { "groupId", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Id) },
+        ///             { "folder", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Folder) },
+        ///             { "name", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Name) },
+        ///             { "description", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Description) },
+        ///             { "static", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Statics) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +48,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAddressGroupResult>("scm:index/getAddressGroup:getAddressGroup", args ?? new GetAddressGroupArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// AddressGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +60,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetAddressGroup.Invoke(new()
+        ///     // Look up the address group by its ID.
+        ///     var scmAddressGroupDs = Scm.GetAddressGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "99802bce-76c6-42c9-801e-e2e4529bb335",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["addressGroupOutputs"] = 
+        ///         {
+        ///             { "groupId", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Id) },
+        ///             { "folder", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Folder) },
+        ///             { "name", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Name) },
+        ///             { "description", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Description) },
+        ///             { "static", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Statics) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +84,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetAddressGroupResult>("scm:index/getAddressGroup:getAddressGroup", args ?? new GetAddressGroupInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// AddressGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +96,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetAddressGroup.Invoke(new()
+        ///     // Look up the address group by its ID.
+        ///     var scmAddressGroupDs = Scm.GetAddressGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "99802bce-76c6-42c9-801e-e2e4529bb335",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["addressGroupOutputs"] = 
+        ///         {
+        ///             { "groupId", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Id) },
+        ///             { "folder", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Folder) },
+        ///             { "name", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Name) },
+        ///             { "description", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Description) },
+        ///             { "static", scmAddressGroupDs.Apply(getAddressGroupResult =&gt; getAddressGroupResult.Statics) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +124,16 @@ namespace Pulumi.Scm
     public sealed class GetAddressGroupArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the address group
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the address group
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetAddressGroupArgs()
         {
@@ -102,10 +144,16 @@ namespace Pulumi.Scm
     public sealed class GetAddressGroupInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the address group
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the address group
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetAddressGroupInvokeArgs()
         {
@@ -118,27 +166,39 @@ namespace Pulumi.Scm
     public sealed class GetAddressGroupResult
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The DynamicValue param.
+        /// The device in which the resource is defined
         /// </summary>
-        public readonly Outputs.GetAddressGroupDynamicValueResult DynamicValue;
+        public readonly string Device;
         /// <summary>
-        /// The Id param.
+        /// Dynamic
+        /// </summary>
+        public readonly Outputs.GetAddressGroupDynamicResult Dynamic;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the address group
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the address group
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// The snippet in which the resource is defined
         /// </summary>
-        public readonly ImmutableArray<string> StaticLists;
+        public readonly string Snippet;
         /// <summary>
-        /// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Static
+        /// </summary>
+        public readonly ImmutableArray<string> Statics;
+        /// <summary>
+        /// Tags for address group object
         /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
@@ -147,23 +207,32 @@ namespace Pulumi.Scm
         private GetAddressGroupResult(
             string description,
 
-            Outputs.GetAddressGroupDynamicValueResult dynamicValue,
+            string device,
+
+            Outputs.GetAddressGroupDynamicResult dynamic,
+
+            string folder,
 
             string id,
 
             string name,
 
-            ImmutableArray<string> staticLists,
+            string snippet,
+
+            ImmutableArray<string> statics,
 
             ImmutableArray<string> tags,
 
             string tfid)
         {
             Description = description;
-            DynamicValue = dynamicValue;
+            Device = device;
+            Dynamic = dynamic;
+            Folder = folder;
             Id = id;
             Name = name;
-            StaticLists = staticLists;
+            Snippet = snippet;
+            Statics = statics;
             Tags = tags;
             Tfid = tfid;
         }

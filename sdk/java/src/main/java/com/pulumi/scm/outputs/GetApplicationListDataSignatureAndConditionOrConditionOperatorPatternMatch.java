@@ -13,38 +13,38 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatch {
     /**
-     * @return The Context param. String length must not exceed 127 characters.
+     * @return Context
      * 
      */
     private String context;
     /**
-     * @return The Pattern param. String length must not exceed 127 characters.
+     * @return Pattern
      * 
      */
     private String pattern;
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     private List<GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatchQualifier> qualifiers;
 
     private GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatch() {}
     /**
-     * @return The Context param. String length must not exceed 127 characters.
+     * @return Context
      * 
      */
     public String context() {
         return this.context;
     }
     /**
-     * @return The Pattern param. String length must not exceed 127 characters.
+     * @return Pattern
      * 
      */
     public String pattern() {
         return this.pattern;
     }
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     public List<GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatchQualifier> qualifiers() {

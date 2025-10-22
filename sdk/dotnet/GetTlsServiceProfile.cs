@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetTlsServiceProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetTlsServiceProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// TlsServiceProfile data source
         /// </summary>
         public static Task<GetTlsServiceProfileResult> InvokeAsync(GetTlsServiceProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetTlsServiceProfileResult>("scm:index/getTlsServiceProfile:getTlsServiceProfile", args ?? new GetTlsServiceProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetTlsServiceProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// TlsServiceProfile data source
         /// </summary>
         public static Output<GetTlsServiceProfileResult> Invoke(GetTlsServiceProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTlsServiceProfileResult>("scm:index/getTlsServiceProfile:getTlsServiceProfile", args ?? new GetTlsServiceProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetTlsServiceProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// TlsServiceProfile data source
         /// </summary>
         public static Output<GetTlsServiceProfileResult> Invoke(GetTlsServiceProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetTlsServiceProfileResult>("scm:index/getTlsServiceProfile:getTlsServiceProfile", args ?? new GetTlsServiceProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetTlsServiceProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the TLS service profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetTlsServiceProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetTlsServiceProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the TLS service profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetTlsServiceProfileInvokeArgs()
         {
@@ -118,26 +76,42 @@ namespace Pulumi.Scm
     public sealed class GetTlsServiceProfileResult
     {
         /// <summary>
-        /// SSL certificate file name. String length must not exceed 255 characters.
+        /// Certificate name
         /// </summary>
         public readonly string Certificate;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the TLS service profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The ProtocolSettings param.
+        /// Protocol settings
         /// </summary>
         public readonly Outputs.GetTlsServiceProfileProtocolSettingsResult ProtocolSettings;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetTlsServiceProfileResult(
             string certificate,
+
+            string device,
+
+            string folder,
 
             string id,
 
@@ -145,12 +119,17 @@ namespace Pulumi.Scm
 
             Outputs.GetTlsServiceProfileProtocolSettingsResult protocolSettings,
 
+            string snippet,
+
             string tfid)
         {
             Certificate = certificate;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
             ProtocolSettings = protocolSettings;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

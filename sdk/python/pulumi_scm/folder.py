@@ -26,11 +26,11 @@ class FolderArgs:
                  snippets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a Folder resource.
-        :param pulumi.Input[_builtins.str] parent: The Parent param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: The Labels param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] snippets: The Snippets param.
+        :param pulumi.Input[_builtins.str] parent: The parent folder
+        :param pulumi.Input[_builtins.str] description: The description of the folder
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels assigned to the folder
+        :param pulumi.Input[_builtins.str] name: The name of the folder
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] snippets: Snippets associated with the folder
         """
         pulumi.set(__self__, "parent", parent)
         if description is not None:
@@ -46,7 +46,7 @@ class FolderArgs:
     @pulumi.getter
     def parent(self) -> pulumi.Input[_builtins.str]:
         """
-        The Parent param.
+        The parent folder
         """
         return pulumi.get(self, "parent")
 
@@ -58,7 +58,7 @@ class FolderArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the folder
         """
         return pulumi.get(self, "description")
 
@@ -70,7 +70,7 @@ class FolderArgs:
     @pulumi.getter
     def labels(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Labels param.
+        Labels assigned to the folder
         """
         return pulumi.get(self, "labels")
 
@@ -82,7 +82,7 @@ class FolderArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the folder
         """
         return pulumi.get(self, "name")
 
@@ -94,7 +94,7 @@ class FolderArgs:
     @pulumi.getter
     def snippets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Snippets param.
+        Snippets associated with the folder
         """
         return pulumi.get(self, "snippets")
 
@@ -114,11 +114,11 @@ class _FolderState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Folder resources.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: The Labels param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] parent: The Parent param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] snippets: The Snippets param.
+        :param pulumi.Input[_builtins.str] description: The description of the folder
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels assigned to the folder
+        :param pulumi.Input[_builtins.str] name: The name of the folder
+        :param pulumi.Input[_builtins.str] parent: The parent folder
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] snippets: Snippets associated with the folder
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -137,7 +137,7 @@ class _FolderState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the folder
         """
         return pulumi.get(self, "description")
 
@@ -149,7 +149,7 @@ class _FolderState:
     @pulumi.getter
     def labels(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Labels param.
+        Labels assigned to the folder
         """
         return pulumi.get(self, "labels")
 
@@ -161,7 +161,7 @@ class _FolderState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the folder
         """
         return pulumi.get(self, "name")
 
@@ -173,7 +173,7 @@ class _FolderState:
     @pulumi.getter
     def parent(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Parent param.
+        The parent folder
         """
         return pulumi.get(self, "parent")
 
@@ -185,7 +185,7 @@ class _FolderState:
     @pulumi.getter
     def snippets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Snippets param.
+        Snippets associated with the folder
         """
         return pulumi.get(self, "snippets")
 
@@ -216,29 +216,15 @@ class Folder(pulumi.CustomResource):
                  snippets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        snip1 = scm.Snippet("snip1", name="foobar")
-        example = scm.Folder("example",
-            name="my folder",
-            parent="Shared",
-            description="Made by Pulumi",
-            snippets=[snip1.name])
-        ```
+        Folder resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: The Labels param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] parent: The Parent param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] snippets: The Snippets param.
+        :param pulumi.Input[_builtins.str] description: The description of the folder
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels assigned to the folder
+        :param pulumi.Input[_builtins.str] name: The name of the folder
+        :param pulumi.Input[_builtins.str] parent: The parent folder
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] snippets: Snippets associated with the folder
         """
         ...
     @overload
@@ -247,21 +233,7 @@ class Folder(pulumi.CustomResource):
                  args: FolderArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        snip1 = scm.Snippet("snip1", name="foobar")
-        example = scm.Folder("example",
-            name="my folder",
-            parent="Shared",
-            description="Made by Pulumi",
-            snippets=[snip1.name])
-        ```
+        Folder resource
 
         :param str resource_name: The name of the resource.
         :param FolderArgs args: The arguments to use to populate this resource's properties.
@@ -323,11 +295,11 @@ class Folder(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: The Labels param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] parent: The Parent param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] snippets: The Snippets param.
+        :param pulumi.Input[_builtins.str] description: The description of the folder
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels assigned to the folder
+        :param pulumi.Input[_builtins.str] name: The name of the folder
+        :param pulumi.Input[_builtins.str] parent: The parent folder
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] snippets: Snippets associated with the folder
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -345,7 +317,7 @@ class Folder(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param.
+        The description of the folder
         """
         return pulumi.get(self, "description")
 
@@ -353,7 +325,7 @@ class Folder(pulumi.CustomResource):
     @pulumi.getter
     def labels(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Labels param.
+        Labels assigned to the folder
         """
         return pulumi.get(self, "labels")
 
@@ -361,7 +333,7 @@ class Folder(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        The name of the folder
         """
         return pulumi.get(self, "name")
 
@@ -369,7 +341,7 @@ class Folder(pulumi.CustomResource):
     @pulumi.getter
     def parent(self) -> pulumi.Output[_builtins.str]:
         """
-        The Parent param.
+        The parent folder
         """
         return pulumi.get(self, "parent")
 
@@ -377,7 +349,7 @@ class Folder(pulumi.CustomResource):
     @pulumi.getter
     def snippets(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Snippets param.
+        Snippets associated with the folder
         """
         return pulumi.get(self, "snippets")
 

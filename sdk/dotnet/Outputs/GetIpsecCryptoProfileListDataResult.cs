@@ -14,41 +14,58 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIpsecCryptoProfileListDataResult
     {
         /// <summary>
-        /// The Ah param.
+        /// Ah
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileListDataAhResult Ah;
         /// <summary>
-        /// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// phase-2 DH group (PFS DH group)
         /// </summary>
         public readonly string DhGroup;
         /// <summary>
-        /// The Esp param.
+        /// Esp
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileListDataEspResult Esp;
         /// <summary>
-        /// UUID of the resource.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Lifesize param.
+        /// Lifesize
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileListDataLifesizeResult Lifesize;
         /// <summary>
-        /// The Lifetime param.
+        /// Ipsec crypto profile lifetime
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileListDataLifetimeResult Lifetime;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetIpsecCryptoProfileListDataResult(
             Outputs.GetIpsecCryptoProfileListDataAhResult ah,
 
+            string device,
+
             string dhGroup,
 
             Outputs.GetIpsecCryptoProfileListDataEspResult esp,
+
+            string folder,
 
             string id,
 
@@ -56,15 +73,23 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetIpsecCryptoProfileListDataLifetimeResult lifetime,
 
-            string name)
+            string name,
+
+            string snippet,
+
+            string tfid)
         {
             Ah = ah;
+            Device = device;
             DhGroup = dhGroup;
             Esp = esp;
+            Folder = folder;
             Id = id;
             Lifesize = lifesize;
             Lifetime = lifetime;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

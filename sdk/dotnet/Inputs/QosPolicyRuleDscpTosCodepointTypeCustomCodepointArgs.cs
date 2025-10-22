@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The BinaryValue param.
+        /// Binary value
         /// </summary>
         [Input("binaryValue")]
         public Input<string>? BinaryValue { get; set; }
 
         /// <summary>
-        /// The CodepointName param.
+        /// Codepoint name
         /// </summary>
         [Input("codepointName")]
         public Input<string>? CodepointName { get; set; }

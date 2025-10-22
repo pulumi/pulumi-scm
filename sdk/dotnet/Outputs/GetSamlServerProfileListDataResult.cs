@@ -14,39 +14,56 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSamlServerProfileListDataResult
     {
         /// <summary>
-        /// The Certificate param. String length must not exceed 63 characters.
+        /// The identity provider certificate
         /// </summary>
         public readonly string Certificate;
         /// <summary>
-        /// The EntityId param. String length must be between 1 and 1024 characters.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The identity provider ID
         /// </summary>
         public readonly string EntityId;
         /// <summary>
-        /// UUID of the resource.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the SAML server profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The MaxClockSkew param. Value must be between 1 and 900.
+        /// Maxiumum clock skew
         /// </summary>
         public readonly int MaxClockSkew;
         /// <summary>
-        /// The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+        /// The name of the SAML server profile
+        /// </summary>
+        public readonly string Name;
+        /// <summary>
+        /// SAML HTTP binding for SLO requests to the identity provider
         /// </summary>
         public readonly string SloBindings;
         /// <summary>
-        /// The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// SAML HTTP binding for SSO requests to the identity provider
         /// </summary>
         public readonly string SsoBindings;
         /// <summary>
-        /// The SsoUrl param. String length must be between 1 and 255 characters.
+        /// Identity provider SSO URL
         /// </summary>
         public readonly string SsoUrl;
+        public readonly string Tfid;
         /// <summary>
-        /// The ValidateIdpCertificate param.
+        /// Validate the identity provider certificate?
         /// </summary>
         public readonly bool ValidateIdpCertificate;
         /// <summary>
-        /// The WantAuthRequestsSigned param.
+        /// Sign SAML message to the identity provider?
         /// </summary>
         public readonly bool WantAuthRequestsSigned;
 
@@ -54,29 +71,44 @@ namespace Pulumi.Scm.Outputs
         private GetSamlServerProfileListDataResult(
             string certificate,
 
+            string device,
+
             string entityId,
+
+            string folder,
 
             string id,
 
             int maxClockSkew,
 
+            string name,
+
             string sloBindings,
+
+            string snippet,
 
             string ssoBindings,
 
             string ssoUrl,
+
+            string tfid,
 
             bool validateIdpCertificate,
 
             bool wantAuthRequestsSigned)
         {
             Certificate = certificate;
+            Device = device;
             EntityId = entityId;
+            Folder = folder;
             Id = id;
             MaxClockSkew = maxClockSkew;
+            Name = name;
             SloBindings = sloBindings;
+            Snippet = snippet;
             SsoBindings = ssoBindings;
             SsoUrl = ssoUrl;
+            Tfid = tfid;
             ValidateIdpCertificate = validateIdpCertificate;
             WantAuthRequestsSigned = wantAuthRequestsSigned;
         }

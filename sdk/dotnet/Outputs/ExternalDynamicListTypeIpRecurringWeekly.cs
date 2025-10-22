@@ -14,17 +14,17 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeIpRecurringWeekly
     {
         /// <summary>
-        /// Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        /// Time specification hh (e.g. 20)
         /// </summary>
-        public readonly string? At;
+        public readonly string At;
         /// <summary>
-        /// The DayOfWeek param. String must be one of these: `"sunday"`, `"monday"`, `"tuesday"`, `"wednesday"`, `"thursday"`, `"friday"`, `"saturday"`.
+        /// Day of week
         /// </summary>
         public readonly string DayOfWeek;
 
         [OutputConstructor]
         private ExternalDynamicListTypeIpRecurringWeekly(
-            string? at,
+            string at,
 
             string dayOfWeek)
         {

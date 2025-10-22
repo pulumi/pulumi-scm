@@ -7,8 +7,8 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.QosPolicyRuleDscpTosCodepointTypeAf;
 import com.pulumi.scm.outputs.QosPolicyRuleDscpTosCodepointTypeCs;
 import com.pulumi.scm.outputs.QosPolicyRuleDscpTosCodepointTypeCustom;
+import com.pulumi.scm.outputs.QosPolicyRuleDscpTosCodepointTypeEf;
 import com.pulumi.scm.outputs.QosPolicyRuleDscpTosCodepointTypeTos;
-import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,62 +16,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QosPolicyRuleDscpTosCodepointType {
     /**
-     * @return The Af param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Af
      * 
      */
     private @Nullable QosPolicyRuleDscpTosCodepointTypeAf af;
     /**
-     * @return The Cs param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Cs
      * 
      */
     private @Nullable QosPolicyRuleDscpTosCodepointTypeCs cs;
     /**
-     * @return The Custom param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Custom
      * 
      */
     private @Nullable QosPolicyRuleDscpTosCodepointTypeCustom custom;
     /**
-     * @return The Ef param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Ef
      * 
      */
-    private @Nullable Boolean ef;
+    private @Nullable QosPolicyRuleDscpTosCodepointTypeEf ef;
     /**
-     * @return The Tos param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Tos
      * 
      */
     private @Nullable QosPolicyRuleDscpTosCodepointTypeTos tos;
 
     private QosPolicyRuleDscpTosCodepointType() {}
     /**
-     * @return The Af param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Af
      * 
      */
     public Optional<QosPolicyRuleDscpTosCodepointTypeAf> af() {
         return Optional.ofNullable(this.af);
     }
     /**
-     * @return The Cs param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Cs
      * 
      */
     public Optional<QosPolicyRuleDscpTosCodepointTypeCs> cs() {
         return Optional.ofNullable(this.cs);
     }
     /**
-     * @return The Custom param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Custom
      * 
      */
     public Optional<QosPolicyRuleDscpTosCodepointTypeCustom> custom() {
         return Optional.ofNullable(this.custom);
     }
     /**
-     * @return The Ef param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Ef
      * 
      */
-    public Optional<Boolean> ef() {
+    public Optional<QosPolicyRuleDscpTosCodepointTypeEf> ef() {
         return Optional.ofNullable(this.ef);
     }
     /**
-     * @return The Tos param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Tos
      * 
      */
     public Optional<QosPolicyRuleDscpTosCodepointTypeTos> tos() {
@@ -90,7 +90,7 @@ public final class QosPolicyRuleDscpTosCodepointType {
         private @Nullable QosPolicyRuleDscpTosCodepointTypeAf af;
         private @Nullable QosPolicyRuleDscpTosCodepointTypeCs cs;
         private @Nullable QosPolicyRuleDscpTosCodepointTypeCustom custom;
-        private @Nullable Boolean ef;
+        private @Nullable QosPolicyRuleDscpTosCodepointTypeEf ef;
         private @Nullable QosPolicyRuleDscpTosCodepointTypeTos tos;
         public Builder() {}
         public Builder(QosPolicyRuleDscpTosCodepointType defaults) {
@@ -121,7 +121,7 @@ public final class QosPolicyRuleDscpTosCodepointType {
             return this;
         }
         @CustomType.Setter
-        public Builder ef(@Nullable Boolean ef) {
+        public Builder ef(@Nullable QosPolicyRuleDscpTosCodepointTypeEf ef) {
 
             this.ef = ef;
             return this;

@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.NatRuleSourceTranslationFallback;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,50 +15,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NatRuleSourceTranslation {
     /**
-     * @return The BiDirectional param. String must be one of these: `&#34;yes&#34;`, `&#34;no&#34;`.
+     * @return Bi directional
      * 
      */
-    private @Nullable String biDirectional;
+    private @Nullable Boolean biDirectional;
     /**
-     * @return The Fallback param.
+     * @return Fallback
      * 
      */
     private @Nullable NatRuleSourceTranslationFallback fallback;
     /**
-     * @return The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+     * @return Interface name
+     * 
+     */
+    private @Nullable String interface_;
+    /**
+     * @return Translated IP addresses
      * 
      */
     private @Nullable List<String> translatedAddressArrays;
     /**
-     * @return The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+     * @return Translated IP address
      * 
      */
     private @Nullable String translatedAddressSingle;
 
     private NatRuleSourceTranslation() {}
     /**
-     * @return The BiDirectional param. String must be one of these: `&#34;yes&#34;`, `&#34;no&#34;`.
+     * @return Bi directional
      * 
      */
-    public Optional<String> biDirectional() {
+    public Optional<Boolean> biDirectional() {
         return Optional.ofNullable(this.biDirectional);
     }
     /**
-     * @return The Fallback param.
+     * @return Fallback
      * 
      */
     public Optional<NatRuleSourceTranslationFallback> fallback() {
         return Optional.ofNullable(this.fallback);
     }
     /**
-     * @return The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+     * @return Interface name
+     * 
+     */
+    public Optional<String> interface_() {
+        return Optional.ofNullable(this.interface_);
+    }
+    /**
+     * @return Translated IP addresses
      * 
      */
     public List<String> translatedAddressArrays() {
         return this.translatedAddressArrays == null ? List.of() : this.translatedAddressArrays;
     }
     /**
-     * @return The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+     * @return Translated IP address
      * 
      */
     public Optional<String> translatedAddressSingle() {
@@ -73,8 +86,9 @@ public final class NatRuleSourceTranslation {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String biDirectional;
+        private @Nullable Boolean biDirectional;
         private @Nullable NatRuleSourceTranslationFallback fallback;
+        private @Nullable String interface_;
         private @Nullable List<String> translatedAddressArrays;
         private @Nullable String translatedAddressSingle;
         public Builder() {}
@@ -82,12 +96,13 @@ public final class NatRuleSourceTranslation {
     	      Objects.requireNonNull(defaults);
     	      this.biDirectional = defaults.biDirectional;
     	      this.fallback = defaults.fallback;
+    	      this.interface_ = defaults.interface_;
     	      this.translatedAddressArrays = defaults.translatedAddressArrays;
     	      this.translatedAddressSingle = defaults.translatedAddressSingle;
         }
 
         @CustomType.Setter
-        public Builder biDirectional(@Nullable String biDirectional) {
+        public Builder biDirectional(@Nullable Boolean biDirectional) {
 
             this.biDirectional = biDirectional;
             return this;
@@ -96,6 +111,12 @@ public final class NatRuleSourceTranslation {
         public Builder fallback(@Nullable NatRuleSourceTranslationFallback fallback) {
 
             this.fallback = fallback;
+            return this;
+        }
+        @CustomType.Setter("interface")
+        public Builder interface_(@Nullable String interface_) {
+
+            this.interface_ = interface_;
             return this;
         }
         @CustomType.Setter
@@ -117,6 +138,7 @@ public final class NatRuleSourceTranslation {
             final var _resultValue = new NatRuleSourceTranslation();
             _resultValue.biDirectional = biDirectional;
             _resultValue.fallback = fallback;
+            _resultValue.interface_ = interface_;
             _resultValue.translatedAddressArrays = translatedAddressArrays;
             _resultValue.translatedAddressSingle = translatedAddressSingle;
             return _resultValue;

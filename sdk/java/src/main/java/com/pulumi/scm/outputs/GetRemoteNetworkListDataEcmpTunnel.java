@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class GetRemoteNetworkListDataEcmpTunnel {
     /**
-     * @return The IpsecTunnel param.
+     * @return Ipsec tunnel
      * 
      */
     private String ipsecTunnel;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     private GetRemoteNetworkListDataEcmpTunnelProtocol protocol;
 
     private GetRemoteNetworkListDataEcmpTunnel() {}
     /**
-     * @return The IpsecTunnel param.
+     * @return Ipsec tunnel
      * 
      */
     public String ipsecTunnel() {
         return this.ipsecTunnel;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     public GetRemoteNetworkListDataEcmpTunnelProtocol protocol() {

@@ -4,8 +4,14 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.scm.outputs.AntiSpywareProfileThreatExceptionActionAlert;
+import com.pulumi.scm.outputs.AntiSpywareProfileThreatExceptionActionAllow;
 import com.pulumi.scm.outputs.AntiSpywareProfileThreatExceptionActionBlockIp;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.AntiSpywareProfileThreatExceptionActionDefault;
+import com.pulumi.scm.outputs.AntiSpywareProfileThreatExceptionActionDrop;
+import com.pulumi.scm.outputs.AntiSpywareProfileThreatExceptionActionResetBoth;
+import com.pulumi.scm.outputs.AntiSpywareProfileThreatExceptionActionResetClient;
+import com.pulumi.scm.outputs.AntiSpywareProfileThreatExceptionActionResetServer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -13,101 +19,101 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareProfileThreatExceptionAction {
     /**
-     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Alert
      * 
      */
-    private @Nullable Boolean alert;
+    private @Nullable AntiSpywareProfileThreatExceptionActionAlert alert;
     /**
-     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Allow
      * 
      */
-    private @Nullable Boolean allow;
+    private @Nullable AntiSpywareProfileThreatExceptionActionAllow allow;
     /**
-     * @return The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return anti spyware profiles threat exception action block ip
      * 
      */
     private @Nullable AntiSpywareProfileThreatExceptionActionBlockIp blockIp;
     /**
-     * @return The Default param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Default
      * 
      */
-    private @Nullable Boolean default_;
+    private @Nullable AntiSpywareProfileThreatExceptionActionDefault default_;
     /**
-     * @return The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Drop
      * 
      */
-    private @Nullable Boolean drop;
+    private @Nullable AntiSpywareProfileThreatExceptionActionDrop drop;
     /**
-     * @return The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset both
      * 
      */
-    private @Nullable Boolean resetBoth;
+    private @Nullable AntiSpywareProfileThreatExceptionActionResetBoth resetBoth;
     /**
-     * @return The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset client
      * 
      */
-    private @Nullable Boolean resetClient;
+    private @Nullable AntiSpywareProfileThreatExceptionActionResetClient resetClient;
     /**
-     * @return The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset server
      * 
      */
-    private @Nullable Boolean resetServer;
+    private @Nullable AntiSpywareProfileThreatExceptionActionResetServer resetServer;
 
     private AntiSpywareProfileThreatExceptionAction() {}
     /**
-     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Alert
      * 
      */
-    public Optional<Boolean> alert() {
+    public Optional<AntiSpywareProfileThreatExceptionActionAlert> alert() {
         return Optional.ofNullable(this.alert);
     }
     /**
-     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Allow
      * 
      */
-    public Optional<Boolean> allow() {
+    public Optional<AntiSpywareProfileThreatExceptionActionAllow> allow() {
         return Optional.ofNullable(this.allow);
     }
     /**
-     * @return The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return anti spyware profiles threat exception action block ip
      * 
      */
     public Optional<AntiSpywareProfileThreatExceptionActionBlockIp> blockIp() {
         return Optional.ofNullable(this.blockIp);
     }
     /**
-     * @return The Default param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Default
      * 
      */
-    public Optional<Boolean> default_() {
+    public Optional<AntiSpywareProfileThreatExceptionActionDefault> default_() {
         return Optional.ofNullable(this.default_);
     }
     /**
-     * @return The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Drop
      * 
      */
-    public Optional<Boolean> drop() {
+    public Optional<AntiSpywareProfileThreatExceptionActionDrop> drop() {
         return Optional.ofNullable(this.drop);
     }
     /**
-     * @return The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset both
      * 
      */
-    public Optional<Boolean> resetBoth() {
+    public Optional<AntiSpywareProfileThreatExceptionActionResetBoth> resetBoth() {
         return Optional.ofNullable(this.resetBoth);
     }
     /**
-     * @return The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset client
      * 
      */
-    public Optional<Boolean> resetClient() {
+    public Optional<AntiSpywareProfileThreatExceptionActionResetClient> resetClient() {
         return Optional.ofNullable(this.resetClient);
     }
     /**
-     * @return The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset server
      * 
      */
-    public Optional<Boolean> resetServer() {
+    public Optional<AntiSpywareProfileThreatExceptionActionResetServer> resetServer() {
         return Optional.ofNullable(this.resetServer);
     }
 
@@ -120,14 +126,14 @@ public final class AntiSpywareProfileThreatExceptionAction {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Boolean alert;
-        private @Nullable Boolean allow;
+        private @Nullable AntiSpywareProfileThreatExceptionActionAlert alert;
+        private @Nullable AntiSpywareProfileThreatExceptionActionAllow allow;
         private @Nullable AntiSpywareProfileThreatExceptionActionBlockIp blockIp;
-        private @Nullable Boolean default_;
-        private @Nullable Boolean drop;
-        private @Nullable Boolean resetBoth;
-        private @Nullable Boolean resetClient;
-        private @Nullable Boolean resetServer;
+        private @Nullable AntiSpywareProfileThreatExceptionActionDefault default_;
+        private @Nullable AntiSpywareProfileThreatExceptionActionDrop drop;
+        private @Nullable AntiSpywareProfileThreatExceptionActionResetBoth resetBoth;
+        private @Nullable AntiSpywareProfileThreatExceptionActionResetClient resetClient;
+        private @Nullable AntiSpywareProfileThreatExceptionActionResetServer resetServer;
         public Builder() {}
         public Builder(AntiSpywareProfileThreatExceptionAction defaults) {
     	      Objects.requireNonNull(defaults);
@@ -142,13 +148,13 @@ public final class AntiSpywareProfileThreatExceptionAction {
         }
 
         @CustomType.Setter
-        public Builder alert(@Nullable Boolean alert) {
+        public Builder alert(@Nullable AntiSpywareProfileThreatExceptionActionAlert alert) {
 
             this.alert = alert;
             return this;
         }
         @CustomType.Setter
-        public Builder allow(@Nullable Boolean allow) {
+        public Builder allow(@Nullable AntiSpywareProfileThreatExceptionActionAllow allow) {
 
             this.allow = allow;
             return this;
@@ -160,31 +166,31 @@ public final class AntiSpywareProfileThreatExceptionAction {
             return this;
         }
         @CustomType.Setter("default")
-        public Builder default_(@Nullable Boolean default_) {
+        public Builder default_(@Nullable AntiSpywareProfileThreatExceptionActionDefault default_) {
 
             this.default_ = default_;
             return this;
         }
         @CustomType.Setter
-        public Builder drop(@Nullable Boolean drop) {
+        public Builder drop(@Nullable AntiSpywareProfileThreatExceptionActionDrop drop) {
 
             this.drop = drop;
             return this;
         }
         @CustomType.Setter
-        public Builder resetBoth(@Nullable Boolean resetBoth) {
+        public Builder resetBoth(@Nullable AntiSpywareProfileThreatExceptionActionResetBoth resetBoth) {
 
             this.resetBoth = resetBoth;
             return this;
         }
         @CustomType.Setter
-        public Builder resetClient(@Nullable Boolean resetClient) {
+        public Builder resetClient(@Nullable AntiSpywareProfileThreatExceptionActionResetClient resetClient) {
 
             this.resetClient = resetClient;
             return this;
         }
         @CustomType.Setter
-        public Builder resetServer(@Nullable Boolean resetServer) {
+        public Builder resetServer(@Nullable AntiSpywareProfileThreatExceptionActionResetServer resetServer) {
 
             this.resetServer = resetServer;
             return this;

@@ -17,86 +17,86 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectHostInfoCriteria {
     /**
-     * @return The ClientVersion param.
+     * @return Client version
      * 
      */
     private GetHipObjectHostInfoCriteriaClientVersion clientVersion;
     /**
-     * @return The Domain param.
+     * @return Domain
      * 
      */
     private GetHipObjectHostInfoCriteriaDomain domain;
     /**
-     * @return The HostId param.
+     * @return Host id
      * 
      */
     private GetHipObjectHostInfoCriteriaHostId hostId;
     /**
-     * @return The HostName param.
+     * @return Host name
      * 
      */
     private GetHipObjectHostInfoCriteriaHostName hostName;
     /**
-     * @return If device is managed.
+     * @return If device is managed
      * 
      */
     private Boolean managed;
     /**
-     * @return The Os param.
+     * @return Os
      * 
      */
     private GetHipObjectHostInfoCriteriaOs os;
     /**
-     * @return The SerialNumber param.
+     * @return Serial number
      * 
      */
     private GetHipObjectHostInfoCriteriaSerialNumber serialNumber;
 
     private GetHipObjectHostInfoCriteria() {}
     /**
-     * @return The ClientVersion param.
+     * @return Client version
      * 
      */
     public GetHipObjectHostInfoCriteriaClientVersion clientVersion() {
         return this.clientVersion;
     }
     /**
-     * @return The Domain param.
+     * @return Domain
      * 
      */
     public GetHipObjectHostInfoCriteriaDomain domain() {
         return this.domain;
     }
     /**
-     * @return The HostId param.
+     * @return Host id
      * 
      */
     public GetHipObjectHostInfoCriteriaHostId hostId() {
         return this.hostId;
     }
     /**
-     * @return The HostName param.
+     * @return Host name
      * 
      */
     public GetHipObjectHostInfoCriteriaHostName hostName() {
         return this.hostName;
     }
     /**
-     * @return If device is managed.
+     * @return If device is managed
      * 
      */
     public Boolean managed() {
         return this.managed;
     }
     /**
-     * @return The Os param.
+     * @return Os
      * 
      */
     public GetHipObjectHostInfoCriteriaOs os() {
         return this.os;
     }
     /**
-     * @return The SerialNumber param.
+     * @return Serial number
      * 
      */
     public GetHipObjectHostInfoCriteriaSerialNumber serialNumber() {

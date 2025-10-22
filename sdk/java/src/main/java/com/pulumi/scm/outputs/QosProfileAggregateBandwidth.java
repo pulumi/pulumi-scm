@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QosProfileAggregateBandwidth {
     /**
-     * @return guaranteed sending bandwidth in mbps. Value must be between 0 and 16000.
+     * @return guaranteed sending bandwidth in mbps
      * 
      */
     private @Nullable Integer egressGuaranteed;
     /**
-     * @return max sending bandwidth in mbps. Value must be between 0 and 60000.
+     * @return max sending bandwidth in mbps
      * 
      */
     private @Nullable Integer egressMax;
 
     private QosProfileAggregateBandwidth() {}
     /**
-     * @return guaranteed sending bandwidth in mbps. Value must be between 0 and 16000.
+     * @return guaranteed sending bandwidth in mbps
      * 
      */
     public Optional<Integer> egressGuaranteed() {
         return Optional.ofNullable(this.egressGuaranteed);
     }
     /**
-     * @return max sending bandwidth in mbps. Value must be between 0 and 60000.
+     * @return max sending bandwidth in mbps
      * 
      */
     public Optional<Integer> egressMax() {

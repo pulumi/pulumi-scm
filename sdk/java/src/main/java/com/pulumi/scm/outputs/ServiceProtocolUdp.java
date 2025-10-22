@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceProtocolUdp {
     /**
-     * @return The Override param.
+     * @return Override
      * 
      */
     private @Nullable ServiceProtocolUdpOverride override;
     /**
-     * @return The Port param. String length must be between 1 and 1023 characters.
+     * @return Port
      * 
      */
     private String port;
     /**
-     * @return The SourcePort param. String length must be between 1 and 1023 characters.
+     * @return Source port
      * 
      */
     private @Nullable String sourcePort;
 
     private ServiceProtocolUdp() {}
     /**
-     * @return The Override param.
+     * @return Override
      * 
      */
     public Optional<ServiceProtocolUdpOverride> override() {
         return Optional.ofNullable(this.override);
     }
     /**
-     * @return The Port param. String length must be between 1 and 1023 characters.
+     * @return Port
      * 
      */
     public String port() {
         return this.port;
     }
     /**
-     * @return The SourcePort param. String length must be between 1 and 1023 characters.
+     * @return Source port
      * 
      */
     public Optional<String> sourcePort() {

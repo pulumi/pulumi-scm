@@ -12,33 +12,6 @@ import (
 )
 
 // Retrieves a listing of config items.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetQosPolicyRuleList(ctx, &scm.GetQosPolicyRuleListArgs{
-//				Folder:   pulumi.StringRef("Shared"),
-//				Position: pulumi.StringRef("pre"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 func GetQosPolicyRuleList(ctx *pulumi.Context, args *GetQosPolicyRuleListArgs, opts ...pulumi.InvokeOption) (*GetQosPolicyRuleListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetQosPolicyRuleListResult
@@ -51,44 +24,40 @@ func GetQosPolicyRuleList(ctx *pulumi.Context, args *GetQosPolicyRuleListArgs, o
 
 // A collection of arguments for invoking getQosPolicyRuleList.
 type GetQosPolicyRuleListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-	Position *string `pulumi:"position"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getQosPolicyRuleList.
 type GetQosPolicyRuleListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetQosPolicyRuleListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-	Position string `pulumi:"position"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -103,19 +72,17 @@ func GetQosPolicyRuleListOutput(ctx *pulumi.Context, args GetQosPolicyRuleListOu
 
 // A collection of arguments for invoking getQosPolicyRuleList.
 type GetQosPolicyRuleListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-	Position pulumi.StringPtrInput `pulumi:"position"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -138,17 +105,17 @@ func (o GetQosPolicyRuleListResultOutput) ToGetQosPolicyRuleListResultOutputWith
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetQosPolicyRuleListResultOutput) Datas() GetQosPolicyRuleListDataArrayOutput {
 	return o.ApplyT(func(v GetQosPolicyRuleListResult) []GetQosPolicyRuleListData { return v.Datas }).(GetQosPolicyRuleListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetQosPolicyRuleListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetQosPolicyRuleListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetQosPolicyRuleListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetQosPolicyRuleListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -158,27 +125,22 @@ func (o GetQosPolicyRuleListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetQosPolicyRuleListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetQosPolicyRuleListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetQosPolicyRuleListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetQosPolicyRuleListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetQosPolicyRuleListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetQosPolicyRuleListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetQosPolicyRuleListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetQosPolicyRuleListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetQosPolicyRuleListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetQosPolicyRuleListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetQosPolicyRuleListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-func (o GetQosPolicyRuleListResultOutput) Position() pulumi.StringOutput {
-	return o.ApplyT(func(v GetQosPolicyRuleListResult) string { return v.Position }).(pulumi.StringOutput)
-}
-
-// The Snippet param.
+// The snippet of the item.
 func (o GetQosPolicyRuleListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetQosPolicyRuleListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -187,7 +149,7 @@ func (o GetQosPolicyRuleListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetQosPolicyRuleListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetQosPolicyRuleListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetQosPolicyRuleListResult) int { return v.Total }).(pulumi.IntOutput)
 }

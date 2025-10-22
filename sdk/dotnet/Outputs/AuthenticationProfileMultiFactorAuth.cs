@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class AuthenticationProfileMultiFactorAuth
     {
         /// <summary>
-        /// The Factors param.
+        /// Factors
         /// </summary>
         public readonly ImmutableArray<string> Factors;
         /// <summary>
-        /// The MfaEnable param.
+        /// Mfa enable
         /// </summary>
         public readonly bool? MfaEnable;
 

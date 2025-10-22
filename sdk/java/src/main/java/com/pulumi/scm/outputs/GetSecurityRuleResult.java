@@ -5,7 +5,12 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetSecurityRuleAllowUrlCategory;
+import com.pulumi.scm.outputs.GetSecurityRuleAllowWebApplication;
+import com.pulumi.scm.outputs.GetSecurityRuleDefaultProfileSettings;
+import com.pulumi.scm.outputs.GetSecurityRuleLogSettings;
 import com.pulumi.scm.outputs.GetSecurityRuleProfileSetting;
+import com.pulumi.scm.outputs.GetSecurityRuleSecuritySettings;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,246 +19,450 @@ import java.util.Objects;
 @CustomType
 public final class GetSecurityRuleResult {
     /**
-     * @return The action to be taken when the rule is matched. String must be one of these: `&#34;allow&#34;`, `&#34;deny&#34;`, `&#34;drop&#34;`, `&#34;reset-client&#34;`, `&#34;reset-server&#34;`, `&#34;reset-both&#34;`.
+     * @return The action to be taken when the rule is matched
      * 
      */
     private String action;
     /**
-     * @return The application(s) being accessed.
+     * @return Allow url category
+     * 
+     */
+    private List<GetSecurityRuleAllowUrlCategory> allowUrlCategories;
+    /**
+     * @return Allow web application
+     * 
+     */
+    private List<GetSecurityRuleAllowWebApplication> allowWebApplications;
+    /**
+     * @return The application(s) being accessed
      * 
      */
     private List<String> applications;
     /**
-     * @return The URL categories being accessed.
+     * @return Block url category
+     * 
+     */
+    private List<String> blockUrlCategories;
+    /**
+     * @return Block web application
+     * 
+     */
+    private List<String> blockWebApplications;
+    /**
+     * @return The URL categories being accessed
      * 
      */
     private List<String> categories;
     /**
-     * @return The description of the security rule.
+     * @return Default profile settings
+     * 
+     */
+    private GetSecurityRuleDefaultProfileSettings defaultProfileSettings;
+    /**
+     * @return The description of the security rule
      * 
      */
     private String description;
     /**
-     * @return The destination Host Integrity Profile(s).
+     * @return The destination Host Integrity Profile(s)
      * 
      */
     private List<String> destinationHips;
     /**
-     * @return The destination address(es).
+     * @return The destination address(es)
      * 
      */
     private List<String> destinations;
     /**
-     * @return The state of the security rule. Default: `false`.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Devices
+     * 
+     */
+    private List<String> devices;
+    /**
+     * @return Is the security rule disabled?
      * 
      */
     private Boolean disabled;
     /**
-     * @return The source security zone(s).
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The source security zone(s)
      * 
      */
     private List<String> froms;
     /**
-     * @return The Id param.
+     * @return The UUID of the security rule
      * 
      */
     private String id;
     /**
-     * @return The external log forwarding profile.
+     * @return Log at session end?
+     * 
+     */
+    private Boolean logEnd;
+    /**
+     * @return The external log forwarding profile
      * 
      */
     private String logSetting;
     /**
-     * @return The name of the security rule.
+     * @return Log settings
+     * 
+     */
+    private GetSecurityRuleLogSettings logSettings;
+    /**
+     * @return Log at session start?
+     * 
+     */
+    private Boolean logStart;
+    /**
+     * @return The name of the security rule
      * 
      */
     private String name;
     /**
-     * @return Negate the destination addresses(es). Default: `false`.
+     * @return Negate the destination addresses(es)?
      * 
      */
     private Boolean negateDestination;
     /**
-     * @return Negate the source address(es). Default: `false`.
+     * @return Negate the source address(es)?
      * 
      */
     private Boolean negateSource;
     /**
-     * @return The security profile object.
+     * @return Negate user
+     * 
+     */
+    private Boolean negateUser;
+    /**
+     * @return Policy type
+     * 
+     */
+    private String policyType;
+    /**
+     * @return The security profile object
      * 
      */
     private GetSecurityRuleProfileSetting profileSetting;
     /**
-     * @return The service(s) being accessed.
+     * @return Schedule in which this rule will be applied
+     * 
+     */
+    private String schedule;
+    /**
+     * @return Security settings
+     * 
+     */
+    private GetSecurityRuleSecuritySettings securitySettings;
+    /**
+     * @return The service(s) being accessed
      * 
      */
     private List<String> services;
     /**
-     * @return The source Host Integrity Profile(s).
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return The source Host Integrity Profile(s)
      * 
      */
     private List<String> sourceHips;
     /**
-     * @return The source user(s) or group(s).
+     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
     private List<String> sourceUsers;
     /**
-     * @return The source address(es).
+     * @return The source addresses(es)
      * 
      */
     private List<String> sources;
     /**
-     * @return The tags associated with the security rule.
+     * @return The tags associated with the security rule
      * 
      */
     private List<String> tags;
+    /**
+     * @return Tenant restrictions
+     * 
+     */
+    private List<String> tenantRestrictions;
     private String tfid;
     /**
-     * @return The destination security zone(s).
+     * @return The destination security zone(s)
      * 
      */
     private List<String> tos;
 
     private GetSecurityRuleResult() {}
     /**
-     * @return The action to be taken when the rule is matched. String must be one of these: `&#34;allow&#34;`, `&#34;deny&#34;`, `&#34;drop&#34;`, `&#34;reset-client&#34;`, `&#34;reset-server&#34;`, `&#34;reset-both&#34;`.
+     * @return The action to be taken when the rule is matched
      * 
      */
     public String action() {
         return this.action;
     }
     /**
-     * @return The application(s) being accessed.
+     * @return Allow url category
+     * 
+     */
+    public List<GetSecurityRuleAllowUrlCategory> allowUrlCategories() {
+        return this.allowUrlCategories;
+    }
+    /**
+     * @return Allow web application
+     * 
+     */
+    public List<GetSecurityRuleAllowWebApplication> allowWebApplications() {
+        return this.allowWebApplications;
+    }
+    /**
+     * @return The application(s) being accessed
      * 
      */
     public List<String> applications() {
         return this.applications;
     }
     /**
-     * @return The URL categories being accessed.
+     * @return Block url category
+     * 
+     */
+    public List<String> blockUrlCategories() {
+        return this.blockUrlCategories;
+    }
+    /**
+     * @return Block web application
+     * 
+     */
+    public List<String> blockWebApplications() {
+        return this.blockWebApplications;
+    }
+    /**
+     * @return The URL categories being accessed
      * 
      */
     public List<String> categories() {
         return this.categories;
     }
     /**
-     * @return The description of the security rule.
+     * @return Default profile settings
+     * 
+     */
+    public GetSecurityRuleDefaultProfileSettings defaultProfileSettings() {
+        return this.defaultProfileSettings;
+    }
+    /**
+     * @return The description of the security rule
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The destination Host Integrity Profile(s).
+     * @return The destination Host Integrity Profile(s)
      * 
      */
     public List<String> destinationHips() {
         return this.destinationHips;
     }
     /**
-     * @return The destination address(es).
+     * @return The destination address(es)
      * 
      */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
-     * @return The state of the security rule. Default: `false`.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Devices
+     * 
+     */
+    public List<String> devices() {
+        return this.devices;
+    }
+    /**
+     * @return Is the security rule disabled?
      * 
      */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * @return The source security zone(s).
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The source security zone(s)
      * 
      */
     public List<String> froms() {
         return this.froms;
     }
     /**
-     * @return The Id param.
+     * @return The UUID of the security rule
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The external log forwarding profile.
+     * @return Log at session end?
+     * 
+     */
+    public Boolean logEnd() {
+        return this.logEnd;
+    }
+    /**
+     * @return The external log forwarding profile
      * 
      */
     public String logSetting() {
         return this.logSetting;
     }
     /**
-     * @return The name of the security rule.
+     * @return Log settings
+     * 
+     */
+    public GetSecurityRuleLogSettings logSettings() {
+        return this.logSettings;
+    }
+    /**
+     * @return Log at session start?
+     * 
+     */
+    public Boolean logStart() {
+        return this.logStart;
+    }
+    /**
+     * @return The name of the security rule
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Negate the destination addresses(es). Default: `false`.
+     * @return Negate the destination addresses(es)?
      * 
      */
     public Boolean negateDestination() {
         return this.negateDestination;
     }
     /**
-     * @return Negate the source address(es). Default: `false`.
+     * @return Negate the source address(es)?
      * 
      */
     public Boolean negateSource() {
         return this.negateSource;
     }
     /**
-     * @return The security profile object.
+     * @return Negate user
+     * 
+     */
+    public Boolean negateUser() {
+        return this.negateUser;
+    }
+    /**
+     * @return Policy type
+     * 
+     */
+    public String policyType() {
+        return this.policyType;
+    }
+    /**
+     * @return The security profile object
      * 
      */
     public GetSecurityRuleProfileSetting profileSetting() {
         return this.profileSetting;
     }
     /**
-     * @return The service(s) being accessed.
+     * @return Schedule in which this rule will be applied
+     * 
+     */
+    public String schedule() {
+        return this.schedule;
+    }
+    /**
+     * @return Security settings
+     * 
+     */
+    public GetSecurityRuleSecuritySettings securitySettings() {
+        return this.securitySettings;
+    }
+    /**
+     * @return The service(s) being accessed
      * 
      */
     public List<String> services() {
         return this.services;
     }
     /**
-     * @return The source Host Integrity Profile(s).
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return The source Host Integrity Profile(s)
      * 
      */
     public List<String> sourceHips() {
         return this.sourceHips;
     }
     /**
-     * @return The source user(s) or group(s).
+     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
     /**
-     * @return The source address(es).
+     * @return The source addresses(es)
      * 
      */
     public List<String> sources() {
         return this.sources;
     }
     /**
-     * @return The tags associated with the security rule.
+     * @return The tags associated with the security rule
      * 
      */
     public List<String> tags() {
         return this.tags;
     }
+    /**
+     * @return Tenant restrictions
+     * 
+     */
+    public List<String> tenantRestrictions() {
+        return this.tenantRestrictions;
+    }
     public String tfid() {
         return this.tfid;
     }
     /**
-     * @return The destination security zone(s).
+     * @return The destination security zone(s)
      * 
      */
     public List<String> tos() {
@@ -270,48 +479,82 @@ public final class GetSecurityRuleResult {
     @CustomType.Builder
     public static final class Builder {
         private String action;
+        private List<GetSecurityRuleAllowUrlCategory> allowUrlCategories;
+        private List<GetSecurityRuleAllowWebApplication> allowWebApplications;
         private List<String> applications;
+        private List<String> blockUrlCategories;
+        private List<String> blockWebApplications;
         private List<String> categories;
+        private GetSecurityRuleDefaultProfileSettings defaultProfileSettings;
         private String description;
         private List<String> destinationHips;
         private List<String> destinations;
+        private String device;
+        private List<String> devices;
         private Boolean disabled;
+        private String folder;
         private List<String> froms;
         private String id;
+        private Boolean logEnd;
         private String logSetting;
+        private GetSecurityRuleLogSettings logSettings;
+        private Boolean logStart;
         private String name;
         private Boolean negateDestination;
         private Boolean negateSource;
+        private Boolean negateUser;
+        private String policyType;
         private GetSecurityRuleProfileSetting profileSetting;
+        private String schedule;
+        private GetSecurityRuleSecuritySettings securitySettings;
         private List<String> services;
+        private String snippet;
         private List<String> sourceHips;
         private List<String> sourceUsers;
         private List<String> sources;
         private List<String> tags;
+        private List<String> tenantRestrictions;
         private String tfid;
         private List<String> tos;
         public Builder() {}
         public Builder(GetSecurityRuleResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.action = defaults.action;
+    	      this.allowUrlCategories = defaults.allowUrlCategories;
+    	      this.allowWebApplications = defaults.allowWebApplications;
     	      this.applications = defaults.applications;
+    	      this.blockUrlCategories = defaults.blockUrlCategories;
+    	      this.blockWebApplications = defaults.blockWebApplications;
     	      this.categories = defaults.categories;
+    	      this.defaultProfileSettings = defaults.defaultProfileSettings;
     	      this.description = defaults.description;
     	      this.destinationHips = defaults.destinationHips;
     	      this.destinations = defaults.destinations;
+    	      this.device = defaults.device;
+    	      this.devices = defaults.devices;
     	      this.disabled = defaults.disabled;
+    	      this.folder = defaults.folder;
     	      this.froms = defaults.froms;
     	      this.id = defaults.id;
+    	      this.logEnd = defaults.logEnd;
     	      this.logSetting = defaults.logSetting;
+    	      this.logSettings = defaults.logSettings;
+    	      this.logStart = defaults.logStart;
     	      this.name = defaults.name;
     	      this.negateDestination = defaults.negateDestination;
     	      this.negateSource = defaults.negateSource;
+    	      this.negateUser = defaults.negateUser;
+    	      this.policyType = defaults.policyType;
     	      this.profileSetting = defaults.profileSetting;
+    	      this.schedule = defaults.schedule;
+    	      this.securitySettings = defaults.securitySettings;
     	      this.services = defaults.services;
+    	      this.snippet = defaults.snippet;
     	      this.sourceHips = defaults.sourceHips;
     	      this.sourceUsers = defaults.sourceUsers;
     	      this.sources = defaults.sources;
     	      this.tags = defaults.tags;
+    	      this.tenantRestrictions = defaults.tenantRestrictions;
     	      this.tfid = defaults.tfid;
     	      this.tos = defaults.tos;
         }
@@ -325,6 +568,28 @@ public final class GetSecurityRuleResult {
             return this;
         }
         @CustomType.Setter
+        public Builder allowUrlCategories(List<GetSecurityRuleAllowUrlCategory> allowUrlCategories) {
+            if (allowUrlCategories == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "allowUrlCategories");
+            }
+            this.allowUrlCategories = allowUrlCategories;
+            return this;
+        }
+        public Builder allowUrlCategories(GetSecurityRuleAllowUrlCategory... allowUrlCategories) {
+            return allowUrlCategories(List.of(allowUrlCategories));
+        }
+        @CustomType.Setter
+        public Builder allowWebApplications(List<GetSecurityRuleAllowWebApplication> allowWebApplications) {
+            if (allowWebApplications == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "allowWebApplications");
+            }
+            this.allowWebApplications = allowWebApplications;
+            return this;
+        }
+        public Builder allowWebApplications(GetSecurityRuleAllowWebApplication... allowWebApplications) {
+            return allowWebApplications(List.of(allowWebApplications));
+        }
+        @CustomType.Setter
         public Builder applications(List<String> applications) {
             if (applications == null) {
               throw new MissingRequiredPropertyException("GetSecurityRuleResult", "applications");
@@ -336,6 +601,28 @@ public final class GetSecurityRuleResult {
             return applications(List.of(applications));
         }
         @CustomType.Setter
+        public Builder blockUrlCategories(List<String> blockUrlCategories) {
+            if (blockUrlCategories == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "blockUrlCategories");
+            }
+            this.blockUrlCategories = blockUrlCategories;
+            return this;
+        }
+        public Builder blockUrlCategories(String... blockUrlCategories) {
+            return blockUrlCategories(List.of(blockUrlCategories));
+        }
+        @CustomType.Setter
+        public Builder blockWebApplications(List<String> blockWebApplications) {
+            if (blockWebApplications == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "blockWebApplications");
+            }
+            this.blockWebApplications = blockWebApplications;
+            return this;
+        }
+        public Builder blockWebApplications(String... blockWebApplications) {
+            return blockWebApplications(List.of(blockWebApplications));
+        }
+        @CustomType.Setter
         public Builder categories(List<String> categories) {
             if (categories == null) {
               throw new MissingRequiredPropertyException("GetSecurityRuleResult", "categories");
@@ -345,6 +632,14 @@ public final class GetSecurityRuleResult {
         }
         public Builder categories(String... categories) {
             return categories(List.of(categories));
+        }
+        @CustomType.Setter
+        public Builder defaultProfileSettings(GetSecurityRuleDefaultProfileSettings defaultProfileSettings) {
+            if (defaultProfileSettings == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "defaultProfileSettings");
+            }
+            this.defaultProfileSettings = defaultProfileSettings;
+            return this;
         }
         @CustomType.Setter
         public Builder description(String description) {
@@ -377,11 +672,38 @@ public final class GetSecurityRuleResult {
             return destinations(List.of(destinations));
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder devices(List<String> devices) {
+            if (devices == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "devices");
+            }
+            this.devices = devices;
+            return this;
+        }
+        public Builder devices(String... devices) {
+            return devices(List.of(devices));
+        }
+        @CustomType.Setter
         public Builder disabled(Boolean disabled) {
             if (disabled == null) {
               throw new MissingRequiredPropertyException("GetSecurityRuleResult", "disabled");
             }
             this.disabled = disabled;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -404,11 +726,35 @@ public final class GetSecurityRuleResult {
             return this;
         }
         @CustomType.Setter
+        public Builder logEnd(Boolean logEnd) {
+            if (logEnd == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "logEnd");
+            }
+            this.logEnd = logEnd;
+            return this;
+        }
+        @CustomType.Setter
         public Builder logSetting(String logSetting) {
             if (logSetting == null) {
               throw new MissingRequiredPropertyException("GetSecurityRuleResult", "logSetting");
             }
             this.logSetting = logSetting;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder logSettings(GetSecurityRuleLogSettings logSettings) {
+            if (logSettings == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "logSettings");
+            }
+            this.logSettings = logSettings;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder logStart(Boolean logStart) {
+            if (logStart == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "logStart");
+            }
+            this.logStart = logStart;
             return this;
         }
         @CustomType.Setter
@@ -436,11 +782,43 @@ public final class GetSecurityRuleResult {
             return this;
         }
         @CustomType.Setter
+        public Builder negateUser(Boolean negateUser) {
+            if (negateUser == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "negateUser");
+            }
+            this.negateUser = negateUser;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder policyType(String policyType) {
+            if (policyType == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "policyType");
+            }
+            this.policyType = policyType;
+            return this;
+        }
+        @CustomType.Setter
         public Builder profileSetting(GetSecurityRuleProfileSetting profileSetting) {
             if (profileSetting == null) {
               throw new MissingRequiredPropertyException("GetSecurityRuleResult", "profileSetting");
             }
             this.profileSetting = profileSetting;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder schedule(String schedule) {
+            if (schedule == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "schedule");
+            }
+            this.schedule = schedule;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder securitySettings(GetSecurityRuleSecuritySettings securitySettings) {
+            if (securitySettings == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "securitySettings");
+            }
+            this.securitySettings = securitySettings;
             return this;
         }
         @CustomType.Setter
@@ -453,6 +831,14 @@ public final class GetSecurityRuleResult {
         }
         public Builder services(String... services) {
             return services(List.of(services));
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
         }
         @CustomType.Setter
         public Builder sourceHips(List<String> sourceHips) {
@@ -499,6 +885,17 @@ public final class GetSecurityRuleResult {
             return tags(List.of(tags));
         }
         @CustomType.Setter
+        public Builder tenantRestrictions(List<String> tenantRestrictions) {
+            if (tenantRestrictions == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleResult", "tenantRestrictions");
+            }
+            this.tenantRestrictions = tenantRestrictions;
+            return this;
+        }
+        public Builder tenantRestrictions(String... tenantRestrictions) {
+            return tenantRestrictions(List.of(tenantRestrictions));
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetSecurityRuleResult", "tfid");
@@ -520,24 +917,41 @@ public final class GetSecurityRuleResult {
         public GetSecurityRuleResult build() {
             final var _resultValue = new GetSecurityRuleResult();
             _resultValue.action = action;
+            _resultValue.allowUrlCategories = allowUrlCategories;
+            _resultValue.allowWebApplications = allowWebApplications;
             _resultValue.applications = applications;
+            _resultValue.blockUrlCategories = blockUrlCategories;
+            _resultValue.blockWebApplications = blockWebApplications;
             _resultValue.categories = categories;
+            _resultValue.defaultProfileSettings = defaultProfileSettings;
             _resultValue.description = description;
             _resultValue.destinationHips = destinationHips;
             _resultValue.destinations = destinations;
+            _resultValue.device = device;
+            _resultValue.devices = devices;
             _resultValue.disabled = disabled;
+            _resultValue.folder = folder;
             _resultValue.froms = froms;
             _resultValue.id = id;
+            _resultValue.logEnd = logEnd;
             _resultValue.logSetting = logSetting;
+            _resultValue.logSettings = logSettings;
+            _resultValue.logStart = logStart;
             _resultValue.name = name;
             _resultValue.negateDestination = negateDestination;
             _resultValue.negateSource = negateSource;
+            _resultValue.negateUser = negateUser;
+            _resultValue.policyType = policyType;
             _resultValue.profileSetting = profileSetting;
+            _resultValue.schedule = schedule;
+            _resultValue.securitySettings = securitySettings;
             _resultValue.services = services;
+            _resultValue.snippet = snippet;
             _resultValue.sourceHips = sourceHips;
             _resultValue.sourceUsers = sourceUsers;
             _resultValue.sources = sources;
             _resultValue.tags = tags;
+            _resultValue.tenantRestrictions = tenantRestrictions;
             _resultValue.tfid = tfid;
             _resultValue.tos = tos;
             return _resultValue;

@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupSamlServerProfile(ctx, &scm.LookupSamlServerProfileArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// SamlServerProfile data source
 func LookupSamlServerProfile(ctx *pulumi.Context, args *LookupSamlServerProfileArgs, opts ...pulumi.InvokeOption) (*LookupSamlServerProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupSamlServerProfileResult
@@ -50,30 +24,40 @@ func LookupSamlServerProfile(ctx *pulumi.Context, args *LookupSamlServerProfileA
 
 // A collection of arguments for invoking getSamlServerProfile.
 type LookupSamlServerProfileArgs struct {
-	// The Id param.
+	// The UUID of the SAML server profile
 	Id string `pulumi:"id"`
+	// The name of the SAML server profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getSamlServerProfile.
 type LookupSamlServerProfileResult struct {
-	// The Certificate param. String length must not exceed 63 characters.
+	// The identity provider certificate
 	Certificate string `pulumi:"certificate"`
-	// The EntityId param. String length must be between 1 and 1024 characters.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The identity provider ID
 	EntityId string `pulumi:"entityId"`
-	// The Id param.
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the SAML server profile
 	Id string `pulumi:"id"`
-	// The MaxClockSkew param. Value must be between 1 and 900.
+	// Maxiumum clock skew
 	MaxClockSkew int `pulumi:"maxClockSkew"`
-	// The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+	// The name of the SAML server profile
+	Name string `pulumi:"name"`
+	// SAML HTTP binding for SLO requests to the identity provider
 	SloBindings string `pulumi:"sloBindings"`
-	// The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// SAML HTTP binding for SSO requests to the identity provider
 	SsoBindings string `pulumi:"ssoBindings"`
-	// The SsoUrl param. String length must be between 1 and 255 characters.
+	// Identity provider SSO URL
 	SsoUrl string `pulumi:"ssoUrl"`
 	Tfid   string `pulumi:"tfid"`
-	// The ValidateIdpCertificate param.
+	// Validate the identity provider certificate?
 	ValidateIdpCertificate bool `pulumi:"validateIdpCertificate"`
-	// The WantAuthRequestsSigned param.
+	// Sign SAML message to the identity provider?
 	WantAuthRequestsSigned bool `pulumi:"wantAuthRequestsSigned"`
 }
 
@@ -88,8 +72,10 @@ func LookupSamlServerProfileOutput(ctx *pulumi.Context, args LookupSamlServerPro
 
 // A collection of arguments for invoking getSamlServerProfile.
 type LookupSamlServerProfileOutputArgs struct {
-	// The Id param.
+	// The UUID of the SAML server profile
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the SAML server profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupSamlServerProfileOutputArgs) ElementType() reflect.Type {
@@ -111,37 +97,57 @@ func (o LookupSamlServerProfileResultOutput) ToLookupSamlServerProfileResultOutp
 	return o
 }
 
-// The Certificate param. String length must not exceed 63 characters.
+// The identity provider certificate
 func (o LookupSamlServerProfileResultOutput) Certificate() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Certificate }).(pulumi.StringOutput)
 }
 
-// The EntityId param. String length must be between 1 and 1024 characters.
+// The device in which the resource is defined
+func (o LookupSamlServerProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The identity provider ID
 func (o LookupSamlServerProfileResultOutput) EntityId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.EntityId }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The folder in which the resource is defined
+func (o LookupSamlServerProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the SAML server profile
 func (o LookupSamlServerProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The MaxClockSkew param. Value must be between 1 and 900.
+// Maxiumum clock skew
 func (o LookupSamlServerProfileResultOutput) MaxClockSkew() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) int { return v.MaxClockSkew }).(pulumi.IntOutput)
 }
 
-// The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+// The name of the SAML server profile
+func (o LookupSamlServerProfileResultOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// SAML HTTP binding for SLO requests to the identity provider
 func (o LookupSamlServerProfileResultOutput) SloBindings() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.SloBindings }).(pulumi.StringOutput)
 }
 
-// The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+// The snippet in which the resource is defined
+func (o LookupSamlServerProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// SAML HTTP binding for SSO requests to the identity provider
 func (o LookupSamlServerProfileResultOutput) SsoBindings() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.SsoBindings }).(pulumi.StringOutput)
 }
 
-// The SsoUrl param. String length must be between 1 and 255 characters.
+// Identity provider SSO URL
 func (o LookupSamlServerProfileResultOutput) SsoUrl() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.SsoUrl }).(pulumi.StringOutput)
 }
@@ -150,12 +156,12 @@ func (o LookupSamlServerProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The ValidateIdpCertificate param.
+// Validate the identity provider certificate?
 func (o LookupSamlServerProfileResultOutput) ValidateIdpCertificate() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) bool { return v.ValidateIdpCertificate }).(pulumi.BoolOutput)
 }
 
-// The WantAuthRequestsSigned param.
+// Sign SAML message to the identity provider?
 func (o LookupSamlServerProfileResultOutput) WantAuthRequestsSigned() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupSamlServerProfileResult) bool { return v.WantAuthRequestsSigned }).(pulumi.BoolOutput)
 }

@@ -5,23 +5,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getFolder({
- *     id: "1234-56-789",
- * });
- * ```
+ * Folder data source
  */
 export function getFolder(args: GetFolderArgs, opts?: pulumi.InvokeOptions): Promise<GetFolderResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getFolder:getFolder", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +20,13 @@ export function getFolder(args: GetFolderArgs, opts?: pulumi.InvokeOptions): Pro
  */
 export interface GetFolderArgs {
     /**
-     * The Id param.
+     * The UUID of the folder
      */
     id: string;
+    /**
+     * The name of the folder
+     */
+    name?: string;
 }
 
 /**
@@ -40,49 +34,39 @@ export interface GetFolderArgs {
  */
 export interface GetFolderResult {
     /**
-     * The Description param.
+     * The description of the folder
      */
     readonly description: string;
     /**
-     * The Id param.
+     * The UUID of the folder
      */
     readonly id: string;
     /**
-     * The Labels param.
+     * Labels assigned to the folder
      */
     readonly labels: string[];
     /**
-     * The Name param.
+     * The name of the folder
      */
     readonly name: string;
     /**
-     * The Parent param.
+     * The parent folder
      */
     readonly parent: string;
     /**
-     * The Snippets param.
+     * Snippets associated with the folder
      */
     readonly snippets: string[];
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getFolder({
- *     id: "1234-56-789",
- * });
- * ```
+ * Folder data source
  */
 export function getFolderOutput(args: GetFolderOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFolderResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getFolder:getFolder", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -91,7 +75,11 @@ export function getFolderOutput(args: GetFolderOutputArgs, opts?: pulumi.InvokeO
  */
 export interface GetFolderOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the folder
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the folder
+     */
+    name?: pulumi.Input<string>;
 }

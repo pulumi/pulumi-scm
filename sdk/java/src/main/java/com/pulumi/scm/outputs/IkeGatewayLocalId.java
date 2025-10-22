@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayLocalId {
     /**
-     * @return Local ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[a-zA-Z0-9.-]+)$|^([$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * @return Local ID string
      * 
      */
     private @Nullable String id;
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     private @Nullable String type;
 
     private IkeGatewayLocalId() {}
     /**
-     * @return Local ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[a-zA-Z0-9.-]+)$|^([$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * @return Local ID string
      * 
      */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     public Optional<String> type() {

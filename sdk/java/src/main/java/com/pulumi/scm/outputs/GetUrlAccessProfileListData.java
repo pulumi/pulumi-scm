@@ -14,198 +14,250 @@ import java.util.Objects;
 @CustomType
 public final class GetUrlAccessProfileListData {
     /**
-     * @return The Alerts param.
+     * @return Alert
      * 
      */
     private List<String> alerts;
     /**
-     * @return The Allows param.
+     * @return Allow
      * 
      */
     private List<String> allows;
     /**
-     * @return The Blocks param.
+     * @return Block
      * 
      */
     private List<String> blocks;
     /**
-     * @return The CloudInlineCat param.
+     * @return Cloud inline cat
      * 
      */
     private Boolean cloudInlineCat;
     /**
-     * @return The Continues param.
+     * @return Continue
      * 
      */
     private List<String> continues;
     /**
-     * @return The CredentialEnforcement param.
+     * @return Credential enforcement
      * 
      */
     private GetUrlAccessProfileListDataCredentialEnforcement credentialEnforcement;
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return The LocalInlineCat param.
+     * @return Local inline cat
      * 
      */
     private Boolean localInlineCat;
     /**
-     * @return The LogContainerPageOnly param. Default: `true`.
+     * @return Log container page only
      * 
      */
     private Boolean logContainerPageOnly;
     /**
-     * @return The LogHttpHdrReferer param. Default: `false`.
+     * @return Log http hdr referer
      * 
      */
     private Boolean logHttpHdrReferer;
     /**
-     * @return The LogHttpHdrUserAgent param. Default: `false`.
+     * @return Log http hdr user agent
      * 
      */
     private Boolean logHttpHdrUserAgent;
     /**
-     * @return The LogHttpHdrXff param. Default: `false`.
+     * @return Log http hdr xff
      * 
      */
     private Boolean logHttpHdrXff;
     /**
-     * @return The MlavCategoryExceptions param.
+     * @return Mlav category exception
      * 
      */
     private List<String> mlavCategoryExceptions;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The SafeSearchEnforcement param. Default: `false`.
+     * @return Redirect
+     * 
+     */
+    private List<String> redirects;
+    /**
+     * @return Safe search enforcement
      * 
      */
     private Boolean safeSearchEnforcement;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
 
     private GetUrlAccessProfileListData() {}
     /**
-     * @return The Alerts param.
+     * @return Alert
      * 
      */
     public List<String> alerts() {
         return this.alerts;
     }
     /**
-     * @return The Allows param.
+     * @return Allow
      * 
      */
     public List<String> allows() {
         return this.allows;
     }
     /**
-     * @return The Blocks param.
+     * @return Block
      * 
      */
     public List<String> blocks() {
         return this.blocks;
     }
     /**
-     * @return The CloudInlineCat param.
+     * @return Cloud inline cat
      * 
      */
     public Boolean cloudInlineCat() {
         return this.cloudInlineCat;
     }
     /**
-     * @return The Continues param.
+     * @return Continue
      * 
      */
     public List<String> continues() {
         return this.continues;
     }
     /**
-     * @return The CredentialEnforcement param.
+     * @return Credential enforcement
      * 
      */
     public GetUrlAccessProfileListDataCredentialEnforcement credentialEnforcement() {
         return this.credentialEnforcement;
     }
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The LocalInlineCat param.
+     * @return Local inline cat
      * 
      */
     public Boolean localInlineCat() {
         return this.localInlineCat;
     }
     /**
-     * @return The LogContainerPageOnly param. Default: `true`.
+     * @return Log container page only
      * 
      */
     public Boolean logContainerPageOnly() {
         return this.logContainerPageOnly;
     }
     /**
-     * @return The LogHttpHdrReferer param. Default: `false`.
+     * @return Log http hdr referer
      * 
      */
     public Boolean logHttpHdrReferer() {
         return this.logHttpHdrReferer;
     }
     /**
-     * @return The LogHttpHdrUserAgent param. Default: `false`.
+     * @return Log http hdr user agent
      * 
      */
     public Boolean logHttpHdrUserAgent() {
         return this.logHttpHdrUserAgent;
     }
     /**
-     * @return The LogHttpHdrXff param. Default: `false`.
+     * @return Log http hdr xff
      * 
      */
     public Boolean logHttpHdrXff() {
         return this.logHttpHdrXff;
     }
     /**
-     * @return The MlavCategoryExceptions param.
+     * @return Mlav category exception
      * 
      */
     public List<String> mlavCategoryExceptions() {
         return this.mlavCategoryExceptions;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The SafeSearchEnforcement param. Default: `false`.
+     * @return Redirect
+     * 
+     */
+    public List<String> redirects() {
+        return this.redirects;
+    }
+    /**
+     * @return Safe search enforcement
      * 
      */
     public Boolean safeSearchEnforcement() {
         return this.safeSearchEnforcement;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -224,6 +276,8 @@ public final class GetUrlAccessProfileListData {
         private List<String> continues;
         private GetUrlAccessProfileListDataCredentialEnforcement credentialEnforcement;
         private String description;
+        private String device;
+        private String folder;
         private String id;
         private Boolean localInlineCat;
         private Boolean logContainerPageOnly;
@@ -232,7 +286,10 @@ public final class GetUrlAccessProfileListData {
         private Boolean logHttpHdrXff;
         private List<String> mlavCategoryExceptions;
         private String name;
+        private List<String> redirects;
         private Boolean safeSearchEnforcement;
+        private String snippet;
+        private String tfid;
         public Builder() {}
         public Builder(GetUrlAccessProfileListData defaults) {
     	      Objects.requireNonNull(defaults);
@@ -243,6 +300,8 @@ public final class GetUrlAccessProfileListData {
     	      this.continues = defaults.continues;
     	      this.credentialEnforcement = defaults.credentialEnforcement;
     	      this.description = defaults.description;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.localInlineCat = defaults.localInlineCat;
     	      this.logContainerPageOnly = defaults.logContainerPageOnly;
@@ -251,7 +310,10 @@ public final class GetUrlAccessProfileListData {
     	      this.logHttpHdrXff = defaults.logHttpHdrXff;
     	      this.mlavCategoryExceptions = defaults.mlavCategoryExceptions;
     	      this.name = defaults.name;
+    	      this.redirects = defaults.redirects;
     	      this.safeSearchEnforcement = defaults.safeSearchEnforcement;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -323,6 +385,22 @@ public final class GetUrlAccessProfileListData {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetUrlAccessProfileListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetUrlAccessProfileListData", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
+        @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
               throw new MissingRequiredPropertyException("GetUrlAccessProfileListData", "id");
@@ -390,11 +468,38 @@ public final class GetUrlAccessProfileListData {
             return this;
         }
         @CustomType.Setter
+        public Builder redirects(List<String> redirects) {
+            if (redirects == null) {
+              throw new MissingRequiredPropertyException("GetUrlAccessProfileListData", "redirects");
+            }
+            this.redirects = redirects;
+            return this;
+        }
+        public Builder redirects(String... redirects) {
+            return redirects(List.of(redirects));
+        }
+        @CustomType.Setter
         public Builder safeSearchEnforcement(Boolean safeSearchEnforcement) {
             if (safeSearchEnforcement == null) {
               throw new MissingRequiredPropertyException("GetUrlAccessProfileListData", "safeSearchEnforcement");
             }
             this.safeSearchEnforcement = safeSearchEnforcement;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetUrlAccessProfileListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetUrlAccessProfileListData", "tfid");
+            }
+            this.tfid = tfid;
             return this;
         }
         public GetUrlAccessProfileListData build() {
@@ -406,6 +511,8 @@ public final class GetUrlAccessProfileListData {
             _resultValue.continues = continues;
             _resultValue.credentialEnforcement = credentialEnforcement;
             _resultValue.description = description;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.localInlineCat = localInlineCat;
             _resultValue.logContainerPageOnly = logContainerPageOnly;
@@ -414,7 +521,10 @@ public final class GetUrlAccessProfileListData {
             _resultValue.logHttpHdrXff = logHttpHdrXff;
             _resultValue.mlavCategoryExceptions = mlavCategoryExceptions;
             _resultValue.name = name;
+            _resultValue.redirects = redirects;
             _resultValue.safeSearchEnforcement = safeSearchEnforcement;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

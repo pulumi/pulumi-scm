@@ -1,6 +1,6 @@
 {
     "name": "@pulumi/scm",
-    "version": "0.0.0-alpha.0+dev",
+    "version": "1.0.0-alpha.0+dev",
     "description": "A Pulumi package for managing resources on Strata Cloud Manager.. Based on terraform-provider-scm: version v0.2.1",
     "keywords": [
         "pulumi",
@@ -25,6 +25,6 @@
     "pulumi": {
         "resource": true,
         "name": "scm",
-        "version": "0.0.0-alpha.0+dev"
+        "version": "1.0.0-alpha.0+dev"
     }
 }

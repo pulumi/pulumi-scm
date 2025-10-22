@@ -20,14 +20,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     public static final AntiSpywareSignatureState Empty = new AntiSpywareSignatureState();
 
     /**
-     * The Bugtraqs param.
+     * Bugtraq
      * 
      */
     @Import(name="bugtraqs")
     private @Nullable Output<List<String>> bugtraqs;
 
     /**
-     * @return The Bugtraqs param.
+     * @return Bugtraq
      * 
      */
     public Optional<Output<List<String>>> bugtraqs() {
@@ -35,14 +35,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Comment param. String length must not exceed 256 characters.
+     * Comment
      * 
      */
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
     /**
-     * @return The Comment param. String length must not exceed 256 characters.
+     * @return Comment
      * 
      */
     public Optional<Output<String>> comment() {
@@ -50,14 +50,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Cves param.
+     * Cve
      * 
      */
     @Import(name="cves")
     private @Nullable Output<List<String>> cves;
 
     /**
-     * @return The Cves param.
+     * @return Cve
      * 
      */
     public Optional<Output<List<String>>> cves() {
@@ -65,14 +65,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The DefaultAction param.
+     * anti spyware signature default action
      * 
      */
     @Import(name="defaultAction")
     private @Nullable Output<AntiSpywareSignatureDefaultActionArgs> defaultAction;
 
     /**
-     * @return The DefaultAction param.
+     * @return anti spyware signature default action
      * 
      */
     public Optional<Output<AntiSpywareSignatureDefaultActionArgs>> defaultAction() {
@@ -80,14 +80,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -95,14 +95,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Direction param. String must be one of these: `&#34;client2server&#34;`, `&#34;server2client&#34;`, `&#34;both&#34;`.
+     * Direction
      * 
      */
     @Import(name="direction")
     private @Nullable Output<String> direction;
 
     /**
-     * @return The Direction param. String must be one of these: `&#34;client2server&#34;`, `&#34;server2client&#34;`, `&#34;both&#34;`.
+     * @return Direction
      * 
      */
     public Optional<Output<String>> direction() {
@@ -110,14 +110,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -125,14 +125,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The References param.
+     * Reference
      * 
      */
     @Import(name="references")
     private @Nullable Output<List<String>> references;
 
     /**
-     * @return The References param.
+     * @return Reference
      * 
      */
     public Optional<Output<List<String>>> references() {
@@ -140,14 +140,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Severity param. String must be one of these: `&#34;critical&#34;`, `&#34;low&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;informational&#34;`.
+     * Severity
      * 
      */
     @Import(name="severity")
     private @Nullable Output<String> severity;
 
     /**
-     * @return The Severity param. String must be one of these: `&#34;critical&#34;`, `&#34;low&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;informational&#34;`.
+     * @return Severity
      * 
      */
     public Optional<Output<String>> severity() {
@@ -155,14 +155,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Signature param.
+     * anti spyware signature
      * 
      */
     @Import(name="signature")
     private @Nullable Output<AntiSpywareSignatureSignatureArgs> signature;
 
     /**
-     * @return The Signature param.
+     * @return anti spyware signature
      * 
      */
     public Optional<Output<AntiSpywareSignatureSignatureArgs>> signature() {
@@ -170,14 +170,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -192,14 +192,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+     * threat id range \n\n and \n\n
      * 
      */
     @Import(name="threatId")
     private @Nullable Output<Integer> threatId;
 
     /**
-     * @return threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+     * @return threat id range \n\n and \n\n
      * 
      */
     public Optional<Output<Integer>> threatId() {
@@ -207,14 +207,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Threatname param. String length must not exceed 1024 characters.
+     * Threatname
      * 
      */
     @Import(name="threatname")
     private @Nullable Output<String> threatname;
 
     /**
-     * @return The Threatname param. String length must not exceed 1024 characters.
+     * @return Threatname
      * 
      */
     public Optional<Output<String>> threatname() {
@@ -222,14 +222,14 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Vendors param.
+     * Vendor
      * 
      */
     @Import(name="vendors")
     private @Nullable Output<List<String>> vendors;
 
     /**
-     * @return The Vendors param.
+     * @return Vendor
      * 
      */
     public Optional<Output<List<String>>> vendors() {
@@ -275,7 +275,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param bugtraqs The Bugtraqs param.
+         * @param bugtraqs Bugtraq
          * 
          * @return builder
          * 
@@ -286,7 +286,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param bugtraqs The Bugtraqs param.
+         * @param bugtraqs Bugtraq
          * 
          * @return builder
          * 
@@ -296,7 +296,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param bugtraqs The Bugtraqs param.
+         * @param bugtraqs Bugtraq
          * 
          * @return builder
          * 
@@ -306,7 +306,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param comment The Comment param. String length must not exceed 256 characters.
+         * @param comment Comment
          * 
          * @return builder
          * 
@@ -317,7 +317,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param comment The Comment param. String length must not exceed 256 characters.
+         * @param comment Comment
          * 
          * @return builder
          * 
@@ -327,7 +327,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param cves The Cves param.
+         * @param cves Cve
          * 
          * @return builder
          * 
@@ -338,7 +338,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param cves The Cves param.
+         * @param cves Cve
          * 
          * @return builder
          * 
@@ -348,7 +348,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param cves The Cves param.
+         * @param cves Cve
          * 
          * @return builder
          * 
@@ -358,7 +358,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param defaultAction The DefaultAction param.
+         * @param defaultAction anti spyware signature default action
          * 
          * @return builder
          * 
@@ -369,7 +369,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param defaultAction The DefaultAction param.
+         * @param defaultAction anti spyware signature default action
          * 
          * @return builder
          * 
@@ -379,7 +379,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -390,7 +390,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -400,7 +400,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param direction The Direction param. String must be one of these: `&#34;client2server&#34;`, `&#34;server2client&#34;`, `&#34;both&#34;`.
+         * @param direction Direction
          * 
          * @return builder
          * 
@@ -411,7 +411,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param direction The Direction param. String must be one of these: `&#34;client2server&#34;`, `&#34;server2client&#34;`, `&#34;both&#34;`.
+         * @param direction Direction
          * 
          * @return builder
          * 
@@ -421,7 +421,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -432,7 +432,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -442,7 +442,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param references The References param.
+         * @param references Reference
          * 
          * @return builder
          * 
@@ -453,7 +453,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param references The References param.
+         * @param references Reference
          * 
          * @return builder
          * 
@@ -463,7 +463,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param references The References param.
+         * @param references Reference
          * 
          * @return builder
          * 
@@ -473,7 +473,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param severity The Severity param. String must be one of these: `&#34;critical&#34;`, `&#34;low&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;informational&#34;`.
+         * @param severity Severity
          * 
          * @return builder
          * 
@@ -484,7 +484,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param severity The Severity param. String must be one of these: `&#34;critical&#34;`, `&#34;low&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;informational&#34;`.
+         * @param severity Severity
          * 
          * @return builder
          * 
@@ -494,7 +494,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param signature The Signature param.
+         * @param signature anti spyware signature
          * 
          * @return builder
          * 
@@ -505,7 +505,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param signature The Signature param.
+         * @param signature anti spyware signature
          * 
          * @return builder
          * 
@@ -515,7 +515,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -526,7 +526,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -545,7 +545,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param threatId threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+         * @param threatId threat id range \n\n and \n\n
          * 
          * @return builder
          * 
@@ -556,7 +556,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param threatId threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+         * @param threatId threat id range \n\n and \n\n
          * 
          * @return builder
          * 
@@ -566,7 +566,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param threatname The Threatname param. String length must not exceed 1024 characters.
+         * @param threatname Threatname
          * 
          * @return builder
          * 
@@ -577,7 +577,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param threatname The Threatname param. String length must not exceed 1024 characters.
+         * @param threatname Threatname
          * 
          * @return builder
          * 
@@ -587,7 +587,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param vendors The Vendors param.
+         * @param vendors Vendor
          * 
          * @return builder
          * 
@@ -598,7 +598,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param vendors The Vendors param.
+         * @param vendors Vendor
          * 
          * @return builder
          * 
@@ -608,7 +608,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param vendors The Vendors param.
+         * @param vendors Vendor
          * 
          * @return builder
          * 

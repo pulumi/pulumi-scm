@@ -12,22 +12,37 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceGroupResult {
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the service group
      * 
      */
     private String id;
     /**
-     * @return The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Members
      * 
      */
     private List<String> members;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the service group
      * 
      */
     private String name;
     /**
-     * @return Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return Tags associated with the service group
      * 
      */
     private List<String> tags;
@@ -35,28 +50,49 @@ public final class GetServiceGroupResult {
 
     private GetServiceGroupResult() {}
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the service group
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Members
      * 
      */
     public List<String> members() {
         return this.members;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the service group
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return Tags associated with the service group
      * 
      */
     public List<String> tags() {
@@ -75,21 +111,43 @@ public final class GetServiceGroupResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String device;
+        private String folder;
         private String id;
         private List<String> members;
         private String name;
+        private String snippet;
         private List<String> tags;
         private String tfid;
         public Builder() {}
         public Builder(GetServiceGroupResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.members = defaults.members;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
     	      this.tags = defaults.tags;
     	      this.tfid = defaults.tfid;
         }
 
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetServiceGroupResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetServiceGroupResult", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
         @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
@@ -118,6 +176,14 @@ public final class GetServiceGroupResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetServiceGroupResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tags(List<String> tags) {
             if (tags == null) {
               throw new MissingRequiredPropertyException("GetServiceGroupResult", "tags");
@@ -138,9 +204,12 @@ public final class GetServiceGroupResult {
         }
         public GetServiceGroupResult build() {
             final var _resultValue = new GetServiceGroupResult();
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.members = members;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
             _resultValue.tags = tags;
             _resultValue.tfid = tfid;
             return _resultValue;

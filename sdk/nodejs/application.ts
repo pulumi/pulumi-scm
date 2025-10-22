@@ -7,16 +7,9 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * Application resource
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.Application("example", {});
- * ```
  */
 export class Application extends pulumi.CustomResource {
     /**
@@ -47,128 +40,128 @@ export class Application extends pulumi.CustomResource {
     }
 
     /**
-     * The AbleToTransferFile param.
+     * Able to transfer file
      */
     declare public readonly ableToTransferFile: pulumi.Output<boolean | undefined>;
     /**
-     * The AlgDisableCapability param. String length must not exceed 127 characters.
+     * Alg disable capability
      */
     declare public readonly algDisableCapability: pulumi.Output<string | undefined>;
     /**
-     * The Category param.
+     * Category
      */
     declare public readonly category: pulumi.Output<string>;
     /**
-     * The ConsumeBigBandwidth param.
+     * Consume big bandwidth
      */
     declare public readonly consumeBigBandwidth: pulumi.Output<boolean | undefined>;
     /**
-     * The DataIdent param.
+     * Data ident
      */
     declare public readonly dataIdent: pulumi.Output<boolean | undefined>;
     /**
-     * The Default param.
+     * Default
      */
     declare public readonly default: pulumi.Output<outputs.ApplicationDefault | undefined>;
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The EvasiveBehavior param.
+     * Evasive behavior
      */
     declare public readonly evasiveBehavior: pulumi.Output<boolean | undefined>;
     /**
-     * The FileTypeIdent param.
+     * File type ident
      */
     declare public readonly fileTypeIdent: pulumi.Output<boolean | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The HasKnownVulnerability param.
+     * Has known vulnerability
      */
     declare public readonly hasKnownVulnerability: pulumi.Output<boolean | undefined>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the application
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The NoAppidCaching param.
+     * No appid caching
      */
     declare public readonly noAppidCaching: pulumi.Output<boolean | undefined>;
     /**
-     * The ParentApp param. String length must not exceed 127 characters.
+     * Parent app
      */
     declare public readonly parentApp: pulumi.Output<string | undefined>;
     /**
-     * The PervasiveUse param.
+     * Pervasive use
      */
     declare public readonly pervasiveUse: pulumi.Output<boolean | undefined>;
     /**
-     * The ProneToMisuse param.
+     * Prone to misuse
      */
     declare public readonly proneToMisuse: pulumi.Output<boolean | undefined>;
     /**
-     * The Risk param. Value must be between 1 and 5.
+     * Risk
      */
-    declare public readonly risk: pulumi.Output<number>;
+    declare public readonly risk: pulumi.Output<string>;
     /**
-     * The Signatures param.
+     * Signature
      */
     declare public readonly signatures: pulumi.Output<outputs.ApplicationSignature[] | undefined>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The Subcategory param. String length must not exceed 63 characters.
+     * Subcategory
      */
-    declare public readonly subcategory: pulumi.Output<string>;
+    declare public readonly subcategory: pulumi.Output<string | undefined>;
     /**
-     * timeout for half-close session in seconds. Value must be between 1 and 604800.
+     * timeout for half-close session in seconds
      */
     declare public readonly tcpHalfClosedTimeout: pulumi.Output<number | undefined>;
     /**
-     * timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+     * timeout for session in timeWait state in seconds
      */
     declare public readonly tcpTimeWaitTimeout: pulumi.Output<number | undefined>;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     declare public readonly tcpTimeout: pulumi.Output<number | undefined>;
     /**
-     * The Technology param. String length must not exceed 63 characters.
+     * Technology
      */
-    declare public readonly technology: pulumi.Output<string>;
+    declare public readonly technology: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     declare public readonly timeout: pulumi.Output<number | undefined>;
     /**
-     * The TunnelApplications param.
+     * Tunnel applications
      */
     declare public readonly tunnelApplications: pulumi.Output<boolean | undefined>;
     /**
-     * The TunnelOtherApplication param.
+     * Tunnel other application
      */
     declare public readonly tunnelOtherApplication: pulumi.Output<boolean | undefined>;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     declare public readonly udpTimeout: pulumi.Output<number | undefined>;
     /**
-     * The UsedByMalware param.
+     * Used by malware
      */
     declare public readonly usedByMalware: pulumi.Output<boolean | undefined>;
     /**
-     * The VirusIdent param.
+     * Virus ident
      */
     declare public readonly virusIdent: pulumi.Output<boolean | undefined>;
 
@@ -225,12 +218,6 @@ export class Application extends pulumi.CustomResource {
             if (args?.risk === undefined && !opts.urn) {
                 throw new Error("Missing required property 'risk'");
             }
-            if (args?.subcategory === undefined && !opts.urn) {
-                throw new Error("Missing required property 'subcategory'");
-            }
-            if (args?.technology === undefined && !opts.urn) {
-                throw new Error("Missing required property 'technology'");
-            }
             resourceInputs["ableToTransferFile"] = args?.ableToTransferFile;
             resourceInputs["algDisableCapability"] = args?.algDisableCapability;
             resourceInputs["category"] = args?.category;
@@ -274,128 +261,128 @@ export class Application extends pulumi.CustomResource {
  */
 export interface ApplicationState {
     /**
-     * The AbleToTransferFile param.
+     * Able to transfer file
      */
     ableToTransferFile?: pulumi.Input<boolean>;
     /**
-     * The AlgDisableCapability param. String length must not exceed 127 characters.
+     * Alg disable capability
      */
     algDisableCapability?: pulumi.Input<string>;
     /**
-     * The Category param.
+     * Category
      */
     category?: pulumi.Input<string>;
     /**
-     * The ConsumeBigBandwidth param.
+     * Consume big bandwidth
      */
     consumeBigBandwidth?: pulumi.Input<boolean>;
     /**
-     * The DataIdent param.
+     * Data ident
      */
     dataIdent?: pulumi.Input<boolean>;
     /**
-     * The Default param.
+     * Default
      */
     default?: pulumi.Input<inputs.ApplicationDefault>;
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The EvasiveBehavior param.
+     * Evasive behavior
      */
     evasiveBehavior?: pulumi.Input<boolean>;
     /**
-     * The FileTypeIdent param.
+     * File type ident
      */
     fileTypeIdent?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The HasKnownVulnerability param.
+     * Has known vulnerability
      */
     hasKnownVulnerability?: pulumi.Input<boolean>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the application
      */
     name?: pulumi.Input<string>;
     /**
-     * The NoAppidCaching param.
+     * No appid caching
      */
     noAppidCaching?: pulumi.Input<boolean>;
     /**
-     * The ParentApp param. String length must not exceed 127 characters.
+     * Parent app
      */
     parentApp?: pulumi.Input<string>;
     /**
-     * The PervasiveUse param.
+     * Pervasive use
      */
     pervasiveUse?: pulumi.Input<boolean>;
     /**
-     * The ProneToMisuse param.
+     * Prone to misuse
      */
     proneToMisuse?: pulumi.Input<boolean>;
     /**
-     * The Risk param. Value must be between 1 and 5.
+     * Risk
      */
-    risk?: pulumi.Input<number>;
+    risk?: pulumi.Input<string>;
     /**
-     * The Signatures param.
+     * Signature
      */
     signatures?: pulumi.Input<pulumi.Input<inputs.ApplicationSignature>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Subcategory param. String length must not exceed 63 characters.
+     * Subcategory
      */
     subcategory?: pulumi.Input<string>;
     /**
-     * timeout for half-close session in seconds. Value must be between 1 and 604800.
+     * timeout for half-close session in seconds
      */
     tcpHalfClosedTimeout?: pulumi.Input<number>;
     /**
-     * timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+     * timeout for session in timeWait state in seconds
      */
     tcpTimeWaitTimeout?: pulumi.Input<number>;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     tcpTimeout?: pulumi.Input<number>;
     /**
-     * The Technology param. String length must not exceed 63 characters.
+     * Technology
      */
     technology?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     timeout?: pulumi.Input<number>;
     /**
-     * The TunnelApplications param.
+     * Tunnel applications
      */
     tunnelApplications?: pulumi.Input<boolean>;
     /**
-     * The TunnelOtherApplication param.
+     * Tunnel other application
      */
     tunnelOtherApplication?: pulumi.Input<boolean>;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     udpTimeout?: pulumi.Input<number>;
     /**
-     * The UsedByMalware param.
+     * Used by malware
      */
     usedByMalware?: pulumi.Input<boolean>;
     /**
-     * The VirusIdent param.
+     * Virus ident
      */
     virusIdent?: pulumi.Input<boolean>;
 }
@@ -405,127 +392,127 @@ export interface ApplicationState {
  */
 export interface ApplicationArgs {
     /**
-     * The AbleToTransferFile param.
+     * Able to transfer file
      */
     ableToTransferFile?: pulumi.Input<boolean>;
     /**
-     * The AlgDisableCapability param. String length must not exceed 127 characters.
+     * Alg disable capability
      */
     algDisableCapability?: pulumi.Input<string>;
     /**
-     * The Category param.
+     * Category
      */
     category: pulumi.Input<string>;
     /**
-     * The ConsumeBigBandwidth param.
+     * Consume big bandwidth
      */
     consumeBigBandwidth?: pulumi.Input<boolean>;
     /**
-     * The DataIdent param.
+     * Data ident
      */
     dataIdent?: pulumi.Input<boolean>;
     /**
-     * The Default param.
+     * Default
      */
     default?: pulumi.Input<inputs.ApplicationDefault>;
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The EvasiveBehavior param.
+     * Evasive behavior
      */
     evasiveBehavior?: pulumi.Input<boolean>;
     /**
-     * The FileTypeIdent param.
+     * File type ident
      */
     fileTypeIdent?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The HasKnownVulnerability param.
+     * Has known vulnerability
      */
     hasKnownVulnerability?: pulumi.Input<boolean>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the application
      */
     name?: pulumi.Input<string>;
     /**
-     * The NoAppidCaching param.
+     * No appid caching
      */
     noAppidCaching?: pulumi.Input<boolean>;
     /**
-     * The ParentApp param. String length must not exceed 127 characters.
+     * Parent app
      */
     parentApp?: pulumi.Input<string>;
     /**
-     * The PervasiveUse param.
+     * Pervasive use
      */
     pervasiveUse?: pulumi.Input<boolean>;
     /**
-     * The ProneToMisuse param.
+     * Prone to misuse
      */
     proneToMisuse?: pulumi.Input<boolean>;
     /**
-     * The Risk param. Value must be between 1 and 5.
+     * Risk
      */
-    risk: pulumi.Input<number>;
+    risk: pulumi.Input<string>;
     /**
-     * The Signatures param.
+     * Signature
      */
     signatures?: pulumi.Input<pulumi.Input<inputs.ApplicationSignature>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Subcategory param. String length must not exceed 63 characters.
+     * Subcategory
      */
-    subcategory: pulumi.Input<string>;
+    subcategory?: pulumi.Input<string>;
     /**
-     * timeout for half-close session in seconds. Value must be between 1 and 604800.
+     * timeout for half-close session in seconds
      */
     tcpHalfClosedTimeout?: pulumi.Input<number>;
     /**
-     * timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+     * timeout for session in timeWait state in seconds
      */
     tcpTimeWaitTimeout?: pulumi.Input<number>;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     tcpTimeout?: pulumi.Input<number>;
     /**
-     * The Technology param. String length must not exceed 63 characters.
+     * Technology
      */
-    technology: pulumi.Input<string>;
+    technology?: pulumi.Input<string>;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     timeout?: pulumi.Input<number>;
     /**
-     * The TunnelApplications param.
+     * Tunnel applications
      */
     tunnelApplications?: pulumi.Input<boolean>;
     /**
-     * The TunnelOtherApplication param.
+     * Tunnel other application
      */
     tunnelOtherApplication?: pulumi.Input<boolean>;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     udpTimeout?: pulumi.Input<number>;
     /**
-     * The UsedByMalware param.
+     * Used by malware
      */
     usedByMalware?: pulumi.Input<boolean>;
     /**
-     * The VirusIdent param.
+     * Virus ident
      */
     virusIdent?: pulumi.Input<boolean>;
 }

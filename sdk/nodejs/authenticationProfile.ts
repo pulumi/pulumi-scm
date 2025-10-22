@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.AuthenticationProfile("example", {});
- * ```
+ * AuthenticationProfile resource
  */
 export class AuthenticationProfile extends pulumi.CustomResource {
     /**
@@ -47,48 +38,48 @@ export class AuthenticationProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The AllowList param.
+     * Allow list
      */
-    declare public readonly allowLists: pulumi.Output<string[] | undefined>;
+    declare public readonly allowLists: pulumi.Output<string[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Lockout param.
+     * Lockout
      */
     declare public readonly lockout: pulumi.Output<outputs.AuthenticationProfileLockout | undefined>;
     /**
-     * The Method param.
+     * Method
      */
     declare public readonly method: pulumi.Output<outputs.AuthenticationProfileMethod | undefined>;
     /**
-     * The MultiFactorAuth param.
+     * Multi factor auth
      */
     declare public readonly multiFactorAuth: pulumi.Output<outputs.AuthenticationProfileMultiFactorAuth | undefined>;
     /**
-     * The Name param.
+     * The name of the authentication profile
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The SingleSignOn param.
+     * Single sign on
      */
     declare public readonly singleSignOn: pulumi.Output<outputs.AuthenticationProfileSingleSignOn | undefined>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The UserDomain param. String length must not exceed 63 characters.
+     * User domain
      */
     declare public readonly userDomain: pulumi.Output<string | undefined>;
     /**
-     * The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
+     * Username modifier
      */
     declare public readonly usernameModifier: pulumi.Output<string | undefined>;
 
@@ -142,48 +133,48 @@ export class AuthenticationProfile extends pulumi.CustomResource {
  */
 export interface AuthenticationProfileState {
     /**
-     * The AllowList param.
+     * Allow list
      */
     allowLists?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Lockout param.
+     * Lockout
      */
     lockout?: pulumi.Input<inputs.AuthenticationProfileLockout>;
     /**
-     * The Method param.
+     * Method
      */
     method?: pulumi.Input<inputs.AuthenticationProfileMethod>;
     /**
-     * The MultiFactorAuth param.
+     * Multi factor auth
      */
     multiFactorAuth?: pulumi.Input<inputs.AuthenticationProfileMultiFactorAuth>;
     /**
-     * The Name param.
+     * The name of the authentication profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The SingleSignOn param.
+     * Single sign on
      */
     singleSignOn?: pulumi.Input<inputs.AuthenticationProfileSingleSignOn>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The UserDomain param. String length must not exceed 63 characters.
+     * User domain
      */
     userDomain?: pulumi.Input<string>;
     /**
-     * The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
+     * Username modifier
      */
     usernameModifier?: pulumi.Input<string>;
 }
@@ -193,47 +184,47 @@ export interface AuthenticationProfileState {
  */
 export interface AuthenticationProfileArgs {
     /**
-     * The AllowList param.
+     * Allow list
      */
     allowLists?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Lockout param.
+     * Lockout
      */
     lockout?: pulumi.Input<inputs.AuthenticationProfileLockout>;
     /**
-     * The Method param.
+     * Method
      */
     method?: pulumi.Input<inputs.AuthenticationProfileMethod>;
     /**
-     * The MultiFactorAuth param.
+     * Multi factor auth
      */
     multiFactorAuth?: pulumi.Input<inputs.AuthenticationProfileMultiFactorAuth>;
     /**
-     * The Name param.
+     * The name of the authentication profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The SingleSignOn param.
+     * Single sign on
      */
     singleSignOn?: pulumi.Input<inputs.AuthenticationProfileSingleSignOn>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The UserDomain param. String length must not exceed 63 characters.
+     * User domain
      */
     userDomain?: pulumi.Input<string>;
     /**
-     * The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
+     * Username modifier
      */
     usernameModifier?: pulumi.Input<string>;
 }

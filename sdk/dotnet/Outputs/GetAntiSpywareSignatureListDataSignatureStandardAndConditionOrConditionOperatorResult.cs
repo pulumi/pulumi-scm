@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorResult
     {
         /// <summary>
-        /// The EqualTo param.
+        /// Equal to
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToResult EqualTo;
         /// <summary>
-        /// The GreaterThan param.
+        /// Greater than
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanResult GreaterThan;
         /// <summary>
-        /// The LessThan param.
+        /// Less than
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanResult LessThan;
         /// <summary>
-        /// The PatternMatch param.
+        /// Pattern match
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatchResult PatternMatch;
 

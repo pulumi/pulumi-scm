@@ -11,54 +11,94 @@ import java.util.Objects;
 @CustomType
 public final class GetTagListData {
     /**
-     * @return The Color param. String must be one of these: `&#34;Red&#34;`, `&#34;Green&#34;`, `&#34;Blue&#34;`, `&#34;Yellow&#34;`, `&#34;Copper&#34;`, `&#34;Orange&#34;`, `&#34;Purple&#34;`, `&#34;Gray&#34;`, `&#34;Light Green&#34;`, `&#34;Cyan&#34;`, `&#34;Light Gray&#34;`, `&#34;Blue Gray&#34;`, `&#34;Lime&#34;`, `&#34;Black&#34;`, `&#34;Gold&#34;`, `&#34;Brown&#34;`, `&#34;Olive&#34;`, `&#34;Maroon&#34;`, `&#34;Red-Orange&#34;`, `&#34;Yellow-Orange&#34;`, `&#34;Forest Green&#34;`, `&#34;Turquoise Blue&#34;`, `&#34;Azure Blue&#34;`, `&#34;Cerulean Blue&#34;`, `&#34;Midnight Blue&#34;`, `&#34;Medium Blue&#34;`, `&#34;Cobalt Blue&#34;`, `&#34;Violet Blue&#34;`, `&#34;Blue Violet&#34;`, `&#34;Medium Violet&#34;`, `&#34;Medium Rose&#34;`, `&#34;Lavender&#34;`, `&#34;Orchid&#34;`, `&#34;Thistle&#34;`, `&#34;Peach&#34;`, `&#34;Salmon&#34;`, `&#34;Magenta&#34;`, `&#34;Red Violet&#34;`, `&#34;Mahogany&#34;`, `&#34;Burnt Sienna&#34;`, `&#34;Chestnut&#34;`.
+     * @return The color of the tag
      * 
      */
     private String color;
     /**
-     * @return The Comments param. String length must not exceed 1023 characters.
+     * @return The description of the tag
      * 
      */
     private String comments;
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the tag
      * 
      */
     private String id;
     /**
-     * @return The Name param. String length must not exceed 127 characters.
+     * @return The name of the tag
      * 
      */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
 
     private GetTagListData() {}
     /**
-     * @return The Color param. String must be one of these: `&#34;Red&#34;`, `&#34;Green&#34;`, `&#34;Blue&#34;`, `&#34;Yellow&#34;`, `&#34;Copper&#34;`, `&#34;Orange&#34;`, `&#34;Purple&#34;`, `&#34;Gray&#34;`, `&#34;Light Green&#34;`, `&#34;Cyan&#34;`, `&#34;Light Gray&#34;`, `&#34;Blue Gray&#34;`, `&#34;Lime&#34;`, `&#34;Black&#34;`, `&#34;Gold&#34;`, `&#34;Brown&#34;`, `&#34;Olive&#34;`, `&#34;Maroon&#34;`, `&#34;Red-Orange&#34;`, `&#34;Yellow-Orange&#34;`, `&#34;Forest Green&#34;`, `&#34;Turquoise Blue&#34;`, `&#34;Azure Blue&#34;`, `&#34;Cerulean Blue&#34;`, `&#34;Midnight Blue&#34;`, `&#34;Medium Blue&#34;`, `&#34;Cobalt Blue&#34;`, `&#34;Violet Blue&#34;`, `&#34;Blue Violet&#34;`, `&#34;Medium Violet&#34;`, `&#34;Medium Rose&#34;`, `&#34;Lavender&#34;`, `&#34;Orchid&#34;`, `&#34;Thistle&#34;`, `&#34;Peach&#34;`, `&#34;Salmon&#34;`, `&#34;Magenta&#34;`, `&#34;Red Violet&#34;`, `&#34;Mahogany&#34;`, `&#34;Burnt Sienna&#34;`, `&#34;Chestnut&#34;`.
+     * @return The color of the tag
      * 
      */
     public String color() {
         return this.color;
     }
     /**
-     * @return The Comments param. String length must not exceed 1023 characters.
+     * @return The description of the tag
      * 
      */
     public String comments() {
         return this.comments;
     }
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the tag
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param. String length must not exceed 127 characters.
+     * @return The name of the tag
      * 
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -72,15 +112,23 @@ public final class GetTagListData {
     public static final class Builder {
         private String color;
         private String comments;
+        private String device;
+        private String folder;
         private String id;
         private String name;
+        private String snippet;
+        private String tfid;
         public Builder() {}
         public Builder(GetTagListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.color = defaults.color;
     	      this.comments = defaults.comments;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -100,6 +148,22 @@ public final class GetTagListData {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetTagListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetTagListData", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
+        @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
               throw new MissingRequiredPropertyException("GetTagListData", "id");
@@ -115,12 +179,32 @@ public final class GetTagListData {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetTagListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetTagListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetTagListData build() {
             final var _resultValue = new GetTagListData();
             _resultValue.color = color;
             _resultValue.comments = comments;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

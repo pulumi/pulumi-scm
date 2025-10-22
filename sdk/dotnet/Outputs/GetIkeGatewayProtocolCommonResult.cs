@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayProtocolCommonResult
     {
         /// <summary>
-        /// The Fragmentation param.
+        /// Fragmentation
         /// </summary>
         public readonly Outputs.GetIkeGatewayProtocolCommonFragmentationResult Fragmentation;
         /// <summary>
-        /// The NatTraversal param.
+        /// Enables NAT traversal for the IKE gateway.
         /// </summary>
         public readonly Outputs.GetIkeGatewayProtocolCommonNatTraversalResult NatTraversal;
         /// <summary>
-        /// The PassiveMode param.
+        /// Passive mode
         /// </summary>
         public readonly bool PassiveMode;
 

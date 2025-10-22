@@ -15,19 +15,26 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
+ * //
+ * // Data source to retrieve a list of remote_network objects.
+ * //
+ * // Look up a list of Remote Networks, filtering by folder.
  * const example = scm.getRemoteNetworkList({
  *     folder: "Remote Networks",
  * });
+ * export const remoteNetworkList = example.then(example => .map(network => (network.name)));
  * ```
  */
 export function getRemoteNetworkList(args?: GetRemoteNetworkListArgs, opts?: pulumi.InvokeOptions): Promise<GetRemoteNetworkListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRemoteNetworkList:getRemoteNetworkList", {
+        "device": args.device,
         "folder": args.folder,
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -36,21 +43,29 @@ export function getRemoteNetworkList(args?: GetRemoteNetworkListArgs, opts?: pul
  */
 export interface GetRemoteNetworkListArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+     * The device of the item.
+     */
+    device?: string;
+    /**
+     * The folder of the item. Default: Shared.
      */
     folder?: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
+    /**
+     * The snippet of the item.
+     */
+    snippet?: string;
 }
 
 /**
@@ -58,32 +73,40 @@ export interface GetRemoteNetworkListArgs {
  */
 export interface GetRemoteNetworkListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetRemoteNetworkListData[];
     /**
-     * The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+     * The device of the item.
      */
-    readonly folder: string;
+    readonly device?: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    readonly folder?: string;
     /**
      * The provider-assigned unique ID for this managed resource.
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
+    /**
+     * The snippet of the item.
+     */
+    readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
@@ -96,19 +119,26 @@ export interface GetRemoteNetworkListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
+ * //
+ * // Data source to retrieve a list of remote_network objects.
+ * //
+ * // Look up a list of Remote Networks, filtering by folder.
  * const example = scm.getRemoteNetworkList({
  *     folder: "Remote Networks",
  * });
+ * export const remoteNetworkList = example.then(example => .map(network => (network.name)));
  * ```
  */
 export function getRemoteNetworkListOutput(args?: GetRemoteNetworkListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRemoteNetworkListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRemoteNetworkList:getRemoteNetworkList", {
+        "device": args.device,
         "folder": args.folder,
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -117,19 +147,27 @@ export function getRemoteNetworkListOutput(args?: GetRemoteNetworkListOutputArgs
  */
 export interface GetRemoteNetworkListOutputArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+     * The device of the item.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder of the item. Default: Shared.
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
+    /**
+     * The snippet of the item.
+     */
+    snippet?: pulumi.Input<string>;
 }

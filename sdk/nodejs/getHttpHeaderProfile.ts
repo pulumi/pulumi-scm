@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getHttpHeaderProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * HttpHeaderProfile data source
  */
 export function getHttpHeaderProfile(args: GetHttpHeaderProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetHttpHeaderProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getHttpHeaderProfile(args: GetHttpHeaderProfileArgs, opts?: pulu
  */
 export interface GetHttpHeaderProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the HTTP header profile
      */
     id: string;
+    /**
+     * The name of the HTTP header profile
+     */
+    name?: string;
 }
 
 /**
@@ -42,41 +36,43 @@ export interface GetHttpHeaderProfileArgs {
  */
 export interface GetHttpHeaderProfileResult {
     /**
-     * The Description param.
+     * The description of the HTTP header profile
      */
     readonly description: string;
     /**
-     * The HttpHeaderInsertions param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * A list of HTTP header profile rules
      */
     readonly httpHeaderInsertions: outputs.GetHttpHeaderProfileHttpHeaderInsertion[];
     /**
-     * The Id param.
+     * The UUID of the HTTP header profile
      */
     readonly id: string;
     /**
-     * The Name param.
+     * The name of the HTTP header profile
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getHttpHeaderProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * HttpHeaderProfile data source
  */
 export function getHttpHeaderProfileOutput(args: GetHttpHeaderProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHttpHeaderProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -85,7 +81,11 @@ export function getHttpHeaderProfileOutput(args: GetHttpHeaderProfileOutputArgs,
  */
 export interface GetHttpHeaderProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the HTTP header profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the HTTP header profile
+     */
+    name?: pulumi.Input<string>;
 }

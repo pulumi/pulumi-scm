@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.scm.inputs.AddressGroupDynamicValueArgs;
+import com.pulumi.scm.inputs.AddressGroupDynamicArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,14 +18,14 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
     public static final AddressGroupState Empty = new AddressGroupState();
 
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -33,14 +33,14 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -48,29 +48,29 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+     * Dynamic
      * 
      */
-    @Import(name="dynamicValue")
-    private @Nullable Output<AddressGroupDynamicValueArgs> dynamicValue;
+    @Import(name="dynamic")
+    private @Nullable Output<AddressGroupDynamicArgs> dynamic;
 
     /**
-     * @return The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+     * @return Dynamic
      * 
      */
-    public Optional<Output<AddressGroupDynamicValueArgs>> dynamicValue() {
-        return Optional.ofNullable(this.dynamicValue);
+    public Optional<Output<AddressGroupDynamicArgs>> dynamic() {
+        return Optional.ofNullable(this.dynamic);
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -78,14 +78,14 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the address group
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the address group
      * 
      */
     public Optional<Output<String>> name() {
@@ -93,14 +93,14 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -108,29 +108,29 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+     * Static
      * 
      */
-    @Import(name="staticLists")
-    private @Nullable Output<List<String>> staticLists;
+    @Import(name="statics")
+    private @Nullable Output<List<String>> statics;
 
     /**
-     * @return The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+     * @return Static
      * 
      */
-    public Optional<Output<List<String>>> staticLists() {
-        return Optional.ofNullable(this.staticLists);
+    public Optional<Output<List<String>>> statics() {
+        return Optional.ofNullable(this.statics);
     }
 
     /**
-     * Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags for address group object
      * 
      */
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
     /**
-     * @return Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return Tags for address group object
      * 
      */
     public Optional<Output<List<String>>> tags() {
@@ -149,11 +149,11 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
     private AddressGroupState(AddressGroupState $) {
         this.description = $.description;
         this.device = $.device;
-        this.dynamicValue = $.dynamicValue;
+        this.dynamic = $.dynamic;
         this.folder = $.folder;
         this.name = $.name;
         this.snippet = $.snippet;
-        this.staticLists = $.staticLists;
+        this.statics = $.statics;
         this.tags = $.tags;
         this.tfid = $.tfid;
     }
@@ -177,7 +177,7 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param. String length must not exceed 1023 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -188,7 +188,7 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param. String length must not exceed 1023 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -198,7 +198,7 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -209,7 +209,7 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -219,28 +219,28 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dynamicValue The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+         * @param dynamic Dynamic
          * 
          * @return builder
          * 
          */
-        public Builder dynamicValue(@Nullable Output<AddressGroupDynamicValueArgs> dynamicValue) {
-            $.dynamicValue = dynamicValue;
+        public Builder dynamic(@Nullable Output<AddressGroupDynamicArgs> dynamic) {
+            $.dynamic = dynamic;
             return this;
         }
 
         /**
-         * @param dynamicValue The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+         * @param dynamic Dynamic
          * 
          * @return builder
          * 
          */
-        public Builder dynamicValue(AddressGroupDynamicValueArgs dynamicValue) {
-            return dynamicValue(Output.of(dynamicValue));
+        public Builder dynamic(AddressGroupDynamicArgs dynamic) {
+            return dynamic(Output.of(dynamic));
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -251,7 +251,7 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -261,7 +261,7 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the address group
          * 
          * @return builder
          * 
@@ -272,7 +272,7 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the address group
          * 
          * @return builder
          * 
@@ -282,7 +282,7 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -293,7 +293,7 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -303,38 +303,38 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param staticLists The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+         * @param statics Static
          * 
          * @return builder
          * 
          */
-        public Builder staticLists(@Nullable Output<List<String>> staticLists) {
-            $.staticLists = staticLists;
+        public Builder statics(@Nullable Output<List<String>> statics) {
+            $.statics = statics;
             return this;
         }
 
         /**
-         * @param staticLists The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+         * @param statics Static
          * 
          * @return builder
          * 
          */
-        public Builder staticLists(List<String> staticLists) {
-            return staticLists(Output.of(staticLists));
+        public Builder statics(List<String> statics) {
+            return statics(Output.of(statics));
         }
 
         /**
-         * @param staticLists The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+         * @param statics Static
          * 
          * @return builder
          * 
          */
-        public Builder staticLists(String... staticLists) {
-            return staticLists(List.of(staticLists));
+        public Builder statics(String... statics) {
+            return statics(List.of(statics));
         }
 
         /**
-         * @param tags Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+         * @param tags Tags for address group object
          * 
          * @return builder
          * 
@@ -345,7 +345,7 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+         * @param tags Tags for address group object
          * 
          * @return builder
          * 
@@ -355,7 +355,7 @@ public final class AddressGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+         * @param tags Tags for address group object
          * 
          * @return builder
          * 

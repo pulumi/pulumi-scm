@@ -9,67 +9,73 @@ import com.pulumi.scm.outputs.GetRemoteNetworkEcmpTunnel;
 import com.pulumi.scm.outputs.GetRemoteNetworkProtocol;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetRemoteNetworkResult {
     /**
-     * @return The EcmpLoadBalancing param. String must be one of these: `&#34;enable&#34;`, `&#34;disable&#34;`. Default: `&#34;disable&#34;`.
+     * @return Ecmp load balancing
      * 
      */
     private String ecmpLoadBalancing;
     /**
-     * @return ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * @return ecmp*tunnels is required when ecmp*load*balancing is enable
      * 
      */
     private List<GetRemoteNetworkEcmpTunnel> ecmpTunnels;
     /**
-     * @return The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    private Map<String,String> encryptedValues;
+    /**
+     * @return The folder that contains the remote network
      * 
      */
     private String folder;
     /**
-     * @return The Id param.
+     * @return The UUID of the remote network
      * 
      */
     private String id;
     /**
-     * @return ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * @return ipsec*tunnel is required when ecmp*load_balancing is disable
      * 
      */
     private String ipsecTunnel;
     /**
-     * @return New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `&#34;FWAAS-AGGREGATE&#34;`.
+     * @return New customer will only be on aggregate bandwidth licensing
      * 
      */
     private String licenseType;
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the remote network
      * 
      */
     private String name;
     /**
-     * @return setup the protocol when ecmp*load*balancing is disable.
+     * @return setup the protocol when ecmp*load*balancing is disable
      * 
      */
     private GetRemoteNetworkProtocol protocol;
     /**
-     * @return The Region param. String length must exceed 1 characters.
+     * @return Region
      * 
      */
     private String region;
     /**
-     * @return specify secondary ipsecTunnel if needed.
+     * @return specify secondary ipsecTunnel if needed
      * 
      */
     private String secondaryIpsecTunnel;
     /**
-     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE
      * 
      */
     private String spnName;
     /**
-     * @return The Subnets param.
+     * @return Subnets
      * 
      */
     private List<String> subnets;
@@ -77,84 +83,91 @@ public final class GetRemoteNetworkResult {
 
     private GetRemoteNetworkResult() {}
     /**
-     * @return The EcmpLoadBalancing param. String must be one of these: `&#34;enable&#34;`, `&#34;disable&#34;`. Default: `&#34;disable&#34;`.
+     * @return Ecmp load balancing
      * 
      */
     public String ecmpLoadBalancing() {
         return this.ecmpLoadBalancing;
     }
     /**
-     * @return ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * @return ecmp*tunnels is required when ecmp*load*balancing is enable
      * 
      */
     public List<GetRemoteNetworkEcmpTunnel> ecmpTunnels() {
         return this.ecmpTunnels;
     }
     /**
-     * @return The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
+     * @return The folder that contains the remote network
      * 
      */
     public String folder() {
         return this.folder;
     }
     /**
-     * @return The Id param.
+     * @return The UUID of the remote network
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * @return ipsec*tunnel is required when ecmp*load_balancing is disable
      * 
      */
     public String ipsecTunnel() {
         return this.ipsecTunnel;
     }
     /**
-     * @return New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `&#34;FWAAS-AGGREGATE&#34;`.
+     * @return New customer will only be on aggregate bandwidth licensing
      * 
      */
     public String licenseType() {
         return this.licenseType;
     }
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the remote network
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return setup the protocol when ecmp*load*balancing is disable.
+     * @return setup the protocol when ecmp*load*balancing is disable
      * 
      */
     public GetRemoteNetworkProtocol protocol() {
         return this.protocol;
     }
     /**
-     * @return The Region param. String length must exceed 1 characters.
+     * @return Region
      * 
      */
     public String region() {
         return this.region;
     }
     /**
-     * @return specify secondary ipsecTunnel if needed.
+     * @return specify secondary ipsecTunnel if needed
      * 
      */
     public String secondaryIpsecTunnel() {
         return this.secondaryIpsecTunnel;
     }
     /**
-     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE
      * 
      */
     public String spnName() {
         return this.spnName;
     }
     /**
-     * @return The Subnets param.
+     * @return Subnets
      * 
      */
     public List<String> subnets() {
@@ -175,6 +188,7 @@ public final class GetRemoteNetworkResult {
     public static final class Builder {
         private String ecmpLoadBalancing;
         private List<GetRemoteNetworkEcmpTunnel> ecmpTunnels;
+        private Map<String,String> encryptedValues;
         private String folder;
         private String id;
         private String ipsecTunnel;
@@ -191,6 +205,7 @@ public final class GetRemoteNetworkResult {
     	      Objects.requireNonNull(defaults);
     	      this.ecmpLoadBalancing = defaults.ecmpLoadBalancing;
     	      this.ecmpTunnels = defaults.ecmpTunnels;
+    	      this.encryptedValues = defaults.encryptedValues;
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.ipsecTunnel = defaults.ipsecTunnel;
@@ -222,6 +237,14 @@ public final class GetRemoteNetworkResult {
         }
         public Builder ecmpTunnels(GetRemoteNetworkEcmpTunnel... ecmpTunnels) {
             return ecmpTunnels(List.of(ecmpTunnels));
+        }
+        @CustomType.Setter
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetRemoteNetworkResult", "encryptedValues");
+            }
+            this.encryptedValues = encryptedValues;
+            return this;
         }
         @CustomType.Setter
         public Builder folder(String folder) {
@@ -318,6 +341,7 @@ public final class GetRemoteNetworkResult {
             final var _resultValue = new GetRemoteNetworkResult();
             _resultValue.ecmpLoadBalancing = ecmpLoadBalancing;
             _resultValue.ecmpTunnels = ecmpTunnels;
+            _resultValue.encryptedValues = encryptedValues;
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.ipsecTunnel = ipsecTunnel;

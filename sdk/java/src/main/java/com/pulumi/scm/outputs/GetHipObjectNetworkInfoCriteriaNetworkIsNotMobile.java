@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectNetworkInfoCriteriaNetworkIsNotMobile {
     /**
-     * @return The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Carrier
      * 
      */
     private String carrier;
 
     private GetHipObjectNetworkInfoCriteriaNetworkIsNotMobile() {}
     /**
-     * @return The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Carrier
      * 
      */
     public String carrier() {

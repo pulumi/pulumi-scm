@@ -8,6 +8,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeArgs {
@@ -15,24 +17,40 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
     public static final GetApplicationGroupArgs Empty = new GetApplicationGroupArgs();
 
     /**
-     * The Id param.
+     * UUID of the resource
      * 
      */
     @Import(name="id", required=true)
     private Output<String> id;
 
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public Output<String> id() {
         return this.id;
     }
 
+    /**
+     * Alphanumeric string [ 0-9a-zA-Z._-]
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetApplicationGroupArgs() {}
 
     private GetApplicationGroupArgs(GetApplicationGroupArgs $) {
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -54,7 +72,7 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param id The Id param.
+         * @param id UUID of the resource
          * 
          * @return builder
          * 
@@ -65,13 +83,34 @@ public final class GetApplicationGroupArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param id The Id param.
+         * @param id UUID of the resource
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             return id(Output.of(id));
+        }
+
+        /**
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetApplicationGroupArgs build() {

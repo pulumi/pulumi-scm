@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IpsecTunnelTunnelMonitor {
     /**
-     * @return Destination IP to send ICMP probe.
+     * @return Destination IP to send ICMP probe
      * 
      */
     private String destinationIp;
     /**
-     * @return Enable tunnel monitoring on this tunnel. Default: `true`.
+     * @return Enable tunnel monitoring on this tunnel
      * 
      */
     private @Nullable Boolean enable;
     /**
-     * @return Which proxy-id (or proxy-id-v6) the monitoring traffic will use.
+     * @return Which proxy-id (or proxy-id-v6) the monitoring traffic will use
      * 
      */
     private @Nullable String proxyId;
 
     private IpsecTunnelTunnelMonitor() {}
     /**
-     * @return Destination IP to send ICMP probe.
+     * @return Destination IP to send ICMP probe
      * 
      */
     public String destinationIp() {
         return this.destinationIp;
     }
     /**
-     * @return Enable tunnel monitoring on this tunnel. Default: `true`.
+     * @return Enable tunnel monitoring on this tunnel
      * 
      */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * @return Which proxy-id (or proxy-id-v6) the monitoring traffic will use.
+     * @return Which proxy-id (or proxy-id-v6) the monitoring traffic will use
      * 
      */
     public Optional<String> proxyId() {

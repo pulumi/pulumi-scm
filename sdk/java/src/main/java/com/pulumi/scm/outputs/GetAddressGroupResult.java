@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetAddressGroupDynamicValue;
+import com.pulumi.scm.outputs.GetAddressGroupDynamic;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,32 +13,47 @@ import java.util.Objects;
 @CustomType
 public final class GetAddressGroupResult {
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The DynamicValue param.
+     * @return The device in which the resource is defined
      * 
      */
-    private GetAddressGroupDynamicValue dynamicValue;
+    private String device;
     /**
-     * @return The Id param.
+     * @return Dynamic
+     * 
+     */
+    private GetAddressGroupDynamic dynamic;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the address group
      * 
      */
     private String id;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the address group
      * 
      */
     private String name;
     /**
-     * @return The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return The snippet in which the resource is defined
      * 
      */
-    private List<String> staticLists;
+    private String snippet;
     /**
-     * @return Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return Static
+     * 
+     */
+    private List<String> statics;
+    /**
+     * @return Tags for address group object
      * 
      */
     private List<String> tags;
@@ -46,42 +61,63 @@ public final class GetAddressGroupResult {
 
     private GetAddressGroupResult() {}
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The DynamicValue param.
+     * @return The device in which the resource is defined
      * 
      */
-    public GetAddressGroupDynamicValue dynamicValue() {
-        return this.dynamicValue;
+    public String device() {
+        return this.device;
     }
     /**
-     * @return The Id param.
+     * @return Dynamic
+     * 
+     */
+    public GetAddressGroupDynamic dynamic() {
+        return this.dynamic;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the address group
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the address group
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return The snippet in which the resource is defined
      * 
      */
-    public List<String> staticLists() {
-        return this.staticLists;
+    public String snippet() {
+        return this.snippet;
     }
     /**
-     * @return Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return Static
+     * 
+     */
+    public List<String> statics() {
+        return this.statics;
+    }
+    /**
+     * @return Tags for address group object
      * 
      */
     public List<String> tags() {
@@ -101,20 +137,26 @@ public final class GetAddressGroupResult {
     @CustomType.Builder
     public static final class Builder {
         private String description;
-        private GetAddressGroupDynamicValue dynamicValue;
+        private String device;
+        private GetAddressGroupDynamic dynamic;
+        private String folder;
         private String id;
         private String name;
-        private List<String> staticLists;
+        private String snippet;
+        private List<String> statics;
         private List<String> tags;
         private String tfid;
         public Builder() {}
         public Builder(GetAddressGroupResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
-    	      this.dynamicValue = defaults.dynamicValue;
+    	      this.device = defaults.device;
+    	      this.dynamic = defaults.dynamic;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
-    	      this.staticLists = defaults.staticLists;
+    	      this.snippet = defaults.snippet;
+    	      this.statics = defaults.statics;
     	      this.tags = defaults.tags;
     	      this.tfid = defaults.tfid;
         }
@@ -128,11 +170,27 @@ public final class GetAddressGroupResult {
             return this;
         }
         @CustomType.Setter
-        public Builder dynamicValue(GetAddressGroupDynamicValue dynamicValue) {
-            if (dynamicValue == null) {
-              throw new MissingRequiredPropertyException("GetAddressGroupResult", "dynamicValue");
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetAddressGroupResult", "device");
             }
-            this.dynamicValue = dynamicValue;
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder dynamic(GetAddressGroupDynamic dynamic) {
+            if (dynamic == null) {
+              throw new MissingRequiredPropertyException("GetAddressGroupResult", "dynamic");
+            }
+            this.dynamic = dynamic;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetAddressGroupResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -152,15 +210,23 @@ public final class GetAddressGroupResult {
             return this;
         }
         @CustomType.Setter
-        public Builder staticLists(List<String> staticLists) {
-            if (staticLists == null) {
-              throw new MissingRequiredPropertyException("GetAddressGroupResult", "staticLists");
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetAddressGroupResult", "snippet");
             }
-            this.staticLists = staticLists;
+            this.snippet = snippet;
             return this;
         }
-        public Builder staticLists(String... staticLists) {
-            return staticLists(List.of(staticLists));
+        @CustomType.Setter
+        public Builder statics(List<String> statics) {
+            if (statics == null) {
+              throw new MissingRequiredPropertyException("GetAddressGroupResult", "statics");
+            }
+            this.statics = statics;
+            return this;
+        }
+        public Builder statics(String... statics) {
+            return statics(List.of(statics));
         }
         @CustomType.Setter
         public Builder tags(List<String> tags) {
@@ -184,10 +250,13 @@ public final class GetAddressGroupResult {
         public GetAddressGroupResult build() {
             final var _resultValue = new GetAddressGroupResult();
             _resultValue.description = description;
-            _resultValue.dynamicValue = dynamicValue;
+            _resultValue.device = device;
+            _resultValue.dynamic = dynamic;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
-            _resultValue.staticLists = staticLists;
+            _resultValue.snippet = snippet;
+            _resultValue.statics = statics;
             _resultValue.tags = tags;
             _resultValue.tfid = tfid;
             return _resultValue;

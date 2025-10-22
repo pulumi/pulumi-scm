@@ -4,6 +4,8 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -12,78 +14,78 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MfaServerMfaVendorTypePingIdentityV1 {
     /**
-     * @return The PingApiHost param.
+     * @return Ping Identity API hostname
      * 
      */
-    private @Nullable String pingApiHost;
+    private String pingApiHost;
     /**
-     * @return The PingBaseuri param.
+     * @return Ping Identity API base URI
      * 
      */
-    private @Nullable String pingBaseuri;
+    private String pingBaseuri;
     /**
-     * @return The PingOrg param.
-     * 
-     */
-    private @Nullable String pingOrg;
-    /**
-     * @return The PingOrgAlias param.
+     * @return Ping Identity client organization ID
      * 
      */
     private @Nullable String pingOrgAlias;
     /**
-     * @return The PingTimeout param.
+     * @return Ping Identity timeout (seconds)
      * 
      */
-    private @Nullable String pingTimeout;
+    private Integer pingTimeout;
     /**
-     * @return The PingToken param.
+     * @return Ping Identity API token
      * 
      */
-    private @Nullable String pingToken;
+    private String pingToken;
+    /**
+     * @return Ping Identity Base64 key
+     * 
+     */
+    private String pingUseBase64Key;
 
     private MfaServerMfaVendorTypePingIdentityV1() {}
     /**
-     * @return The PingApiHost param.
+     * @return Ping Identity API hostname
      * 
      */
-    public Optional<String> pingApiHost() {
-        return Optional.ofNullable(this.pingApiHost);
+    public String pingApiHost() {
+        return this.pingApiHost;
     }
     /**
-     * @return The PingBaseuri param.
+     * @return Ping Identity API base URI
      * 
      */
-    public Optional<String> pingBaseuri() {
-        return Optional.ofNullable(this.pingBaseuri);
+    public String pingBaseuri() {
+        return this.pingBaseuri;
     }
     /**
-     * @return The PingOrg param.
-     * 
-     */
-    public Optional<String> pingOrg() {
-        return Optional.ofNullable(this.pingOrg);
-    }
-    /**
-     * @return The PingOrgAlias param.
+     * @return Ping Identity client organization ID
      * 
      */
     public Optional<String> pingOrgAlias() {
         return Optional.ofNullable(this.pingOrgAlias);
     }
     /**
-     * @return The PingTimeout param.
+     * @return Ping Identity timeout (seconds)
      * 
      */
-    public Optional<String> pingTimeout() {
-        return Optional.ofNullable(this.pingTimeout);
+    public Integer pingTimeout() {
+        return this.pingTimeout;
     }
     /**
-     * @return The PingToken param.
+     * @return Ping Identity API token
      * 
      */
-    public Optional<String> pingToken() {
-        return Optional.ofNullable(this.pingToken);
+    public String pingToken() {
+        return this.pingToken;
+    }
+    /**
+     * @return Ping Identity Base64 key
+     * 
+     */
+    public String pingUseBase64Key() {
+        return this.pingUseBase64Key;
     }
 
     public static Builder builder() {
@@ -95,39 +97,37 @@ public final class MfaServerMfaVendorTypePingIdentityV1 {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String pingApiHost;
-        private @Nullable String pingBaseuri;
-        private @Nullable String pingOrg;
+        private String pingApiHost;
+        private String pingBaseuri;
         private @Nullable String pingOrgAlias;
-        private @Nullable String pingTimeout;
-        private @Nullable String pingToken;
+        private Integer pingTimeout;
+        private String pingToken;
+        private String pingUseBase64Key;
         public Builder() {}
         public Builder(MfaServerMfaVendorTypePingIdentityV1 defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.pingApiHost = defaults.pingApiHost;
     	      this.pingBaseuri = defaults.pingBaseuri;
-    	      this.pingOrg = defaults.pingOrg;
     	      this.pingOrgAlias = defaults.pingOrgAlias;
     	      this.pingTimeout = defaults.pingTimeout;
     	      this.pingToken = defaults.pingToken;
+    	      this.pingUseBase64Key = defaults.pingUseBase64Key;
         }
 
         @CustomType.Setter
-        public Builder pingApiHost(@Nullable String pingApiHost) {
-
+        public Builder pingApiHost(String pingApiHost) {
+            if (pingApiHost == null) {
+              throw new MissingRequiredPropertyException("MfaServerMfaVendorTypePingIdentityV1", "pingApiHost");
+            }
             this.pingApiHost = pingApiHost;
             return this;
         }
         @CustomType.Setter
-        public Builder pingBaseuri(@Nullable String pingBaseuri) {
-
+        public Builder pingBaseuri(String pingBaseuri) {
+            if (pingBaseuri == null) {
+              throw new MissingRequiredPropertyException("MfaServerMfaVendorTypePingIdentityV1", "pingBaseuri");
+            }
             this.pingBaseuri = pingBaseuri;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder pingOrg(@Nullable String pingOrg) {
-
-            this.pingOrg = pingOrg;
             return this;
         }
         @CustomType.Setter
@@ -137,25 +137,37 @@ public final class MfaServerMfaVendorTypePingIdentityV1 {
             return this;
         }
         @CustomType.Setter
-        public Builder pingTimeout(@Nullable String pingTimeout) {
-
+        public Builder pingTimeout(Integer pingTimeout) {
+            if (pingTimeout == null) {
+              throw new MissingRequiredPropertyException("MfaServerMfaVendorTypePingIdentityV1", "pingTimeout");
+            }
             this.pingTimeout = pingTimeout;
             return this;
         }
         @CustomType.Setter
-        public Builder pingToken(@Nullable String pingToken) {
-
+        public Builder pingToken(String pingToken) {
+            if (pingToken == null) {
+              throw new MissingRequiredPropertyException("MfaServerMfaVendorTypePingIdentityV1", "pingToken");
+            }
             this.pingToken = pingToken;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder pingUseBase64Key(String pingUseBase64Key) {
+            if (pingUseBase64Key == null) {
+              throw new MissingRequiredPropertyException("MfaServerMfaVendorTypePingIdentityV1", "pingUseBase64Key");
+            }
+            this.pingUseBase64Key = pingUseBase64Key;
             return this;
         }
         public MfaServerMfaVendorTypePingIdentityV1 build() {
             final var _resultValue = new MfaServerMfaVendorTypePingIdentityV1();
             _resultValue.pingApiHost = pingApiHost;
             _resultValue.pingBaseuri = pingBaseuri;
-            _resultValue.pingOrg = pingOrg;
             _resultValue.pingOrgAlias = pingOrgAlias;
             _resultValue.pingTimeout = pingTimeout;
             _resultValue.pingToken = pingToken;
+            _resultValue.pingUseBase64Key = pingUseBase64Key;
             return _resultValue;
         }
     }

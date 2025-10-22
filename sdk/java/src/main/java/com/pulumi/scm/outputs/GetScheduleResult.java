@@ -12,43 +12,79 @@ import java.util.Objects;
 @CustomType
 public final class GetScheduleResult {
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the schedule
      * 
      */
     private String id;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the schedule
      * 
      */
     private String name;
     /**
-     * @return The ScheduleType param.
+     * @return Schedule type
      * 
      */
     private GetScheduleScheduleType scheduleType;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
 
     private GetScheduleResult() {}
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the schedule
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the schedule
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The ScheduleType param.
+     * @return Schedule type
      * 
      */
     public GetScheduleScheduleType scheduleType() {
         return this.scheduleType;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
     }
     public String tfid() {
         return this.tfid;
@@ -63,19 +99,41 @@ public final class GetScheduleResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String device;
+        private String folder;
         private String id;
         private String name;
         private GetScheduleScheduleType scheduleType;
+        private String snippet;
         private String tfid;
         public Builder() {}
         public Builder(GetScheduleResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.scheduleType = defaults.scheduleType;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
         }
 
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetScheduleResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetScheduleResult", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
         @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
@@ -101,6 +159,14 @@ public final class GetScheduleResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetScheduleResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetScheduleResult", "tfid");
@@ -110,9 +176,12 @@ public final class GetScheduleResult {
         }
         public GetScheduleResult build() {
             final var _resultValue = new GetScheduleResult();
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.scheduleType = scheduleType;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             return _resultValue;
         }

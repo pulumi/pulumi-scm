@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// ApplicationGroup data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,19 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupApplicationGroup(ctx, &scm.LookupApplicationGroupArgs{
-//				Id: "1234-56-789",
+//			// Look up the application group by its ID from the terraform.tfstate file.
+//			scmApplicationGroupDs, err := scm.LookupApplicationGroup(ctx, &scm.LookupApplicationGroupArgs{
+//				Id: "91616221-ddeb-4b49-866d-48d64dedc056",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("applicationGroupOutputs", pulumi.Map{
+//				"groupId": scmApplicationGroupDs.Id,
+//				"folder":  scmApplicationGroupDs.Folder,
+//				"name":    scmApplicationGroupDs.Name,
+//				"members": scmApplicationGroupDs.Members,
+//			})
 //			return nil
 //		})
 //	}
@@ -50,19 +57,27 @@ func LookupApplicationGroup(ctx *pulumi.Context, args *LookupApplicationGroupArg
 
 // A collection of arguments for invoking getApplicationGroup.
 type LookupApplicationGroupArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
+	// Alphanumeric string [ 0-9a-zA-Z._-]
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getApplicationGroup.
 type LookupApplicationGroupResult struct {
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members []string `pulumi:"members"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name string `pulumi:"name"`
-	Tfid string `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupApplicationGroupOutput(ctx *pulumi.Context, args LookupApplicationGroupOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationGroupResultOutput {
@@ -76,8 +91,10 @@ func LookupApplicationGroupOutput(ctx *pulumi.Context, args LookupApplicationGro
 
 // A collection of arguments for invoking getApplicationGroup.
 type LookupApplicationGroupOutputArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
+	// Alphanumeric string [ 0-9a-zA-Z._-]
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupApplicationGroupOutputArgs) ElementType() reflect.Type {
@@ -99,19 +116,34 @@ func (o LookupApplicationGroupResultOutput) ToLookupApplicationGroupResultOutput
 	return o
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupApplicationGroupResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupApplicationGroupResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
 func (o LookupApplicationGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+// Members
 func (o LookupApplicationGroupResultOutput) Members() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) []string { return v.Members }).(pulumi.StringArrayOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// Alphanumeric string [ 0-9a-zA-Z._-]
 func (o LookupApplicationGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupApplicationGroupResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupApplicationGroupResultOutput) Tfid() pulumi.StringOutput {

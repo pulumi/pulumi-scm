@@ -17,14 +17,14 @@ public final class QosPolicyRuleDscpTosCodepointArgs extends com.pulumi.resource
     public static final QosPolicyRuleDscpTosCodepointArgs Empty = new QosPolicyRuleDscpTosCodepointArgs();
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -32,14 +32,14 @@ public final class QosPolicyRuleDscpTosCodepointArgs extends com.pulumi.resource
     }
 
     /**
-     * The Type param.
+     * Type
      * 
      */
     @Import(name="type")
     private @Nullable Output<QosPolicyRuleDscpTosCodepointTypeArgs> type;
 
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     public Optional<Output<QosPolicyRuleDscpTosCodepointTypeArgs>> type() {
@@ -72,7 +72,7 @@ public final class QosPolicyRuleDscpTosCodepointArgs extends com.pulumi.resource
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class QosPolicyRuleDscpTosCodepointArgs extends com.pulumi.resource
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class QosPolicyRuleDscpTosCodepointArgs extends com.pulumi.resource
         }
 
         /**
-         * @param type The Type param.
+         * @param type Type
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class QosPolicyRuleDscpTosCodepointArgs extends com.pulumi.resource
         }
 
         /**
-         * @param type The Type param.
+         * @param type Type
          * 
          * @return builder
          * 

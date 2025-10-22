@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class WildfireAntiVirusProfileRuleGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Analysis param. String must be one of these: `"public-cloud"`, `"private-cloud"`.
+        /// Analysis
         /// </summary>
         [Input("analysis")]
         public Input<string>? Analysis { get; set; }
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _applications;
 
         /// <summary>
-        /// The Applications param.
+        /// Application
         /// </summary>
         public InputList<string> Applications
         {
@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Direction param. String must be one of these: `"download"`, `"upload"`, `"both"`.
+        /// Direction
         /// </summary>
         [Input("direction")]
         public Input<string>? Direction { get; set; }
@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _fileTypes;
 
         /// <summary>
-        /// The FileTypes param.
+        /// File type
         /// </summary>
         public InputList<string> FileTypes
         {
@@ -49,7 +49,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }

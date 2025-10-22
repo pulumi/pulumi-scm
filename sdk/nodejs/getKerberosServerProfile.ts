@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getKerberosServerProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * KerberosServerProfile data source
  */
 export function getKerberosServerProfile(args: GetKerberosServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetKerberosServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getKerberosServerProfile:getKerberosServerProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getKerberosServerProfile(args: GetKerberosServerProfileArgs, opt
  */
 export interface GetKerberosServerProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the Kerberos server profile
      */
     id: string;
+    /**
+     * The name of the Kerberos server profile
+     */
+    name?: string;
 }
 
 /**
@@ -42,33 +36,39 @@ export interface GetKerberosServerProfileArgs {
  */
 export interface GetKerberosServerProfileResult {
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the Kerberos server profile
      */
     readonly id: string;
     /**
-     * The Servers param.
+     * The name of the Kerberos server profile
+     */
+    readonly name: string;
+    /**
+     * The Kerberos server configuration
      */
     readonly servers: outputs.GetKerberosServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getKerberosServerProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * KerberosServerProfile data source
  */
 export function getKerberosServerProfileOutput(args: GetKerberosServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetKerberosServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getKerberosServerProfile:getKerberosServerProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -77,7 +77,11 @@ export function getKerberosServerProfileOutput(args: GetKerberosServerProfileOut
  */
 export interface GetKerberosServerProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the Kerberos server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the Kerberos server profile
+     */
+    name?: pulumi.Input<string>;
 }

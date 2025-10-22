@@ -14,37 +14,37 @@ namespace Pulumi.Scm.Outputs
     public sealed class MfaServerMfaVendorTypeDuoSecurityV2
     {
         /// <summary>
-        /// The DuoApiHost param.
+        /// Duo Security API hostname
         /// </summary>
-        public readonly string? DuoApiHost;
+        public readonly string DuoApiHost;
         /// <summary>
-        /// The DuoBaseuri param.
+        /// Duo Security API base URI
         /// </summary>
-        public readonly string? DuoBaseuri;
+        public readonly string DuoBaseuri;
         /// <summary>
-        /// The DuoIntegrationKey param.
+        /// Duo Security integration key
         /// </summary>
-        public readonly string? DuoIntegrationKey;
+        public readonly string DuoIntegrationKey;
         /// <summary>
-        /// The DuoSecretKey param.
+        /// Duo Security secret key
         /// </summary>
-        public readonly string? DuoSecretKey;
+        public readonly string DuoSecretKey;
         /// <summary>
-        /// The DuoTimeout param.
+        /// Duo Security timeout (seconds)
         /// </summary>
-        public readonly string? DuoTimeout;
+        public readonly int DuoTimeout;
 
         [OutputConstructor]
         private MfaServerMfaVendorTypeDuoSecurityV2(
-            string? duoApiHost,
+            string duoApiHost,
 
-            string? duoBaseuri,
+            string duoBaseuri,
 
-            string? duoIntegrationKey,
+            string duoIntegrationKey,
 
-            string? duoSecretKey,
+            string duoSecretKey,
 
-            string? duoTimeout)
+            int duoTimeout)
         {
             DuoApiHost = duoApiHost;
             DuoBaseuri = duoBaseuri;

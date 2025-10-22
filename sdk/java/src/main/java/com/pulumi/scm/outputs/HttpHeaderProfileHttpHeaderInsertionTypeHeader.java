@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HttpHeaderProfileHttpHeaderInsertionTypeHeader {
     /**
-     * @return The Header param.
+     * @return The HTTP header string
      * 
      */
     private String header;
     /**
-     * @return The Log param. Default: `false`.
+     * @return Log the use of this HTTP header insertion?
      * 
      */
     private @Nullable Boolean log;
     /**
-     * @return The Name param.
+     * @return An auto-generated name (*This should be removed*)
      * 
      */
     private String name;
     /**
-     * @return The Value param.
+     * @return The value associated with the HTTP header
      * 
      */
     private String value;
 
     private HttpHeaderProfileHttpHeaderInsertionTypeHeader() {}
     /**
-     * @return The Header param.
+     * @return The HTTP header string
      * 
      */
     public String header() {
         return this.header;
     }
     /**
-     * @return The Log param. Default: `false`.
+     * @return Log the use of this HTTP header insertion?
      * 
      */
     public Optional<Boolean> log() {
         return Optional.ofNullable(this.log);
     }
     /**
-     * @return The Name param.
+     * @return An auto-generated name (*This should be removed*)
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Value param.
+     * @return The value associated with the HTTP header
      * 
      */
     public String value() {

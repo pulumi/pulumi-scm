@@ -19,14 +19,14 @@ public final class AntiSpywareSignatureSignatureCombinationArgs extends com.pulu
     public static final AntiSpywareSignatureSignatureCombinationArgs Empty = new AntiSpywareSignatureSignatureCombinationArgs();
 
     /**
-     * The AndConditions param.
+     * And condition
      * 
      */
     @Import(name="andConditions")
     private @Nullable Output<List<AntiSpywareSignatureSignatureCombinationAndConditionArgs>> andConditions;
 
     /**
-     * @return The AndConditions param.
+     * @return And condition
      * 
      */
     public Optional<Output<List<AntiSpywareSignatureSignatureCombinationAndConditionArgs>>> andConditions() {
@@ -34,14 +34,14 @@ public final class AntiSpywareSignatureSignatureCombinationArgs extends com.pulu
     }
 
     /**
-     * The OrderFree param. Default: `false`.
+     * Order free
      * 
      */
     @Import(name="orderFree")
     private @Nullable Output<Boolean> orderFree;
 
     /**
-     * @return The OrderFree param. Default: `false`.
+     * @return Order free
      * 
      */
     public Optional<Output<Boolean>> orderFree() {
@@ -49,14 +49,14 @@ public final class AntiSpywareSignatureSignatureCombinationArgs extends com.pulu
     }
 
     /**
-     * The TimeAttribute param.
+     * anti spyware time attribute
      * 
      */
     @Import(name="timeAttribute")
     private @Nullable Output<AntiSpywareSignatureSignatureCombinationTimeAttributeArgs> timeAttribute;
 
     /**
-     * @return The TimeAttribute param.
+     * @return anti spyware time attribute
      * 
      */
     public Optional<Output<AntiSpywareSignatureSignatureCombinationTimeAttributeArgs>> timeAttribute() {
@@ -90,7 +90,7 @@ public final class AntiSpywareSignatureSignatureCombinationArgs extends com.pulu
         }
 
         /**
-         * @param andConditions The AndConditions param.
+         * @param andConditions And condition
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class AntiSpywareSignatureSignatureCombinationArgs extends com.pulu
         }
 
         /**
-         * @param andConditions The AndConditions param.
+         * @param andConditions And condition
          * 
          * @return builder
          * 
@@ -111,7 +111,7 @@ public final class AntiSpywareSignatureSignatureCombinationArgs extends com.pulu
         }
 
         /**
-         * @param andConditions The AndConditions param.
+         * @param andConditions And condition
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class AntiSpywareSignatureSignatureCombinationArgs extends com.pulu
         }
 
         /**
-         * @param orderFree The OrderFree param. Default: `false`.
+         * @param orderFree Order free
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class AntiSpywareSignatureSignatureCombinationArgs extends com.pulu
         }
 
         /**
-         * @param orderFree The OrderFree param. Default: `false`.
+         * @param orderFree Order free
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class AntiSpywareSignatureSignatureCombinationArgs extends com.pulu
         }
 
         /**
-         * @param timeAttribute The TimeAttribute param.
+         * @param timeAttribute anti spyware time attribute
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class AntiSpywareSignatureSignatureCombinationArgs extends com.pulu
         }
 
         /**
-         * @param timeAttribute The TimeAttribute param.
+         * @param timeAttribute anti spyware time attribute
          * 
          * @return builder
          * 

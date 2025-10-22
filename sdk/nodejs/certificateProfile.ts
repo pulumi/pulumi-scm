@@ -7,16 +7,9 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * CertificateProfile resource
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.CertificateProfile("example", {});
- * ```
  */
 export class CertificateProfile extends pulumi.CustomResource {
     /**
@@ -47,68 +40,68 @@ export class CertificateProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The BlockExpiredCert param.
+     * Block sessions with expired certificates?
      */
     declare public readonly blockExpiredCert: pulumi.Output<boolean | undefined>;
     /**
-     * The BlockTimeoutCert param.
+     * Block session if certificate status cannot be retrieved within timeout?
      */
     declare public readonly blockTimeoutCert: pulumi.Output<boolean | undefined>;
     /**
-     * The BlockUnauthenticatedCert param.
+     * Block session if the certificate was not issued to the authenticating device?
      */
     declare public readonly blockUnauthenticatedCert: pulumi.Output<boolean | undefined>;
     /**
-     * The BlockUnknownCert param.
+     * Block session if certificate status is unknown?
      */
     declare public readonly blockUnknownCert: pulumi.Output<boolean | undefined>;
     /**
-     * The CaCertificates param.
+     * An ordered list of CA certificates
      */
     declare public readonly caCertificates: pulumi.Output<outputs.CertificateProfileCaCertificate[]>;
     /**
-     * The CertStatusTimeout param.
+     * Certificate status timeout
      */
     declare public readonly certStatusTimeout: pulumi.Output<string | undefined>;
     /**
-     * The CrlReceiveTimeout param.
+     * CRL receive timeout (seconds)
      */
     declare public readonly crlReceiveTimeout: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Domain param.
+     * User domain
      */
     declare public readonly domain: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the certificate profile
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The OcspReceiveTimeout param.
+     * OCSP receive timeout (seconds)
      */
     declare public readonly ocspReceiveTimeout: pulumi.Output<string | undefined>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The UseCrl param.
+     * Use CRL?
      */
     declare public readonly useCrl: pulumi.Output<boolean | undefined>;
     /**
-     * The UseOcsp param.
+     * Use OCSP?
      */
     declare public readonly useOcsp: pulumi.Output<boolean | undefined>;
     /**
-     * The UsernameField param.
+     * Certificate username field
      */
     declare public readonly usernameField: pulumi.Output<outputs.CertificateProfileUsernameField | undefined>;
 
@@ -175,68 +168,68 @@ export class CertificateProfile extends pulumi.CustomResource {
  */
 export interface CertificateProfileState {
     /**
-     * The BlockExpiredCert param.
+     * Block sessions with expired certificates?
      */
     blockExpiredCert?: pulumi.Input<boolean>;
     /**
-     * The BlockTimeoutCert param.
+     * Block session if certificate status cannot be retrieved within timeout?
      */
     blockTimeoutCert?: pulumi.Input<boolean>;
     /**
-     * The BlockUnauthenticatedCert param.
+     * Block session if the certificate was not issued to the authenticating device?
      */
     blockUnauthenticatedCert?: pulumi.Input<boolean>;
     /**
-     * The BlockUnknownCert param.
+     * Block session if certificate status is unknown?
      */
     blockUnknownCert?: pulumi.Input<boolean>;
     /**
-     * The CaCertificates param.
+     * An ordered list of CA certificates
      */
     caCertificates?: pulumi.Input<pulumi.Input<inputs.CertificateProfileCaCertificate>[]>;
     /**
-     * The CertStatusTimeout param.
+     * Certificate status timeout
      */
     certStatusTimeout?: pulumi.Input<string>;
     /**
-     * The CrlReceiveTimeout param.
+     * CRL receive timeout (seconds)
      */
     crlReceiveTimeout?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Domain param.
+     * User domain
      */
     domain?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the certificate profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The OcspReceiveTimeout param.
+     * OCSP receive timeout (seconds)
      */
     ocspReceiveTimeout?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The UseCrl param.
+     * Use CRL?
      */
     useCrl?: pulumi.Input<boolean>;
     /**
-     * The UseOcsp param.
+     * Use OCSP?
      */
     useOcsp?: pulumi.Input<boolean>;
     /**
-     * The UsernameField param.
+     * Certificate username field
      */
     usernameField?: pulumi.Input<inputs.CertificateProfileUsernameField>;
 }
@@ -246,67 +239,67 @@ export interface CertificateProfileState {
  */
 export interface CertificateProfileArgs {
     /**
-     * The BlockExpiredCert param.
+     * Block sessions with expired certificates?
      */
     blockExpiredCert?: pulumi.Input<boolean>;
     /**
-     * The BlockTimeoutCert param.
+     * Block session if certificate status cannot be retrieved within timeout?
      */
     blockTimeoutCert?: pulumi.Input<boolean>;
     /**
-     * The BlockUnauthenticatedCert param.
+     * Block session if the certificate was not issued to the authenticating device?
      */
     blockUnauthenticatedCert?: pulumi.Input<boolean>;
     /**
-     * The BlockUnknownCert param.
+     * Block session if certificate status is unknown?
      */
     blockUnknownCert?: pulumi.Input<boolean>;
     /**
-     * The CaCertificates param.
+     * An ordered list of CA certificates
      */
     caCertificates: pulumi.Input<pulumi.Input<inputs.CertificateProfileCaCertificate>[]>;
     /**
-     * The CertStatusTimeout param.
+     * Certificate status timeout
      */
     certStatusTimeout?: pulumi.Input<string>;
     /**
-     * The CrlReceiveTimeout param.
+     * CRL receive timeout (seconds)
      */
     crlReceiveTimeout?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Domain param.
+     * User domain
      */
     domain?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the certificate profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The OcspReceiveTimeout param.
+     * OCSP receive timeout (seconds)
      */
     ocspReceiveTimeout?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The UseCrl param.
+     * Use CRL?
      */
     useCrl?: pulumi.Input<boolean>;
     /**
-     * The UseOcsp param.
+     * Use OCSP?
      */
     useOcsp?: pulumi.Input<boolean>;
     /**
-     * The UsernameField param.
+     * Certificate username field
      */
     usernameField?: pulumi.Input<inputs.CertificateProfileUsernameField>;
 }

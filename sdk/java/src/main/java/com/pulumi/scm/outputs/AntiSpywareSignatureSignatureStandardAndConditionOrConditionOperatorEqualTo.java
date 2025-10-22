@@ -16,50 +16,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualTo {
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     private @Nullable String context;
     /**
-     * @return The Negate param. Default: `false`.
+     * @return Negate
      * 
      */
     private @Nullable Boolean negate;
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     private @Nullable List<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifier> qualifiers;
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     private @Nullable Integer value;
 
     private AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualTo() {}
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
     /**
-     * @return The Negate param. Default: `false`.
+     * @return Negate
      * 
      */
     public Optional<Boolean> negate() {
         return Optional.ofNullable(this.negate);
     }
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     public List<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifier> qualifiers() {
         return this.qualifiers == null ? List.of() : this.qualifiers;
     }
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     public Optional<Integer> value() {

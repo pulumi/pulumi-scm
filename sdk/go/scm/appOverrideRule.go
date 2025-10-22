@@ -12,70 +12,44 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewAppOverrideRule(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// AppOverrideRule resource
 type AppOverrideRule struct {
 	pulumi.CustomResourceState
 
-	// The Application param.
+	// Application
 	Application pulumi.StringOutput `pulumi:"application"`
-	// The Description param. String length must not exceed 1024 characters.
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Destinations param.
+	// Destination
 	Destinations pulumi.StringArrayOutput `pulumi:"destinations"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Disabled param. Default: `false`.
+	// Disabled
 	Disabled pulumi.BoolOutput `pulumi:"disabled"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Froms param.
+	// From
 	Froms pulumi.StringArrayOutput `pulumi:"froms"`
-	// The GroupTag param.
+	// Group tag
 	GroupTag pulumi.StringPtrOutput `pulumi:"groupTag"`
-	// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The NegateDestination param. Default: `false`.
+	// Negate destination
 	NegateDestination pulumi.BoolOutput `pulumi:"negateDestination"`
-	// The NegateSource param. Default: `false`.
+	// Negate source
 	NegateSource pulumi.BoolOutput `pulumi:"negateSource"`
-	// The Port param. Value must be between 0 and 65535.
+	// Port
 	Port pulumi.IntOutput `pulumi:"port"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-	Position pulumi.StringOutput `pulumi:"position"`
-	// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+	// Protocol
 	Protocol pulumi.StringOutput `pulumi:"protocol"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// The Sources param.
+	// Source
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
-	// The Tags param.
+	// Tag
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
 	Tfid pulumi.StringOutput      `pulumi:"tfid"`
-	// The Tos param.
+	// To
 	Tos pulumi.StringArrayOutput `pulumi:"tos"`
 }
 
@@ -130,82 +104,78 @@ func GetAppOverrideRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AppOverrideRule resources.
 type appOverrideRuleState struct {
-	// The Application param.
+	// Application
 	Application *string `pulumi:"application"`
-	// The Description param. String length must not exceed 1024 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Destinations param.
+	// Destination
 	Destinations []string `pulumi:"destinations"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Disabled param. Default: `false`.
+	// Disabled
 	Disabled *bool `pulumi:"disabled"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Froms param.
+	// From
 	Froms []string `pulumi:"froms"`
-	// The GroupTag param.
+	// Group tag
 	GroupTag *string `pulumi:"groupTag"`
-	// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// Name
 	Name *string `pulumi:"name"`
-	// The NegateDestination param. Default: `false`.
+	// Negate destination
 	NegateDestination *bool `pulumi:"negateDestination"`
-	// The NegateSource param. Default: `false`.
+	// Negate source
 	NegateSource *bool `pulumi:"negateSource"`
-	// The Port param. Value must be between 0 and 65535.
+	// Port
 	Port *int `pulumi:"port"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-	Position *string `pulumi:"position"`
-	// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+	// Protocol
 	Protocol *string `pulumi:"protocol"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The Sources param.
+	// Source
 	Sources []string `pulumi:"sources"`
-	// The Tags param.
+	// Tag
 	Tags []string `pulumi:"tags"`
 	Tfid *string  `pulumi:"tfid"`
-	// The Tos param.
+	// To
 	Tos []string `pulumi:"tos"`
 }
 
 type AppOverrideRuleState struct {
-	// The Application param.
+	// Application
 	Application pulumi.StringPtrInput
-	// The Description param. String length must not exceed 1024 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Destinations param.
+	// Destination
 	Destinations pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Disabled param. Default: `false`.
+	// Disabled
 	Disabled pulumi.BoolPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Froms param.
+	// From
 	Froms pulumi.StringArrayInput
-	// The GroupTag param.
+	// Group tag
 	GroupTag pulumi.StringPtrInput
-	// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// Name
 	Name pulumi.StringPtrInput
-	// The NegateDestination param. Default: `false`.
+	// Negate destination
 	NegateDestination pulumi.BoolPtrInput
-	// The NegateSource param. Default: `false`.
+	// Negate source
 	NegateSource pulumi.BoolPtrInput
-	// The Port param. Value must be between 0 and 65535.
+	// Port
 	Port pulumi.IntPtrInput
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-	Position pulumi.StringPtrInput
-	// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+	// Protocol
 	Protocol pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The Sources param.
+	// Source
 	Sources pulumi.StringArrayInput
-	// The Tags param.
+	// Tag
 	Tags pulumi.StringArrayInput
 	Tfid pulumi.StringPtrInput
-	// The Tos param.
+	// To
 	Tos pulumi.StringArrayInput
 }
 
@@ -214,81 +184,77 @@ func (AppOverrideRuleState) ElementType() reflect.Type {
 }
 
 type appOverrideRuleArgs struct {
-	// The Application param.
+	// Application
 	Application string `pulumi:"application"`
-	// The Description param. String length must not exceed 1024 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Destinations param.
+	// Destination
 	Destinations []string `pulumi:"destinations"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Disabled param. Default: `false`.
+	// Disabled
 	Disabled *bool `pulumi:"disabled"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Froms param.
+	// From
 	Froms []string `pulumi:"froms"`
-	// The GroupTag param.
+	// Group tag
 	GroupTag *string `pulumi:"groupTag"`
-	// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// Name
 	Name *string `pulumi:"name"`
-	// The NegateDestination param. Default: `false`.
+	// Negate destination
 	NegateDestination *bool `pulumi:"negateDestination"`
-	// The NegateSource param. Default: `false`.
+	// Negate source
 	NegateSource *bool `pulumi:"negateSource"`
-	// The Port param. Value must be between 0 and 65535.
+	// Port
 	Port int `pulumi:"port"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-	Position *string `pulumi:"position"`
-	// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+	// Protocol
 	Protocol string `pulumi:"protocol"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The Sources param.
+	// Source
 	Sources []string `pulumi:"sources"`
-	// The Tags param.
+	// Tag
 	Tags []string `pulumi:"tags"`
-	// The Tos param.
+	// To
 	Tos []string `pulumi:"tos"`
 }
 
 // The set of arguments for constructing a AppOverrideRule resource.
 type AppOverrideRuleArgs struct {
-	// The Application param.
+	// Application
 	Application pulumi.StringInput
-	// The Description param. String length must not exceed 1024 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Destinations param.
+	// Destination
 	Destinations pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Disabled param. Default: `false`.
+	// Disabled
 	Disabled pulumi.BoolPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Froms param.
+	// From
 	Froms pulumi.StringArrayInput
-	// The GroupTag param.
+	// Group tag
 	GroupTag pulumi.StringPtrInput
-	// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// Name
 	Name pulumi.StringPtrInput
-	// The NegateDestination param. Default: `false`.
+	// Negate destination
 	NegateDestination pulumi.BoolPtrInput
-	// The NegateSource param. Default: `false`.
+	// Negate source
 	NegateSource pulumi.BoolPtrInput
-	// The Port param. Value must be between 0 and 65535.
+	// Port
 	Port pulumi.IntInput
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-	Position pulumi.StringPtrInput
-	// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+	// Protocol
 	Protocol pulumi.StringInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The Sources param.
+	// Source
 	Sources pulumi.StringArrayInput
-	// The Tags param.
+	// Tag
 	Tags pulumi.StringArrayInput
-	// The Tos param.
+	// To
 	Tos pulumi.StringArrayInput
 }
 
@@ -379,87 +345,82 @@ func (o AppOverrideRuleOutput) ToAppOverrideRuleOutputWithContext(ctx context.Co
 	return o
 }
 
-// The Application param.
+// Application
 func (o AppOverrideRuleOutput) Application() pulumi.StringOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Application }).(pulumi.StringOutput)
 }
 
-// The Description param. String length must not exceed 1024 characters.
+// Description
 func (o AppOverrideRuleOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Destinations param.
+// Destination
 func (o AppOverrideRuleOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringArrayOutput { return v.Destinations }).(pulumi.StringArrayOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o AppOverrideRuleOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Disabled param. Default: `false`.
+// Disabled
 func (o AppOverrideRuleOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.BoolOutput { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o AppOverrideRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Froms param.
+// From
 func (o AppOverrideRuleOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringArrayOutput { return v.Froms }).(pulumi.StringArrayOutput)
 }
 
-// The GroupTag param.
+// Group tag
 func (o AppOverrideRuleOutput) GroupTag() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.GroupTag }).(pulumi.StringPtrOutput)
 }
 
-// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+// Name
 func (o AppOverrideRuleOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The NegateDestination param. Default: `false`.
+// Negate destination
 func (o AppOverrideRuleOutput) NegateDestination() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.BoolOutput { return v.NegateDestination }).(pulumi.BoolOutput)
 }
 
-// The NegateSource param. Default: `false`.
+// Negate source
 func (o AppOverrideRuleOutput) NegateSource() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.BoolOutput { return v.NegateSource }).(pulumi.BoolOutput)
 }
 
-// The Port param. Value must be between 0 and 65535.
+// Port
 func (o AppOverrideRuleOutput) Port() pulumi.IntOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.IntOutput { return v.Port }).(pulumi.IntOutput)
 }
 
-// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-func (o AppOverrideRuleOutput) Position() pulumi.StringOutput {
-	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
-}
-
-// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+// Protocol
 func (o AppOverrideRuleOutput) Protocol() pulumi.StringOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Protocol }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o AppOverrideRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// The Sources param.
+// Source
 func (o AppOverrideRuleOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringArrayOutput { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
-// The Tags param.
+// Tag
 func (o AppOverrideRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
@@ -468,7 +429,7 @@ func (o AppOverrideRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Tos param.
+// To
 func (o AppOverrideRuleOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringArrayOutput { return v.Tos }).(pulumi.StringArrayOutput)
 }

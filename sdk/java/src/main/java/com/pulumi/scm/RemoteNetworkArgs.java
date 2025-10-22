@@ -20,14 +20,14 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
     public static final RemoteNetworkArgs Empty = new RemoteNetworkArgs();
 
     /**
-     * The EcmpLoadBalancing param. String must be one of these: `&#34;enable&#34;`, `&#34;disable&#34;`. Default: `&#34;disable&#34;`.
+     * Ecmp load balancing
      * 
      */
     @Import(name="ecmpLoadBalancing")
     private @Nullable Output<String> ecmpLoadBalancing;
 
     /**
-     * @return The EcmpLoadBalancing param. String must be one of these: `&#34;enable&#34;`, `&#34;disable&#34;`. Default: `&#34;disable&#34;`.
+     * @return Ecmp load balancing
      * 
      */
     public Optional<Output<String>> ecmpLoadBalancing() {
@@ -35,14 +35,14 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * ecmp*tunnels is required when ecmp*load*balancing is enable
      * 
      */
     @Import(name="ecmpTunnels")
     private @Nullable Output<List<RemoteNetworkEcmpTunnelArgs>> ecmpTunnels;
 
     /**
-     * @return ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * @return ecmp*tunnels is required when ecmp*load*balancing is enable
      * 
      */
     public Optional<Output<List<RemoteNetworkEcmpTunnelArgs>>> ecmpTunnels() {
@@ -50,29 +50,29 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
+     * The folder that contains the remote network
      * 
      */
-    @Import(name="folder")
-    private @Nullable Output<String> folder;
+    @Import(name="folder", required=true)
+    private Output<String> folder;
 
     /**
-     * @return The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
+     * @return The folder that contains the remote network
      * 
      */
-    public Optional<Output<String>> folder() {
-        return Optional.ofNullable(this.folder);
+    public Output<String> folder() {
+        return this.folder;
     }
 
     /**
-     * ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * ipsec*tunnel is required when ecmp*load_balancing is disable
      * 
      */
     @Import(name="ipsecTunnel")
     private @Nullable Output<String> ipsecTunnel;
 
     /**
-     * @return ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * @return ipsec*tunnel is required when ecmp*load_balancing is disable
      * 
      */
     public Optional<Output<String>> ipsecTunnel() {
@@ -80,29 +80,29 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `&#34;FWAAS-AGGREGATE&#34;`.
+     * New customer will only be on aggregate bandwidth licensing
      * 
      */
-    @Import(name="licenseType")
-    private @Nullable Output<String> licenseType;
+    @Import(name="licenseType", required=true)
+    private Output<String> licenseType;
 
     /**
-     * @return New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `&#34;FWAAS-AGGREGATE&#34;`.
+     * @return New customer will only be on aggregate bandwidth licensing
      * 
      */
-    public Optional<Output<String>> licenseType() {
-        return Optional.ofNullable(this.licenseType);
+    public Output<String> licenseType() {
+        return this.licenseType;
     }
 
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the remote network
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the remote network
      * 
      */
     public Optional<Output<String>> name() {
@@ -110,14 +110,14 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * setup the protocol when ecmp*load*balancing is disable.
+     * setup the protocol when ecmp*load*balancing is disable
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<RemoteNetworkProtocolArgs> protocol;
 
     /**
-     * @return setup the protocol when ecmp*load*balancing is disable.
+     * @return setup the protocol when ecmp*load*balancing is disable
      * 
      */
     public Optional<Output<RemoteNetworkProtocolArgs>> protocol() {
@@ -125,14 +125,14 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Region param. String length must exceed 1 characters.
+     * Region
      * 
      */
     @Import(name="region", required=true)
     private Output<String> region;
 
     /**
-     * @return The Region param. String length must exceed 1 characters.
+     * @return Region
      * 
      */
     public Output<String> region() {
@@ -140,14 +140,14 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * specify secondary ipsecTunnel if needed.
+     * specify secondary ipsecTunnel if needed
      * 
      */
     @Import(name="secondaryIpsecTunnel")
     private @Nullable Output<String> secondaryIpsecTunnel;
 
     /**
-     * @return specify secondary ipsecTunnel if needed.
+     * @return specify secondary ipsecTunnel if needed
      * 
      */
     public Optional<Output<String>> secondaryIpsecTunnel() {
@@ -155,14 +155,14 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * spn-name is needed when licenseType is FWAAS-AGGREGATE
      * 
      */
     @Import(name="spnName")
     private @Nullable Output<String> spnName;
 
     /**
-     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * @return spn-name is needed when licenseType is FWAAS-AGGREGATE
      * 
      */
     public Optional<Output<String>> spnName() {
@@ -170,14 +170,14 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Subnets param.
+     * Subnets
      * 
      */
     @Import(name="subnets")
     private @Nullable Output<List<String>> subnets;
 
     /**
-     * @return The Subnets param.
+     * @return Subnets
      * 
      */
     public Optional<Output<List<String>>> subnets() {
@@ -219,7 +219,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param ecmpLoadBalancing The EcmpLoadBalancing param. String must be one of these: `&#34;enable&#34;`, `&#34;disable&#34;`. Default: `&#34;disable&#34;`.
+         * @param ecmpLoadBalancing Ecmp load balancing
          * 
          * @return builder
          * 
@@ -230,7 +230,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param ecmpLoadBalancing The EcmpLoadBalancing param. String must be one of these: `&#34;enable&#34;`, `&#34;disable&#34;`. Default: `&#34;disable&#34;`.
+         * @param ecmpLoadBalancing Ecmp load balancing
          * 
          * @return builder
          * 
@@ -240,7 +240,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param ecmpTunnels ecmp*tunnels is required when ecmp*load*balancing is enable.
+         * @param ecmpTunnels ecmp*tunnels is required when ecmp*load*balancing is enable
          * 
          * @return builder
          * 
@@ -251,7 +251,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param ecmpTunnels ecmp*tunnels is required when ecmp*load*balancing is enable.
+         * @param ecmpTunnels ecmp*tunnels is required when ecmp*load*balancing is enable
          * 
          * @return builder
          * 
@@ -261,7 +261,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param ecmpTunnels ecmp*tunnels is required when ecmp*load*balancing is enable.
+         * @param ecmpTunnels ecmp*tunnels is required when ecmp*load*balancing is enable
          * 
          * @return builder
          * 
@@ -271,18 +271,18 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
+         * @param folder The folder that contains the remote network
          * 
          * @return builder
          * 
          */
-        public Builder folder(@Nullable Output<String> folder) {
+        public Builder folder(Output<String> folder) {
             $.folder = folder;
             return this;
         }
 
         /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
+         * @param folder The folder that contains the remote network
          * 
          * @return builder
          * 
@@ -292,7 +292,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param ipsecTunnel ipsec*tunnel is required when ecmp*load_balancing is disable.
+         * @param ipsecTunnel ipsec*tunnel is required when ecmp*load_balancing is disable
          * 
          * @return builder
          * 
@@ -303,7 +303,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param ipsecTunnel ipsec*tunnel is required when ecmp*load_balancing is disable.
+         * @param ipsecTunnel ipsec*tunnel is required when ecmp*load_balancing is disable
          * 
          * @return builder
          * 
@@ -313,18 +313,18 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param licenseType New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `&#34;FWAAS-AGGREGATE&#34;`.
+         * @param licenseType New customer will only be on aggregate bandwidth licensing
          * 
          * @return builder
          * 
          */
-        public Builder licenseType(@Nullable Output<String> licenseType) {
+        public Builder licenseType(Output<String> licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
         /**
-         * @param licenseType New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `&#34;FWAAS-AGGREGATE&#34;`.
+         * @param licenseType New customer will only be on aggregate bandwidth licensing
          * 
          * @return builder
          * 
@@ -334,7 +334,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the remote network
          * 
          * @return builder
          * 
@@ -345,7 +345,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the remote network
          * 
          * @return builder
          * 
@@ -355,7 +355,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param protocol setup the protocol when ecmp*load*balancing is disable.
+         * @param protocol setup the protocol when ecmp*load*balancing is disable
          * 
          * @return builder
          * 
@@ -366,7 +366,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param protocol setup the protocol when ecmp*load*balancing is disable.
+         * @param protocol setup the protocol when ecmp*load*balancing is disable
          * 
          * @return builder
          * 
@@ -376,7 +376,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param region The Region param. String length must exceed 1 characters.
+         * @param region Region
          * 
          * @return builder
          * 
@@ -387,7 +387,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param region The Region param. String length must exceed 1 characters.
+         * @param region Region
          * 
          * @return builder
          * 
@@ -397,7 +397,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param secondaryIpsecTunnel specify secondary ipsecTunnel if needed.
+         * @param secondaryIpsecTunnel specify secondary ipsecTunnel if needed
          * 
          * @return builder
          * 
@@ -408,7 +408,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param secondaryIpsecTunnel specify secondary ipsecTunnel if needed.
+         * @param secondaryIpsecTunnel specify secondary ipsecTunnel if needed
          * 
          * @return builder
          * 
@@ -418,7 +418,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param spnName spn-name is needed when licenseType is FWAAS-AGGREGATE.
+         * @param spnName spn-name is needed when licenseType is FWAAS-AGGREGATE
          * 
          * @return builder
          * 
@@ -429,7 +429,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param spnName spn-name is needed when licenseType is FWAAS-AGGREGATE.
+         * @param spnName spn-name is needed when licenseType is FWAAS-AGGREGATE
          * 
          * @return builder
          * 
@@ -439,7 +439,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param subnets The Subnets param.
+         * @param subnets Subnets
          * 
          * @return builder
          * 
@@ -450,7 +450,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param subnets The Subnets param.
+         * @param subnets Subnets
          * 
          * @return builder
          * 
@@ -460,7 +460,7 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param subnets The Subnets param.
+         * @param subnets Subnets
          * 
          * @return builder
          * 
@@ -470,6 +470,12 @@ public final class RemoteNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public RemoteNetworkArgs build() {
+            if ($.folder == null) {
+                throw new MissingRequiredPropertyException("RemoteNetworkArgs", "folder");
+            }
+            if ($.licenseType == null) {
+                throw new MissingRequiredPropertyException("RemoteNetworkArgs", "licenseType");
+            }
             if ($.region == null) {
                 throw new MissingRequiredPropertyException("RemoteNetworkArgs", "region");
             }

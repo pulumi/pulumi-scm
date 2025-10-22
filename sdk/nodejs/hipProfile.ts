@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * HipProfile resource
  *
  * ## Example Usage
  *
@@ -13,7 +13,13 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = new scm.HipProfile("example", {});
+ * // This resource creates a new HIP Profile.
+ * const scmHipProfile1 = new scm.HipProfile("scm_hip_profile_1", {
+ *     folder: "Shared",
+ *     name: "scm_hip_profile_1",
+ *     description: "A HIP profile created by Terraform",
+ *     match: "\"is-win\" and \"is-anti-malware-and-rtp-enabled\"",
+ * });
  * ```
  */
 export class HipProfile extends pulumi.CustomResource {
@@ -45,27 +51,27 @@ export class HipProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Match param. String length must not exceed 2048 characters.
+     * Match
      */
     declare public readonly match: pulumi.Output<string>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP profile
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -113,27 +119,27 @@ export class HipProfile extends pulumi.CustomResource {
  */
 export interface HipProfileState {
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Match param. String length must not exceed 2048 characters.
+     * Match
      */
     match?: pulumi.Input<string>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -144,27 +150,27 @@ export interface HipProfileState {
  */
 export interface HipProfileArgs {
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Match param. String length must not exceed 2048 characters.
+     * Match
      */
     match: pulumi.Input<string>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

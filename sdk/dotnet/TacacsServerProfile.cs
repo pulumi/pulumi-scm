@@ -10,58 +10,43 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.TacacsServerProfile("example");
-    /// 
-    /// });
-    /// ```
+    /// TacacsServerProfile resource
     /// </summary>
     [ScmResourceType("scm:index/tacacsServerProfile:TacacsServerProfile")]
     public partial class TacacsServerProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
-        /// </summary>
-        [Output("encryptedValues")]
-        public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
-
-        /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+        /// The name of the TACACS+ server profile
+        /// </summary>
+        [Output("name")]
+        public Output<string> Name { get; private set; } = null!;
+
+        /// <summary>
+        /// The TACACS+ authentication protocol
         /// </summary>
         [Output("protocol")]
         public Output<string> Protocol { get; private set; } = null!;
 
         /// <summary>
-        /// The Servers param.
+        /// The TACACS+ server configuration
         /// </summary>
         [Output("servers")]
         public Output<ImmutableArray<Outputs.TacacsServerProfileServer>> Servers { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -70,13 +55,13 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 30.
+        /// The TACACS+ timeout (seconds)
         /// </summary>
         [Output("timeout")]
         public Output<int?> Timeout { get; private set; } = null!;
 
         /// <summary>
-        /// The UseSingleConnection param.
+        /// Use a single TACACS+ connection?
         /// </summary>
         [Output("useSingleConnection")]
         public Output<bool?> UseSingleConnection { get; private set; } = null!;
@@ -104,10 +89,6 @@ namespace Pulumi.Scm
             var defaultOptions = new CustomResourceOptions
             {
                 Version = Utilities.Version,
-                AdditionalSecretOutputs =
-                {
-                    "encryptedValues",
-                },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
             // Override the ID if one was specified for consistency with other language SDKs.
@@ -132,19 +113,25 @@ namespace Pulumi.Scm
     public sealed class TacacsServerProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+        /// The name of the TACACS+ server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The TACACS+ authentication protocol
         /// </summary>
         [Input("protocol", required: true)]
         public Input<string> Protocol { get; set; } = null!;
@@ -153,7 +140,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.TacacsServerProfileServerArgs>? _servers;
 
         /// <summary>
-        /// The Servers param.
+        /// The TACACS+ server configuration
         /// </summary>
         public InputList<Inputs.TacacsServerProfileServerArgs> Servers
         {
@@ -162,19 +149,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 30.
+        /// The TACACS+ timeout (seconds)
         /// </summary>
         [Input("timeout")]
         public Input<int>? Timeout { get; set; }
 
         /// <summary>
-        /// The UseSingleConnection param.
+        /// Use a single TACACS+ connection?
         /// </summary>
         [Input("useSingleConnection")]
         public Input<bool>? UseSingleConnection { get; set; }
@@ -188,35 +175,25 @@ namespace Pulumi.Scm
     public sealed class TacacsServerProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
-        [Input("encryptedValues")]
-        private InputMap<string>? _encryptedValues;
-
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
-        /// </summary>
-        public InputMap<string> EncryptedValues
-        {
-            get => _encryptedValues ?? (_encryptedValues = new InputMap<string>());
-            set
-            {
-                var emptySecret = Output.CreateSecret(ImmutableDictionary.Create<string, string>());
-                _encryptedValues = Output.All(value, emptySecret).Apply(v => v[0]);
-            }
-        }
-
-        /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+        /// The name of the TACACS+ server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The TACACS+ authentication protocol
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -225,7 +202,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.TacacsServerProfileServerGetArgs>? _servers;
 
         /// <summary>
-        /// The Servers param.
+        /// The TACACS+ server configuration
         /// </summary>
         public InputList<Inputs.TacacsServerProfileServerGetArgs> Servers
         {
@@ -234,7 +211,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -243,13 +220,13 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 30.
+        /// The TACACS+ timeout (seconds)
         /// </summary>
         [Input("timeout")]
         public Input<int>? Timeout { get; set; }
 
         /// <summary>
-        /// The UseSingleConnection param.
+        /// Use a single TACACS+ connection?
         /// </summary>
         [Input("useSingleConnection")]
         public Input<bool>? UseSingleConnection { get; set; }

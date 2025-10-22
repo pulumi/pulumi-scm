@@ -10,124 +10,103 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.AppOverrideRule("example");
-    /// 
-    /// });
-    /// ```
+    /// AppOverrideRule resource
     /// </summary>
     [ScmResourceType("scm:index/appOverrideRule:AppOverrideRule")]
     public partial class AppOverrideRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Application param.
+        /// Application
         /// </summary>
         [Output("application")]
         public Output<string> Application { get; private set; } = null!;
 
         /// <summary>
-        /// The Description param. String length must not exceed 1024 characters.
+        /// Description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Destinations param.
+        /// Destination
         /// </summary>
         [Output("destinations")]
         public Output<ImmutableArray<string>> Destinations { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Disabled param. Default: `False`.
+        /// Disabled
         /// </summary>
         [Output("disabled")]
         public Output<bool> Disabled { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Froms param.
+        /// From
         /// </summary>
         [Output("froms")]
         public Output<ImmutableArray<string>> Froms { get; private set; } = null!;
 
         /// <summary>
-        /// The GroupTag param.
+        /// Group tag
         /// </summary>
         [Output("groupTag")]
         public Output<string?> GroupTag { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// Name
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The NegateDestination param. Default: `False`.
+        /// Negate destination
         /// </summary>
         [Output("negateDestination")]
         public Output<bool> NegateDestination { get; private set; } = null!;
 
         /// <summary>
-        /// The NegateSource param. Default: `False`.
+        /// Negate source
         /// </summary>
         [Output("negateSource")]
         public Output<bool> NegateSource { get; private set; } = null!;
 
         /// <summary>
-        /// The Port param. Value must be between 0 and 65535.
+        /// Port
         /// </summary>
         [Output("port")]
         public Output<int> Port { get; private set; } = null!;
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        /// </summary>
-        [Output("position")]
-        public Output<string> Position { get; private set; } = null!;
-
-        /// <summary>
-        /// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+        /// Protocol
         /// </summary>
         [Output("protocol")]
         public Output<string> Protocol { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The Sources param.
+        /// Source
         /// </summary>
         [Output("sources")]
         public Output<ImmutableArray<string>> Sources { get; private set; } = null!;
 
         /// <summary>
-        /// The Tags param.
+        /// Tag
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
@@ -136,7 +115,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The Tos param.
+        /// To
         /// </summary>
         [Output("tos")]
         public Output<ImmutableArray<string>> Tos { get; private set; } = null!;
@@ -188,13 +167,13 @@ namespace Pulumi.Scm
     public sealed class AppOverrideRuleArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Application param.
+        /// Application
         /// </summary>
         [Input("application", required: true)]
         public Input<string> Application { get; set; } = null!;
 
         /// <summary>
-        /// The Description param. String length must not exceed 1024 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -203,7 +182,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The Destinations param.
+        /// Destination
         /// </summary>
         public InputList<string> Destinations
         {
@@ -212,19 +191,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param. Default: `False`.
+        /// Disabled
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -233,7 +212,7 @@ namespace Pulumi.Scm
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The Froms param.
+        /// From
         /// </summary>
         public InputList<string> Froms
         {
@@ -242,49 +221,43 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The GroupTag param.
+        /// Group tag
         /// </summary>
         [Input("groupTag")]
         public Input<string>? GroupTag { get; set; }
 
         /// <summary>
-        /// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NegateDestination param. Default: `False`.
+        /// Negate destination
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// The NegateSource param. Default: `False`.
+        /// Negate source
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The Port param. Value must be between 0 and 65535.
+        /// Port
         /// </summary>
         [Input("port", required: true)]
         public Input<int> Port { get; set; } = null!;
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        /// </summary>
-        [Input("position")]
-        public Input<string>? Position { get; set; }
-
-        /// <summary>
-        /// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+        /// Protocol
         /// </summary>
         [Input("protocol", required: true)]
         public Input<string> Protocol { get; set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -293,7 +266,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The Sources param.
+        /// Source
         /// </summary>
         public InputList<string> Sources
         {
@@ -305,7 +278,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// The Tags param.
+        /// Tag
         /// </summary>
         public InputList<string> Tags
         {
@@ -317,7 +290,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tos;
 
         /// <summary>
-        /// The Tos param.
+        /// To
         /// </summary>
         public InputList<string> Tos
         {
@@ -334,13 +307,13 @@ namespace Pulumi.Scm
     public sealed class AppOverrideRuleState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Application param.
+        /// Application
         /// </summary>
         [Input("application")]
         public Input<string>? Application { get; set; }
 
         /// <summary>
-        /// The Description param. String length must not exceed 1024 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -349,7 +322,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The Destinations param.
+        /// Destination
         /// </summary>
         public InputList<string> Destinations
         {
@@ -358,19 +331,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param. Default: `False`.
+        /// Disabled
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -379,7 +352,7 @@ namespace Pulumi.Scm
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The Froms param.
+        /// From
         /// </summary>
         public InputList<string> Froms
         {
@@ -388,49 +361,43 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The GroupTag param.
+        /// Group tag
         /// </summary>
         [Input("groupTag")]
         public Input<string>? GroupTag { get; set; }
 
         /// <summary>
-        /// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NegateDestination param. Default: `False`.
+        /// Negate destination
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// The NegateSource param. Default: `False`.
+        /// Negate source
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The Port param. Value must be between 0 and 65535.
+        /// Port
         /// </summary>
         [Input("port")]
         public Input<int>? Port { get; set; }
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        /// </summary>
-        [Input("position")]
-        public Input<string>? Position { get; set; }
-
-        /// <summary>
-        /// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+        /// Protocol
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -439,7 +406,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The Sources param.
+        /// Source
         /// </summary>
         public InputList<string> Sources
         {
@@ -451,7 +418,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// The Tags param.
+        /// Tag
         /// </summary>
         public InputList<string> Tags
         {
@@ -466,7 +433,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tos;
 
         /// <summary>
-        /// The Tos param.
+        /// To
         /// </summary>
         public InputList<string> Tos
         {

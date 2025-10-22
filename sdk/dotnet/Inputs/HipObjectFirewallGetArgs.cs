@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectFirewallGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Criteria param.
+        /// Criteria
         /// </summary>
         [Input("criteria")]
         public Input<Inputs.HipObjectFirewallCriteriaGetArgs>? Criteria { get; set; }
 
         /// <summary>
-        /// The ExcludeVendor param. Default: `False`.
+        /// Exclude vendor
         /// </summary>
         [Input("excludeVendor")]
         public Input<bool>? ExcludeVendor { get; set; }
@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HipObjectFirewallVendorGetArgs>? _vendors;
 
         /// <summary>
-        /// Vendor name.
+        /// Vendor name
         /// </summary>
         public InputList<Inputs.HipObjectFirewallVendorGetArgs> Vendors
         {

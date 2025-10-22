@@ -5,96 +5,101 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileRuleActionAlert;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileRuleActionAllow;
 import com.pulumi.scm.outputs.GetAntiSpywareProfileRuleActionBlockIp;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileRuleActionDrop;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileRuleActionResetBoth;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileRuleActionResetClient;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileRuleActionResetServer;
 import java.util.Objects;
 
 @CustomType
 public final class GetAntiSpywareProfileRuleAction {
     /**
-     * @return The Alert param.
+     * @return Alert
      * 
      */
-    private Boolean alert;
+    private GetAntiSpywareProfileRuleActionAlert alert;
     /**
-     * @return The Allow param.
+     * @return Allow
      * 
      */
-    private Boolean allow;
+    private GetAntiSpywareProfileRuleActionAllow allow;
     /**
-     * @return The BlockIp param.
+     * @return anti spyware profiles rules action block ip
      * 
      */
     private GetAntiSpywareProfileRuleActionBlockIp blockIp;
     /**
-     * @return The Drop param.
+     * @return Drop
      * 
      */
-    private Boolean drop;
+    private GetAntiSpywareProfileRuleActionDrop drop;
     /**
-     * @return The ResetBoth param.
+     * @return Reset both
      * 
      */
-    private Boolean resetBoth;
+    private GetAntiSpywareProfileRuleActionResetBoth resetBoth;
     /**
-     * @return The ResetClient param.
+     * @return Reset client
      * 
      */
-    private Boolean resetClient;
+    private GetAntiSpywareProfileRuleActionResetClient resetClient;
     /**
-     * @return The ResetServer param.
+     * @return Reset server
      * 
      */
-    private Boolean resetServer;
+    private GetAntiSpywareProfileRuleActionResetServer resetServer;
 
     private GetAntiSpywareProfileRuleAction() {}
     /**
-     * @return The Alert param.
+     * @return Alert
      * 
      */
-    public Boolean alert() {
+    public GetAntiSpywareProfileRuleActionAlert alert() {
         return this.alert;
     }
     /**
-     * @return The Allow param.
+     * @return Allow
      * 
      */
-    public Boolean allow() {
+    public GetAntiSpywareProfileRuleActionAllow allow() {
         return this.allow;
     }
     /**
-     * @return The BlockIp param.
+     * @return anti spyware profiles rules action block ip
      * 
      */
     public GetAntiSpywareProfileRuleActionBlockIp blockIp() {
         return this.blockIp;
     }
     /**
-     * @return The Drop param.
+     * @return Drop
      * 
      */
-    public Boolean drop() {
+    public GetAntiSpywareProfileRuleActionDrop drop() {
         return this.drop;
     }
     /**
-     * @return The ResetBoth param.
+     * @return Reset both
      * 
      */
-    public Boolean resetBoth() {
+    public GetAntiSpywareProfileRuleActionResetBoth resetBoth() {
         return this.resetBoth;
     }
     /**
-     * @return The ResetClient param.
+     * @return Reset client
      * 
      */
-    public Boolean resetClient() {
+    public GetAntiSpywareProfileRuleActionResetClient resetClient() {
         return this.resetClient;
     }
     /**
-     * @return The ResetServer param.
+     * @return Reset server
      * 
      */
-    public Boolean resetServer() {
+    public GetAntiSpywareProfileRuleActionResetServer resetServer() {
         return this.resetServer;
     }
 
@@ -107,13 +112,13 @@ public final class GetAntiSpywareProfileRuleAction {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean alert;
-        private Boolean allow;
+        private GetAntiSpywareProfileRuleActionAlert alert;
+        private GetAntiSpywareProfileRuleActionAllow allow;
         private GetAntiSpywareProfileRuleActionBlockIp blockIp;
-        private Boolean drop;
-        private Boolean resetBoth;
-        private Boolean resetClient;
-        private Boolean resetServer;
+        private GetAntiSpywareProfileRuleActionDrop drop;
+        private GetAntiSpywareProfileRuleActionResetBoth resetBoth;
+        private GetAntiSpywareProfileRuleActionResetClient resetClient;
+        private GetAntiSpywareProfileRuleActionResetServer resetServer;
         public Builder() {}
         public Builder(GetAntiSpywareProfileRuleAction defaults) {
     	      Objects.requireNonNull(defaults);
@@ -127,7 +132,7 @@ public final class GetAntiSpywareProfileRuleAction {
         }
 
         @CustomType.Setter
-        public Builder alert(Boolean alert) {
+        public Builder alert(GetAntiSpywareProfileRuleActionAlert alert) {
             if (alert == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileRuleAction", "alert");
             }
@@ -135,7 +140,7 @@ public final class GetAntiSpywareProfileRuleAction {
             return this;
         }
         @CustomType.Setter
-        public Builder allow(Boolean allow) {
+        public Builder allow(GetAntiSpywareProfileRuleActionAllow allow) {
             if (allow == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileRuleAction", "allow");
             }
@@ -151,7 +156,7 @@ public final class GetAntiSpywareProfileRuleAction {
             return this;
         }
         @CustomType.Setter
-        public Builder drop(Boolean drop) {
+        public Builder drop(GetAntiSpywareProfileRuleActionDrop drop) {
             if (drop == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileRuleAction", "drop");
             }
@@ -159,7 +164,7 @@ public final class GetAntiSpywareProfileRuleAction {
             return this;
         }
         @CustomType.Setter
-        public Builder resetBoth(Boolean resetBoth) {
+        public Builder resetBoth(GetAntiSpywareProfileRuleActionResetBoth resetBoth) {
             if (resetBoth == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileRuleAction", "resetBoth");
             }
@@ -167,7 +172,7 @@ public final class GetAntiSpywareProfileRuleAction {
             return this;
         }
         @CustomType.Setter
-        public Builder resetClient(Boolean resetClient) {
+        public Builder resetClient(GetAntiSpywareProfileRuleActionResetClient resetClient) {
             if (resetClient == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileRuleAction", "resetClient");
             }
@@ -175,7 +180,7 @@ public final class GetAntiSpywareProfileRuleAction {
             return this;
         }
         @CustomType.Setter
-        public Builder resetServer(Boolean resetServer) {
+        public Builder resetServer(GetAntiSpywareProfileRuleActionResetServer resetServer) {
             if (resetServer == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileRuleAction", "resetServer");
             }

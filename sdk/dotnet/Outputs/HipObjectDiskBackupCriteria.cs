@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectDiskBackupCriteria
     {
         /// <summary>
-        /// Is Installed. Default: `True`.
+        /// Is Installed
         /// </summary>
         public readonly bool? IsInstalled;
         /// <summary>
-        /// The LastBackupTime param.
+        /// Last backup time
         /// </summary>
         public readonly Outputs.HipObjectDiskBackupCriteriaLastBackupTime? LastBackupTime;
 

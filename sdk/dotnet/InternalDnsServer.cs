@@ -10,46 +10,31 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.InternalDnsServer("example");
-    /// 
-    /// });
-    /// ```
+    /// InternalDnsServer resource
     /// </summary>
     [ScmResourceType("scm:index/internalDnsServer:InternalDnsServer")]
     public partial class InternalDnsServer : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The DomainNames param.
+        /// The DNS domain name(s)
         /// </summary>
         [Output("domainNames")]
         public Output<ImmutableArray<string>> DomainNames { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the internet DNS server resource
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Primary param.
+        /// The IP address of the primary DNS server
         /// </summary>
         [Output("primary")]
         public Output<string> Primary { get; private set; } = null!;
 
         /// <summary>
-        /// The Secondary param.
+        /// The IP address of the secondary DNS server
         /// </summary>
         [Output("secondary")]
         public Output<string?> Secondary { get; private set; } = null!;
@@ -107,7 +92,7 @@ namespace Pulumi.Scm
         private InputList<string>? _domainNames;
 
         /// <summary>
-        /// The DomainNames param.
+        /// The DNS domain name(s)
         /// </summary>
         public InputList<string> DomainNames
         {
@@ -116,19 +101,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the internet DNS server resource
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Primary param.
+        /// The IP address of the primary DNS server
         /// </summary>
         [Input("primary", required: true)]
         public Input<string> Primary { get; set; } = null!;
 
         /// <summary>
-        /// The Secondary param.
+        /// The IP address of the secondary DNS server
         /// </summary>
         [Input("secondary")]
         public Input<string>? Secondary { get; set; }
@@ -145,7 +130,7 @@ namespace Pulumi.Scm
         private InputList<string>? _domainNames;
 
         /// <summary>
-        /// The DomainNames param.
+        /// The DNS domain name(s)
         /// </summary>
         public InputList<string> DomainNames
         {
@@ -154,19 +139,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the internet DNS server resource
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Primary param.
+        /// The IP address of the primary DNS server
         /// </summary>
         [Input("primary")]
         public Input<string>? Primary { get; set; }
 
         /// <summary>
-        /// The Secondary param.
+        /// The IP address of the secondary DNS server
         /// </summary>
         [Input("secondary")]
         public Input<string>? Secondary { get; set; }

@@ -12,25 +12,19 @@ namespace Pulumi.Scm
     public static class GetTrafficSteeringRule
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
+        /// TrafficSteeringRule data source
         /// </summary>
         public static Task<GetTrafficSteeringRuleResult> InvokeAsync(GetTrafficSteeringRuleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetTrafficSteeringRuleResult>("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", args ?? new GetTrafficSteeringRuleArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
+        /// TrafficSteeringRule data source
         /// </summary>
         public static Output<GetTrafficSteeringRuleResult> Invoke(GetTrafficSteeringRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTrafficSteeringRuleResult>("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", args ?? new GetTrafficSteeringRuleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
+        /// TrafficSteeringRule data source
         /// </summary>
         public static Output<GetTrafficSteeringRuleResult> Invoke(GetTrafficSteeringRuleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetTrafficSteeringRuleResult>("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", args ?? new GetTrafficSteeringRuleInvokeArgs(), options.WithDefaults());
@@ -40,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetTrafficSteeringRuleArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the traffic steering rule
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetTrafficSteeringRuleArgs()
         {
@@ -54,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetTrafficSteeringRuleInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the traffic steering rule
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetTrafficSteeringRuleInvokeArgs()
         {
@@ -70,35 +76,39 @@ namespace Pulumi.Scm
     public sealed class GetTrafficSteeringRuleResult
     {
         /// <summary>
-        /// The Action param.
+        /// Action
         /// </summary>
         public readonly Outputs.GetTrafficSteeringRuleActionResult Action;
         /// <summary>
-        /// The Category param.
+        /// Category
         /// </summary>
         public readonly ImmutableArray<string> Categories;
         /// <summary>
-        /// The Destination param.
+        /// Destination
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
-        /// The Id param.
+        /// The folder containing the traffic steering rule
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the traffic steering rule
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Service param.
+        /// Service
         /// </summary>
         public readonly ImmutableArray<string> Services;
         /// <summary>
-        /// The SourceUser param.
+        /// Source user
         /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
         /// <summary>
-        /// The Source param.
+        /// Source
         /// </summary>
         public readonly ImmutableArray<string> Sources;
         public readonly string Tfid;
@@ -110,6 +120,8 @@ namespace Pulumi.Scm
             ImmutableArray<string> categories,
 
             ImmutableArray<string> destinations,
+
+            string folder,
 
             string id,
 
@@ -126,6 +138,7 @@ namespace Pulumi.Scm
             Action = action;
             Categories = categories;
             Destinations = destinations;
+            Folder = folder;
             Id = id;
             Name = name;
             Services = services;

@@ -13,67 +13,67 @@ namespace Pulumi.Scm.Inputs
     public sealed class DecryptionProfileSslForwardProxyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The AutoIncludeAltname param. Default: `False`.
+        /// Auto include altname
         /// </summary>
         [Input("autoIncludeAltname")]
         public Input<bool>? AutoIncludeAltname { get; set; }
 
         /// <summary>
-        /// The BlockClientCert param. Default: `False`.
+        /// Block client cert
         /// </summary>
         [Input("blockClientCert")]
         public Input<bool>? BlockClientCert { get; set; }
 
         /// <summary>
-        /// The BlockExpiredCertificate param. Default: `False`.
+        /// Block expired certificate
         /// </summary>
         [Input("blockExpiredCertificate")]
         public Input<bool>? BlockExpiredCertificate { get; set; }
 
         /// <summary>
-        /// The BlockTimeoutCert param. Default: `False`.
+        /// Block timeout cert
         /// </summary>
         [Input("blockTimeoutCert")]
         public Input<bool>? BlockTimeoutCert { get; set; }
 
         /// <summary>
-        /// The BlockTls13DowngradeNoResource param. Default: `False`.
+        /// Block tls13 downgrade no resource
         /// </summary>
         [Input("blockTls13DowngradeNoResource")]
         public Input<bool>? BlockTls13DowngradeNoResource { get; set; }
 
         /// <summary>
-        /// The BlockUnknownCert param. Default: `False`.
+        /// Block unknown cert
         /// </summary>
         [Input("blockUnknownCert")]
         public Input<bool>? BlockUnknownCert { get; set; }
 
         /// <summary>
-        /// The BlockUnsupportedCipher param. Default: `False`.
+        /// Block unsupported cipher
         /// </summary>
         [Input("blockUnsupportedCipher")]
         public Input<bool>? BlockUnsupportedCipher { get; set; }
 
         /// <summary>
-        /// The BlockUnsupportedVersion param. Default: `False`.
+        /// Block unsupported version
         /// </summary>
         [Input("blockUnsupportedVersion")]
         public Input<bool>? BlockUnsupportedVersion { get; set; }
 
         /// <summary>
-        /// The BlockUntrustedIssuer param. Default: `False`.
+        /// Block untrusted issuer
         /// </summary>
         [Input("blockUntrustedIssuer")]
         public Input<bool>? BlockUntrustedIssuer { get; set; }
 
         /// <summary>
-        /// The RestrictCertExts param. Default: `False`.
+        /// Restrict cert exts
         /// </summary>
         [Input("restrictCertExts")]
         public Input<bool>? RestrictCertExts { get; set; }
 
         /// <summary>
-        /// The StripAlpn param. Default: `False`.
+        /// Strip alpn
         /// </summary>
         [Input("stripAlpn")]
         public Input<bool>? StripAlpn { get; set; }

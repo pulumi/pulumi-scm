@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IpsecTunnelAutoKeyIkeGateway {
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private @Nullable String name;
 
     private IpsecTunnelAutoKeyIkeGateway() {}
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<String> name() {

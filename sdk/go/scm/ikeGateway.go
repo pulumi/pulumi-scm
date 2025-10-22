@@ -12,33 +12,35 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// IkeGateway resource
 //
 // ## Example Usage
 type IkeGateway struct {
 	pulumi.CustomResourceState
 
-	// The Authentication param.
+	// Authentication
 	Authentication IkeGatewayAuthenticationOutput `pulumi:"authentication"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The LocalId param.
+	// Local address
+	LocalAddress IkeGatewayLocalAddressOutput `pulumi:"localAddress"`
+	// Local id
 	LocalId IkeGatewayLocalIdPtrOutput `pulumi:"localId"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The PeerAddress param.
+	// Peer address
 	PeerAddress IkeGatewayPeerAddressOutput `pulumi:"peerAddress"`
-	// The PeerId param.
+	// Peer id
 	PeerId IkeGatewayPeerIdPtrOutput `pulumi:"peerId"`
-	// The Protocol param.
+	// Protocol
 	Protocol IkeGatewayProtocolOutput `pulumi:"protocol"`
-	// The ProtocolCommon param.
-	ProtocolCommon IkeGatewayProtocolCommonPtrOutput `pulumi:"protocolCommon"`
-	// The Snippet param.
+	// Protocol common
+	ProtocolCommon IkeGatewayProtocolCommonOutput `pulumi:"protocolCommon"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -86,53 +88,57 @@ func GetIkeGateway(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering IkeGateway resources.
 type ikeGatewayState struct {
-	// The Authentication param.
+	// Authentication
 	Authentication *IkeGatewayAuthentication `pulumi:"authentication"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The LocalId param.
+	// Local address
+	LocalAddress *IkeGatewayLocalAddress `pulumi:"localAddress"`
+	// Local id
 	LocalId *IkeGatewayLocalId `pulumi:"localId"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The PeerAddress param.
+	// Peer address
 	PeerAddress *IkeGatewayPeerAddress `pulumi:"peerAddress"`
-	// The PeerId param.
+	// Peer id
 	PeerId *IkeGatewayPeerId `pulumi:"peerId"`
-	// The Protocol param.
+	// Protocol
 	Protocol *IkeGatewayProtocol `pulumi:"protocol"`
-	// The ProtocolCommon param.
+	// Protocol common
 	ProtocolCommon *IkeGatewayProtocolCommon `pulumi:"protocolCommon"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type IkeGatewayState struct {
-	// The Authentication param.
+	// Authentication
 	Authentication IkeGatewayAuthenticationPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The LocalId param.
+	// Local address
+	LocalAddress IkeGatewayLocalAddressPtrInput
+	// Local id
 	LocalId IkeGatewayLocalIdPtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The PeerAddress param.
+	// Peer address
 	PeerAddress IkeGatewayPeerAddressPtrInput
-	// The PeerId param.
+	// Peer id
 	PeerId IkeGatewayPeerIdPtrInput
-	// The Protocol param.
+	// Protocol
 	Protocol IkeGatewayProtocolPtrInput
-	// The ProtocolCommon param.
+	// Protocol common
 	ProtocolCommon IkeGatewayProtocolCommonPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -142,49 +148,53 @@ func (IkeGatewayState) ElementType() reflect.Type {
 }
 
 type ikeGatewayArgs struct {
-	// The Authentication param.
+	// Authentication
 	Authentication IkeGatewayAuthentication `pulumi:"authentication"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The LocalId param.
+	// Local address
+	LocalAddress *IkeGatewayLocalAddress `pulumi:"localAddress"`
+	// Local id
 	LocalId *IkeGatewayLocalId `pulumi:"localId"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The PeerAddress param.
+	// Peer address
 	PeerAddress IkeGatewayPeerAddress `pulumi:"peerAddress"`
-	// The PeerId param.
+	// Peer id
 	PeerId *IkeGatewayPeerId `pulumi:"peerId"`
-	// The Protocol param.
+	// Protocol
 	Protocol IkeGatewayProtocol `pulumi:"protocol"`
-	// The ProtocolCommon param.
+	// Protocol common
 	ProtocolCommon *IkeGatewayProtocolCommon `pulumi:"protocolCommon"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a IkeGateway resource.
 type IkeGatewayArgs struct {
-	// The Authentication param.
+	// Authentication
 	Authentication IkeGatewayAuthenticationInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The LocalId param.
+	// Local address
+	LocalAddress IkeGatewayLocalAddressPtrInput
+	// Local id
 	LocalId IkeGatewayLocalIdPtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The PeerAddress param.
+	// Peer address
 	PeerAddress IkeGatewayPeerAddressInput
-	// The PeerId param.
+	// Peer id
 	PeerId IkeGatewayPeerIdPtrInput
-	// The Protocol param.
+	// Protocol
 	Protocol IkeGatewayProtocolInput
-	// The ProtocolCommon param.
+	// Protocol common
 	ProtocolCommon IkeGatewayProtocolCommonPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -275,57 +285,62 @@ func (o IkeGatewayOutput) ToIkeGatewayOutputWithContext(ctx context.Context) Ike
 	return o
 }
 
-// The Authentication param.
+// Authentication
 func (o IkeGatewayOutput) Authentication() IkeGatewayAuthenticationOutput {
 	return o.ApplyT(func(v *IkeGateway) IkeGatewayAuthenticationOutput { return v.Authentication }).(IkeGatewayAuthenticationOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o IkeGatewayOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IkeGateway) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// (Internal use) Encrypted values returned from the API.
+// Map of sensitive values returned from the API.
 func (o IkeGatewayOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v *IkeGateway) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o IkeGatewayOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IkeGateway) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The LocalId param.
+// Local address
+func (o IkeGatewayOutput) LocalAddress() IkeGatewayLocalAddressOutput {
+	return o.ApplyT(func(v *IkeGateway) IkeGatewayLocalAddressOutput { return v.LocalAddress }).(IkeGatewayLocalAddressOutput)
+}
+
+// Local id
 func (o IkeGatewayOutput) LocalId() IkeGatewayLocalIdPtrOutput {
 	return o.ApplyT(func(v *IkeGateway) IkeGatewayLocalIdPtrOutput { return v.LocalId }).(IkeGatewayLocalIdPtrOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o IkeGatewayOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *IkeGateway) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The PeerAddress param.
+// Peer address
 func (o IkeGatewayOutput) PeerAddress() IkeGatewayPeerAddressOutput {
 	return o.ApplyT(func(v *IkeGateway) IkeGatewayPeerAddressOutput { return v.PeerAddress }).(IkeGatewayPeerAddressOutput)
 }
 
-// The PeerId param.
+// Peer id
 func (o IkeGatewayOutput) PeerId() IkeGatewayPeerIdPtrOutput {
 	return o.ApplyT(func(v *IkeGateway) IkeGatewayPeerIdPtrOutput { return v.PeerId }).(IkeGatewayPeerIdPtrOutput)
 }
 
-// The Protocol param.
+// Protocol
 func (o IkeGatewayOutput) Protocol() IkeGatewayProtocolOutput {
 	return o.ApplyT(func(v *IkeGateway) IkeGatewayProtocolOutput { return v.Protocol }).(IkeGatewayProtocolOutput)
 }
 
-// The ProtocolCommon param.
-func (o IkeGatewayOutput) ProtocolCommon() IkeGatewayProtocolCommonPtrOutput {
-	return o.ApplyT(func(v *IkeGateway) IkeGatewayProtocolCommonPtrOutput { return v.ProtocolCommon }).(IkeGatewayProtocolCommonPtrOutput)
+// Protocol common
+func (o IkeGatewayOutput) ProtocolCommon() IkeGatewayProtocolCommonOutput {
+	return o.ApplyT(func(v *IkeGateway) IkeGatewayProtocolCommonOutput { return v.ProtocolCommon }).(IkeGatewayProtocolCommonOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o IkeGatewayOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IkeGateway) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

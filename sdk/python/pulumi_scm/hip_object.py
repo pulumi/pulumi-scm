@@ -39,22 +39,22 @@ class HipObjectArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a HipObject resource.
-        :param pulumi.Input['HipObjectAntiMalwareArgs'] anti_malware: The AntiMalware param.
-        :param pulumi.Input['HipObjectCertificateArgs'] certificate: The Certificate param.
-        :param pulumi.Input['HipObjectCustomChecksArgs'] custom_checks: The CustomChecks param.
-        :param pulumi.Input['HipObjectDataLossPreventionArgs'] data_loss_prevention: The DataLossPrevention param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input['HipObjectDiskBackupArgs'] disk_backup: The DiskBackup param.
-        :param pulumi.Input['HipObjectDiskEncryptionArgs'] disk_encryption: The DiskEncryption param.
-        :param pulumi.Input['HipObjectFirewallArgs'] firewall: The Firewall param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input['HipObjectHostInfoArgs'] host_info: The HostInfo param.
-        :param pulumi.Input['HipObjectMobileDeviceArgs'] mobile_device: The MobileDevice param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input['HipObjectNetworkInfoArgs'] network_info: The NetworkInfo param.
-        :param pulumi.Input['HipObjectPatchManagementArgs'] patch_management: The PatchManagement param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input['HipObjectAntiMalwareArgs'] anti_malware: Anti malware
+        :param pulumi.Input['HipObjectCertificateArgs'] certificate: Certificate
+        :param pulumi.Input['HipObjectCustomChecksArgs'] custom_checks: Custom checks
+        :param pulumi.Input['HipObjectDataLossPreventionArgs'] data_loss_prevention: Data loss prevention
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input['HipObjectDiskBackupArgs'] disk_backup: Disk backup
+        :param pulumi.Input['HipObjectDiskEncryptionArgs'] disk_encryption: Disk encryption
+        :param pulumi.Input['HipObjectFirewallArgs'] firewall: Firewall
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input['HipObjectHostInfoArgs'] host_info: Host info
+        :param pulumi.Input['HipObjectMobileDeviceArgs'] mobile_device: Mobile device
+        :param pulumi.Input[_builtins.str] name: The name of the HIP object
+        :param pulumi.Input['HipObjectNetworkInfoArgs'] network_info: Network info
+        :param pulumi.Input['HipObjectPatchManagementArgs'] patch_management: Patch management
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if anti_malware is not None:
             pulumi.set(__self__, "anti_malware", anti_malware)
@@ -93,7 +93,7 @@ class HipObjectArgs:
     @pulumi.getter(name="antiMalware")
     def anti_malware(self) -> Optional[pulumi.Input['HipObjectAntiMalwareArgs']]:
         """
-        The AntiMalware param.
+        Anti malware
         """
         return pulumi.get(self, "anti_malware")
 
@@ -105,7 +105,7 @@ class HipObjectArgs:
     @pulumi.getter
     def certificate(self) -> Optional[pulumi.Input['HipObjectCertificateArgs']]:
         """
-        The Certificate param.
+        Certificate
         """
         return pulumi.get(self, "certificate")
 
@@ -117,7 +117,7 @@ class HipObjectArgs:
     @pulumi.getter(name="customChecks")
     def custom_checks(self) -> Optional[pulumi.Input['HipObjectCustomChecksArgs']]:
         """
-        The CustomChecks param.
+        Custom checks
         """
         return pulumi.get(self, "custom_checks")
 
@@ -129,7 +129,7 @@ class HipObjectArgs:
     @pulumi.getter(name="dataLossPrevention")
     def data_loss_prevention(self) -> Optional[pulumi.Input['HipObjectDataLossPreventionArgs']]:
         """
-        The DataLossPrevention param.
+        Data loss prevention
         """
         return pulumi.get(self, "data_loss_prevention")
 
@@ -141,7 +141,7 @@ class HipObjectArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -153,7 +153,7 @@ class HipObjectArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -165,7 +165,7 @@ class HipObjectArgs:
     @pulumi.getter(name="diskBackup")
     def disk_backup(self) -> Optional[pulumi.Input['HipObjectDiskBackupArgs']]:
         """
-        The DiskBackup param.
+        Disk backup
         """
         return pulumi.get(self, "disk_backup")
 
@@ -177,7 +177,7 @@ class HipObjectArgs:
     @pulumi.getter(name="diskEncryption")
     def disk_encryption(self) -> Optional[pulumi.Input['HipObjectDiskEncryptionArgs']]:
         """
-        The DiskEncryption param.
+        Disk encryption
         """
         return pulumi.get(self, "disk_encryption")
 
@@ -189,7 +189,7 @@ class HipObjectArgs:
     @pulumi.getter
     def firewall(self) -> Optional[pulumi.Input['HipObjectFirewallArgs']]:
         """
-        The Firewall param.
+        Firewall
         """
         return pulumi.get(self, "firewall")
 
@@ -201,7 +201,7 @@ class HipObjectArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -213,7 +213,7 @@ class HipObjectArgs:
     @pulumi.getter(name="hostInfo")
     def host_info(self) -> Optional[pulumi.Input['HipObjectHostInfoArgs']]:
         """
-        The HostInfo param.
+        Host info
         """
         return pulumi.get(self, "host_info")
 
@@ -225,7 +225,7 @@ class HipObjectArgs:
     @pulumi.getter(name="mobileDevice")
     def mobile_device(self) -> Optional[pulumi.Input['HipObjectMobileDeviceArgs']]:
         """
-        The MobileDevice param.
+        Mobile device
         """
         return pulumi.get(self, "mobile_device")
 
@@ -237,7 +237,7 @@ class HipObjectArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the HIP object
         """
         return pulumi.get(self, "name")
 
@@ -249,7 +249,7 @@ class HipObjectArgs:
     @pulumi.getter(name="networkInfo")
     def network_info(self) -> Optional[pulumi.Input['HipObjectNetworkInfoArgs']]:
         """
-        The NetworkInfo param.
+        Network info
         """
         return pulumi.get(self, "network_info")
 
@@ -261,7 +261,7 @@ class HipObjectArgs:
     @pulumi.getter(name="patchManagement")
     def patch_management(self) -> Optional[pulumi.Input['HipObjectPatchManagementArgs']]:
         """
-        The PatchManagement param.
+        Patch management
         """
         return pulumi.get(self, "patch_management")
 
@@ -273,7 +273,7 @@ class HipObjectArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -304,22 +304,22 @@ class _HipObjectState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering HipObject resources.
-        :param pulumi.Input['HipObjectAntiMalwareArgs'] anti_malware: The AntiMalware param.
-        :param pulumi.Input['HipObjectCertificateArgs'] certificate: The Certificate param.
-        :param pulumi.Input['HipObjectCustomChecksArgs'] custom_checks: The CustomChecks param.
-        :param pulumi.Input['HipObjectDataLossPreventionArgs'] data_loss_prevention: The DataLossPrevention param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input['HipObjectDiskBackupArgs'] disk_backup: The DiskBackup param.
-        :param pulumi.Input['HipObjectDiskEncryptionArgs'] disk_encryption: The DiskEncryption param.
-        :param pulumi.Input['HipObjectFirewallArgs'] firewall: The Firewall param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input['HipObjectHostInfoArgs'] host_info: The HostInfo param.
-        :param pulumi.Input['HipObjectMobileDeviceArgs'] mobile_device: The MobileDevice param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input['HipObjectNetworkInfoArgs'] network_info: The NetworkInfo param.
-        :param pulumi.Input['HipObjectPatchManagementArgs'] patch_management: The PatchManagement param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input['HipObjectAntiMalwareArgs'] anti_malware: Anti malware
+        :param pulumi.Input['HipObjectCertificateArgs'] certificate: Certificate
+        :param pulumi.Input['HipObjectCustomChecksArgs'] custom_checks: Custom checks
+        :param pulumi.Input['HipObjectDataLossPreventionArgs'] data_loss_prevention: Data loss prevention
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input['HipObjectDiskBackupArgs'] disk_backup: Disk backup
+        :param pulumi.Input['HipObjectDiskEncryptionArgs'] disk_encryption: Disk encryption
+        :param pulumi.Input['HipObjectFirewallArgs'] firewall: Firewall
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input['HipObjectHostInfoArgs'] host_info: Host info
+        :param pulumi.Input['HipObjectMobileDeviceArgs'] mobile_device: Mobile device
+        :param pulumi.Input[_builtins.str] name: The name of the HIP object
+        :param pulumi.Input['HipObjectNetworkInfoArgs'] network_info: Network info
+        :param pulumi.Input['HipObjectPatchManagementArgs'] patch_management: Patch management
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if anti_malware is not None:
             pulumi.set(__self__, "anti_malware", anti_malware)
@@ -360,7 +360,7 @@ class _HipObjectState:
     @pulumi.getter(name="antiMalware")
     def anti_malware(self) -> Optional[pulumi.Input['HipObjectAntiMalwareArgs']]:
         """
-        The AntiMalware param.
+        Anti malware
         """
         return pulumi.get(self, "anti_malware")
 
@@ -372,7 +372,7 @@ class _HipObjectState:
     @pulumi.getter
     def certificate(self) -> Optional[pulumi.Input['HipObjectCertificateArgs']]:
         """
-        The Certificate param.
+        Certificate
         """
         return pulumi.get(self, "certificate")
 
@@ -384,7 +384,7 @@ class _HipObjectState:
     @pulumi.getter(name="customChecks")
     def custom_checks(self) -> Optional[pulumi.Input['HipObjectCustomChecksArgs']]:
         """
-        The CustomChecks param.
+        Custom checks
         """
         return pulumi.get(self, "custom_checks")
 
@@ -396,7 +396,7 @@ class _HipObjectState:
     @pulumi.getter(name="dataLossPrevention")
     def data_loss_prevention(self) -> Optional[pulumi.Input['HipObjectDataLossPreventionArgs']]:
         """
-        The DataLossPrevention param.
+        Data loss prevention
         """
         return pulumi.get(self, "data_loss_prevention")
 
@@ -408,7 +408,7 @@ class _HipObjectState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -420,7 +420,7 @@ class _HipObjectState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -432,7 +432,7 @@ class _HipObjectState:
     @pulumi.getter(name="diskBackup")
     def disk_backup(self) -> Optional[pulumi.Input['HipObjectDiskBackupArgs']]:
         """
-        The DiskBackup param.
+        Disk backup
         """
         return pulumi.get(self, "disk_backup")
 
@@ -444,7 +444,7 @@ class _HipObjectState:
     @pulumi.getter(name="diskEncryption")
     def disk_encryption(self) -> Optional[pulumi.Input['HipObjectDiskEncryptionArgs']]:
         """
-        The DiskEncryption param.
+        Disk encryption
         """
         return pulumi.get(self, "disk_encryption")
 
@@ -456,7 +456,7 @@ class _HipObjectState:
     @pulumi.getter
     def firewall(self) -> Optional[pulumi.Input['HipObjectFirewallArgs']]:
         """
-        The Firewall param.
+        Firewall
         """
         return pulumi.get(self, "firewall")
 
@@ -468,7 +468,7 @@ class _HipObjectState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -480,7 +480,7 @@ class _HipObjectState:
     @pulumi.getter(name="hostInfo")
     def host_info(self) -> Optional[pulumi.Input['HipObjectHostInfoArgs']]:
         """
-        The HostInfo param.
+        Host info
         """
         return pulumi.get(self, "host_info")
 
@@ -492,7 +492,7 @@ class _HipObjectState:
     @pulumi.getter(name="mobileDevice")
     def mobile_device(self) -> Optional[pulumi.Input['HipObjectMobileDeviceArgs']]:
         """
-        The MobileDevice param.
+        Mobile device
         """
         return pulumi.get(self, "mobile_device")
 
@@ -504,7 +504,7 @@ class _HipObjectState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the HIP object
         """
         return pulumi.get(self, "name")
 
@@ -516,7 +516,7 @@ class _HipObjectState:
     @pulumi.getter(name="networkInfo")
     def network_info(self) -> Optional[pulumi.Input['HipObjectNetworkInfoArgs']]:
         """
-        The NetworkInfo param.
+        Network info
         """
         return pulumi.get(self, "network_info")
 
@@ -528,7 +528,7 @@ class _HipObjectState:
     @pulumi.getter(name="patchManagement")
     def patch_management(self) -> Optional[pulumi.Input['HipObjectPatchManagementArgs']]:
         """
-        The PatchManagement param.
+        Patch management
         """
         return pulumi.get(self, "patch_management")
 
@@ -540,7 +540,7 @@ class _HipObjectState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -582,28 +582,28 @@ class HipObject(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        HipObject resource
 
         ## Example Usage
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']] anti_malware: The AntiMalware param.
-        :param pulumi.Input[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']] certificate: The Certificate param.
-        :param pulumi.Input[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']] custom_checks: The CustomChecks param.
-        :param pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']] data_loss_prevention: The DataLossPrevention param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']] disk_backup: The DiskBackup param.
-        :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']] disk_encryption: The DiskEncryption param.
-        :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']] firewall: The Firewall param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']] host_info: The HostInfo param.
-        :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']] mobile_device: The MobileDevice param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']] network_info: The NetworkInfo param.
-        :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']] patch_management: The PatchManagement param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']] anti_malware: Anti malware
+        :param pulumi.Input[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']] certificate: Certificate
+        :param pulumi.Input[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']] custom_checks: Custom checks
+        :param pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']] data_loss_prevention: Data loss prevention
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']] disk_backup: Disk backup
+        :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']] disk_encryption: Disk encryption
+        :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']] firewall: Firewall
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']] host_info: Host info
+        :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']] mobile_device: Mobile device
+        :param pulumi.Input[_builtins.str] name: The name of the HIP object
+        :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']] network_info: Network info
+        :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']] patch_management: Patch management
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -612,7 +612,7 @@ class HipObject(pulumi.CustomResource):
                  args: Optional[HipObjectArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        HipObject resource
 
         ## Example Usage
 
@@ -707,22 +707,22 @@ class HipObject(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']] anti_malware: The AntiMalware param.
-        :param pulumi.Input[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']] certificate: The Certificate param.
-        :param pulumi.Input[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']] custom_checks: The CustomChecks param.
-        :param pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']] data_loss_prevention: The DataLossPrevention param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']] disk_backup: The DiskBackup param.
-        :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']] disk_encryption: The DiskEncryption param.
-        :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']] firewall: The Firewall param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']] host_info: The HostInfo param.
-        :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']] mobile_device: The MobileDevice param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']] network_info: The NetworkInfo param.
-        :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']] patch_management: The PatchManagement param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']] anti_malware: Anti malware
+        :param pulumi.Input[Union['HipObjectCertificateArgs', 'HipObjectCertificateArgsDict']] certificate: Certificate
+        :param pulumi.Input[Union['HipObjectCustomChecksArgs', 'HipObjectCustomChecksArgsDict']] custom_checks: Custom checks
+        :param pulumi.Input[Union['HipObjectDataLossPreventionArgs', 'HipObjectDataLossPreventionArgsDict']] data_loss_prevention: Data loss prevention
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Union['HipObjectDiskBackupArgs', 'HipObjectDiskBackupArgsDict']] disk_backup: Disk backup
+        :param pulumi.Input[Union['HipObjectDiskEncryptionArgs', 'HipObjectDiskEncryptionArgsDict']] disk_encryption: Disk encryption
+        :param pulumi.Input[Union['HipObjectFirewallArgs', 'HipObjectFirewallArgsDict']] firewall: Firewall
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Union['HipObjectHostInfoArgs', 'HipObjectHostInfoArgsDict']] host_info: Host info
+        :param pulumi.Input[Union['HipObjectMobileDeviceArgs', 'HipObjectMobileDeviceArgsDict']] mobile_device: Mobile device
+        :param pulumi.Input[_builtins.str] name: The name of the HIP object
+        :param pulumi.Input[Union['HipObjectNetworkInfoArgs', 'HipObjectNetworkInfoArgsDict']] network_info: Network info
+        :param pulumi.Input[Union['HipObjectPatchManagementArgs', 'HipObjectPatchManagementArgsDict']] patch_management: Patch management
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -749,9 +749,9 @@ class HipObject(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="antiMalware")
-    def anti_malware(self) -> pulumi.Output[Optional['outputs.HipObjectAntiMalware']]:
+    def anti_malware(self) -> pulumi.Output['outputs.HipObjectAntiMalware']:
         """
-        The AntiMalware param.
+        Anti malware
         """
         return pulumi.get(self, "anti_malware")
 
@@ -759,7 +759,7 @@ class HipObject(pulumi.CustomResource):
     @pulumi.getter
     def certificate(self) -> pulumi.Output[Optional['outputs.HipObjectCertificate']]:
         """
-        The Certificate param.
+        Certificate
         """
         return pulumi.get(self, "certificate")
 
@@ -767,15 +767,15 @@ class HipObject(pulumi.CustomResource):
     @pulumi.getter(name="customChecks")
     def custom_checks(self) -> pulumi.Output[Optional['outputs.HipObjectCustomChecks']]:
         """
-        The CustomChecks param.
+        Custom checks
         """
         return pulumi.get(self, "custom_checks")
 
     @_builtins.property
     @pulumi.getter(name="dataLossPrevention")
-    def data_loss_prevention(self) -> pulumi.Output[Optional['outputs.HipObjectDataLossPrevention']]:
+    def data_loss_prevention(self) -> pulumi.Output['outputs.HipObjectDataLossPrevention']:
         """
-        The DataLossPrevention param.
+        Data loss prevention
         """
         return pulumi.get(self, "data_loss_prevention")
 
@@ -783,7 +783,7 @@ class HipObject(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -791,31 +791,31 @@ class HipObject(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="diskBackup")
-    def disk_backup(self) -> pulumi.Output[Optional['outputs.HipObjectDiskBackup']]:
+    def disk_backup(self) -> pulumi.Output['outputs.HipObjectDiskBackup']:
         """
-        The DiskBackup param.
+        Disk backup
         """
         return pulumi.get(self, "disk_backup")
 
     @_builtins.property
     @pulumi.getter(name="diskEncryption")
-    def disk_encryption(self) -> pulumi.Output[Optional['outputs.HipObjectDiskEncryption']]:
+    def disk_encryption(self) -> pulumi.Output['outputs.HipObjectDiskEncryption']:
         """
-        The DiskEncryption param.
+        Disk encryption
         """
         return pulumi.get(self, "disk_encryption")
 
     @_builtins.property
     @pulumi.getter
-    def firewall(self) -> pulumi.Output[Optional['outputs.HipObjectFirewall']]:
+    def firewall(self) -> pulumi.Output['outputs.HipObjectFirewall']:
         """
-        The Firewall param.
+        Firewall
         """
         return pulumi.get(self, "firewall")
 
@@ -823,7 +823,7 @@ class HipObject(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -831,7 +831,7 @@ class HipObject(pulumi.CustomResource):
     @pulumi.getter(name="hostInfo")
     def host_info(self) -> pulumi.Output[Optional['outputs.HipObjectHostInfo']]:
         """
-        The HostInfo param.
+        Host info
         """
         return pulumi.get(self, "host_info")
 
@@ -839,7 +839,7 @@ class HipObject(pulumi.CustomResource):
     @pulumi.getter(name="mobileDevice")
     def mobile_device(self) -> pulumi.Output[Optional['outputs.HipObjectMobileDevice']]:
         """
-        The MobileDevice param.
+        Mobile device
         """
         return pulumi.get(self, "mobile_device")
 
@@ -847,7 +847,7 @@ class HipObject(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the HIP object
         """
         return pulumi.get(self, "name")
 
@@ -855,15 +855,15 @@ class HipObject(pulumi.CustomResource):
     @pulumi.getter(name="networkInfo")
     def network_info(self) -> pulumi.Output[Optional['outputs.HipObjectNetworkInfo']]:
         """
-        The NetworkInfo param.
+        Network info
         """
         return pulumi.get(self, "network_info")
 
     @_builtins.property
     @pulumi.getter(name="patchManagement")
-    def patch_management(self) -> pulumi.Output[Optional['outputs.HipObjectPatchManagement']]:
+    def patch_management(self) -> pulumi.Output['outputs.HipObjectPatchManagement']:
         """
-        The PatchManagement param.
+        Patch management
         """
         return pulumi.get(self, "patch_management")
 
@@ -871,7 +871,7 @@ class HipObject(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

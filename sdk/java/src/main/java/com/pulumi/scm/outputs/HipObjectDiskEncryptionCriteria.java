@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectDiskEncryptionCriteria {
     /**
-     * @return The EncryptedLocations param.
+     * @return Encrypted locations
      * 
      */
     private @Nullable List<HipObjectDiskEncryptionCriteriaEncryptedLocation> encryptedLocations;
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     private @Nullable Boolean isInstalled;
 
     private HipObjectDiskEncryptionCriteria() {}
     /**
-     * @return The EncryptedLocations param.
+     * @return Encrypted locations
      * 
      */
     public List<HipObjectDiskEncryptionCriteriaEncryptedLocation> encryptedLocations() {
         return this.encryptedLocations == null ? List.of() : this.encryptedLocations;
     }
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     public Optional<Boolean> isInstalled() {

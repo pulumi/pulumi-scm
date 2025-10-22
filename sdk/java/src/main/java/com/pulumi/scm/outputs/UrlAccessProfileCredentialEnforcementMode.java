@@ -4,7 +4,9 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.UrlAccessProfileCredentialEnforcementModeDisabled;
+import com.pulumi.scm.outputs.UrlAccessProfileCredentialEnforcementModeDomainCredentials;
+import com.pulumi.scm.outputs.UrlAccessProfileCredentialEnforcementModeIpUser;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -13,53 +15,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class UrlAccessProfileCredentialEnforcementMode {
     /**
-     * @return The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Disabled
      * 
      */
-    private @Nullable Boolean disabled;
+    private @Nullable UrlAccessProfileCredentialEnforcementModeDisabled disabled;
     /**
-     * @return The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Domain credentials
      * 
      */
-    private @Nullable Boolean domainCredentials;
+    private @Nullable UrlAccessProfileCredentialEnforcementModeDomainCredentials domainCredentials;
     /**
-     * @return The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Group mapping
      * 
      */
     private @Nullable String groupMapping;
     /**
-     * @return The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Ip user
      * 
      */
-    private @Nullable Boolean ipUser;
+    private @Nullable UrlAccessProfileCredentialEnforcementModeIpUser ipUser;
 
     private UrlAccessProfileCredentialEnforcementMode() {}
     /**
-     * @return The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Disabled
      * 
      */
-    public Optional<Boolean> disabled() {
+    public Optional<UrlAccessProfileCredentialEnforcementModeDisabled> disabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
-     * @return The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Domain credentials
      * 
      */
-    public Optional<Boolean> domainCredentials() {
+    public Optional<UrlAccessProfileCredentialEnforcementModeDomainCredentials> domainCredentials() {
         return Optional.ofNullable(this.domainCredentials);
     }
     /**
-     * @return The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Group mapping
      * 
      */
     public Optional<String> groupMapping() {
         return Optional.ofNullable(this.groupMapping);
     }
     /**
-     * @return The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Ip user
      * 
      */
-    public Optional<Boolean> ipUser() {
+    public Optional<UrlAccessProfileCredentialEnforcementModeIpUser> ipUser() {
         return Optional.ofNullable(this.ipUser);
     }
 
@@ -72,10 +74,10 @@ public final class UrlAccessProfileCredentialEnforcementMode {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Boolean disabled;
-        private @Nullable Boolean domainCredentials;
+        private @Nullable UrlAccessProfileCredentialEnforcementModeDisabled disabled;
+        private @Nullable UrlAccessProfileCredentialEnforcementModeDomainCredentials domainCredentials;
         private @Nullable String groupMapping;
-        private @Nullable Boolean ipUser;
+        private @Nullable UrlAccessProfileCredentialEnforcementModeIpUser ipUser;
         public Builder() {}
         public Builder(UrlAccessProfileCredentialEnforcementMode defaults) {
     	      Objects.requireNonNull(defaults);
@@ -86,13 +88,13 @@ public final class UrlAccessProfileCredentialEnforcementMode {
         }
 
         @CustomType.Setter
-        public Builder disabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable UrlAccessProfileCredentialEnforcementModeDisabled disabled) {
 
             this.disabled = disabled;
             return this;
         }
         @CustomType.Setter
-        public Builder domainCredentials(@Nullable Boolean domainCredentials) {
+        public Builder domainCredentials(@Nullable UrlAccessProfileCredentialEnforcementModeDomainCredentials domainCredentials) {
 
             this.domainCredentials = domainCredentials;
             return this;
@@ -104,7 +106,7 @@ public final class UrlAccessProfileCredentialEnforcementMode {
             return this;
         }
         @CustomType.Setter
-        public Builder ipUser(@Nullable Boolean ipUser) {
+        public Builder ipUser(@Nullable UrlAccessProfileCredentialEnforcementModeIpUser ipUser) {
 
             this.ipUser = ipUser;
             return this;

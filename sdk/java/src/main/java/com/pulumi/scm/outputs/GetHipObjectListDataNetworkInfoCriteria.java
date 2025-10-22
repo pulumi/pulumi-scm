@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataNetworkInfoCriteria {
     /**
-     * @return The Network param.
+     * @return Network
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetwork network;
 
     private GetHipObjectListDataNetworkInfoCriteria() {}
     /**
-     * @return The Network param.
+     * @return Network
      * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetwork network() {

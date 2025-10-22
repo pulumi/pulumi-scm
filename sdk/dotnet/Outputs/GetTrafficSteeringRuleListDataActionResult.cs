@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetTrafficSteeringRuleListDataActionResult
     {
         /// <summary>
-        /// The Forward param.
+        /// Forward
         /// </summary>
         public readonly Outputs.GetTrafficSteeringRuleListDataActionForwardResult Forward;
         /// <summary>
-        /// The NoPbf param.
+        /// No pbf
         /// </summary>
-        public readonly bool NoPbf;
+        public readonly string NoPbf;
 
         [OutputConstructor]
         private GetTrafficSteeringRuleListDataActionResult(
             Outputs.GetTrafficSteeringRuleListDataActionForwardResult forward,
 
-            bool noPbf)
+            string noPbf)
         {
             Forward = forward;
             NoPbf = noPbf;

@@ -13,26 +13,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataDiskEncryptionCriteria {
     /**
-     * @return The EncryptedLocations param.
+     * @return Encrypted locations
      * 
      */
     private List<GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocation> encryptedLocations;
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     private Boolean isInstalled;
 
     private GetHipObjectListDataDiskEncryptionCriteria() {}
     /**
-     * @return The EncryptedLocations param.
+     * @return Encrypted locations
      * 
      */
     public List<GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocation> encryptedLocations() {
         return this.encryptedLocations;
     }
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     public Boolean isInstalled() {

@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectNetworkInfoCriteriaNetworkIsWifiArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+        /// SSID
         /// </summary>
         [Input("ssid")]
         public Input<string>? Ssid { get; set; }

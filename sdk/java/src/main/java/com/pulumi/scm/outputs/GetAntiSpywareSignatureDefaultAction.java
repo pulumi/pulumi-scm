@@ -5,96 +5,101 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetAntiSpywareSignatureDefaultActionAlert;
+import com.pulumi.scm.outputs.GetAntiSpywareSignatureDefaultActionAllow;
 import com.pulumi.scm.outputs.GetAntiSpywareSignatureDefaultActionBlockIp;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.GetAntiSpywareSignatureDefaultActionDrop;
+import com.pulumi.scm.outputs.GetAntiSpywareSignatureDefaultActionResetBoth;
+import com.pulumi.scm.outputs.GetAntiSpywareSignatureDefaultActionResetClient;
+import com.pulumi.scm.outputs.GetAntiSpywareSignatureDefaultActionResetServer;
 import java.util.Objects;
 
 @CustomType
 public final class GetAntiSpywareSignatureDefaultAction {
     /**
-     * @return The Alert param.
+     * @return Alert
      * 
      */
-    private Boolean alert;
+    private GetAntiSpywareSignatureDefaultActionAlert alert;
     /**
-     * @return The Allow param.
+     * @return Allow
      * 
      */
-    private Boolean allow;
+    private GetAntiSpywareSignatureDefaultActionAllow allow;
     /**
-     * @return The BlockIp param.
+     * @return anti spyware signature block ip
      * 
      */
     private GetAntiSpywareSignatureDefaultActionBlockIp blockIp;
     /**
-     * @return The Drop param.
+     * @return Drop
      * 
      */
-    private Boolean drop;
+    private GetAntiSpywareSignatureDefaultActionDrop drop;
     /**
-     * @return The ResetBoth param.
+     * @return Reset both
      * 
      */
-    private Boolean resetBoth;
+    private GetAntiSpywareSignatureDefaultActionResetBoth resetBoth;
     /**
-     * @return The ResetClient param.
+     * @return Reset client
      * 
      */
-    private Boolean resetClient;
+    private GetAntiSpywareSignatureDefaultActionResetClient resetClient;
     /**
-     * @return The ResetServer param.
+     * @return Reset server
      * 
      */
-    private Boolean resetServer;
+    private GetAntiSpywareSignatureDefaultActionResetServer resetServer;
 
     private GetAntiSpywareSignatureDefaultAction() {}
     /**
-     * @return The Alert param.
+     * @return Alert
      * 
      */
-    public Boolean alert() {
+    public GetAntiSpywareSignatureDefaultActionAlert alert() {
         return this.alert;
     }
     /**
-     * @return The Allow param.
+     * @return Allow
      * 
      */
-    public Boolean allow() {
+    public GetAntiSpywareSignatureDefaultActionAllow allow() {
         return this.allow;
     }
     /**
-     * @return The BlockIp param.
+     * @return anti spyware signature block ip
      * 
      */
     public GetAntiSpywareSignatureDefaultActionBlockIp blockIp() {
         return this.blockIp;
     }
     /**
-     * @return The Drop param.
+     * @return Drop
      * 
      */
-    public Boolean drop() {
+    public GetAntiSpywareSignatureDefaultActionDrop drop() {
         return this.drop;
     }
     /**
-     * @return The ResetBoth param.
+     * @return Reset both
      * 
      */
-    public Boolean resetBoth() {
+    public GetAntiSpywareSignatureDefaultActionResetBoth resetBoth() {
         return this.resetBoth;
     }
     /**
-     * @return The ResetClient param.
+     * @return Reset client
      * 
      */
-    public Boolean resetClient() {
+    public GetAntiSpywareSignatureDefaultActionResetClient resetClient() {
         return this.resetClient;
     }
     /**
-     * @return The ResetServer param.
+     * @return Reset server
      * 
      */
-    public Boolean resetServer() {
+    public GetAntiSpywareSignatureDefaultActionResetServer resetServer() {
         return this.resetServer;
     }
 
@@ -107,13 +112,13 @@ public final class GetAntiSpywareSignatureDefaultAction {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean alert;
-        private Boolean allow;
+        private GetAntiSpywareSignatureDefaultActionAlert alert;
+        private GetAntiSpywareSignatureDefaultActionAllow allow;
         private GetAntiSpywareSignatureDefaultActionBlockIp blockIp;
-        private Boolean drop;
-        private Boolean resetBoth;
-        private Boolean resetClient;
-        private Boolean resetServer;
+        private GetAntiSpywareSignatureDefaultActionDrop drop;
+        private GetAntiSpywareSignatureDefaultActionResetBoth resetBoth;
+        private GetAntiSpywareSignatureDefaultActionResetClient resetClient;
+        private GetAntiSpywareSignatureDefaultActionResetServer resetServer;
         public Builder() {}
         public Builder(GetAntiSpywareSignatureDefaultAction defaults) {
     	      Objects.requireNonNull(defaults);
@@ -127,7 +132,7 @@ public final class GetAntiSpywareSignatureDefaultAction {
         }
 
         @CustomType.Setter
-        public Builder alert(Boolean alert) {
+        public Builder alert(GetAntiSpywareSignatureDefaultActionAlert alert) {
             if (alert == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareSignatureDefaultAction", "alert");
             }
@@ -135,7 +140,7 @@ public final class GetAntiSpywareSignatureDefaultAction {
             return this;
         }
         @CustomType.Setter
-        public Builder allow(Boolean allow) {
+        public Builder allow(GetAntiSpywareSignatureDefaultActionAllow allow) {
             if (allow == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareSignatureDefaultAction", "allow");
             }
@@ -151,7 +156,7 @@ public final class GetAntiSpywareSignatureDefaultAction {
             return this;
         }
         @CustomType.Setter
-        public Builder drop(Boolean drop) {
+        public Builder drop(GetAntiSpywareSignatureDefaultActionDrop drop) {
             if (drop == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareSignatureDefaultAction", "drop");
             }
@@ -159,7 +164,7 @@ public final class GetAntiSpywareSignatureDefaultAction {
             return this;
         }
         @CustomType.Setter
-        public Builder resetBoth(Boolean resetBoth) {
+        public Builder resetBoth(GetAntiSpywareSignatureDefaultActionResetBoth resetBoth) {
             if (resetBoth == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareSignatureDefaultAction", "resetBoth");
             }
@@ -167,7 +172,7 @@ public final class GetAntiSpywareSignatureDefaultAction {
             return this;
         }
         @CustomType.Setter
-        public Builder resetClient(Boolean resetClient) {
+        public Builder resetClient(GetAntiSpywareSignatureDefaultActionResetClient resetClient) {
             if (resetClient == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareSignatureDefaultAction", "resetClient");
             }
@@ -175,7 +180,7 @@ public final class GetAntiSpywareSignatureDefaultAction {
             return this;
         }
         @CustomType.Setter
-        public Builder resetServer(Boolean resetServer) {
+        public Builder resetServer(GetAntiSpywareSignatureDefaultActionResetServer resetServer) {
             if (resetServer == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareSignatureDefaultAction", "resetServer");
             }

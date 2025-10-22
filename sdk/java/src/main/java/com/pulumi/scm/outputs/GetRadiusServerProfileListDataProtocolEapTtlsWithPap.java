@@ -10,28 +10,28 @@ import java.lang.String;
 import java.util.Objects;
 
 @CustomType
-public final class GetRadiusServerProfileListDataProtocolEapTtlsWithPap {
+public final class GetRadiusServerProfileListDataProtocolEAPTTLSWithPAP {
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     private Boolean anonOuterId;
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     private String radiusCertProfile;
 
-    private GetRadiusServerProfileListDataProtocolEapTtlsWithPap() {}
+    private GetRadiusServerProfileListDataProtocolEAPTTLSWithPAP() {}
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     public Boolean anonOuterId() {
         return this.anonOuterId;
     }
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     public String radiusCertProfile() {
@@ -42,7 +42,7 @@ public final class GetRadiusServerProfileListDataProtocolEapTtlsWithPap {
         return new Builder();
     }
 
-    public static Builder builder(GetRadiusServerProfileListDataProtocolEapTtlsWithPap defaults) {
+    public static Builder builder(GetRadiusServerProfileListDataProtocolEAPTTLSWithPAP defaults) {
         return new Builder(defaults);
     }
     @CustomType.Builder
@@ -50,7 +50,7 @@ public final class GetRadiusServerProfileListDataProtocolEapTtlsWithPap {
         private Boolean anonOuterId;
         private String radiusCertProfile;
         public Builder() {}
-        public Builder(GetRadiusServerProfileListDataProtocolEapTtlsWithPap defaults) {
+        public Builder(GetRadiusServerProfileListDataProtocolEAPTTLSWithPAP defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.anonOuterId = defaults.anonOuterId;
     	      this.radiusCertProfile = defaults.radiusCertProfile;
@@ -59,7 +59,7 @@ public final class GetRadiusServerProfileListDataProtocolEapTtlsWithPap {
         @CustomType.Setter
         public Builder anonOuterId(Boolean anonOuterId) {
             if (anonOuterId == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolEapTtlsWithPap", "anonOuterId");
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolEAPTTLSWithPAP", "anonOuterId");
             }
             this.anonOuterId = anonOuterId;
             return this;
@@ -67,13 +67,13 @@ public final class GetRadiusServerProfileListDataProtocolEapTtlsWithPap {
         @CustomType.Setter
         public Builder radiusCertProfile(String radiusCertProfile) {
             if (radiusCertProfile == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolEapTtlsWithPap", "radiusCertProfile");
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolEAPTTLSWithPAP", "radiusCertProfile");
             }
             this.radiusCertProfile = radiusCertProfile;
             return this;
         }
-        public GetRadiusServerProfileListDataProtocolEapTtlsWithPap build() {
-            final var _resultValue = new GetRadiusServerProfileListDataProtocolEapTtlsWithPap();
+        public GetRadiusServerProfileListDataProtocolEAPTTLSWithPAP build() {
+            final var _resultValue = new GetRadiusServerProfileListDataProtocolEAPTTLSWithPAP();
             _resultValue.anonOuterId = anonOuterId;
             _resultValue.radiusCertProfile = radiusCertProfile;
             return _resultValue;

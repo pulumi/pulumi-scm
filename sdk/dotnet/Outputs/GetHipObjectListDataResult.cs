@@ -14,61 +14,74 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataResult
     {
         /// <summary>
-        /// The AntiMalware param.
+        /// Anti malware
         /// </summary>
         public readonly Outputs.GetHipObjectListDataAntiMalwareResult AntiMalware;
         /// <summary>
-        /// The Certificate param.
+        /// Certificate
         /// </summary>
         public readonly Outputs.GetHipObjectListDataCertificateResult Certificate;
         /// <summary>
-        /// The CustomChecks param.
+        /// Custom checks
         /// </summary>
         public readonly Outputs.GetHipObjectListDataCustomChecksResult CustomChecks;
         /// <summary>
-        /// The DataLossPrevention param.
+        /// Data loss prevention
         /// </summary>
         public readonly Outputs.GetHipObjectListDataDataLossPreventionResult DataLossPrevention;
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The DiskBackup param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Disk backup
         /// </summary>
         public readonly Outputs.GetHipObjectListDataDiskBackupResult DiskBackup;
         /// <summary>
-        /// The DiskEncryption param.
+        /// Disk encryption
         /// </summary>
         public readonly Outputs.GetHipObjectListDataDiskEncryptionResult DiskEncryption;
         /// <summary>
-        /// The Firewall param.
+        /// Firewall
         /// </summary>
         public readonly Outputs.GetHipObjectListDataFirewallResult Firewall;
         /// <summary>
-        /// The HostInfo param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// Host info
         /// </summary>
         public readonly Outputs.GetHipObjectListDataHostInfoResult HostInfo;
         /// <summary>
-        /// UUID of the resource.
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The MobileDevice param.
+        /// Mobile device
         /// </summary>
         public readonly Outputs.GetHipObjectListDataMobileDeviceResult MobileDevice;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the HIP object
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NetworkInfo param.
+        /// Network info
         /// </summary>
         public readonly Outputs.GetHipObjectListDataNetworkInfoResult NetworkInfo;
         /// <summary>
-        /// The PatchManagement param.
+        /// Patch management
         /// </summary>
         public readonly Outputs.GetHipObjectListDataPatchManagementResult PatchManagement;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetHipObjectListDataResult(
@@ -82,11 +95,15 @@ namespace Pulumi.Scm.Outputs
 
             string description,
 
+            string device,
+
             Outputs.GetHipObjectListDataDiskBackupResult diskBackup,
 
             Outputs.GetHipObjectListDataDiskEncryptionResult diskEncryption,
 
             Outputs.GetHipObjectListDataFirewallResult firewall,
+
+            string folder,
 
             Outputs.GetHipObjectListDataHostInfoResult hostInfo,
 
@@ -98,22 +115,30 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetHipObjectListDataNetworkInfoResult networkInfo,
 
-            Outputs.GetHipObjectListDataPatchManagementResult patchManagement)
+            Outputs.GetHipObjectListDataPatchManagementResult patchManagement,
+
+            string snippet,
+
+            string tfid)
         {
             AntiMalware = antiMalware;
             Certificate = certificate;
             CustomChecks = customChecks;
             DataLossPrevention = dataLossPrevention;
             Description = description;
+            Device = device;
             DiskBackup = diskBackup;
             DiskEncryption = diskEncryption;
             Firewall = firewall;
+            Folder = folder;
             HostInfo = hostInfo;
             Id = id;
             MobileDevice = mobileDevice;
             Name = name;
             NetworkInfo = networkInfo;
             PatchManagement = patchManagement;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

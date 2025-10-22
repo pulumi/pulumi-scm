@@ -5,75 +5,75 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetRadiusServerProfileProtocolEapTtlsWithPap;
-import com.pulumi.scm.outputs.GetRadiusServerProfileProtocolPeapMschapV2;
-import com.pulumi.scm.outputs.GetRadiusServerProfileProtocolPeapWithGtc;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.GetRadiusServerProfileProtocolEAPTTLSWithPAP;
+import com.pulumi.scm.outputs.GetRadiusServerProfileProtocolPEAPMSCHAPv2;
+import com.pulumi.scm.outputs.GetRadiusServerProfileProtocolPEAPWithGTC;
+import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetRadiusServerProfileProtocol {
     /**
-     * @return The Chap param.
+     * @return C h a p
      * 
      */
-    private Boolean chap;
+    private String cHAP;
     /**
-     * @return The EapTtlsWithPap param.
+     * @return E a p t t l s with p a p
      * 
      */
-    private GetRadiusServerProfileProtocolEapTtlsWithPap eapTtlsWithPap;
+    private GetRadiusServerProfileProtocolEAPTTLSWithPAP eAPTTLSWithPAP;
     /**
-     * @return The Pap param.
+     * @return P a p
      * 
      */
-    private Boolean pap;
+    private String pAP;
     /**
-     * @return The PeapMschapV2 param.
+     * @return P e a p m s c h a pv2
      * 
      */
-    private GetRadiusServerProfileProtocolPeapMschapV2 peapMschapV2;
+    private GetRadiusServerProfileProtocolPEAPMSCHAPv2 pEAPMSCHAPv2;
     /**
-     * @return The PeapWithGtc param.
+     * @return P e a p with g t c
      * 
      */
-    private GetRadiusServerProfileProtocolPeapWithGtc peapWithGtc;
+    private GetRadiusServerProfileProtocolPEAPWithGTC pEAPWithGTC;
 
     private GetRadiusServerProfileProtocol() {}
     /**
-     * @return The Chap param.
+     * @return C h a p
      * 
      */
-    public Boolean chap() {
-        return this.chap;
+    public String cHAP() {
+        return this.cHAP;
     }
     /**
-     * @return The EapTtlsWithPap param.
+     * @return E a p t t l s with p a p
      * 
      */
-    public GetRadiusServerProfileProtocolEapTtlsWithPap eapTtlsWithPap() {
-        return this.eapTtlsWithPap;
+    public GetRadiusServerProfileProtocolEAPTTLSWithPAP eAPTTLSWithPAP() {
+        return this.eAPTTLSWithPAP;
     }
     /**
-     * @return The Pap param.
+     * @return P a p
      * 
      */
-    public Boolean pap() {
-        return this.pap;
+    public String pAP() {
+        return this.pAP;
     }
     /**
-     * @return The PeapMschapV2 param.
+     * @return P e a p m s c h a pv2
      * 
      */
-    public GetRadiusServerProfileProtocolPeapMschapV2 peapMschapV2() {
-        return this.peapMschapV2;
+    public GetRadiusServerProfileProtocolPEAPMSCHAPv2 pEAPMSCHAPv2() {
+        return this.pEAPMSCHAPv2;
     }
     /**
-     * @return The PeapWithGtc param.
+     * @return P e a p with g t c
      * 
      */
-    public GetRadiusServerProfileProtocolPeapWithGtc peapWithGtc() {
-        return this.peapWithGtc;
+    public GetRadiusServerProfileProtocolPEAPWithGTC pEAPWithGTC() {
+        return this.pEAPWithGTC;
     }
 
     public static Builder builder() {
@@ -85,68 +85,68 @@ public final class GetRadiusServerProfileProtocol {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean chap;
-        private GetRadiusServerProfileProtocolEapTtlsWithPap eapTtlsWithPap;
-        private Boolean pap;
-        private GetRadiusServerProfileProtocolPeapMschapV2 peapMschapV2;
-        private GetRadiusServerProfileProtocolPeapWithGtc peapWithGtc;
+        private String cHAP;
+        private GetRadiusServerProfileProtocolEAPTTLSWithPAP eAPTTLSWithPAP;
+        private String pAP;
+        private GetRadiusServerProfileProtocolPEAPMSCHAPv2 pEAPMSCHAPv2;
+        private GetRadiusServerProfileProtocolPEAPWithGTC pEAPWithGTC;
         public Builder() {}
         public Builder(GetRadiusServerProfileProtocol defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.chap = defaults.chap;
-    	      this.eapTtlsWithPap = defaults.eapTtlsWithPap;
-    	      this.pap = defaults.pap;
-    	      this.peapMschapV2 = defaults.peapMschapV2;
-    	      this.peapWithGtc = defaults.peapWithGtc;
+    	      this.cHAP = defaults.cHAP;
+    	      this.eAPTTLSWithPAP = defaults.eAPTTLSWithPAP;
+    	      this.pAP = defaults.pAP;
+    	      this.pEAPMSCHAPv2 = defaults.pEAPMSCHAPv2;
+    	      this.pEAPWithGTC = defaults.pEAPWithGTC;
         }
 
         @CustomType.Setter
-        public Builder chap(Boolean chap) {
-            if (chap == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileProtocol", "chap");
+        public Builder cHAP(String cHAP) {
+            if (cHAP == null) {
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileProtocol", "cHAP");
             }
-            this.chap = chap;
+            this.cHAP = cHAP;
             return this;
         }
         @CustomType.Setter
-        public Builder eapTtlsWithPap(GetRadiusServerProfileProtocolEapTtlsWithPap eapTtlsWithPap) {
-            if (eapTtlsWithPap == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileProtocol", "eapTtlsWithPap");
+        public Builder eAPTTLSWithPAP(GetRadiusServerProfileProtocolEAPTTLSWithPAP eAPTTLSWithPAP) {
+            if (eAPTTLSWithPAP == null) {
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileProtocol", "eAPTTLSWithPAP");
             }
-            this.eapTtlsWithPap = eapTtlsWithPap;
+            this.eAPTTLSWithPAP = eAPTTLSWithPAP;
             return this;
         }
         @CustomType.Setter
-        public Builder pap(Boolean pap) {
-            if (pap == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileProtocol", "pap");
+        public Builder pAP(String pAP) {
+            if (pAP == null) {
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileProtocol", "pAP");
             }
-            this.pap = pap;
+            this.pAP = pAP;
             return this;
         }
         @CustomType.Setter
-        public Builder peapMschapV2(GetRadiusServerProfileProtocolPeapMschapV2 peapMschapV2) {
-            if (peapMschapV2 == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileProtocol", "peapMschapV2");
+        public Builder pEAPMSCHAPv2(GetRadiusServerProfileProtocolPEAPMSCHAPv2 pEAPMSCHAPv2) {
+            if (pEAPMSCHAPv2 == null) {
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileProtocol", "pEAPMSCHAPv2");
             }
-            this.peapMschapV2 = peapMschapV2;
+            this.pEAPMSCHAPv2 = pEAPMSCHAPv2;
             return this;
         }
         @CustomType.Setter
-        public Builder peapWithGtc(GetRadiusServerProfileProtocolPeapWithGtc peapWithGtc) {
-            if (peapWithGtc == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileProtocol", "peapWithGtc");
+        public Builder pEAPWithGTC(GetRadiusServerProfileProtocolPEAPWithGTC pEAPWithGTC) {
+            if (pEAPWithGTC == null) {
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileProtocol", "pEAPWithGTC");
             }
-            this.peapWithGtc = peapWithGtc;
+            this.pEAPWithGTC = pEAPWithGTC;
             return this;
         }
         public GetRadiusServerProfileProtocol build() {
             final var _resultValue = new GetRadiusServerProfileProtocol();
-            _resultValue.chap = chap;
-            _resultValue.eapTtlsWithPap = eapTtlsWithPap;
-            _resultValue.pap = pap;
-            _resultValue.peapMschapV2 = peapMschapV2;
-            _resultValue.peapWithGtc = peapWithGtc;
+            _resultValue.cHAP = cHAP;
+            _resultValue.eAPTTLSWithPAP = eAPTTLSWithPAP;
+            _resultValue.pAP = pAP;
+            _resultValue.pEAPMSCHAPv2 = pEAPMSCHAPv2;
+            _resultValue.pEAPWithGTC = pEAPWithGTC;
             return _resultValue;
         }
     }

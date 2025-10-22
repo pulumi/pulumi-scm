@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataCustomChecksCriteriaResult
     {
         /// <summary>
-        /// The Plist param.
+        /// Plist
         /// </summary>
         public readonly ImmutableArray<Outputs.GetHipObjectListDataCustomChecksCriteriaPlistResult> Plists;
         /// <summary>
-        /// The ProcessList param.
+        /// Process list
         /// </summary>
         public readonly ImmutableArray<Outputs.GetHipObjectListDataCustomChecksCriteriaProcessListResult> ProcessLists;
         /// <summary>
-        /// The RegistryKeys param.
+        /// Registry key
         /// </summary>
         public readonly ImmutableArray<Outputs.GetHipObjectListDataCustomChecksCriteriaRegistryKeyResult> RegistryKeys;
 

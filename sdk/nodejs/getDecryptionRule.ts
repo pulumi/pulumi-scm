@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getDecryptionRule({
- *     id: "1234-56-789",
- * });
- * ```
+ * DecryptionRule data source
  */
 export function getDecryptionRule(args: GetDecryptionRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDecryptionRule:getDecryptionRule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getDecryptionRule(args: GetDecryptionRuleArgs, opts?: pulumi.Inv
  */
 export interface GetDecryptionRuleArgs {
     /**
-     * The Id param.
+     * The UUID of the decryption rule
      */
     id: string;
+    /**
+     * The name of the decryption rule
+     */
+    name?: string;
 }
 
 /**
@@ -42,113 +36,115 @@ export interface GetDecryptionRuleArgs {
  */
 export interface GetDecryptionRuleResult {
     /**
-     * The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+     * The action to be taken
      */
     readonly action: string;
     /**
-     * The Categories param.
+     * The destination URL category
      */
     readonly categories: string[];
     /**
-     * The Description param.
+     * The description of the decryption rule
      */
     readonly description: string;
     /**
-     * The DestinationHips param.
+     * The Host Integrity Profile of the destination host
      */
     readonly destinationHips: string[];
     /**
-     * The Destinations param.
+     * The destination addresses
      */
     readonly destinations: string[];
     /**
-     * The Disabled param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * Is the rule disabled?
      */
     readonly disabled: boolean;
     /**
-     * The Froms param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The source security zone
      */
     readonly froms: string[];
     /**
-     * The Id param.
+     * The UUID of the decryption rule
      */
     readonly id: string;
     /**
-     * The LogFail param.
+     * Log failed decryption events?
      */
     readonly logFail: boolean;
     /**
-     * The LogSetting param.
+     * The log settings of the decryption rule
      */
     readonly logSetting: string;
     /**
-     * The LogSuccess param.
+     * Log successful decryption events?
      */
     readonly logSuccess: boolean;
     /**
-     * The Name param.
+     * The name of the decryption rule
      */
     readonly name: string;
     /**
-     * The NegateDestination param.
+     * Negate the destination addresses?
      */
     readonly negateDestination: boolean;
     /**
-     * The NegateSource param.
+     * Negate the source addresses?
      */
     readonly negateSource: boolean;
     /**
-     * The Profile param.
+     * The decryption profile associated with the decryption rule
      */
     readonly profile: string;
     /**
-     * The Services param.
+     * The destination services and/or service groups
      */
     readonly services: string[];
     /**
-     * The SourceHips param.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * Source hip
      */
     readonly sourceHips: string[];
     /**
-     * The SourceUsers param.
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      */
     readonly sourceUsers: string[];
     /**
-     * The Sources param.
+     * The source addresses
      */
     readonly sources: string[];
     /**
-     * The Tags param.
+     * The tags associated with the decryption rule
      */
     readonly tags: string[];
     readonly tfid: string;
     /**
-     * The Tos param.
+     * The destination security zone
      */
     readonly tos: string[];
     /**
-     * The Type param.
+     * The type of decryption
      */
     readonly type: outputs.GetDecryptionRuleType;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getDecryptionRule({
- *     id: "1234-56-789",
- * });
- * ```
+ * DecryptionRule data source
  */
 export function getDecryptionRuleOutput(args: GetDecryptionRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDecryptionRule:getDecryptionRule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -157,7 +153,11 @@ export function getDecryptionRuleOutput(args: GetDecryptionRuleOutputArgs, opts?
  */
 export interface GetDecryptionRuleOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the decryption rule
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the decryption rule
+     */
+    name?: pulumi.Input<string>;
 }

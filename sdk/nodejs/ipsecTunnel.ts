@@ -7,16 +7,9 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * IpsecTunnel resource
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.IpsecTunnel("example", {});
- * ```
  */
 export class IpsecTunnel extends pulumi.CustomResource {
     /**
@@ -47,42 +40,46 @@ export class IpsecTunnel extends pulumi.CustomResource {
     }
 
     /**
-     * Enable Anti-Replay check on this tunnel.
+     * Enable Anti-Replay check on this tunnel
      */
     declare public readonly antiReplay: pulumi.Output<boolean | undefined>;
     /**
-     * The AutoKey param.
+     * Auto key
      */
     declare public readonly autoKey: pulumi.Output<outputs.IpsecTunnelAutoKey>;
     /**
-     * Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+     * Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      */
     declare public readonly copyTos: pulumi.Output<boolean>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * allow GRE over IPSec. Default: `false`.
+     * allow GRE over IPSec
      */
     declare public readonly enableGreEncapsulation: pulumi.Output<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The TunnelMonitor param.
+     * Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
      */
-    declare public readonly tunnelMonitor: pulumi.Output<outputs.IpsecTunnelTunnelMonitor | undefined>;
+    declare public readonly tunnelInterface: pulumi.Output<string>;
+    /**
+     * Tunnel monitor
+     */
+    declare public readonly tunnelMonitor: pulumi.Output<outputs.IpsecTunnelTunnelMonitor>;
 
     /**
      * Create a IpsecTunnel resource with the given unique name, arguments, and options.
@@ -106,6 +103,7 @@ export class IpsecTunnel extends pulumi.CustomResource {
             resourceInputs["name"] = state?.name;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["tunnelInterface"] = state?.tunnelInterface;
             resourceInputs["tunnelMonitor"] = state?.tunnelMonitor;
         } else {
             const args = argsOrState as IpsecTunnelArgs | undefined;
@@ -120,6 +118,7 @@ export class IpsecTunnel extends pulumi.CustomResource {
             resourceInputs["folder"] = args?.folder;
             resourceInputs["name"] = args?.name;
             resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["tunnelInterface"] = args?.tunnelInterface;
             resourceInputs["tunnelMonitor"] = args?.tunnelMonitor;
             resourceInputs["tfid"] = undefined /*out*/;
         }
@@ -133,40 +132,44 @@ export class IpsecTunnel extends pulumi.CustomResource {
  */
 export interface IpsecTunnelState {
     /**
-     * Enable Anti-Replay check on this tunnel.
+     * Enable Anti-Replay check on this tunnel
      */
     antiReplay?: pulumi.Input<boolean>;
     /**
-     * The AutoKey param.
+     * Auto key
      */
     autoKey?: pulumi.Input<inputs.IpsecTunnelAutoKey>;
     /**
-     * Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+     * Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      */
     copyTos?: pulumi.Input<boolean>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * allow GRE over IPSec. Default: `false`.
+     * allow GRE over IPSec
      */
     enableGreEncapsulation?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The TunnelMonitor param.
+     * Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     */
+    tunnelInterface?: pulumi.Input<string>;
+    /**
+     * Tunnel monitor
      */
     tunnelMonitor?: pulumi.Input<inputs.IpsecTunnelTunnelMonitor>;
 }
@@ -176,39 +179,43 @@ export interface IpsecTunnelState {
  */
 export interface IpsecTunnelArgs {
     /**
-     * Enable Anti-Replay check on this tunnel.
+     * Enable Anti-Replay check on this tunnel
      */
     antiReplay?: pulumi.Input<boolean>;
     /**
-     * The AutoKey param.
+     * Auto key
      */
     autoKey: pulumi.Input<inputs.IpsecTunnelAutoKey>;
     /**
-     * Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+     * Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      */
     copyTos?: pulumi.Input<boolean>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * allow GRE over IPSec. Default: `false`.
+     * allow GRE over IPSec
      */
     enableGreEncapsulation?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The TunnelMonitor param.
+     * Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     */
+    tunnelInterface?: pulumi.Input<string>;
+    /**
+     * Tunnel monitor
      */
     tunnelMonitor?: pulumi.Input<inputs.IpsecTunnelTunnelMonitor>;
 }

@@ -13,10 +13,10 @@ namespace Pulumi.Scm.Inputs
     public sealed class ScepProfileAlgorithmRsaGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The RsaNbits param.
+        /// Rsa nbits
         /// </summary>
         [Input("rsaNbits")]
-        public Input<string>? RsaNbits { get; set; }
+        public Input<int>? RsaNbits { get; set; }
 
         public ScepProfileAlgorithmRsaGetArgs()
         {

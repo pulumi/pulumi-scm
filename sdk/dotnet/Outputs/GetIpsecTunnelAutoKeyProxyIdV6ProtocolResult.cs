@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIpsecTunnelAutoKeyProxyIdV6ProtocolResult
     {
         /// <summary>
-        /// IP protocol number. Value must be between 1 and 254.
+        /// IP protocol number
         /// </summary>
         public readonly int Number;
         /// <summary>
-        /// The Tcp param.
+        /// IPv6 type of proxy*id protocol values for TCP protocol
         /// </summary>
         public readonly Outputs.GetIpsecTunnelAutoKeyProxyIdV6ProtocolTcpResult Tcp;
         /// <summary>
-        /// The Udp param.
+        /// IPv6 type of proxy*id protocol values for UDP protocol
         /// </summary>
         public readonly Outputs.GetIpsecTunnelAutoKeyProxyIdV6ProtocolUdpResult Udp;
 

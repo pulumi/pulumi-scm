@@ -66,15 +66,15 @@ class GetIpsecCryptoProfileResult:
     @pulumi.getter
     def ah(self) -> 'outputs.GetIpsecCryptoProfileAhResult':
         """
-        The Ah param.
+        Ah
         """
         return pulumi.get(self, "ah")
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[_builtins.str]:
+    def device(self) -> _builtins.str:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -82,7 +82,7 @@ class GetIpsecCryptoProfileResult:
     @pulumi.getter(name="dhGroup")
     def dh_group(self) -> _builtins.str:
         """
-        phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+        phase-2 DH group (PFS DH group)
         """
         return pulumi.get(self, "dh_group")
 
@@ -90,15 +90,15 @@ class GetIpsecCryptoProfileResult:
     @pulumi.getter
     def esp(self) -> 'outputs.GetIpsecCryptoProfileEspResult':
         """
-        The Esp param.
+        Esp
         """
         return pulumi.get(self, "esp")
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[_builtins.str]:
+    def folder(self) -> _builtins.str:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -106,7 +106,7 @@ class GetIpsecCryptoProfileResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -114,7 +114,7 @@ class GetIpsecCryptoProfileResult:
     @pulumi.getter
     def lifesize(self) -> 'outputs.GetIpsecCryptoProfileLifesizeResult':
         """
-        The Lifesize param.
+        Lifesize
         """
         return pulumi.get(self, "lifesize")
 
@@ -122,7 +122,7 @@ class GetIpsecCryptoProfileResult:
     @pulumi.getter
     def lifetime(self) -> 'outputs.GetIpsecCryptoProfileLifetimeResult':
         """
-        The Lifetime param.
+        Ipsec crypto profile lifetime
         """
         return pulumi.get(self, "lifetime")
 
@@ -130,15 +130,15 @@ class GetIpsecCryptoProfileResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[_builtins.str]:
+    def snippet(self) -> _builtins.str:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -167,13 +167,11 @@ class AwaitableGetIpsecCryptoProfileResult(GetIpsecCryptoProfileResult):
             tfid=self.tfid)
 
 
-def get_ipsec_crypto_profile(device: Optional[_builtins.str] = None,
-                             folder: Optional[_builtins.str] = None,
-                             id: Optional[_builtins.str] = None,
-                             snippet: Optional[_builtins.str] = None,
+def get_ipsec_crypto_profile(id: Optional[_builtins.str] = None,
+                             name: Optional[_builtins.str] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetIpsecCryptoProfileResult:
     """
-    Retrieves a config item.
+    IpsecCryptoProfile data source
 
     ## Example Usage
 
@@ -181,20 +179,18 @@ def get_ipsec_crypto_profile(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_ipsec_crypto_profile(id="1234-56-789")
+    # Example of looking up an individual IPsec Crypto Profile by its ID.
+    scm_ipsec_crypto_profile_ds = scm.get_ipsec_crypto_profile(id="b89e8fe1-9e92-46fa-8a67-de84313128c9")
+    pulumi.export("ipsecProfileById", scm_ipsec_crypto_profile_ds)
     ```
 
 
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.str id: The Id param.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
     """
     __args__ = dict()
-    __args__['device'] = device
-    __args__['folder'] = folder
     __args__['id'] = id
-    __args__['snippet'] = snippet
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile', __args__, opts=opts, typ=GetIpsecCryptoProfileResult).value
 
@@ -210,13 +206,11 @@ def get_ipsec_crypto_profile(device: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_ipsec_crypto_profile_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                    folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                    id: Optional[pulumi.Input[_builtins.str]] = None,
-                                    snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_ipsec_crypto_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                    name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIpsecCryptoProfileResult]:
     """
-    Retrieves a config item.
+    IpsecCryptoProfile data source
 
     ## Example Usage
 
@@ -224,20 +218,18 @@ def get_ipsec_crypto_profile_output(device: Optional[pulumi.Input[Optional[_buil
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_ipsec_crypto_profile(id="1234-56-789")
+    # Example of looking up an individual IPsec Crypto Profile by its ID.
+    scm_ipsec_crypto_profile_ds = scm.get_ipsec_crypto_profile(id="b89e8fe1-9e92-46fa-8a67-de84313128c9")
+    pulumi.export("ipsecProfileById", scm_ipsec_crypto_profile_ds)
     ```
 
 
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.str id: The Id param.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
     """
     __args__ = dict()
-    __args__['device'] = device
-    __args__['folder'] = folder
     __args__['id'] = id
-    __args__['snippet'] = snippet
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile', __args__, opts=opts, typ=GetIpsecCryptoProfileResult)
     return __ret__.apply(lambda __response__: GetIpsecCryptoProfileResult(

@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// ServiceGroup data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,15 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupServiceGroup(ctx, &scm.LookupServiceGroupArgs{
-//				Id: "1234-56-789",
+//			// Look up a single service group object by its ID.
+//			// The ID used here is from the terraform.tfstate file.
+//			scmServiceGroupDs, err := scm.LookupServiceGroup(ctx, &scm.LookupServiceGroupArgs{
+//				Id: "dc430d61-52ca-44bc-a797-e65123a94134",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("serviceGroupDsResult", scmServiceGroupDs)
 //			return nil
 //		})
 //	}
@@ -50,19 +53,27 @@ func LookupServiceGroup(ctx *pulumi.Context, args *LookupServiceGroupArgs, opts 
 
 // A collection of arguments for invoking getServiceGroup.
 type LookupServiceGroupArgs struct {
-	// The Id param.
+	// The UUID of the service group
 	Id string `pulumi:"id"`
+	// The name of the service group
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getServiceGroup.
 type LookupServiceGroupResult struct {
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the service group
 	Id string `pulumi:"id"`
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members []string `pulumi:"members"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service group
 	Name string `pulumi:"name"`
-	// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Tags associated with the service group
 	Tags []string `pulumi:"tags"`
 	Tfid string   `pulumi:"tfid"`
 }
@@ -78,8 +89,10 @@ func LookupServiceGroupOutput(ctx *pulumi.Context, args LookupServiceGroupOutput
 
 // A collection of arguments for invoking getServiceGroup.
 type LookupServiceGroupOutputArgs struct {
-	// The Id param.
+	// The UUID of the service group
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the service group
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupServiceGroupOutputArgs) ElementType() reflect.Type {
@@ -101,22 +114,37 @@ func (o LookupServiceGroupResultOutput) ToLookupServiceGroupResultOutputWithCont
 	return o
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupServiceGroupResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupServiceGroupResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the service group
 func (o LookupServiceGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+// Members
 func (o LookupServiceGroupResultOutput) Members() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) []string { return v.Members }).(pulumi.StringArrayOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the service group
 func (o LookupServiceGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+// The snippet in which the resource is defined
+func (o LookupServiceGroupResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// Tags associated with the service group
 func (o LookupServiceGroupResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

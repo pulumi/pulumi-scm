@@ -14,176 +14,212 @@ import java.util.Objects;
 @CustomType
 public final class GetAppOverrideRuleResult {
     /**
-     * @return The Application param.
+     * @return Application
      * 
      */
     private String application;
     /**
-     * @return The Description param. String length must not exceed 1024 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The Destinations param.
+     * @return Destination
      * 
      */
     private List<String> destinations;
     /**
-     * @return The Disabled param. Default: `false`.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Disabled
      * 
      */
     private Boolean disabled;
     /**
-     * @return The Froms param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return From
      * 
      */
     private List<String> froms;
     /**
-     * @return The GroupTag param.
+     * @return Group tag
      * 
      */
     private String groupTag;
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The NegateDestination param. Default: `false`.
+     * @return Negate destination
      * 
      */
     private Boolean negateDestination;
     /**
-     * @return The NegateSource param. Default: `false`.
+     * @return Negate source
      * 
      */
     private Boolean negateSource;
     /**
-     * @return The Port param. Value must be between 0 and 65535.
+     * @return Port
      * 
      */
     private Integer port;
     /**
-     * @return The Protocol param. String must be one of these: `&#34;tcp&#34;`, `&#34;udp&#34;`.
+     * @return Protocol
      * 
      */
     private String protocol;
     /**
-     * @return The Sources param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return Source
      * 
      */
     private List<String> sources;
     /**
-     * @return The Tags param.
+     * @return Tag
      * 
      */
     private List<String> tags;
     private String tfid;
     /**
-     * @return The Tos param.
+     * @return To
      * 
      */
     private List<String> tos;
 
     private GetAppOverrideRuleResult() {}
     /**
-     * @return The Application param.
+     * @return Application
      * 
      */
     public String application() {
         return this.application;
     }
     /**
-     * @return The Description param. String length must not exceed 1024 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The Destinations param.
+     * @return Destination
      * 
      */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
-     * @return The Disabled param. Default: `false`.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Disabled
      * 
      */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * @return The Froms param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return From
      * 
      */
     public List<String> froms() {
         return this.froms;
     }
     /**
-     * @return The GroupTag param.
+     * @return Group tag
      * 
      */
     public String groupTag() {
         return this.groupTag;
     }
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The NegateDestination param. Default: `false`.
+     * @return Negate destination
      * 
      */
     public Boolean negateDestination() {
         return this.negateDestination;
     }
     /**
-     * @return The NegateSource param. Default: `false`.
+     * @return Negate source
      * 
      */
     public Boolean negateSource() {
         return this.negateSource;
     }
     /**
-     * @return The Port param. Value must be between 0 and 65535.
+     * @return Port
      * 
      */
     public Integer port() {
         return this.port;
     }
     /**
-     * @return The Protocol param. String must be one of these: `&#34;tcp&#34;`, `&#34;udp&#34;`.
+     * @return Protocol
      * 
      */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * @return The Sources param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return Source
      * 
      */
     public List<String> sources() {
         return this.sources;
     }
     /**
-     * @return The Tags param.
+     * @return Tag
      * 
      */
     public List<String> tags() {
@@ -193,7 +229,7 @@ public final class GetAppOverrideRuleResult {
         return this.tfid;
     }
     /**
-     * @return The Tos param.
+     * @return To
      * 
      */
     public List<String> tos() {
@@ -212,7 +248,9 @@ public final class GetAppOverrideRuleResult {
         private String application;
         private String description;
         private List<String> destinations;
+        private String device;
         private Boolean disabled;
+        private String folder;
         private List<String> froms;
         private String groupTag;
         private String id;
@@ -221,6 +259,7 @@ public final class GetAppOverrideRuleResult {
         private Boolean negateSource;
         private Integer port;
         private String protocol;
+        private String snippet;
         private List<String> sources;
         private List<String> tags;
         private String tfid;
@@ -231,7 +270,9 @@ public final class GetAppOverrideRuleResult {
     	      this.application = defaults.application;
     	      this.description = defaults.description;
     	      this.destinations = defaults.destinations;
+    	      this.device = defaults.device;
     	      this.disabled = defaults.disabled;
+    	      this.folder = defaults.folder;
     	      this.froms = defaults.froms;
     	      this.groupTag = defaults.groupTag;
     	      this.id = defaults.id;
@@ -240,6 +281,7 @@ public final class GetAppOverrideRuleResult {
     	      this.negateSource = defaults.negateSource;
     	      this.port = defaults.port;
     	      this.protocol = defaults.protocol;
+    	      this.snippet = defaults.snippet;
     	      this.sources = defaults.sources;
     	      this.tags = defaults.tags;
     	      this.tfid = defaults.tfid;
@@ -274,11 +316,27 @@ public final class GetAppOverrideRuleResult {
             return destinations(List.of(destinations));
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetAppOverrideRuleResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder disabled(Boolean disabled) {
             if (disabled == null) {
               throw new MissingRequiredPropertyException("GetAppOverrideRuleResult", "disabled");
             }
             this.disabled = disabled;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetAppOverrideRuleResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -349,6 +407,14 @@ public final class GetAppOverrideRuleResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetAppOverrideRuleResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder sources(List<String> sources) {
             if (sources == null) {
               throw new MissingRequiredPropertyException("GetAppOverrideRuleResult", "sources");
@@ -394,7 +460,9 @@ public final class GetAppOverrideRuleResult {
             _resultValue.application = application;
             _resultValue.description = description;
             _resultValue.destinations = destinations;
+            _resultValue.device = device;
             _resultValue.disabled = disabled;
+            _resultValue.folder = folder;
             _resultValue.froms = froms;
             _resultValue.groupTag = groupTag;
             _resultValue.id = id;
@@ -403,6 +471,7 @@ public final class GetAppOverrideRuleResult {
             _resultValue.negateSource = negateSource;
             _resultValue.port = port;
             _resultValue.protocol = protocol;
+            _resultValue.snippet = snippet;
             _resultValue.sources = sources;
             _resultValue.tags = tags;
             _resultValue.tfid = tfid;

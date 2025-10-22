@@ -17,14 +17,14 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
     public static final DnsSecurityProfileState Empty = new DnsSecurityProfileState();
 
     /**
-     * The BotnetDomains param.
+     * Botnet domains
      * 
      */
     @Import(name="botnetDomains")
     private @Nullable Output<DnsSecurityProfileBotnetDomainsArgs> botnetDomains;
 
     /**
-     * @return The BotnetDomains param.
+     * @return Botnet domains
      * 
      */
     public Optional<Output<DnsSecurityProfileBotnetDomainsArgs>> botnetDomains() {
@@ -32,14 +32,14 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Description param.
+     * The description of the DNS security profile
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the DNS security profile
      * 
      */
     public Optional<Output<String>> description() {
@@ -47,14 +47,14 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -62,14 +62,14 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -77,14 +77,14 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Name param.
+     * The name of the DNS security profile
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the DNS security profile
      * 
      */
     public Optional<Output<String>> name() {
@@ -92,14 +92,14 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -144,7 +144,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param botnetDomains The BotnetDomains param.
+         * @param botnetDomains Botnet domains
          * 
          * @return builder
          * 
@@ -155,7 +155,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param botnetDomains The BotnetDomains param.
+         * @param botnetDomains Botnet domains
          * 
          * @return builder
          * 
@@ -165,7 +165,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the DNS security profile
          * 
          * @return builder
          * 
@@ -176,7 +176,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the DNS security profile
          * 
          * @return builder
          * 
@@ -186,7 +186,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -197,7 +197,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -207,7 +207,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -218,7 +218,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -228,7 +228,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the DNS security profile
          * 
          * @return builder
          * 
@@ -239,7 +239,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the DNS security profile
          * 
          * @return builder
          * 
@@ -249,7 +249,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -260,7 +260,7 @@ public final class DnsSecurityProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

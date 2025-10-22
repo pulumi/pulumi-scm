@@ -5,7 +5,6 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,14 +16,14 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
     public static final RemoteNetworkProtocolBgpPeerArgs Empty = new RemoteNetworkProtocolBgpPeerArgs();
 
     /**
-     * The LocalIpAddress param.
+     * Local peer IP address (secondary WAN)
      * 
      */
     @Import(name="localIpAddress")
     private @Nullable Output<String> localIpAddress;
 
     /**
-     * @return The LocalIpAddress param.
+     * @return Local peer IP address (secondary WAN)
      * 
      */
     public Optional<Output<String>> localIpAddress() {
@@ -32,14 +31,14 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
     }
 
     /**
-     * The PeerIpAddress param.
+     * Remote peer IP address (secondary WAN)
      * 
      */
     @Import(name="peerIpAddress")
     private @Nullable Output<String> peerIpAddress;
 
     /**
-     * @return The PeerIpAddress param.
+     * @return Remote peer IP address (secondary WAN)
      * 
      */
     public Optional<Output<String>> peerIpAddress() {
@@ -47,29 +46,14 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
     }
 
     /**
-     * If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
-     * 
-     */
-    @Import(name="sameAsPrimary")
-    private @Nullable Output<Boolean> sameAsPrimary;
-
-    /**
-     * @return If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
-     * 
-     */
-    public Optional<Output<Boolean>> sameAsPrimary() {
-        return Optional.ofNullable(this.sameAsPrimary);
-    }
-
-    /**
-     * The Secret param.
+     * BGP peering secret (secondary WAN)
      * 
      */
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
     /**
-     * @return The Secret param.
+     * @return BGP peering secret (secondary WAN)
      * 
      */
     public Optional<Output<String>> secret() {
@@ -81,7 +65,6 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
     private RemoteNetworkProtocolBgpPeerArgs(RemoteNetworkProtocolBgpPeerArgs $) {
         this.localIpAddress = $.localIpAddress;
         this.peerIpAddress = $.peerIpAddress;
-        this.sameAsPrimary = $.sameAsPrimary;
         this.secret = $.secret;
     }
 
@@ -104,7 +87,7 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
         }
 
         /**
-         * @param localIpAddress The LocalIpAddress param.
+         * @param localIpAddress Local peer IP address (secondary WAN)
          * 
          * @return builder
          * 
@@ -115,7 +98,7 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
         }
 
         /**
-         * @param localIpAddress The LocalIpAddress param.
+         * @param localIpAddress Local peer IP address (secondary WAN)
          * 
          * @return builder
          * 
@@ -125,7 +108,7 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
         }
 
         /**
-         * @param peerIpAddress The PeerIpAddress param.
+         * @param peerIpAddress Remote peer IP address (secondary WAN)
          * 
          * @return builder
          * 
@@ -136,7 +119,7 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
         }
 
         /**
-         * @param peerIpAddress The PeerIpAddress param.
+         * @param peerIpAddress Remote peer IP address (secondary WAN)
          * 
          * @return builder
          * 
@@ -146,28 +129,7 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
         }
 
         /**
-         * @param sameAsPrimary If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder sameAsPrimary(@Nullable Output<Boolean> sameAsPrimary) {
-            $.sameAsPrimary = sameAsPrimary;
-            return this;
-        }
-
-        /**
-         * @param sameAsPrimary If true, the secondary BGP peer configuration will be the same as the primary BGP peer. Default: `true`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder sameAsPrimary(Boolean sameAsPrimary) {
-            return sameAsPrimary(Output.of(sameAsPrimary));
-        }
-
-        /**
-         * @param secret The Secret param.
+         * @param secret BGP peering secret (secondary WAN)
          * 
          * @return builder
          * 
@@ -178,7 +140,7 @@ public final class RemoteNetworkProtocolBgpPeerArgs extends com.pulumi.resources
         }
 
         /**
-         * @param secret The Secret param.
+         * @param secret BGP peering secret (secondary WAN)
          * 
          * @return builder
          * 

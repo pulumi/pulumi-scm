@@ -10,29 +10,29 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm.Inputs
 {
 
-    public sealed class RadiusServerProfileProtocolPeapMschapV2Args : global::Pulumi.ResourceArgs
+    public sealed class RadiusServerProfileProtocolPEAPMSCHAPv2Args : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The AllowPwdChange param.
+        /// Allow pwd change
         /// </summary>
         [Input("allowPwdChange")]
         public Input<bool>? AllowPwdChange { get; set; }
 
         /// <summary>
-        /// The AnonOuterId param.
+        /// Anon outer id
         /// </summary>
         [Input("anonOuterId")]
         public Input<bool>? AnonOuterId { get; set; }
 
         /// <summary>
-        /// The RadiusCertProfile param.
+        /// Radius cert profile
         /// </summary>
         [Input("radiusCertProfile")]
         public Input<string>? RadiusCertProfile { get; set; }
 
-        public RadiusServerProfileProtocolPeapMschapV2Args()
+        public RadiusServerProfileProtocolPEAPMSCHAPv2Args()
         {
         }
-        public static new RadiusServerProfileProtocolPeapMschapV2Args Empty => new RadiusServerProfileProtocolPeapMschapV2Args();
+        public static new RadiusServerProfileProtocolPEAPMSCHAPv2Args Empty => new RadiusServerProfileProtocolPEAPMSCHAPv2Args();
     }
 }

@@ -26,7 +26,13 @@ class GetApplicationGroupResult:
     """
     A collection of values returned by getApplicationGroup.
     """
-    def __init__(__self__, id=None, members=None, name=None, tfid=None):
+    def __init__(__self__, device=None, folder=None, id=None, members=None, name=None, snippet=None, tfid=None):
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -36,15 +42,34 @@ class GetApplicationGroupResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -52,7 +77,7 @@ class GetApplicationGroupResult:
     @pulumi.getter
     def members(self) -> Sequence[_builtins.str]:
         """
-        The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Members
         """
         return pulumi.get(self, "members")
 
@@ -60,9 +85,17 @@ class GetApplicationGroupResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string [ 0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -76,16 +109,20 @@ class AwaitableGetApplicationGroupResult(GetApplicationGroupResult):
         if False:
             yield self
         return GetApplicationGroupResult(
+            device=self.device,
+            folder=self.folder,
             id=self.id,
             members=self.members,
             name=self.name,
+            snippet=self.snippet,
             tfid=self.tfid)
 
 
 def get_application_group(id: Optional[_builtins.str] = None,
+                          name: Optional[_builtins.str] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetApplicationGroupResult:
     """
-    Retrieves a config item.
+    ApplicationGroup data source
 
     ## Example Usage
 
@@ -93,26 +130,39 @@ def get_application_group(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_application_group(id="1234-56-789")
+    # Look up the application group by its ID from the terraform.tfstate file.
+    scm_application_group_ds = scm.get_application_group(id="91616221-ddeb-4b49-866d-48d64dedc056")
+    pulumi.export("applicationGroupOutputs", {
+        "groupId": scm_application_group_ds.id,
+        "folder": scm_application_group_ds.folder,
+        "name": scm_application_group_ds.name,
+        "members": scm_application_group_ds.members,
+    })
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string [ 0-9a-zA-Z._-]
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getApplicationGroup:getApplicationGroup', __args__, opts=opts, typ=GetApplicationGroupResult).value
 
     return AwaitableGetApplicationGroupResult(
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         members=pulumi.get(__ret__, 'members'),
         name=pulumi.get(__ret__, 'name'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_application_group_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                 name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationGroupResult]:
     """
-    Retrieves a config item.
+    ApplicationGroup data source
 
     ## Example Usage
 
@@ -120,18 +170,30 @@ def get_application_group_output(id: Optional[pulumi.Input[_builtins.str]] = Non
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_application_group(id="1234-56-789")
+    # Look up the application group by its ID from the terraform.tfstate file.
+    scm_application_group_ds = scm.get_application_group(id="91616221-ddeb-4b49-866d-48d64dedc056")
+    pulumi.export("applicationGroupOutputs", {
+        "groupId": scm_application_group_ds.id,
+        "folder": scm_application_group_ds.folder,
+        "name": scm_application_group_ds.name,
+        "members": scm_application_group_ds.members,
+    })
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string [ 0-9a-zA-Z._-]
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getApplicationGroup:getApplicationGroup', __args__, opts=opts, typ=GetApplicationGroupResult)
     return __ret__.apply(lambda __response__: GetApplicationGroupResult(
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         members=pulumi.get(__response__, 'members'),
         name=pulumi.get(__response__, 'name'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid')))

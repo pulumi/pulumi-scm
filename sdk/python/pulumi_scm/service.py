@@ -21,24 +21,23 @@ __all__ = ['ServiceArgs', 'Service']
 @pulumi.input_type
 class ServiceArgs:
     def __init__(__self__, *,
-                 protocol: pulumi.Input['ServiceProtocolArgs'],
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 protocol: Optional[pulumi.Input['ServiceProtocolArgs']] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a Service resource.
-        :param pulumi.Input['ServiceProtocolArgs'] protocol: The Protocol param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the service
+        :param pulumi.Input['ServiceProtocolArgs'] protocol: Protocol
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service object
         """
-        pulumi.set(__self__, "protocol", protocol)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if device is not None:
@@ -47,6 +46,8 @@ class ServiceArgs:
             pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if protocol is not None:
+            pulumi.set(__self__, "protocol", protocol)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if tags is not None:
@@ -54,21 +55,9 @@ class ServiceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def protocol(self) -> pulumi.Input['ServiceProtocolArgs']:
-        """
-        The Protocol param.
-        """
-        return pulumi.get(self, "protocol")
-
-    @protocol.setter
-    def protocol(self, value: pulumi.Input['ServiceProtocolArgs']):
-        pulumi.set(self, "protocol", value)
-
-    @_builtins.property
-    @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -80,7 +69,7 @@ class ServiceArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -92,7 +81,7 @@ class ServiceArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -104,7 +93,7 @@ class ServiceArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the service
         """
         return pulumi.get(self, "name")
 
@@ -114,9 +103,21 @@ class ServiceArgs:
 
     @_builtins.property
     @pulumi.getter
+    def protocol(self) -> Optional[pulumi.Input['ServiceProtocolArgs']]:
+        """
+        Protocol
+        """
+        return pulumi.get(self, "protocol")
+
+    @protocol.setter
+    def protocol(self, value: Optional[pulumi.Input['ServiceProtocolArgs']]):
+        pulumi.set(self, "protocol", value)
+
+    @_builtins.property
+    @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -128,7 +129,7 @@ class ServiceArgs:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags for service object
         """
         return pulumi.get(self, "tags")
 
@@ -150,13 +151,13 @@ class _ServiceState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Service resources.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input['ServiceProtocolArgs'] protocol: The Protocol param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the service
+        :param pulumi.Input['ServiceProtocolArgs'] protocol: Protocol
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service object
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -179,7 +180,7 @@ class _ServiceState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -191,7 +192,7 @@ class _ServiceState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -203,7 +204,7 @@ class _ServiceState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -215,7 +216,7 @@ class _ServiceState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the service
         """
         return pulumi.get(self, "name")
 
@@ -227,7 +228,7 @@ class _ServiceState:
     @pulumi.getter
     def protocol(self) -> Optional[pulumi.Input['ServiceProtocolArgs']]:
         """
-        The Protocol param.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -239,7 +240,7 @@ class _ServiceState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -251,7 +252,7 @@ class _ServiceState:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags for service object
         """
         return pulumi.get(self, "tags")
 
@@ -284,7 +285,7 @@ class Service(pulumi.CustomResource):
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        Service resource
 
         ## Example Usage
 
@@ -292,27 +293,65 @@ class Service(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.Service("example")
+        # TCP Service with multiple destination ports custom timeout
+        scm_service_tcp_ports = scm.Service("scm_service_tcp_ports",
+            folder="Shared",
+            name="scm_service_tcp_ports",
+            description="Managed by Pulumi",
+            protocol={
+                "tcp": {
+                    "port": "80,443",
+                    "override": {
+                        "timeout": 3600,
+                    },
+                },
+            })
+        # TCP Service with source port, destination port and custom timeout values
+        scm_service_tcp_port_src_dst = scm.Service("scm_service_tcp_port_src_dst",
+            folder="Shared",
+            name="scm_service_tcp_port_src_dst",
+            description="Managed by Pulumi",
+            protocol={
+                "tcp": {
+                    "port": "80",
+                    "source_port": "49152-65535",
+                    "override": {
+                        "timeout": 3600,
+                        "halfclose_timeout": 240,
+                        "timewait_timeout": 30,
+                    },
+                },
+            })
+        # UDP Service with single destination port
+        scm_service_udp_port = scm.Service("scm_service_udp_port",
+            folder="Shared",
+            name="scm_service_udp_port",
+            description="Managed by Pulumi",
+            protocol={
+                "udp": {
+                    "port": "53",
+                },
+            })
         ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']] protocol: The Protocol param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the service
+        :param pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']] protocol: Protocol
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service object
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: ServiceArgs,
+                 args: Optional[ServiceArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        Service resource
 
         ## Example Usage
 
@@ -320,7 +359,45 @@ class Service(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.Service("example")
+        # TCP Service with multiple destination ports custom timeout
+        scm_service_tcp_ports = scm.Service("scm_service_tcp_ports",
+            folder="Shared",
+            name="scm_service_tcp_ports",
+            description="Managed by Pulumi",
+            protocol={
+                "tcp": {
+                    "port": "80,443",
+                    "override": {
+                        "timeout": 3600,
+                    },
+                },
+            })
+        # TCP Service with source port, destination port and custom timeout values
+        scm_service_tcp_port_src_dst = scm.Service("scm_service_tcp_port_src_dst",
+            folder="Shared",
+            name="scm_service_tcp_port_src_dst",
+            description="Managed by Pulumi",
+            protocol={
+                "tcp": {
+                    "port": "80",
+                    "source_port": "49152-65535",
+                    "override": {
+                        "timeout": 3600,
+                        "halfclose_timeout": 240,
+                        "timewait_timeout": 30,
+                    },
+                },
+            })
+        # UDP Service with single destination port
+        scm_service_udp_port = scm.Service("scm_service_udp_port",
+            folder="Shared",
+            name="scm_service_udp_port",
+            description="Managed by Pulumi",
+            protocol={
+                "udp": {
+                    "port": "53",
+                },
+            })
         ```
 
         :param str resource_name: The name of the resource.
@@ -358,8 +435,6 @@ class Service(pulumi.CustomResource):
             __props__.__dict__["device"] = device
             __props__.__dict__["folder"] = folder
             __props__.__dict__["name"] = name
-            if protocol is None and not opts.urn:
-                raise TypeError("Missing required property 'protocol'")
             __props__.__dict__["protocol"] = protocol
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["tags"] = tags
@@ -389,13 +464,13 @@ class Service(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']] protocol: The Protocol param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the service
+        :param pulumi.Input[Union['ServiceProtocolArgs', 'ServiceProtocolArgsDict']] protocol: Protocol
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service object
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -415,7 +490,7 @@ class Service(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -423,7 +498,7 @@ class Service(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -431,7 +506,7 @@ class Service(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -439,7 +514,7 @@ class Service(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the service
         """
         return pulumi.get(self, "name")
 
@@ -447,7 +522,7 @@ class Service(pulumi.CustomResource):
     @pulumi.getter
     def protocol(self) -> pulumi.Output['outputs.ServiceProtocol']:
         """
-        The Protocol param.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -455,7 +530,7 @@ class Service(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -463,7 +538,7 @@ class Service(pulumi.CustomResource):
     @pulumi.getter
     def tags(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags for service object
         """
         return pulumi.get(self, "tags")
 

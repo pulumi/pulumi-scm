@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetRegionListDataGeoLocation {
     /**
-     * @return latitude coordinate. Value must be between -90 and 90.
+     * @return The latitudinal position of the region
      * 
      */
     private Double latitude;
     /**
-     * @return longitude coordinate. Value must be between -180 and 180.
+     * @return The longitudinal postition of the region
      * 
      */
     private Double longitude;
 
     private GetRegionListDataGeoLocation() {}
     /**
-     * @return latitude coordinate. Value must be between -90 and 90.
+     * @return The latitudinal position of the region
      * 
      */
     public Double latitude() {
         return this.latitude;
     }
     /**
-     * @return longitude coordinate. Value must be between -180 and 180.
+     * @return The longitudinal postition of the region
      * 
      */
     public Double longitude() {

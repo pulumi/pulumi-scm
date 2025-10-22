@@ -10,61 +10,43 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.TlsServiceProfile("example", new()
-    ///     {
-    ///         Folder = "Shared",
-    ///     });
-    /// 
-    /// });
-    /// ```
+    /// TlsServiceProfile resource
     /// </summary>
     [ScmResourceType("scm:index/tlsServiceProfile:TlsServiceProfile")]
     public partial class TlsServiceProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// SSL certificate file name. String length must not exceed 255 characters.
+        /// Certificate name
         /// </summary>
         [Output("certificate")]
         public Output<string> Certificate { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The ProtocolSettings param.
+        /// Protocol settings
         /// </summary>
         [Output("protocolSettings")]
         public Output<Outputs.TlsServiceProfileProtocolSettings> ProtocolSettings { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -119,37 +101,37 @@ namespace Pulumi.Scm
     public sealed class TlsServiceProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// SSL certificate file name. String length must not exceed 255 characters.
+        /// Certificate name
         /// </summary>
         [Input("certificate", required: true)]
         public Input<string> Certificate { get; set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The ProtocolSettings param.
+        /// Protocol settings
         /// </summary>
         [Input("protocolSettings", required: true)]
         public Input<Inputs.TlsServiceProfileProtocolSettingsArgs> ProtocolSettings { get; set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -163,37 +145,37 @@ namespace Pulumi.Scm
     public sealed class TlsServiceProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// SSL certificate file name. String length must not exceed 255 characters.
+        /// Certificate name
         /// </summary>
         [Input("certificate")]
         public Input<string>? Certificate { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The ProtocolSettings param.
+        /// Protocol settings
         /// </summary>
         [Input("protocolSettings")]
         public Input<Inputs.TlsServiceProfileProtocolSettingsGetArgs>? ProtocolSettings { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

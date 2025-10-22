@@ -34,29 +34,27 @@ class AppOverrideRuleArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
-                 position: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a AppOverrideRule resource.
-        :param pulumi.Input[_builtins.str] application: The Application param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[_builtins.int] port: The Port param. Value must be between 0 and 65535.
-        :param pulumi.Input[_builtins.str] protocol: The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1024 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param. Default: `false`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
+        :param pulumi.Input[_builtins.str] application: Application
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: From
+        :param pulumi.Input[_builtins.int] port: Port
+        :param pulumi.Input[_builtins.str] protocol: Protocol
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: To
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Disabled
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] group_tag: Group tag
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate destination
+        :param pulumi.Input[_builtins.bool] negate_source: Negate source
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tag
         """
         pulumi.set(__self__, "application", application)
         pulumi.set(__self__, "destinations", destinations)
@@ -81,8 +79,6 @@ class AppOverrideRuleArgs:
             pulumi.set(__self__, "negate_destination", negate_destination)
         if negate_source is not None:
             pulumi.set(__self__, "negate_source", negate_source)
-        if position is not None:
-            pulumi.set(__self__, "position", position)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if tags is not None:
@@ -92,7 +88,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def application(self) -> pulumi.Input[_builtins.str]:
         """
-        The Application param.
+        Application
         """
         return pulumi.get(self, "application")
 
@@ -104,7 +100,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def destinations(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Destinations param.
+        Destination
         """
         return pulumi.get(self, "destinations")
 
@@ -116,7 +112,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def froms(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Froms param.
+        From
         """
         return pulumi.get(self, "froms")
 
@@ -128,7 +124,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def port(self) -> pulumi.Input[_builtins.int]:
         """
-        The Port param. Value must be between 0 and 65535.
+        Port
         """
         return pulumi.get(self, "port")
 
@@ -140,7 +136,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def protocol(self) -> pulumi.Input[_builtins.str]:
         """
-        The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -152,7 +148,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def sources(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Sources param.
+        Source
         """
         return pulumi.get(self, "sources")
 
@@ -164,7 +160,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def tos(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Tos param.
+        To
         """
         return pulumi.get(self, "tos")
 
@@ -176,7 +172,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1024 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -188,7 +184,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -200,7 +196,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Disabled param. Default: `false`.
+        Disabled
         """
         return pulumi.get(self, "disabled")
 
@@ -212,7 +208,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -224,7 +220,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The GroupTag param.
+        Group tag
         """
         return pulumi.get(self, "group_tag")
 
@@ -236,7 +232,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -248,7 +244,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateDestination param. Default: `false`.
+        Negate destination
         """
         return pulumi.get(self, "negate_destination")
 
@@ -260,7 +256,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateSource param. Default: `false`.
+        Negate source
         """
         return pulumi.get(self, "negate_source")
 
@@ -270,21 +266,9 @@ class AppOverrideRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def position(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        """
-        return pulumi.get(self, "position")
-
-    @position.setter
-    def position(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "position", value)
-
-    @_builtins.property
-    @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -296,7 +280,7 @@ class AppOverrideRuleArgs:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Tags param.
+        Tag
         """
         return pulumi.get(self, "tags")
 
@@ -320,7 +304,6 @@ class _AppOverrideRuleState:
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  port: Optional[pulumi.Input[_builtins.int]] = None,
-                 position: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -329,24 +312,23 @@ class _AppOverrideRuleState:
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering AppOverrideRule resources.
-        :param pulumi.Input[_builtins.str] application: The Application param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1024 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param. Default: `false`.
-        :param pulumi.Input[_builtins.int] port: The Port param. Value must be between 0 and 65535.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] protocol: The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
+        :param pulumi.Input[_builtins.str] application: Application
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Disabled
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: From
+        :param pulumi.Input[_builtins.str] group_tag: Group tag
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate destination
+        :param pulumi.Input[_builtins.bool] negate_source: Negate source
+        :param pulumi.Input[_builtins.int] port: Port
+        :param pulumi.Input[_builtins.str] protocol: Protocol
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tag
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: To
         """
         if application is not None:
             pulumi.set(__self__, "application", application)
@@ -372,8 +354,6 @@ class _AppOverrideRuleState:
             pulumi.set(__self__, "negate_source", negate_source)
         if port is not None:
             pulumi.set(__self__, "port", port)
-        if position is not None:
-            pulumi.set(__self__, "position", position)
         if protocol is not None:
             pulumi.set(__self__, "protocol", protocol)
         if snippet is not None:
@@ -391,7 +371,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def application(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Application param.
+        Application
         """
         return pulumi.get(self, "application")
 
@@ -403,7 +383,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1024 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -415,7 +395,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Destinations param.
+        Destination
         """
         return pulumi.get(self, "destinations")
 
@@ -427,7 +407,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -439,7 +419,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Disabled param. Default: `false`.
+        Disabled
         """
         return pulumi.get(self, "disabled")
 
@@ -451,7 +431,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -463,7 +443,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def froms(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Froms param.
+        From
         """
         return pulumi.get(self, "froms")
 
@@ -475,7 +455,7 @@ class _AppOverrideRuleState:
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The GroupTag param.
+        Group tag
         """
         return pulumi.get(self, "group_tag")
 
@@ -487,7 +467,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -499,7 +479,7 @@ class _AppOverrideRuleState:
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateDestination param. Default: `false`.
+        Negate destination
         """
         return pulumi.get(self, "negate_destination")
 
@@ -511,7 +491,7 @@ class _AppOverrideRuleState:
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateSource param. Default: `false`.
+        Negate source
         """
         return pulumi.get(self, "negate_source")
 
@@ -523,7 +503,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The Port param. Value must be between 0 and 65535.
+        Port
         """
         return pulumi.get(self, "port")
 
@@ -533,21 +513,9 @@ class _AppOverrideRuleState:
 
     @_builtins.property
     @pulumi.getter
-    def position(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        """
-        return pulumi.get(self, "position")
-
-    @position.setter
-    def position(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "position", value)
-
-    @_builtins.property
-    @pulumi.getter
     def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -559,7 +527,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -571,7 +539,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def sources(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Sources param.
+        Source
         """
         return pulumi.get(self, "sources")
 
@@ -583,7 +551,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Tags param.
+        Tag
         """
         return pulumi.get(self, "tags")
 
@@ -604,7 +572,7 @@ class _AppOverrideRuleState:
     @pulumi.getter
     def tos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Tos param.
+        To
         """
         return pulumi.get(self, "tos")
 
@@ -631,7 +599,6 @@ class AppOverrideRule(pulumi.CustomResource):
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  port: Optional[pulumi.Input[_builtins.int]] = None,
-                 position: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -639,37 +606,27 @@ class AppOverrideRule(pulumi.CustomResource):
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.AppOverrideRule("example")
-        ```
+        AppOverrideRule resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] application: The Application param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1024 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param. Default: `false`.
-        :param pulumi.Input[_builtins.int] port: The Port param. Value must be between 0 and 65535.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] protocol: The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
+        :param pulumi.Input[_builtins.str] application: Application
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Disabled
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: From
+        :param pulumi.Input[_builtins.str] group_tag: Group tag
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate destination
+        :param pulumi.Input[_builtins.bool] negate_source: Negate source
+        :param pulumi.Input[_builtins.int] port: Port
+        :param pulumi.Input[_builtins.str] protocol: Protocol
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tag
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: To
         """
         ...
     @overload
@@ -678,16 +635,7 @@ class AppOverrideRule(pulumi.CustomResource):
                  args: AppOverrideRuleArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.AppOverrideRule("example")
-        ```
+        AppOverrideRule resource
 
         :param str resource_name: The name of the resource.
         :param AppOverrideRuleArgs args: The arguments to use to populate this resource's properties.
@@ -716,7 +664,6 @@ class AppOverrideRule(pulumi.CustomResource):
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  port: Optional[pulumi.Input[_builtins.int]] = None,
-                 position: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -751,7 +698,6 @@ class AppOverrideRule(pulumi.CustomResource):
             if port is None and not opts.urn:
                 raise TypeError("Missing required property 'port'")
             __props__.__dict__["port"] = port
-            __props__.__dict__["position"] = position
             if protocol is None and not opts.urn:
                 raise TypeError("Missing required property 'protocol'")
             __props__.__dict__["protocol"] = protocol
@@ -786,7 +732,6 @@ class AppOverrideRule(pulumi.CustomResource):
             negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
             negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
             port: Optional[pulumi.Input[_builtins.int]] = None,
-            position: Optional[pulumi.Input[_builtins.str]] = None,
             protocol: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -800,24 +745,23 @@ class AppOverrideRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] application: The Application param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1024 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param. Default: `false`.
-        :param pulumi.Input[_builtins.int] port: The Port param. Value must be between 0 and 65535.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] protocol: The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
+        :param pulumi.Input[_builtins.str] application: Application
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Disabled
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: From
+        :param pulumi.Input[_builtins.str] group_tag: Group tag
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate destination
+        :param pulumi.Input[_builtins.bool] negate_source: Negate source
+        :param pulumi.Input[_builtins.int] port: Port
+        :param pulumi.Input[_builtins.str] protocol: Protocol
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tag
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: To
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -835,7 +779,6 @@ class AppOverrideRule(pulumi.CustomResource):
         __props__.__dict__["negate_destination"] = negate_destination
         __props__.__dict__["negate_source"] = negate_source
         __props__.__dict__["port"] = port
-        __props__.__dict__["position"] = position
         __props__.__dict__["protocol"] = protocol
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["sources"] = sources
@@ -848,7 +791,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def application(self) -> pulumi.Output[_builtins.str]:
         """
-        The Application param.
+        Application
         """
         return pulumi.get(self, "application")
 
@@ -856,7 +799,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1024 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -864,7 +807,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def destinations(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Destinations param.
+        Destination
         """
         return pulumi.get(self, "destinations")
 
@@ -872,7 +815,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -880,7 +823,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def disabled(self) -> pulumi.Output[_builtins.bool]:
         """
-        The Disabled param. Default: `false`.
+        Disabled
         """
         return pulumi.get(self, "disabled")
 
@@ -888,7 +831,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -896,7 +839,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def froms(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Froms param.
+        From
         """
         return pulumi.get(self, "froms")
 
@@ -904,7 +847,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The GroupTag param.
+        Group tag
         """
         return pulumi.get(self, "group_tag")
 
@@ -912,7 +855,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -920,7 +863,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> pulumi.Output[_builtins.bool]:
         """
-        The NegateDestination param. Default: `false`.
+        Negate destination
         """
         return pulumi.get(self, "negate_destination")
 
@@ -928,7 +871,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> pulumi.Output[_builtins.bool]:
         """
-        The NegateSource param. Default: `false`.
+        Negate source
         """
         return pulumi.get(self, "negate_source")
 
@@ -936,23 +879,15 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def port(self) -> pulumi.Output[_builtins.int]:
         """
-        The Port param. Value must be between 0 and 65535.
+        Port
         """
         return pulumi.get(self, "port")
 
     @_builtins.property
     @pulumi.getter
-    def position(self) -> pulumi.Output[_builtins.str]:
-        """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        """
-        return pulumi.get(self, "position")
-
-    @_builtins.property
-    @pulumi.getter
     def protocol(self) -> pulumi.Output[_builtins.str]:
         """
-        The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -960,7 +895,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -968,7 +903,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def sources(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Sources param.
+        Source
         """
         return pulumi.get(self, "sources")
 
@@ -976,7 +911,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def tags(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Tags param.
+        Tag
         """
         return pulumi.get(self, "tags")
 
@@ -989,7 +924,7 @@ class AppOverrideRule(pulumi.CustomResource):
     @pulumi.getter
     def tos(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Tos param.
+        To
         """
         return pulumi.get(self, "tos")
 

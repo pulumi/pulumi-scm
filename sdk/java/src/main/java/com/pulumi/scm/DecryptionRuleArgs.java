@@ -20,14 +20,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     public static final DecryptionRuleArgs Empty = new DecryptionRuleArgs();
 
     /**
-     * The Action param. String must be one of these: `&#34;decrypt&#34;`, `&#34;no-decrypt&#34;`.
+     * The action to be taken
      * 
      */
     @Import(name="action", required=true)
     private Output<String> action;
 
     /**
-     * @return The Action param. String must be one of these: `&#34;decrypt&#34;`, `&#34;no-decrypt&#34;`.
+     * @return The action to be taken
      * 
      */
     public Output<String> action() {
@@ -35,14 +35,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Categories param.
+     * The destination URL category
      * 
      */
     @Import(name="categories", required=true)
     private Output<List<String>> categories;
 
     /**
-     * @return The Categories param.
+     * @return The destination URL category
      * 
      */
     public Output<List<String>> categories() {
@@ -50,14 +50,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Description param.
+     * The description of the decryption rule
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the decryption rule
      * 
      */
     public Optional<Output<String>> description() {
@@ -65,14 +65,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The DestinationHips param.
+     * The Host Integrity Profile of the destination host
      * 
      */
     @Import(name="destinationHips")
     private @Nullable Output<List<String>> destinationHips;
 
     /**
-     * @return The DestinationHips param.
+     * @return The Host Integrity Profile of the destination host
      * 
      */
     public Optional<Output<List<String>>> destinationHips() {
@@ -80,14 +80,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Destinations param.
+     * The destination addresses
      * 
      */
     @Import(name="destinations", required=true)
     private Output<List<String>> destinations;
 
     /**
-     * @return The Destinations param.
+     * @return The destination addresses
      * 
      */
     public Output<List<String>> destinations() {
@@ -95,14 +95,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -110,14 +110,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Disabled param.
+     * Is the rule disabled?
      * 
      */
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
     /**
-     * @return The Disabled param.
+     * @return Is the rule disabled?
      * 
      */
     public Optional<Output<Boolean>> disabled() {
@@ -125,14 +125,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -140,14 +140,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Froms param.
+     * The source security zone
      * 
      */
     @Import(name="froms", required=true)
     private Output<List<String>> froms;
 
     /**
-     * @return The Froms param.
+     * @return The source security zone
      * 
      */
     public Output<List<String>> froms() {
@@ -155,14 +155,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The LogFail param.
+     * Log failed decryption events?
      * 
      */
     @Import(name="logFail")
     private @Nullable Output<Boolean> logFail;
 
     /**
-     * @return The LogFail param.
+     * @return Log failed decryption events?
      * 
      */
     public Optional<Output<Boolean>> logFail() {
@@ -170,14 +170,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The LogSetting param.
+     * The log settings of the decryption rule
      * 
      */
     @Import(name="logSetting")
     private @Nullable Output<String> logSetting;
 
     /**
-     * @return The LogSetting param.
+     * @return The log settings of the decryption rule
      * 
      */
     public Optional<Output<String>> logSetting() {
@@ -185,14 +185,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The LogSuccess param.
+     * Log successful decryption events?
      * 
      */
     @Import(name="logSuccess")
     private @Nullable Output<Boolean> logSuccess;
 
     /**
-     * @return The LogSuccess param.
+     * @return Log successful decryption events?
      * 
      */
     public Optional<Output<Boolean>> logSuccess() {
@@ -200,14 +200,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Name param.
+     * The name of the decryption rule
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the decryption rule
      * 
      */
     public Optional<Output<String>> name() {
@@ -215,14 +215,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The NegateDestination param.
+     * Negate the destination addresses?
      * 
      */
     @Import(name="negateDestination")
     private @Nullable Output<Boolean> negateDestination;
 
     /**
-     * @return The NegateDestination param.
+     * @return Negate the destination addresses?
      * 
      */
     public Optional<Output<Boolean>> negateDestination() {
@@ -230,14 +230,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The NegateSource param.
+     * Negate the source addresses?
      * 
      */
     @Import(name="negateSource")
     private @Nullable Output<Boolean> negateSource;
 
     /**
-     * @return The NegateSource param.
+     * @return Negate the source addresses?
      * 
      */
     public Optional<Output<Boolean>> negateSource() {
@@ -245,14 +245,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * The position of a security rule
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * @return The position of a security rule
      * 
      */
     public Optional<Output<String>> position() {
@@ -260,14 +260,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Profile param.
+     * The decryption profile associated with the decryption rule
      * 
      */
     @Import(name="profile")
     private @Nullable Output<String> profile;
 
     /**
-     * @return The Profile param.
+     * @return The decryption profile associated with the decryption rule
      * 
      */
     public Optional<Output<String>> profile() {
@@ -275,14 +275,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Services param.
+     * The destination services and/or service groups
      * 
      */
     @Import(name="services", required=true)
     private Output<List<String>> services;
 
     /**
-     * @return The Services param.
+     * @return The destination services and/or service groups
      * 
      */
     public Output<List<String>> services() {
@@ -290,14 +290,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -305,14 +305,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The SourceHips param.
+     * Source hip
      * 
      */
     @Import(name="sourceHips")
     private @Nullable Output<List<String>> sourceHips;
 
     /**
-     * @return The SourceHips param.
+     * @return Source hip
      * 
      */
     public Optional<Output<List<String>>> sourceHips() {
@@ -320,14 +320,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The SourceUsers param.
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
     @Import(name="sourceUsers", required=true)
     private Output<List<String>> sourceUsers;
 
     /**
-     * @return The SourceUsers param.
+     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
     public Output<List<String>> sourceUsers() {
@@ -335,14 +335,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Sources param.
+     * The source addresses
      * 
      */
     @Import(name="sources", required=true)
     private Output<List<String>> sources;
 
     /**
-     * @return The Sources param.
+     * @return The source addresses
      * 
      */
     public Output<List<String>> sources() {
@@ -350,14 +350,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Tags param.
+     * The tags associated with the decryption rule
      * 
      */
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
     /**
-     * @return The Tags param.
+     * @return The tags associated with the decryption rule
      * 
      */
     public Optional<Output<List<String>>> tags() {
@@ -365,14 +365,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Tos param.
+     * The destination security zone
      * 
      */
     @Import(name="tos", required=true)
     private Output<List<String>> tos;
 
     /**
-     * @return The Tos param.
+     * @return The destination security zone
      * 
      */
     public Output<List<String>> tos() {
@@ -380,14 +380,14 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Type param.
+     * The type of decryption
      * 
      */
     @Import(name="type")
     private @Nullable Output<DecryptionRuleTypeArgs> type;
 
     /**
-     * @return The Type param.
+     * @return The type of decryption
      * 
      */
     public Optional<Output<DecryptionRuleTypeArgs>> type() {
@@ -443,7 +443,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param action The Action param. String must be one of these: `&#34;decrypt&#34;`, `&#34;no-decrypt&#34;`.
+         * @param action The action to be taken
          * 
          * @return builder
          * 
@@ -454,7 +454,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param action The Action param. String must be one of these: `&#34;decrypt&#34;`, `&#34;no-decrypt&#34;`.
+         * @param action The action to be taken
          * 
          * @return builder
          * 
@@ -464,7 +464,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param categories The Categories param.
+         * @param categories The destination URL category
          * 
          * @return builder
          * 
@@ -475,7 +475,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param categories The Categories param.
+         * @param categories The destination URL category
          * 
          * @return builder
          * 
@@ -485,7 +485,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param categories The Categories param.
+         * @param categories The destination URL category
          * 
          * @return builder
          * 
@@ -495,7 +495,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the decryption rule
          * 
          * @return builder
          * 
@@ -506,7 +506,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the decryption rule
          * 
          * @return builder
          * 
@@ -516,7 +516,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param destinationHips The DestinationHips param.
+         * @param destinationHips The Host Integrity Profile of the destination host
          * 
          * @return builder
          * 
@@ -527,7 +527,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param destinationHips The DestinationHips param.
+         * @param destinationHips The Host Integrity Profile of the destination host
          * 
          * @return builder
          * 
@@ -537,7 +537,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param destinationHips The DestinationHips param.
+         * @param destinationHips The Host Integrity Profile of the destination host
          * 
          * @return builder
          * 
@@ -547,7 +547,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param destinations The Destinations param.
+         * @param destinations The destination addresses
          * 
          * @return builder
          * 
@@ -558,7 +558,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param destinations The Destinations param.
+         * @param destinations The destination addresses
          * 
          * @return builder
          * 
@@ -568,7 +568,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param destinations The Destinations param.
+         * @param destinations The destination addresses
          * 
          * @return builder
          * 
@@ -578,7 +578,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -589,7 +589,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -599,7 +599,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param disabled The Disabled param.
+         * @param disabled Is the rule disabled?
          * 
          * @return builder
          * 
@@ -610,7 +610,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param disabled The Disabled param.
+         * @param disabled Is the rule disabled?
          * 
          * @return builder
          * 
@@ -620,7 +620,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -631,7 +631,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -641,7 +641,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param froms The Froms param.
+         * @param froms The source security zone
          * 
          * @return builder
          * 
@@ -652,7 +652,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param froms The Froms param.
+         * @param froms The source security zone
          * 
          * @return builder
          * 
@@ -662,7 +662,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param froms The Froms param.
+         * @param froms The source security zone
          * 
          * @return builder
          * 
@@ -672,7 +672,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param logFail The LogFail param.
+         * @param logFail Log failed decryption events?
          * 
          * @return builder
          * 
@@ -683,7 +683,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param logFail The LogFail param.
+         * @param logFail Log failed decryption events?
          * 
          * @return builder
          * 
@@ -693,7 +693,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param logSetting The LogSetting param.
+         * @param logSetting The log settings of the decryption rule
          * 
          * @return builder
          * 
@@ -704,7 +704,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param logSetting The LogSetting param.
+         * @param logSetting The log settings of the decryption rule
          * 
          * @return builder
          * 
@@ -714,7 +714,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param logSuccess The LogSuccess param.
+         * @param logSuccess Log successful decryption events?
          * 
          * @return builder
          * 
@@ -725,7 +725,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param logSuccess The LogSuccess param.
+         * @param logSuccess Log successful decryption events?
          * 
          * @return builder
          * 
@@ -735,7 +735,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the decryption rule
          * 
          * @return builder
          * 
@@ -746,7 +746,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the decryption rule
          * 
          * @return builder
          * 
@@ -756,7 +756,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param negateDestination The NegateDestination param.
+         * @param negateDestination Negate the destination addresses?
          * 
          * @return builder
          * 
@@ -767,7 +767,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param negateDestination The NegateDestination param.
+         * @param negateDestination Negate the destination addresses?
          * 
          * @return builder
          * 
@@ -777,7 +777,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param negateSource The NegateSource param.
+         * @param negateSource Negate the source addresses?
          * 
          * @return builder
          * 
@@ -788,7 +788,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param negateSource The NegateSource param.
+         * @param negateSource Negate the source addresses?
          * 
          * @return builder
          * 
@@ -798,7 +798,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+         * @param position The position of a security rule
          * 
          * @return builder
          * 
@@ -809,7 +809,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+         * @param position The position of a security rule
          * 
          * @return builder
          * 
@@ -819,7 +819,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param profile The Profile param.
+         * @param profile The decryption profile associated with the decryption rule
          * 
          * @return builder
          * 
@@ -830,7 +830,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param profile The Profile param.
+         * @param profile The decryption profile associated with the decryption rule
          * 
          * @return builder
          * 
@@ -840,7 +840,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param services The Services param.
+         * @param services The destination services and/or service groups
          * 
          * @return builder
          * 
@@ -851,7 +851,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param services The Services param.
+         * @param services The destination services and/or service groups
          * 
          * @return builder
          * 
@@ -861,7 +861,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param services The Services param.
+         * @param services The destination services and/or service groups
          * 
          * @return builder
          * 
@@ -871,7 +871,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -882,7 +882,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -892,7 +892,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param sourceHips The SourceHips param.
+         * @param sourceHips Source hip
          * 
          * @return builder
          * 
@@ -903,7 +903,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param sourceHips The SourceHips param.
+         * @param sourceHips Source hip
          * 
          * @return builder
          * 
@@ -913,7 +913,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param sourceHips The SourceHips param.
+         * @param sourceHips Source hip
          * 
          * @return builder
          * 
@@ -923,7 +923,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param sourceUsers The SourceUsers param.
+         * @param sourceUsers List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
          * 
          * @return builder
          * 
@@ -934,7 +934,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param sourceUsers The SourceUsers param.
+         * @param sourceUsers List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
          * 
          * @return builder
          * 
@@ -944,7 +944,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param sourceUsers The SourceUsers param.
+         * @param sourceUsers List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
          * 
          * @return builder
          * 
@@ -954,7 +954,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param sources The Sources param.
+         * @param sources The source addresses
          * 
          * @return builder
          * 
@@ -965,7 +965,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param sources The Sources param.
+         * @param sources The source addresses
          * 
          * @return builder
          * 
@@ -975,7 +975,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param sources The Sources param.
+         * @param sources The source addresses
          * 
          * @return builder
          * 
@@ -985,7 +985,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags The tags associated with the decryption rule
          * 
          * @return builder
          * 
@@ -996,7 +996,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags The tags associated with the decryption rule
          * 
          * @return builder
          * 
@@ -1006,7 +1006,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags The tags associated with the decryption rule
          * 
          * @return builder
          * 
@@ -1016,7 +1016,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param tos The Tos param.
+         * @param tos The destination security zone
          * 
          * @return builder
          * 
@@ -1027,7 +1027,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param tos The Tos param.
+         * @param tos The destination security zone
          * 
          * @return builder
          * 
@@ -1037,7 +1037,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param tos The Tos param.
+         * @param tos The destination security zone
          * 
          * @return builder
          * 
@@ -1047,7 +1047,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param type The Type param.
+         * @param type The type of decryption
          * 
          * @return builder
          * 
@@ -1058,7 +1058,7 @@ public final class DecryptionRuleArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param type The Type param.
+         * @param type The type of decryption
          * 
          * @return builder
          * 

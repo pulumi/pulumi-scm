@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeCryptoProfileListDataLifetimeResult
     {
         /// <summary>
-        /// specify lifetime in days. Value must be between 1 and 365.
+        /// specify lifetime in days
         /// </summary>
         public readonly int Days;
         /// <summary>
-        /// specify lifetime in hours. Value must be between 1 and 65535.
+        /// specify lifetime in hours
         /// </summary>
         public readonly int Hours;
         /// <summary>
-        /// specify lifetime in minutes. Value must be between 3 and 65535.
+        /// specify lifetime in minutes
         /// </summary>
         public readonly int Minutes;
         /// <summary>
-        /// specify lifetime in seconds. Value must be between 180 and 65535.
+        /// specify lifetime in seconds
         /// </summary>
         public readonly int Seconds;
 

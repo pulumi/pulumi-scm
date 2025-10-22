@@ -6,6 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+import com.pulumi.scm.inputs.IkeGatewayLocalAddressArgs;
 import com.pulumi.scm.inputs.IkeGatewayLocalIdArgs;
 import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
 import com.pulumi.scm.inputs.IkeGatewayPeerIdArgs;
@@ -23,14 +24,14 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
     public static final IkeGatewayState Empty = new IkeGatewayState();
 
     /**
-     * The Authentication param.
+     * Authentication
      * 
      */
     @Import(name="authentication")
     private @Nullable Output<IkeGatewayAuthenticationArgs> authentication;
 
     /**
-     * @return The Authentication param.
+     * @return Authentication
      * 
      */
     public Optional<Output<IkeGatewayAuthenticationArgs>> authentication() {
@@ -38,14 +39,14 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -53,14 +54,14 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      * 
      */
     @Import(name="encryptedValues")
     private @Nullable Output<Map<String,String>> encryptedValues;
 
     /**
-     * @return (Internal use) Encrypted values returned from the API.
+     * @return Map of sensitive values returned from the API.
      * 
      */
     public Optional<Output<Map<String,String>>> encryptedValues() {
@@ -68,14 +69,14 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -83,14 +84,29 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The LocalId param.
+     * Local address
+     * 
+     */
+    @Import(name="localAddress")
+    private @Nullable Output<IkeGatewayLocalAddressArgs> localAddress;
+
+    /**
+     * @return Local address
+     * 
+     */
+    public Optional<Output<IkeGatewayLocalAddressArgs>> localAddress() {
+        return Optional.ofNullable(this.localAddress);
+    }
+
+    /**
+     * Local id
      * 
      */
     @Import(name="localId")
     private @Nullable Output<IkeGatewayLocalIdArgs> localId;
 
     /**
-     * @return The LocalId param.
+     * @return Local id
      * 
      */
     public Optional<Output<IkeGatewayLocalIdArgs>> localId() {
@@ -98,14 +114,14 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public Optional<Output<String>> name() {
@@ -113,14 +129,14 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The PeerAddress param.
+     * Peer address
      * 
      */
     @Import(name="peerAddress")
     private @Nullable Output<IkeGatewayPeerAddressArgs> peerAddress;
 
     /**
-     * @return The PeerAddress param.
+     * @return Peer address
      * 
      */
     public Optional<Output<IkeGatewayPeerAddressArgs>> peerAddress() {
@@ -128,14 +144,14 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The PeerId param.
+     * Peer id
      * 
      */
     @Import(name="peerId")
     private @Nullable Output<IkeGatewayPeerIdArgs> peerId;
 
     /**
-     * @return The PeerId param.
+     * @return Peer id
      * 
      */
     public Optional<Output<IkeGatewayPeerIdArgs>> peerId() {
@@ -143,14 +159,14 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Protocol param.
+     * Protocol
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<IkeGatewayProtocolArgs> protocol;
 
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     public Optional<Output<IkeGatewayProtocolArgs>> protocol() {
@@ -158,14 +174,14 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ProtocolCommon param.
+     * Protocol common
      * 
      */
     @Import(name="protocolCommon")
     private @Nullable Output<IkeGatewayProtocolCommonArgs> protocolCommon;
 
     /**
-     * @return The ProtocolCommon param.
+     * @return Protocol common
      * 
      */
     public Optional<Output<IkeGatewayProtocolCommonArgs>> protocolCommon() {
@@ -173,14 +189,14 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -201,6 +217,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         this.device = $.device;
         this.encryptedValues = $.encryptedValues;
         this.folder = $.folder;
+        this.localAddress = $.localAddress;
         this.localId = $.localId;
         this.name = $.name;
         this.peerAddress = $.peerAddress;
@@ -230,7 +247,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authentication The Authentication param.
+         * @param authentication Authentication
          * 
          * @return builder
          * 
@@ -241,7 +258,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authentication The Authentication param.
+         * @param authentication Authentication
          * 
          * @return builder
          * 
@@ -251,7 +268,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -262,7 +279,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -272,7 +289,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param encryptedValues (Internal use) Encrypted values returned from the API.
+         * @param encryptedValues Map of sensitive values returned from the API.
          * 
          * @return builder
          * 
@@ -283,7 +300,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param encryptedValues (Internal use) Encrypted values returned from the API.
+         * @param encryptedValues Map of sensitive values returned from the API.
          * 
          * @return builder
          * 
@@ -293,7 +310,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -304,7 +321,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -314,7 +331,28 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param localId The LocalId param.
+         * @param localAddress Local address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localAddress(@Nullable Output<IkeGatewayLocalAddressArgs> localAddress) {
+            $.localAddress = localAddress;
+            return this;
+        }
+
+        /**
+         * @param localAddress Local address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localAddress(IkeGatewayLocalAddressArgs localAddress) {
+            return localAddress(Output.of(localAddress));
+        }
+
+        /**
+         * @param localId Local id
          * 
          * @return builder
          * 
@@ -325,7 +363,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param localId The LocalId param.
+         * @param localId Local id
          * 
          * @return builder
          * 
@@ -335,7 +373,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -346,7 +384,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -356,7 +394,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param peerAddress The PeerAddress param.
+         * @param peerAddress Peer address
          * 
          * @return builder
          * 
@@ -367,7 +405,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param peerAddress The PeerAddress param.
+         * @param peerAddress Peer address
          * 
          * @return builder
          * 
@@ -377,7 +415,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param peerId The PeerId param.
+         * @param peerId Peer id
          * 
          * @return builder
          * 
@@ -388,7 +426,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param peerId The PeerId param.
+         * @param peerId Peer id
          * 
          * @return builder
          * 
@@ -398,7 +436,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol Protocol
          * 
          * @return builder
          * 
@@ -409,7 +447,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol Protocol
          * 
          * @return builder
          * 
@@ -419,7 +457,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param protocolCommon The ProtocolCommon param.
+         * @param protocolCommon Protocol common
          * 
          * @return builder
          * 
@@ -430,7 +468,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param protocolCommon The ProtocolCommon param.
+         * @param protocolCommon Protocol common
          * 
          * @return builder
          * 
@@ -440,7 +478,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -451,7 +489,7 @@ public final class IkeGatewayState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

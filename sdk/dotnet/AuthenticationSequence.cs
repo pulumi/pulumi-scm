@@ -10,52 +10,37 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.AuthenticationSequence("example");
-    /// 
-    /// });
-    /// ```
+    /// AuthenticationSequence resource
     /// </summary>
     [ScmResourceType("scm:index/authenticationSequence:AuthenticationSequence")]
     public partial class AuthenticationSequence : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The AuthenticationProfiles param.
+        /// An ordered list of authentication profiles
         /// </summary>
         [Output("authenticationProfiles")]
         public Output<ImmutableArray<string>> AuthenticationProfiles { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication sequence
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -64,7 +49,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The UseDomainFindProfile param. Default: `True`.
+        /// Use domain to determine authentication profile?
         /// </summary>
         [Output("useDomainFindProfile")]
         public Output<bool> UseDomainFindProfile { get; private set; } = null!;
@@ -119,7 +104,7 @@ namespace Pulumi.Scm
         private InputList<string>? _authenticationProfiles;
 
         /// <summary>
-        /// The AuthenticationProfiles param.
+        /// An ordered list of authentication profiles
         /// </summary>
         public InputList<string> AuthenticationProfiles
         {
@@ -128,31 +113,31 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication sequence
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The UseDomainFindProfile param. Default: `True`.
+        /// Use domain to determine authentication profile?
         /// </summary>
         [Input("useDomainFindProfile")]
         public Input<bool>? UseDomainFindProfile { get; set; }
@@ -169,7 +154,7 @@ namespace Pulumi.Scm
         private InputList<string>? _authenticationProfiles;
 
         /// <summary>
-        /// The AuthenticationProfiles param.
+        /// An ordered list of authentication profiles
         /// </summary>
         public InputList<string> AuthenticationProfiles
         {
@@ -178,25 +163,25 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication sequence
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -205,7 +190,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The UseDomainFindProfile param. Default: `True`.
+        /// Use domain to determine authentication profile?
         /// </summary>
         [Input("useDomainFindProfile")]
         public Input<bool>? UseDomainFindProfile { get; set; }

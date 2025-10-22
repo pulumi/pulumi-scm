@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetIkeGatewayListDataProtocolCommonNatTraversal {
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     private Boolean enable;
 
     private GetIkeGatewayListDataProtocolCommonNatTraversal() {}
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     public Boolean enable() {

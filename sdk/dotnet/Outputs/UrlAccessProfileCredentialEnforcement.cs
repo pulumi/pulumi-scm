@@ -14,27 +14,27 @@ namespace Pulumi.Scm.Outputs
     public sealed class UrlAccessProfileCredentialEnforcement
     {
         /// <summary>
-        /// The Alerts param.
+        /// Alert
         /// </summary>
         public readonly ImmutableArray<string> Alerts;
         /// <summary>
-        /// The Allows param.
+        /// Allow
         /// </summary>
         public readonly ImmutableArray<string> Allows;
         /// <summary>
-        /// The Blocks param.
+        /// Block
         /// </summary>
         public readonly ImmutableArray<string> Blocks;
         /// <summary>
-        /// The Continues param.
+        /// Continue
         /// </summary>
         public readonly ImmutableArray<string> Continues;
         /// <summary>
-        /// The LogSeverity param. Default: `"medium"`.
+        /// Log severity
         /// </summary>
         public readonly string? LogSeverity;
         /// <summary>
-        /// The Mode param.
+        /// Mode
         /// </summary>
         public readonly Outputs.UrlAccessProfileCredentialEnforcementMode? Mode;
 

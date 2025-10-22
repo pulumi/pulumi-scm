@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.ApplicationSignatureAndConditionGetArgs>? _andConditions;
 
         /// <summary>
-        /// The AndConditions param.
+        /// And condition
         /// </summary>
         public InputList<Inputs.ApplicationSignatureAndConditionGetArgs> AndConditions
         {
@@ -25,25 +25,25 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Comment param. String length must not exceed 256 characters.
+        /// Comment
         /// </summary>
         [Input("comment")]
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// The OrderFree param. Default: `False`.
+        /// Order free
         /// </summary>
         [Input("orderFree")]
         public Input<bool>? OrderFree { get; set; }
 
         /// <summary>
-        /// The Scope param. String must be one of these: `"protocol-data-unit"`, `"session"`. Default: `"protocol-data-unit"`.
+        /// Scope
         /// </summary>
         [Input("scope")]
         public Input<string>? Scope { get; set; }

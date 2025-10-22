@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectNetworkInfoCriteriaNetworkIsWifi
     {
         /// <summary>
-        /// SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+        /// SSID
         /// </summary>
         public readonly string? Ssid;
 

@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetQosPolicyRule
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetQosPolicyRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// QosPolicyRule data source
         /// </summary>
         public static Task<GetQosPolicyRuleResult> InvokeAsync(GetQosPolicyRuleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetQosPolicyRuleResult>("scm:index/getQosPolicyRule:getQosPolicyRule", args ?? new GetQosPolicyRuleArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetQosPolicyRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// QosPolicyRule data source
         /// </summary>
         public static Output<GetQosPolicyRuleResult> Invoke(GetQosPolicyRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosPolicyRuleResult>("scm:index/getQosPolicyRule:getQosPolicyRule", args ?? new GetQosPolicyRuleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetQosPolicyRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// QosPolicyRule data source
         /// </summary>
         public static Output<GetQosPolicyRuleResult> Invoke(GetQosPolicyRuleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosPolicyRuleResult>("scm:index/getQosPolicyRule:getQosPolicyRule", args ?? new GetQosPolicyRuleInvokeArgs(), options.WithDefaults());
@@ -88,16 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetQosPolicyRuleArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public string? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetQosPolicyRuleArgs()
         {
@@ -108,16 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetQosPolicyRuleInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetQosPolicyRuleInvokeArgs()
         {
@@ -130,33 +76,41 @@ namespace Pulumi.Scm
     public sealed class GetQosPolicyRuleResult
     {
         /// <summary>
-        /// The Action param.
+        /// Action
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleActionResult Action;
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The DscpTos param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Dscp tos
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosResult DscpTos;
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
-        public readonly string? Folder;
+        public readonly string Folder;
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Schedule param.
+        /// Schedule
         /// </summary>
         public readonly string Schedule;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
@@ -165,9 +119,11 @@ namespace Pulumi.Scm
 
             string description,
 
+            string device,
+
             Outputs.GetQosPolicyRuleDscpTosResult dscpTos,
 
-            string? folder,
+            string folder,
 
             string id,
 
@@ -175,15 +131,19 @@ namespace Pulumi.Scm
 
             string schedule,
 
+            string snippet,
+
             string tfid)
         {
             Action = action;
             Description = description;
+            Device = device;
             DscpTos = dscpTos;
             Folder = folder;
             Id = id;
             Name = name;
             Schedule = schedule;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

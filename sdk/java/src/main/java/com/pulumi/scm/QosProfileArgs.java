@@ -18,14 +18,14 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
     public static final QosProfileArgs Empty = new QosProfileArgs();
 
     /**
-     * The AggregateBandwidth param.
+     * Aggregate bandwidth
      * 
      */
     @Import(name="aggregateBandwidth")
     private @Nullable Output<QosProfileAggregateBandwidthArgs> aggregateBandwidth;
 
     /**
-     * @return The AggregateBandwidth param.
+     * @return Aggregate bandwidth
      * 
      */
     public Optional<Output<QosProfileAggregateBandwidthArgs>> aggregateBandwidth() {
@@ -33,14 +33,14 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ClassBandwidthType param.
+     * Class bandwidth type
      * 
      */
     @Import(name="classBandwidthType")
     private @Nullable Output<QosProfileClassBandwidthTypeArgs> classBandwidthType;
 
     /**
-     * @return The ClassBandwidthType param.
+     * @return Class bandwidth type
      * 
      */
     public Optional<Output<QosProfileClassBandwidthTypeArgs>> classBandwidthType() {
@@ -48,14 +48,14 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -63,14 +63,14 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -78,14 +78,14 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public Optional<Output<String>> name() {
@@ -93,14 +93,14 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -137,7 +137,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param aggregateBandwidth The AggregateBandwidth param.
+         * @param aggregateBandwidth Aggregate bandwidth
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param aggregateBandwidth The AggregateBandwidth param.
+         * @param aggregateBandwidth Aggregate bandwidth
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param classBandwidthType The ClassBandwidthType param.
+         * @param classBandwidthType Class bandwidth type
          * 
          * @return builder
          * 
@@ -169,7 +169,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param classBandwidthType The ClassBandwidthType param.
+         * @param classBandwidthType Class bandwidth type
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -190,7 +190,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -211,7 +211,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -221,7 +221,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -232,7 +232,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -242,7 +242,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -253,7 +253,7 @@ public final class QosProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

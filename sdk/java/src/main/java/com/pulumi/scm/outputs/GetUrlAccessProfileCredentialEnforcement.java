@@ -13,74 +13,74 @@ import java.util.Objects;
 @CustomType
 public final class GetUrlAccessProfileCredentialEnforcement {
     /**
-     * @return The Alerts param.
+     * @return Alert
      * 
      */
     private List<String> alerts;
     /**
-     * @return The Allows param.
+     * @return Allow
      * 
      */
     private List<String> allows;
     /**
-     * @return The Blocks param.
+     * @return Block
      * 
      */
     private List<String> blocks;
     /**
-     * @return The Continues param.
+     * @return Continue
      * 
      */
     private List<String> continues;
     /**
-     * @return The LogSeverity param. Default: `&#34;medium&#34;`.
+     * @return Log severity
      * 
      */
     private String logSeverity;
     /**
-     * @return The Mode param.
+     * @return Mode
      * 
      */
     private GetUrlAccessProfileCredentialEnforcementMode mode;
 
     private GetUrlAccessProfileCredentialEnforcement() {}
     /**
-     * @return The Alerts param.
+     * @return Alert
      * 
      */
     public List<String> alerts() {
         return this.alerts;
     }
     /**
-     * @return The Allows param.
+     * @return Allow
      * 
      */
     public List<String> allows() {
         return this.allows;
     }
     /**
-     * @return The Blocks param.
+     * @return Block
      * 
      */
     public List<String> blocks() {
         return this.blocks;
     }
     /**
-     * @return The Continues param.
+     * @return Continue
      * 
      */
     public List<String> continues() {
         return this.continues;
     }
     /**
-     * @return The LogSeverity param. Default: `&#34;medium&#34;`.
+     * @return Log severity
      * 
      */
     public String logSeverity() {
         return this.logSeverity;
     }
     /**
-     * @return The Mode param.
+     * @return Mode
      * 
      */
     public GetUrlAccessProfileCredentialEnforcementMode mode() {

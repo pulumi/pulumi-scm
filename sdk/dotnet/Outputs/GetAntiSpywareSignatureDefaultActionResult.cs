@@ -14,49 +14,49 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareSignatureDefaultActionResult
     {
         /// <summary>
-        /// The Alert param.
+        /// Alert
         /// </summary>
-        public readonly bool Alert;
+        public readonly Outputs.GetAntiSpywareSignatureDefaultActionAlertResult Alert;
         /// <summary>
-        /// The Allow param.
+        /// Allow
         /// </summary>
-        public readonly bool Allow;
+        public readonly Outputs.GetAntiSpywareSignatureDefaultActionAllowResult Allow;
         /// <summary>
-        /// The BlockIp param.
+        /// anti spyware signature block ip
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureDefaultActionBlockIpResult BlockIp;
         /// <summary>
-        /// The Drop param.
+        /// Drop
         /// </summary>
-        public readonly bool Drop;
+        public readonly Outputs.GetAntiSpywareSignatureDefaultActionDropResult Drop;
         /// <summary>
-        /// The ResetBoth param.
+        /// Reset both
         /// </summary>
-        public readonly bool ResetBoth;
+        public readonly Outputs.GetAntiSpywareSignatureDefaultActionResetBothResult ResetBoth;
         /// <summary>
-        /// The ResetClient param.
+        /// Reset client
         /// </summary>
-        public readonly bool ResetClient;
+        public readonly Outputs.GetAntiSpywareSignatureDefaultActionResetClientResult ResetClient;
         /// <summary>
-        /// The ResetServer param.
+        /// Reset server
         /// </summary>
-        public readonly bool ResetServer;
+        public readonly Outputs.GetAntiSpywareSignatureDefaultActionResetServerResult ResetServer;
 
         [OutputConstructor]
         private GetAntiSpywareSignatureDefaultActionResult(
-            bool alert,
+            Outputs.GetAntiSpywareSignatureDefaultActionAlertResult alert,
 
-            bool allow,
+            Outputs.GetAntiSpywareSignatureDefaultActionAllowResult allow,
 
             Outputs.GetAntiSpywareSignatureDefaultActionBlockIpResult blockIp,
 
-            bool drop,
+            Outputs.GetAntiSpywareSignatureDefaultActionDropResult drop,
 
-            bool resetBoth,
+            Outputs.GetAntiSpywareSignatureDefaultActionResetBothResult resetBoth,
 
-            bool resetClient,
+            Outputs.GetAntiSpywareSignatureDefaultActionResetClientResult resetClient,
 
-            bool resetServer)
+            Outputs.GetAntiSpywareSignatureDefaultActionResetServerResult resetServer)
         {
             Alert = alert;
             Allow = allow;

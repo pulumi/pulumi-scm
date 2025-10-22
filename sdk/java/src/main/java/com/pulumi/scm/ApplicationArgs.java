@@ -22,14 +22,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
     /**
-     * The AbleToTransferFile param.
+     * Able to transfer file
      * 
      */
     @Import(name="ableToTransferFile")
     private @Nullable Output<Boolean> ableToTransferFile;
 
     /**
-     * @return The AbleToTransferFile param.
+     * @return Able to transfer file
      * 
      */
     public Optional<Output<Boolean>> ableToTransferFile() {
@@ -37,14 +37,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The AlgDisableCapability param. String length must not exceed 127 characters.
+     * Alg disable capability
      * 
      */
     @Import(name="algDisableCapability")
     private @Nullable Output<String> algDisableCapability;
 
     /**
-     * @return The AlgDisableCapability param. String length must not exceed 127 characters.
+     * @return Alg disable capability
      * 
      */
     public Optional<Output<String>> algDisableCapability() {
@@ -52,14 +52,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Category param.
+     * Category
      * 
      */
     @Import(name="category", required=true)
     private Output<String> category;
 
     /**
-     * @return The Category param.
+     * @return Category
      * 
      */
     public Output<String> category() {
@@ -67,14 +67,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ConsumeBigBandwidth param.
+     * Consume big bandwidth
      * 
      */
     @Import(name="consumeBigBandwidth")
     private @Nullable Output<Boolean> consumeBigBandwidth;
 
     /**
-     * @return The ConsumeBigBandwidth param.
+     * @return Consume big bandwidth
      * 
      */
     public Optional<Output<Boolean>> consumeBigBandwidth() {
@@ -82,14 +82,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The DataIdent param.
+     * Data ident
      * 
      */
     @Import(name="dataIdent")
     private @Nullable Output<Boolean> dataIdent;
 
     /**
-     * @return The DataIdent param.
+     * @return Data ident
      * 
      */
     public Optional<Output<Boolean>> dataIdent() {
@@ -97,14 +97,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Default param.
+     * Default
      * 
      */
     @Import(name="default")
     private @Nullable Output<ApplicationDefaultArgs> default_;
 
     /**
-     * @return The Default param.
+     * @return Default
      * 
      */
     public Optional<Output<ApplicationDefaultArgs>> default_() {
@@ -112,14 +112,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -127,14 +127,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -142,14 +142,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The EvasiveBehavior param.
+     * Evasive behavior
      * 
      */
     @Import(name="evasiveBehavior")
     private @Nullable Output<Boolean> evasiveBehavior;
 
     /**
-     * @return The EvasiveBehavior param.
+     * @return Evasive behavior
      * 
      */
     public Optional<Output<Boolean>> evasiveBehavior() {
@@ -157,14 +157,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The FileTypeIdent param.
+     * File type ident
      * 
      */
     @Import(name="fileTypeIdent")
     private @Nullable Output<Boolean> fileTypeIdent;
 
     /**
-     * @return The FileTypeIdent param.
+     * @return File type ident
      * 
      */
     public Optional<Output<Boolean>> fileTypeIdent() {
@@ -172,14 +172,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -187,14 +187,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The HasKnownVulnerability param.
+     * Has known vulnerability
      * 
      */
     @Import(name="hasKnownVulnerability")
     private @Nullable Output<Boolean> hasKnownVulnerability;
 
     /**
-     * @return The HasKnownVulnerability param.
+     * @return Has known vulnerability
      * 
      */
     public Optional<Output<Boolean>> hasKnownVulnerability() {
@@ -202,14 +202,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the application
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the application
      * 
      */
     public Optional<Output<String>> name() {
@@ -217,14 +217,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The NoAppidCaching param.
+     * No appid caching
      * 
      */
     @Import(name="noAppidCaching")
     private @Nullable Output<Boolean> noAppidCaching;
 
     /**
-     * @return The NoAppidCaching param.
+     * @return No appid caching
      * 
      */
     public Optional<Output<Boolean>> noAppidCaching() {
@@ -232,14 +232,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ParentApp param. String length must not exceed 127 characters.
+     * Parent app
      * 
      */
     @Import(name="parentApp")
     private @Nullable Output<String> parentApp;
 
     /**
-     * @return The ParentApp param. String length must not exceed 127 characters.
+     * @return Parent app
      * 
      */
     public Optional<Output<String>> parentApp() {
@@ -247,14 +247,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The PervasiveUse param.
+     * Pervasive use
      * 
      */
     @Import(name="pervasiveUse")
     private @Nullable Output<Boolean> pervasiveUse;
 
     /**
-     * @return The PervasiveUse param.
+     * @return Pervasive use
      * 
      */
     public Optional<Output<Boolean>> pervasiveUse() {
@@ -262,14 +262,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ProneToMisuse param.
+     * Prone to misuse
      * 
      */
     @Import(name="proneToMisuse")
     private @Nullable Output<Boolean> proneToMisuse;
 
     /**
-     * @return The ProneToMisuse param.
+     * @return Prone to misuse
      * 
      */
     public Optional<Output<Boolean>> proneToMisuse() {
@@ -277,29 +277,29 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Risk param. Value must be between 1 and 5.
+     * Risk
      * 
      */
     @Import(name="risk", required=true)
-    private Output<Integer> risk;
+    private Output<String> risk;
 
     /**
-     * @return The Risk param. Value must be between 1 and 5.
+     * @return Risk
      * 
      */
-    public Output<Integer> risk() {
+    public Output<String> risk() {
         return this.risk;
     }
 
     /**
-     * The Signatures param.
+     * Signature
      * 
      */
     @Import(name="signatures")
     private @Nullable Output<List<ApplicationSignatureArgs>> signatures;
 
     /**
-     * @return The Signatures param.
+     * @return Signature
      * 
      */
     public Optional<Output<List<ApplicationSignatureArgs>>> signatures() {
@@ -307,14 +307,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -322,29 +322,29 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Subcategory param. String length must not exceed 63 characters.
+     * Subcategory
      * 
      */
-    @Import(name="subcategory", required=true)
-    private Output<String> subcategory;
+    @Import(name="subcategory")
+    private @Nullable Output<String> subcategory;
 
     /**
-     * @return The Subcategory param. String length must not exceed 63 characters.
+     * @return Subcategory
      * 
      */
-    public Output<String> subcategory() {
-        return this.subcategory;
+    public Optional<Output<String>> subcategory() {
+        return Optional.ofNullable(this.subcategory);
     }
 
     /**
-     * timeout for half-close session in seconds. Value must be between 1 and 604800.
+     * timeout for half-close session in seconds
      * 
      */
     @Import(name="tcpHalfClosedTimeout")
     private @Nullable Output<Integer> tcpHalfClosedTimeout;
 
     /**
-     * @return timeout for half-close session in seconds. Value must be between 1 and 604800.
+     * @return timeout for half-close session in seconds
      * 
      */
     public Optional<Output<Integer>> tcpHalfClosedTimeout() {
@@ -352,14 +352,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+     * timeout for session in timeWait state in seconds
      * 
      */
     @Import(name="tcpTimeWaitTimeout")
     private @Nullable Output<Integer> tcpTimeWaitTimeout;
 
     /**
-     * @return timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+     * @return timeout for session in timeWait state in seconds
      * 
      */
     public Optional<Output<Integer>> tcpTimeWaitTimeout() {
@@ -367,14 +367,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      * 
      */
     @Import(name="tcpTimeout")
     private @Nullable Output<Integer> tcpTimeout;
 
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     public Optional<Output<Integer>> tcpTimeout() {
@@ -382,29 +382,29 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Technology param. String length must not exceed 63 characters.
+     * Technology
      * 
      */
-    @Import(name="technology", required=true)
-    private Output<String> technology;
+    @Import(name="technology")
+    private @Nullable Output<String> technology;
 
     /**
-     * @return The Technology param. String length must not exceed 63 characters.
+     * @return Technology
      * 
      */
-    public Output<String> technology() {
-        return this.technology;
+    public Optional<Output<String>> technology() {
+        return Optional.ofNullable(this.technology);
     }
 
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      * 
      */
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     public Optional<Output<Integer>> timeout() {
@@ -412,14 +412,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The TunnelApplications param.
+     * Tunnel applications
      * 
      */
     @Import(name="tunnelApplications")
     private @Nullable Output<Boolean> tunnelApplications;
 
     /**
-     * @return The TunnelApplications param.
+     * @return Tunnel applications
      * 
      */
     public Optional<Output<Boolean>> tunnelApplications() {
@@ -427,14 +427,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The TunnelOtherApplication param.
+     * Tunnel other application
      * 
      */
     @Import(name="tunnelOtherApplication")
     private @Nullable Output<Boolean> tunnelOtherApplication;
 
     /**
-     * @return The TunnelOtherApplication param.
+     * @return Tunnel other application
      * 
      */
     public Optional<Output<Boolean>> tunnelOtherApplication() {
@@ -442,14 +442,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      * 
      */
     @Import(name="udpTimeout")
     private @Nullable Output<Integer> udpTimeout;
 
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     public Optional<Output<Integer>> udpTimeout() {
@@ -457,14 +457,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The UsedByMalware param.
+     * Used by malware
      * 
      */
     @Import(name="usedByMalware")
     private @Nullable Output<Boolean> usedByMalware;
 
     /**
-     * @return The UsedByMalware param.
+     * @return Used by malware
      * 
      */
     public Optional<Output<Boolean>> usedByMalware() {
@@ -472,14 +472,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The VirusIdent param.
+     * Virus ident
      * 
      */
     @Import(name="virusIdent")
     private @Nullable Output<Boolean> virusIdent;
 
     /**
-     * @return The VirusIdent param.
+     * @return Virus ident
      * 
      */
     public Optional<Output<Boolean>> virusIdent() {
@@ -541,7 +541,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param ableToTransferFile The AbleToTransferFile param.
+         * @param ableToTransferFile Able to transfer file
          * 
          * @return builder
          * 
@@ -552,7 +552,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param ableToTransferFile The AbleToTransferFile param.
+         * @param ableToTransferFile Able to transfer file
          * 
          * @return builder
          * 
@@ -562,7 +562,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param algDisableCapability The AlgDisableCapability param. String length must not exceed 127 characters.
+         * @param algDisableCapability Alg disable capability
          * 
          * @return builder
          * 
@@ -573,7 +573,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param algDisableCapability The AlgDisableCapability param. String length must not exceed 127 characters.
+         * @param algDisableCapability Alg disable capability
          * 
          * @return builder
          * 
@@ -583,7 +583,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param category The Category param.
+         * @param category Category
          * 
          * @return builder
          * 
@@ -594,7 +594,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param category The Category param.
+         * @param category Category
          * 
          * @return builder
          * 
@@ -604,7 +604,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param consumeBigBandwidth The ConsumeBigBandwidth param.
+         * @param consumeBigBandwidth Consume big bandwidth
          * 
          * @return builder
          * 
@@ -615,7 +615,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param consumeBigBandwidth The ConsumeBigBandwidth param.
+         * @param consumeBigBandwidth Consume big bandwidth
          * 
          * @return builder
          * 
@@ -625,7 +625,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dataIdent The DataIdent param.
+         * @param dataIdent Data ident
          * 
          * @return builder
          * 
@@ -636,7 +636,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dataIdent The DataIdent param.
+         * @param dataIdent Data ident
          * 
          * @return builder
          * 
@@ -646,7 +646,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param default_ The Default param.
+         * @param default_ Default
          * 
          * @return builder
          * 
@@ -657,7 +657,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param default_ The Default param.
+         * @param default_ Default
          * 
          * @return builder
          * 
@@ -667,7 +667,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param. String length must not exceed 1023 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -678,7 +678,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param. String length must not exceed 1023 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -688,7 +688,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -699,7 +699,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -709,7 +709,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param evasiveBehavior The EvasiveBehavior param.
+         * @param evasiveBehavior Evasive behavior
          * 
          * @return builder
          * 
@@ -720,7 +720,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param evasiveBehavior The EvasiveBehavior param.
+         * @param evasiveBehavior Evasive behavior
          * 
          * @return builder
          * 
@@ -730,7 +730,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fileTypeIdent The FileTypeIdent param.
+         * @param fileTypeIdent File type ident
          * 
          * @return builder
          * 
@@ -741,7 +741,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fileTypeIdent The FileTypeIdent param.
+         * @param fileTypeIdent File type ident
          * 
          * @return builder
          * 
@@ -751,7 +751,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -762,7 +762,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -772,7 +772,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param hasKnownVulnerability The HasKnownVulnerability param.
+         * @param hasKnownVulnerability Has known vulnerability
          * 
          * @return builder
          * 
@@ -783,7 +783,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param hasKnownVulnerability The HasKnownVulnerability param.
+         * @param hasKnownVulnerability Has known vulnerability
          * 
          * @return builder
          * 
@@ -793,7 +793,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name The name of the application
          * 
          * @return builder
          * 
@@ -804,7 +804,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name The name of the application
          * 
          * @return builder
          * 
@@ -814,7 +814,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param noAppidCaching The NoAppidCaching param.
+         * @param noAppidCaching No appid caching
          * 
          * @return builder
          * 
@@ -825,7 +825,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param noAppidCaching The NoAppidCaching param.
+         * @param noAppidCaching No appid caching
          * 
          * @return builder
          * 
@@ -835,7 +835,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param parentApp The ParentApp param. String length must not exceed 127 characters.
+         * @param parentApp Parent app
          * 
          * @return builder
          * 
@@ -846,7 +846,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param parentApp The ParentApp param. String length must not exceed 127 characters.
+         * @param parentApp Parent app
          * 
          * @return builder
          * 
@@ -856,7 +856,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param pervasiveUse The PervasiveUse param.
+         * @param pervasiveUse Pervasive use
          * 
          * @return builder
          * 
@@ -867,7 +867,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param pervasiveUse The PervasiveUse param.
+         * @param pervasiveUse Pervasive use
          * 
          * @return builder
          * 
@@ -877,7 +877,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param proneToMisuse The ProneToMisuse param.
+         * @param proneToMisuse Prone to misuse
          * 
          * @return builder
          * 
@@ -888,7 +888,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param proneToMisuse The ProneToMisuse param.
+         * @param proneToMisuse Prone to misuse
          * 
          * @return builder
          * 
@@ -898,28 +898,28 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param risk The Risk param. Value must be between 1 and 5.
+         * @param risk Risk
          * 
          * @return builder
          * 
          */
-        public Builder risk(Output<Integer> risk) {
+        public Builder risk(Output<String> risk) {
             $.risk = risk;
             return this;
         }
 
         /**
-         * @param risk The Risk param. Value must be between 1 and 5.
+         * @param risk Risk
          * 
          * @return builder
          * 
          */
-        public Builder risk(Integer risk) {
+        public Builder risk(String risk) {
             return risk(Output.of(risk));
         }
 
         /**
-         * @param signatures The Signatures param.
+         * @param signatures Signature
          * 
          * @return builder
          * 
@@ -930,7 +930,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param signatures The Signatures param.
+         * @param signatures Signature
          * 
          * @return builder
          * 
@@ -940,7 +940,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param signatures The Signatures param.
+         * @param signatures Signature
          * 
          * @return builder
          * 
@@ -950,7 +950,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -961,7 +961,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -971,18 +971,18 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param subcategory The Subcategory param. String length must not exceed 63 characters.
+         * @param subcategory Subcategory
          * 
          * @return builder
          * 
          */
-        public Builder subcategory(Output<String> subcategory) {
+        public Builder subcategory(@Nullable Output<String> subcategory) {
             $.subcategory = subcategory;
             return this;
         }
 
         /**
-         * @param subcategory The Subcategory param. String length must not exceed 63 characters.
+         * @param subcategory Subcategory
          * 
          * @return builder
          * 
@@ -992,7 +992,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tcpHalfClosedTimeout timeout for half-close session in seconds. Value must be between 1 and 604800.
+         * @param tcpHalfClosedTimeout timeout for half-close session in seconds
          * 
          * @return builder
          * 
@@ -1003,7 +1003,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tcpHalfClosedTimeout timeout for half-close session in seconds. Value must be between 1 and 604800.
+         * @param tcpHalfClosedTimeout timeout for half-close session in seconds
          * 
          * @return builder
          * 
@@ -1013,7 +1013,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tcpTimeWaitTimeout timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+         * @param tcpTimeWaitTimeout timeout for session in timeWait state in seconds
          * 
          * @return builder
          * 
@@ -1024,7 +1024,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tcpTimeWaitTimeout timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+         * @param tcpTimeWaitTimeout timeout for session in timeWait state in seconds
          * 
          * @return builder
          * 
@@ -1034,7 +1034,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tcpTimeout timeout in seconds. Value must be between 0 and 604800.
+         * @param tcpTimeout timeout in seconds
          * 
          * @return builder
          * 
@@ -1045,7 +1045,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tcpTimeout timeout in seconds. Value must be between 0 and 604800.
+         * @param tcpTimeout timeout in seconds
          * 
          * @return builder
          * 
@@ -1055,18 +1055,18 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param technology The Technology param. String length must not exceed 63 characters.
+         * @param technology Technology
          * 
          * @return builder
          * 
          */
-        public Builder technology(Output<String> technology) {
+        public Builder technology(@Nullable Output<String> technology) {
             $.technology = technology;
             return this;
         }
 
         /**
-         * @param technology The Technology param. String length must not exceed 63 characters.
+         * @param technology Technology
          * 
          * @return builder
          * 
@@ -1076,7 +1076,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param timeout timeout in seconds. Value must be between 0 and 604800.
+         * @param timeout timeout in seconds
          * 
          * @return builder
          * 
@@ -1087,7 +1087,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param timeout timeout in seconds. Value must be between 0 and 604800.
+         * @param timeout timeout in seconds
          * 
          * @return builder
          * 
@@ -1097,7 +1097,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tunnelApplications The TunnelApplications param.
+         * @param tunnelApplications Tunnel applications
          * 
          * @return builder
          * 
@@ -1108,7 +1108,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tunnelApplications The TunnelApplications param.
+         * @param tunnelApplications Tunnel applications
          * 
          * @return builder
          * 
@@ -1118,7 +1118,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tunnelOtherApplication The TunnelOtherApplication param.
+         * @param tunnelOtherApplication Tunnel other application
          * 
          * @return builder
          * 
@@ -1129,7 +1129,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tunnelOtherApplication The TunnelOtherApplication param.
+         * @param tunnelOtherApplication Tunnel other application
          * 
          * @return builder
          * 
@@ -1139,7 +1139,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param udpTimeout timeout in seconds. Value must be between 0 and 604800.
+         * @param udpTimeout timeout in seconds
          * 
          * @return builder
          * 
@@ -1150,7 +1150,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param udpTimeout timeout in seconds. Value must be between 0 and 604800.
+         * @param udpTimeout timeout in seconds
          * 
          * @return builder
          * 
@@ -1160,7 +1160,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param usedByMalware The UsedByMalware param.
+         * @param usedByMalware Used by malware
          * 
          * @return builder
          * 
@@ -1171,7 +1171,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param usedByMalware The UsedByMalware param.
+         * @param usedByMalware Used by malware
          * 
          * @return builder
          * 
@@ -1181,7 +1181,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param virusIdent The VirusIdent param.
+         * @param virusIdent Virus ident
          * 
          * @return builder
          * 
@@ -1192,7 +1192,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param virusIdent The VirusIdent param.
+         * @param virusIdent Virus ident
          * 
          * @return builder
          * 
@@ -1207,12 +1207,6 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
             }
             if ($.risk == null) {
                 throw new MissingRequiredPropertyException("ApplicationArgs", "risk");
-            }
-            if ($.subcategory == null) {
-                throw new MissingRequiredPropertyException("ApplicationArgs", "subcategory");
-            }
-            if ($.technology == null) {
-                throw new MissingRequiredPropertyException("ApplicationArgs", "technology");
             }
             return $;
         }

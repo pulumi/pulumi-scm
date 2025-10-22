@@ -10,40 +10,40 @@ import java.lang.String;
 import java.util.Objects;
 
 @CustomType
-public final class GetRadiusServerProfileListDataProtocolPeapMschapV2 {
+public final class GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2 {
     /**
-     * @return The AllowPwdChange param.
+     * @return Allow pwd change
      * 
      */
     private Boolean allowPwdChange;
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     private Boolean anonOuterId;
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     private String radiusCertProfile;
 
-    private GetRadiusServerProfileListDataProtocolPeapMschapV2() {}
+    private GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2() {}
     /**
-     * @return The AllowPwdChange param.
+     * @return Allow pwd change
      * 
      */
     public Boolean allowPwdChange() {
         return this.allowPwdChange;
     }
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     public Boolean anonOuterId() {
         return this.anonOuterId;
     }
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     public String radiusCertProfile() {
@@ -54,7 +54,7 @@ public final class GetRadiusServerProfileListDataProtocolPeapMschapV2 {
         return new Builder();
     }
 
-    public static Builder builder(GetRadiusServerProfileListDataProtocolPeapMschapV2 defaults) {
+    public static Builder builder(GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2 defaults) {
         return new Builder(defaults);
     }
     @CustomType.Builder
@@ -63,7 +63,7 @@ public final class GetRadiusServerProfileListDataProtocolPeapMschapV2 {
         private Boolean anonOuterId;
         private String radiusCertProfile;
         public Builder() {}
-        public Builder(GetRadiusServerProfileListDataProtocolPeapMschapV2 defaults) {
+        public Builder(GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2 defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.allowPwdChange = defaults.allowPwdChange;
     	      this.anonOuterId = defaults.anonOuterId;
@@ -73,7 +73,7 @@ public final class GetRadiusServerProfileListDataProtocolPeapMschapV2 {
         @CustomType.Setter
         public Builder allowPwdChange(Boolean allowPwdChange) {
             if (allowPwdChange == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolPeapMschapV2", "allowPwdChange");
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2", "allowPwdChange");
             }
             this.allowPwdChange = allowPwdChange;
             return this;
@@ -81,7 +81,7 @@ public final class GetRadiusServerProfileListDataProtocolPeapMschapV2 {
         @CustomType.Setter
         public Builder anonOuterId(Boolean anonOuterId) {
             if (anonOuterId == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolPeapMschapV2", "anonOuterId");
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2", "anonOuterId");
             }
             this.anonOuterId = anonOuterId;
             return this;
@@ -89,13 +89,13 @@ public final class GetRadiusServerProfileListDataProtocolPeapMschapV2 {
         @CustomType.Setter
         public Builder radiusCertProfile(String radiusCertProfile) {
             if (radiusCertProfile == null) {
-              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolPeapMschapV2", "radiusCertProfile");
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2", "radiusCertProfile");
             }
             this.radiusCertProfile = radiusCertProfile;
             return this;
         }
-        public GetRadiusServerProfileListDataProtocolPeapMschapV2 build() {
-            final var _resultValue = new GetRadiusServerProfileListDataProtocolPeapMschapV2();
+        public GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2 build() {
+            final var _resultValue = new GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2();
             _resultValue.allowPwdChange = allowPwdChange;
             _resultValue.anonOuterId = anonOuterId;
             _resultValue.radiusCertProfile = radiusCertProfile;

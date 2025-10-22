@@ -15,19 +15,30 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getServiceConnectionList({
- *     folder: "Service Connections",
+ * const config = new pulumi.Config();
+ * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+ * const folderScope = config.get("folderScope") || "Service Connections";
+ * // ------------------------------------------------------------------
+ * // Data Source List Lookup
+ * // ------------------------------------------------------------------
+ * const allConnectionsInFolder = scm.getServiceConnectionList({
+ *     folder: folderScope,
+ *     limit: 50,
  * });
+ * export const listOfAllConnectionNames = allConnectionsInFolder.then(allConnectionsInFolder => .map(conn => (conn.name)));
+ * export const totalConnectionsCount = allConnectionsInFolder.then(allConnectionsInFolder => allConnectionsInFolder.datas).length;
  * ```
  */
 export function getServiceConnectionList(args?: GetServiceConnectionListArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceConnectionListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getServiceConnectionList:getServiceConnectionList", {
+        "device": args.device,
         "folder": args.folder,
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -36,21 +47,29 @@ export function getServiceConnectionList(args?: GetServiceConnectionListArgs, op
  */
 export interface GetServiceConnectionListArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+     * The device of the item.
+     */
+    device?: string;
+    /**
+     * The folder of the item. Default: Shared.
      */
     folder?: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
+    /**
+     * The snippet of the item.
+     */
+    snippet?: string;
 }
 
 /**
@@ -58,32 +77,40 @@ export interface GetServiceConnectionListArgs {
  */
 export interface GetServiceConnectionListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetServiceConnectionListData[];
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+     * The device of the item.
      */
-    readonly folder: string;
+    readonly device?: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    readonly folder?: string;
     /**
      * The provider-assigned unique ID for this managed resource.
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
+    /**
+     * The snippet of the item.
+     */
+    readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
@@ -96,19 +123,30 @@ export interface GetServiceConnectionListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getServiceConnectionList({
- *     folder: "Service Connections",
+ * const config = new pulumi.Config();
+ * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+ * const folderScope = config.get("folderScope") || "Service Connections";
+ * // ------------------------------------------------------------------
+ * // Data Source List Lookup
+ * // ------------------------------------------------------------------
+ * const allConnectionsInFolder = scm.getServiceConnectionList({
+ *     folder: folderScope,
+ *     limit: 50,
  * });
+ * export const listOfAllConnectionNames = allConnectionsInFolder.then(allConnectionsInFolder => .map(conn => (conn.name)));
+ * export const totalConnectionsCount = allConnectionsInFolder.then(allConnectionsInFolder => allConnectionsInFolder.datas).length;
  * ```
  */
 export function getServiceConnectionListOutput(args?: GetServiceConnectionListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceConnectionListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getServiceConnectionList:getServiceConnectionList", {
+        "device": args.device,
         "folder": args.folder,
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -117,19 +155,27 @@ export function getServiceConnectionListOutput(args?: GetServiceConnectionListOu
  */
 export interface GetServiceConnectionListOutputArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+     * The device of the item.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder of the item. Default: Shared.
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
+    /**
+     * The snippet of the item.
+     */
+    snippet?: pulumi.Input<string>;
 }

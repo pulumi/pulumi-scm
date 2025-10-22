@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IpsecTunnelAutoKeyProxyIdProtocol {
     /**
-     * @return IP protocol number. Value must be between 1 and 254. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * @return IP protocol number
      * 
      */
     private @Nullable Integer number;
     /**
-     * @return The Tcp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * @return IPv4 type of proxy*id protocol values for TCP protocol
      * 
      */
     private @Nullable IpsecTunnelAutoKeyProxyIdProtocolTcp tcp;
     /**
-     * @return The Udp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * @return IPv6 type of proxy*id protocol values for UDP protocol
      * 
      */
     private @Nullable IpsecTunnelAutoKeyProxyIdProtocolUdp udp;
 
     private IpsecTunnelAutoKeyProxyIdProtocol() {}
     /**
-     * @return IP protocol number. Value must be between 1 and 254. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * @return IP protocol number
      * 
      */
     public Optional<Integer> number() {
         return Optional.ofNullable(this.number);
     }
     /**
-     * @return The Tcp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * @return IPv4 type of proxy*id protocol values for TCP protocol
      * 
      */
     public Optional<IpsecTunnelAutoKeyProxyIdProtocolTcp> tcp() {
         return Optional.ofNullable(this.tcp);
     }
     /**
-     * @return The Udp param. Ensure that only one of the following is specified: `number`, `tcp`, `udp`
+     * @return IPv6 type of proxy*id protocol values for UDP protocol
      * 
      */
     public Optional<IpsecTunnelAutoKeyProxyIdProtocolUdp> udp() {

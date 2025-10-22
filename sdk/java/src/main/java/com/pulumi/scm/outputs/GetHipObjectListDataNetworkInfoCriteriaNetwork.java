@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataNetworkInfoCriteriaNetwork {
     /**
-     * @return The Is param.
+     * @return Is
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIs is;
     /**
-     * @return The IsNot param.
+     * @return Is not
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot isNot;
 
     private GetHipObjectListDataNetworkInfoCriteriaNetwork() {}
     /**
-     * @return The Is param.
+     * @return Is
      * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetworkIs is() {
         return this.is;
     }
     /**
-     * @return The IsNot param.
+     * @return Is not
      * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot isNot() {

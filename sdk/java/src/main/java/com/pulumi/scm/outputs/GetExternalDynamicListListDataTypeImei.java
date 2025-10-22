@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeImeiImeiAuth;
+import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeImeiAuth;
 import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeImeiRecurring;
 import java.lang.String;
 import java.util.List;
@@ -14,74 +14,74 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListListDataTypeImei {
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    private GetExternalDynamicListListDataTypeImeiAuth auth;
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     private String certificateProfile;
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * @return Exception list
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return The ImeiAuth param.
-     * 
-     */
-    private GetExternalDynamicListListDataTypeImeiImeiAuth imeiAuth;
-    /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     private GetExternalDynamicListListDataTypeImeiRecurring recurring;
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
     private String url;
 
     private GetExternalDynamicListListDataTypeImei() {}
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    public GetExternalDynamicListListDataTypeImeiAuth auth() {
+        return this.auth;
+    }
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     public String certificateProfile() {
         return this.certificateProfile;
     }
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * @return Exception list
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return The ImeiAuth param.
-     * 
-     */
-    public GetExternalDynamicListListDataTypeImeiImeiAuth imeiAuth() {
-        return this.imeiAuth;
-    }
-    /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     public GetExternalDynamicListListDataTypeImeiRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
     public String url() {
@@ -97,23 +97,31 @@ public final class GetExternalDynamicListListDataTypeImei {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetExternalDynamicListListDataTypeImeiAuth auth;
         private String certificateProfile;
         private String description;
         private List<String> exceptionLists;
-        private GetExternalDynamicListListDataTypeImeiImeiAuth imeiAuth;
         private GetExternalDynamicListListDataTypeImeiRecurring recurring;
         private String url;
         public Builder() {}
         public Builder(GetExternalDynamicListListDataTypeImei defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.auth = defaults.auth;
     	      this.certificateProfile = defaults.certificateProfile;
     	      this.description = defaults.description;
     	      this.exceptionLists = defaults.exceptionLists;
-    	      this.imeiAuth = defaults.imeiAuth;
     	      this.recurring = defaults.recurring;
     	      this.url = defaults.url;
         }
 
+        @CustomType.Setter
+        public Builder auth(GetExternalDynamicListListDataTypeImeiAuth auth) {
+            if (auth == null) {
+              throw new MissingRequiredPropertyException("GetExternalDynamicListListDataTypeImei", "auth");
+            }
+            this.auth = auth;
+            return this;
+        }
         @CustomType.Setter
         public Builder certificateProfile(String certificateProfile) {
             if (certificateProfile == null) {
@@ -142,14 +150,6 @@ public final class GetExternalDynamicListListDataTypeImei {
             return exceptionLists(List.of(exceptionLists));
         }
         @CustomType.Setter
-        public Builder imeiAuth(GetExternalDynamicListListDataTypeImeiImeiAuth imeiAuth) {
-            if (imeiAuth == null) {
-              throw new MissingRequiredPropertyException("GetExternalDynamicListListDataTypeImei", "imeiAuth");
-            }
-            this.imeiAuth = imeiAuth;
-            return this;
-        }
-        @CustomType.Setter
         public Builder recurring(GetExternalDynamicListListDataTypeImeiRecurring recurring) {
             if (recurring == null) {
               throw new MissingRequiredPropertyException("GetExternalDynamicListListDataTypeImei", "recurring");
@@ -167,10 +167,10 @@ public final class GetExternalDynamicListListDataTypeImei {
         }
         public GetExternalDynamicListListDataTypeImei build() {
             final var _resultValue = new GetExternalDynamicListListDataTypeImei();
+            _resultValue.auth = auth;
             _resultValue.certificateProfile = certificateProfile;
             _resultValue.description = description;
             _resultValue.exceptionLists = exceptionLists;
-            _resultValue.imeiAuth = imeiAuth;
             _resultValue.recurring = recurring;
             _resultValue.url = url;
             return _resultValue;

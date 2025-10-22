@@ -12,19 +12,19 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
-public final class RadiusServerProfileProtocolPeapMschapV2Args extends com.pulumi.resources.ResourceArgs {
+public final class RadiusServerProfileProtocolPEAPMSCHAPv2Args extends com.pulumi.resources.ResourceArgs {
 
-    public static final RadiusServerProfileProtocolPeapMschapV2Args Empty = new RadiusServerProfileProtocolPeapMschapV2Args();
+    public static final RadiusServerProfileProtocolPEAPMSCHAPv2Args Empty = new RadiusServerProfileProtocolPEAPMSCHAPv2Args();
 
     /**
-     * The AllowPwdChange param.
+     * Allow pwd change
      * 
      */
     @Import(name="allowPwdChange")
     private @Nullable Output<Boolean> allowPwdChange;
 
     /**
-     * @return The AllowPwdChange param.
+     * @return Allow pwd change
      * 
      */
     public Optional<Output<Boolean>> allowPwdChange() {
@@ -32,14 +32,14 @@ public final class RadiusServerProfileProtocolPeapMschapV2Args extends com.pulum
     }
 
     /**
-     * The AnonOuterId param.
+     * Anon outer id
      * 
      */
     @Import(name="anonOuterId")
     private @Nullable Output<Boolean> anonOuterId;
 
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     public Optional<Output<Boolean>> anonOuterId() {
@@ -47,23 +47,23 @@ public final class RadiusServerProfileProtocolPeapMschapV2Args extends com.pulum
     }
 
     /**
-     * The RadiusCertProfile param.
+     * Radius cert profile
      * 
      */
     @Import(name="radiusCertProfile")
     private @Nullable Output<String> radiusCertProfile;
 
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     public Optional<Output<String>> radiusCertProfile() {
         return Optional.ofNullable(this.radiusCertProfile);
     }
 
-    private RadiusServerProfileProtocolPeapMschapV2Args() {}
+    private RadiusServerProfileProtocolPEAPMSCHAPv2Args() {}
 
-    private RadiusServerProfileProtocolPeapMschapV2Args(RadiusServerProfileProtocolPeapMschapV2Args $) {
+    private RadiusServerProfileProtocolPEAPMSCHAPv2Args(RadiusServerProfileProtocolPEAPMSCHAPv2Args $) {
         this.allowPwdChange = $.allowPwdChange;
         this.anonOuterId = $.anonOuterId;
         this.radiusCertProfile = $.radiusCertProfile;
@@ -72,23 +72,23 @@ public final class RadiusServerProfileProtocolPeapMschapV2Args extends com.pulum
     public static Builder builder() {
         return new Builder();
     }
-    public static Builder builder(RadiusServerProfileProtocolPeapMschapV2Args defaults) {
+    public static Builder builder(RadiusServerProfileProtocolPEAPMSCHAPv2Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RadiusServerProfileProtocolPeapMschapV2Args $;
+        private RadiusServerProfileProtocolPEAPMSCHAPv2Args $;
 
         public Builder() {
-            $ = new RadiusServerProfileProtocolPeapMschapV2Args();
+            $ = new RadiusServerProfileProtocolPEAPMSCHAPv2Args();
         }
 
-        public Builder(RadiusServerProfileProtocolPeapMschapV2Args defaults) {
-            $ = new RadiusServerProfileProtocolPeapMschapV2Args(Objects.requireNonNull(defaults));
+        public Builder(RadiusServerProfileProtocolPEAPMSCHAPv2Args defaults) {
+            $ = new RadiusServerProfileProtocolPEAPMSCHAPv2Args(Objects.requireNonNull(defaults));
         }
 
         /**
-         * @param allowPwdChange The AllowPwdChange param.
+         * @param allowPwdChange Allow pwd change
          * 
          * @return builder
          * 
@@ -99,7 +99,7 @@ public final class RadiusServerProfileProtocolPeapMschapV2Args extends com.pulum
         }
 
         /**
-         * @param allowPwdChange The AllowPwdChange param.
+         * @param allowPwdChange Allow pwd change
          * 
          * @return builder
          * 
@@ -109,7 +109,7 @@ public final class RadiusServerProfileProtocolPeapMschapV2Args extends com.pulum
         }
 
         /**
-         * @param anonOuterId The AnonOuterId param.
+         * @param anonOuterId Anon outer id
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class RadiusServerProfileProtocolPeapMschapV2Args extends com.pulum
         }
 
         /**
-         * @param anonOuterId The AnonOuterId param.
+         * @param anonOuterId Anon outer id
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class RadiusServerProfileProtocolPeapMschapV2Args extends com.pulum
         }
 
         /**
-         * @param radiusCertProfile The RadiusCertProfile param.
+         * @param radiusCertProfile Radius cert profile
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class RadiusServerProfileProtocolPeapMschapV2Args extends com.pulum
         }
 
         /**
-         * @param radiusCertProfile The RadiusCertProfile param.
+         * @param radiusCertProfile Radius cert profile
          * 
          * @return builder
          * 
@@ -150,7 +150,7 @@ public final class RadiusServerProfileProtocolPeapMschapV2Args extends com.pulum
             return radiusCertProfile(Output.of(radiusCertProfile));
         }
 
-        public RadiusServerProfileProtocolPeapMschapV2Args build() {
+        public RadiusServerProfileProtocolPEAPMSCHAPv2Args build() {
             return $;
         }
     }

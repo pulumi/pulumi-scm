@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class QosProfileAggregateBandwidthArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// guaranteed sending bandwidth in mbps. Value must be between 0 and 16000.
+        /// guaranteed sending bandwidth in mbps
         /// </summary>
         [Input("egressGuaranteed")]
         public Input<int>? EgressGuaranteed { get; set; }
 
         /// <summary>
-        /// max sending bandwidth in mbps. Value must be between 0 and 60000.
+        /// max sending bandwidth in mbps
         /// </summary>
         [Input("egressMax")]
         public Input<int>? EgressMax { get; set; }

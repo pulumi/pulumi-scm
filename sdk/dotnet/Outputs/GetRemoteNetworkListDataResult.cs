@@ -14,55 +14,68 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRemoteNetworkListDataResult
     {
         /// <summary>
-        /// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+        /// Ecmp load balancing
         /// </summary>
         public readonly string EcmpLoadBalancing;
         /// <summary>
-        /// ecmp*tunnels is required when ecmp*load*balancing is enable.
+        /// ecmp*tunnels is required when ecmp*load*balancing is enable
         /// </summary>
         public readonly ImmutableArray<Outputs.GetRemoteNetworkListDataEcmpTunnelResult> EcmpTunnels;
         /// <summary>
-        /// UUID of the resource.
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder that contains the remote network
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the remote network
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// ipsec*tunnel is required when ecmp*load_balancing is disable.
+        /// ipsec*tunnel is required when ecmp*load_balancing is disable
         /// </summary>
         public readonly string IpsecTunnel;
         /// <summary>
-        /// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+        /// New customer will only be on aggregate bandwidth licensing
         /// </summary>
         public readonly string LicenseType;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the remote network
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// setup the protocol when ecmp*load*balancing is disable.
+        /// setup the protocol when ecmp*load*balancing is disable
         /// </summary>
         public readonly Outputs.GetRemoteNetworkListDataProtocolResult Protocol;
         /// <summary>
-        /// The Region param. String length must exceed 1 characters.
+        /// Region
         /// </summary>
         public readonly string Region;
         /// <summary>
-        /// specify secondary IpsecTunnel if needed.
+        /// specify secondary IpsecTunnel if needed
         /// </summary>
         public readonly string SecondaryIpsecTunnel;
         /// <summary>
-        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE.
+        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE
         /// </summary>
         public readonly string SpnName;
         /// <summary>
-        /// The Subnets param.
+        /// Subnets
         /// </summary>
         public readonly ImmutableArray<string> Subnets;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetRemoteNetworkListDataResult(
             string ecmpLoadBalancing,
 
             ImmutableArray<Outputs.GetRemoteNetworkListDataEcmpTunnelResult> ecmpTunnels,
+
+            ImmutableDictionary<string, string> encryptedValues,
+
+            string folder,
 
             string id,
 
@@ -80,10 +93,14 @@ namespace Pulumi.Scm.Outputs
 
             string spnName,
 
-            ImmutableArray<string> subnets)
+            ImmutableArray<string> subnets,
+
+            string tfid)
         {
             EcmpLoadBalancing = ecmpLoadBalancing;
             EcmpTunnels = ecmpTunnels;
+            EncryptedValues = encryptedValues;
+            Folder = folder;
             Id = id;
             IpsecTunnel = ipsecTunnel;
             LicenseType = licenseType;
@@ -93,6 +110,7 @@ namespace Pulumi.Scm.Outputs
             SecondaryIpsecTunnel = secondaryIpsecTunnel;
             SpnName = spnName;
             Subnets = subnets;
+            Tfid = tfid;
         }
     }
 }

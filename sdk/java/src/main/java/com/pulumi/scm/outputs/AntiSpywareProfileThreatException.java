@@ -15,62 +15,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareProfileThreatException {
     /**
-     * @return The Action param.
+     * @return anti spyware profiles threat exception default action
      * 
      */
     private @Nullable AntiSpywareProfileThreatExceptionAction action;
     /**
-     * @return The ExemptIps param.
+     * @return Exempt ip
      * 
      */
     private @Nullable List<AntiSpywareProfileThreatExceptionExemptIp> exemptIps;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private @Nullable String name;
     /**
-     * @return The Notes param.
+     * @return Notes
      * 
      */
     private @Nullable String notes;
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     private @Nullable String packetCapture;
 
     private AntiSpywareProfileThreatException() {}
     /**
-     * @return The Action param.
+     * @return anti spyware profiles threat exception default action
      * 
      */
     public Optional<AntiSpywareProfileThreatExceptionAction> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return The ExemptIps param.
+     * @return Exempt ip
      * 
      */
     public List<AntiSpywareProfileThreatExceptionExemptIp> exemptIps() {
         return this.exemptIps == null ? List.of() : this.exemptIps;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The Notes param.
+     * @return Notes
      * 
      */
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     public Optional<String> packetCapture() {

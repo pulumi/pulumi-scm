@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QosPolicyRuleAction {
     /**
-     * @return The Class param.
+     * @return Class
      * 
      */
     private @Nullable String class_;
 
     private QosPolicyRuleAction() {}
     /**
-     * @return The Class param.
+     * @return Class
      * 
      */
     public Optional<String> class_() {

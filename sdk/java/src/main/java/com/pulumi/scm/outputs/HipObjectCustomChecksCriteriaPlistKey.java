@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectCustomChecksCriteriaPlistKey {
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Key name
      * 
      */
     private String name;
     /**
-     * @return Value does not exist or match specified value data. Default: `false`.
+     * @return Value does not exist or match specified value data
      * 
      */
     private @Nullable Boolean negate;
     /**
-     * @return Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Key value
      * 
      */
     private @Nullable String value;
 
     private HipObjectCustomChecksCriteriaPlistKey() {}
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Key name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Value does not exist or match specified value data. Default: `false`.
+     * @return Value does not exist or match specified value data
      * 
      */
     public Optional<Boolean> negate() {
         return Optional.ofNullable(this.negate);
     }
     /**
-     * @return Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Key value
      * 
      */
     public Optional<String> value() {

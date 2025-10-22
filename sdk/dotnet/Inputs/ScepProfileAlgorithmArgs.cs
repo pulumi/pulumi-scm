@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ScepProfileAlgorithmArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Rsa param.
+        /// Key length (bits)
         /// </summary>
         [Input("rsa")]
         public Input<Inputs.ScepProfileAlgorithmRsaArgs>? Rsa { get; set; }

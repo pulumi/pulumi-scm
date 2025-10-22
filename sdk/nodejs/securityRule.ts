@@ -7,16 +7,9 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * SecurityRule resource
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.SecurityRule("example", {});
- * ```
  */
 export class SecurityRule extends pulumi.CustomResource {
     /**
@@ -47,98 +40,154 @@ export class SecurityRule extends pulumi.CustomResource {
     }
 
     /**
-     * The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+     * The action to be taken when the rule is matched
      */
-    declare public readonly action: pulumi.Output<string>;
+    declare public readonly action: pulumi.Output<string | undefined>;
     /**
-     * The application(s) being accessed.
+     * Allow url category
+     */
+    declare public readonly allowUrlCategories: pulumi.Output<outputs.SecurityRuleAllowUrlCategory[]>;
+    /**
+     * Allow web application
+     */
+    declare public readonly allowWebApplications: pulumi.Output<outputs.SecurityRuleAllowWebApplication[]>;
+    /**
+     * The application(s) being accessed
      */
     declare public readonly applications: pulumi.Output<string[]>;
     /**
-     * The URL categories being accessed.
+     * Block url category
+     */
+    declare public readonly blockUrlCategories: pulumi.Output<string[]>;
+    /**
+     * Block web application
+     */
+    declare public readonly blockWebApplications: pulumi.Output<string[]>;
+    /**
+     * The URL categories being accessed
      */
     declare public readonly categories: pulumi.Output<string[]>;
     /**
-     * The description of the security rule.
+     * Default profile settings
+     */
+    declare public readonly defaultProfileSettings: pulumi.Output<outputs.SecurityRuleDefaultProfileSettings>;
+    /**
+     * The description of the security rule
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The destination Host Integrity Profile(s).
+     * The destination Host Integrity Profile(s)
      */
-    declare public readonly destinationHips: pulumi.Output<string[] | undefined>;
+    declare public readonly destinationHips: pulumi.Output<string[]>;
     /**
-     * The destination address(es).
+     * The destination address(es)
      */
-    declare public readonly destinations: pulumi.Output<string[]>;
+    declare public readonly destinations: pulumi.Output<string[] | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The state of the security rule. Default: `false`.
+     * Devices
+     */
+    declare public readonly devices: pulumi.Output<string[]>;
+    /**
+     * Is the security rule disabled?
      */
     declare public readonly disabled: pulumi.Output<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The source security zone(s).
+     * The source security zone(s)
      */
-    declare public readonly froms: pulumi.Output<string[]>;
+    declare public readonly froms: pulumi.Output<string[] | undefined>;
     /**
-     * The external log forwarding profile.
+     * Log at session end?
      */
-    declare public readonly logSetting: pulumi.Output<string | undefined>;
+    declare public readonly logEnd: pulumi.Output<boolean>;
     /**
-     * The name of the security rule.
+     * The external log forwarding profile
+     */
+    declare public readonly logSetting: pulumi.Output<string>;
+    /**
+     * Log settings
+     */
+    declare public readonly logSettings: pulumi.Output<outputs.SecurityRuleLogSettings>;
+    /**
+     * Log at session start?
+     */
+    declare public readonly logStart: pulumi.Output<boolean>;
+    /**
+     * The name of the security rule
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Negate the destination addresses(es). Default: `false`.
+     * Negate the destination addresses(es)?
      */
     declare public readonly negateDestination: pulumi.Output<boolean>;
     /**
-     * Negate the source address(es). Default: `false`.
+     * Negate the source address(es)?
      */
     declare public readonly negateSource: pulumi.Output<boolean>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * Negate user
+     */
+    declare public readonly negateUser: pulumi.Output<boolean>;
+    /**
+     * Policy type
+     */
+    declare public readonly policyType: pulumi.Output<string>;
+    /**
+     * The position of a security rule
      */
     declare public readonly position: pulumi.Output<string>;
     /**
-     * The security profile object.
+     * The security profile object
      */
-    declare public readonly profileSetting: pulumi.Output<outputs.SecurityRuleProfileSetting | undefined>;
+    declare public readonly profileSetting: pulumi.Output<outputs.SecurityRuleProfileSetting>;
     /**
-     * The service(s) being accessed.
+     * Schedule in which this rule will be applied
      */
-    declare public readonly services: pulumi.Output<string[]>;
+    declare public readonly schedule: pulumi.Output<string | undefined>;
     /**
-     * The Snippet param.
+     * Security settings
+     */
+    declare public readonly securitySettings: pulumi.Output<outputs.SecurityRuleSecuritySettings>;
+    /**
+     * The service(s) being accessed
+     */
+    declare public readonly services: pulumi.Output<string[] | undefined>;
+    /**
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The source Host Integrity Profile(s).
+     * The source Host Integrity Profile(s)
      */
-    declare public readonly sourceHips: pulumi.Output<string[] | undefined>;
+    declare public readonly sourceHips: pulumi.Output<string[]>;
     /**
-     * The source user(s) or group(s).
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      */
-    declare public readonly sourceUsers: pulumi.Output<string[]>;
+    declare public readonly sourceUsers: pulumi.Output<string[] | undefined>;
     /**
-     * The source address(es).
+     * The source addresses(es)
      */
-    declare public readonly sources: pulumi.Output<string[]>;
+    declare public readonly sources: pulumi.Output<string[] | undefined>;
     /**
-     * The tags associated with the security rule.
+     * The tags associated with the security rule
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
+    /**
+     * Tenant restrictions
+     */
+    declare public readonly tenantRestrictions: pulumi.Output<string[]>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The destination security zone(s).
+     * The destination security zone(s)
      */
-    declare public readonly tos: pulumi.Output<string[]>;
+    declare public readonly tos: pulumi.Output<string[] | undefined>;
 
     /**
      * Create a SecurityRule resource with the given unique name, arguments, and options.
@@ -147,87 +196,88 @@ export class SecurityRule extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args: SecurityRuleArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args?: SecurityRuleArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: SecurityRuleArgs | SecurityRuleState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SecurityRuleState | undefined;
             resourceInputs["action"] = state?.action;
+            resourceInputs["allowUrlCategories"] = state?.allowUrlCategories;
+            resourceInputs["allowWebApplications"] = state?.allowWebApplications;
             resourceInputs["applications"] = state?.applications;
+            resourceInputs["blockUrlCategories"] = state?.blockUrlCategories;
+            resourceInputs["blockWebApplications"] = state?.blockWebApplications;
             resourceInputs["categories"] = state?.categories;
+            resourceInputs["defaultProfileSettings"] = state?.defaultProfileSettings;
             resourceInputs["description"] = state?.description;
             resourceInputs["destinationHips"] = state?.destinationHips;
             resourceInputs["destinations"] = state?.destinations;
             resourceInputs["device"] = state?.device;
+            resourceInputs["devices"] = state?.devices;
             resourceInputs["disabled"] = state?.disabled;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["froms"] = state?.froms;
+            resourceInputs["logEnd"] = state?.logEnd;
             resourceInputs["logSetting"] = state?.logSetting;
+            resourceInputs["logSettings"] = state?.logSettings;
+            resourceInputs["logStart"] = state?.logStart;
             resourceInputs["name"] = state?.name;
             resourceInputs["negateDestination"] = state?.negateDestination;
             resourceInputs["negateSource"] = state?.negateSource;
+            resourceInputs["negateUser"] = state?.negateUser;
+            resourceInputs["policyType"] = state?.policyType;
             resourceInputs["position"] = state?.position;
             resourceInputs["profileSetting"] = state?.profileSetting;
+            resourceInputs["schedule"] = state?.schedule;
+            resourceInputs["securitySettings"] = state?.securitySettings;
             resourceInputs["services"] = state?.services;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["sourceHips"] = state?.sourceHips;
             resourceInputs["sourceUsers"] = state?.sourceUsers;
             resourceInputs["sources"] = state?.sources;
             resourceInputs["tags"] = state?.tags;
+            resourceInputs["tenantRestrictions"] = state?.tenantRestrictions;
             resourceInputs["tfid"] = state?.tfid;
             resourceInputs["tos"] = state?.tos;
         } else {
             const args = argsOrState as SecurityRuleArgs | undefined;
-            if (args?.action === undefined && !opts.urn) {
-                throw new Error("Missing required property 'action'");
-            }
-            if (args?.applications === undefined && !opts.urn) {
-                throw new Error("Missing required property 'applications'");
-            }
-            if (args?.categories === undefined && !opts.urn) {
-                throw new Error("Missing required property 'categories'");
-            }
-            if (args?.destinations === undefined && !opts.urn) {
-                throw new Error("Missing required property 'destinations'");
-            }
-            if (args?.froms === undefined && !opts.urn) {
-                throw new Error("Missing required property 'froms'");
-            }
-            if (args?.services === undefined && !opts.urn) {
-                throw new Error("Missing required property 'services'");
-            }
-            if (args?.sourceUsers === undefined && !opts.urn) {
-                throw new Error("Missing required property 'sourceUsers'");
-            }
-            if (args?.sources === undefined && !opts.urn) {
-                throw new Error("Missing required property 'sources'");
-            }
-            if (args?.tos === undefined && !opts.urn) {
-                throw new Error("Missing required property 'tos'");
-            }
             resourceInputs["action"] = args?.action;
+            resourceInputs["allowUrlCategories"] = args?.allowUrlCategories;
+            resourceInputs["allowWebApplications"] = args?.allowWebApplications;
             resourceInputs["applications"] = args?.applications;
+            resourceInputs["blockUrlCategories"] = args?.blockUrlCategories;
+            resourceInputs["blockWebApplications"] = args?.blockWebApplications;
             resourceInputs["categories"] = args?.categories;
+            resourceInputs["defaultProfileSettings"] = args?.defaultProfileSettings;
             resourceInputs["description"] = args?.description;
             resourceInputs["destinationHips"] = args?.destinationHips;
             resourceInputs["destinations"] = args?.destinations;
             resourceInputs["device"] = args?.device;
+            resourceInputs["devices"] = args?.devices;
             resourceInputs["disabled"] = args?.disabled;
             resourceInputs["folder"] = args?.folder;
             resourceInputs["froms"] = args?.froms;
+            resourceInputs["logEnd"] = args?.logEnd;
             resourceInputs["logSetting"] = args?.logSetting;
+            resourceInputs["logSettings"] = args?.logSettings;
+            resourceInputs["logStart"] = args?.logStart;
             resourceInputs["name"] = args?.name;
             resourceInputs["negateDestination"] = args?.negateDestination;
             resourceInputs["negateSource"] = args?.negateSource;
+            resourceInputs["negateUser"] = args?.negateUser;
+            resourceInputs["policyType"] = args?.policyType;
             resourceInputs["position"] = args?.position;
             resourceInputs["profileSetting"] = args?.profileSetting;
+            resourceInputs["schedule"] = args?.schedule;
+            resourceInputs["securitySettings"] = args?.securitySettings;
             resourceInputs["services"] = args?.services;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["sourceHips"] = args?.sourceHips;
             resourceInputs["sourceUsers"] = args?.sourceUsers;
             resourceInputs["sources"] = args?.sources;
             resourceInputs["tags"] = args?.tags;
+            resourceInputs["tenantRestrictions"] = args?.tenantRestrictions;
             resourceInputs["tos"] = args?.tos;
             resourceInputs["tfid"] = undefined /*out*/;
         }
@@ -241,96 +291,152 @@ export class SecurityRule extends pulumi.CustomResource {
  */
 export interface SecurityRuleState {
     /**
-     * The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+     * The action to be taken when the rule is matched
      */
     action?: pulumi.Input<string>;
     /**
-     * The application(s) being accessed.
+     * Allow url category
+     */
+    allowUrlCategories?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowUrlCategory>[]>;
+    /**
+     * Allow web application
+     */
+    allowWebApplications?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowWebApplication>[]>;
+    /**
+     * The application(s) being accessed
      */
     applications?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The URL categories being accessed.
+     * Block url category
+     */
+    blockUrlCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Block web application
+     */
+    blockWebApplications?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The URL categories being accessed
      */
     categories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The description of the security rule.
+     * Default profile settings
+     */
+    defaultProfileSettings?: pulumi.Input<inputs.SecurityRuleDefaultProfileSettings>;
+    /**
+     * The description of the security rule
      */
     description?: pulumi.Input<string>;
     /**
-     * The destination Host Integrity Profile(s).
+     * The destination Host Integrity Profile(s)
      */
     destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The destination address(es).
+     * The destination address(es)
      */
     destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The state of the security rule. Default: `false`.
+     * Devices
+     */
+    devices?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Is the security rule disabled?
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The source security zone(s).
+     * The source security zone(s)
      */
     froms?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The external log forwarding profile.
+     * Log at session end?
+     */
+    logEnd?: pulumi.Input<boolean>;
+    /**
+     * The external log forwarding profile
      */
     logSetting?: pulumi.Input<string>;
     /**
-     * The name of the security rule.
+     * Log settings
+     */
+    logSettings?: pulumi.Input<inputs.SecurityRuleLogSettings>;
+    /**
+     * Log at session start?
+     */
+    logStart?: pulumi.Input<boolean>;
+    /**
+     * The name of the security rule
      */
     name?: pulumi.Input<string>;
     /**
-     * Negate the destination addresses(es). Default: `false`.
+     * Negate the destination addresses(es)?
      */
     negateDestination?: pulumi.Input<boolean>;
     /**
-     * Negate the source address(es). Default: `false`.
+     * Negate the source address(es)?
      */
     negateSource?: pulumi.Input<boolean>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * Negate user
+     */
+    negateUser?: pulumi.Input<boolean>;
+    /**
+     * Policy type
+     */
+    policyType?: pulumi.Input<string>;
+    /**
+     * The position of a security rule
      */
     position?: pulumi.Input<string>;
     /**
-     * The security profile object.
+     * The security profile object
      */
     profileSetting?: pulumi.Input<inputs.SecurityRuleProfileSetting>;
     /**
-     * The service(s) being accessed.
+     * Schedule in which this rule will be applied
+     */
+    schedule?: pulumi.Input<string>;
+    /**
+     * Security settings
+     */
+    securitySettings?: pulumi.Input<inputs.SecurityRuleSecuritySettings>;
+    /**
+     * The service(s) being accessed
      */
     services?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The source Host Integrity Profile(s).
+     * The source Host Integrity Profile(s)
      */
     sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The source user(s) or group(s).
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      */
     sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The source address(es).
+     * The source addresses(es)
      */
     sources?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The tags associated with the security rule.
+     * The tags associated with the security rule
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Tenant restrictions
+     */
+    tenantRestrictions?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
     /**
-     * The destination security zone(s).
+     * The destination security zone(s)
      */
     tos?: pulumi.Input<pulumi.Input<string>[]>;
 }
@@ -340,95 +446,151 @@ export interface SecurityRuleState {
  */
 export interface SecurityRuleArgs {
     /**
-     * The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+     * The action to be taken when the rule is matched
      */
-    action: pulumi.Input<string>;
+    action?: pulumi.Input<string>;
     /**
-     * The application(s) being accessed.
+     * Allow url category
      */
-    applications: pulumi.Input<pulumi.Input<string>[]>;
+    allowUrlCategories?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowUrlCategory>[]>;
     /**
-     * The URL categories being accessed.
+     * Allow web application
      */
-    categories: pulumi.Input<pulumi.Input<string>[]>;
+    allowWebApplications?: pulumi.Input<pulumi.Input<inputs.SecurityRuleAllowWebApplication>[]>;
     /**
-     * The description of the security rule.
+     * The application(s) being accessed
+     */
+    applications?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Block url category
+     */
+    blockUrlCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Block web application
+     */
+    blockWebApplications?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The URL categories being accessed
+     */
+    categories?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Default profile settings
+     */
+    defaultProfileSettings?: pulumi.Input<inputs.SecurityRuleDefaultProfileSettings>;
+    /**
+     * The description of the security rule
      */
     description?: pulumi.Input<string>;
     /**
-     * The destination Host Integrity Profile(s).
+     * The destination Host Integrity Profile(s)
      */
     destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The destination address(es).
+     * The destination address(es)
      */
-    destinations: pulumi.Input<pulumi.Input<string>[]>;
+    destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The state of the security rule. Default: `false`.
+     * Devices
+     */
+    devices?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Is the security rule disabled?
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The source security zone(s).
+     * The source security zone(s)
      */
-    froms: pulumi.Input<pulumi.Input<string>[]>;
+    froms?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The external log forwarding profile.
+     * Log at session end?
+     */
+    logEnd?: pulumi.Input<boolean>;
+    /**
+     * The external log forwarding profile
      */
     logSetting?: pulumi.Input<string>;
     /**
-     * The name of the security rule.
+     * Log settings
+     */
+    logSettings?: pulumi.Input<inputs.SecurityRuleLogSettings>;
+    /**
+     * Log at session start?
+     */
+    logStart?: pulumi.Input<boolean>;
+    /**
+     * The name of the security rule
      */
     name?: pulumi.Input<string>;
     /**
-     * Negate the destination addresses(es). Default: `false`.
+     * Negate the destination addresses(es)?
      */
     negateDestination?: pulumi.Input<boolean>;
     /**
-     * Negate the source address(es). Default: `false`.
+     * Negate the source address(es)?
      */
     negateSource?: pulumi.Input<boolean>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * Negate user
+     */
+    negateUser?: pulumi.Input<boolean>;
+    /**
+     * Policy type
+     */
+    policyType?: pulumi.Input<string>;
+    /**
+     * The position of a security rule
      */
     position?: pulumi.Input<string>;
     /**
-     * The security profile object.
+     * The security profile object
      */
     profileSetting?: pulumi.Input<inputs.SecurityRuleProfileSetting>;
     /**
-     * The service(s) being accessed.
+     * Schedule in which this rule will be applied
      */
-    services: pulumi.Input<pulumi.Input<string>[]>;
+    schedule?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * Security settings
+     */
+    securitySettings?: pulumi.Input<inputs.SecurityRuleSecuritySettings>;
+    /**
+     * The service(s) being accessed
+     */
+    services?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The source Host Integrity Profile(s).
+     * The source Host Integrity Profile(s)
      */
     sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The source user(s) or group(s).
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      */
-    sourceUsers: pulumi.Input<pulumi.Input<string>[]>;
+    sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The source address(es).
+     * The source addresses(es)
      */
-    sources: pulumi.Input<pulumi.Input<string>[]>;
+    sources?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The tags associated with the security rule.
+     * The tags associated with the security rule
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The destination security zone(s).
+     * Tenant restrictions
      */
-    tos: pulumi.Input<pulumi.Input<string>[]>;
+    tenantRestrictions?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The destination security zone(s)
+     */
+    tos?: pulumi.Input<pulumi.Input<string>[]>;
 }

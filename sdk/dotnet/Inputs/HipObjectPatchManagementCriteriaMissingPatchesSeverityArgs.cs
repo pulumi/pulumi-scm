@@ -13,37 +13,37 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
+        /// Greater equal
         /// </summary>
         [Input("greaterEqual")]
         public Input<int>? GreaterEqual { get; set; }
 
         /// <summary>
-        /// The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
+        /// Greater than
         /// </summary>
         [Input("greaterThan")]
         public Input<int>? GreaterThan { get; set; }
 
         /// <summary>
-        /// The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
+        /// Is
         /// </summary>
         [Input("is")]
         public Input<int>? Is { get; set; }
 
         /// <summary>
-        /// The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
+        /// Is not
         /// </summary>
         [Input("isNot")]
         public Input<int>? IsNot { get; set; }
 
         /// <summary>
-        /// The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
+        /// Less equal
         /// </summary>
         [Input("lessEqual")]
         public Input<int>? LessEqual { get; set; }
 
         /// <summary>
-        /// The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `GreaterEqual`, `GreaterThan`, `Is`, `IsNot`, `LessEqual`, `LessThan`
+        /// Less than
         /// </summary>
         [Input("lessThan")]
         public Input<int>? LessThan { get; set; }

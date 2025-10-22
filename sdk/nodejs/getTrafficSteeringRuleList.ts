@@ -8,26 +8,17 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getTrafficSteeringRuleList({
- *     folder: "Service Connections",
- * });
- * ```
  */
 export function getTrafficSteeringRuleList(args?: GetTrafficSteeringRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetTrafficSteeringRuleListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTrafficSteeringRuleList:getTrafficSteeringRuleList", {
+        "device": args.device,
         "folder": args.folder,
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -36,21 +27,29 @@ export function getTrafficSteeringRuleList(args?: GetTrafficSteeringRuleListArgs
  */
 export interface GetTrafficSteeringRuleListArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+     * The device of the item.
+     */
+    device?: string;
+    /**
+     * The folder of the item. Default: Shared.
      */
     folder?: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
+    /**
+     * The snippet of the item.
+     */
+    snippet?: string;
 }
 
 /**
@@ -58,57 +57,56 @@ export interface GetTrafficSteeringRuleListArgs {
  */
 export interface GetTrafficSteeringRuleListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetTrafficSteeringRuleListData[];
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+     * The device of the item.
      */
-    readonly folder: string;
+    readonly device?: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    readonly folder?: string;
     /**
      * The provider-assigned unique ID for this managed resource.
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
+    /**
+     * The snippet of the item.
+     */
+    readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
 /**
  * Retrieves a listing of config items.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getTrafficSteeringRuleList({
- *     folder: "Service Connections",
- * });
- * ```
  */
 export function getTrafficSteeringRuleListOutput(args?: GetTrafficSteeringRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTrafficSteeringRuleListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTrafficSteeringRuleList:getTrafficSteeringRuleList", {
+        "device": args.device,
         "folder": args.folder,
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -117,19 +115,27 @@ export function getTrafficSteeringRuleListOutput(args?: GetTrafficSteeringRuleLi
  */
 export interface GetTrafficSteeringRuleListOutputArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+     * The device of the item.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder of the item. Default: Shared.
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
+    /**
+     * The snippet of the item.
+     */
+    snippet?: pulumi.Input<string>;
 }

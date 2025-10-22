@@ -17,14 +17,14 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
     public static final ApplicationSignatureAndConditionOrConditionOperatorEqualToArgs Empty = new ApplicationSignatureAndConditionOrConditionOperatorEqualToArgs();
 
     /**
-     * The Context param.
+     * Context
      * 
      */
     @Import(name="context", required=true)
     private Output<String> context;
 
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     public Output<String> context() {
@@ -32,14 +32,14 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
     }
 
     /**
-     * 4-byte hex value. String length must not exceed 10 characters. String validation regex: `^[0][xX][0-9A-Fa-f]{8}$`.
+     * 4-byte hex value
      * 
      */
     @Import(name="mask")
     private @Nullable Output<String> mask;
 
     /**
-     * @return 4-byte hex value. String length must not exceed 10 characters. String validation regex: `^[0][xX][0-9A-Fa-f]{8}$`.
+     * @return 4-byte hex value
      * 
      */
     public Optional<Output<String>> mask() {
@@ -47,14 +47,14 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
     }
 
     /**
-     * The Position param. String length must not exceed 127 characters.
+     * Position
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return The Position param. String length must not exceed 127 characters.
+     * @return Position
      * 
      */
     public Optional<Output<String>> position() {
@@ -62,14 +62,14 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
     }
 
     /**
-     * The Value param. String length must not exceed 10 characters.
+     * Value
      * 
      */
     @Import(name="value", required=true)
     private Output<String> value;
 
     /**
-     * @return The Value param. String length must not exceed 10 characters.
+     * @return Value
      * 
      */
     public Output<String> value() {
@@ -104,7 +104,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
         }
 
         /**
-         * @param context The Context param.
+         * @param context Context
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
         }
 
         /**
-         * @param context The Context param.
+         * @param context Context
          * 
          * @return builder
          * 
@@ -125,7 +125,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
         }
 
         /**
-         * @param mask 4-byte hex value. String length must not exceed 10 characters. String validation regex: `^[0][xX][0-9A-Fa-f]{8}$`.
+         * @param mask 4-byte hex value
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
         }
 
         /**
-         * @param mask 4-byte hex value. String length must not exceed 10 characters. String validation regex: `^[0][xX][0-9A-Fa-f]{8}$`.
+         * @param mask 4-byte hex value
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
         }
 
         /**
-         * @param position The Position param. String length must not exceed 127 characters.
+         * @param position Position
          * 
          * @return builder
          * 
@@ -157,7 +157,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
         }
 
         /**
-         * @param position The Position param. String length must not exceed 127 characters.
+         * @param position Position
          * 
          * @return builder
          * 
@@ -167,7 +167,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
         }
 
         /**
-         * @param value The Value param. String length must not exceed 10 characters.
+         * @param value Value
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorEqualToArg
         }
 
         /**
-         * @param value The Value param. String length must not exceed 10 characters.
+         * @param value Value
          * 
          * @return builder
          * 

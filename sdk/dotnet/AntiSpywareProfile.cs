@@ -10,82 +10,69 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// AntiSpywareProfile resource
     /// 
     /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.AntiSpywareProfile("example");
-    /// 
-    /// });
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/antiSpywareProfile:AntiSpywareProfile")]
     public partial class AntiSpywareProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The CloudInlineAnalysis param. Default: `False`.
+        /// Cloud inline analysis
         /// </summary>
         [Output("cloudInlineAnalysis")]
         public Output<bool> CloudInlineAnalysis { get; private set; } = null!;
 
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The InlineExceptionEdlUrls param.
+        /// Inline exception edl url
         /// </summary>
         [Output("inlineExceptionEdlUrls")]
         public Output<ImmutableArray<string>> InlineExceptionEdlUrls { get; private set; } = null!;
 
         /// <summary>
-        /// The InlineExceptionIpAddresses param.
+        /// Inline exception ip address
         /// </summary>
         [Output("inlineExceptionIpAddresses")]
         public Output<ImmutableArray<string>> InlineExceptionIpAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// The MicaEngineSpywareEnabledList param.
+        /// Mica engine spyware enabled
         /// </summary>
-        [Output("micaEngineSpywareEnabledLists")]
-        public Output<ImmutableArray<Outputs.AntiSpywareProfileMicaEngineSpywareEnabledList>> MicaEngineSpywareEnabledLists { get; private set; } = null!;
+        [Output("micaEngineSpywareEnableds")]
+        public Output<ImmutableArray<Outputs.AntiSpywareProfileMicaEngineSpywareEnabled>> MicaEngineSpywareEnableds { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the anti-spyware profile
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Rules param.
+        /// Rules
         /// </summary>
         [Output("rules")]
         public Output<ImmutableArray<Outputs.AntiSpywareProfileRule>> Rules { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -94,7 +81,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The ThreatExceptions param.
+        /// Threat exception
         /// </summary>
         [Output("threatExceptions")]
         public Output<ImmutableArray<Outputs.AntiSpywareProfileThreatException>> ThreatExceptions { get; private set; } = null!;
@@ -146,25 +133,25 @@ namespace Pulumi.Scm
     public sealed class AntiSpywareProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The CloudInlineAnalysis param. Default: `False`.
+        /// Cloud inline analysis
         /// </summary>
         [Input("cloudInlineAnalysis")]
         public Input<bool>? CloudInlineAnalysis { get; set; }
 
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -173,7 +160,7 @@ namespace Pulumi.Scm
         private InputList<string>? _inlineExceptionEdlUrls;
 
         /// <summary>
-        /// The InlineExceptionEdlUrls param.
+        /// Inline exception edl url
         /// </summary>
         public InputList<string> InlineExceptionEdlUrls
         {
@@ -185,7 +172,7 @@ namespace Pulumi.Scm
         private InputList<string>? _inlineExceptionIpAddresses;
 
         /// <summary>
-        /// The InlineExceptionIpAddresses param.
+        /// Inline exception ip address
         /// </summary>
         public InputList<string> InlineExceptionIpAddresses
         {
@@ -193,20 +180,20 @@ namespace Pulumi.Scm
             set => _inlineExceptionIpAddresses = value;
         }
 
-        [Input("micaEngineSpywareEnabledLists")]
-        private InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledListArgs>? _micaEngineSpywareEnabledLists;
+        [Input("micaEngineSpywareEnableds")]
+        private InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledArgs>? _micaEngineSpywareEnableds;
 
         /// <summary>
-        /// The MicaEngineSpywareEnabledList param.
+        /// Mica engine spyware enabled
         /// </summary>
-        public InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledListArgs> MicaEngineSpywareEnabledLists
+        public InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledArgs> MicaEngineSpywareEnableds
         {
-            get => _micaEngineSpywareEnabledLists ?? (_micaEngineSpywareEnabledLists = new InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledListArgs>());
-            set => _micaEngineSpywareEnabledLists = value;
+            get => _micaEngineSpywareEnableds ?? (_micaEngineSpywareEnableds = new InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledArgs>());
+            set => _micaEngineSpywareEnableds = value;
         }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the anti-spyware profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -215,7 +202,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.AntiSpywareProfileRuleArgs>? _rules;
 
         /// <summary>
-        /// The Rules param.
+        /// Rules
         /// </summary>
         public InputList<Inputs.AntiSpywareProfileRuleArgs> Rules
         {
@@ -224,7 +211,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -233,7 +220,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.AntiSpywareProfileThreatExceptionArgs>? _threatExceptions;
 
         /// <summary>
-        /// The ThreatExceptions param.
+        /// Threat exception
         /// </summary>
         public InputList<Inputs.AntiSpywareProfileThreatExceptionArgs> ThreatExceptions
         {
@@ -250,25 +237,25 @@ namespace Pulumi.Scm
     public sealed class AntiSpywareProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The CloudInlineAnalysis param. Default: `False`.
+        /// Cloud inline analysis
         /// </summary>
         [Input("cloudInlineAnalysis")]
         public Input<bool>? CloudInlineAnalysis { get; set; }
 
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -277,7 +264,7 @@ namespace Pulumi.Scm
         private InputList<string>? _inlineExceptionEdlUrls;
 
         /// <summary>
-        /// The InlineExceptionEdlUrls param.
+        /// Inline exception edl url
         /// </summary>
         public InputList<string> InlineExceptionEdlUrls
         {
@@ -289,7 +276,7 @@ namespace Pulumi.Scm
         private InputList<string>? _inlineExceptionIpAddresses;
 
         /// <summary>
-        /// The InlineExceptionIpAddresses param.
+        /// Inline exception ip address
         /// </summary>
         public InputList<string> InlineExceptionIpAddresses
         {
@@ -297,20 +284,20 @@ namespace Pulumi.Scm
             set => _inlineExceptionIpAddresses = value;
         }
 
-        [Input("micaEngineSpywareEnabledLists")]
-        private InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledListGetArgs>? _micaEngineSpywareEnabledLists;
+        [Input("micaEngineSpywareEnableds")]
+        private InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledGetArgs>? _micaEngineSpywareEnableds;
 
         /// <summary>
-        /// The MicaEngineSpywareEnabledList param.
+        /// Mica engine spyware enabled
         /// </summary>
-        public InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledListGetArgs> MicaEngineSpywareEnabledLists
+        public InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledGetArgs> MicaEngineSpywareEnableds
         {
-            get => _micaEngineSpywareEnabledLists ?? (_micaEngineSpywareEnabledLists = new InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledListGetArgs>());
-            set => _micaEngineSpywareEnabledLists = value;
+            get => _micaEngineSpywareEnableds ?? (_micaEngineSpywareEnableds = new InputList<Inputs.AntiSpywareProfileMicaEngineSpywareEnabledGetArgs>());
+            set => _micaEngineSpywareEnableds = value;
         }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the anti-spyware profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -319,7 +306,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.AntiSpywareProfileRuleGetArgs>? _rules;
 
         /// <summary>
-        /// The Rules param.
+        /// Rules
         /// </summary>
         public InputList<Inputs.AntiSpywareProfileRuleGetArgs> Rules
         {
@@ -328,7 +315,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -340,7 +327,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.AntiSpywareProfileThreatExceptionGetArgs>? _threatExceptions;
 
         /// <summary>
-        /// The ThreatExceptions param.
+        /// Threat exception
         /// </summary>
         public InputList<Inputs.AntiSpywareProfileThreatExceptionGetArgs> ThreatExceptions
         {

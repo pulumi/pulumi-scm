@@ -8,68 +8,66 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class FileBlockingProfileRule {
     /**
-     * @return The Action param. String must be one of these: `&#34;alert&#34;`, `&#34;block&#34;`, `&#34;continue&#34;`. Default: `&#34;alert&#34;`.
+     * @return The action to take when the rule match criteria is met
      * 
      */
-    private @Nullable String action;
+    private String action;
     /**
-     * @return The Applications param. List must contain at least 1 elements.
+     * @return The application transferring the files (App-ID naming)
      * 
      */
     private List<String> applications;
     /**
-     * @return The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`. Default: `&#34;both&#34;`.
+     * @return The direction of the file transfer
      * 
      */
-    private @Nullable String direction;
+    private String direction;
     /**
-     * @return The FileTypes param. List must contain at least 1 elements.
+     * @return The file type
      * 
      */
     private List<String> fileTypes;
     /**
-     * @return The Name param.
+     * @return The name of the file blocking rule
      * 
      */
     private String name;
 
     private FileBlockingProfileRule() {}
     /**
-     * @return The Action param. String must be one of these: `&#34;alert&#34;`, `&#34;block&#34;`, `&#34;continue&#34;`. Default: `&#34;alert&#34;`.
+     * @return The action to take when the rule match criteria is met
      * 
      */
-    public Optional<String> action() {
-        return Optional.ofNullable(this.action);
+    public String action() {
+        return this.action;
     }
     /**
-     * @return The Applications param. List must contain at least 1 elements.
+     * @return The application transferring the files (App-ID naming)
      * 
      */
     public List<String> applications() {
         return this.applications;
     }
     /**
-     * @return The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`. Default: `&#34;both&#34;`.
+     * @return The direction of the file transfer
      * 
      */
-    public Optional<String> direction() {
-        return Optional.ofNullable(this.direction);
+    public String direction() {
+        return this.direction;
     }
     /**
-     * @return The FileTypes param. List must contain at least 1 elements.
+     * @return The file type
      * 
      */
     public List<String> fileTypes() {
         return this.fileTypes;
     }
     /**
-     * @return The Name param.
+     * @return The name of the file blocking rule
      * 
      */
     public String name() {
@@ -85,9 +83,9 @@ public final class FileBlockingProfileRule {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String action;
+        private String action;
         private List<String> applications;
-        private @Nullable String direction;
+        private String direction;
         private List<String> fileTypes;
         private String name;
         public Builder() {}
@@ -101,8 +99,10 @@ public final class FileBlockingProfileRule {
         }
 
         @CustomType.Setter
-        public Builder action(@Nullable String action) {
-
+        public Builder action(String action) {
+            if (action == null) {
+              throw new MissingRequiredPropertyException("FileBlockingProfileRule", "action");
+            }
             this.action = action;
             return this;
         }
@@ -118,8 +118,10 @@ public final class FileBlockingProfileRule {
             return applications(List.of(applications));
         }
         @CustomType.Setter
-        public Builder direction(@Nullable String direction) {
-
+        public Builder direction(String direction) {
+            if (direction == null) {
+              throw new MissingRequiredPropertyException("FileBlockingProfileRule", "direction");
+            }
             this.direction = direction;
             return this;
         }

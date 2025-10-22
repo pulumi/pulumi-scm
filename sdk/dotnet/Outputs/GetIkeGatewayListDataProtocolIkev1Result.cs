@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayListDataProtocolIkev1Result
     {
         /// <summary>
-        /// The Dpd param.
+        /// Dpd
         /// </summary>
         public readonly Outputs.GetIkeGatewayListDataProtocolIkev1DpdResult Dpd;
         /// <summary>
-        /// The IkeCryptoProfile param.
+        /// Ike crypto profile
         /// </summary>
         public readonly string IkeCryptoProfile;
 

@@ -16,14 +16,14 @@ public final class TrafficSteeringRuleActionForwardArgs extends com.pulumi.resou
     public static final TrafficSteeringRuleActionForwardArgs Empty = new TrafficSteeringRuleActionForwardArgs();
 
     /**
-     * The Target param.
+     * Target
      * 
      */
     @Import(name="target")
     private @Nullable Output<String> target;
 
     /**
-     * @return The Target param.
+     * @return Target
      * 
      */
     public Optional<Output<String>> target() {
@@ -55,7 +55,7 @@ public final class TrafficSteeringRuleActionForwardArgs extends com.pulumi.resou
         }
 
         /**
-         * @param target The Target param.
+         * @param target Target
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class TrafficSteeringRuleActionForwardArgs extends com.pulumi.resou
         }
 
         /**
-         * @param target The Target param.
+         * @param target Target
          * 
          * @return builder
          * 

@@ -7,6 +7,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetApplicationGroupPlainArgs extends com.pulumi.resources.InvokeArgs {
@@ -14,24 +16,40 @@ public final class GetApplicationGroupPlainArgs extends com.pulumi.resources.Inv
     public static final GetApplicationGroupPlainArgs Empty = new GetApplicationGroupPlainArgs();
 
     /**
-     * The Id param.
+     * UUID of the resource
      * 
      */
     @Import(name="id", required=true)
     private String id;
 
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
 
+    /**
+     * Alphanumeric string [ 0-9a-zA-Z._-]
+     * 
+     */
+    @Import(name="name")
+    private @Nullable String name;
+
+    /**
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
+     * 
+     */
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetApplicationGroupPlainArgs() {}
 
     private GetApplicationGroupPlainArgs(GetApplicationGroupPlainArgs $) {
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -53,13 +71,24 @@ public final class GetApplicationGroupPlainArgs extends com.pulumi.resources.Inv
         }
 
         /**
-         * @param id The Id param.
+         * @param id UUID of the resource
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            $.name = name;
             return this;
         }
 

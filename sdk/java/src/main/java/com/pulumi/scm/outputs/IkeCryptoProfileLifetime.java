@@ -12,50 +12,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeCryptoProfileLifetime {
     /**
-     * @return specify lifetime in days. Value must be between 1 and 365. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in days
      * 
      */
     private @Nullable Integer days;
     /**
-     * @return specify lifetime in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in hours
      * 
      */
     private @Nullable Integer hours;
     /**
-     * @return specify lifetime in minutes. Value must be between 3 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in minutes
      * 
      */
     private @Nullable Integer minutes;
     /**
-     * @return specify lifetime in seconds. Value must be between 180 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in seconds
      * 
      */
     private @Nullable Integer seconds;
 
     private IkeCryptoProfileLifetime() {}
     /**
-     * @return specify lifetime in days. Value must be between 1 and 365. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in days
      * 
      */
     public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
     /**
-     * @return specify lifetime in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in hours
      * 
      */
     public Optional<Integer> hours() {
         return Optional.ofNullable(this.hours);
     }
     /**
-     * @return specify lifetime in minutes. Value must be between 3 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in minutes
      * 
      */
     public Optional<Integer> minutes() {
         return Optional.ofNullable(this.minutes);
     }
     /**
-     * @return specify lifetime in seconds. Value must be between 180 and 65535. Ensure that only one of the following is specified: `days`, `hours`, `minutes`, `seconds`
+     * @return specify lifetime in seconds
      * 
      */
     public Optional<Integer> seconds() {

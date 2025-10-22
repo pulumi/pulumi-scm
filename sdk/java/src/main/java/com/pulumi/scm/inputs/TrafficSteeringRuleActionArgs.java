@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.TrafficSteeringRuleActionForwardArgs;
-import java.lang.Boolean;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,14 +17,14 @@ public final class TrafficSteeringRuleActionArgs extends com.pulumi.resources.Re
     public static final TrafficSteeringRuleActionArgs Empty = new TrafficSteeringRuleActionArgs();
 
     /**
-     * The Forward param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+     * Forward
      * 
      */
     @Import(name="forward")
     private @Nullable Output<TrafficSteeringRuleActionForwardArgs> forward;
 
     /**
-     * @return The Forward param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+     * @return Forward
      * 
      */
     public Optional<Output<TrafficSteeringRuleActionForwardArgs>> forward() {
@@ -32,17 +32,17 @@ public final class TrafficSteeringRuleActionArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The NoPbf param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+     * No pbf
      * 
      */
     @Import(name="noPbf")
-    private @Nullable Output<Boolean> noPbf;
+    private @Nullable Output<String> noPbf;
 
     /**
-     * @return The NoPbf param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+     * @return No pbf
      * 
      */
-    public Optional<Output<Boolean>> noPbf() {
+    public Optional<Output<String>> noPbf() {
         return Optional.ofNullable(this.noPbf);
     }
 
@@ -72,7 +72,7 @@ public final class TrafficSteeringRuleActionArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param forward The Forward param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+         * @param forward Forward
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class TrafficSteeringRuleActionArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param forward The Forward param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+         * @param forward Forward
          * 
          * @return builder
          * 
@@ -93,23 +93,23 @@ public final class TrafficSteeringRuleActionArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param noPbf The NoPbf param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+         * @param noPbf No pbf
          * 
          * @return builder
          * 
          */
-        public Builder noPbf(@Nullable Output<Boolean> noPbf) {
+        public Builder noPbf(@Nullable Output<String> noPbf) {
             $.noPbf = noPbf;
             return this;
         }
 
         /**
-         * @param noPbf The NoPbf param. Ensure that only one of the following is specified: `forward`, `no-pbf`
+         * @param noPbf No pbf
          * 
          * @return builder
          * 
          */
-        public Builder noPbf(Boolean noPbf) {
+        public Builder noPbf(String noPbf) {
             return noPbf(Output.of(noPbf));
         }
 

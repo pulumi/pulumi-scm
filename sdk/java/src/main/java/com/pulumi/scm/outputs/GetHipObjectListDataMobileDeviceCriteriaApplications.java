@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataMobileDeviceCriteriaApplications {
     /**
-     * @return The HasMalware param.
+     * @return Has malware
      * 
      */
     private GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalware hasMalware;
     /**
-     * @return Has apps that are not managed.
+     * @return Has apps that are not managed
      * 
      */
     private Boolean hasUnmanagedApp;
     /**
-     * @return The Includes param.
+     * @return Includes
      * 
      */
     private List<GetHipObjectListDataMobileDeviceCriteriaApplicationsInclude> includes;
 
     private GetHipObjectListDataMobileDeviceCriteriaApplications() {}
     /**
-     * @return The HasMalware param.
+     * @return Has malware
      * 
      */
     public GetHipObjectListDataMobileDeviceCriteriaApplicationsHasMalware hasMalware() {
         return this.hasMalware;
     }
     /**
-     * @return Has apps that are not managed.
+     * @return Has apps that are not managed
      * 
      */
     public Boolean hasUnmanagedApp() {
         return this.hasUnmanagedApp;
     }
     /**
-     * @return The Includes param.
+     * @return Includes
      * 
      */
     public List<GetHipObjectListDataMobileDeviceCriteriaApplicationsInclude> includes() {

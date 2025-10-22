@@ -13,32 +13,27 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceConnectionGroupResult {
     /**
-     * @return The DisableSnat param.
+     * @return Disable snat
      * 
      */
     private Boolean disableSnat;
     /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    private String folder;
-    /**
-     * @return The Id param.
+     * @return The UUID of the service connection group
      * 
      */
     private String id;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The PbfOnly param.
+     * @return Pbf only
      * 
      */
     private Boolean pbfOnly;
     /**
-     * @return The Targets param.
+     * @return Target
      * 
      */
     private List<String> targets;
@@ -46,42 +41,35 @@ public final class GetServiceConnectionGroupResult {
 
     private GetServiceConnectionGroupResult() {}
     /**
-     * @return The DisableSnat param.
+     * @return Disable snat
      * 
      */
     public Boolean disableSnat() {
         return this.disableSnat;
     }
     /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    public String folder() {
-        return this.folder;
-    }
-    /**
-     * @return The Id param.
+     * @return The UUID of the service connection group
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The PbfOnly param.
+     * @return Pbf only
      * 
      */
     public Boolean pbfOnly() {
         return this.pbfOnly;
     }
     /**
-     * @return The Targets param.
+     * @return Target
      * 
      */
     public List<String> targets() {
@@ -101,7 +89,6 @@ public final class GetServiceConnectionGroupResult {
     @CustomType.Builder
     public static final class Builder {
         private Boolean disableSnat;
-        private String folder;
         private String id;
         private String name;
         private Boolean pbfOnly;
@@ -111,7 +98,6 @@ public final class GetServiceConnectionGroupResult {
         public Builder(GetServiceConnectionGroupResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.disableSnat = defaults.disableSnat;
-    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.pbfOnly = defaults.pbfOnly;
@@ -125,14 +111,6 @@ public final class GetServiceConnectionGroupResult {
               throw new MissingRequiredPropertyException("GetServiceConnectionGroupResult", "disableSnat");
             }
             this.disableSnat = disableSnat;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder folder(String folder) {
-            if (folder == null) {
-              throw new MissingRequiredPropertyException("GetServiceConnectionGroupResult", "folder");
-            }
-            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -181,7 +159,6 @@ public final class GetServiceConnectionGroupResult {
         public GetServiceConnectionGroupResult build() {
             final var _resultValue = new GetServiceConnectionGroupResult();
             _resultValue.disableSnat = disableSnat;
-            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.pbfOnly = pbfOnly;

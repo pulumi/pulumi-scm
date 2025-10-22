@@ -20,14 +20,14 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
     public static final IpsecCryptoProfileState Empty = new IpsecCryptoProfileState();
 
     /**
-     * The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+     * Ah
      * 
      */
     @Import(name="ah")
     private @Nullable Output<IpsecCryptoProfileAhArgs> ah;
 
     /**
-     * @return The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+     * @return Ah
      * 
      */
     public Optional<Output<IpsecCryptoProfileAhArgs>> ah() {
@@ -35,14 +35,14 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -50,14 +50,14 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * phase-2 DH group (PFS DH group). String must be one of these: `&#34;no-pfs&#34;`, `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`. Default: `&#34;group2&#34;`.
+     * phase-2 DH group (PFS DH group)
      * 
      */
     @Import(name="dhGroup")
     private @Nullable Output<String> dhGroup;
 
     /**
-     * @return phase-2 DH group (PFS DH group). String must be one of these: `&#34;no-pfs&#34;`, `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`. Default: `&#34;group2&#34;`.
+     * @return phase-2 DH group (PFS DH group)
      * 
      */
     public Optional<Output<String>> dhGroup() {
@@ -65,14 +65,14 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+     * Esp
      * 
      */
     @Import(name="esp")
     private @Nullable Output<IpsecCryptoProfileEspArgs> esp;
 
     /**
-     * @return The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+     * @return Esp
      * 
      */
     public Optional<Output<IpsecCryptoProfileEspArgs>> esp() {
@@ -80,14 +80,14 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -95,14 +95,14 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Lifesize param.
+     * Lifesize
      * 
      */
     @Import(name="lifesize")
     private @Nullable Output<IpsecCryptoProfileLifesizeArgs> lifesize;
 
     /**
-     * @return The Lifesize param.
+     * @return Lifesize
      * 
      */
     public Optional<Output<IpsecCryptoProfileLifesizeArgs>> lifesize() {
@@ -110,14 +110,14 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Lifetime param.
+     * Ipsec crypto profile lifetime
      * 
      */
     @Import(name="lifetime")
     private @Nullable Output<IpsecCryptoProfileLifetimeArgs> lifetime;
 
     /**
-     * @return The Lifetime param.
+     * @return Ipsec crypto profile lifetime
      * 
      */
     public Optional<Output<IpsecCryptoProfileLifetimeArgs>> lifetime() {
@@ -125,14 +125,14 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public Optional<Output<String>> name() {
@@ -140,14 +140,14 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -195,7 +195,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param ah The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+         * @param ah Ah
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param ah The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+         * @param ah Ah
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -227,7 +227,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -237,7 +237,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param dhGroup phase-2 DH group (PFS DH group). String must be one of these: `&#34;no-pfs&#34;`, `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`. Default: `&#34;group2&#34;`.
+         * @param dhGroup phase-2 DH group (PFS DH group)
          * 
          * @return builder
          * 
@@ -248,7 +248,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param dhGroup phase-2 DH group (PFS DH group). String must be one of these: `&#34;no-pfs&#34;`, `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`. Default: `&#34;group2&#34;`.
+         * @param dhGroup phase-2 DH group (PFS DH group)
          * 
          * @return builder
          * 
@@ -258,7 +258,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param esp The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+         * @param esp Esp
          * 
          * @return builder
          * 
@@ -269,7 +269,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param esp The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+         * @param esp Esp
          * 
          * @return builder
          * 
@@ -279,7 +279,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -290,7 +290,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -300,7 +300,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param lifesize The Lifesize param.
+         * @param lifesize Lifesize
          * 
          * @return builder
          * 
@@ -311,7 +311,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param lifesize The Lifesize param.
+         * @param lifesize Lifesize
          * 
          * @return builder
          * 
@@ -321,7 +321,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param lifetime The Lifetime param.
+         * @param lifetime Ipsec crypto profile lifetime
          * 
          * @return builder
          * 
@@ -332,7 +332,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param lifetime The Lifetime param.
+         * @param lifetime Ipsec crypto profile lifetime
          * 
          * @return builder
          * 
@@ -342,7 +342,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -353,7 +353,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -363,7 +363,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -374,7 +374,7 @@ public final class IpsecCryptoProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

@@ -14,12 +14,12 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetScepProfileAlgorithmRsaResult
     {
         /// <summary>
-        /// The RsaNbits param.
+        /// Rsa nbits
         /// </summary>
-        public readonly string RsaNbits;
+        public readonly int RsaNbits;
 
         [OutputConstructor]
-        private GetScepProfileAlgorithmRsaResult(string rsaNbits)
+        private GetScepProfileAlgorithmRsaResult(int rsaNbits)
         {
             RsaNbits = rsaNbits;
         }

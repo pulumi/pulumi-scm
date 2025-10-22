@@ -16,17 +16,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDecryptionProfileListResult {
     /**
-     * @return The Data param.
+     * @return The data.
      * 
      */
     private List<GetDecryptionProfileListData> datas;
     /**
-     * @return The Device param.
+     * @return The device of the item.
      * 
      */
     private @Nullable String device;
     /**
-     * @return The Folder param.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private @Nullable String folder;
@@ -36,49 +36,49 @@ public final class GetDecryptionProfileListResult {
      */
     private String id;
     /**
-     * @return The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * @return The max number of items to return. Default: 200.
      * 
      */
-    private Integer limit;
+    private @Nullable Integer limit;
     /**
-     * @return The Name param.
+     * @return The name of the item.
      * 
      */
     private @Nullable String name;
     /**
-     * @return The Offset param. Default: `0`.
+     * @return The offset of the first item to return.
      * 
      */
-    private Integer offset;
+    private @Nullable Integer offset;
     /**
-     * @return The Snippet param.
+     * @return The snippet of the item.
      * 
      */
     private @Nullable String snippet;
     private String tfid;
     /**
-     * @return The Total param.
+     * @return The total number of items.
      * 
      */
     private Integer total;
 
     private GetDecryptionProfileListResult() {}
     /**
-     * @return The Data param.
+     * @return The data.
      * 
      */
     public List<GetDecryptionProfileListData> datas() {
         return this.datas;
     }
     /**
-     * @return The Device param.
+     * @return The device of the item.
      * 
      */
     public Optional<String> device() {
         return Optional.ofNullable(this.device);
     }
     /**
-     * @return The Folder param.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public Optional<String> folder() {
@@ -92,28 +92,28 @@ public final class GetDecryptionProfileListResult {
         return this.id;
     }
     /**
-     * @return The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * @return The max number of items to return. Default: 200.
      * 
      */
-    public Integer limit() {
-        return this.limit;
+    public Optional<Integer> limit() {
+        return Optional.ofNullable(this.limit);
     }
     /**
-     * @return The Name param.
+     * @return The name of the item.
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The Offset param. Default: `0`.
+     * @return The offset of the first item to return.
      * 
      */
-    public Integer offset() {
-        return this.offset;
+    public Optional<Integer> offset() {
+        return Optional.ofNullable(this.offset);
     }
     /**
-     * @return The Snippet param.
+     * @return The snippet of the item.
      * 
      */
     public Optional<String> snippet() {
@@ -123,7 +123,7 @@ public final class GetDecryptionProfileListResult {
         return this.tfid;
     }
     /**
-     * @return The Total param.
+     * @return The total number of items.
      * 
      */
     public Integer total() {
@@ -143,9 +143,9 @@ public final class GetDecryptionProfileListResult {
         private @Nullable String device;
         private @Nullable String folder;
         private String id;
-        private Integer limit;
+        private @Nullable Integer limit;
         private @Nullable String name;
-        private Integer offset;
+        private @Nullable Integer offset;
         private @Nullable String snippet;
         private String tfid;
         private Integer total;
@@ -196,10 +196,8 @@ public final class GetDecryptionProfileListResult {
             return this;
         }
         @CustomType.Setter
-        public Builder limit(Integer limit) {
-            if (limit == null) {
-              throw new MissingRequiredPropertyException("GetDecryptionProfileListResult", "limit");
-            }
+        public Builder limit(@Nullable Integer limit) {
+
             this.limit = limit;
             return this;
         }
@@ -210,10 +208,8 @@ public final class GetDecryptionProfileListResult {
             return this;
         }
         @CustomType.Setter
-        public Builder offset(Integer offset) {
-            if (offset == null) {
-              throw new MissingRequiredPropertyException("GetDecryptionProfileListResult", "offset");
-            }
+        public Builder offset(@Nullable Integer offset) {
+
             this.offset = offset;
             return this;
         }

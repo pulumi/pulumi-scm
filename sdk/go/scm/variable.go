@@ -7,11 +7,12 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// Variable resource
 //
 // ## Example Usage
 //
@@ -27,8 +28,123 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewVariable(ctx, "example", &scm.VariableArgs{
-//				Folder: pulumi.String("Shared"),
+//			// Creates a variable in as-number format
+//			_, err := scm.NewVariable(ctx, "scm_variable_asn", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_variable_asn"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("as-number"),
+//				Value:       pulumi.String("65535"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a variable in count format
+//			_, err = scm.NewVariable(ctx, "scm_variable_count", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_variable_count"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("count"),
+//				Value:       pulumi.String("15"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a variable in fqdn format
+//			_, err = scm.NewVariable(ctx, "scm_variable_fqdn", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_variable_fqdn"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("fqdn"),
+//				Value:       pulumi.String("scm.example.com"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a variable in group-id format
+//			_, err = scm.NewVariable(ctx, "scm_variable_group_id", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_variable_group_id"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("group-id"),
+//				Value:       pulumi.String("10"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a variable in ip-range format
+//			_, err = scm.NewVariable(ctx, "scm_variable_iprange", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_variable_iprange"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("ip-range"),
+//				Value:       pulumi.String("198.18.1.1-198.18.1.100"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a variable in ip-netmask format
+//			_, err = scm.NewVariable(ctx, "scm_variable_ipaddr", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_variable_ipaddr"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("ip-netmask"),
+//				Value:       pulumi.String("198.18.2.0/24"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a variable in ip-wildcard format
+//			_, err = scm.NewVariable(ctx, "scm_variable_ipwildcard", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_variable_ipwildcard"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("ip-wildcard"),
+//				Value:       pulumi.String("198.18.1.0/0.255.255.255"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a variable in percent format
+//			_, err = scm.NewVariable(ctx, "scm_variable_percent", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_variable_percent"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("percent"),
+//				Value:       pulumi.String("10"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a variable in router-id format
+//			_, err = scm.NewVariable(ctx, "scm_variable_router_id", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_variable_router_id"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("router-id"),
+//				Value:       pulumi.String("198.18.1.1"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a variable in timer format
+//			_, err = scm.NewVariable(ctx, "scm_variable_timer", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_variable_timer"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("timer"),
+//				Value:       pulumi.String("1440"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a variable in zone format
+//			_, err = scm.NewVariable(ctx, "scm_variable_zone", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_variable_zone"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("zone"),
+//				Value:       pulumi.String("internet"),
 //			})
 //			if err != nil {
 //				return err
@@ -41,32 +157,38 @@ import (
 type Variable struct {
 	pulumi.CustomResourceState
 
-	// The Description param.
+	// The description of the variable
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the variable
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Overridden param.
-	Overridden pulumi.BoolOutput `pulumi:"overridden"`
-	// The Snippet param.
+	// Is the variable overridden?
+	Overridden pulumi.BoolPtrOutput `pulumi:"overridden"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
-	// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
-	Type pulumi.StringPtrOutput `pulumi:"type"`
-	// value can accept either string or integer.
-	Value pulumi.StringPtrOutput `pulumi:"value"`
+	// The variable type
+	Type pulumi.StringOutput `pulumi:"type"`
+	// The value of the variable
+	Value pulumi.StringOutput `pulumi:"value"`
 }
 
 // NewVariable registers a new resource with the given unique name, arguments, and options.
 func NewVariable(ctx *pulumi.Context,
 	name string, args *VariableArgs, opts ...pulumi.ResourceOption) (*Variable, error) {
 	if args == nil {
-		args = &VariableArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.Type == nil {
+		return nil, errors.New("invalid value for required argument 'Type'")
+	}
+	if args.Value == nil {
+		return nil, errors.New("invalid value for required argument 'Value'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource Variable
 	err := ctx.RegisterResource("scm:index/variable:Variable", name, args, &resource, opts...)
@@ -90,42 +212,42 @@ func GetVariable(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering Variable resources.
 type variableState struct {
-	// The Description param.
+	// The description of the variable
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the variable
 	Name *string `pulumi:"name"`
-	// The Overridden param.
+	// Is the variable overridden?
 	Overridden *bool `pulumi:"overridden"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
-	// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+	// The variable type
 	Type *string `pulumi:"type"`
-	// value can accept either string or integer.
+	// The value of the variable
 	Value *string `pulumi:"value"`
 }
 
 type VariableState struct {
-	// The Description param.
+	// The description of the variable
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the variable
 	Name pulumi.StringPtrInput
-	// The Overridden param.
+	// Is the variable overridden?
 	Overridden pulumi.BoolPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
-	// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+	// The variable type
 	Type pulumi.StringPtrInput
-	// value can accept either string or integer.
+	// The value of the variable
 	Value pulumi.StringPtrInput
 }
 
@@ -134,38 +256,42 @@ func (VariableState) ElementType() reflect.Type {
 }
 
 type variableArgs struct {
-	// The Description param.
+	// The description of the variable
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the variable
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// Is the variable overridden?
+	Overridden *bool `pulumi:"overridden"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
-	Type *string `pulumi:"type"`
-	// value can accept either string or integer.
-	Value *string `pulumi:"value"`
+	// The variable type
+	Type string `pulumi:"type"`
+	// The value of the variable
+	Value string `pulumi:"value"`
 }
 
 // The set of arguments for constructing a Variable resource.
 type VariableArgs struct {
-	// The Description param.
+	// The description of the variable
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the variable
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// Is the variable overridden?
+	Overridden pulumi.BoolPtrInput
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
-	Type pulumi.StringPtrInput
-	// value can accept either string or integer.
-	Value pulumi.StringPtrInput
+	// The variable type
+	Type pulumi.StringInput
+	// The value of the variable
+	Value pulumi.StringInput
 }
 
 func (VariableArgs) ElementType() reflect.Type {
@@ -255,32 +381,32 @@ func (o VariableOutput) ToVariableOutputWithContext(ctx context.Context) Variabl
 	return o
 }
 
-// The Description param.
+// The description of the variable
 func (o VariableOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o VariableOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o VariableOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the variable
 func (o VariableOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Overridden param.
-func (o VariableOutput) Overridden() pulumi.BoolOutput {
-	return o.ApplyT(func(v *Variable) pulumi.BoolOutput { return v.Overridden }).(pulumi.BoolOutput)
+// Is the variable overridden?
+func (o VariableOutput) Overridden() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *Variable) pulumi.BoolPtrOutput { return v.Overridden }).(pulumi.BoolPtrOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o VariableOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -289,14 +415,14 @@ func (o VariableOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
-func (o VariableOutput) Type() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *Variable) pulumi.StringPtrOutput { return v.Type }).(pulumi.StringPtrOutput)
+// The variable type
+func (o VariableOutput) Type() pulumi.StringOutput {
+	return o.ApplyT(func(v *Variable) pulumi.StringOutput { return v.Type }).(pulumi.StringOutput)
 }
 
-// value can accept either string or integer.
-func (o VariableOutput) Value() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *Variable) pulumi.StringPtrOutput { return v.Value }).(pulumi.StringPtrOutput)
+// The value of the variable
+func (o VariableOutput) Value() pulumi.StringOutput {
+	return o.ApplyT(func(v *Variable) pulumi.StringOutput { return v.Value }).(pulumi.StringOutput)
 }
 
 type VariableArrayOutput struct{ *pulumi.OutputState }

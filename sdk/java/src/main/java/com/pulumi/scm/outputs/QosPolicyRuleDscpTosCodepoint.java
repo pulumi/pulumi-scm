@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QosPolicyRuleDscpTosCodepoint {
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private @Nullable String name;
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     private @Nullable QosPolicyRuleDscpTosCodepointType type;
 
     private QosPolicyRuleDscpTosCodepoint() {}
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     public Optional<QosPolicyRuleDscpTosCodepointType> type() {

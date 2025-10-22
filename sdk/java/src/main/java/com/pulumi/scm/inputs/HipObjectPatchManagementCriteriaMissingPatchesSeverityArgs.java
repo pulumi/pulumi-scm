@@ -16,14 +16,14 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
     public static final HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs Empty = new HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs();
 
     /**
-     * The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * Greater equal
      * 
      */
     @Import(name="greaterEqual")
     private @Nullable Output<Integer> greaterEqual;
 
     /**
-     * @return The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Greater equal
      * 
      */
     public Optional<Output<Integer>> greaterEqual() {
@@ -31,14 +31,14 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
     }
 
     /**
-     * The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * Greater than
      * 
      */
     @Import(name="greaterThan")
     private @Nullable Output<Integer> greaterThan;
 
     /**
-     * @return The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Greater than
      * 
      */
     public Optional<Output<Integer>> greaterThan() {
@@ -46,14 +46,14 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
     }
 
     /**
-     * The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * Is
      * 
      */
     @Import(name="is")
     private @Nullable Output<Integer> is;
 
     /**
-     * @return The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Is
      * 
      */
     public Optional<Output<Integer>> is() {
@@ -61,14 +61,14 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
     }
 
     /**
-     * The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * Is not
      * 
      */
     @Import(name="isNot")
     private @Nullable Output<Integer> isNot;
 
     /**
-     * @return The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Is not
      * 
      */
     public Optional<Output<Integer>> isNot() {
@@ -76,14 +76,14 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
     }
 
     /**
-     * The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * Less equal
      * 
      */
     @Import(name="lessEqual")
     private @Nullable Output<Integer> lessEqual;
 
     /**
-     * @return The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Less equal
      * 
      */
     public Optional<Output<Integer>> lessEqual() {
@@ -91,14 +91,14 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
     }
 
     /**
-     * The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * Less than
      * 
      */
     @Import(name="lessThan")
     private @Nullable Output<Integer> lessThan;
 
     /**
-     * @return The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+     * @return Less than
      * 
      */
     public Optional<Output<Integer>> lessThan() {
@@ -135,7 +135,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param greaterEqual The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param greaterEqual Greater equal
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param greaterEqual The GreaterEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param greaterEqual Greater equal
          * 
          * @return builder
          * 
@@ -156,7 +156,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param greaterThan The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param greaterThan Greater than
          * 
          * @return builder
          * 
@@ -167,7 +167,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param greaterThan The GreaterThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param greaterThan Greater than
          * 
          * @return builder
          * 
@@ -177,7 +177,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param is The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param is Is
          * 
          * @return builder
          * 
@@ -188,7 +188,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param is The Is param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param is Is
          * 
          * @return builder
          * 
@@ -198,7 +198,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param isNot The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param isNot Is not
          * 
          * @return builder
          * 
@@ -209,7 +209,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param isNot The IsNot param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param isNot Is not
          * 
          * @return builder
          * 
@@ -219,7 +219,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param lessEqual The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param lessEqual Less equal
          * 
          * @return builder
          * 
@@ -230,7 +230,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param lessEqual The LessEqual param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param lessEqual Less equal
          * 
          * @return builder
          * 
@@ -240,7 +240,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param lessThan The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param lessThan Less than
          * 
          * @return builder
          * 
@@ -251,7 +251,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs ex
         }
 
         /**
-         * @param lessThan The LessThan param. Value must be between 0 and 100000. Ensure that only one of the following is specified: `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, `lessThan`
+         * @param lessThan Less than
          * 
          * @return builder
          * 

@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * ApplicationFilter data source
  *
  * ## Example Usage
  *
@@ -15,15 +15,17 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getApplicationFilter({
- *     id: "1234-56-789",
+ * const scmApplicationFilterDs = scm.getApplicationFilter({
+ *     id: "52ee6475-a99c-42d7-be0a-e251c05e805b",
  * });
+ * export const applicationFiltersDataSourceResults = scmApplicationFilterDs;
  * ```
  */
 export function getApplicationFilter(args: GetApplicationFilterArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationFilterResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getApplicationFilter:getApplicationFilter", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +34,13 @@ export function getApplicationFilter(args: GetApplicationFilterArgs, opts?: pulu
  */
 export interface GetApplicationFilterArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * Alphanumeric string [ 0-9a-zA-Z._-]
+     */
+    name?: string;
 }
 
 /**
@@ -42,89 +48,101 @@ export interface GetApplicationFilterArgs {
  */
 export interface GetApplicationFilterResult {
     /**
-     * The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Category
      */
     readonly categories: string[];
     /**
-     * only True is a valid value.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * only True is a valid value
      */
     readonly evasive: boolean;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     readonly excessiveBandwidthUse: boolean;
     /**
-     * The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Exclude
      */
     readonly excludes: string[];
     /**
-     * only True is a valid value.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * only True is a valid value
      */
     readonly hasKnownVulnerabilities: boolean;
     /**
-     * The Id param.
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     readonly isSaas: boolean;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     readonly name: string;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     readonly newAppid: boolean;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     readonly pervasive: boolean;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     readonly proneToMisuse: boolean;
     /**
-     * The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+     * Risk
      */
     readonly risks: number[];
     /**
-     * The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * Saas certifications
      */
     readonly saasCertifications: string[];
     /**
-     * The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * Saas risk
      */
     readonly saasRisks: string[];
     /**
-     * The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * Subcategory
      */
     readonly subcategories: string[];
     /**
-     * The Tagging param.
+     * Tagging
      */
     readonly tagging: outputs.GetApplicationFilterTagging;
     /**
-     * The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Technology
      */
     readonly technologies: string[];
     readonly tfid: string;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     readonly transfersFiles: boolean;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     readonly tunnelsOtherApps: boolean;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     readonly usedByMalware: boolean;
 }
 /**
- * Retrieves a config item.
+ * ApplicationFilter data source
  *
  * ## Example Usage
  *
@@ -132,15 +150,17 @@ export interface GetApplicationFilterResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getApplicationFilter({
- *     id: "1234-56-789",
+ * const scmApplicationFilterDs = scm.getApplicationFilter({
+ *     id: "52ee6475-a99c-42d7-be0a-e251c05e805b",
  * });
+ * export const applicationFiltersDataSourceResults = scmApplicationFilterDs;
  * ```
  */
 export function getApplicationFilterOutput(args: GetApplicationFilterOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationFilterResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getApplicationFilter:getApplicationFilter", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -149,7 +169,11 @@ export function getApplicationFilterOutput(args: GetApplicationFilterOutputArgs,
  */
 export interface GetApplicationFilterOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Alphanumeric string [ 0-9a-zA-Z._-]
+     */
+    name?: pulumi.Input<string>;
 }

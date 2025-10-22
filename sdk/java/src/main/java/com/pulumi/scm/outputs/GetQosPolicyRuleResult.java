@@ -9,97 +9,119 @@ import com.pulumi.scm.outputs.GetQosPolicyRuleAction;
 import com.pulumi.scm.outputs.GetQosPolicyRuleDscpTos;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class GetQosPolicyRuleResult {
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     private GetQosPolicyRuleAction action;
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The DscpTos param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Dscp tos
      * 
      */
     private GetQosPolicyRuleDscpTos dscpTos;
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
-    private @Nullable String folder;
+    private String folder;
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The Schedule param.
+     * @return Schedule
      * 
      */
     private String schedule;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
 
     private GetQosPolicyRuleResult() {}
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     public GetQosPolicyRuleAction action() {
         return this.action;
     }
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The DscpTos param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Dscp tos
      * 
      */
     public GetQosPolicyRuleDscpTos dscpTos() {
         return this.dscpTos;
     }
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
-    public Optional<String> folder() {
-        return Optional.ofNullable(this.folder);
+    public String folder() {
+        return this.folder;
     }
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Schedule param.
+     * @return Schedule
      * 
      */
     public String schedule() {
         return this.schedule;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
     }
     public String tfid() {
         return this.tfid;
@@ -116,22 +138,26 @@ public final class GetQosPolicyRuleResult {
     public static final class Builder {
         private GetQosPolicyRuleAction action;
         private String description;
+        private String device;
         private GetQosPolicyRuleDscpTos dscpTos;
-        private @Nullable String folder;
+        private String folder;
         private String id;
         private String name;
         private String schedule;
+        private String snippet;
         private String tfid;
         public Builder() {}
         public Builder(GetQosPolicyRuleResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.action = defaults.action;
     	      this.description = defaults.description;
+    	      this.device = defaults.device;
     	      this.dscpTos = defaults.dscpTos;
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.schedule = defaults.schedule;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
         }
 
@@ -152,6 +178,14 @@ public final class GetQosPolicyRuleResult {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetQosPolicyRuleResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder dscpTos(GetQosPolicyRuleDscpTos dscpTos) {
             if (dscpTos == null) {
               throw new MissingRequiredPropertyException("GetQosPolicyRuleResult", "dscpTos");
@@ -160,8 +194,10 @@ public final class GetQosPolicyRuleResult {
             return this;
         }
         @CustomType.Setter
-        public Builder folder(@Nullable String folder) {
-
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetQosPolicyRuleResult", "folder");
+            }
             this.folder = folder;
             return this;
         }
@@ -190,6 +226,14 @@ public final class GetQosPolicyRuleResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetQosPolicyRuleResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetQosPolicyRuleResult", "tfid");
@@ -201,11 +245,13 @@ public final class GetQosPolicyRuleResult {
             final var _resultValue = new GetQosPolicyRuleResult();
             _resultValue.action = action;
             _resultValue.description = description;
+            _resultValue.device = device;
             _resultValue.dscpTos = dscpTos;
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.schedule = schedule;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             return _resultValue;
         }

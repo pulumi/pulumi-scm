@@ -12,110 +12,110 @@ import java.util.Objects;
 @CustomType
 public final class GetRemoteNetworkProtocolBgp {
     /**
-     * @return The DoNotExportRoutes param.
+     * @return Do not export routes?
      * 
      */
     private Boolean doNotExportRoutes;
     /**
-     * @return to setup bgp protocol, enable need to set as true.
+     * @return Enable BGP peering?
      * 
      */
     private Boolean enable;
     /**
-     * @return The LocalIpAddress param.
+     * @return Local peer IP address
      * 
      */
     private String localIpAddress;
     /**
-     * @return The OriginateDefaultRoute param.
+     * @return Originate default route?
      * 
      */
     private Boolean originateDefaultRoute;
     /**
-     * @return The PeerAs param.
+     * @return BGP peer ASN
      * 
      */
     private String peerAs;
     /**
-     * @return The PeerIpAddress param.
+     * @return Remote peer IP address
      * 
      */
     private String peerIpAddress;
     /**
-     * @return Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `&#34;exchange-v4-over-v4&#34;`, `&#34;exchange-v4-v6-over-v4&#34;`, `&#34;exchange-v4-over-v4-v6-over-v6&#34;`, `&#34;exchange-v6-over-v6&#34;`.
+     * @return Route exchange types
      * 
      */
     private String peeringType;
     /**
-     * @return The Secret param.
+     * @return BGP peering secret
      * 
      */
     private String secret;
     /**
-     * @return The SummarizeMobileUserRoutes param.
+     * @return Summarize mobile user routes?
      * 
      */
     private Boolean summarizeMobileUserRoutes;
 
     private GetRemoteNetworkProtocolBgp() {}
     /**
-     * @return The DoNotExportRoutes param.
+     * @return Do not export routes?
      * 
      */
     public Boolean doNotExportRoutes() {
         return this.doNotExportRoutes;
     }
     /**
-     * @return to setup bgp protocol, enable need to set as true.
+     * @return Enable BGP peering?
      * 
      */
     public Boolean enable() {
         return this.enable;
     }
     /**
-     * @return The LocalIpAddress param.
+     * @return Local peer IP address
      * 
      */
     public String localIpAddress() {
         return this.localIpAddress;
     }
     /**
-     * @return The OriginateDefaultRoute param.
+     * @return Originate default route?
      * 
      */
     public Boolean originateDefaultRoute() {
         return this.originateDefaultRoute;
     }
     /**
-     * @return The PeerAs param.
+     * @return BGP peer ASN
      * 
      */
     public String peerAs() {
         return this.peerAs;
     }
     /**
-     * @return The PeerIpAddress param.
+     * @return Remote peer IP address
      * 
      */
     public String peerIpAddress() {
         return this.peerIpAddress;
     }
     /**
-     * @return Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `&#34;exchange-v4-over-v4&#34;`, `&#34;exchange-v4-v6-over-v4&#34;`, `&#34;exchange-v4-over-v4-v6-over-v6&#34;`, `&#34;exchange-v6-over-v6&#34;`.
+     * @return Route exchange types
      * 
      */
     public String peeringType() {
         return this.peeringType;
     }
     /**
-     * @return The Secret param.
+     * @return BGP peering secret
      * 
      */
     public String secret() {
         return this.secret;
     }
     /**
-     * @return The SummarizeMobileUserRoutes param.
+     * @return Summarize mobile user routes?
      * 
      */
     public Boolean summarizeMobileUserRoutes() {

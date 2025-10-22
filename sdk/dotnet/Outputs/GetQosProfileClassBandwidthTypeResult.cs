@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosProfileClassBandwidthTypeResult
     {
         /// <summary>
-        /// The Mbps param.
+        /// Mbps
         /// </summary>
         public readonly Outputs.GetQosProfileClassBandwidthTypeMbpsResult Mbps;
         /// <summary>
-        /// The Percentage param.
+        /// Percentage
         /// </summary>
         public readonly Outputs.GetQosProfileClassBandwidthTypePercentageResult Percentage;
 

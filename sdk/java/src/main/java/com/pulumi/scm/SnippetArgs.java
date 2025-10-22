@@ -17,14 +17,14 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
     public static final SnippetArgs Empty = new SnippetArgs();
 
     /**
-     * The Description param.
+     * The description of the snippet
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the snippet
      * 
      */
     public Optional<Output<String>> description() {
@@ -32,14 +32,14 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Labels param.
+     * Labels applied to the snippet
      * 
      */
     @Import(name="labels")
     private @Nullable Output<List<String>> labels;
 
     /**
-     * @return The Labels param.
+     * @return Labels applied to the snippet
      * 
      */
     public Optional<Output<List<String>>> labels() {
@@ -47,18 +47,33 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Name param.
+     * The name of the snippet
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the snippet
      * 
      */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    /**
+     * The snippet type
+     * 
+     */
+    @Import(name="type")
+    private @Nullable Output<String> type;
+
+    /**
+     * @return The snippet type
+     * 
+     */
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     private SnippetArgs() {}
@@ -67,6 +82,7 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
         this.description = $.description;
         this.labels = $.labels;
         this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
@@ -88,7 +104,7 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the snippet
          * 
          * @return builder
          * 
@@ -99,7 +115,7 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the snippet
          * 
          * @return builder
          * 
@@ -109,7 +125,7 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param labels The Labels param.
+         * @param labels Labels applied to the snippet
          * 
          * @return builder
          * 
@@ -120,7 +136,7 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param labels The Labels param.
+         * @param labels Labels applied to the snippet
          * 
          * @return builder
          * 
@@ -130,7 +146,7 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param labels The Labels param.
+         * @param labels Labels applied to the snippet
          * 
          * @return builder
          * 
@@ -140,7 +156,7 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the snippet
          * 
          * @return builder
          * 
@@ -151,13 +167,34 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the snippet
          * 
          * @return builder
          * 
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param type The snippet type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable Output<String> type) {
+            $.type = type;
+            return this;
+        }
+
+        /**
+         * @param type The snippet type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         public SnippetArgs build() {

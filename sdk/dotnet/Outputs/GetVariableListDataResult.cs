@@ -14,27 +14,40 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetVariableListDataResult
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the variable
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the variable
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the variable
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Overridden param.
+        /// Is the variable overridden?
         /// </summary>
         public readonly bool Overridden;
         /// <summary>
-        /// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// The variable type
         /// </summary>
         public readonly string Type;
         /// <summary>
-        /// value can accept either string or integer.
+        /// The value of the variable
         /// </summary>
         public readonly string Value;
 
@@ -42,20 +55,32 @@ namespace Pulumi.Scm.Outputs
         private GetVariableListDataResult(
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
             string name,
 
             bool overridden,
 
+            string snippet,
+
+            string tfid,
+
             string type,
 
             string value)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
             Overridden = overridden;
+            Snippet = snippet;
+            Tfid = tfid;
             Type = type;
             Value = value;
         }

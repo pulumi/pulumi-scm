@@ -5,16 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.SamlServerProfile("example", {});
- * ```
+ * SamlServerProfile resource
  */
 export class SamlServerProfile extends pulumi.CustomResource {
     /**
@@ -45,48 +36,52 @@ export class SamlServerProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Certificate param. String length must not exceed 63 characters.
+     * The identity provider certificate
      */
     declare public readonly certificate: pulumi.Output<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The EntityId param. String length must be between 1 and 1024 characters.
+     * The identity provider ID
      */
-    declare public readonly entityId: pulumi.Output<string | undefined>;
+    declare public readonly entityId: pulumi.Output<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The MaxClockSkew param. Value must be between 1 and 900.
+     * Maxiumum clock skew
      */
     declare public readonly maxClockSkew: pulumi.Output<number | undefined>;
     /**
-     * The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+     * The name of the SAML server profile
+     */
+    declare public readonly name: pulumi.Output<string>;
+    /**
+     * SAML HTTP binding for SLO requests to the identity provider
      */
     declare public readonly sloBindings: pulumi.Output<string | undefined>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+     * SAML HTTP binding for SSO requests to the identity provider
      */
-    declare public readonly ssoBindings: pulumi.Output<string | undefined>;
+    declare public readonly ssoBindings: pulumi.Output<string>;
     /**
-     * The SsoUrl param. String length must be between 1 and 255 characters.
+     * Identity provider SSO URL
      */
-    declare public readonly ssoUrl: pulumi.Output<string | undefined>;
+    declare public readonly ssoUrl: pulumi.Output<string>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The ValidateIdpCertificate param.
+     * Validate the identity provider certificate?
      */
     declare public readonly validateIdpCertificate: pulumi.Output<boolean | undefined>;
     /**
-     * The WantAuthRequestsSigned param.
+     * Sign SAML message to the identity provider?
      */
     declare public readonly wantAuthRequestsSigned: pulumi.Output<boolean | undefined>;
 
@@ -108,6 +103,7 @@ export class SamlServerProfile extends pulumi.CustomResource {
             resourceInputs["entityId"] = state?.entityId;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["maxClockSkew"] = state?.maxClockSkew;
+            resourceInputs["name"] = state?.name;
             resourceInputs["sloBindings"] = state?.sloBindings;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["ssoBindings"] = state?.ssoBindings;
@@ -120,11 +116,21 @@ export class SamlServerProfile extends pulumi.CustomResource {
             if (args?.certificate === undefined && !opts.urn) {
                 throw new Error("Missing required property 'certificate'");
             }
+            if (args?.entityId === undefined && !opts.urn) {
+                throw new Error("Missing required property 'entityId'");
+            }
+            if (args?.ssoBindings === undefined && !opts.urn) {
+                throw new Error("Missing required property 'ssoBindings'");
+            }
+            if (args?.ssoUrl === undefined && !opts.urn) {
+                throw new Error("Missing required property 'ssoUrl'");
+            }
             resourceInputs["certificate"] = args?.certificate;
             resourceInputs["device"] = args?.device;
             resourceInputs["entityId"] = args?.entityId;
             resourceInputs["folder"] = args?.folder;
             resourceInputs["maxClockSkew"] = args?.maxClockSkew;
+            resourceInputs["name"] = args?.name;
             resourceInputs["sloBindings"] = args?.sloBindings;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["ssoBindings"] = args?.ssoBindings;
@@ -143,48 +149,52 @@ export class SamlServerProfile extends pulumi.CustomResource {
  */
 export interface SamlServerProfileState {
     /**
-     * The Certificate param. String length must not exceed 63 characters.
+     * The identity provider certificate
      */
     certificate?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The EntityId param. String length must be between 1 and 1024 characters.
+     * The identity provider ID
      */
     entityId?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The MaxClockSkew param. Value must be between 1 and 900.
+     * Maxiumum clock skew
      */
     maxClockSkew?: pulumi.Input<number>;
     /**
-     * The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+     * The name of the SAML server profile
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * SAML HTTP binding for SLO requests to the identity provider
      */
     sloBindings?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+     * SAML HTTP binding for SSO requests to the identity provider
      */
     ssoBindings?: pulumi.Input<string>;
     /**
-     * The SsoUrl param. String length must be between 1 and 255 characters.
+     * Identity provider SSO URL
      */
     ssoUrl?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The ValidateIdpCertificate param.
+     * Validate the identity provider certificate?
      */
     validateIdpCertificate?: pulumi.Input<boolean>;
     /**
-     * The WantAuthRequestsSigned param.
+     * Sign SAML message to the identity provider?
      */
     wantAuthRequestsSigned?: pulumi.Input<boolean>;
 }
@@ -194,47 +204,51 @@ export interface SamlServerProfileState {
  */
 export interface SamlServerProfileArgs {
     /**
-     * The Certificate param. String length must not exceed 63 characters.
+     * The identity provider certificate
      */
     certificate: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The EntityId param. String length must be between 1 and 1024 characters.
+     * The identity provider ID
      */
-    entityId?: pulumi.Input<string>;
+    entityId: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The MaxClockSkew param. Value must be between 1 and 900.
+     * Maxiumum clock skew
      */
     maxClockSkew?: pulumi.Input<number>;
     /**
-     * The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+     * The name of the SAML server profile
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * SAML HTTP binding for SLO requests to the identity provider
      */
     sloBindings?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+     * SAML HTTP binding for SSO requests to the identity provider
      */
-    ssoBindings?: pulumi.Input<string>;
+    ssoBindings: pulumi.Input<string>;
     /**
-     * The SsoUrl param. String length must be between 1 and 255 characters.
+     * Identity provider SSO URL
      */
-    ssoUrl?: pulumi.Input<string>;
+    ssoUrl: pulumi.Input<string>;
     /**
-     * The ValidateIdpCertificate param.
+     * Validate the identity provider certificate?
      */
     validateIdpCertificate?: pulumi.Input<boolean>;
     /**
-     * The WantAuthRequestsSigned param.
+     * Sign SAML message to the identity provider?
      */
     wantAuthRequestsSigned?: pulumi.Input<boolean>;
 }

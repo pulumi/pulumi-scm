@@ -8,23 +8,17 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getSnippetList({});
- * ```
  */
 export function getSnippetList(args?: GetSnippetListArgs, opts?: pulumi.InvokeOptions): Promise<GetSnippetListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSnippetList:getSnippetList", {
+        "device": args.device,
+        "folder": args.folder,
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -33,17 +27,29 @@ export function getSnippetList(args?: GetSnippetListArgs, opts?: pulumi.InvokeOp
  */
 export interface GetSnippetListArgs {
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The device of the item.
+     */
+    device?: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    folder?: string;
+    /**
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
+    /**
+     * The snippet of the item.
+     */
+    snippet?: string;
 }
 
 /**
@@ -51,50 +57,56 @@ export interface GetSnippetListArgs {
  */
 export interface GetSnippetListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetSnippetListData[];
+    /**
+     * The device of the item.
+     */
+    readonly device?: string;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    readonly folder?: string;
     /**
      * The provider-assigned unique ID for this managed resource.
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
+    /**
+     * The snippet of the item.
+     */
+    readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
 /**
  * Retrieves a listing of config items.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getSnippetList({});
- * ```
  */
 export function getSnippetListOutput(args?: GetSnippetListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSnippetListResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSnippetList:getSnippetList", {
+        "device": args.device,
+        "folder": args.folder,
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -103,15 +115,27 @@ export function getSnippetListOutput(args?: GetSnippetListOutputArgs, opts?: pul
  */
 export interface GetSnippetListOutputArgs {
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The device of the item.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder of the item. Default: Shared.
+     */
+    folder?: pulumi.Input<string>;
+    /**
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
+    /**
+     * The snippet of the item.
+     */
+    snippet?: pulumi.Input<string>;
 }

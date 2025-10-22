@@ -16,14 +16,14 @@ public final class IkeGatewayProtocolIkev1DpdArgs extends com.pulumi.resources.R
     public static final IkeGatewayProtocolIkev1DpdArgs Empty = new IkeGatewayProtocolIkev1DpdArgs();
 
     /**
-     * The Enable param.
+     * Enable
      * 
      */
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     public Optional<Output<Boolean>> enable() {
@@ -55,7 +55,7 @@ public final class IkeGatewayProtocolIkev1DpdArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param enable The Enable param.
+         * @param enable Enable
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class IkeGatewayProtocolIkev1DpdArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param enable The Enable param.
+         * @param enable Enable
          * 
          * @return builder
          * 

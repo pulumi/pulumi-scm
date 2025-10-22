@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAuthenticationProfileListDataMethodLdapResult
     {
         /// <summary>
-        /// The LoginAttribute param.
+        /// Login attribute
         /// </summary>
         public readonly string LoginAttribute;
         /// <summary>
-        /// The PasswdExpDays param.
+        /// Passwd exp days
         /// </summary>
         public readonly int PasswdExpDays;
         /// <summary>
-        /// The ServerProfile param.
+        /// Server profile
         /// </summary>
         public readonly string ServerProfile;
 

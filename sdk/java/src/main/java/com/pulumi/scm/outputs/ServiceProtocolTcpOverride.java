@@ -12,38 +12,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceProtocolTcpOverride {
     /**
-     * @return tcp session half-close timeout value (in second). Value must be between 1 and 604800. Default: `120`.
+     * @return tcp session half-close timeout value (in second)
      * 
      */
     private @Nullable Integer halfcloseTimeout;
     /**
-     * @return tcp session timeout value (in second). Value must be between 1 and 604800. Default: `3600`.
+     * @return tcp session timeout value (in second)
      * 
      */
     private @Nullable Integer timeout;
     /**
-     * @return tcp session time-wait timeout value (in second). Value must be between 1 and 600. Default: `15`.
+     * @return tcp session time-wait timeout value (in second)
      * 
      */
     private @Nullable Integer timewaitTimeout;
 
     private ServiceProtocolTcpOverride() {}
     /**
-     * @return tcp session half-close timeout value (in second). Value must be between 1 and 604800. Default: `120`.
+     * @return tcp session half-close timeout value (in second)
      * 
      */
     public Optional<Integer> halfcloseTimeout() {
         return Optional.ofNullable(this.halfcloseTimeout);
     }
     /**
-     * @return tcp session timeout value (in second). Value must be between 1 and 604800. Default: `3600`.
+     * @return tcp session timeout value (in second)
      * 
      */
     public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
-     * @return tcp session time-wait timeout value (in second). Value must be between 1 and 600. Default: `15`.
+     * @return tcp session time-wait timeout value (in second)
      * 
      */
     public Optional<Integer> timewaitTimeout() {

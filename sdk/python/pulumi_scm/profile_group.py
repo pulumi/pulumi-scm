@@ -20,6 +20,7 @@ __all__ = ['ProfileGroupArgs', 'ProfileGroup']
 class ProfileGroupArgs:
     def __init__(__self__, *,
                  ai_securities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 data_filterings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  dns_securities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  file_blockings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -33,21 +34,24 @@ class ProfileGroupArgs:
                  vulnerabilities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a ProfileGroup resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ai_securities: List of AI security profiles.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: List of DNS security profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: List of file blocking profiles.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The name of the profile group.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: List of HTTP header insertion profiles.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: List of anti-spyware profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: List of URL filtering profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: List of anti-virus and Wildfire analysis profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vulnerabilities: List of vulnerability protection profiles.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ai_securities: Ai security
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] data_filterings: Data filtering
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: Dns security
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: File blocking
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the profile group
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: Saas security
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: Spyware
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: Url filtering
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: Virus and wildfire analysis
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vulnerabilities: Vulnerability
         """
         if ai_securities is not None:
             pulumi.set(__self__, "ai_securities", ai_securities)
+        if data_filterings is not None:
+            pulumi.set(__self__, "data_filterings", data_filterings)
         if device is not None:
             pulumi.set(__self__, "device", device)
         if dns_securities is not None:
@@ -75,7 +79,7 @@ class ProfileGroupArgs:
     @pulumi.getter(name="aiSecurities")
     def ai_securities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of AI security profiles.
+        Ai security
         """
         return pulumi.get(self, "ai_securities")
 
@@ -84,10 +88,22 @@ class ProfileGroupArgs:
         pulumi.set(self, "ai_securities", value)
 
     @_builtins.property
+    @pulumi.getter(name="dataFilterings")
+    def data_filterings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Data filtering
+        """
+        return pulumi.get(self, "data_filterings")
+
+    @data_filterings.setter
+    def data_filterings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "data_filterings", value)
+
+    @_builtins.property
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -99,7 +115,7 @@ class ProfileGroupArgs:
     @pulumi.getter(name="dnsSecurities")
     def dns_securities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of DNS security profiles.
+        Dns security
         """
         return pulumi.get(self, "dns_securities")
 
@@ -111,7 +127,7 @@ class ProfileGroupArgs:
     @pulumi.getter(name="fileBlockings")
     def file_blockings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of file blocking profiles.
+        File blocking
         """
         return pulumi.get(self, "file_blockings")
 
@@ -123,7 +139,7 @@ class ProfileGroupArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -135,7 +151,7 @@ class ProfileGroupArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The name of the profile group.
+        The name of the profile group
         """
         return pulumi.get(self, "name")
 
@@ -147,7 +163,7 @@ class ProfileGroupArgs:
     @pulumi.getter(name="saasSecurities")
     def saas_securities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of HTTP header insertion profiles.
+        Saas security
         """
         return pulumi.get(self, "saas_securities")
 
@@ -159,7 +175,7 @@ class ProfileGroupArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -171,7 +187,7 @@ class ProfileGroupArgs:
     @pulumi.getter
     def spywares(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of anti-spyware profiles.
+        Spyware
         """
         return pulumi.get(self, "spywares")
 
@@ -183,7 +199,7 @@ class ProfileGroupArgs:
     @pulumi.getter(name="urlFilterings")
     def url_filterings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of URL filtering profiles.
+        Url filtering
         """
         return pulumi.get(self, "url_filterings")
 
@@ -195,7 +211,7 @@ class ProfileGroupArgs:
     @pulumi.getter(name="virusAndWildfireAnalyses")
     def virus_and_wildfire_analyses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of anti-virus and Wildfire analysis profiles.
+        Virus and wildfire analysis
         """
         return pulumi.get(self, "virus_and_wildfire_analyses")
 
@@ -207,7 +223,7 @@ class ProfileGroupArgs:
     @pulumi.getter
     def vulnerabilities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of vulnerability protection profiles.
+        Vulnerability
         """
         return pulumi.get(self, "vulnerabilities")
 
@@ -220,6 +236,7 @@ class ProfileGroupArgs:
 class _ProfileGroupState:
     def __init__(__self__, *,
                  ai_securities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 data_filterings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  dns_securities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  file_blockings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -234,21 +251,24 @@ class _ProfileGroupState:
                  vulnerabilities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering ProfileGroup resources.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ai_securities: List of AI security profiles.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: List of DNS security profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: List of file blocking profiles.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The name of the profile group.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: List of HTTP header insertion profiles.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: List of anti-spyware profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: List of URL filtering profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: List of anti-virus and Wildfire analysis profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vulnerabilities: List of vulnerability protection profiles.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ai_securities: Ai security
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] data_filterings: Data filtering
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: Dns security
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: File blocking
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the profile group
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: Saas security
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: Spyware
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: Url filtering
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: Virus and wildfire analysis
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vulnerabilities: Vulnerability
         """
         if ai_securities is not None:
             pulumi.set(__self__, "ai_securities", ai_securities)
+        if data_filterings is not None:
+            pulumi.set(__self__, "data_filterings", data_filterings)
         if device is not None:
             pulumi.set(__self__, "device", device)
         if dns_securities is not None:
@@ -278,7 +298,7 @@ class _ProfileGroupState:
     @pulumi.getter(name="aiSecurities")
     def ai_securities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of AI security profiles.
+        Ai security
         """
         return pulumi.get(self, "ai_securities")
 
@@ -287,10 +307,22 @@ class _ProfileGroupState:
         pulumi.set(self, "ai_securities", value)
 
     @_builtins.property
+    @pulumi.getter(name="dataFilterings")
+    def data_filterings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Data filtering
+        """
+        return pulumi.get(self, "data_filterings")
+
+    @data_filterings.setter
+    def data_filterings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "data_filterings", value)
+
+    @_builtins.property
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -302,7 +334,7 @@ class _ProfileGroupState:
     @pulumi.getter(name="dnsSecurities")
     def dns_securities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of DNS security profiles.
+        Dns security
         """
         return pulumi.get(self, "dns_securities")
 
@@ -314,7 +346,7 @@ class _ProfileGroupState:
     @pulumi.getter(name="fileBlockings")
     def file_blockings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of file blocking profiles.
+        File blocking
         """
         return pulumi.get(self, "file_blockings")
 
@@ -326,7 +358,7 @@ class _ProfileGroupState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -338,7 +370,7 @@ class _ProfileGroupState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The name of the profile group.
+        The name of the profile group
         """
         return pulumi.get(self, "name")
 
@@ -350,7 +382,7 @@ class _ProfileGroupState:
     @pulumi.getter(name="saasSecurities")
     def saas_securities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of HTTP header insertion profiles.
+        Saas security
         """
         return pulumi.get(self, "saas_securities")
 
@@ -362,7 +394,7 @@ class _ProfileGroupState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -374,7 +406,7 @@ class _ProfileGroupState:
     @pulumi.getter
     def spywares(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of anti-spyware profiles.
+        Spyware
         """
         return pulumi.get(self, "spywares")
 
@@ -395,7 +427,7 @@ class _ProfileGroupState:
     @pulumi.getter(name="urlFilterings")
     def url_filterings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of URL filtering profiles.
+        Url filtering
         """
         return pulumi.get(self, "url_filterings")
 
@@ -407,7 +439,7 @@ class _ProfileGroupState:
     @pulumi.getter(name="virusAndWildfireAnalyses")
     def virus_and_wildfire_analyses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of anti-virus and Wildfire analysis profiles.
+        Virus and wildfire analysis
         """
         return pulumi.get(self, "virus_and_wildfire_analyses")
 
@@ -419,7 +451,7 @@ class _ProfileGroupState:
     @pulumi.getter
     def vulnerabilities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of vulnerability protection profiles.
+        Vulnerability
         """
         return pulumi.get(self, "vulnerabilities")
 
@@ -435,6 +467,7 @@ class ProfileGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  ai_securities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 data_filterings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  dns_securities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  file_blockings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -448,31 +481,23 @@ class ProfileGroup(pulumi.CustomResource):
                  vulnerabilities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.ProfileGroup("example")
-        ```
+        ProfileGroup resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ai_securities: List of AI security profiles.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: List of DNS security profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: List of file blocking profiles.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The name of the profile group.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: List of HTTP header insertion profiles.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: List of anti-spyware profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: List of URL filtering profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: List of anti-virus and Wildfire analysis profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vulnerabilities: List of vulnerability protection profiles.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ai_securities: Ai security
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] data_filterings: Data filtering
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: Dns security
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: File blocking
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the profile group
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: Saas security
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: Spyware
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: Url filtering
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: Virus and wildfire analysis
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vulnerabilities: Vulnerability
         """
         ...
     @overload
@@ -481,16 +506,7 @@ class ProfileGroup(pulumi.CustomResource):
                  args: Optional[ProfileGroupArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.ProfileGroup("example")
-        ```
+        ProfileGroup resource
 
         :param str resource_name: The name of the resource.
         :param ProfileGroupArgs args: The arguments to use to populate this resource's properties.
@@ -508,6 +524,7 @@ class ProfileGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  ai_securities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 data_filterings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  dns_securities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  file_blockings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -529,6 +546,7 @@ class ProfileGroup(pulumi.CustomResource):
             __props__ = ProfileGroupArgs.__new__(ProfileGroupArgs)
 
             __props__.__dict__["ai_securities"] = ai_securities
+            __props__.__dict__["data_filterings"] = data_filterings
             __props__.__dict__["device"] = device
             __props__.__dict__["dns_securities"] = dns_securities
             __props__.__dict__["file_blockings"] = file_blockings
@@ -552,6 +570,7 @@ class ProfileGroup(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             ai_securities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            data_filterings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             device: Optional[pulumi.Input[_builtins.str]] = None,
             dns_securities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             file_blockings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -571,24 +590,26 @@ class ProfileGroup(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ai_securities: List of AI security profiles.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: List of DNS security profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: List of file blocking profiles.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The name of the profile group.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: List of HTTP header insertion profiles.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: List of anti-spyware profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: List of URL filtering profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: List of anti-virus and Wildfire analysis profiles.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vulnerabilities: List of vulnerability protection profiles.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ai_securities: Ai security
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] data_filterings: Data filtering
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_securities: Dns security
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] file_blockings: File blocking
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the profile group
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] saas_securities: Saas security
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] spywares: Spyware
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] url_filterings: Url filtering
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virus_and_wildfire_analyses: Virus and wildfire analysis
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vulnerabilities: Vulnerability
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
         __props__ = _ProfileGroupState.__new__(_ProfileGroupState)
 
         __props__.__dict__["ai_securities"] = ai_securities
+        __props__.__dict__["data_filterings"] = data_filterings
         __props__.__dict__["device"] = device
         __props__.__dict__["dns_securities"] = dns_securities
         __props__.__dict__["file_blockings"] = file_blockings
@@ -607,15 +628,23 @@ class ProfileGroup(pulumi.CustomResource):
     @pulumi.getter(name="aiSecurities")
     def ai_securities(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        List of AI security profiles.
+        Ai security
         """
         return pulumi.get(self, "ai_securities")
+
+    @_builtins.property
+    @pulumi.getter(name="dataFilterings")
+    def data_filterings(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+        """
+        Data filtering
+        """
+        return pulumi.get(self, "data_filterings")
 
     @_builtins.property
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -623,7 +652,7 @@ class ProfileGroup(pulumi.CustomResource):
     @pulumi.getter(name="dnsSecurities")
     def dns_securities(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        List of DNS security profiles.
+        Dns security
         """
         return pulumi.get(self, "dns_securities")
 
@@ -631,7 +660,7 @@ class ProfileGroup(pulumi.CustomResource):
     @pulumi.getter(name="fileBlockings")
     def file_blockings(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        List of file blocking profiles.
+        File blocking
         """
         return pulumi.get(self, "file_blockings")
 
@@ -639,7 +668,7 @@ class ProfileGroup(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -647,7 +676,7 @@ class ProfileGroup(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The name of the profile group.
+        The name of the profile group
         """
         return pulumi.get(self, "name")
 
@@ -655,7 +684,7 @@ class ProfileGroup(pulumi.CustomResource):
     @pulumi.getter(name="saasSecurities")
     def saas_securities(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        List of HTTP header insertion profiles.
+        Saas security
         """
         return pulumi.get(self, "saas_securities")
 
@@ -663,7 +692,7 @@ class ProfileGroup(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -671,7 +700,7 @@ class ProfileGroup(pulumi.CustomResource):
     @pulumi.getter
     def spywares(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        List of anti-spyware profiles.
+        Spyware
         """
         return pulumi.get(self, "spywares")
 
@@ -684,7 +713,7 @@ class ProfileGroup(pulumi.CustomResource):
     @pulumi.getter(name="urlFilterings")
     def url_filterings(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        List of URL filtering profiles.
+        Url filtering
         """
         return pulumi.get(self, "url_filterings")
 
@@ -692,7 +721,7 @@ class ProfileGroup(pulumi.CustomResource):
     @pulumi.getter(name="virusAndWildfireAnalyses")
     def virus_and_wildfire_analyses(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        List of anti-virus and Wildfire analysis profiles.
+        Virus and wildfire analysis
         """
         return pulumi.get(self, "virus_and_wildfire_analyses")
 
@@ -700,7 +729,7 @@ class ProfileGroup(pulumi.CustomResource):
     @pulumi.getter
     def vulnerabilities(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        List of vulnerability protection profiles.
+        Vulnerability
         """
         return pulumi.get(self, "vulnerabilities")
 

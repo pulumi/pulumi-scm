@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * IpsecCryptoProfile data source
  *
  * ## Example Usage
  *
@@ -15,18 +15,18 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getIpsecCryptoProfile({
- *     id: "1234-56-789",
+ * // Example of looking up an individual IPsec Crypto Profile by its ID.
+ * const scmIpsecCryptoProfileDs = scm.getIpsecCryptoProfile({
+ *     id: "b89e8fe1-9e92-46fa-8a67-de84313128c9",
  * });
+ * export const ipsecProfileById = scmIpsecCryptoProfileDs;
  * ```
  */
 export function getIpsecCryptoProfile(args: GetIpsecCryptoProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetIpsecCryptoProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", {
-        "device": args.device,
-        "folder": args.folder,
         "id": args.id,
-        "snippet": args.snippet,
+        "name": args.name,
     }, opts);
 }
 
@@ -35,21 +35,13 @@ export function getIpsecCryptoProfile(args: GetIpsecCryptoProfileArgs, opts?: pu
  */
 export interface GetIpsecCryptoProfileArgs {
     /**
-     * The Device param.
-     */
-    device?: string;
-    /**
-     * The Folder param.
-     */
-    folder?: string;
-    /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
     /**
-     * The Snippet param.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    snippet?: string;
+    name?: string;
 }
 
 /**
@@ -57,49 +49,49 @@ export interface GetIpsecCryptoProfileArgs {
  */
 export interface GetIpsecCryptoProfileResult {
     /**
-     * The Ah param.
+     * Ah
      */
     readonly ah: outputs.GetIpsecCryptoProfileAh;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
-    readonly device?: string;
+    readonly device: string;
     /**
-     * phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+     * phase-2 DH group (PFS DH group)
      */
     readonly dhGroup: string;
     /**
-     * The Esp param.
+     * Esp
      */
     readonly esp: outputs.GetIpsecCryptoProfileEsp;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
-    readonly folder?: string;
+    readonly folder: string;
     /**
-     * The Id param.
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The Lifesize param.
+     * Lifesize
      */
     readonly lifesize: outputs.GetIpsecCryptoProfileLifesize;
     /**
-     * The Lifetime param.
+     * Ipsec crypto profile lifetime
      */
     readonly lifetime: outputs.GetIpsecCryptoProfileLifetime;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
-    readonly snippet?: string;
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * IpsecCryptoProfile data source
  *
  * ## Example Usage
  *
@@ -107,18 +99,18 @@ export interface GetIpsecCryptoProfileResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getIpsecCryptoProfile({
- *     id: "1234-56-789",
+ * // Example of looking up an individual IPsec Crypto Profile by its ID.
+ * const scmIpsecCryptoProfileDs = scm.getIpsecCryptoProfile({
+ *     id: "b89e8fe1-9e92-46fa-8a67-de84313128c9",
  * });
+ * export const ipsecProfileById = scmIpsecCryptoProfileDs;
  * ```
  */
 export function getIpsecCryptoProfileOutput(args: GetIpsecCryptoProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpsecCryptoProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", {
-        "device": args.device,
-        "folder": args.folder,
         "id": args.id,
-        "snippet": args.snippet,
+        "name": args.name,
     }, opts);
 }
 
@@ -127,19 +119,11 @@ export function getIpsecCryptoProfileOutput(args: GetIpsecCryptoProfileOutputArg
  */
 export interface GetIpsecCryptoProfileOutputArgs {
     /**
-     * The Device param.
-     */
-    device?: pulumi.Input<string>;
-    /**
-     * The Folder param.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    snippet?: pulumi.Input<string>;
+    name?: pulumi.Input<string>;
 }

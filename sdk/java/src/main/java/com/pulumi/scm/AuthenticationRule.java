@@ -18,358 +18,328 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.AuthenticationRule;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new AuthenticationRule("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * AuthenticationRule resource
  * 
  */
 @ResourceType(type="scm:index/authenticationRule:AuthenticationRule")
 public class AuthenticationRule extends com.pulumi.resources.CustomResource {
     /**
-     * the authentication profile name to apply to authentication rule.
+     * The authentication profile name
      * 
      */
     @Export(name="authenticationEnforcement", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authenticationEnforcement;
 
     /**
-     * @return the authentication profile name to apply to authentication rule.
+     * @return The authentication profile name
      * 
      */
     public Output<Optional<String>> authenticationEnforcement() {
         return Codegen.optional(this.authenticationEnforcement);
     }
     /**
-     * The Categories param.
+     * The destination URL categories
      * 
      */
     @Export(name="categories", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> categories;
 
     /**
-     * @return The Categories param.
+     * @return The destination URL categories
      * 
      */
     public Output<Optional<List<String>>> categories() {
         return Codegen.optional(this.categories);
     }
     /**
-     * The Description param.
+     * The description of the authentication rule
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the authentication rule
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The DestinationHips param.
+     * The destination Host Integrity Profile (HIP)
      * 
      */
     @Export(name="destinationHips", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> destinationHips;
 
     /**
-     * @return The DestinationHips param.
+     * @return The destination Host Integrity Profile (HIP)
      * 
      */
     public Output<Optional<List<String>>> destinationHips() {
         return Codegen.optional(this.destinationHips);
     }
     /**
-     * The Destinations param.
+     * The destination addresses
      * 
      */
     @Export(name="destinations", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> destinations;
+    private Output<List<String>> destinations;
 
     /**
-     * @return The Destinations param.
+     * @return The destination addresses
      * 
      */
-    public Output<Optional<List<String>>> destinations() {
-        return Codegen.optional(this.destinations);
+    public Output<List<String>> destinations() {
+        return this.destinations;
     }
     /**
-     * The Device param.
+     * Device
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return Device
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Disabled param. Default: `false`.
+     * Is the authentication rule disabled?
      * 
      */
     @Export(name="disabled", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> disabled;
 
     /**
-     * @return The Disabled param. Default: `false`.
+     * @return Is the authentication rule disabled?
      * 
      */
     public Output<Boolean> disabled() {
         return this.disabled;
     }
     /**
-     * The Folder param.
+     * Folder
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return Folder
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Froms param.
+     * The source security zones
      * 
      */
     @Export(name="froms", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> froms;
+    private Output<List<String>> froms;
 
     /**
-     * @return The Froms param.
+     * @return The source security zones
      * 
      */
-    public Output<Optional<List<String>>> froms() {
-        return Codegen.optional(this.froms);
+    public Output<List<String>> froms() {
+        return this.froms;
     }
     /**
-     * The GroupTag param.
+     * Group tag
      * 
      */
     @Export(name="groupTag", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> groupTag;
 
     /**
-     * @return The GroupTag param.
+     * @return Group tag
      * 
      */
     public Output<Optional<String>> groupTag() {
         return Codegen.optional(this.groupTag);
     }
     /**
-     * The HipProfiles param.
+     * The source Host Integrity Profile (HIP)
      * 
      */
     @Export(name="hipProfiles", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> hipProfiles;
 
     /**
-     * @return The HipProfiles param.
+     * @return The source Host Integrity Profile (HIP)
      * 
      */
     public Output<Optional<List<String>>> hipProfiles() {
         return Codegen.optional(this.hipProfiles);
     }
     /**
-     * The LogAuthenticationTimeout param. Default: `false`.
+     * Log authentication timeouts?
      * 
      */
     @Export(name="logAuthenticationTimeout", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> logAuthenticationTimeout;
 
     /**
-     * @return The LogAuthenticationTimeout param. Default: `false`.
+     * @return Log authentication timeouts?
      * 
      */
     public Output<Boolean> logAuthenticationTimeout() {
         return this.logAuthenticationTimeout;
     }
     /**
-     * The LogSetting param.
+     * The log forwarding profile name
      * 
      */
     @Export(name="logSetting", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> logSetting;
 
     /**
-     * @return The LogSetting param.
+     * @return The log forwarding profile name
      * 
      */
     public Output<Optional<String>> logSetting() {
         return Codegen.optional(this.logSetting);
     }
     /**
-     * The Name param.
+     * The name of the authentication rule
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the authentication rule
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The NegateDestination param. Default: `false`.
+     * Are the destination addresses negated?
      * 
      */
     @Export(name="negateDestination", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> negateDestination;
 
     /**
-     * @return The NegateDestination param. Default: `false`.
+     * @return Are the destination addresses negated?
      * 
      */
     public Output<Boolean> negateDestination() {
         return this.negateDestination;
     }
     /**
-     * The NegateSource param. Default: `false`.
+     * Are the source addresses negated?
      * 
      */
     @Export(name="negateSource", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> negateSource;
 
     /**
-     * @return The NegateSource param. Default: `false`.
+     * @return Are the source addresses negated?
      * 
      */
     public Output<Boolean> negateSource() {
         return this.negateSource;
     }
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * The relative position of the rule
      * 
      */
     @Export(name="position", refs={String.class}, tree="[0]")
     private Output<String> position;
 
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * @return The relative position of the rule
      * 
      */
     public Output<String> position() {
         return this.position;
     }
     /**
-     * The Services param.
+     * The destination ports
      * 
      */
     @Export(name="services", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> services;
+    private Output<List<String>> services;
 
     /**
-     * @return The Services param.
+     * @return The destination ports
      * 
      */
-    public Output<Optional<List<String>>> services() {
-        return Codegen.optional(this.services);
+    public Output<List<String>> services() {
+        return this.services;
     }
     /**
-     * The Snippet param.
+     * Snippet
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return Snippet
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * The SourceHips param.
+     * The source Host Integrity Profile (HIP)
      * 
      */
     @Export(name="sourceHips", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> sourceHips;
 
     /**
-     * @return The SourceHips param.
+     * @return The source Host Integrity Profile (HIP)
      * 
      */
     public Output<Optional<List<String>>> sourceHips() {
         return Codegen.optional(this.sourceHips);
     }
     /**
-     * The SourceUsers param.
+     * The source users
      * 
      */
     @Export(name="sourceUsers", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> sourceUsers;
 
     /**
-     * @return The SourceUsers param.
+     * @return The source users
      * 
      */
     public Output<Optional<List<String>>> sourceUsers() {
         return Codegen.optional(this.sourceUsers);
     }
     /**
-     * The Sources param.
+     * The source addresses
      * 
      */
     @Export(name="sources", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> sources;
+    private Output<List<String>> sources;
 
     /**
-     * @return The Sources param.
+     * @return The source addresses
      * 
      */
-    public Output<Optional<List<String>>> sources() {
-        return Codegen.optional(this.sources);
+    public Output<List<String>> sources() {
+        return this.sources;
     }
     /**
-     * The Tags param.
+     * The authentication rule tags
      * 
      */
     @Export(name="tags", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> tags;
 
     /**
-     * @return The Tags param.
+     * @return The authentication rule tags
      * 
      */
     public Output<Optional<List<String>>> tags() {
@@ -382,32 +352,32 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The Timeout param. Value must be between 1 and 1440.
+     * The authentication session timeout (seconds)
      * 
      */
     @Export(name="timeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> timeout;
 
     /**
-     * @return The Timeout param. Value must be between 1 and 1440.
+     * @return The authentication session timeout (seconds)
      * 
      */
     public Output<Optional<Integer>> timeout() {
         return Codegen.optional(this.timeout);
     }
     /**
-     * The Tos param.
+     * The destination security zones
      * 
      */
     @Export(name="tos", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> tos;
+    private Output<List<String>> tos;
 
     /**
-     * @return The Tos param.
+     * @return The destination security zones
      * 
      */
-    public Output<Optional<List<String>>> tos() {
-        return Codegen.optional(this.tos);
+    public Output<List<String>> tos() {
+        return this.tos;
     }
 
     /**
@@ -422,7 +392,7 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AuthenticationRule(java.lang.String name, @Nullable AuthenticationRuleArgs args) {
+    public AuthenticationRule(java.lang.String name, AuthenticationRuleArgs args) {
         this(name, args, null);
     }
     /**
@@ -431,7 +401,7 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AuthenticationRule(java.lang.String name, @Nullable AuthenticationRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public AuthenticationRule(java.lang.String name, AuthenticationRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/authenticationRule:AuthenticationRule", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -439,7 +409,7 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
         super("scm:index/authenticationRule:AuthenticationRule", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static AuthenticationRuleArgs makeArgs(@Nullable AuthenticationRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static AuthenticationRuleArgs makeArgs(AuthenticationRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

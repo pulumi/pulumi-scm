@@ -6,35 +6,35 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetTrafficSteeringRuleActionForward;
-import java.lang.Boolean;
+import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetTrafficSteeringRuleAction {
     /**
-     * @return The Forward param.
+     * @return Forward
      * 
      */
     private GetTrafficSteeringRuleActionForward forward;
     /**
-     * @return The NoPbf param.
+     * @return No pbf
      * 
      */
-    private Boolean noPbf;
+    private String noPbf;
 
     private GetTrafficSteeringRuleAction() {}
     /**
-     * @return The Forward param.
+     * @return Forward
      * 
      */
     public GetTrafficSteeringRuleActionForward forward() {
         return this.forward;
     }
     /**
-     * @return The NoPbf param.
+     * @return No pbf
      * 
      */
-    public Boolean noPbf() {
+    public String noPbf() {
         return this.noPbf;
     }
 
@@ -48,7 +48,7 @@ public final class GetTrafficSteeringRuleAction {
     @CustomType.Builder
     public static final class Builder {
         private GetTrafficSteeringRuleActionForward forward;
-        private Boolean noPbf;
+        private String noPbf;
         public Builder() {}
         public Builder(GetTrafficSteeringRuleAction defaults) {
     	      Objects.requireNonNull(defaults);
@@ -65,7 +65,7 @@ public final class GetTrafficSteeringRuleAction {
             return this;
         }
         @CustomType.Setter
-        public Builder noPbf(Boolean noPbf) {
+        public Builder noPbf(String noPbf) {
             if (noPbf == null) {
               throw new MissingRequiredPropertyException("GetTrafficSteeringRuleAction", "noPbf");
             }

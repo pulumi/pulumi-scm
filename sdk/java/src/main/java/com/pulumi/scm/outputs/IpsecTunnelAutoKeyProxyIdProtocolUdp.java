@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IpsecTunnelAutoKeyProxyIdProtocolUdp {
     /**
-     * @return The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+     * @return Local port
      * 
      */
     private @Nullable Integer localPort;
     /**
-     * @return The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+     * @return Remote port
      * 
      */
     private @Nullable Integer remotePort;
 
     private IpsecTunnelAutoKeyProxyIdProtocolUdp() {}
     /**
-     * @return The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+     * @return Local port
      * 
      */
     public Optional<Integer> localPort() {
         return Optional.ofNullable(this.localPort);
     }
     /**
-     * @return The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+     * @return Remote port
      * 
      */
     public Optional<Integer> remotePort() {

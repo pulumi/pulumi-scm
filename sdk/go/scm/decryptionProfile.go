@@ -11,51 +11,27 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewDecryptionProfile(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// DecryptionProfile resource
 type DecryptionProfile struct {
 	pulumi.CustomResourceState
 
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// The SslForwardProxy param.
-	SslForwardProxy DecryptionProfileSslForwardProxyPtrOutput `pulumi:"sslForwardProxy"`
-	// The SslInboundProxy param.
-	SslInboundProxy DecryptionProfileSslInboundProxyPtrOutput `pulumi:"sslInboundProxy"`
-	// The SslNoProxy param.
-	SslNoProxy DecryptionProfileSslNoProxyPtrOutput `pulumi:"sslNoProxy"`
-	// The SslProtocolSettings param.
-	SslProtocolSettings DecryptionProfileSslProtocolSettingsPtrOutput `pulumi:"sslProtocolSettings"`
-	Tfid                pulumi.StringOutput                           `pulumi:"tfid"`
+	// Ssl forward proxy
+	SslForwardProxy DecryptionProfileSslForwardProxyOutput `pulumi:"sslForwardProxy"`
+	// Ssl inbound proxy
+	SslInboundProxy DecryptionProfileSslInboundProxyOutput `pulumi:"sslInboundProxy"`
+	// Ssl no proxy
+	SslNoProxy DecryptionProfileSslNoProxyOutput `pulumi:"sslNoProxy"`
+	// Ssl protocol settings
+	SslProtocolSettings DecryptionProfileSslProtocolSettingsOutput `pulumi:"sslProtocolSettings"`
+	Tfid                pulumi.StringOutput                        `pulumi:"tfid"`
 }
 
 // NewDecryptionProfile registers a new resource with the given unique name, arguments, and options.
@@ -88,41 +64,41 @@ func GetDecryptionProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering DecryptionProfile resources.
 type decryptionProfileState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The SslForwardProxy param.
+	// Ssl forward proxy
 	SslForwardProxy *DecryptionProfileSslForwardProxy `pulumi:"sslForwardProxy"`
-	// The SslInboundProxy param.
+	// Ssl inbound proxy
 	SslInboundProxy *DecryptionProfileSslInboundProxy `pulumi:"sslInboundProxy"`
-	// The SslNoProxy param.
+	// Ssl no proxy
 	SslNoProxy *DecryptionProfileSslNoProxy `pulumi:"sslNoProxy"`
-	// The SslProtocolSettings param.
+	// Ssl protocol settings
 	SslProtocolSettings *DecryptionProfileSslProtocolSettings `pulumi:"sslProtocolSettings"`
 	Tfid                *string                               `pulumi:"tfid"`
 }
 
 type DecryptionProfileState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The SslForwardProxy param.
+	// Ssl forward proxy
 	SslForwardProxy DecryptionProfileSslForwardProxyPtrInput
-	// The SslInboundProxy param.
+	// Ssl inbound proxy
 	SslInboundProxy DecryptionProfileSslInboundProxyPtrInput
-	// The SslNoProxy param.
+	// Ssl no proxy
 	SslNoProxy DecryptionProfileSslNoProxyPtrInput
-	// The SslProtocolSettings param.
+	// Ssl protocol settings
 	SslProtocolSettings DecryptionProfileSslProtocolSettingsPtrInput
 	Tfid                pulumi.StringPtrInput
 }
@@ -132,41 +108,41 @@ func (DecryptionProfileState) ElementType() reflect.Type {
 }
 
 type decryptionProfileArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The SslForwardProxy param.
+	// Ssl forward proxy
 	SslForwardProxy *DecryptionProfileSslForwardProxy `pulumi:"sslForwardProxy"`
-	// The SslInboundProxy param.
+	// Ssl inbound proxy
 	SslInboundProxy *DecryptionProfileSslInboundProxy `pulumi:"sslInboundProxy"`
-	// The SslNoProxy param.
+	// Ssl no proxy
 	SslNoProxy *DecryptionProfileSslNoProxy `pulumi:"sslNoProxy"`
-	// The SslProtocolSettings param.
+	// Ssl protocol settings
 	SslProtocolSettings *DecryptionProfileSslProtocolSettings `pulumi:"sslProtocolSettings"`
 }
 
 // The set of arguments for constructing a DecryptionProfile resource.
 type DecryptionProfileArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The SslForwardProxy param.
+	// Ssl forward proxy
 	SslForwardProxy DecryptionProfileSslForwardProxyPtrInput
-	// The SslInboundProxy param.
+	// Ssl inbound proxy
 	SslInboundProxy DecryptionProfileSslInboundProxyPtrInput
-	// The SslNoProxy param.
+	// Ssl no proxy
 	SslNoProxy DecryptionProfileSslNoProxyPtrInput
-	// The SslProtocolSettings param.
+	// Ssl protocol settings
 	SslProtocolSettings DecryptionProfileSslProtocolSettingsPtrInput
 }
 
@@ -257,44 +233,44 @@ func (o DecryptionProfileOutput) ToDecryptionProfileOutputWithContext(ctx contex
 	return o
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o DecryptionProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o DecryptionProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 func (o DecryptionProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *DecryptionProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o DecryptionProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// The SslForwardProxy param.
-func (o DecryptionProfileOutput) SslForwardProxy() DecryptionProfileSslForwardProxyPtrOutput {
-	return o.ApplyT(func(v *DecryptionProfile) DecryptionProfileSslForwardProxyPtrOutput { return v.SslForwardProxy }).(DecryptionProfileSslForwardProxyPtrOutput)
+// Ssl forward proxy
+func (o DecryptionProfileOutput) SslForwardProxy() DecryptionProfileSslForwardProxyOutput {
+	return o.ApplyT(func(v *DecryptionProfile) DecryptionProfileSslForwardProxyOutput { return v.SslForwardProxy }).(DecryptionProfileSslForwardProxyOutput)
 }
 
-// The SslInboundProxy param.
-func (o DecryptionProfileOutput) SslInboundProxy() DecryptionProfileSslInboundProxyPtrOutput {
-	return o.ApplyT(func(v *DecryptionProfile) DecryptionProfileSslInboundProxyPtrOutput { return v.SslInboundProxy }).(DecryptionProfileSslInboundProxyPtrOutput)
+// Ssl inbound proxy
+func (o DecryptionProfileOutput) SslInboundProxy() DecryptionProfileSslInboundProxyOutput {
+	return o.ApplyT(func(v *DecryptionProfile) DecryptionProfileSslInboundProxyOutput { return v.SslInboundProxy }).(DecryptionProfileSslInboundProxyOutput)
 }
 
-// The SslNoProxy param.
-func (o DecryptionProfileOutput) SslNoProxy() DecryptionProfileSslNoProxyPtrOutput {
-	return o.ApplyT(func(v *DecryptionProfile) DecryptionProfileSslNoProxyPtrOutput { return v.SslNoProxy }).(DecryptionProfileSslNoProxyPtrOutput)
+// Ssl no proxy
+func (o DecryptionProfileOutput) SslNoProxy() DecryptionProfileSslNoProxyOutput {
+	return o.ApplyT(func(v *DecryptionProfile) DecryptionProfileSslNoProxyOutput { return v.SslNoProxy }).(DecryptionProfileSslNoProxyOutput)
 }
 
-// The SslProtocolSettings param.
-func (o DecryptionProfileOutput) SslProtocolSettings() DecryptionProfileSslProtocolSettingsPtrOutput {
-	return o.ApplyT(func(v *DecryptionProfile) DecryptionProfileSslProtocolSettingsPtrOutput { return v.SslProtocolSettings }).(DecryptionProfileSslProtocolSettingsPtrOutput)
+// Ssl protocol settings
+func (o DecryptionProfileOutput) SslProtocolSettings() DecryptionProfileSslProtocolSettingsOutput {
+	return o.ApplyT(func(v *DecryptionProfile) DecryptionProfileSslProtocolSettingsOutput { return v.SslProtocolSettings }).(DecryptionProfileSslProtocolSettingsOutput)
 }
 
 func (o DecryptionProfileOutput) Tfid() pulumi.StringOutput {

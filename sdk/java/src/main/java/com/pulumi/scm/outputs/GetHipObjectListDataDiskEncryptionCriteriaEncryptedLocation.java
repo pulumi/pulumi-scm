@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocation {
     /**
-     * @return The EncryptionState param.
+     * @return Encryption state
      * 
      */
     private GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionState encryptionState;
     /**
-     * @return The Name param.
+     * @return Encryption location
      * 
      */
     private String name;
 
     private GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocation() {}
     /**
-     * @return The EncryptionState param.
+     * @return Encryption state
      * 
      */
     public GetHipObjectListDataDiskEncryptionCriteriaEncryptedLocationEncryptionState encryptionState() {
         return this.encryptionState;
     }
     /**
-     * @return The Name param.
+     * @return Encryption location
      * 
      */
     public String name() {

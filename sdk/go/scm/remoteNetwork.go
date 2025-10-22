@@ -12,57 +12,35 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// RemoteNetwork resource
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewRemoteNetwork(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 type RemoteNetwork struct {
 	pulumi.CustomResourceState
 
-	// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+	// Ecmp load balancing
 	EcmpLoadBalancing pulumi.StringOutput `pulumi:"ecmpLoadBalancing"`
-	// ecmp*tunnels is required when ecmp*load*balancing is enable.
+	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels RemoteNetworkEcmpTunnelArrayOutput `pulumi:"ecmpTunnels"`
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
-	// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+	// The folder that contains the remote network
 	Folder pulumi.StringOutput `pulumi:"folder"`
-	// ipsec*tunnel is required when ecmp*load_balancing is disable.
+	// ipsec*tunnel is required when ecmp*load_balancing is disable
 	IpsecTunnel pulumi.StringPtrOutput `pulumi:"ipsecTunnel"`
-	// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+	// New customer will only be on aggregate bandwidth licensing
 	LicenseType pulumi.StringOutput `pulumi:"licenseType"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the remote network
 	Name pulumi.StringOutput `pulumi:"name"`
-	// setup the protocol when ecmp*load*balancing is disable.
+	// setup the protocol when ecmp*load*balancing is disable
 	Protocol RemoteNetworkProtocolPtrOutput `pulumi:"protocol"`
-	// The Region param. String length must exceed 1 characters.
+	// Region
 	Region pulumi.StringOutput `pulumi:"region"`
-	// specify secondary ipsecTunnel if needed.
+	// specify secondary ipsecTunnel if needed
 	SecondaryIpsecTunnel pulumi.StringPtrOutput `pulumi:"secondaryIpsecTunnel"`
-	// spn-name is needed when licenseType is FWAAS-AGGREGATE.
+	// spn-name is needed when licenseType is FWAAS-AGGREGATE
 	SpnName pulumi.StringPtrOutput `pulumi:"spnName"`
-	// The Subnets param.
+	// Subnets
 	Subnets pulumi.StringArrayOutput `pulumi:"subnets"`
 	Tfid    pulumi.StringOutput      `pulumi:"tfid"`
 }
@@ -74,6 +52,12 @@ func NewRemoteNetwork(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.Folder == nil {
+		return nil, errors.New("invalid value for required argument 'Folder'")
+	}
+	if args.LicenseType == nil {
+		return nil, errors.New("invalid value for required argument 'LicenseType'")
+	}
 	if args.Region == nil {
 		return nil, errors.New("invalid value for required argument 'Region'")
 	}
@@ -104,57 +88,57 @@ func GetRemoteNetwork(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering RemoteNetwork resources.
 type remoteNetworkState struct {
-	// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+	// Ecmp load balancing
 	EcmpLoadBalancing *string `pulumi:"ecmpLoadBalancing"`
-	// ecmp*tunnels is required when ecmp*load*balancing is enable.
+	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels []RemoteNetworkEcmpTunnel `pulumi:"ecmpTunnels"`
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+	// The folder that contains the remote network
 	Folder *string `pulumi:"folder"`
-	// ipsec*tunnel is required when ecmp*load_balancing is disable.
+	// ipsec*tunnel is required when ecmp*load_balancing is disable
 	IpsecTunnel *string `pulumi:"ipsecTunnel"`
-	// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+	// New customer will only be on aggregate bandwidth licensing
 	LicenseType *string `pulumi:"licenseType"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the remote network
 	Name *string `pulumi:"name"`
-	// setup the protocol when ecmp*load*balancing is disable.
+	// setup the protocol when ecmp*load*balancing is disable
 	Protocol *RemoteNetworkProtocol `pulumi:"protocol"`
-	// The Region param. String length must exceed 1 characters.
+	// Region
 	Region *string `pulumi:"region"`
-	// specify secondary ipsecTunnel if needed.
+	// specify secondary ipsecTunnel if needed
 	SecondaryIpsecTunnel *string `pulumi:"secondaryIpsecTunnel"`
-	// spn-name is needed when licenseType is FWAAS-AGGREGATE.
+	// spn-name is needed when licenseType is FWAAS-AGGREGATE
 	SpnName *string `pulumi:"spnName"`
-	// The Subnets param.
+	// Subnets
 	Subnets []string `pulumi:"subnets"`
 	Tfid    *string  `pulumi:"tfid"`
 }
 
 type RemoteNetworkState struct {
-	// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+	// Ecmp load balancing
 	EcmpLoadBalancing pulumi.StringPtrInput
-	// ecmp*tunnels is required when ecmp*load*balancing is enable.
+	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels RemoteNetworkEcmpTunnelArrayInput
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
-	// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+	// The folder that contains the remote network
 	Folder pulumi.StringPtrInput
-	// ipsec*tunnel is required when ecmp*load_balancing is disable.
+	// ipsec*tunnel is required when ecmp*load_balancing is disable
 	IpsecTunnel pulumi.StringPtrInput
-	// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+	// New customer will only be on aggregate bandwidth licensing
 	LicenseType pulumi.StringPtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the remote network
 	Name pulumi.StringPtrInput
-	// setup the protocol when ecmp*load*balancing is disable.
+	// setup the protocol when ecmp*load*balancing is disable
 	Protocol RemoteNetworkProtocolPtrInput
-	// The Region param. String length must exceed 1 characters.
+	// Region
 	Region pulumi.StringPtrInput
-	// specify secondary ipsecTunnel if needed.
+	// specify secondary ipsecTunnel if needed
 	SecondaryIpsecTunnel pulumi.StringPtrInput
-	// spn-name is needed when licenseType is FWAAS-AGGREGATE.
+	// spn-name is needed when licenseType is FWAAS-AGGREGATE
 	SpnName pulumi.StringPtrInput
-	// The Subnets param.
+	// Subnets
 	Subnets pulumi.StringArrayInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -164,53 +148,53 @@ func (RemoteNetworkState) ElementType() reflect.Type {
 }
 
 type remoteNetworkArgs struct {
-	// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+	// Ecmp load balancing
 	EcmpLoadBalancing *string `pulumi:"ecmpLoadBalancing"`
-	// ecmp*tunnels is required when ecmp*load*balancing is enable.
+	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels []RemoteNetworkEcmpTunnel `pulumi:"ecmpTunnels"`
-	// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-	Folder *string `pulumi:"folder"`
-	// ipsec*tunnel is required when ecmp*load_balancing is disable.
+	// The folder that contains the remote network
+	Folder string `pulumi:"folder"`
+	// ipsec*tunnel is required when ecmp*load_balancing is disable
 	IpsecTunnel *string `pulumi:"ipsecTunnel"`
-	// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
-	LicenseType *string `pulumi:"licenseType"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// New customer will only be on aggregate bandwidth licensing
+	LicenseType string `pulumi:"licenseType"`
+	// The name of the remote network
 	Name *string `pulumi:"name"`
-	// setup the protocol when ecmp*load*balancing is disable.
+	// setup the protocol when ecmp*load*balancing is disable
 	Protocol *RemoteNetworkProtocol `pulumi:"protocol"`
-	// The Region param. String length must exceed 1 characters.
+	// Region
 	Region string `pulumi:"region"`
-	// specify secondary ipsecTunnel if needed.
+	// specify secondary ipsecTunnel if needed
 	SecondaryIpsecTunnel *string `pulumi:"secondaryIpsecTunnel"`
-	// spn-name is needed when licenseType is FWAAS-AGGREGATE.
+	// spn-name is needed when licenseType is FWAAS-AGGREGATE
 	SpnName *string `pulumi:"spnName"`
-	// The Subnets param.
+	// Subnets
 	Subnets []string `pulumi:"subnets"`
 }
 
 // The set of arguments for constructing a RemoteNetwork resource.
 type RemoteNetworkArgs struct {
-	// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+	// Ecmp load balancing
 	EcmpLoadBalancing pulumi.StringPtrInput
-	// ecmp*tunnels is required when ecmp*load*balancing is enable.
+	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels RemoteNetworkEcmpTunnelArrayInput
-	// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-	Folder pulumi.StringPtrInput
-	// ipsec*tunnel is required when ecmp*load_balancing is disable.
+	// The folder that contains the remote network
+	Folder pulumi.StringInput
+	// ipsec*tunnel is required when ecmp*load_balancing is disable
 	IpsecTunnel pulumi.StringPtrInput
-	// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
-	LicenseType pulumi.StringPtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// New customer will only be on aggregate bandwidth licensing
+	LicenseType pulumi.StringInput
+	// The name of the remote network
 	Name pulumi.StringPtrInput
-	// setup the protocol when ecmp*load*balancing is disable.
+	// setup the protocol when ecmp*load*balancing is disable
 	Protocol RemoteNetworkProtocolPtrInput
-	// The Region param. String length must exceed 1 characters.
+	// Region
 	Region pulumi.StringInput
-	// specify secondary ipsecTunnel if needed.
+	// specify secondary ipsecTunnel if needed
 	SecondaryIpsecTunnel pulumi.StringPtrInput
-	// spn-name is needed when licenseType is FWAAS-AGGREGATE.
+	// spn-name is needed when licenseType is FWAAS-AGGREGATE
 	SpnName pulumi.StringPtrInput
-	// The Subnets param.
+	// Subnets
 	Subnets pulumi.StringArrayInput
 }
 
@@ -301,62 +285,62 @@ func (o RemoteNetworkOutput) ToRemoteNetworkOutputWithContext(ctx context.Contex
 	return o
 }
 
-// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+// Ecmp load balancing
 func (o RemoteNetworkOutput) EcmpLoadBalancing() pulumi.StringOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringOutput { return v.EcmpLoadBalancing }).(pulumi.StringOutput)
 }
 
-// ecmp*tunnels is required when ecmp*load*balancing is enable.
+// ecmp*tunnels is required when ecmp*load*balancing is enable
 func (o RemoteNetworkOutput) EcmpTunnels() RemoteNetworkEcmpTunnelArrayOutput {
 	return o.ApplyT(func(v *RemoteNetwork) RemoteNetworkEcmpTunnelArrayOutput { return v.EcmpTunnels }).(RemoteNetworkEcmpTunnelArrayOutput)
 }
 
-// (Internal use) Encrypted values returned from the API.
+// Map of sensitive values returned from the API.
 func (o RemoteNetworkOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+// The folder that contains the remote network
 func (o RemoteNetworkOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
 }
 
-// ipsec*tunnel is required when ecmp*load_balancing is disable.
+// ipsec*tunnel is required when ecmp*load_balancing is disable
 func (o RemoteNetworkOutput) IpsecTunnel() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringPtrOutput { return v.IpsecTunnel }).(pulumi.StringPtrOutput)
 }
 
-// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+// New customer will only be on aggregate bandwidth licensing
 func (o RemoteNetworkOutput) LicenseType() pulumi.StringOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringOutput { return v.LicenseType }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the remote network
 func (o RemoteNetworkOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// setup the protocol when ecmp*load*balancing is disable.
+// setup the protocol when ecmp*load*balancing is disable
 func (o RemoteNetworkOutput) Protocol() RemoteNetworkProtocolPtrOutput {
 	return o.ApplyT(func(v *RemoteNetwork) RemoteNetworkProtocolPtrOutput { return v.Protocol }).(RemoteNetworkProtocolPtrOutput)
 }
 
-// The Region param. String length must exceed 1 characters.
+// Region
 func (o RemoteNetworkOutput) Region() pulumi.StringOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringOutput { return v.Region }).(pulumi.StringOutput)
 }
 
-// specify secondary ipsecTunnel if needed.
+// specify secondary ipsecTunnel if needed
 func (o RemoteNetworkOutput) SecondaryIpsecTunnel() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringPtrOutput { return v.SecondaryIpsecTunnel }).(pulumi.StringPtrOutput)
 }
 
-// spn-name is needed when licenseType is FWAAS-AGGREGATE.
+// spn-name is needed when licenseType is FWAAS-AGGREGATE
 func (o RemoteNetworkOutput) SpnName() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringPtrOutput { return v.SpnName }).(pulumi.StringPtrOutput)
 }
 
-// The Subnets param.
+// Subnets
 func (o RemoteNetworkOutput) Subnets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *RemoteNetwork) pulumi.StringArrayOutput { return v.Subnets }).(pulumi.StringArrayOutput)
 }

@@ -7,6 +7,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetHipProfilePlainArgs extends com.pulumi.resources.InvokeArgs {
@@ -14,24 +16,40 @@ public final class GetHipProfilePlainArgs extends com.pulumi.resources.InvokeArg
     public static final GetHipProfilePlainArgs Empty = new GetHipProfilePlainArgs();
 
     /**
-     * The Id param.
+     * UUID of the resource
      * 
      */
     @Import(name="id", required=true)
     private String id;
 
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
 
+    /**
+     * The name of the HIP profile
+     * 
+     */
+    @Import(name="name")
+    private @Nullable String name;
+
+    /**
+     * @return The name of the HIP profile
+     * 
+     */
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetHipProfilePlainArgs() {}
 
     private GetHipProfilePlainArgs(GetHipProfilePlainArgs $) {
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -53,13 +71,24 @@ public final class GetHipProfilePlainArgs extends com.pulumi.resources.InvokeArg
         }
 
         /**
-         * @param id The Id param.
+         * @param id UUID of the resource
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param name The name of the HIP profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            $.name = name;
             return this;
         }
 

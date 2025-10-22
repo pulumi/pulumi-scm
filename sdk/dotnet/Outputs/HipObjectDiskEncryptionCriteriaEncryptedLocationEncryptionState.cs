@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState
     {
         /// <summary>
-        /// The Is param. String must be one of these: `"encrypted"`, `"unencrypted"`, `"partial"`, `"unknown"`. Ensure that only one of the following is specified: `Is`, `IsNot`
+        /// Is
         /// </summary>
         public readonly string? Is;
         /// <summary>
-        /// The IsNot param. String must be one of these: `"encrypted"`, `"unencrypted"`, `"partial"`, `"unknown"`. Ensure that only one of the following is specified: `Is`, `IsNot`
+        /// Is not
         /// </summary>
         public readonly string? IsNot;
 

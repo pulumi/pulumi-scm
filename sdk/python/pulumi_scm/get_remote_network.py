@@ -27,13 +27,16 @@ class GetRemoteNetworkResult:
     """
     A collection of values returned by getRemoteNetwork.
     """
-    def __init__(__self__, ecmp_load_balancing=None, ecmp_tunnels=None, folder=None, id=None, ipsec_tunnel=None, license_type=None, name=None, protocol=None, region=None, secondary_ipsec_tunnel=None, spn_name=None, subnets=None, tfid=None):
+    def __init__(__self__, ecmp_load_balancing=None, ecmp_tunnels=None, encrypted_values=None, folder=None, id=None, ipsec_tunnel=None, license_type=None, name=None, protocol=None, region=None, secondary_ipsec_tunnel=None, spn_name=None, subnets=None, tfid=None):
         if ecmp_load_balancing and not isinstance(ecmp_load_balancing, str):
             raise TypeError("Expected argument 'ecmp_load_balancing' to be a str")
         pulumi.set(__self__, "ecmp_load_balancing", ecmp_load_balancing)
         if ecmp_tunnels and not isinstance(ecmp_tunnels, list):
             raise TypeError("Expected argument 'ecmp_tunnels' to be a list")
         pulumi.set(__self__, "ecmp_tunnels", ecmp_tunnels)
+        if encrypted_values and not isinstance(encrypted_values, dict):
+            raise TypeError("Expected argument 'encrypted_values' to be a dict")
+        pulumi.set(__self__, "encrypted_values", encrypted_values)
         if folder and not isinstance(folder, str):
             raise TypeError("Expected argument 'folder' to be a str")
         pulumi.set(__self__, "folder", folder)
@@ -72,7 +75,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter(name="ecmpLoadBalancing")
     def ecmp_load_balancing(self) -> _builtins.str:
         """
-        The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+        Ecmp load balancing
         """
         return pulumi.get(self, "ecmp_load_balancing")
 
@@ -80,15 +83,23 @@ class GetRemoteNetworkResult:
     @pulumi.getter(name="ecmpTunnels")
     def ecmp_tunnels(self) -> Sequence['outputs.GetRemoteNetworkEcmpTunnelResult']:
         """
-        ecmp*tunnels is required when ecmp*load*balancing is enable.
+        ecmp*tunnels is required when ecmp*load*balancing is enable
         """
         return pulumi.get(self, "ecmp_tunnels")
+
+    @_builtins.property
+    @pulumi.getter(name="encryptedValues")
+    def encrypted_values(self) -> Mapping[str, _builtins.str]:
+        """
+        Map of sensitive values returned from the API.
+        """
+        return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
         """
-        The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+        The folder that contains the remote network
         """
         return pulumi.get(self, "folder")
 
@@ -96,7 +107,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the remote network
         """
         return pulumi.get(self, "id")
 
@@ -104,7 +115,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter(name="ipsecTunnel")
     def ipsec_tunnel(self) -> _builtins.str:
         """
-        ipsec*tunnel is required when ecmp*load_balancing is disable.
+        ipsec*tunnel is required when ecmp*load_balancing is disable
         """
         return pulumi.get(self, "ipsec_tunnel")
 
@@ -112,7 +123,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter(name="licenseType")
     def license_type(self) -> _builtins.str:
         """
-        New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+        New customer will only be on aggregate bandwidth licensing
         """
         return pulumi.get(self, "license_type")
 
@@ -120,7 +131,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the remote network
         """
         return pulumi.get(self, "name")
 
@@ -128,7 +139,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter
     def protocol(self) -> 'outputs.GetRemoteNetworkProtocolResult':
         """
-        setup the protocol when ecmp*load*balancing is disable.
+        setup the protocol when ecmp*load*balancing is disable
         """
         return pulumi.get(self, "protocol")
 
@@ -136,7 +147,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter
     def region(self) -> _builtins.str:
         """
-        The Region param. String length must exceed 1 characters.
+        Region
         """
         return pulumi.get(self, "region")
 
@@ -144,7 +155,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter(name="secondaryIpsecTunnel")
     def secondary_ipsec_tunnel(self) -> _builtins.str:
         """
-        specify secondary ipsec_tunnel if needed.
+        specify secondary ipsec_tunnel if needed
         """
         return pulumi.get(self, "secondary_ipsec_tunnel")
 
@@ -152,7 +163,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter(name="spnName")
     def spn_name(self) -> _builtins.str:
         """
-        spn-name is needed when license_type is FWAAS-AGGREGATE.
+        spn-name is needed when license_type is FWAAS-AGGREGATE
         """
         return pulumi.get(self, "spn_name")
 
@@ -160,7 +171,7 @@ class GetRemoteNetworkResult:
     @pulumi.getter
     def subnets(self) -> Sequence[_builtins.str]:
         """
-        The Subnets param.
+        Subnets
         """
         return pulumi.get(self, "subnets")
 
@@ -178,6 +189,7 @@ class AwaitableGetRemoteNetworkResult(GetRemoteNetworkResult):
         return GetRemoteNetworkResult(
             ecmp_load_balancing=self.ecmp_load_balancing,
             ecmp_tunnels=self.ecmp_tunnels,
+            encrypted_values=self.encrypted_values,
             folder=self.folder,
             id=self.id,
             ipsec_tunnel=self.ipsec_tunnel,
@@ -191,11 +203,11 @@ class AwaitableGetRemoteNetworkResult(GetRemoteNetworkResult):
             tfid=self.tfid)
 
 
-def get_remote_network(folder: Optional[_builtins.str] = None,
-                       id: Optional[_builtins.str] = None,
+def get_remote_network(id: Optional[_builtins.str] = None,
+                       name: Optional[_builtins.str] = None,
                        opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetRemoteNetworkResult:
     """
-    Retrieves a config item.
+    RemoteNetwork data source
 
     ## Example Usage
 
@@ -203,22 +215,29 @@ def get_remote_network(folder: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_remote_network(id="1234-56-789")
+    #
+    # Data source to retrieve a single remote_network object.
+    #
+    # Look up a single Remote Network by its ID.
+    # Replace the ID with the UUID of the remote network you want to find.
+    example = scm.get_remote_network(id="7fc59ec2-46b3-4a0e-9c86-9b7416426a70")
+    pulumi.export("remoteNetworkDetails", example)
     ```
 
 
-    :param _builtins.str folder: The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the remote network
+    :param _builtins.str name: The name of the remote network
     """
     __args__ = dict()
-    __args__['folder'] = folder
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getRemoteNetwork:getRemoteNetwork', __args__, opts=opts, typ=GetRemoteNetworkResult).value
 
     return AwaitableGetRemoteNetworkResult(
         ecmp_load_balancing=pulumi.get(__ret__, 'ecmp_load_balancing'),
         ecmp_tunnels=pulumi.get(__ret__, 'ecmp_tunnels'),
+        encrypted_values=pulumi.get(__ret__, 'encrypted_values'),
         folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         ipsec_tunnel=pulumi.get(__ret__, 'ipsec_tunnel'),
@@ -230,11 +249,11 @@ def get_remote_network(folder: Optional[_builtins.str] = None,
         spn_name=pulumi.get(__ret__, 'spn_name'),
         subnets=pulumi.get(__ret__, 'subnets'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_remote_network_output(folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                              id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_remote_network_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                              name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRemoteNetworkResult]:
     """
-    Retrieves a config item.
+    RemoteNetwork data source
 
     ## Example Usage
 
@@ -242,21 +261,28 @@ def get_remote_network_output(folder: Optional[pulumi.Input[Optional[_builtins.s
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_remote_network(id="1234-56-789")
+    #
+    # Data source to retrieve a single remote_network object.
+    #
+    # Look up a single Remote Network by its ID.
+    # Replace the ID with the UUID of the remote network you want to find.
+    example = scm.get_remote_network(id="7fc59ec2-46b3-4a0e-9c86-9b7416426a70")
+    pulumi.export("remoteNetworkDetails", example)
     ```
 
 
-    :param _builtins.str folder: The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the remote network
+    :param _builtins.str name: The name of the remote network
     """
     __args__ = dict()
-    __args__['folder'] = folder
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getRemoteNetwork:getRemoteNetwork', __args__, opts=opts, typ=GetRemoteNetworkResult)
     return __ret__.apply(lambda __response__: GetRemoteNetworkResult(
         ecmp_load_balancing=pulumi.get(__response__, 'ecmp_load_balancing'),
         ecmp_tunnels=pulumi.get(__response__, 'ecmp_tunnels'),
+        encrypted_values=pulumi.get(__response__, 'encrypted_values'),
         folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         ipsec_tunnel=pulumi.get(__response__, 'ipsec_tunnel'),

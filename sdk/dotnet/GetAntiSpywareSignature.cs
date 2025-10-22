@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetAntiSpywareSignature
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAntiSpywareSignature.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AntiSpywareSignature data source
         /// </summary>
         public static Task<GetAntiSpywareSignatureResult> InvokeAsync(GetAntiSpywareSignatureArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAntiSpywareSignatureResult>("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", args ?? new GetAntiSpywareSignatureArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAntiSpywareSignature.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AntiSpywareSignature data source
         /// </summary>
         public static Output<GetAntiSpywareSignatureResult> Invoke(GetAntiSpywareSignatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAntiSpywareSignatureResult>("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", args ?? new GetAntiSpywareSignatureInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAntiSpywareSignature.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AntiSpywareSignature data source
         /// </summary>
         public static Output<GetAntiSpywareSignatureResult> Invoke(GetAntiSpywareSignatureInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAntiSpywareSignatureResult>("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", args ?? new GetAntiSpywareSignatureInvokeArgs(), options.WithDefaults());
@@ -88,7 +34,7 @@ namespace Pulumi.Scm
     public sealed class GetAntiSpywareSignatureArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
@@ -102,7 +48,7 @@ namespace Pulumi.Scm
     public sealed class GetAntiSpywareSignatureInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
@@ -118,52 +64,64 @@ namespace Pulumi.Scm
     public sealed class GetAntiSpywareSignatureResult
     {
         /// <summary>
-        /// The Bugtraqs param.
+        /// Bugtraq
         /// </summary>
         public readonly ImmutableArray<string> Bugtraqs;
         /// <summary>
-        /// The Comment param. String length must not exceed 256 characters.
+        /// Comment
         /// </summary>
         public readonly string Comment;
         /// <summary>
-        /// The Cves param.
+        /// Cve
         /// </summary>
         public readonly ImmutableArray<string> Cves;
         /// <summary>
-        /// The DefaultAction param.
+        /// anti spyware signature default action
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureDefaultActionResult DefaultAction;
         /// <summary>
-        /// The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Direction
         /// </summary>
         public readonly string Direction;
         /// <summary>
-        /// The Id param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The References param.
+        /// Reference
         /// </summary>
         public readonly ImmutableArray<string> References;
         /// <summary>
-        /// The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+        /// Severity
         /// </summary>
         public readonly string Severity;
         /// <summary>
-        /// The Signature param.
+        /// anti spyware signature
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureSignatureResult Signature;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+        /// threat id range \n\n and \n\n
         /// </summary>
         public readonly int ThreatId;
         /// <summary>
-        /// The Threatname param. String length must not exceed 1024 characters.
+        /// Threatname
         /// </summary>
         public readonly string Threatname;
         /// <summary>
-        /// The Vendors param.
+        /// Vendor
         /// </summary>
         public readonly ImmutableArray<string> Vendors;
 
@@ -177,7 +135,11 @@ namespace Pulumi.Scm
 
             Outputs.GetAntiSpywareSignatureDefaultActionResult defaultAction,
 
+            string device,
+
             string direction,
+
+            string folder,
 
             string id,
 
@@ -186,6 +148,8 @@ namespace Pulumi.Scm
             string severity,
 
             Outputs.GetAntiSpywareSignatureSignatureResult signature,
+
+            string snippet,
 
             string tfid,
 
@@ -199,11 +163,14 @@ namespace Pulumi.Scm
             Comment = comment;
             Cves = cves;
             DefaultAction = defaultAction;
+            Device = device;
             Direction = direction;
+            Folder = folder;
             Id = id;
             References = references;
             Severity = severity;
             Signature = signature;
+            Snippet = snippet;
             Tfid = tfid;
             ThreatId = threatId;
             Threatname = threatname;

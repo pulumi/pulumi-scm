@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * IpsecTunnel data source
  *
  * ## Example Usage
  *
@@ -15,16 +15,18 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getIpsecTunnel({
- *     id: "1234-56-789",
+ * // Example of looking up an individual IPsec Tunnel by its ID.
+ * const scmIpsecTunnelDs = scm.getIpsecTunnel({
+ *     id: "7c237a82-8c11-4f09-bdbf-599e159019ce",
  * });
+ * export const ipsecTunnelById = scmIpsecTunnelDs;
  * ```
  */
 export function getIpsecTunnel(args: GetIpsecTunnelArgs, opts?: pulumi.InvokeOptions): Promise<GetIpsecTunnelResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIpsecTunnel:getIpsecTunnel", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -33,13 +35,13 @@ export function getIpsecTunnel(args: GetIpsecTunnelArgs, opts?: pulumi.InvokeOpt
  */
 export interface GetIpsecTunnelArgs {
     /**
-     * The Folder param.
-     */
-    folder?: string;
-    /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
+    name?: string;
 }
 
 /**
@@ -47,41 +49,53 @@ export interface GetIpsecTunnelArgs {
  */
 export interface GetIpsecTunnelResult {
     /**
-     * Enable Anti-Replay check on this tunnel.
+     * Enable Anti-Replay check on this tunnel
      */
     readonly antiReplay: boolean;
     /**
-     * The AutoKey param.
+     * Auto key
      */
     readonly autoKey: outputs.GetIpsecTunnelAutoKey;
     /**
-     * Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+     * Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      */
     readonly copyTos: boolean;
     /**
-     * allow GRE over IPSec. Default: `false`.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * allow GRE over IPSec
      */
     readonly enableGreEncapsulation: boolean;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
-    readonly folder?: string;
+    readonly folder: string;
     /**
-     * The Id param.
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * The TunnelMonitor param.
+     * Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     */
+    readonly tunnelInterface: string;
+    /**
+     * Tunnel monitor
      */
     readonly tunnelMonitor: outputs.GetIpsecTunnelTunnelMonitor;
 }
 /**
- * Retrieves a config item.
+ * IpsecTunnel data source
  *
  * ## Example Usage
  *
@@ -89,16 +103,18 @@ export interface GetIpsecTunnelResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getIpsecTunnel({
- *     id: "1234-56-789",
+ * // Example of looking up an individual IPsec Tunnel by its ID.
+ * const scmIpsecTunnelDs = scm.getIpsecTunnel({
+ *     id: "7c237a82-8c11-4f09-bdbf-599e159019ce",
  * });
+ * export const ipsecTunnelById = scmIpsecTunnelDs;
  * ```
  */
 export function getIpsecTunnelOutput(args: GetIpsecTunnelOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpsecTunnelResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIpsecTunnel:getIpsecTunnel", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -107,11 +123,11 @@ export function getIpsecTunnelOutput(args: GetIpsecTunnelOutputArgs, opts?: pulu
  */
 export interface GetIpsecTunnelOutputArgs {
     /**
-     * The Folder param.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+     */
+    name?: pulumi.Input<string>;
 }

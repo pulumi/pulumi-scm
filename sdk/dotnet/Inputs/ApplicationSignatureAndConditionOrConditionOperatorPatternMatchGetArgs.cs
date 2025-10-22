@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class ApplicationSignatureAndConditionOrConditionOperatorPatternMatchGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Context param. String length must not exceed 127 characters.
+        /// Context
         /// </summary>
         [Input("context", required: true)]
         public Input<string> Context { get; set; } = null!;
 
         /// <summary>
-        /// The Pattern param. String length must not exceed 127 characters.
+        /// Pattern
         /// </summary>
         [Input("pattern", required: true)]
         public Input<string> Pattern { get; set; } = null!;
@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierGetArgs>? _qualifiers;
 
         /// <summary>
-        /// The Qualifiers param.
+        /// Qualifier
         /// </summary>
         public InputList<Inputs.ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierGetArgs> Qualifiers
         {

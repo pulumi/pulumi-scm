@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class DecryptionRuleTypeGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The SslForwardProxy param. Ensure that only one of the following is specified: `SslForwardProxy`, `SslInboundInspection`
+        /// Ssl forward proxy
         /// </summary>
         [Input("sslForwardProxy")]
-        public Input<bool>? SslForwardProxy { get; set; }
+        public Input<Inputs.DecryptionRuleTypeSslForwardProxyGetArgs>? SslForwardProxy { get; set; }
 
         /// <summary>
-        /// add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `SslForwardProxy`, `SslInboundInspection`
+        /// add the certificate name for SSL inbound inspection
         /// </summary>
         [Input("sslInboundInspection")]
         public Input<string>? SslInboundInspection { get; set; }

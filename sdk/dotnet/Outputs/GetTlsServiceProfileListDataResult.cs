@@ -14,36 +14,61 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetTlsServiceProfileListDataResult
     {
         /// <summary>
-        /// SSL certificate file name. String length must not exceed 255 characters.
+        /// Certificate name
         /// </summary>
         public readonly string Certificate;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the TLS service profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The ProtocolSettings param.
+        /// Protocol settings
         /// </summary>
         public readonly Outputs.GetTlsServiceProfileListDataProtocolSettingsResult ProtocolSettings;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetTlsServiceProfileListDataResult(
             string certificate,
 
+            string device,
+
+            string folder,
+
             string id,
 
             string name,
 
-            Outputs.GetTlsServiceProfileListDataProtocolSettingsResult protocolSettings)
+            Outputs.GetTlsServiceProfileListDataProtocolSettingsResult protocolSettings,
+
+            string snippet,
+
+            string tfid)
         {
             Certificate = certificate;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
             ProtocolSettings = protocolSettings;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getFileBlockingProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * FileBlockingProfile data source
  */
 export function getFileBlockingProfile(args: GetFileBlockingProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetFileBlockingProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getFileBlockingProfile:getFileBlockingProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getFileBlockingProfile(args: GetFileBlockingProfileArgs, opts?: 
  */
 export interface GetFileBlockingProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the file blocking profile
      */
     id: string;
+    /**
+     * The name of the file blocking profile
+     */
+    name?: string;
 }
 
 /**
@@ -42,41 +36,43 @@ export interface GetFileBlockingProfileArgs {
  */
 export interface GetFileBlockingProfileResult {
     /**
-     * The Description param.
+     * Description
      */
     readonly description: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the file blocking profile
      */
     readonly id: string;
     /**
-     * The Name param.
+     * The name of the file blocking profile
      */
     readonly name: string;
     /**
-     * The Rules param.
+     * A list of file blocking rules
      */
     readonly rules: outputs.GetFileBlockingProfileRule[];
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getFileBlockingProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * FileBlockingProfile data source
  */
 export function getFileBlockingProfileOutput(args: GetFileBlockingProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFileBlockingProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getFileBlockingProfile:getFileBlockingProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -85,7 +81,11 @@ export function getFileBlockingProfileOutput(args: GetFileBlockingProfileOutputA
  */
 export interface GetFileBlockingProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the file blocking profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the file blocking profile
+     */
+    name?: pulumi.Input<string>;
 }

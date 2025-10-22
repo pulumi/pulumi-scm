@@ -10,46 +10,37 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.KerberosServerProfile("example");
-    /// 
-    /// });
-    /// ```
+    /// KerberosServerProfile resource
     /// </summary>
     [ScmResourceType("scm:index/kerberosServerProfile:KerberosServerProfile")]
     public partial class KerberosServerProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Servers param.
+        /// The name of the Kerberos server profile
+        /// </summary>
+        [Output("name")]
+        public Output<string> Name { get; private set; } = null!;
+
+        /// <summary>
+        /// The Kerberos server configuration
         /// </summary>
         [Output("servers")]
         public Output<ImmutableArray<Outputs.KerberosServerProfileServer>> Servers { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -104,22 +95,28 @@ namespace Pulumi.Scm
     public sealed class KerberosServerProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
+
+        /// <summary>
+        /// The name of the Kerberos server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         [Input("servers", required: true)]
         private InputList<Inputs.KerberosServerProfileServerArgs>? _servers;
 
         /// <summary>
-        /// The Servers param.
+        /// The Kerberos server configuration
         /// </summary>
         public InputList<Inputs.KerberosServerProfileServerArgs> Servers
         {
@@ -128,7 +125,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -142,22 +139,28 @@ namespace Pulumi.Scm
     public sealed class KerberosServerProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
+
+        /// <summary>
+        /// The name of the Kerberos server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         [Input("servers")]
         private InputList<Inputs.KerberosServerProfileServerGetArgs>? _servers;
 
         /// <summary>
-        /// The Servers param.
+        /// The Kerberos server configuration
         /// </summary>
         public InputList<Inputs.KerberosServerProfileServerGetArgs> Servers
         {
@@ -166,7 +169,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

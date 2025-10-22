@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.ExternalDynamicListTypeDomainDomainAuth;
+import com.pulumi.scm.outputs.ExternalDynamicListTypeDomainAuth;
 import com.pulumi.scm.outputs.ExternalDynamicListTypeDomainRecurring;
 import java.lang.Boolean;
 import java.lang.String;
@@ -17,90 +17,90 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListTypeDomain {
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    private @Nullable ExternalDynamicListTypeDomainAuth auth;
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     private @Nullable String certificateProfile;
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     private @Nullable String description;
     /**
-     * @return The DomainAuth param.
-     * 
-     */
-    private @Nullable ExternalDynamicListTypeDomainDomainAuth domainAuth;
-    /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     private @Nullable List<String> exceptionLists;
     /**
-     * @return Enable/Disable expand domain. Default: `false`.
+     * @return Enable/Disable expand domain
      * 
      */
     private @Nullable Boolean expandDomain;
     /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     private ExternalDynamicListTypeDomainRecurring recurring;
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
-    private @Nullable String url;
+    private String url;
 
     private ExternalDynamicListTypeDomain() {}
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    public Optional<ExternalDynamicListTypeDomainAuth> auth() {
+        return Optional.ofNullable(this.auth);
+    }
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     public Optional<String> certificateProfile() {
         return Optional.ofNullable(this.certificateProfile);
     }
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return The DomainAuth param.
-     * 
-     */
-    public Optional<ExternalDynamicListTypeDomainDomainAuth> domainAuth() {
-        return Optional.ofNullable(this.domainAuth);
-    }
-    /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists == null ? List.of() : this.exceptionLists;
     }
     /**
-     * @return Enable/Disable expand domain. Default: `false`.
+     * @return Enable/Disable expand domain
      * 
      */
     public Optional<Boolean> expandDomain() {
         return Optional.ofNullable(this.expandDomain);
     }
     /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     public ExternalDynamicListTypeDomainRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
-    public Optional<String> url() {
-        return Optional.ofNullable(this.url);
+    public String url() {
+        return this.url;
     }
 
     public static Builder builder() {
@@ -112,25 +112,31 @@ public final class ExternalDynamicListTypeDomain {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable ExternalDynamicListTypeDomainAuth auth;
         private @Nullable String certificateProfile;
         private @Nullable String description;
-        private @Nullable ExternalDynamicListTypeDomainDomainAuth domainAuth;
         private @Nullable List<String> exceptionLists;
         private @Nullable Boolean expandDomain;
         private ExternalDynamicListTypeDomainRecurring recurring;
-        private @Nullable String url;
+        private String url;
         public Builder() {}
         public Builder(ExternalDynamicListTypeDomain defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.auth = defaults.auth;
     	      this.certificateProfile = defaults.certificateProfile;
     	      this.description = defaults.description;
-    	      this.domainAuth = defaults.domainAuth;
     	      this.exceptionLists = defaults.exceptionLists;
     	      this.expandDomain = defaults.expandDomain;
     	      this.recurring = defaults.recurring;
     	      this.url = defaults.url;
         }
 
+        @CustomType.Setter
+        public Builder auth(@Nullable ExternalDynamicListTypeDomainAuth auth) {
+
+            this.auth = auth;
+            return this;
+        }
         @CustomType.Setter
         public Builder certificateProfile(@Nullable String certificateProfile) {
 
@@ -141,12 +147,6 @@ public final class ExternalDynamicListTypeDomain {
         public Builder description(@Nullable String description) {
 
             this.description = description;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder domainAuth(@Nullable ExternalDynamicListTypeDomainDomainAuth domainAuth) {
-
-            this.domainAuth = domainAuth;
             return this;
         }
         @CustomType.Setter
@@ -173,16 +173,18 @@ public final class ExternalDynamicListTypeDomain {
             return this;
         }
         @CustomType.Setter
-        public Builder url(@Nullable String url) {
-
+        public Builder url(String url) {
+            if (url == null) {
+              throw new MissingRequiredPropertyException("ExternalDynamicListTypeDomain", "url");
+            }
             this.url = url;
             return this;
         }
         public ExternalDynamicListTypeDomain build() {
             final var _resultValue = new ExternalDynamicListTypeDomain();
+            _resultValue.auth = auth;
             _resultValue.certificateProfile = certificateProfile;
             _resultValue.description = description;
-            _resultValue.domainAuth = domainAuth;
             _resultValue.exceptionLists = exceptionLists;
             _resultValue.expandDomain = expandDomain;
             _resultValue.recurring = recurring;

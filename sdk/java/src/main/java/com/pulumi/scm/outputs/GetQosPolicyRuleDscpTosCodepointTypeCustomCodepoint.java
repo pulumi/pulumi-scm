@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetQosPolicyRuleDscpTosCodepointTypeCustomCodepoint {
     /**
-     * @return The BinaryValue param.
+     * @return Binary value
      * 
      */
     private String binaryValue;
     /**
-     * @return The CodepointName param.
+     * @return Codepoint name
      * 
      */
     private String codepointName;
 
     private GetQosPolicyRuleDscpTosCodepointTypeCustomCodepoint() {}
     /**
-     * @return The BinaryValue param.
+     * @return Binary value
      * 
      */
     public String binaryValue() {
         return this.binaryValue;
     }
     /**
-     * @return The CodepointName param.
+     * @return Codepoint name
      * 
      */
     public String codepointName() {

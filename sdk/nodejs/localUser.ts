@@ -5,20 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.LocalUser("example", {
- *     folder: "Shared",
- *     name: "user1",
- *     password: "secret",
- * });
- * ```
+ * LocalUser resource
  */
 export class LocalUser extends pulumi.CustomResource {
     /**
@@ -49,31 +36,31 @@ export class LocalUser extends pulumi.CustomResource {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Disabled param.
+     * Is the local user disabled?
      */
-    declare public readonly disabled: pulumi.Output<boolean | undefined>;
+    declare public readonly disabled: pulumi.Output<boolean>;
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      */
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Name param. String length must not exceed 31 characters.
+     * The name of the local user
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Password param. String length must not exceed 63 characters.
+     * The password of the local user
      */
-    declare public readonly password: pulumi.Output<string | undefined>;
+    declare public readonly password: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -85,7 +72,7 @@ export class LocalUser extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: LocalUserArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: LocalUserArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: LocalUserArgs | LocalUserState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -101,6 +88,9 @@ export class LocalUser extends pulumi.CustomResource {
             resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as LocalUserArgs | undefined;
+            if (args?.password === undefined && !opts.urn) {
+                throw new Error("Missing required property 'password'");
+            }
             resourceInputs["device"] = args?.device;
             resourceInputs["disabled"] = args?.disabled;
             resourceInputs["folder"] = args?.folder;
@@ -122,31 +112,31 @@ export class LocalUser extends pulumi.CustomResource {
  */
 export interface LocalUserState {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Disabled param.
+     * Is the local user disabled?
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      */
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param. String length must not exceed 31 characters.
+     * The name of the local user
      */
     name?: pulumi.Input<string>;
     /**
-     * The Password param. String length must not exceed 63 characters.
+     * The password of the local user
      */
     password?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -157,27 +147,27 @@ export interface LocalUserState {
  */
 export interface LocalUserArgs {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Disabled param.
+     * Is the local user disabled?
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param. String length must not exceed 31 characters.
+     * The name of the local user
      */
     name?: pulumi.Input<string>;
     /**
-     * The Password param. String length must not exceed 63 characters.
+     * The password of the local user
      */
-    password?: pulumi.Input<string>;
+    password: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

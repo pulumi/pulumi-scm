@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class ScepProfileScepChallengeGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The DynamicChallenge param. Ensure that only one of the following is specified: `Dynamic`, `Fixed`, `None`
+        /// Dynamic
         /// </summary>
-        [Input("dynamicChallenge")]
-        public Input<Inputs.ScepProfileScepChallengeDynamicChallengeGetArgs>? DynamicChallenge { get; set; }
+        [Input("dynamic")]
+        public Input<Inputs.ScepProfileScepChallengeDynamicGetArgs>? Dynamic { get; set; }
 
         /// <summary>
-        /// Challenge to use for SCEP server on mobile clients. String length must not exceed 1024 characters. Ensure that only one of the following is specified: `Dynamic`, `Fixed`, `None`
+        /// Challenge to use for SCEP server on mobile clients
         /// </summary>
         [Input("fixed")]
         public Input<string>? Fixed { get; set; }
 
         /// <summary>
-        /// The None param. String must be one of these: `""`. Ensure that only one of the following is specified: `Dynamic`, `Fixed`, `None`
+        /// No OTP
         /// </summary>
         [Input("none")]
         public Input<string>? None { get; set; }

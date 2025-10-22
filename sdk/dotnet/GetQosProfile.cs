@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetQosProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetQosProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// QosProfile data source
         /// </summary>
         public static Task<GetQosProfileResult> InvokeAsync(GetQosProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetQosProfileResult>("scm:index/getQosProfile:getQosProfile", args ?? new GetQosProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetQosProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// QosProfile data source
         /// </summary>
         public static Output<GetQosProfileResult> Invoke(GetQosProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosProfileResult>("scm:index/getQosProfile:getQosProfile", args ?? new GetQosProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetQosProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// QosProfile data source
         /// </summary>
         public static Output<GetQosProfileResult> Invoke(GetQosProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosProfileResult>("scm:index/getQosProfile:getQosProfile", args ?? new GetQosProfileInvokeArgs(), options.WithDefaults());
@@ -88,16 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetQosProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public string? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetQosProfileArgs()
         {
@@ -108,16 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetQosProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetQosProfileInvokeArgs()
         {
@@ -130,25 +76,33 @@ namespace Pulumi.Scm
     public sealed class GetQosProfileResult
     {
         /// <summary>
-        /// The AggregateBandwidth param.
+        /// Aggregate bandwidth
         /// </summary>
         public readonly Outputs.GetQosProfileAggregateBandwidthResult AggregateBandwidth;
         /// <summary>
-        /// The ClassBandwidthType param.
+        /// Class bandwidth type
         /// </summary>
         public readonly Outputs.GetQosProfileClassBandwidthTypeResult ClassBandwidthType;
         /// <summary>
-        /// The Folder param.
+        /// The device in which the resource is defined
         /// </summary>
-        public readonly string? Folder;
+        public readonly string Device;
         /// <summary>
-        /// The Id param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
@@ -157,19 +111,25 @@ namespace Pulumi.Scm
 
             Outputs.GetQosProfileClassBandwidthTypeResult classBandwidthType,
 
-            string? folder,
+            string device,
+
+            string folder,
 
             string id,
 
             string name,
 
+            string snippet,
+
             string tfid)
         {
             AggregateBandwidth = aggregateBandwidth;
             ClassBandwidthType = classBandwidthType;
+            Device = device;
             Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

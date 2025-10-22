@@ -16,14 +16,14 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
     public static final HipProfileState Empty = new HipProfileState();
 
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -31,14 +31,14 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -46,14 +46,14 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -61,14 +61,14 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Match param. String length must not exceed 2048 characters.
+     * Match
      * 
      */
     @Import(name="match")
     private @Nullable Output<String> match;
 
     /**
-     * @return The Match param. String length must not exceed 2048 characters.
+     * @return Match
      * 
      */
     public Optional<Output<String>> match() {
@@ -76,14 +76,14 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP profile
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the HIP profile
      * 
      */
     public Optional<Output<String>> name() {
@@ -91,14 +91,14 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -143,7 +143,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -164,7 +164,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -175,7 +175,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -185,7 +185,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -196,7 +196,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param match The Match param. String length must not exceed 2048 characters.
+         * @param match Match
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param match The Match param. String length must not exceed 2048 characters.
+         * @param match Match
          * 
          * @return builder
          * 
@@ -227,7 +227,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name The name of the HIP profile
          * 
          * @return builder
          * 
@@ -238,7 +238,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name The name of the HIP profile
          * 
          * @return builder
          * 
@@ -248,7 +248,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -259,7 +259,7 @@ public final class HipProfileState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

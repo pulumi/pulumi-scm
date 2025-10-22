@@ -8,8 +8,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.QosPolicyRuleDscpTosCodepointTypeAfArgs;
 import com.pulumi.scm.inputs.QosPolicyRuleDscpTosCodepointTypeCsArgs;
 import com.pulumi.scm.inputs.QosPolicyRuleDscpTosCodepointTypeCustomArgs;
+import com.pulumi.scm.inputs.QosPolicyRuleDscpTosCodepointTypeEfArgs;
 import com.pulumi.scm.inputs.QosPolicyRuleDscpTosCodepointTypeTosArgs;
-import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,14 +20,14 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
     public static final QosPolicyRuleDscpTosCodepointTypeArgs Empty = new QosPolicyRuleDscpTosCodepointTypeArgs();
 
     /**
-     * The Af param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * Af
      * 
      */
     @Import(name="af")
     private @Nullable Output<QosPolicyRuleDscpTosCodepointTypeAfArgs> af;
 
     /**
-     * @return The Af param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Af
      * 
      */
     public Optional<Output<QosPolicyRuleDscpTosCodepointTypeAfArgs>> af() {
@@ -35,14 +35,14 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
     }
 
     /**
-     * The Cs param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * Cs
      * 
      */
     @Import(name="cs")
     private @Nullable Output<QosPolicyRuleDscpTosCodepointTypeCsArgs> cs;
 
     /**
-     * @return The Cs param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Cs
      * 
      */
     public Optional<Output<QosPolicyRuleDscpTosCodepointTypeCsArgs>> cs() {
@@ -50,14 +50,14 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
     }
 
     /**
-     * The Custom param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * Custom
      * 
      */
     @Import(name="custom")
     private @Nullable Output<QosPolicyRuleDscpTosCodepointTypeCustomArgs> custom;
 
     /**
-     * @return The Custom param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Custom
      * 
      */
     public Optional<Output<QosPolicyRuleDscpTosCodepointTypeCustomArgs>> custom() {
@@ -65,29 +65,29 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
     }
 
     /**
-     * The Ef param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * Ef
      * 
      */
     @Import(name="ef")
-    private @Nullable Output<Boolean> ef;
+    private @Nullable Output<QosPolicyRuleDscpTosCodepointTypeEfArgs> ef;
 
     /**
-     * @return The Ef param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Ef
      * 
      */
-    public Optional<Output<Boolean>> ef() {
+    public Optional<Output<QosPolicyRuleDscpTosCodepointTypeEfArgs>> ef() {
         return Optional.ofNullable(this.ef);
     }
 
     /**
-     * The Tos param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * Tos
      * 
      */
     @Import(name="tos")
     private @Nullable Output<QosPolicyRuleDscpTosCodepointTypeTosArgs> tos;
 
     /**
-     * @return The Tos param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+     * @return Tos
      * 
      */
     public Optional<Output<QosPolicyRuleDscpTosCodepointTypeTosArgs>> tos() {
@@ -123,7 +123,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
         }
 
         /**
-         * @param af The Af param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+         * @param af Af
          * 
          * @return builder
          * 
@@ -134,7 +134,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
         }
 
         /**
-         * @param af The Af param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+         * @param af Af
          * 
          * @return builder
          * 
@@ -144,7 +144,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
         }
 
         /**
-         * @param cs The Cs param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+         * @param cs Cs
          * 
          * @return builder
          * 
@@ -155,7 +155,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
         }
 
         /**
-         * @param cs The Cs param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+         * @param cs Cs
          * 
          * @return builder
          * 
@@ -165,7 +165,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
         }
 
         /**
-         * @param custom The Custom param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+         * @param custom Custom
          * 
          * @return builder
          * 
@@ -176,7 +176,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
         }
 
         /**
-         * @param custom The Custom param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+         * @param custom Custom
          * 
          * @return builder
          * 
@@ -186,28 +186,28 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
         }
 
         /**
-         * @param ef The Ef param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+         * @param ef Ef
          * 
          * @return builder
          * 
          */
-        public Builder ef(@Nullable Output<Boolean> ef) {
+        public Builder ef(@Nullable Output<QosPolicyRuleDscpTosCodepointTypeEfArgs> ef) {
             $.ef = ef;
             return this;
         }
 
         /**
-         * @param ef The Ef param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+         * @param ef Ef
          * 
          * @return builder
          * 
          */
-        public Builder ef(Boolean ef) {
+        public Builder ef(QosPolicyRuleDscpTosCodepointTypeEfArgs ef) {
             return ef(Output.of(ef));
         }
 
         /**
-         * @param tos The Tos param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+         * @param tos Tos
          * 
          * @return builder
          * 
@@ -218,7 +218,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeArgs extends com.pulumi.reso
         }
 
         /**
-         * @param tos The Tos param. Ensure that only one of the following is specified: `af`, `cs`, `custom`, `ef`, `tos`
+         * @param tos Tos
          * 
          * @return builder
          * 

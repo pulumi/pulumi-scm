@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatchResult
     {
         /// <summary>
-        /// The Context param. String length must not exceed 127 characters.
+        /// Context
         /// </summary>
         public readonly string Context;
         /// <summary>
-        /// The Pattern param. String length must not exceed 127 characters.
+        /// Pattern
         /// </summary>
         public readonly string Pattern;
         /// <summary>
-        /// The Qualifiers param.
+        /// Qualifier
         /// </summary>
         public readonly ImmutableArray<Outputs.GetApplicationListDataSignatureAndConditionOrConditionOperatorPatternMatchQualifierResult> Qualifiers;
 

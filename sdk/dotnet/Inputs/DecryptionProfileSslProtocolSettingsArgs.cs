@@ -13,97 +13,97 @@ namespace Pulumi.Scm.Inputs
     public sealed class DecryptionProfileSslProtocolSettingsArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The AuthAlgoMd5 param. Default: `True`.
+        /// Auth algo md5
         /// </summary>
         [Input("authAlgoMd5")]
         public Input<bool>? AuthAlgoMd5 { get; set; }
 
         /// <summary>
-        /// The AuthAlgoSha1 param. Default: `True`.
+        /// Auth algo sha1
         /// </summary>
         [Input("authAlgoSha1")]
         public Input<bool>? AuthAlgoSha1 { get; set; }
 
         /// <summary>
-        /// The AuthAlgoSha256 param. Default: `True`.
+        /// Auth algo sha256
         /// </summary>
         [Input("authAlgoSha256")]
         public Input<bool>? AuthAlgoSha256 { get; set; }
 
         /// <summary>
-        /// The AuthAlgoSha384 param. Default: `True`.
+        /// Auth algo sha384
         /// </summary>
         [Input("authAlgoSha384")]
         public Input<bool>? AuthAlgoSha384 { get; set; }
 
         /// <summary>
-        /// The EncAlgo3des param. Default: `True`.
+        /// Enc algo3des
         /// </summary>
         [Input("encAlgo3des")]
         public Input<bool>? EncAlgo3des { get; set; }
 
         /// <summary>
-        /// The EncAlgoAes128Cbc param. Default: `True`.
+        /// Enc algo aes128 cbc
         /// </summary>
         [Input("encAlgoAes128Cbc")]
         public Input<bool>? EncAlgoAes128Cbc { get; set; }
 
         /// <summary>
-        /// The EncAlgoAes128Gcm param. Default: `True`.
+        /// Enc algo aes128 gcm
         /// </summary>
         [Input("encAlgoAes128Gcm")]
         public Input<bool>? EncAlgoAes128Gcm { get; set; }
 
         /// <summary>
-        /// The EncAlgoAes256Cbc param. Default: `True`.
+        /// Enc algo aes256 cbc
         /// </summary>
         [Input("encAlgoAes256Cbc")]
         public Input<bool>? EncAlgoAes256Cbc { get; set; }
 
         /// <summary>
-        /// The EncAlgoAes256Gcm param. Default: `True`.
+        /// Enc algo aes256 gcm
         /// </summary>
         [Input("encAlgoAes256Gcm")]
         public Input<bool>? EncAlgoAes256Gcm { get; set; }
 
         /// <summary>
-        /// The EncAlgoChacha20Poly1305 param. Default: `True`.
+        /// Enc algo chacha20 poly1305
         /// </summary>
         [Input("encAlgoChacha20Poly1305")]
         public Input<bool>? EncAlgoChacha20Poly1305 { get; set; }
 
         /// <summary>
-        /// The EncAlgoRc4 param. Default: `True`.
+        /// Enc algo rc4
         /// </summary>
         [Input("encAlgoRc4")]
         public Input<bool>? EncAlgoRc4 { get; set; }
 
         /// <summary>
-        /// The KeyxchgAlgoDhe param. Default: `True`.
+        /// Keyxchg algo dhe
         /// </summary>
         [Input("keyxchgAlgoDhe")]
         public Input<bool>? KeyxchgAlgoDhe { get; set; }
 
         /// <summary>
-        /// The KeyxchgAlgoEcdhe param. Default: `True`.
+        /// Keyxchg algo ecdhe
         /// </summary>
         [Input("keyxchgAlgoEcdhe")]
         public Input<bool>? KeyxchgAlgoEcdhe { get; set; }
 
         /// <summary>
-        /// The KeyxchgAlgoRsa param. Default: `True`.
+        /// Keyxchg algo rsa
         /// </summary>
         [Input("keyxchgAlgoRsa")]
         public Input<bool>? KeyxchgAlgoRsa { get; set; }
 
         /// <summary>
-        /// The MaxVersion param. String must be one of these: `"sslv3"`, `"tls1-0"`, `"tls1-1"`, `"tls1-2"`, `"tls1-3"`, `"max"`. Default: `"tls1-2"`.
+        /// Max version
         /// </summary>
         [Input("maxVersion")]
         public Input<string>? MaxVersion { get; set; }
 
         /// <summary>
-        /// The MinVersion param. String must be one of these: `"sslv3"`, `"tls1-0"`, `"tls1-1"`, `"tls1-2"`, `"tls1-3"`. Default: `"tls1-0"`.
+        /// Min version
         /// </summary>
         [Input("minVersion")]
         public Input<string>? MinVersion { get; set; }

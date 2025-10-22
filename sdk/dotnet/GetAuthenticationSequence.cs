@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetAuthenticationSequence
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAuthenticationSequence.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AuthenticationSequence data source
         /// </summary>
         public static Task<GetAuthenticationSequenceResult> InvokeAsync(GetAuthenticationSequenceArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAuthenticationSequenceResult>("scm:index/getAuthenticationSequence:getAuthenticationSequence", args ?? new GetAuthenticationSequenceArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAuthenticationSequence.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AuthenticationSequence data source
         /// </summary>
         public static Output<GetAuthenticationSequenceResult> Invoke(GetAuthenticationSequenceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationSequenceResult>("scm:index/getAuthenticationSequence:getAuthenticationSequence", args ?? new GetAuthenticationSequenceInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetAuthenticationSequence.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// AuthenticationSequence data source
         /// </summary>
         public static Output<GetAuthenticationSequenceResult> Invoke(GetAuthenticationSequenceInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationSequenceResult>("scm:index/getAuthenticationSequence:getAuthenticationSequence", args ?? new GetAuthenticationSequenceInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetAuthenticationSequenceArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the authentication sequence
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the authentication sequence
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetAuthenticationSequenceArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetAuthenticationSequenceInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the authentication sequence
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the authentication sequence
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetAuthenticationSequenceInvokeArgs()
         {
@@ -118,20 +76,32 @@ namespace Pulumi.Scm
     public sealed class GetAuthenticationSequenceResult
     {
         /// <summary>
-        /// The AuthenticationProfiles param.
+        /// An ordered list of authentication profiles
         /// </summary>
         public readonly ImmutableArray<string> AuthenticationProfiles;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the authentication sequence
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication sequence
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The UseDomainFindProfile param. Default: `True`.
+        /// Use domain to determine authentication profile?
         /// </summary>
         public readonly bool UseDomainFindProfile;
 
@@ -139,17 +109,26 @@ namespace Pulumi.Scm
         private GetAuthenticationSequenceResult(
             ImmutableArray<string> authenticationProfiles,
 
+            string device,
+
+            string folder,
+
             string id,
 
             string name,
+
+            string snippet,
 
             string tfid,
 
             bool useDomainFindProfile)
         {
             AuthenticationProfiles = authenticationProfiles;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
             Tfid = tfid;
             UseDomainFindProfile = useDomainFindProfile;
         }

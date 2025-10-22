@@ -5,8 +5,13 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.AntiSpywareProfileRuleActionAlertArgs;
+import com.pulumi.scm.inputs.AntiSpywareProfileRuleActionAllowArgs;
 import com.pulumi.scm.inputs.AntiSpywareProfileRuleActionBlockIpArgs;
-import java.lang.Boolean;
+import com.pulumi.scm.inputs.AntiSpywareProfileRuleActionDropArgs;
+import com.pulumi.scm.inputs.AntiSpywareProfileRuleActionResetBothArgs;
+import com.pulumi.scm.inputs.AntiSpywareProfileRuleActionResetClientArgs;
+import com.pulumi.scm.inputs.AntiSpywareProfileRuleActionResetServerArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,44 +22,44 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
     public static final AntiSpywareProfileRuleActionArgs Empty = new AntiSpywareProfileRuleActionArgs();
 
     /**
-     * The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * Alert
      * 
      */
     @Import(name="alert")
-    private @Nullable Output<Boolean> alert;
+    private @Nullable Output<AntiSpywareProfileRuleActionAlertArgs> alert;
 
     /**
-     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Alert
      * 
      */
-    public Optional<Output<Boolean>> alert() {
+    public Optional<Output<AntiSpywareProfileRuleActionAlertArgs>> alert() {
         return Optional.ofNullable(this.alert);
     }
 
     /**
-     * The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * Allow
      * 
      */
     @Import(name="allow")
-    private @Nullable Output<Boolean> allow;
+    private @Nullable Output<AntiSpywareProfileRuleActionAllowArgs> allow;
 
     /**
-     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Allow
      * 
      */
-    public Optional<Output<Boolean>> allow() {
+    public Optional<Output<AntiSpywareProfileRuleActionAllowArgs>> allow() {
         return Optional.ofNullable(this.allow);
     }
 
     /**
-     * The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * anti spyware profiles rules action block ip
      * 
      */
     @Import(name="blockIp")
     private @Nullable Output<AntiSpywareProfileRuleActionBlockIpArgs> blockIp;
 
     /**
-     * @return The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return anti spyware profiles rules action block ip
      * 
      */
     public Optional<Output<AntiSpywareProfileRuleActionBlockIpArgs>> blockIp() {
@@ -62,62 +67,62 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
     }
 
     /**
-     * The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * Drop
      * 
      */
     @Import(name="drop")
-    private @Nullable Output<Boolean> drop;
+    private @Nullable Output<AntiSpywareProfileRuleActionDropArgs> drop;
 
     /**
-     * @return The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Drop
      * 
      */
-    public Optional<Output<Boolean>> drop() {
+    public Optional<Output<AntiSpywareProfileRuleActionDropArgs>> drop() {
         return Optional.ofNullable(this.drop);
     }
 
     /**
-     * The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * Reset both
      * 
      */
     @Import(name="resetBoth")
-    private @Nullable Output<Boolean> resetBoth;
+    private @Nullable Output<AntiSpywareProfileRuleActionResetBothArgs> resetBoth;
 
     /**
-     * @return The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset both
      * 
      */
-    public Optional<Output<Boolean>> resetBoth() {
+    public Optional<Output<AntiSpywareProfileRuleActionResetBothArgs>> resetBoth() {
         return Optional.ofNullable(this.resetBoth);
     }
 
     /**
-     * The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * Reset client
      * 
      */
     @Import(name="resetClient")
-    private @Nullable Output<Boolean> resetClient;
+    private @Nullable Output<AntiSpywareProfileRuleActionResetClientArgs> resetClient;
 
     /**
-     * @return The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset client
      * 
      */
-    public Optional<Output<Boolean>> resetClient() {
+    public Optional<Output<AntiSpywareProfileRuleActionResetClientArgs>> resetClient() {
         return Optional.ofNullable(this.resetClient);
     }
 
     /**
-     * The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * Reset server
      * 
      */
     @Import(name="resetServer")
-    private @Nullable Output<Boolean> resetServer;
+    private @Nullable Output<AntiSpywareProfileRuleActionResetServerArgs> resetServer;
 
     /**
-     * @return The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset server
      * 
      */
-    public Optional<Output<Boolean>> resetServer() {
+    public Optional<Output<AntiSpywareProfileRuleActionResetServerArgs>> resetServer() {
         return Optional.ofNullable(this.resetServer);
     }
 
@@ -152,49 +157,49 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
         }
 
         /**
-         * @param alert The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param alert Alert
          * 
          * @return builder
          * 
          */
-        public Builder alert(@Nullable Output<Boolean> alert) {
+        public Builder alert(@Nullable Output<AntiSpywareProfileRuleActionAlertArgs> alert) {
             $.alert = alert;
             return this;
         }
 
         /**
-         * @param alert The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param alert Alert
          * 
          * @return builder
          * 
          */
-        public Builder alert(Boolean alert) {
+        public Builder alert(AntiSpywareProfileRuleActionAlertArgs alert) {
             return alert(Output.of(alert));
         }
 
         /**
-         * @param allow The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param allow Allow
          * 
          * @return builder
          * 
          */
-        public Builder allow(@Nullable Output<Boolean> allow) {
+        public Builder allow(@Nullable Output<AntiSpywareProfileRuleActionAllowArgs> allow) {
             $.allow = allow;
             return this;
         }
 
         /**
-         * @param allow The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param allow Allow
          * 
          * @return builder
          * 
          */
-        public Builder allow(Boolean allow) {
+        public Builder allow(AntiSpywareProfileRuleActionAllowArgs allow) {
             return allow(Output.of(allow));
         }
 
         /**
-         * @param blockIp The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param blockIp anti spyware profiles rules action block ip
          * 
          * @return builder
          * 
@@ -205,7 +210,7 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
         }
 
         /**
-         * @param blockIp The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param blockIp anti spyware profiles rules action block ip
          * 
          * @return builder
          * 
@@ -215,86 +220,86 @@ public final class AntiSpywareProfileRuleActionArgs extends com.pulumi.resources
         }
 
         /**
-         * @param drop The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param drop Drop
          * 
          * @return builder
          * 
          */
-        public Builder drop(@Nullable Output<Boolean> drop) {
+        public Builder drop(@Nullable Output<AntiSpywareProfileRuleActionDropArgs> drop) {
             $.drop = drop;
             return this;
         }
 
         /**
-         * @param drop The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param drop Drop
          * 
          * @return builder
          * 
          */
-        public Builder drop(Boolean drop) {
+        public Builder drop(AntiSpywareProfileRuleActionDropArgs drop) {
             return drop(Output.of(drop));
         }
 
         /**
-         * @param resetBoth The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param resetBoth Reset both
          * 
          * @return builder
          * 
          */
-        public Builder resetBoth(@Nullable Output<Boolean> resetBoth) {
+        public Builder resetBoth(@Nullable Output<AntiSpywareProfileRuleActionResetBothArgs> resetBoth) {
             $.resetBoth = resetBoth;
             return this;
         }
 
         /**
-         * @param resetBoth The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param resetBoth Reset both
          * 
          * @return builder
          * 
          */
-        public Builder resetBoth(Boolean resetBoth) {
+        public Builder resetBoth(AntiSpywareProfileRuleActionResetBothArgs resetBoth) {
             return resetBoth(Output.of(resetBoth));
         }
 
         /**
-         * @param resetClient The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param resetClient Reset client
          * 
          * @return builder
          * 
          */
-        public Builder resetClient(@Nullable Output<Boolean> resetClient) {
+        public Builder resetClient(@Nullable Output<AntiSpywareProfileRuleActionResetClientArgs> resetClient) {
             $.resetClient = resetClient;
             return this;
         }
 
         /**
-         * @param resetClient The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param resetClient Reset client
          * 
          * @return builder
          * 
          */
-        public Builder resetClient(Boolean resetClient) {
+        public Builder resetClient(AntiSpywareProfileRuleActionResetClientArgs resetClient) {
             return resetClient(Output.of(resetClient));
         }
 
         /**
-         * @param resetServer The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param resetServer Reset server
          * 
          * @return builder
          * 
          */
-        public Builder resetServer(@Nullable Output<Boolean> resetServer) {
+        public Builder resetServer(@Nullable Output<AntiSpywareProfileRuleActionResetServerArgs> resetServer) {
             $.resetServer = resetServer;
             return this;
         }
 
         /**
-         * @param resetServer The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+         * @param resetServer Reset server
          * 
          * @return builder
          * 
          */
-        public Builder resetServer(Boolean resetServer) {
+        public Builder resetServer(AntiSpywareProfileRuleActionResetServerArgs resetServer) {
             return resetServer(Output.of(resetServer));
         }
 

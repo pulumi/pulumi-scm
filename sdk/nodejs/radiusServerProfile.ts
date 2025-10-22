@@ -7,9 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
+ * RadiusServerProfile resource
  */
 export class RadiusServerProfile extends pulumi.CustomResource {
     /**
@@ -40,36 +38,36 @@ export class RadiusServerProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * (Internal use) Encrypted values returned from the API.
-     */
-    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
-    /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Protocol param.
+     * The name of the RADIUS server profile
      */
-    declare public readonly protocol: pulumi.Output<outputs.RadiusServerProfileProtocol | undefined>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * The Retries param. Value must be between 1 and 5.
+     * The RADIUS authentication protocol
+     */
+    declare public readonly protocol: pulumi.Output<outputs.RadiusServerProfileProtocol>;
+    /**
+     * The number of RADIUS server retries
      */
     declare public readonly retries: pulumi.Output<number | undefined>;
     /**
-     * The Servers param.
+     * Server
      */
     declare public readonly servers: pulumi.Output<outputs.RadiusServerProfileServer[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The Timeout param. Value must be between 1 and 120.
+     * The RADIUS server authentication timeout (seconds)
      */
     declare public readonly timeout: pulumi.Output<number | undefined>;
 
@@ -87,8 +85,8 @@ export class RadiusServerProfile extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as RadiusServerProfileState | undefined;
             resourceInputs["device"] = state?.device;
-            resourceInputs["encryptedValues"] = state?.encryptedValues;
             resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
             resourceInputs["protocol"] = state?.protocol;
             resourceInputs["retries"] = state?.retries;
             resourceInputs["servers"] = state?.servers;
@@ -97,22 +95,23 @@ export class RadiusServerProfile extends pulumi.CustomResource {
             resourceInputs["timeout"] = state?.timeout;
         } else {
             const args = argsOrState as RadiusServerProfileArgs | undefined;
+            if (args?.protocol === undefined && !opts.urn) {
+                throw new Error("Missing required property 'protocol'");
+            }
             if (args?.servers === undefined && !opts.urn) {
                 throw new Error("Missing required property 'servers'");
             }
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
             resourceInputs["protocol"] = args?.protocol;
             resourceInputs["retries"] = args?.retries;
             resourceInputs["servers"] = args?.servers;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["timeout"] = args?.timeout;
-            resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-        const secretOpts = { additionalSecretOutputs: ["encryptedValues"] };
-        opts = pulumi.mergeOptions(opts, secretOpts);
         super(RadiusServerProfile.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -122,36 +121,36 @@ export class RadiusServerProfile extends pulumi.CustomResource {
  */
 export interface RadiusServerProfileState {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * (Internal use) Encrypted values returned from the API.
-     */
-    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
-    /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Protocol param.
+     * The name of the RADIUS server profile
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * The RADIUS authentication protocol
      */
     protocol?: pulumi.Input<inputs.RadiusServerProfileProtocol>;
     /**
-     * The Retries param. Value must be between 1 and 5.
+     * The number of RADIUS server retries
      */
     retries?: pulumi.Input<number>;
     /**
-     * The Servers param.
+     * Server
      */
     servers?: pulumi.Input<pulumi.Input<inputs.RadiusServerProfileServer>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The Timeout param. Value must be between 1 and 120.
+     * The RADIUS server authentication timeout (seconds)
      */
     timeout?: pulumi.Input<number>;
 }
@@ -161,31 +160,35 @@ export interface RadiusServerProfileState {
  */
 export interface RadiusServerProfileArgs {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Protocol param.
+     * The name of the RADIUS server profile
      */
-    protocol?: pulumi.Input<inputs.RadiusServerProfileProtocol>;
+    name?: pulumi.Input<string>;
     /**
-     * The Retries param. Value must be between 1 and 5.
+     * The RADIUS authentication protocol
+     */
+    protocol: pulumi.Input<inputs.RadiusServerProfileProtocol>;
+    /**
+     * The number of RADIUS server retries
      */
     retries?: pulumi.Input<number>;
     /**
-     * The Servers param.
+     * Server
      */
     servers: pulumi.Input<pulumi.Input<inputs.RadiusServerProfileServer>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Timeout param. Value must be between 1 and 120.
+     * The RADIUS server authentication timeout (seconds)
      */
     timeout?: pulumi.Input<number>;
 }

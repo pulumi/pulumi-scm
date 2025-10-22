@@ -7,16 +7,9 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * ServiceConnection resource
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.ServiceConnection("example", {});
- * ```
  */
 export class ServiceConnection extends pulumi.CustomResource {
     /**
@@ -47,63 +40,59 @@ export class ServiceConnection extends pulumi.CustomResource {
     }
 
     /**
-     * The BackupSC param.
+     * Backup s c
      */
     declare public readonly backupSC: pulumi.Output<string | undefined>;
     /**
-     * The BgpPeer param.
+     * Bgp peer
      */
     declare public readonly bgpPeer: pulumi.Output<outputs.ServiceConnectionBgpPeer | undefined>;
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      */
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-     */
-    declare public readonly folder: pulumi.Output<string>;
-    /**
-     * The IpsecTunnel param.
+     * Ipsec tunnel
      */
     declare public readonly ipsecTunnel: pulumi.Output<string>;
     /**
-     * The Name param.
+     * The name of the service connection
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The NatPool param.
+     * Nat pool
      */
     declare public readonly natPool: pulumi.Output<string | undefined>;
     /**
-     * The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+     * No export community
      */
     declare public readonly noExportCommunity: pulumi.Output<string | undefined>;
     /**
-     * The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+     * Onboarding type
      */
     declare public readonly onboardingType: pulumi.Output<string>;
     /**
-     * The Protocol param.
+     * Protocol
      */
     declare public readonly protocol: pulumi.Output<outputs.ServiceConnectionProtocol | undefined>;
     /**
-     * The Qos param.
+     * Qos
      */
     declare public readonly qos: pulumi.Output<outputs.ServiceConnectionQos | undefined>;
     /**
-     * The Region param.
+     * Region
      */
     declare public readonly region: pulumi.Output<string>;
     /**
-     * The SecondaryIpsecTunnel param.
+     * Secondary ipsec tunnel
      */
     declare public readonly secondaryIpsecTunnel: pulumi.Output<string | undefined>;
     /**
-     * The SourceNat param.
+     * Source nat
      */
     declare public readonly sourceNat: pulumi.Output<boolean | undefined>;
     /**
-     * The Subnets param.
+     * Subnets
      */
     declare public readonly subnets: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -124,7 +113,6 @@ export class ServiceConnection extends pulumi.CustomResource {
             resourceInputs["backupSC"] = state?.backupSC;
             resourceInputs["bgpPeer"] = state?.bgpPeer;
             resourceInputs["encryptedValues"] = state?.encryptedValues;
-            resourceInputs["folder"] = state?.folder;
             resourceInputs["ipsecTunnel"] = state?.ipsecTunnel;
             resourceInputs["name"] = state?.name;
             resourceInputs["natPool"] = state?.natPool;
@@ -147,7 +135,6 @@ export class ServiceConnection extends pulumi.CustomResource {
             }
             resourceInputs["backupSC"] = args?.backupSC;
             resourceInputs["bgpPeer"] = args?.bgpPeer;
-            resourceInputs["folder"] = args?.folder;
             resourceInputs["ipsecTunnel"] = args?.ipsecTunnel;
             resourceInputs["name"] = args?.name;
             resourceInputs["natPool"] = args?.natPool;
@@ -174,63 +161,59 @@ export class ServiceConnection extends pulumi.CustomResource {
  */
 export interface ServiceConnectionState {
     /**
-     * The BackupSC param.
+     * Backup s c
      */
     backupSC?: pulumi.Input<string>;
     /**
-     * The BgpPeer param.
+     * Bgp peer
      */
     bgpPeer?: pulumi.Input<inputs.ServiceConnectionBgpPeer>;
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      */
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The IpsecTunnel param.
+     * Ipsec tunnel
      */
     ipsecTunnel?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * The name of the service connection
      */
     name?: pulumi.Input<string>;
     /**
-     * The NatPool param.
+     * Nat pool
      */
     natPool?: pulumi.Input<string>;
     /**
-     * The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+     * No export community
      */
     noExportCommunity?: pulumi.Input<string>;
     /**
-     * The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+     * Onboarding type
      */
     onboardingType?: pulumi.Input<string>;
     /**
-     * The Protocol param.
+     * Protocol
      */
     protocol?: pulumi.Input<inputs.ServiceConnectionProtocol>;
     /**
-     * The Qos param.
+     * Qos
      */
     qos?: pulumi.Input<inputs.ServiceConnectionQos>;
     /**
-     * The Region param.
+     * Region
      */
     region?: pulumi.Input<string>;
     /**
-     * The SecondaryIpsecTunnel param.
+     * Secondary ipsec tunnel
      */
     secondaryIpsecTunnel?: pulumi.Input<string>;
     /**
-     * The SourceNat param.
+     * Source nat
      */
     sourceNat?: pulumi.Input<boolean>;
     /**
-     * The Subnets param.
+     * Subnets
      */
     subnets?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
@@ -241,59 +224,55 @@ export interface ServiceConnectionState {
  */
 export interface ServiceConnectionArgs {
     /**
-     * The BackupSC param.
+     * Backup s c
      */
     backupSC?: pulumi.Input<string>;
     /**
-     * The BgpPeer param.
+     * Bgp peer
      */
     bgpPeer?: pulumi.Input<inputs.ServiceConnectionBgpPeer>;
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The IpsecTunnel param.
+     * Ipsec tunnel
      */
     ipsecTunnel: pulumi.Input<string>;
     /**
-     * The Name param.
+     * The name of the service connection
      */
     name?: pulumi.Input<string>;
     /**
-     * The NatPool param.
+     * Nat pool
      */
     natPool?: pulumi.Input<string>;
     /**
-     * The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+     * No export community
      */
     noExportCommunity?: pulumi.Input<string>;
     /**
-     * The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+     * Onboarding type
      */
     onboardingType?: pulumi.Input<string>;
     /**
-     * The Protocol param.
+     * Protocol
      */
     protocol?: pulumi.Input<inputs.ServiceConnectionProtocol>;
     /**
-     * The Qos param.
+     * Qos
      */
     qos?: pulumi.Input<inputs.ServiceConnectionQos>;
     /**
-     * The Region param.
+     * Region
      */
     region: pulumi.Input<string>;
     /**
-     * The SecondaryIpsecTunnel param.
+     * Secondary ipsec tunnel
      */
     secondaryIpsecTunnel?: pulumi.Input<string>;
     /**
-     * The SourceNat param.
+     * Source nat
      */
     sourceNat?: pulumi.Input<boolean>;
     /**
-     * The Subnets param.
+     * Subnets
      */
     subnets?: pulumi.Input<pulumi.Input<string>[]>;
 }

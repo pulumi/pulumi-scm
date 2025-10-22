@@ -18,86 +18,86 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListType {
     /**
-     * @return The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Domain
      * 
      */
     private @Nullable ExternalDynamicListTypeDomain domain;
     /**
-     * @return The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Imei
      * 
      */
     private @Nullable ExternalDynamicListTypeImei imei;
     /**
-     * @return The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Imsi
      * 
      */
     private @Nullable ExternalDynamicListTypeImsi imsi;
     /**
-     * @return The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Ip
      * 
      */
     private @Nullable ExternalDynamicListTypeIp ip;
     /**
-     * @return The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Predefined ip
      * 
      */
     private @Nullable ExternalDynamicListTypePredefinedIp predefinedIp;
     /**
-     * @return The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Predefined url
      * 
      */
     private @Nullable ExternalDynamicListTypePredefinedUrl predefinedUrl;
     /**
-     * @return The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Url
      * 
      */
     private @Nullable ExternalDynamicListTypeUrl url;
 
     private ExternalDynamicListType() {}
     /**
-     * @return The Domain param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Domain
      * 
      */
     public Optional<ExternalDynamicListTypeDomain> domain() {
         return Optional.ofNullable(this.domain);
     }
     /**
-     * @return The Imei param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Imei
      * 
      */
     public Optional<ExternalDynamicListTypeImei> imei() {
         return Optional.ofNullable(this.imei);
     }
     /**
-     * @return The Imsi param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Imsi
      * 
      */
     public Optional<ExternalDynamicListTypeImsi> imsi() {
         return Optional.ofNullable(this.imsi);
     }
     /**
-     * @return The Ip param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Ip
      * 
      */
     public Optional<ExternalDynamicListTypeIp> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
-     * @return The PredefinedIp param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Predefined ip
      * 
      */
     public Optional<ExternalDynamicListTypePredefinedIp> predefinedIp() {
         return Optional.ofNullable(this.predefinedIp);
     }
     /**
-     * @return The PredefinedUrl param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Predefined url
      * 
      */
     public Optional<ExternalDynamicListTypePredefinedUrl> predefinedUrl() {
         return Optional.ofNullable(this.predefinedUrl);
     }
     /**
-     * @return The Url param. Ensure that only one of the following is specified: `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, `url`
+     * @return Url
      * 
      */
     public Optional<ExternalDynamicListTypeUrl> url() {

@@ -16,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * Variable resource
  * 
  * ## Example Usage
  * 
@@ -42,8 +42,125 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Variable("example", VariableArgs.builder()
- *             .folder("Shared")
+ *         //
+ *         // Creates a variable in as-number format
+ *         //
+ *         var scmVariableAsn = new Variable("scmVariableAsn", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_variable_asn")
+ *             .description("Managed by Pulumi")
+ *             .type("as-number")
+ *             .value("65535")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a variable in count format
+ *         //
+ *         var scmVariableCount = new Variable("scmVariableCount", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_variable_count")
+ *             .description("Managed by Pulumi")
+ *             .type("count")
+ *             .value("15")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a variable in fqdn format
+ *         //
+ *         var scmVariableFqdn = new Variable("scmVariableFqdn", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_variable_fqdn")
+ *             .description("Managed by Pulumi")
+ *             .type("fqdn")
+ *             .value("scm.example.com")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a variable in group-id format
+ *         //
+ *         var scmVariableGroupId = new Variable("scmVariableGroupId", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_variable_group_id")
+ *             .description("Managed by Pulumi")
+ *             .type("group-id")
+ *             .value("10")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a variable in ip-range format
+ *         //
+ *         var scmVariableIprange = new Variable("scmVariableIprange", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_variable_iprange")
+ *             .description("Managed by Pulumi")
+ *             .type("ip-range")
+ *             .value("198.18.1.1-198.18.1.100")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a variable in ip-netmask format
+ *         //
+ *         var scmVariableIpaddr = new Variable("scmVariableIpaddr", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_variable_ipaddr")
+ *             .description("Managed by Pulumi")
+ *             .type("ip-netmask")
+ *             .value("198.18.2.0/24")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a variable in ip-wildcard format
+ *         //
+ *         var scmVariableIpwildcard = new Variable("scmVariableIpwildcard", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_variable_ipwildcard")
+ *             .description("Managed by Pulumi")
+ *             .type("ip-wildcard")
+ *             .value("198.18.1.0/0.255.255.255")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a variable in percent format
+ *         //
+ *         var scmVariablePercent = new Variable("scmVariablePercent", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_variable_percent")
+ *             .description("Managed by Pulumi")
+ *             .type("percent")
+ *             .value("10")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a variable in router-id format
+ *         //
+ *         var scmVariableRouterId = new Variable("scmVariableRouterId", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_variable_router_id")
+ *             .description("Managed by Pulumi")
+ *             .type("router-id")
+ *             .value("198.18.1.1")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a variable in timer format
+ *         //
+ *         var scmVariableTimer = new Variable("scmVariableTimer", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_variable_timer")
+ *             .description("Managed by Pulumi")
+ *             .type("timer")
+ *             .value("1440")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a variable in zone format
+ *         //
+ *         var scmVariableZone = new Variable("scmVariableZone", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_variable_zone")
+ *             .description("Managed by Pulumi")
+ *             .type("zone")
+ *             .value("internet")
  *             .build());
  * 
  *     }
@@ -55,84 +172,84 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/variable:Variable")
 public class Variable extends com.pulumi.resources.CustomResource {
     /**
-     * The Description param.
+     * The description of the variable
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the variable
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the variable
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the variable
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Overridden param.
+     * Is the variable overridden?
      * 
      */
     @Export(name="overridden", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> overridden;
+    private Output</* @Nullable */ Boolean> overridden;
 
     /**
-     * @return The Overridden param.
+     * @return Is the variable overridden?
      * 
      */
-    public Output<Boolean> overridden() {
-        return this.overridden;
+    public Output<Optional<Boolean>> overridden() {
+        return Codegen.optional(this.overridden);
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -145,32 +262,32 @@ public class Variable extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The Type param. String must be one of these: `&#34;percent&#34;`, `&#34;count&#34;`, `&#34;ip-netmask&#34;`, `&#34;zone&#34;`, `&#34;ip-range&#34;`, `&#34;ip-wildcard&#34;`, `&#34;device-priority&#34;`, `&#34;device-id&#34;`, `&#34;egress-max&#34;`, `&#34;as-number&#34;`, `&#34;fqdn&#34;`, `&#34;port&#34;`, `&#34;link-tag&#34;`, `&#34;group-id&#34;`, `&#34;rate&#34;`, `&#34;router-id&#34;`, `&#34;qos-profile&#34;`, `&#34;timer&#34;`.
+     * The variable type
      * 
      */
     @Export(name="type", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> type;
+    private Output<String> type;
 
     /**
-     * @return The Type param. String must be one of these: `&#34;percent&#34;`, `&#34;count&#34;`, `&#34;ip-netmask&#34;`, `&#34;zone&#34;`, `&#34;ip-range&#34;`, `&#34;ip-wildcard&#34;`, `&#34;device-priority&#34;`, `&#34;device-id&#34;`, `&#34;egress-max&#34;`, `&#34;as-number&#34;`, `&#34;fqdn&#34;`, `&#34;port&#34;`, `&#34;link-tag&#34;`, `&#34;group-id&#34;`, `&#34;rate&#34;`, `&#34;router-id&#34;`, `&#34;qos-profile&#34;`, `&#34;timer&#34;`.
+     * @return The variable type
      * 
      */
-    public Output<Optional<String>> type() {
-        return Codegen.optional(this.type);
+    public Output<String> type() {
+        return this.type;
     }
     /**
-     * value can accept either string or integer.
+     * The value of the variable
      * 
      */
     @Export(name="value", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> value;
+    private Output<String> value;
 
     /**
-     * @return value can accept either string or integer.
+     * @return The value of the variable
      * 
      */
-    public Output<Optional<String>> value() {
-        return Codegen.optional(this.value);
+    public Output<String> value() {
+        return this.value;
     }
 
     /**
@@ -185,7 +302,7 @@ public class Variable extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Variable(java.lang.String name, @Nullable VariableArgs args) {
+    public Variable(java.lang.String name, VariableArgs args) {
         this(name, args, null);
     }
     /**
@@ -194,7 +311,7 @@ public class Variable extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Variable(java.lang.String name, @Nullable VariableArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Variable(java.lang.String name, VariableArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/variable:Variable", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -202,7 +319,7 @@ public class Variable extends com.pulumi.resources.CustomResource {
         super("scm:index/variable:Variable", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static VariableArgs makeArgs(@Nullable VariableArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static VariableArgs makeArgs(VariableArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

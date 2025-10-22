@@ -18,14 +18,14 @@ public final class HipObjectDiskEncryptionCriteriaArgs extends com.pulumi.resour
     public static final HipObjectDiskEncryptionCriteriaArgs Empty = new HipObjectDiskEncryptionCriteriaArgs();
 
     /**
-     * The EncryptedLocations param.
+     * Encrypted locations
      * 
      */
     @Import(name="encryptedLocations")
     private @Nullable Output<List<HipObjectDiskEncryptionCriteriaEncryptedLocationArgs>> encryptedLocations;
 
     /**
-     * @return The EncryptedLocations param.
+     * @return Encrypted locations
      * 
      */
     public Optional<Output<List<HipObjectDiskEncryptionCriteriaEncryptedLocationArgs>>> encryptedLocations() {
@@ -33,14 +33,14 @@ public final class HipObjectDiskEncryptionCriteriaArgs extends com.pulumi.resour
     }
 
     /**
-     * Is Installed. Default: `true`.
+     * Is Installed
      * 
      */
     @Import(name="isInstalled")
     private @Nullable Output<Boolean> isInstalled;
 
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     public Optional<Output<Boolean>> isInstalled() {
@@ -73,7 +73,7 @@ public final class HipObjectDiskEncryptionCriteriaArgs extends com.pulumi.resour
         }
 
         /**
-         * @param encryptedLocations The EncryptedLocations param.
+         * @param encryptedLocations Encrypted locations
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class HipObjectDiskEncryptionCriteriaArgs extends com.pulumi.resour
         }
 
         /**
-         * @param encryptedLocations The EncryptedLocations param.
+         * @param encryptedLocations Encrypted locations
          * 
          * @return builder
          * 
@@ -94,7 +94,7 @@ public final class HipObjectDiskEncryptionCriteriaArgs extends com.pulumi.resour
         }
 
         /**
-         * @param encryptedLocations The EncryptedLocations param.
+         * @param encryptedLocations Encrypted locations
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class HipObjectDiskEncryptionCriteriaArgs extends com.pulumi.resour
         }
 
         /**
-         * @param isInstalled Is Installed. Default: `true`.
+         * @param isInstalled Is Installed
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class HipObjectDiskEncryptionCriteriaArgs extends com.pulumi.resour
         }
 
         /**
-         * @param isInstalled Is Installed. Default: `true`.
+         * @param isInstalled Is Installed
          * 
          * @return builder
          * 

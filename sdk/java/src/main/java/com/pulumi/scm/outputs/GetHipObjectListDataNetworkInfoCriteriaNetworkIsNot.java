@@ -5,58 +5,59 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernet;
 import com.pulumi.scm.outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobile;
+import com.pulumi.scm.outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknown;
 import com.pulumi.scm.outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifi;
-import java.lang.Boolean;
 import java.util.Objects;
 
 @CustomType
 public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
     /**
-     * @return The Ethernet param.
+     * @return Ethernet
      * 
      */
-    private Boolean ethernet;
+    private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernet ethernet;
     /**
-     * @return The Mobile param.
+     * @return Mobile
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobile mobile;
     /**
-     * @return The Unknown param.
+     * @return Unknown
      * 
      */
-    private Boolean unknown;
+    private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknown unknown;
     /**
-     * @return The Wifi param.
+     * @return Wifi
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifi wifi;
 
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot() {}
     /**
-     * @return The Ethernet param.
+     * @return Ethernet
      * 
      */
-    public Boolean ethernet() {
+    public GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernet ethernet() {
         return this.ethernet;
     }
     /**
-     * @return The Mobile param.
+     * @return Mobile
      * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobile mobile() {
         return this.mobile;
     }
     /**
-     * @return The Unknown param.
+     * @return Unknown
      * 
      */
-    public Boolean unknown() {
+    public GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknown unknown() {
         return this.unknown;
     }
     /**
-     * @return The Wifi param.
+     * @return Wifi
      * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifi wifi() {
@@ -72,9 +73,9 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean ethernet;
+        private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernet ethernet;
         private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobile mobile;
-        private Boolean unknown;
+        private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknown unknown;
         private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifi wifi;
         public Builder() {}
         public Builder(GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot defaults) {
@@ -86,7 +87,7 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
         }
 
         @CustomType.Setter
-        public Builder ethernet(Boolean ethernet) {
+        public Builder ethernet(GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotEthernet ethernet) {
             if (ethernet == null) {
               throw new MissingRequiredPropertyException("GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot", "ethernet");
             }
@@ -102,7 +103,7 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
             return this;
         }
         @CustomType.Setter
-        public Builder unknown(Boolean unknown) {
+        public Builder unknown(GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknown unknown) {
             if (unknown == null) {
               throw new MissingRequiredPropertyException("GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot", "unknown");
             }

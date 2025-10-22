@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.String;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,17 +16,17 @@ public final class ScepProfileAlgorithmRsaArgs extends com.pulumi.resources.Reso
     public static final ScepProfileAlgorithmRsaArgs Empty = new ScepProfileAlgorithmRsaArgs();
 
     /**
-     * The RsaNbits param.
+     * Rsa nbits
      * 
      */
     @Import(name="rsaNbits")
-    private @Nullable Output<String> rsaNbits;
+    private @Nullable Output<Integer> rsaNbits;
 
     /**
-     * @return The RsaNbits param.
+     * @return Rsa nbits
      * 
      */
-    public Optional<Output<String>> rsaNbits() {
+    public Optional<Output<Integer>> rsaNbits() {
         return Optional.ofNullable(this.rsaNbits);
     }
 
@@ -55,23 +55,23 @@ public final class ScepProfileAlgorithmRsaArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param rsaNbits The RsaNbits param.
+         * @param rsaNbits Rsa nbits
          * 
          * @return builder
          * 
          */
-        public Builder rsaNbits(@Nullable Output<String> rsaNbits) {
+        public Builder rsaNbits(@Nullable Output<Integer> rsaNbits) {
             $.rsaNbits = rsaNbits;
             return this;
         }
 
         /**
-         * @param rsaNbits The RsaNbits param.
+         * @param rsaNbits Rsa nbits
          * 
          * @return builder
          * 
          */
-        public Builder rsaNbits(String rsaNbits) {
+        public Builder rsaNbits(Integer rsaNbits) {
             return rsaNbits(Output.of(rsaNbits));
         }
 

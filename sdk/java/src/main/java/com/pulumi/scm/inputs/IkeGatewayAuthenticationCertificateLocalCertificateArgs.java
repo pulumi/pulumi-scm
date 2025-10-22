@@ -16,14 +16,14 @@ public final class IkeGatewayAuthenticationCertificateLocalCertificateArgs exten
     public static final IkeGatewayAuthenticationCertificateLocalCertificateArgs Empty = new IkeGatewayAuthenticationCertificateLocalCertificateArgs();
 
     /**
-     * The LocalCertificateName param.
+     * Local certificate name
      * 
      */
     @Import(name="localCertificateName")
     private @Nullable Output<String> localCertificateName;
 
     /**
-     * @return The LocalCertificateName param.
+     * @return Local certificate name
      * 
      */
     public Optional<Output<String>> localCertificateName() {
@@ -55,7 +55,7 @@ public final class IkeGatewayAuthenticationCertificateLocalCertificateArgs exten
         }
 
         /**
-         * @param localCertificateName The LocalCertificateName param.
+         * @param localCertificateName Local certificate name
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class IkeGatewayAuthenticationCertificateLocalCertificateArgs exten
         }
 
         /**
-         * @param localCertificateName The LocalCertificateName param.
+         * @param localCertificateName Local certificate name
          * 
          * @return builder
          * 

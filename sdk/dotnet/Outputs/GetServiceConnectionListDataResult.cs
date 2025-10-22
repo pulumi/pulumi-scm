@@ -14,67 +14,74 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetServiceConnectionListDataResult
     {
         /// <summary>
-        /// The BackupSC param.
+        /// Backup s c
         /// </summary>
         public readonly string BackupSC;
         /// <summary>
-        /// The BgpPeer param.
+        /// Bgp peer
         /// </summary>
         public readonly Outputs.GetServiceConnectionListDataBgpPeerResult BgpPeer;
         /// <summary>
-        /// UUID of the resource.
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The UUID of the service connection
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The IpsecTunnel param.
+        /// Ipsec tunnel
         /// </summary>
         public readonly string IpsecTunnel;
         /// <summary>
-        /// The Name param.
+        /// The name of the service connection
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NatPool param.
+        /// Nat pool
         /// </summary>
         public readonly string NatPool;
         /// <summary>
-        /// The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+        /// No export community
         /// </summary>
         public readonly string NoExportCommunity;
         /// <summary>
-        /// The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+        /// Onboarding type
         /// </summary>
         public readonly string OnboardingType;
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         public readonly Outputs.GetServiceConnectionListDataProtocolResult Protocol;
         /// <summary>
-        /// The Qos param.
+        /// Qos
         /// </summary>
         public readonly Outputs.GetServiceConnectionListDataQosResult Qos;
         /// <summary>
-        /// The Region param.
+        /// Region
         /// </summary>
         public readonly string Region;
         /// <summary>
-        /// The SecondaryIpsecTunnel param.
+        /// Secondary ipsec tunnel
         /// </summary>
         public readonly string SecondaryIpsecTunnel;
         /// <summary>
-        /// The SourceNat param.
+        /// Source nat
         /// </summary>
         public readonly bool SourceNat;
         /// <summary>
-        /// The Subnets param.
+        /// Subnets
         /// </summary>
         public readonly ImmutableArray<string> Subnets;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetServiceConnectionListDataResult(
             string backupSC,
 
             Outputs.GetServiceConnectionListDataBgpPeerResult bgpPeer,
+
+            ImmutableDictionary<string, string> encryptedValues,
 
             string id,
 
@@ -98,10 +105,13 @@ namespace Pulumi.Scm.Outputs
 
             bool sourceNat,
 
-            ImmutableArray<string> subnets)
+            ImmutableArray<string> subnets,
+
+            string tfid)
         {
             BackupSC = backupSC;
             BgpPeer = bgpPeer;
+            EncryptedValues = encryptedValues;
             Id = id;
             IpsecTunnel = ipsecTunnel;
             Name = name;
@@ -114,6 +124,7 @@ namespace Pulumi.Scm.Outputs
             SecondaryIpsecTunnel = secondaryIpsecTunnel;
             SourceNat = sourceNat;
             Subnets = subnets;
+            Tfid = tfid;
         }
     }
 }

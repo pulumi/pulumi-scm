@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectCertificateCriteria
     {
         /// <summary>
-        /// The CertificateAttributes param.
+        /// Certificate attributes
         /// </summary>
         public readonly ImmutableArray<Outputs.HipObjectCertificateCriteriaCertificateAttribute> CertificateAttributes;
         /// <summary>
-        /// Profile for authenticating client certificates.
+        /// Profile for authenticating client certificates
         /// </summary>
         public readonly string? CertificateProfile;
 

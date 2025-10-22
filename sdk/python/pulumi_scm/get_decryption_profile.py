@@ -27,13 +27,22 @@ class GetDecryptionProfileResult:
     """
     A collection of values returned by getDecryptionProfile.
     """
-    def __init__(__self__, id=None, name=None, ssl_forward_proxy=None, ssl_inbound_proxy=None, ssl_no_proxy=None, ssl_protocol_settings=None, tfid=None):
+    def __init__(__self__, device=None, folder=None, id=None, name=None, snippet=None, ssl_forward_proxy=None, ssl_inbound_proxy=None, ssl_no_proxy=None, ssl_protocol_settings=None, tfid=None):
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if ssl_forward_proxy and not isinstance(ssl_forward_proxy, dict):
             raise TypeError("Expected argument 'ssl_forward_proxy' to be a dict")
         pulumi.set(__self__, "ssl_forward_proxy", ssl_forward_proxy)
@@ -52,9 +61,25 @@ class GetDecryptionProfileResult:
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -62,15 +87,23 @@ class GetDecryptionProfileResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\\-\\.\\s]{0,}$`.
+        Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sslForwardProxy")
     def ssl_forward_proxy(self) -> 'outputs.GetDecryptionProfileSslForwardProxyResult':
         """
-        The SslForwardProxy param.
+        Ssl forward proxy
         """
         return pulumi.get(self, "ssl_forward_proxy")
 
@@ -78,7 +111,7 @@ class GetDecryptionProfileResult:
     @pulumi.getter(name="sslInboundProxy")
     def ssl_inbound_proxy(self) -> 'outputs.GetDecryptionProfileSslInboundProxyResult':
         """
-        The SslInboundProxy param.
+        Ssl inbound proxy
         """
         return pulumi.get(self, "ssl_inbound_proxy")
 
@@ -86,7 +119,7 @@ class GetDecryptionProfileResult:
     @pulumi.getter(name="sslNoProxy")
     def ssl_no_proxy(self) -> 'outputs.GetDecryptionProfileSslNoProxyResult':
         """
-        The SslNoProxy param.
+        Ssl no proxy
         """
         return pulumi.get(self, "ssl_no_proxy")
 
@@ -94,7 +127,7 @@ class GetDecryptionProfileResult:
     @pulumi.getter(name="sslProtocolSettings")
     def ssl_protocol_settings(self) -> 'outputs.GetDecryptionProfileSslProtocolSettingsResult':
         """
-        The SslProtocolSettings param.
+        Ssl protocol settings
         """
         return pulumi.get(self, "ssl_protocol_settings")
 
@@ -110,8 +143,11 @@ class AwaitableGetDecryptionProfileResult(GetDecryptionProfileResult):
         if False:
             yield self
         return GetDecryptionProfileResult(
+            device=self.device,
+            folder=self.folder,
             id=self.id,
             name=self.name,
+            snippet=self.snippet,
             ssl_forward_proxy=self.ssl_forward_proxy,
             ssl_inbound_proxy=self.ssl_inbound_proxy,
             ssl_no_proxy=self.ssl_no_proxy,
@@ -120,59 +156,53 @@ class AwaitableGetDecryptionProfileResult(GetDecryptionProfileResult):
 
 
 def get_decryption_profile(id: Optional[_builtins.str] = None,
+                           name: Optional[_builtins.str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetDecryptionProfileResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_decryption_profile(id="1234-56-789")
-    ```
+    DecryptionProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getDecryptionProfile:getDecryptionProfile', __args__, opts=opts, typ=GetDecryptionProfileResult).value
 
     return AwaitableGetDecryptionProfileResult(
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         ssl_forward_proxy=pulumi.get(__ret__, 'ssl_forward_proxy'),
         ssl_inbound_proxy=pulumi.get(__ret__, 'ssl_inbound_proxy'),
         ssl_no_proxy=pulumi.get(__ret__, 'ssl_no_proxy'),
         ssl_protocol_settings=pulumi.get(__ret__, 'ssl_protocol_settings'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_decryption_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDecryptionProfileResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_decryption_profile(id="1234-56-789")
-    ```
+    DecryptionProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getDecryptionProfile:getDecryptionProfile', __args__, opts=opts, typ=GetDecryptionProfileResult)
     return __ret__.apply(lambda __response__: GetDecryptionProfileResult(
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
+        snippet=pulumi.get(__response__, 'snippet'),
         ssl_forward_proxy=pulumi.get(__response__, 'ssl_forward_proxy'),
         ssl_inbound_proxy=pulumi.get(__response__, 'ssl_inbound_proxy'),
         ssl_no_proxy=pulumi.get(__response__, 'ssl_no_proxy'),

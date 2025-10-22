@@ -18,14 +18,14 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs ext
     public static final HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs Empty = new HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs();
 
     /**
-     * Registry value name. String length must not exceed 1023 characters.
+     * Registry value name
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return Registry value name. String length must not exceed 1023 characters.
+     * @return Registry value name
      * 
      */
     public Output<String> name() {
@@ -33,14 +33,14 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs ext
     }
 
     /**
-     * Value does not exist or match specified value data. Default: `false`.
+     * Value does not exist or match specified value data
      * 
      */
     @Import(name="negate")
     private @Nullable Output<Boolean> negate;
 
     /**
-     * @return Value does not exist or match specified value data. Default: `false`.
+     * @return Value does not exist or match specified value data
      * 
      */
     public Optional<Output<Boolean>> negate() {
@@ -48,14 +48,14 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs ext
     }
 
     /**
-     * Registry value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * Registry value data
      * 
      */
     @Import(name="valueData")
     private @Nullable Output<String> valueData;
 
     /**
-     * @return Registry value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Registry value data
      * 
      */
     public Optional<Output<String>> valueData() {
@@ -89,7 +89,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs ext
         }
 
         /**
-         * @param name Registry value name. String length must not exceed 1023 characters.
+         * @param name Registry value name
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs ext
         }
 
         /**
-         * @param name Registry value name. String length must not exceed 1023 characters.
+         * @param name Registry value name
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs ext
         }
 
         /**
-         * @param negate Value does not exist or match specified value data. Default: `false`.
+         * @param negate Value does not exist or match specified value data
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs ext
         }
 
         /**
-         * @param negate Value does not exist or match specified value data. Default: `false`.
+         * @param negate Value does not exist or match specified value data
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs ext
         }
 
         /**
-         * @param valueData Registry value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+         * @param valueData Registry value data
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs ext
         }
 
         /**
-         * @param valueData Registry value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+         * @param valueData Registry value data
          * 
          * @return builder
          * 

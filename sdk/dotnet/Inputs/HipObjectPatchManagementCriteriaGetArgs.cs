@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectPatchManagementCriteriaGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// is enabled. String must be one of these: `"no"`, `"yes"`, `"not-available"`.
+        /// is enabled
         /// </summary>
         [Input("isEnabled")]
         public Input<string>? IsEnabled { get; set; }
 
         /// <summary>
-        /// Is Installed. Default: `True`.
+        /// Is Installed
         /// </summary>
         [Input("isInstalled")]
         public Input<bool>? IsInstalled { get; set; }
 
         /// <summary>
-        /// The MissingPatches param.
+        /// Missing patches
         /// </summary>
         [Input("missingPatches")]
         public Input<Inputs.HipObjectPatchManagementCriteriaMissingPatchesGetArgs>? MissingPatches { get; set; }

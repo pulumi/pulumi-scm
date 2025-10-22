@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class QosPolicyRuleDscpTosCodepointArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Type param.
+        /// Type
         /// </summary>
         [Input("type")]
         public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeArgs>? Type { get; set; }

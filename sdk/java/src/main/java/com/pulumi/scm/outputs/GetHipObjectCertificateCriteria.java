@@ -13,26 +13,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectCertificateCriteria {
     /**
-     * @return The CertificateAttributes param.
+     * @return Certificate attributes
      * 
      */
     private List<GetHipObjectCertificateCriteriaCertificateAttribute> certificateAttributes;
     /**
-     * @return Profile for authenticating client certificates.
+     * @return Profile for authenticating client certificates
      * 
      */
     private String certificateProfile;
 
     private GetHipObjectCertificateCriteria() {}
     /**
-     * @return The CertificateAttributes param.
+     * @return Certificate attributes
      * 
      */
     public List<GetHipObjectCertificateCriteriaCertificateAttribute> certificateAttributes() {
         return this.certificateAttributes;
     }
     /**
-     * @return Profile for authenticating client certificates.
+     * @return Profile for authenticating client certificates
      * 
      */
     public String certificateProfile() {

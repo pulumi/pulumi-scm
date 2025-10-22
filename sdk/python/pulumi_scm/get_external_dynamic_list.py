@@ -27,13 +27,25 @@ class GetExternalDynamicListResult:
     """
     A collection of values returned by getExternalDynamicList.
     """
-    def __init__(__self__, id=None, name=None, tfid=None, type=None):
+    def __init__(__self__, device=None, encrypted_values=None, folder=None, id=None, name=None, snippet=None, tfid=None, type=None):
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if encrypted_values and not isinstance(encrypted_values, dict):
+            raise TypeError("Expected argument 'encrypted_values' to be a dict")
+        pulumi.set(__self__, "encrypted_values", encrypted_values)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -43,9 +55,33 @@ class GetExternalDynamicListResult:
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter(name="encryptedValues")
+    def encrypted_values(self) -> Mapping[str, _builtins.str]:
+        """
+        Map of sensitive values returned from the API.
+        """
+        return pulumi.get(self, "encrypted_values")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the external dynamic list
         """
         return pulumi.get(self, "id")
 
@@ -53,9 +89,17 @@ class GetExternalDynamicListResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the external dynamic list
         """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -66,7 +110,7 @@ class GetExternalDynamicListResult:
     @pulumi.getter
     def type(self) -> 'outputs.GetExternalDynamicListTypeResult':
         """
-        The Type param.
+        Type
         """
         return pulumi.get(self, "type")
 
@@ -77,16 +121,21 @@ class AwaitableGetExternalDynamicListResult(GetExternalDynamicListResult):
         if False:
             yield self
         return GetExternalDynamicListResult(
+            device=self.device,
+            encrypted_values=self.encrypted_values,
+            folder=self.folder,
             id=self.id,
             name=self.name,
+            snippet=self.snippet,
             tfid=self.tfid,
             type=self.type)
 
 
 def get_external_dynamic_list(id: Optional[_builtins.str] = None,
+                              name: Optional[_builtins.str] = None,
                               opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetExternalDynamicListResult:
     """
-    Retrieves a config item.
+    ExternalDynamicList data source
 
     ## Example Usage
 
@@ -94,26 +143,42 @@ def get_external_dynamic_list(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_external_dynamic_list(id="1234-56-789")
+    # Data source to look up a single external dynamic list by its ID.
+    scm_external_dynamic_list_ds = scm.get_external_dynamic_list(id="ce39b7b5-f5bc-4276-9fe5-be56613e37ad")
+    pulumi.export("externalDynamicListDetails", {
+        "id": scm_external_dynamic_list_ds.id,
+        "name": scm_external_dynamic_list_ds.name,
+        "folder": scm_external_dynamic_list_ds.folder,
+        "description": scm_external_dynamic_list_ds.type.domain.description,
+        "url": scm_external_dynamic_list_ds.type.domain.url,
+        "recurring": scm_external_dynamic_list_ds.type.domain.recurring,
+    })
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the external dynamic list
+    :param _builtins.str name: The name of the external dynamic list
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getExternalDynamicList:getExternalDynamicList', __args__, opts=opts, typ=GetExternalDynamicListResult).value
 
     return AwaitableGetExternalDynamicListResult(
+        device=pulumi.get(__ret__, 'device'),
+        encrypted_values=pulumi.get(__ret__, 'encrypted_values'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         type=pulumi.get(__ret__, 'type'))
 def get_external_dynamic_list_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                     name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetExternalDynamicListResult]:
     """
-    Retrieves a config item.
+    ExternalDynamicList data source
 
     ## Example Usage
 
@@ -121,18 +186,33 @@ def get_external_dynamic_list_output(id: Optional[pulumi.Input[_builtins.str]] =
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_external_dynamic_list(id="1234-56-789")
+    # Data source to look up a single external dynamic list by its ID.
+    scm_external_dynamic_list_ds = scm.get_external_dynamic_list(id="ce39b7b5-f5bc-4276-9fe5-be56613e37ad")
+    pulumi.export("externalDynamicListDetails", {
+        "id": scm_external_dynamic_list_ds.id,
+        "name": scm_external_dynamic_list_ds.name,
+        "folder": scm_external_dynamic_list_ds.folder,
+        "description": scm_external_dynamic_list_ds.type.domain.description,
+        "url": scm_external_dynamic_list_ds.type.domain.url,
+        "recurring": scm_external_dynamic_list_ds.type.domain.recurring,
+    })
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the external dynamic list
+    :param _builtins.str name: The name of the external dynamic list
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getExternalDynamicList:getExternalDynamicList', __args__, opts=opts, typ=GetExternalDynamicListResult)
     return __ret__.apply(lambda __response__: GetExternalDynamicListResult(
+        device=pulumi.get(__response__, 'device'),
+        encrypted_values=pulumi.get(__response__, 'encrypted_values'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         type=pulumi.get(__response__, 'type')))

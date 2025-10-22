@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * AddressGroup data source
  *
  * ## Example Usage
  *
@@ -15,15 +15,24 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getAddressGroup({
- *     id: "1234-56-789",
+ * // Look up the address group by its ID.
+ * const scmAddressGroupDs = scm.getAddressGroup({
+ *     id: "99802bce-76c6-42c9-801e-e2e4529bb335",
  * });
+ * export const addressGroupOutputs = {
+ *     groupId: scmAddressGroupDs.then(scmAddressGroupDs => scmAddressGroupDs.id),
+ *     folder: scmAddressGroupDs.then(scmAddressGroupDs => scmAddressGroupDs.folder),
+ *     name: scmAddressGroupDs.then(scmAddressGroupDs => scmAddressGroupDs.name),
+ *     description: scmAddressGroupDs.then(scmAddressGroupDs => scmAddressGroupDs.description),
+ *     static: scmAddressGroupDs.then(scmAddressGroupDs => scmAddressGroupDs.statics),
+ * };
  * ```
  */
 export function getAddressGroup(args: GetAddressGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetAddressGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAddressGroup:getAddressGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +41,13 @@ export function getAddressGroup(args: GetAddressGroupArgs, opts?: pulumi.InvokeO
  */
 export interface GetAddressGroupArgs {
     /**
-     * The Id param.
+     * The UUID of the address group
      */
     id: string;
+    /**
+     * The name of the address group
+     */
+    name?: string;
 }
 
 /**
@@ -42,33 +55,45 @@ export interface GetAddressGroupArgs {
  */
 export interface GetAddressGroupResult {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     readonly description: string;
     /**
-     * The DynamicValue param.
+     * The device in which the resource is defined
      */
-    readonly dynamicValue: outputs.GetAddressGroupDynamicValue;
+    readonly device: string;
     /**
-     * The Id param.
+     * Dynamic
+     */
+    readonly dynamic: outputs.GetAddressGroupDynamic;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the address group
      */
     readonly id: string;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the address group
      */
     readonly name: string;
     /**
-     * The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * The snippet in which the resource is defined
      */
-    readonly staticLists: string[];
+    readonly snippet: string;
     /**
-     * Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Static
+     */
+    readonly statics: string[];
+    /**
+     * Tags for address group object
      */
     readonly tags: string[];
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * AddressGroup data source
  *
  * ## Example Usage
  *
@@ -76,15 +101,24 @@ export interface GetAddressGroupResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getAddressGroup({
- *     id: "1234-56-789",
+ * // Look up the address group by its ID.
+ * const scmAddressGroupDs = scm.getAddressGroup({
+ *     id: "99802bce-76c6-42c9-801e-e2e4529bb335",
  * });
+ * export const addressGroupOutputs = {
+ *     groupId: scmAddressGroupDs.then(scmAddressGroupDs => scmAddressGroupDs.id),
+ *     folder: scmAddressGroupDs.then(scmAddressGroupDs => scmAddressGroupDs.folder),
+ *     name: scmAddressGroupDs.then(scmAddressGroupDs => scmAddressGroupDs.name),
+ *     description: scmAddressGroupDs.then(scmAddressGroupDs => scmAddressGroupDs.description),
+ *     static: scmAddressGroupDs.then(scmAddressGroupDs => scmAddressGroupDs.statics),
+ * };
  * ```
  */
 export function getAddressGroupOutput(args: GetAddressGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAddressGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAddressGroup:getAddressGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -93,7 +127,11 @@ export function getAddressGroupOutput(args: GetAddressGroupOutputArgs, opts?: pu
  */
 export interface GetAddressGroupOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the address group
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the address group
+     */
+    name?: pulumi.Input<string>;
 }

@@ -15,66 +15,114 @@ import java.util.Objects;
 @CustomType
 public final class GetRadiusServerProfileResult {
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the RADIUS server profile
      * 
      */
     private String id;
     /**
-     * @return The Protocol param.
+     * @return The name of the RADIUS server profile
+     * 
+     */
+    private String name;
+    /**
+     * @return The RADIUS authentication protocol
      * 
      */
     private GetRadiusServerProfileProtocol protocol;
     /**
-     * @return The Retries param. Value must be between 1 and 5.
+     * @return The number of RADIUS server retries
      * 
      */
     private Integer retries;
     /**
-     * @return The Servers param.
+     * @return Server
      * 
      */
     private List<GetRadiusServerProfileServer> servers;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
     /**
-     * @return The Timeout param. Value must be between 1 and 120.
+     * @return The RADIUS server authentication timeout (seconds)
      * 
      */
     private Integer timeout;
 
     private GetRadiusServerProfileResult() {}
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the RADIUS server profile
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Protocol param.
+     * @return The name of the RADIUS server profile
+     * 
+     */
+    public String name() {
+        return this.name;
+    }
+    /**
+     * @return The RADIUS authentication protocol
      * 
      */
     public GetRadiusServerProfileProtocol protocol() {
         return this.protocol;
     }
     /**
-     * @return The Retries param. Value must be between 1 and 5.
+     * @return The number of RADIUS server retries
      * 
      */
     public Integer retries() {
         return this.retries;
     }
     /**
-     * @return The Servers param.
+     * @return Server
      * 
      */
     public List<GetRadiusServerProfileServer> servers() {
         return this.servers;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
     public String tfid() {
         return this.tfid;
     }
     /**
-     * @return The Timeout param. Value must be between 1 and 120.
+     * @return The RADIUS server authentication timeout (seconds)
      * 
      */
     public Integer timeout() {
@@ -90,29 +138,61 @@ public final class GetRadiusServerProfileResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String device;
+        private String folder;
         private String id;
+        private String name;
         private GetRadiusServerProfileProtocol protocol;
         private Integer retries;
         private List<GetRadiusServerProfileServer> servers;
+        private String snippet;
         private String tfid;
         private Integer timeout;
         public Builder() {}
         public Builder(GetRadiusServerProfileResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
+    	      this.name = defaults.name;
     	      this.protocol = defaults.protocol;
     	      this.retries = defaults.retries;
     	      this.servers = defaults.servers;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.timeout = defaults.timeout;
         }
 
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileResult", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
         @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
               throw new MissingRequiredPropertyException("GetRadiusServerProfileResult", "id");
             }
             this.id = id;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileResult", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
@@ -143,6 +223,14 @@ public final class GetRadiusServerProfileResult {
             return servers(List.of(servers));
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetRadiusServerProfileResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetRadiusServerProfileResult", "tfid");
@@ -160,10 +248,14 @@ public final class GetRadiusServerProfileResult {
         }
         public GetRadiusServerProfileResult build() {
             final var _resultValue = new GetRadiusServerProfileResult();
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
+            _resultValue.name = name;
             _resultValue.protocol = protocol;
             _resultValue.retries = retries;
             _resultValue.servers = servers;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.timeout = timeout;
             return _resultValue;

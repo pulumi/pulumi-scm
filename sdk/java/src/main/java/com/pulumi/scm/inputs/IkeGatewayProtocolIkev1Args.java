@@ -17,14 +17,14 @@ public final class IkeGatewayProtocolIkev1Args extends com.pulumi.resources.Reso
     public static final IkeGatewayProtocolIkev1Args Empty = new IkeGatewayProtocolIkev1Args();
 
     /**
-     * The Dpd param.
+     * Dpd
      * 
      */
     @Import(name="dpd")
     private @Nullable Output<IkeGatewayProtocolIkev1DpdArgs> dpd;
 
     /**
-     * @return The Dpd param.
+     * @return Dpd
      * 
      */
     public Optional<Output<IkeGatewayProtocolIkev1DpdArgs>> dpd() {
@@ -32,14 +32,14 @@ public final class IkeGatewayProtocolIkev1Args extends com.pulumi.resources.Reso
     }
 
     /**
-     * The IkeCryptoProfile param.
+     * Ike crypto profile
      * 
      */
     @Import(name="ikeCryptoProfile")
     private @Nullable Output<String> ikeCryptoProfile;
 
     /**
-     * @return The IkeCryptoProfile param.
+     * @return Ike crypto profile
      * 
      */
     public Optional<Output<String>> ikeCryptoProfile() {
@@ -72,7 +72,7 @@ public final class IkeGatewayProtocolIkev1Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param dpd The Dpd param.
+         * @param dpd Dpd
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class IkeGatewayProtocolIkev1Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param dpd The Dpd param.
+         * @param dpd Dpd
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class IkeGatewayProtocolIkev1Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ikeCryptoProfile The IkeCryptoProfile param.
+         * @param ikeCryptoProfile Ike crypto profile
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class IkeGatewayProtocolIkev1Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ikeCryptoProfile The IkeCryptoProfile param.
+         * @param ikeCryptoProfile Ike crypto profile
          * 
          * @return builder
          * 

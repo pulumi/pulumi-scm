@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * Variable resource
  *
  * ## Example Usage
  *
@@ -13,7 +13,116 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = new scm.Variable("example", {folder: "Shared"});
+ * //
+ * // Creates a variable in as-number format
+ * //
+ * const scmVariableAsn = new scm.Variable("scm_variable_asn", {
+ *     folder: "All",
+ *     name: "$scm_variable_asn",
+ *     description: "Managed by Pulumi",
+ *     type: "as-number",
+ *     value: "65535",
+ * });
+ * //
+ * // Creates a variable in count format
+ * //
+ * const scmVariableCount = new scm.Variable("scm_variable_count", {
+ *     folder: "All",
+ *     name: "$scm_variable_count",
+ *     description: "Managed by Pulumi",
+ *     type: "count",
+ *     value: "15",
+ * });
+ * //
+ * // Creates a variable in fqdn format
+ * //
+ * const scmVariableFqdn = new scm.Variable("scm_variable_fqdn", {
+ *     folder: "All",
+ *     name: "$scm_variable_fqdn",
+ *     description: "Managed by Pulumi",
+ *     type: "fqdn",
+ *     value: "scm.example.com",
+ * });
+ * //
+ * // Creates a variable in group-id format
+ * //
+ * const scmVariableGroupId = new scm.Variable("scm_variable_group_id", {
+ *     folder: "All",
+ *     name: "$scm_variable_group_id",
+ *     description: "Managed by Pulumi",
+ *     type: "group-id",
+ *     value: "10",
+ * });
+ * //
+ * // Creates a variable in ip-range format
+ * //
+ * const scmVariableIprange = new scm.Variable("scm_variable_iprange", {
+ *     folder: "All",
+ *     name: "$scm_variable_iprange",
+ *     description: "Managed by Pulumi",
+ *     type: "ip-range",
+ *     value: "198.18.1.1-198.18.1.100",
+ * });
+ * //
+ * // Creates a variable in ip-netmask format
+ * //
+ * const scmVariableIpaddr = new scm.Variable("scm_variable_ipaddr", {
+ *     folder: "All",
+ *     name: "$scm_variable_ipaddr",
+ *     description: "Managed by Pulumi",
+ *     type: "ip-netmask",
+ *     value: "198.18.2.0/24",
+ * });
+ * //
+ * // Creates a variable in ip-wildcard format
+ * //
+ * const scmVariableIpwildcard = new scm.Variable("scm_variable_ipwildcard", {
+ *     folder: "All",
+ *     name: "$scm_variable_ipwildcard",
+ *     description: "Managed by Pulumi",
+ *     type: "ip-wildcard",
+ *     value: "198.18.1.0/0.255.255.255",
+ * });
+ * //
+ * // Creates a variable in percent format
+ * //
+ * const scmVariablePercent = new scm.Variable("scm_variable_percent", {
+ *     folder: "All",
+ *     name: "$scm_variable_percent",
+ *     description: "Managed by Pulumi",
+ *     type: "percent",
+ *     value: "10",
+ * });
+ * //
+ * // Creates a variable in router-id format
+ * //
+ * const scmVariableRouterId = new scm.Variable("scm_variable_router_id", {
+ *     folder: "All",
+ *     name: "$scm_variable_router_id",
+ *     description: "Managed by Pulumi",
+ *     type: "router-id",
+ *     value: "198.18.1.1",
+ * });
+ * //
+ * // Creates a variable in timer format
+ * //
+ * const scmVariableTimer = new scm.Variable("scm_variable_timer", {
+ *     folder: "All",
+ *     name: "$scm_variable_timer",
+ *     description: "Managed by Pulumi",
+ *     type: "timer",
+ *     value: "1440",
+ * });
+ * //
+ * // Creates a variable in zone format
+ * //
+ * const scmVariableZone = new scm.Variable("scm_variable_zone", {
+ *     folder: "All",
+ *     name: "$scm_variable_zone",
+ *     description: "Managed by Pulumi",
+ *     type: "zone",
+ *     value: "internet",
+ * });
  * ```
  */
 export class Variable extends pulumi.CustomResource {
@@ -45,38 +154,38 @@ export class Variable extends pulumi.CustomResource {
     }
 
     /**
-     * The Description param.
+     * The description of the variable
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the variable
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Overridden param.
+     * Is the variable overridden?
      */
-    declare public /*out*/ readonly overridden: pulumi.Output<boolean>;
+    declare public readonly overridden: pulumi.Output<boolean | undefined>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+     * The variable type
      */
-    declare public readonly type: pulumi.Output<string | undefined>;
+    declare public readonly type: pulumi.Output<string>;
     /**
-     * value can accept either string or integer.
+     * The value of the variable
      */
-    declare public readonly value: pulumi.Output<string | undefined>;
+    declare public readonly value: pulumi.Output<string>;
 
     /**
      * Create a Variable resource with the given unique name, arguments, and options.
@@ -85,7 +194,7 @@ export class Variable extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: VariableArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: VariableArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: VariableArgs | VariableState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -102,14 +211,20 @@ export class Variable extends pulumi.CustomResource {
             resourceInputs["value"] = state?.value;
         } else {
             const args = argsOrState as VariableArgs | undefined;
+            if (args?.type === undefined && !opts.urn) {
+                throw new Error("Missing required property 'type'");
+            }
+            if (args?.value === undefined && !opts.urn) {
+                throw new Error("Missing required property 'value'");
+            }
             resourceInputs["description"] = args?.description;
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
             resourceInputs["name"] = args?.name;
+            resourceInputs["overridden"] = args?.overridden;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["type"] = args?.type;
             resourceInputs["value"] = args?.value;
-            resourceInputs["overridden"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -122,36 +237,36 @@ export class Variable extends pulumi.CustomResource {
  */
 export interface VariableState {
     /**
-     * The Description param.
+     * The description of the variable
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the variable
      */
     name?: pulumi.Input<string>;
     /**
-     * The Overridden param.
+     * Is the variable overridden?
      */
     overridden?: pulumi.Input<boolean>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+     * The variable type
      */
     type?: pulumi.Input<string>;
     /**
-     * value can accept either string or integer.
+     * The value of the variable
      */
     value?: pulumi.Input<string>;
 }
@@ -161,31 +276,35 @@ export interface VariableState {
  */
 export interface VariableArgs {
     /**
-     * The Description param.
+     * The description of the variable
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the variable
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * Is the variable overridden?
+     */
+    overridden?: pulumi.Input<boolean>;
+    /**
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+     * The variable type
      */
-    type?: pulumi.Input<string>;
+    type: pulumi.Input<string>;
     /**
-     * value can accept either string or integer.
+     * The value of the variable
      */
-    value?: pulumi.Input<string>;
+    value: pulumi.Input<string>;
 }

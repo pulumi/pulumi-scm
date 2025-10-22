@@ -13,38 +13,38 @@ import java.util.Objects;
 @CustomType
 public final class GetIkeGatewayProtocol {
     /**
-     * @return The Ikev1 param.
+     * @return Ikev1
      * 
      */
     private GetIkeGatewayProtocolIkev1 ikev1;
     /**
-     * @return The Ikev2 param.
+     * @return Ikev2
      * 
      */
     private GetIkeGatewayProtocolIkev2 ikev2;
     /**
-     * @return The Version param. String must be one of these: `&#34;ikev2-preferred&#34;`, `&#34;ikev1&#34;`, `&#34;ikev2&#34;`. Default: `&#34;ikev2-preferred&#34;`.
+     * @return Version
      * 
      */
     private String version;
 
     private GetIkeGatewayProtocol() {}
     /**
-     * @return The Ikev1 param.
+     * @return Ikev1
      * 
      */
     public GetIkeGatewayProtocolIkev1 ikev1() {
         return this.ikev1;
     }
     /**
-     * @return The Ikev2 param.
+     * @return Ikev2
      * 
      */
     public GetIkeGatewayProtocolIkev2 ikev2() {
         return this.ikev2;
     }
     /**
-     * @return The Version param. String must be one of these: `&#34;ikev2-preferred&#34;`, `&#34;ikev1&#34;`, `&#34;ikev2&#34;`. Default: `&#34;ikev2-preferred&#34;`.
+     * @return Version
      * 
      */
     public String version() {

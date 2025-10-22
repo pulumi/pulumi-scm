@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// Variable data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,19 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupVariable(ctx, &scm.LookupVariableArgs{
-//				Id: "1234-56-789",
+//			// Look up the "$example" variable by its name.
+//			scmVariableDs, err := scm.LookupVariable(ctx, &scm.LookupVariableArgs{
+//				Id: "66cbe56c-0300-4905-8455-d384978a0081",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("variableOutputs", pulumi.StringMap{
+//				"exampleId":    scmVariableDs.Id,
+//				"exampleName":  scmVariableDs.Name,
+//				"exampleType":  scmVariableDs.Type,
+//				"exampleValue": scmVariableDs.Value,
+//			})
 //			return nil
 //		})
 //	}
@@ -50,36 +57,32 @@ func LookupVariable(ctx *pulumi.Context, args *LookupVariableArgs, opts ...pulum
 
 // A collection of arguments for invoking getVariable.
 type LookupVariableArgs struct {
-	// The Device param.
-	Device *string `pulumi:"device"`
-	// The Folder param.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// UUID of the variable
 	Id string `pulumi:"id"`
-	// The Snippet param.
-	Snippet *string `pulumi:"snippet"`
+	// The name of the variable
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getVariable.
 type LookupVariableResult struct {
-	// The Description param.
+	// The description of the variable
 	Description string `pulumi:"description"`
-	// The Device param.
-	Device *string `pulumi:"device"`
-	// The Folder param.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the variable
 	Id string `pulumi:"id"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the variable
 	Name string `pulumi:"name"`
-	// The Overridden param.
+	// Is the variable overridden?
 	Overridden bool `pulumi:"overridden"`
-	// The Snippet param.
-	Snippet *string `pulumi:"snippet"`
-	Tfid    string  `pulumi:"tfid"`
-	// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+	// The variable type
 	Type string `pulumi:"type"`
-	// value can accept either string or integer.
+	// The value of the variable
 	Value string `pulumi:"value"`
 }
 
@@ -94,14 +97,10 @@ func LookupVariableOutput(ctx *pulumi.Context, args LookupVariableOutputArgs, op
 
 // A collection of arguments for invoking getVariable.
 type LookupVariableOutputArgs struct {
-	// The Device param.
-	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
-	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Id param.
+	// UUID of the variable
 	Id pulumi.StringInput `pulumi:"id"`
-	// The Snippet param.
-	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
+	// The name of the variable
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupVariableOutputArgs) ElementType() reflect.Type {
@@ -123,51 +122,51 @@ func (o LookupVariableResultOutput) ToLookupVariableResultOutputWithContext(ctx 
 	return o
 }
 
-// The Description param.
+// The description of the variable
 func (o LookupVariableResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The Device param.
-func (o LookupVariableResultOutput) Device() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v LookupVariableResult) *string { return v.Device }).(pulumi.StringPtrOutput)
+// The device in which the resource is defined
+func (o LookupVariableResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupVariableResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The Folder param.
-func (o LookupVariableResultOutput) Folder() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v LookupVariableResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
+// The folder in which the resource is defined
+func (o LookupVariableResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupVariableResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// UUID of the variable
 func (o LookupVariableResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the variable
 func (o LookupVariableResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Overridden param.
+// Is the variable overridden?
 func (o LookupVariableResultOutput) Overridden() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupVariableResult) bool { return v.Overridden }).(pulumi.BoolOutput)
 }
 
-// The Snippet param.
-func (o LookupVariableResultOutput) Snippet() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v LookupVariableResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
+// The snippet in which the resource is defined
+func (o LookupVariableResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupVariableResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupVariableResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+// The variable type
 func (o LookupVariableResultOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Type }).(pulumi.StringOutput)
 }
 
-// value can accept either string or integer.
+// The value of the variable
 func (o LookupVariableResultOutput) Value() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupVariableResult) string { return v.Value }).(pulumi.StringOutput)
 }

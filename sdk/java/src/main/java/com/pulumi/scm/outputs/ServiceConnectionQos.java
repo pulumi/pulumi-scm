@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceConnectionQos {
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     private @Nullable Boolean enable;
     /**
-     * @return The QosProfile param.
+     * @return Qos profile
      * 
      */
     private @Nullable String qosProfile;
 
     private ServiceConnectionQos() {}
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * @return The QosProfile param.
+     * @return Qos profile
      * 
      */
     public Optional<String> qosProfile() {

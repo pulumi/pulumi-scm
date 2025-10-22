@@ -14,14 +14,14 @@ public final class GetAntiSpywareSignaturePlainArgs extends com.pulumi.resources
     public static final GetAntiSpywareSignaturePlainArgs Empty = new GetAntiSpywareSignaturePlainArgs();
 
     /**
-     * The Id param.
+     * UUID of the resource
      * 
      */
     @Import(name="id", required=true)
     private String id;
 
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public String id() {
@@ -53,7 +53,7 @@ public final class GetAntiSpywareSignaturePlainArgs extends com.pulumi.resources
         }
 
         /**
-         * @param id The Id param.
+         * @param id UUID of the resource
          * 
          * @return builder
          * 

@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TrafficSteeringRuleActionForward {
     /**
-     * @return The Target param.
+     * @return Target
      * 
      */
     private @Nullable String target;
 
     private TrafficSteeringRuleActionForward() {}
     /**
-     * @return The Target param.
+     * @return Target
      * 
      */
     public Optional<String> target() {

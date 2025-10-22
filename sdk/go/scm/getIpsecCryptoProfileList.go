@@ -27,12 +27,15 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetIpsecCryptoProfileList(ctx, &scm.GetIpsecCryptoProfileListArgs{
-//				Folder: pulumi.StringRef("Shared"),
+//			// Example of listing all IPsec Crypto Profiles within a specific folder.
+//			scmIpsecCryptoProfileListDs, err := scm.GetIpsecCryptoProfileList(ctx, &scm.GetIpsecCryptoProfileListArgs{
+//				Folder: pulumi.StringRef("Prisma Access"),
+//				Limit:  pulumi.IntRef(100),
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("allIpsecProfiles", scmIpsecCryptoProfileListDs.Datas)
 //			return nil
 //		})
 //	}
@@ -50,40 +53,40 @@ func GetIpsecCryptoProfileList(ctx *pulumi.Context, args *GetIpsecCryptoProfileL
 
 // A collection of arguments for invoking getIpsecCryptoProfileList.
 type GetIpsecCryptoProfileListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getIpsecCryptoProfileList.
 type GetIpsecCryptoProfileListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetIpsecCryptoProfileListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +101,17 @@ func GetIpsecCryptoProfileListOutput(ctx *pulumi.Context, args GetIpsecCryptoPro
 
 // A collection of arguments for invoking getIpsecCryptoProfileList.
 type GetIpsecCryptoProfileListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +134,17 @@ func (o GetIpsecCryptoProfileListResultOutput) ToGetIpsecCryptoProfileListResult
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetIpsecCryptoProfileListResultOutput) Datas() GetIpsecCryptoProfileListDataArrayOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) []GetIpsecCryptoProfileListData { return v.Datas }).(GetIpsecCryptoProfileListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetIpsecCryptoProfileListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetIpsecCryptoProfileListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +154,22 @@ func (o GetIpsecCryptoProfileListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetIpsecCryptoProfileListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetIpsecCryptoProfileListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetIpsecCryptoProfileListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetIpsecCryptoProfileListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetIpsecCryptoProfileListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetIpsecCryptoProfileListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +178,7 @@ func (o GetIpsecCryptoProfileListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetIpsecCryptoProfileListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetIpsecCryptoProfileListResult) int { return v.Total }).(pulumi.IntOutput)
 }

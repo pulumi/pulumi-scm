@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class AuthenticationProfileMethodTacplus
     {
         /// <summary>
-        /// The Checkgroup param.
+        /// Checkgroup
         /// </summary>
         public readonly bool? Checkgroup;
         /// <summary>
-        /// The ServerProfile param.
+        /// Server profile
         /// </summary>
         public readonly string? ServerProfile;
 

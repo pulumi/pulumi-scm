@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayLocalIdResult
     {
         /// <summary>
-        /// Local ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\@[a-zA-Z0-9.-]+)$|^([$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+        /// Local ID string
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Type param.
+        /// Type
         /// </summary>
         public readonly string Type;
 

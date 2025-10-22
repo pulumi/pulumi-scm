@@ -11,40 +11,40 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
-public final class RadiusServerProfileProtocolPeapMschapV2 {
+public final class RadiusServerProfileProtocolPEAPMSCHAPv2 {
     /**
-     * @return The AllowPwdChange param.
+     * @return Allow pwd change
      * 
      */
     private @Nullable Boolean allowPwdChange;
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     private @Nullable Boolean anonOuterId;
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     private @Nullable String radiusCertProfile;
 
-    private RadiusServerProfileProtocolPeapMschapV2() {}
+    private RadiusServerProfileProtocolPEAPMSCHAPv2() {}
     /**
-     * @return The AllowPwdChange param.
+     * @return Allow pwd change
      * 
      */
     public Optional<Boolean> allowPwdChange() {
         return Optional.ofNullable(this.allowPwdChange);
     }
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     public Optional<Boolean> anonOuterId() {
         return Optional.ofNullable(this.anonOuterId);
     }
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     public Optional<String> radiusCertProfile() {
@@ -55,7 +55,7 @@ public final class RadiusServerProfileProtocolPeapMschapV2 {
         return new Builder();
     }
 
-    public static Builder builder(RadiusServerProfileProtocolPeapMschapV2 defaults) {
+    public static Builder builder(RadiusServerProfileProtocolPEAPMSCHAPv2 defaults) {
         return new Builder(defaults);
     }
     @CustomType.Builder
@@ -64,7 +64,7 @@ public final class RadiusServerProfileProtocolPeapMschapV2 {
         private @Nullable Boolean anonOuterId;
         private @Nullable String radiusCertProfile;
         public Builder() {}
-        public Builder(RadiusServerProfileProtocolPeapMschapV2 defaults) {
+        public Builder(RadiusServerProfileProtocolPEAPMSCHAPv2 defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.allowPwdChange = defaults.allowPwdChange;
     	      this.anonOuterId = defaults.anonOuterId;
@@ -89,8 +89,8 @@ public final class RadiusServerProfileProtocolPeapMschapV2 {
             this.radiusCertProfile = radiusCertProfile;
             return this;
         }
-        public RadiusServerProfileProtocolPeapMschapV2 build() {
-            final var _resultValue = new RadiusServerProfileProtocolPeapMschapV2();
+        public RadiusServerProfileProtocolPEAPMSCHAPv2 build() {
+            final var _resultValue = new RadiusServerProfileProtocolPEAPMSCHAPv2();
             _resultValue.allowPwdChange = allowPwdChange;
             _resultValue.anonOuterId = anonOuterId;
             _resultValue.radiusCertProfile = radiusCertProfile;

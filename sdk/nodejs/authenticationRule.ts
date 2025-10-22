@@ -5,16 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.AuthenticationRule("example", {});
- * ```
+ * AuthenticationRule resource
  */
 export class AuthenticationRule extends pulumi.CustomResource {
     /**
@@ -45,106 +36,106 @@ export class AuthenticationRule extends pulumi.CustomResource {
     }
 
     /**
-     * the authentication profile name to apply to authentication rule.
+     * The authentication profile name
      */
     declare public readonly authenticationEnforcement: pulumi.Output<string | undefined>;
     /**
-     * The Categories param.
+     * The destination URL categories
      */
     declare public readonly categories: pulumi.Output<string[] | undefined>;
     /**
-     * The Description param.
+     * The description of the authentication rule
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The DestinationHips param.
+     * The destination Host Integrity Profile (HIP)
      */
     declare public readonly destinationHips: pulumi.Output<string[] | undefined>;
     /**
-     * The Destinations param.
+     * The destination addresses
      */
-    declare public readonly destinations: pulumi.Output<string[] | undefined>;
+    declare public readonly destinations: pulumi.Output<string[]>;
     /**
-     * The Device param.
+     * Device
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Disabled param. Default: `false`.
+     * Is the authentication rule disabled?
      */
     declare public readonly disabled: pulumi.Output<boolean>;
     /**
-     * The Folder param.
+     * Folder
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Froms param.
+     * The source security zones
      */
-    declare public readonly froms: pulumi.Output<string[] | undefined>;
+    declare public readonly froms: pulumi.Output<string[]>;
     /**
-     * The GroupTag param.
+     * Group tag
      */
     declare public readonly groupTag: pulumi.Output<string | undefined>;
     /**
-     * The HipProfiles param.
+     * The source Host Integrity Profile (HIP)
      */
     declare public readonly hipProfiles: pulumi.Output<string[] | undefined>;
     /**
-     * The LogAuthenticationTimeout param. Default: `false`.
+     * Log authentication timeouts?
      */
     declare public readonly logAuthenticationTimeout: pulumi.Output<boolean>;
     /**
-     * The LogSetting param.
+     * The log forwarding profile name
      */
     declare public readonly logSetting: pulumi.Output<string | undefined>;
     /**
-     * The Name param.
+     * The name of the authentication rule
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The NegateDestination param. Default: `false`.
+     * Are the destination addresses negated?
      */
     declare public readonly negateDestination: pulumi.Output<boolean>;
     /**
-     * The NegateSource param. Default: `false`.
+     * Are the source addresses negated?
      */
     declare public readonly negateSource: pulumi.Output<boolean>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The relative position of the rule
      */
     declare public readonly position: pulumi.Output<string>;
     /**
-     * The Services param.
+     * The destination ports
      */
-    declare public readonly services: pulumi.Output<string[] | undefined>;
+    declare public readonly services: pulumi.Output<string[]>;
     /**
-     * The Snippet param.
+     * Snippet
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The SourceHips param.
+     * The source Host Integrity Profile (HIP)
      */
     declare public readonly sourceHips: pulumi.Output<string[] | undefined>;
     /**
-     * The SourceUsers param.
+     * The source users
      */
     declare public readonly sourceUsers: pulumi.Output<string[] | undefined>;
     /**
-     * The Sources param.
+     * The source addresses
      */
-    declare public readonly sources: pulumi.Output<string[] | undefined>;
+    declare public readonly sources: pulumi.Output<string[]>;
     /**
-     * The Tags param.
+     * The authentication rule tags
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The Timeout param. Value must be between 1 and 1440.
+     * The authentication session timeout (seconds)
      */
     declare public readonly timeout: pulumi.Output<number | undefined>;
     /**
-     * The Tos param.
+     * The destination security zones
      */
-    declare public readonly tos: pulumi.Output<string[] | undefined>;
+    declare public readonly tos: pulumi.Output<string[]>;
 
     /**
      * Create a AuthenticationRule resource with the given unique name, arguments, and options.
@@ -153,7 +144,7 @@ export class AuthenticationRule extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: AuthenticationRuleArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: AuthenticationRuleArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: AuthenticationRuleArgs | AuthenticationRuleState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -187,6 +178,21 @@ export class AuthenticationRule extends pulumi.CustomResource {
             resourceInputs["tos"] = state?.tos;
         } else {
             const args = argsOrState as AuthenticationRuleArgs | undefined;
+            if (args?.destinations === undefined && !opts.urn) {
+                throw new Error("Missing required property 'destinations'");
+            }
+            if (args?.froms === undefined && !opts.urn) {
+                throw new Error("Missing required property 'froms'");
+            }
+            if (args?.services === undefined && !opts.urn) {
+                throw new Error("Missing required property 'services'");
+            }
+            if (args?.sources === undefined && !opts.urn) {
+                throw new Error("Missing required property 'sources'");
+            }
+            if (args?.tos === undefined && !opts.urn) {
+                throw new Error("Missing required property 'tos'");
+            }
             resourceInputs["authenticationEnforcement"] = args?.authenticationEnforcement;
             resourceInputs["categories"] = args?.categories;
             resourceInputs["description"] = args?.description;
@@ -224,104 +230,104 @@ export class AuthenticationRule extends pulumi.CustomResource {
  */
 export interface AuthenticationRuleState {
     /**
-     * the authentication profile name to apply to authentication rule.
+     * The authentication profile name
      */
     authenticationEnforcement?: pulumi.Input<string>;
     /**
-     * The Categories param.
+     * The destination URL categories
      */
     categories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Description param.
+     * The description of the authentication rule
      */
     description?: pulumi.Input<string>;
     /**
-     * The DestinationHips param.
+     * The destination Host Integrity Profile (HIP)
      */
     destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Destinations param.
+     * The destination addresses
      */
     destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * Device
      */
     device?: pulumi.Input<string>;
     /**
-     * The Disabled param. Default: `false`.
+     * Is the authentication rule disabled?
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * Folder
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Froms param.
+     * The source security zones
      */
     froms?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The GroupTag param.
+     * Group tag
      */
     groupTag?: pulumi.Input<string>;
     /**
-     * The HipProfiles param.
+     * The source Host Integrity Profile (HIP)
      */
     hipProfiles?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The LogAuthenticationTimeout param. Default: `false`.
+     * Log authentication timeouts?
      */
     logAuthenticationTimeout?: pulumi.Input<boolean>;
     /**
-     * The LogSetting param.
+     * The log forwarding profile name
      */
     logSetting?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * The name of the authentication rule
      */
     name?: pulumi.Input<string>;
     /**
-     * The NegateDestination param. Default: `false`.
+     * Are the destination addresses negated?
      */
     negateDestination?: pulumi.Input<boolean>;
     /**
-     * The NegateSource param. Default: `false`.
+     * Are the source addresses negated?
      */
     negateSource?: pulumi.Input<boolean>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The relative position of the rule
      */
     position?: pulumi.Input<string>;
     /**
-     * The Services param.
+     * The destination ports
      */
     services?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Snippet param.
+     * Snippet
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The SourceHips param.
+     * The source Host Integrity Profile (HIP)
      */
     sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The SourceUsers param.
+     * The source users
      */
     sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Sources param.
+     * The source addresses
      */
     sources?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tags param.
+     * The authentication rule tags
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
     /**
-     * The Timeout param. Value must be between 1 and 1440.
+     * The authentication session timeout (seconds)
      */
     timeout?: pulumi.Input<number>;
     /**
-     * The Tos param.
+     * The destination security zones
      */
     tos?: pulumi.Input<pulumi.Input<string>[]>;
 }
@@ -331,103 +337,103 @@ export interface AuthenticationRuleState {
  */
 export interface AuthenticationRuleArgs {
     /**
-     * the authentication profile name to apply to authentication rule.
+     * The authentication profile name
      */
     authenticationEnforcement?: pulumi.Input<string>;
     /**
-     * The Categories param.
+     * The destination URL categories
      */
     categories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Description param.
+     * The description of the authentication rule
      */
     description?: pulumi.Input<string>;
     /**
-     * The DestinationHips param.
+     * The destination Host Integrity Profile (HIP)
      */
     destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Destinations param.
+     * The destination addresses
      */
-    destinations?: pulumi.Input<pulumi.Input<string>[]>;
+    destinations: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * Device
      */
     device?: pulumi.Input<string>;
     /**
-     * The Disabled param. Default: `false`.
+     * Is the authentication rule disabled?
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * Folder
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Froms param.
+     * The source security zones
      */
-    froms?: pulumi.Input<pulumi.Input<string>[]>;
+    froms: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The GroupTag param.
+     * Group tag
      */
     groupTag?: pulumi.Input<string>;
     /**
-     * The HipProfiles param.
+     * The source Host Integrity Profile (HIP)
      */
     hipProfiles?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The LogAuthenticationTimeout param. Default: `false`.
+     * Log authentication timeouts?
      */
     logAuthenticationTimeout?: pulumi.Input<boolean>;
     /**
-     * The LogSetting param.
+     * The log forwarding profile name
      */
     logSetting?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * The name of the authentication rule
      */
     name?: pulumi.Input<string>;
     /**
-     * The NegateDestination param. Default: `false`.
+     * Are the destination addresses negated?
      */
     negateDestination?: pulumi.Input<boolean>;
     /**
-     * The NegateSource param. Default: `false`.
+     * Are the source addresses negated?
      */
     negateSource?: pulumi.Input<boolean>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The relative position of the rule
      */
     position?: pulumi.Input<string>;
     /**
-     * The Services param.
+     * The destination ports
      */
-    services?: pulumi.Input<pulumi.Input<string>[]>;
+    services: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Snippet param.
+     * Snippet
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The SourceHips param.
+     * The source Host Integrity Profile (HIP)
      */
     sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The SourceUsers param.
+     * The source users
      */
     sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Sources param.
+     * The source addresses
      */
-    sources?: pulumi.Input<pulumi.Input<string>[]>;
+    sources: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tags param.
+     * The authentication rule tags
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Timeout param. Value must be between 1 and 1440.
+     * The authentication session timeout (seconds)
      */
     timeout?: pulumi.Input<number>;
     /**
-     * The Tos param.
+     * The destination security zones
      */
-    tos?: pulumi.Input<pulumi.Input<string>[]>;
+    tos: pulumi.Input<pulumi.Input<string>[]>;
 }

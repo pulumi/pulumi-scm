@@ -26,10 +26,16 @@ class GetHipProfileResult:
     """
     A collection of values returned by getHipProfile.
     """
-    def __init__(__self__, description=None, id=None, match=None, name=None, tfid=None):
+    def __init__(__self__, description=None, device=None, folder=None, id=None, match=None, name=None, snippet=None, tfid=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -39,6 +45,9 @@ class GetHipProfileResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -47,15 +56,31 @@ class GetHipProfileResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -63,7 +88,7 @@ class GetHipProfileResult:
     @pulumi.getter
     def match(self) -> _builtins.str:
         """
-        The Match param. String length must not exceed 2048 characters.
+        Match
         """
         return pulumi.get(self, "match")
 
@@ -71,9 +96,17 @@ class GetHipProfileResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the HIP profile
         """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -88,16 +121,20 @@ class AwaitableGetHipProfileResult(GetHipProfileResult):
             yield self
         return GetHipProfileResult(
             description=self.description,
+            device=self.device,
+            folder=self.folder,
             id=self.id,
             match=self.match,
             name=self.name,
+            snippet=self.snippet,
             tfid=self.tfid)
 
 
 def get_hip_profile(id: Optional[_builtins.str] = None,
+                    name: Optional[_builtins.str] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetHipProfileResult:
     """
-    Retrieves a config item.
+    HipProfile data source
 
     ## Example Usage
 
@@ -105,27 +142,35 @@ def get_hip_profile(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_hip_profile(id="1234-56-789")
+    # Look up a single HIP Profile by its ID.
+    scm_hip_profile_ds = scm.get_hip_profile(id="e0a970b8-98d2-42e9-a273-53fbf67607c2")
+    pulumi.export("hipProfileDsResult", scm_hip_profile_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: The name of the HIP profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getHipProfile:getHipProfile', __args__, opts=opts, typ=GetHipProfileResult).value
 
     return AwaitableGetHipProfileResult(
         description=pulumi.get(__ret__, 'description'),
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         match=pulumi.get(__ret__, 'match'),
         name=pulumi.get(__ret__, 'name'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_hip_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                           name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetHipProfileResult]:
     """
-    Retrieves a config item.
+    HipProfile data source
 
     ## Example Usage
 
@@ -133,19 +178,26 @@ def get_hip_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_hip_profile(id="1234-56-789")
+    # Look up a single HIP Profile by its ID.
+    scm_hip_profile_ds = scm.get_hip_profile(id="e0a970b8-98d2-42e9-a273-53fbf67607c2")
+    pulumi.export("hipProfileDsResult", scm_hip_profile_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: The name of the HIP profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getHipProfile:getHipProfile', __args__, opts=opts, typ=GetHipProfileResult)
     return __ret__.apply(lambda __response__: GetHipProfileResult(
         description=pulumi.get(__response__, 'description'),
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         match=pulumi.get(__response__, 'match'),
         name=pulumi.get(__response__, 'name'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid')))

@@ -18,14 +18,14 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
     public static final FileBlockingProfileState Empty = new FileBlockingProfileState();
 
     /**
-     * The Description param.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -33,14 +33,14 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -48,14 +48,14 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -63,14 +63,14 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Name param.
+     * The name of the file blocking profile
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the file blocking profile
      * 
      */
     public Optional<Output<String>> name() {
@@ -78,14 +78,14 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Rules param.
+     * A list of file blocking rules
      * 
      */
     @Import(name="rules")
     private @Nullable Output<List<FileBlockingProfileRuleArgs>> rules;
 
     /**
-     * @return The Rules param.
+     * @return A list of file blocking rules
      * 
      */
     public Optional<Output<List<FileBlockingProfileRuleArgs>>> rules() {
@@ -93,14 +93,14 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -145,7 +145,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -156,7 +156,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -166,7 +166,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -177,7 +177,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -187,7 +187,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -198,7 +198,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -208,7 +208,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the file blocking profile
          * 
          * @return builder
          * 
@@ -219,7 +219,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the file blocking profile
          * 
          * @return builder
          * 
@@ -229,7 +229,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param rules The Rules param.
+         * @param rules A list of file blocking rules
          * 
          * @return builder
          * 
@@ -240,7 +240,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param rules The Rules param.
+         * @param rules A list of file blocking rules
          * 
          * @return builder
          * 
@@ -250,7 +250,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param rules The Rules param.
+         * @param rules A list of file blocking rules
          * 
          * @return builder
          * 
@@ -260,7 +260,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -271,7 +271,7 @@ public final class FileBlockingProfileState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayPeerId {
     /**
-     * @return Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * @return Peer ID string
      * 
      */
     private @Nullable String id;
     /**
-     * @return The Type param. String must be one of these: `&#34;ipaddr&#34;`, `&#34;keyid&#34;`, `&#34;fqdn&#34;`, `&#34;ufqdn&#34;`.
+     * @return Type
      * 
      */
     private @Nullable String type;
 
     private IkeGatewayPeerId() {}
     /**
-     * @return Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\{@literal @}[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+     * @return Peer ID string
      * 
      */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * @return The Type param. String must be one of these: `&#34;ipaddr&#34;`, `&#34;keyid&#34;`, `&#34;fqdn&#34;`, `&#34;ufqdn&#34;`.
+     * @return Type
      * 
      */
     public Optional<String> type() {

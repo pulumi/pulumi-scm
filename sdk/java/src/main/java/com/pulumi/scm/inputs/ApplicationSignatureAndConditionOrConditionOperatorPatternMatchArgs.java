@@ -19,14 +19,14 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorPatternMat
     public static final ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgs Empty = new ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgs();
 
     /**
-     * The Context param. String length must not exceed 127 characters.
+     * Context
      * 
      */
     @Import(name="context", required=true)
     private Output<String> context;
 
     /**
-     * @return The Context param. String length must not exceed 127 characters.
+     * @return Context
      * 
      */
     public Output<String> context() {
@@ -34,14 +34,14 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorPatternMat
     }
 
     /**
-     * The Pattern param. String length must not exceed 127 characters.
+     * Pattern
      * 
      */
     @Import(name="pattern", required=true)
     private Output<String> pattern;
 
     /**
-     * @return The Pattern param. String length must not exceed 127 characters.
+     * @return Pattern
      * 
      */
     public Output<String> pattern() {
@@ -49,14 +49,14 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorPatternMat
     }
 
     /**
-     * The Qualifiers param.
+     * Qualifier
      * 
      */
     @Import(name="qualifiers")
     private @Nullable Output<List<ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierArgs>> qualifiers;
 
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     public Optional<Output<List<ApplicationSignatureAndConditionOrConditionOperatorPatternMatchQualifierArgs>>> qualifiers() {
@@ -90,7 +90,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorPatternMat
         }
 
         /**
-         * @param context The Context param. String length must not exceed 127 characters.
+         * @param context Context
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorPatternMat
         }
 
         /**
-         * @param context The Context param. String length must not exceed 127 characters.
+         * @param context Context
          * 
          * @return builder
          * 
@@ -111,7 +111,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorPatternMat
         }
 
         /**
-         * @param pattern The Pattern param. String length must not exceed 127 characters.
+         * @param pattern Pattern
          * 
          * @return builder
          * 
@@ -122,7 +122,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorPatternMat
         }
 
         /**
-         * @param pattern The Pattern param. String length must not exceed 127 characters.
+         * @param pattern Pattern
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorPatternMat
         }
 
         /**
-         * @param qualifiers The Qualifiers param.
+         * @param qualifiers Qualifier
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorPatternMat
         }
 
         /**
-         * @param qualifiers The Qualifiers param.
+         * @param qualifiers Qualifier
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorPatternMat
         }
 
         /**
-         * @param qualifiers The Qualifiers param.
+         * @param qualifiers Qualifier
          * 
          * @return builder
          * 

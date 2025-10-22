@@ -18,14 +18,14 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationArgs extends 
     public static final HipObjectDiskEncryptionCriteriaEncryptedLocationArgs Empty = new HipObjectDiskEncryptionCriteriaEncryptedLocationArgs();
 
     /**
-     * The EncryptionState param.
+     * Encryption state
      * 
      */
     @Import(name="encryptionState")
     private @Nullable Output<HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs> encryptionState;
 
     /**
-     * @return The EncryptionState param.
+     * @return Encryption state
      * 
      */
     public Optional<Output<HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs>> encryptionState() {
@@ -33,14 +33,14 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationArgs extends 
     }
 
     /**
-     * Encryption location. String length must not exceed 1023 characters.
+     * Encryption location
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return Encryption location. String length must not exceed 1023 characters.
+     * @return Encryption location
      * 
      */
     public Output<String> name() {
@@ -73,7 +73,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationArgs extends 
         }
 
         /**
-         * @param encryptionState The EncryptionState param.
+         * @param encryptionState Encryption state
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationArgs extends 
         }
 
         /**
-         * @param encryptionState The EncryptionState param.
+         * @param encryptionState Encryption state
          * 
          * @return builder
          * 
@@ -94,7 +94,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationArgs extends 
         }
 
         /**
-         * @param name Encryption location. String length must not exceed 1023 characters.
+         * @param name Encryption location
          * 
          * @return builder
          * 
@@ -105,7 +105,7 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationArgs extends 
         }
 
         /**
-         * @param name Encryption location. String length must not exceed 1023 characters.
+         * @param name Encryption location
          * 
          * @return builder
          * 

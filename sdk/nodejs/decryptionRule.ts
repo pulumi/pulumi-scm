@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.DecryptionRule("example", {});
- * ```
+ * DecryptionRule resource
  */
 export class DecryptionRule extends pulumi.CustomResource {
     /**
@@ -47,104 +38,104 @@ export class DecryptionRule extends pulumi.CustomResource {
     }
 
     /**
-     * The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+     * The action to be taken
      */
     declare public readonly action: pulumi.Output<string>;
     /**
-     * The Categories param.
+     * The destination URL category
      */
     declare public readonly categories: pulumi.Output<string[]>;
     /**
-     * The Description param.
+     * The description of the decryption rule
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The DestinationHips param.
+     * The Host Integrity Profile of the destination host
      */
     declare public readonly destinationHips: pulumi.Output<string[] | undefined>;
     /**
-     * The Destinations param.
+     * The destination addresses
      */
     declare public readonly destinations: pulumi.Output<string[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Disabled param.
+     * Is the rule disabled?
      */
     declare public readonly disabled: pulumi.Output<boolean | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Froms param.
+     * The source security zone
      */
     declare public readonly froms: pulumi.Output<string[]>;
     /**
-     * The LogFail param.
+     * Log failed decryption events?
      */
     declare public readonly logFail: pulumi.Output<boolean | undefined>;
     /**
-     * The LogSetting param.
+     * The log settings of the decryption rule
      */
     declare public readonly logSetting: pulumi.Output<string | undefined>;
     /**
-     * The LogSuccess param.
+     * Log successful decryption events?
      */
     declare public readonly logSuccess: pulumi.Output<boolean | undefined>;
     /**
-     * The Name param.
+     * The name of the decryption rule
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The NegateDestination param.
+     * Negate the destination addresses?
      */
     declare public readonly negateDestination: pulumi.Output<boolean | undefined>;
     /**
-     * The NegateSource param.
+     * Negate the source addresses?
      */
     declare public readonly negateSource: pulumi.Output<boolean | undefined>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The position of a security rule
      */
     declare public readonly position: pulumi.Output<string>;
     /**
-     * The Profile param.
+     * The decryption profile associated with the decryption rule
      */
     declare public readonly profile: pulumi.Output<string | undefined>;
     /**
-     * The Services param.
+     * The destination services and/or service groups
      */
     declare public readonly services: pulumi.Output<string[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The SourceHips param.
+     * Source hip
      */
     declare public readonly sourceHips: pulumi.Output<string[] | undefined>;
     /**
-     * The SourceUsers param.
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      */
     declare public readonly sourceUsers: pulumi.Output<string[]>;
     /**
-     * The Sources param.
+     * The source addresses
      */
     declare public readonly sources: pulumi.Output<string[]>;
     /**
-     * The Tags param.
+     * The tags associated with the decryption rule
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The Tos param.
+     * The destination security zone
      */
     declare public readonly tos: pulumi.Output<string[]>;
     /**
-     * The Type param.
+     * The type of decryption
      */
     declare public readonly type: pulumi.Output<outputs.DecryptionRuleType | undefined>;
 
@@ -250,104 +241,104 @@ export class DecryptionRule extends pulumi.CustomResource {
  */
 export interface DecryptionRuleState {
     /**
-     * The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+     * The action to be taken
      */
     action?: pulumi.Input<string>;
     /**
-     * The Categories param.
+     * The destination URL category
      */
     categories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Description param.
+     * The description of the decryption rule
      */
     description?: pulumi.Input<string>;
     /**
-     * The DestinationHips param.
+     * The Host Integrity Profile of the destination host
      */
     destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Destinations param.
+     * The destination addresses
      */
     destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Disabled param.
+     * Is the rule disabled?
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Froms param.
+     * The source security zone
      */
     froms?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The LogFail param.
+     * Log failed decryption events?
      */
     logFail?: pulumi.Input<boolean>;
     /**
-     * The LogSetting param.
+     * The log settings of the decryption rule
      */
     logSetting?: pulumi.Input<string>;
     /**
-     * The LogSuccess param.
+     * Log successful decryption events?
      */
     logSuccess?: pulumi.Input<boolean>;
     /**
-     * The Name param.
+     * The name of the decryption rule
      */
     name?: pulumi.Input<string>;
     /**
-     * The NegateDestination param.
+     * Negate the destination addresses?
      */
     negateDestination?: pulumi.Input<boolean>;
     /**
-     * The NegateSource param.
+     * Negate the source addresses?
      */
     negateSource?: pulumi.Input<boolean>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The position of a security rule
      */
     position?: pulumi.Input<string>;
     /**
-     * The Profile param.
+     * The decryption profile associated with the decryption rule
      */
     profile?: pulumi.Input<string>;
     /**
-     * The Services param.
+     * The destination services and/or service groups
      */
     services?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The SourceHips param.
+     * Source hip
      */
     sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The SourceUsers param.
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      */
     sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Sources param.
+     * The source addresses
      */
     sources?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tags param.
+     * The tags associated with the decryption rule
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
     /**
-     * The Tos param.
+     * The destination security zone
      */
     tos?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Type param.
+     * The type of decryption
      */
     type?: pulumi.Input<inputs.DecryptionRuleType>;
 }
@@ -357,103 +348,103 @@ export interface DecryptionRuleState {
  */
 export interface DecryptionRuleArgs {
     /**
-     * The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+     * The action to be taken
      */
     action: pulumi.Input<string>;
     /**
-     * The Categories param.
+     * The destination URL category
      */
     categories: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Description param.
+     * The description of the decryption rule
      */
     description?: pulumi.Input<string>;
     /**
-     * The DestinationHips param.
+     * The Host Integrity Profile of the destination host
      */
     destinationHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Destinations param.
+     * The destination addresses
      */
     destinations: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Disabled param.
+     * Is the rule disabled?
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Froms param.
+     * The source security zone
      */
     froms: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The LogFail param.
+     * Log failed decryption events?
      */
     logFail?: pulumi.Input<boolean>;
     /**
-     * The LogSetting param.
+     * The log settings of the decryption rule
      */
     logSetting?: pulumi.Input<string>;
     /**
-     * The LogSuccess param.
+     * Log successful decryption events?
      */
     logSuccess?: pulumi.Input<boolean>;
     /**
-     * The Name param.
+     * The name of the decryption rule
      */
     name?: pulumi.Input<string>;
     /**
-     * The NegateDestination param.
+     * Negate the destination addresses?
      */
     negateDestination?: pulumi.Input<boolean>;
     /**
-     * The NegateSource param.
+     * Negate the source addresses?
      */
     negateSource?: pulumi.Input<boolean>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The position of a security rule
      */
     position?: pulumi.Input<string>;
     /**
-     * The Profile param.
+     * The decryption profile associated with the decryption rule
      */
     profile?: pulumi.Input<string>;
     /**
-     * The Services param.
+     * The destination services and/or service groups
      */
     services: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The SourceHips param.
+     * Source hip
      */
     sourceHips?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The SourceUsers param.
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      */
     sourceUsers: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Sources param.
+     * The source addresses
      */
     sources: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tags param.
+     * The tags associated with the decryption rule
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tos param.
+     * The destination security zone
      */
     tos: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Type param.
+     * The type of decryption
      */
     type?: pulumi.Input<inputs.DecryptionRuleType>;
 }

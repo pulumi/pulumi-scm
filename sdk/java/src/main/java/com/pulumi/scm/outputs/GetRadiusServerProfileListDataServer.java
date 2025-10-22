@@ -12,50 +12,50 @@ import java.util.Objects;
 @CustomType
 public final class GetRadiusServerProfileListDataServer {
     /**
-     * @return The IpAddress param.
+     * @return The IP address of the RADIUS server
      * 
      */
     private String ipAddress;
     /**
-     * @return The Name param.
+     * @return The name of the RADIUS server
      * 
      */
     private String name;
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The RADIUS server port
      * 
      */
     private Integer port;
     /**
-     * @return The Secret param. String length must not exceed 64 characters.
+     * @return The RADIUS secret
      * 
      */
     private String secret;
 
     private GetRadiusServerProfileListDataServer() {}
     /**
-     * @return The IpAddress param.
+     * @return The IP address of the RADIUS server
      * 
      */
     public String ipAddress() {
         return this.ipAddress;
     }
     /**
-     * @return The Name param.
+     * @return The name of the RADIUS server
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The RADIUS server port
      * 
      */
     public Integer port() {
         return this.port;
     }
     /**
-     * @return The Secret param. String length must not exceed 64 characters.
+     * @return The RADIUS secret
      * 
      */
     public String secret() {

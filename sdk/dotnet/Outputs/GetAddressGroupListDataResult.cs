@@ -14,50 +14,75 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAddressGroupListDataResult
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The DynamicValue param.
+        /// The device in which the resource is defined
         /// </summary>
-        public readonly Outputs.GetAddressGroupListDataDynamicValueResult DynamicValue;
+        public readonly string Device;
         /// <summary>
-        /// UUID of the resource.
+        /// Dynamic
+        /// </summary>
+        public readonly Outputs.GetAddressGroupListDataDynamicResult Dynamic;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the address group
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the address group
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// The snippet in which the resource is defined
         /// </summary>
-        public readonly ImmutableArray<string> StaticLists;
+        public readonly string Snippet;
         /// <summary>
-        /// Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Static
+        /// </summary>
+        public readonly ImmutableArray<string> Statics;
+        /// <summary>
+        /// Tags for address group object
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetAddressGroupListDataResult(
             string description,
 
-            Outputs.GetAddressGroupListDataDynamicValueResult dynamicValue,
+            string device,
+
+            Outputs.GetAddressGroupListDataDynamicResult dynamic,
+
+            string folder,
 
             string id,
 
             string name,
 
-            ImmutableArray<string> staticLists,
+            string snippet,
 
-            ImmutableArray<string> tags)
+            ImmutableArray<string> statics,
+
+            ImmutableArray<string> tags,
+
+            string tfid)
         {
             Description = description;
-            DynamicValue = dynamicValue;
+            Device = device;
+            Dynamic = dynamic;
+            Folder = folder;
             Id = id;
             Name = name;
-            StaticLists = staticLists;
+            Snippet = snippet;
+            Statics = statics;
             Tags = tags;
+            Tfid = tfid;
         }
     }
 }

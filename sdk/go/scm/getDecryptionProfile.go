@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupDecryptionProfile(ctx, &scm.LookupDecryptionProfileArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// DecryptionProfile data source
 func LookupDecryptionProfile(ctx *pulumi.Context, args *LookupDecryptionProfileArgs, opts ...pulumi.InvokeOption) (*LookupDecryptionProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupDecryptionProfileResult
@@ -50,23 +24,31 @@ func LookupDecryptionProfile(ctx *pulumi.Context, args *LookupDecryptionProfileA
 
 // A collection of arguments for invoking getDecryptionProfile.
 type LookupDecryptionProfileArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
+	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getDecryptionProfile.
 type LookupDecryptionProfileResult struct {
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 	Name string `pulumi:"name"`
-	// The SslForwardProxy param.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Ssl forward proxy
 	SslForwardProxy GetDecryptionProfileSslForwardProxy `pulumi:"sslForwardProxy"`
-	// The SslInboundProxy param.
+	// Ssl inbound proxy
 	SslInboundProxy GetDecryptionProfileSslInboundProxy `pulumi:"sslInboundProxy"`
-	// The SslNoProxy param.
+	// Ssl no proxy
 	SslNoProxy GetDecryptionProfileSslNoProxy `pulumi:"sslNoProxy"`
-	// The SslProtocolSettings param.
+	// Ssl protocol settings
 	SslProtocolSettings GetDecryptionProfileSslProtocolSettings `pulumi:"sslProtocolSettings"`
 	Tfid                string                                  `pulumi:"tfid"`
 }
@@ -82,8 +64,10 @@ func LookupDecryptionProfileOutput(ctx *pulumi.Context, args LookupDecryptionPro
 
 // A collection of arguments for invoking getDecryptionProfile.
 type LookupDecryptionProfileOutputArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
+	// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupDecryptionProfileOutputArgs) ElementType() reflect.Type {
@@ -105,32 +89,47 @@ func (o LookupDecryptionProfileResultOutput) ToLookupDecryptionProfileResultOutp
 	return o
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupDecryptionProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionProfileResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupDecryptionProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
 func (o LookupDecryptionProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
 func (o LookupDecryptionProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The SslForwardProxy param.
+// The snippet in which the resource is defined
+func (o LookupDecryptionProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// Ssl forward proxy
 func (o LookupDecryptionProfileResultOutput) SslForwardProxy() GetDecryptionProfileSslForwardProxyOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) GetDecryptionProfileSslForwardProxy { return v.SslForwardProxy }).(GetDecryptionProfileSslForwardProxyOutput)
 }
 
-// The SslInboundProxy param.
+// Ssl inbound proxy
 func (o LookupDecryptionProfileResultOutput) SslInboundProxy() GetDecryptionProfileSslInboundProxyOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) GetDecryptionProfileSslInboundProxy { return v.SslInboundProxy }).(GetDecryptionProfileSslInboundProxyOutput)
 }
 
-// The SslNoProxy param.
+// Ssl no proxy
 func (o LookupDecryptionProfileResultOutput) SslNoProxy() GetDecryptionProfileSslNoProxyOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) GetDecryptionProfileSslNoProxy { return v.SslNoProxy }).(GetDecryptionProfileSslNoProxyOutput)
 }
 
-// The SslProtocolSettings param.
+// Ssl protocol settings
 func (o LookupDecryptionProfileResultOutput) SslProtocolSettings() GetDecryptionProfileSslProtocolSettingsOutput {
 	return o.ApplyT(func(v LookupDecryptionProfileResult) GetDecryptionProfileSslProtocolSettings {
 		return v.SslProtocolSettings

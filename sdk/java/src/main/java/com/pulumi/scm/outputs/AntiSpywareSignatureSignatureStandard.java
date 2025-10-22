@@ -16,62 +16,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareSignatureSignatureStandard {
     /**
-     * @return The AndConditions param.
+     * @return And condition
      * 
      */
     private @Nullable List<AntiSpywareSignatureSignatureStandardAndCondition> andConditions;
     /**
-     * @return The Comment param. String length must not exceed 256 characters.
+     * @return Comment
      * 
      */
     private @Nullable String comment;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The OrderFree param. Default: `false`.
+     * @return Order free
      * 
      */
     private @Nullable Boolean orderFree;
     /**
-     * @return The Scope param. String must be one of these: `&#34;protocol-data-unit&#34;`, `&#34;session&#34;`.
+     * @return Scope
      * 
      */
     private @Nullable String scope;
 
     private AntiSpywareSignatureSignatureStandard() {}
     /**
-     * @return The AndConditions param.
+     * @return And condition
      * 
      */
     public List<AntiSpywareSignatureSignatureStandardAndCondition> andConditions() {
         return this.andConditions == null ? List.of() : this.andConditions;
     }
     /**
-     * @return The Comment param. String length must not exceed 256 characters.
+     * @return Comment
      * 
      */
     public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The OrderFree param. Default: `false`.
+     * @return Order free
      * 
      */
     public Optional<Boolean> orderFree() {
         return Optional.ofNullable(this.orderFree);
     }
     /**
-     * @return The Scope param. String must be one of these: `&#34;protocol-data-unit&#34;`, `&#34;session&#34;`.
+     * @return Scope
      * 
      */
     public Optional<String> scope() {

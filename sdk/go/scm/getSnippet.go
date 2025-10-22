@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupSnippet(ctx, &scm.LookupSnippetArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// Snippet data source
 func LookupSnippet(ctx *pulumi.Context, args *LookupSnippetArgs, opts ...pulumi.InvokeOption) (*LookupSnippetResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupSnippetResult
@@ -50,22 +24,24 @@ func LookupSnippet(ctx *pulumi.Context, args *LookupSnippetArgs, opts ...pulumi.
 
 // A collection of arguments for invoking getSnippet.
 type LookupSnippetArgs struct {
-	// The Id param.
+	// The UUID of the snippet
 	Id string `pulumi:"id"`
+	// The name of the snippet
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getSnippet.
 type LookupSnippetResult struct {
-	// The Description param.
+	// The description of the snippet
 	Description string `pulumi:"description"`
-	// The Id param.
+	// The UUID of the snippet
 	Id string `pulumi:"id"`
-	// The Labels param.
+	// Labels applied to the snippet
 	Labels []string `pulumi:"labels"`
-	// The Name param.
+	// The name of the snippet
 	Name string `pulumi:"name"`
 	Tfid string `pulumi:"tfid"`
-	// The Type param. String must be one of these: `"predefined"`, `"custom"`.
+	// The snippet type
 	Type string `pulumi:"type"`
 }
 
@@ -80,8 +56,10 @@ func LookupSnippetOutput(ctx *pulumi.Context, args LookupSnippetOutputArgs, opts
 
 // A collection of arguments for invoking getSnippet.
 type LookupSnippetOutputArgs struct {
-	// The Id param.
+	// The UUID of the snippet
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the snippet
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupSnippetOutputArgs) ElementType() reflect.Type {
@@ -103,22 +81,22 @@ func (o LookupSnippetResultOutput) ToLookupSnippetResultOutputWithContext(ctx co
 	return o
 }
 
-// The Description param.
+// The description of the snippet
 func (o LookupSnippetResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSnippetResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The UUID of the snippet
 func (o LookupSnippetResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSnippetResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Labels param.
+// Labels applied to the snippet
 func (o LookupSnippetResultOutput) Labels() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSnippetResult) []string { return v.Labels }).(pulumi.StringArrayOutput)
 }
 
-// The Name param.
+// The name of the snippet
 func (o LookupSnippetResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSnippetResult) string { return v.Name }).(pulumi.StringOutput)
 }
@@ -127,7 +105,7 @@ func (o LookupSnippetResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSnippetResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Type param. String must be one of these: `"predefined"`, `"custom"`.
+// The snippet type
 func (o LookupSnippetResultOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSnippetResult) string { return v.Type }).(pulumi.StringOutput)
 }

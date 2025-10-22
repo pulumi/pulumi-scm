@@ -4,74 +4,74 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class MfaServerMfaVendorTypeOktaAdaptiveV1 {
     /**
-     * @return The OktaApiHost param.
+     * @return Okta API hostname
      * 
      */
-    private @Nullable String oktaApiHost;
+    private String oktaApiHost;
     /**
-     * @return The OktaBaseuri param.
+     * @return Okta baseuri
      * 
      */
-    private @Nullable String oktaBaseuri;
+    private String oktaBaseuri;
     /**
-     * @return The OktaOrg param.
+     * @return Okta organization
      * 
      */
-    private @Nullable String oktaOrg;
+    private String oktaOrg;
     /**
-     * @return The OktaTimeout param.
+     * @return Okta timeout (seconds)
      * 
      */
-    private @Nullable String oktaTimeout;
+    private Integer oktaTimeout;
     /**
-     * @return The OktaToken param.
+     * @return Okta API token
      * 
      */
-    private @Nullable String oktaToken;
+    private String oktaToken;
 
     private MfaServerMfaVendorTypeOktaAdaptiveV1() {}
     /**
-     * @return The OktaApiHost param.
+     * @return Okta API hostname
      * 
      */
-    public Optional<String> oktaApiHost() {
-        return Optional.ofNullable(this.oktaApiHost);
+    public String oktaApiHost() {
+        return this.oktaApiHost;
     }
     /**
-     * @return The OktaBaseuri param.
+     * @return Okta baseuri
      * 
      */
-    public Optional<String> oktaBaseuri() {
-        return Optional.ofNullable(this.oktaBaseuri);
+    public String oktaBaseuri() {
+        return this.oktaBaseuri;
     }
     /**
-     * @return The OktaOrg param.
+     * @return Okta organization
      * 
      */
-    public Optional<String> oktaOrg() {
-        return Optional.ofNullable(this.oktaOrg);
+    public String oktaOrg() {
+        return this.oktaOrg;
     }
     /**
-     * @return The OktaTimeout param.
+     * @return Okta timeout (seconds)
      * 
      */
-    public Optional<String> oktaTimeout() {
-        return Optional.ofNullable(this.oktaTimeout);
+    public Integer oktaTimeout() {
+        return this.oktaTimeout;
     }
     /**
-     * @return The OktaToken param.
+     * @return Okta API token
      * 
      */
-    public Optional<String> oktaToken() {
-        return Optional.ofNullable(this.oktaToken);
+    public String oktaToken() {
+        return this.oktaToken;
     }
 
     public static Builder builder() {
@@ -83,11 +83,11 @@ public final class MfaServerMfaVendorTypeOktaAdaptiveV1 {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String oktaApiHost;
-        private @Nullable String oktaBaseuri;
-        private @Nullable String oktaOrg;
-        private @Nullable String oktaTimeout;
-        private @Nullable String oktaToken;
+        private String oktaApiHost;
+        private String oktaBaseuri;
+        private String oktaOrg;
+        private Integer oktaTimeout;
+        private String oktaToken;
         public Builder() {}
         public Builder(MfaServerMfaVendorTypeOktaAdaptiveV1 defaults) {
     	      Objects.requireNonNull(defaults);
@@ -99,32 +99,42 @@ public final class MfaServerMfaVendorTypeOktaAdaptiveV1 {
         }
 
         @CustomType.Setter
-        public Builder oktaApiHost(@Nullable String oktaApiHost) {
-
+        public Builder oktaApiHost(String oktaApiHost) {
+            if (oktaApiHost == null) {
+              throw new MissingRequiredPropertyException("MfaServerMfaVendorTypeOktaAdaptiveV1", "oktaApiHost");
+            }
             this.oktaApiHost = oktaApiHost;
             return this;
         }
         @CustomType.Setter
-        public Builder oktaBaseuri(@Nullable String oktaBaseuri) {
-
+        public Builder oktaBaseuri(String oktaBaseuri) {
+            if (oktaBaseuri == null) {
+              throw new MissingRequiredPropertyException("MfaServerMfaVendorTypeOktaAdaptiveV1", "oktaBaseuri");
+            }
             this.oktaBaseuri = oktaBaseuri;
             return this;
         }
         @CustomType.Setter
-        public Builder oktaOrg(@Nullable String oktaOrg) {
-
+        public Builder oktaOrg(String oktaOrg) {
+            if (oktaOrg == null) {
+              throw new MissingRequiredPropertyException("MfaServerMfaVendorTypeOktaAdaptiveV1", "oktaOrg");
+            }
             this.oktaOrg = oktaOrg;
             return this;
         }
         @CustomType.Setter
-        public Builder oktaTimeout(@Nullable String oktaTimeout) {
-
+        public Builder oktaTimeout(Integer oktaTimeout) {
+            if (oktaTimeout == null) {
+              throw new MissingRequiredPropertyException("MfaServerMfaVendorTypeOktaAdaptiveV1", "oktaTimeout");
+            }
             this.oktaTimeout = oktaTimeout;
             return this;
         }
         @CustomType.Setter
-        public Builder oktaToken(@Nullable String oktaToken) {
-
+        public Builder oktaToken(String oktaToken) {
+            if (oktaToken == null) {
+              throw new MissingRequiredPropertyException("MfaServerMfaVendorTypeOktaAdaptiveV1", "oktaToken");
+            }
             this.oktaToken = oktaToken;
             return this;
         }

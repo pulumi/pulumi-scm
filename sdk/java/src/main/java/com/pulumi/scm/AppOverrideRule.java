@@ -18,274 +18,230 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.AppOverrideRule;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new AppOverrideRule("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * AppOverrideRule resource
  * 
  */
 @ResourceType(type="scm:index/appOverrideRule:AppOverrideRule")
 public class AppOverrideRule extends com.pulumi.resources.CustomResource {
     /**
-     * The Application param.
+     * Application
      * 
      */
     @Export(name="application", refs={String.class}, tree="[0]")
     private Output<String> application;
 
     /**
-     * @return The Application param.
+     * @return Application
      * 
      */
     public Output<String> application() {
         return this.application;
     }
     /**
-     * The Description param. String length must not exceed 1024 characters.
+     * Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param. String length must not exceed 1024 characters.
+     * @return Description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Destinations param.
+     * Destination
      * 
      */
     @Export(name="destinations", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> destinations;
 
     /**
-     * @return The Destinations param.
+     * @return Destination
      * 
      */
     public Output<List<String>> destinations() {
         return this.destinations;
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Disabled param. Default: `false`.
+     * Disabled
      * 
      */
     @Export(name="disabled", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> disabled;
 
     /**
-     * @return The Disabled param. Default: `false`.
+     * @return Disabled
      * 
      */
     public Output<Boolean> disabled() {
         return this.disabled;
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Froms param.
+     * From
      * 
      */
     @Export(name="froms", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> froms;
 
     /**
-     * @return The Froms param.
+     * @return From
      * 
      */
     public Output<List<String>> froms() {
         return this.froms;
     }
     /**
-     * The GroupTag param.
+     * Group tag
      * 
      */
     @Export(name="groupTag", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> groupTag;
 
     /**
-     * @return The GroupTag param.
+     * @return Group tag
      * 
      */
     public Output<Optional<String>> groupTag() {
         return Codegen.optional(this.groupTag);
     }
     /**
-     * The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return Name
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The NegateDestination param. Default: `false`.
+     * Negate destination
      * 
      */
     @Export(name="negateDestination", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> negateDestination;
 
     /**
-     * @return The NegateDestination param. Default: `false`.
+     * @return Negate destination
      * 
      */
     public Output<Boolean> negateDestination() {
         return this.negateDestination;
     }
     /**
-     * The NegateSource param. Default: `false`.
+     * Negate source
      * 
      */
     @Export(name="negateSource", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> negateSource;
 
     /**
-     * @return The NegateSource param. Default: `false`.
+     * @return Negate source
      * 
      */
     public Output<Boolean> negateSource() {
         return this.negateSource;
     }
     /**
-     * The Port param. Value must be between 0 and 65535.
+     * Port
      * 
      */
     @Export(name="port", refs={Integer.class}, tree="[0]")
     private Output<Integer> port;
 
     /**
-     * @return The Port param. Value must be between 0 and 65535.
+     * @return Port
      * 
      */
     public Output<Integer> port() {
         return this.port;
     }
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-     * 
-     */
-    @Export(name="position", refs={String.class}, tree="[0]")
-    private Output<String> position;
-
-    /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-     * 
-     */
-    public Output<String> position() {
-        return this.position;
-    }
-    /**
-     * The Protocol param. String must be one of these: `&#34;tcp&#34;`, `&#34;udp&#34;`.
+     * Protocol
      * 
      */
     @Export(name="protocol", refs={String.class}, tree="[0]")
     private Output<String> protocol;
 
     /**
-     * @return The Protocol param. String must be one of these: `&#34;tcp&#34;`, `&#34;udp&#34;`.
+     * @return Protocol
      * 
      */
     public Output<String> protocol() {
         return this.protocol;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * The Sources param.
+     * Source
      * 
      */
     @Export(name="sources", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> sources;
 
     /**
-     * @return The Sources param.
+     * @return Source
      * 
      */
     public Output<List<String>> sources() {
         return this.sources;
     }
     /**
-     * The Tags param.
+     * Tag
      * 
      */
     @Export(name="tags", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> tags;
 
     /**
-     * @return The Tags param.
+     * @return Tag
      * 
      */
     public Output<Optional<List<String>>> tags() {
@@ -298,14 +254,14 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The Tos param.
+     * To
      * 
      */
     @Export(name="tos", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> tos;
 
     /**
-     * @return The Tos param.
+     * @return To
      * 
      */
     public Output<List<String>> tos() {

@@ -17,14 +17,14 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
     public static final DynamicUserGroupState Empty = new DynamicUserGroupState();
 
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * The description of the dynamic address group
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return The description of the dynamic address group
      * 
      */
     public Optional<Output<String>> description() {
@@ -32,14 +32,14 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -47,14 +47,14 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * tag-based filter. String length must not exceed 2047 characters.
+     * The tag-based filter for the dynamic user group
      * 
      */
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
     /**
-     * @return tag-based filter. String length must not exceed 2047 characters.
+     * @return The tag-based filter for the dynamic user group
      * 
      */
     public Optional<Output<String>> filter() {
@@ -62,14 +62,14 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -77,14 +77,14 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the dynamic address group
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the dynamic address group
      * 
      */
     public Optional<Output<String>> name() {
@@ -92,14 +92,14 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -107,14 +107,14 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags associated with the dynamic user group
      * 
      */
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
     /**
-     * @return Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return Tags associated with the dynamic user group
      * 
      */
     public Optional<Output<List<String>>> tags() {
@@ -160,7 +160,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param description The Description param. String length must not exceed 1023 characters.
+         * @param description The description of the dynamic address group
          * 
          * @return builder
          * 
@@ -171,7 +171,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param description The Description param. String length must not exceed 1023 characters.
+         * @param description The description of the dynamic address group
          * 
          * @return builder
          * 
@@ -181,7 +181,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -192,7 +192,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -202,7 +202,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param filter tag-based filter. String length must not exceed 2047 characters.
+         * @param filter The tag-based filter for the dynamic user group
          * 
          * @return builder
          * 
@@ -213,7 +213,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param filter tag-based filter. String length must not exceed 2047 characters.
+         * @param filter The tag-based filter for the dynamic user group
          * 
          * @return builder
          * 
@@ -223,7 +223,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -234,7 +234,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -244,7 +244,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the dynamic address group
          * 
          * @return builder
          * 
@@ -255,7 +255,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the dynamic address group
          * 
          * @return builder
          * 
@@ -265,7 +265,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -276,7 +276,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -286,7 +286,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param tags Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+         * @param tags Tags associated with the dynamic user group
          * 
          * @return builder
          * 
@@ -297,7 +297,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param tags Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+         * @param tags Tags associated with the dynamic user group
          * 
          * @return builder
          * 
@@ -307,7 +307,7 @@ public final class DynamicUserGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param tags Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+         * @param tags Tags associated with the dynamic user group
          * 
          * @return builder
          * 

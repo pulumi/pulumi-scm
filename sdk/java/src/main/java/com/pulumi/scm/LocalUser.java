@@ -18,139 +18,104 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.LocalUser;
- * import com.pulumi.scm.LocalUserArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new LocalUser("example", LocalUserArgs.builder()
- *             .folder("Shared")
- *             .name("user1")
- *             .password("secret")
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
+ * LocalUser resource
  * 
  */
 @ResourceType(type="scm:index/localUser:LocalUser")
 public class LocalUser extends com.pulumi.resources.CustomResource {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Disabled param.
+     * Is the local user disabled?
      * 
      */
     @Export(name="disabled", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> disabled;
+    private Output<Boolean> disabled;
 
     /**
-     * @return The Disabled param.
+     * @return Is the local user disabled?
      * 
      */
-    public Output<Optional<Boolean>> disabled() {
-        return Codegen.optional(this.disabled);
+    public Output<Boolean> disabled() {
+        return this.disabled;
     }
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      * 
      */
     @Export(name="encryptedValues", refs={Map.class,String.class}, tree="[0,1,1]")
     private Output<Map<String,String>> encryptedValues;
 
     /**
-     * @return (Internal use) Encrypted values returned from the API.
+     * @return Map of sensitive values returned from the API.
      * 
      */
     public Output<Map<String,String>> encryptedValues() {
         return this.encryptedValues;
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Name param. String length must not exceed 31 characters.
+     * The name of the local user
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param. String length must not exceed 31 characters.
+     * @return The name of the local user
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Password param. String length must not exceed 63 characters.
+     * The password of the local user
      * 
      */
     @Export(name="password", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> password;
+    private Output<String> password;
 
     /**
-     * @return The Password param. String length must not exceed 63 characters.
+     * @return The password of the local user
      * 
      */
-    public Output<Optional<String>> password() {
-        return Codegen.optional(this.password);
+    public Output<String> password() {
+        return this.password;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -175,7 +140,7 @@ public class LocalUser extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public LocalUser(java.lang.String name, @Nullable LocalUserArgs args) {
+    public LocalUser(java.lang.String name, LocalUserArgs args) {
         this(name, args, null);
     }
     /**
@@ -184,7 +149,7 @@ public class LocalUser extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LocalUser(java.lang.String name, @Nullable LocalUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public LocalUser(java.lang.String name, LocalUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/localUser:LocalUser", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -192,7 +157,7 @@ public class LocalUser extends com.pulumi.resources.CustomResource {
         super("scm:index/localUser:LocalUser", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static LocalUserArgs makeArgs(@Nullable LocalUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static LocalUserArgs makeArgs(LocalUserArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

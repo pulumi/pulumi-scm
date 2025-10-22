@@ -18,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * IkeCryptoProfile resource
  * 
  * ## Example Usage
  * 
@@ -30,6 +30,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
  * import com.pulumi.scm.IkeCryptoProfile;
+ * import com.pulumi.scm.IkeCryptoProfileArgs;
+ * import com.pulumi.scm.inputs.IkeCryptoProfileLifetimeArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -43,7 +45,24 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new IkeCryptoProfile("example");
+ *         // The resource block defines a new IKE Crypto Profile.
+ *         var scmIkeCryptoProfile2 = new IkeCryptoProfile("scmIkeCryptoProfile2", IkeCryptoProfileArgs.builder()
+ *             .name("scm_ike_crypto_profile_2")
+ *             .folder("Prisma Access")
+ *             .hashes(            
+ *                 "sha256",
+ *                 "sha384")
+ *             .dhGroups(            
+ *                 "group14",
+ *                 "group5")
+ *             .encryptions(            
+ *                 "aes-256-cbc",
+ *                 "aes-128-cbc")
+ *             .lifetime(IkeCryptoProfileLifetimeArgs.builder()
+ *                 .hours(8)
+ *                 .build())
+ *             .authenticationMultiple(10)
+ *             .build());
  * 
  *     }
  * }
@@ -54,126 +73,126 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/ikeCryptoProfile:IkeCryptoProfile")
 public class IkeCryptoProfile extends com.pulumi.resources.CustomResource {
     /**
-     * IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+     * IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
      * 
      */
     @Export(name="authenticationMultiple", refs={Integer.class}, tree="[0]")
     private Output<Integer> authenticationMultiple;
 
     /**
-     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
      * 
      */
     public Output<Integer> authenticationMultiple() {
         return this.authenticationMultiple;
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`.
+     * Dh group
      * 
      */
     @Export(name="dhGroups", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> dhGroups;
 
     /**
-     * @return The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`.
+     * @return Dh group
      * 
      */
     public Output<List<String>> dhGroups() {
         return this.dhGroups;
     }
     /**
-     * Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`.
+     * Encryption algorithm
      * 
      */
     @Export(name="encryptions", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> encryptions;
 
     /**
-     * @return Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`.
+     * @return Encryption algorithm
      * 
      */
     public Output<List<String>> encryptions() {
         return this.encryptions;
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+     * Hash
      * 
      */
     @Export(name="hashes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> hashes;
 
     /**
-     * @return The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+     * @return Hash
      * 
      */
     public Output<List<String>> hashes() {
         return this.hashes;
     }
     /**
-     * The Lifetime param.
+     * Ike crypto profile lifetime
      * 
      */
     @Export(name="lifetime", refs={IkeCryptoProfileLifetime.class}, tree="[0]")
     private Output</* @Nullable */ IkeCryptoProfileLifetime> lifetime;
 
     /**
-     * @return The Lifetime param.
+     * @return Ike crypto profile lifetime
      * 
      */
     public Output<Optional<IkeCryptoProfileLifetime>> lifetime() {
         return Codegen.optional(this.lifetime);
     }
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {

@@ -11,19 +11,19 @@ namespace Pulumi.Scm.Outputs
 {
 
     [OutputType]
-    public sealed class RadiusServerProfileProtocolPeapWithGtc
+    public sealed class RadiusServerProfileProtocolPEAPWithGTC
     {
         /// <summary>
-        /// The AnonOuterId param.
+        /// Anon outer id
         /// </summary>
         public readonly bool? AnonOuterId;
         /// <summary>
-        /// The RadiusCertProfile param.
+        /// Radius cert profile
         /// </summary>
         public readonly string? RadiusCertProfile;
 
         [OutputConstructor]
-        private RadiusServerProfileProtocolPeapWithGtc(
+        private RadiusServerProfileProtocolPEAPWithGTC(
             bool? anonOuterId,
 
             string? radiusCertProfile)

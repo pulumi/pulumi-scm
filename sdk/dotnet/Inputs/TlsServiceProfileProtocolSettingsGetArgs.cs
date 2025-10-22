@@ -13,85 +13,85 @@ namespace Pulumi.Scm.Inputs
     public sealed class TlsServiceProfileProtocolSettingsGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Allow authentication SHA1.
+        /// Allow SHA1 authentication?
         /// </summary>
         [Input("authAlgoSha1")]
         public Input<bool>? AuthAlgoSha1 { get; set; }
 
         /// <summary>
-        /// Allow authentication SHA256.
+        /// Allow SHA256 authentication?
         /// </summary>
         [Input("authAlgoSha256")]
         public Input<bool>? AuthAlgoSha256 { get; set; }
 
         /// <summary>
-        /// Allow authentication SHA384.
+        /// Allow SHA384 authentication?
         /// </summary>
         [Input("authAlgoSha384")]
         public Input<bool>? AuthAlgoSha384 { get; set; }
 
         /// <summary>
-        /// Allow algorithm 3DES.
+        /// Allow 3DES algorithm?
         /// </summary>
         [Input("encAlgo3des")]
         public Input<bool>? EncAlgo3des { get; set; }
 
         /// <summary>
-        /// Allow algorithm AES-128-CBC.
+        /// Allow AES-128-CBC algorithm?
         /// </summary>
         [Input("encAlgoAes128Cbc")]
         public Input<bool>? EncAlgoAes128Cbc { get; set; }
 
         /// <summary>
-        /// Allow algorithm AES-128-GCM.
+        /// Allow AES-128-GCM algorithm?
         /// </summary>
         [Input("encAlgoAes128Gcm")]
         public Input<bool>? EncAlgoAes128Gcm { get; set; }
 
         /// <summary>
-        /// Allow algorithm AES-256-CBC.
+        /// Allow AES-256-CBC algorithm?
         /// </summary>
         [Input("encAlgoAes256Cbc")]
         public Input<bool>? EncAlgoAes256Cbc { get; set; }
 
         /// <summary>
-        /// Allow algorithm AES-256-GCM.
+        /// Allow algorithm AES-256-GCM
         /// </summary>
         [Input("encAlgoAes256Gcm")]
         public Input<bool>? EncAlgoAes256Gcm { get; set; }
 
         /// <summary>
-        /// Allow algorithm RC4.
+        /// Allow RC4 algorithm?
         /// </summary>
         [Input("encAlgoRc4")]
         public Input<bool>? EncAlgoRc4 { get; set; }
 
         /// <summary>
-        /// Allow algorithm DHE.
+        /// Allow DHE algorithm?
         /// </summary>
         [Input("keyxchgAlgoDhe")]
         public Input<bool>? KeyxchgAlgoDhe { get; set; }
 
         /// <summary>
-        /// Allow algorithm ECDHE.
+        /// Allow ECDHE algorithm?
         /// </summary>
         [Input("keyxchgAlgoEcdhe")]
         public Input<bool>? KeyxchgAlgoEcdhe { get; set; }
 
         /// <summary>
-        /// Allow algorithm RSA.
+        /// Allow RSA algorithm?
         /// </summary>
         [Input("keyxchgAlgoRsa")]
         public Input<bool>? KeyxchgAlgoRsa { get; set; }
 
         /// <summary>
-        /// The MaxVersion param. String must be one of these: `"tls1-0"`, `"tls1-1"`, `"tls1-2"`, `"tls1-3"`, `"max"`. Default: `"max"`.
+        /// Maximum TLS version
         /// </summary>
         [Input("maxVersion")]
         public Input<string>? MaxVersion { get; set; }
 
         /// <summary>
-        /// The MinVersion param. String must be one of these: `"tls1-0"`, `"tls1-1"`, `"tls1-2"`. Default: `"tls1-0"`.
+        /// Minimum TLS version
         /// </summary>
         [Input("minVersion")]
         public Input<string>? MinVersion { get; set; }

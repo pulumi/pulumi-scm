@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QosProfileClassBandwidthTypePercentageClassClassBandwidth {
     /**
-     * @return guaranteed sending bandwidth in percentage. Value must be between 0 and 100.
+     * @return guaranteed sending bandwidth in percentage
      * 
      */
     private @Nullable Integer egressGuaranteed;
     /**
-     * @return max sending bandwidth in percentage. Value must be between 0 and 100.
+     * @return max sending bandwidth in percentage
      * 
      */
     private @Nullable Integer egressMax;
 
     private QosProfileClassBandwidthTypePercentageClassClassBandwidth() {}
     /**
-     * @return guaranteed sending bandwidth in percentage. Value must be between 0 and 100.
+     * @return guaranteed sending bandwidth in percentage
      * 
      */
     public Optional<Integer> egressGuaranteed() {
         return Optional.ofNullable(this.egressGuaranteed);
     }
     /**
-     * @return max sending bandwidth in percentage. Value must be between 0 and 100.
+     * @return max sending bandwidth in percentage
      * 
      */
     public Optional<Integer> egressMax() {

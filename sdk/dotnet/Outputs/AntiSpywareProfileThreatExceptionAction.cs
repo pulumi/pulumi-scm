@@ -14,55 +14,55 @@ namespace Pulumi.Scm.Outputs
     public sealed class AntiSpywareProfileThreatExceptionAction
     {
         /// <summary>
-        /// The Alert param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Alert
         /// </summary>
-        public readonly bool? Alert;
+        public readonly Outputs.AntiSpywareProfileThreatExceptionActionAlert? Alert;
         /// <summary>
-        /// The Allow param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Allow
         /// </summary>
-        public readonly bool? Allow;
+        public readonly Outputs.AntiSpywareProfileThreatExceptionActionAllow? Allow;
         /// <summary>
-        /// The BlockIp param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// anti spyware profiles threat exception action block ip
         /// </summary>
         public readonly Outputs.AntiSpywareProfileThreatExceptionActionBlockIp? BlockIp;
         /// <summary>
-        /// The Default param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Default
         /// </summary>
-        public readonly bool? Default;
+        public readonly Outputs.AntiSpywareProfileThreatExceptionActionDefault? Default;
         /// <summary>
-        /// The Drop param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Drop
         /// </summary>
-        public readonly bool? Drop;
+        public readonly Outputs.AntiSpywareProfileThreatExceptionActionDrop? Drop;
         /// <summary>
-        /// The ResetBoth param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset both
         /// </summary>
-        public readonly bool? ResetBoth;
+        public readonly Outputs.AntiSpywareProfileThreatExceptionActionResetBoth? ResetBoth;
         /// <summary>
-        /// The ResetClient param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset client
         /// </summary>
-        public readonly bool? ResetClient;
+        public readonly Outputs.AntiSpywareProfileThreatExceptionActionResetClient? ResetClient;
         /// <summary>
-        /// The ResetServer param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Default`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset server
         /// </summary>
-        public readonly bool? ResetServer;
+        public readonly Outputs.AntiSpywareProfileThreatExceptionActionResetServer? ResetServer;
 
         [OutputConstructor]
         private AntiSpywareProfileThreatExceptionAction(
-            bool? alert,
+            Outputs.AntiSpywareProfileThreatExceptionActionAlert? alert,
 
-            bool? allow,
+            Outputs.AntiSpywareProfileThreatExceptionActionAllow? allow,
 
             Outputs.AntiSpywareProfileThreatExceptionActionBlockIp? blockIp,
 
-            bool? @default,
+            Outputs.AntiSpywareProfileThreatExceptionActionDefault? @default,
 
-            bool? drop,
+            Outputs.AntiSpywareProfileThreatExceptionActionDrop? drop,
 
-            bool? resetBoth,
+            Outputs.AntiSpywareProfileThreatExceptionActionResetBoth? resetBoth,
 
-            bool? resetClient,
+            Outputs.AntiSpywareProfileThreatExceptionActionResetClient? resetClient,
 
-            bool? resetServer)
+            Outputs.AntiSpywareProfileThreatExceptionActionResetServer? resetServer)
         {
             Alert = alert;
             Allow = allow;

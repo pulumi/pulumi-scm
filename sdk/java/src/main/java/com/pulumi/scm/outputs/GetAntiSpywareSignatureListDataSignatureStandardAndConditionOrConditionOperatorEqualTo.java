@@ -15,50 +15,50 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo {
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     private String context;
     /**
-     * @return The Negate param. Default: `false`.
+     * @return Negate
      * 
      */
     private Boolean negate;
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     private List<GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier> qualifiers;
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     private Integer value;
 
     private GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo() {}
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     public String context() {
         return this.context;
     }
     /**
-     * @return The Negate param. Default: `false`.
+     * @return Negate
      * 
      */
     public Boolean negate() {
         return this.negate;
     }
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     public List<GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualToQualifier> qualifiers() {
         return this.qualifiers;
     }
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     public Integer value() {

@@ -11,38 +11,38 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceListDataProtocolTcpOverride {
     /**
-     * @return tcp session half-close timeout value (in second). Value must be between 1 and 604800. Default: `120`.
+     * @return tcp session half-close timeout value (in second)
      * 
      */
     private Integer halfcloseTimeout;
     /**
-     * @return tcp session timeout value (in second). Value must be between 1 and 604800. Default: `3600`.
+     * @return tcp session timeout value (in second)
      * 
      */
     private Integer timeout;
     /**
-     * @return tcp session time-wait timeout value (in second). Value must be between 1 and 600. Default: `15`.
+     * @return tcp session time-wait timeout value (in second)
      * 
      */
     private Integer timewaitTimeout;
 
     private GetServiceListDataProtocolTcpOverride() {}
     /**
-     * @return tcp session half-close timeout value (in second). Value must be between 1 and 604800. Default: `120`.
+     * @return tcp session half-close timeout value (in second)
      * 
      */
     public Integer halfcloseTimeout() {
         return this.halfcloseTimeout;
     }
     /**
-     * @return tcp session timeout value (in second). Value must be between 1 and 604800. Default: `3600`.
+     * @return tcp session timeout value (in second)
      * 
      */
     public Integer timeout() {
         return this.timeout;
     }
     /**
-     * @return tcp session time-wait timeout value (in second). Value must be between 1 and 600. Default: `15`.
+     * @return tcp session time-wait timeout value (in second)
      * 
      */
     public Integer timewaitTimeout() {

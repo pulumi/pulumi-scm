@@ -20,162 +20,132 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.AuthenticationProfile;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new AuthenticationProfile("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * AuthenticationProfile resource
  * 
  */
 @ResourceType(type="scm:index/authenticationProfile:AuthenticationProfile")
 public class AuthenticationProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The AllowList param.
+     * Allow list
      * 
      */
     @Export(name="allowLists", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> allowLists;
+    private Output<List<String>> allowLists;
 
     /**
-     * @return The AllowList param.
+     * @return Allow list
      * 
      */
-    public Output<Optional<List<String>>> allowLists() {
-        return Codegen.optional(this.allowLists);
+    public Output<List<String>> allowLists() {
+        return this.allowLists;
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Lockout param.
+     * Lockout
      * 
      */
     @Export(name="lockout", refs={AuthenticationProfileLockout.class}, tree="[0]")
     private Output</* @Nullable */ AuthenticationProfileLockout> lockout;
 
     /**
-     * @return The Lockout param.
+     * @return Lockout
      * 
      */
     public Output<Optional<AuthenticationProfileLockout>> lockout() {
         return Codegen.optional(this.lockout);
     }
     /**
-     * The Method param.
+     * Method
      * 
      */
     @Export(name="method", refs={AuthenticationProfileMethod.class}, tree="[0]")
     private Output</* @Nullable */ AuthenticationProfileMethod> method;
 
     /**
-     * @return The Method param.
+     * @return Method
      * 
      */
     public Output<Optional<AuthenticationProfileMethod>> method() {
         return Codegen.optional(this.method);
     }
     /**
-     * The MultiFactorAuth param.
+     * Multi factor auth
      * 
      */
     @Export(name="multiFactorAuth", refs={AuthenticationProfileMultiFactorAuth.class}, tree="[0]")
     private Output</* @Nullable */ AuthenticationProfileMultiFactorAuth> multiFactorAuth;
 
     /**
-     * @return The MultiFactorAuth param.
+     * @return Multi factor auth
      * 
      */
     public Output<Optional<AuthenticationProfileMultiFactorAuth>> multiFactorAuth() {
         return Codegen.optional(this.multiFactorAuth);
     }
     /**
-     * The Name param.
+     * The name of the authentication profile
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the authentication profile
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The SingleSignOn param.
+     * Single sign on
      * 
      */
     @Export(name="singleSignOn", refs={AuthenticationProfileSingleSignOn.class}, tree="[0]")
     private Output</* @Nullable */ AuthenticationProfileSingleSignOn> singleSignOn;
 
     /**
-     * @return The SingleSignOn param.
+     * @return Single sign on
      * 
      */
     public Output<Optional<AuthenticationProfileSingleSignOn>> singleSignOn() {
         return Codegen.optional(this.singleSignOn);
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -188,28 +158,28 @@ public class AuthenticationProfile extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The UserDomain param. String length must not exceed 63 characters.
+     * User domain
      * 
      */
     @Export(name="userDomain", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> userDomain;
 
     /**
-     * @return The UserDomain param. String length must not exceed 63 characters.
+     * @return User domain
      * 
      */
     public Output<Optional<String>> userDomain() {
         return Codegen.optional(this.userDomain);
     }
     /**
-     * The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * Username modifier
      * 
      */
     @Export(name="usernameModifier", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> usernameModifier;
 
     /**
-     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * @return Username modifier
      * 
      */
     public Output<Optional<String>> usernameModifier() {

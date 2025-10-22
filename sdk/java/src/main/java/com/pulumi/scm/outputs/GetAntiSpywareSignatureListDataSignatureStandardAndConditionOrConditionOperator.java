@@ -14,50 +14,50 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperator {
     /**
-     * @return The EqualTo param.
+     * @return Equal to
      * 
      */
     private GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo equalTo;
     /**
-     * @return The GreaterThan param.
+     * @return Greater than
      * 
      */
     private GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThan greaterThan;
     /**
-     * @return The LessThan param.
+     * @return Less than
      * 
      */
     private GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan lessThan;
     /**
-     * @return The PatternMatch param.
+     * @return Pattern match
      * 
      */
     private GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatch patternMatch;
 
     private GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperator() {}
     /**
-     * @return The EqualTo param.
+     * @return Equal to
      * 
      */
     public GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorEqualTo equalTo() {
         return this.equalTo;
     }
     /**
-     * @return The GreaterThan param.
+     * @return Greater than
      * 
      */
     public GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThan greaterThan() {
         return this.greaterThan;
     }
     /**
-     * @return The LessThan param.
+     * @return Less than
      * 
      */
     public GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan lessThan() {
         return this.lessThan;
     }
     /**
-     * @return The PatternMatch param.
+     * @return Pattern match
      * 
      */
     public GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorPatternMatch patternMatch() {

@@ -11,28 +11,28 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
-public final class RadiusServerProfileProtocolEapTtlsWithPap {
+public final class RadiusServerProfileProtocolEAPTTLSWithPAP {
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     private @Nullable Boolean anonOuterId;
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     private @Nullable String radiusCertProfile;
 
-    private RadiusServerProfileProtocolEapTtlsWithPap() {}
+    private RadiusServerProfileProtocolEAPTTLSWithPAP() {}
     /**
-     * @return The AnonOuterId param.
+     * @return Anon outer id
      * 
      */
     public Optional<Boolean> anonOuterId() {
         return Optional.ofNullable(this.anonOuterId);
     }
     /**
-     * @return The RadiusCertProfile param.
+     * @return Radius cert profile
      * 
      */
     public Optional<String> radiusCertProfile() {
@@ -43,7 +43,7 @@ public final class RadiusServerProfileProtocolEapTtlsWithPap {
         return new Builder();
     }
 
-    public static Builder builder(RadiusServerProfileProtocolEapTtlsWithPap defaults) {
+    public static Builder builder(RadiusServerProfileProtocolEAPTTLSWithPAP defaults) {
         return new Builder(defaults);
     }
     @CustomType.Builder
@@ -51,7 +51,7 @@ public final class RadiusServerProfileProtocolEapTtlsWithPap {
         private @Nullable Boolean anonOuterId;
         private @Nullable String radiusCertProfile;
         public Builder() {}
-        public Builder(RadiusServerProfileProtocolEapTtlsWithPap defaults) {
+        public Builder(RadiusServerProfileProtocolEAPTTLSWithPAP defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.anonOuterId = defaults.anonOuterId;
     	      this.radiusCertProfile = defaults.radiusCertProfile;
@@ -69,8 +69,8 @@ public final class RadiusServerProfileProtocolEapTtlsWithPap {
             this.radiusCertProfile = radiusCertProfile;
             return this;
         }
-        public RadiusServerProfileProtocolEapTtlsWithPap build() {
-            final var _resultValue = new RadiusServerProfileProtocolEapTtlsWithPap();
+        public RadiusServerProfileProtocolEAPTTLSWithPAP build() {
+            final var _resultValue = new RadiusServerProfileProtocolEAPTTLSWithPAP();
             _resultValue.anonOuterId = anonOuterId;
             _resultValue.radiusCertProfile = radiusCertProfile;
             return _resultValue;

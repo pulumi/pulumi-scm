@@ -14,21 +14,34 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosProfileListDataResult
     {
         /// <summary>
-        /// The AggregateBandwidth param.
+        /// Aggregate bandwidth
         /// </summary>
         public readonly Outputs.GetQosProfileListDataAggregateBandwidthResult AggregateBandwidth;
         /// <summary>
-        /// The ClassBandwidthType param.
+        /// Class bandwidth type
         /// </summary>
         public readonly Outputs.GetQosProfileListDataClassBandwidthTypeResult ClassBandwidthType;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetQosProfileListDataResult(
@@ -36,14 +49,26 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetQosProfileListDataClassBandwidthTypeResult classBandwidthType,
 
+            string device,
+
+            string folder,
+
             string id,
 
-            string name)
+            string name,
+
+            string snippet,
+
+            string tfid)
         {
             AggregateBandwidth = aggregateBandwidth;
             ClassBandwidthType = classBandwidthType;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectNetworkInfoCriteria
     {
         /// <summary>
-        /// The Network param.
+        /// Network
         /// </summary>
         public readonly Outputs.HipObjectNetworkInfoCriteriaNetwork? Network;
 

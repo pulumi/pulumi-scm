@@ -11,74 +11,74 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverity {
     /**
-     * @return The GreaterEqual param. Value must be between 0 and 100000.
+     * @return Greater equal
      * 
      */
     private Integer greaterEqual;
     /**
-     * @return The GreaterThan param. Value must be between 0 and 100000.
+     * @return Greater than
      * 
      */
     private Integer greaterThan;
     /**
-     * @return The Is param. Value must be between 0 and 100000.
+     * @return Is
      * 
      */
     private Integer is;
     /**
-     * @return The IsNot param. Value must be between 0 and 100000.
+     * @return Is not
      * 
      */
     private Integer isNot;
     /**
-     * @return The LessEqual param. Value must be between 0 and 100000.
+     * @return Less equal
      * 
      */
     private Integer lessEqual;
     /**
-     * @return The LessThan param. Value must be between 0 and 100000.
+     * @return Less than
      * 
      */
     private Integer lessThan;
 
     private GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverity() {}
     /**
-     * @return The GreaterEqual param. Value must be between 0 and 100000.
+     * @return Greater equal
      * 
      */
     public Integer greaterEqual() {
         return this.greaterEqual;
     }
     /**
-     * @return The GreaterThan param. Value must be between 0 and 100000.
+     * @return Greater than
      * 
      */
     public Integer greaterThan() {
         return this.greaterThan;
     }
     /**
-     * @return The Is param. Value must be between 0 and 100000.
+     * @return Is
      * 
      */
     public Integer is() {
         return this.is;
     }
     /**
-     * @return The IsNot param. Value must be between 0 and 100000.
+     * @return Is not
      * 
      */
     public Integer isNot() {
         return this.isNot;
     }
     /**
-     * @return The LessEqual param. Value must be between 0 and 100000.
+     * @return Less equal
      * 
      */
     public Integer lessEqual() {
         return this.lessEqual;
     }
     /**
-     * @return The LessThan param. Value must be between 0 and 100000.
+     * @return Less than
      * 
      */
     public Integer lessThan() {

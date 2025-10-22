@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectDiskBackupCriteria {
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     private @Nullable Boolean isInstalled;
     /**
-     * @return The LastBackupTime param.
+     * @return Last backup time
      * 
      */
     private @Nullable HipObjectDiskBackupCriteriaLastBackupTime lastBackupTime;
 
     private HipObjectDiskBackupCriteria() {}
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     public Optional<Boolean> isInstalled() {
         return Optional.ofNullable(this.isInstalled);
     }
     /**
-     * @return The LastBackupTime param.
+     * @return Last backup time
      * 
      */
     public Optional<HipObjectDiskBackupCriteriaLastBackupTime> lastBackupTime() {

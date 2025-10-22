@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -12,77 +13,77 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MfaServerMfaVendorTypeRsaSecuridAccessV1 {
     /**
-     * @return The RsaAccessid param.
+     * @return RSA SecurID access ID
      * 
      */
     private @Nullable String rsaAccessid;
     /**
-     * @return The RsaAccesskey param.
+     * @return RSA SecurID access key
      * 
      */
     private @Nullable String rsaAccesskey;
     /**
-     * @return The RsaApiHost param.
+     * @return RSA SecurID hostname
      * 
      */
     private @Nullable String rsaApiHost;
     /**
-     * @return The RsaAssurancepolicyid param.
+     * @return RSA SecurID assurance level
      * 
      */
     private @Nullable String rsaAssurancepolicyid;
     /**
-     * @return The RsaBaseuri param.
+     * @return RSA SecurID API base URI
      * 
      */
     private @Nullable String rsaBaseuri;
     /**
-     * @return The RsaTimeout param.
+     * @return RSA SecurID timeout (seconds)
      * 
      */
-    private @Nullable String rsaTimeout;
+    private @Nullable Integer rsaTimeout;
 
     private MfaServerMfaVendorTypeRsaSecuridAccessV1() {}
     /**
-     * @return The RsaAccessid param.
+     * @return RSA SecurID access ID
      * 
      */
     public Optional<String> rsaAccessid() {
         return Optional.ofNullable(this.rsaAccessid);
     }
     /**
-     * @return The RsaAccesskey param.
+     * @return RSA SecurID access key
      * 
      */
     public Optional<String> rsaAccesskey() {
         return Optional.ofNullable(this.rsaAccesskey);
     }
     /**
-     * @return The RsaApiHost param.
+     * @return RSA SecurID hostname
      * 
      */
     public Optional<String> rsaApiHost() {
         return Optional.ofNullable(this.rsaApiHost);
     }
     /**
-     * @return The RsaAssurancepolicyid param.
+     * @return RSA SecurID assurance level
      * 
      */
     public Optional<String> rsaAssurancepolicyid() {
         return Optional.ofNullable(this.rsaAssurancepolicyid);
     }
     /**
-     * @return The RsaBaseuri param.
+     * @return RSA SecurID API base URI
      * 
      */
     public Optional<String> rsaBaseuri() {
         return Optional.ofNullable(this.rsaBaseuri);
     }
     /**
-     * @return The RsaTimeout param.
+     * @return RSA SecurID timeout (seconds)
      * 
      */
-    public Optional<String> rsaTimeout() {
+    public Optional<Integer> rsaTimeout() {
         return Optional.ofNullable(this.rsaTimeout);
     }
 
@@ -100,7 +101,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1 {
         private @Nullable String rsaApiHost;
         private @Nullable String rsaAssurancepolicyid;
         private @Nullable String rsaBaseuri;
-        private @Nullable String rsaTimeout;
+        private @Nullable Integer rsaTimeout;
         public Builder() {}
         public Builder(MfaServerMfaVendorTypeRsaSecuridAccessV1 defaults) {
     	      Objects.requireNonNull(defaults);
@@ -143,7 +144,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1 {
             return this;
         }
         @CustomType.Setter
-        public Builder rsaTimeout(@Nullable String rsaTimeout) {
+        public Builder rsaTimeout(@Nullable Integer rsaTimeout) {
 
             this.rsaTimeout = rsaTimeout;
             return this;

@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class RegionGeoLocationGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// latitude coordinate. Value must be between -90 and 90.
+        /// The latitudinal position of the region
         /// </summary>
         [Input("latitude", required: true)]
         public Input<double> Latitude { get; set; } = null!;
 
         /// <summary>
-        /// longitude coordinate. Value must be between -180 and 180.
+        /// The longitudinal postition of the region
         /// </summary>
         [Input("longitude", required: true)]
         public Input<double> Longitude { get; set; } = null!;

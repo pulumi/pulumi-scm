@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetApplicationListDataSignatureAndConditionOrConditionOperatorGreaterThanQualifierResult
     {
         /// <summary>
-        /// The Name param.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Value param.
+        /// Value
         /// </summary>
         public readonly string Value;
 

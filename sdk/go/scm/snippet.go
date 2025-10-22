@@ -11,43 +11,19 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewSnippet(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// Snippet resource
 type Snippet struct {
 	pulumi.CustomResourceState
 
-	// The Description param.
+	// The description of the snippet
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Labels param.
+	// Labels applied to the snippet
 	Labels pulumi.StringArrayOutput `pulumi:"labels"`
-	// The Name param.
+	// The name of the snippet
 	Name pulumi.StringOutput `pulumi:"name"`
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
-	// The Type param. String must be one of these: `"predefined"`, `"custom"`.
-	Type pulumi.StringOutput `pulumi:"type"`
+	// The snippet type
+	Type pulumi.StringPtrOutput `pulumi:"type"`
 }
 
 // NewSnippet registers a new resource with the given unique name, arguments, and options.
@@ -80,26 +56,26 @@ func GetSnippet(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering Snippet resources.
 type snippetState struct {
-	// The Description param.
+	// The description of the snippet
 	Description *string `pulumi:"description"`
-	// The Labels param.
+	// Labels applied to the snippet
 	Labels []string `pulumi:"labels"`
-	// The Name param.
+	// The name of the snippet
 	Name *string `pulumi:"name"`
 	Tfid *string `pulumi:"tfid"`
-	// The Type param. String must be one of these: `"predefined"`, `"custom"`.
+	// The snippet type
 	Type *string `pulumi:"type"`
 }
 
 type SnippetState struct {
-	// The Description param.
+	// The description of the snippet
 	Description pulumi.StringPtrInput
-	// The Labels param.
+	// Labels applied to the snippet
 	Labels pulumi.StringArrayInput
-	// The Name param.
+	// The name of the snippet
 	Name pulumi.StringPtrInput
 	Tfid pulumi.StringPtrInput
-	// The Type param. String must be one of these: `"predefined"`, `"custom"`.
+	// The snippet type
 	Type pulumi.StringPtrInput
 }
 
@@ -108,22 +84,26 @@ func (SnippetState) ElementType() reflect.Type {
 }
 
 type snippetArgs struct {
-	// The Description param.
+	// The description of the snippet
 	Description *string `pulumi:"description"`
-	// The Labels param.
+	// Labels applied to the snippet
 	Labels []string `pulumi:"labels"`
-	// The Name param.
+	// The name of the snippet
 	Name *string `pulumi:"name"`
+	// The snippet type
+	Type *string `pulumi:"type"`
 }
 
 // The set of arguments for constructing a Snippet resource.
 type SnippetArgs struct {
-	// The Description param.
+	// The description of the snippet
 	Description pulumi.StringPtrInput
-	// The Labels param.
+	// Labels applied to the snippet
 	Labels pulumi.StringArrayInput
-	// The Name param.
+	// The name of the snippet
 	Name pulumi.StringPtrInput
+	// The snippet type
+	Type pulumi.StringPtrInput
 }
 
 func (SnippetArgs) ElementType() reflect.Type {
@@ -213,17 +193,17 @@ func (o SnippetOutput) ToSnippetOutputWithContext(ctx context.Context) SnippetOu
 	return o
 }
 
-// The Description param.
+// The description of the snippet
 func (o SnippetOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Labels param.
+// Labels applied to the snippet
 func (o SnippetOutput) Labels() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringArrayOutput { return v.Labels }).(pulumi.StringArrayOutput)
 }
 
-// The Name param.
+// The name of the snippet
 func (o SnippetOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
@@ -232,9 +212,9 @@ func (o SnippetOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Type param. String must be one of these: `"predefined"`, `"custom"`.
-func (o SnippetOutput) Type() pulumi.StringOutput {
-	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.Type }).(pulumi.StringOutput)
+// The snippet type
+func (o SnippetOutput) Type() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Snippet) pulumi.StringPtrOutput { return v.Type }).(pulumi.StringPtrOutput)
 }
 
 type SnippetArrayOutput struct{ *pulumi.OutputState }

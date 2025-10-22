@@ -14,31 +14,31 @@ namespace Pulumi.Scm.Outputs
     public sealed class AuthenticationProfileMethod
     {
         /// <summary>
-        /// The Cloud param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
+        /// Cloud
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodCloud? Cloud;
         /// <summary>
-        /// The Kerberos param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
+        /// Kerberos
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodKerberos? Kerberos;
         /// <summary>
-        /// The Ldap param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
+        /// Ldap
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodLdap? Ldap;
         /// <summary>
-        /// The LocalDatabase param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
+        /// Local database
         /// </summary>
-        public readonly bool? LocalDatabase;
+        public readonly Outputs.AuthenticationProfileMethodLocalDatabase? LocalDatabase;
         /// <summary>
-        /// The Radius param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
+        /// Radius
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodRadius? Radius;
         /// <summary>
-        /// The SamlIdp param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
+        /// Saml idp
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodSamlIdp? SamlIdp;
         /// <summary>
-        /// The Tacplus param. Ensure that only one of the following is specified: `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, `Tacplus`
+        /// Tacplus
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodTacplus? Tacplus;
 
@@ -50,7 +50,7 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.AuthenticationProfileMethodLdap? ldap,
 
-            bool? localDatabase,
+            Outputs.AuthenticationProfileMethodLocalDatabase? localDatabase,
 
             Outputs.AuthenticationProfileMethodRadius? radius,
 

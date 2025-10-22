@@ -12,50 +12,50 @@ import java.util.Objects;
 @CustomType
 public final class GetIpsecTunnelAutoKeyProxyId {
     /**
-     * @return The Local param.
+     * @return Local
      * 
      */
     private String local;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The Protocol param.
+     * @return IPv4 type of proxy*id protocol values for TCP protocol
      * 
      */
     private GetIpsecTunnelAutoKeyProxyIdProtocol protocol;
     /**
-     * @return The Remote param.
+     * @return Remote
      * 
      */
     private String remote;
 
     private GetIpsecTunnelAutoKeyProxyId() {}
     /**
-     * @return The Local param.
+     * @return Local
      * 
      */
     public String local() {
         return this.local;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Protocol param.
+     * @return IPv4 type of proxy*id protocol values for TCP protocol
      * 
      */
     public GetIpsecTunnelAutoKeyProxyIdProtocol protocol() {
         return this.protocol;
     }
     /**
-     * @return The Remote param.
+     * @return Remote
      * 
      */
     public String remote() {

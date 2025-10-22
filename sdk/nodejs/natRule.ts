@@ -7,9 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
+ * NatRule resource
  */
 export class NatRule extends pulumi.CustomResource {
     /**
@@ -40,90 +38,90 @@ export class NatRule extends pulumi.CustomResource {
     }
 
     /**
-     * The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+     * Active active device binding
      */
     declare public readonly activeActiveDeviceBinding: pulumi.Output<string | undefined>;
     /**
-     * The Description param.
+     * NAT rule description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Static destination translation parameter.
-     */
-    declare public readonly destinationTranslation: pulumi.Output<outputs.NatRuleDestinationTranslation | undefined>;
-    /**
-     * The destination address(es).
+     * Destination address(es) of the original packet
      */
     declare public readonly destinations: pulumi.Output<string[]>;
     /**
-     * The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Disabled param.
+     * Disable NAT rule?
      */
-    declare public readonly disabled: pulumi.Output<boolean | undefined>;
+    declare public readonly disabled: pulumi.Output<boolean>;
     /**
-     * Dynamic destination translation parameter.
+     * Distribution method
      */
-    declare public readonly dynamicDestinationTranslation: pulumi.Output<outputs.NatRuleDynamicDestinationTranslation | undefined>;
+    declare public readonly distribution: pulumi.Output<string | undefined>;
     /**
-     * The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * DNS rewrite
+     */
+    declare public readonly dnsRewrite: pulumi.Output<outputs.NatRuleDnsRewrite | undefined>;
+    /**
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The source security zone(s).
+     * Source zone(s) of the original packet
      */
     declare public readonly froms: pulumi.Output<string[]>;
     /**
-     * The GroupTag param.
-     */
-    declare public readonly groupTag: pulumi.Output<string | undefined>;
-    /**
-     * The Name param.
+     * NAT rule name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+     * NAT type
      */
-    declare public readonly natType: pulumi.Output<string | undefined>;
+    declare public readonly natType: pulumi.Output<string>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The relative position of the rule
      */
     declare public readonly position: pulumi.Output<string>;
     /**
-     * The Service param.
+     * The service of the original packet
      */
     declare public readonly service: pulumi.Output<string>;
     /**
-     * The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The SourceTranslation param.
+     * Source translation
      */
     declare public readonly sourceTranslation: pulumi.Output<outputs.NatRuleSourceTranslation | undefined>;
     /**
-     * The source address(es).
+     * Source address(es) of the original packet
      */
     declare public readonly sources: pulumi.Output<string[]>;
     /**
-     * The Tags param.
+     * NAT rule tags
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
-    /**
-     * The Target param.
-     */
-    declare public readonly target: pulumi.Output<outputs.NatRuleTarget | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The ToInterface param.
+     * Destination interface of the original packet
      */
     declare public readonly toInterface: pulumi.Output<string | undefined>;
     /**
-     * The destination security zone(s).
+     * Destination zone of the original packet
      */
     declare public readonly tos: pulumi.Output<string[]>;
+    /**
+     * Translated destination IP address
+     */
+    declare public readonly translatedAddressSingle: pulumi.Output<string | undefined>;
+    /**
+     * Translated destination port
+     */
+    declare public readonly translatedPort: pulumi.Output<number | undefined>;
 
     /**
      * Create a NatRule resource with the given unique name, arguments, and options.
@@ -140,14 +138,13 @@ export class NatRule extends pulumi.CustomResource {
             const state = argsOrState as NatRuleState | undefined;
             resourceInputs["activeActiveDeviceBinding"] = state?.activeActiveDeviceBinding;
             resourceInputs["description"] = state?.description;
-            resourceInputs["destinationTranslation"] = state?.destinationTranslation;
             resourceInputs["destinations"] = state?.destinations;
             resourceInputs["device"] = state?.device;
             resourceInputs["disabled"] = state?.disabled;
-            resourceInputs["dynamicDestinationTranslation"] = state?.dynamicDestinationTranslation;
+            resourceInputs["distribution"] = state?.distribution;
+            resourceInputs["dnsRewrite"] = state?.dnsRewrite;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["froms"] = state?.froms;
-            resourceInputs["groupTag"] = state?.groupTag;
             resourceInputs["name"] = state?.name;
             resourceInputs["natType"] = state?.natType;
             resourceInputs["position"] = state?.position;
@@ -156,10 +153,11 @@ export class NatRule extends pulumi.CustomResource {
             resourceInputs["sourceTranslation"] = state?.sourceTranslation;
             resourceInputs["sources"] = state?.sources;
             resourceInputs["tags"] = state?.tags;
-            resourceInputs["target"] = state?.target;
             resourceInputs["tfid"] = state?.tfid;
             resourceInputs["toInterface"] = state?.toInterface;
             resourceInputs["tos"] = state?.tos;
+            resourceInputs["translatedAddressSingle"] = state?.translatedAddressSingle;
+            resourceInputs["translatedPort"] = state?.translatedPort;
         } else {
             const args = argsOrState as NatRuleArgs | undefined;
             if (args?.destinations === undefined && !opts.urn) {
@@ -179,14 +177,13 @@ export class NatRule extends pulumi.CustomResource {
             }
             resourceInputs["activeActiveDeviceBinding"] = args?.activeActiveDeviceBinding;
             resourceInputs["description"] = args?.description;
-            resourceInputs["destinationTranslation"] = args?.destinationTranslation;
             resourceInputs["destinations"] = args?.destinations;
             resourceInputs["device"] = args?.device;
             resourceInputs["disabled"] = args?.disabled;
-            resourceInputs["dynamicDestinationTranslation"] = args?.dynamicDestinationTranslation;
+            resourceInputs["distribution"] = args?.distribution;
+            resourceInputs["dnsRewrite"] = args?.dnsRewrite;
             resourceInputs["folder"] = args?.folder;
             resourceInputs["froms"] = args?.froms;
-            resourceInputs["groupTag"] = args?.groupTag;
             resourceInputs["name"] = args?.name;
             resourceInputs["natType"] = args?.natType;
             resourceInputs["position"] = args?.position;
@@ -195,9 +192,10 @@ export class NatRule extends pulumi.CustomResource {
             resourceInputs["sourceTranslation"] = args?.sourceTranslation;
             resourceInputs["sources"] = args?.sources;
             resourceInputs["tags"] = args?.tags;
-            resourceInputs["target"] = args?.target;
             resourceInputs["toInterface"] = args?.toInterface;
             resourceInputs["tos"] = args?.tos;
+            resourceInputs["translatedAddressSingle"] = args?.translatedAddressSingle;
+            resourceInputs["translatedPort"] = args?.translatedPort;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -210,90 +208,90 @@ export class NatRule extends pulumi.CustomResource {
  */
 export interface NatRuleState {
     /**
-     * The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+     * Active active device binding
      */
     activeActiveDeviceBinding?: pulumi.Input<string>;
     /**
-     * The Description param.
+     * NAT rule description
      */
     description?: pulumi.Input<string>;
     /**
-     * Static destination translation parameter.
-     */
-    destinationTranslation?: pulumi.Input<inputs.NatRuleDestinationTranslation>;
-    /**
-     * The destination address(es).
+     * Destination address(es) of the original packet
      */
     destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Disabled param.
+     * Disable NAT rule?
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * Dynamic destination translation parameter.
+     * Distribution method
      */
-    dynamicDestinationTranslation?: pulumi.Input<inputs.NatRuleDynamicDestinationTranslation>;
+    distribution?: pulumi.Input<string>;
     /**
-     * The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * DNS rewrite
+     */
+    dnsRewrite?: pulumi.Input<inputs.NatRuleDnsRewrite>;
+    /**
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The source security zone(s).
+     * Source zone(s) of the original packet
      */
     froms?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The GroupTag param.
-     */
-    groupTag?: pulumi.Input<string>;
-    /**
-     * The Name param.
+     * NAT rule name
      */
     name?: pulumi.Input<string>;
     /**
-     * The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+     * NAT type
      */
     natType?: pulumi.Input<string>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The relative position of the rule
      */
     position?: pulumi.Input<string>;
     /**
-     * The Service param.
+     * The service of the original packet
      */
     service?: pulumi.Input<string>;
     /**
-     * The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The SourceTranslation param.
+     * Source translation
      */
     sourceTranslation?: pulumi.Input<inputs.NatRuleSourceTranslation>;
     /**
-     * The source address(es).
+     * Source address(es) of the original packet
      */
     sources?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tags param.
+     * NAT rule tags
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
-    /**
-     * The Target param.
-     */
-    target?: pulumi.Input<inputs.NatRuleTarget>;
     tfid?: pulumi.Input<string>;
     /**
-     * The ToInterface param.
+     * Destination interface of the original packet
      */
     toInterface?: pulumi.Input<string>;
     /**
-     * The destination security zone(s).
+     * Destination zone of the original packet
      */
     tos?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Translated destination IP address
+     */
+    translatedAddressSingle?: pulumi.Input<string>;
+    /**
+     * Translated destination port
+     */
+    translatedPort?: pulumi.Input<number>;
 }
 
 /**
@@ -301,87 +299,87 @@ export interface NatRuleState {
  */
 export interface NatRuleArgs {
     /**
-     * The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+     * Active active device binding
      */
     activeActiveDeviceBinding?: pulumi.Input<string>;
     /**
-     * The Description param.
+     * NAT rule description
      */
     description?: pulumi.Input<string>;
     /**
-     * Static destination translation parameter.
-     */
-    destinationTranslation?: pulumi.Input<inputs.NatRuleDestinationTranslation>;
-    /**
-     * The destination address(es).
+     * Destination address(es) of the original packet
      */
     destinations: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Disabled param.
+     * Disable NAT rule?
      */
     disabled?: pulumi.Input<boolean>;
     /**
-     * Dynamic destination translation parameter.
+     * Distribution method
      */
-    dynamicDestinationTranslation?: pulumi.Input<inputs.NatRuleDynamicDestinationTranslation>;
+    distribution?: pulumi.Input<string>;
     /**
-     * The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * DNS rewrite
+     */
+    dnsRewrite?: pulumi.Input<inputs.NatRuleDnsRewrite>;
+    /**
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The source security zone(s).
+     * Source zone(s) of the original packet
      */
     froms: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The GroupTag param.
-     */
-    groupTag?: pulumi.Input<string>;
-    /**
-     * The Name param.
+     * NAT rule name
      */
     name?: pulumi.Input<string>;
     /**
-     * The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+     * NAT type
      */
     natType?: pulumi.Input<string>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+     * The relative position of the rule
      */
     position?: pulumi.Input<string>;
     /**
-     * The Service param.
+     * The service of the original packet
      */
     service: pulumi.Input<string>;
     /**
-     * The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The SourceTranslation param.
+     * Source translation
      */
     sourceTranslation?: pulumi.Input<inputs.NatRuleSourceTranslation>;
     /**
-     * The source address(es).
+     * Source address(es) of the original packet
      */
     sources: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tags param.
+     * NAT rule tags
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Target param.
-     */
-    target?: pulumi.Input<inputs.NatRuleTarget>;
-    /**
-     * The ToInterface param.
+     * Destination interface of the original packet
      */
     toInterface?: pulumi.Input<string>;
     /**
-     * The destination security zone(s).
+     * Destination zone of the original packet
      */
     tos: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Translated destination IP address
+     */
+    translatedAddressSingle?: pulumi.Input<string>;
+    /**
+     * Translated destination port
+     */
+    translatedPort?: pulumi.Input<number>;
 }

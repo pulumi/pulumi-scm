@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSecurityRuleListDataProfileSettingResult
     {
         /// <summary>
-        /// The security profile group.
+        /// The security profile group
         /// </summary>
         public readonly ImmutableArray<string> Groups;
 

@@ -8,15 +8,6 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getNatRuleList({});
- * ```
  */
 export function getNatRuleList(args?: GetNatRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetNatRuleListResult> {
     args = args || {};
@@ -27,7 +18,6 @@ export function getNatRuleList(args?: GetNatRuleListArgs, opts?: pulumi.InvokeOp
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
-        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -37,31 +27,27 @@ export function getNatRuleList(args?: GetNatRuleListArgs, opts?: pulumi.InvokeOp
  */
 export interface GetNatRuleListArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-     */
-    position?: string;
-    /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: string;
 }
@@ -71,15 +57,15 @@ export interface GetNatRuleListArgs {
  */
 export interface GetNatRuleListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetNatRuleListData[];
     /**
-     * The Device param.
+     * The device of the item.
      */
     readonly device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     readonly folder?: string;
     /**
@@ -87,42 +73,29 @@ export interface GetNatRuleListResult {
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-     */
-    readonly position: string;
-    /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
 /**
  * Retrieves a listing of config items.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getNatRuleList({});
- * ```
  */
 export function getNatRuleListOutput(args?: GetNatRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetNatRuleListResult> {
     args = args || {};
@@ -133,7 +106,6 @@ export function getNatRuleListOutput(args?: GetNatRuleListOutputArgs, opts?: pul
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
-        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -143,31 +115,27 @@ export function getNatRuleListOutput(args?: GetNatRuleListOutputArgs, opts?: pul
  */
 export interface GetNatRuleListOutputArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
     /**
-     * The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-     */
-    position?: pulumi.Input<string>;
-    /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: pulumi.Input<string>;
 }

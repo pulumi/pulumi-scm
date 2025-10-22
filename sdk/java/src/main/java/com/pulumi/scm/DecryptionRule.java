@@ -18,358 +18,328 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.DecryptionRule;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new DecryptionRule("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * DecryptionRule resource
  * 
  */
 @ResourceType(type="scm:index/decryptionRule:DecryptionRule")
 public class DecryptionRule extends com.pulumi.resources.CustomResource {
     /**
-     * The Action param. String must be one of these: `&#34;decrypt&#34;`, `&#34;no-decrypt&#34;`.
+     * The action to be taken
      * 
      */
     @Export(name="action", refs={String.class}, tree="[0]")
     private Output<String> action;
 
     /**
-     * @return The Action param. String must be one of these: `&#34;decrypt&#34;`, `&#34;no-decrypt&#34;`.
+     * @return The action to be taken
      * 
      */
     public Output<String> action() {
         return this.action;
     }
     /**
-     * The Categories param.
+     * The destination URL category
      * 
      */
     @Export(name="categories", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> categories;
 
     /**
-     * @return The Categories param.
+     * @return The destination URL category
      * 
      */
     public Output<List<String>> categories() {
         return this.categories;
     }
     /**
-     * The Description param.
+     * The description of the decryption rule
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the decryption rule
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The DestinationHips param.
+     * The Host Integrity Profile of the destination host
      * 
      */
     @Export(name="destinationHips", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> destinationHips;
 
     /**
-     * @return The DestinationHips param.
+     * @return The Host Integrity Profile of the destination host
      * 
      */
     public Output<Optional<List<String>>> destinationHips() {
         return Codegen.optional(this.destinationHips);
     }
     /**
-     * The Destinations param.
+     * The destination addresses
      * 
      */
     @Export(name="destinations", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> destinations;
 
     /**
-     * @return The Destinations param.
+     * @return The destination addresses
      * 
      */
     public Output<List<String>> destinations() {
         return this.destinations;
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Disabled param.
+     * Is the rule disabled?
      * 
      */
     @Export(name="disabled", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> disabled;
 
     /**
-     * @return The Disabled param.
+     * @return Is the rule disabled?
      * 
      */
     public Output<Optional<Boolean>> disabled() {
         return Codegen.optional(this.disabled);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Froms param.
+     * The source security zone
      * 
      */
     @Export(name="froms", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> froms;
 
     /**
-     * @return The Froms param.
+     * @return The source security zone
      * 
      */
     public Output<List<String>> froms() {
         return this.froms;
     }
     /**
-     * The LogFail param.
+     * Log failed decryption events?
      * 
      */
     @Export(name="logFail", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> logFail;
 
     /**
-     * @return The LogFail param.
+     * @return Log failed decryption events?
      * 
      */
     public Output<Optional<Boolean>> logFail() {
         return Codegen.optional(this.logFail);
     }
     /**
-     * The LogSetting param.
+     * The log settings of the decryption rule
      * 
      */
     @Export(name="logSetting", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> logSetting;
 
     /**
-     * @return The LogSetting param.
+     * @return The log settings of the decryption rule
      * 
      */
     public Output<Optional<String>> logSetting() {
         return Codegen.optional(this.logSetting);
     }
     /**
-     * The LogSuccess param.
+     * Log successful decryption events?
      * 
      */
     @Export(name="logSuccess", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> logSuccess;
 
     /**
-     * @return The LogSuccess param.
+     * @return Log successful decryption events?
      * 
      */
     public Output<Optional<Boolean>> logSuccess() {
         return Codegen.optional(this.logSuccess);
     }
     /**
-     * The Name param.
+     * The name of the decryption rule
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the decryption rule
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The NegateDestination param.
+     * Negate the destination addresses?
      * 
      */
     @Export(name="negateDestination", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> negateDestination;
 
     /**
-     * @return The NegateDestination param.
+     * @return Negate the destination addresses?
      * 
      */
     public Output<Optional<Boolean>> negateDestination() {
         return Codegen.optional(this.negateDestination);
     }
     /**
-     * The NegateSource param.
+     * Negate the source addresses?
      * 
      */
     @Export(name="negateSource", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> negateSource;
 
     /**
-     * @return The NegateSource param.
+     * @return Negate the source addresses?
      * 
      */
     public Output<Optional<Boolean>> negateSource() {
         return Codegen.optional(this.negateSource);
     }
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * The position of a security rule
      * 
      */
     @Export(name="position", refs={String.class}, tree="[0]")
     private Output<String> position;
 
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * @return The position of a security rule
      * 
      */
     public Output<String> position() {
         return this.position;
     }
     /**
-     * The Profile param.
+     * The decryption profile associated with the decryption rule
      * 
      */
     @Export(name="profile", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> profile;
 
     /**
-     * @return The Profile param.
+     * @return The decryption profile associated with the decryption rule
      * 
      */
     public Output<Optional<String>> profile() {
         return Codegen.optional(this.profile);
     }
     /**
-     * The Services param.
+     * The destination services and/or service groups
      * 
      */
     @Export(name="services", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> services;
 
     /**
-     * @return The Services param.
+     * @return The destination services and/or service groups
      * 
      */
     public Output<List<String>> services() {
         return this.services;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * The SourceHips param.
+     * Source hip
      * 
      */
     @Export(name="sourceHips", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> sourceHips;
 
     /**
-     * @return The SourceHips param.
+     * @return Source hip
      * 
      */
     public Output<Optional<List<String>>> sourceHips() {
         return Codegen.optional(this.sourceHips);
     }
     /**
-     * The SourceUsers param.
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
     @Export(name="sourceUsers", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> sourceUsers;
 
     /**
-     * @return The SourceUsers param.
+     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
     public Output<List<String>> sourceUsers() {
         return this.sourceUsers;
     }
     /**
-     * The Sources param.
+     * The source addresses
      * 
      */
     @Export(name="sources", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> sources;
 
     /**
-     * @return The Sources param.
+     * @return The source addresses
      * 
      */
     public Output<List<String>> sources() {
         return this.sources;
     }
     /**
-     * The Tags param.
+     * The tags associated with the decryption rule
      * 
      */
     @Export(name="tags", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> tags;
 
     /**
-     * @return The Tags param.
+     * @return The tags associated with the decryption rule
      * 
      */
     public Output<Optional<List<String>>> tags() {
@@ -382,28 +352,28 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The Tos param.
+     * The destination security zone
      * 
      */
     @Export(name="tos", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> tos;
 
     /**
-     * @return The Tos param.
+     * @return The destination security zone
      * 
      */
     public Output<List<String>> tos() {
         return this.tos;
     }
     /**
-     * The Type param.
+     * The type of decryption
      * 
      */
     @Export(name="type", refs={DecryptionRuleType.class}, tree="[0]")
     private Output</* @Nullable */ DecryptionRuleType> type;
 
     /**
-     * @return The Type param.
+     * @return The type of decryption
      * 
      */
     public Output<Optional<DecryptionRuleType>> type() {

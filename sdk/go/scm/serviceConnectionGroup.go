@@ -12,43 +12,19 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// ServiceConnectionGroup resource
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewServiceConnectionGroup(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 type ServiceConnectionGroup struct {
 	pulumi.CustomResourceState
 
-	// The DisableSnat param.
+	// Disable snat
 	DisableSnat pulumi.BoolPtrOutput `pulumi:"disableSnat"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder pulumi.StringOutput `pulumi:"folder"`
-	// The Name param.
+	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The PbfOnly param.
+	// Pbf only
 	PbfOnly pulumi.BoolPtrOutput `pulumi:"pbfOnly"`
-	// The Targets param.
+	// Target
 	Targets pulumi.StringArrayOutput `pulumi:"targets"`
 	Tfid    pulumi.StringOutput      `pulumi:"tfid"`
 }
@@ -86,29 +62,25 @@ func GetServiceConnectionGroup(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ServiceConnectionGroup resources.
 type serviceConnectionGroupState struct {
-	// The DisableSnat param.
+	// Disable snat
 	DisableSnat *bool `pulumi:"disableSnat"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder *string `pulumi:"folder"`
-	// The Name param.
+	// Name
 	Name *string `pulumi:"name"`
-	// The PbfOnly param.
+	// Pbf only
 	PbfOnly *bool `pulumi:"pbfOnly"`
-	// The Targets param.
+	// Target
 	Targets []string `pulumi:"targets"`
 	Tfid    *string  `pulumi:"tfid"`
 }
 
 type ServiceConnectionGroupState struct {
-	// The DisableSnat param.
+	// Disable snat
 	DisableSnat pulumi.BoolPtrInput
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder pulumi.StringPtrInput
-	// The Name param.
+	// Name
 	Name pulumi.StringPtrInput
-	// The PbfOnly param.
+	// Pbf only
 	PbfOnly pulumi.BoolPtrInput
-	// The Targets param.
+	// Target
 	Targets pulumi.StringArrayInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -118,29 +90,25 @@ func (ServiceConnectionGroupState) ElementType() reflect.Type {
 }
 
 type serviceConnectionGroupArgs struct {
-	// The DisableSnat param.
+	// Disable snat
 	DisableSnat *bool `pulumi:"disableSnat"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder *string `pulumi:"folder"`
-	// The Name param.
+	// Name
 	Name *string `pulumi:"name"`
-	// The PbfOnly param.
+	// Pbf only
 	PbfOnly *bool `pulumi:"pbfOnly"`
-	// The Targets param.
+	// Target
 	Targets []string `pulumi:"targets"`
 }
 
 // The set of arguments for constructing a ServiceConnectionGroup resource.
 type ServiceConnectionGroupArgs struct {
-	// The DisableSnat param.
+	// Disable snat
 	DisableSnat pulumi.BoolPtrInput
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder pulumi.StringPtrInput
-	// The Name param.
+	// Name
 	Name pulumi.StringPtrInput
-	// The PbfOnly param.
+	// Pbf only
 	PbfOnly pulumi.BoolPtrInput
-	// The Targets param.
+	// Target
 	Targets pulumi.StringArrayInput
 }
 
@@ -231,27 +199,22 @@ func (o ServiceConnectionGroupOutput) ToServiceConnectionGroupOutputWithContext(
 	return o
 }
 
-// The DisableSnat param.
+// Disable snat
 func (o ServiceConnectionGroupOutput) DisableSnat() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceConnectionGroup) pulumi.BoolPtrOutput { return v.DisableSnat }).(pulumi.BoolPtrOutput)
 }
 
-// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-func (o ServiceConnectionGroupOutput) Folder() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceConnectionGroup) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
-}
-
-// The Name param.
+// Name
 func (o ServiceConnectionGroupOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceConnectionGroup) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The PbfOnly param.
+// Pbf only
 func (o ServiceConnectionGroupOutput) PbfOnly() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceConnectionGroup) pulumi.BoolPtrOutput { return v.PbfOnly }).(pulumi.BoolPtrOutput)
 }
 
-// The Targets param.
+// Target
 func (o ServiceConnectionGroupOutput) Targets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ServiceConnectionGroup) pulumi.StringArrayOutput { return v.Targets }).(pulumi.StringArrayOutput)
 }

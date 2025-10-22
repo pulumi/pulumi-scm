@@ -17,14 +17,14 @@ public final class QosProfileClassBandwidthTypePercentageArgs extends com.pulumi
     public static final QosProfileClassBandwidthTypePercentageArgs Empty = new QosProfileClassBandwidthTypePercentageArgs();
 
     /**
-     * QoS setting for traffic classes.
+     * QoS setting for traffic classes
      * 
      */
     @Import(name="classes")
     private @Nullable Output<List<QosProfileClassBandwidthTypePercentageClassArgs>> classes;
 
     /**
-     * @return QoS setting for traffic classes.
+     * @return QoS setting for traffic classes
      * 
      */
     public Optional<Output<List<QosProfileClassBandwidthTypePercentageClassArgs>>> classes() {
@@ -56,7 +56,7 @@ public final class QosProfileClassBandwidthTypePercentageArgs extends com.pulumi
         }
 
         /**
-         * @param classes QoS setting for traffic classes.
+         * @param classes QoS setting for traffic classes
          * 
          * @return builder
          * 
@@ -67,7 +67,7 @@ public final class QosProfileClassBandwidthTypePercentageArgs extends com.pulumi
         }
 
         /**
-         * @param classes QoS setting for traffic classes.
+         * @param classes QoS setting for traffic classes
          * 
          * @return builder
          * 
@@ -77,7 +77,7 @@ public final class QosProfileClassBandwidthTypePercentageArgs extends com.pulumi
         }
 
         /**
-         * @param classes QoS setting for traffic classes.
+         * @param classes QoS setting for traffic classes
          * 
          * @return builder
          * 

@@ -10,76 +10,63 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// IpsecCryptoProfile resource
     /// 
     /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.IpsecCryptoProfile("example");
-    /// 
-    /// });
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/ipsecCryptoProfile:IpsecCryptoProfile")]
     public partial class IpsecCryptoProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Ah param. Ensure that only one of the following is specified: `Ah`, `Esp`
+        /// Ah
         /// </summary>
         [Output("ah")]
         public Output<Outputs.IpsecCryptoProfileAh?> Ah { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+        /// phase-2 DH group (PFS DH group)
         /// </summary>
         [Output("dhGroup")]
         public Output<string> DhGroup { get; private set; } = null!;
 
         /// <summary>
-        /// The Esp param. Ensure that only one of the following is specified: `Ah`, `Esp`
+        /// Esp
         /// </summary>
         [Output("esp")]
         public Output<Outputs.IpsecCryptoProfileEsp?> Esp { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Lifesize param.
+        /// Lifesize
         /// </summary>
         [Output("lifesize")]
         public Output<Outputs.IpsecCryptoProfileLifesize?> Lifesize { get; private set; } = null!;
 
         /// <summary>
-        /// The Lifetime param.
+        /// Ipsec crypto profile lifetime
         /// </summary>
         [Output("lifetime")]
         public Output<Outputs.IpsecCryptoProfileLifetime> Lifetime { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -134,55 +121,55 @@ namespace Pulumi.Scm
     public sealed class IpsecCryptoProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Ah param. Ensure that only one of the following is specified: `Ah`, `Esp`
+        /// Ah
         /// </summary>
         [Input("ah")]
         public Input<Inputs.IpsecCryptoProfileAhArgs>? Ah { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+        /// phase-2 DH group (PFS DH group)
         /// </summary>
         [Input("dhGroup")]
         public Input<string>? DhGroup { get; set; }
 
         /// <summary>
-        /// The Esp param. Ensure that only one of the following is specified: `Ah`, `Esp`
+        /// Esp
         /// </summary>
         [Input("esp")]
         public Input<Inputs.IpsecCryptoProfileEspArgs>? Esp { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Lifesize param.
+        /// Lifesize
         /// </summary>
         [Input("lifesize")]
         public Input<Inputs.IpsecCryptoProfileLifesizeArgs>? Lifesize { get; set; }
 
         /// <summary>
-        /// The Lifetime param.
+        /// Ipsec crypto profile lifetime
         /// </summary>
         [Input("lifetime", required: true)]
         public Input<Inputs.IpsecCryptoProfileLifetimeArgs> Lifetime { get; set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -196,55 +183,55 @@ namespace Pulumi.Scm
     public sealed class IpsecCryptoProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Ah param. Ensure that only one of the following is specified: `Ah`, `Esp`
+        /// Ah
         /// </summary>
         [Input("ah")]
         public Input<Inputs.IpsecCryptoProfileAhGetArgs>? Ah { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+        /// phase-2 DH group (PFS DH group)
         /// </summary>
         [Input("dhGroup")]
         public Input<string>? DhGroup { get; set; }
 
         /// <summary>
-        /// The Esp param. Ensure that only one of the following is specified: `Ah`, `Esp`
+        /// Esp
         /// </summary>
         [Input("esp")]
         public Input<Inputs.IpsecCryptoProfileEspGetArgs>? Esp { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Lifesize param.
+        /// Lifesize
         /// </summary>
         [Input("lifesize")]
         public Input<Inputs.IpsecCryptoProfileLifesizeGetArgs>? Lifesize { get; set; }
 
         /// <summary>
-        /// The Lifetime param.
+        /// Ipsec crypto profile lifetime
         /// </summary>
         [Input("lifetime")]
         public Input<Inputs.IpsecCryptoProfileLifetimeGetArgs>? Lifetime { get; set; }
 
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

@@ -12,7 +12,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// ServiceGroup resource
 //
 // ## Example Usage
 //
@@ -28,7 +28,59 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewServiceGroup(ctx, "example", nil)
+//			// TCP Service with multiple destination ports custom timeout
+//			scmServiceTcpPorts, err := scm.NewService(ctx, "scm_service_tcp_ports", &scm.ServiceArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_service_tcp_ports"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Protocol: &scm.ServiceProtocolArgs{
+//					Tcp: &scm.ServiceProtocolTcpArgs{
+//						Port: pulumi.String("80,443"),
+//						Override: &scm.ServiceProtocolTcpOverrideArgs{
+//							Timeout: pulumi.Int(3600),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// UDP Service with single destination port
+//			scmServiceUdpPort, err := scm.NewService(ctx, "scm_service_udp_port", &scm.ServiceArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_service_udp_port"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Protocol: &scm.ServiceProtocolArgs{
+//					Udp: &scm.ServiceProtocolUdpArgs{
+//						Port: pulumi.String("53"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Service Group containing multiple services
+//			scmServicegroup, err := scm.NewServiceGroup(ctx, "scm_servicegroup", &scm.ServiceGroupArgs{
+//				Folder: pulumi.String("Shared"),
+//				Name:   pulumi.String("scm_servicegroup"),
+//				Members: pulumi.StringArray{
+//					scmServiceTcpPorts.Name,
+//					scmServiceUdpPort.Name,
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Service Group containing multiple services and another servicegroup
+//			_, err = scm.NewServiceGroup(ctx, "scm_servicegroup_nested", &scm.ServiceGroupArgs{
+//				Folder: pulumi.String("Shared"),
+//				Name:   pulumi.String("scm_servicegroup_nested"),
+//				Members: pulumi.StringArray{
+//					scmServiceTcpPorts.Name,
+//					scmServiceUdpPort.Name,
+//					scmServicegroup.Name,
+//				},
+//			})
 //			if err != nil {
 //				return err
 //			}
@@ -40,17 +92,17 @@ import (
 type ServiceGroup struct {
 	pulumi.CustomResourceState
 
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members pulumi.StringArrayOutput `pulumi:"members"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service group
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags associated with the service group
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
 	Tfid pulumi.StringOutput      `pulumi:"tfid"`
 }
@@ -88,33 +140,33 @@ func GetServiceGroup(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ServiceGroup resources.
 type serviceGroupState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members []string `pulumi:"members"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service group
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags associated with the service group
 	Tags []string `pulumi:"tags"`
 	Tfid *string  `pulumi:"tfid"`
 }
 
 type ServiceGroupState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members pulumi.StringArrayInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service group
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags associated with the service group
 	Tags pulumi.StringArrayInput
 	Tfid pulumi.StringPtrInput
 }
@@ -124,33 +176,33 @@ func (ServiceGroupState) ElementType() reflect.Type {
 }
 
 type serviceGroupArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members []string `pulumi:"members"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service group
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags associated with the service group
 	Tags []string `pulumi:"tags"`
 }
 
 // The set of arguments for constructing a ServiceGroup resource.
 type ServiceGroupArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members pulumi.StringArrayInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service group
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags associated with the service group
 	Tags pulumi.StringArrayInput
 }
 
@@ -241,32 +293,32 @@ func (o ServiceGroupOutput) ToServiceGroupOutputWithContext(ctx context.Context)
 	return o
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o ServiceGroupOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceGroup) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o ServiceGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+// Members
 func (o ServiceGroupOutput) Members() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ServiceGroup) pulumi.StringArrayOutput { return v.Members }).(pulumi.StringArrayOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the service group
 func (o ServiceGroupOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceGroup) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o ServiceGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+// Tags associated with the service group
 func (o ServiceGroupOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ServiceGroup) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }

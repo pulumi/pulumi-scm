@@ -11,133 +11,131 @@ import com.pulumi.scm.outputs.GetIpsecCryptoProfileLifesize;
 import com.pulumi.scm.outputs.GetIpsecCryptoProfileLifetime;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIpsecCryptoProfileResult {
     /**
-     * @return The Ah param.
+     * @return Ah
      * 
      */
     private GetIpsecCryptoProfileAh ah;
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
-    private @Nullable String device;
+    private String device;
     /**
-     * @return phase-2 DH group (PFS DH group). String must be one of these: `&#34;no-pfs&#34;`, `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`. Default: `&#34;group2&#34;`.
+     * @return phase-2 DH group (PFS DH group)
      * 
      */
     private String dhGroup;
     /**
-     * @return The Esp param.
+     * @return Esp
      * 
      */
     private GetIpsecCryptoProfileEsp esp;
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
-    private @Nullable String folder;
+    private String folder;
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return The Lifesize param.
+     * @return Lifesize
      * 
      */
     private GetIpsecCryptoProfileLifesize lifesize;
     /**
-     * @return The Lifetime param.
+     * @return Ipsec crypto profile lifetime
      * 
      */
     private GetIpsecCryptoProfileLifetime lifetime;
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     private String name;
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
-    private @Nullable String snippet;
+    private String snippet;
     private String tfid;
 
     private GetIpsecCryptoProfileResult() {}
     /**
-     * @return The Ah param.
+     * @return Ah
      * 
      */
     public GetIpsecCryptoProfileAh ah() {
         return this.ah;
     }
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
-    public Optional<String> device() {
-        return Optional.ofNullable(this.device);
+    public String device() {
+        return this.device;
     }
     /**
-     * @return phase-2 DH group (PFS DH group). String must be one of these: `&#34;no-pfs&#34;`, `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`. Default: `&#34;group2&#34;`.
+     * @return phase-2 DH group (PFS DH group)
      * 
      */
     public String dhGroup() {
         return this.dhGroup;
     }
     /**
-     * @return The Esp param.
+     * @return Esp
      * 
      */
     public GetIpsecCryptoProfileEsp esp() {
         return this.esp;
     }
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
-    public Optional<String> folder() {
-        return Optional.ofNullable(this.folder);
+    public String folder() {
+        return this.folder;
     }
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Lifesize param.
+     * @return Lifesize
      * 
      */
     public GetIpsecCryptoProfileLifesize lifesize() {
         return this.lifesize;
     }
     /**
-     * @return The Lifetime param.
+     * @return Ipsec crypto profile lifetime
      * 
      */
     public GetIpsecCryptoProfileLifetime lifetime() {
         return this.lifetime;
     }
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
-    public Optional<String> snippet() {
-        return Optional.ofNullable(this.snippet);
+    public String snippet() {
+        return this.snippet;
     }
     public String tfid() {
         return this.tfid;
@@ -153,15 +151,15 @@ public final class GetIpsecCryptoProfileResult {
     @CustomType.Builder
     public static final class Builder {
         private GetIpsecCryptoProfileAh ah;
-        private @Nullable String device;
+        private String device;
         private String dhGroup;
         private GetIpsecCryptoProfileEsp esp;
-        private @Nullable String folder;
+        private String folder;
         private String id;
         private GetIpsecCryptoProfileLifesize lifesize;
         private GetIpsecCryptoProfileLifetime lifetime;
         private String name;
-        private @Nullable String snippet;
+        private String snippet;
         private String tfid;
         public Builder() {}
         public Builder(GetIpsecCryptoProfileResult defaults) {
@@ -188,8 +186,10 @@ public final class GetIpsecCryptoProfileResult {
             return this;
         }
         @CustomType.Setter
-        public Builder device(@Nullable String device) {
-
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetIpsecCryptoProfileResult", "device");
+            }
             this.device = device;
             return this;
         }
@@ -210,8 +210,10 @@ public final class GetIpsecCryptoProfileResult {
             return this;
         }
         @CustomType.Setter
-        public Builder folder(@Nullable String folder) {
-
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetIpsecCryptoProfileResult", "folder");
+            }
             this.folder = folder;
             return this;
         }
@@ -248,8 +250,10 @@ public final class GetIpsecCryptoProfileResult {
             return this;
         }
         @CustomType.Setter
-        public Builder snippet(@Nullable String snippet) {
-
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetIpsecCryptoProfileResult", "snippet");
+            }
             this.snippet = snippet;
             return this;
         }

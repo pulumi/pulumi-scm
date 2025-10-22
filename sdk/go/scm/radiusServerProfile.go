@@ -12,28 +12,26 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
+// RadiusServerProfile resource
 type RadiusServerProfile struct {
 	pulumi.CustomResourceState
 
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// (Internal use) Encrypted values returned from the API.
-	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Protocol param.
-	Protocol RadiusServerProfileProtocolPtrOutput `pulumi:"protocol"`
-	// The Retries param. Value must be between 1 and 5.
+	// The name of the RADIUS server profile
+	Name pulumi.StringOutput `pulumi:"name"`
+	// The RADIUS authentication protocol
+	Protocol RadiusServerProfileProtocolOutput `pulumi:"protocol"`
+	// The number of RADIUS server retries
 	Retries pulumi.IntPtrOutput `pulumi:"retries"`
-	// The Servers param.
+	// Server
 	Servers RadiusServerProfileServerArrayOutput `pulumi:"servers"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
-	// The Timeout param. Value must be between 1 and 120.
+	// The RADIUS server authentication timeout (seconds)
 	Timeout pulumi.IntPtrOutput `pulumi:"timeout"`
 }
 
@@ -44,13 +42,12 @@ func NewRadiusServerProfile(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.Protocol == nil {
+		return nil, errors.New("invalid value for required argument 'Protocol'")
+	}
 	if args.Servers == nil {
 		return nil, errors.New("invalid value for required argument 'Servers'")
 	}
-	secrets := pulumi.AdditionalSecretOutputs([]string{
-		"encryptedValues",
-	})
-	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource RadiusServerProfile
 	err := ctx.RegisterResource("scm:index/radiusServerProfile:RadiusServerProfile", name, args, &resource, opts...)
@@ -74,42 +71,42 @@ func GetRadiusServerProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering RadiusServerProfile resources.
 type radiusServerProfileState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// (Internal use) Encrypted values returned from the API.
-	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Protocol param.
+	// The name of the RADIUS server profile
+	Name *string `pulumi:"name"`
+	// The RADIUS authentication protocol
 	Protocol *RadiusServerProfileProtocol `pulumi:"protocol"`
-	// The Retries param. Value must be between 1 and 5.
+	// The number of RADIUS server retries
 	Retries *int `pulumi:"retries"`
-	// The Servers param.
+	// Server
 	Servers []RadiusServerProfileServer `pulumi:"servers"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
-	// The Timeout param. Value must be between 1 and 120.
+	// The RADIUS server authentication timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
 }
 
 type RadiusServerProfileState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// (Internal use) Encrypted values returned from the API.
-	EncryptedValues pulumi.StringMapInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Protocol param.
+	// The name of the RADIUS server profile
+	Name pulumi.StringPtrInput
+	// The RADIUS authentication protocol
 	Protocol RadiusServerProfileProtocolPtrInput
-	// The Retries param. Value must be between 1 and 5.
+	// The number of RADIUS server retries
 	Retries pulumi.IntPtrInput
-	// The Servers param.
+	// Server
 	Servers RadiusServerProfileServerArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
-	// The Timeout param. Value must be between 1 and 120.
+	// The RADIUS server authentication timeout (seconds)
 	Timeout pulumi.IntPtrInput
 }
 
@@ -118,37 +115,41 @@ func (RadiusServerProfileState) ElementType() reflect.Type {
 }
 
 type radiusServerProfileArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Protocol param.
-	Protocol *RadiusServerProfileProtocol `pulumi:"protocol"`
-	// The Retries param. Value must be between 1 and 5.
+	// The name of the RADIUS server profile
+	Name *string `pulumi:"name"`
+	// The RADIUS authentication protocol
+	Protocol RadiusServerProfileProtocol `pulumi:"protocol"`
+	// The number of RADIUS server retries
 	Retries *int `pulumi:"retries"`
-	// The Servers param.
+	// Server
 	Servers []RadiusServerProfileServer `pulumi:"servers"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The Timeout param. Value must be between 1 and 120.
+	// The RADIUS server authentication timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
 }
 
 // The set of arguments for constructing a RadiusServerProfile resource.
 type RadiusServerProfileArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Protocol param.
-	Protocol RadiusServerProfileProtocolPtrInput
-	// The Retries param. Value must be between 1 and 5.
+	// The name of the RADIUS server profile
+	Name pulumi.StringPtrInput
+	// The RADIUS authentication protocol
+	Protocol RadiusServerProfileProtocolInput
+	// The number of RADIUS server retries
 	Retries pulumi.IntPtrInput
-	// The Servers param.
+	// Server
 	Servers RadiusServerProfileServerArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The Timeout param. Value must be between 1 and 120.
+	// The RADIUS server authentication timeout (seconds)
 	Timeout pulumi.IntPtrInput
 }
 
@@ -239,37 +240,37 @@ func (o RadiusServerProfileOutput) ToRadiusServerProfileOutputWithContext(ctx co
 	return o
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o RadiusServerProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// (Internal use) Encrypted values returned from the API.
-func (o RadiusServerProfileOutput) EncryptedValues() pulumi.StringMapOutput {
-	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
-}
-
-// The Folder param.
+// The folder in which the resource is defined
 func (o RadiusServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Protocol param.
-func (o RadiusServerProfileOutput) Protocol() RadiusServerProfileProtocolPtrOutput {
-	return o.ApplyT(func(v *RadiusServerProfile) RadiusServerProfileProtocolPtrOutput { return v.Protocol }).(RadiusServerProfileProtocolPtrOutput)
+// The name of the RADIUS server profile
+func (o RadiusServerProfileOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Retries param. Value must be between 1 and 5.
+// The RADIUS authentication protocol
+func (o RadiusServerProfileOutput) Protocol() RadiusServerProfileProtocolOutput {
+	return o.ApplyT(func(v *RadiusServerProfile) RadiusServerProfileProtocolOutput { return v.Protocol }).(RadiusServerProfileProtocolOutput)
+}
+
+// The number of RADIUS server retries
 func (o RadiusServerProfileOutput) Retries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.IntPtrOutput { return v.Retries }).(pulumi.IntPtrOutput)
 }
 
-// The Servers param.
+// Server
 func (o RadiusServerProfileOutput) Servers() RadiusServerProfileServerArrayOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) RadiusServerProfileServerArrayOutput { return v.Servers }).(RadiusServerProfileServerArrayOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o RadiusServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -278,7 +279,7 @@ func (o RadiusServerProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Timeout param. Value must be between 1 and 120.
+// The RADIUS server authentication timeout (seconds)
 func (o RadiusServerProfileOutput) Timeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.IntPtrOutput { return v.Timeout }).(pulumi.IntPtrOutput)
 }

@@ -4,26 +4,25 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class HipObjectMobileDeviceCriteriaLastCheckinTimeWithin {
     /**
-     * @return specify time in days. Value must be between 1 and 365. Default: `30`.
+     * @return specify time in days
      * 
      */
-    private @Nullable Integer days;
+    private Integer days;
 
     private HipObjectMobileDeviceCriteriaLastCheckinTimeWithin() {}
     /**
-     * @return specify time in days. Value must be between 1 and 365. Default: `30`.
+     * @return specify time in days
      * 
      */
-    public Optional<Integer> days() {
-        return Optional.ofNullable(this.days);
+    public Integer days() {
+        return this.days;
     }
 
     public static Builder builder() {
@@ -35,7 +34,7 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeWithin {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Integer days;
+        private Integer days;
         public Builder() {}
         public Builder(HipObjectMobileDeviceCriteriaLastCheckinTimeWithin defaults) {
     	      Objects.requireNonNull(defaults);
@@ -43,8 +42,10 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeWithin {
         }
 
         @CustomType.Setter
-        public Builder days(@Nullable Integer days) {
-
+        public Builder days(Integer days) {
+            if (days == null) {
+              throw new MissingRequiredPropertyException("HipObjectMobileDeviceCriteriaLastCheckinTimeWithin", "days");
+            }
             this.days = days;
             return this;
         }

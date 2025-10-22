@@ -26,7 +26,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * HipObject resource
  * 
  * ## Example Usage
  * 
@@ -34,224 +34,224 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/hipObject:HipObject")
 public class HipObject extends com.pulumi.resources.CustomResource {
     /**
-     * The AntiMalware param.
+     * Anti malware
      * 
      */
     @Export(name="antiMalware", refs={HipObjectAntiMalware.class}, tree="[0]")
-    private Output</* @Nullable */ HipObjectAntiMalware> antiMalware;
+    private Output<HipObjectAntiMalware> antiMalware;
 
     /**
-     * @return The AntiMalware param.
+     * @return Anti malware
      * 
      */
-    public Output<Optional<HipObjectAntiMalware>> antiMalware() {
-        return Codegen.optional(this.antiMalware);
+    public Output<HipObjectAntiMalware> antiMalware() {
+        return this.antiMalware;
     }
     /**
-     * The Certificate param.
+     * Certificate
      * 
      */
     @Export(name="certificate", refs={HipObjectCertificate.class}, tree="[0]")
     private Output</* @Nullable */ HipObjectCertificate> certificate;
 
     /**
-     * @return The Certificate param.
+     * @return Certificate
      * 
      */
     public Output<Optional<HipObjectCertificate>> certificate() {
         return Codegen.optional(this.certificate);
     }
     /**
-     * The CustomChecks param.
+     * Custom checks
      * 
      */
     @Export(name="customChecks", refs={HipObjectCustomChecks.class}, tree="[0]")
     private Output</* @Nullable */ HipObjectCustomChecks> customChecks;
 
     /**
-     * @return The CustomChecks param.
+     * @return Custom checks
      * 
      */
     public Output<Optional<HipObjectCustomChecks>> customChecks() {
         return Codegen.optional(this.customChecks);
     }
     /**
-     * The DataLossPrevention param.
+     * Data loss prevention
      * 
      */
     @Export(name="dataLossPrevention", refs={HipObjectDataLossPrevention.class}, tree="[0]")
-    private Output</* @Nullable */ HipObjectDataLossPrevention> dataLossPrevention;
+    private Output<HipObjectDataLossPrevention> dataLossPrevention;
 
     /**
-     * @return The DataLossPrevention param.
+     * @return Data loss prevention
      * 
      */
-    public Output<Optional<HipObjectDataLossPrevention>> dataLossPrevention() {
-        return Codegen.optional(this.dataLossPrevention);
+    public Output<HipObjectDataLossPrevention> dataLossPrevention() {
+        return this.dataLossPrevention;
     }
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The DiskBackup param.
+     * Disk backup
      * 
      */
     @Export(name="diskBackup", refs={HipObjectDiskBackup.class}, tree="[0]")
-    private Output</* @Nullable */ HipObjectDiskBackup> diskBackup;
+    private Output<HipObjectDiskBackup> diskBackup;
 
     /**
-     * @return The DiskBackup param.
+     * @return Disk backup
      * 
      */
-    public Output<Optional<HipObjectDiskBackup>> diskBackup() {
-        return Codegen.optional(this.diskBackup);
+    public Output<HipObjectDiskBackup> diskBackup() {
+        return this.diskBackup;
     }
     /**
-     * The DiskEncryption param.
+     * Disk encryption
      * 
      */
     @Export(name="diskEncryption", refs={HipObjectDiskEncryption.class}, tree="[0]")
-    private Output</* @Nullable */ HipObjectDiskEncryption> diskEncryption;
+    private Output<HipObjectDiskEncryption> diskEncryption;
 
     /**
-     * @return The DiskEncryption param.
+     * @return Disk encryption
      * 
      */
-    public Output<Optional<HipObjectDiskEncryption>> diskEncryption() {
-        return Codegen.optional(this.diskEncryption);
+    public Output<HipObjectDiskEncryption> diskEncryption() {
+        return this.diskEncryption;
     }
     /**
-     * The Firewall param.
+     * Firewall
      * 
      */
     @Export(name="firewall", refs={HipObjectFirewall.class}, tree="[0]")
-    private Output</* @Nullable */ HipObjectFirewall> firewall;
+    private Output<HipObjectFirewall> firewall;
 
     /**
-     * @return The Firewall param.
+     * @return Firewall
      * 
      */
-    public Output<Optional<HipObjectFirewall>> firewall() {
-        return Codegen.optional(this.firewall);
+    public Output<HipObjectFirewall> firewall() {
+        return this.firewall;
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The HostInfo param.
+     * Host info
      * 
      */
     @Export(name="hostInfo", refs={HipObjectHostInfo.class}, tree="[0]")
     private Output</* @Nullable */ HipObjectHostInfo> hostInfo;
 
     /**
-     * @return The HostInfo param.
+     * @return Host info
      * 
      */
     public Output<Optional<HipObjectHostInfo>> hostInfo() {
         return Codegen.optional(this.hostInfo);
     }
     /**
-     * The MobileDevice param.
+     * Mobile device
      * 
      */
     @Export(name="mobileDevice", refs={HipObjectMobileDevice.class}, tree="[0]")
     private Output</* @Nullable */ HipObjectMobileDevice> mobileDevice;
 
     /**
-     * @return The MobileDevice param.
+     * @return Mobile device
      * 
      */
     public Output<Optional<HipObjectMobileDevice>> mobileDevice() {
         return Codegen.optional(this.mobileDevice);
     }
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP object
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the HIP object
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The NetworkInfo param.
+     * Network info
      * 
      */
     @Export(name="networkInfo", refs={HipObjectNetworkInfo.class}, tree="[0]")
     private Output</* @Nullable */ HipObjectNetworkInfo> networkInfo;
 
     /**
-     * @return The NetworkInfo param.
+     * @return Network info
      * 
      */
     public Output<Optional<HipObjectNetworkInfo>> networkInfo() {
         return Codegen.optional(this.networkInfo);
     }
     /**
-     * The PatchManagement param.
+     * Patch management
      * 
      */
     @Export(name="patchManagement", refs={HipObjectPatchManagement.class}, tree="[0]")
-    private Output</* @Nullable */ HipObjectPatchManagement> patchManagement;
+    private Output<HipObjectPatchManagement> patchManagement;
 
     /**
-     * @return The PatchManagement param.
+     * @return Patch management
      * 
      */
-    public Output<Optional<HipObjectPatchManagement>> patchManagement() {
-        return Codegen.optional(this.patchManagement);
+    public Output<HipObjectPatchManagement> patchManagement() {
+        return this.patchManagement;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {

@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetIkeGatewayListDataAuthentication {
     /**
-     * @return The Certificate param.
+     * @return Certificate
      * 
      */
     private GetIkeGatewayListDataAuthenticationCertificate certificate;
     /**
-     * @return The PreSharedKey param.
+     * @return Pre shared key
      * 
      */
     private GetIkeGatewayListDataAuthenticationPreSharedKey preSharedKey;
 
     private GetIkeGatewayListDataAuthentication() {}
     /**
-     * @return The Certificate param.
+     * @return Certificate
      * 
      */
     public GetIkeGatewayListDataAuthenticationCertificate certificate() {
         return this.certificate;
     }
     /**
-     * @return The PreSharedKey param.
+     * @return Pre shared key
      * 
      */
     public GetIkeGatewayListDataAuthenticationPreSharedKey preSharedKey() {

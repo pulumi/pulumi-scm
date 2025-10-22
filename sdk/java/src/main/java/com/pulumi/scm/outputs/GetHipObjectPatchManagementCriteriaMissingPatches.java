@@ -13,38 +13,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectPatchManagementCriteriaMissingPatches {
     /**
-     * @return The Check param. String must be one of these: `&#34;has-any&#34;`, `&#34;has-none&#34;`, `&#34;has-all&#34;`. Default: `&#34;has-any&#34;`.
+     * @return Check
      * 
      */
     private String check;
     /**
-     * @return The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Patches
      * 
      */
     private List<String> patches;
     /**
-     * @return The Severity param.
+     * @return Severity
      * 
      */
     private GetHipObjectPatchManagementCriteriaMissingPatchesSeverity severity;
 
     private GetHipObjectPatchManagementCriteriaMissingPatches() {}
     /**
-     * @return The Check param. String must be one of these: `&#34;has-any&#34;`, `&#34;has-none&#34;`, `&#34;has-all&#34;`. Default: `&#34;has-any&#34;`.
+     * @return Check
      * 
      */
     public String check() {
         return this.check;
     }
     /**
-     * @return The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Patches
      * 
      */
     public List<String> patches() {
         return this.patches;
     }
     /**
-     * @return The Severity param.
+     * @return Severity
      * 
      */
     public GetHipObjectPatchManagementCriteriaMissingPatchesSeverity severity() {

@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectCertificateCriteria {
     /**
-     * @return The CertificateAttributes param.
+     * @return Certificate attributes
      * 
      */
     private @Nullable List<HipObjectCertificateCriteriaCertificateAttribute> certificateAttributes;
     /**
-     * @return Profile for authenticating client certificates.
+     * @return Profile for authenticating client certificates
      * 
      */
     private @Nullable String certificateProfile;
 
     private HipObjectCertificateCriteria() {}
     /**
-     * @return The CertificateAttributes param.
+     * @return Certificate attributes
      * 
      */
     public List<HipObjectCertificateCriteriaCertificateAttribute> certificateAttributes() {
         return this.certificateAttributes == null ? List.of() : this.certificateAttributes;
     }
     /**
-     * @return Profile for authenticating client certificates.
+     * @return Profile for authenticating client certificates
      * 
      */
     public Optional<String> certificateProfile() {

@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HipObjectCustomChecksCriteriaPlistGetArgs>? _plists;
 
         /// <summary>
-        /// The Plist param.
+        /// Plist
         /// </summary>
         public InputList<Inputs.HipObjectCustomChecksCriteriaPlistGetArgs> Plists
         {
@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HipObjectCustomChecksCriteriaProcessListGetArgs>? _processLists;
 
         /// <summary>
-        /// The ProcessList param.
+        /// Process list
         /// </summary>
         public InputList<Inputs.HipObjectCustomChecksCriteriaProcessListGetArgs> ProcessLists
         {
@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HipObjectCustomChecksCriteriaRegistryKeyGetArgs>? _registryKeys;
 
         /// <summary>
-        /// The RegistryKeys param.
+        /// Registry key
         /// </summary>
         public InputList<Inputs.HipObjectCustomChecksCriteriaRegistryKeyGetArgs> RegistryKeys
         {
