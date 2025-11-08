@@ -27,13 +27,13 @@ namespace Pulumi.Scm
         ///     // Data source to fetch all external dynamic lists in the "Shared" folder.
         ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 EDLs.
         ///     var paginatedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -70,13 +70,13 @@ namespace Pulumi.Scm
         ///     // Data source to fetch all external dynamic lists in the "Shared" folder.
         ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 EDLs.
         ///     var paginatedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -113,13 +113,13 @@ namespace Pulumi.Scm
         ///     // Data source to fetch all external dynamic lists in the "Shared" folder.
         ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 EDLs.
         ///     var paginatedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });

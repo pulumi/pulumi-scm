@@ -10,6 +10,35 @@ import * as utilities from "./utilities";
  * CertificateProfile resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmCp1 = new scm.CertificateProfile("scm_cp_1", {
+ *     folder: "Shared",
+ *     name: "scm_cp_1",
+ *     domain: "test",
+ *     useCrl: true,
+ *     useOcsp: true,
+ *     blockUnknownCert: true,
+ *     blockTimeoutCert: true,
+ *     blockUnauthenticatedCert: true,
+ *     blockExpiredCert: true,
+ *     crlReceiveTimeout: "5",
+ *     ocspReceiveTimeout: "5",
+ *     certStatusTimeout: "5",
+ *     caCertificates: [{
+ *         name: "Forward-Trust-CA",
+ *         defaultOcspUrl: "http://test.com",
+ *         ocspVerifyCert: "Forward-Trust-CA-ECDSA",
+ *         templateName: "something",
+ *     }],
+ *     usernameField: {
+ *         subject: "common-name",
+ *     },
+ * });
+ * ```
  */
 export class CertificateProfile extends pulumi.CustomResource {
     /**

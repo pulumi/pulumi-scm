@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionOspfRibResult
     {
         /// <summary>
-        /// Route maps
+        /// OSPF RIB Route maps set Route maps
         /// </summary>
         public readonly ImmutableArray<Outputs.GetBgpRouteMapRedistributionOspfRibRouteMapResult> RouteMaps;
 

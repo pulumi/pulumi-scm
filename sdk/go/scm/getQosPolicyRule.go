@@ -12,6 +12,53 @@ import (
 )
 
 // QosPolicyRule data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			testQosPolicyRule, err := scm.NewQosPolicyRule(ctx, "test_qos_policy_rule", &scm.QosPolicyRuleArgs{
+//				Name:        pulumi.String("data-source-qos-test"),
+//				Description: pulumi.String("Rule created specifically for data source testing with DSCP/TOS."),
+//				Folder:      pulumi.String("All"),
+//				Position:    pulumi.String("pre"),
+//				Schedule:    pulumi.String("non-work-hours"),
+//				Action: &scm.QosPolicyRuleActionArgs{
+//					Class: pulumi.String("1"),
+//				},
+//				DscpTos: &scm.QosPolicyRuleDscpTosArgs{
+//					Codepoints: scm.QosPolicyRuleDscpTosCodepointArray{
+//						&scm.QosPolicyRuleDscpTosCodepointArgs{
+//							Name: pulumi.String("Expedited Forwarding"),
+//							Type: &scm.QosPolicyRuleDscpTosCodepointTypeArgs{
+//								Ef: &scm.QosPolicyRuleDscpTosCodepointTypeEfArgs{},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			singleRuleById := scm.LookupQosPolicyRuleOutput(ctx, scm.GetQosPolicyRuleOutputArgs{
+//				Id: testQosPolicyRule.ID(),
+//			}, nil)
+//			ctx.Export("singleQosPolicyRuleDump", singleRuleById)
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupQosPolicyRule(ctx *pulumi.Context, args *LookupQosPolicyRuleArgs, opts ...pulumi.InvokeOption) (*LookupQosPolicyRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupQosPolicyRuleResult
@@ -46,11 +93,17 @@ type LookupQosPolicyRuleResult struct {
 	Id string `pulumi:"id"`
 	// Name
 	Name string `pulumi:"name"`
+	// The relative position of the rule
+	Position string `pulumi:"position"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition string `pulumi:"relativePosition"`
 	// Schedule
 	Schedule string `pulumi:"schedule"`
 	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule string `pulumi:"targetRule"`
+	Tfid       string `pulumi:"tfid"`
 }
 
 func LookupQosPolicyRuleOutput(ctx *pulumi.Context, args LookupQosPolicyRuleOutputArgs, opts ...pulumi.InvokeOption) LookupQosPolicyRuleResultOutput {
@@ -124,6 +177,16 @@ func (o LookupQosPolicyRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The relative position of the rule
+func (o LookupQosPolicyRuleResultOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Position }).(pulumi.StringOutput)
+}
+
+// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+func (o LookupQosPolicyRuleResultOutput) RelativePosition() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.RelativePosition }).(pulumi.StringOutput)
+}
+
 // Schedule
 func (o LookupQosPolicyRuleResultOutput) Schedule() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Schedule }).(pulumi.StringOutput)
@@ -132,6 +195,11 @@ func (o LookupQosPolicyRuleResultOutput) Schedule() pulumi.StringOutput {
 // The snippet in which the resource is defined
 func (o LookupQosPolicyRuleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+func (o LookupQosPolicyRuleResultOutput) TargetRule() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupQosPolicyRuleResult) string { return v.TargetRule }).(pulumi.StringOutput)
 }
 
 func (o LookupQosPolicyRuleResultOutput) Tfid() pulumi.StringOutput {

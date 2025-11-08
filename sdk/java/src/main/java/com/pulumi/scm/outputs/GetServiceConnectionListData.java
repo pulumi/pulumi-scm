@@ -20,7 +20,7 @@ public final class GetServiceConnectionListData {
      * @return Backup s c
      * 
      */
-    private String backupSC;
+    private String backupSc;
     /**
      * @return Bgp peer
      * 
@@ -98,8 +98,8 @@ public final class GetServiceConnectionListData {
      * @return Backup s c
      * 
      */
-    public String backupSC() {
-        return this.backupSC;
+    public String backupSc() {
+        return this.backupSc;
     }
     /**
      * @return Bgp peer
@@ -212,7 +212,7 @@ public final class GetServiceConnectionListData {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String backupSC;
+        private String backupSc;
         private GetServiceConnectionListDataBgpPeer bgpPeer;
         private Map<String,String> encryptedValues;
         private String id;
@@ -231,7 +231,7 @@ public final class GetServiceConnectionListData {
         public Builder() {}
         public Builder(GetServiceConnectionListData defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.backupSC = defaults.backupSC;
+    	      this.backupSc = defaults.backupSc;
     	      this.bgpPeer = defaults.bgpPeer;
     	      this.encryptedValues = defaults.encryptedValues;
     	      this.id = defaults.id;
@@ -250,11 +250,11 @@ public final class GetServiceConnectionListData {
         }
 
         @CustomType.Setter
-        public Builder backupSC(String backupSC) {
-            if (backupSC == null) {
-              throw new MissingRequiredPropertyException("GetServiceConnectionListData", "backupSC");
+        public Builder backupSc(String backupSc) {
+            if (backupSc == null) {
+              throw new MissingRequiredPropertyException("GetServiceConnectionListData", "backupSc");
             }
-            this.backupSC = backupSC;
+            this.backupSc = backupSc;
             return this;
         }
         @CustomType.Setter
@@ -382,7 +382,7 @@ public final class GetServiceConnectionListData {
         }
         public GetServiceConnectionListData build() {
             final var _resultValue = new GetServiceConnectionListData();
-            _resultValue.backupSC = backupSC;
+            _resultValue.backupSc = backupSc;
             _resultValue.bgpPeer = bgpPeer;
             _resultValue.encryptedValues = encryptedValues;
             _resultValue.id = id;

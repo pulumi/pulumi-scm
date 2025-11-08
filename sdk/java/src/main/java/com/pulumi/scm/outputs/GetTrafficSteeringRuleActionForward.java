@@ -5,24 +5,37 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.String;
+import com.pulumi.scm.outputs.GetTrafficSteeringRuleActionForwardForward;
+import com.pulumi.scm.outputs.GetTrafficSteeringRuleActionForwardNoPbf;
 import java.util.Objects;
 
 @CustomType
 public final class GetTrafficSteeringRuleActionForward {
     /**
-     * @return Target
+     * @return Forward
      * 
      */
-    private String target;
+    private GetTrafficSteeringRuleActionForwardForward forward;
+    /**
+     * @return No pbf
+     * 
+     */
+    private GetTrafficSteeringRuleActionForwardNoPbf noPbf;
 
     private GetTrafficSteeringRuleActionForward() {}
     /**
-     * @return Target
+     * @return Forward
      * 
      */
-    public String target() {
-        return this.target;
+    public GetTrafficSteeringRuleActionForwardForward forward() {
+        return this.forward;
+    }
+    /**
+     * @return No pbf
+     * 
+     */
+    public GetTrafficSteeringRuleActionForwardNoPbf noPbf() {
+        return this.noPbf;
     }
 
     public static Builder builder() {
@@ -34,24 +47,35 @@ public final class GetTrafficSteeringRuleActionForward {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String target;
+        private GetTrafficSteeringRuleActionForwardForward forward;
+        private GetTrafficSteeringRuleActionForwardNoPbf noPbf;
         public Builder() {}
         public Builder(GetTrafficSteeringRuleActionForward defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
+    	      this.forward = defaults.forward;
+    	      this.noPbf = defaults.noPbf;
         }
 
         @CustomType.Setter
-        public Builder target(String target) {
-            if (target == null) {
-              throw new MissingRequiredPropertyException("GetTrafficSteeringRuleActionForward", "target");
+        public Builder forward(GetTrafficSteeringRuleActionForwardForward forward) {
+            if (forward == null) {
+              throw new MissingRequiredPropertyException("GetTrafficSteeringRuleActionForward", "forward");
             }
-            this.target = target;
+            this.forward = forward;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder noPbf(GetTrafficSteeringRuleActionForwardNoPbf noPbf) {
+            if (noPbf == null) {
+              throw new MissingRequiredPropertyException("GetTrafficSteeringRuleActionForward", "noPbf");
+            }
+            this.noPbf = noPbf;
             return this;
         }
         public GetTrafficSteeringRuleActionForward build() {
             final var _resultValue = new GetTrafficSteeringRuleActionForward();
-            _resultValue.target = target;
+            _resultValue.forward = forward;
+            _resultValue.noPbf = noPbf;
             return _resultValue;
         }
     }

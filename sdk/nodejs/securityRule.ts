@@ -10,6 +10,163 @@ import * as utilities from "./utilities";
  * SecurityRule resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // First, create the tag objects that you will reference.
+ * const outboundTag = new scm.Tag("outbound_tag", {
+ *     folder: "All",
+ *     name: "outbound143",
+ *     color: "Red",
+ * });
+ * const webTag = new scm.Tag("web_tag", {
+ *     folder: "All",
+ *     name: "web143",
+ *     color: "Blue",
+ * });
+ * // --- Existing Rules (Backward Compatibility) ---
+ * const standardWebAccess = new scm.SecurityRule("standard_web_access", {
+ *     folder: "All",
+ *     name: "Allow Standard Web Access143",
+ *     description: "Allow outbound web traffic to any destination...",
+ *     position: "pre",
+ *     action: "allow",
+ *     categories: ["any"],
+ *     applications: [
+ *         "web-browsing",
+ *         "ssl",
+ *     ],
+ *     services: [
+ *         "service-http",
+ *         "service-https",
+ *     ],
+ *     froms: [
+ *         "untrust",
+ *         "trust",
+ *     ],
+ *     tos: ["trust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     negateSource: false,
+ *     negateDestination: false,
+ *     sourceUsers: ["any"],
+ *     sourceHips: ["any"],
+ *     destinationHips: ["any"],
+ *     logStart: true,
+ *     logEnd: true,
+ *     disabled: false,
+ *     tags: [
+ *         outboundTag.name,
+ *         webTag.name,
+ *     ],
+ * });
+ * const blockRiskySaas = new scm.SecurityRule("block_risky_saas", {
+ *     folder: "All",
+ *     name: "Block Risky SaaS Applications143",
+ *     description: "Prevent data exfiltration by blocking risky SaaS apps...",
+ *     action: "deny",
+ *     policyType: "Internet",
+ *     securitySettings: {
+ *         antiSpyware: "yes",
+ *         vulnerability: "yes",
+ *         virusAndWildfireAnalysis: "yes",
+ *     },
+ *     blockWebApplications: ["facebook-posting"],
+ *     logSettings: {
+ *         logSessions: true,
+ *     },
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     sourceUsers: ["any"],
+ *     disabled: false,
+ *     tags: [
+ *         outboundTag.name,
+ *         webTag.name,
+ *     ],
+ * });
+ * // --- NEW Examples Demonstrating Rule Ordering ---
+ * // Example 1: Place a critical block rule at the absolute top
+ * const criticalBlockTop = new scm.SecurityRule("critical_block_top", {
+ *     folder: "All",
+ *     name: "CRITICAL Block Malicious IPs Top143",
+ *     description: "Always block known malicious IPs first.",
+ *     relativePosition: "top",
+ *     action: "deny",
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     sourceUsers: ["any"],
+ *     categories: ["any"],
+ *     applications: ["any"],
+ *     services: ["any"],
+ *     logEnd: true,
+ *     tags: [outboundTag.name],
+ * });
+ * // Example 2: Place a cleanup rule at the absolute bottom
+ * const cleanupDenyBottom = new scm.SecurityRule("cleanup_deny_bottom", {
+ *     folder: "All",
+ *     name: "Cleanup Deny All Bottom143",
+ *     description: "Deny any traffic not explicitly allowed.",
+ *     relativePosition: "bottom",
+ *     action: "deny",
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     sourceUsers: ["any"],
+ *     categories: ["any"],
+ *     applications: ["any"],
+ *     services: ["any"],
+ *     logEnd: true,
+ *     tags: [outboundTag.name],
+ * });
+ * // Example 3: Place a rule *before* the standard web access rule
+ * const allowUpdatesBeforeWeb = new scm.SecurityRule("allow_updates_before_web", {
+ *     folder: "All",
+ *     name: "Allow OS Updates Before Web143",
+ *     description: "Allow specific OS update traffic before general web access.",
+ *     relativePosition: "before",
+ *     targetRule: standardWebAccess.id,
+ *     action: "allow",
+ *     froms: ["trust"],
+ *     tos: ["untrust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     sourceUsers: ["any"],
+ *     categories: ["any"],
+ *     applications: [
+ *         "ms-update",
+ *         "apple-update",
+ *     ],
+ *     services: ["service-https"],
+ *     logEnd: true,
+ *     tags: [outboundTag.name],
+ * });
+ * // Example 4: Place a rule *after* the standard web access rule
+ * const allowCorpAppsAfterWeb = new scm.SecurityRule("allow_corp_apps_after_web", {
+ *     folder: "All",
+ *     name: "Allow Corp Apps After Web143",
+ *     description: "Allow access to specific corporate apps after general web access.",
+ *     relativePosition: "after",
+ *     targetRule: standardWebAccess.id,
+ *     action: "allow",
+ *     froms: ["trust"],
+ *     tos: ["untrust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     sourceUsers: ["any"],
+ *     categories: ["any"],
+ *     applications: ["ms-update"],
+ *     services: ["service-https"],
+ *     logEnd: true,
+ *     tags: [webTag.name],
+ * });
+ * ```
  */
 export class SecurityRule extends pulumi.CustomResource {
     /**
@@ -148,6 +305,10 @@ export class SecurityRule extends pulumi.CustomResource {
      */
     declare public readonly profileSetting: pulumi.Output<outputs.SecurityRuleProfileSetting>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    declare public readonly relativePosition: pulumi.Output<string | undefined>;
+    /**
      * Schedule in which this rule will be applied
      */
     declare public readonly schedule: pulumi.Output<string | undefined>;
@@ -179,6 +340,10 @@ export class SecurityRule extends pulumi.CustomResource {
      * The tags associated with the security rule
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    declare public readonly targetRule: pulumi.Output<string | undefined>;
     /**
      * Tenant restrictions
      */
@@ -229,6 +394,7 @@ export class SecurityRule extends pulumi.CustomResource {
             resourceInputs["policyType"] = state?.policyType;
             resourceInputs["position"] = state?.position;
             resourceInputs["profileSetting"] = state?.profileSetting;
+            resourceInputs["relativePosition"] = state?.relativePosition;
             resourceInputs["schedule"] = state?.schedule;
             resourceInputs["securitySettings"] = state?.securitySettings;
             resourceInputs["services"] = state?.services;
@@ -237,6 +403,7 @@ export class SecurityRule extends pulumi.CustomResource {
             resourceInputs["sourceUsers"] = state?.sourceUsers;
             resourceInputs["sources"] = state?.sources;
             resourceInputs["tags"] = state?.tags;
+            resourceInputs["targetRule"] = state?.targetRule;
             resourceInputs["tenantRestrictions"] = state?.tenantRestrictions;
             resourceInputs["tfid"] = state?.tfid;
             resourceInputs["tos"] = state?.tos;
@@ -269,6 +436,7 @@ export class SecurityRule extends pulumi.CustomResource {
             resourceInputs["policyType"] = args?.policyType;
             resourceInputs["position"] = args?.position;
             resourceInputs["profileSetting"] = args?.profileSetting;
+            resourceInputs["relativePosition"] = args?.relativePosition;
             resourceInputs["schedule"] = args?.schedule;
             resourceInputs["securitySettings"] = args?.securitySettings;
             resourceInputs["services"] = args?.services;
@@ -277,6 +445,7 @@ export class SecurityRule extends pulumi.CustomResource {
             resourceInputs["sourceUsers"] = args?.sourceUsers;
             resourceInputs["sources"] = args?.sources;
             resourceInputs["tags"] = args?.tags;
+            resourceInputs["targetRule"] = args?.targetRule;
             resourceInputs["tenantRestrictions"] = args?.tenantRestrictions;
             resourceInputs["tos"] = args?.tos;
             resourceInputs["tfid"] = undefined /*out*/;
@@ -399,6 +568,10 @@ export interface SecurityRuleState {
      */
     profileSetting?: pulumi.Input<inputs.SecurityRuleProfileSetting>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition?: pulumi.Input<string>;
+    /**
      * Schedule in which this rule will be applied
      */
     schedule?: pulumi.Input<string>;
@@ -430,6 +603,10 @@ export interface SecurityRuleState {
      * The tags associated with the security rule
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule?: pulumi.Input<string>;
     /**
      * Tenant restrictions
      */
@@ -554,6 +731,10 @@ export interface SecurityRuleArgs {
      */
     profileSetting?: pulumi.Input<inputs.SecurityRuleProfileSetting>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition?: pulumi.Input<string>;
+    /**
      * Schedule in which this rule will be applied
      */
     schedule?: pulumi.Input<string>;
@@ -585,6 +766,10 @@ export interface SecurityRuleArgs {
      * The tags associated with the security rule
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule?: pulumi.Input<string>;
     /**
      * Tenant restrictions
      */

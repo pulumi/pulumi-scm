@@ -8,6 +8,65 @@ import * as utilities from "./utilities";
 
 /**
  * Layer3Subinterface resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Creates a ethernet interface used as parent-interface for subsequent examples
+ * //
+ * const scmParentInterface = new scm.EthernetInterface("scm_parent_interface", {
+ *     name: "$scm_parent_interface",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     layer3: {},
+ * });
+ * //
+ * // Creates a layer3 sub-interface with static ip address
+ * //
+ * const scmL3Subinterface = new scm.Layer3Subinterface("scm_l3_subinterface", {
+ *     name: "$scm_parent_interface.100",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     tag: 100,
+ *     parentInterface: "$scm_parent_interface",
+ *     ips: [{
+ *         name: "198.18.1.1/32",
+ *     }],
+ * }, {
+ *     dependsOn: [scmParentInterface],
+ * });
+ * const scmParentDhcpInterface = new scm.EthernetInterface("scm_parent_dhcp_interface", {
+ *     name: "$scm_parent_dhcp_interface",
+ *     comment: "Managed by Pulumi",
+ *     folder: "All",
+ *     layer3: {},
+ * });
+ * //
+ * // Creates a layer3 sub-interface with dhcp
+ * //
+ * const scmL3DhcpSubinterface = new scm.Layer3Subinterface("scm_l3_dhcp_subinterface", {
+ *     name: "$scm_parent_dhcp_interface.100",
+ *     comment: "Managed by Pulumi",
+ *     folder: "All",
+ *     tag: 100,
+ *     parentInterface: "$scm_parent_dhcp_interface",
+ *     dhcpClient: {
+ *         enable: true,
+ *         createDefaultRoute: true,
+ *         defaultRouteMetric: 20,
+ *         sendHostname: {
+ *             enable: true,
+ *             hostname: "client-vlan50-host",
+ *         },
+ *     },
+ * }, {
+ *     dependsOn: [scmParentDhcpInterface],
+ * });
+ * ```
  */
 export class Layer3Subinterface extends pulumi.CustomResource {
     /**
@@ -48,15 +107,15 @@ export class Layer3Subinterface extends pulumi.CustomResource {
     /**
      * Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
      */
-    declare public readonly ddnsConfig: pulumi.Output<outputs.Layer3SubinterfaceDdnsConfig | undefined>;
+    declare public readonly ddnsConfig: pulumi.Output<outputs.Layer3SubinterfaceDdnsConfig>;
     /**
      * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * Dhcp client
+     * Layer3 sub interfaces DHCP Client Object
      */
-    declare public readonly dhcpClient: pulumi.Output<outputs.Layer3SubinterfaceDhcpClient | undefined>;
+    declare public readonly dhcpClient: pulumi.Output<outputs.Layer3SubinterfaceDhcpClient>;
     /**
      * The folder in which the resource is defined
      */
@@ -66,9 +125,9 @@ export class Layer3Subinterface extends pulumi.CustomResource {
      */
     declare public readonly interfaceManagementProfile: pulumi.Output<string | undefined>;
     /**
-     * Ip
+     * L3 sub-interface IP Parent
      */
-    declare public readonly ips: pulumi.Output<string[] | undefined>;
+    declare public readonly ips: pulumi.Output<outputs.Layer3SubinterfaceIp[] | undefined>;
     /**
      * MTU
      */
@@ -161,7 +220,7 @@ export interface Layer3SubinterfaceState {
      */
     device?: pulumi.Input<string>;
     /**
-     * Dhcp client
+     * Layer3 sub interfaces DHCP Client Object
      */
     dhcpClient?: pulumi.Input<inputs.Layer3SubinterfaceDhcpClient>;
     /**
@@ -173,9 +232,9 @@ export interface Layer3SubinterfaceState {
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
-     * Ip
+     * L3 sub-interface IP Parent
      */
-    ips?: pulumi.Input<pulumi.Input<string>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceIp>[]>;
     /**
      * MTU
      */
@@ -220,7 +279,7 @@ export interface Layer3SubinterfaceArgs {
      */
     device?: pulumi.Input<string>;
     /**
-     * Dhcp client
+     * Layer3 sub interfaces DHCP Client Object
      */
     dhcpClient?: pulumi.Input<inputs.Layer3SubinterfaceDhcpClient>;
     /**
@@ -232,9 +291,9 @@ export interface Layer3SubinterfaceArgs {
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
-     * Ip
+     * L3 sub-interface IP Parent
      */
-    ips?: pulumi.Input<pulumi.Input<string>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.Layer3SubinterfaceIp>[]>;
     /**
      * MTU
      */

@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapSetArgs extends com.p
     public static final BgpRouteMapRedistributionOspfRibRouteMapSetArgs Empty = new BgpRouteMapRedistributionOspfRibRouteMapSetArgs();
 
     /**
-     * Source address
+     * OSPF RIB Route maps set Source address
      * 
      */
     @Import(name="sourceAddress")
     private @Nullable Output<String> sourceAddress;
 
     /**
-     * @return Source address
+     * @return OSPF RIB Route maps set Source address
      * 
      */
     public Optional<Output<String>> sourceAddress() {
@@ -55,7 +55,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param sourceAddress Source address
+         * @param sourceAddress OSPF RIB Route maps set Source address
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param sourceAddress Source address
+         * @param sourceAddress OSPF RIB Route maps set Source address
          * 
          * @return builder
          * 

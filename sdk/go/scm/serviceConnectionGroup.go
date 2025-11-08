@@ -15,6 +15,152 @@ import (
 // ServiceConnectionGroup resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			cfg := config.New(ctx, "")
+//			// The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+//			folderScope := "Service Connections"
+//			if param := cfg.Get("folderScope"); param != "" {
+//				folderScope = param
+//			}
+//			// # 1. IKE Crypto Profile (IKE Phase 1)
+//			example, err := scm.NewIkeCryptoProfile(ctx, "example", &scm.IkeCryptoProfileArgs{
+//				Name:   pulumi.String("example-ike-crypto_sc_grp"),
+//				Folder: pulumi.String(folderScope),
+//				Hashes: pulumi.StringArray{
+//					pulumi.String("sha256"),
+//				},
+//				DhGroups: pulumi.StringArray{
+//					pulumi.String("group14"),
+//				},
+//				Encryptions: pulumi.StringArray{
+//					pulumi.String("aes-256-cbc"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// # 2. IPsec Crypto Profile (IKE Phase 2)
+//			exampleIpsecCryptoProfile, err := scm.NewIpsecCryptoProfile(ctx, "example", &scm.IpsecCryptoProfileArgs{
+//				Name:   pulumi.String("panw-IPSec-Crypto_sc_grp"),
+//				Folder: pulumi.String(folderScope),
+//				Esp: &scm.IpsecCryptoProfileEspArgs{
+//					Encryptions: pulumi.StringArray{
+//						pulumi.String("aes-256-gcm"),
+//					},
+//					Authentications: pulumi.StringArray{
+//						pulumi.String("sha256"),
+//					},
+//				},
+//				DhGroup: pulumi.String("group14"),
+//				Lifetime: &scm.IpsecCryptoProfileLifetimeArgs{
+//					Hours: pulumi.Int(8),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// # 3. IKE Gateway
+//			exampleIkeGateway, err := scm.NewIkeGateway(ctx, "example", &scm.IkeGatewayArgs{
+//				Name:   pulumi.String("example-gateway_sc_grp"),
+//				Folder: pulumi.String(folderScope),
+//				PeerAddress: &scm.IkeGatewayPeerAddressArgs{
+//					Ip: pulumi.String("1.1.1.1"),
+//				},
+//				Authentication: &scm.IkeGatewayAuthenticationArgs{
+//					PreSharedKey: &scm.IkeGatewayAuthenticationPreSharedKeyArgs{
+//						Key: pulumi.String("secret"),
+//					},
+//				},
+//				Protocol: &scm.IkeGatewayProtocolArgs{
+//					Ikev1: &scm.IkeGatewayProtocolIkev1Args{
+//						IkeCryptoProfile: example.Name,
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// # 4. IPsec Tunnel
+//			exampleIpsecTunnel, err := scm.NewIpsecTunnel(ctx, "example", &scm.IpsecTunnelArgs{
+//				Name:                   pulumi.String("example-tunnel_sc_grp"),
+//				Folder:                 pulumi.String(folderScope),
+//				TunnelInterface:        pulumi.String("tunnel"),
+//				AntiReplay:             pulumi.Bool(true),
+//				CopyTos:                pulumi.Bool(false),
+//				EnableGreEncapsulation: pulumi.Bool(false),
+//				AutoKey: &scm.IpsecTunnelAutoKeyArgs{
+//					IkeGateways: scm.IpsecTunnelAutoKeyIkeGatewayArray{
+//						&scm.IpsecTunnelAutoKeyIkeGatewayArgs{
+//							Name: exampleIkeGateway.Name,
+//						},
+//					},
+//					IpsecCryptoProfile: exampleIpsecCryptoProfile.Name,
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				exampleIkeGateway,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			// # 5. Service Connection (The target for the group)
+//			siteAVpnSc, err := scm.NewServiceConnection(ctx, "site_a_vpn_sc", &scm.ServiceConnectionArgs{
+//				Name:        pulumi.String("creating_a_service_connection_sc_grp"),
+//				Region:      pulumi.String("us-west-1a"),
+//				IpsecTunnel: exampleIpsecTunnel.Name,
+//				Subnets: pulumi.StringArray{
+//					pulumi.String("10.1.0.0/16"),
+//					pulumi.String("172.16.0.0/24"),
+//				},
+//				SourceNat: pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// # 5. Service Connection (The target for the group)
+//			siteAVpnSc2, err := scm.NewServiceConnection(ctx, "site_a_vpn_sc_2", &scm.ServiceConnectionArgs{
+//				Name:        pulumi.String("creating_a_service_connection_sc_grp_2"),
+//				Region:      pulumi.String("us-west-1a"),
+//				IpsecTunnel: exampleIpsecTunnel.Name,
+//				Subnets: pulumi.StringArray{
+//					pulumi.String("10.1.0.0/16"),
+//					pulumi.String("172.16.0.0/24"),
+//				},
+//				SourceNat: pulumi.Bool(true),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// # 6. Service Connection Group (Groups the Service Connection created above)
+//			_, err = scm.NewServiceConnectionGroup(ctx, "example_group", &scm.ServiceConnectionGroupArgs{
+//				Name: pulumi.String("service-connection-group-app_sc_grp"),
+//				Targets: pulumi.StringArray{
+//					siteAVpnSc.Name,
+//					siteAVpnSc2.Name,
+//				},
+//				DisableSnat: pulumi.Bool(true),
+//				PbfOnly:     pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type ServiceConnectionGroup struct {
 	pulumi.CustomResourceState
 

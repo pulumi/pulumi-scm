@@ -10,7 +10,7 @@ import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileIpv4Ipv4MulticastAllowas
 import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileIpv4Ipv4MulticastMaximumPrefix;
 import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileIpv4Ipv4MulticastNextHop;
 import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileIpv4Ipv4MulticastOrf;
-import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS;
+import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs;
 import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunity;
 import java.lang.Boolean;
 import java.lang.String;
@@ -67,7 +67,7 @@ public final class GetBgpAddressFamilyProfileIpv4Ipv4Multicast {
      * @return Remove private a s
      * 
      */
-    private GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS removePrivateAS;
+    private GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs removePrivateAs;
     /**
      * @return Route reflector client?
      * 
@@ -152,8 +152,8 @@ public final class GetBgpAddressFamilyProfileIpv4Ipv4Multicast {
      * @return Remove private a s
      * 
      */
-    public GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS removePrivateAS() {
-        return this.removePrivateAS;
+    public GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs removePrivateAs() {
+        return this.removePrivateAs;
     }
     /**
      * @return Route reflector client?
@@ -195,7 +195,7 @@ public final class GetBgpAddressFamilyProfileIpv4Ipv4Multicast {
         private GetBgpAddressFamilyProfileIpv4Ipv4MulticastMaximumPrefix maximumPrefix;
         private GetBgpAddressFamilyProfileIpv4Ipv4MulticastNextHop nextHop;
         private GetBgpAddressFamilyProfileIpv4Ipv4MulticastOrf orf;
-        private GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS removePrivateAS;
+        private GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs removePrivateAs;
         private Boolean routeReflectorClient;
         private GetBgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunity sendCommunity;
         private Boolean softReconfigWithStoredInfo;
@@ -211,7 +211,7 @@ public final class GetBgpAddressFamilyProfileIpv4Ipv4Multicast {
     	      this.maximumPrefix = defaults.maximumPrefix;
     	      this.nextHop = defaults.nextHop;
     	      this.orf = defaults.orf;
-    	      this.removePrivateAS = defaults.removePrivateAS;
+    	      this.removePrivateAs = defaults.removePrivateAs;
     	      this.routeReflectorClient = defaults.routeReflectorClient;
     	      this.sendCommunity = defaults.sendCommunity;
     	      this.softReconfigWithStoredInfo = defaults.softReconfigWithStoredInfo;
@@ -290,11 +290,11 @@ public final class GetBgpAddressFamilyProfileIpv4Ipv4Multicast {
             return this;
         }
         @CustomType.Setter
-        public Builder removePrivateAS(GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS removePrivateAS) {
-            if (removePrivateAS == null) {
-              throw new MissingRequiredPropertyException("GetBgpAddressFamilyProfileIpv4Ipv4Multicast", "removePrivateAS");
+        public Builder removePrivateAs(GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs removePrivateAs) {
+            if (removePrivateAs == null) {
+              throw new MissingRequiredPropertyException("GetBgpAddressFamilyProfileIpv4Ipv4Multicast", "removePrivateAs");
             }
-            this.removePrivateAS = removePrivateAS;
+            this.removePrivateAs = removePrivateAs;
             return this;
         }
         @CustomType.Setter
@@ -332,7 +332,7 @@ public final class GetBgpAddressFamilyProfileIpv4Ipv4Multicast {
             _resultValue.maximumPrefix = maximumPrefix;
             _resultValue.nextHop = nextHop;
             _resultValue.orf = orf;
-            _resultValue.removePrivateAS = removePrivateAS;
+            _resultValue.removePrivateAs = removePrivateAs;
             _resultValue.routeReflectorClient = routeReflectorClient;
             _resultValue.sendCommunity = sendCommunity;
             _resultValue.softReconfigWithStoredInfo = softReconfigWithStoredInfo;

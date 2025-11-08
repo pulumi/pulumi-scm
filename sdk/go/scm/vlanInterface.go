@@ -12,6 +12,41 @@ import (
 )
 
 // VlanInterface resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates a vlan interface used as parent-interface for subsequent examples
+//			_, err := scm.NewVlanInterface(ctx, "scm_vlan_interface_ipv4", &scm.VlanInterfaceArgs{
+//				Name:    pulumi.String("$scm_vlan_interface_ipv4"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				VlanTag: pulumi.String("1234"),
+//				Ips: scm.VlanInterfaceIpArray{
+//					&scm.VlanInterfaceIpArgs{
+//						Name: pulumi.String("198.18.1.1/24"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type VlanInterface struct {
 	pulumi.CustomResourceState
 
@@ -20,28 +55,28 @@ type VlanInterface struct {
 	// Description
 	Comment pulumi.StringPtrOutput `pulumi:"comment"`
 	// Dynamic DNS configuration specific to the Vlan Interfaces.
-	DdnsConfig VlanInterfaceDdnsConfigPtrOutput `pulumi:"ddnsConfig"`
-	// Default value
+	DdnsConfig VlanInterfaceDdnsConfigOutput `pulumi:"ddnsConfig"`
+	// Default interface assignment
 	DefaultValue pulumi.StringPtrOutput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// Dhcp client
-	DhcpClient VlanInterfaceDhcpClientPtrOutput `pulumi:"dhcpClient"`
+	// Vlan interfaces DHCP Client Object
+	DhcpClient VlanInterfaceDhcpClientOutput `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrOutput `pulumi:"interfaceManagementProfile"`
-	// Ip
-	Ips pulumi.StringArrayOutput `pulumi:"ips"`
+	// VLAN Interface IP Parent
+	Ips VlanInterfaceIpArrayOutput `pulumi:"ips"`
 	// MTU
-	Mtu pulumi.Float64PtrOutput `pulumi:"mtu"`
+	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
-	// Vlan tag
-	VlanTag pulumi.Float64PtrOutput `pulumi:"vlanTag"`
+	// VLAN tag
+	VlanTag pulumi.StringPtrOutput `pulumi:"vlanTag"`
 }
 
 // NewVlanInterface registers a new resource with the given unique name, arguments, and options.
@@ -80,27 +115,27 @@ type vlanInterfaceState struct {
 	Comment *string `pulumi:"comment"`
 	// Dynamic DNS configuration specific to the Vlan Interfaces.
 	DdnsConfig *VlanInterfaceDdnsConfig `pulumi:"ddnsConfig"`
-	// Default value
+	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// Dhcp client
+	// Vlan interfaces DHCP Client Object
 	DhcpClient *VlanInterfaceDhcpClient `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
-	// Ip
-	Ips []string `pulumi:"ips"`
+	// VLAN Interface IP Parent
+	Ips []VlanInterfaceIp `pulumi:"ips"`
 	// MTU
-	Mtu *float64 `pulumi:"mtu"`
+	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
-	// Vlan tag
-	VlanTag *float64 `pulumi:"vlanTag"`
+	// VLAN tag
+	VlanTag *string `pulumi:"vlanTag"`
 }
 
 type VlanInterfaceState struct {
@@ -110,27 +145,27 @@ type VlanInterfaceState struct {
 	Comment pulumi.StringPtrInput
 	// Dynamic DNS configuration specific to the Vlan Interfaces.
 	DdnsConfig VlanInterfaceDdnsConfigPtrInput
-	// Default value
+	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// Dhcp client
+	// Vlan interfaces DHCP Client Object
 	DhcpClient VlanInterfaceDhcpClientPtrInput
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
-	// Ip
-	Ips pulumi.StringArrayInput
+	// VLAN Interface IP Parent
+	Ips VlanInterfaceIpArrayInput
 	// MTU
-	Mtu pulumi.Float64PtrInput
+	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
-	// Vlan tag
-	VlanTag pulumi.Float64PtrInput
+	// VLAN tag
+	VlanTag pulumi.StringPtrInput
 }
 
 func (VlanInterfaceState) ElementType() reflect.Type {
@@ -144,26 +179,26 @@ type vlanInterfaceArgs struct {
 	Comment *string `pulumi:"comment"`
 	// Dynamic DNS configuration specific to the Vlan Interfaces.
 	DdnsConfig *VlanInterfaceDdnsConfig `pulumi:"ddnsConfig"`
-	// Default value
+	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// Dhcp client
+	// Vlan interfaces DHCP Client Object
 	DhcpClient *VlanInterfaceDhcpClient `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
-	// Ip
-	Ips []string `pulumi:"ips"`
+	// VLAN Interface IP Parent
+	Ips []VlanInterfaceIp `pulumi:"ips"`
 	// MTU
-	Mtu *float64 `pulumi:"mtu"`
+	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// Vlan tag
-	VlanTag *float64 `pulumi:"vlanTag"`
+	// VLAN tag
+	VlanTag *string `pulumi:"vlanTag"`
 }
 
 // The set of arguments for constructing a VlanInterface resource.
@@ -174,26 +209,26 @@ type VlanInterfaceArgs struct {
 	Comment pulumi.StringPtrInput
 	// Dynamic DNS configuration specific to the Vlan Interfaces.
 	DdnsConfig VlanInterfaceDdnsConfigPtrInput
-	// Default value
+	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// Dhcp client
+	// Vlan interfaces DHCP Client Object
 	DhcpClient VlanInterfaceDhcpClientPtrInput
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
-	// Ip
-	Ips pulumi.StringArrayInput
+	// VLAN Interface IP Parent
+	Ips VlanInterfaceIpArrayInput
 	// MTU
-	Mtu pulumi.Float64PtrInput
+	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// Vlan tag
-	VlanTag pulumi.Float64PtrInput
+	// VLAN tag
+	VlanTag pulumi.StringPtrInput
 }
 
 func (VlanInterfaceArgs) ElementType() reflect.Type {
@@ -294,11 +329,11 @@ func (o VlanInterfaceOutput) Comment() pulumi.StringPtrOutput {
 }
 
 // Dynamic DNS configuration specific to the Vlan Interfaces.
-func (o VlanInterfaceOutput) DdnsConfig() VlanInterfaceDdnsConfigPtrOutput {
-	return o.ApplyT(func(v *VlanInterface) VlanInterfaceDdnsConfigPtrOutput { return v.DdnsConfig }).(VlanInterfaceDdnsConfigPtrOutput)
+func (o VlanInterfaceOutput) DdnsConfig() VlanInterfaceDdnsConfigOutput {
+	return o.ApplyT(func(v *VlanInterface) VlanInterfaceDdnsConfigOutput { return v.DdnsConfig }).(VlanInterfaceDdnsConfigOutput)
 }
 
-// Default value
+// Default interface assignment
 func (o VlanInterfaceOutput) DefaultValue() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VlanInterface) pulumi.StringPtrOutput { return v.DefaultValue }).(pulumi.StringPtrOutput)
 }
@@ -308,9 +343,9 @@ func (o VlanInterfaceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VlanInterface) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// Dhcp client
-func (o VlanInterfaceOutput) DhcpClient() VlanInterfaceDhcpClientPtrOutput {
-	return o.ApplyT(func(v *VlanInterface) VlanInterfaceDhcpClientPtrOutput { return v.DhcpClient }).(VlanInterfaceDhcpClientPtrOutput)
+// Vlan interfaces DHCP Client Object
+func (o VlanInterfaceOutput) DhcpClient() VlanInterfaceDhcpClientOutput {
+	return o.ApplyT(func(v *VlanInterface) VlanInterfaceDhcpClientOutput { return v.DhcpClient }).(VlanInterfaceDhcpClientOutput)
 }
 
 // The folder in which the resource is defined
@@ -323,14 +358,14 @@ func (o VlanInterfaceOutput) InterfaceManagementProfile() pulumi.StringPtrOutput
 	return o.ApplyT(func(v *VlanInterface) pulumi.StringPtrOutput { return v.InterfaceManagementProfile }).(pulumi.StringPtrOutput)
 }
 
-// Ip
-func (o VlanInterfaceOutput) Ips() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *VlanInterface) pulumi.StringArrayOutput { return v.Ips }).(pulumi.StringArrayOutput)
+// VLAN Interface IP Parent
+func (o VlanInterfaceOutput) Ips() VlanInterfaceIpArrayOutput {
+	return o.ApplyT(func(v *VlanInterface) VlanInterfaceIpArrayOutput { return v.Ips }).(VlanInterfaceIpArrayOutput)
 }
 
 // MTU
-func (o VlanInterfaceOutput) Mtu() pulumi.Float64PtrOutput {
-	return o.ApplyT(func(v *VlanInterface) pulumi.Float64PtrOutput { return v.Mtu }).(pulumi.Float64PtrOutput)
+func (o VlanInterfaceOutput) Mtu() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *VlanInterface) pulumi.IntPtrOutput { return v.Mtu }).(pulumi.IntPtrOutput)
 }
 
 // L3 sub-interface name
@@ -347,9 +382,9 @@ func (o VlanInterfaceOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *VlanInterface) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Vlan tag
-func (o VlanInterfaceOutput) VlanTag() pulumi.Float64PtrOutput {
-	return o.ApplyT(func(v *VlanInterface) pulumi.Float64PtrOutput { return v.VlanTag }).(pulumi.Float64PtrOutput)
+// VLAN tag
+func (o VlanInterfaceOutput) VlanTag() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *VlanInterface) pulumi.StringPtrOutput { return v.VlanTag }).(pulumi.StringPtrOutput)
 }
 
 type VlanInterfaceArrayOutput struct{ *pulumi.OutputState }

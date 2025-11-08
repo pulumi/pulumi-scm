@@ -35,14 +35,14 @@ public final class EthernetInterfaceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Default value
+     * Default interface assignment
      * 
      */
     @Import(name="defaultValue")
     private @Nullable Output<String> defaultValue;
 
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
     public Optional<Output<String>> defaultValue() {
@@ -95,14 +95,14 @@ public final class EthernetInterfaceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Layer3
+     * Ethernet Interface Layer 3 configuration
      * 
      */
     @Import(name="layer3")
     private @Nullable Output<EthernetInterfaceLayer3Args> layer3;
 
     /**
-     * @return Layer3
+     * @return Ethernet Interface Layer 3 configuration
      * 
      */
     public Optional<Output<EthernetInterfaceLayer3Args>> layer3() {
@@ -272,7 +272,7 @@ public final class EthernetInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param defaultValue Default value
+         * @param defaultValue Default interface assignment
          * 
          * @return builder
          * 
@@ -283,7 +283,7 @@ public final class EthernetInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param defaultValue Default value
+         * @param defaultValue Default interface assignment
          * 
          * @return builder
          * 
@@ -356,7 +356,7 @@ public final class EthernetInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param layer3 Layer3
+         * @param layer3 Ethernet Interface Layer 3 configuration
          * 
          * @return builder
          * 
@@ -367,7 +367,7 @@ public final class EthernetInterfaceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param layer3 Layer3
+         * @param layer3 Ethernet Interface Layer 3 configuration
          * 
          * @return builder
          * 

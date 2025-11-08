@@ -5,11 +5,9 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
-import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class LoopbackInterfaceIpArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,21 +18,21 @@ public final class LoopbackInterfaceIpArgs extends com.pulumi.resources.Resource
      * Loopback IP address(es)
      * 
      */
-    @Import(name="ips")
-    private @Nullable Output<List<String>> ips;
+    @Import(name="name", required=true)
+    private Output<String> name;
 
     /**
      * @return Loopback IP address(es)
      * 
      */
-    public Optional<Output<List<String>>> ips() {
-        return Optional.ofNullable(this.ips);
+    public Output<String> name() {
+        return this.name;
     }
 
     private LoopbackInterfaceIpArgs() {}
 
     private LoopbackInterfaceIpArgs(LoopbackInterfaceIpArgs $) {
-        this.ips = $.ips;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -56,37 +54,30 @@ public final class LoopbackInterfaceIpArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param ips Loopback IP address(es)
+         * @param name Loopback IP address(es)
          * 
          * @return builder
          * 
          */
-        public Builder ips(@Nullable Output<List<String>> ips) {
-            $.ips = ips;
+        public Builder name(Output<String> name) {
+            $.name = name;
             return this;
         }
 
         /**
-         * @param ips Loopback IP address(es)
+         * @param name Loopback IP address(es)
          * 
          * @return builder
          * 
          */
-        public Builder ips(List<String> ips) {
-            return ips(Output.of(ips));
-        }
-
-        /**
-         * @param ips Loopback IP address(es)
-         * 
-         * @return builder
-         * 
-         */
-        public Builder ips(String... ips) {
-            return ips(List.of(ips));
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public LoopbackInterfaceIpArgs build() {
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("LoopbackInterfaceIpArgs", "name");
+            }
             return $;
         }
     }

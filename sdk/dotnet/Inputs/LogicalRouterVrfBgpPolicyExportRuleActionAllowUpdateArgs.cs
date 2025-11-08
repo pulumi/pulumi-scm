@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         /// As path limit
         /// </summary>
         [Input("asPathLimit")]
-        public Input<double>? AsPathLimit { get; set; }
+        public Input<int>? AsPathLimit { get; set; }
 
         /// <summary>
         /// Community
@@ -40,13 +40,13 @@ namespace Pulumi.Scm.Inputs
         /// Local preference
         /// </summary>
         [Input("localPreference")]
-        public Input<double>? LocalPreference { get; set; }
+        public Input<int>? LocalPreference { get; set; }
 
         /// <summary>
         /// Med
         /// </summary>
         [Input("med")]
-        public Input<double>? Med { get; set; }
+        public Input<int>? Med { get; set; }
 
         /// <summary>
         /// Nexthop

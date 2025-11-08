@@ -161,6 +161,24 @@ def get_decryption_profile(id: Optional[_builtins.str] = None,
     """
     DecryptionProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM Decryption Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+    scm_dp_profile = scm.get_decryption_profile(id="c7629092-d286-400b-ba3f-1d57b8065645")
+    pulumi.export("scmDecryptionProfileDetails", {
+        "profileId": scm_dp_profile.id,
+        "folder": scm_dp_profile.folder,
+        "name": scm_dp_profile.name,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
@@ -187,6 +205,24 @@ def get_decryption_profile_output(id: Optional[pulumi.Input[_builtins.str]] = No
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDecryptionProfileResult]:
     """
     DecryptionProfile data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM Decryption Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+    scm_dp_profile = scm.get_decryption_profile(id="c7629092-d286-400b-ba3f-1d57b8065645")
+    pulumi.export("scmDecryptionProfileDetails", {
+        "profileId": scm_dp_profile.id,
+        "folder": scm_dp_profile.folder,
+        "name": scm_dp_profile.name,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

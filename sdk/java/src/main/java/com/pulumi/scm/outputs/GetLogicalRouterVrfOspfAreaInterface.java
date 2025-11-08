@@ -9,7 +9,7 @@ import com.pulumi.scm.outputs.GetLogicalRouterVrfOspfAreaInterfaceBfd;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfOspfAreaInterfaceLinkType;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfOspfAreaInterfaceVrTiming;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -39,7 +39,7 @@ public final class GetLogicalRouterVrfOspfAreaInterface {
      * @return Metric
      * 
      */
-    private Double metric;
+    private Integer metric;
     /**
      * @return Mtu ignore
      * 
@@ -59,7 +59,7 @@ public final class GetLogicalRouterVrfOspfAreaInterface {
      * @return Priority
      * 
      */
-    private Double priority;
+    private Integer priority;
     /**
      * @return Timing
      * 
@@ -104,7 +104,7 @@ public final class GetLogicalRouterVrfOspfAreaInterface {
      * @return Metric
      * 
      */
-    public Double metric() {
+    public Integer metric() {
         return this.metric;
     }
     /**
@@ -132,7 +132,7 @@ public final class GetLogicalRouterVrfOspfAreaInterface {
      * @return Priority
      * 
      */
-    public Double priority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
@@ -163,11 +163,11 @@ public final class GetLogicalRouterVrfOspfAreaInterface {
         private GetLogicalRouterVrfOspfAreaInterfaceBfd bfd;
         private Boolean enable;
         private GetLogicalRouterVrfOspfAreaInterfaceLinkType linkType;
-        private Double metric;
+        private Integer metric;
         private Boolean mtuIgnore;
         private String name;
         private Boolean passive;
-        private Double priority;
+        private Integer priority;
         private String timing;
         private GetLogicalRouterVrfOspfAreaInterfaceVrTiming vrTiming;
         public Builder() {}
@@ -219,7 +219,7 @@ public final class GetLogicalRouterVrfOspfAreaInterface {
             return this;
         }
         @CustomType.Setter
-        public Builder metric(Double metric) {
+        public Builder metric(Integer metric) {
             if (metric == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfAreaInterface", "metric");
             }
@@ -251,7 +251,7 @@ public final class GetLogicalRouterVrfOspfAreaInterface {
             return this;
         }
         @CustomType.Setter
-        public Builder priority(Double priority) {
+        public Builder priority(Integer priority) {
             if (priority == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfAreaInterface", "priority");
             }

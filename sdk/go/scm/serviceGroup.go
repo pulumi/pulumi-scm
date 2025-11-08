@@ -61,7 +61,7 @@ import (
 //			}
 //			// Service Group containing multiple services
 //			scmServicegroup, err := scm.NewServiceGroup(ctx, "scm_servicegroup", &scm.ServiceGroupArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("All"),
 //				Name:   pulumi.String("scm_servicegroup"),
 //				Members: pulumi.StringArray{
 //					scmServiceTcpPorts.Name,
@@ -73,7 +73,7 @@ import (
 //			}
 //			// Service Group containing multiple services and another servicegroup
 //			_, err = scm.NewServiceGroup(ctx, "scm_servicegroup_nested", &scm.ServiceGroupArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("All"),
 //				Name:   pulumi.String("scm_servicegroup_nested"),
 //				Members: pulumi.StringArray{
 //					scmServiceTcpPorts.Name,

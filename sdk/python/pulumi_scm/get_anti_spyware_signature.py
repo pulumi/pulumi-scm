@@ -67,8 +67,8 @@ class GetAntiSpywareSignatureResult:
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
-        if threat_id and not isinstance(threat_id, int):
-            raise TypeError("Expected argument 'threat_id' to be a int")
+        if threat_id and not isinstance(threat_id, str):
+            raise TypeError("Expected argument 'threat_id' to be a str")
         pulumi.set(__self__, "threat_id", threat_id)
         if threatname and not isinstance(threatname, str):
             raise TypeError("Expected argument 'threatname' to be a str")
@@ -180,7 +180,7 @@ class GetAntiSpywareSignatureResult:
 
     @_builtins.property
     @pulumi.getter(name="threatId")
-    def threat_id(self) -> _builtins.int:
+    def threat_id(self) -> _builtins.str:
         """
         threat id range \\n\\n and \\n\\n
         """

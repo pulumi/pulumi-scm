@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// This file is embedded using go:embed
 //			scmAddrTag1, err := scm.NewTag(ctx, "scm_addr_tag_1", &scm.TagArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("All"),
 //				Name:   pulumi.String("scm_addr_tag_1"),
 //				Color:  pulumi.String("Red"),
 //			})
@@ -37,7 +37,7 @@ import (
 //				return err
 //			}
 //			scmAddrTag2, err := scm.NewTag(ctx, "scm_addr_tag_2", &scm.TagArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("All"),
 //				Name:   pulumi.String("scm_addr_tag_2"),
 //				Color:  pulumi.String("Blue"),
 //			})
@@ -45,7 +45,7 @@ import (
 //				return err
 //			}
 //			scmAddrTag3, err := scm.NewTag(ctx, "scm_addr_tag_3", &scm.TagArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("All"),
 //				Name:   pulumi.String("scm_addr_tag_3"),
 //				Color:  pulumi.String("Orange"),
 //			})

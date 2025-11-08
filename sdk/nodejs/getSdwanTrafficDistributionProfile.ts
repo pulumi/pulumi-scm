@@ -48,7 +48,7 @@ export interface GetSdwanTrafficDistributionProfileResult {
      */
     readonly id: string;
     /**
-     * Link tags
+     * Link-Tags for interfaces identified by defined tags
      */
     readonly linkTags: outputs.GetSdwanTrafficDistributionProfileLinkTag[];
     /**

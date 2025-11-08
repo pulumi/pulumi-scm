@@ -8,6 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * DnsSecurityProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM DNS Security Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM DNS Profile you want to find.
+ * const scmDnsProfile = scm.getDnsSecurityProfile({
+ *     id: "18607c90-22fa-4627-8741-f0584d1fa7d6",
+ * });
+ * export const scmDnsSecurityProfileDetails = {
+ *     profileId: scmDnsProfile.then(scmDnsProfile => scmDnsProfile.id),
+ *     folder: scmDnsProfile.then(scmDnsProfile => scmDnsProfile.folder),
+ *     name: scmDnsProfile.then(scmDnsProfile => scmDnsProfile.name),
+ * };
+ * ```
  */
 export function getDnsSecurityProfile(args: GetDnsSecurityProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetDnsSecurityProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -67,6 +87,26 @@ export interface GetDnsSecurityProfileResult {
 }
 /**
  * DnsSecurityProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM DNS Security Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM DNS Profile you want to find.
+ * const scmDnsProfile = scm.getDnsSecurityProfile({
+ *     id: "18607c90-22fa-4627-8741-f0584d1fa7d6",
+ * });
+ * export const scmDnsSecurityProfileDetails = {
+ *     profileId: scmDnsProfile.then(scmDnsProfile => scmDnsProfile.id),
+ *     folder: scmDnsProfile.then(scmDnsProfile => scmDnsProfile.folder),
+ *     name: scmDnsProfile.then(scmDnsProfile => scmDnsProfile.name),
+ * };
+ * ```
  */
 export function getDnsSecurityProfileOutput(args: GetDnsSecurityProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDnsSecurityProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

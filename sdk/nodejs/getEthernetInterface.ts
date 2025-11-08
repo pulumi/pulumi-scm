@@ -8,6 +8,25 @@ import * as utilities from "./utilities";
 
 /**
  * EthernetInterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up ethernet interface by its ID.
+ * const scmL3IntfStaticDs = scm.getEthernetInterface({
+ *     id: "ddad1e64-0b64-41a4-b361-c6199769a8f2",
+ * });
+ * export const ethernetInterfaceDataSourceResults = {
+ *     id: scmL3IntfStaticDs.then(scmL3IntfStaticDs => scmL3IntfStaticDs.id),
+ *     name: scmL3IntfStaticDs.then(scmL3IntfStaticDs => scmL3IntfStaticDs.name),
+ *     comment: scmL3IntfStaticDs.then(scmL3IntfStaticDs => scmL3IntfStaticDs.comment),
+ *     layer3: scmL3IntfStaticDs.then(scmL3IntfStaticDs => scmL3IntfStaticDs.layer3),
+ *     folder: scmL3IntfStaticDs.then(scmL3IntfStaticDs => scmL3IntfStaticDs.folder),
+ * };
+ * ```
  */
 export function getEthernetInterface(args: GetEthernetInterfaceArgs, opts?: pulumi.InvokeOptions): Promise<GetEthernetInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -40,7 +59,7 @@ export interface GetEthernetInterfaceResult {
      */
     readonly comment: string;
     /**
-     * Default value
+     * Default interface assignment
      */
     readonly defaultValue: string;
     /**
@@ -64,7 +83,7 @@ export interface GetEthernetInterfaceResult {
      */
     readonly layer2: outputs.GetEthernetInterfaceLayer2;
     /**
-     * Layer3
+     * Ethernet Interface Layer 3 configuration
      */
     readonly layer3: outputs.GetEthernetInterfaceLayer3;
     /**
@@ -99,6 +118,25 @@ export interface GetEthernetInterfaceResult {
 }
 /**
  * EthernetInterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up ethernet interface by its ID.
+ * const scmL3IntfStaticDs = scm.getEthernetInterface({
+ *     id: "ddad1e64-0b64-41a4-b361-c6199769a8f2",
+ * });
+ * export const ethernetInterfaceDataSourceResults = {
+ *     id: scmL3IntfStaticDs.then(scmL3IntfStaticDs => scmL3IntfStaticDs.id),
+ *     name: scmL3IntfStaticDs.then(scmL3IntfStaticDs => scmL3IntfStaticDs.name),
+ *     comment: scmL3IntfStaticDs.then(scmL3IntfStaticDs => scmL3IntfStaticDs.comment),
+ *     layer3: scmL3IntfStaticDs.then(scmL3IntfStaticDs => scmL3IntfStaticDs.layer3),
+ *     folder: scmL3IntfStaticDs.then(scmL3IntfStaticDs => scmL3IntfStaticDs.folder),
+ * };
+ * ```
  */
 export function getEthernetInterfaceOutput(args: GetEthernetInterfaceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetEthernetInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

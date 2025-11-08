@@ -6,7 +6,6 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -77,12 +76,22 @@ public final class GetAppOverrideRuleListData {
      * @return Port
      * 
      */
-    private Integer port;
+    private String port;
+    /**
+     * @return The position of a security rule
+     * 
+     */
+    private String position;
     /**
      * @return Protocol
      * 
      */
     private String protocol;
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    private String relativePosition;
     /**
      * @return The snippet in which the resource is defined
      * 
@@ -98,6 +107,11 @@ public final class GetAppOverrideRuleListData {
      * 
      */
     private List<String> tags;
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    private String targetRule;
     private String tfid;
     /**
      * @return To
@@ -194,8 +208,15 @@ public final class GetAppOverrideRuleListData {
      * @return Port
      * 
      */
-    public Integer port() {
+    public String port() {
         return this.port;
+    }
+    /**
+     * @return The position of a security rule
+     * 
+     */
+    public String position() {
+        return this.position;
     }
     /**
      * @return Protocol
@@ -203,6 +224,13 @@ public final class GetAppOverrideRuleListData {
      */
     public String protocol() {
         return this.protocol;
+    }
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public String relativePosition() {
+        return this.relativePosition;
     }
     /**
      * @return The snippet in which the resource is defined
@@ -224,6 +252,13 @@ public final class GetAppOverrideRuleListData {
      */
     public List<String> tags() {
         return this.tags;
+    }
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public String targetRule() {
+        return this.targetRule;
     }
     public String tfid() {
         return this.tfid;
@@ -257,11 +292,14 @@ public final class GetAppOverrideRuleListData {
         private String name;
         private Boolean negateDestination;
         private Boolean negateSource;
-        private Integer port;
+        private String port;
+        private String position;
         private String protocol;
+        private String relativePosition;
         private String snippet;
         private List<String> sources;
         private List<String> tags;
+        private String targetRule;
         private String tfid;
         private List<String> tos;
         public Builder() {}
@@ -280,10 +318,13 @@ public final class GetAppOverrideRuleListData {
     	      this.negateDestination = defaults.negateDestination;
     	      this.negateSource = defaults.negateSource;
     	      this.port = defaults.port;
+    	      this.position = defaults.position;
     	      this.protocol = defaults.protocol;
+    	      this.relativePosition = defaults.relativePosition;
     	      this.snippet = defaults.snippet;
     	      this.sources = defaults.sources;
     	      this.tags = defaults.tags;
+    	      this.targetRule = defaults.targetRule;
     	      this.tfid = defaults.tfid;
     	      this.tos = defaults.tos;
         }
@@ -391,11 +432,19 @@ public final class GetAppOverrideRuleListData {
             return this;
         }
         @CustomType.Setter
-        public Builder port(Integer port) {
+        public Builder port(String port) {
             if (port == null) {
               throw new MissingRequiredPropertyException("GetAppOverrideRuleListData", "port");
             }
             this.port = port;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder position(String position) {
+            if (position == null) {
+              throw new MissingRequiredPropertyException("GetAppOverrideRuleListData", "position");
+            }
+            this.position = position;
             return this;
         }
         @CustomType.Setter
@@ -404,6 +453,14 @@ public final class GetAppOverrideRuleListData {
               throw new MissingRequiredPropertyException("GetAppOverrideRuleListData", "protocol");
             }
             this.protocol = protocol;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder relativePosition(String relativePosition) {
+            if (relativePosition == null) {
+              throw new MissingRequiredPropertyException("GetAppOverrideRuleListData", "relativePosition");
+            }
+            this.relativePosition = relativePosition;
             return this;
         }
         @CustomType.Setter
@@ -435,6 +492,14 @@ public final class GetAppOverrideRuleListData {
         }
         public Builder tags(String... tags) {
             return tags(List.of(tags));
+        }
+        @CustomType.Setter
+        public Builder targetRule(String targetRule) {
+            if (targetRule == null) {
+              throw new MissingRequiredPropertyException("GetAppOverrideRuleListData", "targetRule");
+            }
+            this.targetRule = targetRule;
+            return this;
         }
         @CustomType.Setter
         public Builder tfid(String tfid) {
@@ -470,10 +535,13 @@ public final class GetAppOverrideRuleListData {
             _resultValue.negateDestination = negateDestination;
             _resultValue.negateSource = negateSource;
             _resultValue.port = port;
+            _resultValue.position = position;
             _resultValue.protocol = protocol;
+            _resultValue.relativePosition = relativePosition;
             _resultValue.snippet = snippet;
             _resultValue.sources = sources;
             _resultValue.tags = tags;
+            _resultValue.targetRule = targetRule;
             _resultValue.tfid = tfid;
             _resultValue.tos = tos;
             return _resultValue;

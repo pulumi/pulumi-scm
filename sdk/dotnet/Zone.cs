@@ -11,6 +11,114 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Zone resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     //
+    ///     // Creates an empty layer3 zone
+    ///     //
+    ///     var scmLayer3Zone = new Scm.Zone("scm_layer3_zone", new()
+    ///     {
+    ///         Name = "scm_layer3_zone",
+    ///         Folder = "ngfw-shared",
+    ///         Network = new Scm.Inputs.ZoneNetworkArgs
+    ///         {
+    ///             Layer3s = new() { },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates an empty layer2 zone
+    ///     //
+    ///     var scmLayer2Zone = new Scm.Zone("scm_layer2_zone", new()
+    ///     {
+    ///         Name = "scm_layer2_zone",
+    ///         Folder = "ngfw-shared",
+    ///         Network = new Scm.Inputs.ZoneNetworkArgs
+    ///         {
+    ///             Layer2s = new() { },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates an empty tap zone
+    ///     //
+    ///     var scmTapZone = new Scm.Zone("scm_tap_zone", new()
+    ///     {
+    ///         Name = "scm_tap_zone",
+    ///         Folder = "ngfw-shared",
+    ///         Network = new Scm.Inputs.ZoneNetworkArgs
+    ///         {
+    ///             Taps = new() { },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates an empty vwire zone
+    ///     //
+    ///     var scmVwireZone = new Scm.Zone("scm_vwire_zone", new()
+    ///     {
+    ///         Name = "scm_vwire_zone",
+    ///         Folder = "ngfw-shared",
+    ///         Network = new Scm.Inputs.ZoneNetworkArgs
+    ///         {
+    ///             VirtualWires = new() { },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 zone
+    ///     // Requires Interface $scm_l3_interface to exist
+    ///     //
+    ///     var scmLayer3ZoneComplex = new Scm.Zone("scm_layer3_zone_complex", new()
+    ///     {
+    ///         Name = "scm_layer3_zone_complex",
+    ///         Folder = "ngfw-shared",
+    ///         Network = new Scm.Inputs.ZoneNetworkArgs
+    ///         {
+    ///             Layer3s = new[]
+    ///             {
+    ///                 "$scm_l3_interface",
+    ///             },
+    ///             ZoneProtectionProfile = "best-practice",
+    ///             EnablePacketBufferProtection = true,
+    ///         },
+    ///         EnableDeviceIdentification = true,
+    ///         DeviceAcl = new Scm.Inputs.ZoneDeviceAclArgs
+    ///         {
+    ///             IncludeLists = new[]
+    ///             {
+    ///                 "198.18.1.0/24",
+    ///             },
+    ///             ExcludeLists = new[]
+    ///             {
+    ///                 "198.18.2.0/24",
+    ///             },
+    ///         },
+    ///         EnableUserIdentification = true,
+    ///         UserAcl = new Scm.Inputs.ZoneUserAclArgs
+    ///         {
+    ///             IncludeLists = new[]
+    ///             {
+    ///                 "198.18.3.0/24",
+    ///             },
+    ///             ExcludeLists = new[]
+    ///             {
+    ///                 "198.18.4.0/24",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/zone:Zone")]
     public partial class Zone : global::Pulumi.CustomResource

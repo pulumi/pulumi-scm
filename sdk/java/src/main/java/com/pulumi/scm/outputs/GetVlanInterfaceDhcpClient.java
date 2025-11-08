@@ -13,17 +13,17 @@ import java.util.Objects;
 @CustomType
 public final class GetVlanInterfaceDhcpClient {
     /**
-     * @return Create default route
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
     private Boolean createDefaultRoute;
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     private Integer defaultRouteMetric;
     /**
-     * @return Enable
+     * @return Enable DHCP?
      * 
      */
     private Boolean enable;
@@ -35,21 +35,21 @@ public final class GetVlanInterfaceDhcpClient {
 
     private GetVlanInterfaceDhcpClient() {}
     /**
-     * @return Create default route
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
     public Boolean createDefaultRoute() {
         return this.createDefaultRoute;
     }
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     public Integer defaultRouteMetric() {
         return this.defaultRouteMetric;
     }
     /**
-     * @return Enable
+     * @return Enable DHCP?
      * 
      */
     public Boolean enable() {

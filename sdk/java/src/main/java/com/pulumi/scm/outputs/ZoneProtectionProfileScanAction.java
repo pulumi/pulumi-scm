@@ -4,8 +4,10 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Integer;
-import java.lang.String;
+import com.pulumi.scm.outputs.ZoneProtectionProfileScanActionAlert;
+import com.pulumi.scm.outputs.ZoneProtectionProfileScanActionAllow;
+import com.pulumi.scm.outputs.ZoneProtectionProfileScanActionBlock;
+import com.pulumi.scm.outputs.ZoneProtectionProfileScanActionBlockIp;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -13,30 +15,54 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ZoneProtectionProfileScanAction {
     /**
-     * @return Duration
+     * @return Alert
      * 
      */
-    private @Nullable Integer duration;
+    private @Nullable ZoneProtectionProfileScanActionAlert alert;
     /**
-     * @return Track by
+     * @return Allow
      * 
      */
-    private @Nullable String trackBy;
+    private @Nullable ZoneProtectionProfileScanActionAllow allow;
+    /**
+     * @return Block
+     * 
+     */
+    private @Nullable ZoneProtectionProfileScanActionBlock block;
+    /**
+     * @return Block ip
+     * 
+     */
+    private @Nullable ZoneProtectionProfileScanActionBlockIp blockIp;
 
     private ZoneProtectionProfileScanAction() {}
     /**
-     * @return Duration
+     * @return Alert
      * 
      */
-    public Optional<Integer> duration() {
-        return Optional.ofNullable(this.duration);
+    public Optional<ZoneProtectionProfileScanActionAlert> alert() {
+        return Optional.ofNullable(this.alert);
     }
     /**
-     * @return Track by
+     * @return Allow
      * 
      */
-    public Optional<String> trackBy() {
-        return Optional.ofNullable(this.trackBy);
+    public Optional<ZoneProtectionProfileScanActionAllow> allow() {
+        return Optional.ofNullable(this.allow);
+    }
+    /**
+     * @return Block
+     * 
+     */
+    public Optional<ZoneProtectionProfileScanActionBlock> block() {
+        return Optional.ofNullable(this.block);
+    }
+    /**
+     * @return Block ip
+     * 
+     */
+    public Optional<ZoneProtectionProfileScanActionBlockIp> blockIp() {
+        return Optional.ofNullable(this.blockIp);
     }
 
     public static Builder builder() {
@@ -48,31 +74,49 @@ public final class ZoneProtectionProfileScanAction {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Integer duration;
-        private @Nullable String trackBy;
+        private @Nullable ZoneProtectionProfileScanActionAlert alert;
+        private @Nullable ZoneProtectionProfileScanActionAllow allow;
+        private @Nullable ZoneProtectionProfileScanActionBlock block;
+        private @Nullable ZoneProtectionProfileScanActionBlockIp blockIp;
         public Builder() {}
         public Builder(ZoneProtectionProfileScanAction defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.trackBy = defaults.trackBy;
+    	      this.alert = defaults.alert;
+    	      this.allow = defaults.allow;
+    	      this.block = defaults.block;
+    	      this.blockIp = defaults.blockIp;
         }
 
         @CustomType.Setter
-        public Builder duration(@Nullable Integer duration) {
+        public Builder alert(@Nullable ZoneProtectionProfileScanActionAlert alert) {
 
-            this.duration = duration;
+            this.alert = alert;
             return this;
         }
         @CustomType.Setter
-        public Builder trackBy(@Nullable String trackBy) {
+        public Builder allow(@Nullable ZoneProtectionProfileScanActionAllow allow) {
 
-            this.trackBy = trackBy;
+            this.allow = allow;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder block(@Nullable ZoneProtectionProfileScanActionBlock block) {
+
+            this.block = block;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder blockIp(@Nullable ZoneProtectionProfileScanActionBlockIp blockIp) {
+
+            this.blockIp = blockIp;
             return this;
         }
         public ZoneProtectionProfileScanAction build() {
             final var _resultValue = new ZoneProtectionProfileScanAction();
-            _resultValue.duration = duration;
-            _resultValue.trackBy = trackBy;
+            _resultValue.alert = alert;
+            _resultValue.allow = allow;
+            _resultValue.block = block;
+            _resultValue.blockIp = blockIp;
             return _resultValue;
         }
     }

@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfArgs extends com.
     public static final BgpRouteMapRedistributionConnectedStaticOspfArgs Empty = new BgpRouteMapRedistributionConnectedStaticOspfArgs();
 
     /**
-     * Route maps
+     * Connected Static  BGP OSPF Route maps
      * 
      */
     @Import(name="routeMaps")
     private @Nullable Output<List<BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs>> routeMaps;
 
     /**
-     * @return Route maps
+     * @return Connected Static  BGP OSPF Route maps
      * 
      */
     public Optional<Output<List<BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs>>> routeMaps() {
@@ -56,7 +56,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfArgs extends com.
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps Connected Static  BGP OSPF Route maps
          * 
          * @return builder
          * 
@@ -67,7 +67,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfArgs extends com.
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps Connected Static  BGP OSPF Route maps
          * 
          * @return builder
          * 
@@ -77,7 +77,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfArgs extends com.
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps Connected Static  BGP OSPF Route maps
          * 
          * @return builder
          * 

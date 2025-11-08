@@ -4,6 +4,7 @@
 package com.pulumi.scm.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -91,6 +92,21 @@ public final class GetAuthenticationRuleListPlainArgs extends com.pulumi.resourc
     }
 
     /**
+     * The relative position of the rule
+     * 
+     */
+    @Import(name="position", required=true)
+    private String position;
+
+    /**
+     * @return The relative position of the rule
+     * 
+     */
+    public String position() {
+        return this.position;
+    }
+
+    /**
      * The snippet of the item.
      * 
      */
@@ -113,6 +129,7 @@ public final class GetAuthenticationRuleListPlainArgs extends com.pulumi.resourc
         this.limit = $.limit;
         this.name = $.name;
         this.offset = $.offset;
+        this.position = $.position;
         this.snippet = $.snippet;
     }
 
@@ -190,6 +207,17 @@ public final class GetAuthenticationRuleListPlainArgs extends com.pulumi.resourc
         }
 
         /**
+         * @param position The relative position of the rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder position(String position) {
+            $.position = position;
+            return this;
+        }
+
+        /**
          * @param snippet The snippet of the item.
          * 
          * @return builder
@@ -201,6 +229,9 @@ public final class GetAuthenticationRuleListPlainArgs extends com.pulumi.resourc
         }
 
         public GetAuthenticationRuleListPlainArgs build() {
+            if ($.position == null) {
+                throw new MissingRequiredPropertyException("GetAuthenticationRuleListPlainArgs", "position");
+            }
             return $;
         }
     }

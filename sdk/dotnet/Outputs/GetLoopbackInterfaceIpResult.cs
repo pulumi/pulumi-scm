@@ -16,12 +16,12 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Loopback IP address(es)
         /// </summary>
-        public readonly ImmutableArray<string> Ips;
+        public readonly string Name;
 
         [OutputConstructor]
-        private GetLoopbackInterfaceIpResult(ImmutableArray<string> ips)
+        private GetLoopbackInterfaceIpResult(string name)
         {
-            Ips = ips;
+            Name = name;
         }
     }
 }

@@ -38,7 +38,7 @@ type LookupDnsProxyResult struct {
 	Default GetDnsProxyDefault `pulumi:"default"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// Domain servers
+	// DNS proxy rules
 	DomainServers []GetDnsProxyDomainServer `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled bool `pulumi:"enabled"`
@@ -112,7 +112,7 @@ func (o LookupDnsProxyResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Domain servers
+// DNS proxy rules
 func (o LookupDnsProxyResultOutput) DomainServers() GetDnsProxyDomainServerArrayOutput {
 	return o.ApplyT(func(v LookupDnsProxyResult) []GetDnsProxyDomainServer { return v.DomainServers }).(GetDnsProxyDomainServerArrayOutput)
 }

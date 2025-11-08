@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         /// Grace period
         /// </summary>
         [Input("gracePeriod")]
-        public Input<double>? GracePeriod { get; set; }
+        public Input<int>? GracePeriod { get; set; }
 
         /// <summary>
         /// Helper enable
@@ -34,13 +34,13 @@ namespace Pulumi.Scm.Inputs
         /// Max neighbor restart time
         /// </summary>
         [Input("maxNeighborRestartTime")]
-        public Input<double>? MaxNeighborRestartTime { get; set; }
+        public Input<int>? MaxNeighborRestartTime { get; set; }
 
         /// <summary>
         /// Strict l s a checking
         /// </summary>
-        [Input("strictLSAChecking")]
-        public Input<bool>? StrictLSAChecking { get; set; }
+        [Input("strictLsaChecking")]
+        public Input<bool>? StrictLsaChecking { get; set; }
 
         public LogicalRouterVrfOspfv3GracefulRestartArgs()
         {

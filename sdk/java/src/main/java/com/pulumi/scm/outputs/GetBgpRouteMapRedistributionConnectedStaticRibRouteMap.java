@@ -14,12 +14,12 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionConnectedStaticRibRouteMap {
     /**
-     * @return Action
+     * @return Connected Static BGP Rib Route maps Action
      * 
      */
     private String action;
     /**
-     * @return Description
+     * @return Connected Static BGP Rib Route maps Description
      * 
      */
     private String description;
@@ -29,26 +29,26 @@ public final class GetBgpRouteMapRedistributionConnectedStaticRibRouteMap {
      */
     private GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatch match;
     /**
-     * @return Sequence number
+     * @return Connected Static BGP Rib Route maps Sequence number
      * 
      */
     private Integer name;
     /**
-     * @return Set
+     * @return Connected Static Root RIB set
      * 
      */
     private GetBgpRouteMapRedistributionConnectedStaticRibRouteMapSet set;
 
     private GetBgpRouteMapRedistributionConnectedStaticRibRouteMap() {}
     /**
-     * @return Action
+     * @return Connected Static BGP Rib Route maps Action
      * 
      */
     public String action() {
         return this.action;
     }
     /**
-     * @return Description
+     * @return Connected Static BGP Rib Route maps Description
      * 
      */
     public String description() {
@@ -62,14 +62,14 @@ public final class GetBgpRouteMapRedistributionConnectedStaticRibRouteMap {
         return this.match;
     }
     /**
-     * @return Sequence number
+     * @return Connected Static BGP Rib Route maps Sequence number
      * 
      */
     public Integer name() {
         return this.name;
     }
     /**
-     * @return Set
+     * @return Connected Static Root RIB set
      * 
      */
     public GetBgpRouteMapRedistributionConnectedStaticRibRouteMapSet set() {

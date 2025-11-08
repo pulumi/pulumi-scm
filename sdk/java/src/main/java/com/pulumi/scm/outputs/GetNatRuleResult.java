@@ -5,10 +5,10 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetNatRuleDnsRewrite;
+import com.pulumi.scm.outputs.GetNatRuleDestinationTranslation;
+import com.pulumi.scm.outputs.GetNatRuleDynamicDestinationTranslation;
 import com.pulumi.scm.outputs.GetNatRuleSourceTranslation;
 import java.lang.Boolean;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,6 +26,11 @@ public final class GetNatRuleResult {
      */
     private String description;
     /**
+     * @return Destination translation
+     * 
+     */
+    private GetNatRuleDestinationTranslation destinationTranslation;
+    /**
      * @return Destination address(es) of the original packet
      * 
      */
@@ -41,15 +46,10 @@ public final class GetNatRuleResult {
      */
     private Boolean disabled;
     /**
-     * @return Distribution method
+     * @return Dynamic destination translation
      * 
      */
-    private String distribution;
-    /**
-     * @return DNS rewrite
-     * 
-     */
-    private GetNatRuleDnsRewrite dnsRewrite;
+    private GetNatRuleDynamicDestinationTranslation dynamicDestinationTranslation;
     /**
      * @return The folder in which the resource is defined
      * 
@@ -75,6 +75,11 @@ public final class GetNatRuleResult {
      * 
      */
     private String natType;
+    /**
+     * @return The relative position of the rule
+     * 
+     */
+    private String position;
     /**
      * @return The service of the original packet
      * 
@@ -111,16 +116,6 @@ public final class GetNatRuleResult {
      * 
      */
     private List<String> tos;
-    /**
-     * @return Translated destination IP address
-     * 
-     */
-    private String translatedAddressSingle;
-    /**
-     * @return Translated destination port
-     * 
-     */
-    private Integer translatedPort;
 
     private GetNatRuleResult() {}
     /**
@@ -136,6 +131,13 @@ public final class GetNatRuleResult {
      */
     public String description() {
         return this.description;
+    }
+    /**
+     * @return Destination translation
+     * 
+     */
+    public GetNatRuleDestinationTranslation destinationTranslation() {
+        return this.destinationTranslation;
     }
     /**
      * @return Destination address(es) of the original packet
@@ -159,18 +161,11 @@ public final class GetNatRuleResult {
         return this.disabled;
     }
     /**
-     * @return Distribution method
+     * @return Dynamic destination translation
      * 
      */
-    public String distribution() {
-        return this.distribution;
-    }
-    /**
-     * @return DNS rewrite
-     * 
-     */
-    public GetNatRuleDnsRewrite dnsRewrite() {
-        return this.dnsRewrite;
+    public GetNatRuleDynamicDestinationTranslation dynamicDestinationTranslation() {
+        return this.dynamicDestinationTranslation;
     }
     /**
      * @return The folder in which the resource is defined
@@ -206,6 +201,13 @@ public final class GetNatRuleResult {
      */
     public String natType() {
         return this.natType;
+    }
+    /**
+     * @return The relative position of the rule
+     * 
+     */
+    public String position() {
+        return this.position;
     }
     /**
      * @return The service of the original packet
@@ -259,20 +261,6 @@ public final class GetNatRuleResult {
     public List<String> tos() {
         return this.tos;
     }
-    /**
-     * @return Translated destination IP address
-     * 
-     */
-    public String translatedAddressSingle() {
-        return this.translatedAddressSingle;
-    }
-    /**
-     * @return Translated destination port
-     * 
-     */
-    public Integer translatedPort() {
-        return this.translatedPort;
-    }
 
     public static Builder builder() {
         return new Builder();
@@ -285,16 +273,17 @@ public final class GetNatRuleResult {
     public static final class Builder {
         private String activeActiveDeviceBinding;
         private String description;
+        private GetNatRuleDestinationTranslation destinationTranslation;
         private List<String> destinations;
         private String device;
         private Boolean disabled;
-        private String distribution;
-        private GetNatRuleDnsRewrite dnsRewrite;
+        private GetNatRuleDynamicDestinationTranslation dynamicDestinationTranslation;
         private String folder;
         private List<String> froms;
         private String id;
         private String name;
         private String natType;
+        private String position;
         private String service;
         private String snippet;
         private GetNatRuleSourceTranslation sourceTranslation;
@@ -303,23 +292,22 @@ public final class GetNatRuleResult {
         private String tfid;
         private String toInterface;
         private List<String> tos;
-        private String translatedAddressSingle;
-        private Integer translatedPort;
         public Builder() {}
         public Builder(GetNatRuleResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.activeActiveDeviceBinding = defaults.activeActiveDeviceBinding;
     	      this.description = defaults.description;
+    	      this.destinationTranslation = defaults.destinationTranslation;
     	      this.destinations = defaults.destinations;
     	      this.device = defaults.device;
     	      this.disabled = defaults.disabled;
-    	      this.distribution = defaults.distribution;
-    	      this.dnsRewrite = defaults.dnsRewrite;
+    	      this.dynamicDestinationTranslation = defaults.dynamicDestinationTranslation;
     	      this.folder = defaults.folder;
     	      this.froms = defaults.froms;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.natType = defaults.natType;
+    	      this.position = defaults.position;
     	      this.service = defaults.service;
     	      this.snippet = defaults.snippet;
     	      this.sourceTranslation = defaults.sourceTranslation;
@@ -328,8 +316,6 @@ public final class GetNatRuleResult {
     	      this.tfid = defaults.tfid;
     	      this.toInterface = defaults.toInterface;
     	      this.tos = defaults.tos;
-    	      this.translatedAddressSingle = defaults.translatedAddressSingle;
-    	      this.translatedPort = defaults.translatedPort;
         }
 
         @CustomType.Setter
@@ -346,6 +332,14 @@ public final class GetNatRuleResult {
               throw new MissingRequiredPropertyException("GetNatRuleResult", "description");
             }
             this.description = description;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder destinationTranslation(GetNatRuleDestinationTranslation destinationTranslation) {
+            if (destinationTranslation == null) {
+              throw new MissingRequiredPropertyException("GetNatRuleResult", "destinationTranslation");
+            }
+            this.destinationTranslation = destinationTranslation;
             return this;
         }
         @CustomType.Setter
@@ -376,19 +370,11 @@ public final class GetNatRuleResult {
             return this;
         }
         @CustomType.Setter
-        public Builder distribution(String distribution) {
-            if (distribution == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleResult", "distribution");
+        public Builder dynamicDestinationTranslation(GetNatRuleDynamicDestinationTranslation dynamicDestinationTranslation) {
+            if (dynamicDestinationTranslation == null) {
+              throw new MissingRequiredPropertyException("GetNatRuleResult", "dynamicDestinationTranslation");
             }
-            this.distribution = distribution;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder dnsRewrite(GetNatRuleDnsRewrite dnsRewrite) {
-            if (dnsRewrite == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleResult", "dnsRewrite");
-            }
-            this.dnsRewrite = dnsRewrite;
+            this.dynamicDestinationTranslation = dynamicDestinationTranslation;
             return this;
         }
         @CustomType.Setter
@@ -432,6 +418,14 @@ public final class GetNatRuleResult {
               throw new MissingRequiredPropertyException("GetNatRuleResult", "natType");
             }
             this.natType = natType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder position(String position) {
+            if (position == null) {
+              throw new MissingRequiredPropertyException("GetNatRuleResult", "position");
+            }
+            this.position = position;
             return this;
         }
         @CustomType.Setter
@@ -507,36 +501,21 @@ public final class GetNatRuleResult {
         public Builder tos(String... tos) {
             return tos(List.of(tos));
         }
-        @CustomType.Setter
-        public Builder translatedAddressSingle(String translatedAddressSingle) {
-            if (translatedAddressSingle == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleResult", "translatedAddressSingle");
-            }
-            this.translatedAddressSingle = translatedAddressSingle;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder translatedPort(Integer translatedPort) {
-            if (translatedPort == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleResult", "translatedPort");
-            }
-            this.translatedPort = translatedPort;
-            return this;
-        }
         public GetNatRuleResult build() {
             final var _resultValue = new GetNatRuleResult();
             _resultValue.activeActiveDeviceBinding = activeActiveDeviceBinding;
             _resultValue.description = description;
+            _resultValue.destinationTranslation = destinationTranslation;
             _resultValue.destinations = destinations;
             _resultValue.device = device;
             _resultValue.disabled = disabled;
-            _resultValue.distribution = distribution;
-            _resultValue.dnsRewrite = dnsRewrite;
+            _resultValue.dynamicDestinationTranslation = dynamicDestinationTranslation;
             _resultValue.folder = folder;
             _resultValue.froms = froms;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.natType = natType;
+            _resultValue.position = position;
             _resultValue.service = service;
             _resultValue.snippet = snippet;
             _resultValue.sourceTranslation = sourceTranslation;
@@ -545,8 +524,6 @@ public final class GetNatRuleResult {
             _resultValue.tfid = tfid;
             _resultValue.toInterface = toInterface;
             _resultValue.tos = tos;
-            _resultValue.translatedAddressSingle = translatedAddressSingle;
-            _resultValue.translatedPort = translatedPort;
             return _resultValue;
         }
     }

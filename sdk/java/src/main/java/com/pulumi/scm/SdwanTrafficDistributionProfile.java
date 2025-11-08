@@ -51,14 +51,14 @@ public class SdwanTrafficDistributionProfile extends com.pulumi.resources.Custom
         return Codegen.optional(this.folder);
     }
     /**
-     * Link tags
+     * Link-Tags for interfaces identified by defined tags
      * 
      */
     @Export(name="linkTags", refs={List.class,SdwanTrafficDistributionProfileLinkTag.class}, tree="[0,1]")
     private Output</* @Nullable */ List<SdwanTrafficDistributionProfileLinkTag>> linkTags;
 
     /**
-     * @return Link tags
+     * @return Link-Tags for interfaces identified by defined tags
      * 
      */
     public Output<Optional<List<SdwanTrafficDistributionProfileLinkTag>>> linkTags() {
@@ -103,14 +103,14 @@ public class SdwanTrafficDistributionProfile extends com.pulumi.resources.Custom
      * 
      */
     @Export(name="trafficDistribution", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> trafficDistribution;
+    private Output<String> trafficDistribution;
 
     /**
      * @return Traffic distribution
      * 
      */
-    public Output<Optional<String>> trafficDistribution() {
-        return Codegen.optional(this.trafficDistribution);
+    public Output<String> trafficDistribution() {
+        return this.trafficDistribution;
     }
 
     /**

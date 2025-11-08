@@ -8,6 +8,37 @@ import * as utilities from "./utilities";
 
 /**
  * LoopbackInterface resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Creates a loopback interface with static ipv4 address
+ * //
+ * const scmLoopbackIntf = new scm.LoopbackInterface("scm_loopback_intf", {
+ *     name: "$scm_loopback_intf",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     ips: [{
+ *         name: "198.18.1.1/32",
+ *     }],
+ * });
+ * //
+ * // Creates a loopback interface with static ipv4 address, with default value loopback.123
+ * //
+ * const scmLoopbackIntf2 = new scm.LoopbackInterface("scm_loopback_intf_2", {
+ *     name: "$scm_loopback_intf_2",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     defaultValue: "loopback.123",
+ *     ips: [{
+ *         name: "198.18.1.2/32",
+ *     }],
+ * });
+ * ```
  */
 export class LoopbackInterface extends pulumi.CustomResource {
     /**
@@ -42,9 +73,9 @@ export class LoopbackInterface extends pulumi.CustomResource {
      */
     declare public readonly comment: pulumi.Output<string | undefined>;
     /**
-     * Default value
+     * Default interface assignment
      */
-    declare public readonly defaultValue: pulumi.Output<number | undefined>;
+    declare public readonly defaultValue: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
      */
@@ -58,15 +89,19 @@ export class LoopbackInterface extends pulumi.CustomResource {
      */
     declare public readonly interfaceManagementProfile: pulumi.Output<string | undefined>;
     /**
-     * loopback ip parent
+     * Loopback IP Parent
      */
-    declare public readonly ip: pulumi.Output<outputs.LoopbackInterfaceIp | undefined>;
+    declare public readonly ips: pulumi.Output<outputs.LoopbackInterfaceIp[] | undefined>;
+    /**
+     * Loopback IPv6 Configuration
+     */
+    declare public readonly ipv6: pulumi.Output<outputs.LoopbackInterfaceIpv6>;
     /**
      * MTU
      */
     declare public readonly mtu: pulumi.Output<number | undefined>;
     /**
-     * L3 sub-interface name
+     * Loopback Interface name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
@@ -93,7 +128,8 @@ export class LoopbackInterface extends pulumi.CustomResource {
             resourceInputs["device"] = state?.device;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["interfaceManagementProfile"] = state?.interfaceManagementProfile;
-            resourceInputs["ip"] = state?.ip;
+            resourceInputs["ips"] = state?.ips;
+            resourceInputs["ipv6"] = state?.ipv6;
             resourceInputs["mtu"] = state?.mtu;
             resourceInputs["name"] = state?.name;
             resourceInputs["snippet"] = state?.snippet;
@@ -105,7 +141,8 @@ export class LoopbackInterface extends pulumi.CustomResource {
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
             resourceInputs["interfaceManagementProfile"] = args?.interfaceManagementProfile;
-            resourceInputs["ip"] = args?.ip;
+            resourceInputs["ips"] = args?.ips;
+            resourceInputs["ipv6"] = args?.ipv6;
             resourceInputs["mtu"] = args?.mtu;
             resourceInputs["name"] = args?.name;
             resourceInputs["snippet"] = args?.snippet;
@@ -125,9 +162,9 @@ export interface LoopbackInterfaceState {
      */
     comment?: pulumi.Input<string>;
     /**
-     * Default value
+     * Default interface assignment
      */
-    defaultValue?: pulumi.Input<number>;
+    defaultValue?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
      */
@@ -141,15 +178,19 @@ export interface LoopbackInterfaceState {
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
-     * loopback ip parent
+     * Loopback IP Parent
      */
-    ip?: pulumi.Input<inputs.LoopbackInterfaceIp>;
+    ips?: pulumi.Input<pulumi.Input<inputs.LoopbackInterfaceIp>[]>;
+    /**
+     * Loopback IPv6 Configuration
+     */
+    ipv6?: pulumi.Input<inputs.LoopbackInterfaceIpv6>;
     /**
      * MTU
      */
     mtu?: pulumi.Input<number>;
     /**
-     * L3 sub-interface name
+     * Loopback Interface name
      */
     name?: pulumi.Input<string>;
     /**
@@ -168,9 +209,9 @@ export interface LoopbackInterfaceArgs {
      */
     comment?: pulumi.Input<string>;
     /**
-     * Default value
+     * Default interface assignment
      */
-    defaultValue?: pulumi.Input<number>;
+    defaultValue?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
      */
@@ -184,15 +225,19 @@ export interface LoopbackInterfaceArgs {
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
-     * loopback ip parent
+     * Loopback IP Parent
      */
-    ip?: pulumi.Input<inputs.LoopbackInterfaceIp>;
+    ips?: pulumi.Input<pulumi.Input<inputs.LoopbackInterfaceIp>[]>;
+    /**
+     * Loopback IPv6 Configuration
+     */
+    ipv6?: pulumi.Input<inputs.LoopbackInterfaceIpv6>;
     /**
      * MTU
      */
     mtu?: pulumi.Input<number>;
     /**
-     * L3 sub-interface name
+     * Loopback Interface name
      */
     name?: pulumi.Input<string>;
     /**

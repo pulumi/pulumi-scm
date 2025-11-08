@@ -11,6 +11,63 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// RadiusServerProfile resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var chapRadiusProfile = new Scm.RadiusServerProfile("chap_radius_profile", new()
+    ///     {
+    ///         Name = "CHAP_only_rsp_1",
+    ///         Folder = "All",
+    ///         Retries = 5,
+    ///         Timeout = 60,
+    ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs
+    ///         {
+    ///             CHAP = null,
+    ///         },
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.RadiusServerProfileServerArgs
+    ///             {
+    ///                 Name = "Chap_Server_Primary",
+    ///                 IpAddress = "10.1.1.10",
+    ///                 Port = 1812,
+    ///                 Secret = "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var papRadiusProfile = new Scm.RadiusServerProfile("pap_radius_profile", new()
+    ///     {
+    ///         Name = "pap_only_rsp_1",
+    ///         Folder = "All",
+    ///         Retries = 5,
+    ///         Timeout = 60,
+    ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs
+    ///         {
+    ///             PAP = null,
+    ///         },
+    ///         Servers = new[]
+    ///         {
+    ///             new Scm.Inputs.RadiusServerProfileServerArgs
+    ///             {
+    ///                 Name = "pap_Server_Primary",
+    ///                 IpAddress = "10.1.1.10",
+    ///                 Port = 1812,
+    ///                 Secret = "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/radiusServerProfile:RadiusServerProfile")]
     public partial class RadiusServerProfile : global::Pulumi.CustomResource

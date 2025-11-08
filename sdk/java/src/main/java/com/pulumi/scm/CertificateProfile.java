@@ -23,6 +23,59 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.CertificateProfile;
+ * import com.pulumi.scm.CertificateProfileArgs;
+ * import com.pulumi.scm.inputs.CertificateProfileCaCertificateArgs;
+ * import com.pulumi.scm.inputs.CertificateProfileUsernameFieldArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmCp1 = new CertificateProfile("scmCp1", CertificateProfileArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_cp_1")
+ *             .domain("test")
+ *             .useCrl(true)
+ *             .useOcsp(true)
+ *             .blockUnknownCert(true)
+ *             .blockTimeoutCert(true)
+ *             .blockUnauthenticatedCert(true)
+ *             .blockExpiredCert(true)
+ *             .crlReceiveTimeout("5")
+ *             .ocspReceiveTimeout("5")
+ *             .certStatusTimeout("5")
+ *             .caCertificates(CertificateProfileCaCertificateArgs.builder()
+ *                 .name("Forward-Trust-CA")
+ *                 .defaultOcspUrl("http://test.com")
+ *                 .ocspVerifyCert("Forward-Trust-CA-ECDSA")
+ *                 .templateName("something")
+ *                 .build())
+ *             .usernameField(CertificateProfileUsernameFieldArgs.builder()
+ *                 .subject("common-name")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/certificateProfile:CertificateProfile")
 public class CertificateProfile extends com.pulumi.resources.CustomResource {

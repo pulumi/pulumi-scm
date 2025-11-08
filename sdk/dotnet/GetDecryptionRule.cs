@@ -13,18 +13,213 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// DecryptionRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+        ///     var testDecryptionRule = new Scm.DecryptionRule("test_decryption_rule", new()
+        ///     {
+        ///         Name = "data-source-test-rule",
+        ///         Description = "Rule created specifically for data source testing.",
+        ///         Folder = "All",
+        ///         Position = "pre",
+        ///         Action = "decrypt",
+        ///         Froms = new[]
+        ///         {
+        ///             "trust",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "untrust",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-https",
+        ///         },
+        ///         Categories = new[]
+        ///         {
+        ///             "high-risk",
+        ///         },
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
+        ///         {
+        ///             SslForwardProxy = null,
+        ///         },
+        ///     });
+        /// 
+        ///     // We use the ID from the resource created above.
+        ///     var singleRuleById = Scm.GetDecryptionRule.Invoke(new()
+        ///     {
+        ///         Id = testDecryptionRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleDecryptionRuleName"] = singleRuleById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetDecryptionRuleResult> InvokeAsync(GetDecryptionRuleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDecryptionRuleResult>("scm:index/getDecryptionRule:getDecryptionRule", args ?? new GetDecryptionRuleArgs(), options.WithDefaults());
 
         /// <summary>
         /// DecryptionRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+        ///     var testDecryptionRule = new Scm.DecryptionRule("test_decryption_rule", new()
+        ///     {
+        ///         Name = "data-source-test-rule",
+        ///         Description = "Rule created specifically for data source testing.",
+        ///         Folder = "All",
+        ///         Position = "pre",
+        ///         Action = "decrypt",
+        ///         Froms = new[]
+        ///         {
+        ///             "trust",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "untrust",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-https",
+        ///         },
+        ///         Categories = new[]
+        ///         {
+        ///             "high-risk",
+        ///         },
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
+        ///         {
+        ///             SslForwardProxy = null,
+        ///         },
+        ///     });
+        /// 
+        ///     // We use the ID from the resource created above.
+        ///     var singleRuleById = Scm.GetDecryptionRule.Invoke(new()
+        ///     {
+        ///         Id = testDecryptionRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleDecryptionRuleName"] = singleRuleById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDecryptionRuleResult> Invoke(GetDecryptionRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionRuleResult>("scm:index/getDecryptionRule:getDecryptionRule", args ?? new GetDecryptionRuleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// DecryptionRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+        ///     var testDecryptionRule = new Scm.DecryptionRule("test_decryption_rule", new()
+        ///     {
+        ///         Name = "data-source-test-rule",
+        ///         Description = "Rule created specifically for data source testing.",
+        ///         Folder = "All",
+        ///         Position = "pre",
+        ///         Action = "decrypt",
+        ///         Froms = new[]
+        ///         {
+        ///             "trust",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "untrust",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-https",
+        ///         },
+        ///         Categories = new[]
+        ///         {
+        ///             "high-risk",
+        ///         },
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
+        ///         {
+        ///             SslForwardProxy = null,
+        ///         },
+        ///     });
+        /// 
+        ///     // We use the ID from the resource created above.
+        ///     var singleRuleById = Scm.GetDecryptionRule.Invoke(new()
+        ///     {
+        ///         Id = testDecryptionRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleDecryptionRuleName"] = singleRuleById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDecryptionRuleResult> Invoke(GetDecryptionRuleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionRuleResult>("scm:index/getDecryptionRule:getDecryptionRule", args ?? new GetDecryptionRuleInvokeArgs(), options.WithDefaults());
@@ -140,9 +335,17 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>
+        /// The position of a security rule
+        /// </summary>
+        public readonly string Position;
+        /// <summary>
         /// The decryption profile associated with the decryption rule
         /// </summary>
         public readonly string Profile;
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        public readonly string RelativePosition;
         /// <summary>
         /// The destination services and/or service groups
         /// </summary>
@@ -167,6 +370,10 @@ namespace Pulumi.Scm
         /// The tags associated with the decryption rule
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        public readonly string TargetRule;
         public readonly string Tfid;
         /// <summary>
         /// The destination security zone
@@ -211,7 +418,11 @@ namespace Pulumi.Scm
 
             bool negateSource,
 
+            string position,
+
             string profile,
+
+            string relativePosition,
 
             ImmutableArray<string> services,
 
@@ -224,6 +435,8 @@ namespace Pulumi.Scm
             ImmutableArray<string> sources,
 
             ImmutableArray<string> tags,
+
+            string targetRule,
 
             string tfid,
 
@@ -247,13 +460,16 @@ namespace Pulumi.Scm
             Name = name;
             NegateDestination = negateDestination;
             NegateSource = negateSource;
+            Position = position;
             Profile = profile;
+            RelativePosition = relativePosition;
             Services = services;
             Snippet = snippet;
             SourceHips = sourceHips;
             SourceUsers = sourceUsers;
             Sources = sources;
             Tags = tags;
+            TargetRule = targetRule;
             Tfid = tfid;
             Tos = tos;
             Type = type;

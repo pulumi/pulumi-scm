@@ -15,6 +15,79 @@ import (
 // IkeGateway resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// The scm_ike_crypto_profile resource is a prerequisite for the IKE gateway.
+//			scmIkeGwCryptoProfile1, err := scm.NewIkeCryptoProfile(ctx, "scm_ike_gw_crypto_profile_1", &scm.IkeCryptoProfileArgs{
+//				Folder: pulumi.String("Remote Networks"),
+//				Name:   pulumi.String("scm_ike_gw_crypto_profile_1"),
+//				Hashes: pulumi.StringArray{
+//					pulumi.String("sha256"),
+//				},
+//				DhGroups: pulumi.StringArray{
+//					pulumi.String("group14"),
+//				},
+//				Encryptions: pulumi.StringArray{
+//					pulumi.String("aes-256-cbc"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// This is the main scm_ike_gateway resource.
+//			_, err = scm.NewIkeGateway(ctx, "scm_ike_gateway_1", &scm.IkeGatewayArgs{
+//				Folder: pulumi.String("Remote Networks"),
+//				Name:   pulumi.String("scm_ike_gateway_1"),
+//				Authentication: &scm.IkeGatewayAuthenticationArgs{
+//					PreSharedKey: &scm.IkeGatewayAuthenticationPreSharedKeyArgs{
+//						Key: pulumi.String("123456"),
+//					},
+//				},
+//				PeerAddress: &scm.IkeGatewayPeerAddressArgs{
+//					Ip: pulumi.String("2.2.2.4"),
+//				},
+//				PeerId: &scm.IkeGatewayPeerIdArgs{
+//					Type: pulumi.String("ipaddr"),
+//					Id:   pulumi.String("10.3.3.4"),
+//				},
+//				LocalId: &scm.IkeGatewayLocalIdArgs{
+//					Type: pulumi.String("ipaddr"),
+//					Id:   pulumi.String("10.3.4.4"),
+//				},
+//				Protocol: &scm.IkeGatewayProtocolArgs{
+//					Ikev1: &scm.IkeGatewayProtocolIkev1Args{
+//						IkeCryptoProfile: scmIkeGwCryptoProfile1.Name,
+//						Dpd: &scm.IkeGatewayProtocolIkev1DpdArgs{
+//							Enable: pulumi.Bool(true),
+//						},
+//					},
+//					Ikev2: &scm.IkeGatewayProtocolIkev2Args{
+//						IkeCryptoProfile: scmIkeGwCryptoProfile1.Name,
+//						Dpd: &scm.IkeGatewayProtocolIkev2DpdArgs{
+//							Enable: pulumi.Bool(true),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type IkeGateway struct {
 	pulumi.CustomResourceState
 

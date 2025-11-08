@@ -16,14 +16,14 @@ public final class Layer3SubinterfaceArpArgs extends com.pulumi.resources.Resour
     public static final Layer3SubinterfaceArpArgs Empty = new Layer3SubinterfaceArpArgs();
 
     /**
-     * Hw address
+     * MAC address
      * 
      */
     @Import(name="hwAddress")
     private @Nullable Output<String> hwAddress;
 
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     public Optional<Output<String>> hwAddress() {
@@ -71,7 +71,7 @@ public final class Layer3SubinterfaceArpArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param hwAddress Hw address
+         * @param hwAddress MAC address
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class Layer3SubinterfaceArpArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param hwAddress Hw address
+         * @param hwAddress MAC address
          * 
          * @return builder
          * 

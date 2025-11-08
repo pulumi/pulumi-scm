@@ -26,7 +26,7 @@ class GetAuthenticationRuleResult:
     """
     A collection of values returned by getAuthenticationRule.
     """
-    def __init__(__self__, authentication_enforcement=None, categories=None, description=None, destination_hips=None, destinations=None, device=None, disabled=None, folder=None, froms=None, group_tag=None, hip_profiles=None, id=None, log_authentication_timeout=None, log_setting=None, name=None, negate_destination=None, negate_source=None, services=None, snippet=None, source_hips=None, source_users=None, sources=None, tags=None, tfid=None, timeout=None, tos=None):
+    def __init__(__self__, authentication_enforcement=None, categories=None, description=None, destination_hips=None, destinations=None, device=None, disabled=None, folder=None, froms=None, group_tag=None, hip_profiles=None, id=None, log_authentication_timeout=None, log_setting=None, name=None, negate_destination=None, negate_source=None, position=None, relative_position=None, services=None, snippet=None, source_hips=None, source_users=None, sources=None, tags=None, target_rule=None, tfid=None, timeout=None, tos=None):
         if authentication_enforcement and not isinstance(authentication_enforcement, str):
             raise TypeError("Expected argument 'authentication_enforcement' to be a str")
         pulumi.set(__self__, "authentication_enforcement", authentication_enforcement)
@@ -78,6 +78,12 @@ class GetAuthenticationRuleResult:
         if negate_source and not isinstance(negate_source, bool):
             raise TypeError("Expected argument 'negate_source' to be a bool")
         pulumi.set(__self__, "negate_source", negate_source)
+        if position and not isinstance(position, str):
+            raise TypeError("Expected argument 'position' to be a str")
+        pulumi.set(__self__, "position", position)
+        if relative_position and not isinstance(relative_position, str):
+            raise TypeError("Expected argument 'relative_position' to be a str")
+        pulumi.set(__self__, "relative_position", relative_position)
         if services and not isinstance(services, list):
             raise TypeError("Expected argument 'services' to be a list")
         pulumi.set(__self__, "services", services)
@@ -96,6 +102,9 @@ class GetAuthenticationRuleResult:
         if tags and not isinstance(tags, list):
             raise TypeError("Expected argument 'tags' to be a list")
         pulumi.set(__self__, "tags", tags)
+        if target_rule and not isinstance(target_rule, str):
+            raise TypeError("Expected argument 'target_rule' to be a str")
+        pulumi.set(__self__, "target_rule", target_rule)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -244,6 +253,22 @@ class GetAuthenticationRuleResult:
 
     @_builtins.property
     @pulumi.getter
+    def position(self) -> _builtins.str:
+        """
+        The relative position of the rule
+        """
+        return pulumi.get(self, "position")
+
+    @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> _builtins.str:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @_builtins.property
+    @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
         """
         The destination ports
@@ -291,6 +316,14 @@ class GetAuthenticationRuleResult:
         return pulumi.get(self, "tags")
 
     @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> _builtins.str:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
         return pulumi.get(self, "tfid")
@@ -335,12 +368,15 @@ class AwaitableGetAuthenticationRuleResult(GetAuthenticationRuleResult):
             name=self.name,
             negate_destination=self.negate_destination,
             negate_source=self.negate_source,
+            position=self.position,
+            relative_position=self.relative_position,
             services=self.services,
             snippet=self.snippet,
             source_hips=self.source_hips,
             source_users=self.source_users,
             sources=self.sources,
             tags=self.tags,
+            target_rule=self.target_rule,
             tfid=self.tfid,
             timeout=self.timeout,
             tos=self.tos)
@@ -351,6 +387,34 @@ def get_authentication_rule(id: Optional[_builtins.str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAuthenticationRuleResult:
     """
     AuthenticationRule data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    rule_to_fetch = scm.AuthenticationRule("rule_to_fetch",
+        name="rule-to-be-queried-scm-105",
+        description="This rule is created purely to test the data source functionality.",
+        position="pre",
+        folder="All",
+        destinations=["any"],
+        froms=["any"],
+        tos=["any"],
+        sources=["any"],
+        services=[
+            "service-http",
+            "service-https",
+        ],
+        source_users=["any"],
+        timeout=1200,
+        negate_source=False,
+        negate_destination=False)
+    rule_data = scm.get_authentication_rule_output(id=rule_to_fetch.id)
+    pulumi.export("fetchedRuleId", rule_data.id)
+    pulumi.export("fetchedRuleTimeout", rule_data.timeout)
+    ```
 
 
     :param _builtins.str id: The UUID of the authentication rule
@@ -380,12 +444,15 @@ def get_authentication_rule(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         negate_destination=pulumi.get(__ret__, 'negate_destination'),
         negate_source=pulumi.get(__ret__, 'negate_source'),
+        position=pulumi.get(__ret__, 'position'),
+        relative_position=pulumi.get(__ret__, 'relative_position'),
         services=pulumi.get(__ret__, 'services'),
         snippet=pulumi.get(__ret__, 'snippet'),
         source_hips=pulumi.get(__ret__, 'source_hips'),
         source_users=pulumi.get(__ret__, 'source_users'),
         sources=pulumi.get(__ret__, 'sources'),
         tags=pulumi.get(__ret__, 'tags'),
+        target_rule=pulumi.get(__ret__, 'target_rule'),
         tfid=pulumi.get(__ret__, 'tfid'),
         timeout=pulumi.get(__ret__, 'timeout'),
         tos=pulumi.get(__ret__, 'tos'))
@@ -394,6 +461,34 @@ def get_authentication_rule_output(id: Optional[pulumi.Input[_builtins.str]] = N
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationRuleResult]:
     """
     AuthenticationRule data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    rule_to_fetch = scm.AuthenticationRule("rule_to_fetch",
+        name="rule-to-be-queried-scm-105",
+        description="This rule is created purely to test the data source functionality.",
+        position="pre",
+        folder="All",
+        destinations=["any"],
+        froms=["any"],
+        tos=["any"],
+        sources=["any"],
+        services=[
+            "service-http",
+            "service-https",
+        ],
+        source_users=["any"],
+        timeout=1200,
+        negate_source=False,
+        negate_destination=False)
+    rule_data = scm.get_authentication_rule_output(id=rule_to_fetch.id)
+    pulumi.export("fetchedRuleId", rule_data.id)
+    pulumi.export("fetchedRuleTimeout", rule_data.timeout)
+    ```
 
 
     :param _builtins.str id: The UUID of the authentication rule
@@ -422,12 +517,15 @@ def get_authentication_rule_output(id: Optional[pulumi.Input[_builtins.str]] = N
         name=pulumi.get(__response__, 'name'),
         negate_destination=pulumi.get(__response__, 'negate_destination'),
         negate_source=pulumi.get(__response__, 'negate_source'),
+        position=pulumi.get(__response__, 'position'),
+        relative_position=pulumi.get(__response__, 'relative_position'),
         services=pulumi.get(__response__, 'services'),
         snippet=pulumi.get(__response__, 'snippet'),
         source_hips=pulumi.get(__response__, 'source_hips'),
         source_users=pulumi.get(__response__, 'source_users'),
         sources=pulumi.get(__response__, 'sources'),
         tags=pulumi.get(__response__, 'tags'),
+        target_rule=pulumi.get(__response__, 'target_rule'),
         tfid=pulumi.get(__response__, 'tfid'),
         timeout=pulumi.get(__response__, 'timeout'),
         tos=pulumi.get(__response__, 'tos')))

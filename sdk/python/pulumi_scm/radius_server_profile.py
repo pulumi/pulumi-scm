@@ -318,6 +318,42 @@ class RadiusServerProfile(pulumi.CustomResource):
         """
         RadiusServerProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        chap_radius_profile = scm.RadiusServerProfile("chap_radius_profile",
+            name="CHAP_only_rsp_1",
+            folder="All",
+            retries=5,
+            timeout=60,
+            protocol={
+                "c_hap": {},
+            },
+            servers=[{
+                "name": "Chap_Server_Primary",
+                "ip_address": "10.1.1.10",
+                "port": 1812,
+                "secret": "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+            }])
+        pap_radius_profile = scm.RadiusServerProfile("pap_radius_profile",
+            name="pap_only_rsp_1",
+            folder="All",
+            retries=5,
+            timeout=60,
+            protocol={
+                "p_ap": {},
+            },
+            servers=[{
+                "name": "pap_Server_Primary",
+                "ip_address": "10.1.1.10",
+                "port": 1812,
+                "secret": "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+            }])
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -337,6 +373,42 @@ class RadiusServerProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         RadiusServerProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        chap_radius_profile = scm.RadiusServerProfile("chap_radius_profile",
+            name="CHAP_only_rsp_1",
+            folder="All",
+            retries=5,
+            timeout=60,
+            protocol={
+                "c_hap": {},
+            },
+            servers=[{
+                "name": "Chap_Server_Primary",
+                "ip_address": "10.1.1.10",
+                "port": 1812,
+                "secret": "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+            }])
+        pap_radius_profile = scm.RadiusServerProfile("pap_radius_profile",
+            name="pap_only_rsp_1",
+            folder="All",
+            retries=5,
+            timeout=60,
+            protocol={
+                "p_ap": {},
+            },
+            servers=[{
+                "name": "pap_Server_Primary",
+                "ip_address": "10.1.1.10",
+                "port": 1812,
+                "secret": "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+            }])
+        ```
 
         :param str resource_name: The name of the resource.
         :param RadiusServerProfileArgs args: The arguments to use to populate this resource's properties.

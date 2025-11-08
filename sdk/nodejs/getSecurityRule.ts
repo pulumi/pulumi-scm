@@ -8,6 +8,53 @@ import * as utilities from "./utilities";
 
 /**
  * SecurityRule data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const standardWebAccess = new scm.SecurityRule("standard_web_access", {
+ *     folder: "All",
+ *     name: "Allow Standard Web Access DS1",
+ *     description: "Allow outbound web traffic to any destination...",
+ *     position: "pre",
+ *     action: "allow",
+ *     categories: ["any"],
+ *     applications: [
+ *         "web-browsing",
+ *         "ssl",
+ *     ],
+ *     services: [
+ *         "service-http",
+ *         "service-https",
+ *     ],
+ *     froms: [
+ *         "untrust",
+ *         "trust",
+ *     ],
+ *     tos: ["trust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     negateSource: false,
+ *     negateDestination: false,
+ *     sourceUsers: ["any"],
+ *     sourceHips: ["any"],
+ *     destinationHips: ["any"],
+ *     logStart: true,
+ *     logEnd: true,
+ *     disabled: false,
+ * });
+ * // --- Data Source Calls to Fetch Existing Rules ---
+ * // 1. Fetch by ID (Best for direct lookup)
+ * const standardWebAccessById = scm.getSecurityRuleOutput({
+ *     id: standardWebAccess.id,
+ * });
+ * export const fetchedStandardWebId = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.id);
+ * export const fetchedStandardWebName = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.name);
+ * export const fetchedStandardWebDescription = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.description);
+ * ```
  */
 export function getSecurityRule(args: GetSecurityRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetSecurityRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -140,9 +187,17 @@ export interface GetSecurityRuleResult {
      */
     readonly policyType: string;
     /**
+     * The position of a security rule
+     */
+    readonly position: string;
+    /**
      * The security profile object
      */
     readonly profileSetting: outputs.GetSecurityRuleProfileSetting;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    readonly relativePosition: string;
     /**
      * Schedule in which this rule will be applied
      */
@@ -176,6 +231,10 @@ export interface GetSecurityRuleResult {
      */
     readonly tags: string[];
     /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    readonly targetRule: string;
+    /**
      * Tenant restrictions
      */
     readonly tenantRestrictions: string[];
@@ -187,6 +246,53 @@ export interface GetSecurityRuleResult {
 }
 /**
  * SecurityRule data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const standardWebAccess = new scm.SecurityRule("standard_web_access", {
+ *     folder: "All",
+ *     name: "Allow Standard Web Access DS1",
+ *     description: "Allow outbound web traffic to any destination...",
+ *     position: "pre",
+ *     action: "allow",
+ *     categories: ["any"],
+ *     applications: [
+ *         "web-browsing",
+ *         "ssl",
+ *     ],
+ *     services: [
+ *         "service-http",
+ *         "service-https",
+ *     ],
+ *     froms: [
+ *         "untrust",
+ *         "trust",
+ *     ],
+ *     tos: ["trust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     negateSource: false,
+ *     negateDestination: false,
+ *     sourceUsers: ["any"],
+ *     sourceHips: ["any"],
+ *     destinationHips: ["any"],
+ *     logStart: true,
+ *     logEnd: true,
+ *     disabled: false,
+ * });
+ * // --- Data Source Calls to Fetch Existing Rules ---
+ * // 1. Fetch by ID (Best for direct lookup)
+ * const standardWebAccessById = scm.getSecurityRuleOutput({
+ *     id: standardWebAccess.id,
+ * });
+ * export const fetchedStandardWebId = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.id);
+ * export const fetchedStandardWebName = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.name);
+ * export const fetchedStandardWebDescription = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.description);
+ * ```
  */
 export function getSecurityRuleOutput(args: GetSecurityRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSecurityRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

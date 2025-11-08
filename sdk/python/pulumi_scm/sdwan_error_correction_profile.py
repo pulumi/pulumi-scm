@@ -21,7 +21,7 @@ __all__ = ['SdwanErrorCorrectionProfileArgs', 'SdwanErrorCorrectionProfile']
 @pulumi.input_type
 class SdwanErrorCorrectionProfileArgs:
     def __init__(__self__, *,
-                 activation_threshold: pulumi.Input[_builtins.float],
+                 activation_threshold: pulumi.Input[_builtins.int],
                  mode: pulumi.Input['SdwanErrorCorrectionProfileModeArgs'],
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
@@ -29,7 +29,7 @@ class SdwanErrorCorrectionProfileArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SdwanErrorCorrectionProfile resource.
-        :param pulumi.Input[_builtins.float] activation_threshold: Activation threshold
+        :param pulumi.Input[_builtins.int] activation_threshold: Activation threshold
         :param pulumi.Input['SdwanErrorCorrectionProfileModeArgs'] mode: Mode
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
@@ -49,14 +49,14 @@ class SdwanErrorCorrectionProfileArgs:
 
     @_builtins.property
     @pulumi.getter(name="activationThreshold")
-    def activation_threshold(self) -> pulumi.Input[_builtins.float]:
+    def activation_threshold(self) -> pulumi.Input[_builtins.int]:
         """
         Activation threshold
         """
         return pulumi.get(self, "activation_threshold")
 
     @activation_threshold.setter
-    def activation_threshold(self, value: pulumi.Input[_builtins.float]):
+    def activation_threshold(self, value: pulumi.Input[_builtins.int]):
         pulumi.set(self, "activation_threshold", value)
 
     @_builtins.property
@@ -123,7 +123,7 @@ class SdwanErrorCorrectionProfileArgs:
 @pulumi.input_type
 class _SdwanErrorCorrectionProfileState:
     def __init__(__self__, *,
-                 activation_threshold: Optional[pulumi.Input[_builtins.float]] = None,
+                 activation_threshold: Optional[pulumi.Input[_builtins.int]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  mode: Optional[pulumi.Input['SdwanErrorCorrectionProfileModeArgs']] = None,
@@ -132,7 +132,7 @@ class _SdwanErrorCorrectionProfileState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SdwanErrorCorrectionProfile resources.
-        :param pulumi.Input[_builtins.float] activation_threshold: Activation threshold
+        :param pulumi.Input[_builtins.int] activation_threshold: Activation threshold
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input['SdwanErrorCorrectionProfileModeArgs'] mode: Mode
@@ -156,14 +156,14 @@ class _SdwanErrorCorrectionProfileState:
 
     @_builtins.property
     @pulumi.getter(name="activationThreshold")
-    def activation_threshold(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def activation_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Activation threshold
         """
         return pulumi.get(self, "activation_threshold")
 
     @activation_threshold.setter
-    def activation_threshold(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def activation_threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "activation_threshold", value)
 
     @_builtins.property
@@ -242,7 +242,7 @@ class SdwanErrorCorrectionProfile(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 activation_threshold: Optional[pulumi.Input[_builtins.float]] = None,
+                 activation_threshold: Optional[pulumi.Input[_builtins.int]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  mode: Optional[pulumi.Input[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict']]] = None,
@@ -254,7 +254,7 @@ class SdwanErrorCorrectionProfile(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.float] activation_threshold: Activation threshold
+        :param pulumi.Input[_builtins.int] activation_threshold: Activation threshold
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict']] mode: Mode
@@ -285,7 +285,7 @@ class SdwanErrorCorrectionProfile(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 activation_threshold: Optional[pulumi.Input[_builtins.float]] = None,
+                 activation_threshold: Optional[pulumi.Input[_builtins.int]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  mode: Optional[pulumi.Input[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict']]] = None,
@@ -321,7 +321,7 @@ class SdwanErrorCorrectionProfile(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            activation_threshold: Optional[pulumi.Input[_builtins.float]] = None,
+            activation_threshold: Optional[pulumi.Input[_builtins.int]] = None,
             device: Optional[pulumi.Input[_builtins.str]] = None,
             folder: Optional[pulumi.Input[_builtins.str]] = None,
             mode: Optional[pulumi.Input[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict']]] = None,
@@ -335,7 +335,7 @@ class SdwanErrorCorrectionProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.float] activation_threshold: Activation threshold
+        :param pulumi.Input[_builtins.int] activation_threshold: Activation threshold
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Union['SdwanErrorCorrectionProfileModeArgs', 'SdwanErrorCorrectionProfileModeArgsDict']] mode: Mode
@@ -357,7 +357,7 @@ class SdwanErrorCorrectionProfile(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="activationThreshold")
-    def activation_threshold(self) -> pulumi.Output[_builtins.float]:
+    def activation_threshold(self) -> pulumi.Output[_builtins.int]:
         """
         Activation threshold
         """

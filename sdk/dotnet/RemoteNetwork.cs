@@ -13,6 +13,136 @@ namespace Pulumi.Scm
     /// RemoteNetwork resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // --- DEPENDENCY 1: IKE Crypto Profile ---
+    ///     // This profile defines the encryption and authentication algorithms for the IKE Gateway.
+    ///     // The values are taken from the 'createTestIKECryptoProfile' helper function.
+    ///     var example = new Scm.IkeCryptoProfile("example", new()
+    ///     {
+    ///         Name = "example-ike-crypto-prf-for-rn",
+    ///         Folder = "Remote Networks",
+    ///         Hashes = new[]
+    ///         {
+    ///             "sha256",
+    ///         },
+    ///         DhGroups = new[]
+    ///         {
+    ///             "group14",
+    ///         },
+    ///         Encryptions = new[]
+    ///         {
+    ///             "aes-256-cbc",
+    ///         },
+    ///     });
+    /// 
+    ///     // --- DEPENDENCY 2: IKE Gateway ---
+    ///     // This defines the VPN peer. It depends on the IKE Crypto Profile created above.
+    ///     // The values are taken from the 'createTestIKEGateway' helper function.
+    ///     var exampleIkeGateway = new Scm.IkeGateway("example", new()
+    ///     {
+    ///         Name = "example-ike-gateway-for-rn",
+    ///         Folder = "Remote Networks",
+    ///         Authentication = new Scm.Inputs.IkeGatewayAuthenticationArgs
+    ///         {
+    ///             PreSharedKey = new Scm.Inputs.IkeGatewayAuthenticationPreSharedKeyArgs
+    ///             {
+    ///                 Key = "secret",
+    ///             },
+    ///         },
+    ///         PeerAddress = new Scm.Inputs.IkeGatewayPeerAddressArgs
+    ///         {
+    ///             Ip = "1.1.1.1",
+    ///         },
+    ///         Protocol = new Scm.Inputs.IkeGatewayProtocolArgs
+    ///         {
+    ///             Ikev1 = new Scm.Inputs.IkeGatewayProtocolIkev1Args
+    ///             {
+    ///                 IkeCryptoProfile = example.Name,
+    ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             example,
+    ///         },
+    ///     });
+    /// 
+    ///     // --- DEPENDENCY 3: IPsec Tunnel ---
+    ///     // This defines the tunnel interface itself and uses the IKE Gateway.
+    ///     // The values are taken from the 'createTestIPsecTunnel' helper function.
+    ///     var exampleIpsecTunnel = new Scm.IpsecTunnel("example", new()
+    ///     {
+    ///         Name = "example-ipsec-tunnel-for-rn",
+    ///         Folder = "Remote Networks",
+    ///         AntiReplay = true,
+    ///         CopyTos = false,
+    ///         EnableGreEncapsulation = false,
+    ///         AutoKey = new Scm.Inputs.IpsecTunnelAutoKeyArgs
+    ///         {
+    ///             IkeGateways = new[]
+    ///             {
+    ///                 new Scm.Inputs.IpsecTunnelAutoKeyIkeGatewayArgs
+    ///                 {
+    ///                     Name = exampleIkeGateway.Name,
+    ///                 },
+    ///             },
+    ///             IpsecCryptoProfile = "PaloAlto-Networks-IPSec-Crypto",
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             exampleIkeGateway,
+    ///         },
+    ///     });
+    /// 
+    ///     // --- MAIN RESOURCE: Remote Network ---
+    ///     // This is the final resource, which uses the IPsec Tunnel created above.
+    ///     // The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
+    ///     var exampleRemoteNetwork = new Scm.RemoteNetwork("example", new()
+    ///     {
+    ///         Name = "example-remote-network",
+    ///         Folder = "Remote Networks",
+    ///         LicenseType = "FWAAS-AGGREGATE",
+    ///         Region = "us-west-2",
+    ///         SpnName = "us-west-dakota",
+    ///         Subnets = new[]
+    ///         {
+    ///             "192.168.1.0/24",
+    ///         },
+    ///         IpsecTunnel = exampleIpsecTunnel.Name,
+    ///         Protocol = new Scm.Inputs.RemoteNetworkProtocolArgs
+    ///         {
+    ///             Bgp = new Scm.Inputs.RemoteNetworkProtocolBgpArgs
+    ///             {
+    ///                 Enable = true,
+    ///                 PeerAs = "65000",
+    ///                 LocalIpAddress = "169.254.1.1",
+    ///                 PeerIpAddress = "169.254.1.2",
+    ///                 DoNotExportRoutes = false,
+    ///                 OriginateDefaultRoute = false,
+    ///                 SummarizeMobileUserRoutes = false,
+    ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             exampleIpsecTunnel,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/remoteNetwork:RemoteNetwork")]
     public partial class RemoteNetwork : global::Pulumi.CustomResource

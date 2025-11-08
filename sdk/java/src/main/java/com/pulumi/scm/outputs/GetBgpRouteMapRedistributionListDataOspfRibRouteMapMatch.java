@@ -14,62 +14,62 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatch {
     /**
-     * @return Address
+     * @return OSPF RIB Route maps address
      * 
      */
     private GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatchAddress address;
     /**
-     * @return Interface
+     * @return OSPF RIB Route maps Interface
      * 
      */
     private String interface_;
     /**
-     * @return Metric
+     * @return OSPF RIB Route maps Metric
      * 
      */
     private Integer metric;
     /**
-     * @return Next hop
+     * @return OSPF RIB Route maps next*hop
      * 
      */
     private GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatchNextHop nextHop;
     /**
-     * @return Tag
+     * @return OSPF RIB Route maps tag
      * 
      */
     private Integer tag;
 
     private GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatch() {}
     /**
-     * @return Address
+     * @return OSPF RIB Route maps address
      * 
      */
     public GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatchAddress address() {
         return this.address;
     }
     /**
-     * @return Interface
+     * @return OSPF RIB Route maps Interface
      * 
      */
     public String interface_() {
         return this.interface_;
     }
     /**
-     * @return Metric
+     * @return OSPF RIB Route maps Metric
      * 
      */
     public Integer metric() {
         return this.metric;
     }
     /**
-     * @return Next hop
+     * @return OSPF RIB Route maps next*hop
      * 
      */
     public GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatchNextHop nextHop() {
         return this.nextHop;
     }
     /**
-     * @return Tag
+     * @return OSPF RIB Route maps tag
      * 
      */
     public Integer tag() {

@@ -13,18 +13,96 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM DNS Security Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetDnsSecurityProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDnsSecurityProfileListAllShared"] = allShared.Apply(getDnsSecurityProfileListResult =&gt; getDnsSecurityProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetDnsSecurityProfileListResult> InvokeAsync(GetDnsSecurityProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDnsSecurityProfileListResult>("scm:index/getDnsSecurityProfileList:getDnsSecurityProfileList", args ?? new GetDnsSecurityProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM DNS Security Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetDnsSecurityProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDnsSecurityProfileListAllShared"] = allShared.Apply(getDnsSecurityProfileListResult =&gt; getDnsSecurityProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDnsSecurityProfileListResult> Invoke(GetDnsSecurityProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDnsSecurityProfileListResult>("scm:index/getDnsSecurityProfileList:getDnsSecurityProfileList", args ?? new GetDnsSecurityProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM DNS Security Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetDnsSecurityProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDnsSecurityProfileListAllShared"] = allShared.Apply(getDnsSecurityProfileListResult =&gt; getDnsSecurityProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDnsSecurityProfileListResult> Invoke(GetDnsSecurityProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetDnsSecurityProfileListResult>("scm:index/getDnsSecurityProfileList:getDnsSecurityProfileList", args ?? new GetDnsSecurityProfileListInvokeArgs(), options.WithDefaults());

@@ -14,36 +14,29 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetZoneProtectionProfileListDataFloodTcpSynResult
     {
         /// <summary>
-        /// When the flow exceeds the `ActivateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-        /// </summary>
-        public readonly int ActivateRate;
-        /// <summary>
-        /// When the flow exceeds the `AlertRate`` threshold, an alarm is generated.
-        /// </summary>
-        public readonly int AlarmRate;
-        /// <summary>
         /// Enable protection against SYN floods?
         /// </summary>
         public readonly bool Enable;
         /// <summary>
-        /// When the flow exceeds the `MaximalRate` threshold, 100% of incoming SYN packets are dropped.
+        /// Red
         /// </summary>
-        public readonly int MaximalRate;
+        public readonly Outputs.GetZoneProtectionProfileListDataFloodTcpSynRedResult Red;
+        /// <summary>
+        /// Syn cookies
+        /// </summary>
+        public readonly Outputs.GetZoneProtectionProfileListDataFloodTcpSynSynCookiesResult SynCookies;
 
         [OutputConstructor]
         private GetZoneProtectionProfileListDataFloodTcpSynResult(
-            int activateRate,
-
-            int alarmRate,
-
             bool enable,
 
-            int maximalRate)
+            Outputs.GetZoneProtectionProfileListDataFloodTcpSynRedResult red,
+
+            Outputs.GetZoneProtectionProfileListDataFloodTcpSynSynCookiesResult synCookies)
         {
-            ActivateRate = activateRate;
-            AlarmRate = alarmRate;
             Enable = enable;
-            MaximalRate = maximalRate;
+            Red = red;
+            SynCookies = synCookies;
         }
     }
 }

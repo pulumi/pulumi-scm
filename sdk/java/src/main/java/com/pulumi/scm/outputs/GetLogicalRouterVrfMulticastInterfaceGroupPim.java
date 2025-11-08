@@ -7,7 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfMulticastInterfaceGroupPimAllowedNeighbor;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Assert interval
      * 
      */
-    private Double assertInterval;
+    private Integer assertInterval;
     /**
      * @return Bsr border
      * 
@@ -32,7 +32,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Dr priority
      * 
      */
-    private Double drPriority;
+    private Integer drPriority;
     /**
      * @return Enable
      * 
@@ -42,12 +42,12 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Hello interval
      * 
      */
-    private Double helloInterval;
+    private Integer helloInterval;
     /**
      * @return Join prune interval
      * 
      */
-    private Double joinPruneInterval;
+    private Integer joinPruneInterval;
 
     private GetLogicalRouterVrfMulticastInterfaceGroupPim() {}
     /**
@@ -61,7 +61,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Assert interval
      * 
      */
-    public Double assertInterval() {
+    public Integer assertInterval() {
         return this.assertInterval;
     }
     /**
@@ -75,7 +75,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Dr priority
      * 
      */
-    public Double drPriority() {
+    public Integer drPriority() {
         return this.drPriority;
     }
     /**
@@ -89,14 +89,14 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Hello interval
      * 
      */
-    public Double helloInterval() {
+    public Integer helloInterval() {
         return this.helloInterval;
     }
     /**
      * @return Join prune interval
      * 
      */
-    public Double joinPruneInterval() {
+    public Integer joinPruneInterval() {
         return this.joinPruneInterval;
     }
 
@@ -110,12 +110,12 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupPim {
     @CustomType.Builder
     public static final class Builder {
         private List<GetLogicalRouterVrfMulticastInterfaceGroupPimAllowedNeighbor> allowedNeighbors;
-        private Double assertInterval;
+        private Integer assertInterval;
         private Boolean bsrBorder;
-        private Double drPriority;
+        private Integer drPriority;
         private Boolean enable;
-        private Double helloInterval;
-        private Double joinPruneInterval;
+        private Integer helloInterval;
+        private Integer joinPruneInterval;
         public Builder() {}
         public Builder(GetLogicalRouterVrfMulticastInterfaceGroupPim defaults) {
     	      Objects.requireNonNull(defaults);
@@ -140,7 +140,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupPim {
             return allowedNeighbors(List.of(allowedNeighbors));
         }
         @CustomType.Setter
-        public Builder assertInterval(Double assertInterval) {
+        public Builder assertInterval(Integer assertInterval) {
             if (assertInterval == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfMulticastInterfaceGroupPim", "assertInterval");
             }
@@ -156,7 +156,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupPim {
             return this;
         }
         @CustomType.Setter
-        public Builder drPriority(Double drPriority) {
+        public Builder drPriority(Integer drPriority) {
             if (drPriority == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfMulticastInterfaceGroupPim", "drPriority");
             }
@@ -172,7 +172,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupPim {
             return this;
         }
         @CustomType.Setter
-        public Builder helloInterval(Double helloInterval) {
+        public Builder helloInterval(Integer helloInterval) {
             if (helloInterval == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfMulticastInterfaceGroupPim", "helloInterval");
             }
@@ -180,7 +180,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupPim {
             return this;
         }
         @CustomType.Setter
-        public Builder joinPruneInterval(Double joinPruneInterval) {
+        public Builder joinPruneInterval(Integer joinPruneInterval) {
             if (joinPruneInterval == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfMulticastInterfaceGroupPim", "joinPruneInterval");
             }

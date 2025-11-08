@@ -4,26 +4,25 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
-import java.util.List;
 import java.util.Objects;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class TunnelInterfaceIp {
     /**
-     * @return tunnel interfaces IP address(es)
+     * @return Tunnel Interface IP address(es)
      * 
      */
-    private @Nullable List<String> ips;
+    private String name;
 
     private TunnelInterfaceIp() {}
     /**
-     * @return tunnel interfaces IP address(es)
+     * @return Tunnel Interface IP address(es)
      * 
      */
-    public List<String> ips() {
-        return this.ips == null ? List.of() : this.ips;
+    public String name() {
+        return this.name;
     }
 
     public static Builder builder() {
@@ -35,25 +34,24 @@ public final class TunnelInterfaceIp {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable List<String> ips;
+        private String name;
         public Builder() {}
         public Builder(TunnelInterfaceIp defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.ips = defaults.ips;
+    	      this.name = defaults.name;
         }
 
         @CustomType.Setter
-        public Builder ips(@Nullable List<String> ips) {
-
-            this.ips = ips;
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("TunnelInterfaceIp", "name");
+            }
+            this.name = name;
             return this;
-        }
-        public Builder ips(String... ips) {
-            return ips(List.of(ips));
         }
         public TunnelInterfaceIp build() {
             final var _resultValue = new TunnelInterfaceIp();
-            _resultValue.ips = ips;
+            _resultValue.name = name;
             return _resultValue;
         }
     }

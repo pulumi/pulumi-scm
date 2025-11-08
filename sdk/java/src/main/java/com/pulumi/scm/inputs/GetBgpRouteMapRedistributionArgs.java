@@ -17,14 +17,14 @@ public final class GetBgpRouteMapRedistributionArgs extends com.pulumi.resources
     public static final GetBgpRouteMapRedistributionArgs Empty = new GetBgpRouteMapRedistributionArgs();
 
     /**
-     * UUID of the resource
+     * BGP Route Map Redistributions UUID of the resource
      * 
      */
     @Import(name="id", required=true)
     private Output<String> id;
 
     /**
-     * @return UUID of the resource
+     * @return BGP Route Map Redistributions UUID of the resource
      * 
      */
     public Output<String> id() {
@@ -32,14 +32,14 @@ public final class GetBgpRouteMapRedistributionArgs extends com.pulumi.resources
     }
 
     /**
-     * Name
+     * BGP Route Map Redistributions Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Name
+     * @return BGP Route Map Redistributions Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -72,7 +72,7 @@ public final class GetBgpRouteMapRedistributionArgs extends com.pulumi.resources
         }
 
         /**
-         * @param id UUID of the resource
+         * @param id BGP Route Map Redistributions UUID of the resource
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class GetBgpRouteMapRedistributionArgs extends com.pulumi.resources
         }
 
         /**
-         * @param id UUID of the resource
+         * @param id BGP Route Map Redistributions UUID of the resource
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class GetBgpRouteMapRedistributionArgs extends com.pulumi.resources
         }
 
         /**
-         * @param name Name
+         * @param name BGP Route Map Redistributions Name
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class GetBgpRouteMapRedistributionArgs extends com.pulumi.resources
         }
 
         /**
-         * @param name Name
+         * @param name BGP Route Map Redistributions Name
          * 
          * @return builder
          * 

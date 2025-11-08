@@ -239,6 +239,81 @@ class ExternalDynamicList(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # This resource creates a domain-based External Dynamic List (EDL).
+        # The EDL will fetch a list of domains from the specified URL daily.
+        scm_edl1 = scm.ExternalDynamicList("scm_edl_1",
+            folder="All",
+            name="scm_edl_1",
+            type={
+                "domain": {
+                    "description": "List of malicious domains to block, updated daily.",
+                    "url": "http://some-threat-feed.com/domains.txt",
+                    "recurring": {
+                        "daily": {
+                            "at": "03",
+                        },
+                    },
+                },
+            })
+        scm_edl2 = scm.ExternalDynamicList("scm_edl_2",
+            folder="All",
+            name="scm_edl_2",
+            type={
+                "ip": {
+                    "description": "IP threat feed with basic auth, updated hourly.",
+                    "url": "https://threats.example.com/ips.txt",
+                    "recurring": {
+                        "hourly": {},
+                    },
+                },
+            })
+        scm_edl3 = scm.ExternalDynamicList("scm_edl_3",
+            folder="All",
+            name="scm_edl_3",
+            type={
+                "url": {
+                    "description": "List of phishing URLs, updated every Monday at 2 AM.",
+                    "url": "https://phish-block.example.com/urls.txt",
+                    "recurring": {
+                        "weekly": {
+                            "day_of_week": "monday",
+                            "at": "02",
+                        },
+                    },
+                },
+            })
+        scm_edl4 = scm.ExternalDynamicList("scm_edl_4",
+            folder="All",
+            name="scm_edl_4",
+            type={
+                "predefined_ip": {
+                    "description": "Palo Alto Networks-provided list of high-risk IP addresses.",
+                    "url": "panw-highrisk-ip-list",
+                },
+            })
+        scm_edl5 = scm.ExternalDynamicList("scm_edl_5",
+            folder="All",
+            name="scm_edl_5",
+            type={
+                "ip": {
+                    "description": "IP threat feed that requires authentication.",
+                    "url": "https://secure-feed.example.com/ips.txt",
+                    "certificate_profile": "test-cert-list-qekwys",
+                    "auth": {
+                        "username": "my-api-user",
+                        "password": "a-very-secret-password-123!",
+                    },
+                    "recurring": {
+                        "five_minute": {},
+                    },
+                },
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -257,6 +332,81 @@ class ExternalDynamicList(pulumi.CustomResource):
         ExternalDynamicList resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # This resource creates a domain-based External Dynamic List (EDL).
+        # The EDL will fetch a list of domains from the specified URL daily.
+        scm_edl1 = scm.ExternalDynamicList("scm_edl_1",
+            folder="All",
+            name="scm_edl_1",
+            type={
+                "domain": {
+                    "description": "List of malicious domains to block, updated daily.",
+                    "url": "http://some-threat-feed.com/domains.txt",
+                    "recurring": {
+                        "daily": {
+                            "at": "03",
+                        },
+                    },
+                },
+            })
+        scm_edl2 = scm.ExternalDynamicList("scm_edl_2",
+            folder="All",
+            name="scm_edl_2",
+            type={
+                "ip": {
+                    "description": "IP threat feed with basic auth, updated hourly.",
+                    "url": "https://threats.example.com/ips.txt",
+                    "recurring": {
+                        "hourly": {},
+                    },
+                },
+            })
+        scm_edl3 = scm.ExternalDynamicList("scm_edl_3",
+            folder="All",
+            name="scm_edl_3",
+            type={
+                "url": {
+                    "description": "List of phishing URLs, updated every Monday at 2 AM.",
+                    "url": "https://phish-block.example.com/urls.txt",
+                    "recurring": {
+                        "weekly": {
+                            "day_of_week": "monday",
+                            "at": "02",
+                        },
+                    },
+                },
+            })
+        scm_edl4 = scm.ExternalDynamicList("scm_edl_4",
+            folder="All",
+            name="scm_edl_4",
+            type={
+                "predefined_ip": {
+                    "description": "Palo Alto Networks-provided list of high-risk IP addresses.",
+                    "url": "panw-highrisk-ip-list",
+                },
+            })
+        scm_edl5 = scm.ExternalDynamicList("scm_edl_5",
+            folder="All",
+            name="scm_edl_5",
+            type={
+                "ip": {
+                    "description": "IP threat feed that requires authentication.",
+                    "url": "https://secure-feed.example.com/ips.txt",
+                    "certificate_profile": "test-cert-list-qekwys",
+                    "auth": {
+                        "username": "my-api-user",
+                        "password": "a-very-secret-password-123!",
+                    },
+                    "recurring": {
+                        "five_minute": {},
+                    },
+                },
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param ExternalDynamicListArgs args: The arguments to use to populate this resource's properties.

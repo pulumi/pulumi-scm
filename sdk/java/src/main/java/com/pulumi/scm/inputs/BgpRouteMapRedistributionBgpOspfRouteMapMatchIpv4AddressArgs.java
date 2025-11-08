@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs 
     public static final BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs Empty = new BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs();
 
     /**
-     * Access list
+     * BGP Root OSPF Route maps match ipv4 Access list
      * 
      */
     @Import(name="accessList")
     private @Nullable Output<String> accessList;
 
     /**
-     * @return Access list
+     * @return BGP Root OSPF Route maps match ipv4 Access list
      * 
      */
     public Optional<Output<String>> accessList() {
@@ -31,14 +31,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs 
     }
 
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps match ipv4 Prefix list
      * 
      */
     @Import(name="prefixList")
     private @Nullable Output<String> prefixList;
 
     /**
-     * @return Prefix list
+     * @return BGP Root OSPF Route maps match ipv4 Prefix list
      * 
      */
     public Optional<Output<String>> prefixList() {
@@ -71,7 +71,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs 
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList BGP Root OSPF Route maps match ipv4 Access list
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs 
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList BGP Root OSPF Route maps match ipv4 Access list
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs 
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList BGP Root OSPF Route maps match ipv4 Prefix list
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs 
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList BGP Root OSPF Route maps match ipv4 Prefix list
          * 
          * @return builder
          * 

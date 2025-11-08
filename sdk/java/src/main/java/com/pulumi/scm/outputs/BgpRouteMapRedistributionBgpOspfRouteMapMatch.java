@@ -14,134 +14,134 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionBgpOspfRouteMapMatch {
     /**
-     * @return AS path access list
+     * @return BGP Root OSPF Route maps match AS path access list
      * 
      */
     private @Nullable String asPathAccessList;
     /**
-     * @return Extended community
+     * @return EBGP Root OSPF Route maps match xtended community
      * 
      */
     private @Nullable String extendedCommunity;
     /**
-     * @return Interface
+     * @return BGP Root OSPF Route maps match Interface
      * 
      */
     private @Nullable String interface_;
     /**
-     * @return bgp-route-map-redistributions ipv4 object
+     * @return BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
      * 
      */
     private @Nullable BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4 ipv4;
     /**
-     * @return Large community
+     * @return BGP Root OSPF Route maps match Large community
      * 
      */
     private @Nullable String largeCommunity;
     /**
-     * @return Local preference
+     * @return BGP Root OSPF Route maps match Local preference
      * 
      */
     private @Nullable Integer localPreference;
     /**
-     * @return Metric
+     * @return BGP Root OSPF Route maps match Metric
      * 
      */
     private @Nullable Integer metric;
     /**
-     * @return Origin
+     * @return BGP Root OSPF Route maps match Origin
      * 
      */
     private @Nullable String origin;
     /**
-     * @return Peer
+     * @return BGP Root OSPF Route maps match Peer
      * 
      */
     private @Nullable String peer;
     /**
-     * @return Regular community
+     * @return BGP Root OSPF Route maps match Regular community
      * 
      */
     private @Nullable String regularCommunity;
     /**
-     * @return Tag
+     * @return BGP Root OSPF Route maps match Tag
      * 
      */
     private @Nullable Integer tag;
 
     private BgpRouteMapRedistributionBgpOspfRouteMapMatch() {}
     /**
-     * @return AS path access list
+     * @return BGP Root OSPF Route maps match AS path access list
      * 
      */
     public Optional<String> asPathAccessList() {
         return Optional.ofNullable(this.asPathAccessList);
     }
     /**
-     * @return Extended community
+     * @return EBGP Root OSPF Route maps match xtended community
      * 
      */
     public Optional<String> extendedCommunity() {
         return Optional.ofNullable(this.extendedCommunity);
     }
     /**
-     * @return Interface
+     * @return BGP Root OSPF Route maps match Interface
      * 
      */
     public Optional<String> interface_() {
         return Optional.ofNullable(this.interface_);
     }
     /**
-     * @return bgp-route-map-redistributions ipv4 object
+     * @return BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
      * 
      */
     public Optional<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4> ipv4() {
         return Optional.ofNullable(this.ipv4);
     }
     /**
-     * @return Large community
+     * @return BGP Root OSPF Route maps match Large community
      * 
      */
     public Optional<String> largeCommunity() {
         return Optional.ofNullable(this.largeCommunity);
     }
     /**
-     * @return Local preference
+     * @return BGP Root OSPF Route maps match Local preference
      * 
      */
     public Optional<Integer> localPreference() {
         return Optional.ofNullable(this.localPreference);
     }
     /**
-     * @return Metric
+     * @return BGP Root OSPF Route maps match Metric
      * 
      */
     public Optional<Integer> metric() {
         return Optional.ofNullable(this.metric);
     }
     /**
-     * @return Origin
+     * @return BGP Root OSPF Route maps match Origin
      * 
      */
     public Optional<String> origin() {
         return Optional.ofNullable(this.origin);
     }
     /**
-     * @return Peer
+     * @return BGP Root OSPF Route maps match Peer
      * 
      */
     public Optional<String> peer() {
         return Optional.ofNullable(this.peer);
     }
     /**
-     * @return Regular community
+     * @return BGP Root OSPF Route maps match Regular community
      * 
      */
     public Optional<String> regularCommunity() {
         return Optional.ofNullable(this.regularCommunity);
     }
     /**
-     * @return Tag
+     * @return BGP Root OSPF Route maps match Tag
      * 
      */
     public Optional<Integer> tag() {

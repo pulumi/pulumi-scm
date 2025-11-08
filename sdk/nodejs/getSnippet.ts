@@ -6,6 +6,30 @@ import * as utilities from "./utilities";
 
 /**
  * Snippet data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmLabel1 = new scm.Label("scm_label_1", {name: "scm_label"});
+ * const scmSnippet1 = new scm.Snippet("scm_snippet_1", {
+ *     name: "scm_snippet",
+ *     description: "Adding a Description from Terraform",
+ *     labels: [scmLabel1.name],
+ * });
+ * // Look up the "scm_snippet" tag by its id
+ * const scmSnippetOutputsDs = scm.getSnippetOutput({
+ *     id: scmSnippet1.id,
+ * });
+ * export const snippetOutputs = {
+ *     productionId: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.id),
+ *     productionName: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.name),
+ *     productionDescription: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.description),
+ *     productionLabels: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.labels),
+ * };
+ * ```
  */
 export function getSnippet(args: GetSnippetArgs, opts?: pulumi.InvokeOptions): Promise<GetSnippetResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -57,6 +81,30 @@ export interface GetSnippetResult {
 }
 /**
  * Snippet data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmLabel1 = new scm.Label("scm_label_1", {name: "scm_label"});
+ * const scmSnippet1 = new scm.Snippet("scm_snippet_1", {
+ *     name: "scm_snippet",
+ *     description: "Adding a Description from Terraform",
+ *     labels: [scmLabel1.name],
+ * });
+ * // Look up the "scm_snippet" tag by its id
+ * const scmSnippetOutputsDs = scm.getSnippetOutput({
+ *     id: scmSnippet1.id,
+ * });
+ * export const snippetOutputs = {
+ *     productionId: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.id),
+ *     productionName: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.name),
+ *     productionDescription: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.description),
+ *     productionLabels: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.labels),
+ * };
+ * ```
  */
 export function getSnippetOutput(args: GetSnippetOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSnippetResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

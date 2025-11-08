@@ -19,7 +19,7 @@ type SdwanTrafficDistributionProfile struct {
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Link tags
+	// Link-Tags for interfaces identified by defined tags
 	LinkTags SdwanTrafficDistributionProfileLinkTagArrayOutput `pulumi:"linkTags"`
 	// Profile name
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -27,7 +27,7 @@ type SdwanTrafficDistributionProfile struct {
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// Traffic distribution
-	TrafficDistribution pulumi.StringPtrOutput `pulumi:"trafficDistribution"`
+	TrafficDistribution pulumi.StringOutput `pulumi:"trafficDistribution"`
 }
 
 // NewSdwanTrafficDistributionProfile registers a new resource with the given unique name, arguments, and options.
@@ -64,7 +64,7 @@ type sdwanTrafficDistributionProfileState struct {
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Link tags
+	// Link-Tags for interfaces identified by defined tags
 	LinkTags []SdwanTrafficDistributionProfileLinkTag `pulumi:"linkTags"`
 	// Profile name
 	Name *string `pulumi:"name"`
@@ -80,7 +80,7 @@ type SdwanTrafficDistributionProfileState struct {
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Link tags
+	// Link-Tags for interfaces identified by defined tags
 	LinkTags SdwanTrafficDistributionProfileLinkTagArrayInput
 	// Profile name
 	Name pulumi.StringPtrInput
@@ -100,7 +100,7 @@ type sdwanTrafficDistributionProfileArgs struct {
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Link tags
+	// Link-Tags for interfaces identified by defined tags
 	LinkTags []SdwanTrafficDistributionProfileLinkTag `pulumi:"linkTags"`
 	// Profile name
 	Name *string `pulumi:"name"`
@@ -116,7 +116,7 @@ type SdwanTrafficDistributionProfileArgs struct {
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Link tags
+	// Link-Tags for interfaces identified by defined tags
 	LinkTags SdwanTrafficDistributionProfileLinkTagArrayInput
 	// Profile name
 	Name pulumi.StringPtrInput
@@ -223,7 +223,7 @@ func (o SdwanTrafficDistributionProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SdwanTrafficDistributionProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Link tags
+// Link-Tags for interfaces identified by defined tags
 func (o SdwanTrafficDistributionProfileOutput) LinkTags() SdwanTrafficDistributionProfileLinkTagArrayOutput {
 	return o.ApplyT(func(v *SdwanTrafficDistributionProfile) SdwanTrafficDistributionProfileLinkTagArrayOutput {
 		return v.LinkTags
@@ -245,8 +245,8 @@ func (o SdwanTrafficDistributionProfileOutput) Tfid() pulumi.StringOutput {
 }
 
 // Traffic distribution
-func (o SdwanTrafficDistributionProfileOutput) TrafficDistribution() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SdwanTrafficDistributionProfile) pulumi.StringPtrOutput { return v.TrafficDistribution }).(pulumi.StringPtrOutput)
+func (o SdwanTrafficDistributionProfileOutput) TrafficDistribution() pulumi.StringOutput {
+	return o.ApplyT(func(v *SdwanTrafficDistributionProfile) pulumi.StringOutput { return v.TrafficDistribution }).(pulumi.StringOutput)
 }
 
 type SdwanTrafficDistributionProfileArrayOutput struct{ *pulumi.OutputState }

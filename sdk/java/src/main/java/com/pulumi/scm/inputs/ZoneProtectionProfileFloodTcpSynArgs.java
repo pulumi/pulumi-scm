@@ -5,8 +5,9 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.ZoneProtectionProfileFloodTcpSynRedArgs;
+import com.pulumi.scm.inputs.ZoneProtectionProfileFloodTcpSynSynCookiesArgs;
 import java.lang.Boolean;
-import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,36 +16,6 @@ import javax.annotation.Nullable;
 public final class ZoneProtectionProfileFloodTcpSynArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ZoneProtectionProfileFloodTcpSynArgs Empty = new ZoneProtectionProfileFloodTcpSynArgs();
-
-    /**
-     * When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-     * 
-     */
-    @Import(name="activateRate")
-    private @Nullable Output<Integer> activateRate;
-
-    /**
-     * @return When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-     * 
-     */
-    public Optional<Output<Integer>> activateRate() {
-        return Optional.ofNullable(this.activateRate);
-    }
-
-    /**
-     * When the flow exceeds the `alertRate`` threshold, an alarm is generated.
-     * 
-     */
-    @Import(name="alarmRate")
-    private @Nullable Output<Integer> alarmRate;
-
-    /**
-     * @return When the flow exceeds the `alertRate`` threshold, an alarm is generated.
-     * 
-     */
-    public Optional<Output<Integer>> alarmRate() {
-        return Optional.ofNullable(this.alarmRate);
-    }
 
     /**
      * Enable protection against SYN floods?
@@ -62,27 +33,41 @@ public final class ZoneProtectionProfileFloodTcpSynArgs extends com.pulumi.resou
     }
 
     /**
-     * When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
+     * Red
      * 
      */
-    @Import(name="maximalRate")
-    private @Nullable Output<Integer> maximalRate;
+    @Import(name="red")
+    private @Nullable Output<ZoneProtectionProfileFloodTcpSynRedArgs> red;
 
     /**
-     * @return When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
+     * @return Red
      * 
      */
-    public Optional<Output<Integer>> maximalRate() {
-        return Optional.ofNullable(this.maximalRate);
+    public Optional<Output<ZoneProtectionProfileFloodTcpSynRedArgs>> red() {
+        return Optional.ofNullable(this.red);
+    }
+
+    /**
+     * Syn cookies
+     * 
+     */
+    @Import(name="synCookies")
+    private @Nullable Output<ZoneProtectionProfileFloodTcpSynSynCookiesArgs> synCookies;
+
+    /**
+     * @return Syn cookies
+     * 
+     */
+    public Optional<Output<ZoneProtectionProfileFloodTcpSynSynCookiesArgs>> synCookies() {
+        return Optional.ofNullable(this.synCookies);
     }
 
     private ZoneProtectionProfileFloodTcpSynArgs() {}
 
     private ZoneProtectionProfileFloodTcpSynArgs(ZoneProtectionProfileFloodTcpSynArgs $) {
-        this.activateRate = $.activateRate;
-        this.alarmRate = $.alarmRate;
         this.enable = $.enable;
-        this.maximalRate = $.maximalRate;
+        this.red = $.red;
+        this.synCookies = $.synCookies;
     }
 
     public static Builder builder() {
@@ -101,48 +86,6 @@ public final class ZoneProtectionProfileFloodTcpSynArgs extends com.pulumi.resou
 
         public Builder(ZoneProtectionProfileFloodTcpSynArgs defaults) {
             $ = new ZoneProtectionProfileFloodTcpSynArgs(Objects.requireNonNull(defaults));
-        }
-
-        /**
-         * @param activateRate When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder activateRate(@Nullable Output<Integer> activateRate) {
-            $.activateRate = activateRate;
-            return this;
-        }
-
-        /**
-         * @param activateRate When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder activateRate(Integer activateRate) {
-            return activateRate(Output.of(activateRate));
-        }
-
-        /**
-         * @param alarmRate When the flow exceeds the `alertRate`` threshold, an alarm is generated.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder alarmRate(@Nullable Output<Integer> alarmRate) {
-            $.alarmRate = alarmRate;
-            return this;
-        }
-
-        /**
-         * @param alarmRate When the flow exceeds the `alertRate`` threshold, an alarm is generated.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder alarmRate(Integer alarmRate) {
-            return alarmRate(Output.of(alarmRate));
         }
 
         /**
@@ -167,24 +110,45 @@ public final class ZoneProtectionProfileFloodTcpSynArgs extends com.pulumi.resou
         }
 
         /**
-         * @param maximalRate When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
+         * @param red Red
          * 
          * @return builder
          * 
          */
-        public Builder maximalRate(@Nullable Output<Integer> maximalRate) {
-            $.maximalRate = maximalRate;
+        public Builder red(@Nullable Output<ZoneProtectionProfileFloodTcpSynRedArgs> red) {
+            $.red = red;
             return this;
         }
 
         /**
-         * @param maximalRate When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
+         * @param red Red
          * 
          * @return builder
          * 
          */
-        public Builder maximalRate(Integer maximalRate) {
-            return maximalRate(Output.of(maximalRate));
+        public Builder red(ZoneProtectionProfileFloodTcpSynRedArgs red) {
+            return red(Output.of(red));
+        }
+
+        /**
+         * @param synCookies Syn cookies
+         * 
+         * @return builder
+         * 
+         */
+        public Builder synCookies(@Nullable Output<ZoneProtectionProfileFloodTcpSynSynCookiesArgs> synCookies) {
+            $.synCookies = synCookies;
+            return this;
+        }
+
+        /**
+         * @param synCookies Syn cookies
+         * 
+         * @return builder
+         * 
+         */
+        public Builder synCookies(ZoneProtectionProfileFloodTcpSynSynCookiesArgs synCookies) {
+            return synCookies(Output.of(synCookies));
         }
 
         public ZoneProtectionProfileFloodTcpSynArgs build() {

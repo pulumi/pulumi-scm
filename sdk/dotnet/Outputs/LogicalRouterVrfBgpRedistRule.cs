@@ -24,7 +24,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Metric
         /// </summary>
-        public readonly double? Metric;
+        public readonly int? Metric;
         /// <summary>
         /// Name
         /// </summary>
@@ -36,7 +36,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Set as path limit
         /// </summary>
-        public readonly double? SetAsPathLimit;
+        public readonly int? SetAsPathLimit;
         /// <summary>
         /// Set community
         /// </summary>
@@ -48,11 +48,11 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Set local preference
         /// </summary>
-        public readonly double? SetLocalPreference;
+        public readonly int? SetLocalPreference;
         /// <summary>
         /// Set med
         /// </summary>
-        public readonly double? SetMed;
+        public readonly int? SetMed;
         /// <summary>
         /// Set origin
         /// </summary>
@@ -64,21 +64,21 @@ namespace Pulumi.Scm.Outputs
 
             bool? enable,
 
-            double? metric,
+            int? metric,
 
             string name,
 
             string? routeTable,
 
-            double? setAsPathLimit,
+            int? setAsPathLimit,
 
             ImmutableArray<string> setCommunities,
 
             ImmutableArray<string> setExtendedCommunities,
 
-            double? setLocalPreference,
+            int? setLocalPreference,
 
-            double? setMed,
+            int? setMed,
 
             string? setOrigin)
         {

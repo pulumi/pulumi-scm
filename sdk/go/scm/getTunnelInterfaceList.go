@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetTunnelInterfaceList(ctx *pulumi.Context, args *GetTunnelInterfaceListArgs, opts ...pulumi.InvokeOption) (*GetTunnelInterfaceListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetTunnelInterfaceListResult

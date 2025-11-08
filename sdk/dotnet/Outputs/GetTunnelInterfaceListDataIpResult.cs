@@ -14,14 +14,14 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetTunnelInterfaceListDataIpResult
     {
         /// <summary>
-        /// tunnel interfaces IP address(es)
+        /// Tunnel Interface IP address(es)
         /// </summary>
-        public readonly ImmutableArray<string> Ips;
+        public readonly string Name;
 
         [OutputConstructor]
-        private GetTunnelInterfaceListDataIpResult(ImmutableArray<string> ips)
+        private GetTunnelInterfaceListDataIpResult(string name)
         {
-            Ips = ips;
+            Name = name;
         }
     }
 }

@@ -8,6 +8,44 @@ import * as utilities from "./utilities";
 
 /**
  * RadiusServerProfile resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const chapRadiusProfile = new scm.RadiusServerProfile("chap_radius_profile", {
+ *     name: "CHAP_only_rsp_1",
+ *     folder: "All",
+ *     retries: 5,
+ *     timeout: 60,
+ *     protocol: {
+ *         cHAP: {},
+ *     },
+ *     servers: [{
+ *         name: "Chap_Server_Primary",
+ *         ipAddress: "10.1.1.10",
+ *         port: 1812,
+ *         secret: "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+ *     }],
+ * });
+ * const papRadiusProfile = new scm.RadiusServerProfile("pap_radius_profile", {
+ *     name: "pap_only_rsp_1",
+ *     folder: "All",
+ *     retries: 5,
+ *     timeout: 60,
+ *     protocol: {
+ *         pAP: {},
+ *     },
+ *     servers: [{
+ *         name: "pap_Server_Primary",
+ *         ipAddress: "10.1.1.10",
+ *         port: 1812,
+ *         secret: "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+ *     }],
+ * });
+ * ```
  */
 export class RadiusServerProfile extends pulumi.CustomResource {
     /**

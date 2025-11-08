@@ -18,7 +18,7 @@ public final class VlanInterfaceDhcpClientSendHostname {
      */
     private @Nullable Boolean enable;
     /**
-     * @return Hostname
+     * @return Set interface hostname
      * 
      */
     private @Nullable String hostname;
@@ -32,7 +32,7 @@ public final class VlanInterfaceDhcpClientSendHostname {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * @return Hostname
+     * @return Set interface hostname
      * 
      */
     public Optional<String> hostname() {

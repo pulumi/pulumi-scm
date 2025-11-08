@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class BgpRouteMapRedistributionOspfRibRouteMap
     {
         /// <summary>
-        /// Action
+        /// OSPF RIB Route maps Action
         /// </summary>
         public readonly string? Action;
         /// <summary>
-        /// Description
+        /// OSPF RIB Route maps Description
         /// </summary>
         public readonly string? Description;
         /// <summary>
@@ -26,11 +26,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionOspfRibRouteMapMatch? Match;
         /// <summary>
-        /// Sequence number
+        /// OSPF RIB Route mapsSequence number
         /// </summary>
         public readonly int? Name;
         /// <summary>
-        /// Set
+        /// OSPF RIB Route maps set
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionOspfRibRouteMapSet? Set;
 

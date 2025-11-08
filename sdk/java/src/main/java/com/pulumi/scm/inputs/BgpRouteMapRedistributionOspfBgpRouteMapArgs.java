@@ -19,14 +19,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
     public static final BgpRouteMapRedistributionOspfBgpRouteMapArgs Empty = new BgpRouteMapRedistributionOspfBgpRouteMapArgs();
 
     /**
-     * Action
+     * OSPF BGP Route maps Action
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return OSPF BGP Route maps Action
      * 
      */
     public Optional<Output<String>> action() {
@@ -34,14 +34,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
     }
 
     /**
-     * Description
+     * OSPF BGP Route maps Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return Description
+     * @return OSPF BGP Route maps Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -64,14 +64,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
     }
 
     /**
-     * Sequence number
+     * OSPF BGP Route maps Sequence number
      * 
      */
     @Import(name="name")
     private @Nullable Output<Integer> name;
 
     /**
-     * @return Sequence number
+     * @return OSPF BGP Route maps Sequence number
      * 
      */
     public Optional<Output<Integer>> name() {
@@ -79,14 +79,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
     }
 
     /**
-     * Set
+     * OSPF Root Set
      * 
      */
     @Import(name="set")
     private @Nullable Output<BgpRouteMapRedistributionOspfBgpRouteMapSetArgs> set;
 
     /**
-     * @return Set
+     * @return OSPF Root Set
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionOspfBgpRouteMapSetArgs>> set() {
@@ -122,7 +122,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param action Action
+         * @param action OSPF BGP Route maps Action
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param action Action
+         * @param action OSPF BGP Route maps Action
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param description Description
+         * @param description OSPF BGP Route maps Description
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param description Description
+         * @param description OSPF BGP Route maps Description
          * 
          * @return builder
          * 
@@ -185,7 +185,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param name Sequence number
+         * @param name OSPF BGP Route maps Sequence number
          * 
          * @return builder
          * 
@@ -196,7 +196,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param name Sequence number
+         * @param name OSPF BGP Route maps Sequence number
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param set Set
+         * @param set OSPF Root Set
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param set Set
+         * @param set OSPF Root Set
          * 
          * @return builder
          * 

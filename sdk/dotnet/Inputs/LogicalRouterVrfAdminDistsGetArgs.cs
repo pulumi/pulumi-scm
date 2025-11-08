@@ -16,73 +16,73 @@ namespace Pulumi.Scm.Inputs
         /// Bgp external
         /// </summary>
         [Input("bgpExternal")]
-        public Input<double>? BgpExternal { get; set; }
+        public Input<int>? BgpExternal { get; set; }
 
         /// <summary>
         /// Bgp internal
         /// </summary>
         [Input("bgpInternal")]
-        public Input<double>? BgpInternal { get; set; }
+        public Input<int>? BgpInternal { get; set; }
 
         /// <summary>
         /// Bgp local
         /// </summary>
         [Input("bgpLocal")]
-        public Input<double>? BgpLocal { get; set; }
+        public Input<int>? BgpLocal { get; set; }
 
         /// <summary>
         /// Ospf ext
         /// </summary>
         [Input("ospfExt")]
-        public Input<double>? OspfExt { get; set; }
+        public Input<int>? OspfExt { get; set; }
 
         /// <summary>
         /// Ospf inter
         /// </summary>
         [Input("ospfInter")]
-        public Input<double>? OspfInter { get; set; }
+        public Input<int>? OspfInter { get; set; }
 
         /// <summary>
         /// Ospf intra
         /// </summary>
         [Input("ospfIntra")]
-        public Input<double>? OspfIntra { get; set; }
+        public Input<int>? OspfIntra { get; set; }
 
         /// <summary>
         /// Ospfv3 ext
         /// </summary>
         [Input("ospfv3Ext")]
-        public Input<double>? Ospfv3Ext { get; set; }
+        public Input<int>? Ospfv3Ext { get; set; }
 
         /// <summary>
         /// Ospfv3 inter
         /// </summary>
         [Input("ospfv3Inter")]
-        public Input<double>? Ospfv3Inter { get; set; }
+        public Input<int>? Ospfv3Inter { get; set; }
 
         /// <summary>
         /// Ospfv3 intra
         /// </summary>
         [Input("ospfv3Intra")]
-        public Input<double>? Ospfv3Intra { get; set; }
+        public Input<int>? Ospfv3Intra { get; set; }
 
         /// <summary>
         /// Rip
         /// </summary>
         [Input("rip")]
-        public Input<double>? Rip { get; set; }
+        public Input<int>? Rip { get; set; }
 
         /// <summary>
         /// Static
         /// </summary>
         [Input("static")]
-        public Input<double>? Static { get; set; }
+        public Input<int>? Static { get; set; }
 
         /// <summary>
         /// Static ipv6
         /// </summary>
         [Input("staticIpv6")]
-        public Input<double>? StaticIpv6 { get; set; }
+        public Input<int>? StaticIpv6 { get; set; }
 
         public LogicalRouterVrfAdminDistsGetArgs()
         {

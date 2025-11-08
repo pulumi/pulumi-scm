@@ -7,7 +7,6 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetAntiSpywareSignatureDefaultAction;
 import com.pulumi.scm.outputs.GetAntiSpywareSignatureSignature;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -79,7 +78,7 @@ public final class GetAntiSpywareSignatureResult {
      * @return threat id range \n\n and \n\n
      * 
      */
-    private Integer threatId;
+    private String threatId;
     /**
      * @return Threatname
      * 
@@ -183,7 +182,7 @@ public final class GetAntiSpywareSignatureResult {
      * @return threat id range \n\n and \n\n
      * 
      */
-    public Integer threatId() {
+    public String threatId() {
         return this.threatId;
     }
     /**
@@ -223,7 +222,7 @@ public final class GetAntiSpywareSignatureResult {
         private GetAntiSpywareSignatureSignature signature;
         private String snippet;
         private String tfid;
-        private Integer threatId;
+        private String threatId;
         private String threatname;
         private List<String> vendors;
         public Builder() {}
@@ -361,7 +360,7 @@ public final class GetAntiSpywareSignatureResult {
             return this;
         }
         @CustomType.Setter
-        public Builder threatId(Integer threatId) {
+        public Builder threatId(String threatId) {
             if (threatId == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareSignatureResult", "threatId");
             }

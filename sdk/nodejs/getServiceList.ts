@@ -17,12 +17,12 @@ import * as utilities from "./utilities";
  *
  * // Data source to fetch all services in the "Shared" folder.
  * const allSharedServices = scm.getServiceList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const allSharedServicesMap = allSharedServices.then(allSharedServices => .reduce((__obj, svc) => ({ ...__obj, [svc.name]: svc })));
  * // Example of using pagination to get the first 5 services.
  * const paginatedServices = scm.getServiceList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
@@ -130,12 +130,12 @@ export interface GetServiceListResult {
  *
  * // Data source to fetch all services in the "Shared" folder.
  * const allSharedServices = scm.getServiceList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const allSharedServicesMap = allSharedServices.then(allSharedServices => .reduce((__obj, svc) => ({ ...__obj, [svc.name]: svc })));
  * // Example of using pagination to get the first 5 services.
  * const paginatedServices = scm.getServiceList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });

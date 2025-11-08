@@ -11,6 +11,103 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// QosPolicyRule resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // --- 2. ANCHOR QOS POLICY RULE (Used for relative positioning) ---
+    ///     var anchorQosRule = new Scm.QosPolicyRule("anchor_qos_rule", new()
+    ///     {
+    ///         Name = "anchor-qos-rule",
+    ///         Description = "Base rule for testing 'before' and 'after' positioning.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
+    ///         {
+    ///             Class = "2",
+    ///         },
+    ///         Schedule = "non-work-hours",
+    ///         DscpTos = new Scm.Inputs.QosPolicyRuleDscpTosArgs
+    ///         {
+    ///             Codepoints = new[]
+    ///             {
+    ///                 new Scm.Inputs.QosPolicyRuleDscpTosCodepointArgs
+    ///                 {
+    ///                     Name = "Set-EF",
+    ///                     Type = new Scm.Inputs.QosPolicyRuleDscpTosCodepointTypeArgs
+    ///                     {
+    ///                         Ef = null,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+    ///     var ruleTopQosRule = new Scm.QosPolicyRule("rule_top_qos_rule", new()
+    ///     {
+    ///         Name = "top-absolute-qos-rule",
+    ///         Description = "Placed at the very TOP of the QoS rulebase (Highest Priority).",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "top",
+    ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
+    ///         {
+    ///             Class = "2",
+    ///         },
+    ///     });
+    /// 
+    ///     var ruleBottomQosRule = new Scm.QosPolicyRule("rule_bottom_qos_rule", new()
+    ///     {
+    ///         Name = "bottom-absolute-qos-rule",
+    ///         Description = "Placed at the very BOTTOM of the QoS rulebase (Lowest Priority)",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "bottom",
+    ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
+    ///         {
+    ///             Class = "3",
+    ///         },
+    ///     });
+    /// 
+    ///     // --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+    ///     var ruleBeforeAnchorQos = new Scm.QosPolicyRule("rule_before_anchor_qos", new()
+    ///     {
+    ///         Name = "before-anchor-qos-rule",
+    ///         Description = "Positioned immediately BEFORE the anchor-qos-rule.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "before",
+    ///         TargetRule = anchorQosRule.Id,
+    ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
+    ///         {
+    ///             Class = "5",
+    ///         },
+    ///     });
+    /// 
+    ///     var ruleAfterAnchorQos = new Scm.QosPolicyRule("rule_after_anchor_qos", new()
+    ///     {
+    ///         Name = "after-anchor-qos-rule",
+    ///         Description = "Positioned immediately AFTER the anchor-qos-rule.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "after",
+    ///         TargetRule = anchorQosRule.Id,
+    ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
+    ///         {
+    ///             Class = "4",
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/qosPolicyRule:QosPolicyRule")]
     public partial class QosPolicyRule : global::Pulumi.CustomResource
@@ -58,6 +155,12 @@ namespace Pulumi.Scm
         public Output<string> Position { get; private set; } = null!;
 
         /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Output("relativePosition")]
+        public Output<string?> RelativePosition { get; private set; } = null!;
+
+        /// <summary>
         /// Schedule
         /// </summary>
         [Output("schedule")]
@@ -68,6 +171,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Output("targetRule")]
+        public Output<string?> TargetRule { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
@@ -161,6 +270,12 @@ namespace Pulumi.Scm
         public Input<string>? Position { get; set; }
 
         /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Input("relativePosition")]
+        public Input<string>? RelativePosition { get; set; }
+
+        /// <summary>
         /// Schedule
         /// </summary>
         [Input("schedule")]
@@ -171,6 +286,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Input("targetRule")]
+        public Input<string>? TargetRule { get; set; }
 
         public QosPolicyRuleArgs()
         {
@@ -223,6 +344,12 @@ namespace Pulumi.Scm
         public Input<string>? Position { get; set; }
 
         /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Input("relativePosition")]
+        public Input<string>? RelativePosition { get; set; }
+
+        /// <summary>
         /// Schedule
         /// </summary>
         [Input("schedule")]
@@ -233,6 +360,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Input("targetRule")]
+        public Input<string>? TargetRule { get; set; }
 
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }

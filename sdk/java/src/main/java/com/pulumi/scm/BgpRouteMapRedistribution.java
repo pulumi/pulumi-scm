@@ -52,14 +52,14 @@ public class BgpRouteMapRedistribution extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.connectedStatic);
     }
     /**
-     * Description
+     * BGP Route Map Redistributions Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return Description
+     * @return BGP Route Map Redistributions Description
      * 
      */
     public Output<Optional<String>> description() {
@@ -94,14 +94,14 @@ public class BgpRouteMapRedistribution extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.folder);
     }
     /**
-     * Name
+     * BGP Route Map Redistributions Name
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Name
+     * @return BGP Route Map Redistributions Name
      * 
      */
     public Output<String> name() {

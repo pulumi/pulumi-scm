@@ -6,7 +6,6 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetTrafficSteeringRuleListDataActionForward;
-import java.lang.String;
 import java.util.Objects;
 
 @CustomType
@@ -16,11 +15,6 @@ public final class GetTrafficSteeringRuleListDataAction {
      * 
      */
     private GetTrafficSteeringRuleListDataActionForward forward;
-    /**
-     * @return No pbf
-     * 
-     */
-    private String noPbf;
 
     private GetTrafficSteeringRuleListDataAction() {}
     /**
@@ -29,13 +23,6 @@ public final class GetTrafficSteeringRuleListDataAction {
      */
     public GetTrafficSteeringRuleListDataActionForward forward() {
         return this.forward;
-    }
-    /**
-     * @return No pbf
-     * 
-     */
-    public String noPbf() {
-        return this.noPbf;
     }
 
     public static Builder builder() {
@@ -48,12 +35,10 @@ public final class GetTrafficSteeringRuleListDataAction {
     @CustomType.Builder
     public static final class Builder {
         private GetTrafficSteeringRuleListDataActionForward forward;
-        private String noPbf;
         public Builder() {}
         public Builder(GetTrafficSteeringRuleListDataAction defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.forward = defaults.forward;
-    	      this.noPbf = defaults.noPbf;
         }
 
         @CustomType.Setter
@@ -64,18 +49,9 @@ public final class GetTrafficSteeringRuleListDataAction {
             this.forward = forward;
             return this;
         }
-        @CustomType.Setter
-        public Builder noPbf(String noPbf) {
-            if (noPbf == null) {
-              throw new MissingRequiredPropertyException("GetTrafficSteeringRuleListDataAction", "noPbf");
-            }
-            this.noPbf = noPbf;
-            return this;
-        }
         public GetTrafficSteeringRuleListDataAction build() {
             final var _resultValue = new GetTrafficSteeringRuleListDataAction();
             _resultValue.forward = forward;
-            _resultValue.noPbf = noPbf;
             return _resultValue;
         }
     }

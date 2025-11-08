@@ -5,6 +5,7 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.InterfaceManagementProfilePermittedIpArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -63,14 +64,14 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Http ocsp
+     * Allow HTTP OCSP?
      * 
      */
     @Import(name="httpOcsp")
     private @Nullable Output<Boolean> httpOcsp;
 
     /**
-     * @return Http ocsp
+     * @return Allow HTTP OCSP?
      * 
      */
     public Optional<Output<Boolean>> httpOcsp() {
@@ -108,17 +109,17 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Permitted ip
+     * Allowed IP address(es)
      * 
      */
     @Import(name="permittedIps")
-    private @Nullable Output<List<String>> permittedIps;
+    private @Nullable Output<List<InterfaceManagementProfilePermittedIpArgs>> permittedIps;
 
     /**
-     * @return Permitted ip
+     * @return Allowed IP address(es)
      * 
      */
-    public Optional<Output<List<String>>> permittedIps() {
+    public Optional<Output<List<InterfaceManagementProfilePermittedIpArgs>>> permittedIps() {
         return Optional.ofNullable(this.permittedIps);
     }
 
@@ -138,17 +139,17 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Response pages
+     * Allow response pages?
      * 
      */
     @Import(name="responsePages")
-    private @Nullable Output<String> responsePages;
+    private @Nullable Output<Boolean> responsePages;
 
     /**
-     * @return Response pages
+     * @return Allow response pages?
      * 
      */
-    public Optional<Output<String>> responsePages() {
+    public Optional<Output<Boolean>> responsePages() {
         return Optional.ofNullable(this.responsePages);
     }
 
@@ -198,14 +199,14 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Userid service
+     * Allow User-ID?
      * 
      */
     @Import(name="useridService")
     private @Nullable Output<Boolean> useridService;
 
     /**
-     * @return Userid service
+     * @return Allow User-ID?
      * 
      */
     public Optional<Output<Boolean>> useridService() {
@@ -213,14 +214,14 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Userid syslog listener ssl
+     * Allow User-ID syslog listener (SSL)?
      * 
      */
     @Import(name="useridSyslogListenerSsl")
     private @Nullable Output<Boolean> useridSyslogListenerSsl;
 
     /**
-     * @return Userid syslog listener ssl
+     * @return Allow User-ID syslog listener (SSL)?
      * 
      */
     public Optional<Output<Boolean>> useridSyslogListenerSsl() {
@@ -228,14 +229,14 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Userid syslog listener udp
+     * Allow User-ID syslog listener (UDP)?
      * 
      */
     @Import(name="useridSyslogListenerUdp")
     private @Nullable Output<Boolean> useridSyslogListenerUdp;
 
     /**
-     * @return Userid syslog listener udp
+     * @return Allow User-ID syslog listener (UDP)?
      * 
      */
     public Optional<Output<Boolean>> useridSyslogListenerUdp() {
@@ -344,7 +345,7 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param httpOcsp Http ocsp
+         * @param httpOcsp Allow HTTP OCSP?
          * 
          * @return builder
          * 
@@ -355,7 +356,7 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param httpOcsp Http ocsp
+         * @param httpOcsp Allow HTTP OCSP?
          * 
          * @return builder
          * 
@@ -407,33 +408,33 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param permittedIps Permitted ip
+         * @param permittedIps Allowed IP address(es)
          * 
          * @return builder
          * 
          */
-        public Builder permittedIps(@Nullable Output<List<String>> permittedIps) {
+        public Builder permittedIps(@Nullable Output<List<InterfaceManagementProfilePermittedIpArgs>> permittedIps) {
             $.permittedIps = permittedIps;
             return this;
         }
 
         /**
-         * @param permittedIps Permitted ip
+         * @param permittedIps Allowed IP address(es)
          * 
          * @return builder
          * 
          */
-        public Builder permittedIps(List<String> permittedIps) {
+        public Builder permittedIps(List<InterfaceManagementProfilePermittedIpArgs> permittedIps) {
             return permittedIps(Output.of(permittedIps));
         }
 
         /**
-         * @param permittedIps Permitted ip
+         * @param permittedIps Allowed IP address(es)
          * 
          * @return builder
          * 
          */
-        public Builder permittedIps(String... permittedIps) {
+        public Builder permittedIps(InterfaceManagementProfilePermittedIpArgs... permittedIps) {
             return permittedIps(List.of(permittedIps));
         }
 
@@ -459,23 +460,23 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param responsePages Response pages
+         * @param responsePages Allow response pages?
          * 
          * @return builder
          * 
          */
-        public Builder responsePages(@Nullable Output<String> responsePages) {
+        public Builder responsePages(@Nullable Output<Boolean> responsePages) {
             $.responsePages = responsePages;
             return this;
         }
 
         /**
-         * @param responsePages Response pages
+         * @param responsePages Allow response pages?
          * 
          * @return builder
          * 
          */
-        public Builder responsePages(String responsePages) {
+        public Builder responsePages(Boolean responsePages) {
             return responsePages(Output.of(responsePages));
         }
 
@@ -543,7 +544,7 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param useridService Userid service
+         * @param useridService Allow User-ID?
          * 
          * @return builder
          * 
@@ -554,7 +555,7 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param useridService Userid service
+         * @param useridService Allow User-ID?
          * 
          * @return builder
          * 
@@ -564,7 +565,7 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param useridSyslogListenerSsl Userid syslog listener ssl
+         * @param useridSyslogListenerSsl Allow User-ID syslog listener (SSL)?
          * 
          * @return builder
          * 
@@ -575,7 +576,7 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param useridSyslogListenerSsl Userid syslog listener ssl
+         * @param useridSyslogListenerSsl Allow User-ID syslog listener (SSL)?
          * 
          * @return builder
          * 
@@ -585,7 +586,7 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param useridSyslogListenerUdp Userid syslog listener udp
+         * @param useridSyslogListenerUdp Allow User-ID syslog listener (UDP)?
          * 
          * @return builder
          * 
@@ -596,7 +597,7 @@ public final class InterfaceManagementProfileArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param useridSyslogListenerUdp Userid syslog listener udp
+         * @param useridSyslogListenerUdp Allow User-ID syslog listener (UDP)?
          * 
          * @return builder
          * 

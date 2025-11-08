@@ -40,7 +40,7 @@ import * as utilities from "./utilities";
  * });
  * // Service Group containing multiple services
  * const scmServicegroup = new scm.ServiceGroup("scm_servicegroup", {
- *     folder: "Shared",
+ *     folder: "All",
  *     name: "scm_servicegroup",
  *     members: [
  *         scmServiceTcpPorts.name,
@@ -49,7 +49,7 @@ import * as utilities from "./utilities";
  * });
  * // Service Group containing multiple services and another servicegroup
  * const scmServicegroupNested = new scm.ServiceGroup("scm_servicegroup_nested", {
- *     folder: "Shared",
+ *     folder: "All",
  *     name: "scm_servicegroup_nested",
  *     members: [
  *         scmServiceTcpPorts.name,

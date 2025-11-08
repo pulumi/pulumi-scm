@@ -82,6 +82,14 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>
+        /// The relative position of the rule
+        /// </summary>
+        public readonly string Position;
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        public readonly string RelativePosition;
+        /// <summary>
         /// The destination ports
         /// </summary>
         public readonly ImmutableArray<string> Services;
@@ -105,6 +113,10 @@ namespace Pulumi.Scm.Outputs
         /// The authentication rule tags
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        public readonly string TargetRule;
         public readonly string Tfid;
         /// <summary>
         /// The authentication session timeout (seconds)
@@ -151,6 +163,10 @@ namespace Pulumi.Scm.Outputs
 
             bool negateSource,
 
+            string position,
+
+            string relativePosition,
+
             ImmutableArray<string> services,
 
             string snippet,
@@ -162,6 +178,8 @@ namespace Pulumi.Scm.Outputs
             ImmutableArray<string> sources,
 
             ImmutableArray<string> tags,
+
+            string targetRule,
 
             string tfid,
 
@@ -186,12 +204,15 @@ namespace Pulumi.Scm.Outputs
             Name = name;
             NegateDestination = negateDestination;
             NegateSource = negateSource;
+            Position = position;
+            RelativePosition = relativePosition;
             Services = services;
             Snippet = snippet;
             SourceHips = sourceHips;
             SourceUsers = sourceUsers;
             Sources = sources;
             Tags = tags;
+            TargetRule = targetRule;
             Tfid = tfid;
             Timeout = timeout;
             Tos = tos;

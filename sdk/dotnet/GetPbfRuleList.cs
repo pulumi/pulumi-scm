@@ -13,18 +13,102 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Define a data source for listing pbf rules
+        ///     var pagedPbfRulesList = Scm.GetPbfRuleList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///         Limit = 10,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedPbfRuleListSummary"] = 
+        ///         {
+        ///             { "totalRulesInList", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Total) },
+        ///             { "allRules", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetPbfRuleListResult> InvokeAsync(GetPbfRuleListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetPbfRuleListResult>("scm:index/getPbfRuleList:getPbfRuleList", args ?? new GetPbfRuleListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Define a data source for listing pbf rules
+        ///     var pagedPbfRulesList = Scm.GetPbfRuleList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///         Limit = 10,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedPbfRuleListSummary"] = 
+        ///         {
+        ///             { "totalRulesInList", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Total) },
+        ///             { "allRules", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetPbfRuleListResult> Invoke(GetPbfRuleListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPbfRuleListResult>("scm:index/getPbfRuleList:getPbfRuleList", args ?? new GetPbfRuleListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Define a data source for listing pbf rules
+        ///     var pagedPbfRulesList = Scm.GetPbfRuleList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///         Limit = 10,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedPbfRuleListSummary"] = 
+        ///         {
+        ///             { "totalRulesInList", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Total) },
+        ///             { "allRules", pagedPbfRulesList.Apply(getPbfRuleListResult =&gt; getPbfRuleListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetPbfRuleListResult> Invoke(GetPbfRuleListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetPbfRuleListResult>("scm:index/getPbfRuleList:getPbfRuleList", args ?? new GetPbfRuleListInvokeArgs(), options.WithDefaults());

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionOspfResult
     {
         /// <summary>
-        /// Bgp
+        /// OSPF Root BGP
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionOspfBgpResult Bgp;
         /// <summary>

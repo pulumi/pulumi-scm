@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         /// Route tag
         /// </summary>
         [Input("routeTag")]
-        public Input<double>? RouteTag { get; set; }
+        public Input<int>? RouteTag { get; set; }
 
         public LogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRangeArgs()
         {

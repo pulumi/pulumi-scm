@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetEthernetInterfaceListDataPoeResult
     {
         /// <summary>
-        /// Poe enabled
+        /// Enabled PoE?
         /// </summary>
         public readonly bool PoeEnabled;
         /// <summary>
-        /// Poe rsvd pwr
+        /// PoE reserved power
         /// </summary>
         public readonly int PoeRsvdPwr;
 

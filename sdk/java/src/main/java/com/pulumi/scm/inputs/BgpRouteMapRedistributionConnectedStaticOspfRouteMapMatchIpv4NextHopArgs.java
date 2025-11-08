@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4
     public static final BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgs Empty = new BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgs();
 
     /**
-     * Access list
+     * Connected Static BGP OSPF Route map ipv4 next hop Access list
      * 
      */
     @Import(name="accessList")
     private @Nullable Output<String> accessList;
 
     /**
-     * @return Access list
+     * @return Connected Static BGP OSPF Route map ipv4 next hop Access list
      * 
      */
     public Optional<Output<String>> accessList() {
@@ -31,14 +31,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4
     }
 
     /**
-     * Prefix list
+     * Connected Static BGP OSPF Route map ipv4 next hop Prefix list
      * 
      */
     @Import(name="prefixList")
     private @Nullable Output<String> prefixList;
 
     /**
-     * @return Prefix list
+     * @return Connected Static BGP OSPF Route map ipv4 next hop Prefix list
      * 
      */
     public Optional<Output<String>> prefixList() {
@@ -71,7 +71,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList Connected Static BGP OSPF Route map ipv4 next hop Access list
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList Connected Static BGP OSPF Route map ipv4 next hop Access list
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList Connected Static BGP OSPF Route map ipv4 next hop Prefix list
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList Connected Static BGP OSPF Route map ipv4 next hop Prefix list
          * 
          * @return builder
          * 

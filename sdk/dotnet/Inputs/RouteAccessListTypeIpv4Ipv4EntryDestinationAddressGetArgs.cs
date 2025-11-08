@@ -19,10 +19,10 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Address { get; set; }
 
         /// <summary>
-        /// Destination IP wildcard
+        /// Entry
         /// </summary>
-        [Input("wildcard")]
-        public Input<string>? Wildcard { get; set; }
+        [Input("entry")]
+        public Input<Inputs.RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryGetArgs>? Entry { get; set; }
 
         public RouteAccessListTypeIpv4Ipv4EntryDestinationAddressGetArgs()
         {

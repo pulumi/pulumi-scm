@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * // Fetch a list of all application objects.
  * // This data source will call the "List" API endpoint.
  * const allApps = scm.getApplicationList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const applicationsListRaw = allApps.then(allApps => allApps.datas);
  * ```
@@ -120,7 +120,7 @@ export interface GetApplicationListResult {
  * // Fetch a list of all application objects.
  * // This data source will call the "List" API endpoint.
  * const allApps = scm.getApplicationList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const applicationsListRaw = allApps.then(allApps => allApps.datas);
  * ```

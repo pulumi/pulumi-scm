@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Layer3SubinterfaceDhcpClient {
     /**
-     * @return Create default route
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
     private @Nullable Boolean createDefaultRoute;
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     private @Nullable Integer defaultRouteMetric;
     /**
-     * @return Enable
+     * @return Enable DHCP?
      * 
      */
     private @Nullable Boolean enable;
     /**
-     * @return Send hostname
+     * @return Layer3 sub interfaces DHCP Client Send hostname
      * 
      */
     private @Nullable Layer3SubinterfaceDhcpClientSendHostname sendHostname;
 
     private Layer3SubinterfaceDhcpClient() {}
     /**
-     * @return Create default route
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
     public Optional<Boolean> createDefaultRoute() {
         return Optional.ofNullable(this.createDefaultRoute);
     }
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     public Optional<Integer> defaultRouteMetric() {
         return Optional.ofNullable(this.defaultRouteMetric);
     }
     /**
-     * @return Enable
+     * @return Enable DHCP?
      * 
      */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * @return Send hostname
+     * @return Layer3 sub interfaces DHCP Client Send hostname
      * 
      */
     public Optional<Layer3SubinterfaceDhcpClientSendHostname> sendHostname() {

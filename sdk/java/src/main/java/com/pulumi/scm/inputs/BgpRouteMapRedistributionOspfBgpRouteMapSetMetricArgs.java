@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs extends
     public static final BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs Empty = new BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs();
 
     /**
-     * Metric action
+     * OSPF BGP Route maps set Metric action
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Metric action
+     * @return OSPF BGP Route maps set Metric action
      * 
      */
     public Optional<Output<String>> action() {
@@ -32,14 +32,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs extends
     }
 
     /**
-     * Metric value
+     * OSPF BGP Route maps set Metric value
      * 
      */
     @Import(name="value")
     private @Nullable Output<Integer> value;
 
     /**
-     * @return Metric value
+     * @return OSPF BGP Route maps set Metric value
      * 
      */
     public Optional<Output<Integer>> value() {
@@ -72,7 +72,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs extends
         }
 
         /**
-         * @param action Metric action
+         * @param action OSPF BGP Route maps set Metric action
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs extends
         }
 
         /**
-         * @param action Metric action
+         * @param action OSPF BGP Route maps set Metric action
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs extends
         }
 
         /**
-         * @param value Metric value
+         * @param value OSPF BGP Route maps set Metric value
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs extends
         }
 
         /**
-         * @param value Metric value
+         * @param value OSPF BGP Route maps set Metric value
          * 
          * @return builder
          * 

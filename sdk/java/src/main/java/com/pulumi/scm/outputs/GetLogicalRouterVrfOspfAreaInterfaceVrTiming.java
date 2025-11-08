@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -14,62 +14,62 @@ public final class GetLogicalRouterVrfOspfAreaInterfaceVrTiming {
      * @return Dead counts
      * 
      */
-    private Double deadCounts;
+    private Integer deadCounts;
     /**
      * @return Gr delay
      * 
      */
-    private Double grDelay;
+    private Integer grDelay;
     /**
      * @return Hello interval
      * 
      */
-    private Double helloInterval;
+    private Integer helloInterval;
     /**
      * @return Retransmit interval
      * 
      */
-    private Double retransmitInterval;
+    private Integer retransmitInterval;
     /**
      * @return Transit delay
      * 
      */
-    private Double transitDelay;
+    private Integer transitDelay;
 
     private GetLogicalRouterVrfOspfAreaInterfaceVrTiming() {}
     /**
      * @return Dead counts
      * 
      */
-    public Double deadCounts() {
+    public Integer deadCounts() {
         return this.deadCounts;
     }
     /**
      * @return Gr delay
      * 
      */
-    public Double grDelay() {
+    public Integer grDelay() {
         return this.grDelay;
     }
     /**
      * @return Hello interval
      * 
      */
-    public Double helloInterval() {
+    public Integer helloInterval() {
         return this.helloInterval;
     }
     /**
      * @return Retransmit interval
      * 
      */
-    public Double retransmitInterval() {
+    public Integer retransmitInterval() {
         return this.retransmitInterval;
     }
     /**
      * @return Transit delay
      * 
      */
-    public Double transitDelay() {
+    public Integer transitDelay() {
         return this.transitDelay;
     }
 
@@ -82,11 +82,11 @@ public final class GetLogicalRouterVrfOspfAreaInterfaceVrTiming {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Double deadCounts;
-        private Double grDelay;
-        private Double helloInterval;
-        private Double retransmitInterval;
-        private Double transitDelay;
+        private Integer deadCounts;
+        private Integer grDelay;
+        private Integer helloInterval;
+        private Integer retransmitInterval;
+        private Integer transitDelay;
         public Builder() {}
         public Builder(GetLogicalRouterVrfOspfAreaInterfaceVrTiming defaults) {
     	      Objects.requireNonNull(defaults);
@@ -98,7 +98,7 @@ public final class GetLogicalRouterVrfOspfAreaInterfaceVrTiming {
         }
 
         @CustomType.Setter
-        public Builder deadCounts(Double deadCounts) {
+        public Builder deadCounts(Integer deadCounts) {
             if (deadCounts == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfAreaInterfaceVrTiming", "deadCounts");
             }
@@ -106,7 +106,7 @@ public final class GetLogicalRouterVrfOspfAreaInterfaceVrTiming {
             return this;
         }
         @CustomType.Setter
-        public Builder grDelay(Double grDelay) {
+        public Builder grDelay(Integer grDelay) {
             if (grDelay == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfAreaInterfaceVrTiming", "grDelay");
             }
@@ -114,7 +114,7 @@ public final class GetLogicalRouterVrfOspfAreaInterfaceVrTiming {
             return this;
         }
         @CustomType.Setter
-        public Builder helloInterval(Double helloInterval) {
+        public Builder helloInterval(Integer helloInterval) {
             if (helloInterval == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfAreaInterfaceVrTiming", "helloInterval");
             }
@@ -122,7 +122,7 @@ public final class GetLogicalRouterVrfOspfAreaInterfaceVrTiming {
             return this;
         }
         @CustomType.Setter
-        public Builder retransmitInterval(Double retransmitInterval) {
+        public Builder retransmitInterval(Integer retransmitInterval) {
             if (retransmitInterval == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfAreaInterfaceVrTiming", "retransmitInterval");
             }
@@ -130,7 +130,7 @@ public final class GetLogicalRouterVrfOspfAreaInterfaceVrTiming {
             return this;
         }
         @CustomType.Setter
-        public Builder transitDelay(Double transitDelay) {
+        public Builder transitDelay(Integer transitDelay) {
             if (transitDelay == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfAreaInterfaceVrTiming", "transitDelay");
             }

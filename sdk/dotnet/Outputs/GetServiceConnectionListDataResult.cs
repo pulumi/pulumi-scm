@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Backup s c
         /// </summary>
-        public readonly string BackupSC;
+        public readonly string BackupSc;
         /// <summary>
         /// Bgp peer
         /// </summary>
@@ -77,7 +77,7 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private GetServiceConnectionListDataResult(
-            string backupSC,
+            string backupSc,
 
             Outputs.GetServiceConnectionListDataBgpPeerResult bgpPeer,
 
@@ -109,7 +109,7 @@ namespace Pulumi.Scm.Outputs
 
             string tfid)
         {
-            BackupSC = backupSC;
+            BackupSc = backupSc;
             BgpPeer = bgpPeer;
             EncryptedValues = encryptedValues;
             Id = id;

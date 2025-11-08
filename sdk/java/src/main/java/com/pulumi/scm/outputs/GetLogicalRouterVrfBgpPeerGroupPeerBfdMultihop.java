@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -14,14 +14,14 @@ public final class GetLogicalRouterVrfBgpPeerGroupPeerBfdMultihop {
      * @return Min received ttl
      * 
      */
-    private Double minReceivedTtl;
+    private Integer minReceivedTtl;
 
     private GetLogicalRouterVrfBgpPeerGroupPeerBfdMultihop() {}
     /**
      * @return Min received ttl
      * 
      */
-    public Double minReceivedTtl() {
+    public Integer minReceivedTtl() {
         return this.minReceivedTtl;
     }
 
@@ -34,7 +34,7 @@ public final class GetLogicalRouterVrfBgpPeerGroupPeerBfdMultihop {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Double minReceivedTtl;
+        private Integer minReceivedTtl;
         public Builder() {}
         public Builder(GetLogicalRouterVrfBgpPeerGroupPeerBfdMultihop defaults) {
     	      Objects.requireNonNull(defaults);
@@ -42,7 +42,7 @@ public final class GetLogicalRouterVrfBgpPeerGroupPeerBfdMultihop {
         }
 
         @CustomType.Setter
-        public Builder minReceivedTtl(Double minReceivedTtl) {
+        public Builder minReceivedTtl(Integer minReceivedTtl) {
             if (minReceivedTtl == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfBgpPeerGroupPeerBfdMultihop", "minReceivedTtl");
             }

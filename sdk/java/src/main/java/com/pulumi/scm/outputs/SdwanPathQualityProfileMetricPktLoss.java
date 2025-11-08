@@ -4,39 +4,38 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class SdwanPathQualityProfileMetricPktLoss {
     /**
-     * @return Sensitivity
+     * @return Packet loss sensitivity
      * 
      */
-    private @Nullable String sensitivity;
+    private String sensitivity;
     /**
-     * @return Threshold
+     * @return Packet loss threshold (percentage)
      * 
      */
-    private @Nullable Integer threshold;
+    private Integer threshold;
 
     private SdwanPathQualityProfileMetricPktLoss() {}
     /**
-     * @return Sensitivity
+     * @return Packet loss sensitivity
      * 
      */
-    public Optional<String> sensitivity() {
-        return Optional.ofNullable(this.sensitivity);
+    public String sensitivity() {
+        return this.sensitivity;
     }
     /**
-     * @return Threshold
+     * @return Packet loss threshold (percentage)
      * 
      */
-    public Optional<Integer> threshold() {
-        return Optional.ofNullable(this.threshold);
+    public Integer threshold() {
+        return this.threshold;
     }
 
     public static Builder builder() {
@@ -48,8 +47,8 @@ public final class SdwanPathQualityProfileMetricPktLoss {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String sensitivity;
-        private @Nullable Integer threshold;
+        private String sensitivity;
+        private Integer threshold;
         public Builder() {}
         public Builder(SdwanPathQualityProfileMetricPktLoss defaults) {
     	      Objects.requireNonNull(defaults);
@@ -58,14 +57,18 @@ public final class SdwanPathQualityProfileMetricPktLoss {
         }
 
         @CustomType.Setter
-        public Builder sensitivity(@Nullable String sensitivity) {
-
+        public Builder sensitivity(String sensitivity) {
+            if (sensitivity == null) {
+              throw new MissingRequiredPropertyException("SdwanPathQualityProfileMetricPktLoss", "sensitivity");
+            }
             this.sensitivity = sensitivity;
             return this;
         }
         @CustomType.Setter
-        public Builder threshold(@Nullable Integer threshold) {
-
+        public Builder threshold(Integer threshold) {
+            if (threshold == null) {
+              throw new MissingRequiredPropertyException("SdwanPathQualityProfileMetricPktLoss", "threshold");
+            }
             this.threshold = threshold;
             return this;
         }

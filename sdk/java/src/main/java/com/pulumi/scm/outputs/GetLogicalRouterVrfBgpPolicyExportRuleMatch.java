@@ -9,7 +9,7 @@ import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyExportRuleMatchAddress
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyExportRuleMatchAsPath;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyExportRuleMatchCommunity;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyExportRuleMatchExtendedCommunity;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,7 +50,7 @@ public final class GetLogicalRouterVrfBgpPolicyExportRuleMatch {
      * @return Med
      * 
      */
-    private Double med;
+    private Integer med;
     /**
      * @return Nexthop
      * 
@@ -114,7 +114,7 @@ public final class GetLogicalRouterVrfBgpPolicyExportRuleMatch {
      * @return Med
      * 
      */
-    public Double med() {
+    public Integer med() {
         return this.med;
     }
     /**
@@ -154,7 +154,7 @@ public final class GetLogicalRouterVrfBgpPolicyExportRuleMatch {
         private GetLogicalRouterVrfBgpPolicyExportRuleMatchCommunity community;
         private GetLogicalRouterVrfBgpPolicyExportRuleMatchExtendedCommunity extendedCommunity;
         private List<String> fromPeers;
-        private Double med;
+        private Integer med;
         private List<String> nexthops;
         private String routeTable;
         private String safi;
@@ -228,7 +228,7 @@ public final class GetLogicalRouterVrfBgpPolicyExportRuleMatch {
             return fromPeers(List.of(fromPeers));
         }
         @CustomType.Setter
-        public Builder med(Double med) {
+        public Builder med(Integer med) {
             if (med == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfBgpPolicyExportRuleMatch", "med");
             }

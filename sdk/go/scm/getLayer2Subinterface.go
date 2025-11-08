@@ -12,6 +12,41 @@ import (
 )
 
 // Layer2Subinterface data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Look up layer2 sub-interface by its ID.
+//			scmL2SubinterfaceDs, err := scm.LookupLayer2Subinterface(ctx, &scm.LookupLayer2SubinterfaceArgs{
+//				Id: "88f730d1-6577-492b-88a6-73d4a513dc76",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("layer2SubinterfaceDataSourceResults", pulumi.StringMap{
+//				"id":              scmL2SubinterfaceDs.Id,
+//				"name":            scmL2SubinterfaceDs.Name,
+//				"comment":         scmL2SubinterfaceDs.Comment,
+//				"vlanTag":         scmL2SubinterfaceDs.VlanTag,
+//				"parentInterface": scmL2SubinterfaceDs.ParentInterface,
+//				"folder":          scmL2SubinterfaceDs.Folder,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupLayer2Subinterface(ctx *pulumi.Context, args *LookupLayer2SubinterfaceArgs, opts ...pulumi.InvokeOption) (*LookupLayer2SubinterfaceResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupLayer2SubinterfaceResult
@@ -47,8 +82,8 @@ type LookupLayer2SubinterfaceResult struct {
 	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
-	// Vlan tag
-	VlanTag float64 `pulumi:"vlanTag"`
+	// VLAN tag
+	VlanTag string `pulumi:"vlanTag"`
 }
 
 func LookupLayer2SubinterfaceOutput(ctx *pulumi.Context, args LookupLayer2SubinterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupLayer2SubinterfaceResultOutput {
@@ -126,9 +161,9 @@ func (o LookupLayer2SubinterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Vlan tag
-func (o LookupLayer2SubinterfaceResultOutput) VlanTag() pulumi.Float64Output {
-	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) float64 { return v.VlanTag }).(pulumi.Float64Output)
+// VLAN tag
+func (o LookupLayer2SubinterfaceResultOutput) VlanTag() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.VlanTag }).(pulumi.StringOutput)
 }
 
 func init() {

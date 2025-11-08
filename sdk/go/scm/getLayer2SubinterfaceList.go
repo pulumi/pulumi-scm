@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetLayer2SubinterfaceList(ctx *pulumi.Context, args *GetLayer2SubinterfaceListArgs, opts ...pulumi.InvokeOption) (*GetLayer2SubinterfaceListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetLayer2SubinterfaceListResult

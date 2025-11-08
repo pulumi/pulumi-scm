@@ -25,6 +25,12 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Fqdn { get; set; }
 
         /// <summary>
+        /// Ip address
+        /// </summary>
+        [Input("ipAddress")]
+        public Input<string>? IpAddress { get; set; }
+
+        /// <summary>
         /// Ipv6 address
         /// </summary>
         [Input("ipv6Address")]

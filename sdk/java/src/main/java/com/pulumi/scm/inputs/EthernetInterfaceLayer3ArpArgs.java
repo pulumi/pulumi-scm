@@ -16,14 +16,14 @@ public final class EthernetInterfaceLayer3ArpArgs extends com.pulumi.resources.R
     public static final EthernetInterfaceLayer3ArpArgs Empty = new EthernetInterfaceLayer3ArpArgs();
 
     /**
-     * Hw address
+     * MAC address
      * 
      */
     @Import(name="hwAddress")
     private @Nullable Output<String> hwAddress;
 
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     public Optional<Output<String>> hwAddress() {
@@ -71,7 +71,7 @@ public final class EthernetInterfaceLayer3ArpArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param hwAddress Hw address
+         * @param hwAddress MAC address
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class EthernetInterfaceLayer3ArpArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param hwAddress Hw address
+         * @param hwAddress MAC address
          * 
          * @return builder
          * 

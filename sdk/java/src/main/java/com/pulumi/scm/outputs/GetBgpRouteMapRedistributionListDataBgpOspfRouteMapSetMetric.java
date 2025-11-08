@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSetMetric {
     /**
-     * @return Metric action
+     * @return BGP Root OSPF Route maps set Metric action
      * 
      */
     private String action;
     /**
-     * @return Metric value
+     * @return BGP Root OSPF Route maps set Metric value
      * 
      */
     private Integer value;
 
     private GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSetMetric() {}
     /**
-     * @return Metric action
+     * @return BGP Root OSPF Route maps set Metric action
      * 
      */
     public String action() {
         return this.action;
     }
     /**
-     * @return Metric value
+     * @return BGP Root OSPF Route maps set Metric value
      * 
      */
     public Integer value() {

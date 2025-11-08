@@ -99,6 +99,16 @@ public final class GetAuthenticationRuleListData {
      */
     private Boolean negateSource;
     /**
+     * @return The relative position of the rule
+     * 
+     */
+    private String position;
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    private String relativePosition;
+    /**
      * @return The destination ports
      * 
      */
@@ -128,6 +138,11 @@ public final class GetAuthenticationRuleListData {
      * 
      */
     private List<String> tags;
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    private String targetRule;
     private String tfid;
     /**
      * @return The authentication session timeout (seconds)
@@ -261,6 +276,20 @@ public final class GetAuthenticationRuleListData {
         return this.negateSource;
     }
     /**
+     * @return The relative position of the rule
+     * 
+     */
+    public String position() {
+        return this.position;
+    }
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public String relativePosition() {
+        return this.relativePosition;
+    }
+    /**
      * @return The destination ports
      * 
      */
@@ -301,6 +330,13 @@ public final class GetAuthenticationRuleListData {
      */
     public List<String> tags() {
         return this.tags;
+    }
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public String targetRule() {
+        return this.targetRule;
     }
     public String tfid() {
         return this.tfid;
@@ -346,12 +382,15 @@ public final class GetAuthenticationRuleListData {
         private String name;
         private Boolean negateDestination;
         private Boolean negateSource;
+        private String position;
+        private String relativePosition;
         private List<String> services;
         private String snippet;
         private List<String> sourceHips;
         private List<String> sourceUsers;
         private List<String> sources;
         private List<String> tags;
+        private String targetRule;
         private String tfid;
         private Integer timeout;
         private List<String> tos;
@@ -375,12 +414,15 @@ public final class GetAuthenticationRuleListData {
     	      this.name = defaults.name;
     	      this.negateDestination = defaults.negateDestination;
     	      this.negateSource = defaults.negateSource;
+    	      this.position = defaults.position;
+    	      this.relativePosition = defaults.relativePosition;
     	      this.services = defaults.services;
     	      this.snippet = defaults.snippet;
     	      this.sourceHips = defaults.sourceHips;
     	      this.sourceUsers = defaults.sourceUsers;
     	      this.sources = defaults.sources;
     	      this.tags = defaults.tags;
+    	      this.targetRule = defaults.targetRule;
     	      this.tfid = defaults.tfid;
     	      this.timeout = defaults.timeout;
     	      this.tos = defaults.tos;
@@ -538,6 +580,22 @@ public final class GetAuthenticationRuleListData {
             return this;
         }
         @CustomType.Setter
+        public Builder position(String position) {
+            if (position == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "position");
+            }
+            this.position = position;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder relativePosition(String relativePosition) {
+            if (relativePosition == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "relativePosition");
+            }
+            this.relativePosition = relativePosition;
+            return this;
+        }
+        @CustomType.Setter
         public Builder services(List<String> services) {
             if (services == null) {
               throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "services");
@@ -601,6 +659,14 @@ public final class GetAuthenticationRuleListData {
             return tags(List.of(tags));
         }
         @CustomType.Setter
+        public Builder targetRule(String targetRule) {
+            if (targetRule == null) {
+              throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "targetRule");
+            }
+            this.targetRule = targetRule;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetAuthenticationRuleListData", "tfid");
@@ -646,12 +712,15 @@ public final class GetAuthenticationRuleListData {
             _resultValue.name = name;
             _resultValue.negateDestination = negateDestination;
             _resultValue.negateSource = negateSource;
+            _resultValue.position = position;
+            _resultValue.relativePosition = relativePosition;
             _resultValue.services = services;
             _resultValue.snippet = snippet;
             _resultValue.sourceHips = sourceHips;
             _resultValue.sourceUsers = sourceUsers;
             _resultValue.sources = sources;
             _resultValue.tags = tags;
+            _resultValue.targetRule = targetRule;
             _resultValue.tfid = tfid;
             _resultValue.timeout = timeout;
             _resultValue.tos = tos;

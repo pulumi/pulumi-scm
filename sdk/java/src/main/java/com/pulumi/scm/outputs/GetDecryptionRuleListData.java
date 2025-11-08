@@ -94,10 +94,20 @@ public final class GetDecryptionRuleListData {
      */
     private Boolean negateSource;
     /**
+     * @return The position of a security rule
+     * 
+     */
+    private String position;
+    /**
      * @return The decryption profile associated with the decryption rule
      * 
      */
     private String profile;
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    private String relativePosition;
     /**
      * @return The destination services and/or service groups
      * 
@@ -128,6 +138,11 @@ public final class GetDecryptionRuleListData {
      * 
      */
     private List<String> tags;
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    private String targetRule;
     private String tfid;
     /**
      * @return The destination security zone
@@ -254,11 +269,25 @@ public final class GetDecryptionRuleListData {
         return this.negateSource;
     }
     /**
+     * @return The position of a security rule
+     * 
+     */
+    public String position() {
+        return this.position;
+    }
+    /**
      * @return The decryption profile associated with the decryption rule
      * 
      */
     public String profile() {
         return this.profile;
+    }
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public String relativePosition() {
+        return this.relativePosition;
     }
     /**
      * @return The destination services and/or service groups
@@ -301,6 +330,13 @@ public final class GetDecryptionRuleListData {
      */
     public List<String> tags() {
         return this.tags;
+    }
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public String targetRule() {
+        return this.targetRule;
     }
     public String tfid() {
         return this.tfid;
@@ -345,13 +381,16 @@ public final class GetDecryptionRuleListData {
         private String name;
         private Boolean negateDestination;
         private Boolean negateSource;
+        private String position;
         private String profile;
+        private String relativePosition;
         private List<String> services;
         private String snippet;
         private List<String> sourceHips;
         private List<String> sourceUsers;
         private List<String> sources;
         private List<String> tags;
+        private String targetRule;
         private String tfid;
         private List<String> tos;
         private GetDecryptionRuleListDataType type;
@@ -374,13 +413,16 @@ public final class GetDecryptionRuleListData {
     	      this.name = defaults.name;
     	      this.negateDestination = defaults.negateDestination;
     	      this.negateSource = defaults.negateSource;
+    	      this.position = defaults.position;
     	      this.profile = defaults.profile;
+    	      this.relativePosition = defaults.relativePosition;
     	      this.services = defaults.services;
     	      this.snippet = defaults.snippet;
     	      this.sourceHips = defaults.sourceHips;
     	      this.sourceUsers = defaults.sourceUsers;
     	      this.sources = defaults.sources;
     	      this.tags = defaults.tags;
+    	      this.targetRule = defaults.targetRule;
     	      this.tfid = defaults.tfid;
     	      this.tos = defaults.tos;
     	      this.type = defaults.type;
@@ -527,11 +569,27 @@ public final class GetDecryptionRuleListData {
             return this;
         }
         @CustomType.Setter
+        public Builder position(String position) {
+            if (position == null) {
+              throw new MissingRequiredPropertyException("GetDecryptionRuleListData", "position");
+            }
+            this.position = position;
+            return this;
+        }
+        @CustomType.Setter
         public Builder profile(String profile) {
             if (profile == null) {
               throw new MissingRequiredPropertyException("GetDecryptionRuleListData", "profile");
             }
             this.profile = profile;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder relativePosition(String relativePosition) {
+            if (relativePosition == null) {
+              throw new MissingRequiredPropertyException("GetDecryptionRuleListData", "relativePosition");
+            }
+            this.relativePosition = relativePosition;
             return this;
         }
         @CustomType.Setter
@@ -598,6 +656,14 @@ public final class GetDecryptionRuleListData {
             return tags(List.of(tags));
         }
         @CustomType.Setter
+        public Builder targetRule(String targetRule) {
+            if (targetRule == null) {
+              throw new MissingRequiredPropertyException("GetDecryptionRuleListData", "targetRule");
+            }
+            this.targetRule = targetRule;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetDecryptionRuleListData", "tfid");
@@ -642,13 +708,16 @@ public final class GetDecryptionRuleListData {
             _resultValue.name = name;
             _resultValue.negateDestination = negateDestination;
             _resultValue.negateSource = negateSource;
+            _resultValue.position = position;
             _resultValue.profile = profile;
+            _resultValue.relativePosition = relativePosition;
             _resultValue.services = services;
             _resultValue.snippet = snippet;
             _resultValue.sourceHips = sourceHips;
             _resultValue.sourceUsers = sourceUsers;
             _resultValue.sources = sources;
             _resultValue.tags = tags;
+            _resultValue.targetRule = targetRule;
             _resultValue.tfid = tfid;
             _resultValue.tos = tos;
             _resultValue.type = type;

@@ -12,7 +12,7 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class DnsProxyStaticEntryArgs : global::Pulumi.ResourceArgs
     {
-        [Input("addresses")]
+        [Input("addresses", required: true)]
         private InputList<string>? _addresses;
 
         /// <summary>
@@ -25,16 +25,16 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Domain
+        /// Fully qualified domain name
         /// </summary>
-        [Input("domain")]
-        public Input<string>? Domain { get; set; }
+        [Input("domain", required: true)]
+        public Input<string> Domain { get; set; } = null!;
 
         /// <summary>
-        /// Name
+        /// Static entry name
         /// </summary>
-        [Input("name")]
-        public Input<string>? Name { get; set; }
+        [Input("name", required: true)]
+        public Input<string> Name { get; set; } = null!;
 
         public DnsProxyStaticEntryArgs()
         {

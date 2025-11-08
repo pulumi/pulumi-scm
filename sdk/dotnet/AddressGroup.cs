@@ -56,7 +56,7 @@ namespace Pulumi.Scm
     ///     // Create tags to be used for dynamic address group
     ///     var scmAddressgroupTag1 = new Scm.Tag("scm_addressgroup_tag_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_addressgroup_tag_1",
     ///         Comments = "Managed by Pulumi",
     ///         Color = "Orange",
@@ -64,7 +64,7 @@ namespace Pulumi.Scm
     /// 
     ///     var scmAddressgroupTag2 = new Scm.Tag("scm_addressgroup_tag_2", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_addressgroup_tag_2",
     ///         Comments = "Managed by Pulumi",
     ///         Color = "Blue",

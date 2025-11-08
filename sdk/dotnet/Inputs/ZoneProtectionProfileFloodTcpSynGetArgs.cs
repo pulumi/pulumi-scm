@@ -13,28 +13,22 @@ namespace Pulumi.Scm.Inputs
     public sealed class ZoneProtectionProfileFloodTcpSynGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// When the flow exceeds the `ActivateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-        /// </summary>
-        [Input("activateRate")]
-        public Input<int>? ActivateRate { get; set; }
-
-        /// <summary>
-        /// When the flow exceeds the `AlertRate`` threshold, an alarm is generated.
-        /// </summary>
-        [Input("alarmRate")]
-        public Input<int>? AlarmRate { get; set; }
-
-        /// <summary>
         /// Enable protection against SYN floods?
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }
 
         /// <summary>
-        /// When the flow exceeds the `MaximalRate` threshold, 100% of incoming SYN packets are dropped.
+        /// Red
         /// </summary>
-        [Input("maximalRate")]
-        public Input<int>? MaximalRate { get; set; }
+        [Input("red")]
+        public Input<Inputs.ZoneProtectionProfileFloodTcpSynRedGetArgs>? Red { get; set; }
+
+        /// <summary>
+        /// Syn cookies
+        /// </summary>
+        [Input("synCookies")]
+        public Input<Inputs.ZoneProtectionProfileFloodTcpSynSynCookiesGetArgs>? SynCookies { get; set; }
 
         public ZoneProtectionProfileFloodTcpSynGetArgs()
         {

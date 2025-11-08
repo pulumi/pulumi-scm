@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Metric
         /// </summary>
-        public readonly double? Metric;
+        public readonly int? Metric;
         /// <summary>
         /// Metric type
         /// </summary>
@@ -24,7 +24,7 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private LogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginate(
-            double? metric,
+            int? metric,
 
             string? metricType)
         {

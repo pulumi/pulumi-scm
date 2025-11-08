@@ -32,7 +32,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// First, create the tags that will be used in the dynamic user group's filter.
 //			scmDugTag1, err := scm.NewTag(ctx, "scm_dug_tag_1", &scm.TagArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("All"),
 //				Name:   pulumi.String("scm_dug_tag_1"),
 //				Color:  pulumi.String("Red"),
 //			})
@@ -40,7 +40,7 @@ import (
 //				return err
 //			}
 //			scmDugTag2, err := scm.NewTag(ctx, "scm_dug_tag_2", &scm.TagArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("All"),
 //				Name:   pulumi.String("scm_dug_tag_2"),
 //				Color:  pulumi.String("Blue"),
 //			})
@@ -48,7 +48,7 @@ import (
 //				return err
 //			}
 //			scmDugTag3, err := scm.NewTag(ctx, "scm_dug_tag_3", &scm.TagArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("All"),
 //				Name:   pulumi.String("scm_dug_tag_3"),
 //				Color:  pulumi.String("Green"),
 //			})

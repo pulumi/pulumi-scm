@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -51,13 +51,13 @@ public final class LogicalRouterVrfBgpPeerGroupConnectionOptionsArgs extends com
      * 
      */
     @Import(name="multihop")
-    private @Nullable Output<Double> multihop;
+    private @Nullable Output<Integer> multihop;
 
     /**
      * @return Multihop
      * 
      */
-    public Optional<Output<Double>> multihop() {
+    public Optional<Output<Integer>> multihop() {
         return Optional.ofNullable(this.multihop);
     }
 
@@ -151,7 +151,7 @@ public final class LogicalRouterVrfBgpPeerGroupConnectionOptionsArgs extends com
          * @return builder
          * 
          */
-        public Builder multihop(@Nullable Output<Double> multihop) {
+        public Builder multihop(@Nullable Output<Integer> multihop) {
             $.multihop = multihop;
             return this;
         }
@@ -162,7 +162,7 @@ public final class LogicalRouterVrfBgpPeerGroupConnectionOptionsArgs extends com
          * @return builder
          * 
          */
-        public Builder multihop(Double multihop) {
+        public Builder multihop(Integer multihop) {
             return multihop(Output.of(multihop));
         }
 

@@ -88,7 +88,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Link tags
+        /// Link-Tags for interfaces identified by defined tags
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSdwanTrafficDistributionProfileLinkTagResult> LinkTags;
         /// <summary>

@@ -22,19 +22,19 @@ namespace Pulumi.Scm.Inputs
         /// Local restart time
         /// </summary>
         [Input("localRestartTime")]
-        public Input<double>? LocalRestartTime { get; set; }
+        public Input<int>? LocalRestartTime { get; set; }
 
         /// <summary>
         /// Max peer restart time
         /// </summary>
         [Input("maxPeerRestartTime")]
-        public Input<double>? MaxPeerRestartTime { get; set; }
+        public Input<int>? MaxPeerRestartTime { get; set; }
 
         /// <summary>
         /// Stale route time
         /// </summary>
         [Input("staleRouteTime")]
-        public Input<double>? StaleRouteTime { get; set; }
+        public Input<int>? StaleRouteTime { get; set; }
 
         public LogicalRouterVrfBgpGracefulRestartArgs()
         {

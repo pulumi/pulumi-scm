@@ -13,38 +13,38 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4 {
     /**
-     * @return bgp-route-map-redistributions ipv4 object address
+     * @return BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
      * 
      */
     private GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4Address address;
     /**
-     * @return bgp-route-map-redistributions ipv4 object next*hop
+     * @return BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
      * 
      */
     private GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4NextHop nextHop;
     /**
-     * @return bgp-route-map-redistributions ipv4 object route*source
+     * @return BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
      * 
      */
     private GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4RouteSource routeSource;
 
     private GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4() {}
     /**
-     * @return bgp-route-map-redistributions ipv4 object address
+     * @return BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
      * 
      */
     public GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4Address address() {
         return this.address;
     }
     /**
-     * @return bgp-route-map-redistributions ipv4 object next*hop
+     * @return BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
      * 
      */
     public GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4NextHop nextHop() {
         return this.nextHop;
     }
     /**
-     * @return bgp-route-map-redistributions ipv4 object route*source
+     * @return BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
      * 
      */
     public GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4RouteSource routeSource() {

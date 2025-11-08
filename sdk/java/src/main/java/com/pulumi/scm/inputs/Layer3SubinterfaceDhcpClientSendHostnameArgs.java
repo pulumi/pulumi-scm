@@ -32,14 +32,14 @@ public final class Layer3SubinterfaceDhcpClientSendHostnameArgs extends com.pulu
     }
 
     /**
-     * Hostname
+     * Set interface hostname
      * 
      */
     @Import(name="hostname")
     private @Nullable Output<String> hostname;
 
     /**
-     * @return Hostname
+     * @return Set interface hostname
      * 
      */
     public Optional<Output<String>> hostname() {
@@ -93,7 +93,7 @@ public final class Layer3SubinterfaceDhcpClientSendHostnameArgs extends com.pulu
         }
 
         /**
-         * @param hostname Hostname
+         * @param hostname Set interface hostname
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class Layer3SubinterfaceDhcpClientSendHostnameArgs extends com.pulu
         }
 
         /**
-         * @param hostname Hostname
+         * @param hostname Set interface hostname
          * 
          * @return builder
          * 

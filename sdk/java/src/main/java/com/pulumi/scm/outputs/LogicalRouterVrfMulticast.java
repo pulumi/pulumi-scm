@@ -13,7 +13,7 @@ import com.pulumi.scm.outputs.LogicalRouterVrfMulticastSptThreshold;
 import com.pulumi.scm.outputs.LogicalRouterVrfMulticastSsmAddressSpace;
 import com.pulumi.scm.outputs.LogicalRouterVrfMulticastStaticRoute;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,7 +61,7 @@ public final class LogicalRouterVrfMulticast {
      * @return Route ageout time
      * 
      */
-    private @Nullable Double routeAgeoutTime;
+    private @Nullable Integer routeAgeoutTime;
     /**
      * @return Rp
      * 
@@ -137,7 +137,7 @@ public final class LogicalRouterVrfMulticast {
      * @return Route ageout time
      * 
      */
-    public Optional<Double> routeAgeoutTime() {
+    public Optional<Integer> routeAgeoutTime() {
         return Optional.ofNullable(this.routeAgeoutTime);
     }
     /**
@@ -185,7 +185,7 @@ public final class LogicalRouterVrfMulticast {
         private @Nullable String mode;
         private @Nullable LogicalRouterVrfMulticastMsdp msdp;
         private @Nullable LogicalRouterVrfMulticastPim pim;
-        private @Nullable Double routeAgeoutTime;
+        private @Nullable Integer routeAgeoutTime;
         private @Nullable LogicalRouterVrfMulticastRp rp;
         private @Nullable List<LogicalRouterVrfMulticastSptThreshold> sptThresholds;
         private @Nullable List<LogicalRouterVrfMulticastSsmAddressSpace> ssmAddressSpaces;
@@ -253,7 +253,7 @@ public final class LogicalRouterVrfMulticast {
             return this;
         }
         @CustomType.Setter
-        public Builder routeAgeoutTime(@Nullable Double routeAgeoutTime) {
+        public Builder routeAgeoutTime(@Nullable Integer routeAgeoutTime) {
 
             this.routeAgeoutTime = routeAgeoutTime;
             return this;

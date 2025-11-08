@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -20,7 +20,7 @@ public final class GetLogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingB
      * @return Remote port
      * 
      */
-    private Double remotePort;
+    private Integer remotePort;
 
     private GetLogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnection() {}
     /**
@@ -34,7 +34,7 @@ public final class GetLogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingB
      * @return Remote port
      * 
      */
-    public Double remotePort() {
+    public Integer remotePort() {
         return this.remotePort;
     }
 
@@ -48,7 +48,7 @@ public final class GetLogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingB
     @CustomType.Builder
     public static final class Builder {
         private Boolean allow;
-        private Double remotePort;
+        private Integer remotePort;
         public Builder() {}
         public Builder(GetLogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnection defaults) {
     	      Objects.requireNonNull(defaults);
@@ -65,7 +65,7 @@ public final class GetLogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingB
             return this;
         }
         @CustomType.Setter
-        public Builder remotePort(Double remotePort) {
+        public Builder remotePort(Integer remotePort) {
             if (remotePort == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnection", "remotePort");
             }

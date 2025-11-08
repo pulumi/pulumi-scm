@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SdwanErrorCorrectionProfileModeForwardErrorCorrection {
      * @return Recovery duration
      * 
      */
-    private Double recoveryDuration;
+    private Integer recoveryDuration;
 
     private SdwanErrorCorrectionProfileModeForwardErrorCorrection() {}
     /**
@@ -34,7 +34,7 @@ public final class SdwanErrorCorrectionProfileModeForwardErrorCorrection {
      * @return Recovery duration
      * 
      */
-    public Double recoveryDuration() {
+    public Integer recoveryDuration() {
         return this.recoveryDuration;
     }
 
@@ -48,7 +48,7 @@ public final class SdwanErrorCorrectionProfileModeForwardErrorCorrection {
     @CustomType.Builder
     public static final class Builder {
         private String ratio;
-        private Double recoveryDuration;
+        private Integer recoveryDuration;
         public Builder() {}
         public Builder(SdwanErrorCorrectionProfileModeForwardErrorCorrection defaults) {
     	      Objects.requireNonNull(defaults);
@@ -65,7 +65,7 @@ public final class SdwanErrorCorrectionProfileModeForwardErrorCorrection {
             return this;
         }
         @CustomType.Setter
-        public Builder recoveryDuration(Double recoveryDuration) {
+        public Builder recoveryDuration(Integer recoveryDuration) {
             if (recoveryDuration == null) {
               throw new MissingRequiredPropertyException("SdwanErrorCorrectionProfileModeForwardErrorCorrection", "recoveryDuration");
             }

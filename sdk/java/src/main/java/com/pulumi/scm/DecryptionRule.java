@@ -20,6 +20,157 @@ import javax.annotation.Nullable;
 /**
  * DecryptionRule resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Tag;
+ * import com.pulumi.scm.TagArgs;
+ * import com.pulumi.scm.DecryptionRule;
+ * import com.pulumi.scm.DecryptionRuleArgs;
+ * import com.pulumi.scm.inputs.DecryptionRuleTypeArgs;
+ * import com.pulumi.scm.inputs.DecryptionRuleTypeSslForwardProxyArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         // --- 1. TAG Resource ---
+ *         var decryptionPositionTag = new Tag("decryptionPositionTag", TagArgs.builder()
+ *             .name("decryption-position-tag")
+ *             .folder("All")
+ *             .color("Purple")
+ *             .build());
+ * 
+ *         // --- 2. ANCHOR DECRYPTION RULE (Used for relative positioning) ---
+ *         var anchorDecryptionRule = new DecryptionRule("anchorDecryptionRule", DecryptionRuleArgs.builder()
+ *             .name("anchor-decryption-rule")
+ *             .description("Base rule for testing 'before' and 'after' positioning.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .action("decrypt")
+ *             .froms("trust")
+ *             .tos("untrust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .services("service-https")
+ *             .categories("high-risk")
+ *             .sourceUsers("any")
+ *             .type(DecryptionRuleTypeArgs.builder()
+ *                 .sslForwardProxy(DecryptionRuleTypeSslForwardProxyArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .destinationHips("any")
+ *             .tags(decryptionPositionTag.name())
+ *             .logSuccess(true)
+ *             .logFail(true)
+ *             .disabled(false)
+ *             .negateSource(false)
+ *             .negateDestination(false)
+ *             .build());
+ * 
+ *         // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+ *         var ruleTopDecryptionRule = new DecryptionRule("ruleTopDecryptionRule", DecryptionRuleArgs.builder()
+ *             .name("top-absolute-decryption-rule")
+ *             .description("Placed at the very TOP of the Decryption rulebase.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .action("no-decrypt")
+ *             .relativePosition("top")
+ *             .froms("any")
+ *             .tos("any")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .services("service-https")
+ *             .categories("high-risk")
+ *             .sourceUsers("any")
+ *             .type(DecryptionRuleTypeArgs.builder()
+ *                 .sslForwardProxy(DecryptionRuleTypeSslForwardProxyArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var ruleBottomDecryptionRule = new DecryptionRule("ruleBottomDecryptionRule", DecryptionRuleArgs.builder()
+ *             .name("bottom-absolute-decryption-rule")
+ *             .description("Placed at the very BOTTOM of the Decryption rulebase.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .action("decrypt")
+ *             .relativePosition("bottom")
+ *             .froms("any")
+ *             .tos("any")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .services("service-https")
+ *             .categories("high-risk")
+ *             .sourceUsers("any")
+ *             .type(DecryptionRuleTypeArgs.builder()
+ *                 .sslForwardProxy(DecryptionRuleTypeSslForwardProxyArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         // --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+ *         var ruleBeforeAnchorDecryption = new DecryptionRule("ruleBeforeAnchorDecryption", DecryptionRuleArgs.builder()
+ *             .name("before-anchor-decryption-rule")
+ *             .description("Positioned immediately BEFORE the anchor-decryption-rule. Updating")
+ *             .folder("All")
+ *             .position("pre")
+ *             .action("decrypt")
+ *             .relativePosition("before")
+ *             .targetRule(anchorDecryptionRule.id())
+ *             .froms("trust")
+ *             .tos("untrust")
+ *             .sources("10.1.1.0/24")
+ *             .destinations("any")
+ *             .services("service-https")
+ *             .categories("high-risk")
+ *             .sourceUsers("any")
+ *             .type(DecryptionRuleTypeArgs.builder()
+ *                 .sslForwardProxy(DecryptionRuleTypeSslForwardProxyArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var ruleAfterAnchorDecryption = new DecryptionRule("ruleAfterAnchorDecryption", DecryptionRuleArgs.builder()
+ *             .name("after-anchor-decryption-rule_123")
+ *             .description("Positioned immediately AFTER the anchor-decryption-rule.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .action("decrypt")
+ *             .relativePosition("after")
+ *             .targetRule(anchorDecryptionRule.id())
+ *             .froms("any")
+ *             .tos("untrust")
+ *             .sources("any")
+ *             .destinations("192.168.1.10")
+ *             .services("service-https")
+ *             .categories("any")
+ *             .sourceUsers("any")
+ *             .type(DecryptionRuleTypeArgs.builder()
+ *                 .sslForwardProxy(DecryptionRuleTypeSslForwardProxyArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/decryptionRule:DecryptionRule")
 public class DecryptionRule extends com.pulumi.resources.CustomResource {
@@ -262,6 +413,20 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.profile);
     }
     /**
+     * Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    @Export(name="relativePosition", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> relativePosition;
+
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public Output<Optional<String>> relativePosition() {
+        return Codegen.optional(this.relativePosition);
+    }
+    /**
      * The destination services and/or service groups
      * 
      */
@@ -344,6 +509,20 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<List<String>>> tags() {
         return Codegen.optional(this.tags);
+    }
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    @Export(name="targetRule", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> targetRule;
+
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public Output<Optional<String>> targetRule() {
+        return Codegen.optional(this.targetRule);
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;

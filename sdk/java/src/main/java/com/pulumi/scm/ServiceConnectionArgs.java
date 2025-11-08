@@ -25,15 +25,15 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
      * Backup s c
      * 
      */
-    @Import(name="backupSC")
-    private @Nullable Output<String> backupSC;
+    @Import(name="backupSc")
+    private @Nullable Output<String> backupSc;
 
     /**
      * @return Backup s c
      * 
      */
-    public Optional<Output<String>> backupSC() {
-        return Optional.ofNullable(this.backupSC);
+    public Optional<Output<String>> backupSc() {
+        return Optional.ofNullable(this.backupSc);
     }
 
     /**
@@ -219,7 +219,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     private ServiceConnectionArgs() {}
 
     private ServiceConnectionArgs(ServiceConnectionArgs $) {
-        this.backupSC = $.backupSC;
+        this.backupSc = $.backupSc;
         this.bgpPeer = $.bgpPeer;
         this.ipsecTunnel = $.ipsecTunnel;
         this.name = $.name;
@@ -253,24 +253,24 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param backupSC Backup s c
+         * @param backupSc Backup s c
          * 
          * @return builder
          * 
          */
-        public Builder backupSC(@Nullable Output<String> backupSC) {
-            $.backupSC = backupSC;
+        public Builder backupSc(@Nullable Output<String> backupSc) {
+            $.backupSc = backupSc;
             return this;
         }
 
         /**
-         * @param backupSC Backup s c
+         * @param backupSc Backup s c
          * 
          * @return builder
          * 
          */
-        public Builder backupSC(String backupSC) {
-            return backupSC(Output.of(backupSC));
+        public Builder backupSc(String backupSc) {
+            return backupSc(Output.of(backupSc));
         }
 
         /**

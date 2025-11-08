@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class DnsProxyCacheGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Cache edns
+        /// Cache EDNS UDP response
         /// </summary>
         [Input("cacheEdns")]
         public Input<bool>? CacheEdns { get; set; }

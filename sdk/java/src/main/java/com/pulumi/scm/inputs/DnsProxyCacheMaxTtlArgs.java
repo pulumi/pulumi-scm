@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,29 +18,29 @@ public final class DnsProxyCacheMaxTtlArgs extends com.pulumi.resources.Resource
     public static final DnsProxyCacheMaxTtlArgs Empty = new DnsProxyCacheMaxTtlArgs();
 
     /**
-     * Enabled
+     * Enable max ttl for this DNS object
      * 
      */
-    @Import(name="enabled")
-    private @Nullable Output<Boolean> enabled;
+    @Import(name="enabled", required=true)
+    private Output<Boolean> enabled;
 
     /**
-     * @return Enabled
+     * @return Enable max ttl for this DNS object
      * 
      */
-    public Optional<Output<Boolean>> enabled() {
-        return Optional.ofNullable(this.enabled);
+    public Output<Boolean> enabled() {
+        return this.enabled;
     }
 
     /**
-     * Time to live
+     * Time in seconds after which entry is cleared
      * 
      */
     @Import(name="timeToLive")
     private @Nullable Output<Integer> timeToLive;
 
     /**
-     * @return Time to live
+     * @return Time in seconds after which entry is cleared
      * 
      */
     public Optional<Output<Integer>> timeToLive() {
@@ -72,18 +73,18 @@ public final class DnsProxyCacheMaxTtlArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param enabled Enabled
+         * @param enabled Enable max ttl for this DNS object
          * 
          * @return builder
          * 
          */
-        public Builder enabled(@Nullable Output<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
         /**
-         * @param enabled Enabled
+         * @param enabled Enable max ttl for this DNS object
          * 
          * @return builder
          * 
@@ -93,7 +94,7 @@ public final class DnsProxyCacheMaxTtlArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param timeToLive Time to live
+         * @param timeToLive Time in seconds after which entry is cleared
          * 
          * @return builder
          * 
@@ -104,7 +105,7 @@ public final class DnsProxyCacheMaxTtlArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param timeToLive Time to live
+         * @param timeToLive Time in seconds after which entry is cleared
          * 
          * @return builder
          * 
@@ -114,6 +115,9 @@ public final class DnsProxyCacheMaxTtlArgs extends com.pulumi.resources.Resource
         }
 
         public DnsProxyCacheMaxTtlArgs build() {
+            if ($.enabled == null) {
+                throw new MissingRequiredPropertyException("DnsProxyCacheMaxTtlArgs", "enabled");
+            }
             return $;
         }
     }

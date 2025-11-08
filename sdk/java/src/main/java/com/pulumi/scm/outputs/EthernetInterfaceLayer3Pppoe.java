@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.EthernetInterfaceLayer3PppoePassive;
 import com.pulumi.scm.outputs.EthernetInterfaceLayer3PppoeStaticAddress;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +27,7 @@ public final class EthernetInterfaceLayer3Pppoe {
      */
     private @Nullable String authentication;
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     private @Nullable Integer defaultRouteMetric;
@@ -39,7 +40,7 @@ public final class EthernetInterfaceLayer3Pppoe {
      * @return Passive
      * 
      */
-    private @Nullable Boolean passive;
+    private @Nullable EthernetInterfaceLayer3PppoePassive passive;
     /**
      * @return Password
      * 
@@ -77,7 +78,7 @@ public final class EthernetInterfaceLayer3Pppoe {
         return Optional.ofNullable(this.authentication);
     }
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     public Optional<Integer> defaultRouteMetric() {
@@ -94,7 +95,7 @@ public final class EthernetInterfaceLayer3Pppoe {
      * @return Passive
      * 
      */
-    public Optional<Boolean> passive() {
+    public Optional<EthernetInterfaceLayer3PppoePassive> passive() {
         return Optional.ofNullable(this.passive);
     }
     /**
@@ -139,7 +140,7 @@ public final class EthernetInterfaceLayer3Pppoe {
         private @Nullable String authentication;
         private @Nullable Integer defaultRouteMetric;
         private @Nullable Boolean enable;
-        private @Nullable Boolean passive;
+        private @Nullable EthernetInterfaceLayer3PppoePassive passive;
         private String password;
         private @Nullable String service;
         private @Nullable EthernetInterfaceLayer3PppoeStaticAddress staticAddress;
@@ -183,7 +184,7 @@ public final class EthernetInterfaceLayer3Pppoe {
             return this;
         }
         @CustomType.Setter
-        public Builder passive(@Nullable Boolean passive) {
+        public Builder passive(@Nullable EthernetInterfaceLayer3PppoePassive passive) {
 
             this.passive = passive;
             return this;

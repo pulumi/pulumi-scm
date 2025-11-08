@@ -28,6 +28,90 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.IkeCryptoProfile;
+ * import com.pulumi.scm.IkeCryptoProfileArgs;
+ * import com.pulumi.scm.IkeGateway;
+ * import com.pulumi.scm.IkeGatewayArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayPeerIdArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayLocalIdArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1DpdArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev2Args;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev2DpdArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         // The scm_ike_crypto_profile resource is a prerequisite for the IKE gateway.
+ *         var scmIkeGwCryptoProfile1 = new IkeCryptoProfile("scmIkeGwCryptoProfile1", IkeCryptoProfileArgs.builder()
+ *             .folder("Remote Networks")
+ *             .name("scm_ike_gw_crypto_profile_1")
+ *             .hashes("sha256")
+ *             .dhGroups("group14")
+ *             .encryptions("aes-256-cbc")
+ *             .build());
+ * 
+ *         // This is the main scm_ike_gateway resource.
+ *         var scmIkeGateway1 = new IkeGateway("scmIkeGateway1", IkeGatewayArgs.builder()
+ *             .folder("Remote Networks")
+ *             .name("scm_ike_gateway_1")
+ *             .authentication(IkeGatewayAuthenticationArgs.builder()
+ *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+ *                     .key("123456")
+ *                     .build())
+ *                 .build())
+ *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+ *                 .ip("2.2.2.4")
+ *                 .build())
+ *             .peerId(IkeGatewayPeerIdArgs.builder()
+ *                 .type("ipaddr")
+ *                 .id("10.3.3.4")
+ *                 .build())
+ *             .localId(IkeGatewayLocalIdArgs.builder()
+ *                 .type("ipaddr")
+ *                 .id("10.3.4.4")
+ *                 .build())
+ *             .protocol(IkeGatewayProtocolArgs.builder()
+ *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+ *                     .ikeCryptoProfile(scmIkeGwCryptoProfile1.name())
+ *                     .dpd(IkeGatewayProtocolIkev1DpdArgs.builder()
+ *                         .enable(true)
+ *                         .build())
+ *                     .build())
+ *                 .ikev2(IkeGatewayProtocolIkev2Args.builder()
+ *                     .ikeCryptoProfile(scmIkeGwCryptoProfile1.name())
+ *                     .dpd(IkeGatewayProtocolIkev2DpdArgs.builder()
+ *                         .enable(true)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/ikeGateway:IkeGateway")
 public class IkeGateway extends com.pulumi.resources.CustomResource {

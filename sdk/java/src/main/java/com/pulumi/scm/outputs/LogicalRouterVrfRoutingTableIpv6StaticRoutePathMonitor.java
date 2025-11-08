@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestination;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitor {
      * @return Hold time
      * 
      */
-    private @Nullable Double holdTime;
+    private @Nullable Integer holdTime;
     /**
      * @return Monitor destinations
      * 
@@ -55,7 +55,7 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitor {
      * @return Hold time
      * 
      */
-    public Optional<Double> holdTime() {
+    public Optional<Integer> holdTime() {
         return Optional.ofNullable(this.holdTime);
     }
     /**
@@ -77,7 +77,7 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitor {
     public static final class Builder {
         private @Nullable Boolean enable;
         private @Nullable String failureCondition;
-        private @Nullable Double holdTime;
+        private @Nullable Integer holdTime;
         private @Nullable List<LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestination> monitorDestinations;
         public Builder() {}
         public Builder(LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitor defaults) {
@@ -101,7 +101,7 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitor {
             return this;
         }
         @CustomType.Setter
-        public Builder holdTime(@Nullable Double holdTime) {
+        public Builder holdTime(@Nullable Integer holdTime) {
 
             this.holdTime = holdTime;
             return this;

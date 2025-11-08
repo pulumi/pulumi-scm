@@ -13,18 +13,108 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Define a data source for listing NAT rules
+        ///     var pagedNatRulesList = Scm.GetNatRuleList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///         Limit = 10,
+        ///         Offset = 10,
+        ///         Position = "pre",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedNATRuleListSummary"] = 
+        ///         {
+        ///             { "totalRulesInList", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Total) },
+        ///             { "allRules", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
-        public static Task<GetNatRuleListResult> InvokeAsync(GetNatRuleListArgs? args = null, InvokeOptions? options = null)
+        public static Task<GetNatRuleListResult> InvokeAsync(GetNatRuleListArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetNatRuleListResult>("scm:index/getNatRuleList:getNatRuleList", args ?? new GetNatRuleListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Define a data source for listing NAT rules
+        ///     var pagedNatRulesList = Scm.GetNatRuleList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///         Limit = 10,
+        ///         Offset = 10,
+        ///         Position = "pre",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedNATRuleListSummary"] = 
+        ///         {
+        ///             { "totalRulesInList", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Total) },
+        ///             { "allRules", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
-        public static Output<GetNatRuleListResult> Invoke(GetNatRuleListInvokeArgs? args = null, InvokeOptions? options = null)
+        public static Output<GetNatRuleListResult> Invoke(GetNatRuleListInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetNatRuleListResult>("scm:index/getNatRuleList:getNatRuleList", args ?? new GetNatRuleListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Define a data source for listing NAT rules
+        ///     var pagedNatRulesList = Scm.GetNatRuleList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///         Limit = 10,
+        ///         Offset = 10,
+        ///         Position = "pre",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedNATRuleListSummary"] = 
+        ///         {
+        ///             { "totalRulesInList", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Total) },
+        ///             { "allRules", pagedNatRulesList.Apply(getNatRuleListResult =&gt; getNatRuleListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetNatRuleListResult> Invoke(GetNatRuleListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetNatRuleListResult>("scm:index/getNatRuleList:getNatRuleList", args ?? new GetNatRuleListInvokeArgs(), options.WithDefaults());
@@ -62,6 +152,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("offset")]
         public int? Offset { get; set; }
+
+        /// <summary>
+        /// The relative position of the rule
+        /// </summary>
+        [Input("position", required: true)]
+        public string Position { get; set; } = null!;
 
         /// <summary>
         /// The snippet of the item.
@@ -108,6 +204,12 @@ namespace Pulumi.Scm
         public Input<int>? Offset { get; set; }
 
         /// <summary>
+        /// The relative position of the rule
+        /// </summary>
+        [Input("position", required: true)]
+        public Input<string> Position { get; set; } = null!;
+
+        /// <summary>
         /// The snippet of the item.
         /// </summary>
         [Input("snippet")]
@@ -152,6 +254,10 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly int? Offset;
         /// <summary>
+        /// The relative position of the rule
+        /// </summary>
+        public readonly string Position;
+        /// <summary>
         /// The snippet of the item.
         /// </summary>
         public readonly string? Snippet;
@@ -177,6 +283,8 @@ namespace Pulumi.Scm
 
             int? offset,
 
+            string position,
+
             string? snippet,
 
             string tfid,
@@ -190,6 +298,7 @@ namespace Pulumi.Scm
             Limit = limit;
             Name = name;
             Offset = offset;
+            Position = position;
             Snippet = snippet;
             Tfid = tfid;
             Total = total;

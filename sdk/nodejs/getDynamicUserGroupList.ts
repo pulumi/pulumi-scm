@@ -17,12 +17,12 @@ import * as utilities from "./utilities";
  *
  * // 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
  * const allSharedDugs = scm.getDynamicUserGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const dugResultsFromList = allSharedDugs.then(allSharedDugs => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
  * // This data source block shows an example of pagination.
  * const paginatedDugsExample = scm.getDynamicUserGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
@@ -129,12 +129,12 @@ export interface GetDynamicUserGroupListResult {
  *
  * // 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
  * const allSharedDugs = scm.getDynamicUserGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const dugResultsFromList = allSharedDugs.then(allSharedDugs => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
  * // This data source block shows an example of pagination.
  * const paginatedDugsExample = scm.getDynamicUserGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });

@@ -12,6 +12,66 @@ import (
 )
 
 // DecryptionRule data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+//			testDecryptionRule, err := scm.NewDecryptionRule(ctx, "test_decryption_rule", &scm.DecryptionRuleArgs{
+//				Name:        pulumi.String("data-source-test-rule"),
+//				Description: pulumi.String("Rule created specifically for data source testing."),
+//				Folder:      pulumi.String("All"),
+//				Position:    pulumi.String("pre"),
+//				Action:      pulumi.String("decrypt"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("trust"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-https"),
+//				},
+//				Categories: pulumi.StringArray{
+//					pulumi.String("high-risk"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Type: &scm.DecryptionRuleTypeArgs{
+//					SslForwardProxy: &scm.DecryptionRuleTypeSslForwardProxyArgs{},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// We use the ID from the resource created above.
+//			singleRuleById := scm.LookupDecryptionRuleOutput(ctx, scm.GetDecryptionRuleOutputArgs{
+//				Id: testDecryptionRule.ID(),
+//			}, nil)
+//			ctx.Export("singleDecryptionRuleName", singleRuleById)
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupDecryptionRule(ctx *pulumi.Context, args *LookupDecryptionRuleArgs, opts ...pulumi.InvokeOption) (*LookupDecryptionRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupDecryptionRuleResult
@@ -64,8 +124,12 @@ type LookupDecryptionRuleResult struct {
 	NegateDestination bool `pulumi:"negateDestination"`
 	// Negate the source addresses?
 	NegateSource bool `pulumi:"negateSource"`
+	// The position of a security rule
+	Position string `pulumi:"position"`
 	// The decryption profile associated with the decryption rule
 	Profile string `pulumi:"profile"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition string `pulumi:"relativePosition"`
 	// The destination services and/or service groups
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
@@ -78,7 +142,9 @@ type LookupDecryptionRuleResult struct {
 	Sources []string `pulumi:"sources"`
 	// The tags associated with the decryption rule
 	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule string `pulumi:"targetRule"`
+	Tfid       string `pulumi:"tfid"`
 	// The destination security zone
 	Tos []string `pulumi:"tos"`
 	// The type of decryption
@@ -201,9 +267,19 @@ func (o LookupDecryptionRuleResultOutput) NegateSource() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) bool { return v.NegateSource }).(pulumi.BoolOutput)
 }
 
+// The position of a security rule
+func (o LookupDecryptionRuleResultOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.Position }).(pulumi.StringOutput)
+}
+
 // The decryption profile associated with the decryption rule
 func (o LookupDecryptionRuleResultOutput) Profile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.Profile }).(pulumi.StringOutput)
+}
+
+// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+func (o LookupDecryptionRuleResultOutput) RelativePosition() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.RelativePosition }).(pulumi.StringOutput)
 }
 
 // The destination services and/or service groups
@@ -234,6 +310,11 @@ func (o LookupDecryptionRuleResultOutput) Sources() pulumi.StringArrayOutput {
 // The tags associated with the decryption rule
 func (o LookupDecryptionRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
+}
+
+// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+func (o LookupDecryptionRuleResultOutput) TargetRule() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.TargetRule }).(pulumi.StringOutput)
 }
 
 func (o LookupDecryptionRuleResultOutput) Tfid() pulumi.StringOutput {

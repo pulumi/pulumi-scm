@@ -7,7 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,13 +54,13 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="metric")
-    private @Nullable Output<Double> metric;
+    private @Nullable Output<Integer> metric;
 
     /**
      * @return Metric
      * 
      */
-    public Optional<Output<Double>> metric() {
+    public Optional<Output<Integer>> metric() {
         return Optional.ofNullable(this.metric);
     }
 
@@ -99,13 +99,13 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="setAsPathLimit")
-    private @Nullable Output<Double> setAsPathLimit;
+    private @Nullable Output<Integer> setAsPathLimit;
 
     /**
      * @return Set as path limit
      * 
      */
-    public Optional<Output<Double>> setAsPathLimit() {
+    public Optional<Output<Integer>> setAsPathLimit() {
         return Optional.ofNullable(this.setAsPathLimit);
     }
 
@@ -144,13 +144,13 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="setLocalPreference")
-    private @Nullable Output<Double> setLocalPreference;
+    private @Nullable Output<Integer> setLocalPreference;
 
     /**
      * @return Set local preference
      * 
      */
-    public Optional<Output<Double>> setLocalPreference() {
+    public Optional<Output<Integer>> setLocalPreference() {
         return Optional.ofNullable(this.setLocalPreference);
     }
 
@@ -159,13 +159,13 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="setMed")
-    private @Nullable Output<Double> setMed;
+    private @Nullable Output<Integer> setMed;
 
     /**
      * @return Set med
      * 
      */
-    public Optional<Output<Double>> setMed() {
+    public Optional<Output<Integer>> setMed() {
         return Optional.ofNullable(this.setMed);
     }
 
@@ -266,7 +266,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder metric(@Nullable Output<Double> metric) {
+        public Builder metric(@Nullable Output<Integer> metric) {
             $.metric = metric;
             return this;
         }
@@ -277,7 +277,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder metric(Double metric) {
+        public Builder metric(Integer metric) {
             return metric(Output.of(metric));
         }
 
@@ -329,7 +329,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder setAsPathLimit(@Nullable Output<Double> setAsPathLimit) {
+        public Builder setAsPathLimit(@Nullable Output<Integer> setAsPathLimit) {
             $.setAsPathLimit = setAsPathLimit;
             return this;
         }
@@ -340,7 +340,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder setAsPathLimit(Double setAsPathLimit) {
+        public Builder setAsPathLimit(Integer setAsPathLimit) {
             return setAsPathLimit(Output.of(setAsPathLimit));
         }
 
@@ -412,7 +412,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder setLocalPreference(@Nullable Output<Double> setLocalPreference) {
+        public Builder setLocalPreference(@Nullable Output<Integer> setLocalPreference) {
             $.setLocalPreference = setLocalPreference;
             return this;
         }
@@ -423,7 +423,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder setLocalPreference(Double setLocalPreference) {
+        public Builder setLocalPreference(Integer setLocalPreference) {
             return setLocalPreference(Output.of(setLocalPreference));
         }
 
@@ -433,7 +433,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder setMed(@Nullable Output<Double> setMed) {
+        public Builder setMed(@Nullable Output<Integer> setMed) {
             $.setMed = setMed;
             return this;
         }
@@ -444,7 +444,7 @@ public final class LogicalRouterVrfBgpRedistRuleArgs extends com.pulumi.resource
          * @return builder
          * 
          */
-        public Builder setMed(Double setMed) {
+        public Builder setMed(Integer setMed) {
             return setMed(Output.of(setMed));
         }
 

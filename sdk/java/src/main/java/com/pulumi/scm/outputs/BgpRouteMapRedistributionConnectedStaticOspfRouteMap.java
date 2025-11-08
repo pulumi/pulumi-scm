@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
     /**
-     * @return Action
+     * @return Connected Static BGP OSPF Route map Action
      * 
      */
     private @Nullable String action;
     /**
-     * @return Description
+     * @return Connected Static BGP OSPF Route map Description
      * 
      */
     private @Nullable String description;
@@ -30,26 +30,26 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch match;
     /**
-     * @return Sequence number
+     * @return Connected Static BGP OSPF Route map Sequence number
      * 
      */
     private @Nullable Integer name;
     /**
-     * @return Set
+     * @return Connected Static Root OSPF Set
      * 
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet set;
 
     private BgpRouteMapRedistributionConnectedStaticOspfRouteMap() {}
     /**
-     * @return Action
+     * @return Connected Static BGP OSPF Route map Action
      * 
      */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return Description
+     * @return Connected Static BGP OSPF Route map Description
      * 
      */
     public Optional<String> description() {
@@ -63,14 +63,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
         return Optional.ofNullable(this.match);
     }
     /**
-     * @return Sequence number
+     * @return Connected Static BGP OSPF Route map Sequence number
      * 
      */
     public Optional<Integer> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return Set
+     * @return Connected Static Root OSPF Set
      * 
      */
     public Optional<BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet> set() {

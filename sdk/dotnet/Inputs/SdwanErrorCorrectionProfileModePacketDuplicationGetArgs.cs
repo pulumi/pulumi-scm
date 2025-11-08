@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         /// Recovery duration pd
         /// </summary>
         [Input("recoveryDurationPd", required: true)]
-        public Input<double> RecoveryDurationPd { get; set; } = null!;
+        public Input<int> RecoveryDurationPd { get; set; } = null!;
 
         public SdwanErrorCorrectionProfileModePacketDuplicationGetArgs()
         {

@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataConnectedStaticResult ConnectedStatic;
         /// <summary>
-        /// Description
+        /// BGP Route Map Redistributions Description
         /// </summary>
         public readonly string Description;
         /// <summary>
@@ -34,11 +34,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Folder;
         /// <summary>
-        /// UUID of the resource
+        /// BGP Route Map Redistributions UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Name
+        /// BGP Route Map Redistributions Name
         /// </summary>
         public readonly string Name;
         /// <summary>

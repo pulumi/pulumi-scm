@@ -11,6 +11,219 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// AuthenticationRule resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var appAccessTag = new Scm.Tag("app_access_tag", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "app-access-test_25",
+    ///         Color = "Blue",
+    ///     });
+    /// 
+    ///     // -----------------------------------------------------------------------------
+    ///     // 2. ANCHOR RULE (Used for relative positioning by other rules)
+    ///     // -----------------------------------------------------------------------------
+    ///     var anchorRule = new Scm.AuthenticationRule("anchor_rule", new()
+    ///     {
+    ///         Name = "test_anchor_rule_251",
+    ///         Description = "Base rule. Used to test 'before' and 'after' positioning",
+    ///         Position = "pre",
+    ///         Folder = "All",
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-http",
+    ///             "service-https",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Timeout = 1200,
+    ///         NegateSource = false,
+    ///         NegateDestination = false,
+    ///         Tags = new[]
+    ///         {
+    ///             appAccessTag.Name,
+    ///         },
+    ///         Categories = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         DestinationHips = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         LogAuthenticationTimeout = false,
+    ///         Disabled = false,
+    ///     });
+    /// 
+    ///     // # -----------------------------------------------------------------------------
+    ///     // # 3. ABSOLUTE POSITIONING Examples ("top" and "bottom")
+    ///     // # -----------------------------------------------------------------------------
+    ///     var ruleTopOfList = new Scm.AuthenticationRule("rule_top_of_list", new()
+    ///     {
+    ///         Name = "test_top_rule_25",
+    ///         Description = "Placed at the very top of the 'pre' rulebase.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "top",
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Froms = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "trust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///     });
+    /// 
+    ///     var ruleBottomOfList = new Scm.AuthenticationRule("rule_bottom_of_list", new()
+    ///     {
+    ///         Name = "test_bottom_rule_25",
+    ///         Description = "Placed at the very bottom of the 'pre' rulebase.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "bottom",
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///     });
+    /// 
+    ///     // -----------------------------------------------------------------------------
+    ///     // 4. RELATIVE POSITIONING Examples ("before" and "after")
+    ///     // -----------------------------------------------------------------------------
+    ///     var ruleBeforeAnchor = new Scm.AuthenticationRule("rule_before_anchor", new()
+    ///     {
+    ///         Name = "test_before_rule_25_updating",
+    ///         Description = "Positioned immediately BEFORE the anchor_rule.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "before",
+    ///         TargetRule = anchorRule.Id,
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///     });
+    /// 
+    ///     var ruleAfterAnchor = new Scm.AuthenticationRule("rule_after_anchor", new()
+    ///     {
+    ///         Name = "test_after_rule_25",
+    ///         Description = "Positioned immediately AFTER the anchor_rule.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "after",
+    ///         TargetRule = anchorRule.Id,
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/authenticationRule:AuthenticationRule")]
     public partial class AuthenticationRule : global::Pulumi.CustomResource
@@ -118,6 +331,12 @@ namespace Pulumi.Scm
         public Output<string> Position { get; private set; } = null!;
 
         /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Output("relativePosition")]
+        public Output<string?> RelativePosition { get; private set; } = null!;
+
+        /// <summary>
         /// The destination ports
         /// </summary>
         [Output("services")]
@@ -152,6 +371,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Output("targetRule")]
+        public Output<string?> TargetRule { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
@@ -346,6 +571,12 @@ namespace Pulumi.Scm
         [Input("position")]
         public Input<string>? Position { get; set; }
 
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Input("relativePosition")]
+        public Input<string>? RelativePosition { get; set; }
+
         [Input("services", required: true)]
         private InputList<string>? _services;
 
@@ -411,6 +642,12 @@ namespace Pulumi.Scm
             get => _tags ?? (_tags = new InputList<string>());
             set => _tags = value;
         }
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Input("targetRule")]
+        public Input<string>? TargetRule { get; set; }
 
         /// <summary>
         /// The authentication session timeout (seconds)
@@ -570,6 +807,12 @@ namespace Pulumi.Scm
         [Input("position")]
         public Input<string>? Position { get; set; }
 
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Input("relativePosition")]
+        public Input<string>? RelativePosition { get; set; }
+
         [Input("services")]
         private InputList<string>? _services;
 
@@ -635,6 +878,12 @@ namespace Pulumi.Scm
             get => _tags ?? (_tags = new InputList<string>());
             set => _tags = value;
         }
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Input("targetRule")]
+        public Input<string>? TargetRule { get; set; }
 
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }

@@ -27,13 +27,13 @@ namespace Pulumi.Scm
         ///     // Data source to fetch all services in the "Shared" folder.
         ///     var allSharedServices = Scm.GetServiceList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 services.
         ///     var paginatedServices = Scm.GetServiceList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -71,13 +71,13 @@ namespace Pulumi.Scm
         ///     // Data source to fetch all services in the "Shared" folder.
         ///     var allSharedServices = Scm.GetServiceList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 services.
         ///     var paginatedServices = Scm.GetServiceList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -115,13 +115,13 @@ namespace Pulumi.Scm
         ///     // Data source to fetch all services in the "Shared" folder.
         ///     var allSharedServices = Scm.GetServiceList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 5 services.
         ///     var paginatedServices = Scm.GetServiceList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });

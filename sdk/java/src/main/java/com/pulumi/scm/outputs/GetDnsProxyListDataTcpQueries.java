@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsProxyListDataTcpQueries {
     /**
-     * @return Enabled
+     * @return Turn on forwarding of TCP DNS queries?
      * 
      */
     private Boolean enabled;
     /**
-     * @return Max pending requests
+     * @return Upper limit on number of concurrent TCP DNS requests
      * 
      */
     private Integer maxPendingRequests;
 
     private GetDnsProxyListDataTcpQueries() {}
     /**
-     * @return Enabled
+     * @return Turn on forwarding of TCP DNS queries?
      * 
      */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * @return Max pending requests
+     * @return Upper limit on number of concurrent TCP DNS requests
      * 
      */
     public Integer maxPendingRequests() {

@@ -7,11 +7,55 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 // Layer2Subinterface resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates a ethernet interface used as parent-interface for subsequent examples
+//			scmParentInterface, err := scm.NewEthernetInterface(ctx, "scm_parent_interface", &scm.EthernetInterfaceArgs{
+//				Name:    pulumi.String("$scm_parent_interface"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer2:  &scm.EthernetInterfaceLayer2Args{},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer2 sub-interface with vlan tag 100
+//			_, err = scm.NewLayer2Subinterface(ctx, "scm_layer2_subinterface", &scm.Layer2SubinterfaceArgs{
+//				Name:            pulumi.String("$scm_parent_interface.100"),
+//				Comment:         pulumi.String("Managed by Pulumi"),
+//				Folder:          pulumi.String("ngfw-shared"),
+//				VlanTag:         pulumi.String("100"),
+//				ParentInterface: pulumi.String("$scm_parent_interface"),
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmParentInterface,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type Layer2Subinterface struct {
 	pulumi.CustomResourceState
 
@@ -28,17 +72,20 @@ type Layer2Subinterface struct {
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
-	// Vlan tag
-	VlanTag pulumi.Float64PtrOutput `pulumi:"vlanTag"`
+	// VLAN tag
+	VlanTag pulumi.StringOutput `pulumi:"vlanTag"`
 }
 
 // NewLayer2Subinterface registers a new resource with the given unique name, arguments, and options.
 func NewLayer2Subinterface(ctx *pulumi.Context,
 	name string, args *Layer2SubinterfaceArgs, opts ...pulumi.ResourceOption) (*Layer2Subinterface, error) {
 	if args == nil {
-		args = &Layer2SubinterfaceArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.VlanTag == nil {
+		return nil, errors.New("invalid value for required argument 'VlanTag'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource Layer2Subinterface
 	err := ctx.RegisterResource("scm:index/layer2Subinterface:Layer2Subinterface", name, args, &resource, opts...)
@@ -75,8 +122,8 @@ type layer2SubinterfaceState struct {
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
-	// Vlan tag
-	VlanTag *float64 `pulumi:"vlanTag"`
+	// VLAN tag
+	VlanTag *string `pulumi:"vlanTag"`
 }
 
 type Layer2SubinterfaceState struct {
@@ -93,8 +140,8 @@ type Layer2SubinterfaceState struct {
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
-	// Vlan tag
-	VlanTag pulumi.Float64PtrInput
+	// VLAN tag
+	VlanTag pulumi.StringPtrInput
 }
 
 func (Layer2SubinterfaceState) ElementType() reflect.Type {
@@ -114,8 +161,8 @@ type layer2SubinterfaceArgs struct {
 	ParentInterface *string `pulumi:"parentInterface"`
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// Vlan tag
-	VlanTag *float64 `pulumi:"vlanTag"`
+	// VLAN tag
+	VlanTag string `pulumi:"vlanTag"`
 }
 
 // The set of arguments for constructing a Layer2Subinterface resource.
@@ -132,8 +179,8 @@ type Layer2SubinterfaceArgs struct {
 	ParentInterface pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// Vlan tag
-	VlanTag pulumi.Float64PtrInput
+	// VLAN tag
+	VlanTag pulumi.StringInput
 }
 
 func (Layer2SubinterfaceArgs) ElementType() reflect.Type {
@@ -257,9 +304,9 @@ func (o Layer2SubinterfaceOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Layer2Subinterface) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Vlan tag
-func (o Layer2SubinterfaceOutput) VlanTag() pulumi.Float64PtrOutput {
-	return o.ApplyT(func(v *Layer2Subinterface) pulumi.Float64PtrOutput { return v.VlanTag }).(pulumi.Float64PtrOutput)
+// VLAN tag
+func (o Layer2SubinterfaceOutput) VlanTag() pulumi.StringOutput {
+	return o.ApplyT(func(v *Layer2Subinterface) pulumi.StringOutput { return v.VlanTag }).(pulumi.StringOutput)
 }
 
 type Layer2SubinterfaceArrayOutput struct{ *pulumi.OutputState }

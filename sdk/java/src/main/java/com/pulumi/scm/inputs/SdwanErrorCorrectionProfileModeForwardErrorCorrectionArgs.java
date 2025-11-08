@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,13 +35,13 @@ public final class SdwanErrorCorrectionProfileModeForwardErrorCorrectionArgs ext
      * 
      */
     @Import(name="recoveryDuration", required=true)
-    private Output<Double> recoveryDuration;
+    private Output<Integer> recoveryDuration;
 
     /**
      * @return Recovery duration
      * 
      */
-    public Output<Double> recoveryDuration() {
+    public Output<Integer> recoveryDuration() {
         return this.recoveryDuration;
     }
 
@@ -97,7 +97,7 @@ public final class SdwanErrorCorrectionProfileModeForwardErrorCorrectionArgs ext
          * @return builder
          * 
          */
-        public Builder recoveryDuration(Output<Double> recoveryDuration) {
+        public Builder recoveryDuration(Output<Integer> recoveryDuration) {
             $.recoveryDuration = recoveryDuration;
             return this;
         }
@@ -108,7 +108,7 @@ public final class SdwanErrorCorrectionProfileModeForwardErrorCorrectionArgs ext
          * @return builder
          * 
          */
-        public Builder recoveryDuration(Double recoveryDuration) {
+        public Builder recoveryDuration(Integer recoveryDuration) {
             return recoveryDuration(Output.of(recoveryDuration));
         }
 

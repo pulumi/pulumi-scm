@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetVlanInterfaceList(ctx *pulumi.Context, args *GetVlanInterfaceListArgs, opts ...pulumi.InvokeOption) (*GetVlanInterfaceListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetVlanInterfaceListResult

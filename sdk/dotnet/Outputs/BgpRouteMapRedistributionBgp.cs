@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionBgpOspf? Ospf;
         /// <summary>
-        /// Rib
+        /// BGP Root RIB
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionBgpRib? Rib;
 

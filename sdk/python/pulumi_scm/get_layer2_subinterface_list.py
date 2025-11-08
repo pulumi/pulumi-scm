@@ -165,6 +165,17 @@ def get_layer2_subinterface_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Fetch a list of all layer2 sub-interfaces
+    all_layer2_subinterfaces = scm.get_layer2_subinterface_list(folder="ngfw-shared")
+    pulumi.export("scmLayer2SubinterfaceList", {interface.name: interface for interface in all_layer2_subinterfaces.datas})
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +214,17 @@ def get_layer2_subinterface_list_output(device: Optional[pulumi.Input[Optional[_
                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLayer2SubinterfaceListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Fetch a list of all layer2 sub-interfaces
+    all_layer2_subinterfaces = scm.get_layer2_subinterface_list(folder="ngfw-shared")
+    pulumi.export("scmLayer2SubinterfaceList", {interface.name: interface for interface in all_layer2_subinterfaces.datas})
+    ```
 
 
     :param _builtins.str device: The device of the item.

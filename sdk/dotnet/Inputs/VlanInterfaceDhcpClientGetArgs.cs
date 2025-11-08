@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class VlanInterfaceDhcpClientGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Create default route
+        /// Automatically create default route pointing to default gateway provided by server
         /// </summary>
         [Input("createDefaultRoute")]
         public Input<bool>? CreateDefaultRoute { get; set; }
 
         /// <summary>
-        /// Default route metric
+        /// Metric of the default route created
         /// </summary>
         [Input("defaultRouteMetric")]
         public Input<int>? DefaultRouteMetric { get; set; }
 
         /// <summary>
-        /// Enable
+        /// Enable DHCP?
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }

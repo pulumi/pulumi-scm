@@ -12,6 +12,36 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a list of SCM DNS Security Profile objects.
+//			//
+//			// Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+//			allShared, err := scm.GetDnsSecurityProfileList(ctx, &scm.GetDnsSecurityProfileListArgs{
+//				Folder: pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmDnsSecurityProfileListAllShared", allShared.Datas)
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetDnsSecurityProfileList(ctx *pulumi.Context, args *GetDnsSecurityProfileListArgs, opts ...pulumi.InvokeOption) (*GetDnsSecurityProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetDnsSecurityProfileListResult

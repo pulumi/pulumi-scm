@@ -19,13 +19,13 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgs>? Metric { get; set; }
 
         /// <summary>
-        /// Metric type
+        /// Connected Static BGP OSPF Route map set Metric type
         /// </summary>
         [Input("metricType")]
         public Input<string>? MetricType { get; set; }
 
         /// <summary>
-        /// Tag
+        /// Connected Static BGP OSPF Route map set Tag
         /// </summary>
         [Input("tag")]
         public Input<int>? Tag { get; set; }

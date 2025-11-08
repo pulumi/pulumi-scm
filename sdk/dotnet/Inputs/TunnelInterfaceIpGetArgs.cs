@@ -12,17 +12,11 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class TunnelInterfaceIpGetArgs : global::Pulumi.ResourceArgs
     {
-        [Input("ips")]
-        private InputList<string>? _ips;
-
         /// <summary>
-        /// tunnel interfaces IP address(es)
+        /// Tunnel Interface IP address(es)
         /// </summary>
-        public InputList<string> Ips
-        {
-            get => _ips ?? (_ips = new InputList<string>());
-            set => _ips = value;
-        }
+        [Input("name", required: true)]
+        public Input<string> Name { get; set; } = null!;
 
         public TunnelInterfaceIpGetArgs()
         {

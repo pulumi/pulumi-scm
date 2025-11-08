@@ -51,6 +51,11 @@ public final class GetNatRuleListResult {
      */
     private @Nullable Integer offset;
     /**
+     * @return The relative position of the rule
+     * 
+     */
+    private String position;
+    /**
      * @return The snippet of the item.
      * 
      */
@@ -113,6 +118,13 @@ public final class GetNatRuleListResult {
         return Optional.ofNullable(this.offset);
     }
     /**
+     * @return The relative position of the rule
+     * 
+     */
+    public String position() {
+        return this.position;
+    }
+    /**
      * @return The snippet of the item.
      * 
      */
@@ -146,6 +158,7 @@ public final class GetNatRuleListResult {
         private @Nullable Integer limit;
         private @Nullable String name;
         private @Nullable Integer offset;
+        private String position;
         private @Nullable String snippet;
         private String tfid;
         private Integer total;
@@ -159,6 +172,7 @@ public final class GetNatRuleListResult {
     	      this.limit = defaults.limit;
     	      this.name = defaults.name;
     	      this.offset = defaults.offset;
+    	      this.position = defaults.position;
     	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.total = defaults.total;
@@ -214,6 +228,14 @@ public final class GetNatRuleListResult {
             return this;
         }
         @CustomType.Setter
+        public Builder position(String position) {
+            if (position == null) {
+              throw new MissingRequiredPropertyException("GetNatRuleListResult", "position");
+            }
+            this.position = position;
+            return this;
+        }
+        @CustomType.Setter
         public Builder snippet(@Nullable String snippet) {
 
             this.snippet = snippet;
@@ -244,6 +266,7 @@ public final class GetNatRuleListResult {
             _resultValue.limit = limit;
             _resultValue.name = name;
             _resultValue.offset = offset;
+            _resultValue.position = position;
             _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.total = total;

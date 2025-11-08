@@ -12,6 +12,40 @@ import (
 )
 
 // DnsSecurityProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a single SCM DNS Security Profile object by its ID.
+//			//
+//			// Replace the ID with the UUID of the SCM DNS Profile you want to find.
+//			scmDnsProfile, err := scm.LookupDnsSecurityProfile(ctx, &scm.LookupDnsSecurityProfileArgs{
+//				Id: "18607c90-22fa-4627-8741-f0584d1fa7d6",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmDnsSecurityProfileDetails", pulumi.StringMap{
+//				"profileId": scmDnsProfile.Id,
+//				"folder":    scmDnsProfile.Folder,
+//				"name":      scmDnsProfile.Name,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupDnsSecurityProfile(ctx *pulumi.Context, args *LookupDnsSecurityProfileArgs, opts ...pulumi.InvokeOption) (*LookupDnsSecurityProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupDnsSecurityProfileResult

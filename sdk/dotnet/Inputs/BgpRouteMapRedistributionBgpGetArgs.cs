@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.BgpRouteMapRedistributionBgpOspfGetArgs>? Ospf { get; set; }
 
         /// <summary>
-        /// Rib
+        /// BGP Root RIB
         /// </summary>
         [Input("rib")]
         public Input<Inputs.BgpRouteMapRedistributionBgpRibGetArgs>? Rib { get; set; }

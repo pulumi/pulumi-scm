@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         /// Min received ttl
         /// </summary>
         [Input("minReceivedTtl")]
-        public Input<double>? MinReceivedTtl { get; set; }
+        public Input<int>? MinReceivedTtl { get; set; }
 
         public LogicalRouterVrfBgpPeerGroupPeerBfdMultihopArgs()
         {

@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp {
      * @return Advertisement interval
      * 
      */
-    private Double advertisementInterval;
+    private Integer advertisementInterval;
     /**
      * @return Group list
      * 
@@ -35,7 +35,7 @@ public final class GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp {
      * @return Priority
      * 
      */
-    private Double priority;
+    private Integer priority;
 
     private GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp() {}
     /**
@@ -49,7 +49,7 @@ public final class GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp {
      * @return Advertisement interval
      * 
      */
-    public Double advertisementInterval() {
+    public Integer advertisementInterval() {
         return this.advertisementInterval;
     }
     /**
@@ -70,7 +70,7 @@ public final class GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp {
      * @return Priority
      * 
      */
-    public Double priority() {
+    public Integer priority() {
         return this.priority;
     }
 
@@ -84,10 +84,10 @@ public final class GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp {
     @CustomType.Builder
     public static final class Builder {
         private String address;
-        private Double advertisementInterval;
+        private Integer advertisementInterval;
         private String groupList;
         private String interface_;
-        private Double priority;
+        private Integer priority;
         public Builder() {}
         public Builder(GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp defaults) {
     	      Objects.requireNonNull(defaults);
@@ -107,7 +107,7 @@ public final class GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp {
             return this;
         }
         @CustomType.Setter
-        public Builder advertisementInterval(Double advertisementInterval) {
+        public Builder advertisementInterval(Integer advertisementInterval) {
             if (advertisementInterval == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp", "advertisementInterval");
             }
@@ -131,7 +131,7 @@ public final class GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp {
             return this;
         }
         @CustomType.Setter
-        public Builder priority(Double priority) {
+        public Builder priority(Integer priority) {
             if (priority == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfMulticastPimRpLocalRpCandidateRp", "priority");
             }

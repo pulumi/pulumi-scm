@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class BgpRouteMapRedistributionOspfRibRouteMapMatch
     {
         /// <summary>
-        /// Address
+        /// OSPF RIB Route maps address
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionOspfRibRouteMapMatchAddress? Address;
         /// <summary>
-        /// Interface
+        /// OSPF RIB Route maps Interface
         /// </summary>
         public readonly string? Interface;
         /// <summary>
-        /// Metric
+        /// OSPF RIB Route maps Metric
         /// </summary>
         public readonly int? Metric;
         /// <summary>
-        /// Next hop
+        /// OSPF RIB Route maps next*hop
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop? NextHop;
         /// <summary>
-        /// Tag
+        /// OSPF RIB Route maps tag
         /// </summary>
         public readonly int? Tag;
 

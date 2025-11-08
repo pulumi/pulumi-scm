@@ -10,7 +10,7 @@ import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4Ipv4UnicastAllowasInArgs
 import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4Ipv4UnicastMaximumPrefixArgs;
 import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4Ipv4UnicastNextHopArgs;
 import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4Ipv4UnicastOrfArgs;
-import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs;
+import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs;
 import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -162,15 +162,15 @@ public final class BgpAddressFamilyProfileIpv4Ipv4UnicastArgs extends com.pulumi
      * Remove private a s
      * 
      */
-    @Import(name="removePrivateAS")
-    private @Nullable Output<BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs> removePrivateAS;
+    @Import(name="removePrivateAs")
+    private @Nullable Output<BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs> removePrivateAs;
 
     /**
      * @return Remove private a s
      * 
      */
-    public Optional<Output<BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs>> removePrivateAS() {
-        return Optional.ofNullable(this.removePrivateAS);
+    public Optional<Output<BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs>> removePrivateAs() {
+        return Optional.ofNullable(this.removePrivateAs);
     }
 
     /**
@@ -230,7 +230,7 @@ public final class BgpAddressFamilyProfileIpv4Ipv4UnicastArgs extends com.pulumi
         this.maximumPrefix = $.maximumPrefix;
         this.nextHop = $.nextHop;
         this.orf = $.orf;
-        this.removePrivateAS = $.removePrivateAS;
+        this.removePrivateAs = $.removePrivateAs;
         this.routeReflectorClient = $.routeReflectorClient;
         this.sendCommunity = $.sendCommunity;
         this.softReconfigWithStoredInfo = $.softReconfigWithStoredInfo;
@@ -444,24 +444,24 @@ public final class BgpAddressFamilyProfileIpv4Ipv4UnicastArgs extends com.pulumi
         }
 
         /**
-         * @param removePrivateAS Remove private a s
+         * @param removePrivateAs Remove private a s
          * 
          * @return builder
          * 
          */
-        public Builder removePrivateAS(@Nullable Output<BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs> removePrivateAS) {
-            $.removePrivateAS = removePrivateAS;
+        public Builder removePrivateAs(@Nullable Output<BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs> removePrivateAs) {
+            $.removePrivateAs = removePrivateAs;
             return this;
         }
 
         /**
-         * @param removePrivateAS Remove private a s
+         * @param removePrivateAs Remove private a s
          * 
          * @return builder
          * 
          */
-        public Builder removePrivateAS(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs removePrivateAS) {
-            return removePrivateAS(Output.of(removePrivateAS));
+        public Builder removePrivateAs(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs removePrivateAs) {
+            return removePrivateAs(Output.of(removePrivateAs));
         }
 
         /**

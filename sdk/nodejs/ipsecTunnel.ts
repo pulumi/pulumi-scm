@@ -10,6 +10,72 @@ import * as utilities from "./utilities";
  * IpsecTunnel resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+ * // Note: The resource name is plural: "scm_ike_crypto_profile"
+ * const example = new scm.IkeCryptoProfile("example", {
+ *     name: "example-ike-crypto",
+ *     folder: "Remote Networks",
+ *     hashes: ["sha256"],
+ *     dhGroups: ["group14"],
+ *     encryptions: ["aes-256-cbc"],
+ * });
+ * //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+ * // Note: The resource name is plural and nested blocks now use an equals sign (=).
+ * const exampleIpsecCryptoProfile = new scm.IpsecCryptoProfile("example", {
+ *     name: "PaloAlto-Networks-IPSec-Crypto",
+ *     folder: "Remote Networks",
+ *     esp: {
+ *         encryptions: ["aes-256-gcm"],
+ *         authentications: ["sha256"],
+ *     },
+ *     dhGroup: "group14",
+ *     lifetime: {
+ *         hours: 8,
+ *     },
+ * });
+ * //# 3. Define the IKE Gateway
+ * // Note: The resource name is plural and nested blocks now use an equals sign (=).
+ * const exampleIkeGateway = new scm.IkeGateway("example", {
+ *     name: "example-gateway",
+ *     folder: "Remote Networks",
+ *     peerAddress: {
+ *         ip: "1.1.1.1",
+ *     },
+ *     authentication: {
+ *         preSharedKey: {
+ *             key: "secret",
+ *         },
+ *     },
+ *     protocol: {
+ *         ikev1: {
+ *             ikeCryptoProfile: example.name,
+ *         },
+ *     },
+ * });
+ * //# 4. Define the IPsec Tunnel
+ * // Note: Nested 'auto_key' block uses an equals sign (=).
+ * const exampleIpsecTunnel = new scm.IpsecTunnel("example", {
+ *     name: "example-tunnel",
+ *     folder: "Remote Networks",
+ *     tunnelInterface: "tunnel",
+ *     antiReplay: true,
+ *     copyTos: false,
+ *     enableGreEncapsulation: false,
+ *     autoKey: {
+ *         ikeGateways: [{
+ *             name: exampleIkeGateway.name,
+ *         }],
+ *         ipsecCryptoProfile: exampleIpsecCryptoProfile.name,
+ *     },
+ * }, {
+ *     dependsOn: [exampleIkeGateway],
+ * });
+ * ```
  */
 export class IpsecTunnel extends pulumi.CustomResource {
     /**

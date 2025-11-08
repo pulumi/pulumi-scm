@@ -14,14 +14,36 @@ namespace Pulumi.Scm.Outputs
     public sealed class EthernetInterfaceLayer3DhcpClient
     {
         /// <summary>
-        /// Dhcp client
+        /// Automatically create default route pointing to default gateway provided by server
         /// </summary>
-        public readonly Outputs.EthernetInterfaceLayer3DhcpClientDhcpClient? DhcpClient;
+        public readonly bool? CreateDefaultRoute;
+        /// <summary>
+        /// Metric of the default route created
+        /// </summary>
+        public readonly int? DefaultRouteMetric;
+        /// <summary>
+        /// Enable DHCP?
+        /// </summary>
+        public readonly bool? Enable;
+        /// <summary>
+        /// Ethernet Interfaces DHCP ClientSend hostname
+        /// </summary>
+        public readonly Outputs.EthernetInterfaceLayer3DhcpClientSendHostname? SendHostname;
 
         [OutputConstructor]
-        private EthernetInterfaceLayer3DhcpClient(Outputs.EthernetInterfaceLayer3DhcpClientDhcpClient? dhcpClient)
+        private EthernetInterfaceLayer3DhcpClient(
+            bool? createDefaultRoute,
+
+            int? defaultRouteMetric,
+
+            bool? enable,
+
+            Outputs.EthernetInterfaceLayer3DhcpClientSendHostname? sendHostname)
         {
-            DhcpClient = dhcpClient;
+            CreateDefaultRoute = createDefaultRoute;
+            DefaultRouteMetric = defaultRouteMetric;
+            Enable = enable;
+            SendHostname = sendHostname;
         }
     }
 }

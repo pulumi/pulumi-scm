@@ -14,49 +14,49 @@ namespace Pulumi.Scm.Outputs
     public sealed class EthernetInterfaceLayer3DdnsConfig
     {
         /// <summary>
-        /// Ddns cert profile
+        /// Certificate profile
         /// </summary>
-        public readonly string? DdnsCertProfile;
+        public readonly string DdnsCertProfile;
         /// <summary>
-        /// Ddns enabled
+        /// Enable DDNS?
         /// </summary>
         public readonly bool? DdnsEnabled;
         /// <summary>
         /// Ddns hostname
         /// </summary>
-        public readonly string? DdnsHostname;
+        public readonly string DdnsHostname;
         /// <summary>
-        /// Ddns ip
+        /// IP to register (static only)
         /// </summary>
         public readonly string? DdnsIp;
         /// <summary>
-        /// Ddns update interval
+        /// Update interval (days)
         /// </summary>
         public readonly int? DdnsUpdateInterval;
         /// <summary>
-        /// Ddns vendor
+        /// DDNS vendor
         /// </summary>
-        public readonly string? DdnsVendor;
+        public readonly string DdnsVendor;
         /// <summary>
-        /// Ddns vendor config
+        /// DDNS vendor
         /// </summary>
-        public readonly string? DdnsVendorConfig;
+        public readonly string DdnsVendorConfig;
 
         [OutputConstructor]
         private EthernetInterfaceLayer3DdnsConfig(
-            string? ddnsCertProfile,
+            string ddnsCertProfile,
 
             bool? ddnsEnabled,
 
-            string? ddnsHostname,
+            string ddnsHostname,
 
             string? ddnsIp,
 
             int? ddnsUpdateInterval,
 
-            string? ddnsVendor,
+            string ddnsVendor,
 
-            string? ddnsVendorConfig)
+            string ddnsVendorConfig)
         {
             DdnsCertProfile = ddnsCertProfile;
             DdnsEnabled = ddnsEnabled;

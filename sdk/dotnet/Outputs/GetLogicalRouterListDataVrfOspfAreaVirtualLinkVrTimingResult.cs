@@ -16,29 +16,29 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Dead counts
         /// </summary>
-        public readonly double DeadCounts;
+        public readonly int DeadCounts;
         /// <summary>
         /// Hello interval
         /// </summary>
-        public readonly double HelloInterval;
+        public readonly int HelloInterval;
         /// <summary>
         /// Retransmit interval
         /// </summary>
-        public readonly double RetransmitInterval;
+        public readonly int RetransmitInterval;
         /// <summary>
         /// Transit delay
         /// </summary>
-        public readonly double TransitDelay;
+        public readonly int TransitDelay;
 
         [OutputConstructor]
         private GetLogicalRouterListDataVrfOspfAreaVirtualLinkVrTimingResult(
-            double deadCounts,
+            int deadCounts,
 
-            double helloInterval,
+            int helloInterval,
 
-            double retransmitInterval,
+            int retransmitInterval,
 
-            double transitDelay)
+            int transitDelay)
         {
             DeadCounts = deadCounts;
             HelloInterval = helloInterval;

@@ -6,6 +6,66 @@ import * as utilities from "./utilities";
 
 /**
  * Folder resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Creates a folder under the "All Firewalls" aka "ngfw-shared" folder
+ * //
+ * const scmFolderExample = new scm.Folder("scm_folder_example", {
+ *     name: "scm_folder_example",
+ *     parent: "ngfw-shared",
+ *     description: "Managed by Pulumi",
+ * });
+ * //
+ * // Creates a folder under the "scm_folder_example" folder created beforehand
+ * //
+ * const scmNestedFolderExample = new scm.Folder("scm_nested_folder_example", {
+ *     name: "scm_nested_folder_example",
+ *     parent: "scm_folder_example",
+ *     description: "Managed by Pulumi",
+ * }, {
+ *     dependsOn: [scmFolderExample],
+ * });
+ * //
+ * // Creates a snippet that will be associated to a folder
+ * //
+ * const scmSnippetExample = new scm.Snippet("scm_snippet_example", {
+ *     name: "scm_snippet_example",
+ *     description: "Managed by Pulumi",
+ * });
+ * //
+ * // Creates a folder with an attached snippet
+ * //
+ * const scmFolderWithSnippets = new scm.Folder("scm_folder_with_snippets", {
+ *     name: "scm_folder_with_snippets",
+ *     parent: "ngfw-shared",
+ *     description: "Managed by Pulumi",
+ *     snippets: [scmSnippetExample.name],
+ * });
+ * //
+ * // Creates a label that will be associated to a folder
+ * //
+ * const scmLabelExample = new scm.Label("scm_label_example", {
+ *     name: "scm_label_example",
+ *     description: "Managed by Pulumi",
+ * });
+ * //
+ * // Creates a folder with an attached label
+ * //
+ * const scmFolderWithLabel = new scm.Folder("scm_folder_with_label", {
+ *     name: "scm_folder_with_label",
+ *     parent: "ngfw-shared",
+ *     description: "Managed by Pulumi",
+ *     labels: [scmLabelExample.name],
+ * }, {
+ *     dependsOn: [scmLabelExample],
+ * });
+ * ```
  */
 export class Folder extends pulumi.CustomResource {
     /**

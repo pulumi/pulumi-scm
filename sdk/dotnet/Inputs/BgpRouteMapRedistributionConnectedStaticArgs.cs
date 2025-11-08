@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionConnectedStaticArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Bgp
+        /// Connected Static Root BGP
         /// </summary>
         [Input("bgp")]
         public Input<Inputs.BgpRouteMapRedistributionConnectedStaticBgpArgs>? Bgp { get; set; }

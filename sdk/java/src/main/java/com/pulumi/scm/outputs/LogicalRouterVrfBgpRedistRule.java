@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class LogicalRouterVrfBgpRedistRule {
      * @return Metric
      * 
      */
-    private @Nullable Double metric;
+    private @Nullable Integer metric;
     /**
      * @return Name
      * 
@@ -44,7 +44,7 @@ public final class LogicalRouterVrfBgpRedistRule {
      * @return Set as path limit
      * 
      */
-    private @Nullable Double setAsPathLimit;
+    private @Nullable Integer setAsPathLimit;
     /**
      * @return Set community
      * 
@@ -59,12 +59,12 @@ public final class LogicalRouterVrfBgpRedistRule {
      * @return Set local preference
      * 
      */
-    private @Nullable Double setLocalPreference;
+    private @Nullable Integer setLocalPreference;
     /**
      * @return Set med
      * 
      */
-    private @Nullable Double setMed;
+    private @Nullable Integer setMed;
     /**
      * @return Set origin
      * 
@@ -90,7 +90,7 @@ public final class LogicalRouterVrfBgpRedistRule {
      * @return Metric
      * 
      */
-    public Optional<Double> metric() {
+    public Optional<Integer> metric() {
         return Optional.ofNullable(this.metric);
     }
     /**
@@ -111,7 +111,7 @@ public final class LogicalRouterVrfBgpRedistRule {
      * @return Set as path limit
      * 
      */
-    public Optional<Double> setAsPathLimit() {
+    public Optional<Integer> setAsPathLimit() {
         return Optional.ofNullable(this.setAsPathLimit);
     }
     /**
@@ -132,14 +132,14 @@ public final class LogicalRouterVrfBgpRedistRule {
      * @return Set local preference
      * 
      */
-    public Optional<Double> setLocalPreference() {
+    public Optional<Integer> setLocalPreference() {
         return Optional.ofNullable(this.setLocalPreference);
     }
     /**
      * @return Set med
      * 
      */
-    public Optional<Double> setMed() {
+    public Optional<Integer> setMed() {
         return Optional.ofNullable(this.setMed);
     }
     /**
@@ -161,14 +161,14 @@ public final class LogicalRouterVrfBgpRedistRule {
     public static final class Builder {
         private @Nullable String addressFamilyIdentifier;
         private @Nullable Boolean enable;
-        private @Nullable Double metric;
+        private @Nullable Integer metric;
         private String name;
         private @Nullable String routeTable;
-        private @Nullable Double setAsPathLimit;
+        private @Nullable Integer setAsPathLimit;
         private @Nullable List<String> setCommunities;
         private @Nullable List<String> setExtendedCommunities;
-        private @Nullable Double setLocalPreference;
-        private @Nullable Double setMed;
+        private @Nullable Integer setLocalPreference;
+        private @Nullable Integer setMed;
         private @Nullable String setOrigin;
         public Builder() {}
         public Builder(LogicalRouterVrfBgpRedistRule defaults) {
@@ -199,7 +199,7 @@ public final class LogicalRouterVrfBgpRedistRule {
             return this;
         }
         @CustomType.Setter
-        public Builder metric(@Nullable Double metric) {
+        public Builder metric(@Nullable Integer metric) {
 
             this.metric = metric;
             return this;
@@ -219,7 +219,7 @@ public final class LogicalRouterVrfBgpRedistRule {
             return this;
         }
         @CustomType.Setter
-        public Builder setAsPathLimit(@Nullable Double setAsPathLimit) {
+        public Builder setAsPathLimit(@Nullable Integer setAsPathLimit) {
 
             this.setAsPathLimit = setAsPathLimit;
             return this;
@@ -243,13 +243,13 @@ public final class LogicalRouterVrfBgpRedistRule {
             return setExtendedCommunities(List.of(setExtendedCommunities));
         }
         @CustomType.Setter
-        public Builder setLocalPreference(@Nullable Double setLocalPreference) {
+        public Builder setLocalPreference(@Nullable Integer setLocalPreference) {
 
             this.setLocalPreference = setLocalPreference;
             return this;
         }
         @CustomType.Setter
-        public Builder setMed(@Nullable Double setMed) {
+        public Builder setMed(@Nullable Integer setMed) {
 
             this.setMed = setMed;
             return this;

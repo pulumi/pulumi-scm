@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsProxyCache {
     /**
-     * @return Cache edns
+     * @return Cache EDNS UDP response
      * 
      */
     private Boolean cacheEdns;
@@ -29,7 +29,7 @@ public final class GetDnsProxyCache {
 
     private GetDnsProxyCache() {}
     /**
-     * @return Cache edns
+     * @return Cache EDNS UDP response
      * 
      */
     public Boolean cacheEdns() {

@@ -15,32 +15,32 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// C h a p
         /// </summary>
-        [Input("cHAP")]
-        public Input<string>? CHAP { get; set; }
+        [Input("chap")]
+        public Input<Inputs.RadiusServerProfileProtocolChapArgs>? Chap { get; set; }
 
         /// <summary>
         /// E a p t t l s with p a p
         /// </summary>
-        [Input("eAPTTLSWithPAP")]
-        public Input<Inputs.RadiusServerProfileProtocolEAPTTLSWithPAPArgs>? EAPTTLSWithPAP { get; set; }
+        [Input("eapTtlsWithPap")]
+        public Input<Inputs.RadiusServerProfileProtocolEapTtlsWithPapArgs>? EapTtlsWithPap { get; set; }
 
         /// <summary>
         /// P a p
         /// </summary>
-        [Input("pAP")]
-        public Input<string>? PAP { get; set; }
+        [Input("pap")]
+        public Input<Inputs.RadiusServerProfileProtocolPapArgs>? Pap { get; set; }
 
         /// <summary>
         /// P e a p m s c h a pv2
         /// </summary>
-        [Input("pEAPMSCHAPv2")]
-        public Input<Inputs.RadiusServerProfileProtocolPEAPMSCHAPv2Args>? PEAPMSCHAPv2 { get; set; }
+        [Input("peapMschaPv2")]
+        public Input<Inputs.RadiusServerProfileProtocolPeapMschaPv2Args>? PeapMschaPv2 { get; set; }
 
         /// <summary>
         /// P e a p with g t c
         /// </summary>
-        [Input("pEAPWithGTC")]
-        public Input<Inputs.RadiusServerProfileProtocolPEAPWithGTCArgs>? PEAPWithGTC { get; set; }
+        [Input("peapWithGtc")]
+        public Input<Inputs.RadiusServerProfileProtocolPeapWithGtcArgs>? PeapWithGtc { get; set; }
 
         public RadiusServerProfileProtocolArgs()
         {

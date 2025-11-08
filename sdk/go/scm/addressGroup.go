@@ -62,7 +62,7 @@ import (
 //			}
 //			// Create tags to be used for dynamic address group
 //			_, err = scm.NewTag(ctx, "scm_addressgroup_tag_1", &scm.TagArgs{
-//				Folder:   pulumi.String("Shared"),
+//				Folder:   pulumi.String("All"),
 //				Name:     pulumi.String("scm_addressgroup_tag_1"),
 //				Comments: pulumi.String("Managed by Pulumi"),
 //				Color:    pulumi.String("Orange"),
@@ -71,7 +71,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewTag(ctx, "scm_addressgroup_tag_2", &scm.TagArgs{
-//				Folder:   pulumi.String("Shared"),
+//				Folder:   pulumi.String("All"),
 //				Name:     pulumi.String("scm_addressgroup_tag_2"),
 //				Comments: pulumi.String("Managed by Pulumi"),
 //				Color:    pulumi.String("Blue"),

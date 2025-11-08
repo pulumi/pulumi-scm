@@ -12,6 +12,85 @@ import (
 )
 
 // Layer3Subinterface resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates a ethernet interface used as parent-interface for subsequent examples
+//			scmParentInterface, err := scm.NewEthernetInterface(ctx, "scm_parent_interface", &scm.EthernetInterfaceArgs{
+//				Name:    pulumi.String("$scm_parent_interface"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3:  &scm.EthernetInterfaceLayer3Args{},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 sub-interface with static ip address
+//			_, err = scm.NewLayer3Subinterface(ctx, "scm_l3_subinterface", &scm.Layer3SubinterfaceArgs{
+//				Name:            pulumi.String("$scm_parent_interface.100"),
+//				Comment:         pulumi.String("Managed by Pulumi"),
+//				Folder:          pulumi.String("ngfw-shared"),
+//				Tag:             pulumi.Int(100),
+//				ParentInterface: pulumi.String("$scm_parent_interface"),
+//				Ips: scm.Layer3SubinterfaceIpArray{
+//					&scm.Layer3SubinterfaceIpArgs{
+//						Name: pulumi.String("198.18.1.1/32"),
+//					},
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmParentInterface,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			scmParentDhcpInterface, err := scm.NewEthernetInterface(ctx, "scm_parent_dhcp_interface", &scm.EthernetInterfaceArgs{
+//				Name:    pulumi.String("$scm_parent_dhcp_interface"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("All"),
+//				Layer3:  &scm.EthernetInterfaceLayer3Args{},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 sub-interface with dhcp
+//			_, err = scm.NewLayer3Subinterface(ctx, "scm_l3_dhcp_subinterface", &scm.Layer3SubinterfaceArgs{
+//				Name:            pulumi.String("$scm_parent_dhcp_interface.100"),
+//				Comment:         pulumi.String("Managed by Pulumi"),
+//				Folder:          pulumi.String("All"),
+//				Tag:             pulumi.Int(100),
+//				ParentInterface: pulumi.String("$scm_parent_dhcp_interface"),
+//				DhcpClient: &scm.Layer3SubinterfaceDhcpClientArgs{
+//					Enable:             pulumi.Bool(true),
+//					CreateDefaultRoute: pulumi.Bool(true),
+//					DefaultRouteMetric: pulumi.Int(20),
+//					SendHostname: &scm.Layer3SubinterfaceDhcpClientSendHostnameArgs{
+//						Enable:   pulumi.Bool(true),
+//						Hostname: pulumi.String("client-vlan50-host"),
+//					},
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmParentDhcpInterface,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type Layer3Subinterface struct {
 	pulumi.CustomResourceState
 
@@ -20,19 +99,19 @@ type Layer3Subinterface struct {
 	// Description
 	Comment pulumi.StringPtrOutput `pulumi:"comment"`
 	// Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
-	DdnsConfig Layer3SubinterfaceDdnsConfigPtrOutput `pulumi:"ddnsConfig"`
+	DdnsConfig Layer3SubinterfaceDdnsConfigOutput `pulumi:"ddnsConfig"`
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// Dhcp client
-	DhcpClient Layer3SubinterfaceDhcpClientPtrOutput `pulumi:"dhcpClient"`
+	// Layer3 sub interfaces DHCP Client Object
+	DhcpClient Layer3SubinterfaceDhcpClientOutput `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrOutput `pulumi:"interfaceManagementProfile"`
-	// Ip
-	Ips pulumi.StringArrayOutput `pulumi:"ips"`
+	// L3 sub-interface IP Parent
+	Ips Layer3SubinterfaceIpArrayOutput `pulumi:"ips"`
 	// MTU
-	Mtu pulumi.Float64PtrOutput `pulumi:"mtu"`
+	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Parent interface
@@ -40,8 +119,8 @@ type Layer3Subinterface struct {
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// VLAN tag
-	Tag  pulumi.Float64PtrOutput `pulumi:"tag"`
-	Tfid pulumi.StringOutput     `pulumi:"tfid"`
+	Tag  pulumi.IntPtrOutput `pulumi:"tag"`
+	Tfid pulumi.StringOutput `pulumi:"tfid"`
 }
 
 // NewLayer3Subinterface registers a new resource with the given unique name, arguments, and options.
@@ -82,16 +161,16 @@ type layer3SubinterfaceState struct {
 	DdnsConfig *Layer3SubinterfaceDdnsConfig `pulumi:"ddnsConfig"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// Dhcp client
+	// Layer3 sub interfaces DHCP Client Object
 	DhcpClient *Layer3SubinterfaceDhcpClient `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
-	// Ip
-	Ips []string `pulumi:"ips"`
+	// L3 sub-interface IP Parent
+	Ips []Layer3SubinterfaceIp `pulumi:"ips"`
 	// MTU
-	Mtu *float64 `pulumi:"mtu"`
+	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
 	// Parent interface
@@ -99,8 +178,8 @@ type layer3SubinterfaceState struct {
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	// VLAN tag
-	Tag  *float64 `pulumi:"tag"`
-	Tfid *string  `pulumi:"tfid"`
+	Tag  *int    `pulumi:"tag"`
+	Tfid *string `pulumi:"tfid"`
 }
 
 type Layer3SubinterfaceState struct {
@@ -112,16 +191,16 @@ type Layer3SubinterfaceState struct {
 	DdnsConfig Layer3SubinterfaceDdnsConfigPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// Dhcp client
+	// Layer3 sub interfaces DHCP Client Object
 	DhcpClient Layer3SubinterfaceDhcpClientPtrInput
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
-	// Ip
-	Ips pulumi.StringArrayInput
+	// L3 sub-interface IP Parent
+	Ips Layer3SubinterfaceIpArrayInput
 	// MTU
-	Mtu pulumi.Float64PtrInput
+	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
 	// Parent interface
@@ -129,7 +208,7 @@ type Layer3SubinterfaceState struct {
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	// VLAN tag
-	Tag  pulumi.Float64PtrInput
+	Tag  pulumi.IntPtrInput
 	Tfid pulumi.StringPtrInput
 }
 
@@ -146,16 +225,16 @@ type layer3SubinterfaceArgs struct {
 	DdnsConfig *Layer3SubinterfaceDdnsConfig `pulumi:"ddnsConfig"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// Dhcp client
+	// Layer3 sub interfaces DHCP Client Object
 	DhcpClient *Layer3SubinterfaceDhcpClient `pulumi:"dhcpClient"`
 	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
-	// Ip
-	Ips []string `pulumi:"ips"`
+	// L3 sub-interface IP Parent
+	Ips []Layer3SubinterfaceIp `pulumi:"ips"`
 	// MTU
-	Mtu *float64 `pulumi:"mtu"`
+	Mtu *int `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name *string `pulumi:"name"`
 	// Parent interface
@@ -163,7 +242,7 @@ type layer3SubinterfaceArgs struct {
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	// VLAN tag
-	Tag *float64 `pulumi:"tag"`
+	Tag *int `pulumi:"tag"`
 }
 
 // The set of arguments for constructing a Layer3Subinterface resource.
@@ -176,16 +255,16 @@ type Layer3SubinterfaceArgs struct {
 	DdnsConfig Layer3SubinterfaceDdnsConfigPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// Dhcp client
+	// Layer3 sub interfaces DHCP Client Object
 	DhcpClient Layer3SubinterfaceDhcpClientPtrInput
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput
-	// Ip
-	Ips pulumi.StringArrayInput
+	// L3 sub-interface IP Parent
+	Ips Layer3SubinterfaceIpArrayInput
 	// MTU
-	Mtu pulumi.Float64PtrInput
+	Mtu pulumi.IntPtrInput
 	// L3 sub-interface name
 	Name pulumi.StringPtrInput
 	// Parent interface
@@ -193,7 +272,7 @@ type Layer3SubinterfaceArgs struct {
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	// VLAN tag
-	Tag pulumi.Float64PtrInput
+	Tag pulumi.IntPtrInput
 }
 
 func (Layer3SubinterfaceArgs) ElementType() reflect.Type {
@@ -294,8 +373,8 @@ func (o Layer3SubinterfaceOutput) Comment() pulumi.StringPtrOutput {
 }
 
 // Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
-func (o Layer3SubinterfaceOutput) DdnsConfig() Layer3SubinterfaceDdnsConfigPtrOutput {
-	return o.ApplyT(func(v *Layer3Subinterface) Layer3SubinterfaceDdnsConfigPtrOutput { return v.DdnsConfig }).(Layer3SubinterfaceDdnsConfigPtrOutput)
+func (o Layer3SubinterfaceOutput) DdnsConfig() Layer3SubinterfaceDdnsConfigOutput {
+	return o.ApplyT(func(v *Layer3Subinterface) Layer3SubinterfaceDdnsConfigOutput { return v.DdnsConfig }).(Layer3SubinterfaceDdnsConfigOutput)
 }
 
 // The device in which the resource is defined
@@ -303,9 +382,9 @@ func (o Layer3SubinterfaceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Layer3Subinterface) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// Dhcp client
-func (o Layer3SubinterfaceOutput) DhcpClient() Layer3SubinterfaceDhcpClientPtrOutput {
-	return o.ApplyT(func(v *Layer3Subinterface) Layer3SubinterfaceDhcpClientPtrOutput { return v.DhcpClient }).(Layer3SubinterfaceDhcpClientPtrOutput)
+// Layer3 sub interfaces DHCP Client Object
+func (o Layer3SubinterfaceOutput) DhcpClient() Layer3SubinterfaceDhcpClientOutput {
+	return o.ApplyT(func(v *Layer3Subinterface) Layer3SubinterfaceDhcpClientOutput { return v.DhcpClient }).(Layer3SubinterfaceDhcpClientOutput)
 }
 
 // The folder in which the resource is defined
@@ -318,14 +397,14 @@ func (o Layer3SubinterfaceOutput) InterfaceManagementProfile() pulumi.StringPtrO
 	return o.ApplyT(func(v *Layer3Subinterface) pulumi.StringPtrOutput { return v.InterfaceManagementProfile }).(pulumi.StringPtrOutput)
 }
 
-// Ip
-func (o Layer3SubinterfaceOutput) Ips() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *Layer3Subinterface) pulumi.StringArrayOutput { return v.Ips }).(pulumi.StringArrayOutput)
+// L3 sub-interface IP Parent
+func (o Layer3SubinterfaceOutput) Ips() Layer3SubinterfaceIpArrayOutput {
+	return o.ApplyT(func(v *Layer3Subinterface) Layer3SubinterfaceIpArrayOutput { return v.Ips }).(Layer3SubinterfaceIpArrayOutput)
 }
 
 // MTU
-func (o Layer3SubinterfaceOutput) Mtu() pulumi.Float64PtrOutput {
-	return o.ApplyT(func(v *Layer3Subinterface) pulumi.Float64PtrOutput { return v.Mtu }).(pulumi.Float64PtrOutput)
+func (o Layer3SubinterfaceOutput) Mtu() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *Layer3Subinterface) pulumi.IntPtrOutput { return v.Mtu }).(pulumi.IntPtrOutput)
 }
 
 // L3 sub-interface name
@@ -344,8 +423,8 @@ func (o Layer3SubinterfaceOutput) Snippet() pulumi.StringPtrOutput {
 }
 
 // VLAN tag
-func (o Layer3SubinterfaceOutput) Tag() pulumi.Float64PtrOutput {
-	return o.ApplyT(func(v *Layer3Subinterface) pulumi.Float64PtrOutput { return v.Tag }).(pulumi.Float64PtrOutput)
+func (o Layer3SubinterfaceOutput) Tag() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *Layer3Subinterface) pulumi.IntPtrOutput { return v.Tag }).(pulumi.IntPtrOutput)
 }
 
 func (o Layer3SubinterfaceOutput) Tfid() pulumi.StringOutput {

@@ -32,14 +32,14 @@ public final class GetLoopbackInterfaceArgs extends com.pulumi.resources.InvokeA
     }
 
     /**
-     * L3 sub-interface name
+     * Loopback Interface name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return L3 sub-interface name
+     * @return Loopback Interface name
      * 
      */
     public Optional<Output<String>> name() {
@@ -93,7 +93,7 @@ public final class GetLoopbackInterfaceArgs extends com.pulumi.resources.InvokeA
         }
 
         /**
-         * @param name L3 sub-interface name
+         * @param name Loopback Interface name
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class GetLoopbackInterfaceArgs extends com.pulumi.resources.InvokeA
         }
 
         /**
-         * @param name L3 sub-interface name
+         * @param name Loopback Interface name
          * 
          * @return builder
          * 

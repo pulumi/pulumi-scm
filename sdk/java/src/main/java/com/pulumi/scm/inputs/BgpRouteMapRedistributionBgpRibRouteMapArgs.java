@@ -19,14 +19,14 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
     public static final BgpRouteMapRedistributionBgpRibRouteMapArgs Empty = new BgpRouteMapRedistributionBgpRibRouteMapArgs();
 
     /**
-     * Action
+     * BGP Root RIB Route maps Action
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return BGP Root RIB Route maps Action
      * 
      */
     public Optional<Output<String>> action() {
@@ -34,14 +34,14 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
     }
 
     /**
-     * Description
+     * BGP Root RIB Route maps Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return Description
+     * @return BGP Root RIB Route maps Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -49,14 +49,14 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
     }
 
     /**
-     * Match
+     * match attribute for BG Rib route map
      * 
      */
     @Import(name="match")
     private @Nullable Output<BgpRouteMapRedistributionBgpRibRouteMapMatchArgs> match;
 
     /**
-     * @return Match
+     * @return match attribute for BG Rib route map
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionBgpRibRouteMapMatchArgs>> match() {
@@ -64,14 +64,14 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
     }
 
     /**
-     * Sequence number
+     * BGP Root RIB Route maps Sequence number
      * 
      */
     @Import(name="name")
     private @Nullable Output<Integer> name;
 
     /**
-     * @return Sequence number
+     * @return BGP Root RIB Route maps Sequence number
      * 
      */
     public Optional<Output<Integer>> name() {
@@ -79,14 +79,14 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
     }
 
     /**
-     * Set
+     * Set attributes for BGP route map
      * 
      */
     @Import(name="set")
     private @Nullable Output<BgpRouteMapRedistributionBgpRibRouteMapSetArgs> set;
 
     /**
-     * @return Set
+     * @return Set attributes for BGP route map
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionBgpRibRouteMapSetArgs>> set() {
@@ -122,7 +122,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param action Action
+         * @param action BGP Root RIB Route maps Action
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param action Action
+         * @param action BGP Root RIB Route maps Action
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param description Description
+         * @param description BGP Root RIB Route maps Description
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param description Description
+         * @param description BGP Root RIB Route maps Description
          * 
          * @return builder
          * 
@@ -164,7 +164,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param match Match
+         * @param match match attribute for BG Rib route map
          * 
          * @return builder
          * 
@@ -175,7 +175,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param match Match
+         * @param match match attribute for BG Rib route map
          * 
          * @return builder
          * 
@@ -185,7 +185,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param name Sequence number
+         * @param name BGP Root RIB Route maps Sequence number
          * 
          * @return builder
          * 
@@ -196,7 +196,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param name Sequence number
+         * @param name BGP Root RIB Route maps Sequence number
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param set Set
+         * @param set Set attributes for BGP route map
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapArgs extends com.pulum
         }
 
         /**
-         * @param set Set
+         * @param set Set attributes for BGP route map
          * 
          * @return builder
          * 

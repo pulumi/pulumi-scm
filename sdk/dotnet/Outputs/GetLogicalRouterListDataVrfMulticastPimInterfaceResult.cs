@@ -20,7 +20,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Dr priority
         /// </summary>
-        public readonly double DrPriority;
+        public readonly int DrPriority;
         /// <summary>
         /// If timer
         /// </summary>
@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
         private GetLogicalRouterListDataVrfMulticastPimInterfaceResult(
             string description,
 
-            double drPriority,
+            int drPriority,
 
             string ifTimer,
 

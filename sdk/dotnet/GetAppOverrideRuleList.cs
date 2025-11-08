@@ -13,18 +13,102 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allPreRules = Scm.GetAppOverrideRuleList.Invoke(new()
+        ///     {
+        ///         Offset = 10,
+        ///         Position = "pre",
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedRuleListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Total) },
+        ///             { "firstRuleName", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
-        public static Task<GetAppOverrideRuleListResult> InvokeAsync(GetAppOverrideRuleListArgs? args = null, InvokeOptions? options = null)
+        public static Task<GetAppOverrideRuleListResult> InvokeAsync(GetAppOverrideRuleListArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAppOverrideRuleListResult>("scm:index/getAppOverrideRuleList:getAppOverrideRuleList", args ?? new GetAppOverrideRuleListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allPreRules = Scm.GetAppOverrideRuleList.Invoke(new()
+        ///     {
+        ///         Offset = 10,
+        ///         Position = "pre",
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedRuleListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Total) },
+        ///             { "firstRuleName", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
-        public static Output<GetAppOverrideRuleListResult> Invoke(GetAppOverrideRuleListInvokeArgs? args = null, InvokeOptions? options = null)
+        public static Output<GetAppOverrideRuleListResult> Invoke(GetAppOverrideRuleListInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAppOverrideRuleListResult>("scm:index/getAppOverrideRuleList:getAppOverrideRuleList", args ?? new GetAppOverrideRuleListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allPreRules = Scm.GetAppOverrideRuleList.Invoke(new()
+        ///     {
+        ///         Offset = 10,
+        ///         Position = "pre",
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedRuleListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Total) },
+        ///             { "firstRuleName", allPreRules.Apply(getAppOverrideRuleListResult =&gt; getAppOverrideRuleListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAppOverrideRuleListResult> Invoke(GetAppOverrideRuleListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAppOverrideRuleListResult>("scm:index/getAppOverrideRuleList:getAppOverrideRuleList", args ?? new GetAppOverrideRuleListInvokeArgs(), options.WithDefaults());
@@ -62,6 +146,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("offset")]
         public int? Offset { get; set; }
+
+        /// <summary>
+        /// The position of a security rule
+        /// </summary>
+        [Input("position", required: true)]
+        public string Position { get; set; } = null!;
 
         /// <summary>
         /// The snippet of the item.
@@ -108,6 +198,12 @@ namespace Pulumi.Scm
         public Input<int>? Offset { get; set; }
 
         /// <summary>
+        /// The position of a security rule
+        /// </summary>
+        [Input("position", required: true)]
+        public Input<string> Position { get; set; } = null!;
+
+        /// <summary>
         /// The snippet of the item.
         /// </summary>
         [Input("snippet")]
@@ -152,6 +248,10 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly int? Offset;
         /// <summary>
+        /// The position of a security rule
+        /// </summary>
+        public readonly string Position;
+        /// <summary>
         /// The snippet of the item.
         /// </summary>
         public readonly string? Snippet;
@@ -177,6 +277,8 @@ namespace Pulumi.Scm
 
             int? offset,
 
+            string position,
+
             string? snippet,
 
             string tfid,
@@ -190,6 +292,7 @@ namespace Pulumi.Scm
             Limit = limit;
             Name = name;
             Offset = offset;
+            Position = position;
             Snippet = snippet;
             Tfid = tfid;
             Total = total;

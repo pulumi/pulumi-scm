@@ -77,7 +77,7 @@ import javax.annotation.Nullable;
  * 
  *         // Service Group containing multiple services
  *         var scmServicegroup = new ServiceGroup("scmServicegroup", ServiceGroupArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_servicegroup")
  *             .members(            
  *                 scmServiceTcpPorts.name(),
@@ -86,7 +86,7 @@ import javax.annotation.Nullable;
  * 
  *         // Service Group containing multiple services and another servicegroup
  *         var scmServicegroupNested = new ServiceGroup("scmServicegroupNested", ServiceGroupArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_servicegroup_nested")
  *             .members(            
  *                 scmServiceTcpPorts.name(),

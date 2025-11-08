@@ -20,7 +20,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// As path limit
         /// </summary>
-        public readonly double? AsPathLimit;
+        public readonly int? AsPathLimit;
         /// <summary>
         /// Community
         /// </summary>
@@ -32,11 +32,11 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Local preference
         /// </summary>
-        public readonly double? LocalPreference;
+        public readonly int? LocalPreference;
         /// <summary>
         /// Med
         /// </summary>
-        public readonly double? Med;
+        public readonly int? Med;
         /// <summary>
         /// Nexthop
         /// </summary>
@@ -50,15 +50,15 @@ namespace Pulumi.Scm.Outputs
         private LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate(
             Outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath? asPath,
 
-            double? asPathLimit,
+            int? asPathLimit,
 
             Outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity? community,
 
             Outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity? extendedCommunity,
 
-            double? localPreference,
+            int? localPreference,
 
-            double? med,
+            int? med,
 
             string? nexthop,
 

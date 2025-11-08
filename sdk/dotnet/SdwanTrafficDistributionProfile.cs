@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Link tags
+        /// Link-Tags for interfaces identified by defined tags
         /// </summary>
         [Output("linkTags")]
         public Output<ImmutableArray<Outputs.SdwanTrafficDistributionProfileLinkTag>> LinkTags { get; private set; } = null!;
@@ -52,7 +52,7 @@ namespace Pulumi.Scm
         /// Traffic distribution
         /// </summary>
         [Output("trafficDistribution")]
-        public Output<string?> TrafficDistribution { get; private set; } = null!;
+        public Output<string> TrafficDistribution { get; private set; } = null!;
 
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.SdwanTrafficDistributionProfileLinkTagArgs>? _linkTags;
 
         /// <summary>
-        /// Link tags
+        /// Link-Tags for interfaces identified by defined tags
         /// </summary>
         public InputList<Inputs.SdwanTrafficDistributionProfileLinkTagArgs> LinkTags
         {
@@ -166,7 +166,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.SdwanTrafficDistributionProfileLinkTagGetArgs>? _linkTags;
 
         /// <summary>
-        /// Link tags
+        /// Link-Tags for interfaces identified by defined tags
         /// </summary>
         public InputList<Inputs.SdwanTrafficDistributionProfileLinkTagGetArgs> LinkTags
         {

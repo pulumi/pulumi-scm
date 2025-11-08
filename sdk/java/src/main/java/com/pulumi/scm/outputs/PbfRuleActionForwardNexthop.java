@@ -17,7 +17,7 @@ public final class PbfRuleActionForwardNexthop {
      */
     private @Nullable String fqdn;
     /**
-     * @return Ip address
+     * @return Next hop IP address
      * 
      */
     private @Nullable String ipAddress;
@@ -31,7 +31,7 @@ public final class PbfRuleActionForwardNexthop {
         return Optional.ofNullable(this.fqdn);
     }
     /**
-     * @return Ip address
+     * @return Next hop IP address
      * 
      */
     public Optional<String> ipAddress() {

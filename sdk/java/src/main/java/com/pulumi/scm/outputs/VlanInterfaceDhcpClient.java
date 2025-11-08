@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VlanInterfaceDhcpClient {
     /**
-     * @return Create default route
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
     private @Nullable Boolean createDefaultRoute;
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     private @Nullable Integer defaultRouteMetric;
     /**
-     * @return Enable
+     * @return Enable DHCP?
      * 
      */
     private @Nullable Boolean enable;
@@ -36,21 +36,21 @@ public final class VlanInterfaceDhcpClient {
 
     private VlanInterfaceDhcpClient() {}
     /**
-     * @return Create default route
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
     public Optional<Boolean> createDefaultRoute() {
         return Optional.ofNullable(this.createDefaultRoute);
     }
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     public Optional<Integer> defaultRouteMetric() {
         return Optional.ofNullable(this.defaultRouteMetric);
     }
     /**
-     * @return Enable
+     * @return Enable DHCP?
      * 
      */
     public Optional<Boolean> enable() {

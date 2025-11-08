@@ -18,11 +18,77 @@ namespace Pulumi.Scm.Inputs
         [Input("enablePacketBufferProtection")]
         public Input<bool>? EnablePacketBufferProtection { get; set; }
 
+        [Input("externals")]
+        private InputList<string>? _externals;
+
+        /// <summary>
+        /// External
+        /// </summary>
+        public InputList<string> Externals
+        {
+            get => _externals ?? (_externals = new InputList<string>());
+            set => _externals = value;
+        }
+
+        [Input("layer2s")]
+        private InputList<string>? _layer2s;
+
+        /// <summary>
+        /// Layer2
+        /// </summary>
+        public InputList<string> Layer2s
+        {
+            get => _layer2s ?? (_layer2s = new InputList<string>());
+            set => _layer2s = value;
+        }
+
+        [Input("layer3s")]
+        private InputList<string>? _layer3s;
+
+        /// <summary>
+        /// Layer3
+        /// </summary>
+        public InputList<string> Layer3s
+        {
+            get => _layer3s ?? (_layer3s = new InputList<string>());
+            set => _layer3s = value;
+        }
+
         /// <summary>
         /// Log setting
         /// </summary>
         [Input("logSetting")]
         public Input<string>? LogSetting { get; set; }
+
+        [Input("taps")]
+        private InputList<string>? _taps;
+
+        /// <summary>
+        /// Tap
+        /// </summary>
+        public InputList<string> Taps
+        {
+            get => _taps ?? (_taps = new InputList<string>());
+            set => _taps = value;
+        }
+
+        /// <summary>
+        /// Tunnel
+        /// </summary>
+        [Input("tunnel")]
+        public Input<Inputs.ZoneNetworkTunnelArgs>? Tunnel { get; set; }
+
+        [Input("virtualWires")]
+        private InputList<string>? _virtualWires;
+
+        /// <summary>
+        /// Virtual wire
+        /// </summary>
+        public InputList<string> VirtualWires
+        {
+            get => _virtualWires ?? (_virtualWires = new InputList<string>());
+            set => _virtualWires = value;
+        }
 
         /// <summary>
         /// Zone protection profile

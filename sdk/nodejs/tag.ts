@@ -16,17 +16,17 @@ import * as utilities from "./utilities";
  * // This file is embedded using go:embed
  * // Tags for organizing and categorizing resources
  * const scmTag1 = new scm.Tag("scm_tag_1", {
- *     folder: "Shared",
+ *     folder: "All",
  *     name: "scm_tag_1",
  *     color: "Red",
  * });
  * const scmTag2 = new scm.Tag("scm_tag_2", {
- *     folder: "Shared",
+ *     folder: "All",
  *     name: "scm_tag_2",
  *     color: "Blue",
  * });
  * const scmTag3 = new scm.Tag("scm_tag_3", {
- *     folder: "Shared",
+ *     folder: "All",
  *     name: "scm_tag_3",
  *     color: "Orange",
  * });

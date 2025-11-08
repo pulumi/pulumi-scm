@@ -20,6 +20,133 @@ import javax.annotation.Nullable;
 /**
  * AuthenticationRule resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Tag;
+ * import com.pulumi.scm.TagArgs;
+ * import com.pulumi.scm.AuthenticationRule;
+ * import com.pulumi.scm.AuthenticationRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var appAccessTag = new Tag("appAccessTag", TagArgs.builder()
+ *             .folder("All")
+ *             .name("app-access-test_25")
+ *             .color("Blue")
+ *             .build());
+ * 
+ *         // -----------------------------------------------------------------------------
+ *         // 2. ANCHOR RULE (Used for relative positioning by other rules)
+ *         // -----------------------------------------------------------------------------
+ *         var anchorRule = new AuthenticationRule("anchorRule", AuthenticationRuleArgs.builder()
+ *             .name("test_anchor_rule_251")
+ *             .description("Base rule. Used to test 'before' and 'after' positioning")
+ *             .position("pre")
+ *             .folder("All")
+ *             .destinations("any")
+ *             .froms("any")
+ *             .tos("any")
+ *             .sources("any")
+ *             .services(            
+ *                 "service-http",
+ *                 "service-https")
+ *             .sourceUsers("any")
+ *             .timeout(1200)
+ *             .negateSource(false)
+ *             .negateDestination(false)
+ *             .tags(appAccessTag.name())
+ *             .categories("any")
+ *             .destinationHips("any")
+ *             .logAuthenticationTimeout(false)
+ *             .disabled(false)
+ *             .build());
+ * 
+ *         // # -----------------------------------------------------------------------------
+ *         // # 3. ABSOLUTE POSITIONING Examples ("top" and "bottom")
+ *         // # -----------------------------------------------------------------------------
+ *         var ruleTopOfList = new AuthenticationRule("ruleTopOfList", AuthenticationRuleArgs.builder()
+ *             .name("test_top_rule_25")
+ *             .description("Placed at the very top of the 'pre' rulebase.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("top")
+ *             .destinations("any")
+ *             .froms("untrust")
+ *             .tos("trust")
+ *             .sources("any")
+ *             .services("any")
+ *             .sourceUsers("any")
+ *             .build());
+ * 
+ *         var ruleBottomOfList = new AuthenticationRule("ruleBottomOfList", AuthenticationRuleArgs.builder()
+ *             .name("test_bottom_rule_25")
+ *             .description("Placed at the very bottom of the 'pre' rulebase.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("bottom")
+ *             .destinations("any")
+ *             .froms("any")
+ *             .tos("any")
+ *             .sources("any")
+ *             .services("any")
+ *             .sourceUsers("any")
+ *             .build());
+ * 
+ *         // -----------------------------------------------------------------------------
+ *         // 4. RELATIVE POSITIONING Examples ("before" and "after")
+ *         // -----------------------------------------------------------------------------
+ *         var ruleBeforeAnchor = new AuthenticationRule("ruleBeforeAnchor", AuthenticationRuleArgs.builder()
+ *             .name("test_before_rule_25_updating")
+ *             .description("Positioned immediately BEFORE the anchor_rule.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("before")
+ *             .targetRule(anchorRule.id())
+ *             .destinations("any")
+ *             .froms("any")
+ *             .tos("any")
+ *             .sources("any")
+ *             .services("any")
+ *             .sourceUsers("any")
+ *             .build());
+ * 
+ *         var ruleAfterAnchor = new AuthenticationRule("ruleAfterAnchor", AuthenticationRuleArgs.builder()
+ *             .name("test_after_rule_25")
+ *             .description("Positioned immediately AFTER the anchor_rule.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("after")
+ *             .targetRule(anchorRule.id())
+ *             .destinations("any")
+ *             .froms("any")
+ *             .tos("any")
+ *             .sources("any")
+ *             .services("any")
+ *             .sourceUsers("any")
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/authenticationRule:AuthenticationRule")
 public class AuthenticationRule extends com.pulumi.resources.CustomResource {
@@ -262,6 +389,20 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
         return this.position;
     }
     /**
+     * Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    @Export(name="relativePosition", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> relativePosition;
+
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public Output<Optional<String>> relativePosition() {
+        return Codegen.optional(this.relativePosition);
+    }
+    /**
      * The destination ports
      * 
      */
@@ -344,6 +485,20 @@ public class AuthenticationRule extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<List<String>>> tags() {
         return Codegen.optional(this.tags);
+    }
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    @Export(name="targetRule", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> targetRule;
+
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public Output<Optional<String>> targetRule() {
+        return Codegen.optional(this.targetRule);
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;

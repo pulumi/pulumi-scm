@@ -11,6 +11,97 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Folder resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     //
+    ///     // Creates a folder under the "All Firewalls" aka "ngfw-shared" folder
+    ///     //
+    ///     var scmFolderExample = new Scm.Folder("scm_folder_example", new()
+    ///     {
+    ///         Name = "scm_folder_example",
+    ///         Parent = "ngfw-shared",
+    ///         Description = "Managed by Pulumi",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a folder under the "scm_folder_example" folder created beforehand
+    ///     //
+    ///     var scmNestedFolderExample = new Scm.Folder("scm_nested_folder_example", new()
+    ///     {
+    ///         Name = "scm_nested_folder_example",
+    ///         Parent = "scm_folder_example",
+    ///         Description = "Managed by Pulumi",
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmFolderExample,
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a snippet that will be associated to a folder
+    ///     //
+    ///     var scmSnippetExample = new Scm.Snippet("scm_snippet_example", new()
+    ///     {
+    ///         Name = "scm_snippet_example",
+    ///         Description = "Managed by Pulumi",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a folder with an attached snippet
+    ///     //
+    ///     var scmFolderWithSnippets = new Scm.Folder("scm_folder_with_snippets", new()
+    ///     {
+    ///         Name = "scm_folder_with_snippets",
+    ///         Parent = "ngfw-shared",
+    ///         Description = "Managed by Pulumi",
+    ///         Snippets = new[]
+    ///         {
+    ///             scmSnippetExample.Name,
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a label that will be associated to a folder
+    ///     //
+    ///     var scmLabelExample = new Scm.Label("scm_label_example", new()
+    ///     {
+    ///         Name = "scm_label_example",
+    ///         Description = "Managed by Pulumi",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a folder with an attached label
+    ///     //
+    ///     var scmFolderWithLabel = new Scm.Folder("scm_folder_with_label", new()
+    ///     {
+    ///         Name = "scm_folder_with_label",
+    ///         Parent = "ngfw-shared",
+    ///         Description = "Managed by Pulumi",
+    ///         Labels = new[]
+    ///         {
+    ///             scmLabelExample.Name,
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmLabelExample,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/folder:Folder")]
     public partial class Folder : global::Pulumi.CustomResource

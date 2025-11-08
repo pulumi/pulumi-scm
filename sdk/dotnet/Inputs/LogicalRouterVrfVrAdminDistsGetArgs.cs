@@ -16,55 +16,55 @@ namespace Pulumi.Scm.Inputs
         /// Ebgp
         /// </summary>
         [Input("ebgp")]
-        public Input<double>? Ebgp { get; set; }
+        public Input<int>? Ebgp { get; set; }
 
         /// <summary>
         /// Ibgp
         /// </summary>
         [Input("ibgp")]
-        public Input<double>? Ibgp { get; set; }
+        public Input<int>? Ibgp { get; set; }
 
         /// <summary>
         /// Ospf ext
         /// </summary>
         [Input("ospfExt")]
-        public Input<double>? OspfExt { get; set; }
+        public Input<int>? OspfExt { get; set; }
 
         /// <summary>
         /// Ospf int
         /// </summary>
         [Input("ospfInt")]
-        public Input<double>? OspfInt { get; set; }
+        public Input<int>? OspfInt { get; set; }
 
         /// <summary>
         /// Ospfv3 ext
         /// </summary>
         [Input("ospfv3Ext")]
-        public Input<double>? Ospfv3Ext { get; set; }
+        public Input<int>? Ospfv3Ext { get; set; }
 
         /// <summary>
         /// Ospfv3 int
         /// </summary>
         [Input("ospfv3Int")]
-        public Input<double>? Ospfv3Int { get; set; }
+        public Input<int>? Ospfv3Int { get; set; }
 
         /// <summary>
         /// Rip
         /// </summary>
         [Input("rip")]
-        public Input<double>? Rip { get; set; }
+        public Input<int>? Rip { get; set; }
 
         /// <summary>
         /// Static
         /// </summary>
         [Input("static")]
-        public Input<double>? Static { get; set; }
+        public Input<int>? Static { get; set; }
 
         /// <summary>
         /// Static ipv6
         /// </summary>
         [Input("staticIpv6")]
-        public Input<double>? StaticIpv6 { get; set; }
+        public Input<int>? StaticIpv6 { get; set; }
 
         public LogicalRouterVrfVrAdminDistsGetArgs()
         {

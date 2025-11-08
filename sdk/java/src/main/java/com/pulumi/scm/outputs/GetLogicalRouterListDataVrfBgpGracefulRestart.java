@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -20,17 +20,17 @@ public final class GetLogicalRouterListDataVrfBgpGracefulRestart {
      * @return Local restart time
      * 
      */
-    private Double localRestartTime;
+    private Integer localRestartTime;
     /**
      * @return Max peer restart time
      * 
      */
-    private Double maxPeerRestartTime;
+    private Integer maxPeerRestartTime;
     /**
      * @return Stale route time
      * 
      */
-    private Double staleRouteTime;
+    private Integer staleRouteTime;
 
     private GetLogicalRouterListDataVrfBgpGracefulRestart() {}
     /**
@@ -44,21 +44,21 @@ public final class GetLogicalRouterListDataVrfBgpGracefulRestart {
      * @return Local restart time
      * 
      */
-    public Double localRestartTime() {
+    public Integer localRestartTime() {
         return this.localRestartTime;
     }
     /**
      * @return Max peer restart time
      * 
      */
-    public Double maxPeerRestartTime() {
+    public Integer maxPeerRestartTime() {
         return this.maxPeerRestartTime;
     }
     /**
      * @return Stale route time
      * 
      */
-    public Double staleRouteTime() {
+    public Integer staleRouteTime() {
         return this.staleRouteTime;
     }
 
@@ -72,9 +72,9 @@ public final class GetLogicalRouterListDataVrfBgpGracefulRestart {
     @CustomType.Builder
     public static final class Builder {
         private Boolean enable;
-        private Double localRestartTime;
-        private Double maxPeerRestartTime;
-        private Double staleRouteTime;
+        private Integer localRestartTime;
+        private Integer maxPeerRestartTime;
+        private Integer staleRouteTime;
         public Builder() {}
         public Builder(GetLogicalRouterListDataVrfBgpGracefulRestart defaults) {
     	      Objects.requireNonNull(defaults);
@@ -93,7 +93,7 @@ public final class GetLogicalRouterListDataVrfBgpGracefulRestart {
             return this;
         }
         @CustomType.Setter
-        public Builder localRestartTime(Double localRestartTime) {
+        public Builder localRestartTime(Integer localRestartTime) {
             if (localRestartTime == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpGracefulRestart", "localRestartTime");
             }
@@ -101,7 +101,7 @@ public final class GetLogicalRouterListDataVrfBgpGracefulRestart {
             return this;
         }
         @CustomType.Setter
-        public Builder maxPeerRestartTime(Double maxPeerRestartTime) {
+        public Builder maxPeerRestartTime(Integer maxPeerRestartTime) {
             if (maxPeerRestartTime == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpGracefulRestart", "maxPeerRestartTime");
             }
@@ -109,7 +109,7 @@ public final class GetLogicalRouterListDataVrfBgpGracefulRestart {
             return this;
         }
         @CustomType.Setter
-        public Builder staleRouteTime(Double staleRouteTime) {
+        public Builder staleRouteTime(Integer staleRouteTime) {
             if (staleRouteTime == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpGracefulRestart", "staleRouteTime");
             }

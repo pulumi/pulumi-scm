@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool Enable;
         /// <summary>
-        /// Hostname
+        /// Set interface hostname
         /// </summary>
         public readonly string Hostname;
 

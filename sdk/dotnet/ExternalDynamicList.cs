@@ -13,6 +13,118 @@ namespace Pulumi.Scm
     /// ExternalDynamicList resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // This resource creates a domain-based External Dynamic List (EDL).
+    ///     // The EDL will fetch a list of domains from the specified URL daily.
+    ///     var scmEdl1 = new Scm.ExternalDynamicList("scm_edl_1", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm_edl_1",
+    ///         Type = new Scm.Inputs.ExternalDynamicListTypeArgs
+    ///         {
+    ///             Domain = new Scm.Inputs.ExternalDynamicListTypeDomainArgs
+    ///             {
+    ///                 Description = "List of malicious domains to block, updated daily.",
+    ///                 Url = "http://some-threat-feed.com/domains.txt",
+    ///                 Recurring = new Scm.Inputs.ExternalDynamicListTypeDomainRecurringArgs
+    ///                 {
+    ///                     Daily = new Scm.Inputs.ExternalDynamicListTypeDomainRecurringDailyArgs
+    ///                     {
+    ///                         At = "03",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmEdl2 = new Scm.ExternalDynamicList("scm_edl_2", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm_edl_2",
+    ///         Type = new Scm.Inputs.ExternalDynamicListTypeArgs
+    ///         {
+    ///             Ip = new Scm.Inputs.ExternalDynamicListTypeIpArgs
+    ///             {
+    ///                 Description = "IP threat feed with basic auth, updated hourly.",
+    ///                 Url = "https://threats.example.com/ips.txt",
+    ///                 Recurring = new Scm.Inputs.ExternalDynamicListTypeIpRecurringArgs
+    ///                 {
+    ///                     Hourly = null,
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmEdl3 = new Scm.ExternalDynamicList("scm_edl_3", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm_edl_3",
+    ///         Type = new Scm.Inputs.ExternalDynamicListTypeArgs
+    ///         {
+    ///             Url = new Scm.Inputs.ExternalDynamicListTypeUrlArgs
+    ///             {
+    ///                 Description = "List of phishing URLs, updated every Monday at 2 AM.",
+    ///                 Url = "https://phish-block.example.com/urls.txt",
+    ///                 Recurring = new Scm.Inputs.ExternalDynamicListTypeUrlRecurringArgs
+    ///                 {
+    ///                     Weekly = new Scm.Inputs.ExternalDynamicListTypeUrlRecurringWeeklyArgs
+    ///                     {
+    ///                         DayOfWeek = "monday",
+    ///                         At = "02",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmEdl4 = new Scm.ExternalDynamicList("scm_edl_4", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm_edl_4",
+    ///         Type = new Scm.Inputs.ExternalDynamicListTypeArgs
+    ///         {
+    ///             PredefinedIp = new Scm.Inputs.ExternalDynamicListTypePredefinedIpArgs
+    ///             {
+    ///                 Description = "Palo Alto Networks-provided list of high-risk IP addresses.",
+    ///                 Url = "panw-highrisk-ip-list",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmEdl5 = new Scm.ExternalDynamicList("scm_edl_5", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm_edl_5",
+    ///         Type = new Scm.Inputs.ExternalDynamicListTypeArgs
+    ///         {
+    ///             Ip = new Scm.Inputs.ExternalDynamicListTypeIpArgs
+    ///             {
+    ///                 Description = "IP threat feed that requires authentication.",
+    ///                 Url = "https://secure-feed.example.com/ips.txt",
+    ///                 CertificateProfile = "test-cert-list-qekwys",
+    ///                 Auth = new Scm.Inputs.ExternalDynamicListTypeIpAuthArgs
+    ///                 {
+    ///                     Username = "my-api-user",
+    ///                     Password = "a-very-secret-password-123!",
+    ///                 },
+    ///                 Recurring = new Scm.Inputs.ExternalDynamicListTypeIpRecurringArgs
+    ///                 {
+    ///                     FiveMinute = null,
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/externalDynamicList:ExternalDynamicList")]
     public partial class ExternalDynamicList : global::Pulumi.CustomResource

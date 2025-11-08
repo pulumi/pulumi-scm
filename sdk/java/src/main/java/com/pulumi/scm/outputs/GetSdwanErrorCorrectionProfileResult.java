@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetSdwanErrorCorrectionProfileMode;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSdwanErrorCorrectionProfileResult {
      * @return Activation threshold
      * 
      */
-    private Double activationThreshold;
+    private Integer activationThreshold;
     /**
      * @return The device in which the resource is defined
      * 
@@ -54,7 +54,7 @@ public final class GetSdwanErrorCorrectionProfileResult {
      * @return Activation threshold
      * 
      */
-    public Double activationThreshold() {
+    public Integer activationThreshold() {
         return this.activationThreshold;
     }
     /**
@@ -112,7 +112,7 @@ public final class GetSdwanErrorCorrectionProfileResult {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Double activationThreshold;
+        private Integer activationThreshold;
         private String device;
         private String folder;
         private String id;
@@ -134,7 +134,7 @@ public final class GetSdwanErrorCorrectionProfileResult {
         }
 
         @CustomType.Setter
-        public Builder activationThreshold(Double activationThreshold) {
+        public Builder activationThreshold(Integer activationThreshold) {
             if (activationThreshold == null) {
               throw new MissingRequiredPropertyException("GetSdwanErrorCorrectionProfileResult", "activationThreshold");
             }

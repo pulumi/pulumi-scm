@@ -137,6 +137,24 @@ def get_dns_security_profile(id: Optional[_builtins.str] = None,
     """
     DnsSecurityProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM DNS Security Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM DNS Profile you want to find.
+    scm_dns_profile = scm.get_dns_security_profile(id="18607c90-22fa-4627-8741-f0584d1fa7d6")
+    pulumi.export("scmDnsSecurityProfileDetails", {
+        "profileId": scm_dns_profile.id,
+        "folder": scm_dns_profile.folder,
+        "name": scm_dns_profile.name,
+    })
+    ```
+
 
     :param _builtins.str id: The UUID of the DNS security profile
     :param _builtins.str name: The name of the DNS security profile
@@ -161,6 +179,24 @@ def get_dns_security_profile_output(id: Optional[pulumi.Input[_builtins.str]] = 
                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDnsSecurityProfileResult]:
     """
     DnsSecurityProfile data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM DNS Security Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM DNS Profile you want to find.
+    scm_dns_profile = scm.get_dns_security_profile(id="18607c90-22fa-4627-8741-f0584d1fa7d6")
+    pulumi.export("scmDnsSecurityProfileDetails", {
+        "profileId": scm_dns_profile.id,
+        "folder": scm_dns_profile.folder,
+        "name": scm_dns_profile.name,
+    })
+    ```
 
 
     :param _builtins.str id: The UUID of the DNS security profile

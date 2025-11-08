@@ -20,7 +20,7 @@ public final class BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath {
      * @return Tx bestpath per a s
      * 
      */
-    private @Nullable Boolean txBestpathPerAS;
+    private @Nullable Boolean txBestpathPerAs;
 
     private BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath() {}
     /**
@@ -34,8 +34,8 @@ public final class BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath {
      * @return Tx bestpath per a s
      * 
      */
-    public Optional<Boolean> txBestpathPerAS() {
-        return Optional.ofNullable(this.txBestpathPerAS);
+    public Optional<Boolean> txBestpathPerAs() {
+        return Optional.ofNullable(this.txBestpathPerAs);
     }
 
     public static Builder builder() {
@@ -48,12 +48,12 @@ public final class BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable Boolean txAllPaths;
-        private @Nullable Boolean txBestpathPerAS;
+        private @Nullable Boolean txBestpathPerAs;
         public Builder() {}
         public Builder(BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.txAllPaths = defaults.txAllPaths;
-    	      this.txBestpathPerAS = defaults.txBestpathPerAS;
+    	      this.txBestpathPerAs = defaults.txBestpathPerAs;
         }
 
         @CustomType.Setter
@@ -63,15 +63,15 @@ public final class BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath {
             return this;
         }
         @CustomType.Setter
-        public Builder txBestpathPerAS(@Nullable Boolean txBestpathPerAS) {
+        public Builder txBestpathPerAs(@Nullable Boolean txBestpathPerAs) {
 
-            this.txBestpathPerAS = txBestpathPerAS;
+            this.txBestpathPerAs = txBestpathPerAs;
             return this;
         }
         public BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath build() {
             final var _resultValue = new BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath();
             _resultValue.txAllPaths = txAllPaths;
-            _resultValue.txBestpathPerAS = txBestpathPerAS;
+            _resultValue.txBestpathPerAs = txBestpathPerAs;
             return _resultValue;
         }
     }

@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSetAggregatorResult
     {
         /// <summary>
-        /// Aggregator AS
+        /// OSPF BGP Route maps set Aggregator AS
         /// </summary>
         public readonly int As;
         /// <summary>
-        /// Router ID
+        /// OSPF BGP Route maps set Router ID
         /// </summary>
         public readonly string RouterId;
 

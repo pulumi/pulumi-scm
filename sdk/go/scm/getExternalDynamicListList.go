@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Data source to fetch all external dynamic lists in the "Shared" folder.
 //			allSharedEdls, err := scm.GetExternalDynamicListList(ctx, &scm.GetExternalDynamicListListArgs{
-//				Folder: pulumi.StringRef("Shared"),
+//				Folder: pulumi.StringRef("All"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -37,7 +37,7 @@ import (
 //			ctx.Export("allSharedEdlsMap", allSharedEdls.Datas)
 //			// Example of using pagination to get the first 5 EDLs.
 //			paginatedEdls, err := scm.GetExternalDynamicListList(ctx, &scm.GetExternalDynamicListListArgs{
-//				Folder: pulumi.StringRef("Shared"),
+//				Folder: pulumi.StringRef("All"),
 //				Limit:  pulumi.IntRef(5),
 //				Offset: pulumi.IntRef(0),
 //			}, nil)

@@ -17,7 +17,7 @@ public final class GetLayer3SubinterfaceDhcpClientSendHostname {
      */
     private Boolean enable;
     /**
-     * @return Hostname
+     * @return Set interface hostname
      * 
      */
     private String hostname;
@@ -31,7 +31,7 @@ public final class GetLayer3SubinterfaceDhcpClientSendHostname {
         return this.enable;
     }
     /**
-     * @return Hostname
+     * @return Set interface hostname
      * 
      */
     public String hostname() {

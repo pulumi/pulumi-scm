@@ -32,7 +32,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Preference
         /// </summary>
-        public readonly double? Preference;
+        public readonly int? Preference;
 
         [OutputConstructor]
         private LogicalRouterVrfMulticastStaticRoute(
@@ -44,7 +44,7 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.LogicalRouterVrfMulticastStaticRouteNexthop? nexthop,
 
-            double? preference)
+            int? preference)
         {
             Destination = destination;
             Interface = @interface;

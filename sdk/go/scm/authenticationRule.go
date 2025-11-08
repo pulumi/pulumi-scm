@@ -13,6 +13,199 @@ import (
 )
 
 // AuthenticationRule resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			appAccessTag, err := scm.NewTag(ctx, "app_access_tag", &scm.TagArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("app-access-test_25"),
+//				Color:  pulumi.String("Blue"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// -----------------------------------------------------------------------------
+//			// 2. ANCHOR RULE (Used for relative positioning by other rules)
+//			// -----------------------------------------------------------------------------
+//			anchorRule, err := scm.NewAuthenticationRule(ctx, "anchor_rule", &scm.AuthenticationRuleArgs{
+//				Name:        pulumi.String("test_anchor_rule_251"),
+//				Description: pulumi.String("Base rule. Used to test 'before' and 'after' positioning"),
+//				Position:    pulumi.String("pre"),
+//				Folder:      pulumi.String("All"),
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-http"),
+//					pulumi.String("service-https"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Timeout:           pulumi.Int(1200),
+//				NegateSource:      pulumi.Bool(false),
+//				NegateDestination: pulumi.Bool(false),
+//				Tags: pulumi.StringArray{
+//					appAccessTag.Name,
+//				},
+//				Categories: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				DestinationHips: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				LogAuthenticationTimeout: pulumi.Bool(false),
+//				Disabled:                 pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// # -----------------------------------------------------------------------------
+//			// # 3. ABSOLUTE POSITIONING Examples ("top" and "bottom")
+//			// # -----------------------------------------------------------------------------
+//			_, err = scm.NewAuthenticationRule(ctx, "rule_top_of_list", &scm.AuthenticationRuleArgs{
+//				Name:             pulumi.String("test_top_rule_25"),
+//				Description:      pulumi.String("Placed at the very top of the 'pre' rulebase."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("top"),
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Froms: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("trust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewAuthenticationRule(ctx, "rule_bottom_of_list", &scm.AuthenticationRuleArgs{
+//				Name:             pulumi.String("test_bottom_rule_25"),
+//				Description:      pulumi.String("Placed at the very bottom of the 'pre' rulebase."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("bottom"),
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// -----------------------------------------------------------------------------
+//			// 4. RELATIVE POSITIONING Examples ("before" and "after")
+//			// -----------------------------------------------------------------------------
+//			_, err = scm.NewAuthenticationRule(ctx, "rule_before_anchor", &scm.AuthenticationRuleArgs{
+//				Name:             pulumi.String("test_before_rule_25_updating"),
+//				Description:      pulumi.String("Positioned immediately BEFORE the anchor_rule."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("before"),
+//				TargetRule:       anchorRule.ID(),
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewAuthenticationRule(ctx, "rule_after_anchor", &scm.AuthenticationRuleArgs{
+//				Name:             pulumi.String("test_after_rule_25"),
+//				Description:      pulumi.String("Positioned immediately AFTER the anchor_rule."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("after"),
+//				TargetRule:       anchorRule.ID(),
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type AuthenticationRule struct {
 	pulumi.CustomResourceState
 
@@ -50,6 +243,8 @@ type AuthenticationRule struct {
 	NegateSource pulumi.BoolOutput `pulumi:"negateSource"`
 	// The relative position of the rule
 	Position pulumi.StringOutput `pulumi:"position"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrOutput `pulumi:"relativePosition"`
 	// The destination ports
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// Snippet
@@ -62,7 +257,9 @@ type AuthenticationRule struct {
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
 	// The authentication rule tags
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	Tfid pulumi.StringOutput      `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrOutput `pulumi:"targetRule"`
+	Tfid       pulumi.StringOutput    `pulumi:"tfid"`
 	// The authentication session timeout (seconds)
 	Timeout pulumi.IntPtrOutput `pulumi:"timeout"`
 	// The destination security zones
@@ -148,6 +345,8 @@ type authenticationRuleState struct {
 	NegateSource *bool `pulumi:"negateSource"`
 	// The relative position of the rule
 	Position *string `pulumi:"position"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition *string `pulumi:"relativePosition"`
 	// The destination ports
 	Services []string `pulumi:"services"`
 	// Snippet
@@ -160,7 +359,9 @@ type authenticationRuleState struct {
 	Sources []string `pulumi:"sources"`
 	// The authentication rule tags
 	Tags []string `pulumi:"tags"`
-	Tfid *string  `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule *string `pulumi:"targetRule"`
+	Tfid       *string `pulumi:"tfid"`
 	// The authentication session timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
 	// The destination security zones
@@ -202,6 +403,8 @@ type AuthenticationRuleState struct {
 	NegateSource pulumi.BoolPtrInput
 	// The relative position of the rule
 	Position pulumi.StringPtrInput
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrInput
 	// The destination ports
 	Services pulumi.StringArrayInput
 	// Snippet
@@ -214,7 +417,9 @@ type AuthenticationRuleState struct {
 	Sources pulumi.StringArrayInput
 	// The authentication rule tags
 	Tags pulumi.StringArrayInput
-	Tfid pulumi.StringPtrInput
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrInput
+	Tfid       pulumi.StringPtrInput
 	// The authentication session timeout (seconds)
 	Timeout pulumi.IntPtrInput
 	// The destination security zones
@@ -260,6 +465,8 @@ type authenticationRuleArgs struct {
 	NegateSource *bool `pulumi:"negateSource"`
 	// The relative position of the rule
 	Position *string `pulumi:"position"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition *string `pulumi:"relativePosition"`
 	// The destination ports
 	Services []string `pulumi:"services"`
 	// Snippet
@@ -272,6 +479,8 @@ type authenticationRuleArgs struct {
 	Sources []string `pulumi:"sources"`
 	// The authentication rule tags
 	Tags []string `pulumi:"tags"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule *string `pulumi:"targetRule"`
 	// The authentication session timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
 	// The destination security zones
@@ -314,6 +523,8 @@ type AuthenticationRuleArgs struct {
 	NegateSource pulumi.BoolPtrInput
 	// The relative position of the rule
 	Position pulumi.StringPtrInput
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrInput
 	// The destination ports
 	Services pulumi.StringArrayInput
 	// Snippet
@@ -326,6 +537,8 @@ type AuthenticationRuleArgs struct {
 	Sources pulumi.StringArrayInput
 	// The authentication rule tags
 	Tags pulumi.StringArrayInput
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrInput
 	// The authentication session timeout (seconds)
 	Timeout pulumi.IntPtrInput
 	// The destination security zones
@@ -504,6 +717,11 @@ func (o AuthenticationRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
 
+// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+func (o AuthenticationRuleOutput) RelativePosition() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.RelativePosition }).(pulumi.StringPtrOutput)
+}
+
 // The destination ports
 func (o AuthenticationRuleOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.Services }).(pulumi.StringArrayOutput)
@@ -532,6 +750,11 @@ func (o AuthenticationRuleOutput) Sources() pulumi.StringArrayOutput {
 // The authentication rule tags
 func (o AuthenticationRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
+}
+
+// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+func (o AuthenticationRuleOutput) TargetRule() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.TargetRule }).(pulumi.StringPtrOutput)
 }
 
 func (o AuthenticationRuleOutput) Tfid() pulumi.StringOutput {

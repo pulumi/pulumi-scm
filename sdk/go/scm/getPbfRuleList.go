@@ -12,6 +12,38 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Define a data source for listing pbf rules
+//			pagedPbfRulesList, err := scm.GetPbfRuleList(ctx, &scm.GetPbfRuleListArgs{
+//				Folder: pulumi.StringRef("All"),
+//				Limit:  pulumi.IntRef(10),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("fetchedPbfRuleListSummary", pulumi.Map{
+//				"totalRulesInList": pagedPbfRulesList.Total,
+//				"allRules":         pagedPbfRulesList.Datas,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetPbfRuleList(ctx *pulumi.Context, args *GetPbfRuleListArgs, opts ...pulumi.InvokeOption) (*GetPbfRuleListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetPbfRuleListResult

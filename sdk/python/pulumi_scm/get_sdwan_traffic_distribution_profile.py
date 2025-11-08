@@ -81,7 +81,7 @@ class GetSdwanTrafficDistributionProfileResult:
     @pulumi.getter(name="linkTags")
     def link_tags(self) -> Sequence['outputs.GetSdwanTrafficDistributionProfileLinkTagResult']:
         """
-        Link tags
+        Link-Tags for interfaces identified by defined tags
         """
         return pulumi.get(self, "link_tags")
 

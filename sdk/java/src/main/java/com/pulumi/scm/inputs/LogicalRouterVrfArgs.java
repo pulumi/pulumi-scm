@@ -16,7 +16,7 @@ import com.pulumi.scm.inputs.LogicalRouterVrfRibFilterArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfRipArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfRoutingTableArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfVrAdminDistsArgs;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,13 +78,13 @@ public final class LogicalRouterVrfArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="globalVrid")
-    private @Nullable Output<Double> globalVrid;
+    private @Nullable Output<Integer> globalVrid;
 
     /**
      * @return Global vrid
      * 
      */
-    public Optional<Output<Double>> globalVrid() {
+    public Optional<Output<Integer>> globalVrid() {
         return Optional.ofNullable(this.globalVrid);
     }
 
@@ -360,7 +360,7 @@ public final class LogicalRouterVrfArgs extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder globalVrid(@Nullable Output<Double> globalVrid) {
+        public Builder globalVrid(@Nullable Output<Integer> globalVrid) {
             $.globalVrid = globalVrid;
             return this;
         }
@@ -371,7 +371,7 @@ public final class LogicalRouterVrfArgs extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder globalVrid(Double globalVrid) {
+        public Builder globalVrid(Integer globalVrid) {
             return globalVrid(Output.of(globalVrid));
         }
 

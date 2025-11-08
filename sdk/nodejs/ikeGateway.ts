@@ -10,6 +10,55 @@ import * as utilities from "./utilities";
  * IkeGateway resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // The scm_ike_crypto_profile resource is a prerequisite for the IKE gateway.
+ * const scmIkeGwCryptoProfile1 = new scm.IkeCryptoProfile("scm_ike_gw_crypto_profile_1", {
+ *     folder: "Remote Networks",
+ *     name: "scm_ike_gw_crypto_profile_1",
+ *     hashes: ["sha256"],
+ *     dhGroups: ["group14"],
+ *     encryptions: ["aes-256-cbc"],
+ * });
+ * // This is the main scm_ike_gateway resource.
+ * const scmIkeGateway1 = new scm.IkeGateway("scm_ike_gateway_1", {
+ *     folder: "Remote Networks",
+ *     name: "scm_ike_gateway_1",
+ *     authentication: {
+ *         preSharedKey: {
+ *             key: "123456",
+ *         },
+ *     },
+ *     peerAddress: {
+ *         ip: "2.2.2.4",
+ *     },
+ *     peerId: {
+ *         type: "ipaddr",
+ *         id: "10.3.3.4",
+ *     },
+ *     localId: {
+ *         type: "ipaddr",
+ *         id: "10.3.4.4",
+ *     },
+ *     protocol: {
+ *         ikev1: {
+ *             ikeCryptoProfile: scmIkeGwCryptoProfile1.name,
+ *             dpd: {
+ *                 enable: true,
+ *             },
+ *         },
+ *         ikev2: {
+ *             ikeCryptoProfile: scmIkeGwCryptoProfile1.name,
+ *             dpd: {
+ *                 enable: true,
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
  */
 export class IkeGateway extends pulumi.CustomResource {
     /**

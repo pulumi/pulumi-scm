@@ -21,6 +21,149 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.IkeCryptoProfile;
+ * import com.pulumi.scm.IkeCryptoProfileArgs;
+ * import com.pulumi.scm.IpsecCryptoProfile;
+ * import com.pulumi.scm.IpsecCryptoProfileArgs;
+ * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+ * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+ * import com.pulumi.scm.IkeGateway;
+ * import com.pulumi.scm.IkeGatewayArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+ * import com.pulumi.scm.IpsecTunnel;
+ * import com.pulumi.scm.IpsecTunnelArgs;
+ * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+ * import com.pulumi.scm.ServiceConnection;
+ * import com.pulumi.scm.ServiceConnectionArgs;
+ * import com.pulumi.scm.ServiceConnectionGroup;
+ * import com.pulumi.scm.ServiceConnectionGroupArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var config = ctx.config();
+ *         final var folderScope = config.get("folderScope").orElse("Service Connections");
+ *         //# 1. IKE Crypto Profile (IKE Phase 1)
+ *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+ *             .name("example-ike-crypto_sc_grp")
+ *             .folder(folderScope)
+ *             .hashes("sha256")
+ *             .dhGroups("group14")
+ *             .encryptions("aes-256-cbc")
+ *             .build());
+ * 
+ *         //# 2. IPsec Crypto Profile (IKE Phase 2)
+ *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+ *             .name("panw-IPSec-Crypto_sc_grp")
+ *             .folder(folderScope)
+ *             .esp(IpsecCryptoProfileEspArgs.builder()
+ *                 .encryptions("aes-256-gcm")
+ *                 .authentications("sha256")
+ *                 .build())
+ *             .dhGroup("group14")
+ *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+ *                 .hours(8)
+ *                 .build())
+ *             .build());
+ * 
+ *         //# 3. IKE Gateway
+ *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+ *             .name("example-gateway_sc_grp")
+ *             .folder(folderScope)
+ *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+ *                 .ip("1.1.1.1")
+ *                 .build())
+ *             .authentication(IkeGatewayAuthenticationArgs.builder()
+ *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+ *                     .key("secret")
+ *                     .build())
+ *                 .build())
+ *             .protocol(IkeGatewayProtocolArgs.builder()
+ *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+ *                     .ikeCryptoProfile(example.name())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         //# 4. IPsec Tunnel
+ *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+ *             .name("example-tunnel_sc_grp")
+ *             .folder(folderScope)
+ *             .tunnelInterface("tunnel")
+ *             .antiReplay(true)
+ *             .copyTos(false)
+ *             .enableGreEncapsulation(false)
+ *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+ *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+ *                     .name(exampleIkeGateway.name())
+ *                     .build())
+ *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(exampleIkeGateway)
+ *                 .build());
+ * 
+ *         //# 5. Service Connection (The target for the group)
+ *         var siteAVpnSc = new ServiceConnection("siteAVpnSc", ServiceConnectionArgs.builder()
+ *             .name("creating_a_service_connection_sc_grp")
+ *             .region("us-west-1a")
+ *             .ipsecTunnel(exampleIpsecTunnel.name())
+ *             .subnets(            
+ *                 "10.1.0.0/16",
+ *                 "172.16.0.0/24")
+ *             .sourceNat(false)
+ *             .build());
+ * 
+ *         //# 5. Service Connection (The target for the group)
+ *         var siteAVpnSc2 = new ServiceConnection("siteAVpnSc2", ServiceConnectionArgs.builder()
+ *             .name("creating_a_service_connection_sc_grp_2")
+ *             .region("us-west-1a")
+ *             .ipsecTunnel(exampleIpsecTunnel.name())
+ *             .subnets(            
+ *                 "10.1.0.0/16",
+ *                 "172.16.0.0/24")
+ *             .sourceNat(true)
+ *             .build());
+ * 
+ *         // ------------------------------------------------------------------
+ *         // II. SERVICE CONNECTION GROUP RESOURCE
+ *         // ------------------------------------------------------------------
+ *         //# 6. Service Connection Group (Groups the Service Connection created above)
+ *         var exampleGroup = new ServiceConnectionGroup("exampleGroup", ServiceConnectionGroupArgs.builder()
+ *             .name("service-connection-group-app_sc_grp")
+ *             .targets(            
+ *                 siteAVpnSc.name(),
+ *                 siteAVpnSc2.name())
+ *             .disableSnat(true)
+ *             .pbfOnly(false)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/serviceConnectionGroup:ServiceConnectionGroup")
 public class ServiceConnectionGroup extends com.pulumi.resources.CustomResource {

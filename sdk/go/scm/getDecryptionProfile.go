@@ -12,6 +12,40 @@ import (
 )
 
 // DecryptionProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a single SCM Decryption Profile object by its ID.
+//			//
+//			// Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+//			scmDpProfile, err := scm.LookupDecryptionProfile(ctx, &scm.LookupDecryptionProfileArgs{
+//				Id: "c7629092-d286-400b-ba3f-1d57b8065645",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmDecryptionProfileDetails", pulumi.StringMap{
+//				"profileId": scmDpProfile.Id,
+//				"folder":    scmDpProfile.Folder,
+//				"name":      scmDpProfile.Name,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupDecryptionProfile(ctx *pulumi.Context, args *LookupDecryptionProfileArgs, opts ...pulumi.InvokeOption) (*LookupDecryptionProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupDecryptionProfileResult

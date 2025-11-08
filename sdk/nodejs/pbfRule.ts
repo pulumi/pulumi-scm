@@ -8,6 +8,95 @@ import * as utilities from "./utilities";
 
 /**
  * PbfRule resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const exampleTag = new scm.Tag("example_tag", {
+ *     folder: "All",
+ *     name: "pbf-rule-tag-test-1",
+ *     color: "Red",
+ * });
+ * // --- PBF Rule Resource with discard action---
+ * const examplePbfRule = new scm.PbfRule("example_pbf_rule", {
+ *     name: "pbf-test-rule-discard",
+ *     folder: "All",
+ *     description: "PBF rule for forwarding specific traffic.",
+ *     from: {
+ *         zones: ["zone-untrust"],
+ *     },
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     applications: ["any"],
+ *     services: ["service-http"],
+ *     sourceUsers: ["any"],
+ *     action: {
+ *         discard: {},
+ *     },
+ *     tags: [exampleTag.name],
+ *     enforceSymmetricReturn: {
+ *         enabled: false,
+ *     },
+ *     schedule: "non-work-hours",
+ * });
+ * // --- PBF Rule Resource with no-pbf action---
+ * const exampleNoPbfRule = new scm.PbfRule("example_no_pbf_rule", {
+ *     name: "pbf-test-rule-no-pbf",
+ *     folder: "All",
+ *     description: "PBF rule for forwarding specific traffic",
+ *     from: {
+ *         zones: ["zone-untrust"],
+ *     },
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     applications: ["any"],
+ *     services: ["service-https"],
+ *     sourceUsers: ["any"],
+ *     action: {
+ *         noPbf: {},
+ *     },
+ *     tags: [exampleTag.name],
+ *     enforceSymmetricReturn: {
+ *         enabled: false,
+ *     },
+ *     schedule: "non-work-hours",
+ * });
+ * // --- PBF Rule Resource with forward action---
+ * const exampleForwardPbfRule = new scm.PbfRule("example_forward_pbf_rule", {
+ *     name: "pbf-test-rule-forward",
+ *     folder: "All",
+ *     description: "PBF rule for forwarding specific traffic",
+ *     from: {
+ *         zones: ["zone-untrust"],
+ *     },
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     applications: ["any"],
+ *     services: ["service-http"],
+ *     sourceUsers: ["any"],
+ *     action: {
+ *         forward: {
+ *             egressInterface: "ethernet1/1",
+ *             nexthop: {
+ *                 ipAddress: "192.168.1.254",
+ *             },
+ *             monitor: {
+ *                 ipAddress: "8.8.8.10",
+ *                 profile: "test_tf_profile",
+ *                 disableIfUnreachable: true,
+ *             },
+ *         },
+ *     },
+ *     tags: [exampleTag.name],
+ *     enforceSymmetricReturn: {
+ *         enabled: true,
+ *     },
+ *     schedule: "non-work-hours",
+ * });
+ * ```
  */
 export class PbfRule extends pulumi.CustomResource {
     /**

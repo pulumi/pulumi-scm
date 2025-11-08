@@ -16,10 +16,10 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Recovery duration pd
         /// </summary>
-        public readonly double RecoveryDurationPd;
+        public readonly int RecoveryDurationPd;
 
         [OutputConstructor]
-        private GetSdwanErrorCorrectionProfileListDataModePacketDuplicationResult(double recoveryDurationPd)
+        private GetSdwanErrorCorrectionProfileListDataModePacketDuplicationResult(int recoveryDurationPd)
         {
             RecoveryDurationPd = recoveryDurationPd;
         }

@@ -8,6 +8,25 @@ import * as utilities from "./utilities";
 
 /**
  * TunnelInterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up tunnel interface by its ID.
+ * const scmTunnelIntfDs = scm.getTunnelInterface({
+ *     id: "ddad1e64-0b64-41a4-b361-c6191169a8f1",
+ * });
+ * export const scmTunnelInterfaceDataSourceResults = {
+ *     id: scmTunnelIntfDs.then(scmTunnelIntfDs => scmTunnelIntfDs.id),
+ *     name: scmTunnelIntfDs.then(scmTunnelIntfDs => scmTunnelIntfDs.name),
+ *     comment: scmTunnelIntfDs.then(scmTunnelIntfDs => scmTunnelIntfDs.comment),
+ *     ip: scmTunnelIntfDs.then(scmTunnelIntfDs => scmTunnelIntfDs.ips),
+ *     folder: scmTunnelIntfDs.then(scmTunnelIntfDs => scmTunnelIntfDs.folder),
+ * };
+ * ```
  */
 export function getTunnelInterface(args: GetTunnelInterfaceArgs, opts?: pulumi.InvokeOptions): Promise<GetTunnelInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -40,9 +59,9 @@ export interface GetTunnelInterfaceResult {
      */
     readonly comment: string;
     /**
-     * Default value
+     * Default interface assignment
      */
-    readonly defaultValue: number;
+    readonly defaultValue: string;
     /**
      * The device in which the resource is defined
      */
@@ -60,9 +79,9 @@ export interface GetTunnelInterfaceResult {
      */
     readonly interfaceManagementProfile: string;
     /**
-     * tunnel interfaces ip parent
+     * Tunnel Interface IP Parent
      */
-    readonly ip: outputs.GetTunnelInterfaceIp;
+    readonly ips: outputs.GetTunnelInterfaceIp[];
     /**
      * MTU
      */
@@ -79,6 +98,25 @@ export interface GetTunnelInterfaceResult {
 }
 /**
  * TunnelInterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up tunnel interface by its ID.
+ * const scmTunnelIntfDs = scm.getTunnelInterface({
+ *     id: "ddad1e64-0b64-41a4-b361-c6191169a8f1",
+ * });
+ * export const scmTunnelInterfaceDataSourceResults = {
+ *     id: scmTunnelIntfDs.then(scmTunnelIntfDs => scmTunnelIntfDs.id),
+ *     name: scmTunnelIntfDs.then(scmTunnelIntfDs => scmTunnelIntfDs.name),
+ *     comment: scmTunnelIntfDs.then(scmTunnelIntfDs => scmTunnelIntfDs.comment),
+ *     ip: scmTunnelIntfDs.then(scmTunnelIntfDs => scmTunnelIntfDs.ips),
+ *     folder: scmTunnelIntfDs.then(scmTunnelIntfDs => scmTunnelIntfDs.folder),
+ * };
+ * ```
  */
 export function getTunnelInterfaceOutput(args: GetTunnelInterfaceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTunnelInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

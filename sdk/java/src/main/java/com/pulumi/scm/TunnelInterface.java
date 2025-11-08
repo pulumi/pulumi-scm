@@ -11,14 +11,68 @@ import com.pulumi.scm.TunnelInterfaceArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.TunnelInterfaceState;
 import com.pulumi.scm.outputs.TunnelInterfaceIp;
-import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * TunnelInterface resource
+ * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.TunnelInterface;
+ * import com.pulumi.scm.TunnelInterfaceArgs;
+ * import com.pulumi.scm.inputs.TunnelInterfaceIpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates a tunnel interface with static ipv4 address
+ *         //
+ *         var scmTunnelIntf = new TunnelInterface("scmTunnelIntf", TunnelInterfaceArgs.builder()
+ *             .name("$scm_tunnel_intf")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .ips(TunnelInterfaceIpArgs.builder()
+ *                 .name("198.18.1.1/32")
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a tunnel interface with static ipv4 address, with default value tunnel.123
+ *         //
+ *         var scmTunnelIntf2 = new TunnelInterface("scmTunnelIntf2", TunnelInterfaceArgs.builder()
+ *             .name("$scm_tunnel_intf_2")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .ips(TunnelInterfaceIpArgs.builder()
+ *                 .name("198.18.1.2/32")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  */
 @ResourceType(type="scm:index/tunnelInterface:TunnelInterface")
@@ -38,17 +92,17 @@ public class TunnelInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.comment);
     }
     /**
-     * Default value
+     * Default interface assignment
      * 
      */
-    @Export(name="defaultValue", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> defaultValue;
+    @Export(name="defaultValue", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> defaultValue;
 
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
-    public Output<Optional<Integer>> defaultValue() {
+    public Output<Optional<String>> defaultValue() {
         return Codegen.optional(this.defaultValue);
     }
     /**
@@ -94,31 +148,31 @@ public class TunnelInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.interfaceManagementProfile);
     }
     /**
-     * tunnel interfaces ip parent
+     * Tunnel Interface IP Parent
      * 
      */
-    @Export(name="ip", refs={TunnelInterfaceIp.class}, tree="[0]")
-    private Output</* @Nullable */ TunnelInterfaceIp> ip;
+    @Export(name="ips", refs={List.class,TunnelInterfaceIp.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<TunnelInterfaceIp>> ips;
 
     /**
-     * @return tunnel interfaces ip parent
+     * @return Tunnel Interface IP Parent
      * 
      */
-    public Output<Optional<TunnelInterfaceIp>> ip() {
-        return Codegen.optional(this.ip);
+    public Output<Optional<List<TunnelInterfaceIp>>> ips() {
+        return Codegen.optional(this.ips);
     }
     /**
      * MTU
      * 
      */
-    @Export(name="mtu", refs={Double.class}, tree="[0]")
-    private Output</* @Nullable */ Double> mtu;
+    @Export(name="mtu", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> mtu;
 
     /**
      * @return MTU
      * 
      */
-    public Output<Optional<Double>> mtu() {
+    public Output<Optional<Integer>> mtu() {
         return Codegen.optional(this.mtu);
     }
     /**

@@ -30,7 +30,7 @@ import (
 //			// Fetch a list of all service group objects.
 //			// This data source will call the "List" API endpoint.
 //			allServiceGroups, err := scm.GetServiceGroupList(ctx, &scm.GetServiceGroupListArgs{
-//				Folder: pulumi.StringRef("Shared"),
+//				Folder: pulumi.StringRef("All"),
 //			}, nil)
 //			if err != nil {
 //				return err

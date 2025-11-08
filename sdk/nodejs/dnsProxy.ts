@@ -40,7 +40,7 @@ export class DnsProxy extends pulumi.CustomResource {
     /**
      * Cache
      */
-    declare public readonly cache: pulumi.Output<outputs.DnsProxyCache | undefined>;
+    declare public readonly cache: pulumi.Output<outputs.DnsProxyCache>;
     /**
      * Default
      */
@@ -50,7 +50,7 @@ export class DnsProxy extends pulumi.CustomResource {
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * Domain servers
+     * DNS proxy rules
      */
     declare public readonly domainServers: pulumi.Output<outputs.DnsProxyDomainServer[] | undefined>;
     /**
@@ -80,12 +80,12 @@ export class DnsProxy extends pulumi.CustomResource {
     /**
      * Tcp queries
      */
-    declare public readonly tcpQueries: pulumi.Output<outputs.DnsProxyTcpQueries | undefined>;
+    declare public readonly tcpQueries: pulumi.Output<outputs.DnsProxyTcpQueries>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * Udp queries
      */
-    declare public readonly udpQueries: pulumi.Output<outputs.DnsProxyUdpQueries | undefined>;
+    declare public readonly udpQueries: pulumi.Output<outputs.DnsProxyUdpQueries>;
 
     /**
      * Create a DnsProxy resource with the given unique name, arguments, and options.
@@ -154,7 +154,7 @@ export interface DnsProxyState {
      */
     device?: pulumi.Input<string>;
     /**
-     * Domain servers
+     * DNS proxy rules
      */
     domainServers?: pulumi.Input<pulumi.Input<inputs.DnsProxyDomainServer>[]>;
     /**
@@ -209,7 +209,7 @@ export interface DnsProxyArgs {
      */
     device?: pulumi.Input<string>;
     /**
-     * Domain servers
+     * DNS proxy rules
      */
     domainServers?: pulumi.Input<pulumi.Input<inputs.DnsProxyDomainServer>[]>;
     /**

@@ -32,7 +32,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Metric
         /// </summary>
-        public readonly double? Metric;
+        public readonly int? Metric;
         /// <summary>
         /// Mtu ignore
         /// </summary>
@@ -48,7 +48,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Priority
         /// </summary>
-        public readonly double? Priority;
+        public readonly int? Priority;
         /// <summary>
         /// Timing
         /// </summary>
@@ -68,7 +68,7 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.LogicalRouterVrfOspfAreaInterfaceLinkType? linkType,
 
-            double? metric,
+            int? metric,
 
             bool? mtuIgnore,
 
@@ -76,7 +76,7 @@ namespace Pulumi.Scm.Outputs
 
             bool? passive,
 
-            double? priority,
+            int? priority,
 
             string? timing,
 

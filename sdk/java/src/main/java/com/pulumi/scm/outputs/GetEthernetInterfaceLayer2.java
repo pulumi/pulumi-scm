@@ -5,23 +5,36 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Integer;
+import com.pulumi.scm.outputs.GetEthernetInterfaceLayer2Lldp;
+import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetEthernetInterfaceLayer2 {
     /**
-     * @return Vlan tag
+     * @return LLDP Settings
      * 
      */
-    private Integer vlanTag;
+    private GetEthernetInterfaceLayer2Lldp lldp;
+    /**
+     * @return Assign interface to VLAN tag
+     * 
+     */
+    private String vlanTag;
 
     private GetEthernetInterfaceLayer2() {}
     /**
-     * @return Vlan tag
+     * @return LLDP Settings
      * 
      */
-    public Integer vlanTag() {
+    public GetEthernetInterfaceLayer2Lldp lldp() {
+        return this.lldp;
+    }
+    /**
+     * @return Assign interface to VLAN tag
+     * 
+     */
+    public String vlanTag() {
         return this.vlanTag;
     }
 
@@ -34,15 +47,25 @@ public final class GetEthernetInterfaceLayer2 {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Integer vlanTag;
+        private GetEthernetInterfaceLayer2Lldp lldp;
+        private String vlanTag;
         public Builder() {}
         public Builder(GetEthernetInterfaceLayer2 defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.lldp = defaults.lldp;
     	      this.vlanTag = defaults.vlanTag;
         }
 
         @CustomType.Setter
-        public Builder vlanTag(Integer vlanTag) {
+        public Builder lldp(GetEthernetInterfaceLayer2Lldp lldp) {
+            if (lldp == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceLayer2", "lldp");
+            }
+            this.lldp = lldp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder vlanTag(String vlanTag) {
             if (vlanTag == null) {
               throw new MissingRequiredPropertyException("GetEthernetInterfaceLayer2", "vlanTag");
             }
@@ -51,6 +74,7 @@ public final class GetEthernetInterfaceLayer2 {
         }
         public GetEthernetInterfaceLayer2 build() {
             final var _resultValue = new GetEthernetInterfaceLayer2();
+            _resultValue.lldp = lldp;
             _resultValue.vlanTag = vlanTag;
             return _resultValue;
         }

@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class LogicalRouterVrfEcmpAlgorithmIpHash {
      * @return Hash seed
      * 
      */
-    private @Nullable Double hashSeed;
+    private @Nullable Integer hashSeed;
     /**
      * @return Src only
      * 
@@ -33,7 +33,7 @@ public final class LogicalRouterVrfEcmpAlgorithmIpHash {
      * @return Hash seed
      * 
      */
-    public Optional<Double> hashSeed() {
+    public Optional<Integer> hashSeed() {
         return Optional.ofNullable(this.hashSeed);
     }
     /**
@@ -60,7 +60,7 @@ public final class LogicalRouterVrfEcmpAlgorithmIpHash {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Double hashSeed;
+        private @Nullable Integer hashSeed;
         private @Nullable Boolean srcOnly;
         private @Nullable Boolean usePort;
         public Builder() {}
@@ -72,7 +72,7 @@ public final class LogicalRouterVrfEcmpAlgorithmIpHash {
         }
 
         @CustomType.Setter
-        public Builder hashSeed(@Nullable Double hashSeed) {
+        public Builder hashSeed(@Nullable Integer hashSeed) {
 
             this.hashSeed = hashSeed;
             return this;

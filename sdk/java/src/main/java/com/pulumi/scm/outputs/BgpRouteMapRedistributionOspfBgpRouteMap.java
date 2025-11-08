@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionOspfBgpRouteMap {
     /**
-     * @return Action
+     * @return OSPF BGP Route maps Action
      * 
      */
     private @Nullable String action;
     /**
-     * @return Description
+     * @return OSPF BGP Route maps Description
      * 
      */
     private @Nullable String description;
@@ -30,26 +30,26 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMap {
      */
     private @Nullable BgpRouteMapRedistributionOspfBgpRouteMapMatch match;
     /**
-     * @return Sequence number
+     * @return OSPF BGP Route maps Sequence number
      * 
      */
     private @Nullable Integer name;
     /**
-     * @return Set
+     * @return OSPF Root Set
      * 
      */
     private @Nullable BgpRouteMapRedistributionOspfBgpRouteMapSet set;
 
     private BgpRouteMapRedistributionOspfBgpRouteMap() {}
     /**
-     * @return Action
+     * @return OSPF BGP Route maps Action
      * 
      */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return Description
+     * @return OSPF BGP Route maps Description
      * 
      */
     public Optional<String> description() {
@@ -63,14 +63,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMap {
         return Optional.ofNullable(this.match);
     }
     /**
-     * @return Sequence number
+     * @return OSPF BGP Route maps Sequence number
      * 
      */
     public Optional<Integer> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return Set
+     * @return OSPF Root Set
      * 
      */
     public Optional<BgpRouteMapRedistributionOspfBgpRouteMapSet> set() {

@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,13 +21,13 @@ public final class LogicalRouterVrfEcmpAlgorithmIpHashArgs extends com.pulumi.re
      * 
      */
     @Import(name="hashSeed")
-    private @Nullable Output<Double> hashSeed;
+    private @Nullable Output<Integer> hashSeed;
 
     /**
      * @return Hash seed
      * 
      */
-    public Optional<Output<Double>> hashSeed() {
+    public Optional<Output<Integer>> hashSeed() {
         return Optional.ofNullable(this.hashSeed);
     }
 
@@ -93,7 +93,7 @@ public final class LogicalRouterVrfEcmpAlgorithmIpHashArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder hashSeed(@Nullable Output<Double> hashSeed) {
+        public Builder hashSeed(@Nullable Output<Integer> hashSeed) {
             $.hashSeed = hashSeed;
             return this;
         }
@@ -104,7 +104,7 @@ public final class LogicalRouterVrfEcmpAlgorithmIpHashArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder hashSeed(Double hashSeed) {
+        public Builder hashSeed(Integer hashSeed) {
             return hashSeed(Output.of(hashSeed));
         }
 

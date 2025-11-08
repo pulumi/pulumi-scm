@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.SdwanErrorCorrectionProfileModeArgs;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,13 +22,13 @@ public final class SdwanErrorCorrectionProfileState extends com.pulumi.resources
      * 
      */
     @Import(name="activationThreshold")
-    private @Nullable Output<Double> activationThreshold;
+    private @Nullable Output<Integer> activationThreshold;
 
     /**
      * @return Activation threshold
      * 
      */
-    public Optional<Output<Double>> activationThreshold() {
+    public Optional<Output<Integer>> activationThreshold() {
         return Optional.ofNullable(this.activationThreshold);
     }
 
@@ -150,7 +150,7 @@ public final class SdwanErrorCorrectionProfileState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder activationThreshold(@Nullable Output<Double> activationThreshold) {
+        public Builder activationThreshold(@Nullable Output<Integer> activationThreshold) {
             $.activationThreshold = activationThreshold;
             return this;
         }
@@ -161,7 +161,7 @@ public final class SdwanErrorCorrectionProfileState extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder activationThreshold(Double activationThreshold) {
+        public Builder activationThreshold(Integer activationThreshold) {
             return activationThreshold(Output.of(activationThreshold));
         }
 

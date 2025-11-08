@@ -11,6 +11,175 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// AppOverrideRule resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // --- 1. TAG Resource ---
+    ///     var appOverridePositionTag = new Scm.Tag("app_override_position_tag", new()
+    ///     {
+    ///         Name = "app-override-position-tag_1",
+    ///         Folder = "All",
+    ///         Color = "Orange",
+    ///     });
+    /// 
+    ///     // --- 2. ANCHOR RULE (Used for relative positioning by other rules) ---
+    ///     var anchorAppOverride = new Scm.AppOverrideRule("anchor_app_override", new()
+    ///     {
+    ///         Name = "anchor-app-override-rule",
+    ///         Description = "Base rule for testing 'before' and 'after' positioning. Updating",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         Application = "ssl",
+    ///         Protocol = "tcp",
+    ///         Port = "112",
+    ///         Froms = new[]
+    ///         {
+    ///             "trust",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tags = new[]
+    ///         {
+    ///             appOverridePositionTag.Name,
+    ///         },
+    ///     });
+    /// 
+    ///     // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+    ///     var ruleTopAppOverride = new Scm.AppOverrideRule("rule_top_app_override", new()
+    ///     {
+    ///         Name = "top-absolute-app-override",
+    ///         Description = "Placed at the very TOP of the App Override rulebase.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "bottom",
+    ///         Application = "ssl",
+    ///         Protocol = "tcp",
+    ///         Port = "443",
+    ///         Froms = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "trust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///     });
+    /// 
+    ///     var ruleBottomAppOverride = new Scm.AppOverrideRule("rule_bottom_app_override", new()
+    ///     {
+    ///         Name = "bottom-absolute-app-override",
+    ///         Description = "Placed at the very BOTTOM of the App Override rulebase.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "bottom",
+    ///         Application = "ssl",
+    ///         Protocol = "tcp",
+    ///         Port = "443",
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///     });
+    /// 
+    ///     //--- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+    ///     var ruleBeforeAnchorOverride = new Scm.AppOverrideRule("rule_before_anchor_override", new()
+    ///     {
+    ///         Name = "before-anchor-app-override",
+    ///         Description = "Positioned immediately BEFORE the anchor-app-override-rule.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "before",
+    ///         TargetRule = anchorAppOverride.Id,
+    ///         Application = "ssl",
+    ///         Protocol = "tcp",
+    ///         Port = "443",
+    ///         Froms = new[]
+    ///         {
+    ///             "trust",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///     });
+    /// 
+    ///     var ruleAfterAnchorOverride = new Scm.AppOverrideRule("rule_after_anchor_override", new()
+    ///     {
+    ///         Name = "after-anchor-app-override",
+    ///         Description = "Positioned immediately AFTER the anchor-app-override-rule.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         RelativePosition = "before",
+    ///         TargetRule = anchorAppOverride.Id,
+    ///         Application = "ssl",
+    ///         Protocol = "tcp",
+    ///         Port = "443",
+    ///         Froms = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "trust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/appOverrideRule:AppOverrideRule")]
     public partial class AppOverrideRule : global::Pulumi.CustomResource
@@ -85,13 +254,25 @@ namespace Pulumi.Scm
         /// Port
         /// </summary>
         [Output("port")]
-        public Output<int> Port { get; private set; } = null!;
+        public Output<string> Port { get; private set; } = null!;
+
+        /// <summary>
+        /// The position of a security rule
+        /// </summary>
+        [Output("position")]
+        public Output<string> Position { get; private set; } = null!;
 
         /// <summary>
         /// Protocol
         /// </summary>
         [Output("protocol")]
         public Output<string> Protocol { get; private set; } = null!;
+
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Output("relativePosition")]
+        public Output<string?> RelativePosition { get; private set; } = null!;
 
         /// <summary>
         /// The snippet in which the resource is defined
@@ -110,6 +291,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Output("targetRule")]
+        public Output<string?> TargetRule { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
@@ -248,13 +435,25 @@ namespace Pulumi.Scm
         /// Port
         /// </summary>
         [Input("port", required: true)]
-        public Input<int> Port { get; set; } = null!;
+        public Input<string> Port { get; set; } = null!;
+
+        /// <summary>
+        /// The position of a security rule
+        /// </summary>
+        [Input("position")]
+        public Input<string>? Position { get; set; }
 
         /// <summary>
         /// Protocol
         /// </summary>
         [Input("protocol", required: true)]
         public Input<string> Protocol { get; set; } = null!;
+
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Input("relativePosition")]
+        public Input<string>? RelativePosition { get; set; }
 
         /// <summary>
         /// The snippet in which the resource is defined
@@ -285,6 +484,12 @@ namespace Pulumi.Scm
             get => _tags ?? (_tags = new InputList<string>());
             set => _tags = value;
         }
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Input("targetRule")]
+        public Input<string>? TargetRule { get; set; }
 
         [Input("tos", required: true)]
         private InputList<string>? _tos;
@@ -388,13 +593,25 @@ namespace Pulumi.Scm
         /// Port
         /// </summary>
         [Input("port")]
-        public Input<int>? Port { get; set; }
+        public Input<string>? Port { get; set; }
+
+        /// <summary>
+        /// The position of a security rule
+        /// </summary>
+        [Input("position")]
+        public Input<string>? Position { get; set; }
 
         /// <summary>
         /// Protocol
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
+
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Input("relativePosition")]
+        public Input<string>? RelativePosition { get; set; }
 
         /// <summary>
         /// The snippet in which the resource is defined
@@ -425,6 +642,12 @@ namespace Pulumi.Scm
             get => _tags ?? (_tags = new InputList<string>());
             set => _tags = value;
         }
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Input("targetRule")]
+        public Input<string>? TargetRule { get; set; }
 
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }

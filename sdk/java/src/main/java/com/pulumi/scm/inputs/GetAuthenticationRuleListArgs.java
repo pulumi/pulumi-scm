@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -92,6 +93,21 @@ public final class GetAuthenticationRuleListArgs extends com.pulumi.resources.In
     }
 
     /**
+     * The relative position of the rule
+     * 
+     */
+    @Import(name="position", required=true)
+    private Output<String> position;
+
+    /**
+     * @return The relative position of the rule
+     * 
+     */
+    public Output<String> position() {
+        return this.position;
+    }
+
+    /**
      * The snippet of the item.
      * 
      */
@@ -114,6 +130,7 @@ public final class GetAuthenticationRuleListArgs extends com.pulumi.resources.In
         this.limit = $.limit;
         this.name = $.name;
         this.offset = $.offset;
+        this.position = $.position;
         this.snippet = $.snippet;
     }
 
@@ -241,6 +258,27 @@ public final class GetAuthenticationRuleListArgs extends com.pulumi.resources.In
         }
 
         /**
+         * @param position The relative position of the rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder position(Output<String> position) {
+            $.position = position;
+            return this;
+        }
+
+        /**
+         * @param position The relative position of the rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder position(String position) {
+            return position(Output.of(position));
+        }
+
+        /**
          * @param snippet The snippet of the item.
          * 
          * @return builder
@@ -262,6 +300,9 @@ public final class GetAuthenticationRuleListArgs extends com.pulumi.resources.In
         }
 
         public GetAuthenticationRuleListArgs build() {
+            if ($.position == null) {
+                throw new MissingRequiredPropertyException("GetAuthenticationRuleListArgs", "position");
+            }
             return $;
         }
     }

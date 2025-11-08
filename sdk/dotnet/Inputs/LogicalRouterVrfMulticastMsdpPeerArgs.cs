@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Inputs
         /// Max sa
         /// </summary>
         [Input("maxSa")]
-        public Input<double>? MaxSa { get; set; }
+        public Input<int>? MaxSa { get; set; }
 
         /// <summary>
         /// Name

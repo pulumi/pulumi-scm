@@ -17,7 +17,7 @@ public final class GetBgpRouteMapRedistributionBgp {
      */
     private GetBgpRouteMapRedistributionBgpOspf ospf;
     /**
-     * @return Rib
+     * @return BGP Root RIB
      * 
      */
     private GetBgpRouteMapRedistributionBgpRib rib;
@@ -31,7 +31,7 @@ public final class GetBgpRouteMapRedistributionBgp {
         return this.ospf;
     }
     /**
-     * @return Rib
+     * @return BGP Root RIB
      * 
      */
     public GetBgpRouteMapRedistributionBgpRib rib() {

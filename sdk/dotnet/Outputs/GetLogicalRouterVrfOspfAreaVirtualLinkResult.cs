@@ -28,11 +28,11 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Instance id
         /// </summary>
-        public readonly double InstanceId;
+        public readonly int InstanceId;
         /// <summary>
         /// Interface id
         /// </summary>
-        public readonly double InterfaceId;
+        public readonly int InterfaceId;
         /// <summary>
         /// Name
         /// </summary>
@@ -66,9 +66,9 @@ namespace Pulumi.Scm.Outputs
 
             bool enable,
 
-            double instanceId,
+            int instanceId,
 
-            double interfaceId,
+            int interfaceId,
 
             string name,
 

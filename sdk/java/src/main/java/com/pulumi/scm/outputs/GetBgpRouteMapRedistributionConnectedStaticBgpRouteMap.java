@@ -14,12 +14,12 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap {
     /**
-     * @return Action
+     * @return Connected Static BGP Route maps Action
      * 
      */
     private String action;
     /**
-     * @return Description
+     * @return Connected Static BGP Route maps Description
      * 
      */
     private String description;
@@ -29,7 +29,7 @@ public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap {
      */
     private GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch match;
     /**
-     * @return Sequence number
+     * @return Connected Static BGP Route maps Sequence number
      * 
      */
     private Integer name;
@@ -41,14 +41,14 @@ public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap {
 
     private GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap() {}
     /**
-     * @return Action
+     * @return Connected Static BGP Route maps Action
      * 
      */
     public String action() {
         return this.action;
     }
     /**
-     * @return Description
+     * @return Connected Static BGP Route maps Description
      * 
      */
     public String description() {
@@ -62,7 +62,7 @@ public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap {
         return this.match;
     }
     /**
-     * @return Sequence number
+     * @return Connected Static BGP Route maps Sequence number
      * 
      */
     public Integer name() {

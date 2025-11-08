@@ -26,7 +26,7 @@ class GetAppOverrideRuleResult:
     """
     A collection of values returned by getAppOverrideRule.
     """
-    def __init__(__self__, application=None, description=None, destinations=None, device=None, disabled=None, folder=None, froms=None, group_tag=None, id=None, name=None, negate_destination=None, negate_source=None, port=None, protocol=None, snippet=None, sources=None, tags=None, tfid=None, tos=None):
+    def __init__(__self__, application=None, description=None, destinations=None, device=None, disabled=None, folder=None, froms=None, group_tag=None, id=None, name=None, negate_destination=None, negate_source=None, port=None, position=None, protocol=None, relative_position=None, snippet=None, sources=None, tags=None, target_rule=None, tfid=None, tos=None):
         if application and not isinstance(application, str):
             raise TypeError("Expected argument 'application' to be a str")
         pulumi.set(__self__, "application", application)
@@ -63,12 +63,18 @@ class GetAppOverrideRuleResult:
         if negate_source and not isinstance(negate_source, bool):
             raise TypeError("Expected argument 'negate_source' to be a bool")
         pulumi.set(__self__, "negate_source", negate_source)
-        if port and not isinstance(port, int):
-            raise TypeError("Expected argument 'port' to be a int")
+        if port and not isinstance(port, str):
+            raise TypeError("Expected argument 'port' to be a str")
         pulumi.set(__self__, "port", port)
+        if position and not isinstance(position, str):
+            raise TypeError("Expected argument 'position' to be a str")
+        pulumi.set(__self__, "position", position)
         if protocol and not isinstance(protocol, str):
             raise TypeError("Expected argument 'protocol' to be a str")
         pulumi.set(__self__, "protocol", protocol)
+        if relative_position and not isinstance(relative_position, str):
+            raise TypeError("Expected argument 'relative_position' to be a str")
+        pulumi.set(__self__, "relative_position", relative_position)
         if snippet and not isinstance(snippet, str):
             raise TypeError("Expected argument 'snippet' to be a str")
         pulumi.set(__self__, "snippet", snippet)
@@ -78,6 +84,9 @@ class GetAppOverrideRuleResult:
         if tags and not isinstance(tags, list):
             raise TypeError("Expected argument 'tags' to be a list")
         pulumi.set(__self__, "tags", tags)
+        if target_rule and not isinstance(target_rule, str):
+            raise TypeError("Expected argument 'target_rule' to be a str")
+        pulumi.set(__self__, "target_rule", target_rule)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -183,11 +192,19 @@ class GetAppOverrideRuleResult:
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> _builtins.int:
+    def port(self) -> _builtins.str:
         """
         Port
         """
         return pulumi.get(self, "port")
+
+    @_builtins.property
+    @pulumi.getter
+    def position(self) -> _builtins.str:
+        """
+        The position of a security rule
+        """
+        return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
@@ -196,6 +213,14 @@ class GetAppOverrideRuleResult:
         Protocol
         """
         return pulumi.get(self, "protocol")
+
+    @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> _builtins.str:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
 
     @_builtins.property
     @pulumi.getter
@@ -220,6 +245,14 @@ class GetAppOverrideRuleResult:
         Tag
         """
         return pulumi.get(self, "tags")
+
+    @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> _builtins.str:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
 
     @_builtins.property
     @pulumi.getter
@@ -254,10 +287,13 @@ class AwaitableGetAppOverrideRuleResult(GetAppOverrideRuleResult):
             negate_destination=self.negate_destination,
             negate_source=self.negate_source,
             port=self.port,
+            position=self.position,
             protocol=self.protocol,
+            relative_position=self.relative_position,
             snippet=self.snippet,
             sources=self.sources,
             tags=self.tags,
+            target_rule=self.target_rule,
             tfid=self.tfid,
             tos=self.tos)
 
@@ -267,6 +303,29 @@ def get_app_override_rule(id: Optional[_builtins.str] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAppOverrideRuleResult:
     """
     AppOverrideRule data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+    test_app_override_rule = scm.AppOverrideRule("test_app_override_rule",
+        name="data-source-app-override-test",
+        description="Rule created specifically for data source testing.",
+        folder="All",
+        position="pre",
+        application="ssl",
+        protocol="tcp",
+        port="8443",
+        froms=["trust"],
+        tos=["untrust"],
+        sources=["any"],
+        destinations=["any"])
+    single_rule_by_id = scm.get_app_override_rule_output(id=test_app_override_rule.id)
+    pulumi.export("singleAppOverrideRuleName", single_rule_by_id)
+    ```
 
 
     :param _builtins.str id: UUID of the resource
@@ -292,10 +351,13 @@ def get_app_override_rule(id: Optional[_builtins.str] = None,
         negate_destination=pulumi.get(__ret__, 'negate_destination'),
         negate_source=pulumi.get(__ret__, 'negate_source'),
         port=pulumi.get(__ret__, 'port'),
+        position=pulumi.get(__ret__, 'position'),
         protocol=pulumi.get(__ret__, 'protocol'),
+        relative_position=pulumi.get(__ret__, 'relative_position'),
         snippet=pulumi.get(__ret__, 'snippet'),
         sources=pulumi.get(__ret__, 'sources'),
         tags=pulumi.get(__ret__, 'tags'),
+        target_rule=pulumi.get(__ret__, 'target_rule'),
         tfid=pulumi.get(__ret__, 'tfid'),
         tos=pulumi.get(__ret__, 'tos'))
 def get_app_override_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
@@ -303,6 +365,29 @@ def get_app_override_rule_output(id: Optional[pulumi.Input[_builtins.str]] = Non
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAppOverrideRuleResult]:
     """
     AppOverrideRule data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+    test_app_override_rule = scm.AppOverrideRule("test_app_override_rule",
+        name="data-source-app-override-test",
+        description="Rule created specifically for data source testing.",
+        folder="All",
+        position="pre",
+        application="ssl",
+        protocol="tcp",
+        port="8443",
+        froms=["trust"],
+        tos=["untrust"],
+        sources=["any"],
+        destinations=["any"])
+    single_rule_by_id = scm.get_app_override_rule_output(id=test_app_override_rule.id)
+    pulumi.export("singleAppOverrideRuleName", single_rule_by_id)
+    ```
 
 
     :param _builtins.str id: UUID of the resource
@@ -327,9 +412,12 @@ def get_app_override_rule_output(id: Optional[pulumi.Input[_builtins.str]] = Non
         negate_destination=pulumi.get(__response__, 'negate_destination'),
         negate_source=pulumi.get(__response__, 'negate_source'),
         port=pulumi.get(__response__, 'port'),
+        position=pulumi.get(__response__, 'position'),
         protocol=pulumi.get(__response__, 'protocol'),
+        relative_position=pulumi.get(__response__, 'relative_position'),
         snippet=pulumi.get(__response__, 'snippet'),
         sources=pulumi.get(__response__, 'sources'),
         tags=pulumi.get(__response__, 'tags'),
+        target_rule=pulumi.get(__response__, 'target_rule'),
         tfid=pulumi.get(__response__, 'tfid'),
         tos=pulumi.get(__response__, 'tos')))

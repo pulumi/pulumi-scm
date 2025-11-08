@@ -13,16 +13,28 @@ namespace Pulumi.Scm.Inputs
     public sealed class ZoneProtectionProfileScanActionGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Duration
+        /// Alert
         /// </summary>
-        [Input("duration")]
-        public Input<int>? Duration { get; set; }
+        [Input("alert")]
+        public Input<Inputs.ZoneProtectionProfileScanActionAlertGetArgs>? Alert { get; set; }
 
         /// <summary>
-        /// Track by
+        /// Allow
         /// </summary>
-        [Input("trackBy")]
-        public Input<string>? TrackBy { get; set; }
+        [Input("allow")]
+        public Input<Inputs.ZoneProtectionProfileScanActionAllowGetArgs>? Allow { get; set; }
+
+        /// <summary>
+        /// Block
+        /// </summary>
+        [Input("block")]
+        public Input<Inputs.ZoneProtectionProfileScanActionBlockGetArgs>? Block { get; set; }
+
+        /// <summary>
+        /// Block ip
+        /// </summary>
+        [Input("blockIp")]
+        public Input<Inputs.ZoneProtectionProfileScanActionBlockIpGetArgs>? BlockIp { get; set; }
 
         public ZoneProtectionProfileScanActionGetArgs()
         {

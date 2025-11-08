@@ -13,67 +13,67 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// AS path access list
+        /// BGP Root RIB Route maps match AS path access list
         /// </summary>
         [Input("asPathAccessList")]
         public Input<string>? AsPathAccessList { get; set; }
 
         /// <summary>
-        /// Extended community
+        /// BGP Root RIB Route maps match Extended community
         /// </summary>
         [Input("extendedCommunity")]
         public Input<string>? ExtendedCommunity { get; set; }
 
         /// <summary>
-        /// Interface
+        /// BGP Root RIB Route maps match Interface
         /// </summary>
         [Input("interface")]
         public Input<string>? Interface { get; set; }
 
         /// <summary>
-        /// Ipv4
+        /// BGP Route Map Redistributions Root BGP rib Route Map IPv4
         /// </summary>
         [Input("ipv4")]
         public Input<Inputs.BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Args>? Ipv4 { get; set; }
 
         /// <summary>
-        /// Large community
+        /// BGP Root RIB Route maps match Large community
         /// </summary>
         [Input("largeCommunity")]
         public Input<string>? LargeCommunity { get; set; }
 
         /// <summary>
-        /// Local preference
+        /// BGP Root RIB Route maps match Local preference
         /// </summary>
         [Input("localPreference")]
         public Input<int>? LocalPreference { get; set; }
 
         /// <summary>
-        /// Metric
+        /// BGP Root RIB Route maps match Metric
         /// </summary>
         [Input("metric")]
         public Input<int>? Metric { get; set; }
 
         /// <summary>
-        /// Origin
+        /// BGP Root RIB Route maps match Origin
         /// </summary>
         [Input("origin")]
         public Input<string>? Origin { get; set; }
 
         /// <summary>
-        /// Peer
+        /// BGP Root RIB Route maps match Peer
         /// </summary>
         [Input("peer")]
         public Input<string>? Peer { get; set; }
 
         /// <summary>
-        /// Regular community
+        /// BGP Root RIB Route maps match Regular community
         /// </summary>
         [Input("regularCommunity")]
         public Input<string>? RegularCommunity { get; set; }
 
         /// <summary>
-        /// Tag
+        /// BGP Root RIB Route maps match Tag
         /// </summary>
         [Input("tag")]
         public Input<int>? Tag { get; set; }

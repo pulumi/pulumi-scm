@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsProxyCacheMaxTtl {
     /**
-     * @return Enabled
+     * @return Enable max ttl for this DNS object
      * 
      */
     private Boolean enabled;
     /**
-     * @return Time to live
+     * @return Time in seconds after which entry is cleared
      * 
      */
     private Integer timeToLive;
 
     private GetDnsProxyCacheMaxTtl() {}
     /**
-     * @return Enabled
+     * @return Enable max ttl for this DNS object
      * 
      */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * @return Time to live
+     * @return Time in seconds after which entry is cleared
      * 
      */
     public Integer timeToLive() {

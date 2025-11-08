@@ -5,7 +5,9 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.scm.inputs.EthernetInterfaceLayer3DhcpClientDhcpClientArgs;
+import com.pulumi.scm.inputs.EthernetInterfaceLayer3DhcpClientSendHostnameArgs;
+import java.lang.Boolean;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,24 +18,72 @@ public final class EthernetInterfaceLayer3DhcpClientArgs extends com.pulumi.reso
     public static final EthernetInterfaceLayer3DhcpClientArgs Empty = new EthernetInterfaceLayer3DhcpClientArgs();
 
     /**
-     * Dhcp client
+     * Automatically create default route pointing to default gateway provided by server
      * 
      */
-    @Import(name="dhcpClient")
-    private @Nullable Output<EthernetInterfaceLayer3DhcpClientDhcpClientArgs> dhcpClient;
+    @Import(name="createDefaultRoute")
+    private @Nullable Output<Boolean> createDefaultRoute;
 
     /**
-     * @return Dhcp client
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
-    public Optional<Output<EthernetInterfaceLayer3DhcpClientDhcpClientArgs>> dhcpClient() {
-        return Optional.ofNullable(this.dhcpClient);
+    public Optional<Output<Boolean>> createDefaultRoute() {
+        return Optional.ofNullable(this.createDefaultRoute);
+    }
+
+    /**
+     * Metric of the default route created
+     * 
+     */
+    @Import(name="defaultRouteMetric")
+    private @Nullable Output<Integer> defaultRouteMetric;
+
+    /**
+     * @return Metric of the default route created
+     * 
+     */
+    public Optional<Output<Integer>> defaultRouteMetric() {
+        return Optional.ofNullable(this.defaultRouteMetric);
+    }
+
+    /**
+     * Enable DHCP?
+     * 
+     */
+    @Import(name="enable")
+    private @Nullable Output<Boolean> enable;
+
+    /**
+     * @return Enable DHCP?
+     * 
+     */
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
+    }
+
+    /**
+     * Ethernet Interfaces DHCP ClientSend hostname
+     * 
+     */
+    @Import(name="sendHostname")
+    private @Nullable Output<EthernetInterfaceLayer3DhcpClientSendHostnameArgs> sendHostname;
+
+    /**
+     * @return Ethernet Interfaces DHCP ClientSend hostname
+     * 
+     */
+    public Optional<Output<EthernetInterfaceLayer3DhcpClientSendHostnameArgs>> sendHostname() {
+        return Optional.ofNullable(this.sendHostname);
     }
 
     private EthernetInterfaceLayer3DhcpClientArgs() {}
 
     private EthernetInterfaceLayer3DhcpClientArgs(EthernetInterfaceLayer3DhcpClientArgs $) {
-        this.dhcpClient = $.dhcpClient;
+        this.createDefaultRoute = $.createDefaultRoute;
+        this.defaultRouteMetric = $.defaultRouteMetric;
+        this.enable = $.enable;
+        this.sendHostname = $.sendHostname;
     }
 
     public static Builder builder() {
@@ -55,24 +105,87 @@ public final class EthernetInterfaceLayer3DhcpClientArgs extends com.pulumi.reso
         }
 
         /**
-         * @param dhcpClient Dhcp client
+         * @param createDefaultRoute Automatically create default route pointing to default gateway provided by server
          * 
          * @return builder
          * 
          */
-        public Builder dhcpClient(@Nullable Output<EthernetInterfaceLayer3DhcpClientDhcpClientArgs> dhcpClient) {
-            $.dhcpClient = dhcpClient;
+        public Builder createDefaultRoute(@Nullable Output<Boolean> createDefaultRoute) {
+            $.createDefaultRoute = createDefaultRoute;
             return this;
         }
 
         /**
-         * @param dhcpClient Dhcp client
+         * @param createDefaultRoute Automatically create default route pointing to default gateway provided by server
          * 
          * @return builder
          * 
          */
-        public Builder dhcpClient(EthernetInterfaceLayer3DhcpClientDhcpClientArgs dhcpClient) {
-            return dhcpClient(Output.of(dhcpClient));
+        public Builder createDefaultRoute(Boolean createDefaultRoute) {
+            return createDefaultRoute(Output.of(createDefaultRoute));
+        }
+
+        /**
+         * @param defaultRouteMetric Metric of the default route created
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultRouteMetric(@Nullable Output<Integer> defaultRouteMetric) {
+            $.defaultRouteMetric = defaultRouteMetric;
+            return this;
+        }
+
+        /**
+         * @param defaultRouteMetric Metric of the default route created
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultRouteMetric(Integer defaultRouteMetric) {
+            return defaultRouteMetric(Output.of(defaultRouteMetric));
+        }
+
+        /**
+         * @param enable Enable DHCP?
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enable(@Nullable Output<Boolean> enable) {
+            $.enable = enable;
+            return this;
+        }
+
+        /**
+         * @param enable Enable DHCP?
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
+        }
+
+        /**
+         * @param sendHostname Ethernet Interfaces DHCP ClientSend hostname
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sendHostname(@Nullable Output<EthernetInterfaceLayer3DhcpClientSendHostnameArgs> sendHostname) {
+            $.sendHostname = sendHostname;
+            return this;
+        }
+
+        /**
+         * @param sendHostname Ethernet Interfaces DHCP ClientSend hostname
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sendHostname(EthernetInterfaceLayer3DhcpClientSendHostnameArgs sendHostname) {
+            return sendHostname(Output.of(sendHostname));
         }
 
         public EthernetInterfaceLayer3DhcpClientArgs build() {

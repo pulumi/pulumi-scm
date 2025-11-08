@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         /// Max packet
         /// </summary>
         [Input("maxPacket")]
-        public Input<double>? MaxPacket { get; set; }
+        public Input<int>? MaxPacket { get; set; }
 
         public LogicalRouterVrfOspfFloodPreventionHelloArgs()
         {

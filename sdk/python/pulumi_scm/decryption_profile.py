@@ -320,6 +320,138 @@ class DecryptionProfile(pulumi.CustomResource):
         """
         DecryptionProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_decryption_profile_base = scm.DecryptionProfile("scm_decryption_profile_base",
+            folder="ngfw-shared",
+            name="dp_base")
+        scm_decryption_profile_forward_proxy = scm.DecryptionProfile("scm_decryption_profile_forward_proxy",
+            folder="ngfw-shared",
+            name="dp_forward_proxy",
+            ssl_forward_proxy={
+                "auto_include_altname": False,
+                "block_client_cert": True,
+                "block_expired_certificate": True,
+                "block_timeout_cert": True,
+                "block_tls13_downgrade_no_resource": False,
+                "block_unknown_cert": False,
+                "block_unsupported_cipher": True,
+                "block_unsupported_version": True,
+                "block_untrusted_issuer": True,
+                "restrict_cert_exts": False,
+                "strip_alpn": True,
+            })
+        scm_decryption_profile_inbound_proxy = scm.DecryptionProfile("scm_decryption_profile_inbound_proxy",
+            folder="ngfw-shared",
+            name="dp_inbound_proxy",
+            ssl_inbound_proxy={
+                "block_if_hsm_unavailable": True,
+                "block_if_no_resource": True,
+                "block_unsupported_cipher": False,
+                "block_unsupported_version": True,
+            })
+        scm_decryption_profile_no_proxy = scm.DecryptionProfile("scm_decryption_profile_no_proxy",
+            folder="ngfw-shared",
+            name="dp_no_proxy",
+            ssl_no_proxy={
+                "block_expired_certificate": True,
+                "block_untrusted_issuer": False,
+            })
+        scm_decryption_profile_protocol_settings = scm.DecryptionProfile("scm_decryption_profile_protocol_settings",
+            folder="ngfw-shared",
+            name="dp_protocol_settings",
+            ssl_protocol_settings={
+                "auth_algo_md5": True,
+                "auth_algo_sha1": True,
+                "auth_algo_sha256": True,
+                "auth_algo_sha384": False,
+                "enc_algo3des": False,
+                "enc_algo_aes128_cbc": False,
+                "enc_algo_aes128_gcm": True,
+                "enc_algo_aes256_cbc": False,
+                "enc_algo_aes256_gcm": True,
+                "enc_algo_chacha20_poly1305": False,
+                "enc_algo_rc4": False,
+                "keyxchg_algo_dhe": True,
+                "keyxchg_algo_ecdhe": True,
+                "keyxchg_algo_rsa": False,
+                "max_version": "max",
+                "min_version": "tls1-2",
+            })
+        mixed_decryption_profile = scm.DecryptionProfile("mixed_decryption_profile",
+            folder="ngfw-shared",
+            name="mixed_dp",
+            ssl_forward_proxy={
+                "auto_include_altname": True,
+                "block_client_cert": True,
+                "block_expired_certificate": False,
+                "restrict_cert_exts": False,
+                "strip_alpn": True,
+            },
+            ssl_inbound_proxy={
+                "block_if_hsm_unavailable": True,
+                "block_if_no_resource": True,
+                "block_unsupported_cipher": True,
+                "block_unsupported_version": True,
+            },
+            ssl_protocol_settings={
+                "auth_algo_md5": True,
+                "auth_algo_sha1": True,
+                "auth_algo_sha256": False,
+                "auth_algo_sha384": True,
+                "enc_algo3des": True,
+                "enc_algo_rc4": True,
+                "keyxchg_algo_dhe": False,
+                "keyxchg_algo_ecdhe": False,
+                "max_version": "tls1-3",
+                "min_version": "tls1-1",
+            })
+        full_mixed_decryption_profile = scm.DecryptionProfile("full_mixed_decryption_profile",
+            folder="ngfw-shared",
+            name="full_mixed_dp",
+            ssl_forward_proxy={
+                "auto_include_altname": True,
+                "block_client_cert": True,
+                "block_expired_certificate": False,
+                "block_timeout_cert": True,
+                "block_unknown_cert": False,
+                "block_unsupported_cipher": True,
+                "block_untrusted_issuer": False,
+                "restrict_cert_exts": False,
+                "strip_alpn": True,
+            },
+            ssl_inbound_proxy={
+                "block_if_hsm_unavailable": True,
+                "block_if_no_resource": False,
+                "block_unsupported_cipher": True,
+                "block_unsupported_version": False,
+            },
+            ssl_no_proxy={
+                "block_expired_certificate": False,
+                "block_untrusted_issuer": True,
+            },
+            ssl_protocol_settings={
+                "auth_algo_md5": False,
+                "auth_algo_sha1": True,
+                "auth_algo_sha256": False,
+                "auth_algo_sha384": True,
+                "enc_algo3des": False,
+                "enc_algo_aes128_gcm": True,
+                "enc_algo_aes256_cbc": False,
+                "enc_algo_aes256_gcm": True,
+                "enc_algo_rc4": True,
+                "keyxchg_algo_dhe": False,
+                "keyxchg_algo_ecdhe": True,
+                "keyxchg_algo_rsa": False,
+                "max_version": "tls1-0",
+                "min_version": "sslv3",
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -339,6 +471,138 @@ class DecryptionProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         DecryptionProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_decryption_profile_base = scm.DecryptionProfile("scm_decryption_profile_base",
+            folder="ngfw-shared",
+            name="dp_base")
+        scm_decryption_profile_forward_proxy = scm.DecryptionProfile("scm_decryption_profile_forward_proxy",
+            folder="ngfw-shared",
+            name="dp_forward_proxy",
+            ssl_forward_proxy={
+                "auto_include_altname": False,
+                "block_client_cert": True,
+                "block_expired_certificate": True,
+                "block_timeout_cert": True,
+                "block_tls13_downgrade_no_resource": False,
+                "block_unknown_cert": False,
+                "block_unsupported_cipher": True,
+                "block_unsupported_version": True,
+                "block_untrusted_issuer": True,
+                "restrict_cert_exts": False,
+                "strip_alpn": True,
+            })
+        scm_decryption_profile_inbound_proxy = scm.DecryptionProfile("scm_decryption_profile_inbound_proxy",
+            folder="ngfw-shared",
+            name="dp_inbound_proxy",
+            ssl_inbound_proxy={
+                "block_if_hsm_unavailable": True,
+                "block_if_no_resource": True,
+                "block_unsupported_cipher": False,
+                "block_unsupported_version": True,
+            })
+        scm_decryption_profile_no_proxy = scm.DecryptionProfile("scm_decryption_profile_no_proxy",
+            folder="ngfw-shared",
+            name="dp_no_proxy",
+            ssl_no_proxy={
+                "block_expired_certificate": True,
+                "block_untrusted_issuer": False,
+            })
+        scm_decryption_profile_protocol_settings = scm.DecryptionProfile("scm_decryption_profile_protocol_settings",
+            folder="ngfw-shared",
+            name="dp_protocol_settings",
+            ssl_protocol_settings={
+                "auth_algo_md5": True,
+                "auth_algo_sha1": True,
+                "auth_algo_sha256": True,
+                "auth_algo_sha384": False,
+                "enc_algo3des": False,
+                "enc_algo_aes128_cbc": False,
+                "enc_algo_aes128_gcm": True,
+                "enc_algo_aes256_cbc": False,
+                "enc_algo_aes256_gcm": True,
+                "enc_algo_chacha20_poly1305": False,
+                "enc_algo_rc4": False,
+                "keyxchg_algo_dhe": True,
+                "keyxchg_algo_ecdhe": True,
+                "keyxchg_algo_rsa": False,
+                "max_version": "max",
+                "min_version": "tls1-2",
+            })
+        mixed_decryption_profile = scm.DecryptionProfile("mixed_decryption_profile",
+            folder="ngfw-shared",
+            name="mixed_dp",
+            ssl_forward_proxy={
+                "auto_include_altname": True,
+                "block_client_cert": True,
+                "block_expired_certificate": False,
+                "restrict_cert_exts": False,
+                "strip_alpn": True,
+            },
+            ssl_inbound_proxy={
+                "block_if_hsm_unavailable": True,
+                "block_if_no_resource": True,
+                "block_unsupported_cipher": True,
+                "block_unsupported_version": True,
+            },
+            ssl_protocol_settings={
+                "auth_algo_md5": True,
+                "auth_algo_sha1": True,
+                "auth_algo_sha256": False,
+                "auth_algo_sha384": True,
+                "enc_algo3des": True,
+                "enc_algo_rc4": True,
+                "keyxchg_algo_dhe": False,
+                "keyxchg_algo_ecdhe": False,
+                "max_version": "tls1-3",
+                "min_version": "tls1-1",
+            })
+        full_mixed_decryption_profile = scm.DecryptionProfile("full_mixed_decryption_profile",
+            folder="ngfw-shared",
+            name="full_mixed_dp",
+            ssl_forward_proxy={
+                "auto_include_altname": True,
+                "block_client_cert": True,
+                "block_expired_certificate": False,
+                "block_timeout_cert": True,
+                "block_unknown_cert": False,
+                "block_unsupported_cipher": True,
+                "block_untrusted_issuer": False,
+                "restrict_cert_exts": False,
+                "strip_alpn": True,
+            },
+            ssl_inbound_proxy={
+                "block_if_hsm_unavailable": True,
+                "block_if_no_resource": False,
+                "block_unsupported_cipher": True,
+                "block_unsupported_version": False,
+            },
+            ssl_no_proxy={
+                "block_expired_certificate": False,
+                "block_untrusted_issuer": True,
+            },
+            ssl_protocol_settings={
+                "auth_algo_md5": False,
+                "auth_algo_sha1": True,
+                "auth_algo_sha256": False,
+                "auth_algo_sha384": True,
+                "enc_algo3des": False,
+                "enc_algo_aes128_gcm": True,
+                "enc_algo_aes256_cbc": False,
+                "enc_algo_aes256_gcm": True,
+                "enc_algo_rc4": True,
+                "keyxchg_algo_dhe": False,
+                "keyxchg_algo_ecdhe": True,
+                "keyxchg_algo_rsa": False,
+                "max_version": "tls1-0",
+                "min_version": "sslv3",
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param DecryptionProfileArgs args: The arguments to use to populate this resource's properties.

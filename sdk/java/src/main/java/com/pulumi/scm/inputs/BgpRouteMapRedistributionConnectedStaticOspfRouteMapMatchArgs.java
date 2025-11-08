@@ -18,14 +18,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs
     public static final BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs Empty = new BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs();
 
     /**
-     * Interface
+     * Connected Static BGP OSPF Route map Interface
      * 
      */
     @Import(name="interface")
     private @Nullable Output<String> interface_;
 
     /**
-     * @return Interface
+     * @return Connected Static BGP OSPF Route map Interface
      * 
      */
     public Optional<Output<String>> interface_() {
@@ -48,14 +48,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs
     }
 
     /**
-     * Metric
+     * Connected Static BGP OSPF Route map Metric
      * 
      */
     @Import(name="metric")
     private @Nullable Output<Integer> metric;
 
     /**
-     * @return Metric
+     * @return Connected Static BGP OSPF Route map Metric
      * 
      */
     public Optional<Output<Integer>> metric() {
@@ -89,7 +89,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs
         }
 
         /**
-         * @param interface_ Interface
+         * @param interface_ Connected Static BGP OSPF Route map Interface
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs
         }
 
         /**
-         * @param interface_ Interface
+         * @param interface_ Connected Static BGP OSPF Route map Interface
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs
         }
 
         /**
-         * @param metric Metric
+         * @param metric Connected Static BGP OSPF Route map Metric
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs
         }
 
         /**
-         * @param metric Metric
+         * @param metric Connected Static BGP OSPF Route map Metric
          * 
          * @return builder
          * 

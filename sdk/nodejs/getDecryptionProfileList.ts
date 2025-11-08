@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM Decryption Profile objects.
+ * //
+ * // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+ * const allShared = scm.getDecryptionProfileList({
+ *     folder: "All",
+ * });
+ * export const scmDecryptionProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getDecryptionProfileList(args?: GetDecryptionProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionProfileListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetDecryptionProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM Decryption Profile objects.
+ * //
+ * // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+ * const allShared = scm.getDecryptionProfileList({
+ *     folder: "All",
+ * });
+ * export const scmDecryptionProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getDecryptionProfileListOutput(args?: GetDecryptionProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionProfileListResult> {
     args = args || {};

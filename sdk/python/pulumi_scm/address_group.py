@@ -349,12 +349,12 @@ class AddressGroup(pulumi.CustomResource):
             ])
         # Create tags to be used for dynamic address group
         scm_addressgroup_tag1 = scm.Tag("scm_addressgroup_tag_1",
-            folder="Shared",
+            folder="All",
             name="scm_addressgroup_tag_1",
             comments="Managed by Pulumi",
             color="Orange")
         scm_addressgroup_tag2 = scm.Tag("scm_addressgroup_tag_2",
-            folder="Shared",
+            folder="All",
             name="scm_addressgroup_tag_2",
             comments="Managed by Pulumi",
             color="Blue")
@@ -417,12 +417,12 @@ class AddressGroup(pulumi.CustomResource):
             ])
         # Create tags to be used for dynamic address group
         scm_addressgroup_tag1 = scm.Tag("scm_addressgroup_tag_1",
-            folder="Shared",
+            folder="All",
             name="scm_addressgroup_tag_1",
             comments="Managed by Pulumi",
             color="Orange")
         scm_addressgroup_tag2 = scm.Tag("scm_addressgroup_tag_2",
-            folder="Shared",
+            folder="All",
             name="scm_addressgroup_tag_2",
             comments="Managed by Pulumi",
             color="Blue")

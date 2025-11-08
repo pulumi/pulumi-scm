@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4 {
     /**
-     * @return Address
+     * @return Connected Static Root OSPF Address
      * 
      */
     private GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address address;
@@ -24,7 +24,7 @@ public final class GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchI
 
     private GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4() {}
     /**
-     * @return Address
+     * @return Connected Static Root OSPF Address
      * 
      */
     public GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address address() {

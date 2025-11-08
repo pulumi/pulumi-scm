@@ -13,6 +13,194 @@ import (
 )
 
 // NatRule resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			exampleTag, err := scm.NewTag(ctx, "example_tag", &scm.TagArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("example-tag"),
+//				Color:  pulumi.String("Red"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Source Translation (SNAT) - Dynamic IP and Port
+//			_, err = scm.NewNatRule(ctx, "example_nat_rule", &scm.NatRuleArgs{
+//				Name: pulumi.String("snat-to-internet-1"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Service:     pulumi.String("service-https"),
+//				Description: pulumi.String("Dynamic SNAT for internal traffic accessing the internet. Updating"),
+//				Disabled:    pulumi.Bool(false),
+//				NatType:     pulumi.String("ipv4"),
+//				Folder:      pulumi.String("All"),
+//				Tags: pulumi.StringArray{
+//					exampleTag.Name,
+//				},
+//				SourceTranslation: &scm.NatRuleSourceTranslationArgs{
+//					DynamicIpAndPort: &scm.NatRuleSourceTranslationDynamicIpAndPortArgs{
+//						TranslatedAddresses: pulumi.StringArray{
+//							pulumi.String("1.1.1.1"),
+//							pulumi.String("1.1.1.5"),
+//						},
+//					},
+//				},
+//				DestinationTranslation: &scm.NatRuleDestinationTranslationArgs{
+//					TranslatedAddress: pulumi.String("192.168.1.10"),
+//					TranslatedPort:    pulumi.Int(8080),
+//				},
+//				ActiveActiveDeviceBinding: pulumi.String("1"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Source Translation (SNAT) - Static IP - Bidirectional - no
+//			_, err = scm.NewNatRule(ctx, "example_nat_static_rule", &scm.NatRuleArgs{
+//				Name: pulumi.String("snat-to-bid-1"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Service:     pulumi.String("service-https"),
+//				Description: pulumi.String("Dynamic SNAT for internal traffic accessing the internet. Updating"),
+//				Disabled:    pulumi.Bool(false),
+//				NatType:     pulumi.String("ipv4"),
+//				Folder:      pulumi.String("All"),
+//				Tags: pulumi.StringArray{
+//					exampleTag.Name,
+//				},
+//				SourceTranslation: &scm.NatRuleSourceTranslationArgs{
+//					StaticIp: &scm.NatRuleSourceTranslationStaticIpArgs{
+//						TranslatedAddress: pulumi.String("1.1.1.5"),
+//						BiDirectional:     pulumi.String("no"),
+//					},
+//				},
+//				DestinationTranslation: &scm.NatRuleDestinationTranslationArgs{
+//					TranslatedAddress: pulumi.String("192.168.1.10"),
+//					TranslatedPort:    pulumi.Int(8080),
+//				},
+//				ActiveActiveDeviceBinding: pulumi.String("1"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Source Translation (SNAT) - Static IP - Bidirectional - yes
+//			_, err = scm.NewNatRule(ctx, "example_nat_static_rule_2", &scm.NatRuleArgs{
+//				Name: pulumi.String("snat-to-bid-yes-1"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Service:     pulumi.String("service-https"),
+//				Description: pulumi.String("Dynamic SNAT for internal traffic accessing the internet. Updating"),
+//				Disabled:    pulumi.Bool(false),
+//				NatType:     pulumi.String("ipv4"),
+//				Folder:      pulumi.String("All"),
+//				Tags: pulumi.StringArray{
+//					exampleTag.Name,
+//				},
+//				SourceTranslation: &scm.NatRuleSourceTranslationArgs{
+//					StaticIp: &scm.NatRuleSourceTranslationStaticIpArgs{
+//						TranslatedAddress: pulumi.String("1.1.1.5"),
+//						BiDirectional:     pulumi.String("yes"),
+//					},
+//				},
+//				ActiveActiveDeviceBinding: pulumi.String("1"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Source Translation (SNAT) - Dynamic IP
+//			_, err = scm.NewNatRule(ctx, "example_nat_dynamic_rule", &scm.NatRuleArgs{
+//				Name: pulumi.String("snat-to-dyanamic-1"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Service:     pulumi.String("service-https"),
+//				Description: pulumi.String("Dynamic SNAT for internal traffic accessing the internet. Updating"),
+//				Disabled:    pulumi.Bool(false),
+//				NatType:     pulumi.String("ipv4"),
+//				Folder:      pulumi.String("All"),
+//				Tags: pulumi.StringArray{
+//					exampleTag.Name,
+//				},
+//				SourceTranslation: &scm.NatRuleSourceTranslationArgs{
+//					DynamicIp: &scm.NatRuleSourceTranslationDynamicIpArgs{
+//						TranslatedAddresses: pulumi.StringArray{
+//							pulumi.String("1.1.1.0/24"),
+//						},
+//						Fallback: &scm.NatRuleSourceTranslationDynamicIpFallbackArgs{
+//							TranslatedAddresses: pulumi.StringArray{
+//								pulumi.String("1.1.1.0"),
+//							},
+//							InterfaceAddress: &scm.NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgs{
+//								Interface: pulumi.String("ethernet1/1"),
+//								Ip:        pulumi.String("1.1.1.5"),
+//							},
+//						},
+//					},
+//				},
+//				DestinationTranslation: &scm.NatRuleDestinationTranslationArgs{
+//					TranslatedAddress: pulumi.String("192.168.1.10"),
+//					TranslatedPort:    pulumi.Int(8080),
+//				},
+//				ActiveActiveDeviceBinding: pulumi.String("1"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type NatRule struct {
 	pulumi.CustomResourceState
 
@@ -20,16 +208,16 @@ type NatRule struct {
 	ActiveActiveDeviceBinding pulumi.StringPtrOutput `pulumi:"activeActiveDeviceBinding"`
 	// NAT rule description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
+	// Destination translation
+	DestinationTranslation NatRuleDestinationTranslationPtrOutput `pulumi:"destinationTranslation"`
 	// Destination address(es) of the original packet
 	Destinations pulumi.StringArrayOutput `pulumi:"destinations"`
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// Disable NAT rule?
 	Disabled pulumi.BoolOutput `pulumi:"disabled"`
-	// Distribution method
-	Distribution pulumi.StringPtrOutput `pulumi:"distribution"`
-	// DNS rewrite
-	DnsRewrite NatRuleDnsRewritePtrOutput `pulumi:"dnsRewrite"`
+	// Dynamic destination translation
+	DynamicDestinationTranslation NatRuleDynamicDestinationTranslationPtrOutput `pulumi:"dynamicDestinationTranslation"`
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Source zone(s) of the original packet
@@ -55,10 +243,6 @@ type NatRule struct {
 	ToInterface pulumi.StringPtrOutput `pulumi:"toInterface"`
 	// Destination zone of the original packet
 	Tos pulumi.StringArrayOutput `pulumi:"tos"`
-	// Translated destination IP address
-	TranslatedAddressSingle pulumi.StringPtrOutput `pulumi:"translatedAddressSingle"`
-	// Translated destination port
-	TranslatedPort pulumi.IntPtrOutput `pulumi:"translatedPort"`
 }
 
 // NewNatRule registers a new resource with the given unique name, arguments, and options.
@@ -110,16 +294,16 @@ type natRuleState struct {
 	ActiveActiveDeviceBinding *string `pulumi:"activeActiveDeviceBinding"`
 	// NAT rule description
 	Description *string `pulumi:"description"`
+	// Destination translation
+	DestinationTranslation *NatRuleDestinationTranslation `pulumi:"destinationTranslation"`
 	// Destination address(es) of the original packet
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// Disable NAT rule?
 	Disabled *bool `pulumi:"disabled"`
-	// Distribution method
-	Distribution *string `pulumi:"distribution"`
-	// DNS rewrite
-	DnsRewrite *NatRuleDnsRewrite `pulumi:"dnsRewrite"`
+	// Dynamic destination translation
+	DynamicDestinationTranslation *NatRuleDynamicDestinationTranslation `pulumi:"dynamicDestinationTranslation"`
 	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// Source zone(s) of the original packet
@@ -145,10 +329,6 @@ type natRuleState struct {
 	ToInterface *string `pulumi:"toInterface"`
 	// Destination zone of the original packet
 	Tos []string `pulumi:"tos"`
-	// Translated destination IP address
-	TranslatedAddressSingle *string `pulumi:"translatedAddressSingle"`
-	// Translated destination port
-	TranslatedPort *int `pulumi:"translatedPort"`
 }
 
 type NatRuleState struct {
@@ -156,16 +336,16 @@ type NatRuleState struct {
 	ActiveActiveDeviceBinding pulumi.StringPtrInput
 	// NAT rule description
 	Description pulumi.StringPtrInput
+	// Destination translation
+	DestinationTranslation NatRuleDestinationTranslationPtrInput
 	// Destination address(es) of the original packet
 	Destinations pulumi.StringArrayInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// Disable NAT rule?
 	Disabled pulumi.BoolPtrInput
-	// Distribution method
-	Distribution pulumi.StringPtrInput
-	// DNS rewrite
-	DnsRewrite NatRuleDnsRewritePtrInput
+	// Dynamic destination translation
+	DynamicDestinationTranslation NatRuleDynamicDestinationTranslationPtrInput
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
 	// Source zone(s) of the original packet
@@ -191,10 +371,6 @@ type NatRuleState struct {
 	ToInterface pulumi.StringPtrInput
 	// Destination zone of the original packet
 	Tos pulumi.StringArrayInput
-	// Translated destination IP address
-	TranslatedAddressSingle pulumi.StringPtrInput
-	// Translated destination port
-	TranslatedPort pulumi.IntPtrInput
 }
 
 func (NatRuleState) ElementType() reflect.Type {
@@ -206,16 +382,16 @@ type natRuleArgs struct {
 	ActiveActiveDeviceBinding *string `pulumi:"activeActiveDeviceBinding"`
 	// NAT rule description
 	Description *string `pulumi:"description"`
+	// Destination translation
+	DestinationTranslation *NatRuleDestinationTranslation `pulumi:"destinationTranslation"`
 	// Destination address(es) of the original packet
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// Disable NAT rule?
 	Disabled *bool `pulumi:"disabled"`
-	// Distribution method
-	Distribution *string `pulumi:"distribution"`
-	// DNS rewrite
-	DnsRewrite *NatRuleDnsRewrite `pulumi:"dnsRewrite"`
+	// Dynamic destination translation
+	DynamicDestinationTranslation *NatRuleDynamicDestinationTranslation `pulumi:"dynamicDestinationTranslation"`
 	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
 	// Source zone(s) of the original packet
@@ -240,10 +416,6 @@ type natRuleArgs struct {
 	ToInterface *string `pulumi:"toInterface"`
 	// Destination zone of the original packet
 	Tos []string `pulumi:"tos"`
-	// Translated destination IP address
-	TranslatedAddressSingle *string `pulumi:"translatedAddressSingle"`
-	// Translated destination port
-	TranslatedPort *int `pulumi:"translatedPort"`
 }
 
 // The set of arguments for constructing a NatRule resource.
@@ -252,16 +424,16 @@ type NatRuleArgs struct {
 	ActiveActiveDeviceBinding pulumi.StringPtrInput
 	// NAT rule description
 	Description pulumi.StringPtrInput
+	// Destination translation
+	DestinationTranslation NatRuleDestinationTranslationPtrInput
 	// Destination address(es) of the original packet
 	Destinations pulumi.StringArrayInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// Disable NAT rule?
 	Disabled pulumi.BoolPtrInput
-	// Distribution method
-	Distribution pulumi.StringPtrInput
-	// DNS rewrite
-	DnsRewrite NatRuleDnsRewritePtrInput
+	// Dynamic destination translation
+	DynamicDestinationTranslation NatRuleDynamicDestinationTranslationPtrInput
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
 	// Source zone(s) of the original packet
@@ -286,10 +458,6 @@ type NatRuleArgs struct {
 	ToInterface pulumi.StringPtrInput
 	// Destination zone of the original packet
 	Tos pulumi.StringArrayInput
-	// Translated destination IP address
-	TranslatedAddressSingle pulumi.StringPtrInput
-	// Translated destination port
-	TranslatedPort pulumi.IntPtrInput
 }
 
 func (NatRuleArgs) ElementType() reflect.Type {
@@ -389,6 +557,11 @@ func (o NatRuleOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
+// Destination translation
+func (o NatRuleOutput) DestinationTranslation() NatRuleDestinationTranslationPtrOutput {
+	return o.ApplyT(func(v *NatRule) NatRuleDestinationTranslationPtrOutput { return v.DestinationTranslation }).(NatRuleDestinationTranslationPtrOutput)
+}
+
 // Destination address(es) of the original packet
 func (o NatRuleOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.StringArrayOutput { return v.Destinations }).(pulumi.StringArrayOutput)
@@ -404,14 +577,9 @@ func (o NatRuleOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.BoolOutput { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// Distribution method
-func (o NatRuleOutput) Distribution() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *NatRule) pulumi.StringPtrOutput { return v.Distribution }).(pulumi.StringPtrOutput)
-}
-
-// DNS rewrite
-func (o NatRuleOutput) DnsRewrite() NatRuleDnsRewritePtrOutput {
-	return o.ApplyT(func(v *NatRule) NatRuleDnsRewritePtrOutput { return v.DnsRewrite }).(NatRuleDnsRewritePtrOutput)
+// Dynamic destination translation
+func (o NatRuleOutput) DynamicDestinationTranslation() NatRuleDynamicDestinationTranslationPtrOutput {
+	return o.ApplyT(func(v *NatRule) NatRuleDynamicDestinationTranslationPtrOutput { return v.DynamicDestinationTranslation }).(NatRuleDynamicDestinationTranslationPtrOutput)
 }
 
 // The folder in which the resource is defined
@@ -476,16 +644,6 @@ func (o NatRuleOutput) ToInterface() pulumi.StringPtrOutput {
 // Destination zone of the original packet
 func (o NatRuleOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *NatRule) pulumi.StringArrayOutput { return v.Tos }).(pulumi.StringArrayOutput)
-}
-
-// Translated destination IP address
-func (o NatRuleOutput) TranslatedAddressSingle() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *NatRule) pulumi.StringPtrOutput { return v.TranslatedAddressSingle }).(pulumi.StringPtrOutput)
-}
-
-// Translated destination port
-func (o NatRuleOutput) TranslatedPort() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *NatRule) pulumi.IntPtrOutput { return v.TranslatedPort }).(pulumi.IntPtrOutput)
 }
 
 type NatRuleArrayOutput struct{ *pulumi.OutputState }

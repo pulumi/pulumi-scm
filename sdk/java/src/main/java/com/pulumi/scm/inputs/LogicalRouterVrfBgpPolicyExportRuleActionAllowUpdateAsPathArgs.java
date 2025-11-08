@@ -7,7 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNoneArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveArgs;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -37,13 +37,13 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
      * 
      */
     @Import(name="prepend")
-    private @Nullable Output<Double> prepend;
+    private @Nullable Output<Integer> prepend;
 
     /**
      * @return Prepend
      * 
      */
-    public Optional<Output<Double>> prepend() {
+    public Optional<Output<Integer>> prepend() {
         return Optional.ofNullable(this.prepend);
     }
 
@@ -67,13 +67,13 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
      * 
      */
     @Import(name="removeAndPrepend")
-    private @Nullable Output<Double> removeAndPrepend;
+    private @Nullable Output<Integer> removeAndPrepend;
 
     /**
      * @return Remove and prepend
      * 
      */
-    public Optional<Output<Double>> removeAndPrepend() {
+    public Optional<Output<Integer>> removeAndPrepend() {
         return Optional.ofNullable(this.removeAndPrepend);
     }
 
@@ -131,7 +131,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
          * @return builder
          * 
          */
-        public Builder prepend(@Nullable Output<Double> prepend) {
+        public Builder prepend(@Nullable Output<Integer> prepend) {
             $.prepend = prepend;
             return this;
         }
@@ -142,7 +142,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
          * @return builder
          * 
          */
-        public Builder prepend(Double prepend) {
+        public Builder prepend(Integer prepend) {
             return prepend(Output.of(prepend));
         }
 
@@ -173,7 +173,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
          * @return builder
          * 
          */
-        public Builder removeAndPrepend(@Nullable Output<Double> removeAndPrepend) {
+        public Builder removeAndPrepend(@Nullable Output<Integer> removeAndPrepend) {
             $.removeAndPrepend = removeAndPrepend;
             return this;
         }
@@ -184,7 +184,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArg
          * @return builder
          * 
          */
-        public Builder removeAndPrepend(Double removeAndPrepend) {
+        public Builder removeAndPrepend(Integer removeAndPrepend) {
             return removeAndPrepend(Output.of(removeAndPrepend));
         }
 

@@ -18,14 +18,14 @@ public final class DnsProxyCacheArgs extends com.pulumi.resources.ResourceArgs {
     public static final DnsProxyCacheArgs Empty = new DnsProxyCacheArgs();
 
     /**
-     * Cache edns
+     * Cache EDNS UDP response
      * 
      */
     @Import(name="cacheEdns")
     private @Nullable Output<Boolean> cacheEdns;
 
     /**
-     * @return Cache edns
+     * @return Cache EDNS UDP response
      * 
      */
     public Optional<Output<Boolean>> cacheEdns() {
@@ -89,7 +89,7 @@ public final class DnsProxyCacheArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param cacheEdns Cache edns
+         * @param cacheEdns Cache EDNS UDP response
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class DnsProxyCacheArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param cacheEdns Cache edns
+         * @param cacheEdns Cache EDNS UDP response
          * 
          * @return builder
          * 

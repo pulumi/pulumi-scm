@@ -551,6 +551,91 @@ class PbfRule(pulumi.CustomResource):
         """
         PbfRule resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example_tag = scm.Tag("example_tag",
+            folder="All",
+            name="pbf-rule-tag-test-1",
+            color="Red")
+        # --- PBF Rule Resource with discard action---
+        example_pbf_rule = scm.PbfRule("example_pbf_rule",
+            name="pbf-test-rule-discard",
+            folder="All",
+            description="PBF rule for forwarding specific traffic.",
+            from_={
+                "zones": ["zone-untrust"],
+            },
+            sources=["any"],
+            destinations=["any"],
+            applications=["any"],
+            services=["service-http"],
+            source_users=["any"],
+            action={
+                "discard": {},
+            },
+            tags=[example_tag.name],
+            enforce_symmetric_return={
+                "enabled": False,
+            },
+            schedule="non-work-hours")
+        # --- PBF Rule Resource with no-pbf action---
+        example_no_pbf_rule = scm.PbfRule("example_no_pbf_rule",
+            name="pbf-test-rule-no-pbf",
+            folder="All",
+            description="PBF rule for forwarding specific traffic",
+            from_={
+                "zones": ["zone-untrust"],
+            },
+            sources=["any"],
+            destinations=["any"],
+            applications=["any"],
+            services=["service-https"],
+            source_users=["any"],
+            action={
+                "no_pbf": {},
+            },
+            tags=[example_tag.name],
+            enforce_symmetric_return={
+                "enabled": False,
+            },
+            schedule="non-work-hours")
+        # --- PBF Rule Resource with forward action---
+        example_forward_pbf_rule = scm.PbfRule("example_forward_pbf_rule",
+            name="pbf-test-rule-forward",
+            folder="All",
+            description="PBF rule for forwarding specific traffic",
+            from_={
+                "zones": ["zone-untrust"],
+            },
+            sources=["any"],
+            destinations=["any"],
+            applications=["any"],
+            services=["service-http"],
+            source_users=["any"],
+            action={
+                "forward": {
+                    "egress_interface": "ethernet1/1",
+                    "nexthop": {
+                        "ip_address": "192.168.1.254",
+                    },
+                    "monitor": {
+                        "ip_address": "8.8.8.10",
+                        "profile": "test_tf_profile",
+                        "disable_if_unreachable": True,
+                    },
+                },
+            },
+            tags=[example_tag.name],
+            enforce_symmetric_return={
+                "enabled": True,
+            },
+            schedule="non-work-hours")
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['PbfRuleActionArgs', 'PbfRuleActionArgsDict']] action: Action
@@ -577,6 +662,91 @@ class PbfRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         PbfRule resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example_tag = scm.Tag("example_tag",
+            folder="All",
+            name="pbf-rule-tag-test-1",
+            color="Red")
+        # --- PBF Rule Resource with discard action---
+        example_pbf_rule = scm.PbfRule("example_pbf_rule",
+            name="pbf-test-rule-discard",
+            folder="All",
+            description="PBF rule for forwarding specific traffic.",
+            from_={
+                "zones": ["zone-untrust"],
+            },
+            sources=["any"],
+            destinations=["any"],
+            applications=["any"],
+            services=["service-http"],
+            source_users=["any"],
+            action={
+                "discard": {},
+            },
+            tags=[example_tag.name],
+            enforce_symmetric_return={
+                "enabled": False,
+            },
+            schedule="non-work-hours")
+        # --- PBF Rule Resource with no-pbf action---
+        example_no_pbf_rule = scm.PbfRule("example_no_pbf_rule",
+            name="pbf-test-rule-no-pbf",
+            folder="All",
+            description="PBF rule for forwarding specific traffic",
+            from_={
+                "zones": ["zone-untrust"],
+            },
+            sources=["any"],
+            destinations=["any"],
+            applications=["any"],
+            services=["service-https"],
+            source_users=["any"],
+            action={
+                "no_pbf": {},
+            },
+            tags=[example_tag.name],
+            enforce_symmetric_return={
+                "enabled": False,
+            },
+            schedule="non-work-hours")
+        # --- PBF Rule Resource with forward action---
+        example_forward_pbf_rule = scm.PbfRule("example_forward_pbf_rule",
+            name="pbf-test-rule-forward",
+            folder="All",
+            description="PBF rule for forwarding specific traffic",
+            from_={
+                "zones": ["zone-untrust"],
+            },
+            sources=["any"],
+            destinations=["any"],
+            applications=["any"],
+            services=["service-http"],
+            source_users=["any"],
+            action={
+                "forward": {
+                    "egress_interface": "ethernet1/1",
+                    "nexthop": {
+                        "ip_address": "192.168.1.254",
+                    },
+                    "monitor": {
+                        "ip_address": "8.8.8.10",
+                        "profile": "test_tf_profile",
+                        "disable_if_unreachable": True,
+                    },
+                },
+            },
+            tags=[example_tag.name],
+            enforce_symmetric_return={
+                "enabled": True,
+            },
+            schedule="non-work-hours")
+        ```
 
         :param str resource_name: The name of the resource.
         :param PbfRuleArgs args: The arguments to use to populate this resource's properties.

@@ -12,6 +12,8 @@ import (
 )
 
 // DnsSecurityProfile resource
+//
+// ## Example Usage
 type DnsSecurityProfile struct {
 	pulumi.CustomResourceState
 

@@ -17,12 +17,12 @@ import * as utilities from "./utilities";
  *
  * // 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
  * const allShared = scm.getApplicationGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const applicationGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
  * // Example of using pagination to get a subset of application groups.
  * const paginatedExample = scm.getApplicationGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
@@ -129,12 +129,12 @@ export interface GetApplicationGroupListResult {
  *
  * // 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
  * const allShared = scm.getApplicationGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const applicationGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, group) => ({ ...__obj, [group.id]: group })));
  * // Example of using pagination to get a subset of application groups.
  * const paginatedExample = scm.getApplicationGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });

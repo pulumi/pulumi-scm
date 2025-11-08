@@ -8,7 +8,8 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetVlanInterfaceListDataArp;
 import com.pulumi.scm.outputs.GetVlanInterfaceListDataDdnsConfig;
 import com.pulumi.scm.outputs.GetVlanInterfaceListDataDhcpClient;
-import java.lang.Double;
+import com.pulumi.scm.outputs.GetVlanInterfaceListDataIp;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class GetVlanInterfaceListData {
      */
     private GetVlanInterfaceListDataDdnsConfig ddnsConfig;
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
     private String defaultValue;
@@ -41,7 +42,7 @@ public final class GetVlanInterfaceListData {
      */
     private String device;
     /**
-     * @return Dhcp client
+     * @return Vlan interfaces DHCP Client Object
      * 
      */
     private GetVlanInterfaceListDataDhcpClient dhcpClient;
@@ -61,15 +62,15 @@ public final class GetVlanInterfaceListData {
      */
     private String interfaceManagementProfile;
     /**
-     * @return Ip
+     * @return VLAN Interface IP Parent
      * 
      */
-    private List<String> ips;
+    private List<GetVlanInterfaceListDataIp> ips;
     /**
      * @return MTU
      * 
      */
-    private Double mtu;
+    private Integer mtu;
     /**
      * @return L3 sub-interface name
      * 
@@ -82,10 +83,10 @@ public final class GetVlanInterfaceListData {
     private String snippet;
     private String tfid;
     /**
-     * @return Vlan tag
+     * @return VLAN tag
      * 
      */
-    private Double vlanTag;
+    private String vlanTag;
 
     private GetVlanInterfaceListData() {}
     /**
@@ -110,7 +111,7 @@ public final class GetVlanInterfaceListData {
         return this.ddnsConfig;
     }
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
     public String defaultValue() {
@@ -124,7 +125,7 @@ public final class GetVlanInterfaceListData {
         return this.device;
     }
     /**
-     * @return Dhcp client
+     * @return Vlan interfaces DHCP Client Object
      * 
      */
     public GetVlanInterfaceListDataDhcpClient dhcpClient() {
@@ -152,17 +153,17 @@ public final class GetVlanInterfaceListData {
         return this.interfaceManagementProfile;
     }
     /**
-     * @return Ip
+     * @return VLAN Interface IP Parent
      * 
      */
-    public List<String> ips() {
+    public List<GetVlanInterfaceListDataIp> ips() {
         return this.ips;
     }
     /**
      * @return MTU
      * 
      */
-    public Double mtu() {
+    public Integer mtu() {
         return this.mtu;
     }
     /**
@@ -183,10 +184,10 @@ public final class GetVlanInterfaceListData {
         return this.tfid;
     }
     /**
-     * @return Vlan tag
+     * @return VLAN tag
      * 
      */
-    public Double vlanTag() {
+    public String vlanTag() {
         return this.vlanTag;
     }
 
@@ -208,12 +209,12 @@ public final class GetVlanInterfaceListData {
         private String folder;
         private String id;
         private String interfaceManagementProfile;
-        private List<String> ips;
-        private Double mtu;
+        private List<GetVlanInterfaceListDataIp> ips;
+        private Integer mtu;
         private String name;
         private String snippet;
         private String tfid;
-        private Double vlanTag;
+        private String vlanTag;
         public Builder() {}
         public Builder(GetVlanInterfaceListData defaults) {
     	      Objects.requireNonNull(defaults);
@@ -310,18 +311,18 @@ public final class GetVlanInterfaceListData {
             return this;
         }
         @CustomType.Setter
-        public Builder ips(List<String> ips) {
+        public Builder ips(List<GetVlanInterfaceListDataIp> ips) {
             if (ips == null) {
               throw new MissingRequiredPropertyException("GetVlanInterfaceListData", "ips");
             }
             this.ips = ips;
             return this;
         }
-        public Builder ips(String... ips) {
+        public Builder ips(GetVlanInterfaceListDataIp... ips) {
             return ips(List.of(ips));
         }
         @CustomType.Setter
-        public Builder mtu(Double mtu) {
+        public Builder mtu(Integer mtu) {
             if (mtu == null) {
               throw new MissingRequiredPropertyException("GetVlanInterfaceListData", "mtu");
             }
@@ -353,7 +354,7 @@ public final class GetVlanInterfaceListData {
             return this;
         }
         @CustomType.Setter
-        public Builder vlanTag(Double vlanTag) {
+        public Builder vlanTag(String vlanTag) {
             if (vlanTag == null) {
               throw new MissingRequiredPropertyException("GetVlanInterfaceListData", "vlanTag");
             }

@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Arg
     public static final BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Args Empty = new BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Args();
 
     /**
-     * Next hop
+     * Connected Static BGP Route maps set Next ipv4 hop
      * 
      */
     @Import(name="nextHop")
     private @Nullable Output<String> nextHop;
 
     /**
-     * @return Next hop
+     * @return Connected Static BGP Route maps set Next ipv4 hop
      * 
      */
     public Optional<Output<String>> nextHop() {
@@ -31,14 +31,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Arg
     }
 
     /**
-     * Source address
+     * Connected Static BGP Route maps set ipv4 Source address
      * 
      */
     @Import(name="sourceAddress")
     private @Nullable Output<String> sourceAddress;
 
     /**
-     * @return Source address
+     * @return Connected Static BGP Route maps set ipv4 Source address
      * 
      */
     public Optional<Output<String>> sourceAddress() {
@@ -71,7 +71,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Arg
         }
 
         /**
-         * @param nextHop Next hop
+         * @param nextHop Connected Static BGP Route maps set Next ipv4 hop
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Arg
         }
 
         /**
-         * @param nextHop Next hop
+         * @param nextHop Connected Static BGP Route maps set Next ipv4 hop
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Arg
         }
 
         /**
-         * @param sourceAddress Source address
+         * @param sourceAddress Connected Static BGP Route maps set ipv4 Source address
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Arg
         }
 
         /**
-         * @param sourceAddress Source address
+         * @param sourceAddress Connected Static BGP Route maps set ipv4 Source address
          * 
          * @return builder
          * 

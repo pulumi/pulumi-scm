@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class DnsProxyUdpQueriesRetriesGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Attempts
+        /// Maximum number of retries before trying next name server
         /// </summary>
         [Input("attempts")]
         public Input<int>? Attempts { get; set; }
 
         /// <summary>
-        /// Interval
+        /// Time in seconds for another request to be sent
         /// </summary>
         [Input("interval")]
         public Input<int>? Interval { get; set; }

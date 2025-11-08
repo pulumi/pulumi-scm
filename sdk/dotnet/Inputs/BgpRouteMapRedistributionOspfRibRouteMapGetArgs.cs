@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionOspfRibRouteMapGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Action
+        /// OSPF RIB Route maps Action
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }
 
         /// <summary>
-        /// Description
+        /// OSPF RIB Route maps Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -31,13 +31,13 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.BgpRouteMapRedistributionOspfRibRouteMapMatchGetArgs>? Match { get; set; }
 
         /// <summary>
-        /// Sequence number
+        /// OSPF RIB Route mapsSequence number
         /// </summary>
         [Input("name")]
         public Input<int>? Name { get; set; }
 
         /// <summary>
-        /// Set
+        /// OSPF RIB Route maps set
         /// </summary>
         [Input("set")]
         public Input<Inputs.BgpRouteMapRedistributionOspfRibRouteMapSetGetArgs>? Set { get; set; }

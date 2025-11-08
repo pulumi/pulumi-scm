@@ -19,14 +19,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
     public static final BgpRouteMapRedistributionOspfRibRouteMapArgs Empty = new BgpRouteMapRedistributionOspfRibRouteMapArgs();
 
     /**
-     * Action
+     * OSPF RIB Route maps Action
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return OSPF RIB Route maps Action
      * 
      */
     public Optional<Output<String>> action() {
@@ -34,14 +34,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
     }
 
     /**
-     * Description
+     * OSPF RIB Route maps Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return Description
+     * @return OSPF RIB Route maps Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -64,14 +64,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
     }
 
     /**
-     * Sequence number
+     * OSPF RIB Route mapsSequence number
      * 
      */
     @Import(name="name")
     private @Nullable Output<Integer> name;
 
     /**
-     * @return Sequence number
+     * @return OSPF RIB Route mapsSequence number
      * 
      */
     public Optional<Output<Integer>> name() {
@@ -79,14 +79,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
     }
 
     /**
-     * Set
+     * OSPF RIB Route maps set
      * 
      */
     @Import(name="set")
     private @Nullable Output<BgpRouteMapRedistributionOspfRibRouteMapSetArgs> set;
 
     /**
-     * @return Set
+     * @return OSPF RIB Route maps set
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionOspfRibRouteMapSetArgs>> set() {
@@ -122,7 +122,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param action Action
+         * @param action OSPF RIB Route maps Action
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param action Action
+         * @param action OSPF RIB Route maps Action
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param description Description
+         * @param description OSPF RIB Route maps Description
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param description Description
+         * @param description OSPF RIB Route maps Description
          * 
          * @return builder
          * 
@@ -185,7 +185,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param name Sequence number
+         * @param name OSPF RIB Route mapsSequence number
          * 
          * @return builder
          * 
@@ -196,7 +196,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param name Sequence number
+         * @param name OSPF RIB Route mapsSequence number
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param set Set
+         * @param set OSPF RIB Route maps set
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapArgs extends com.pulu
         }
 
         /**
-         * @param set Set
+         * @param set OSPF RIB Route maps set
          * 
          * @return builder
          * 

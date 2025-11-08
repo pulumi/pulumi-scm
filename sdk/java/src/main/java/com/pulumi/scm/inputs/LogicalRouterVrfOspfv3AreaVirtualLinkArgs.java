@@ -9,7 +9,7 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.inputs.LogicalRouterVrfOspfv3AreaVirtualLinkBfdArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfOspfv3AreaVirtualLinkVrTimingArgs;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -70,13 +70,13 @@ public final class LogicalRouterVrfOspfv3AreaVirtualLinkArgs extends com.pulumi.
      * 
      */
     @Import(name="instanceId")
-    private @Nullable Output<Double> instanceId;
+    private @Nullable Output<Integer> instanceId;
 
     /**
      * @return Instance id
      * 
      */
-    public Optional<Output<Double>> instanceId() {
+    public Optional<Output<Integer>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
 
@@ -85,13 +85,13 @@ public final class LogicalRouterVrfOspfv3AreaVirtualLinkArgs extends com.pulumi.
      * 
      */
     @Import(name="interfaceId")
-    private @Nullable Output<Double> interfaceId;
+    private @Nullable Output<Integer> interfaceId;
 
     /**
      * @return Interface id
      * 
      */
-    public Optional<Output<Double>> interfaceId() {
+    public Optional<Output<Integer>> interfaceId() {
         return Optional.ofNullable(this.interfaceId);
     }
 
@@ -288,7 +288,7 @@ public final class LogicalRouterVrfOspfv3AreaVirtualLinkArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder instanceId(@Nullable Output<Double> instanceId) {
+        public Builder instanceId(@Nullable Output<Integer> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
@@ -299,7 +299,7 @@ public final class LogicalRouterVrfOspfv3AreaVirtualLinkArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder instanceId(Double instanceId) {
+        public Builder instanceId(Integer instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
@@ -309,7 +309,7 @@ public final class LogicalRouterVrfOspfv3AreaVirtualLinkArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder interfaceId(@Nullable Output<Double> interfaceId) {
+        public Builder interfaceId(@Nullable Output<Integer> interfaceId) {
             $.interfaceId = interfaceId;
             return this;
         }
@@ -320,7 +320,7 @@ public final class LogicalRouterVrfOspfv3AreaVirtualLinkArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder interfaceId(Double interfaceId) {
+        public Builder interfaceId(Integer interfaceId) {
             return interfaceId(Output.of(interfaceId));
         }
 

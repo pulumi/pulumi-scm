@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionOspfBgpRouteMapResult
     {
         /// <summary>
-        /// Action
+        /// OSPF BGP Route maps Action
         /// </summary>
         public readonly string Action;
         /// <summary>
-        /// Description
+        /// OSPF BGP Route maps Description
         /// </summary>
         public readonly string Description;
         /// <summary>
@@ -26,11 +26,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionOspfBgpRouteMapMatchResult Match;
         /// <summary>
-        /// Sequence number
+        /// OSPF BGP Route maps Sequence number
         /// </summary>
         public readonly int Name;
         /// <summary>
-        /// Set
+        /// OSPF Root Set
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionOspfBgpRouteMapSetResult Set;
 

@@ -28,7 +28,7 @@ public final class GetSdwanTrafficDistributionProfileListData {
      */
     private String id;
     /**
-     * @return Link tags
+     * @return Link-Tags for interfaces identified by defined tags
      * 
      */
     private List<GetSdwanTrafficDistributionProfileListDataLinkTag> linkTags;
@@ -72,7 +72,7 @@ public final class GetSdwanTrafficDistributionProfileListData {
         return this.id;
     }
     /**
-     * @return Link tags
+     * @return Link-Tags for interfaces identified by defined tags
      * 
      */
     public List<GetSdwanTrafficDistributionProfileListDataLinkTag> linkTags() {

@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,62 +15,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsProxyDomainServer {
     /**
-     * @return Cacheable
+     * @return Enable caching for this DNS proxy rule?
      * 
      */
     private @Nullable Boolean cacheable;
     /**
-     * @return Domain name
+     * @return Domain names(s) that will be matched
      * 
      */
     private @Nullable List<String> domainNames;
     /**
-     * @return Name
+     * @return Proxy rule name
      * 
      */
-    private @Nullable String name;
+    private String name;
     /**
-     * @return Primary
+     * @return Primary DNS server IP address
      * 
      */
-    private @Nullable String primary;
+    private String primary;
     /**
-     * @return Secondary
+     * @return Secondary DNS server IP address
      * 
      */
     private @Nullable String secondary;
 
     private DnsProxyDomainServer() {}
     /**
-     * @return Cacheable
+     * @return Enable caching for this DNS proxy rule?
      * 
      */
     public Optional<Boolean> cacheable() {
         return Optional.ofNullable(this.cacheable);
     }
     /**
-     * @return Domain name
+     * @return Domain names(s) that will be matched
      * 
      */
     public List<String> domainNames() {
         return this.domainNames == null ? List.of() : this.domainNames;
     }
     /**
-     * @return Name
+     * @return Proxy rule name
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public String name() {
+        return this.name;
     }
     /**
-     * @return Primary
+     * @return Primary DNS server IP address
      * 
      */
-    public Optional<String> primary() {
-        return Optional.ofNullable(this.primary);
+    public String primary() {
+        return this.primary;
     }
     /**
-     * @return Secondary
+     * @return Secondary DNS server IP address
      * 
      */
     public Optional<String> secondary() {
@@ -87,8 +88,8 @@ public final class DnsProxyDomainServer {
     public static final class Builder {
         private @Nullable Boolean cacheable;
         private @Nullable List<String> domainNames;
-        private @Nullable String name;
-        private @Nullable String primary;
+        private String name;
+        private String primary;
         private @Nullable String secondary;
         public Builder() {}
         public Builder(DnsProxyDomainServer defaults) {
@@ -116,14 +117,18 @@ public final class DnsProxyDomainServer {
             return domainNames(List.of(domainNames));
         }
         @CustomType.Setter
-        public Builder name(@Nullable String name) {
-
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("DnsProxyDomainServer", "name");
+            }
             this.name = name;
             return this;
         }
         @CustomType.Setter
-        public Builder primary(@Nullable String primary) {
-
+        public Builder primary(String primary) {
+            if (primary == null) {
+              throw new MissingRequiredPropertyException("DnsProxyDomainServer", "primary");
+            }
             this.primary = primary;
             return this;
         }

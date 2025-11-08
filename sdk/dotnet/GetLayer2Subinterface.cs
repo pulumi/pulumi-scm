@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Layer2Subinterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up layer2 sub-interface by its ID.
+        ///     var scmL2SubinterfaceDs = Scm.GetLayer2Subinterface.Invoke(new()
+        ///     {
+        ///         Id = "88f730d1-6577-492b-88a6-73d4a513dc76",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["layer2SubinterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Id) },
+        ///             { "name", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Name) },
+        ///             { "comment", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Comment) },
+        ///             { "vlanTag", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.VlanTag) },
+        ///             { "parentInterface", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.ParentInterface) },
+        ///             { "folder", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLayer2SubinterfaceResult> InvokeAsync(GetLayer2SubinterfaceArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLayer2SubinterfaceResult>("scm:index/getLayer2Subinterface:getLayer2Subinterface", args ?? new GetLayer2SubinterfaceArgs(), options.WithDefaults());
 
         /// <summary>
         /// Layer2Subinterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up layer2 sub-interface by its ID.
+        ///     var scmL2SubinterfaceDs = Scm.GetLayer2Subinterface.Invoke(new()
+        ///     {
+        ///         Id = "88f730d1-6577-492b-88a6-73d4a513dc76",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["layer2SubinterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Id) },
+        ///             { "name", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Name) },
+        ///             { "comment", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Comment) },
+        ///             { "vlanTag", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.VlanTag) },
+        ///             { "parentInterface", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.ParentInterface) },
+        ///             { "folder", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLayer2SubinterfaceResult> Invoke(GetLayer2SubinterfaceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLayer2SubinterfaceResult>("scm:index/getLayer2Subinterface:getLayer2Subinterface", args ?? new GetLayer2SubinterfaceInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Layer2Subinterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up layer2 sub-interface by its ID.
+        ///     var scmL2SubinterfaceDs = Scm.GetLayer2Subinterface.Invoke(new()
+        ///     {
+        ///         Id = "88f730d1-6577-492b-88a6-73d4a513dc76",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["layer2SubinterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Id) },
+        ///             { "name", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Name) },
+        ///             { "comment", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Comment) },
+        ///             { "vlanTag", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.VlanTag) },
+        ///             { "parentInterface", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.ParentInterface) },
+        ///             { "folder", scmL2SubinterfaceDs.Apply(getLayer2SubinterfaceResult =&gt; getLayer2SubinterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLayer2SubinterfaceResult> Invoke(GetLayer2SubinterfaceInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLayer2SubinterfaceResult>("scm:index/getLayer2Subinterface:getLayer2Subinterface", args ?? new GetLayer2SubinterfaceInvokeArgs(), options.WithDefaults());
@@ -105,9 +198,9 @@ namespace Pulumi.Scm
         public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// Vlan tag
+        /// VLAN tag
         /// </summary>
-        public readonly double VlanTag;
+        public readonly string VlanTag;
 
         [OutputConstructor]
         private GetLayer2SubinterfaceResult(
@@ -127,7 +220,7 @@ namespace Pulumi.Scm
 
             string tfid,
 
-            double vlanTag)
+            string vlanTag)
         {
             Comment = comment;
             Device = device;

@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatchIpv4 {
     /**
-     * @return Address
+     * @return Connected Static BGP Rib Route maps ipv4 address
      * 
      */
     private GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatchIpv4Address address;
@@ -24,7 +24,7 @@ public final class GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMa
 
     private GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatchIpv4() {}
     /**
-     * @return Address
+     * @return Connected Static BGP Rib Route maps ipv4 address
      * 
      */
     public GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatchIpv4Address address() {

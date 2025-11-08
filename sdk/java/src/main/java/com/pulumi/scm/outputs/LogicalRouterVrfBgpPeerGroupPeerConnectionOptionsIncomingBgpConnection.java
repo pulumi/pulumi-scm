@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpC
      * @return Remote port
      * 
      */
-    private @Nullable Double remotePort;
+    private @Nullable Integer remotePort;
 
     private LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnection() {}
     /**
@@ -35,7 +35,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpC
      * @return Remote port
      * 
      */
-    public Optional<Double> remotePort() {
+    public Optional<Integer> remotePort() {
         return Optional.ofNullable(this.remotePort);
     }
 
@@ -49,7 +49,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpC
     @CustomType.Builder
     public static final class Builder {
         private @Nullable Boolean allow;
-        private @Nullable Double remotePort;
+        private @Nullable Integer remotePort;
         public Builder() {}
         public Builder(LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnection defaults) {
     	      Objects.requireNonNull(defaults);
@@ -64,7 +64,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpC
             return this;
         }
         @CustomType.Setter
-        public Builder remotePort(@Nullable Double remotePort) {
+        public Builder remotePort(@Nullable Integer remotePort) {
 
             this.remotePort = remotePort;
             return this;

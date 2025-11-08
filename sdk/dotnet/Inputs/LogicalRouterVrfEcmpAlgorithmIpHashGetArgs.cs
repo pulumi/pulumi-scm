@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         /// Hash seed
         /// </summary>
         [Input("hashSeed")]
-        public Input<double>? HashSeed { get; set; }
+        public Input<int>? HashSeed { get; set; }
 
         /// <summary>
         /// Src only

@@ -18,9 +18,9 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Comment;
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
-        public readonly int DefaultValue;
+        public readonly string DefaultValue;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
@@ -38,15 +38,19 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string InterfaceManagementProfile;
         /// <summary>
-        /// loopback ip parent
+        /// Loopback IP Parent
         /// </summary>
-        public readonly Outputs.GetLoopbackInterfaceListDataIpResult Ip;
+        public readonly ImmutableArray<Outputs.GetLoopbackInterfaceListDataIpResult> Ips;
+        /// <summary>
+        /// Loopback IPv6 Configuration
+        /// </summary>
+        public readonly Outputs.GetLoopbackInterfaceListDataIpv6Result Ipv6;
         /// <summary>
         /// MTU
         /// </summary>
-        public readonly double Mtu;
+        public readonly int Mtu;
         /// <summary>
-        /// L3 sub-interface name
+        /// Loopback Interface name
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -59,7 +63,7 @@ namespace Pulumi.Scm.Outputs
         private GetLoopbackInterfaceListDataResult(
             string comment,
 
-            int defaultValue,
+            string defaultValue,
 
             string device,
 
@@ -69,9 +73,11 @@ namespace Pulumi.Scm.Outputs
 
             string interfaceManagementProfile,
 
-            Outputs.GetLoopbackInterfaceListDataIpResult ip,
+            ImmutableArray<Outputs.GetLoopbackInterfaceListDataIpResult> ips,
 
-            double mtu,
+            Outputs.GetLoopbackInterfaceListDataIpv6Result ipv6,
+
+            int mtu,
 
             string name,
 
@@ -85,7 +91,8 @@ namespace Pulumi.Scm.Outputs
             Folder = folder;
             Id = id;
             InterfaceManagementProfile = interfaceManagementProfile;
-            Ip = ip;
+            Ips = ips;
+            Ipv6 = ipv6;
             Mtu = mtu;
             Name = name;
             Snippet = snippet;

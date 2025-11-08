@@ -15,10 +15,10 @@ export type AddressGroup = import("./addressGroup").AddressGroup;
 export const AddressGroup: typeof import("./addressGroup").AddressGroup = null as any;
 utilities.lazyLoad(exports, ["AddressGroup"], () => require("./addressGroup"));
 
-export { AggregateEthernetInterfaceArgs, AggregateEthernetInterfaceState } from "./aggregateEthernetInterface";
-export type AggregateEthernetInterface = import("./aggregateEthernetInterface").AggregateEthernetInterface;
-export const AggregateEthernetInterface: typeof import("./aggregateEthernetInterface").AggregateEthernetInterface = null as any;
-utilities.lazyLoad(exports, ["AggregateEthernetInterface"], () => require("./aggregateEthernetInterface"));
+export { AggregateInterfaceArgs, AggregateInterfaceState } from "./aggregateInterface";
+export type AggregateInterface = import("./aggregateInterface").AggregateInterface;
+export const AggregateInterface: typeof import("./aggregateInterface").AggregateInterface = null as any;
+utilities.lazyLoad(exports, ["AggregateInterface"], () => require("./aggregateInterface"));
 
 export { AntiSpywareProfileArgs, AntiSpywareProfileState } from "./antiSpywareProfile";
 export type AntiSpywareProfile = import("./antiSpywareProfile").AntiSpywareProfile;
@@ -185,15 +185,15 @@ export const getAddressList: typeof import("./getAddressList").getAddressList = 
 export const getAddressListOutput: typeof import("./getAddressList").getAddressListOutput = null as any;
 utilities.lazyLoad(exports, ["getAddressList","getAddressListOutput"], () => require("./getAddressList"));
 
-export { GetAggregateEthernetInterfaceArgs, GetAggregateEthernetInterfaceResult, GetAggregateEthernetInterfaceOutputArgs } from "./getAggregateEthernetInterface";
-export const getAggregateEthernetInterface: typeof import("./getAggregateEthernetInterface").getAggregateEthernetInterface = null as any;
-export const getAggregateEthernetInterfaceOutput: typeof import("./getAggregateEthernetInterface").getAggregateEthernetInterfaceOutput = null as any;
-utilities.lazyLoad(exports, ["getAggregateEthernetInterface","getAggregateEthernetInterfaceOutput"], () => require("./getAggregateEthernetInterface"));
+export { GetAggregateInterfaceArgs, GetAggregateInterfaceResult, GetAggregateInterfaceOutputArgs } from "./getAggregateInterface";
+export const getAggregateInterface: typeof import("./getAggregateInterface").getAggregateInterface = null as any;
+export const getAggregateInterfaceOutput: typeof import("./getAggregateInterface").getAggregateInterfaceOutput = null as any;
+utilities.lazyLoad(exports, ["getAggregateInterface","getAggregateInterfaceOutput"], () => require("./getAggregateInterface"));
 
-export { GetAggregateEthernetInterfaceListArgs, GetAggregateEthernetInterfaceListResult, GetAggregateEthernetInterfaceListOutputArgs } from "./getAggregateEthernetInterfaceList";
-export const getAggregateEthernetInterfaceList: typeof import("./getAggregateEthernetInterfaceList").getAggregateEthernetInterfaceList = null as any;
-export const getAggregateEthernetInterfaceListOutput: typeof import("./getAggregateEthernetInterfaceList").getAggregateEthernetInterfaceListOutput = null as any;
-utilities.lazyLoad(exports, ["getAggregateEthernetInterfaceList","getAggregateEthernetInterfaceListOutput"], () => require("./getAggregateEthernetInterfaceList"));
+export { GetAggregateInterfaceListArgs, GetAggregateInterfaceListResult, GetAggregateInterfaceListOutputArgs } from "./getAggregateInterfaceList";
+export const getAggregateInterfaceList: typeof import("./getAggregateInterfaceList").getAggregateInterfaceList = null as any;
+export const getAggregateInterfaceListOutput: typeof import("./getAggregateInterfaceList").getAggregateInterfaceListOutput = null as any;
+utilities.lazyLoad(exports, ["getAggregateInterfaceList","getAggregateInterfaceListOutput"], () => require("./getAggregateInterfaceList"));
 
 export { GetAntiSpywareProfileArgs, GetAntiSpywareProfileResult, GetAntiSpywareProfileOutputArgs } from "./getAntiSpywareProfile";
 export const getAntiSpywareProfile: typeof import("./getAntiSpywareProfile").getAntiSpywareProfile = null as any;
@@ -1456,8 +1456,8 @@ const _module = {
                 return new Address(name, <any>undefined, { urn })
             case "scm:index/addressGroup:AddressGroup":
                 return new AddressGroup(name, <any>undefined, { urn })
-            case "scm:index/aggregateEthernetInterface:AggregateEthernetInterface":
-                return new AggregateEthernetInterface(name, <any>undefined, { urn })
+            case "scm:index/aggregateInterface:AggregateInterface":
+                return new AggregateInterface(name, <any>undefined, { urn })
             case "scm:index/antiSpywareProfile:AntiSpywareProfile":
                 return new AntiSpywareProfile(name, <any>undefined, { urn })
             case "scm:index/antiSpywareSignature:AntiSpywareSignature":
@@ -1651,7 +1651,7 @@ const _module = {
 };
 pulumi.runtime.registerResourceModule("scm", "index/address", _module)
 pulumi.runtime.registerResourceModule("scm", "index/addressGroup", _module)
-pulumi.runtime.registerResourceModule("scm", "index/aggregateEthernetInterface", _module)
+pulumi.runtime.registerResourceModule("scm", "index/aggregateInterface", _module)
 pulumi.runtime.registerResourceModule("scm", "index/antiSpywareProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/antiSpywareSignature", _module)
 pulumi.runtime.registerResourceModule("scm", "index/appOverrideRule", _module)

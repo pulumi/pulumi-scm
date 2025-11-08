@@ -18,11 +18,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator? Aggregator;
         /// <summary>
-        /// AS numbers
+        /// OSPF BGP Route maps set AS numbers
         /// </summary>
         public readonly ImmutableArray<int> AspathPrepends;
         /// <summary>
-        /// Enable BGP atomic aggregate?
+        /// OSPF BGP Route maps set Enable BGP atomic aggregate?
         /// </summary>
         public readonly bool? AtomicAggregate;
         /// <summary>
@@ -30,11 +30,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4? Ipv4;
         /// <summary>
-        /// Large communities
+        /// OSPF BGP Route maps set Large communities
         /// </summary>
         public readonly ImmutableArray<string> LargeCommunities;
         /// <summary>
-        /// Local preference
+        /// OSPF BGP Route maps set Local preference
         /// </summary>
         public readonly int? LocalPreference;
         /// <summary>
@@ -42,23 +42,23 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionOspfBgpRouteMapSetMetric? Metric;
         /// <summary>
-        /// Origin
+        /// OSPF BGP Route maps set Origin
         /// </summary>
         public readonly string? Origin;
         /// <summary>
-        /// Originator ID
+        /// OSPF BGP Route maps set Originator ID
         /// </summary>
         public readonly string? OriginatorId;
         /// <summary>
-        /// Regular communities
+        /// OSPF BGP Route maps set Regular communities
         /// </summary>
         public readonly ImmutableArray<string> RegularCommunities;
         /// <summary>
-        /// Tag
+        /// OSPF BGP Route maps set Tag
         /// </summary>
         public readonly int? Tag;
         /// <summary>
-        /// Weight
+        /// OSPF BGP Route maps set Weight
         /// </summary>
         public readonly int? Weight;
 

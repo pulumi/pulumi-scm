@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapSetArgs extends com.pu
     public static final BgpRouteMapRedistributionBgpRibRouteMapSetArgs Empty = new BgpRouteMapRedistributionBgpRibRouteMapSetArgs();
 
     /**
-     * Source address
+     * BGP Root RIB Route maps set Source address
      * 
      */
     @Import(name="sourceAddress")
     private @Nullable Output<String> sourceAddress;
 
     /**
-     * @return Source address
+     * @return BGP Root RIB Route maps set Source address
      * 
      */
     public Optional<Output<String>> sourceAddress() {
@@ -55,7 +55,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapSetArgs extends com.pu
         }
 
         /**
-         * @param sourceAddress Source address
+         * @param sourceAddress BGP Root RIB Route maps set Source address
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapSetArgs extends com.pu
         }
 
         /**
-         * @param sourceAddress Source address
+         * @param sourceAddress BGP Root RIB Route maps set Source address
          * 
          * @return builder
          * 

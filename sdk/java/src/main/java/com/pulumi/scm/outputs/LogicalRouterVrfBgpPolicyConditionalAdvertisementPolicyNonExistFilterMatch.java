@@ -8,7 +8,7 @@ import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyConditionalAdvertisementP
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchAsPath;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchCommunity;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchExtendedCommunity;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -51,7 +51,7 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExi
      * @return Med
      * 
      */
-    private @Nullable Double med;
+    private @Nullable Integer med;
     /**
      * @return Nexthop
      * 
@@ -115,7 +115,7 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExi
      * @return Med
      * 
      */
-    public Optional<Double> med() {
+    public Optional<Integer> med() {
         return Optional.ofNullable(this.med);
     }
     /**
@@ -155,7 +155,7 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExi
         private @Nullable LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchCommunity community;
         private @Nullable LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchExtendedCommunity extendedCommunity;
         private @Nullable List<String> fromPeers;
-        private @Nullable Double med;
+        private @Nullable Integer med;
         private @Nullable List<String> nexthops;
         private @Nullable String routeTable;
         private @Nullable String safi;
@@ -217,7 +217,7 @@ public final class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExi
             return fromPeers(List.of(fromPeers));
         }
         @CustomType.Setter
-        public Builder med(@Nullable Double med) {
+        public Builder med(@Nullable Integer med) {
 
             this.med = med;
             return this;

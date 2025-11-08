@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Address
     {
         /// <summary>
-        /// Access list
+        /// BGP Root RIB Route maps match ipv Access list
         /// </summary>
         public readonly string? AccessList;
         /// <summary>
-        /// Prefix list
+        /// BGP Root RIB Route maps match ipv Prefix list
         /// </summary>
         public readonly string? PrefixList;
 

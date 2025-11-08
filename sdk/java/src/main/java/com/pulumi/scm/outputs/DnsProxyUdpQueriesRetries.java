@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsProxyUdpQueriesRetries {
     /**
-     * @return Attempts
+     * @return Maximum number of retries before trying next name server
      * 
      */
     private @Nullable Integer attempts;
     /**
-     * @return Interval
+     * @return Time in seconds for another request to be sent
      * 
      */
     private @Nullable Integer interval;
 
     private DnsProxyUdpQueriesRetries() {}
     /**
-     * @return Attempts
+     * @return Maximum number of retries before trying next name server
      * 
      */
     public Optional<Integer> attempts() {
         return Optional.ofNullable(this.attempts);
     }
     /**
-     * @return Interval
+     * @return Time in seconds for another request to be sent
      * 
      */
     public Optional<Integer> interval() {

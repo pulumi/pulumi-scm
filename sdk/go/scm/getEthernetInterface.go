@@ -12,6 +12,40 @@ import (
 )
 
 // EthernetInterface data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Look up ethernet interface by its ID.
+//			scmL3IntfStaticDs, err := scm.LookupEthernetInterface(ctx, &scm.LookupEthernetInterfaceArgs{
+//				Id: "ddad1e64-0b64-41a4-b361-c6199769a8f2",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("ethernetInterfaceDataSourceResults", pulumi.Map{
+//				"id":      scmL3IntfStaticDs.Id,
+//				"name":    scmL3IntfStaticDs.Name,
+//				"comment": scmL3IntfStaticDs.Comment,
+//				"layer3":  scmL3IntfStaticDs.Layer3,
+//				"folder":  scmL3IntfStaticDs.Folder,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupEthernetInterface(ctx *pulumi.Context, args *LookupEthernetInterfaceArgs, opts ...pulumi.InvokeOption) (*LookupEthernetInterfaceResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupEthernetInterfaceResult
@@ -34,7 +68,7 @@ type LookupEthernetInterfaceArgs struct {
 type LookupEthernetInterfaceResult struct {
 	// Interface description
 	Comment string `pulumi:"comment"`
-	// Default value
+	// Default interface assignment
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
@@ -46,7 +80,7 @@ type LookupEthernetInterfaceResult struct {
 	Id string `pulumi:"id"`
 	// Layer2
 	Layer2 GetEthernetInterfaceLayer2 `pulumi:"layer2"`
-	// Layer3
+	// Ethernet Interface Layer 3 configuration
 	Layer3 GetEthernetInterfaceLayer3 `pulumi:"layer3"`
 	// Link duplex
 	LinkDuplex string `pulumi:"linkDuplex"`
@@ -106,7 +140,7 @@ func (o LookupEthernetInterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
-// Default value
+// Default interface assignment
 func (o LookupEthernetInterfaceResultOutput) DefaultValue() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
@@ -136,7 +170,7 @@ func (o LookupEthernetInterfaceResultOutput) Layer2() GetEthernetInterfaceLayer2
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) GetEthernetInterfaceLayer2 { return v.Layer2 }).(GetEthernetInterfaceLayer2Output)
 }
 
-// Layer3
+// Ethernet Interface Layer 3 configuration
 func (o LookupEthernetInterfaceResultOutput) Layer3() GetEthernetInterfaceLayer3Output {
 	return o.ApplyT(func(v LookupEthernetInterfaceResult) GetEthernetInterfaceLayer3 { return v.Layer3 }).(GetEthernetInterfaceLayer3Output)
 }

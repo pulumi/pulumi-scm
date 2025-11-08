@@ -89,7 +89,7 @@ class GetEthernetInterfaceResult:
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> _builtins.str:
         """
-        Default value
+        Default interface assignment
         """
         return pulumi.get(self, "default_value")
 
@@ -137,7 +137,7 @@ class GetEthernetInterfaceResult:
     @pulumi.getter
     def layer3(self) -> 'outputs.GetEthernetInterfaceLayer3Result':
         """
-        Layer3
+        Ethernet Interface Layer 3 configuration
         """
         return pulumi.get(self, "layer3")
 
@@ -233,6 +233,23 @@ def get_ethernet_interface(id: Optional[_builtins.str] = None,
     """
     EthernetInterface data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up ethernet interface by its ID.
+    scm_l3_intf_static_ds = scm.get_ethernet_interface(id="ddad1e64-0b64-41a4-b361-c6199769a8f2")
+    pulumi.export("ethernetInterfaceDataSourceResults", {
+        "id": scm_l3_intf_static_ds.id,
+        "name": scm_l3_intf_static_ds.name,
+        "comment": scm_l3_intf_static_ds.comment,
+        "layer3": scm_l3_intf_static_ds.layer3,
+        "folder": scm_l3_intf_static_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Interface name
@@ -265,6 +282,23 @@ def get_ethernet_interface_output(id: Optional[pulumi.Input[_builtins.str]] = No
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetEthernetInterfaceResult]:
     """
     EthernetInterface data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up ethernet interface by its ID.
+    scm_l3_intf_static_ds = scm.get_ethernet_interface(id="ddad1e64-0b64-41a4-b361-c6199769a8f2")
+    pulumi.export("ethernetInterfaceDataSourceResults", {
+        "id": scm_l3_intf_static_ds.id,
+        "name": scm_l3_intf_static_ds.name,
+        "comment": scm_l3_intf_static_ds.comment,
+        "layer3": scm_l3_intf_static_ds.layer3,
+        "folder": scm_l3_intf_static_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

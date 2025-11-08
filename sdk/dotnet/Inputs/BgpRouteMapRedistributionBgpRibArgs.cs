@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.BgpRouteMapRedistributionBgpRibRouteMapArgs>? _routeMaps;
 
         /// <summary>
-        /// Route maps
+        /// BGP Root RIB Route maps
         /// </summary>
         public InputList<Inputs.BgpRouteMapRedistributionBgpRibRouteMapArgs> RouteMaps
         {

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class DnsProxyCache
     {
         /// <summary>
-        /// Cache edns
+        /// Cache EDNS UDP response
         /// </summary>
         public readonly bool? CacheEdns;
         /// <summary>

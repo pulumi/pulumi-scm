@@ -9,7 +9,7 @@ import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressSupp
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchAsPath;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchCommunity;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchExtendedCommunity;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,7 +50,7 @@ public final class GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterM
      * @return Med
      * 
      */
-    private Double med;
+    private Integer med;
     /**
      * @return Nexthop
      * 
@@ -114,7 +114,7 @@ public final class GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterM
      * @return Med
      * 
      */
-    public Double med() {
+    public Integer med() {
         return this.med;
     }
     /**
@@ -154,7 +154,7 @@ public final class GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterM
         private GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchCommunity community;
         private GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchExtendedCommunity extendedCommunity;
         private List<String> fromPeers;
-        private Double med;
+        private Integer med;
         private List<String> nexthops;
         private String routeTable;
         private String safi;
@@ -228,7 +228,7 @@ public final class GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterM
             return fromPeers(List.of(fromPeers));
         }
         @CustomType.Setter
-        public Builder med(Double med) {
+        public Builder med(Integer med) {
             if (med == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatch", "med");
             }

@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric
     public static final BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgs Empty = new BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgs();
 
     /**
-     * Metric action
+     * Connected Static BGP OSPF Route map set Metric action
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Metric action
+     * @return Connected Static BGP OSPF Route map set Metric action
      * 
      */
     public Optional<Output<String>> action() {
@@ -32,14 +32,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric
     }
 
     /**
-     * Metric value
+     * Connected Static BGP OSPF Route map set Metric value
      * 
      */
     @Import(name="value")
     private @Nullable Output<Integer> value;
 
     /**
-     * @return Metric value
+     * @return Connected Static BGP OSPF Route map set Metric value
      * 
      */
     public Optional<Output<Integer>> value() {
@@ -72,7 +72,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric
         }
 
         /**
-         * @param action Metric action
+         * @param action Connected Static BGP OSPF Route map set Metric action
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric
         }
 
         /**
-         * @param action Metric action
+         * @param action Connected Static BGP OSPF Route map set Metric action
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric
         }
 
         /**
-         * @param value Metric value
+         * @param value Connected Static BGP OSPF Route map set Metric value
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric
         }
 
         /**
-         * @param value Metric value
+         * @param value Connected Static BGP OSPF Route map set Metric value
          * 
          * @return builder
          * 

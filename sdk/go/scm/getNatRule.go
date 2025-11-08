@@ -12,6 +12,73 @@ import (
 )
 
 // NatRule data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Define the resource (the item to be created via API POST/PUT)
+//			dnatExternalWebTestCreate, err := scm.NewNatRule(ctx, "dnat_external_web_test_create", &scm.NatRuleArgs{
+//				Name:        pulumi.String("DNAT-External-data-src-test_1"),
+//				Description: pulumi.String("Translate public VIP to internal web server."),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("zone-untrust"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("zone-untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Service:  pulumi.String("service-http"),
+//				Folder:   pulumi.String("All"),
+//				NatType:  pulumi.String("ipv4"),
+//				Position: pulumi.String("pre"),
+//				DestinationTranslation: &scm.NatRuleDestinationTranslationArgs{
+//					TranslatedAddress: pulumi.String("10.1.1.16"),
+//					TranslatedPort:    pulumi.Int(112),
+//					DnsRewrite: &scm.NatRuleDestinationTranslationDnsRewriteArgs{
+//						Direction: pulumi.String("reverse"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Define the data source (the item to be retrieved via API GET)
+//			dnatExternalWebTestGet := scm.LookupNatRuleOutput(ctx, scm.GetNatRuleOutputArgs{
+//				Id: dnatExternalWebTestCreate.ID(),
+//			}, nil)
+//			ctx.Export("retrievedIDAndName", pulumi.StringMap{
+//				"id": dnatExternalWebTestGet.ApplyT(func(dnatExternalWebTestGet scm.GetNatRuleResult) (*string, error) {
+//					return &dnatExternalWebTestGet.Id, nil
+//				}).(pulumi.StringPtrOutput),
+//				"name": dnatExternalWebTestGet.ApplyT(func(dnatExternalWebTestGet scm.GetNatRuleResult) (*string, error) {
+//					return &dnatExternalWebTestGet.Name, nil
+//				}).(pulumi.StringPtrOutput),
+//			})
+//			ctx.Export("retrievedDestinationTranslation", dnatExternalWebTestGet.ApplyT(func(dnatExternalWebTestGet scm.GetNatRuleResult) (scm.GetNatRuleDestinationTranslation, error) {
+//				return dnatExternalWebTestGet.DestinationTranslation, nil
+//			}).(scm.GetNatRuleDestinationTranslationOutput))
+//			ctx.Export("recievedResponse", dnatExternalWebTestGet)
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupNatRule(ctx *pulumi.Context, args *LookupNatRuleArgs, opts ...pulumi.InvokeOption) (*LookupNatRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupNatRuleResult
@@ -36,16 +103,16 @@ type LookupNatRuleResult struct {
 	ActiveActiveDeviceBinding string `pulumi:"activeActiveDeviceBinding"`
 	// NAT rule description
 	Description string `pulumi:"description"`
+	// Destination translation
+	DestinationTranslation GetNatRuleDestinationTranslation `pulumi:"destinationTranslation"`
 	// Destination address(es) of the original packet
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
 	// Disable NAT rule?
 	Disabled bool `pulumi:"disabled"`
-	// Distribution method
-	Distribution string `pulumi:"distribution"`
-	// DNS rewrite
-	DnsRewrite GetNatRuleDnsRewrite `pulumi:"dnsRewrite"`
+	// Dynamic destination translation
+	DynamicDestinationTranslation GetNatRuleDynamicDestinationTranslation `pulumi:"dynamicDestinationTranslation"`
 	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// Source zone(s) of the original packet
@@ -56,6 +123,8 @@ type LookupNatRuleResult struct {
 	Name string `pulumi:"name"`
 	// NAT type
 	NatType string `pulumi:"natType"`
+	// The relative position of the rule
+	Position string `pulumi:"position"`
 	// The service of the original packet
 	Service string `pulumi:"service"`
 	// The snippet in which the resource is defined
@@ -71,10 +140,6 @@ type LookupNatRuleResult struct {
 	ToInterface string `pulumi:"toInterface"`
 	// Destination zone of the original packet
 	Tos []string `pulumi:"tos"`
-	// Translated destination IP address
-	TranslatedAddressSingle string `pulumi:"translatedAddressSingle"`
-	// Translated destination port
-	TranslatedPort int `pulumi:"translatedPort"`
 }
 
 func LookupNatRuleOutput(ctx *pulumi.Context, args LookupNatRuleOutputArgs, opts ...pulumi.InvokeOption) LookupNatRuleResultOutput {
@@ -123,6 +188,11 @@ func (o LookupNatRuleResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
+// Destination translation
+func (o LookupNatRuleResultOutput) DestinationTranslation() GetNatRuleDestinationTranslationOutput {
+	return o.ApplyT(func(v LookupNatRuleResult) GetNatRuleDestinationTranslation { return v.DestinationTranslation }).(GetNatRuleDestinationTranslationOutput)
+}
+
 // Destination address(es) of the original packet
 func (o LookupNatRuleResultOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) []string { return v.Destinations }).(pulumi.StringArrayOutput)
@@ -138,14 +208,11 @@ func (o LookupNatRuleResultOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// Distribution method
-func (o LookupNatRuleResultOutput) Distribution() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Distribution }).(pulumi.StringOutput)
-}
-
-// DNS rewrite
-func (o LookupNatRuleResultOutput) DnsRewrite() GetNatRuleDnsRewriteOutput {
-	return o.ApplyT(func(v LookupNatRuleResult) GetNatRuleDnsRewrite { return v.DnsRewrite }).(GetNatRuleDnsRewriteOutput)
+// Dynamic destination translation
+func (o LookupNatRuleResultOutput) DynamicDestinationTranslation() GetNatRuleDynamicDestinationTranslationOutput {
+	return o.ApplyT(func(v LookupNatRuleResult) GetNatRuleDynamicDestinationTranslation {
+		return v.DynamicDestinationTranslation
+	}).(GetNatRuleDynamicDestinationTranslationOutput)
 }
 
 // The folder in which the resource is defined
@@ -171,6 +238,11 @@ func (o LookupNatRuleResultOutput) Name() pulumi.StringOutput {
 // NAT type
 func (o LookupNatRuleResultOutput) NatType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) string { return v.NatType }).(pulumi.StringOutput)
+}
+
+// The relative position of the rule
+func (o LookupNatRuleResultOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupNatRuleResult) string { return v.Position }).(pulumi.StringOutput)
 }
 
 // The service of the original packet
@@ -210,16 +282,6 @@ func (o LookupNatRuleResultOutput) ToInterface() pulumi.StringOutput {
 // Destination zone of the original packet
 func (o LookupNatRuleResultOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupNatRuleResult) []string { return v.Tos }).(pulumi.StringArrayOutput)
-}
-
-// Translated destination IP address
-func (o LookupNatRuleResultOutput) TranslatedAddressSingle() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupNatRuleResult) string { return v.TranslatedAddressSingle }).(pulumi.StringOutput)
-}
-
-// Translated destination port
-func (o LookupNatRuleResultOutput) TranslatedPort() pulumi.IntOutput {
-	return o.ApplyT(func(v LookupNatRuleResult) int { return v.TranslatedPort }).(pulumi.IntOutput)
 }
 
 func init() {

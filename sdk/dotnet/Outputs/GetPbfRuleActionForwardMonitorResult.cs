@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool DisableIfUnreachable;
         /// <summary>
-        /// Ip address
+        /// Monitor IP address
         /// </summary>
         public readonly string IpAddress;
         /// <summary>

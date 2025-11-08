@@ -13,6 +13,36 @@ namespace Pulumi.Scm
     /// ApplicationFilter resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmApplicationFilter1 = new Scm.ApplicationFilter("scm_application_filter_1", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_application_filter_1",
+    ///         Categories = new[]
+    ///         {
+    ///             "business-systems",
+    ///         },
+    ///         Risks = new[]
+    ///         {
+    ///             1,
+    ///         },
+    ///         Evasive = true,
+    ///         Tagging = new Scm.Inputs.ApplicationFilterTaggingArgs
+    ///         {
+    ///             NoTag = true,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/applicationFilter:ApplicationFilter")]
     public partial class ApplicationFilter : global::Pulumi.CustomResource

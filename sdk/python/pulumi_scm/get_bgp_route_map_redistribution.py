@@ -79,7 +79,7 @@ class GetBgpRouteMapRedistributionResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        Description
+        BGP Route Map Redistributions Description
         """
         return pulumi.get(self, "description")
 
@@ -103,7 +103,7 @@ class GetBgpRouteMapRedistributionResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        UUID of the resource
+        BGP Route Map Redistributions UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -111,7 +111,7 @@ class GetBgpRouteMapRedistributionResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Name
+        BGP Route Map Redistributions Name
         """
         return pulumi.get(self, "name")
 
@@ -162,8 +162,8 @@ def get_bgp_route_map_redistribution(id: Optional[_builtins.str] = None,
     BgpRouteMapRedistribution data source
 
 
-    :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Name
+    :param _builtins.str id: BGP Route Map Redistributions UUID of the resource
+    :param _builtins.str name: BGP Route Map Redistributions Name
     """
     __args__ = dict()
     __args__['id'] = id
@@ -189,8 +189,8 @@ def get_bgp_route_map_redistribution_output(id: Optional[pulumi.Input[_builtins.
     BgpRouteMapRedistribution data source
 
 
-    :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: Name
+    :param _builtins.str id: BGP Route Map Redistributions UUID of the resource
+    :param _builtins.str name: BGP Route Map Redistributions Name
     """
     __args__ = dict()
     __args__['id'] = id

@@ -12,6 +12,51 @@ import (
 )
 
 // InterfaceManagementProfile resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewInterfaceManagementProfile(ctx, "dc_postman_profile", &scm.InterfaceManagementProfileArgs{
+//				Name:   pulumi.String("test_inf_mgmt_profile_1_update"),
+//				Folder: pulumi.String("All"),
+//				PermittedIps: scm.InterfaceManagementProfilePermittedIpArray{
+//					&scm.InterfaceManagementProfilePermittedIpArgs{
+//						Name: pulumi.String("10.0.0.0/24"),
+//					},
+//					&scm.InterfaceManagementProfilePermittedIpArgs{
+//						Name: pulumi.String("10.0.0.0/32"),
+//					},
+//				},
+//				Http:                    pulumi.Bool(true),
+//				Https:                   pulumi.Bool(false),
+//				Telnet:                  pulumi.Bool(false),
+//				Ssh:                     pulumi.Bool(true),
+//				Ping:                    pulumi.Bool(false),
+//				HttpOcsp:                pulumi.Bool(true),
+//				UseridService:           pulumi.Bool(true),
+//				UseridSyslogListenerSsl: pulumi.Bool(true),
+//				UseridSyslogListenerUdp: pulumi.Bool(true),
+//				ResponsePages:           pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type InterfaceManagementProfile struct {
 	pulumi.CustomResourceState
 
@@ -21,18 +66,18 @@ type InterfaceManagementProfile struct {
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Allow HTTP?
 	Http pulumi.BoolPtrOutput `pulumi:"http"`
-	// Http ocsp
+	// Allow HTTP OCSP?
 	HttpOcsp pulumi.BoolPtrOutput `pulumi:"httpOcsp"`
 	// Allow HTTPS?
 	Https pulumi.BoolPtrOutput `pulumi:"https"`
 	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Permitted ip
-	PermittedIps pulumi.StringArrayOutput `pulumi:"permittedIps"`
+	// Allowed IP address(es)
+	PermittedIps InterfaceManagementProfilePermittedIpArrayOutput `pulumi:"permittedIps"`
 	// Allow ping?
 	Ping pulumi.BoolPtrOutput `pulumi:"ping"`
-	// Response pages
-	ResponsePages pulumi.StringPtrOutput `pulumi:"responsePages"`
+	// Allow response pages?
+	ResponsePages pulumi.BoolPtrOutput `pulumi:"responsePages"`
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Allow SSH?
@@ -40,11 +85,11 @@ type InterfaceManagementProfile struct {
 	// Allow telnet? Seriously, why would you do this?!?
 	Telnet pulumi.BoolPtrOutput `pulumi:"telnet"`
 	Tfid   pulumi.StringOutput  `pulumi:"tfid"`
-	// Userid service
+	// Allow User-ID?
 	UseridService pulumi.BoolPtrOutput `pulumi:"useridService"`
-	// Userid syslog listener ssl
+	// Allow User-ID syslog listener (SSL)?
 	UseridSyslogListenerSsl pulumi.BoolPtrOutput `pulumi:"useridSyslogListenerSsl"`
-	// Userid syslog listener udp
+	// Allow User-ID syslog listener (UDP)?
 	UseridSyslogListenerUdp pulumi.BoolPtrOutput `pulumi:"useridSyslogListenerUdp"`
 }
 
@@ -84,18 +129,18 @@ type interfaceManagementProfileState struct {
 	Folder *string `pulumi:"folder"`
 	// Allow HTTP?
 	Http *bool `pulumi:"http"`
-	// Http ocsp
+	// Allow HTTP OCSP?
 	HttpOcsp *bool `pulumi:"httpOcsp"`
 	// Allow HTTPS?
 	Https *bool `pulumi:"https"`
 	// Name
 	Name *string `pulumi:"name"`
-	// Permitted ip
-	PermittedIps []string `pulumi:"permittedIps"`
+	// Allowed IP address(es)
+	PermittedIps []InterfaceManagementProfilePermittedIp `pulumi:"permittedIps"`
 	// Allow ping?
 	Ping *bool `pulumi:"ping"`
-	// Response pages
-	ResponsePages *string `pulumi:"responsePages"`
+	// Allow response pages?
+	ResponsePages *bool `pulumi:"responsePages"`
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	// Allow SSH?
@@ -103,11 +148,11 @@ type interfaceManagementProfileState struct {
 	// Allow telnet? Seriously, why would you do this?!?
 	Telnet *bool   `pulumi:"telnet"`
 	Tfid   *string `pulumi:"tfid"`
-	// Userid service
+	// Allow User-ID?
 	UseridService *bool `pulumi:"useridService"`
-	// Userid syslog listener ssl
+	// Allow User-ID syslog listener (SSL)?
 	UseridSyslogListenerSsl *bool `pulumi:"useridSyslogListenerSsl"`
-	// Userid syslog listener udp
+	// Allow User-ID syslog listener (UDP)?
 	UseridSyslogListenerUdp *bool `pulumi:"useridSyslogListenerUdp"`
 }
 
@@ -118,18 +163,18 @@ type InterfaceManagementProfileState struct {
 	Folder pulumi.StringPtrInput
 	// Allow HTTP?
 	Http pulumi.BoolPtrInput
-	// Http ocsp
+	// Allow HTTP OCSP?
 	HttpOcsp pulumi.BoolPtrInput
 	// Allow HTTPS?
 	Https pulumi.BoolPtrInput
 	// Name
 	Name pulumi.StringPtrInput
-	// Permitted ip
-	PermittedIps pulumi.StringArrayInput
+	// Allowed IP address(es)
+	PermittedIps InterfaceManagementProfilePermittedIpArrayInput
 	// Allow ping?
 	Ping pulumi.BoolPtrInput
-	// Response pages
-	ResponsePages pulumi.StringPtrInput
+	// Allow response pages?
+	ResponsePages pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	// Allow SSH?
@@ -137,11 +182,11 @@ type InterfaceManagementProfileState struct {
 	// Allow telnet? Seriously, why would you do this?!?
 	Telnet pulumi.BoolPtrInput
 	Tfid   pulumi.StringPtrInput
-	// Userid service
+	// Allow User-ID?
 	UseridService pulumi.BoolPtrInput
-	// Userid syslog listener ssl
+	// Allow User-ID syslog listener (SSL)?
 	UseridSyslogListenerSsl pulumi.BoolPtrInput
-	// Userid syslog listener udp
+	// Allow User-ID syslog listener (UDP)?
 	UseridSyslogListenerUdp pulumi.BoolPtrInput
 }
 
@@ -156,29 +201,29 @@ type interfaceManagementProfileArgs struct {
 	Folder *string `pulumi:"folder"`
 	// Allow HTTP?
 	Http *bool `pulumi:"http"`
-	// Http ocsp
+	// Allow HTTP OCSP?
 	HttpOcsp *bool `pulumi:"httpOcsp"`
 	// Allow HTTPS?
 	Https *bool `pulumi:"https"`
 	// Name
 	Name *string `pulumi:"name"`
-	// Permitted ip
-	PermittedIps []string `pulumi:"permittedIps"`
+	// Allowed IP address(es)
+	PermittedIps []InterfaceManagementProfilePermittedIp `pulumi:"permittedIps"`
 	// Allow ping?
 	Ping *bool `pulumi:"ping"`
-	// Response pages
-	ResponsePages *string `pulumi:"responsePages"`
+	// Allow response pages?
+	ResponsePages *bool `pulumi:"responsePages"`
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	// Allow SSH?
 	Ssh *bool `pulumi:"ssh"`
 	// Allow telnet? Seriously, why would you do this?!?
 	Telnet *bool `pulumi:"telnet"`
-	// Userid service
+	// Allow User-ID?
 	UseridService *bool `pulumi:"useridService"`
-	// Userid syslog listener ssl
+	// Allow User-ID syslog listener (SSL)?
 	UseridSyslogListenerSsl *bool `pulumi:"useridSyslogListenerSsl"`
-	// Userid syslog listener udp
+	// Allow User-ID syslog listener (UDP)?
 	UseridSyslogListenerUdp *bool `pulumi:"useridSyslogListenerUdp"`
 }
 
@@ -190,29 +235,29 @@ type InterfaceManagementProfileArgs struct {
 	Folder pulumi.StringPtrInput
 	// Allow HTTP?
 	Http pulumi.BoolPtrInput
-	// Http ocsp
+	// Allow HTTP OCSP?
 	HttpOcsp pulumi.BoolPtrInput
 	// Allow HTTPS?
 	Https pulumi.BoolPtrInput
 	// Name
 	Name pulumi.StringPtrInput
-	// Permitted ip
-	PermittedIps pulumi.StringArrayInput
+	// Allowed IP address(es)
+	PermittedIps InterfaceManagementProfilePermittedIpArrayInput
 	// Allow ping?
 	Ping pulumi.BoolPtrInput
-	// Response pages
-	ResponsePages pulumi.StringPtrInput
+	// Allow response pages?
+	ResponsePages pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	// Allow SSH?
 	Ssh pulumi.BoolPtrInput
 	// Allow telnet? Seriously, why would you do this?!?
 	Telnet pulumi.BoolPtrInput
-	// Userid service
+	// Allow User-ID?
 	UseridService pulumi.BoolPtrInput
-	// Userid syslog listener ssl
+	// Allow User-ID syslog listener (SSL)?
 	UseridSyslogListenerSsl pulumi.BoolPtrInput
-	// Userid syslog listener udp
+	// Allow User-ID syslog listener (UDP)?
 	UseridSyslogListenerUdp pulumi.BoolPtrInput
 }
 
@@ -318,7 +363,7 @@ func (o InterfaceManagementProfileOutput) Http() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.BoolPtrOutput { return v.Http }).(pulumi.BoolPtrOutput)
 }
 
-// Http ocsp
+// Allow HTTP OCSP?
 func (o InterfaceManagementProfileOutput) HttpOcsp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.BoolPtrOutput { return v.HttpOcsp }).(pulumi.BoolPtrOutput)
 }
@@ -333,9 +378,11 @@ func (o InterfaceManagementProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Permitted ip
-func (o InterfaceManagementProfileOutput) PermittedIps() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.StringArrayOutput { return v.PermittedIps }).(pulumi.StringArrayOutput)
+// Allowed IP address(es)
+func (o InterfaceManagementProfileOutput) PermittedIps() InterfaceManagementProfilePermittedIpArrayOutput {
+	return o.ApplyT(func(v *InterfaceManagementProfile) InterfaceManagementProfilePermittedIpArrayOutput {
+		return v.PermittedIps
+	}).(InterfaceManagementProfilePermittedIpArrayOutput)
 }
 
 // Allow ping?
@@ -343,9 +390,9 @@ func (o InterfaceManagementProfileOutput) Ping() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.BoolPtrOutput { return v.Ping }).(pulumi.BoolPtrOutput)
 }
 
-// Response pages
-func (o InterfaceManagementProfileOutput) ResponsePages() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.StringPtrOutput { return v.ResponsePages }).(pulumi.StringPtrOutput)
+// Allow response pages?
+func (o InterfaceManagementProfileOutput) ResponsePages() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.BoolPtrOutput { return v.ResponsePages }).(pulumi.BoolPtrOutput)
 }
 
 // The snippet in which the resource is defined
@@ -367,17 +414,17 @@ func (o InterfaceManagementProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Userid service
+// Allow User-ID?
 func (o InterfaceManagementProfileOutput) UseridService() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.BoolPtrOutput { return v.UseridService }).(pulumi.BoolPtrOutput)
 }
 
-// Userid syslog listener ssl
+// Allow User-ID syslog listener (SSL)?
 func (o InterfaceManagementProfileOutput) UseridSyslogListenerSsl() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.BoolPtrOutput { return v.UseridSyslogListenerSsl }).(pulumi.BoolPtrOutput)
 }
 
-// Userid syslog listener udp
+// Allow User-ID syslog listener (UDP)?
 func (o InterfaceManagementProfileOutput) UseridSyslogListenerUdp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *InterfaceManagementProfile) pulumi.BoolPtrOutput { return v.UseridSyslogListenerUdp }).(pulumi.BoolPtrOutput)
 }

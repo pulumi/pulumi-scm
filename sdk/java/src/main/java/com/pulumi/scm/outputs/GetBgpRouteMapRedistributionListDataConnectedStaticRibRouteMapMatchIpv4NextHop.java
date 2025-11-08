@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatchIpv4NextHop {
     /**
-     * @return Access list
+     * @return Connected Static BGP Rib Route maps ipv4 nect hop Access list
      * 
      */
     private String accessList;
     /**
-     * @return Prefix list
+     * @return Connected Static BGP Rib Route maps ipv4 next hop Prefix list
      * 
      */
     private String prefixList;
 
     private GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatchIpv4NextHop() {}
     /**
-     * @return Access list
+     * @return Connected Static BGP Rib Route maps ipv4 nect hop Access list
      * 
      */
     public String accessList() {
         return this.accessList;
     }
     /**
-     * @return Prefix list
+     * @return Connected Static BGP Rib Route maps ipv4 next hop Prefix list
      * 
      */
     public String prefixList() {

@@ -64,7 +64,7 @@ namespace Pulumi.Scm.Inputs
         /// Route ageout time
         /// </summary>
         [Input("routeAgeoutTime")]
-        public Input<double>? RouteAgeoutTime { get; set; }
+        public Input<int>? RouteAgeoutTime { get; set; }
 
         /// <summary>
         /// Rp

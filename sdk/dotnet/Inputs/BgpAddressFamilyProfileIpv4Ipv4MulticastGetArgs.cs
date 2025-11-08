@@ -69,8 +69,8 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// Remove private a s
         /// </summary>
-        [Input("removePrivateAS")]
-        public Input<Inputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASGetArgs>? RemovePrivateAS { get; set; }
+        [Input("removePrivateAs")]
+        public Input<Inputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsGetArgs>? RemovePrivateAs { get; set; }
 
         /// <summary>
         /// Route reflector client?

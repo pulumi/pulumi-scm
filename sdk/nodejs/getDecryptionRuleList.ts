@@ -8,9 +8,25 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const pagedRulesList = scm.getDecryptionRuleList({
+ *     folder: "All",
+ *     offset: 10,
+ *     position: "pre",
+ * });
+ * export const fetchedRuleListSummary = {
+ *     countOfRulesFetched: pagedRulesList.then(pagedRulesList => pagedRulesList.total),
+ *     firstRuleName: pagedRulesList.then(pagedRulesList => pagedRulesList.datas?.[0]?.name),
+ * };
+ * ```
  */
-export function getDecryptionRuleList(args?: GetDecryptionRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionRuleListResult> {
-    args = args || {};
+export function getDecryptionRuleList(args: GetDecryptionRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDecryptionRuleList:getDecryptionRuleList", {
         "device": args.device,
@@ -18,6 +34,7 @@ export function getDecryptionRuleList(args?: GetDecryptionRuleListArgs, opts?: p
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -46,6 +63,10 @@ export interface GetDecryptionRuleListArgs {
      * The offset of the first item to return.
      */
     offset?: number;
+    /**
+     * The position of a security rule
+     */
+    position: string;
     /**
      * The snippet of the item.
      */
@@ -85,6 +106,10 @@ export interface GetDecryptionRuleListResult {
      */
     readonly offset?: number;
     /**
+     * The position of a security rule
+     */
+    readonly position: string;
+    /**
      * The snippet of the item.
      */
     readonly snippet?: string;
@@ -96,9 +121,25 @@ export interface GetDecryptionRuleListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const pagedRulesList = scm.getDecryptionRuleList({
+ *     folder: "All",
+ *     offset: 10,
+ *     position: "pre",
+ * });
+ * export const fetchedRuleListSummary = {
+ *     countOfRulesFetched: pagedRulesList.then(pagedRulesList => pagedRulesList.total),
+ *     firstRuleName: pagedRulesList.then(pagedRulesList => pagedRulesList.datas?.[0]?.name),
+ * };
+ * ```
  */
-export function getDecryptionRuleListOutput(args?: GetDecryptionRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionRuleListResult> {
-    args = args || {};
+export function getDecryptionRuleListOutput(args: GetDecryptionRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDecryptionRuleList:getDecryptionRuleList", {
         "device": args.device,
@@ -106,6 +147,7 @@ export function getDecryptionRuleListOutput(args?: GetDecryptionRuleListOutputAr
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -134,6 +176,10 @@ export interface GetDecryptionRuleListOutputArgs {
      * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
+    /**
+     * The position of a security rule
+     */
+    position: pulumi.Input<string>;
     /**
      * The snippet of the item.
      */

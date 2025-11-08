@@ -48,14 +48,14 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
     }
 
     /**
-     * Link tags
+     * Link-Tags for interfaces identified by defined tags
      * 
      */
     @Import(name="linkTags")
     private @Nullable Output<List<SdwanTrafficDistributionProfileLinkTagArgs>> linkTags;
 
     /**
-     * @return Link tags
+     * @return Link-Tags for interfaces identified by defined tags
      * 
      */
     public Optional<Output<List<SdwanTrafficDistributionProfileLinkTagArgs>>> linkTags() {
@@ -179,7 +179,7 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
         }
 
         /**
-         * @param linkTags Link tags
+         * @param linkTags Link-Tags for interfaces identified by defined tags
          * 
          * @return builder
          * 
@@ -190,7 +190,7 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
         }
 
         /**
-         * @param linkTags Link tags
+         * @param linkTags Link-Tags for interfaces identified by defined tags
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class SdwanTrafficDistributionProfileArgs extends com.pulumi.resour
         }
 
         /**
-         * @param linkTags Link tags
+         * @param linkTags Link-Tags for interfaces identified by defined tags
          * 
          * @return builder
          * 

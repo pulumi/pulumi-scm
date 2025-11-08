@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class VlanInterfaceDdnsConfigArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Ddns cert profile
+        /// Certificate profile
         /// </summary>
-        [Input("ddnsCertProfile")]
-        public Input<string>? DdnsCertProfile { get; set; }
+        [Input("ddnsCertProfile", required: true)]
+        public Input<string> DdnsCertProfile { get; set; } = null!;
 
         /// <summary>
-        /// Ddns enabled
+        /// Enable DDNS?
         /// </summary>
         [Input("ddnsEnabled")]
         public Input<bool>? DdnsEnabled { get; set; }
@@ -27,32 +27,32 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// Ddns hostname
         /// </summary>
-        [Input("ddnsHostname")]
-        public Input<string>? DdnsHostname { get; set; }
+        [Input("ddnsHostname", required: true)]
+        public Input<string> DdnsHostname { get; set; } = null!;
 
         /// <summary>
-        /// Ddns ip
+        /// IP to register (static only)
         /// </summary>
         [Input("ddnsIp")]
         public Input<string>? DdnsIp { get; set; }
 
         /// <summary>
-        /// Ddns update interval
+        /// Update interval (days)
         /// </summary>
         [Input("ddnsUpdateInterval")]
         public Input<int>? DdnsUpdateInterval { get; set; }
 
         /// <summary>
-        /// Ddns vendor
+        /// DDNS vendor
         /// </summary>
-        [Input("ddnsVendor")]
-        public Input<string>? DdnsVendor { get; set; }
+        [Input("ddnsVendor", required: true)]
+        public Input<string> DdnsVendor { get; set; } = null!;
 
         /// <summary>
-        /// Ddns vendor config
+        /// DDNS vendor
         /// </summary>
-        [Input("ddnsVendorConfig")]
-        public Input<string>? DdnsVendorConfig { get; set; }
+        [Input("ddnsVendorConfig", required: true)]
+        public Input<string> DdnsVendorConfig { get; set; } = null!;
 
         public VlanInterfaceDdnsConfigArgs()
         {

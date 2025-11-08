@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionListDataOspfBgpResult
     {
         /// <summary>
-        /// Route maps
+        /// OSPF BGP Route maps
         /// </summary>
         public readonly ImmutableArray<Outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMapResult> RouteMaps;
 

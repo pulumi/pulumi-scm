@@ -27,7 +27,7 @@ namespace Pulumi.Scm
         ///     // Fetch a list of all certificate profile objects from the "Shared" folder.
         ///     var allProfiles = Scm.GetCertificateProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -56,7 +56,7 @@ namespace Pulumi.Scm
         ///     // Fetch a list of all certificate profile objects from the "Shared" folder.
         ///     var allProfiles = Scm.GetCertificateProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -85,7 +85,7 @@ namespace Pulumi.Scm
         ///     // Fetch a list of all certificate profile objects from the "Shared" folder.
         ///     var allProfiles = Scm.GetCertificateProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;

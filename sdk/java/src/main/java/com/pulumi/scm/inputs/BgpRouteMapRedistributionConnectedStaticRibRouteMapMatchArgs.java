@@ -18,14 +18,14 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs 
     public static final BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs Empty = new BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs();
 
     /**
-     * Interface
+     * Connected Static BGP Rib Route maps Interface
      * 
      */
     @Import(name="interface")
     private @Nullable Output<String> interface_;
 
     /**
-     * @return Interface
+     * @return Connected Static BGP Rib Route maps Interface
      * 
      */
     public Optional<Output<String>> interface_() {
@@ -48,14 +48,14 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs 
     }
 
     /**
-     * Metric
+     * Connected Static BGP Rib Route maps Metric
      * 
      */
     @Import(name="metric")
     private @Nullable Output<Integer> metric;
 
     /**
-     * @return Metric
+     * @return Connected Static BGP Rib Route maps Metric
      * 
      */
     public Optional<Output<Integer>> metric() {
@@ -89,7 +89,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs 
         }
 
         /**
-         * @param interface_ Interface
+         * @param interface_ Connected Static BGP Rib Route maps Interface
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs 
         }
 
         /**
-         * @param interface_ Interface
+         * @param interface_ Connected Static BGP Rib Route maps Interface
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs 
         }
 
         /**
-         * @param metric Metric
+         * @param metric Connected Static BGP Rib Route maps Metric
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs 
         }
 
         /**
-         * @param metric Metric
+         * @param metric Connected Static BGP Rib Route maps Metric
          * 
          * @return builder
          * 

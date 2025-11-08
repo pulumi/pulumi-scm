@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         ///     // This data source will call the "List" API endpoint.
         ///     var allTags = Scm.GetTagList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -58,7 +58,7 @@ namespace Pulumi.Scm
         ///     // This data source will call the "List" API endpoint.
         ///     var allTags = Scm.GetTagList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -88,7 +88,7 @@ namespace Pulumi.Scm
         ///     // This data source will call the "List" API endpoint.
         ///     var allTags = Scm.GetTagList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;

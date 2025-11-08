@@ -16,25 +16,25 @@ namespace Pulumi.Scm.Inputs
         /// Dead counts
         /// </summary>
         [Input("deadCounts")]
-        public Input<double>? DeadCounts { get; set; }
+        public Input<int>? DeadCounts { get; set; }
 
         /// <summary>
         /// Hello interval
         /// </summary>
         [Input("helloInterval")]
-        public Input<double>? HelloInterval { get; set; }
+        public Input<int>? HelloInterval { get; set; }
 
         /// <summary>
         /// Retransmit interval
         /// </summary>
         [Input("retransmitInterval")]
-        public Input<double>? RetransmitInterval { get; set; }
+        public Input<int>? RetransmitInterval { get; set; }
 
         /// <summary>
         /// Transit delay
         /// </summary>
         [Input("transitDelay")]
-        public Input<double>? TransitDelay { get; set; }
+        public Input<int>? TransitDelay { get; set; }
 
         public LogicalRouterVrfOspfv3AreaVirtualLinkVrTimingGetArgs()
         {

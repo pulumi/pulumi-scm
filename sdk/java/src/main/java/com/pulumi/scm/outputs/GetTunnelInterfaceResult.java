@@ -6,9 +6,9 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetTunnelInterfaceIp;
-import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
@@ -19,10 +19,10 @@ public final class GetTunnelInterfaceResult {
      */
     private String comment;
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
-    private Integer defaultValue;
+    private String defaultValue;
     /**
      * @return The device in which the resource is defined
      * 
@@ -44,15 +44,15 @@ public final class GetTunnelInterfaceResult {
      */
     private String interfaceManagementProfile;
     /**
-     * @return tunnel interfaces ip parent
+     * @return Tunnel Interface IP Parent
      * 
      */
-    private GetTunnelInterfaceIp ip;
+    private List<GetTunnelInterfaceIp> ips;
     /**
      * @return MTU
      * 
      */
-    private Double mtu;
+    private Integer mtu;
     /**
      * @return L3 sub-interface name
      * 
@@ -74,10 +74,10 @@ public final class GetTunnelInterfaceResult {
         return this.comment;
     }
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
-    public Integer defaultValue() {
+    public String defaultValue() {
         return this.defaultValue;
     }
     /**
@@ -109,17 +109,17 @@ public final class GetTunnelInterfaceResult {
         return this.interfaceManagementProfile;
     }
     /**
-     * @return tunnel interfaces ip parent
+     * @return Tunnel Interface IP Parent
      * 
      */
-    public GetTunnelInterfaceIp ip() {
-        return this.ip;
+    public List<GetTunnelInterfaceIp> ips() {
+        return this.ips;
     }
     /**
      * @return MTU
      * 
      */
-    public Double mtu() {
+    public Integer mtu() {
         return this.mtu;
     }
     /**
@@ -150,13 +150,13 @@ public final class GetTunnelInterfaceResult {
     @CustomType.Builder
     public static final class Builder {
         private String comment;
-        private Integer defaultValue;
+        private String defaultValue;
         private String device;
         private String folder;
         private String id;
         private String interfaceManagementProfile;
-        private GetTunnelInterfaceIp ip;
-        private Double mtu;
+        private List<GetTunnelInterfaceIp> ips;
+        private Integer mtu;
         private String name;
         private String snippet;
         private String tfid;
@@ -169,7 +169,7 @@ public final class GetTunnelInterfaceResult {
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.interfaceManagementProfile = defaults.interfaceManagementProfile;
-    	      this.ip = defaults.ip;
+    	      this.ips = defaults.ips;
     	      this.mtu = defaults.mtu;
     	      this.name = defaults.name;
     	      this.snippet = defaults.snippet;
@@ -185,7 +185,7 @@ public final class GetTunnelInterfaceResult {
             return this;
         }
         @CustomType.Setter
-        public Builder defaultValue(Integer defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             if (defaultValue == null) {
               throw new MissingRequiredPropertyException("GetTunnelInterfaceResult", "defaultValue");
             }
@@ -225,15 +225,18 @@ public final class GetTunnelInterfaceResult {
             return this;
         }
         @CustomType.Setter
-        public Builder ip(GetTunnelInterfaceIp ip) {
-            if (ip == null) {
-              throw new MissingRequiredPropertyException("GetTunnelInterfaceResult", "ip");
+        public Builder ips(List<GetTunnelInterfaceIp> ips) {
+            if (ips == null) {
+              throw new MissingRequiredPropertyException("GetTunnelInterfaceResult", "ips");
             }
-            this.ip = ip;
+            this.ips = ips;
             return this;
         }
+        public Builder ips(GetTunnelInterfaceIp... ips) {
+            return ips(List.of(ips));
+        }
         @CustomType.Setter
-        public Builder mtu(Double mtu) {
+        public Builder mtu(Integer mtu) {
             if (mtu == null) {
               throw new MissingRequiredPropertyException("GetTunnelInterfaceResult", "mtu");
             }
@@ -272,7 +275,7 @@ public final class GetTunnelInterfaceResult {
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.interfaceManagementProfile = interfaceManagementProfile;
-            _resultValue.ip = ip;
+            _resultValue.ips = ips;
             _resultValue.mtu = mtu;
             _resultValue.name = name;
             _resultValue.snippet = snippet;

@@ -15,17 +15,17 @@ import * as utilities from "./utilities";
  *
  * // This file is embedded using go:embed
  * const scmAddrTag1 = new scm.Tag("scm_addr_tag_1", {
- *     folder: "Shared",
+ *     folder: "All",
  *     name: "scm_addr_tag_1",
  *     color: "Red",
  * });
  * const scmAddrTag2 = new scm.Tag("scm_addr_tag_2", {
- *     folder: "Shared",
+ *     folder: "All",
  *     name: "scm_addr_tag_2",
  *     color: "Blue",
  * });
  * const scmAddrTag3 = new scm.Tag("scm_addr_tag_3", {
- *     folder: "Shared",
+ *     folder: "All",
  *     name: "scm_addr_tag_3",
  *     color: "Orange",
  * });

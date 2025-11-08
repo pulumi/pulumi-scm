@@ -27,13 +27,16 @@ class GetNatRuleResult:
     """
     A collection of values returned by getNatRule.
     """
-    def __init__(__self__, active_active_device_binding=None, description=None, destinations=None, device=None, disabled=None, distribution=None, dns_rewrite=None, folder=None, froms=None, id=None, name=None, nat_type=None, service=None, snippet=None, source_translation=None, sources=None, tags=None, tfid=None, to_interface=None, tos=None, translated_address_single=None, translated_port=None):
+    def __init__(__self__, active_active_device_binding=None, description=None, destination_translation=None, destinations=None, device=None, disabled=None, dynamic_destination_translation=None, folder=None, froms=None, id=None, name=None, nat_type=None, position=None, service=None, snippet=None, source_translation=None, sources=None, tags=None, tfid=None, to_interface=None, tos=None):
         if active_active_device_binding and not isinstance(active_active_device_binding, str):
             raise TypeError("Expected argument 'active_active_device_binding' to be a str")
         pulumi.set(__self__, "active_active_device_binding", active_active_device_binding)
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if destination_translation and not isinstance(destination_translation, dict):
+            raise TypeError("Expected argument 'destination_translation' to be a dict")
+        pulumi.set(__self__, "destination_translation", destination_translation)
         if destinations and not isinstance(destinations, list):
             raise TypeError("Expected argument 'destinations' to be a list")
         pulumi.set(__self__, "destinations", destinations)
@@ -43,12 +46,9 @@ class GetNatRuleResult:
         if disabled and not isinstance(disabled, bool):
             raise TypeError("Expected argument 'disabled' to be a bool")
         pulumi.set(__self__, "disabled", disabled)
-        if distribution and not isinstance(distribution, str):
-            raise TypeError("Expected argument 'distribution' to be a str")
-        pulumi.set(__self__, "distribution", distribution)
-        if dns_rewrite and not isinstance(dns_rewrite, dict):
-            raise TypeError("Expected argument 'dns_rewrite' to be a dict")
-        pulumi.set(__self__, "dns_rewrite", dns_rewrite)
+        if dynamic_destination_translation and not isinstance(dynamic_destination_translation, dict):
+            raise TypeError("Expected argument 'dynamic_destination_translation' to be a dict")
+        pulumi.set(__self__, "dynamic_destination_translation", dynamic_destination_translation)
         if folder and not isinstance(folder, str):
             raise TypeError("Expected argument 'folder' to be a str")
         pulumi.set(__self__, "folder", folder)
@@ -64,6 +64,9 @@ class GetNatRuleResult:
         if nat_type and not isinstance(nat_type, str):
             raise TypeError("Expected argument 'nat_type' to be a str")
         pulumi.set(__self__, "nat_type", nat_type)
+        if position and not isinstance(position, str):
+            raise TypeError("Expected argument 'position' to be a str")
+        pulumi.set(__self__, "position", position)
         if service and not isinstance(service, str):
             raise TypeError("Expected argument 'service' to be a str")
         pulumi.set(__self__, "service", service)
@@ -88,12 +91,6 @@ class GetNatRuleResult:
         if tos and not isinstance(tos, list):
             raise TypeError("Expected argument 'tos' to be a list")
         pulumi.set(__self__, "tos", tos)
-        if translated_address_single and not isinstance(translated_address_single, str):
-            raise TypeError("Expected argument 'translated_address_single' to be a str")
-        pulumi.set(__self__, "translated_address_single", translated_address_single)
-        if translated_port and not isinstance(translated_port, int):
-            raise TypeError("Expected argument 'translated_port' to be a int")
-        pulumi.set(__self__, "translated_port", translated_port)
 
     @_builtins.property
     @pulumi.getter(name="activeActiveDeviceBinding")
@@ -110,6 +107,14 @@ class GetNatRuleResult:
         NAT rule description
         """
         return pulumi.get(self, "description")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationTranslation")
+    def destination_translation(self) -> 'outputs.GetNatRuleDestinationTranslationResult':
+        """
+        Destination translation
+        """
+        return pulumi.get(self, "destination_translation")
 
     @_builtins.property
     @pulumi.getter
@@ -136,20 +141,12 @@ class GetNatRuleResult:
         return pulumi.get(self, "disabled")
 
     @_builtins.property
-    @pulumi.getter
-    def distribution(self) -> _builtins.str:
+    @pulumi.getter(name="dynamicDestinationTranslation")
+    def dynamic_destination_translation(self) -> 'outputs.GetNatRuleDynamicDestinationTranslationResult':
         """
-        Distribution method
+        Dynamic destination translation
         """
-        return pulumi.get(self, "distribution")
-
-    @_builtins.property
-    @pulumi.getter(name="dnsRewrite")
-    def dns_rewrite(self) -> 'outputs.GetNatRuleDnsRewriteResult':
-        """
-        DNS rewrite
-        """
-        return pulumi.get(self, "dns_rewrite")
+        return pulumi.get(self, "dynamic_destination_translation")
 
     @_builtins.property
     @pulumi.getter
@@ -190,6 +187,14 @@ class GetNatRuleResult:
         NAT type
         """
         return pulumi.get(self, "nat_type")
+
+    @_builtins.property
+    @pulumi.getter
+    def position(self) -> _builtins.str:
+        """
+        The relative position of the rule
+        """
+        return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
@@ -252,22 +257,6 @@ class GetNatRuleResult:
         """
         return pulumi.get(self, "tos")
 
-    @_builtins.property
-    @pulumi.getter(name="translatedAddressSingle")
-    def translated_address_single(self) -> _builtins.str:
-        """
-        Translated destination IP address
-        """
-        return pulumi.get(self, "translated_address_single")
-
-    @_builtins.property
-    @pulumi.getter(name="translatedPort")
-    def translated_port(self) -> _builtins.int:
-        """
-        Translated destination port
-        """
-        return pulumi.get(self, "translated_port")
-
 
 class AwaitableGetNatRuleResult(GetNatRuleResult):
     # pylint: disable=using-constant-test
@@ -277,16 +266,17 @@ class AwaitableGetNatRuleResult(GetNatRuleResult):
         return GetNatRuleResult(
             active_active_device_binding=self.active_active_device_binding,
             description=self.description,
+            destination_translation=self.destination_translation,
             destinations=self.destinations,
             device=self.device,
             disabled=self.disabled,
-            distribution=self.distribution,
-            dns_rewrite=self.dns_rewrite,
+            dynamic_destination_translation=self.dynamic_destination_translation,
             folder=self.folder,
             froms=self.froms,
             id=self.id,
             name=self.name,
             nat_type=self.nat_type,
+            position=self.position,
             service=self.service,
             snippet=self.snippet,
             source_translation=self.source_translation,
@@ -294,9 +284,7 @@ class AwaitableGetNatRuleResult(GetNatRuleResult):
             tags=self.tags,
             tfid=self.tfid,
             to_interface=self.to_interface,
-            tos=self.tos,
-            translated_address_single=self.translated_address_single,
-            translated_port=self.translated_port)
+            tos=self.tos)
 
 
 def get_nat_rule(id: Optional[_builtins.str] = None,
@@ -304,6 +292,41 @@ def get_nat_rule(id: Optional[_builtins.str] = None,
                  opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetNatRuleResult:
     """
     NatRule data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Define the resource (the item to be created via API POST/PUT)
+    dnat_external_web_test_create = scm.NatRule("dnat_external_web_test_create",
+        name="DNAT-External-data-src-test_1",
+        description="Translate public VIP to internal web server.",
+        froms=["zone-untrust"],
+        tos=["zone-untrust"],
+        sources=["any"],
+        destinations=["any"],
+        service="service-http",
+        folder="All",
+        nat_type="ipv4",
+        position="pre",
+        destination_translation={
+            "translated_address": "10.1.1.16",
+            "translated_port": 112,
+            "dns_rewrite": {
+                "direction": "reverse",
+            },
+        })
+    # Define the data source (the item to be retrieved via API GET)
+    dnat_external_web_test_get = scm.get_nat_rule_output(id=dnat_external_web_test_create.id)
+    pulumi.export("retrievedIDAndName", {
+        "id": dnat_external_web_test_get.id,
+        "name": dnat_external_web_test_get.name,
+    })
+    pulumi.export("retrievedDestinationTranslation", dnat_external_web_test_get.destination_translation)
+    pulumi.export("recievedResponse", dnat_external_web_test_get)
+    ```
 
 
     :param _builtins.str id: UUID of the resource
@@ -318,16 +341,17 @@ def get_nat_rule(id: Optional[_builtins.str] = None,
     return AwaitableGetNatRuleResult(
         active_active_device_binding=pulumi.get(__ret__, 'active_active_device_binding'),
         description=pulumi.get(__ret__, 'description'),
+        destination_translation=pulumi.get(__ret__, 'destination_translation'),
         destinations=pulumi.get(__ret__, 'destinations'),
         device=pulumi.get(__ret__, 'device'),
         disabled=pulumi.get(__ret__, 'disabled'),
-        distribution=pulumi.get(__ret__, 'distribution'),
-        dns_rewrite=pulumi.get(__ret__, 'dns_rewrite'),
+        dynamic_destination_translation=pulumi.get(__ret__, 'dynamic_destination_translation'),
         folder=pulumi.get(__ret__, 'folder'),
         froms=pulumi.get(__ret__, 'froms'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         nat_type=pulumi.get(__ret__, 'nat_type'),
+        position=pulumi.get(__ret__, 'position'),
         service=pulumi.get(__ret__, 'service'),
         snippet=pulumi.get(__ret__, 'snippet'),
         source_translation=pulumi.get(__ret__, 'source_translation'),
@@ -335,14 +359,47 @@ def get_nat_rule(id: Optional[_builtins.str] = None,
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'),
         to_interface=pulumi.get(__ret__, 'to_interface'),
-        tos=pulumi.get(__ret__, 'tos'),
-        translated_address_single=pulumi.get(__ret__, 'translated_address_single'),
-        translated_port=pulumi.get(__ret__, 'translated_port'))
+        tos=pulumi.get(__ret__, 'tos'))
 def get_nat_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                         name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetNatRuleResult]:
     """
     NatRule data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Define the resource (the item to be created via API POST/PUT)
+    dnat_external_web_test_create = scm.NatRule("dnat_external_web_test_create",
+        name="DNAT-External-data-src-test_1",
+        description="Translate public VIP to internal web server.",
+        froms=["zone-untrust"],
+        tos=["zone-untrust"],
+        sources=["any"],
+        destinations=["any"],
+        service="service-http",
+        folder="All",
+        nat_type="ipv4",
+        position="pre",
+        destination_translation={
+            "translated_address": "10.1.1.16",
+            "translated_port": 112,
+            "dns_rewrite": {
+                "direction": "reverse",
+            },
+        })
+    # Define the data source (the item to be retrieved via API GET)
+    dnat_external_web_test_get = scm.get_nat_rule_output(id=dnat_external_web_test_create.id)
+    pulumi.export("retrievedIDAndName", {
+        "id": dnat_external_web_test_get.id,
+        "name": dnat_external_web_test_get.name,
+    })
+    pulumi.export("retrievedDestinationTranslation", dnat_external_web_test_get.destination_translation)
+    pulumi.export("recievedResponse", dnat_external_web_test_get)
+    ```
 
 
     :param _builtins.str id: UUID of the resource
@@ -356,16 +413,17 @@ def get_nat_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     return __ret__.apply(lambda __response__: GetNatRuleResult(
         active_active_device_binding=pulumi.get(__response__, 'active_active_device_binding'),
         description=pulumi.get(__response__, 'description'),
+        destination_translation=pulumi.get(__response__, 'destination_translation'),
         destinations=pulumi.get(__response__, 'destinations'),
         device=pulumi.get(__response__, 'device'),
         disabled=pulumi.get(__response__, 'disabled'),
-        distribution=pulumi.get(__response__, 'distribution'),
-        dns_rewrite=pulumi.get(__response__, 'dns_rewrite'),
+        dynamic_destination_translation=pulumi.get(__response__, 'dynamic_destination_translation'),
         folder=pulumi.get(__response__, 'folder'),
         froms=pulumi.get(__response__, 'froms'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         nat_type=pulumi.get(__response__, 'nat_type'),
+        position=pulumi.get(__response__, 'position'),
         service=pulumi.get(__response__, 'service'),
         snippet=pulumi.get(__response__, 'snippet'),
         source_translation=pulumi.get(__response__, 'source_translation'),
@@ -373,6 +431,4 @@ def get_nat_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
         tags=pulumi.get(__response__, 'tags'),
         tfid=pulumi.get(__response__, 'tfid'),
         to_interface=pulumi.get(__response__, 'to_interface'),
-        tos=pulumi.get(__response__, 'tos'),
-        translated_address_single=pulumi.get(__response__, 'translated_address_single'),
-        translated_port=pulumi.get(__response__, 'translated_port')))
+        tos=pulumi.get(__response__, 'tos')))

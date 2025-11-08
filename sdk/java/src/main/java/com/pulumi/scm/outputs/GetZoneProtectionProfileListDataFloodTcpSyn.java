@@ -5,48 +5,30 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetZoneProtectionProfileListDataFloodTcpSynRed;
+import com.pulumi.scm.outputs.GetZoneProtectionProfileListDataFloodTcpSynSynCookies;
 import java.lang.Boolean;
-import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
 public final class GetZoneProtectionProfileListDataFloodTcpSyn {
-    /**
-     * @return When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-     * 
-     */
-    private Integer activateRate;
-    /**
-     * @return When the flow exceeds the `alertRate`` threshold, an alarm is generated.
-     * 
-     */
-    private Integer alarmRate;
     /**
      * @return Enable protection against SYN floods?
      * 
      */
     private Boolean enable;
     /**
-     * @return When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
+     * @return Red
      * 
      */
-    private Integer maximalRate;
+    private GetZoneProtectionProfileListDataFloodTcpSynRed red;
+    /**
+     * @return Syn cookies
+     * 
+     */
+    private GetZoneProtectionProfileListDataFloodTcpSynSynCookies synCookies;
 
     private GetZoneProtectionProfileListDataFloodTcpSyn() {}
-    /**
-     * @return When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-     * 
-     */
-    public Integer activateRate() {
-        return this.activateRate;
-    }
-    /**
-     * @return When the flow exceeds the `alertRate`` threshold, an alarm is generated.
-     * 
-     */
-    public Integer alarmRate() {
-        return this.alarmRate;
-    }
     /**
      * @return Enable protection against SYN floods?
      * 
@@ -55,11 +37,18 @@ public final class GetZoneProtectionProfileListDataFloodTcpSyn {
         return this.enable;
     }
     /**
-     * @return When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
+     * @return Red
      * 
      */
-    public Integer maximalRate() {
-        return this.maximalRate;
+    public GetZoneProtectionProfileListDataFloodTcpSynRed red() {
+        return this.red;
+    }
+    /**
+     * @return Syn cookies
+     * 
+     */
+    public GetZoneProtectionProfileListDataFloodTcpSynSynCookies synCookies() {
+        return this.synCookies;
     }
 
     public static Builder builder() {
@@ -71,35 +60,17 @@ public final class GetZoneProtectionProfileListDataFloodTcpSyn {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Integer activateRate;
-        private Integer alarmRate;
         private Boolean enable;
-        private Integer maximalRate;
+        private GetZoneProtectionProfileListDataFloodTcpSynRed red;
+        private GetZoneProtectionProfileListDataFloodTcpSynSynCookies synCookies;
         public Builder() {}
         public Builder(GetZoneProtectionProfileListDataFloodTcpSyn defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.activateRate = defaults.activateRate;
-    	      this.alarmRate = defaults.alarmRate;
     	      this.enable = defaults.enable;
-    	      this.maximalRate = defaults.maximalRate;
+    	      this.red = defaults.red;
+    	      this.synCookies = defaults.synCookies;
         }
 
-        @CustomType.Setter
-        public Builder activateRate(Integer activateRate) {
-            if (activateRate == null) {
-              throw new MissingRequiredPropertyException("GetZoneProtectionProfileListDataFloodTcpSyn", "activateRate");
-            }
-            this.activateRate = activateRate;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder alarmRate(Integer alarmRate) {
-            if (alarmRate == null) {
-              throw new MissingRequiredPropertyException("GetZoneProtectionProfileListDataFloodTcpSyn", "alarmRate");
-            }
-            this.alarmRate = alarmRate;
-            return this;
-        }
         @CustomType.Setter
         public Builder enable(Boolean enable) {
             if (enable == null) {
@@ -109,19 +80,26 @@ public final class GetZoneProtectionProfileListDataFloodTcpSyn {
             return this;
         }
         @CustomType.Setter
-        public Builder maximalRate(Integer maximalRate) {
-            if (maximalRate == null) {
-              throw new MissingRequiredPropertyException("GetZoneProtectionProfileListDataFloodTcpSyn", "maximalRate");
+        public Builder red(GetZoneProtectionProfileListDataFloodTcpSynRed red) {
+            if (red == null) {
+              throw new MissingRequiredPropertyException("GetZoneProtectionProfileListDataFloodTcpSyn", "red");
             }
-            this.maximalRate = maximalRate;
+            this.red = red;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder synCookies(GetZoneProtectionProfileListDataFloodTcpSynSynCookies synCookies) {
+            if (synCookies == null) {
+              throw new MissingRequiredPropertyException("GetZoneProtectionProfileListDataFloodTcpSyn", "synCookies");
+            }
+            this.synCookies = synCookies;
             return this;
         }
         public GetZoneProtectionProfileListDataFloodTcpSyn build() {
             final var _resultValue = new GetZoneProtectionProfileListDataFloodTcpSyn();
-            _resultValue.activateRate = activateRate;
-            _resultValue.alarmRate = alarmRate;
             _resultValue.enable = enable;
-            _resultValue.maximalRate = maximalRate;
+            _resultValue.red = red;
+            _resultValue.synCookies = synCookies;
             return _resultValue;
         }
     }

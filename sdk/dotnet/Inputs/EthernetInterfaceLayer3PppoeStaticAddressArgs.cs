@@ -13,10 +13,10 @@ namespace Pulumi.Scm.Inputs
     public sealed class EthernetInterfaceLayer3PppoeStaticAddressArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Ip
+        /// Static IP address
         /// </summary>
-        [Input("ip")]
-        public Input<string>? Ip { get; set; }
+        [Input("ip", required: true)]
+        public Input<string> Ip { get; set; } = null!;
 
         public EthernetInterfaceLayer3PppoeStaticAddressArgs()
         {

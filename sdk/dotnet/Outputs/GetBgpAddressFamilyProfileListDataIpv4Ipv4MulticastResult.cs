@@ -52,7 +52,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Remove private a s
         /// </summary>
-        public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateASResult RemovePrivateAS;
+        public readonly Outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateAsResult RemovePrivateAs;
         /// <summary>
         /// Route reflector client?
         /// </summary>
@@ -86,7 +86,7 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastOrfResult orf,
 
-            Outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateASResult removePrivateAS,
+            Outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateAsResult removePrivateAs,
 
             bool routeReflectorClient,
 
@@ -103,7 +103,7 @@ namespace Pulumi.Scm.Outputs
             MaximumPrefix = maximumPrefix;
             NextHop = nextHop;
             Orf = orf;
-            RemovePrivateAS = removePrivateAS;
+            RemovePrivateAs = removePrivateAs;
             RouteReflectorClient = routeReflectorClient;
             SendCommunity = sendCommunity;
             SoftReconfigWithStoredInfo = softReconfigWithStoredInfo;

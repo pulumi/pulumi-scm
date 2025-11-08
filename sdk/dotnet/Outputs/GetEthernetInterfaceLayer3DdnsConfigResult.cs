@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetEthernetInterfaceLayer3DdnsConfigResult
     {
         /// <summary>
-        /// Ddns cert profile
+        /// Certificate profile
         /// </summary>
         public readonly string DdnsCertProfile;
         /// <summary>
-        /// Ddns enabled
+        /// Enable DDNS?
         /// </summary>
         public readonly bool DdnsEnabled;
         /// <summary>
@@ -26,19 +26,19 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string DdnsHostname;
         /// <summary>
-        /// Ddns ip
+        /// IP to register (static only)
         /// </summary>
         public readonly string DdnsIp;
         /// <summary>
-        /// Ddns update interval
+        /// Update interval (days)
         /// </summary>
         public readonly int DdnsUpdateInterval;
         /// <summary>
-        /// Ddns vendor
+        /// DDNS vendor
         /// </summary>
         public readonly string DdnsVendor;
         /// <summary>
-        /// Ddns vendor config
+        /// DDNS vendor
         /// </summary>
         public readonly string DdnsVendorConfig;
 

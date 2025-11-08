@@ -11,6 +11,218 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// NatRule resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var exampleTag = new Scm.Tag("example_tag", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "example-tag",
+    ///         Color = "Red",
+    ///     });
+    /// 
+    ///     //Source Translation (SNAT) - Dynamic IP and Port
+    ///     var exampleNatRule = new Scm.NatRule("example_nat_rule", new()
+    ///     {
+    ///         Name = "snat-to-internet-1",
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Service = "service-https",
+    ///         Description = "Dynamic SNAT for internal traffic accessing the internet. Updating",
+    ///         Disabled = false,
+    ///         NatType = "ipv4",
+    ///         Folder = "All",
+    ///         Tags = new[]
+    ///         {
+    ///             exampleTag.Name,
+    ///         },
+    ///         SourceTranslation = new Scm.Inputs.NatRuleSourceTranslationArgs
+    ///         {
+    ///             DynamicIpAndPort = new Scm.Inputs.NatRuleSourceTranslationDynamicIpAndPortArgs
+    ///             {
+    ///                 TranslatedAddresses = new[]
+    ///                 {
+    ///                     "1.1.1.1",
+    ///                     "1.1.1.5",
+    ///                 },
+    ///             },
+    ///         },
+    ///         DestinationTranslation = new Scm.Inputs.NatRuleDestinationTranslationArgs
+    ///         {
+    ///             TranslatedAddress = "192.168.1.10",
+    ///             TranslatedPort = 8080,
+    ///         },
+    ///         ActiveActiveDeviceBinding = "1",
+    ///     });
+    /// 
+    ///     //Source Translation (SNAT) - Static IP - Bidirectional - no
+    ///     var exampleNatStaticRule = new Scm.NatRule("example_nat_static_rule", new()
+    ///     {
+    ///         Name = "snat-to-bid-1",
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Service = "service-https",
+    ///         Description = "Dynamic SNAT for internal traffic accessing the internet. Updating",
+    ///         Disabled = false,
+    ///         NatType = "ipv4",
+    ///         Folder = "All",
+    ///         Tags = new[]
+    ///         {
+    ///             exampleTag.Name,
+    ///         },
+    ///         SourceTranslation = new Scm.Inputs.NatRuleSourceTranslationArgs
+    ///         {
+    ///             StaticIp = new Scm.Inputs.NatRuleSourceTranslationStaticIpArgs
+    ///             {
+    ///                 TranslatedAddress = "1.1.1.5",
+    ///                 BiDirectional = "no",
+    ///             },
+    ///         },
+    ///         DestinationTranslation = new Scm.Inputs.NatRuleDestinationTranslationArgs
+    ///         {
+    ///             TranslatedAddress = "192.168.1.10",
+    ///             TranslatedPort = 8080,
+    ///         },
+    ///         ActiveActiveDeviceBinding = "1",
+    ///     });
+    /// 
+    ///     //Source Translation (SNAT) - Static IP - Bidirectional - yes
+    ///     var exampleNatStaticRule2 = new Scm.NatRule("example_nat_static_rule_2", new()
+    ///     {
+    ///         Name = "snat-to-bid-yes-1",
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Service = "service-https",
+    ///         Description = "Dynamic SNAT for internal traffic accessing the internet. Updating",
+    ///         Disabled = false,
+    ///         NatType = "ipv4",
+    ///         Folder = "All",
+    ///         Tags = new[]
+    ///         {
+    ///             exampleTag.Name,
+    ///         },
+    ///         SourceTranslation = new Scm.Inputs.NatRuleSourceTranslationArgs
+    ///         {
+    ///             StaticIp = new Scm.Inputs.NatRuleSourceTranslationStaticIpArgs
+    ///             {
+    ///                 TranslatedAddress = "1.1.1.5",
+    ///                 BiDirectional = "yes",
+    ///             },
+    ///         },
+    ///         ActiveActiveDeviceBinding = "1",
+    ///     });
+    /// 
+    ///     //Source Translation (SNAT) - Dynamic IP 
+    ///     var exampleNatDynamicRule = new Scm.NatRule("example_nat_dynamic_rule", new()
+    ///     {
+    ///         Name = "snat-to-dyanamic-1",
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Service = "service-https",
+    ///         Description = "Dynamic SNAT for internal traffic accessing the internet. Updating",
+    ///         Disabled = false,
+    ///         NatType = "ipv4",
+    ///         Folder = "All",
+    ///         Tags = new[]
+    ///         {
+    ///             exampleTag.Name,
+    ///         },
+    ///         SourceTranslation = new Scm.Inputs.NatRuleSourceTranslationArgs
+    ///         {
+    ///             DynamicIp = new Scm.Inputs.NatRuleSourceTranslationDynamicIpArgs
+    ///             {
+    ///                 TranslatedAddresses = new[]
+    ///                 {
+    ///                     "1.1.1.0/24",
+    ///                 },
+    ///                 Fallback = new Scm.Inputs.NatRuleSourceTranslationDynamicIpFallbackArgs
+    ///                 {
+    ///                     TranslatedAddresses = new[]
+    ///                     {
+    ///                         "1.1.1.0",
+    ///                     },
+    ///                     InterfaceAddress = new Scm.Inputs.NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgs
+    ///                     {
+    ///                         Interface = "ethernet1/1",
+    ///                         Ip = "1.1.1.5",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         DestinationTranslation = new Scm.Inputs.NatRuleDestinationTranslationArgs
+    ///         {
+    ///             TranslatedAddress = "192.168.1.10",
+    ///             TranslatedPort = 8080,
+    ///         },
+    ///         ActiveActiveDeviceBinding = "1",
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/natRule:NatRule")]
     public partial class NatRule : global::Pulumi.CustomResource
@@ -26,6 +238,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
+
+        /// <summary>
+        /// Destination translation
+        /// </summary>
+        [Output("destinationTranslation")]
+        public Output<Outputs.NatRuleDestinationTranslation?> DestinationTranslation { get; private set; } = null!;
 
         /// <summary>
         /// Destination address(es) of the original packet
@@ -46,16 +264,10 @@ namespace Pulumi.Scm
         public Output<bool> Disabled { get; private set; } = null!;
 
         /// <summary>
-        /// Distribution method
+        /// Dynamic destination translation
         /// </summary>
-        [Output("distribution")]
-        public Output<string?> Distribution { get; private set; } = null!;
-
-        /// <summary>
-        /// DNS rewrite
-        /// </summary>
-        [Output("dnsRewrite")]
-        public Output<Outputs.NatRuleDnsRewrite?> DnsRewrite { get; private set; } = null!;
+        [Output("dynamicDestinationTranslation")]
+        public Output<Outputs.NatRuleDynamicDestinationTranslation?> DynamicDestinationTranslation { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
@@ -132,18 +344,6 @@ namespace Pulumi.Scm
         [Output("tos")]
         public Output<ImmutableArray<string>> Tos { get; private set; } = null!;
 
-        /// <summary>
-        /// Translated destination IP address
-        /// </summary>
-        [Output("translatedAddressSingle")]
-        public Output<string?> TranslatedAddressSingle { get; private set; } = null!;
-
-        /// <summary>
-        /// Translated destination port
-        /// </summary>
-        [Output("translatedPort")]
-        public Output<int?> TranslatedPort { get; private set; } = null!;
-
 
         /// <summary>
         /// Create a NatRule resource with the given unique name, arguments, and options.
@@ -202,6 +402,12 @@ namespace Pulumi.Scm
         [Input("description")]
         public Input<string>? Description { get; set; }
 
+        /// <summary>
+        /// Destination translation
+        /// </summary>
+        [Input("destinationTranslation")]
+        public Input<Inputs.NatRuleDestinationTranslationArgs>? DestinationTranslation { get; set; }
+
         [Input("destinations", required: true)]
         private InputList<string>? _destinations;
 
@@ -227,16 +433,10 @@ namespace Pulumi.Scm
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// Distribution method
+        /// Dynamic destination translation
         /// </summary>
-        [Input("distribution")]
-        public Input<string>? Distribution { get; set; }
-
-        /// <summary>
-        /// DNS rewrite
-        /// </summary>
-        [Input("dnsRewrite")]
-        public Input<Inputs.NatRuleDnsRewriteArgs>? DnsRewrite { get; set; }
+        [Input("dynamicDestinationTranslation")]
+        public Input<Inputs.NatRuleDynamicDestinationTranslationArgs>? DynamicDestinationTranslation { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
@@ -334,18 +534,6 @@ namespace Pulumi.Scm
             set => _tos = value;
         }
 
-        /// <summary>
-        /// Translated destination IP address
-        /// </summary>
-        [Input("translatedAddressSingle")]
-        public Input<string>? TranslatedAddressSingle { get; set; }
-
-        /// <summary>
-        /// Translated destination port
-        /// </summary>
-        [Input("translatedPort")]
-        public Input<int>? TranslatedPort { get; set; }
-
         public NatRuleArgs()
         {
         }
@@ -365,6 +553,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
+
+        /// <summary>
+        /// Destination translation
+        /// </summary>
+        [Input("destinationTranslation")]
+        public Input<Inputs.NatRuleDestinationTranslationGetArgs>? DestinationTranslation { get; set; }
 
         [Input("destinations")]
         private InputList<string>? _destinations;
@@ -391,16 +585,10 @@ namespace Pulumi.Scm
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// Distribution method
+        /// Dynamic destination translation
         /// </summary>
-        [Input("distribution")]
-        public Input<string>? Distribution { get; set; }
-
-        /// <summary>
-        /// DNS rewrite
-        /// </summary>
-        [Input("dnsRewrite")]
-        public Input<Inputs.NatRuleDnsRewriteGetArgs>? DnsRewrite { get; set; }
+        [Input("dynamicDestinationTranslation")]
+        public Input<Inputs.NatRuleDynamicDestinationTranslationGetArgs>? DynamicDestinationTranslation { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
@@ -500,18 +688,6 @@ namespace Pulumi.Scm
             get => _tos ?? (_tos = new InputList<string>());
             set => _tos = value;
         }
-
-        /// <summary>
-        /// Translated destination IP address
-        /// </summary>
-        [Input("translatedAddressSingle")]
-        public Input<string>? TranslatedAddressSingle { get; set; }
-
-        /// <summary>
-        /// Translated destination port
-        /// </summary>
-        [Input("translatedPort")]
-        public Input<int>? TranslatedPort { get; set; }
 
         public NatRuleState()
         {

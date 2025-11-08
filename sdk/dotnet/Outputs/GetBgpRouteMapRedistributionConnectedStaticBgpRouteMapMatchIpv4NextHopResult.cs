@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopResult
     {
         /// <summary>
-        /// Access list
+        /// Connected Static BGP Route maps match ip4 next hop Access list
         /// </summary>
         public readonly string AccessList;
         /// <summary>
-        /// Prefix list
+        /// Connected Static BGP Route maps match ip4 next hop Prefix list
         /// </summary>
         public readonly string PrefixList;
 

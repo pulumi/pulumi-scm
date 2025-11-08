@@ -55,8 +55,8 @@ class GetLayer3SubinterfaceResult:
         if ips and not isinstance(ips, list):
             raise TypeError("Expected argument 'ips' to be a list")
         pulumi.set(__self__, "ips", ips)
-        if mtu and not isinstance(mtu, float):
-            raise TypeError("Expected argument 'mtu' to be a float")
+        if mtu and not isinstance(mtu, int):
+            raise TypeError("Expected argument 'mtu' to be a int")
         pulumi.set(__self__, "mtu", mtu)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
@@ -67,8 +67,8 @@ class GetLayer3SubinterfaceResult:
         if snippet and not isinstance(snippet, str):
             raise TypeError("Expected argument 'snippet' to be a str")
         pulumi.set(__self__, "snippet", snippet)
-        if tag and not isinstance(tag, float):
-            raise TypeError("Expected argument 'tag' to be a float")
+        if tag and not isinstance(tag, int):
+            raise TypeError("Expected argument 'tag' to be a int")
         pulumi.set(__self__, "tag", tag)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
@@ -110,7 +110,7 @@ class GetLayer3SubinterfaceResult:
     @pulumi.getter(name="dhcpClient")
     def dhcp_client(self) -> 'outputs.GetLayer3SubinterfaceDhcpClientResult':
         """
-        Dhcp client
+        Layer3 sub interfaces DHCP Client Object
         """
         return pulumi.get(self, "dhcp_client")
 
@@ -140,15 +140,15 @@ class GetLayer3SubinterfaceResult:
 
     @_builtins.property
     @pulumi.getter
-    def ips(self) -> Sequence[_builtins.str]:
+    def ips(self) -> Sequence['outputs.GetLayer3SubinterfaceIpResult']:
         """
-        Ip
+        L3 sub-interface IP Parent
         """
         return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
-    def mtu(self) -> _builtins.float:
+    def mtu(self) -> _builtins.int:
         """
         MTU
         """
@@ -180,7 +180,7 @@ class GetLayer3SubinterfaceResult:
 
     @_builtins.property
     @pulumi.getter
-    def tag(self) -> _builtins.float:
+    def tag(self) -> _builtins.int:
         """
         VLAN tag
         """
@@ -221,6 +221,25 @@ def get_layer3_subinterface(id: Optional[_builtins.str] = None,
     """
     Layer3Subinterface data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up layer3 sub-interface by its ID.
+    scm_l3_subinterface_ds = scm.get_layer3_subinterface(id="88f730d1-6577-492b-88a6-73d4a513dc76")
+    pulumi.export("layer3SubinterfaceDataSourceResults", {
+        "id": scm_l3_subinterface_ds.id,
+        "name": scm_l3_subinterface_ds.name,
+        "comment": scm_l3_subinterface_ds.comment,
+        "ip": scm_l3_subinterface_ds.ips,
+        "tag": scm_l3_subinterface_ds.tag,
+        "parentInterface": scm_l3_subinterface_ds.parent_interface,
+        "folder": scm_l3_subinterface_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: L3 sub-interface name
@@ -252,6 +271,25 @@ def get_layer3_subinterface_output(id: Optional[pulumi.Input[_builtins.str]] = N
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLayer3SubinterfaceResult]:
     """
     Layer3Subinterface data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up layer3 sub-interface by its ID.
+    scm_l3_subinterface_ds = scm.get_layer3_subinterface(id="88f730d1-6577-492b-88a6-73d4a513dc76")
+    pulumi.export("layer3SubinterfaceDataSourceResults", {
+        "id": scm_l3_subinterface_ds.id,
+        "name": scm_l3_subinterface_ds.name,
+        "comment": scm_l3_subinterface_ds.comment,
+        "ip": scm_l3_subinterface_ds.ips,
+        "tag": scm_l3_subinterface_ds.tag,
+        "parentInterface": scm_l3_subinterface_ds.parent_interface,
+        "folder": scm_l3_subinterface_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

@@ -173,7 +173,7 @@ def get_application_list(device: Optional[_builtins.str] = None,
 
     # Fetch a list of all application objects.
     # This data source will call the "List" API endpoint.
-    all_apps = scm.get_application_list(folder="Shared")
+    all_apps = scm.get_application_list(folder="All")
     pulumi.export("applicationsListRaw", all_apps.datas)
     ```
 
@@ -224,7 +224,7 @@ def get_application_list_output(device: Optional[pulumi.Input[Optional[_builtins
 
     # Fetch a list of all application objects.
     # This data source will call the "List" API endpoint.
-    all_apps = scm.get_application_list(folder="Shared")
+    all_apps = scm.get_application_list(folder="All")
     pulumi.export("applicationsListRaw", all_apps.datas)
     ```
 

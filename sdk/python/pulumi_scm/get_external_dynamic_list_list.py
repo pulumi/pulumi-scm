@@ -172,10 +172,10 @@ def get_external_dynamic_list_list(device: Optional[_builtins.str] = None,
     import pulumi_scm as scm
 
     # Data source to fetch all external dynamic lists in the "Shared" folder.
-    all_shared_edls = scm.get_external_dynamic_list_list(folder="Shared")
+    all_shared_edls = scm.get_external_dynamic_list_list(folder="All")
     pulumi.export("allSharedEdlsMap", all_shared_edls.datas)
     # Example of using pagination to get the first 5 EDLs.
-    paginated_edls = scm.get_external_dynamic_list_list(folder="Shared",
+    paginated_edls = scm.get_external_dynamic_list_list(folder="All",
         limit=5,
         offset=0)
     pulumi.export("paginatedEdlsDetails", {
@@ -231,10 +231,10 @@ def get_external_dynamic_list_list_output(device: Optional[pulumi.Input[Optional
     import pulumi_scm as scm
 
     # Data source to fetch all external dynamic lists in the "Shared" folder.
-    all_shared_edls = scm.get_external_dynamic_list_list(folder="Shared")
+    all_shared_edls = scm.get_external_dynamic_list_list(folder="All")
     pulumi.export("allSharedEdlsMap", all_shared_edls.datas)
     # Example of using pagination to get the first 5 EDLs.
-    paginated_edls = scm.get_external_dynamic_list_list(folder="Shared",
+    paginated_edls = scm.get_external_dynamic_list_list(folder="All",
         limit=5,
         offset=0)
     pulumi.export("paginatedEdlsDetails", {

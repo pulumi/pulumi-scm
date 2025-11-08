@@ -19,7 +19,7 @@ public final class GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAddPath {
      * @return Tx bestpath per a s
      * 
      */
-    private Boolean txBestpathPerAS;
+    private Boolean txBestpathPerAs;
 
     private GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAddPath() {}
     /**
@@ -33,8 +33,8 @@ public final class GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAddPath {
      * @return Tx bestpath per a s
      * 
      */
-    public Boolean txBestpathPerAS() {
-        return this.txBestpathPerAS;
+    public Boolean txBestpathPerAs() {
+        return this.txBestpathPerAs;
     }
 
     public static Builder builder() {
@@ -47,12 +47,12 @@ public final class GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAddPath {
     @CustomType.Builder
     public static final class Builder {
         private Boolean txAllPaths;
-        private Boolean txBestpathPerAS;
+        private Boolean txBestpathPerAs;
         public Builder() {}
         public Builder(GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAddPath defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.txAllPaths = defaults.txAllPaths;
-    	      this.txBestpathPerAS = defaults.txBestpathPerAS;
+    	      this.txBestpathPerAs = defaults.txBestpathPerAs;
         }
 
         @CustomType.Setter
@@ -64,17 +64,17 @@ public final class GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAddPath {
             return this;
         }
         @CustomType.Setter
-        public Builder txBestpathPerAS(Boolean txBestpathPerAS) {
-            if (txBestpathPerAS == null) {
-              throw new MissingRequiredPropertyException("GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAddPath", "txBestpathPerAS");
+        public Builder txBestpathPerAs(Boolean txBestpathPerAs) {
+            if (txBestpathPerAs == null) {
+              throw new MissingRequiredPropertyException("GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAddPath", "txBestpathPerAs");
             }
-            this.txBestpathPerAS = txBestpathPerAS;
+            this.txBestpathPerAs = txBestpathPerAs;
             return this;
         }
         public GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAddPath build() {
             final var _resultValue = new GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAddPath();
             _resultValue.txAllPaths = txAllPaths;
-            _resultValue.txBestpathPerAS = txBestpathPerAS;
+            _resultValue.txBestpathPerAs = txBestpathPerAs;
             return _resultValue;
         }
     }

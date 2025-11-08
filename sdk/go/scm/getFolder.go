@@ -12,6 +12,39 @@ import (
 )
 
 // Folder data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Look up a folder by id
+//			scmFolderDs, err := scm.LookupFolder(ctx, &scm.LookupFolderArgs{
+//				Id: "0f11d0d9-df7c-45da-a60c-4d80f8422544",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmFolderOutput", pulumi.StringMap{
+//				"id":          scmFolderDs.Id,
+//				"name":        scmFolderDs.Name,
+//				"description": scmFolderDs.Description,
+//				"parent":      scmFolderDs.Parent,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupFolder(ctx *pulumi.Context, args *LookupFolderArgs, opts ...pulumi.InvokeOption) (*LookupFolderResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupFolderResult

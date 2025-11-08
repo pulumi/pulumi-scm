@@ -22,6 +22,127 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.ExternalDynamicList;
+ * import com.pulumi.scm.ExternalDynamicListArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeDomainArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeDomainRecurringArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeDomainRecurringDailyArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeIpArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeIpRecurringArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeIpRecurringHourlyArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeUrlArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeUrlRecurringArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeUrlRecurringWeeklyArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypePredefinedIpArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeIpAuthArgs;
+ * import com.pulumi.scm.inputs.ExternalDynamicListTypeIpRecurringFiveMinuteArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         // This resource creates a domain-based External Dynamic List (EDL).
+ *         // The EDL will fetch a list of domains from the specified URL daily.
+ *         var scmEdl1 = new ExternalDynamicList("scmEdl1", ExternalDynamicListArgs.builder()
+ *             .folder("All")
+ *             .name("scm_edl_1")
+ *             .type(ExternalDynamicListTypeArgs.builder()
+ *                 .domain(ExternalDynamicListTypeDomainArgs.builder()
+ *                     .description("List of malicious domains to block, updated daily.")
+ *                     .url("http://some-threat-feed.com/domains.txt")
+ *                     .recurring(ExternalDynamicListTypeDomainRecurringArgs.builder()
+ *                         .daily(ExternalDynamicListTypeDomainRecurringDailyArgs.builder()
+ *                             .at("03")
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmEdl2 = new ExternalDynamicList("scmEdl2", ExternalDynamicListArgs.builder()
+ *             .folder("All")
+ *             .name("scm_edl_2")
+ *             .type(ExternalDynamicListTypeArgs.builder()
+ *                 .ip(ExternalDynamicListTypeIpArgs.builder()
+ *                     .description("IP threat feed with basic auth, updated hourly.")
+ *                     .url("https://threats.example.com/ips.txt")
+ *                     .recurring(ExternalDynamicListTypeIpRecurringArgs.builder()
+ *                         .hourly(ExternalDynamicListTypeIpRecurringHourlyArgs.builder()
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmEdl3 = new ExternalDynamicList("scmEdl3", ExternalDynamicListArgs.builder()
+ *             .folder("All")
+ *             .name("scm_edl_3")
+ *             .type(ExternalDynamicListTypeArgs.builder()
+ *                 .url(ExternalDynamicListTypeUrlArgs.builder()
+ *                     .description("List of phishing URLs, updated every Monday at 2 AM.")
+ *                     .url("https://phish-block.example.com/urls.txt")
+ *                     .recurring(ExternalDynamicListTypeUrlRecurringArgs.builder()
+ *                         .weekly(ExternalDynamicListTypeUrlRecurringWeeklyArgs.builder()
+ *                             .dayOfWeek("monday")
+ *                             .at("02")
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmEdl4 = new ExternalDynamicList("scmEdl4", ExternalDynamicListArgs.builder()
+ *             .folder("All")
+ *             .name("scm_edl_4")
+ *             .type(ExternalDynamicListTypeArgs.builder()
+ *                 .predefinedIp(ExternalDynamicListTypePredefinedIpArgs.builder()
+ *                     .description("Palo Alto Networks-provided list of high-risk IP addresses.")
+ *                     .url("panw-highrisk-ip-list")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmEdl5 = new ExternalDynamicList("scmEdl5", ExternalDynamicListArgs.builder()
+ *             .folder("All")
+ *             .name("scm_edl_5")
+ *             .type(ExternalDynamicListTypeArgs.builder()
+ *                 .ip(ExternalDynamicListTypeIpArgs.builder()
+ *                     .description("IP threat feed that requires authentication.")
+ *                     .url("https://secure-feed.example.com/ips.txt")
+ *                     .certificateProfile("test-cert-list-qekwys")
+ *                     .auth(ExternalDynamicListTypeIpAuthArgs.builder()
+ *                         .username("my-api-user")
+ *                         .password("a-very-secret-password-123!")
+ *                         .build())
+ *                     .recurring(ExternalDynamicListTypeIpRecurringArgs.builder()
+ *                         .fiveMinute(ExternalDynamicListTypeIpRecurringFiveMinuteArgs.builder()
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/externalDynamicList:ExternalDynamicList")
 public class ExternalDynamicList extends com.pulumi.resources.CustomResource {

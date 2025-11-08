@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         /// Admin dist
         /// </summary>
         [Input("adminDist")]
-        public Input<double>? AdminDist { get; set; }
+        public Input<int>? AdminDist { get; set; }
 
         /// <summary>
         /// Bfd
@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Inputs
         /// Metric
         /// </summary>
         [Input("metric")]
-        public Input<double>? Metric { get; set; }
+        public Input<int>? Metric { get; set; }
 
         /// <summary>
         /// Name

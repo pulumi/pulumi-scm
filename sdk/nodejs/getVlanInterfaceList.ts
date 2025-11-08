@@ -8,6 +8,19 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all vlan interfaces
+ * const allVlanInterfaces = scm.getVlanInterfaceList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmVlanInterfaceList = allVlanInterfaces.then(allVlanInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * ```
  */
 export function getVlanInterfaceList(args?: GetVlanInterfaceListArgs, opts?: pulumi.InvokeOptions): Promise<GetVlanInterfaceListResult> {
     args = args || {};
@@ -96,6 +109,19 @@ export interface GetVlanInterfaceListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all vlan interfaces
+ * const allVlanInterfaces = scm.getVlanInterfaceList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmVlanInterfaceList = allVlanInterfaces.then(allVlanInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * ```
  */
 export function getVlanInterfaceListOutput(args?: GetVlanInterfaceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVlanInterfaceListResult> {
     args = args || {};

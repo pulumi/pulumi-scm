@@ -27,12 +27,12 @@ class GetLoopbackInterfaceResult:
     """
     A collection of values returned by getLoopbackInterface.
     """
-    def __init__(__self__, comment=None, default_value=None, device=None, folder=None, id=None, interface_management_profile=None, ip=None, mtu=None, name=None, snippet=None, tfid=None):
+    def __init__(__self__, comment=None, default_value=None, device=None, folder=None, id=None, interface_management_profile=None, ips=None, ipv6=None, mtu=None, name=None, snippet=None, tfid=None):
         if comment and not isinstance(comment, str):
             raise TypeError("Expected argument 'comment' to be a str")
         pulumi.set(__self__, "comment", comment)
-        if default_value and not isinstance(default_value, int):
-            raise TypeError("Expected argument 'default_value' to be a int")
+        if default_value and not isinstance(default_value, str):
+            raise TypeError("Expected argument 'default_value' to be a str")
         pulumi.set(__self__, "default_value", default_value)
         if device and not isinstance(device, str):
             raise TypeError("Expected argument 'device' to be a str")
@@ -46,11 +46,14 @@ class GetLoopbackInterfaceResult:
         if interface_management_profile and not isinstance(interface_management_profile, str):
             raise TypeError("Expected argument 'interface_management_profile' to be a str")
         pulumi.set(__self__, "interface_management_profile", interface_management_profile)
-        if ip and not isinstance(ip, dict):
-            raise TypeError("Expected argument 'ip' to be a dict")
-        pulumi.set(__self__, "ip", ip)
-        if mtu and not isinstance(mtu, float):
-            raise TypeError("Expected argument 'mtu' to be a float")
+        if ips and not isinstance(ips, list):
+            raise TypeError("Expected argument 'ips' to be a list")
+        pulumi.set(__self__, "ips", ips)
+        if ipv6 and not isinstance(ipv6, dict):
+            raise TypeError("Expected argument 'ipv6' to be a dict")
+        pulumi.set(__self__, "ipv6", ipv6)
+        if mtu and not isinstance(mtu, int):
+            raise TypeError("Expected argument 'mtu' to be a int")
         pulumi.set(__self__, "mtu", mtu)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
@@ -72,9 +75,9 @@ class GetLoopbackInterfaceResult:
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
-    def default_value(self) -> _builtins.int:
+    def default_value(self) -> _builtins.str:
         """
-        Default value
+        Default interface assignment
         """
         return pulumi.get(self, "default_value")
 
@@ -112,15 +115,23 @@ class GetLoopbackInterfaceResult:
 
     @_builtins.property
     @pulumi.getter
-    def ip(self) -> 'outputs.GetLoopbackInterfaceIpResult':
+    def ips(self) -> Sequence['outputs.GetLoopbackInterfaceIpResult']:
         """
-        loopback ip parent
+        Loopback IP Parent
         """
-        return pulumi.get(self, "ip")
+        return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
-    def mtu(self) -> _builtins.float:
+    def ipv6(self) -> 'outputs.GetLoopbackInterfaceIpv6Result':
+        """
+        Loopback IPv6 Configuration
+        """
+        return pulumi.get(self, "ipv6")
+
+    @_builtins.property
+    @pulumi.getter
+    def mtu(self) -> _builtins.int:
         """
         MTU
         """
@@ -130,7 +141,7 @@ class GetLoopbackInterfaceResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        L3 sub-interface name
+        Loopback Interface name
         """
         return pulumi.get(self, "name")
 
@@ -160,7 +171,8 @@ class AwaitableGetLoopbackInterfaceResult(GetLoopbackInterfaceResult):
             folder=self.folder,
             id=self.id,
             interface_management_profile=self.interface_management_profile,
-            ip=self.ip,
+            ips=self.ips,
+            ipv6=self.ipv6,
             mtu=self.mtu,
             name=self.name,
             snippet=self.snippet,
@@ -173,9 +185,26 @@ def get_loopback_interface(id: Optional[_builtins.str] = None,
     """
     LoopbackInterface data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up loopback interface by its ID.
+    scm_loopback_intf_ds = scm.get_loopback_interface(id="ddad1e64-0b64-41a4-b361-c6199769a8f1")
+    pulumi.export("scmLoopbackInterfaceDataSourceResults", {
+        "id": scm_loopback_intf_ds.id,
+        "name": scm_loopback_intf_ds.name,
+        "comment": scm_loopback_intf_ds.comment,
+        "ip": scm_loopback_intf_ds.ips,
+        "folder": scm_loopback_intf_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: L3 sub-interface name
+    :param _builtins.str name: Loopback Interface name
     """
     __args__ = dict()
     __args__['id'] = id
@@ -190,7 +219,8 @@ def get_loopback_interface(id: Optional[_builtins.str] = None,
         folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         interface_management_profile=pulumi.get(__ret__, 'interface_management_profile'),
-        ip=pulumi.get(__ret__, 'ip'),
+        ips=pulumi.get(__ret__, 'ips'),
+        ipv6=pulumi.get(__ret__, 'ipv6'),
         mtu=pulumi.get(__ret__, 'mtu'),
         name=pulumi.get(__ret__, 'name'),
         snippet=pulumi.get(__ret__, 'snippet'),
@@ -201,9 +231,26 @@ def get_loopback_interface_output(id: Optional[pulumi.Input[_builtins.str]] = No
     """
     LoopbackInterface data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up loopback interface by its ID.
+    scm_loopback_intf_ds = scm.get_loopback_interface(id="ddad1e64-0b64-41a4-b361-c6199769a8f1")
+    pulumi.export("scmLoopbackInterfaceDataSourceResults", {
+        "id": scm_loopback_intf_ds.id,
+        "name": scm_loopback_intf_ds.name,
+        "comment": scm_loopback_intf_ds.comment,
+        "ip": scm_loopback_intf_ds.ips,
+        "folder": scm_loopback_intf_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
-    :param _builtins.str name: L3 sub-interface name
+    :param _builtins.str name: Loopback Interface name
     """
     __args__ = dict()
     __args__['id'] = id
@@ -217,7 +264,8 @@ def get_loopback_interface_output(id: Optional[pulumi.Input[_builtins.str]] = No
         folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         interface_management_profile=pulumi.get(__response__, 'interface_management_profile'),
-        ip=pulumi.get(__response__, 'ip'),
+        ips=pulumi.get(__response__, 'ips'),
+        ipv6=pulumi.get(__response__, 'ipv6'),
         mtu=pulumi.get(__response__, 'mtu'),
         name=pulumi.get(__response__, 'name'),
         snippet=pulumi.get(__response__, 'snippet'),

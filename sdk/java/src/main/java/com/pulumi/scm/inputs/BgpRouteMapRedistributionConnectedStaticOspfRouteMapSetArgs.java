@@ -33,14 +33,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs e
     }
 
     /**
-     * Metric type
+     * Connected Static BGP OSPF Route map set Metric type
      * 
      */
     @Import(name="metricType")
     private @Nullable Output<String> metricType;
 
     /**
-     * @return Metric type
+     * @return Connected Static BGP OSPF Route map set Metric type
      * 
      */
     public Optional<Output<String>> metricType() {
@@ -48,14 +48,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs e
     }
 
     /**
-     * Tag
+     * Connected Static BGP OSPF Route map set Tag
      * 
      */
     @Import(name="tag")
     private @Nullable Output<Integer> tag;
 
     /**
-     * @return Tag
+     * @return Connected Static BGP OSPF Route map set Tag
      * 
      */
     public Optional<Output<Integer>> tag() {
@@ -110,7 +110,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs e
         }
 
         /**
-         * @param metricType Metric type
+         * @param metricType Connected Static BGP OSPF Route map set Metric type
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs e
         }
 
         /**
-         * @param metricType Metric type
+         * @param metricType Connected Static BGP OSPF Route map set Metric type
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs e
         }
 
         /**
-         * @param tag Tag
+         * @param tag Connected Static BGP OSPF Route map set Tag
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs e
         }
 
         /**
-         * @param tag Tag
+         * @param tag Connected Static BGP OSPF Route map set Tag
          * 
          * @return builder
          * 

@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -31,25 +32,25 @@ public final class RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs extend
     }
 
     /**
-     * Destination IP wildcard
+     * Entry
      * 
      */
-    @Import(name="wildcard")
-    private @Nullable Output<String> wildcard;
+    @Import(name="entry")
+    private @Nullable Output<RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs> entry;
 
     /**
-     * @return Destination IP wildcard
+     * @return Entry
      * 
      */
-    public Optional<Output<String>> wildcard() {
-        return Optional.ofNullable(this.wildcard);
+    public Optional<Output<RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs>> entry() {
+        return Optional.ofNullable(this.entry);
     }
 
     private RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs() {}
 
     private RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs(RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs $) {
         this.address = $.address;
-        this.wildcard = $.wildcard;
+        this.entry = $.entry;
     }
 
     public static Builder builder() {
@@ -92,24 +93,24 @@ public final class RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs extend
         }
 
         /**
-         * @param wildcard Destination IP wildcard
+         * @param entry Entry
          * 
          * @return builder
          * 
          */
-        public Builder wildcard(@Nullable Output<String> wildcard) {
-            $.wildcard = wildcard;
+        public Builder entry(@Nullable Output<RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs> entry) {
+            $.entry = entry;
             return this;
         }
 
         /**
-         * @param wildcard Destination IP wildcard
+         * @param entry Entry
          * 
          * @return builder
          * 
          */
-        public Builder wildcard(String wildcard) {
-            return wildcard(Output.of(wildcard));
+        public Builder entry(RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs entry) {
+            return entry(Output.of(entry));
         }
 
         public RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs build() {

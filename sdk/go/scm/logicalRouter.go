@@ -12,6 +12,8 @@ import (
 )
 
 // LogicalRouter resource
+//
+// ## Example Usage
 type LogicalRouter struct {
 	pulumi.CustomResourceState
 

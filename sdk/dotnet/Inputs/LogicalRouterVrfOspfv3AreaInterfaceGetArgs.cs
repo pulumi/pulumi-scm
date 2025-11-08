@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         /// Instance id
         /// </summary>
         [Input("instanceId")]
-        public Input<double>? InstanceId { get; set; }
+        public Input<int>? InstanceId { get; set; }
 
         /// <summary>
         /// Link type
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Inputs
         /// Metric
         /// </summary>
         [Input("metric")]
-        public Input<double>? Metric { get; set; }
+        public Input<int>? Metric { get; set; }
 
         /// <summary>
         /// Mtu ignore
@@ -82,7 +82,7 @@ namespace Pulumi.Scm.Inputs
         /// Priority
         /// </summary>
         [Input("priority")]
-        public Input<double>? Priority { get; set; }
+        public Input<int>? Priority { get; set; }
 
         /// <summary>
         /// Timing

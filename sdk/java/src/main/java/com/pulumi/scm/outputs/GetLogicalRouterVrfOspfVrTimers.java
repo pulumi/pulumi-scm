@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -14,26 +14,26 @@ public final class GetLogicalRouterVrfOspfVrTimers {
      * @return Lsa interval
      * 
      */
-    private Double lsaInterval;
+    private Integer lsaInterval;
     /**
      * @return Spf calculation delay
      * 
      */
-    private Double spfCalculationDelay;
+    private Integer spfCalculationDelay;
 
     private GetLogicalRouterVrfOspfVrTimers() {}
     /**
      * @return Lsa interval
      * 
      */
-    public Double lsaInterval() {
+    public Integer lsaInterval() {
         return this.lsaInterval;
     }
     /**
      * @return Spf calculation delay
      * 
      */
-    public Double spfCalculationDelay() {
+    public Integer spfCalculationDelay() {
         return this.spfCalculationDelay;
     }
 
@@ -46,8 +46,8 @@ public final class GetLogicalRouterVrfOspfVrTimers {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Double lsaInterval;
-        private Double spfCalculationDelay;
+        private Integer lsaInterval;
+        private Integer spfCalculationDelay;
         public Builder() {}
         public Builder(GetLogicalRouterVrfOspfVrTimers defaults) {
     	      Objects.requireNonNull(defaults);
@@ -56,7 +56,7 @@ public final class GetLogicalRouterVrfOspfVrTimers {
         }
 
         @CustomType.Setter
-        public Builder lsaInterval(Double lsaInterval) {
+        public Builder lsaInterval(Integer lsaInterval) {
             if (lsaInterval == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfVrTimers", "lsaInterval");
             }
@@ -64,7 +64,7 @@ public final class GetLogicalRouterVrfOspfVrTimers {
             return this;
         }
         @CustomType.Setter
-        public Builder spfCalculationDelay(Double spfCalculationDelay) {
+        public Builder spfCalculationDelay(Integer spfCalculationDelay) {
             if (spfCalculationDelay == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfVrTimers", "spfCalculationDelay");
             }

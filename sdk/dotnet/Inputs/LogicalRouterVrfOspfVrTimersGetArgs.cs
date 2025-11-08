@@ -16,13 +16,13 @@ namespace Pulumi.Scm.Inputs
         /// Lsa interval
         /// </summary>
         [Input("lsaInterval")]
-        public Input<double>? LsaInterval { get; set; }
+        public Input<int>? LsaInterval { get; set; }
 
         /// <summary>
         /// Spf calculation delay
         /// </summary>
         [Input("spfCalculationDelay")]
-        public Input<double>? SpfCalculationDelay { get; set; }
+        public Input<int>? SpfCalculationDelay { get; set; }
 
         public LogicalRouterVrfOspfVrTimersGetArgs()
         {

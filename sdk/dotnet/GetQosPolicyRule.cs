@@ -13,18 +13,165 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// QosPolicyRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var testQosPolicyRule = new Scm.QosPolicyRule("test_qos_policy_rule", new()
+        ///     {
+        ///         Name = "data-source-qos-test",
+        ///         Description = "Rule created specifically for data source testing with DSCP/TOS.",
+        ///         Folder = "All",
+        ///         Position = "pre",
+        ///         Schedule = "non-work-hours",
+        ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
+        ///         {
+        ///             Class = "1",
+        ///         },
+        ///         DscpTos = new Scm.Inputs.QosPolicyRuleDscpTosArgs
+        ///         {
+        ///             Codepoints = new[]
+        ///             {
+        ///                 new Scm.Inputs.QosPolicyRuleDscpTosCodepointArgs
+        ///                 {
+        ///                     Name = "Expedited Forwarding",
+        ///                     Type = new Scm.Inputs.QosPolicyRuleDscpTosCodepointTypeArgs
+        ///                     {
+        ///                         Ef = null,
+        ///                     },
+        ///                 },
+        ///             },
+        ///         },
+        ///     });
+        /// 
+        ///     var singleRuleById = Scm.GetQosPolicyRule.Invoke(new()
+        ///     {
+        ///         Id = testQosPolicyRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleQosPolicyRuleDump"] = singleRuleById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetQosPolicyRuleResult> InvokeAsync(GetQosPolicyRuleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetQosPolicyRuleResult>("scm:index/getQosPolicyRule:getQosPolicyRule", args ?? new GetQosPolicyRuleArgs(), options.WithDefaults());
 
         /// <summary>
         /// QosPolicyRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var testQosPolicyRule = new Scm.QosPolicyRule("test_qos_policy_rule", new()
+        ///     {
+        ///         Name = "data-source-qos-test",
+        ///         Description = "Rule created specifically for data source testing with DSCP/TOS.",
+        ///         Folder = "All",
+        ///         Position = "pre",
+        ///         Schedule = "non-work-hours",
+        ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
+        ///         {
+        ///             Class = "1",
+        ///         },
+        ///         DscpTos = new Scm.Inputs.QosPolicyRuleDscpTosArgs
+        ///         {
+        ///             Codepoints = new[]
+        ///             {
+        ///                 new Scm.Inputs.QosPolicyRuleDscpTosCodepointArgs
+        ///                 {
+        ///                     Name = "Expedited Forwarding",
+        ///                     Type = new Scm.Inputs.QosPolicyRuleDscpTosCodepointTypeArgs
+        ///                     {
+        ///                         Ef = null,
+        ///                     },
+        ///                 },
+        ///             },
+        ///         },
+        ///     });
+        /// 
+        ///     var singleRuleById = Scm.GetQosPolicyRule.Invoke(new()
+        ///     {
+        ///         Id = testQosPolicyRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleQosPolicyRuleDump"] = singleRuleById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetQosPolicyRuleResult> Invoke(GetQosPolicyRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosPolicyRuleResult>("scm:index/getQosPolicyRule:getQosPolicyRule", args ?? new GetQosPolicyRuleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// QosPolicyRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var testQosPolicyRule = new Scm.QosPolicyRule("test_qos_policy_rule", new()
+        ///     {
+        ///         Name = "data-source-qos-test",
+        ///         Description = "Rule created specifically for data source testing with DSCP/TOS.",
+        ///         Folder = "All",
+        ///         Position = "pre",
+        ///         Schedule = "non-work-hours",
+        ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
+        ///         {
+        ///             Class = "1",
+        ///         },
+        ///         DscpTos = new Scm.Inputs.QosPolicyRuleDscpTosArgs
+        ///         {
+        ///             Codepoints = new[]
+        ///             {
+        ///                 new Scm.Inputs.QosPolicyRuleDscpTosCodepointArgs
+        ///                 {
+        ///                     Name = "Expedited Forwarding",
+        ///                     Type = new Scm.Inputs.QosPolicyRuleDscpTosCodepointTypeArgs
+        ///                     {
+        ///                         Ef = null,
+        ///                     },
+        ///                 },
+        ///             },
+        ///         },
+        ///     });
+        /// 
+        ///     var singleRuleById = Scm.GetQosPolicyRule.Invoke(new()
+        ///     {
+        ///         Id = testQosPolicyRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleQosPolicyRuleDump"] = singleRuleById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetQosPolicyRuleResult> Invoke(GetQosPolicyRuleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosPolicyRuleResult>("scm:index/getQosPolicyRule:getQosPolicyRule", args ?? new GetQosPolicyRuleInvokeArgs(), options.WithDefaults());
@@ -104,6 +251,14 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Name;
         /// <summary>
+        /// The relative position of the rule
+        /// </summary>
+        public readonly string Position;
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        public readonly string RelativePosition;
+        /// <summary>
         /// Schedule
         /// </summary>
         public readonly string Schedule;
@@ -111,6 +266,10 @@ namespace Pulumi.Scm
         /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        public readonly string TargetRule;
         public readonly string Tfid;
 
         [OutputConstructor]
@@ -129,9 +288,15 @@ namespace Pulumi.Scm
 
             string name,
 
+            string position,
+
+            string relativePosition,
+
             string schedule,
 
             string snippet,
+
+            string targetRule,
 
             string tfid)
         {
@@ -142,8 +307,11 @@ namespace Pulumi.Scm
             Folder = folder;
             Id = id;
             Name = name;
+            Position = position;
+            RelativePosition = relativePosition;
             Schedule = schedule;
             Snippet = snippet;
+            TargetRule = targetRule;
             Tfid = tfid;
         }
     }

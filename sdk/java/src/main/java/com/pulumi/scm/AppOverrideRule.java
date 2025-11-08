@@ -11,7 +11,6 @@ import com.pulumi.scm.AppOverrideRuleArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.AppOverrideRuleState;
 import java.lang.Boolean;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -19,6 +18,124 @@ import javax.annotation.Nullable;
 
 /**
  * AppOverrideRule resource
+ * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Tag;
+ * import com.pulumi.scm.TagArgs;
+ * import com.pulumi.scm.AppOverrideRule;
+ * import com.pulumi.scm.AppOverrideRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         // --- 1. TAG Resource ---
+ *         var appOverridePositionTag = new Tag("appOverridePositionTag", TagArgs.builder()
+ *             .name("app-override-position-tag_1")
+ *             .folder("All")
+ *             .color("Orange")
+ *             .build());
+ * 
+ *         // --- 2. ANCHOR RULE (Used for relative positioning by other rules) ---
+ *         var anchorAppOverride = new AppOverrideRule("anchorAppOverride", AppOverrideRuleArgs.builder()
+ *             .name("anchor-app-override-rule")
+ *             .description("Base rule for testing 'before' and 'after' positioning. Updating")
+ *             .folder("All")
+ *             .position("pre")
+ *             .application("ssl")
+ *             .protocol("tcp")
+ *             .port("112")
+ *             .froms("trust")
+ *             .tos("untrust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .tags(appOverridePositionTag.name())
+ *             .build());
+ * 
+ *         // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+ *         var ruleTopAppOverride = new AppOverrideRule("ruleTopAppOverride", AppOverrideRuleArgs.builder()
+ *             .name("top-absolute-app-override")
+ *             .description("Placed at the very TOP of the App Override rulebase.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("bottom")
+ *             .application("ssl")
+ *             .protocol("tcp")
+ *             .port("443")
+ *             .froms("untrust")
+ *             .tos("trust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .build());
+ * 
+ *         var ruleBottomAppOverride = new AppOverrideRule("ruleBottomAppOverride", AppOverrideRuleArgs.builder()
+ *             .name("bottom-absolute-app-override")
+ *             .description("Placed at the very BOTTOM of the App Override rulebase.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("bottom")
+ *             .application("ssl")
+ *             .protocol("tcp")
+ *             .port("443")
+ *             .froms("any")
+ *             .tos("any")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .build());
+ * 
+ *         //--- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+ *         var ruleBeforeAnchorOverride = new AppOverrideRule("ruleBeforeAnchorOverride", AppOverrideRuleArgs.builder()
+ *             .name("before-anchor-app-override")
+ *             .description("Positioned immediately BEFORE the anchor-app-override-rule.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("before")
+ *             .targetRule(anchorAppOverride.id())
+ *             .application("ssl")
+ *             .protocol("tcp")
+ *             .port("443")
+ *             .froms("trust")
+ *             .tos("untrust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .build());
+ * 
+ *         var ruleAfterAnchorOverride = new AppOverrideRule("ruleAfterAnchorOverride", AppOverrideRuleArgs.builder()
+ *             .name("after-anchor-app-override")
+ *             .description("Positioned immediately AFTER the anchor-app-override-rule.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("before")
+ *             .targetRule(anchorAppOverride.id())
+ *             .application("ssl")
+ *             .protocol("tcp")
+ *             .port("443")
+ *             .froms("untrust")
+ *             .tos("trust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  */
 @ResourceType(type="scm:index/appOverrideRule:AppOverrideRule")
@@ -181,15 +298,29 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      * Port
      * 
      */
-    @Export(name="port", refs={Integer.class}, tree="[0]")
-    private Output<Integer> port;
+    @Export(name="port", refs={String.class}, tree="[0]")
+    private Output<String> port;
 
     /**
      * @return Port
      * 
      */
-    public Output<Integer> port() {
+    public Output<String> port() {
         return this.port;
+    }
+    /**
+     * The position of a security rule
+     * 
+     */
+    @Export(name="position", refs={String.class}, tree="[0]")
+    private Output<String> position;
+
+    /**
+     * @return The position of a security rule
+     * 
+     */
+    public Output<String> position() {
+        return this.position;
     }
     /**
      * Protocol
@@ -204,6 +335,20 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      */
     public Output<String> protocol() {
         return this.protocol;
+    }
+    /**
+     * Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    @Export(name="relativePosition", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> relativePosition;
+
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public Output<Optional<String>> relativePosition() {
+        return Codegen.optional(this.relativePosition);
     }
     /**
      * The snippet in which the resource is defined
@@ -246,6 +391,20 @@ public class AppOverrideRule extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<List<String>>> tags() {
         return Codegen.optional(this.tags);
+    }
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    @Export(name="targetRule", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> targetRule;
+
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public Output<Optional<String>> targetRule() {
+        return Codegen.optional(this.targetRule);
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;

@@ -8,6 +8,19 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all layer3 sub-interfaces
+ * const allLayer3Subinterfaces = scm.getLayer3SubinterfaceList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmLayer3SubinterfaceList = allLayer3Subinterfaces.then(allLayer3Subinterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * ```
  */
 export function getLayer3SubinterfaceList(args?: GetLayer3SubinterfaceListArgs, opts?: pulumi.InvokeOptions): Promise<GetLayer3SubinterfaceListResult> {
     args = args || {};
@@ -96,6 +109,19 @@ export interface GetLayer3SubinterfaceListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all layer3 sub-interfaces
+ * const allLayer3Subinterfaces = scm.getLayer3SubinterfaceList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmLayer3SubinterfaceList = allLayer3Subinterfaces.then(allLayer3Subinterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * ```
  */
 export function getLayer3SubinterfaceListOutput(args?: GetLayer3SubinterfaceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLayer3SubinterfaceListResult> {
     args = args || {};

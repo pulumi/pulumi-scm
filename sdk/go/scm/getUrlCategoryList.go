@@ -31,7 +31,7 @@ import (
 //			//
 //			// Example 1: Fetch a list of all URL Categories in the "Shared" folder.
 //			allShared, err := scm.GetUrlCategoryList(ctx, &scm.GetUrlCategoryListArgs{
-//				Folder: pulumi.StringRef("Shared"),
+//				Folder: pulumi.StringRef("All"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -39,7 +39,7 @@ import (
 //			ctx.Export("urlCategoriesListAllShared", allShared.Datas)
 //			// Example 2: Use pagination to get the first 5 URL Categories by name.
 //			paginated, err := scm.GetUrlCategoryList(ctx, &scm.GetUrlCategoryListArgs{
-//				Folder: pulumi.StringRef("Shared"),
+//				Folder: pulumi.StringRef("All"),
 //				Limit:  pulumi.IntRef(5),
 //				Offset: pulumi.IntRef(0),
 //			}, nil)

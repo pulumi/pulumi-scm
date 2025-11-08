@@ -13,18 +13,96 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Decryption Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetDecryptionProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDecryptionProfileListAllShared"] = allShared.Apply(getDecryptionProfileListResult =&gt; getDecryptionProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetDecryptionProfileListResult> InvokeAsync(GetDecryptionProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDecryptionProfileListResult>("scm:index/getDecryptionProfileList:getDecryptionProfileList", args ?? new GetDecryptionProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Decryption Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetDecryptionProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDecryptionProfileListAllShared"] = allShared.Apply(getDecryptionProfileListResult =&gt; getDecryptionProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDecryptionProfileListResult> Invoke(GetDecryptionProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionProfileListResult>("scm:index/getDecryptionProfileList:getDecryptionProfileList", args ?? new GetDecryptionProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM Decryption Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetDecryptionProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDecryptionProfileListAllShared"] = allShared.Apply(getDecryptionProfileListResult =&gt; getDecryptionProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDecryptionProfileListResult> Invoke(GetDecryptionProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionProfileListResult>("scm:index/getDecryptionProfileList:getDecryptionProfileList", args ?? new GetDecryptionProfileListInvokeArgs(), options.WithDefaults());

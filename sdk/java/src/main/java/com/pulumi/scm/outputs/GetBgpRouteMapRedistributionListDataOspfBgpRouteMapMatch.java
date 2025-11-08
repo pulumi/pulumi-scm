@@ -19,12 +19,12 @@ public final class GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatch {
      */
     private GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatchAddress address;
     /**
-     * @return Interface
+     * @return OSPF BGP Route maps Interface
      * 
      */
     private String interface_;
     /**
-     * @return Metric
+     * @return OSPF BGP Route maps Metric
      * 
      */
     private Integer metric;
@@ -34,7 +34,7 @@ public final class GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatch {
      */
     private GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatchNextHop nextHop;
     /**
-     * @return Tag
+     * @return OSPF BGP Route maps Tag
      * 
      */
     private Integer tag;
@@ -48,14 +48,14 @@ public final class GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatch {
         return this.address;
     }
     /**
-     * @return Interface
+     * @return OSPF BGP Route maps Interface
      * 
      */
     public String interface_() {
         return this.interface_;
     }
     /**
-     * @return Metric
+     * @return OSPF BGP Route maps Metric
      * 
      */
     public Integer metric() {
@@ -69,7 +69,7 @@ public final class GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatch {
         return this.nextHop;
     }
     /**
-     * @return Tag
+     * @return OSPF BGP Route maps Tag
      * 
      */
     public Integer tag() {

@@ -5,7 +5,7 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Double;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -107,18 +107,18 @@ public final class Layer2SubinterfaceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Vlan tag
+     * VLAN tag
      * 
      */
-    @Import(name="vlanTag")
-    private @Nullable Output<Double> vlanTag;
+    @Import(name="vlanTag", required=true)
+    private Output<String> vlanTag;
 
     /**
-     * @return Vlan tag
+     * @return VLAN tag
      * 
      */
-    public Optional<Output<Double>> vlanTag() {
-        return Optional.ofNullable(this.vlanTag);
+    public Output<String> vlanTag() {
+        return this.vlanTag;
     }
 
     private Layer2SubinterfaceArgs() {}
@@ -278,27 +278,30 @@ public final class Layer2SubinterfaceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param vlanTag Vlan tag
+         * @param vlanTag VLAN tag
          * 
          * @return builder
          * 
          */
-        public Builder vlanTag(@Nullable Output<Double> vlanTag) {
+        public Builder vlanTag(Output<String> vlanTag) {
             $.vlanTag = vlanTag;
             return this;
         }
 
         /**
-         * @param vlanTag Vlan tag
+         * @param vlanTag VLAN tag
          * 
          * @return builder
          * 
          */
-        public Builder vlanTag(Double vlanTag) {
+        public Builder vlanTag(String vlanTag) {
             return vlanTag(Output.of(vlanTag));
         }
 
         public Layer2SubinterfaceArgs build() {
+            if ($.vlanTag == null) {
+                throw new MissingRequiredPropertyException("Layer2SubinterfaceArgs", "vlanTag");
+            }
             return $;
         }
     }

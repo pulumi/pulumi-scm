@@ -12,6 +12,38 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			pagedRulesList, err := scm.GetDecryptionRuleList(ctx, &scm.GetDecryptionRuleListArgs{
+//				Folder:   pulumi.StringRef("All"),
+//				Offset:   pulumi.IntRef(10),
+//				Position: "pre",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("fetchedRuleListSummary", pulumi.Map{
+//				"countOfRulesFetched": pagedRulesList.Total,
+//				"firstRuleName":       pagedRulesList.Datas[0].Name,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetDecryptionRuleList(ctx *pulumi.Context, args *GetDecryptionRuleListArgs, opts ...pulumi.InvokeOption) (*GetDecryptionRuleListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetDecryptionRuleListResult
@@ -34,6 +66,8 @@ type GetDecryptionRuleListArgs struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The position of a security rule
+	Position string `pulumi:"position"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -54,6 +88,8 @@ type GetDecryptionRuleListResult struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The position of a security rule
+	Position string `pulumi:"position"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
@@ -82,6 +118,8 @@ type GetDecryptionRuleListOutputArgs struct {
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
+	// The position of a security rule
+	Position pulumi.StringInput `pulumi:"position"`
 	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
@@ -138,6 +176,11 @@ func (o GetDecryptionRuleListResultOutput) Name() pulumi.StringPtrOutput {
 // The offset of the first item to return.
 func (o GetDecryptionRuleListResultOutput) Offset() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v GetDecryptionRuleListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
+}
+
+// The position of a security rule
+func (o GetDecryptionRuleListResultOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v GetDecryptionRuleListResult) string { return v.Position }).(pulumi.StringOutput)
 }
 
 // The snippet of the item.

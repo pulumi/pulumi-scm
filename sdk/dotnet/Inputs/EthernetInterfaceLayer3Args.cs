@@ -25,13 +25,13 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Ddns config
+        /// Dynamic DNS configuration specific to the Ethernet Interfaces.
         /// </summary>
         [Input("ddnsConfig")]
         public Input<Inputs.EthernetInterfaceLayer3DdnsConfigArgs>? DdnsConfig { get; set; }
 
         /// <summary>
-        /// Dhcp client
+        /// Ethernet Interfaces DHCP Client Object
         /// </summary>
         [Input("dhcpClient")]
         public Input<Inputs.EthernetInterfaceLayer3DhcpClientArgs>? DhcpClient { get; set; }
@@ -43,14 +43,14 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? InterfaceManagementProfile { get; set; }
 
         [Input("ips")]
-        private InputList<string>? _ips;
+        private InputList<Inputs.EthernetInterfaceLayer3IpArgs>? _ips;
 
         /// <summary>
-        /// Interface IP addresses
+        /// Ethernet Interface IP addresses
         /// </summary>
-        public InputList<string> Ips
+        public InputList<Inputs.EthernetInterfaceLayer3IpArgs> Ips
         {
-            get => _ips ?? (_ips = new InputList<string>());
+            get => _ips ?? (_ips = new InputList<Inputs.EthernetInterfaceLayer3IpArgs>());
             set => _ips = value;
         }
 

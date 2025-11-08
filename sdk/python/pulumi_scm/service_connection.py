@@ -100,7 +100,7 @@ class ServiceConnectionArgs:
         pulumi.set(self, "region", value)
 
     @_builtins.property
-    @pulumi.getter(name="backupSC")
+    @pulumi.getter(name="backupSc")
     def backup_sc(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Backup s c
@@ -299,7 +299,7 @@ class _ServiceConnectionState:
             pulumi.set(__self__, "tfid", tfid)
 
     @_builtins.property
-    @pulumi.getter(name="backupSC")
+    @pulumi.getter(name="backupSc")
     def backup_sc(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Backup s c
@@ -501,6 +501,81 @@ class ServiceConnection(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        config = pulumi.Config()
+        # The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+        folder_scope = config.get("folderScope")
+        if folder_scope is None:
+            folder_scope = "Service Connections"
+        ## 1. Define the IKE Crypto Profile (IKE Phase 1)
+        # Note: The resource name is plural: "scm_ike_crypto_profile"
+        example = scm.IkeCryptoProfile("example",
+            name="example-ike-crypto",
+            folder=folder_scope,
+            hashes=["sha256"],
+            dh_groups=["group14"],
+            encryptions=["aes-256-cbc"])
+        ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
+        example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
+            name="panw-IPSec-Crypto",
+            folder=folder_scope,
+            esp={
+                "encryptions": ["aes-256-gcm"],
+                "authentications": ["sha256"],
+            },
+            dh_group="group14",
+            lifetime={
+                "hours": 8,
+            })
+        ## 3. Define the IKE Gateway
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
+        example_ike_gateway = scm.IkeGateway("example",
+            name="example-gateway",
+            folder=folder_scope,
+            peer_address={
+                "ip": "1.1.1.1",
+            },
+            authentication={
+                "pre_shared_key": {
+                    "key": "secret",
+                },
+            },
+            protocol={
+                "ikev1": {
+                    "ike_crypto_profile": example.name,
+                },
+            })
+        ## 4. Define the IPsec Tunnel
+        # Note: Nested 'auto_key' block uses an equals sign (=).
+        example_ipsec_tunnel = scm.IpsecTunnel("example",
+            name="example-tunnel",
+            folder=folder_scope,
+            tunnel_interface="tunnel",
+            anti_replay=True,
+            copy_tos=False,
+            enable_gre_encapsulation=False,
+            auto_key={
+                "ike_gateways": [{
+                    "name": example_ike_gateway.name,
+                }],
+                "ipsec_crypto_profile": example_ipsec_crypto_profile.name,
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example_ike_gateway]))
+        site_a_vpn_sc = scm.ServiceConnection("site_a_vpn_sc",
+            name="creating_a_service_connection",
+            region="us-west-1",
+            ipsec_tunnel=example_ipsec_tunnel.name,
+            subnets=[
+                "10.1.0.0/16",
+                "172.16.0.0/24",
+            ],
+            source_nat=True)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] backup_sc: Backup s c
@@ -527,6 +602,81 @@ class ServiceConnection(pulumi.CustomResource):
         ServiceConnection resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        config = pulumi.Config()
+        # The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+        folder_scope = config.get("folderScope")
+        if folder_scope is None:
+            folder_scope = "Service Connections"
+        ## 1. Define the IKE Crypto Profile (IKE Phase 1)
+        # Note: The resource name is plural: "scm_ike_crypto_profile"
+        example = scm.IkeCryptoProfile("example",
+            name="example-ike-crypto",
+            folder=folder_scope,
+            hashes=["sha256"],
+            dh_groups=["group14"],
+            encryptions=["aes-256-cbc"])
+        ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
+        example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
+            name="panw-IPSec-Crypto",
+            folder=folder_scope,
+            esp={
+                "encryptions": ["aes-256-gcm"],
+                "authentications": ["sha256"],
+            },
+            dh_group="group14",
+            lifetime={
+                "hours": 8,
+            })
+        ## 3. Define the IKE Gateway
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
+        example_ike_gateway = scm.IkeGateway("example",
+            name="example-gateway",
+            folder=folder_scope,
+            peer_address={
+                "ip": "1.1.1.1",
+            },
+            authentication={
+                "pre_shared_key": {
+                    "key": "secret",
+                },
+            },
+            protocol={
+                "ikev1": {
+                    "ike_crypto_profile": example.name,
+                },
+            })
+        ## 4. Define the IPsec Tunnel
+        # Note: Nested 'auto_key' block uses an equals sign (=).
+        example_ipsec_tunnel = scm.IpsecTunnel("example",
+            name="example-tunnel",
+            folder=folder_scope,
+            tunnel_interface="tunnel",
+            anti_replay=True,
+            copy_tos=False,
+            enable_gre_encapsulation=False,
+            auto_key={
+                "ike_gateways": [{
+                    "name": example_ike_gateway.name,
+                }],
+                "ipsec_crypto_profile": example_ipsec_crypto_profile.name,
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example_ike_gateway]))
+        site_a_vpn_sc = scm.ServiceConnection("site_a_vpn_sc",
+            name="creating_a_service_connection",
+            region="us-west-1",
+            ipsec_tunnel=example_ipsec_tunnel.name,
+            subnets=[
+                "10.1.0.0/16",
+                "172.16.0.0/24",
+            ],
+            source_nat=True)
+        ```
 
         :param str resource_name: The name of the resource.
         :param ServiceConnectionArgs args: The arguments to use to populate this resource's properties.
@@ -655,7 +805,7 @@ class ServiceConnection(pulumi.CustomResource):
         return ServiceConnection(resource_name, opts=opts, __props__=__props__)
 
     @_builtins.property
-    @pulumi.getter(name="backupSC")
+    @pulumi.getter(name="backupSc")
     def backup_sc(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Backup s c

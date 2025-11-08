@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetVlanInterfaceArp {
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     private String hwAddress;
@@ -28,7 +28,7 @@ public final class GetVlanInterfaceArp {
 
     private GetVlanInterfaceArp() {}
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     public String hwAddress() {

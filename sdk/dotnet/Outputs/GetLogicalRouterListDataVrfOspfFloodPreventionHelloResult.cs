@@ -20,13 +20,13 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Max packet
         /// </summary>
-        public readonly double MaxPacket;
+        public readonly int MaxPacket;
 
         [OutputConstructor]
         private GetLogicalRouterListDataVrfOspfFloodPreventionHelloResult(
             bool enable,
 
-            double maxPacket)
+            int maxPacket)
         {
             Enable = enable;
             MaxPacket = maxPacket;

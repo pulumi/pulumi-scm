@@ -6,6 +6,37 @@ import * as utilities from "./utilities";
 
 /**
  * AuthenticationRule data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const ruleToFetch = new scm.AuthenticationRule("rule_to_fetch", {
+ *     name: "rule-to-be-queried-scm-105",
+ *     description: "This rule is created purely to test the data source functionality.",
+ *     position: "pre",
+ *     folder: "All",
+ *     destinations: ["any"],
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     services: [
+ *         "service-http",
+ *         "service-https",
+ *     ],
+ *     sourceUsers: ["any"],
+ *     timeout: 1200,
+ *     negateSource: false,
+ *     negateDestination: false,
+ * });
+ * const ruleData = scm.getAuthenticationRuleOutput({
+ *     id: ruleToFetch.id,
+ * });
+ * export const fetchedRuleId = ruleData.apply(ruleData => ruleData.id);
+ * export const fetchedRuleTimeout = ruleData.apply(ruleData => ruleData.timeout);
+ * ```
  */
 export function getAuthenticationRule(args: GetAuthenticationRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -102,6 +133,14 @@ export interface GetAuthenticationRuleResult {
      */
     readonly negateSource: boolean;
     /**
+     * The relative position of the rule
+     */
+    readonly position: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    readonly relativePosition: string;
+    /**
      * The destination ports
      */
     readonly services: string[];
@@ -125,6 +164,10 @@ export interface GetAuthenticationRuleResult {
      * The authentication rule tags
      */
     readonly tags: string[];
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    readonly targetRule: string;
     readonly tfid: string;
     /**
      * The authentication session timeout (seconds)
@@ -137,6 +180,37 @@ export interface GetAuthenticationRuleResult {
 }
 /**
  * AuthenticationRule data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const ruleToFetch = new scm.AuthenticationRule("rule_to_fetch", {
+ *     name: "rule-to-be-queried-scm-105",
+ *     description: "This rule is created purely to test the data source functionality.",
+ *     position: "pre",
+ *     folder: "All",
+ *     destinations: ["any"],
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     services: [
+ *         "service-http",
+ *         "service-https",
+ *     ],
+ *     sourceUsers: ["any"],
+ *     timeout: 1200,
+ *     negateSource: false,
+ *     negateDestination: false,
+ * });
+ * const ruleData = scm.getAuthenticationRuleOutput({
+ *     id: ruleToFetch.id,
+ * });
+ * export const fetchedRuleId = ruleData.apply(ruleData => ruleData.id);
+ * export const fetchedRuleTimeout = ruleData.apply(ruleData => ruleData.timeout);
+ * ```
  */
 export function getAuthenticationRuleOutput(args: GetAuthenticationRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

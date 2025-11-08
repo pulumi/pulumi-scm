@@ -10,7 +10,7 @@ import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastA
 import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastMaximumPrefix;
 import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastNextHop;
 import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastOrf;
-import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAS;
+import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAs;
 import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastSendCommunity;
 import java.lang.Boolean;
 import java.lang.String;
@@ -67,7 +67,7 @@ public final class GetBgpAddressFamilyProfileListDataIpv4Ipv4Unicast {
      * @return Remove private a s
      * 
      */
-    private GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAS removePrivateAS;
+    private GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAs removePrivateAs;
     /**
      * @return Route reflector client?
      * 
@@ -152,8 +152,8 @@ public final class GetBgpAddressFamilyProfileListDataIpv4Ipv4Unicast {
      * @return Remove private a s
      * 
      */
-    public GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAS removePrivateAS() {
-        return this.removePrivateAS;
+    public GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAs removePrivateAs() {
+        return this.removePrivateAs;
     }
     /**
      * @return Route reflector client?
@@ -195,7 +195,7 @@ public final class GetBgpAddressFamilyProfileListDataIpv4Ipv4Unicast {
         private GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastMaximumPrefix maximumPrefix;
         private GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastNextHop nextHop;
         private GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastOrf orf;
-        private GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAS removePrivateAS;
+        private GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAs removePrivateAs;
         private Boolean routeReflectorClient;
         private GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastSendCommunity sendCommunity;
         private Boolean softReconfigWithStoredInfo;
@@ -211,7 +211,7 @@ public final class GetBgpAddressFamilyProfileListDataIpv4Ipv4Unicast {
     	      this.maximumPrefix = defaults.maximumPrefix;
     	      this.nextHop = defaults.nextHop;
     	      this.orf = defaults.orf;
-    	      this.removePrivateAS = defaults.removePrivateAS;
+    	      this.removePrivateAs = defaults.removePrivateAs;
     	      this.routeReflectorClient = defaults.routeReflectorClient;
     	      this.sendCommunity = defaults.sendCommunity;
     	      this.softReconfigWithStoredInfo = defaults.softReconfigWithStoredInfo;
@@ -290,11 +290,11 @@ public final class GetBgpAddressFamilyProfileListDataIpv4Ipv4Unicast {
             return this;
         }
         @CustomType.Setter
-        public Builder removePrivateAS(GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAS removePrivateAS) {
-            if (removePrivateAS == null) {
-              throw new MissingRequiredPropertyException("GetBgpAddressFamilyProfileListDataIpv4Ipv4Unicast", "removePrivateAS");
+        public Builder removePrivateAs(GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAs removePrivateAs) {
+            if (removePrivateAs == null) {
+              throw new MissingRequiredPropertyException("GetBgpAddressFamilyProfileListDataIpv4Ipv4Unicast", "removePrivateAs");
             }
-            this.removePrivateAS = removePrivateAS;
+            this.removePrivateAs = removePrivateAs;
             return this;
         }
         @CustomType.Setter
@@ -332,7 +332,7 @@ public final class GetBgpAddressFamilyProfileListDataIpv4Ipv4Unicast {
             _resultValue.maximumPrefix = maximumPrefix;
             _resultValue.nextHop = nextHop;
             _resultValue.orf = orf;
-            _resultValue.removePrivateAS = removePrivateAS;
+            _resultValue.removePrivateAs = removePrivateAs;
             _resultValue.routeReflectorClient = routeReflectorClient;
             _resultValue.sendCommunity = sendCommunity;
             _resultValue.softReconfigWithStoredInfo = softReconfigWithStoredInfo;

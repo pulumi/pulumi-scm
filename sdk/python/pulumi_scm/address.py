@@ -392,15 +392,15 @@ class Address(pulumi.CustomResource):
 
         # This file is embedded using go:embed
         scm_addr_tag1 = scm.Tag("scm_addr_tag_1",
-            folder="Shared",
+            folder="All",
             name="scm_addr_tag_1",
             color="Red")
         scm_addr_tag2 = scm.Tag("scm_addr_tag_2",
-            folder="Shared",
+            folder="All",
             name="scm_addr_tag_2",
             color="Blue")
         scm_addr_tag3 = scm.Tag("scm_addr_tag_3",
-            folder="Shared",
+            folder="All",
             name="scm_addr_tag_3",
             color="Orange")
         # IP Netmask
@@ -475,15 +475,15 @@ class Address(pulumi.CustomResource):
 
         # This file is embedded using go:embed
         scm_addr_tag1 = scm.Tag("scm_addr_tag_1",
-            folder="Shared",
+            folder="All",
             name="scm_addr_tag_1",
             color="Red")
         scm_addr_tag2 = scm.Tag("scm_addr_tag_2",
-            folder="Shared",
+            folder="All",
             name="scm_addr_tag_2",
             color="Blue")
         scm_addr_tag3 = scm.Tag("scm_addr_tag_3",
-            folder="Shared",
+            folder="All",
             name="scm_addr_tag_3",
             color="Orange")
         # IP Netmask

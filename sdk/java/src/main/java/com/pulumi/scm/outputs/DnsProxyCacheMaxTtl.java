@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -13,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsProxyCacheMaxTtl {
     /**
-     * @return Enabled
+     * @return Enable max ttl for this DNS object
      * 
      */
-    private @Nullable Boolean enabled;
+    private Boolean enabled;
     /**
-     * @return Time to live
+     * @return Time in seconds after which entry is cleared
      * 
      */
     private @Nullable Integer timeToLive;
 
     private DnsProxyCacheMaxTtl() {}
     /**
-     * @return Enabled
+     * @return Enable max ttl for this DNS object
      * 
      */
-    public Optional<Boolean> enabled() {
-        return Optional.ofNullable(this.enabled);
+    public Boolean enabled() {
+        return this.enabled;
     }
     /**
-     * @return Time to live
+     * @return Time in seconds after which entry is cleared
      * 
      */
     public Optional<Integer> timeToLive() {
@@ -48,7 +49,7 @@ public final class DnsProxyCacheMaxTtl {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Boolean enabled;
+        private Boolean enabled;
         private @Nullable Integer timeToLive;
         public Builder() {}
         public Builder(DnsProxyCacheMaxTtl defaults) {
@@ -58,8 +59,10 @@ public final class DnsProxyCacheMaxTtl {
         }
 
         @CustomType.Setter
-        public Builder enabled(@Nullable Boolean enabled) {
-
+        public Builder enabled(Boolean enabled) {
+            if (enabled == null) {
+              throw new MissingRequiredPropertyException("DnsProxyCacheMaxTtl", "enabled");
+            }
             this.enabled = enabled;
             return this;
         }

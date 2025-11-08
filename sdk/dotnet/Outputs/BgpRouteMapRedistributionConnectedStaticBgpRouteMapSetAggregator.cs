@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator
     {
         /// <summary>
-        /// Aggregator AS
+        /// Connected Static BGP Route maps set Aggregator AS
         /// </summary>
         public readonly int? As;
         /// <summary>
-        /// Router ID
+        /// Connected Static BGP Route maps set Router ID
         /// </summary>
         public readonly string? RouterId;
 

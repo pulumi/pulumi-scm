@@ -20,7 +20,7 @@ import * as utilities from "./utilities";
  * //
  * // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
  * const allShared = scm.getUrlAccessProfileList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const urlAccessProfilesListAllShared = allShared.then(allShared => allShared.datas);
  * ```
@@ -124,7 +124,7 @@ export interface GetUrlAccessProfileListResult {
  * //
  * // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
  * const allShared = scm.getUrlAccessProfileList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const urlAccessProfilesListAllShared = allShared.then(allShared => allShared.datas);
  * ```

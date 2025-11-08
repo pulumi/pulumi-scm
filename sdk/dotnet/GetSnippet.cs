@@ -13,18 +13,150 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Snippet data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var scmLabel1 = new Scm.Label("scm_label_1", new()
+        ///     {
+        ///         Name = "scm_label",
+        ///     });
+        /// 
+        ///     var scmSnippet1 = new Scm.Snippet("scm_snippet_1", new()
+        ///     {
+        ///         Name = "scm_snippet",
+        ///         Description = "Adding a Description from Terraform",
+        ///         Labels = new[]
+        ///         {
+        ///             scmLabel1.Name,
+        ///         },
+        ///     });
+        /// 
+        ///     // Look up the "scm_snippet" tag by its id
+        ///     var scmSnippetOutputsDs = Scm.GetSnippet.Invoke(new()
+        ///     {
+        ///         Id = scmSnippet1.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["snippetOutputs"] = 
+        ///         {
+        ///             { "productionId", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Id) },
+        ///             { "productionName", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Name) },
+        ///             { "productionDescription", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Description) },
+        ///             { "productionLabels", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Labels) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetSnippetResult> InvokeAsync(GetSnippetArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSnippetResult>("scm:index/getSnippet:getSnippet", args ?? new GetSnippetArgs(), options.WithDefaults());
 
         /// <summary>
         /// Snippet data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var scmLabel1 = new Scm.Label("scm_label_1", new()
+        ///     {
+        ///         Name = "scm_label",
+        ///     });
+        /// 
+        ///     var scmSnippet1 = new Scm.Snippet("scm_snippet_1", new()
+        ///     {
+        ///         Name = "scm_snippet",
+        ///         Description = "Adding a Description from Terraform",
+        ///         Labels = new[]
+        ///         {
+        ///             scmLabel1.Name,
+        ///         },
+        ///     });
+        /// 
+        ///     // Look up the "scm_snippet" tag by its id
+        ///     var scmSnippetOutputsDs = Scm.GetSnippet.Invoke(new()
+        ///     {
+        ///         Id = scmSnippet1.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["snippetOutputs"] = 
+        ///         {
+        ///             { "productionId", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Id) },
+        ///             { "productionName", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Name) },
+        ///             { "productionDescription", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Description) },
+        ///             { "productionLabels", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Labels) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSnippetResult> Invoke(GetSnippetInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSnippetResult>("scm:index/getSnippet:getSnippet", args ?? new GetSnippetInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Snippet data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var scmLabel1 = new Scm.Label("scm_label_1", new()
+        ///     {
+        ///         Name = "scm_label",
+        ///     });
+        /// 
+        ///     var scmSnippet1 = new Scm.Snippet("scm_snippet_1", new()
+        ///     {
+        ///         Name = "scm_snippet",
+        ///         Description = "Adding a Description from Terraform",
+        ///         Labels = new[]
+        ///         {
+        ///             scmLabel1.Name,
+        ///         },
+        ///     });
+        /// 
+        ///     // Look up the "scm_snippet" tag by its id
+        ///     var scmSnippetOutputsDs = Scm.GetSnippet.Invoke(new()
+        ///     {
+        ///         Id = scmSnippet1.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["snippetOutputs"] = 
+        ///         {
+        ///             { "productionId", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Id) },
+        ///             { "productionName", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Name) },
+        ///             { "productionDescription", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Description) },
+        ///             { "productionLabels", scmSnippetOutputsDs.Apply(getSnippetResult =&gt; getSnippetResult.Labels) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSnippetResult> Invoke(GetSnippetInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSnippetResult>("scm:index/getSnippet:getSnippet", args ?? new GetSnippetInvokeArgs(), options.WithDefaults());

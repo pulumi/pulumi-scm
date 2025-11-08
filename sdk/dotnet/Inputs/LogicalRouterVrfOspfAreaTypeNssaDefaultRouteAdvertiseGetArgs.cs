@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         /// Metric
         /// </summary>
         [Input("metric")]
-        public Input<double>? Metric { get; set; }
+        public Input<int>? Metric { get; set; }
 
         /// <summary>
         /// Type

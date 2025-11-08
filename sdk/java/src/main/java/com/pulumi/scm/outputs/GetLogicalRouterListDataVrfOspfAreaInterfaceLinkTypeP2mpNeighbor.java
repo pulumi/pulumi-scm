@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpNeigh
      * @return Priority
      * 
      */
-    private Double priority;
+    private Integer priority;
 
     private GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpNeighbor() {}
     /**
@@ -34,7 +34,7 @@ public final class GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpNeigh
      * @return Priority
      * 
      */
-    public Double priority() {
+    public Integer priority() {
         return this.priority;
     }
 
@@ -48,7 +48,7 @@ public final class GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpNeigh
     @CustomType.Builder
     public static final class Builder {
         private String name;
-        private Double priority;
+        private Integer priority;
         public Builder() {}
         public Builder(GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpNeighbor defaults) {
     	      Objects.requireNonNull(defaults);
@@ -65,7 +65,7 @@ public final class GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpNeigh
             return this;
         }
         @CustomType.Setter
-        public Builder priority(Double priority) {
+        public Builder priority(Integer priority) {
             if (priority == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpNeighbor", "priority");
             }

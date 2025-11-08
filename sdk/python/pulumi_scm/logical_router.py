@@ -254,6 +254,8 @@ class LogicalRouter(pulumi.CustomResource):
         """
         LogicalRouter resource
 
+        ## Example Usage
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -271,6 +273,8 @@ class LogicalRouter(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         LogicalRouter resource
+
+        ## Example Usage
 
         :param str resource_name: The name of the resource.
         :param LogicalRouterArgs args: The arguments to use to populate this resource's properties.

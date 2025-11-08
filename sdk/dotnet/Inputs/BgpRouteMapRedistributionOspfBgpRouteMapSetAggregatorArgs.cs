@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Aggregator AS
+        /// OSPF BGP Route maps set Aggregator AS
         /// </summary>
         [Input("as")]
         public Input<int>? As { get; set; }
 
         /// <summary>
-        /// Router ID
+        /// OSPF BGP Route maps set Router ID
         /// </summary>
         [Input("routerId")]
         public Input<string>? RouterId { get; set; }

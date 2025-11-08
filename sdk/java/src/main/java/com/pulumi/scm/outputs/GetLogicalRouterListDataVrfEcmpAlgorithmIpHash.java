@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -15,7 +15,7 @@ public final class GetLogicalRouterListDataVrfEcmpAlgorithmIpHash {
      * @return Hash seed
      * 
      */
-    private Double hashSeed;
+    private Integer hashSeed;
     /**
      * @return Src only
      * 
@@ -32,7 +32,7 @@ public final class GetLogicalRouterListDataVrfEcmpAlgorithmIpHash {
      * @return Hash seed
      * 
      */
-    public Double hashSeed() {
+    public Integer hashSeed() {
         return this.hashSeed;
     }
     /**
@@ -59,7 +59,7 @@ public final class GetLogicalRouterListDataVrfEcmpAlgorithmIpHash {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Double hashSeed;
+        private Integer hashSeed;
         private Boolean srcOnly;
         private Boolean usePort;
         public Builder() {}
@@ -71,7 +71,7 @@ public final class GetLogicalRouterListDataVrfEcmpAlgorithmIpHash {
         }
 
         @CustomType.Setter
-        public Builder hashSeed(Double hashSeed) {
+        public Builder hashSeed(Integer hashSeed) {
             if (hashSeed == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfEcmpAlgorithmIpHash", "hashSeed");
             }

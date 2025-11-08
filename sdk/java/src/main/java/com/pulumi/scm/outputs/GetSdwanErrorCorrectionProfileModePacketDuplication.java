@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -14,14 +14,14 @@ public final class GetSdwanErrorCorrectionProfileModePacketDuplication {
      * @return Recovery duration pd
      * 
      */
-    private Double recoveryDurationPd;
+    private Integer recoveryDurationPd;
 
     private GetSdwanErrorCorrectionProfileModePacketDuplication() {}
     /**
      * @return Recovery duration pd
      * 
      */
-    public Double recoveryDurationPd() {
+    public Integer recoveryDurationPd() {
         return this.recoveryDurationPd;
     }
 
@@ -34,7 +34,7 @@ public final class GetSdwanErrorCorrectionProfileModePacketDuplication {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Double recoveryDurationPd;
+        private Integer recoveryDurationPd;
         public Builder() {}
         public Builder(GetSdwanErrorCorrectionProfileModePacketDuplication defaults) {
     	      Objects.requireNonNull(defaults);
@@ -42,7 +42,7 @@ public final class GetSdwanErrorCorrectionProfileModePacketDuplication {
         }
 
         @CustomType.Setter
-        public Builder recoveryDurationPd(Double recoveryDurationPd) {
+        public Builder recoveryDurationPd(Integer recoveryDurationPd) {
             if (recoveryDurationPd == null) {
               throw new MissingRequiredPropertyException("GetSdwanErrorCorrectionProfileModePacketDuplication", "recoveryDurationPd");
             }

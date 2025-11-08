@@ -34,7 +34,7 @@ public final class GetDnsProxyResult {
      */
     private String device;
     /**
-     * @return Domain servers
+     * @return DNS proxy rules
      * 
      */
     private List<GetDnsProxyDomainServer> domainServers;
@@ -108,7 +108,7 @@ public final class GetDnsProxyResult {
         return this.device;
     }
     /**
-     * @return Domain servers
+     * @return DNS proxy rules
      * 
      */
     public List<GetDnsProxyDomainServer> domainServers() {

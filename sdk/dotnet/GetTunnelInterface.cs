@@ -13,18 +13,108 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// TunnelInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up tunnel interface by its ID.
+        ///     var scmTunnelIntfDs = Scm.GetTunnelInterface.Invoke(new()
+        ///     {
+        ///         Id = "ddad1e64-0b64-41a4-b361-c6191169a8f1",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTunnelInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Id) },
+        ///             { "name", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Name) },
+        ///             { "comment", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Comment) },
+        ///             { "ip", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Ips) },
+        ///             { "folder", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetTunnelInterfaceResult> InvokeAsync(GetTunnelInterfaceArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetTunnelInterfaceResult>("scm:index/getTunnelInterface:getTunnelInterface", args ?? new GetTunnelInterfaceArgs(), options.WithDefaults());
 
         /// <summary>
         /// TunnelInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up tunnel interface by its ID.
+        ///     var scmTunnelIntfDs = Scm.GetTunnelInterface.Invoke(new()
+        ///     {
+        ///         Id = "ddad1e64-0b64-41a4-b361-c6191169a8f1",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTunnelInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Id) },
+        ///             { "name", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Name) },
+        ///             { "comment", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Comment) },
+        ///             { "ip", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Ips) },
+        ///             { "folder", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTunnelInterfaceResult> Invoke(GetTunnelInterfaceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTunnelInterfaceResult>("scm:index/getTunnelInterface:getTunnelInterface", args ?? new GetTunnelInterfaceInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// TunnelInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up tunnel interface by its ID.
+        ///     var scmTunnelIntfDs = Scm.GetTunnelInterface.Invoke(new()
+        ///     {
+        ///         Id = "ddad1e64-0b64-41a4-b361-c6191169a8f1",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTunnelInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Id) },
+        ///             { "name", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Name) },
+        ///             { "comment", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Comment) },
+        ///             { "ip", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Ips) },
+        ///             { "folder", scmTunnelIntfDs.Apply(getTunnelInterfaceResult =&gt; getTunnelInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTunnelInterfaceResult> Invoke(GetTunnelInterfaceInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetTunnelInterfaceResult>("scm:index/getTunnelInterface:getTunnelInterface", args ?? new GetTunnelInterfaceInvokeArgs(), options.WithDefaults());
@@ -80,9 +170,9 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Comment;
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
-        public readonly int DefaultValue;
+        public readonly string DefaultValue;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
@@ -100,13 +190,13 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string InterfaceManagementProfile;
         /// <summary>
-        /// tunnel interfaces ip parent
+        /// Tunnel Interface IP Parent
         /// </summary>
-        public readonly Outputs.GetTunnelInterfaceIpResult Ip;
+        public readonly ImmutableArray<Outputs.GetTunnelInterfaceIpResult> Ips;
         /// <summary>
         /// MTU
         /// </summary>
-        public readonly double Mtu;
+        public readonly int Mtu;
         /// <summary>
         /// L3 sub-interface name
         /// </summary>
@@ -121,7 +211,7 @@ namespace Pulumi.Scm
         private GetTunnelInterfaceResult(
             string comment,
 
-            int defaultValue,
+            string defaultValue,
 
             string device,
 
@@ -131,9 +221,9 @@ namespace Pulumi.Scm
 
             string interfaceManagementProfile,
 
-            Outputs.GetTunnelInterfaceIpResult ip,
+            ImmutableArray<Outputs.GetTunnelInterfaceIpResult> ips,
 
-            double mtu,
+            int mtu,
 
             string name,
 
@@ -147,7 +237,7 @@ namespace Pulumi.Scm
             Folder = folder;
             Id = id;
             InterfaceManagementProfile = interfaceManagementProfile;
-            Ip = ip;
+            Ips = ips;
             Mtu = mtu;
             Name = name;
             Snippet = snippet;

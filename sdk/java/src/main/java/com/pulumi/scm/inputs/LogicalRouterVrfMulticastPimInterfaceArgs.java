@@ -7,7 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -38,13 +38,13 @@ public final class LogicalRouterVrfMulticastPimInterfaceArgs extends com.pulumi.
      * 
      */
     @Import(name="drPriority")
-    private @Nullable Output<Double> drPriority;
+    private @Nullable Output<Integer> drPriority;
 
     /**
      * @return Dr priority
      * 
      */
-    public Optional<Output<Double>> drPriority() {
+    public Optional<Output<Integer>> drPriority() {
         return Optional.ofNullable(this.drPriority);
     }
 
@@ -164,7 +164,7 @@ public final class LogicalRouterVrfMulticastPimInterfaceArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder drPriority(@Nullable Output<Double> drPriority) {
+        public Builder drPriority(@Nullable Output<Integer> drPriority) {
             $.drPriority = drPriority;
             return this;
         }
@@ -175,7 +175,7 @@ public final class LogicalRouterVrfMulticastPimInterfaceArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder drPriority(Double drPriority) {
+        public Builder drPriority(Integer drPriority) {
             return drPriority(Output.of(drPriority));
         }
 

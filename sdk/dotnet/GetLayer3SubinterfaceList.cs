@@ -13,18 +13,87 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all layer3 sub-interfaces
+        ///     var allLayer3Subinterfaces = Scm.GetLayer3SubinterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLayer3SubinterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLayer3SubinterfaceListResult> InvokeAsync(GetLayer3SubinterfaceListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLayer3SubinterfaceListResult>("scm:index/getLayer3SubinterfaceList:getLayer3SubinterfaceList", args ?? new GetLayer3SubinterfaceListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all layer3 sub-interfaces
+        ///     var allLayer3Subinterfaces = Scm.GetLayer3SubinterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLayer3SubinterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLayer3SubinterfaceListResult> Invoke(GetLayer3SubinterfaceListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLayer3SubinterfaceListResult>("scm:index/getLayer3SubinterfaceList:getLayer3SubinterfaceList", args ?? new GetLayer3SubinterfaceListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all layer3 sub-interfaces
+        ///     var allLayer3Subinterfaces = Scm.GetLayer3SubinterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLayer3SubinterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLayer3SubinterfaceListResult> Invoke(GetLayer3SubinterfaceListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLayer3SubinterfaceListResult>("scm:index/getLayer3SubinterfaceList:getLayer3SubinterfaceList", args ?? new GetLayer3SubinterfaceListInvokeArgs(), options.WithDefaults());

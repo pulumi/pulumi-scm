@@ -13,6 +13,336 @@ namespace Pulumi.Scm
     /// SecurityRule resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // First, create the tag objects that you will reference.
+    ///     var outboundTag = new Scm.Tag("outbound_tag", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "outbound143",
+    ///         Color = "Red",
+    ///     });
+    /// 
+    ///     var webTag = new Scm.Tag("web_tag", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "web143",
+    ///         Color = "Blue",
+    ///     });
+    /// 
+    ///     // --- Existing Rules (Backward Compatibility) ---
+    ///     var standardWebAccess = new Scm.SecurityRule("standard_web_access", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "Allow Standard Web Access143",
+    ///         Description = "Allow outbound web traffic to any destination...",
+    ///         Position = "pre",
+    ///         Action = "allow",
+    ///         Categories = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Applications = new[]
+    ///         {
+    ///             "web-browsing",
+    ///             "ssl",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-http",
+    ///             "service-https",
+    ///         },
+    ///         Froms = new[]
+    ///         {
+    ///             "untrust",
+    ///             "trust",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "trust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         NegateSource = false,
+    ///         NegateDestination = false,
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         SourceHips = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         DestinationHips = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         LogStart = true,
+    ///         LogEnd = true,
+    ///         Disabled = false,
+    ///         Tags = new[]
+    ///         {
+    ///             outboundTag.Name,
+    ///             webTag.Name,
+    ///         },
+    ///     });
+    /// 
+    ///     var blockRiskySaas = new Scm.SecurityRule("block_risky_saas", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "Block Risky SaaS Applications143",
+    ///         Description = "Prevent data exfiltration by blocking risky SaaS apps...",
+    ///         Action = "deny",
+    ///         PolicyType = "Internet",
+    ///         SecuritySettings = new Scm.Inputs.SecurityRuleSecuritySettingsArgs
+    ///         {
+    ///             AntiSpyware = "yes",
+    ///             Vulnerability = "yes",
+    ///             VirusAndWildfireAnalysis = "yes",
+    ///         },
+    ///         BlockWebApplications = new[]
+    ///         {
+    ///             "facebook-posting",
+    ///         },
+    ///         LogSettings = new Scm.Inputs.SecurityRuleLogSettingsArgs
+    ///         {
+    ///             LogSessions = true,
+    ///         },
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Disabled = false,
+    ///         Tags = new[]
+    ///         {
+    ///             outboundTag.Name,
+    ///             webTag.Name,
+    ///         },
+    ///     });
+    /// 
+    ///     // --- NEW Examples Demonstrating Rule Ordering ---
+    ///     // Example 1: Place a critical block rule at the absolute top
+    ///     var criticalBlockTop = new Scm.SecurityRule("critical_block_top", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "CRITICAL Block Malicious IPs Top143",
+    ///         Description = "Always block known malicious IPs first.",
+    ///         RelativePosition = "top",
+    ///         Action = "deny",
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Categories = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Applications = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         LogEnd = true,
+    ///         Tags = new[]
+    ///         {
+    ///             outboundTag.Name,
+    ///         },
+    ///     });
+    /// 
+    ///     // Example 2: Place a cleanup rule at the absolute bottom
+    ///     var cleanupDenyBottom = new Scm.SecurityRule("cleanup_deny_bottom", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "Cleanup Deny All Bottom143",
+    ///         Description = "Deny any traffic not explicitly allowed.",
+    ///         RelativePosition = "bottom",
+    ///         Action = "deny",
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Categories = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Applications = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         LogEnd = true,
+    ///         Tags = new[]
+    ///         {
+    ///             outboundTag.Name,
+    ///         },
+    ///     });
+    /// 
+    ///     // Example 3: Place a rule *before* the standard web access rule
+    ///     var allowUpdatesBeforeWeb = new Scm.SecurityRule("allow_updates_before_web", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "Allow OS Updates Before Web143",
+    ///         Description = "Allow specific OS update traffic before general web access.",
+    ///         RelativePosition = "before",
+    ///         TargetRule = standardWebAccess.Id,
+    ///         Action = "allow",
+    ///         Froms = new[]
+    ///         {
+    ///             "trust",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Categories = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Applications = new[]
+    ///         {
+    ///             "ms-update",
+    ///             "apple-update",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-https",
+    ///         },
+    ///         LogEnd = true,
+    ///         Tags = new[]
+    ///         {
+    ///             outboundTag.Name,
+    ///         },
+    ///     });
+    /// 
+    ///     // Example 4: Place a rule *after* the standard web access rule
+    ///     var allowCorpAppsAfterWeb = new Scm.SecurityRule("allow_corp_apps_after_web", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "Allow Corp Apps After Web143",
+    ///         Description = "Allow access to specific corporate apps after general web access.",
+    ///         RelativePosition = "after",
+    ///         TargetRule = standardWebAccess.Id,
+    ///         Action = "allow",
+    ///         Froms = new[]
+    ///         {
+    ///             "trust",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Categories = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Applications = new[]
+    ///         {
+    ///             "ms-update",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-https",
+    ///         },
+    ///         LogEnd = true,
+    ///         Tags = new[]
+    ///         {
+    ///             webTag.Name,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/securityRule:SecurityRule")]
     public partial class SecurityRule : global::Pulumi.CustomResource
@@ -180,6 +510,12 @@ namespace Pulumi.Scm
         public Output<Outputs.SecurityRuleProfileSetting> ProfileSetting { get; private set; } = null!;
 
         /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Output("relativePosition")]
+        public Output<string?> RelativePosition { get; private set; } = null!;
+
+        /// <summary>
         /// Schedule in which this rule will be applied
         /// </summary>
         [Output("schedule")]
@@ -226,6 +562,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Output("targetRule")]
+        public Output<string?> TargetRule { get; private set; } = null!;
 
         /// <summary>
         /// Tenant restrictions
@@ -511,6 +853,12 @@ namespace Pulumi.Scm
         public Input<Inputs.SecurityRuleProfileSettingArgs>? ProfileSetting { get; set; }
 
         /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Input("relativePosition")]
+        public Input<string>? RelativePosition { get; set; }
+
+        /// <summary>
         /// Schedule in which this rule will be applied
         /// </summary>
         [Input("schedule")]
@@ -587,6 +935,12 @@ namespace Pulumi.Scm
             get => _tags ?? (_tags = new InputList<string>());
             set => _tags = value;
         }
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Input("targetRule")]
+        public Input<string>? TargetRule { get; set; }
 
         [Input("tenantRestrictions")]
         private InputList<string>? _tenantRestrictions;
@@ -843,6 +1197,12 @@ namespace Pulumi.Scm
         public Input<Inputs.SecurityRuleProfileSettingGetArgs>? ProfileSetting { get; set; }
 
         /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Input("relativePosition")]
+        public Input<string>? RelativePosition { get; set; }
+
+        /// <summary>
         /// Schedule in which this rule will be applied
         /// </summary>
         [Input("schedule")]
@@ -919,6 +1279,12 @@ namespace Pulumi.Scm
             get => _tags ?? (_tags = new InputList<string>());
             set => _tags = value;
         }
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Input("targetRule")]
+        public Input<string>? TargetRule { get; set; }
 
         [Input("tenantRestrictions")]
         private InputList<string>? _tenantRestrictions;

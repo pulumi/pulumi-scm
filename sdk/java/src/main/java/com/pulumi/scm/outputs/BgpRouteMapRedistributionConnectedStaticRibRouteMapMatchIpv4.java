@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4 {
     /**
-     * @return Address
+     * @return Connected Static BGP Rib Route maps ipv4 address
      * 
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address address;
@@ -25,7 +25,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4 
 
     private BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4() {}
     /**
-     * @return Address
+     * @return Connected Static BGP Rib Route maps ipv4 address
      * 
      */
     public Optional<BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address> address() {

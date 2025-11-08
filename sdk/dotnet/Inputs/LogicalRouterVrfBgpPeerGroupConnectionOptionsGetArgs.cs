@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         /// Multihop
         /// </summary>
         [Input("multihop")]
-        public Input<double>? Multihop { get; set; }
+        public Input<int>? Multihop { get; set; }
 
         /// <summary>
         /// Timers

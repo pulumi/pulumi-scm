@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Med
         /// </summary>
-        public readonly double Med;
+        public readonly int Med;
         /// <summary>
         /// Nexthop
         /// </summary>
@@ -68,7 +68,7 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> fromPeers,
 
-            double med,
+            int med,
 
             ImmutableArray<string> nexthops,
 

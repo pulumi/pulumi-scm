@@ -15,6 +15,146 @@ namespace Pulumi.Scm
         /// ServiceConnection data source
         /// 
         /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var config = new Config();
+        ///     // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+        ///     var folderScope = config.Get("folderScope") ?? "Service Connections";
+        ///     //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+        ///     // Note: The resource name is plural: "scm_ike_crypto_profile"
+        ///     var example = new Scm.IkeCryptoProfile("example", new()
+        ///     {
+        ///         Name = "example-ike-crypto_data",
+        ///         Folder = folderScope,
+        ///         Hashes = new[]
+        ///         {
+        ///             "sha256",
+        ///         },
+        ///         DhGroups = new[]
+        ///         {
+        ///             "group14",
+        ///         },
+        ///         Encryptions = new[]
+        ///         {
+        ///             "aes-256-cbc",
+        ///         },
+        ///     });
+        /// 
+        ///     //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+        ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
+        ///     var exampleIpsecCryptoProfile = new Scm.IpsecCryptoProfile("example", new()
+        ///     {
+        ///         Name = "panw-IPSec-Crypto_data",
+        ///         Folder = folderScope,
+        ///         Esp = new Scm.Inputs.IpsecCryptoProfileEspArgs
+        ///         {
+        ///             Encryptions = new[]
+        ///             {
+        ///                 "aes-256-gcm",
+        ///             },
+        ///             Authentications = new[]
+        ///             {
+        ///                 "sha256",
+        ///             },
+        ///         },
+        ///         DhGroup = "group14",
+        ///         Lifetime = new Scm.Inputs.IpsecCryptoProfileLifetimeArgs
+        ///         {
+        ///             Hours = 8,
+        ///         },
+        ///     });
+        /// 
+        ///     //# 3. Define the IKE Gateway
+        ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
+        ///     var exampleIkeGateway = new Scm.IkeGateway("example", new()
+        ///     {
+        ///         Name = "example-gateway_data",
+        ///         Folder = folderScope,
+        ///         PeerAddress = new Scm.Inputs.IkeGatewayPeerAddressArgs
+        ///         {
+        ///             Ip = "1.1.1.1",
+        ///         },
+        ///         Authentication = new Scm.Inputs.IkeGatewayAuthenticationArgs
+        ///         {
+        ///             PreSharedKey = new Scm.Inputs.IkeGatewayAuthenticationPreSharedKeyArgs
+        ///             {
+        ///                 Key = "secret",
+        ///             },
+        ///         },
+        ///         Protocol = new Scm.Inputs.IkeGatewayProtocolArgs
+        ///         {
+        ///             Ikev1 = new Scm.Inputs.IkeGatewayProtocolIkev1Args
+        ///             {
+        ///                 IkeCryptoProfile = example.Name,
+        ///             },
+        ///         },
+        ///     });
+        /// 
+        ///     //# 4. Define the IPsec Tunnel
+        ///     // Note: Nested 'auto_key' block uses an equals sign (=).
+        ///     var exampleIpsecTunnel = new Scm.IpsecTunnel("example", new()
+        ///     {
+        ///         Name = "example-tunnel_data",
+        ///         Folder = folderScope,
+        ///         TunnelInterface = "tunnel",
+        ///         AntiReplay = true,
+        ///         CopyTos = false,
+        ///         EnableGreEncapsulation = false,
+        ///         AutoKey = new Scm.Inputs.IpsecTunnelAutoKeyArgs
+        ///         {
+        ///             IkeGateways = new[]
+        ///             {
+        ///                 new Scm.Inputs.IpsecTunnelAutoKeyIkeGatewayArgs
+        ///                 {
+        ///                     Name = exampleIkeGateway.Name,
+        ///                 },
+        ///             },
+        ///             IpsecCryptoProfile = exampleIpsecCryptoProfile.Name,
+        ///         },
+        ///     }, new CustomResourceOptions
+        ///     {
+        ///         DependsOn =
+        ///         {
+        ///             exampleIkeGateway,
+        ///         },
+        ///     });
+        /// 
+        ///     var siteAVpnSc = new Scm.ServiceConnection("site_a_vpn_sc", new()
+        ///     {
+        ///         Name = "creating_a_service_connection_data",
+        ///         Region = "us-west-1",
+        ///         IpsecTunnel = exampleIpsecTunnel.Name,
+        ///         Subnets = new[]
+        ///         {
+        ///             "10.1.0.0/16",
+        ///             "172.16.0.0/24",
+        ///         },
+        ///         SourceNat = true,
+        ///     });
+        /// 
+        ///     //------------------------------------------------------
+        ///     // Data Soruce
+        ///     //------------------------------------------------------
+        ///     var createdConnLookup = Scm.GetServiceConnection.Invoke(new()
+        ///     {
+        ///         Id = siteAVpnSc.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["createdServiceConnectionId"] = createdConnLookup.Apply(getServiceConnectionResult =&gt; getServiceConnectionResult.Id),
+        ///         ["createdServiceConnectionRegion"] = createdConnLookup.Apply(getServiceConnectionResult =&gt; getServiceConnectionResult.Region),
+        ///         ["createdServiceConnectionSubnets"] = createdConnLookup.Apply(getServiceConnectionResult =&gt; getServiceConnectionResult.Subnets),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetServiceConnectionResult> InvokeAsync(GetServiceConnectionArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetServiceConnectionResult>("scm:index/getServiceConnection:getServiceConnection", args ?? new GetServiceConnectionArgs(), options.WithDefaults());
@@ -23,6 +163,146 @@ namespace Pulumi.Scm
         /// ServiceConnection data source
         /// 
         /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var config = new Config();
+        ///     // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+        ///     var folderScope = config.Get("folderScope") ?? "Service Connections";
+        ///     //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+        ///     // Note: The resource name is plural: "scm_ike_crypto_profile"
+        ///     var example = new Scm.IkeCryptoProfile("example", new()
+        ///     {
+        ///         Name = "example-ike-crypto_data",
+        ///         Folder = folderScope,
+        ///         Hashes = new[]
+        ///         {
+        ///             "sha256",
+        ///         },
+        ///         DhGroups = new[]
+        ///         {
+        ///             "group14",
+        ///         },
+        ///         Encryptions = new[]
+        ///         {
+        ///             "aes-256-cbc",
+        ///         },
+        ///     });
+        /// 
+        ///     //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+        ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
+        ///     var exampleIpsecCryptoProfile = new Scm.IpsecCryptoProfile("example", new()
+        ///     {
+        ///         Name = "panw-IPSec-Crypto_data",
+        ///         Folder = folderScope,
+        ///         Esp = new Scm.Inputs.IpsecCryptoProfileEspArgs
+        ///         {
+        ///             Encryptions = new[]
+        ///             {
+        ///                 "aes-256-gcm",
+        ///             },
+        ///             Authentications = new[]
+        ///             {
+        ///                 "sha256",
+        ///             },
+        ///         },
+        ///         DhGroup = "group14",
+        ///         Lifetime = new Scm.Inputs.IpsecCryptoProfileLifetimeArgs
+        ///         {
+        ///             Hours = 8,
+        ///         },
+        ///     });
+        /// 
+        ///     //# 3. Define the IKE Gateway
+        ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
+        ///     var exampleIkeGateway = new Scm.IkeGateway("example", new()
+        ///     {
+        ///         Name = "example-gateway_data",
+        ///         Folder = folderScope,
+        ///         PeerAddress = new Scm.Inputs.IkeGatewayPeerAddressArgs
+        ///         {
+        ///             Ip = "1.1.1.1",
+        ///         },
+        ///         Authentication = new Scm.Inputs.IkeGatewayAuthenticationArgs
+        ///         {
+        ///             PreSharedKey = new Scm.Inputs.IkeGatewayAuthenticationPreSharedKeyArgs
+        ///             {
+        ///                 Key = "secret",
+        ///             },
+        ///         },
+        ///         Protocol = new Scm.Inputs.IkeGatewayProtocolArgs
+        ///         {
+        ///             Ikev1 = new Scm.Inputs.IkeGatewayProtocolIkev1Args
+        ///             {
+        ///                 IkeCryptoProfile = example.Name,
+        ///             },
+        ///         },
+        ///     });
+        /// 
+        ///     //# 4. Define the IPsec Tunnel
+        ///     // Note: Nested 'auto_key' block uses an equals sign (=).
+        ///     var exampleIpsecTunnel = new Scm.IpsecTunnel("example", new()
+        ///     {
+        ///         Name = "example-tunnel_data",
+        ///         Folder = folderScope,
+        ///         TunnelInterface = "tunnel",
+        ///         AntiReplay = true,
+        ///         CopyTos = false,
+        ///         EnableGreEncapsulation = false,
+        ///         AutoKey = new Scm.Inputs.IpsecTunnelAutoKeyArgs
+        ///         {
+        ///             IkeGateways = new[]
+        ///             {
+        ///                 new Scm.Inputs.IpsecTunnelAutoKeyIkeGatewayArgs
+        ///                 {
+        ///                     Name = exampleIkeGateway.Name,
+        ///                 },
+        ///             },
+        ///             IpsecCryptoProfile = exampleIpsecCryptoProfile.Name,
+        ///         },
+        ///     }, new CustomResourceOptions
+        ///     {
+        ///         DependsOn =
+        ///         {
+        ///             exampleIkeGateway,
+        ///         },
+        ///     });
+        /// 
+        ///     var siteAVpnSc = new Scm.ServiceConnection("site_a_vpn_sc", new()
+        ///     {
+        ///         Name = "creating_a_service_connection_data",
+        ///         Region = "us-west-1",
+        ///         IpsecTunnel = exampleIpsecTunnel.Name,
+        ///         Subnets = new[]
+        ///         {
+        ///             "10.1.0.0/16",
+        ///             "172.16.0.0/24",
+        ///         },
+        ///         SourceNat = true,
+        ///     });
+        /// 
+        ///     //------------------------------------------------------
+        ///     // Data Soruce
+        ///     //------------------------------------------------------
+        ///     var createdConnLookup = Scm.GetServiceConnection.Invoke(new()
+        ///     {
+        ///         Id = siteAVpnSc.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["createdServiceConnectionId"] = createdConnLookup.Apply(getServiceConnectionResult =&gt; getServiceConnectionResult.Id),
+        ///         ["createdServiceConnectionRegion"] = createdConnLookup.Apply(getServiceConnectionResult =&gt; getServiceConnectionResult.Region),
+        ///         ["createdServiceConnectionSubnets"] = createdConnLookup.Apply(getServiceConnectionResult =&gt; getServiceConnectionResult.Subnets),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetServiceConnectionResult> Invoke(GetServiceConnectionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceConnectionResult>("scm:index/getServiceConnection:getServiceConnection", args ?? new GetServiceConnectionInvokeArgs(), options.WithDefaults());
@@ -31,6 +311,146 @@ namespace Pulumi.Scm
         /// ServiceConnection data source
         /// 
         /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var config = new Config();
+        ///     // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+        ///     var folderScope = config.Get("folderScope") ?? "Service Connections";
+        ///     //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+        ///     // Note: The resource name is plural: "scm_ike_crypto_profile"
+        ///     var example = new Scm.IkeCryptoProfile("example", new()
+        ///     {
+        ///         Name = "example-ike-crypto_data",
+        ///         Folder = folderScope,
+        ///         Hashes = new[]
+        ///         {
+        ///             "sha256",
+        ///         },
+        ///         DhGroups = new[]
+        ///         {
+        ///             "group14",
+        ///         },
+        ///         Encryptions = new[]
+        ///         {
+        ///             "aes-256-cbc",
+        ///         },
+        ///     });
+        /// 
+        ///     //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+        ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
+        ///     var exampleIpsecCryptoProfile = new Scm.IpsecCryptoProfile("example", new()
+        ///     {
+        ///         Name = "panw-IPSec-Crypto_data",
+        ///         Folder = folderScope,
+        ///         Esp = new Scm.Inputs.IpsecCryptoProfileEspArgs
+        ///         {
+        ///             Encryptions = new[]
+        ///             {
+        ///                 "aes-256-gcm",
+        ///             },
+        ///             Authentications = new[]
+        ///             {
+        ///                 "sha256",
+        ///             },
+        ///         },
+        ///         DhGroup = "group14",
+        ///         Lifetime = new Scm.Inputs.IpsecCryptoProfileLifetimeArgs
+        ///         {
+        ///             Hours = 8,
+        ///         },
+        ///     });
+        /// 
+        ///     //# 3. Define the IKE Gateway
+        ///     // Note: The resource name is plural and nested blocks now use an equals sign (=).
+        ///     var exampleIkeGateway = new Scm.IkeGateway("example", new()
+        ///     {
+        ///         Name = "example-gateway_data",
+        ///         Folder = folderScope,
+        ///         PeerAddress = new Scm.Inputs.IkeGatewayPeerAddressArgs
+        ///         {
+        ///             Ip = "1.1.1.1",
+        ///         },
+        ///         Authentication = new Scm.Inputs.IkeGatewayAuthenticationArgs
+        ///         {
+        ///             PreSharedKey = new Scm.Inputs.IkeGatewayAuthenticationPreSharedKeyArgs
+        ///             {
+        ///                 Key = "secret",
+        ///             },
+        ///         },
+        ///         Protocol = new Scm.Inputs.IkeGatewayProtocolArgs
+        ///         {
+        ///             Ikev1 = new Scm.Inputs.IkeGatewayProtocolIkev1Args
+        ///             {
+        ///                 IkeCryptoProfile = example.Name,
+        ///             },
+        ///         },
+        ///     });
+        /// 
+        ///     //# 4. Define the IPsec Tunnel
+        ///     // Note: Nested 'auto_key' block uses an equals sign (=).
+        ///     var exampleIpsecTunnel = new Scm.IpsecTunnel("example", new()
+        ///     {
+        ///         Name = "example-tunnel_data",
+        ///         Folder = folderScope,
+        ///         TunnelInterface = "tunnel",
+        ///         AntiReplay = true,
+        ///         CopyTos = false,
+        ///         EnableGreEncapsulation = false,
+        ///         AutoKey = new Scm.Inputs.IpsecTunnelAutoKeyArgs
+        ///         {
+        ///             IkeGateways = new[]
+        ///             {
+        ///                 new Scm.Inputs.IpsecTunnelAutoKeyIkeGatewayArgs
+        ///                 {
+        ///                     Name = exampleIkeGateway.Name,
+        ///                 },
+        ///             },
+        ///             IpsecCryptoProfile = exampleIpsecCryptoProfile.Name,
+        ///         },
+        ///     }, new CustomResourceOptions
+        ///     {
+        ///         DependsOn =
+        ///         {
+        ///             exampleIkeGateway,
+        ///         },
+        ///     });
+        /// 
+        ///     var siteAVpnSc = new Scm.ServiceConnection("site_a_vpn_sc", new()
+        ///     {
+        ///         Name = "creating_a_service_connection_data",
+        ///         Region = "us-west-1",
+        ///         IpsecTunnel = exampleIpsecTunnel.Name,
+        ///         Subnets = new[]
+        ///         {
+        ///             "10.1.0.0/16",
+        ///             "172.16.0.0/24",
+        ///         },
+        ///         SourceNat = true,
+        ///     });
+        /// 
+        ///     //------------------------------------------------------
+        ///     // Data Soruce
+        ///     //------------------------------------------------------
+        ///     var createdConnLookup = Scm.GetServiceConnection.Invoke(new()
+        ///     {
+        ///         Id = siteAVpnSc.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["createdServiceConnectionId"] = createdConnLookup.Apply(getServiceConnectionResult =&gt; getServiceConnectionResult.Id),
+        ///         ["createdServiceConnectionRegion"] = createdConnLookup.Apply(getServiceConnectionResult =&gt; getServiceConnectionResult.Region),
+        ///         ["createdServiceConnectionSubnets"] = createdConnLookup.Apply(getServiceConnectionResult =&gt; getServiceConnectionResult.Subnets),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetServiceConnectionResult> Invoke(GetServiceConnectionInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceConnectionResult>("scm:index/getServiceConnection:getServiceConnection", args ?? new GetServiceConnectionInvokeArgs(), options.WithDefaults());
@@ -84,7 +504,7 @@ namespace Pulumi.Scm
         /// <summary>
         /// Backup s c
         /// </summary>
-        public readonly string BackupSC;
+        public readonly string BackupSc;
         /// <summary>
         /// Bgp peer
         /// </summary>
@@ -145,7 +565,7 @@ namespace Pulumi.Scm
 
         [OutputConstructor]
         private GetServiceConnectionResult(
-            string backupSC,
+            string backupSc,
 
             Outputs.GetServiceConnectionBgpPeerResult bgpPeer,
 
@@ -177,7 +597,7 @@ namespace Pulumi.Scm
 
             string tfid)
         {
-            BackupSC = backupSC;
+            BackupSc = backupSc;
             BgpPeer = bgpPeer;
             EncryptedValues = encryptedValues;
             Id = id;

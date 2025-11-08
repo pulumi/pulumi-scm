@@ -7,7 +7,6 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.AntiSpywareSignatureDefaultActionArgs;
 import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureArgs;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -196,13 +195,13 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="threatId")
-    private @Nullable Output<Integer> threatId;
+    private @Nullable Output<String> threatId;
 
     /**
      * @return threat id range \n\n and \n\n
      * 
      */
-    public Optional<Output<Integer>> threatId() {
+    public Optional<Output<String>> threatId() {
         return Optional.ofNullable(this.threatId);
     }
 
@@ -550,7 +549,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder threatId(@Nullable Output<Integer> threatId) {
+        public Builder threatId(@Nullable Output<String> threatId) {
             $.threatId = threatId;
             return this;
         }
@@ -561,7 +560,7 @@ public final class AntiSpywareSignatureState extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder threatId(Integer threatId) {
+        public Builder threatId(String threatId) {
             return threatId(Output.of(threatId));
         }
 

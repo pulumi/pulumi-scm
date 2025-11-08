@@ -43,9 +43,9 @@ namespace Pulumi.Scm.Outputs
         public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// Vlan tag
+        /// VLAN tag
         /// </summary>
-        public readonly double VlanTag;
+        public readonly string VlanTag;
 
         [OutputConstructor]
         private GetLayer2SubinterfaceListDataResult(
@@ -65,7 +65,7 @@ namespace Pulumi.Scm.Outputs
 
             string tfid,
 
-            double vlanTag)
+            string vlanTag)
         {
             Comment = comment;
             Device = device;

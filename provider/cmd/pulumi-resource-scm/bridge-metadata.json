@@ -22,8 +22,8 @@
                     }
                 }
             },
-            "scm_aggregate_ethernet_interface": {
-                "current": "scm:index/aggregateEthernetInterface:AggregateEthernetInterface",
+            "scm_aggregate_interface": {
+                "current": "scm:index/aggregateInterface:AggregateInterface",
                 "majorVersion": 1,
                 "fields": {
                     "layer3": {
@@ -1957,8 +1957,11 @@
                 "majorVersion": 1,
                 "fields": {
                     "ip": {
+                        "maxItemsOne": false
+                    },
+                    "ipv6": {
                         "fields": {
-                            "ip": {
+                            "address": {
                                 "maxItemsOne": false
                             }
                         }
@@ -1984,8 +1987,26 @@
                     },
                     "source_translation": {
                         "fields": {
-                            "translated_address_array": {
-                                "maxItemsOne": false
+                            "dynamic_ip": {
+                                "fields": {
+                                    "fallback": {
+                                        "fields": {
+                                            "translated_address": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    },
+                                    "translated_address": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            },
+                            "dynamic_ip_and_port": {
+                                "fields": {
+                                    "translated_address": {
+                                        "maxItemsOne": false
+                                    }
+                                }
                             }
                         }
                     },
@@ -2551,11 +2572,7 @@
                 "majorVersion": 1,
                 "fields": {
                     "ip": {
-                        "fields": {
-                            "ip": {
-                                "maxItemsOne": false
-                            }
-                        }
+                        "maxItemsOne": false
                     }
                 }
             },
@@ -2784,6 +2801,25 @@
                             }
                         }
                     },
+                    "network": {
+                        "fields": {
+                            "external": {
+                                "maxItemsOne": false
+                            },
+                            "layer2": {
+                                "maxItemsOne": false
+                            },
+                            "layer3": {
+                                "maxItemsOne": false
+                            },
+                            "tap": {
+                                "maxItemsOne": false
+                            },
+                            "virtual_wire": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    },
                     "user_acl": {
                         "fields": {
                             "exclude_list": {
@@ -2880,8 +2916,8 @@
                     }
                 }
             },
-            "scm_aggregate_ethernet_interface": {
-                "current": "scm:index/getAggregateEthernetInterface:getAggregateEthernetInterface",
+            "scm_aggregate_interface": {
+                "current": "scm:index/getAggregateInterface:getAggregateInterface",
                 "majorVersion": 1,
                 "fields": {
                     "layer3": {
@@ -2896,8 +2932,8 @@
                     }
                 }
             },
-            "scm_aggregate_ethernet_interface_list": {
-                "current": "scm:index/getAggregateEthernetInterfaceList:getAggregateEthernetInterfaceList",
+            "scm_aggregate_interface_list": {
+                "current": "scm:index/getAggregateInterfaceList:getAggregateInterfaceList",
                 "majorVersion": 1,
                 "fields": {
                     "data": {
@@ -7044,8 +7080,11 @@
                 "majorVersion": 1,
                 "fields": {
                     "ip": {
+                        "maxItemsOne": false
+                    },
+                    "ipv6": {
                         "fields": {
-                            "ip": {
+                            "address": {
                                 "maxItemsOne": false
                             }
                         }
@@ -7061,8 +7100,11 @@
                         "elem": {
                             "fields": {
                                 "ip": {
+                                    "maxItemsOne": false
+                                },
+                                "ipv6": {
                                     "fields": {
-                                        "ip": {
+                                        "address": {
                                             "maxItemsOne": false
                                         }
                                     }
@@ -7087,8 +7129,26 @@
                     },
                     "source_translation": {
                         "fields": {
-                            "translated_address_array": {
-                                "maxItemsOne": false
+                            "dynamic_ip": {
+                                "fields": {
+                                    "fallback": {
+                                        "fields": {
+                                            "translated_address": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    },
+                                    "translated_address": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            },
+                            "dynamic_ip_and_port": {
+                                "fields": {
+                                    "translated_address": {
+                                        "maxItemsOne": false
+                                    }
+                                }
                             }
                         }
                     },
@@ -7119,8 +7179,26 @@
                                 },
                                 "source_translation": {
                                     "fields": {
-                                        "translated_address_array": {
-                                            "maxItemsOne": false
+                                        "dynamic_ip": {
+                                            "fields": {
+                                                "fallback": {
+                                                    "fields": {
+                                                        "translated_address": {
+                                                            "maxItemsOne": false
+                                                        }
+                                                    }
+                                                },
+                                                "translated_address": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
+                                        },
+                                        "dynamic_ip_and_port": {
+                                            "fields": {
+                                                "translated_address": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
                                         }
                                     }
                                 },
@@ -8466,11 +8544,7 @@
                 "majorVersion": 1,
                 "fields": {
                     "ip": {
-                        "fields": {
-                            "ip": {
-                                "maxItemsOne": false
-                            }
-                        }
+                        "maxItemsOne": false
                     }
                 }
             },
@@ -8483,11 +8557,7 @@
                         "elem": {
                             "fields": {
                                 "ip": {
-                                    "fields": {
-                                        "ip": {
-                                            "maxItemsOne": false
-                                        }
-                                    }
+                                    "maxItemsOne": false
                                 }
                             }
                         }
@@ -8977,6 +9047,25 @@
                             }
                         }
                     },
+                    "network": {
+                        "fields": {
+                            "external": {
+                                "maxItemsOne": false
+                            },
+                            "layer2": {
+                                "maxItemsOne": false
+                            },
+                            "layer3": {
+                                "maxItemsOne": false
+                            },
+                            "tap": {
+                                "maxItemsOne": false
+                            },
+                            "virtual_wire": {
+                                "maxItemsOne": false
+                            }
+                        }
+                    },
                     "user_acl": {
                         "fields": {
                             "exclude_list": {
@@ -9003,6 +9092,25 @@
                                             "maxItemsOne": false
                                         },
                                         "include_list": {
+                                            "maxItemsOne": false
+                                        }
+                                    }
+                                },
+                                "network": {
+                                    "fields": {
+                                        "external": {
+                                            "maxItemsOne": false
+                                        },
+                                        "layer2": {
+                                            "maxItemsOne": false
+                                        },
+                                        "layer3": {
+                                            "maxItemsOne": false
+                                        },
+                                        "tap": {
+                                            "maxItemsOne": false
+                                        },
+                                        "virtual_wire": {
                                             "maxItemsOne": false
                                         }
                                     }

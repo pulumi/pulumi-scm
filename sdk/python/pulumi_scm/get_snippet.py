@@ -112,6 +112,27 @@ def get_snippet(id: Optional[_builtins.str] = None,
     """
     Snippet data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    scm_label1 = scm.Label("scm_label_1", name="scm_label")
+    scm_snippet1 = scm.Snippet("scm_snippet_1",
+        name="scm_snippet",
+        description="Adding a Description from Terraform",
+        labels=[scm_label1.name])
+    # Look up the "scm_snippet" tag by its id
+    scm_snippet_outputs_ds = scm.get_snippet_output(id=scm_snippet1.id)
+    pulumi.export("snippetOutputs", {
+        "productionId": scm_snippet_outputs_ds.id,
+        "productionName": scm_snippet_outputs_ds.name,
+        "productionDescription": scm_snippet_outputs_ds.description,
+        "productionLabels": scm_snippet_outputs_ds.labels,
+    })
+    ```
+
 
     :param _builtins.str id: The UUID of the snippet
     :param _builtins.str name: The name of the snippet
@@ -134,6 +155,27 @@ def get_snippet_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSnippetResult]:
     """
     Snippet data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    scm_label1 = scm.Label("scm_label_1", name="scm_label")
+    scm_snippet1 = scm.Snippet("scm_snippet_1",
+        name="scm_snippet",
+        description="Adding a Description from Terraform",
+        labels=[scm_label1.name])
+    # Look up the "scm_snippet" tag by its id
+    scm_snippet_outputs_ds = scm.get_snippet_output(id=scm_snippet1.id)
+    pulumi.export("snippetOutputs", {
+        "productionId": scm_snippet_outputs_ds.id,
+        "productionName": scm_snippet_outputs_ds.name,
+        "productionDescription": scm_snippet_outputs_ds.description,
+        "productionLabels": scm_snippet_outputs_ds.labels,
+    })
+    ```
 
 
     :param _builtins.str id: The UUID of the snippet

@@ -13,6 +13,47 @@ namespace Pulumi.Scm
     /// CertificateProfile resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmCp1 = new Scm.CertificateProfile("scm_cp_1", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_cp_1",
+    ///         Domain = "test",
+    ///         UseCrl = true,
+    ///         UseOcsp = true,
+    ///         BlockUnknownCert = true,
+    ///         BlockTimeoutCert = true,
+    ///         BlockUnauthenticatedCert = true,
+    ///         BlockExpiredCert = true,
+    ///         CrlReceiveTimeout = "5",
+    ///         OcspReceiveTimeout = "5",
+    ///         CertStatusTimeout = "5",
+    ///         CaCertificates = new[]
+    ///         {
+    ///             new Scm.Inputs.CertificateProfileCaCertificateArgs
+    ///             {
+    ///                 Name = "Forward-Trust-CA",
+    ///                 DefaultOcspUrl = "http://test.com",
+    ///                 OcspVerifyCert = "Forward-Trust-CA-ECDSA",
+    ///                 TemplateName = "something",
+    ///             },
+    ///         },
+    ///         UsernameField = new Scm.Inputs.CertificateProfileUsernameFieldArgs
+    ///         {
+    ///             Subject = "common-name",
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/certificateProfile:CertificateProfile")]
     public partial class CertificateProfile : global::Pulumi.CustomResource

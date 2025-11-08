@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? Enable { get; set; }
 
         /// <summary>
-        /// Hostname
+        /// Set interface hostname
         /// </summary>
         [Input("hostname")]
         public Input<string>? Hostname { get; set; }

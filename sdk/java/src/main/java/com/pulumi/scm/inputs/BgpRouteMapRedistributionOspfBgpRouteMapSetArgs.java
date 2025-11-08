@@ -37,14 +37,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
     }
 
     /**
-     * AS numbers
+     * OSPF BGP Route maps set AS numbers
      * 
      */
     @Import(name="aspathPrepends")
     private @Nullable Output<List<Integer>> aspathPrepends;
 
     /**
-     * @return AS numbers
+     * @return OSPF BGP Route maps set AS numbers
      * 
      */
     public Optional<Output<List<Integer>>> aspathPrepends() {
@@ -52,14 +52,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
     }
 
     /**
-     * Enable BGP atomic aggregate?
+     * OSPF BGP Route maps set Enable BGP atomic aggregate?
      * 
      */
     @Import(name="atomicAggregate")
     private @Nullable Output<Boolean> atomicAggregate;
 
     /**
-     * @return Enable BGP atomic aggregate?
+     * @return OSPF BGP Route maps set Enable BGP atomic aggregate?
      * 
      */
     public Optional<Output<Boolean>> atomicAggregate() {
@@ -82,14 +82,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
     }
 
     /**
-     * Large communities
+     * OSPF BGP Route maps set Large communities
      * 
      */
     @Import(name="largeCommunities")
     private @Nullable Output<List<String>> largeCommunities;
 
     /**
-     * @return Large communities
+     * @return OSPF BGP Route maps set Large communities
      * 
      */
     public Optional<Output<List<String>>> largeCommunities() {
@@ -97,14 +97,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
     }
 
     /**
-     * Local preference
+     * OSPF BGP Route maps set Local preference
      * 
      */
     @Import(name="localPreference")
     private @Nullable Output<Integer> localPreference;
 
     /**
-     * @return Local preference
+     * @return OSPF BGP Route maps set Local preference
      * 
      */
     public Optional<Output<Integer>> localPreference() {
@@ -127,14 +127,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
     }
 
     /**
-     * Origin
+     * OSPF BGP Route maps set Origin
      * 
      */
     @Import(name="origin")
     private @Nullable Output<String> origin;
 
     /**
-     * @return Origin
+     * @return OSPF BGP Route maps set Origin
      * 
      */
     public Optional<Output<String>> origin() {
@@ -142,14 +142,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
     }
 
     /**
-     * Originator ID
+     * OSPF BGP Route maps set Originator ID
      * 
      */
     @Import(name="originatorId")
     private @Nullable Output<String> originatorId;
 
     /**
-     * @return Originator ID
+     * @return OSPF BGP Route maps set Originator ID
      * 
      */
     public Optional<Output<String>> originatorId() {
@@ -157,14 +157,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
     }
 
     /**
-     * Regular communities
+     * OSPF BGP Route maps set Regular communities
      * 
      */
     @Import(name="regularCommunities")
     private @Nullable Output<List<String>> regularCommunities;
 
     /**
-     * @return Regular communities
+     * @return OSPF BGP Route maps set Regular communities
      * 
      */
     public Optional<Output<List<String>>> regularCommunities() {
@@ -172,14 +172,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
     }
 
     /**
-     * Tag
+     * OSPF BGP Route maps set Tag
      * 
      */
     @Import(name="tag")
     private @Nullable Output<Integer> tag;
 
     /**
-     * @return Tag
+     * @return OSPF BGP Route maps set Tag
      * 
      */
     public Optional<Output<Integer>> tag() {
@@ -187,14 +187,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
     }
 
     /**
-     * Weight
+     * OSPF BGP Route maps set Weight
      * 
      */
     @Import(name="weight")
     private @Nullable Output<Integer> weight;
 
     /**
-     * @return Weight
+     * @return OSPF BGP Route maps set Weight
      * 
      */
     public Optional<Output<Integer>> weight() {
@@ -258,7 +258,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param aspathPrepends AS numbers
+         * @param aspathPrepends OSPF BGP Route maps set AS numbers
          * 
          * @return builder
          * 
@@ -269,7 +269,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param aspathPrepends AS numbers
+         * @param aspathPrepends OSPF BGP Route maps set AS numbers
          * 
          * @return builder
          * 
@@ -279,7 +279,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param aspathPrepends AS numbers
+         * @param aspathPrepends OSPF BGP Route maps set AS numbers
          * 
          * @return builder
          * 
@@ -289,7 +289,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param atomicAggregate Enable BGP atomic aggregate?
+         * @param atomicAggregate OSPF BGP Route maps set Enable BGP atomic aggregate?
          * 
          * @return builder
          * 
@@ -300,7 +300,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param atomicAggregate Enable BGP atomic aggregate?
+         * @param atomicAggregate OSPF BGP Route maps set Enable BGP atomic aggregate?
          * 
          * @return builder
          * 
@@ -331,7 +331,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param largeCommunities Large communities
+         * @param largeCommunities OSPF BGP Route maps set Large communities
          * 
          * @return builder
          * 
@@ -342,7 +342,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param largeCommunities Large communities
+         * @param largeCommunities OSPF BGP Route maps set Large communities
          * 
          * @return builder
          * 
@@ -352,7 +352,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param largeCommunities Large communities
+         * @param largeCommunities OSPF BGP Route maps set Large communities
          * 
          * @return builder
          * 
@@ -362,7 +362,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param localPreference Local preference
+         * @param localPreference OSPF BGP Route maps set Local preference
          * 
          * @return builder
          * 
@@ -373,7 +373,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param localPreference Local preference
+         * @param localPreference OSPF BGP Route maps set Local preference
          * 
          * @return builder
          * 
@@ -404,7 +404,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param origin Origin
+         * @param origin OSPF BGP Route maps set Origin
          * 
          * @return builder
          * 
@@ -415,7 +415,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param origin Origin
+         * @param origin OSPF BGP Route maps set Origin
          * 
          * @return builder
          * 
@@ -425,7 +425,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param originatorId Originator ID
+         * @param originatorId OSPF BGP Route maps set Originator ID
          * 
          * @return builder
          * 
@@ -436,7 +436,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param originatorId Originator ID
+         * @param originatorId OSPF BGP Route maps set Originator ID
          * 
          * @return builder
          * 
@@ -446,7 +446,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param regularCommunities Regular communities
+         * @param regularCommunities OSPF BGP Route maps set Regular communities
          * 
          * @return builder
          * 
@@ -457,7 +457,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param regularCommunities Regular communities
+         * @param regularCommunities OSPF BGP Route maps set Regular communities
          * 
          * @return builder
          * 
@@ -467,7 +467,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param regularCommunities Regular communities
+         * @param regularCommunities OSPF BGP Route maps set Regular communities
          * 
          * @return builder
          * 
@@ -477,7 +477,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param tag Tag
+         * @param tag OSPF BGP Route maps set Tag
          * 
          * @return builder
          * 
@@ -488,7 +488,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param tag Tag
+         * @param tag OSPF BGP Route maps set Tag
          * 
          * @return builder
          * 
@@ -498,7 +498,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param weight Weight
+         * @param weight OSPF BGP Route maps set Weight
          * 
          * @return builder
          * 
@@ -509,7 +509,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param weight Weight
+         * @param weight OSPF BGP Route maps set Weight
          * 
          * @return builder
          * 

@@ -12,6 +12,39 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			allPreRules, err := scm.GetAuthenticationRuleList(ctx, &scm.GetAuthenticationRuleListArgs{
+//				Limit:    pulumi.IntRef(10),
+//				Offset:   pulumi.IntRef(15),
+//				Position: "pre",
+//				Folder:   pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("fetchedRuleListSummary", pulumi.Map{
+//				"countOfRulesFetched": allPreRules.Total,
+//				"firstRuleName":       allPreRules.Datas[0].Name,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetAuthenticationRuleList(ctx *pulumi.Context, args *GetAuthenticationRuleListArgs, opts ...pulumi.InvokeOption) (*GetAuthenticationRuleListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetAuthenticationRuleListResult
@@ -34,6 +67,8 @@ type GetAuthenticationRuleListArgs struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The relative position of the rule
+	Position string `pulumi:"position"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -54,6 +89,8 @@ type GetAuthenticationRuleListResult struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The relative position of the rule
+	Position string `pulumi:"position"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
@@ -82,6 +119,8 @@ type GetAuthenticationRuleListOutputArgs struct {
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
+	// The relative position of the rule
+	Position pulumi.StringInput `pulumi:"position"`
 	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
@@ -138,6 +177,11 @@ func (o GetAuthenticationRuleListResultOutput) Name() pulumi.StringPtrOutput {
 // The offset of the first item to return.
 func (o GetAuthenticationRuleListResultOutput) Offset() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v GetAuthenticationRuleListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
+}
+
+// The relative position of the rule
+func (o GetAuthenticationRuleListResultOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAuthenticationRuleListResult) string { return v.Position }).(pulumi.StringOutput)
 }
 
 // The snippet of the item.

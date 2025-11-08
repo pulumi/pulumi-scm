@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class LogicalRouterVrfBgpPeerGroupConnectionOptions {
      * @return Multihop
      * 
      */
-    private @Nullable Double multihop;
+    private @Nullable Integer multihop;
     /**
      * @return Timers
      * 
@@ -52,7 +52,7 @@ public final class LogicalRouterVrfBgpPeerGroupConnectionOptions {
      * @return Multihop
      * 
      */
-    public Optional<Double> multihop() {
+    public Optional<Integer> multihop() {
         return Optional.ofNullable(this.multihop);
     }
     /**
@@ -74,7 +74,7 @@ public final class LogicalRouterVrfBgpPeerGroupConnectionOptions {
     public static final class Builder {
         private @Nullable String authentication;
         private @Nullable String dampening;
-        private @Nullable Double multihop;
+        private @Nullable Integer multihop;
         private @Nullable String timers;
         public Builder() {}
         public Builder(LogicalRouterVrfBgpPeerGroupConnectionOptions defaults) {
@@ -98,7 +98,7 @@ public final class LogicalRouterVrfBgpPeerGroupConnectionOptions {
             return this;
         }
         @CustomType.Setter
-        public Builder multihop(@Nullable Double multihop) {
+        public Builder multihop(@Nullable Integer multihop) {
 
             this.multihop = multihop;
             return this;

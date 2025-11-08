@@ -20,13 +20,13 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Metric
         /// </summary>
-        public readonly double? Metric;
+        public readonly int? Metric;
 
         [OutputConstructor]
         private LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList(
             string? accessList,
 
-            double? metric)
+            int? metric)
         {
             AccessList = accessList;
             Metric = metric;

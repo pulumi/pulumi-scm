@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetSdwanPathQualityProfileMetricPktLossResult
     {
         /// <summary>
-        /// Sensitivity
+        /// Packet loss sensitivity
         /// </summary>
         public readonly string Sensitivity;
         /// <summary>
-        /// Threshold
+        /// Packet loss threshold (percentage)
         /// </summary>
         public readonly int Threshold;
 

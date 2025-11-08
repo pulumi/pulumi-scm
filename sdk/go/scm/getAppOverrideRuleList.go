@@ -12,6 +12,38 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			allPreRules, err := scm.GetAppOverrideRuleList(ctx, &scm.GetAppOverrideRuleListArgs{
+//				Offset:   pulumi.IntRef(10),
+//				Position: "pre",
+//				Folder:   pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("fetchedRuleListSummary", pulumi.Map{
+//				"countOfRulesFetched": allPreRules.Total,
+//				"firstRuleName":       allPreRules.Datas[0].Name,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetAppOverrideRuleList(ctx *pulumi.Context, args *GetAppOverrideRuleListArgs, opts ...pulumi.InvokeOption) (*GetAppOverrideRuleListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetAppOverrideRuleListResult
@@ -34,6 +66,8 @@ type GetAppOverrideRuleListArgs struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The position of a security rule
+	Position string `pulumi:"position"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -54,6 +88,8 @@ type GetAppOverrideRuleListResult struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The position of a security rule
+	Position string `pulumi:"position"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
@@ -82,6 +118,8 @@ type GetAppOverrideRuleListOutputArgs struct {
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
+	// The position of a security rule
+	Position pulumi.StringInput `pulumi:"position"`
 	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
@@ -138,6 +176,11 @@ func (o GetAppOverrideRuleListResultOutput) Name() pulumi.StringPtrOutput {
 // The offset of the first item to return.
 func (o GetAppOverrideRuleListResultOutput) Offset() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v GetAppOverrideRuleListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
+}
+
+// The position of a security rule
+func (o GetAppOverrideRuleListResultOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v GetAppOverrideRuleListResult) string { return v.Position }).(pulumi.StringOutput)
 }
 
 // The snippet of the item.

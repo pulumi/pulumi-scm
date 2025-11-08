@@ -13,18 +13,195 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// AuthenticationRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var ruleToFetch = new Scm.AuthenticationRule("rule_to_fetch", new()
+        ///     {
+        ///         Name = "rule-to-be-queried-scm-105",
+        ///         Description = "This rule is created purely to test the data source functionality.",
+        ///         Position = "pre",
+        ///         Folder = "All",
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Froms = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-http",
+        ///             "service-https",
+        ///         },
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Timeout = 1200,
+        ///         NegateSource = false,
+        ///         NegateDestination = false,
+        ///     });
+        /// 
+        ///     var ruleData = Scm.GetAuthenticationRule.Invoke(new()
+        ///     {
+        ///         Id = ruleToFetch.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedRuleId"] = ruleData.Apply(getAuthenticationRuleResult =&gt; getAuthenticationRuleResult.Id),
+        ///         ["fetchedRuleTimeout"] = ruleData.Apply(getAuthenticationRuleResult =&gt; getAuthenticationRuleResult.Timeout),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetAuthenticationRuleResult> InvokeAsync(GetAuthenticationRuleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAuthenticationRuleResult>("scm:index/getAuthenticationRule:getAuthenticationRule", args ?? new GetAuthenticationRuleArgs(), options.WithDefaults());
 
         /// <summary>
         /// AuthenticationRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var ruleToFetch = new Scm.AuthenticationRule("rule_to_fetch", new()
+        ///     {
+        ///         Name = "rule-to-be-queried-scm-105",
+        ///         Description = "This rule is created purely to test the data source functionality.",
+        ///         Position = "pre",
+        ///         Folder = "All",
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Froms = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-http",
+        ///             "service-https",
+        ///         },
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Timeout = 1200,
+        ///         NegateSource = false,
+        ///         NegateDestination = false,
+        ///     });
+        /// 
+        ///     var ruleData = Scm.GetAuthenticationRule.Invoke(new()
+        ///     {
+        ///         Id = ruleToFetch.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedRuleId"] = ruleData.Apply(getAuthenticationRuleResult =&gt; getAuthenticationRuleResult.Id),
+        ///         ["fetchedRuleTimeout"] = ruleData.Apply(getAuthenticationRuleResult =&gt; getAuthenticationRuleResult.Timeout),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAuthenticationRuleResult> Invoke(GetAuthenticationRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationRuleResult>("scm:index/getAuthenticationRule:getAuthenticationRule", args ?? new GetAuthenticationRuleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// AuthenticationRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var ruleToFetch = new Scm.AuthenticationRule("rule_to_fetch", new()
+        ///     {
+        ///         Name = "rule-to-be-queried-scm-105",
+        ///         Description = "This rule is created purely to test the data source functionality.",
+        ///         Position = "pre",
+        ///         Folder = "All",
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Froms = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-http",
+        ///             "service-https",
+        ///         },
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Timeout = 1200,
+        ///         NegateSource = false,
+        ///         NegateDestination = false,
+        ///     });
+        /// 
+        ///     var ruleData = Scm.GetAuthenticationRule.Invoke(new()
+        ///     {
+        ///         Id = ruleToFetch.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedRuleId"] = ruleData.Apply(getAuthenticationRuleResult =&gt; getAuthenticationRuleResult.Id),
+        ///         ["fetchedRuleTimeout"] = ruleData.Apply(getAuthenticationRuleResult =&gt; getAuthenticationRuleResult.Timeout),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAuthenticationRuleResult> Invoke(GetAuthenticationRuleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationRuleResult>("scm:index/getAuthenticationRule:getAuthenticationRule", args ?? new GetAuthenticationRuleInvokeArgs(), options.WithDefaults());
@@ -144,6 +321,14 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>
+        /// The relative position of the rule
+        /// </summary>
+        public readonly string Position;
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        public readonly string RelativePosition;
+        /// <summary>
         /// The destination ports
         /// </summary>
         public readonly ImmutableArray<string> Services;
@@ -167,6 +352,10 @@ namespace Pulumi.Scm
         /// The authentication rule tags
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        public readonly string TargetRule;
         public readonly string Tfid;
         /// <summary>
         /// The authentication session timeout (seconds)
@@ -213,6 +402,10 @@ namespace Pulumi.Scm
 
             bool negateSource,
 
+            string position,
+
+            string relativePosition,
+
             ImmutableArray<string> services,
 
             string snippet,
@@ -224,6 +417,8 @@ namespace Pulumi.Scm
             ImmutableArray<string> sources,
 
             ImmutableArray<string> tags,
+
+            string targetRule,
 
             string tfid,
 
@@ -248,12 +443,15 @@ namespace Pulumi.Scm
             Name = name;
             NegateDestination = negateDestination;
             NegateSource = negateSource;
+            Position = position;
+            RelativePosition = relativePosition;
             Services = services;
             Snippet = snippet;
             SourceHips = sourceHips;
             SourceUsers = sourceUsers;
             Sources = sources;
             Tags = tags;
+            TargetRule = targetRule;
             Tfid = tfid;
             Timeout = timeout;
             Tos = tos;

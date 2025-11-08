@@ -64,11 +64,19 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Port
         /// </summary>
-        public readonly int Port;
+        public readonly string Port;
+        /// <summary>
+        /// The position of a security rule
+        /// </summary>
+        public readonly string Position;
         /// <summary>
         /// Protocol
         /// </summary>
         public readonly string Protocol;
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        public readonly string RelativePosition;
         /// <summary>
         /// The snippet in which the resource is defined
         /// </summary>
@@ -81,6 +89,10 @@ namespace Pulumi.Scm.Outputs
         /// Tag
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        public readonly string TargetRule;
         public readonly string Tfid;
         /// <summary>
         /// To
@@ -113,15 +125,21 @@ namespace Pulumi.Scm.Outputs
 
             bool negateSource,
 
-            int port,
+            string port,
+
+            string position,
 
             string protocol,
+
+            string relativePosition,
 
             string snippet,
 
             ImmutableArray<string> sources,
 
             ImmutableArray<string> tags,
+
+            string targetRule,
 
             string tfid,
 
@@ -140,10 +158,13 @@ namespace Pulumi.Scm.Outputs
             NegateDestination = negateDestination;
             NegateSource = negateSource;
             Port = port;
+            Position = position;
             Protocol = protocol;
+            RelativePosition = relativePosition;
             Snippet = snippet;
             Sources = sources;
             Tags = tags;
+            TargetRule = targetRule;
             Tfid = tfid;
             Tos = tos;
         }

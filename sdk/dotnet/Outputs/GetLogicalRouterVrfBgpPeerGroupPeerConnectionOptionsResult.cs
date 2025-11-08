@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Idle hold time
         /// </summary>
-        public readonly double IdleHoldTime;
+        public readonly int IdleHoldTime;
         /// <summary>
         /// Incoming bgp connection
         /// </summary>
@@ -44,7 +44,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Min route adv interval
         /// </summary>
-        public readonly double MinRouteAdvInterval;
+        public readonly int MinRouteAdvInterval;
         /// <summary>
         /// Multihop
         /// </summary>
@@ -52,7 +52,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Open delay time
         /// </summary>
-        public readonly double OpenDelayTime;
+        public readonly int OpenDelayTime;
         /// <summary>
         /// Outgoing bgp connection
         /// </summary>
@@ -70,7 +70,7 @@ namespace Pulumi.Scm.Outputs
 
             string holdTime,
 
-            double idleHoldTime,
+            int idleHoldTime,
 
             Outputs.GetLogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnectionResult incomingBgpConnection,
 
@@ -78,11 +78,11 @@ namespace Pulumi.Scm.Outputs
 
             string maxPrefixes,
 
-            double minRouteAdvInterval,
+            int minRouteAdvInterval,
 
             string multihop,
 
-            double openDelayTime,
+            int openDelayTime,
 
             Outputs.GetLogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnectionResult outgoingBgpConnection,
 

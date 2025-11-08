@@ -6,6 +6,29 @@ import * as utilities from "./utilities";
 
 /**
  * Snippet resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmLabel1 = new scm.Label("scm_label_1", {name: "scm_label"});
+ * //snippet with label
+ * const scmSnippet1 = new scm.Snippet("scm_snippet_1", {
+ *     name: "scm_snippet",
+ *     description: "Adding a Description from Terraform",
+ *     labels: [scmLabel1.name],
+ * });
+ * const scmSnippet2 = new scm.Snippet("scm_snippet_2", {
+ *     name: "scm_snippet_2",
+ *     description: "Adding a Description from Terraform",
+ * });
+ * const scmSnippet3 = new scm.Snippet("scm_snippet_3", {
+ *     name: "scm_snippet_3",
+ *     description: "Adding a Description from Terraform",
+ * });
+ * ```
  */
 export class Snippet extends pulumi.CustomResource {
     /**

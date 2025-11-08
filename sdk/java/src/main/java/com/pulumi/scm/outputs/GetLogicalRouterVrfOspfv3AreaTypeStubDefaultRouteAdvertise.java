@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -14,14 +14,14 @@ public final class GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise {
      * @return Metric
      * 
      */
-    private Double metric;
+    private Integer metric;
 
     private GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise() {}
     /**
      * @return Metric
      * 
      */
-    public Double metric() {
+    public Integer metric() {
         return this.metric;
     }
 
@@ -34,7 +34,7 @@ public final class GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Double metric;
+        private Integer metric;
         public Builder() {}
         public Builder(GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise defaults) {
     	      Objects.requireNonNull(defaults);
@@ -42,7 +42,7 @@ public final class GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise {
         }
 
         @CustomType.Setter
-        public Builder metric(Double metric) {
+        public Builder metric(Integer metric) {
             if (metric == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise", "metric");
             }

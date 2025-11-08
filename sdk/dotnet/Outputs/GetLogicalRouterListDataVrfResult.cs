@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Global vrid
         /// </summary>
-        public readonly double GlobalVrid;
+        public readonly int GlobalVrid;
         /// <summary>
         /// Interface
         /// </summary>
@@ -82,7 +82,7 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetLogicalRouterListDataVrfEcmpResult ecmp,
 
-            double globalVrid,
+            int globalVrid,
 
             ImmutableArray<string> interfaces,
 

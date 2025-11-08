@@ -12,18 +12,18 @@ export interface AddressGroupDynamic {
     filter: string;
 }
 
-export interface AggregateEthernetInterfaceLayer2 {
+export interface AggregateInterfaceLayer2 {
     /**
      * Lacp
      */
-    lacp: outputs.AggregateEthernetInterfaceLayer2Lacp;
+    lacp: outputs.AggregateInterfaceLayer2Lacp;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    vlanTag: number;
+    vlanTag: string;
 }
 
-export interface AggregateEthernetInterfaceLayer2Lacp {
+export interface AggregateInterfaceLayer2Lacp {
     /**
      * Enable LACP?
      */
@@ -33,7 +33,7 @@ export interface AggregateEthernetInterfaceLayer2Lacp {
      */
     fastFailover: boolean;
     /**
-     * Max ports
+     * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
@@ -41,49 +41,49 @@ export interface AggregateEthernetInterfaceLayer2Lacp {
      */
     mode: string;
     /**
-     * System priority
+     * LACP system priority in system ID
      */
     systemPriority: number;
     /**
-     * Transmission rate
+     * Transmission mode
      */
     transmissionRate: string;
 }
 
-export interface AggregateEthernetInterfaceLayer3 {
+export interface AggregateInterfaceLayer3 {
     /**
      * Aggregate Ethernet ARP configuration
      */
-    arps: outputs.AggregateEthernetInterfaceLayer3Arp[];
+    arps: outputs.AggregateInterfaceLayer3Arp[];
     /**
-     * Ddns config
+     * Dynamic DNS configuration specific to the Aggregate Interface.
      */
-    ddnsConfig: outputs.AggregateEthernetInterfaceLayer3DdnsConfig;
+    ddnsConfig: outputs.AggregateInterfaceLayer3DdnsConfig;
     /**
-     * Dhcp client
+     * Aggregate Ethernet DHCP Client Object
      */
-    dhcpClient: outputs.AggregateEthernetInterfaceLayer3DhcpClient;
+    dhcpClient: outputs.AggregateInterfaceLayer3DhcpClient;
     /**
      * Interface management profile
      */
     interfaceManagementProfile: string;
     /**
-     * Interface IP addresses
+     * Aggregate Interface IP addresses
      */
-    ips: string[];
+    ips: outputs.AggregateInterfaceLayer3Ip[];
     /**
      * Lacp
      */
-    lacp: outputs.AggregateEthernetInterfaceLayer3Lacp;
+    lacp: outputs.AggregateInterfaceLayer3Lacp;
     /**
      * MTU
      */
     mtu: number;
 }
 
-export interface AggregateEthernetInterfaceLayer3Arp {
+export interface AggregateInterfaceLayer3Arp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress?: string;
     /**
@@ -92,13 +92,13 @@ export interface AggregateEthernetInterfaceLayer3Arp {
     name?: string;
 }
 
-export interface AggregateEthernetInterfaceLayer3DdnsConfig {
+export interface AggregateInterfaceLayer3DdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
     ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled: boolean;
     /**
@@ -106,54 +106,61 @@ export interface AggregateEthernetInterfaceLayer3DdnsConfig {
      */
     ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
     ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
     ddnsVendorConfig: string;
 }
 
-export interface AggregateEthernetInterfaceLayer3DhcpClient {
+export interface AggregateInterfaceLayer3DhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable: boolean;
     /**
-     * Send hostname
+     * Aggregate Ethernet DHCP Client Send hostname
      */
-    sendHostname: outputs.AggregateEthernetInterfaceLayer3DhcpClientSendHostname;
+    sendHostname: outputs.AggregateInterfaceLayer3DhcpClientSendHostname;
 }
 
-export interface AggregateEthernetInterfaceLayer3DhcpClientSendHostname {
+export interface AggregateInterfaceLayer3DhcpClientSendHostname {
     /**
      * Enable
      */
     enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname: string;
 }
 
-export interface AggregateEthernetInterfaceLayer3Lacp {
+export interface AggregateInterfaceLayer3Ip {
+    /**
+     * Aggregate Interface IP addresses name
+     */
+    name: string;
+}
+
+export interface AggregateInterfaceLayer3Lacp {
     /**
      * Enable LACP?
      */
@@ -163,7 +170,7 @@ export interface AggregateEthernetInterfaceLayer3Lacp {
      */
     fastFailover: boolean;
     /**
-     * Max ports
+     * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
@@ -171,11 +178,11 @@ export interface AggregateEthernetInterfaceLayer3Lacp {
      */
     mode: string;
     /**
-     * System priority
+     * LACP system priority in system ID
      */
     systemPriority: number;
     /**
-     * Transmission rate
+     * Transmission mode
      */
     transmissionRate: string;
 }
@@ -1094,7 +1101,7 @@ export interface BgpAddressFamilyProfileIpv4Ipv4Multicast {
     /**
      * Remove private a s
      */
-    removePrivateAS?: outputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS;
+    removePrivateAs?: outputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs;
     /**
      * Route reflector client?
      */
@@ -1117,7 +1124,7 @@ export interface BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath {
     /**
      * Tx bestpath per a s
      */
-    txBestpathPerAS?: boolean;
+    txBestpathPerAs?: boolean;
 }
 
 export interface BgpAddressFamilyProfileIpv4Ipv4MulticastAllowasIn {
@@ -1194,15 +1201,21 @@ export interface BgpAddressFamilyProfileIpv4Ipv4MulticastOrf {
     orfPrefixList?: string;
 }
 
-export interface BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS {
+export interface BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs {
     /**
      * All
      */
-    all?: string;
+    all?: outputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll;
     /**
      * Replace a s
      */
-    replaceAS?: string;
+    replaceAs?: outputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs;
+}
+
+export interface BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll {
+}
+
+export interface BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs {
 }
 
 export interface BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunity {
@@ -1283,7 +1296,7 @@ export interface BgpAddressFamilyProfileIpv4Ipv4Unicast {
     /**
      * Remove private a s
      */
-    removePrivateAS?: outputs.BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS;
+    removePrivateAs?: outputs.BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs;
     /**
      * Route reflector client?
      */
@@ -1306,7 +1319,7 @@ export interface BgpAddressFamilyProfileIpv4Ipv4UnicastAddPath {
     /**
      * Tx bestpath per a s
      */
-    txBestpathPerAS?: boolean;
+    txBestpathPerAs?: boolean;
 }
 
 export interface BgpAddressFamilyProfileIpv4Ipv4UnicastAllowasIn {
@@ -1383,15 +1396,21 @@ export interface BgpAddressFamilyProfileIpv4Ipv4UnicastOrf {
     orfPrefixList?: string;
 }
 
-export interface BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS {
+export interface BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs {
     /**
      * All
      */
-    all?: string;
+    all?: outputs.BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll;
     /**
      * Replace a s
      */
-    replaceAS?: string;
+    replaceAs?: outputs.BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs;
+}
+
+export interface BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll {
+}
+
+export interface BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs {
 }
 
 export interface BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunity {
@@ -1735,25 +1754,25 @@ export interface BgpRouteMapRedistributionBgp {
      */
     ospf?: outputs.BgpRouteMapRedistributionBgpOspf;
     /**
-     * Rib
+     * BGP Root RIB
      */
     rib?: outputs.BgpRouteMapRedistributionBgpRib;
 }
 
 export interface BgpRouteMapRedistributionBgpOspf {
     /**
-     * Route maps
+     * BGP Root OSPF Route maps
      */
     routeMaps?: outputs.BgpRouteMapRedistributionBgpOspfRouteMap[];
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMap {
     /**
-     * Action
+     * BGP Root OSPF Route maps Action
      */
     action?: string;
     /**
-     * Description
+     * BGP Root OSPF Route maps Description
      */
     description?: string;
     /**
@@ -1761,106 +1780,106 @@ export interface BgpRouteMapRedistributionBgpOspfRouteMap {
      */
     match?: outputs.BgpRouteMapRedistributionBgpOspfRouteMapMatch;
     /**
-     * Sequence number
+     * BGP Root OSPF Route maps Sequence number
      */
     name?: number;
     /**
-     * Set
+     * BGP Root OSPF Set
      */
     set?: outputs.BgpRouteMapRedistributionBgpOspfRouteMapSet;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapMatch {
     /**
-     * AS path access list
+     * BGP Root OSPF Route maps match AS path access list
      */
     asPathAccessList?: string;
     /**
-     * Extended community
+     * EBGP Root OSPF Route maps match xtended community
      */
     extendedCommunity?: string;
     /**
-     * Interface
+     * BGP Root OSPF Route maps match Interface
      */
     interface?: string;
     /**
-     * bgp-route-map-redistributions ipv4 object
+     * BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
      */
     ipv4?: outputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4;
     /**
-     * Large community
+     * BGP Root OSPF Route maps match Large community
      */
     largeCommunity?: string;
     /**
-     * Local preference
+     * BGP Root OSPF Route maps match Local preference
      */
     localPreference?: number;
     /**
-     * Metric
+     * BGP Root OSPF Route maps match Metric
      */
     metric?: number;
     /**
-     * Origin
+     * BGP Root OSPF Route maps match Origin
      */
     origin?: string;
     /**
-     * Peer
+     * BGP Root OSPF Route maps match Peer
      */
     peer?: string;
     /**
-     * Regular community
+     * BGP Root OSPF Route maps match Regular community
      */
     regularCommunity?: string;
     /**
-     * Tag
+     * BGP Root OSPF Route maps match Tag
      */
     tag?: number;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4 {
     /**
-     * bgp-route-map-redistributions ipv4 object address
+     * BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
      */
     address?: outputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address;
     /**
-     * bgp-route-map-redistributions ipv4 object next*hop
+     * BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
      */
     nextHop?: outputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop;
     /**
-     * bgp-route-map-redistributions ipv4 object route*source
+     * BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
      */
     routeSource?: outputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * BGP Root OSPF Route maps match ipv4 Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps match ipv4 Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * BGP Root OSPF Route maps ipv4 nextVr hop Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps ipv4 next hop Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource {
     /**
-     * Access list
+     * BGP Root OSPF Route maps ipv4 route source Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps ipv4 route source Prefix list
      */
     prefixList?: string;
 }
@@ -1871,99 +1890,99 @@ export interface BgpRouteMapRedistributionBgpOspfRouteMapSet {
      */
     metric?: outputs.BgpRouteMapRedistributionBgpOspfRouteMapSetMetric;
     /**
-     * Metric type
+     * BGP Root OSPF Route maps set Metric type
      */
     metricType?: string;
     /**
-     * Tag
+     * BGP Root OSPF Route maps set Tag
      */
     tag?: number;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapSetMetric {
     /**
-     * Metric action
+     * BGP Root OSPF Route maps set Metric action
      */
     action?: string;
     /**
-     * Metric value
+     * BGP Root OSPF Route maps set Metric value
      */
     value?: number;
 }
 
 export interface BgpRouteMapRedistributionBgpRib {
     /**
-     * Route maps
+     * BGP Root RIB Route maps
      */
     routeMaps?: outputs.BgpRouteMapRedistributionBgpRibRouteMap[];
 }
 
 export interface BgpRouteMapRedistributionBgpRibRouteMap {
     /**
-     * Action
+     * BGP Root RIB Route maps Action
      */
     action?: string;
     /**
-     * Description
+     * BGP Root RIB Route maps Description
      */
     description?: string;
     /**
-     * Match
+     * match attribute for BG Rib route map
      */
     match?: outputs.BgpRouteMapRedistributionBgpRibRouteMapMatch;
     /**
-     * Sequence number
+     * BGP Root RIB Route maps Sequence number
      */
     name?: number;
     /**
-     * Set
+     * Set attributes for BGP route map
      */
     set?: outputs.BgpRouteMapRedistributionBgpRibRouteMapSet;
 }
 
 export interface BgpRouteMapRedistributionBgpRibRouteMapMatch {
     /**
-     * AS path access list
+     * BGP Root RIB Route maps match AS path access list
      */
     asPathAccessList?: string;
     /**
-     * Extended community
+     * BGP Root RIB Route maps match Extended community
      */
     extendedCommunity?: string;
     /**
-     * Interface
+     * BGP Root RIB Route maps match Interface
      */
     interface?: string;
     /**
-     * Ipv4
+     * BGP Route Map Redistributions Root BGP rib Route Map IPv4
      */
     ipv4?: outputs.BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4;
     /**
-     * Large community
+     * BGP Root RIB Route maps match Large community
      */
     largeCommunity?: string;
     /**
-     * Local preference
+     * BGP Root RIB Route maps match Local preference
      */
     localPreference?: number;
     /**
-     * Metric
+     * BGP Root RIB Route maps match Metric
      */
     metric?: number;
     /**
-     * Origin
+     * BGP Root RIB Route maps match Origin
      */
     origin?: string;
     /**
-     * Peer
+     * BGP Root RIB Route maps match Peer
      */
     peer?: string;
     /**
-     * Regular community
+     * BGP Root RIB Route maps match Regular community
      */
     regularCommunity?: string;
     /**
-     * Tag
+     * BGP Root RIB Route maps match Tag
      */
     tag?: number;
 }
@@ -1985,47 +2004,47 @@ export interface BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4 {
 
 export interface BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv next hop Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv next hop Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSource {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv route source Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv route source Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionBgpRibRouteMapSet {
     /**
-     * Source address
+     * BGP Root RIB Route maps set Source address
      */
     sourceAddress?: string;
 }
 
 export interface BgpRouteMapRedistributionConnectedStatic {
     /**
-     * Bgp
+     * Connected Static Root BGP
      */
     bgp?: outputs.BgpRouteMapRedistributionConnectedStaticBgp;
     /**
@@ -2040,18 +2059,18 @@ export interface BgpRouteMapRedistributionConnectedStatic {
 
 export interface BgpRouteMapRedistributionConnectedStaticBgp {
     /**
-     * Route maps
+     * Connected Static BGP Route maps
      */
     routeMaps?: outputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMap[];
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
     /**
-     * Action
+     * Connected Static BGP Route maps Action
      */
     action?: string;
     /**
-     * Description
+     * Connected Static BGP Route maps Description
      */
     description?: string;
     /**
@@ -2059,7 +2078,7 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
      */
     match?: outputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch;
     /**
-     * Sequence number
+     * Connected Static BGP Route maps Sequence number
      */
     name?: number;
     /**
@@ -2070,7 +2089,7 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP Route maps match Interface
      */
     interface?: string;
     /**
@@ -2078,7 +2097,7 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch {
      */
     ipv4?: outputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4;
     /**
-     * Metric
+     * Connected Static BGP Route maps match Metric
      */
     metric?: number;
 }
@@ -2096,22 +2115,22 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4 {
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP Route maps match ip4 Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * Connected Static BGP Route maps match ip4  Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP Route maps match ip4 next hop Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * Connected Static BGP Route maps match ip4 next hop Prefix list
      */
     prefixList?: string;
 }
@@ -2122,11 +2141,11 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     aggregator?: outputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator;
     /**
-     * AS numbers
+     * Connected Static BGP Route maps set AS numbers
      */
     aspathPrepends?: number[];
     /**
-     * Enable BGP atomic aggregate?
+     * Connected Static BGP Route maps set Enable BGP atomic aggregate?
      */
     atomicAggregate?: boolean;
     /**
@@ -2134,11 +2153,11 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     ipv4?: outputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4;
     /**
-     * Large communities
+     * Connected Static  BGP Route maps set Large communities
      */
     largeCommunities?: string[];
     /**
-     * Local preference
+     * Connected Static BGP Route maps set Local preference
      */
     localPreference?: number;
     /**
@@ -2146,74 +2165,74 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     metric?: outputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric;
     /**
-     * Origin
+     * Connected Static BGP Route maps set Origin
      */
     origin?: string;
     /**
-     * Originator ID
+     * Connected Static BGP Route maps set Originator ID
      */
     originatorId?: string;
     /**
-     * Regular communities
+     * Connected Static  BGP Route maps set Regular communities
      */
     regularCommunities?: string[];
     /**
-     * Tag
+     * Connected Static BGP Route maps set Tag
      */
     tag?: number;
     /**
-     * Weight
+     * Connected Static BGP Route maps set Weight
      */
     weight?: number;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator {
     /**
-     * Aggregator AS
+     * Connected Static BGP Route maps set Aggregator AS
      */
     as?: number;
     /**
-     * Router ID
+     * Connected Static BGP Route maps set Router ID
      */
     routerId?: string;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4 {
     /**
-     * Next hop
+     * Connected Static BGP Route maps set Next ipv4 hop
      */
     nextHop?: string;
     /**
-     * Source address
+     * Connected Static BGP Route maps set ipv4 Source address
      */
     sourceAddress?: string;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric {
     /**
-     * Metric action
+     * Connected Static BGP Route maps set Metric action
      */
     action?: string;
     /**
-     * Metric value
+     * Connected Static BGP Route maps set Metric value
      */
     value?: number;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspf {
     /**
-     * Route maps
+     * Connected Static  BGP OSPF Route maps
      */
     routeMaps?: outputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMap[];
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
     /**
-     * Action
+     * Connected Static BGP OSPF Route map Action
      */
     action?: string;
     /**
-     * Description
+     * Connected Static BGP OSPF Route map Description
      */
     description?: string;
     /**
@@ -2221,18 +2240,18 @@ export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
      */
     match?: outputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch;
     /**
-     * Sequence number
+     * Connected Static BGP OSPF Route map Sequence number
      */
     name?: number;
     /**
-     * Set
+     * Connected Static Root OSPF Set
      */
     set?: outputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP OSPF Route map Interface
      */
     interface?: string;
     /**
@@ -2240,14 +2259,14 @@ export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch {
      */
     ipv4?: outputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4;
     /**
-     * Metric
+     * Connected Static BGP OSPF Route map Metric
      */
     metric?: number;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4 {
     /**
-     * Address
+     * Connected Static Root OSPF Address
      */
     address?: outputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address;
     /**
@@ -2258,22 +2277,22 @@ export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4 {
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP OSPF Route map ipv4 Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * Connected Static BGP OSPF Route map ipv4 Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP OSPF Route map ipv4 next hop Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * Connected Static BGP OSPF Route map ipv4 next hop Prefix list
      */
     prefixList?: string;
 }
@@ -2284,40 +2303,40 @@ export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet {
      */
     metric?: outputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric;
     /**
-     * Metric type
+     * Connected Static BGP OSPF Route map set Metric type
      */
     metricType?: string;
     /**
-     * Tag
+     * Connected Static BGP OSPF Route map set Tag
      */
     tag?: number;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric {
     /**
-     * Metric action
+     * Connected Static BGP OSPF Route map set Metric action
      */
     action?: string;
     /**
-     * Metric value
+     * Connected Static BGP OSPF Route map set Metric value
      */
     value?: number;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRib {
     /**
-     * Route maps
+     * Connected Static BGP Rib Route maps
      */
     routeMaps?: outputs.BgpRouteMapRedistributionConnectedStaticRibRouteMap[];
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMap {
     /**
-     * Action
+     * Connected Static BGP Rib Route maps Action
      */
     action?: string;
     /**
-     * Description
+     * Connected Static BGP Rib Route maps Description
      */
     description?: string;
     /**
@@ -2325,18 +2344,18 @@ export interface BgpRouteMapRedistributionConnectedStaticRibRouteMap {
      */
     match?: outputs.BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch;
     /**
-     * Sequence number
+     * Connected Static BGP Rib Route maps Sequence number
      */
     name?: number;
     /**
-     * Set
+     * Connected Static Root RIB set
      */
     set?: outputs.BgpRouteMapRedistributionConnectedStaticRibRouteMapSet;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP Rib Route maps Interface
      */
     interface?: string;
     /**
@@ -2344,14 +2363,14 @@ export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch {
      */
     ipv4?: outputs.BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4;
     /**
-     * Metric
+     * Connected Static BGP Rib Route maps Metric
      */
     metric?: number;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4 {
     /**
-     * Address
+     * Connected Static BGP Rib Route maps ipv4 address
      */
     address?: outputs.BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address;
     /**
@@ -2362,36 +2381,36 @@ export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4 {
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP Rib Route maps ipv4 Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * Connected Static BGP Rib Route maps ipv4 Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP Rib Route maps ipv4 nect hop Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * Connected Static BGP Rib Route maps ipv4 next hop Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapSet {
     /**
-     * Source address
+     * Connected Static BGP Rib Route Map Distribution Source address
      */
     sourceAddress?: string;
 }
 
 export interface BgpRouteMapRedistributionOspf {
     /**
-     * Bgp
+     * OSPF Root BGP
      */
     bgp?: outputs.BgpRouteMapRedistributionOspfBgp;
     /**
@@ -2402,18 +2421,18 @@ export interface BgpRouteMapRedistributionOspf {
 
 export interface BgpRouteMapRedistributionOspfBgp {
     /**
-     * Route maps
+     * OSPF BGP Route maps
      */
     routeMaps?: outputs.BgpRouteMapRedistributionOspfBgpRouteMap[];
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMap {
     /**
-     * Action
+     * OSPF BGP Route maps Action
      */
     action?: string;
     /**
-     * Description
+     * OSPF BGP Route maps Description
      */
     description?: string;
     /**
@@ -2421,11 +2440,11 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMap {
      */
     match?: outputs.BgpRouteMapRedistributionOspfBgpRouteMapMatch;
     /**
-     * Sequence number
+     * OSPF BGP Route maps Sequence number
      */
     name?: number;
     /**
-     * Set
+     * OSPF Root Set
      */
     set?: outputs.BgpRouteMapRedistributionOspfBgpRouteMapSet;
 }
@@ -2436,11 +2455,11 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapMatch {
      */
     address?: outputs.BgpRouteMapRedistributionOspfBgpRouteMapMatchAddress;
     /**
-     * Interface
+     * OSPF BGP Route maps Interface
      */
     interface?: string;
     /**
-     * Metric
+     * OSPF BGP Route maps Metric
      */
     metric?: number;
     /**
@@ -2448,29 +2467,29 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapMatch {
      */
     nextHop?: outputs.BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop;
     /**
-     * Tag
+     * OSPF BGP Route maps Tag
      */
     tag?: number;
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMapMatchAddress {
     /**
-     * Access list
+     * OSPF BGP Route maps match Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * OSPF BGP Route maps match Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop {
     /**
-     * Access list
+     * OSPF BGP Route maps nextHop Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * OSPF BGP Route maps nextHop Prefix list
      */
     prefixList?: string;
 }
@@ -2481,11 +2500,11 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     aggregator?: outputs.BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator;
     /**
-     * AS numbers
+     * OSPF BGP Route maps set AS numbers
      */
     aspathPrepends?: number[];
     /**
-     * Enable BGP atomic aggregate?
+     * OSPF BGP Route maps set Enable BGP atomic aggregate?
      */
     atomicAggregate?: boolean;
     /**
@@ -2493,11 +2512,11 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     ipv4?: outputs.BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4;
     /**
-     * Large communities
+     * OSPF BGP Route maps set Large communities
      */
     largeCommunities?: string[];
     /**
-     * Local preference
+     * OSPF BGP Route maps set Local preference
      */
     localPreference?: number;
     /**
@@ -2505,74 +2524,74 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     metric?: outputs.BgpRouteMapRedistributionOspfBgpRouteMapSetMetric;
     /**
-     * Origin
+     * OSPF BGP Route maps set Origin
      */
     origin?: string;
     /**
-     * Originator ID
+     * OSPF BGP Route maps set Originator ID
      */
     originatorId?: string;
     /**
-     * Regular communities
+     * OSPF BGP Route maps set Regular communities
      */
     regularCommunities?: string[];
     /**
-     * Tag
+     * OSPF BGP Route maps set Tag
      */
     tag?: number;
     /**
-     * Weight
+     * OSPF BGP Route maps set Weight
      */
     weight?: number;
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator {
     /**
-     * Aggregator AS
+     * OSPF BGP Route maps set Aggregator AS
      */
     as?: number;
     /**
-     * Router ID
+     * OSPF BGP Route maps set Router ID
      */
     routerId?: string;
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4 {
     /**
-     * Next hop
+     * OSPF BGP Route maps set ipv4 Next hop
      */
     nextHop?: string;
     /**
-     * Source address
+     * OSPF BGP Route maps set ipv4 Source address
      */
     sourceAddress?: string;
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMapSetMetric {
     /**
-     * Metric action
+     * OSPF BGP Route maps set Metric action
      */
     action?: string;
     /**
-     * Metric value
+     * OSPF BGP Route maps set Metric value
      */
     value?: number;
 }
 
 export interface BgpRouteMapRedistributionOspfRib {
     /**
-     * Route maps
+     * OSPF RIB Route maps set Route maps
      */
     routeMaps?: outputs.BgpRouteMapRedistributionOspfRibRouteMap[];
 }
 
 export interface BgpRouteMapRedistributionOspfRibRouteMap {
     /**
-     * Action
+     * OSPF RIB Route maps Action
      */
     action?: string;
     /**
-     * Description
+     * OSPF RIB Route maps Description
      */
     description?: string;
     /**
@@ -2580,63 +2599,63 @@ export interface BgpRouteMapRedistributionOspfRibRouteMap {
      */
     match?: outputs.BgpRouteMapRedistributionOspfRibRouteMapMatch;
     /**
-     * Sequence number
+     * OSPF RIB Route mapsSequence number
      */
     name?: number;
     /**
-     * Set
+     * OSPF RIB Route maps set
      */
     set?: outputs.BgpRouteMapRedistributionOspfRibRouteMapSet;
 }
 
 export interface BgpRouteMapRedistributionOspfRibRouteMapMatch {
     /**
-     * Address
+     * OSPF RIB Route maps address
      */
     address?: outputs.BgpRouteMapRedistributionOspfRibRouteMapMatchAddress;
     /**
-     * Interface
+     * OSPF RIB Route maps Interface
      */
     interface?: string;
     /**
-     * Metric
+     * OSPF RIB Route maps Metric
      */
     metric?: number;
     /**
-     * Next hop
+     * OSPF RIB Route maps next*hop
      */
     nextHop?: outputs.BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop;
     /**
-     * Tag
+     * OSPF RIB Route maps tag
      */
     tag?: number;
 }
 
 export interface BgpRouteMapRedistributionOspfRibRouteMapMatchAddress {
     /**
-     * Access list
+     * OSPF RIB Route maps address Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * OSPF RIB Route maps address Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop {
     /**
-     * Access list
+     * OSPF RIB Route maps nextHop Access list
      */
     accessList?: string;
     /**
-     * Prefix list
+     * OSPF RIB Route maps nextHop Prefix list
      */
     prefixList?: string;
 }
 
 export interface BgpRouteMapRedistributionOspfRibRouteMapSet {
     /**
-     * Source address
+     * OSPF RIB Route maps set Source address
      */
     sourceAddress?: string;
 }
@@ -3252,9 +3271,9 @@ export interface DhcpInterfaceServerReserved {
 
 export interface DnsProxyCache {
     /**
-     * Cache edns
+     * Cache EDNS UDP response
      */
-    cacheEdns?: boolean;
+    cacheEdns: boolean;
     /**
      * Turn on caching for this DNS object
      */
@@ -3262,18 +3281,18 @@ export interface DnsProxyCache {
     /**
      * Max ttl
      */
-    maxTtl?: outputs.DnsProxyCacheMaxTtl;
+    maxTtl: outputs.DnsProxyCacheMaxTtl;
 }
 
 export interface DnsProxyCacheMaxTtl {
     /**
-     * Enabled
+     * Enable max ttl for this DNS object
      */
-    enabled?: boolean;
+    enabled: boolean;
     /**
-     * Time to live
+     * Time in seconds after which entry is cleared
      */
-    timeToLive?: number;
+    timeToLive: number;
 }
 
 export interface DnsProxyDefault {
@@ -3300,23 +3319,23 @@ export interface DnsProxyDefaultInheritance {
 
 export interface DnsProxyDomainServer {
     /**
-     * Cacheable
+     * Enable caching for this DNS proxy rule?
      */
     cacheable?: boolean;
     /**
-     * Domain name
+     * Domain names(s) that will be matched
      */
     domainNames?: string[];
     /**
-     * Name
+     * Proxy rule name
      */
-    name?: string;
+    name: string;
     /**
-     * Primary
+     * Primary DNS server IP address
      */
-    primary?: string;
+    primary: string;
     /**
-     * Secondary
+     * Secondary DNS server IP address
      */
     secondary?: string;
 }
@@ -3325,44 +3344,44 @@ export interface DnsProxyStaticEntry {
     /**
      * Address
      */
-    addresses?: string[];
+    addresses: string[];
     /**
-     * Domain
+     * Fully qualified domain name
      */
-    domain?: string;
+    domain: string;
     /**
-     * Name
+     * Static entry name
      */
-    name?: string;
+    name: string;
 }
 
 export interface DnsProxyTcpQueries {
     /**
-     * Enabled
+     * Turn on forwarding of TCP DNS queries?
      */
-    enabled?: boolean;
+    enabled: boolean;
     /**
-     * Max pending requests
+     * Upper limit on number of concurrent TCP DNS requests
      */
-    maxPendingRequests?: number;
+    maxPendingRequests: number;
 }
 
 export interface DnsProxyUdpQueries {
     /**
      * Retries
      */
-    retries?: outputs.DnsProxyUdpQueriesRetries;
+    retries: outputs.DnsProxyUdpQueriesRetries;
 }
 
 export interface DnsProxyUdpQueriesRetries {
     /**
-     * Attempts
+     * Maximum number of retries before trying next name server
      */
-    attempts?: number;
+    attempts: number;
     /**
-     * Interval
+     * Time in seconds for another request to be sent
      */
-    interval?: number;
+    interval: number;
 }
 
 export interface DnsSecurityProfileBotnetDomains {
@@ -3789,9 +3808,20 @@ export interface DosProtectionRuleProtectionClassifiedClassificationCriteria {
 
 export interface EthernetInterfaceLayer2 {
     /**
-     * Vlan tag
+     * LLDP Settings
      */
-    vlanTag?: number;
+    lldp?: outputs.EthernetInterfaceLayer2Lldp;
+    /**
+     * Assign interface to VLAN tag
+     */
+    vlanTag?: string;
+}
+
+export interface EthernetInterfaceLayer2Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
 }
 
 export interface EthernetInterfaceLayer3 {
@@ -3800,11 +3830,11 @@ export interface EthernetInterfaceLayer3 {
      */
     arps: outputs.EthernetInterfaceLayer3Arp[];
     /**
-     * Ddns config
+     * Dynamic DNS configuration specific to the Ethernet Interfaces.
      */
     ddnsConfig: outputs.EthernetInterfaceLayer3DdnsConfig;
     /**
-     * Dhcp client
+     * Ethernet Interfaces DHCP Client Object
      */
     dhcpClient: outputs.EthernetInterfaceLayer3DhcpClient;
     /**
@@ -3812,9 +3842,9 @@ export interface EthernetInterfaceLayer3 {
      */
     interfaceManagementProfile: string;
     /**
-     * Interface IP addresses
+     * Ethernet Interface IP addresses
      */
-    ips: string[];
+    ips: outputs.EthernetInterfaceLayer3Ip[];
     /**
      * MTU
      */
@@ -3827,7 +3857,7 @@ export interface EthernetInterfaceLayer3 {
 
 export interface EthernetInterfaceLayer3Arp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress?: string;
     /**
@@ -3838,11 +3868,11 @@ export interface EthernetInterfaceLayer3Arp {
 
 export interface EthernetInterfaceLayer3DdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
     ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled: boolean;
     /**
@@ -3850,58 +3880,58 @@ export interface EthernetInterfaceLayer3DdnsConfig {
      */
     ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
     ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
     ddnsVendorConfig: string;
 }
 
 export interface EthernetInterfaceLayer3DhcpClient {
     /**
-     * Dhcp client
-     */
-    dhcpClient: outputs.EthernetInterfaceLayer3DhcpClientDhcpClient;
-}
-
-export interface EthernetInterfaceLayer3DhcpClientDhcpClient {
-    /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable: boolean;
     /**
-     * Send hostname
+     * Ethernet Interfaces DHCP ClientSend hostname
      */
-    sendHostname: outputs.EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname;
+    sendHostname: outputs.EthernetInterfaceLayer3DhcpClientSendHostname;
 }
 
-export interface EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname {
+export interface EthernetInterfaceLayer3DhcpClientSendHostname {
     /**
      * Enable
      */
     enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname: string;
+}
+
+export interface EthernetInterfaceLayer3Ip {
+    /**
+     * Ethernet Interface IP addresses name
+     */
+    name: string;
 }
 
 export interface EthernetInterfaceLayer3Pppoe {
@@ -3914,7 +3944,7 @@ export interface EthernetInterfaceLayer3Pppoe {
      */
     authentication: string;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
@@ -3924,7 +3954,7 @@ export interface EthernetInterfaceLayer3Pppoe {
     /**
      * Passive
      */
-    passive: boolean;
+    passive: outputs.EthernetInterfaceLayer3PppoePassive;
     /**
      * Password
      */
@@ -3943,22 +3973,29 @@ export interface EthernetInterfaceLayer3Pppoe {
     username: string;
 }
 
+export interface EthernetInterfaceLayer3PppoePassive {
+    /**
+     * Passive Mode enabled
+     */
+    enable: boolean;
+}
+
 export interface EthernetInterfaceLayer3PppoeStaticAddress {
     /**
-     * Ip
+     * Static IP address
      */
     ip: string;
 }
 
 export interface EthernetInterfacePoe {
     /**
-     * Poe enabled
+     * Enabled PoE?
      */
-    poeEnabled?: boolean;
+    poeEnabled: boolean;
     /**
-     * Poe rsvd pwr
+     * PoE reserved power
      */
-    poeRsvdPwr?: number;
+    poeRsvdPwr: number;
 }
 
 export interface EthernetInterfaceTap {
@@ -4634,18 +4671,18 @@ export interface GetAddressListData {
     tfid: string;
 }
 
-export interface GetAggregateEthernetInterfaceLayer2 {
+export interface GetAggregateInterfaceLayer2 {
     /**
      * Lacp
      */
-    lacp: outputs.GetAggregateEthernetInterfaceLayer2Lacp;
+    lacp: outputs.GetAggregateInterfaceLayer2Lacp;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    vlanTag: number;
+    vlanTag: string;
 }
 
-export interface GetAggregateEthernetInterfaceLayer2Lacp {
+export interface GetAggregateInterfaceLayer2Lacp {
     /**
      * Enable LACP?
      */
@@ -4655,7 +4692,7 @@ export interface GetAggregateEthernetInterfaceLayer2Lacp {
      */
     fastFailover: boolean;
     /**
-     * Max ports
+     * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
@@ -4663,49 +4700,49 @@ export interface GetAggregateEthernetInterfaceLayer2Lacp {
      */
     mode: string;
     /**
-     * System priority
+     * LACP system priority in system ID
      */
     systemPriority: number;
     /**
-     * Transmission rate
+     * Transmission mode
      */
     transmissionRate: string;
 }
 
-export interface GetAggregateEthernetInterfaceLayer3 {
+export interface GetAggregateInterfaceLayer3 {
     /**
      * Aggregate Ethernet ARP configuration
      */
-    arps: outputs.GetAggregateEthernetInterfaceLayer3Arp[];
+    arps: outputs.GetAggregateInterfaceLayer3Arp[];
     /**
-     * Ddns config
+     * Dynamic DNS configuration specific to the Aggregate Interface.
      */
-    ddnsConfig: outputs.GetAggregateEthernetInterfaceLayer3DdnsConfig;
+    ddnsConfig: outputs.GetAggregateInterfaceLayer3DdnsConfig;
     /**
-     * Dhcp client
+     * Aggregate Ethernet DHCP Client Object
      */
-    dhcpClient: outputs.GetAggregateEthernetInterfaceLayer3DhcpClient;
+    dhcpClient: outputs.GetAggregateInterfaceLayer3DhcpClient;
     /**
      * Interface management profile
      */
     interfaceManagementProfile: string;
     /**
-     * Interface IP addresses
+     * Aggregate Interface IP addresses
      */
-    ips: string[];
+    ips: outputs.GetAggregateInterfaceLayer3Ip[];
     /**
      * Lacp
      */
-    lacp: outputs.GetAggregateEthernetInterfaceLayer3Lacp;
+    lacp: outputs.GetAggregateInterfaceLayer3Lacp;
     /**
      * MTU
      */
     mtu: number;
 }
 
-export interface GetAggregateEthernetInterfaceLayer3Arp {
+export interface GetAggregateInterfaceLayer3Arp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress: string;
     /**
@@ -4714,13 +4751,13 @@ export interface GetAggregateEthernetInterfaceLayer3Arp {
     name: string;
 }
 
-export interface GetAggregateEthernetInterfaceLayer3DdnsConfig {
+export interface GetAggregateInterfaceLayer3DdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
     ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled: boolean;
     /**
@@ -4728,54 +4765,61 @@ export interface GetAggregateEthernetInterfaceLayer3DdnsConfig {
      */
     ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
     ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
     ddnsVendorConfig: string;
 }
 
-export interface GetAggregateEthernetInterfaceLayer3DhcpClient {
+export interface GetAggregateInterfaceLayer3DhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable: boolean;
     /**
-     * Send hostname
+     * Aggregate Ethernet DHCP Client Send hostname
      */
-    sendHostname: outputs.GetAggregateEthernetInterfaceLayer3DhcpClientSendHostname;
+    sendHostname: outputs.GetAggregateInterfaceLayer3DhcpClientSendHostname;
 }
 
-export interface GetAggregateEthernetInterfaceLayer3DhcpClientSendHostname {
+export interface GetAggregateInterfaceLayer3DhcpClientSendHostname {
     /**
      * Enable
      */
     enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname: string;
 }
 
-export interface GetAggregateEthernetInterfaceLayer3Lacp {
+export interface GetAggregateInterfaceLayer3Ip {
+    /**
+     * Aggregate Interface IP addresses name
+     */
+    name: string;
+}
+
+export interface GetAggregateInterfaceLayer3Lacp {
     /**
      * Enable LACP?
      */
@@ -4785,7 +4829,7 @@ export interface GetAggregateEthernetInterfaceLayer3Lacp {
      */
     fastFailover: boolean;
     /**
-     * Max ports
+     * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
@@ -4793,22 +4837,22 @@ export interface GetAggregateEthernetInterfaceLayer3Lacp {
      */
     mode: string;
     /**
-     * System priority
+     * LACP system priority in system ID
      */
     systemPriority: number;
     /**
-     * Transmission rate
+     * Transmission mode
      */
     transmissionRate: string;
 }
 
-export interface GetAggregateEthernetInterfaceListData {
+export interface GetAggregateInterfaceListData {
     /**
      * Aggregate interface description
      */
     comment: string;
     /**
-     * Default value
+     * Default interface assignment
      */
     defaultValue: string;
     /**
@@ -4826,11 +4870,11 @@ export interface GetAggregateEthernetInterfaceListData {
     /**
      * Layer2
      */
-    layer2: outputs.GetAggregateEthernetInterfaceListDataLayer2;
+    layer2: outputs.GetAggregateInterfaceListDataLayer2;
     /**
-     * Layer3
+     * Aggregate Interface Layer 3 configuration
      */
-    layer3: outputs.GetAggregateEthernetInterfaceListDataLayer3;
+    layer3: outputs.GetAggregateInterfaceListDataLayer3;
     /**
      * Aggregate interface name
      */
@@ -4842,18 +4886,18 @@ export interface GetAggregateEthernetInterfaceListData {
     tfid: string;
 }
 
-export interface GetAggregateEthernetInterfaceListDataLayer2 {
+export interface GetAggregateInterfaceListDataLayer2 {
     /**
      * Lacp
      */
-    lacp: outputs.GetAggregateEthernetInterfaceListDataLayer2Lacp;
+    lacp: outputs.GetAggregateInterfaceListDataLayer2Lacp;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    vlanTag: number;
+    vlanTag: string;
 }
 
-export interface GetAggregateEthernetInterfaceListDataLayer2Lacp {
+export interface GetAggregateInterfaceListDataLayer2Lacp {
     /**
      * Enable LACP?
      */
@@ -4863,7 +4907,7 @@ export interface GetAggregateEthernetInterfaceListDataLayer2Lacp {
      */
     fastFailover: boolean;
     /**
-     * Max ports
+     * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
@@ -4871,49 +4915,49 @@ export interface GetAggregateEthernetInterfaceListDataLayer2Lacp {
      */
     mode: string;
     /**
-     * System priority
+     * LACP system priority in system ID
      */
     systemPriority: number;
     /**
-     * Transmission rate
+     * Transmission mode
      */
     transmissionRate: string;
 }
 
-export interface GetAggregateEthernetInterfaceListDataLayer3 {
+export interface GetAggregateInterfaceListDataLayer3 {
     /**
      * Aggregate Ethernet ARP configuration
      */
-    arps: outputs.GetAggregateEthernetInterfaceListDataLayer3Arp[];
+    arps: outputs.GetAggregateInterfaceListDataLayer3Arp[];
     /**
-     * Ddns config
+     * Dynamic DNS configuration specific to the Aggregate Interface.
      */
-    ddnsConfig: outputs.GetAggregateEthernetInterfaceListDataLayer3DdnsConfig;
+    ddnsConfig: outputs.GetAggregateInterfaceListDataLayer3DdnsConfig;
     /**
-     * Dhcp client
+     * Aggregate Ethernet DHCP Client Object
      */
-    dhcpClient: outputs.GetAggregateEthernetInterfaceListDataLayer3DhcpClient;
+    dhcpClient: outputs.GetAggregateInterfaceListDataLayer3DhcpClient;
     /**
      * Interface management profile
      */
     interfaceManagementProfile: string;
     /**
-     * Interface IP addresses
+     * Aggregate Interface IP addresses
      */
-    ips: string[];
+    ips: outputs.GetAggregateInterfaceListDataLayer3Ip[];
     /**
      * Lacp
      */
-    lacp: outputs.GetAggregateEthernetInterfaceListDataLayer3Lacp;
+    lacp: outputs.GetAggregateInterfaceListDataLayer3Lacp;
     /**
      * MTU
      */
     mtu: number;
 }
 
-export interface GetAggregateEthernetInterfaceListDataLayer3Arp {
+export interface GetAggregateInterfaceListDataLayer3Arp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress: string;
     /**
@@ -4922,13 +4966,13 @@ export interface GetAggregateEthernetInterfaceListDataLayer3Arp {
     name: string;
 }
 
-export interface GetAggregateEthernetInterfaceListDataLayer3DdnsConfig {
+export interface GetAggregateInterfaceListDataLayer3DdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
     ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled: boolean;
     /**
@@ -4936,54 +4980,61 @@ export interface GetAggregateEthernetInterfaceListDataLayer3DdnsConfig {
      */
     ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
     ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
     ddnsVendorConfig: string;
 }
 
-export interface GetAggregateEthernetInterfaceListDataLayer3DhcpClient {
+export interface GetAggregateInterfaceListDataLayer3DhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable: boolean;
     /**
-     * Send hostname
+     * Aggregate Ethernet DHCP Client Send hostname
      */
-    sendHostname: outputs.GetAggregateEthernetInterfaceListDataLayer3DhcpClientSendHostname;
+    sendHostname: outputs.GetAggregateInterfaceListDataLayer3DhcpClientSendHostname;
 }
 
-export interface GetAggregateEthernetInterfaceListDataLayer3DhcpClientSendHostname {
+export interface GetAggregateInterfaceListDataLayer3DhcpClientSendHostname {
     /**
      * Enable
      */
     enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname: string;
 }
 
-export interface GetAggregateEthernetInterfaceListDataLayer3Lacp {
+export interface GetAggregateInterfaceListDataLayer3Ip {
+    /**
+     * Aggregate Interface IP addresses name
+     */
+    name: string;
+}
+
+export interface GetAggregateInterfaceListDataLayer3Lacp {
     /**
      * Enable LACP?
      */
@@ -4993,7 +5044,7 @@ export interface GetAggregateEthernetInterfaceListDataLayer3Lacp {
      */
     fastFailover: boolean;
     /**
-     * Max ports
+     * Maximum number of physical ports bundled in the LAG
      */
     maxPorts: number;
     /**
@@ -5001,11 +5052,11 @@ export interface GetAggregateEthernetInterfaceListDataLayer3Lacp {
      */
     mode: string;
     /**
-     * System priority
+     * LACP system priority in system ID
      */
     systemPriority: number;
     /**
-     * Transmission rate
+     * Transmission mode
      */
     transmissionRate: string;
 }
@@ -5565,7 +5616,7 @@ export interface GetAntiSpywareSignatureListData {
     /**
      * threat id range \n\n and \n\n
      */
-    threatId: number;
+    threatId: string;
     /**
      * Threatname
      */
@@ -6166,11 +6217,19 @@ export interface GetAppOverrideRuleListData {
     /**
      * Port
      */
-    port: number;
+    port: string;
+    /**
+     * The position of a security rule
+     */
+    position: string;
     /**
      * Protocol
      */
     protocol: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition: string;
     /**
      * The snippet in which the resource is defined
      */
@@ -6183,6 +6242,10 @@ export interface GetAppOverrideRuleListData {
      * Tag
      */
     tags: string[];
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule: string;
     tfid: string;
     /**
      * To
@@ -7292,6 +7355,14 @@ export interface GetAuthenticationRuleListData {
      */
     negateSource: boolean;
     /**
+     * The relative position of the rule
+     */
+    position: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition: string;
+    /**
      * The destination ports
      */
     services: string[];
@@ -7315,6 +7386,10 @@ export interface GetAuthenticationRuleListData {
      * The authentication rule tags
      */
     tags: string[];
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule: string;
     tfid: string;
     /**
      * The authentication session timeout (seconds)
@@ -7416,7 +7491,7 @@ export interface GetBgpAddressFamilyProfileIpv4Ipv4Multicast {
     /**
      * Remove private a s
      */
-    removePrivateAS: outputs.GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS;
+    removePrivateAs: outputs.GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs;
     /**
      * Route reflector client?
      */
@@ -7439,7 +7514,7 @@ export interface GetBgpAddressFamilyProfileIpv4Ipv4MulticastAddPath {
     /**
      * Tx bestpath per a s
      */
-    txBestpathPerAS: boolean;
+    txBestpathPerAs: boolean;
 }
 
 export interface GetBgpAddressFamilyProfileIpv4Ipv4MulticastAllowasIn {
@@ -7516,15 +7591,21 @@ export interface GetBgpAddressFamilyProfileIpv4Ipv4MulticastOrf {
     orfPrefixList: string;
 }
 
-export interface GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS {
+export interface GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs {
     /**
      * All
      */
-    all: string;
+    all: outputs.GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll;
     /**
      * Replace a s
      */
-    replaceAS: string;
+    replaceAs: outputs.GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs;
+}
+
+export interface GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll {
+}
+
+export interface GetBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs {
 }
 
 export interface GetBgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunity {
@@ -7605,7 +7686,7 @@ export interface GetBgpAddressFamilyProfileIpv4Ipv4Unicast {
     /**
      * Remove private a s
      */
-    removePrivateAS: outputs.GetBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS;
+    removePrivateAs: outputs.GetBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs;
     /**
      * Route reflector client?
      */
@@ -7628,7 +7709,7 @@ export interface GetBgpAddressFamilyProfileIpv4Ipv4UnicastAddPath {
     /**
      * Tx bestpath per a s
      */
-    txBestpathPerAS: boolean;
+    txBestpathPerAs: boolean;
 }
 
 export interface GetBgpAddressFamilyProfileIpv4Ipv4UnicastAllowasIn {
@@ -7705,15 +7786,21 @@ export interface GetBgpAddressFamilyProfileIpv4Ipv4UnicastOrf {
     orfPrefixList: string;
 }
 
-export interface GetBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS {
+export interface GetBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs {
     /**
      * All
      */
-    all: string;
+    all: outputs.GetBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll;
     /**
      * Replace a s
      */
-    replaceAS: string;
+    replaceAs: outputs.GetBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs;
+}
+
+export interface GetBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll {
+}
+
+export interface GetBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs {
 }
 
 export interface GetBgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunity {
@@ -7840,7 +7927,7 @@ export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4Multicast {
     /**
      * Remove private a s
      */
-    removePrivateAS: outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateAS;
+    removePrivateAs: outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateAs;
     /**
      * Route reflector client?
      */
@@ -7863,7 +7950,7 @@ export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastAddPath {
     /**
      * Tx bestpath per a s
      */
-    txBestpathPerAS: boolean;
+    txBestpathPerAs: boolean;
 }
 
 export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastAllowasIn {
@@ -7940,15 +8027,21 @@ export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastOrf {
     orfPrefixList: string;
 }
 
-export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateAS {
+export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateAs {
     /**
      * All
      */
-    all: string;
+    all: outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateAsAll;
     /**
      * Replace a s
      */
-    replaceAS: string;
+    replaceAs: outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateAsReplaceAs;
+}
+
+export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateAsAll {
+}
+
+export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastRemovePrivateAsReplaceAs {
 }
 
 export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4MulticastSendCommunity {
@@ -8029,7 +8122,7 @@ export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4Unicast {
     /**
      * Remove private a s
      */
-    removePrivateAS: outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAS;
+    removePrivateAs: outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAs;
     /**
      * Route reflector client?
      */
@@ -8052,7 +8145,7 @@ export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAddPath {
     /**
      * Tx bestpath per a s
      */
-    txBestpathPerAS: boolean;
+    txBestpathPerAs: boolean;
 }
 
 export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastAllowasIn {
@@ -8129,15 +8222,21 @@ export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastOrf {
     orfPrefixList: string;
 }
 
-export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAS {
+export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAs {
     /**
      * All
      */
-    all: string;
+    all: outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAsAll;
     /**
      * Replace a s
      */
-    replaceAS: string;
+    replaceAs: outputs.GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAsReplaceAs;
+}
+
+export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAsAll {
+}
+
+export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastRemovePrivateAsReplaceAs {
 }
 
 export interface GetBgpAddressFamilyProfileListDataIpv4Ipv4UnicastSendCommunity {
@@ -9124,25 +9223,25 @@ export interface GetBgpRouteMapRedistributionBgp {
      */
     ospf: outputs.GetBgpRouteMapRedistributionBgpOspf;
     /**
-     * Rib
+     * BGP Root RIB
      */
     rib: outputs.GetBgpRouteMapRedistributionBgpRib;
 }
 
 export interface GetBgpRouteMapRedistributionBgpOspf {
     /**
-     * Route maps
+     * BGP Root OSPF Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionBgpOspfRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionBgpOspfRouteMap {
     /**
-     * Action
+     * BGP Root OSPF Route maps Action
      */
     action: string;
     /**
-     * Description
+     * BGP Root OSPF Route maps Description
      */
     description: string;
     /**
@@ -9150,106 +9249,106 @@ export interface GetBgpRouteMapRedistributionBgpOspfRouteMap {
      */
     match: outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapMatch;
     /**
-     * Sequence number
+     * BGP Root OSPF Route maps Sequence number
      */
     name: number;
     /**
-     * Set
+     * BGP Root OSPF Set
      */
     set: outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapSet;
 }
 
 export interface GetBgpRouteMapRedistributionBgpOspfRouteMapMatch {
     /**
-     * AS path access list
+     * BGP Root OSPF Route maps match AS path access list
      */
     asPathAccessList: string;
     /**
-     * Extended community
+     * EBGP Root OSPF Route maps match xtended community
      */
     extendedCommunity: string;
     /**
-     * Interface
+     * BGP Root OSPF Route maps match Interface
      */
     interface: string;
     /**
-     * bgp-route-map-redistributions ipv4 object
+     * BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
      */
     ipv4: outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4;
     /**
-     * Large community
+     * BGP Root OSPF Route maps match Large community
      */
     largeCommunity: string;
     /**
-     * Local preference
+     * BGP Root OSPF Route maps match Local preference
      */
     localPreference: number;
     /**
-     * Metric
+     * BGP Root OSPF Route maps match Metric
      */
     metric: number;
     /**
-     * Origin
+     * BGP Root OSPF Route maps match Origin
      */
     origin: string;
     /**
-     * Peer
+     * BGP Root OSPF Route maps match Peer
      */
     peer: string;
     /**
-     * Regular community
+     * BGP Root OSPF Route maps match Regular community
      */
     regularCommunity: string;
     /**
-     * Tag
+     * BGP Root OSPF Route maps match Tag
      */
     tag: number;
 }
 
 export interface GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4 {
     /**
-     * bgp-route-map-redistributions ipv4 object address
+     * BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
      */
     address: outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address;
     /**
-     * bgp-route-map-redistributions ipv4 object next*hop
+     * BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
      */
     nextHop: outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop;
     /**
-     * bgp-route-map-redistributions ipv4 object route*source
+     * BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
      */
     routeSource: outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource;
 }
 
 export interface GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * BGP Root OSPF Route maps match ipv4 Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps match ipv4 Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * BGP Root OSPF Route maps ipv4 nextVr hop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps ipv4 next hop Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource {
     /**
-     * Access list
+     * BGP Root OSPF Route maps ipv4 route source Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps ipv4 route source Prefix list
      */
     prefixList: string;
 }
@@ -9260,99 +9359,99 @@ export interface GetBgpRouteMapRedistributionBgpOspfRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapSetMetric;
     /**
-     * Metric type
+     * BGP Root OSPF Route maps set Metric type
      */
     metricType: string;
     /**
-     * Tag
+     * BGP Root OSPF Route maps set Tag
      */
     tag: number;
 }
 
 export interface GetBgpRouteMapRedistributionBgpOspfRouteMapSetMetric {
     /**
-     * Metric action
+     * BGP Root OSPF Route maps set Metric action
      */
     action: string;
     /**
-     * Metric value
+     * BGP Root OSPF Route maps set Metric value
      */
     value: number;
 }
 
 export interface GetBgpRouteMapRedistributionBgpRib {
     /**
-     * Route maps
+     * BGP Root RIB Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionBgpRibRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionBgpRibRouteMap {
     /**
-     * Action
+     * BGP Root RIB Route maps Action
      */
     action: string;
     /**
-     * Description
+     * BGP Root RIB Route maps Description
      */
     description: string;
     /**
-     * Match
+     * match attribute for BG Rib route map
      */
     match: outputs.GetBgpRouteMapRedistributionBgpRibRouteMapMatch;
     /**
-     * Sequence number
+     * BGP Root RIB Route maps Sequence number
      */
     name: number;
     /**
-     * Set
+     * Set attributes for BGP route map
      */
     set: outputs.GetBgpRouteMapRedistributionBgpRibRouteMapSet;
 }
 
 export interface GetBgpRouteMapRedistributionBgpRibRouteMapMatch {
     /**
-     * AS path access list
+     * BGP Root RIB Route maps match AS path access list
      */
     asPathAccessList: string;
     /**
-     * Extended community
+     * BGP Root RIB Route maps match Extended community
      */
     extendedCommunity: string;
     /**
-     * Interface
+     * BGP Root RIB Route maps match Interface
      */
     interface: string;
     /**
-     * Ipv4
+     * BGP Route Map Redistributions Root BGP rib Route Map IPv4
      */
     ipv4: outputs.GetBgpRouteMapRedistributionBgpRibRouteMapMatchIpv4;
     /**
-     * Large community
+     * BGP Root RIB Route maps match Large community
      */
     largeCommunity: string;
     /**
-     * Local preference
+     * BGP Root RIB Route maps match Local preference
      */
     localPreference: number;
     /**
-     * Metric
+     * BGP Root RIB Route maps match Metric
      */
     metric: number;
     /**
-     * Origin
+     * BGP Root RIB Route maps match Origin
      */
     origin: string;
     /**
-     * Peer
+     * BGP Root RIB Route maps match Peer
      */
     peer: string;
     /**
-     * Regular community
+     * BGP Root RIB Route maps match Regular community
      */
     regularCommunity: string;
     /**
-     * Tag
+     * BGP Root RIB Route maps match Tag
      */
     tag: number;
 }
@@ -9374,47 +9473,47 @@ export interface GetBgpRouteMapRedistributionBgpRibRouteMapMatchIpv4 {
 
 export interface GetBgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv next hop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv next hop Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSource {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv route source Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv route source Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionBgpRibRouteMapSet {
     /**
-     * Source address
+     * BGP Root RIB Route maps set Source address
      */
     sourceAddress: string;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStatic {
     /**
-     * Bgp
+     * Connected Static Root BGP
      */
     bgp: outputs.GetBgpRouteMapRedistributionConnectedStaticBgp;
     /**
@@ -9429,18 +9528,18 @@ export interface GetBgpRouteMapRedistributionConnectedStatic {
 
 export interface GetBgpRouteMapRedistributionConnectedStaticBgp {
     /**
-     * Route maps
+     * Connected Static BGP Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap {
     /**
-     * Action
+     * Connected Static BGP Route maps Action
      */
     action: string;
     /**
-     * Description
+     * Connected Static BGP Route maps Description
      */
     description: string;
     /**
@@ -9448,7 +9547,7 @@ export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap {
      */
     match: outputs.GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch;
     /**
-     * Sequence number
+     * Connected Static BGP Route maps Sequence number
      */
     name: number;
     /**
@@ -9459,7 +9558,7 @@ export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMap {
 
 export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP Route maps match Interface
      */
     interface: string;
     /**
@@ -9467,7 +9566,7 @@ export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch {
      */
     ipv4: outputs.GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4;
     /**
-     * Metric
+     * Connected Static BGP Route maps match Metric
      */
     metric: number;
 }
@@ -9485,22 +9584,22 @@ export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4
 
 export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP Route maps match ip4 Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP Route maps match ip4  Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP Route maps match ip4 next hop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP Route maps match ip4 next hop Prefix list
      */
     prefixList: string;
 }
@@ -9511,11 +9610,11 @@ export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     aggregator: outputs.GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator;
     /**
-     * AS numbers
+     * Connected Static BGP Route maps set AS numbers
      */
     aspathPrepends: number[];
     /**
-     * Enable BGP atomic aggregate?
+     * Connected Static BGP Route maps set Enable BGP atomic aggregate?
      */
     atomicAggregate: boolean;
     /**
@@ -9523,11 +9622,11 @@ export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     ipv4: outputs.GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4;
     /**
-     * Large communities
+     * Connected Static  BGP Route maps set Large communities
      */
     largeCommunities: string[];
     /**
-     * Local preference
+     * Connected Static BGP Route maps set Local preference
      */
     localPreference: number;
     /**
@@ -9535,74 +9634,74 @@ export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric;
     /**
-     * Origin
+     * Connected Static BGP Route maps set Origin
      */
     origin: string;
     /**
-     * Originator ID
+     * Connected Static BGP Route maps set Originator ID
      */
     originatorId: string;
     /**
-     * Regular communities
+     * Connected Static  BGP Route maps set Regular communities
      */
     regularCommunities: string[];
     /**
-     * Tag
+     * Connected Static BGP Route maps set Tag
      */
     tag: number;
     /**
-     * Weight
+     * Connected Static BGP Route maps set Weight
      */
     weight: number;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator {
     /**
-     * Aggregator AS
+     * Connected Static BGP Route maps set Aggregator AS
      */
     as: number;
     /**
-     * Router ID
+     * Connected Static BGP Route maps set Router ID
      */
     routerId: string;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4 {
     /**
-     * Next hop
+     * Connected Static BGP Route maps set Next ipv4 hop
      */
     nextHop: string;
     /**
-     * Source address
+     * Connected Static BGP Route maps set ipv4 Source address
      */
     sourceAddress: string;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric {
     /**
-     * Metric action
+     * Connected Static BGP Route maps set Metric action
      */
     action: string;
     /**
-     * Metric value
+     * Connected Static BGP Route maps set Metric value
      */
     value: number;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticOspf {
     /**
-     * Route maps
+     * Connected Static  BGP OSPF Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionConnectedStaticOspfRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMap {
     /**
-     * Action
+     * Connected Static BGP OSPF Route map Action
      */
     action: string;
     /**
-     * Description
+     * Connected Static BGP OSPF Route map Description
      */
     description: string;
     /**
@@ -9610,18 +9709,18 @@ export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMap {
      */
     match: outputs.GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch;
     /**
-     * Sequence number
+     * Connected Static BGP OSPF Route map Sequence number
      */
     name: number;
     /**
-     * Set
+     * Connected Static Root OSPF Set
      */
     set: outputs.GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapSet;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP OSPF Route map Interface
      */
     interface: string;
     /**
@@ -9629,14 +9728,14 @@ export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch {
      */
     ipv4: outputs.GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4;
     /**
-     * Metric
+     * Connected Static BGP OSPF Route map Metric
      */
     metric: number;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4 {
     /**
-     * Address
+     * Connected Static Root OSPF Address
      */
     address: outputs.GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address;
     /**
@@ -9647,22 +9746,22 @@ export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv
 
 export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP OSPF Route map ipv4 Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP OSPF Route map ipv4 Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP OSPF Route map ipv4 next hop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP OSPF Route map ipv4 next hop Prefix list
      */
     prefixList: string;
 }
@@ -9673,40 +9772,40 @@ export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric;
     /**
-     * Metric type
+     * Connected Static BGP OSPF Route map set Metric type
      */
     metricType: string;
     /**
-     * Tag
+     * Connected Static BGP OSPF Route map set Tag
      */
     tag: number;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric {
     /**
-     * Metric action
+     * Connected Static BGP OSPF Route map set Metric action
      */
     action: string;
     /**
-     * Metric value
+     * Connected Static BGP OSPF Route map set Metric value
      */
     value: number;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticRib {
     /**
-     * Route maps
+     * Connected Static BGP Rib Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionConnectedStaticRibRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticRibRouteMap {
     /**
-     * Action
+     * Connected Static BGP Rib Route maps Action
      */
     action: string;
     /**
-     * Description
+     * Connected Static BGP Rib Route maps Description
      */
     description: string;
     /**
@@ -9714,18 +9813,18 @@ export interface GetBgpRouteMapRedistributionConnectedStaticRibRouteMap {
      */
     match: outputs.GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatch;
     /**
-     * Sequence number
+     * Connected Static BGP Rib Route maps Sequence number
      */
     name: number;
     /**
-     * Set
+     * Connected Static Root RIB set
      */
     set: outputs.GetBgpRouteMapRedistributionConnectedStaticRibRouteMapSet;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP Rib Route maps Interface
      */
     interface: string;
     /**
@@ -9733,14 +9832,14 @@ export interface GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatch {
      */
     ipv4: outputs.GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4;
     /**
-     * Metric
+     * Connected Static BGP Rib Route maps Metric
      */
     metric: number;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4 {
     /**
-     * Address
+     * Connected Static BGP Rib Route maps ipv4 address
      */
     address: outputs.GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address;
     /**
@@ -9751,29 +9850,29 @@ export interface GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4
 
 export interface GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP Rib Route maps ipv4 Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP Rib Route maps ipv4 Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP Rib Route maps ipv4 nect hop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP Rib Route maps ipv4 next hop Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionConnectedStaticRibRouteMapSet {
     /**
-     * Source address
+     * Connected Static BGP Rib Route Map Distribution Source address
      */
     sourceAddress: string;
 }
@@ -9788,7 +9887,7 @@ export interface GetBgpRouteMapRedistributionListData {
      */
     connectedStatic: outputs.GetBgpRouteMapRedistributionListDataConnectedStatic;
     /**
-     * Description
+     * BGP Route Map Redistributions Description
      */
     description: string;
     /**
@@ -9800,11 +9899,11 @@ export interface GetBgpRouteMapRedistributionListData {
      */
     folder: string;
     /**
-     * UUID of the resource
+     * BGP Route Map Redistributions UUID of the resource
      */
     id: string;
     /**
-     * Name
+     * BGP Route Map Redistributions Name
      */
     name: string;
     /**
@@ -9824,25 +9923,25 @@ export interface GetBgpRouteMapRedistributionListDataBgp {
      */
     ospf: outputs.GetBgpRouteMapRedistributionListDataBgpOspf;
     /**
-     * Rib
+     * BGP Root RIB
      */
     rib: outputs.GetBgpRouteMapRedistributionListDataBgpRib;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpOspf {
     /**
-     * Route maps
+     * BGP Root OSPF Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionListDataBgpOspfRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMap {
     /**
-     * Action
+     * BGP Root OSPF Route maps Action
      */
     action: string;
     /**
-     * Description
+     * BGP Root OSPF Route maps Description
      */
     description: string;
     /**
@@ -9850,106 +9949,106 @@ export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMap {
      */
     match: outputs.GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatch;
     /**
-     * Sequence number
+     * BGP Root OSPF Route maps Sequence number
      */
     name: number;
     /**
-     * Set
+     * BGP Root OSPF Set
      */
     set: outputs.GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSet;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatch {
     /**
-     * AS path access list
+     * BGP Root OSPF Route maps match AS path access list
      */
     asPathAccessList: string;
     /**
-     * Extended community
+     * EBGP Root OSPF Route maps match xtended community
      */
     extendedCommunity: string;
     /**
-     * Interface
+     * BGP Root OSPF Route maps match Interface
      */
     interface: string;
     /**
-     * bgp-route-map-redistributions ipv4 object
+     * BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
      */
     ipv4: outputs.GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4;
     /**
-     * Large community
+     * BGP Root OSPF Route maps match Large community
      */
     largeCommunity: string;
     /**
-     * Local preference
+     * BGP Root OSPF Route maps match Local preference
      */
     localPreference: number;
     /**
-     * Metric
+     * BGP Root OSPF Route maps match Metric
      */
     metric: number;
     /**
-     * Origin
+     * BGP Root OSPF Route maps match Origin
      */
     origin: string;
     /**
-     * Peer
+     * BGP Root OSPF Route maps match Peer
      */
     peer: string;
     /**
-     * Regular community
+     * BGP Root OSPF Route maps match Regular community
      */
     regularCommunity: string;
     /**
-     * Tag
+     * BGP Root OSPF Route maps match Tag
      */
     tag: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4 {
     /**
-     * bgp-route-map-redistributions ipv4 object address
+     * BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
      */
     address: outputs.GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4Address;
     /**
-     * bgp-route-map-redistributions ipv4 object next*hop
+     * BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
      */
     nextHop: outputs.GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4NextHop;
     /**
-     * bgp-route-map-redistributions ipv4 object route*source
+     * BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
      */
     routeSource: outputs.GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4RouteSource;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * BGP Root OSPF Route maps match ipv4 Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps match ipv4 Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * BGP Root OSPF Route maps ipv4 nextVr hop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps ipv4 next hop Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4RouteSource {
     /**
-     * Access list
+     * BGP Root OSPF Route maps ipv4 route source Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps ipv4 route source Prefix list
      */
     prefixList: string;
 }
@@ -9960,99 +10059,99 @@ export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSetMetric;
     /**
-     * Metric type
+     * BGP Root OSPF Route maps set Metric type
      */
     metricType: string;
     /**
-     * Tag
+     * BGP Root OSPF Route maps set Tag
      */
     tag: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSetMetric {
     /**
-     * Metric action
+     * BGP Root OSPF Route maps set Metric action
      */
     action: string;
     /**
-     * Metric value
+     * BGP Root OSPF Route maps set Metric value
      */
     value: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpRib {
     /**
-     * Route maps
+     * BGP Root RIB Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionListDataBgpRibRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpRibRouteMap {
     /**
-     * Action
+     * BGP Root RIB Route maps Action
      */
     action: string;
     /**
-     * Description
+     * BGP Root RIB Route maps Description
      */
     description: string;
     /**
-     * Match
+     * match attribute for BG Rib route map
      */
     match: outputs.GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatch;
     /**
-     * Sequence number
+     * BGP Root RIB Route maps Sequence number
      */
     name: number;
     /**
-     * Set
+     * Set attributes for BGP route map
      */
     set: outputs.GetBgpRouteMapRedistributionListDataBgpRibRouteMapSet;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatch {
     /**
-     * AS path access list
+     * BGP Root RIB Route maps match AS path access list
      */
     asPathAccessList: string;
     /**
-     * Extended community
+     * BGP Root RIB Route maps match Extended community
      */
     extendedCommunity: string;
     /**
-     * Interface
+     * BGP Root RIB Route maps match Interface
      */
     interface: string;
     /**
-     * Ipv4
+     * BGP Route Map Redistributions Root BGP rib Route Map IPv4
      */
     ipv4: outputs.GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatchIpv4;
     /**
-     * Large community
+     * BGP Root RIB Route maps match Large community
      */
     largeCommunity: string;
     /**
-     * Local preference
+     * BGP Root RIB Route maps match Local preference
      */
     localPreference: number;
     /**
-     * Metric
+     * BGP Root RIB Route maps match Metric
      */
     metric: number;
     /**
-     * Origin
+     * BGP Root RIB Route maps match Origin
      */
     origin: string;
     /**
-     * Peer
+     * BGP Root RIB Route maps match Peer
      */
     peer: string;
     /**
-     * Regular community
+     * BGP Root RIB Route maps match Regular community
      */
     regularCommunity: string;
     /**
-     * Tag
+     * BGP Root RIB Route maps match Tag
      */
     tag: number;
 }
@@ -10074,47 +10173,47 @@ export interface GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatchIpv4 {
 
 export interface GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv next hop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv next hop Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatchIpv4RouteSource {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv route source Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv route source Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataBgpRibRouteMapSet {
     /**
-     * Source address
+     * BGP Root RIB Route maps set Source address
      */
     sourceAddress: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStatic {
     /**
-     * Bgp
+     * Connected Static Root BGP
      */
     bgp: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgp;
     /**
@@ -10129,18 +10228,18 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStatic {
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgp {
     /**
-     * Route maps
+     * Connected Static BGP Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMap {
     /**
-     * Action
+     * Connected Static BGP Route maps Action
      */
     action: string;
     /**
-     * Description
+     * Connected Static BGP Route maps Description
      */
     description: string;
     /**
@@ -10148,7 +10247,7 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMap 
      */
     match: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapMatch;
     /**
-     * Sequence number
+     * Connected Static BGP Route maps Sequence number
      */
     name: number;
     /**
@@ -10159,7 +10258,7 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMap 
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP Route maps match Interface
      */
     interface: string;
     /**
@@ -10167,7 +10266,7 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapM
      */
     ipv4: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapMatchIpv4;
     /**
-     * Metric
+     * Connected Static BGP Route maps match Metric
      */
     metric: number;
 }
@@ -10185,22 +10284,22 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapM
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP Route maps match ip4 Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP Route maps match ip4  Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP Route maps match ip4 next hop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP Route maps match ip4 next hop Prefix list
      */
     prefixList: string;
 }
@@ -10211,11 +10310,11 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapS
      */
     aggregator: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapSetAggregator;
     /**
-     * AS numbers
+     * Connected Static BGP Route maps set AS numbers
      */
     aspathPrepends: number[];
     /**
-     * Enable BGP atomic aggregate?
+     * Connected Static BGP Route maps set Enable BGP atomic aggregate?
      */
     atomicAggregate: boolean;
     /**
@@ -10223,11 +10322,11 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapS
      */
     ipv4: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapSetIpv4;
     /**
-     * Large communities
+     * Connected Static  BGP Route maps set Large communities
      */
     largeCommunities: string[];
     /**
-     * Local preference
+     * Connected Static BGP Route maps set Local preference
      */
     localPreference: number;
     /**
@@ -10235,74 +10334,74 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapS
      */
     metric: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapSetMetric;
     /**
-     * Origin
+     * Connected Static BGP Route maps set Origin
      */
     origin: string;
     /**
-     * Originator ID
+     * Connected Static BGP Route maps set Originator ID
      */
     originatorId: string;
     /**
-     * Regular communities
+     * Connected Static  BGP Route maps set Regular communities
      */
     regularCommunities: string[];
     /**
-     * Tag
+     * Connected Static BGP Route maps set Tag
      */
     tag: number;
     /**
-     * Weight
+     * Connected Static BGP Route maps set Weight
      */
     weight: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapSetAggregator {
     /**
-     * Aggregator AS
+     * Connected Static BGP Route maps set Aggregator AS
      */
     as: number;
     /**
-     * Router ID
+     * Connected Static BGP Route maps set Router ID
      */
     routerId: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapSetIpv4 {
     /**
-     * Next hop
+     * Connected Static BGP Route maps set Next ipv4 hop
      */
     nextHop: string;
     /**
-     * Source address
+     * Connected Static BGP Route maps set ipv4 Source address
      */
     sourceAddress: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapSetMetric {
     /**
-     * Metric action
+     * Connected Static BGP Route maps set Metric action
      */
     action: string;
     /**
-     * Metric value
+     * Connected Static BGP Route maps set Metric value
      */
     value: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspf {
     /**
-     * Route maps
+     * Connected Static  BGP OSPF Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMap {
     /**
-     * Action
+     * Connected Static BGP OSPF Route map Action
      */
     action: string;
     /**
-     * Description
+     * Connected Static BGP OSPF Route map Description
      */
     description: string;
     /**
@@ -10310,18 +10409,18 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMap
      */
     match: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapMatch;
     /**
-     * Sequence number
+     * Connected Static BGP OSPF Route map Sequence number
      */
     name: number;
     /**
-     * Set
+     * Connected Static Root OSPF Set
      */
     set: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapSet;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP OSPF Route map Interface
      */
     interface: string;
     /**
@@ -10329,14 +10428,14 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMap
      */
     ipv4: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapMatchIpv4;
     /**
-     * Metric
+     * Connected Static BGP OSPF Route map Metric
      */
     metric: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapMatchIpv4 {
     /**
-     * Address
+     * Connected Static Root OSPF Address
      */
     address: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapMatchIpv4Address;
     /**
@@ -10347,22 +10446,22 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMap
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP OSPF Route map ipv4 Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP OSPF Route map ipv4 Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP OSPF Route map ipv4 next hop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP OSPF Route map ipv4 next hop Prefix list
      */
     prefixList: string;
 }
@@ -10373,40 +10472,40 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMap
      */
     metric: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapSetMetric;
     /**
-     * Metric type
+     * Connected Static BGP OSPF Route map set Metric type
      */
     metricType: string;
     /**
-     * Tag
+     * Connected Static BGP OSPF Route map set Tag
      */
     tag: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapSetMetric {
     /**
-     * Metric action
+     * Connected Static BGP OSPF Route map set Metric action
      */
     action: string;
     /**
-     * Metric value
+     * Connected Static BGP OSPF Route map set Metric value
      */
     value: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticRib {
     /**
-     * Route maps
+     * Connected Static BGP Rib Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMap {
     /**
-     * Action
+     * Connected Static BGP Rib Route maps Action
      */
     action: string;
     /**
-     * Description
+     * Connected Static BGP Rib Route maps Description
      */
     description: string;
     /**
@@ -10414,18 +10513,18 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMap 
      */
     match: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatch;
     /**
-     * Sequence number
+     * Connected Static BGP Rib Route maps Sequence number
      */
     name: number;
     /**
-     * Set
+     * Connected Static Root RIB set
      */
     set: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapSet;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP Rib Route maps Interface
      */
     interface: string;
     /**
@@ -10433,14 +10532,14 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapM
      */
     ipv4: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatchIpv4;
     /**
-     * Metric
+     * Connected Static BGP Rib Route maps Metric
      */
     metric: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatchIpv4 {
     /**
-     * Address
+     * Connected Static BGP Rib Route maps ipv4 address
      */
     address: outputs.GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatchIpv4Address;
     /**
@@ -10451,36 +10550,36 @@ export interface GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapM
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP Rib Route maps ipv4 Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP Rib Route maps ipv4 Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP Rib Route maps ipv4 nect hop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * Connected Static BGP Rib Route maps ipv4 next hop Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapSet {
     /**
-     * Source address
+     * Connected Static BGP Rib Route Map Distribution Source address
      */
     sourceAddress: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspf {
     /**
-     * Bgp
+     * OSPF Root BGP
      */
     bgp: outputs.GetBgpRouteMapRedistributionListDataOspfBgp;
     /**
@@ -10491,18 +10590,18 @@ export interface GetBgpRouteMapRedistributionListDataOspf {
 
 export interface GetBgpRouteMapRedistributionListDataOspfBgp {
     /**
-     * Route maps
+     * OSPF BGP Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMap {
     /**
-     * Action
+     * OSPF BGP Route maps Action
      */
     action: string;
     /**
-     * Description
+     * OSPF BGP Route maps Description
      */
     description: string;
     /**
@@ -10510,11 +10609,11 @@ export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMap {
      */
     match: outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatch;
     /**
-     * Sequence number
+     * OSPF BGP Route maps Sequence number
      */
     name: number;
     /**
-     * Set
+     * OSPF Root Set
      */
     set: outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSet;
 }
@@ -10525,11 +10624,11 @@ export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatch {
      */
     address: outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatchAddress;
     /**
-     * Interface
+     * OSPF BGP Route maps Interface
      */
     interface: string;
     /**
-     * Metric
+     * OSPF BGP Route maps Metric
      */
     metric: number;
     /**
@@ -10537,29 +10636,29 @@ export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatch {
      */
     nextHop: outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatchNextHop;
     /**
-     * Tag
+     * OSPF BGP Route maps Tag
      */
     tag: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatchAddress {
     /**
-     * Access list
+     * OSPF BGP Route maps match Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * OSPF BGP Route maps match Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatchNextHop {
     /**
-     * Access list
+     * OSPF BGP Route maps nextHop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * OSPF BGP Route maps nextHop Prefix list
      */
     prefixList: string;
 }
@@ -10570,11 +10669,11 @@ export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSet {
      */
     aggregator: outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSetAggregator;
     /**
-     * AS numbers
+     * OSPF BGP Route maps set AS numbers
      */
     aspathPrepends: number[];
     /**
-     * Enable BGP atomic aggregate?
+     * OSPF BGP Route maps set Enable BGP atomic aggregate?
      */
     atomicAggregate: boolean;
     /**
@@ -10582,11 +10681,11 @@ export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSet {
      */
     ipv4: outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSetIpv4;
     /**
-     * Large communities
+     * OSPF BGP Route maps set Large communities
      */
     largeCommunities: string[];
     /**
-     * Local preference
+     * OSPF BGP Route maps set Local preference
      */
     localPreference: number;
     /**
@@ -10594,74 +10693,74 @@ export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSetMetric;
     /**
-     * Origin
+     * OSPF BGP Route maps set Origin
      */
     origin: string;
     /**
-     * Originator ID
+     * OSPF BGP Route maps set Originator ID
      */
     originatorId: string;
     /**
-     * Regular communities
+     * OSPF BGP Route maps set Regular communities
      */
     regularCommunities: string[];
     /**
-     * Tag
+     * OSPF BGP Route maps set Tag
      */
     tag: number;
     /**
-     * Weight
+     * OSPF BGP Route maps set Weight
      */
     weight: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSetAggregator {
     /**
-     * Aggregator AS
+     * OSPF BGP Route maps set Aggregator AS
      */
     as: number;
     /**
-     * Router ID
+     * OSPF BGP Route maps set Router ID
      */
     routerId: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSetIpv4 {
     /**
-     * Next hop
+     * OSPF BGP Route maps set ipv4 Next hop
      */
     nextHop: string;
     /**
-     * Source address
+     * OSPF BGP Route maps set ipv4 Source address
      */
     sourceAddress: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfBgpRouteMapSetMetric {
     /**
-     * Metric action
+     * OSPF BGP Route maps set Metric action
      */
     action: string;
     /**
-     * Metric value
+     * OSPF BGP Route maps set Metric value
      */
     value: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfRib {
     /**
-     * Route maps
+     * OSPF RIB Route maps set Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionListDataOspfRibRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfRibRouteMap {
     /**
-     * Action
+     * OSPF RIB Route maps Action
      */
     action: string;
     /**
-     * Description
+     * OSPF RIB Route maps Description
      */
     description: string;
     /**
@@ -10669,70 +10768,70 @@ export interface GetBgpRouteMapRedistributionListDataOspfRibRouteMap {
      */
     match: outputs.GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatch;
     /**
-     * Sequence number
+     * OSPF RIB Route mapsSequence number
      */
     name: number;
     /**
-     * Set
+     * OSPF RIB Route maps set
      */
     set: outputs.GetBgpRouteMapRedistributionListDataOspfRibRouteMapSet;
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatch {
     /**
-     * Address
+     * OSPF RIB Route maps address
      */
     address: outputs.GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatchAddress;
     /**
-     * Interface
+     * OSPF RIB Route maps Interface
      */
     interface: string;
     /**
-     * Metric
+     * OSPF RIB Route maps Metric
      */
     metric: number;
     /**
-     * Next hop
+     * OSPF RIB Route maps next*hop
      */
     nextHop: outputs.GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatchNextHop;
     /**
-     * Tag
+     * OSPF RIB Route maps tag
      */
     tag: number;
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatchAddress {
     /**
-     * Access list
+     * OSPF RIB Route maps address Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * OSPF RIB Route maps address Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatchNextHop {
     /**
-     * Access list
+     * OSPF RIB Route maps nextHop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * OSPF RIB Route maps nextHop Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionListDataOspfRibRouteMapSet {
     /**
-     * Source address
+     * OSPF RIB Route maps set Source address
      */
     sourceAddress: string;
 }
 
 export interface GetBgpRouteMapRedistributionOspf {
     /**
-     * Bgp
+     * OSPF Root BGP
      */
     bgp: outputs.GetBgpRouteMapRedistributionOspfBgp;
     /**
@@ -10743,18 +10842,18 @@ export interface GetBgpRouteMapRedistributionOspf {
 
 export interface GetBgpRouteMapRedistributionOspfBgp {
     /**
-     * Route maps
+     * OSPF BGP Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionOspfBgpRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionOspfBgpRouteMap {
     /**
-     * Action
+     * OSPF BGP Route maps Action
      */
     action: string;
     /**
-     * Description
+     * OSPF BGP Route maps Description
      */
     description: string;
     /**
@@ -10762,11 +10861,11 @@ export interface GetBgpRouteMapRedistributionOspfBgpRouteMap {
      */
     match: outputs.GetBgpRouteMapRedistributionOspfBgpRouteMapMatch;
     /**
-     * Sequence number
+     * OSPF BGP Route maps Sequence number
      */
     name: number;
     /**
-     * Set
+     * OSPF Root Set
      */
     set: outputs.GetBgpRouteMapRedistributionOspfBgpRouteMapSet;
 }
@@ -10777,11 +10876,11 @@ export interface GetBgpRouteMapRedistributionOspfBgpRouteMapMatch {
      */
     address: outputs.GetBgpRouteMapRedistributionOspfBgpRouteMapMatchAddress;
     /**
-     * Interface
+     * OSPF BGP Route maps Interface
      */
     interface: string;
     /**
-     * Metric
+     * OSPF BGP Route maps Metric
      */
     metric: number;
     /**
@@ -10789,29 +10888,29 @@ export interface GetBgpRouteMapRedistributionOspfBgpRouteMapMatch {
      */
     nextHop: outputs.GetBgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop;
     /**
-     * Tag
+     * OSPF BGP Route maps Tag
      */
     tag: number;
 }
 
 export interface GetBgpRouteMapRedistributionOspfBgpRouteMapMatchAddress {
     /**
-     * Access list
+     * OSPF BGP Route maps match Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * OSPF BGP Route maps match Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop {
     /**
-     * Access list
+     * OSPF BGP Route maps nextHop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * OSPF BGP Route maps nextHop Prefix list
      */
     prefixList: string;
 }
@@ -10822,11 +10921,11 @@ export interface GetBgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     aggregator: outputs.GetBgpRouteMapRedistributionOspfBgpRouteMapSetAggregator;
     /**
-     * AS numbers
+     * OSPF BGP Route maps set AS numbers
      */
     aspathPrepends: number[];
     /**
-     * Enable BGP atomic aggregate?
+     * OSPF BGP Route maps set Enable BGP atomic aggregate?
      */
     atomicAggregate: boolean;
     /**
@@ -10834,11 +10933,11 @@ export interface GetBgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     ipv4: outputs.GetBgpRouteMapRedistributionOspfBgpRouteMapSetIpv4;
     /**
-     * Large communities
+     * OSPF BGP Route maps set Large communities
      */
     largeCommunities: string[];
     /**
-     * Local preference
+     * OSPF BGP Route maps set Local preference
      */
     localPreference: number;
     /**
@@ -10846,74 +10945,74 @@ export interface GetBgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     metric: outputs.GetBgpRouteMapRedistributionOspfBgpRouteMapSetMetric;
     /**
-     * Origin
+     * OSPF BGP Route maps set Origin
      */
     origin: string;
     /**
-     * Originator ID
+     * OSPF BGP Route maps set Originator ID
      */
     originatorId: string;
     /**
-     * Regular communities
+     * OSPF BGP Route maps set Regular communities
      */
     regularCommunities: string[];
     /**
-     * Tag
+     * OSPF BGP Route maps set Tag
      */
     tag: number;
     /**
-     * Weight
+     * OSPF BGP Route maps set Weight
      */
     weight: number;
 }
 
 export interface GetBgpRouteMapRedistributionOspfBgpRouteMapSetAggregator {
     /**
-     * Aggregator AS
+     * OSPF BGP Route maps set Aggregator AS
      */
     as: number;
     /**
-     * Router ID
+     * OSPF BGP Route maps set Router ID
      */
     routerId: string;
 }
 
 export interface GetBgpRouteMapRedistributionOspfBgpRouteMapSetIpv4 {
     /**
-     * Next hop
+     * OSPF BGP Route maps set ipv4 Next hop
      */
     nextHop: string;
     /**
-     * Source address
+     * OSPF BGP Route maps set ipv4 Source address
      */
     sourceAddress: string;
 }
 
 export interface GetBgpRouteMapRedistributionOspfBgpRouteMapSetMetric {
     /**
-     * Metric action
+     * OSPF BGP Route maps set Metric action
      */
     action: string;
     /**
-     * Metric value
+     * OSPF BGP Route maps set Metric value
      */
     value: number;
 }
 
 export interface GetBgpRouteMapRedistributionOspfRib {
     /**
-     * Route maps
+     * OSPF RIB Route maps set Route maps
      */
     routeMaps: outputs.GetBgpRouteMapRedistributionOspfRibRouteMap[];
 }
 
 export interface GetBgpRouteMapRedistributionOspfRibRouteMap {
     /**
-     * Action
+     * OSPF RIB Route maps Action
      */
     action: string;
     /**
-     * Description
+     * OSPF RIB Route maps Description
      */
     description: string;
     /**
@@ -10921,63 +11020,63 @@ export interface GetBgpRouteMapRedistributionOspfRibRouteMap {
      */
     match: outputs.GetBgpRouteMapRedistributionOspfRibRouteMapMatch;
     /**
-     * Sequence number
+     * OSPF RIB Route mapsSequence number
      */
     name: number;
     /**
-     * Set
+     * OSPF RIB Route maps set
      */
     set: outputs.GetBgpRouteMapRedistributionOspfRibRouteMapSet;
 }
 
 export interface GetBgpRouteMapRedistributionOspfRibRouteMapMatch {
     /**
-     * Address
+     * OSPF RIB Route maps address
      */
     address: outputs.GetBgpRouteMapRedistributionOspfRibRouteMapMatchAddress;
     /**
-     * Interface
+     * OSPF RIB Route maps Interface
      */
     interface: string;
     /**
-     * Metric
+     * OSPF RIB Route maps Metric
      */
     metric: number;
     /**
-     * Next hop
+     * OSPF RIB Route maps next*hop
      */
     nextHop: outputs.GetBgpRouteMapRedistributionOspfRibRouteMapMatchNextHop;
     /**
-     * Tag
+     * OSPF RIB Route maps tag
      */
     tag: number;
 }
 
 export interface GetBgpRouteMapRedistributionOspfRibRouteMapMatchAddress {
     /**
-     * Access list
+     * OSPF RIB Route maps address Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * OSPF RIB Route maps address Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionOspfRibRouteMapMatchNextHop {
     /**
-     * Access list
+     * OSPF RIB Route maps nextHop Access list
      */
     accessList: string;
     /**
-     * Prefix list
+     * OSPF RIB Route maps nextHop Prefix list
      */
     prefixList: string;
 }
 
 export interface GetBgpRouteMapRedistributionOspfRibRouteMapSet {
     /**
-     * Source address
+     * OSPF RIB Route maps set Source address
      */
     sourceAddress: string;
 }
@@ -11758,9 +11857,17 @@ export interface GetDecryptionRuleListData {
      */
     negateSource: boolean;
     /**
+     * The position of a security rule
+     */
+    position: string;
+    /**
      * The decryption profile associated with the decryption rule
      */
     profile: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition: string;
     /**
      * The destination services and/or service groups
      */
@@ -11785,6 +11892,10 @@ export interface GetDecryptionRuleListData {
      * The tags associated with the decryption rule
      */
     tags: string[];
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule: string;
     tfid: string;
     /**
      * The destination security zone
@@ -12256,7 +12367,7 @@ export interface GetDhcpInterfaceServerReserved {
 
 export interface GetDnsProxyCache {
     /**
-     * Cache edns
+     * Cache EDNS UDP response
      */
     cacheEdns: boolean;
     /**
@@ -12271,11 +12382,11 @@ export interface GetDnsProxyCache {
 
 export interface GetDnsProxyCacheMaxTtl {
     /**
-     * Enabled
+     * Enable max ttl for this DNS object
      */
     enabled: boolean;
     /**
-     * Time to live
+     * Time in seconds after which entry is cleared
      */
     timeToLive: number;
 }
@@ -12304,23 +12415,23 @@ export interface GetDnsProxyDefaultInheritance {
 
 export interface GetDnsProxyDomainServer {
     /**
-     * Cacheable
+     * Enable caching for this DNS proxy rule?
      */
     cacheable: boolean;
     /**
-     * Domain name
+     * Domain names(s) that will be matched
      */
     domainNames: string[];
     /**
-     * Name
+     * Proxy rule name
      */
     name: string;
     /**
-     * Primary
+     * Primary DNS server IP address
      */
     primary: string;
     /**
-     * Secondary
+     * Secondary DNS server IP address
      */
     secondary: string;
 }
@@ -12339,7 +12450,7 @@ export interface GetDnsProxyListData {
      */
     device: string;
     /**
-     * Domain servers
+     * DNS proxy rules
      */
     domainServers: outputs.GetDnsProxyListDataDomainServer[];
     /**
@@ -12383,7 +12494,7 @@ export interface GetDnsProxyListData {
 
 export interface GetDnsProxyListDataCache {
     /**
-     * Cache edns
+     * Cache EDNS UDP response
      */
     cacheEdns: boolean;
     /**
@@ -12398,11 +12509,11 @@ export interface GetDnsProxyListDataCache {
 
 export interface GetDnsProxyListDataCacheMaxTtl {
     /**
-     * Enabled
+     * Enable max ttl for this DNS object
      */
     enabled: boolean;
     /**
-     * Time to live
+     * Time in seconds after which entry is cleared
      */
     timeToLive: number;
 }
@@ -12431,23 +12542,23 @@ export interface GetDnsProxyListDataDefaultInheritance {
 
 export interface GetDnsProxyListDataDomainServer {
     /**
-     * Cacheable
+     * Enable caching for this DNS proxy rule?
      */
     cacheable: boolean;
     /**
-     * Domain name
+     * Domain names(s) that will be matched
      */
     domainNames: string[];
     /**
-     * Name
+     * Proxy rule name
      */
     name: string;
     /**
-     * Primary
+     * Primary DNS server IP address
      */
     primary: string;
     /**
-     * Secondary
+     * Secondary DNS server IP address
      */
     secondary: string;
 }
@@ -12458,22 +12569,22 @@ export interface GetDnsProxyListDataStaticEntry {
      */
     addresses: string[];
     /**
-     * Domain
+     * Fully qualified domain name
      */
     domain: string;
     /**
-     * Name
+     * Static entry name
      */
     name: string;
 }
 
 export interface GetDnsProxyListDataTcpQueries {
     /**
-     * Enabled
+     * Turn on forwarding of TCP DNS queries?
      */
     enabled: boolean;
     /**
-     * Max pending requests
+     * Upper limit on number of concurrent TCP DNS requests
      */
     maxPendingRequests: number;
 }
@@ -12487,11 +12598,11 @@ export interface GetDnsProxyListDataUdpQueries {
 
 export interface GetDnsProxyListDataUdpQueriesRetries {
     /**
-     * Attempts
+     * Maximum number of retries before trying next name server
      */
     attempts: number;
     /**
-     * Interval
+     * Time in seconds for another request to be sent
      */
     interval: number;
 }
@@ -12502,22 +12613,22 @@ export interface GetDnsProxyStaticEntry {
      */
     addresses: string[];
     /**
-     * Domain
+     * Fully qualified domain name
      */
     domain: string;
     /**
-     * Name
+     * Static entry name
      */
     name: string;
 }
 
 export interface GetDnsProxyTcpQueries {
     /**
-     * Enabled
+     * Turn on forwarding of TCP DNS queries?
      */
     enabled: boolean;
     /**
-     * Max pending requests
+     * Upper limit on number of concurrent TCP DNS requests
      */
     maxPendingRequests: number;
 }
@@ -12531,11 +12642,11 @@ export interface GetDnsProxyUdpQueries {
 
 export interface GetDnsProxyUdpQueriesRetries {
     /**
-     * Attempts
+     * Maximum number of retries before trying next name server
      */
     attempts: number;
     /**
-     * Interval
+     * Time in seconds for another request to be sent
      */
     interval: number;
 }
@@ -13574,9 +13685,20 @@ export interface GetDynamicUserGroupListData {
 
 export interface GetEthernetInterfaceLayer2 {
     /**
-     * Vlan tag
+     * LLDP Settings
      */
-    vlanTag: number;
+    lldp: outputs.GetEthernetInterfaceLayer2Lldp;
+    /**
+     * Assign interface to VLAN tag
+     */
+    vlanTag: string;
+}
+
+export interface GetEthernetInterfaceLayer2Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
 }
 
 export interface GetEthernetInterfaceLayer3 {
@@ -13585,11 +13707,11 @@ export interface GetEthernetInterfaceLayer3 {
      */
     arps: outputs.GetEthernetInterfaceLayer3Arp[];
     /**
-     * Ddns config
+     * Dynamic DNS configuration specific to the Ethernet Interfaces.
      */
     ddnsConfig: outputs.GetEthernetInterfaceLayer3DdnsConfig;
     /**
-     * Dhcp client
+     * Ethernet Interfaces DHCP Client Object
      */
     dhcpClient: outputs.GetEthernetInterfaceLayer3DhcpClient;
     /**
@@ -13597,9 +13719,9 @@ export interface GetEthernetInterfaceLayer3 {
      */
     interfaceManagementProfile: string;
     /**
-     * Interface IP addresses
+     * Ethernet Interface IP addresses
      */
-    ips: string[];
+    ips: outputs.GetEthernetInterfaceLayer3Ip[];
     /**
      * MTU
      */
@@ -13612,7 +13734,7 @@ export interface GetEthernetInterfaceLayer3 {
 
 export interface GetEthernetInterfaceLayer3Arp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress: string;
     /**
@@ -13623,11 +13745,11 @@ export interface GetEthernetInterfaceLayer3Arp {
 
 export interface GetEthernetInterfaceLayer3DdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
     ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled: boolean;
     /**
@@ -13635,58 +13757,58 @@ export interface GetEthernetInterfaceLayer3DdnsConfig {
      */
     ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
     ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
     ddnsVendorConfig: string;
 }
 
 export interface GetEthernetInterfaceLayer3DhcpClient {
     /**
-     * Dhcp client
-     */
-    dhcpClient: outputs.GetEthernetInterfaceLayer3DhcpClientDhcpClient;
-}
-
-export interface GetEthernetInterfaceLayer3DhcpClientDhcpClient {
-    /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable: boolean;
     /**
-     * Send hostname
+     * Ethernet Interfaces DHCP ClientSend hostname
      */
-    sendHostname: outputs.GetEthernetInterfaceLayer3DhcpClientDhcpClientSendHostname;
+    sendHostname: outputs.GetEthernetInterfaceLayer3DhcpClientSendHostname;
 }
 
-export interface GetEthernetInterfaceLayer3DhcpClientDhcpClientSendHostname {
+export interface GetEthernetInterfaceLayer3DhcpClientSendHostname {
     /**
      * Enable
      */
     enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname: string;
+}
+
+export interface GetEthernetInterfaceLayer3Ip {
+    /**
+     * Ethernet Interface IP addresses name
+     */
+    name: string;
 }
 
 export interface GetEthernetInterfaceLayer3Pppoe {
@@ -13699,7 +13821,7 @@ export interface GetEthernetInterfaceLayer3Pppoe {
      */
     authentication: string;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
@@ -13709,7 +13831,7 @@ export interface GetEthernetInterfaceLayer3Pppoe {
     /**
      * Passive
      */
-    passive: boolean;
+    passive: outputs.GetEthernetInterfaceLayer3PppoePassive;
     /**
      * Password
      */
@@ -13728,9 +13850,16 @@ export interface GetEthernetInterfaceLayer3Pppoe {
     username: string;
 }
 
+export interface GetEthernetInterfaceLayer3PppoePassive {
+    /**
+     * Passive Mode enabled
+     */
+    enable: boolean;
+}
+
 export interface GetEthernetInterfaceLayer3PppoeStaticAddress {
     /**
-     * Ip
+     * Static IP address
      */
     ip: string;
 }
@@ -13741,7 +13870,7 @@ export interface GetEthernetInterfaceListData {
      */
     comment: string;
     /**
-     * Default value
+     * Default interface assignment
      */
     defaultValue: string;
     /**
@@ -13765,7 +13894,7 @@ export interface GetEthernetInterfaceListData {
      */
     layer2: outputs.GetEthernetInterfaceListDataLayer2;
     /**
-     * Layer3
+     * Ethernet Interface Layer 3 configuration
      */
     layer3: outputs.GetEthernetInterfaceListDataLayer3;
     /**
@@ -13801,9 +13930,20 @@ export interface GetEthernetInterfaceListData {
 
 export interface GetEthernetInterfaceListDataLayer2 {
     /**
-     * Vlan tag
+     * LLDP Settings
      */
-    vlanTag: number;
+    lldp: outputs.GetEthernetInterfaceListDataLayer2Lldp;
+    /**
+     * Assign interface to VLAN tag
+     */
+    vlanTag: string;
+}
+
+export interface GetEthernetInterfaceListDataLayer2Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: boolean;
 }
 
 export interface GetEthernetInterfaceListDataLayer3 {
@@ -13812,11 +13952,11 @@ export interface GetEthernetInterfaceListDataLayer3 {
      */
     arps: outputs.GetEthernetInterfaceListDataLayer3Arp[];
     /**
-     * Ddns config
+     * Dynamic DNS configuration specific to the Ethernet Interfaces.
      */
     ddnsConfig: outputs.GetEthernetInterfaceListDataLayer3DdnsConfig;
     /**
-     * Dhcp client
+     * Ethernet Interfaces DHCP Client Object
      */
     dhcpClient: outputs.GetEthernetInterfaceListDataLayer3DhcpClient;
     /**
@@ -13824,9 +13964,9 @@ export interface GetEthernetInterfaceListDataLayer3 {
      */
     interfaceManagementProfile: string;
     /**
-     * Interface IP addresses
+     * Ethernet Interface IP addresses
      */
-    ips: string[];
+    ips: outputs.GetEthernetInterfaceListDataLayer3Ip[];
     /**
      * MTU
      */
@@ -13839,7 +13979,7 @@ export interface GetEthernetInterfaceListDataLayer3 {
 
 export interface GetEthernetInterfaceListDataLayer3Arp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress: string;
     /**
@@ -13850,11 +13990,11 @@ export interface GetEthernetInterfaceListDataLayer3Arp {
 
 export interface GetEthernetInterfaceListDataLayer3DdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
     ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled: boolean;
     /**
@@ -13862,58 +14002,58 @@ export interface GetEthernetInterfaceListDataLayer3DdnsConfig {
      */
     ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
     ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
     ddnsVendorConfig: string;
 }
 
 export interface GetEthernetInterfaceListDataLayer3DhcpClient {
     /**
-     * Dhcp client
-     */
-    dhcpClient: outputs.GetEthernetInterfaceListDataLayer3DhcpClientDhcpClient;
-}
-
-export interface GetEthernetInterfaceListDataLayer3DhcpClientDhcpClient {
-    /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable: boolean;
     /**
-     * Send hostname
+     * Ethernet Interfaces DHCP ClientSend hostname
      */
-    sendHostname: outputs.GetEthernetInterfaceListDataLayer3DhcpClientDhcpClientSendHostname;
+    sendHostname: outputs.GetEthernetInterfaceListDataLayer3DhcpClientSendHostname;
 }
 
-export interface GetEthernetInterfaceListDataLayer3DhcpClientDhcpClientSendHostname {
+export interface GetEthernetInterfaceListDataLayer3DhcpClientSendHostname {
     /**
      * Enable
      */
     enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname: string;
+}
+
+export interface GetEthernetInterfaceListDataLayer3Ip {
+    /**
+     * Ethernet Interface IP addresses name
+     */
+    name: string;
 }
 
 export interface GetEthernetInterfaceListDataLayer3Pppoe {
@@ -13926,7 +14066,7 @@ export interface GetEthernetInterfaceListDataLayer3Pppoe {
      */
     authentication: string;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
@@ -13936,7 +14076,7 @@ export interface GetEthernetInterfaceListDataLayer3Pppoe {
     /**
      * Passive
      */
-    passive: boolean;
+    passive: outputs.GetEthernetInterfaceListDataLayer3PppoePassive;
     /**
      * Password
      */
@@ -13955,20 +14095,27 @@ export interface GetEthernetInterfaceListDataLayer3Pppoe {
     username: string;
 }
 
+export interface GetEthernetInterfaceListDataLayer3PppoePassive {
+    /**
+     * Passive Mode enabled
+     */
+    enable: boolean;
+}
+
 export interface GetEthernetInterfaceListDataLayer3PppoeStaticAddress {
     /**
-     * Ip
+     * Static IP address
      */
     ip: string;
 }
 
 export interface GetEthernetInterfaceListDataPoe {
     /**
-     * Poe enabled
+     * Enabled PoE?
      */
     poeEnabled: boolean;
     /**
-     * Poe rsvd pwr
+     * PoE reserved power
      */
     poeRsvdPwr: number;
 }
@@ -13978,11 +14125,11 @@ export interface GetEthernetInterfaceListDataTap {
 
 export interface GetEthernetInterfacePoe {
     /**
-     * Poe enabled
+     * Enabled PoE?
      */
     poeEnabled: boolean;
     /**
-     * Poe rsvd pwr
+     * PoE reserved power
      */
     poeRsvdPwr: number;
 }
@@ -19776,7 +19923,7 @@ export interface GetInterfaceManagementProfileListData {
      */
     http: boolean;
     /**
-     * Http ocsp
+     * Allow HTTP OCSP?
      */
     httpOcsp: boolean;
     /**
@@ -19792,17 +19939,17 @@ export interface GetInterfaceManagementProfileListData {
      */
     name: string;
     /**
-     * Permitted ip
+     * Allowed IP address(es)
      */
-    permittedIps: string[];
+    permittedIps: outputs.GetInterfaceManagementProfileListDataPermittedIp[];
     /**
      * Allow ping?
      */
     ping: boolean;
     /**
-     * Response pages
+     * Allow response pages?
      */
-    responsePages: string;
+    responsePages: boolean;
     /**
      * The snippet in which the resource is defined
      */
@@ -19817,17 +19964,31 @@ export interface GetInterfaceManagementProfileListData {
     telnet: boolean;
     tfid: string;
     /**
-     * Userid service
+     * Allow User-ID?
      */
     useridService: boolean;
     /**
-     * Userid syslog listener ssl
+     * Allow User-ID syslog listener (SSL)?
      */
     useridSyslogListenerSsl: boolean;
     /**
-     * Userid syslog listener udp
+     * Allow User-ID syslog listener (UDP)?
      */
     useridSyslogListenerUdp: boolean;
+}
+
+export interface GetInterfaceManagementProfileListDataPermittedIp {
+    /**
+     * The allowed IP address or CIDR block.
+     */
+    name: string;
+}
+
+export interface GetInterfaceManagementProfilePermittedIp {
+    /**
+     * The allowed IP address or CIDR block.
+     */
+    name: string;
 }
 
 export interface GetIpsecCryptoProfileAh {
@@ -20445,14 +20606,14 @@ export interface GetLayer2SubinterfaceListData {
     snippet: string;
     tfid: string;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    vlanTag: number;
+    vlanTag: string;
 }
 
 export interface GetLayer3SubinterfaceArp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress: string;
     /**
@@ -20463,11 +20624,11 @@ export interface GetLayer3SubinterfaceArp {
 
 export interface GetLayer3SubinterfaceDdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
     ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled: boolean;
     /**
@@ -20475,38 +20636,38 @@ export interface GetLayer3SubinterfaceDdnsConfig {
      */
     ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
     ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
     ddnsVendorConfig: string;
 }
 
 export interface GetLayer3SubinterfaceDhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable: boolean;
     /**
-     * Send hostname
+     * Layer3 sub interfaces DHCP Client Send hostname
      */
     sendHostname: outputs.GetLayer3SubinterfaceDhcpClientSendHostname;
 }
@@ -20517,9 +20678,16 @@ export interface GetLayer3SubinterfaceDhcpClientSendHostname {
      */
     enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname: string;
+}
+
+export interface GetLayer3SubinterfaceIp {
+    /**
+     * L3 sub-interface IP address(es)
+     */
+    name: string;
 }
 
 export interface GetLayer3SubinterfaceListData {
@@ -20540,7 +20708,7 @@ export interface GetLayer3SubinterfaceListData {
      */
     device: string;
     /**
-     * Dhcp client
+     * Layer3 sub interfaces DHCP Client Object
      */
     dhcpClient: outputs.GetLayer3SubinterfaceListDataDhcpClient;
     /**
@@ -20556,9 +20724,9 @@ export interface GetLayer3SubinterfaceListData {
      */
     interfaceManagementProfile: string;
     /**
-     * Ip
+     * L3 sub-interface IP Parent
      */
-    ips: string[];
+    ips: outputs.GetLayer3SubinterfaceListDataIp[];
     /**
      * MTU
      */
@@ -20584,7 +20752,7 @@ export interface GetLayer3SubinterfaceListData {
 
 export interface GetLayer3SubinterfaceListDataArp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress: string;
     /**
@@ -20595,11 +20763,11 @@ export interface GetLayer3SubinterfaceListDataArp {
 
 export interface GetLayer3SubinterfaceListDataDdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
     ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled: boolean;
     /**
@@ -20607,38 +20775,38 @@ export interface GetLayer3SubinterfaceListDataDdnsConfig {
      */
     ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
     ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
     ddnsVendorConfig: string;
 }
 
 export interface GetLayer3SubinterfaceListDataDhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable: boolean;
     /**
-     * Send hostname
+     * Layer3 sub interfaces DHCP Client Send hostname
      */
     sendHostname: outputs.GetLayer3SubinterfaceListDataDhcpClientSendHostname;
 }
@@ -20649,9 +20817,16 @@ export interface GetLayer3SubinterfaceListDataDhcpClientSendHostname {
      */
     enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname: string;
+}
+
+export interface GetLayer3SubinterfaceListDataIp {
+    /**
+     * L3 sub-interface IP address(es)
+     */
+    name: string;
 }
 
 export interface GetLdapServerProfileListData {
@@ -24268,7 +24443,7 @@ export interface GetLogicalRouterListDataVrfOspfGracefulRestart {
     /**
      * Strict l s a checking
      */
-    strictLSAChecking: boolean;
+    strictLsaChecking: boolean;
 }
 
 export interface GetLogicalRouterListDataVrfOspfVrTimers {
@@ -25058,7 +25233,7 @@ export interface GetLogicalRouterListDataVrfOspfv3GracefulRestart {
     /**
      * Strict l s a checking
      */
-    strictLSAChecking: boolean;
+    strictLsaChecking: boolean;
 }
 
 export interface GetLogicalRouterListDataVrfOspfv3VrTimers {
@@ -25363,6 +25538,10 @@ export interface GetLogicalRouterListDataVrfRoutingTableIpStaticRouteNexthop {
      * Fqdn
      */
     fqdn: string;
+    /**
+     * Ip address
+     */
+    ipAddress: string;
     /**
      * Ipv6 address
      */
@@ -28998,7 +29177,7 @@ export interface GetLogicalRouterVrfOspfGracefulRestart {
     /**
      * Strict l s a checking
      */
-    strictLSAChecking: boolean;
+    strictLsaChecking: boolean;
 }
 
 export interface GetLogicalRouterVrfOspfVrTimers {
@@ -29788,7 +29967,7 @@ export interface GetLogicalRouterVrfOspfv3GracefulRestart {
     /**
      * Strict l s a checking
      */
-    strictLSAChecking: boolean;
+    strictLsaChecking: boolean;
 }
 
 export interface GetLogicalRouterVrfOspfv3VrTimers {
@@ -30093,6 +30272,10 @@ export interface GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop {
      * Fqdn
      */
     fqdn: string;
+    /**
+     * Ip address
+     */
+    ipAddress: string;
     /**
      * Ipv6 address
      */
@@ -30430,7 +30613,33 @@ export interface GetLoopbackInterfaceIp {
     /**
      * Loopback IP address(es)
      */
-    ips: string[];
+    name: string;
+}
+
+export interface GetLoopbackInterfaceIpv6 {
+    /**
+     * IPv6 Address Parent
+     */
+    addresses: outputs.GetLoopbackInterfaceIpv6Address[];
+    /**
+     * Enable IPv6
+     */
+    enabled: boolean;
+}
+
+export interface GetLoopbackInterfaceIpv6Address {
+    /**
+     * Enable Address on Interface
+     */
+    enableOnInterface: boolean;
+    /**
+     * Interface ID
+     */
+    interfaceId: string;
+    /**
+     * IPv6 Address
+     */
+    name: string;
 }
 
 export interface GetLoopbackInterfaceListData {
@@ -30439,9 +30648,9 @@ export interface GetLoopbackInterfaceListData {
      */
     comment: string;
     /**
-     * Default value
+     * Default interface assignment
      */
-    defaultValue: number;
+    defaultValue: string;
     /**
      * The device in which the resource is defined
      */
@@ -30459,15 +30668,19 @@ export interface GetLoopbackInterfaceListData {
      */
     interfaceManagementProfile: string;
     /**
-     * loopback ip parent
+     * Loopback IP Parent
      */
-    ip: outputs.GetLoopbackInterfaceListDataIp;
+    ips: outputs.GetLoopbackInterfaceListDataIp[];
+    /**
+     * Loopback IPv6 Configuration
+     */
+    ipv6: outputs.GetLoopbackInterfaceListDataIpv6;
     /**
      * MTU
      */
     mtu: number;
     /**
-     * L3 sub-interface name
+     * Loopback Interface name
      */
     name: string;
     /**
@@ -30481,14 +30694,70 @@ export interface GetLoopbackInterfaceListDataIp {
     /**
      * Loopback IP address(es)
      */
-    ips: string[];
+    name: string;
 }
 
-export interface GetNatRuleDnsRewrite {
+export interface GetLoopbackInterfaceListDataIpv6 {
+    /**
+     * IPv6 Address Parent
+     */
+    addresses: outputs.GetLoopbackInterfaceListDataIpv6Address[];
+    /**
+     * Enable IPv6
+     */
+    enabled: boolean;
+}
+
+export interface GetLoopbackInterfaceListDataIpv6Address {
+    /**
+     * Enable Address on Interface
+     */
+    enableOnInterface: boolean;
+    /**
+     * Interface ID
+     */
+    interfaceId: string;
+    /**
+     * IPv6 Address
+     */
+    name: string;
+}
+
+export interface GetNatRuleDestinationTranslation {
+    /**
+     * DNS rewrite
+     */
+    dnsRewrite: outputs.GetNatRuleDestinationTranslationDnsRewrite;
+    /**
+     * Translated destination IP address
+     */
+    translatedAddress: string;
+    /**
+     * Translated destination port
+     */
+    translatedPort: number;
+}
+
+export interface GetNatRuleDestinationTranslationDnsRewrite {
     /**
      * Direction
      */
     direction: string;
+}
+
+export interface GetNatRuleDynamicDestinationTranslation {
+    /**
+     * Distribution method
+     */
+    distribution: string;
+    /**
+     * Translated destination IP address
+     */
+    translatedAddress: string;
+    /**
+     * Translated destination port
+     */
+    translatedPort: number;
 }
 
 export interface GetNatRuleListData {
@@ -30500,6 +30769,10 @@ export interface GetNatRuleListData {
      * NAT rule description
      */
     description: string;
+    /**
+     * Destination translation
+     */
+    destinationTranslation: outputs.GetNatRuleListDataDestinationTranslation;
     /**
      * Destination address(es) of the original packet
      */
@@ -30513,13 +30786,9 @@ export interface GetNatRuleListData {
      */
     disabled: boolean;
     /**
-     * Distribution method
+     * Dynamic destination translation
      */
-    distribution: string;
-    /**
-     * DNS rewrite
-     */
-    dnsRewrite: outputs.GetNatRuleListDataDnsRewrite;
+    dynamicDestinationTranslation: outputs.GetNatRuleListDataDynamicDestinationTranslation;
     /**
      * The folder in which the resource is defined
      */
@@ -30540,6 +30809,10 @@ export interface GetNatRuleListData {
      * NAT type
      */
     natType: string;
+    /**
+     * The relative position of the rule
+     */
+    position: string;
     /**
      * The service of the original packet
      */
@@ -30569,81 +30842,221 @@ export interface GetNatRuleListData {
      * Destination zone of the original packet
      */
     tos: string[];
+}
+
+export interface GetNatRuleListDataDestinationTranslation {
+    /**
+     * DNS rewrite
+     */
+    dnsRewrite: outputs.GetNatRuleListDataDestinationTranslationDnsRewrite;
     /**
      * Translated destination IP address
      */
-    translatedAddressSingle: string;
+    translatedAddress: string;
     /**
      * Translated destination port
      */
     translatedPort: number;
 }
 
-export interface GetNatRuleListDataDnsRewrite {
+export interface GetNatRuleListDataDestinationTranslationDnsRewrite {
     /**
      * Direction
      */
     direction: string;
 }
 
+export interface GetNatRuleListDataDynamicDestinationTranslation {
+    /**
+     * Distribution method
+     */
+    distribution: string;
+    /**
+     * Translated destination IP address
+     */
+    translatedAddress: string;
+    /**
+     * Translated destination port
+     */
+    translatedPort: number;
+}
+
 export interface GetNatRuleListDataSourceTranslation {
     /**
-     * Bi directional
+     * Dynamic IP
      */
-    biDirectional: boolean;
+    dynamicIp: outputs.GetNatRuleListDataSourceTranslationDynamicIp;
+    /**
+     * Dynamic IP and port
+     */
+    dynamicIpAndPort: outputs.GetNatRuleListDataSourceTranslationDynamicIpAndPort;
+    /**
+     * Static IP
+     */
+    staticIp: outputs.GetNatRuleListDataSourceTranslationStaticIp;
+}
+
+export interface GetNatRuleListDataSourceTranslationDynamicIp {
     /**
      * Fallback
      */
-    fallback: outputs.GetNatRuleListDataSourceTranslationFallback;
-    /**
-     * Interface name
-     */
-    interface: string;
+    fallback: outputs.GetNatRuleListDataSourceTranslationDynamicIpFallback;
     /**
      * Translated IP addresses
      */
-    translatedAddressArrays: string[];
-    /**
-     * Translated IP address
-     */
-    translatedAddressSingle: string;
+    translatedAddresses: string[];
 }
 
-export interface GetNatRuleListDataSourceTranslationFallback {
+export interface GetNatRuleListDataSourceTranslationDynamicIpAndPort {
+    /**
+     * Translated source interface
+     */
+    interfaceAddress: outputs.GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddress;
+    /**
+     * Translated source IP addresses
+     */
+    translatedAddresses: string[];
+}
+
+export interface GetNatRuleListDataSourceTranslationDynamicIpAndPortInterfaceAddress {
+    /**
+     * Floating IP address
+     */
+    floatingIp: string;
     /**
      * Interface name
      */
     interface: string;
+    /**
+     * Translated source IP address
+     */
+    ip: string;
+}
+
+export interface GetNatRuleListDataSourceTranslationDynamicIpFallback {
+    /**
+     * Fallback interface
+     */
+    interfaceAddress: outputs.GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddress;
+    /**
+     * Fallback IP addresses
+     */
+    translatedAddresses: string[];
+}
+
+export interface GetNatRuleListDataSourceTranslationDynamicIpFallbackInterfaceAddress {
+    /**
+     * Floating IP address
+     */
+    floatingIp: string;
+    /**
+     * Interface name
+     */
+    interface: string;
+    /**
+     * IP address
+     */
+    ip: string;
+}
+
+export interface GetNatRuleListDataSourceTranslationStaticIp {
+    /**
+     * Bi directional
+     */
+    biDirectional: string;
+    /**
+     * Translated IP address
+     */
+    translatedAddress: string;
 }
 
 export interface GetNatRuleSourceTranslation {
     /**
-     * Bi directional
+     * Dynamic IP
      */
-    biDirectional: boolean;
+    dynamicIp: outputs.GetNatRuleSourceTranslationDynamicIp;
+    /**
+     * Dynamic IP and port
+     */
+    dynamicIpAndPort: outputs.GetNatRuleSourceTranslationDynamicIpAndPort;
+    /**
+     * Static IP
+     */
+    staticIp: outputs.GetNatRuleSourceTranslationStaticIp;
+}
+
+export interface GetNatRuleSourceTranslationDynamicIp {
     /**
      * Fallback
      */
-    fallback: outputs.GetNatRuleSourceTranslationFallback;
-    /**
-     * Interface name
-     */
-    interface: string;
+    fallback: outputs.GetNatRuleSourceTranslationDynamicIpFallback;
     /**
      * Translated IP addresses
      */
-    translatedAddressArrays: string[];
-    /**
-     * Translated IP address
-     */
-    translatedAddressSingle: string;
+    translatedAddresses: string[];
 }
 
-export interface GetNatRuleSourceTranslationFallback {
+export interface GetNatRuleSourceTranslationDynamicIpAndPort {
+    /**
+     * Translated source interface
+     */
+    interfaceAddress: outputs.GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddress;
+    /**
+     * Translated source IP addresses
+     */
+    translatedAddresses: string[];
+}
+
+export interface GetNatRuleSourceTranslationDynamicIpAndPortInterfaceAddress {
+    /**
+     * Floating IP address
+     */
+    floatingIp: string;
     /**
      * Interface name
      */
     interface: string;
+    /**
+     * Translated source IP address
+     */
+    ip: string;
+}
+
+export interface GetNatRuleSourceTranslationDynamicIpFallback {
+    /**
+     * Fallback interface
+     */
+    interfaceAddress: outputs.GetNatRuleSourceTranslationDynamicIpFallbackInterfaceAddress;
+    /**
+     * Fallback IP addresses
+     */
+    translatedAddresses: string[];
+}
+
+export interface GetNatRuleSourceTranslationDynamicIpFallbackInterfaceAddress {
+    /**
+     * Floating IP address
+     */
+    floatingIp: string;
+    /**
+     * Interface name
+     */
+    interface: string;
+    /**
+     * IP address
+     */
+    ip: string;
+}
+
+export interface GetNatRuleSourceTranslationStaticIp {
+    /**
+     * Bi directional
+     */
+    biDirectional: string;
+    /**
+     * Translated IP address
+     */
+    translatedAddress: string;
 }
 
 export interface GetOspfAuthProfileListData {
@@ -30751,7 +31164,7 @@ export interface GetPbfRuleActionForwardMonitor {
      */
     disableIfUnreachable: boolean;
     /**
-     * Ip address
+     * Monitor IP address
      */
     ipAddress: string;
     /**
@@ -30766,7 +31179,7 @@ export interface GetPbfRuleActionForwardNexthop {
      */
     fqdn: string;
     /**
-     * Ip address
+     * Next hop IP address
      */
     ipAddress: string;
 }
@@ -30910,7 +31323,7 @@ export interface GetPbfRuleListDataActionForwardMonitor {
      */
     disableIfUnreachable: boolean;
     /**
-     * Ip address
+     * Monitor IP address
      */
     ipAddress: string;
     /**
@@ -30925,7 +31338,7 @@ export interface GetPbfRuleListDataActionForwardNexthop {
      */
     fqdn: string;
     /**
-     * Ip address
+     * Next hop IP address
      */
     ipAddress: string;
 }
@@ -31142,6 +31555,14 @@ export interface GetQosPolicyRuleListData {
      */
     name: string;
     /**
+     * The relative position of the rule
+     */
+    position: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition: string;
+    /**
      * Schedule
      */
     schedule: string;
@@ -31149,6 +31570,10 @@ export interface GetQosPolicyRuleListData {
      * The snippet in which the resource is defined
      */
     snippet: string;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule: string;
     tfid: string;
 }
 
@@ -31494,26 +31919,29 @@ export interface GetRadiusServerProfileListDataProtocol {
     /**
      * C h a p
      */
-    cHAP: string;
+    chap: outputs.GetRadiusServerProfileListDataProtocolChap;
     /**
      * E a p t t l s with p a p
      */
-    eAPTTLSWithPAP: outputs.GetRadiusServerProfileListDataProtocolEAPTTLSWithPAP;
+    eapTtlsWithPap: outputs.GetRadiusServerProfileListDataProtocolEapTtlsWithPap;
     /**
      * P a p
      */
-    pAP: string;
+    pap: outputs.GetRadiusServerProfileListDataProtocolPap;
     /**
      * P e a p m s c h a pv2
      */
-    pEAPMSCHAPv2: outputs.GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2;
+    peapMschaPv2: outputs.GetRadiusServerProfileListDataProtocolPeapMschaPv2;
     /**
      * P e a p with g t c
      */
-    pEAPWithGTC: outputs.GetRadiusServerProfileListDataProtocolPEAPWithGTC;
+    peapWithGtc: outputs.GetRadiusServerProfileListDataProtocolPeapWithGtc;
 }
 
-export interface GetRadiusServerProfileListDataProtocolEAPTTLSWithPAP {
+export interface GetRadiusServerProfileListDataProtocolChap {
+}
+
+export interface GetRadiusServerProfileListDataProtocolEapTtlsWithPap {
     /**
      * Anon outer id
      */
@@ -31524,7 +31952,10 @@ export interface GetRadiusServerProfileListDataProtocolEAPTTLSWithPAP {
     radiusCertProfile: string;
 }
 
-export interface GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2 {
+export interface GetRadiusServerProfileListDataProtocolPap {
+}
+
+export interface GetRadiusServerProfileListDataProtocolPeapMschaPv2 {
     /**
      * Allow pwd change
      */
@@ -31539,7 +31970,7 @@ export interface GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2 {
     radiusCertProfile: string;
 }
 
-export interface GetRadiusServerProfileListDataProtocolPEAPWithGTC {
+export interface GetRadiusServerProfileListDataProtocolPeapWithGtc {
     /**
      * Anon outer id
      */
@@ -31573,26 +32004,29 @@ export interface GetRadiusServerProfileProtocol {
     /**
      * C h a p
      */
-    cHAP: string;
+    chap: outputs.GetRadiusServerProfileProtocolChap;
     /**
      * E a p t t l s with p a p
      */
-    eAPTTLSWithPAP: outputs.GetRadiusServerProfileProtocolEAPTTLSWithPAP;
+    eapTtlsWithPap: outputs.GetRadiusServerProfileProtocolEapTtlsWithPap;
     /**
      * P a p
      */
-    pAP: string;
+    pap: outputs.GetRadiusServerProfileProtocolPap;
     /**
      * P e a p m s c h a pv2
      */
-    pEAPMSCHAPv2: outputs.GetRadiusServerProfileProtocolPEAPMSCHAPv2;
+    peapMschaPv2: outputs.GetRadiusServerProfileProtocolPeapMschaPv2;
     /**
      * P e a p with g t c
      */
-    pEAPWithGTC: outputs.GetRadiusServerProfileProtocolPEAPWithGTC;
+    peapWithGtc: outputs.GetRadiusServerProfileProtocolPeapWithGtc;
 }
 
-export interface GetRadiusServerProfileProtocolEAPTTLSWithPAP {
+export interface GetRadiusServerProfileProtocolChap {
+}
+
+export interface GetRadiusServerProfileProtocolEapTtlsWithPap {
     /**
      * Anon outer id
      */
@@ -31603,7 +32037,10 @@ export interface GetRadiusServerProfileProtocolEAPTTLSWithPAP {
     radiusCertProfile: string;
 }
 
-export interface GetRadiusServerProfileProtocolPEAPMSCHAPv2 {
+export interface GetRadiusServerProfileProtocolPap {
+}
+
+export interface GetRadiusServerProfileProtocolPeapMschaPv2 {
     /**
      * Allow pwd change
      */
@@ -31618,7 +32055,7 @@ export interface GetRadiusServerProfileProtocolPEAPMSCHAPv2 {
     radiusCertProfile: string;
 }
 
-export interface GetRadiusServerProfileProtocolPEAPWithGTC {
+export interface GetRadiusServerProfileProtocolPeapWithGtc {
     /**
      * Anon outer id
      */
@@ -32081,12 +32518,34 @@ export interface GetRouteAccessListListDataTypeIpv4Ipv4EntryDestinationAddress {
      */
     address: string;
     /**
+     * Entry
+     */
+    entry: outputs.GetRouteAccessListListDataTypeIpv4Ipv4EntryDestinationAddressEntry;
+}
+
+export interface GetRouteAccessListListDataTypeIpv4Ipv4EntryDestinationAddressEntry {
+    /**
+     * Destination IP address
+     */
+    address: string;
+    /**
      * Destination IP wildcard
      */
     wildcard: string;
 }
 
 export interface GetRouteAccessListListDataTypeIpv4Ipv4EntrySourceAddress {
+    /**
+     * Source IP address
+     */
+    address: string;
+    /**
+     * Entry
+     */
+    entry: outputs.GetRouteAccessListListDataTypeIpv4Ipv4EntrySourceAddressEntry;
+}
+
+export interface GetRouteAccessListListDataTypeIpv4Ipv4EntrySourceAddressEntry {
     /**
      * Source IP address
      */
@@ -32136,12 +32595,34 @@ export interface GetRouteAccessListTypeIpv4Ipv4EntryDestinationAddress {
      */
     address: string;
     /**
+     * Entry
+     */
+    entry: outputs.GetRouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntry;
+}
+
+export interface GetRouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntry {
+    /**
+     * Destination IP address
+     */
+    address: string;
+    /**
      * Destination IP wildcard
      */
     wildcard: string;
 }
 
 export interface GetRouteAccessListTypeIpv4Ipv4EntrySourceAddress {
+    /**
+     * Source IP address
+     */
+    address: string;
+    /**
+     * Entry
+     */
+    entry: outputs.GetRouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry;
+}
+
+export interface GetRouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry {
     /**
      * Source IP address
      */
@@ -33077,11 +33558,11 @@ export interface GetSdwanPathQualityProfileListDataMetricLatency {
 
 export interface GetSdwanPathQualityProfileListDataMetricPktLoss {
     /**
-     * Sensitivity
+     * Packet loss sensitivity
      */
     sensitivity: string;
     /**
-     * Threshold
+     * Packet loss threshold (percentage)
      */
     threshold: number;
 }
@@ -33125,11 +33606,11 @@ export interface GetSdwanPathQualityProfileMetricLatency {
 
 export interface GetSdwanPathQualityProfileMetricPktLoss {
     /**
-     * Sensitivity
+     * Packet loss sensitivity
      */
     sensitivity: string;
     /**
-     * Threshold
+     * Packet loss threshold (percentage)
      */
     threshold: number;
 }
@@ -33394,11 +33875,11 @@ export interface GetSdwanSaasQualityProfileMonitorModeStaticIpIpAddress {
 
 export interface GetSdwanTrafficDistributionProfileLinkTag {
     /**
-     * Name
+     * Link-Tag used for identifying a set of interfaces
      */
     name: string;
     /**
-     * Weight
+     * Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
      */
     weight: number;
 }
@@ -33417,7 +33898,7 @@ export interface GetSdwanTrafficDistributionProfileListData {
      */
     id: string;
     /**
-     * Link tags
+     * Link-Tags for interfaces identified by defined tags
      */
     linkTags: outputs.GetSdwanTrafficDistributionProfileListDataLinkTag[];
     /**
@@ -33437,11 +33918,11 @@ export interface GetSdwanTrafficDistributionProfileListData {
 
 export interface GetSdwanTrafficDistributionProfileListDataLinkTag {
     /**
-     * Name
+     * Link-Tag used for identifying a set of interfaces
      */
     name: string;
     /**
-     * Weight
+     * Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
      */
     weight: number;
 }
@@ -33714,9 +34195,17 @@ export interface GetSecurityRuleListData {
      */
     policyType: string;
     /**
+     * The position of a security rule
+     */
+    position: string;
+    /**
      * The security profile object
      */
     profileSetting: outputs.GetSecurityRuleListDataProfileSetting;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition: string;
     /**
      * Schedule in which this rule will be applied
      */
@@ -33749,6 +34238,10 @@ export interface GetSecurityRuleListData {
      * The tags associated with the security rule
      */
     tags: string[];
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule: string;
     /**
      * Tenant restrictions
      */
@@ -34031,7 +34524,7 @@ export interface GetServiceConnectionListData {
     /**
      * Backup s c
      */
-    backupSC: string;
+    backupSc: string;
     /**
      * Bgp peer
      */
@@ -35093,17 +35586,27 @@ export interface GetTrafficSteeringRuleAction {
      * Forward
      */
     forward: outputs.GetTrafficSteeringRuleActionForward;
-    /**
-     * No pbf
-     */
-    noPbf: string;
 }
 
 export interface GetTrafficSteeringRuleActionForward {
     /**
+     * Forward
+     */
+    forward: outputs.GetTrafficSteeringRuleActionForwardForward;
+    /**
+     * No pbf
+     */
+    noPbf: outputs.GetTrafficSteeringRuleActionForwardNoPbf;
+}
+
+export interface GetTrafficSteeringRuleActionForwardForward {
+    /**
      * Target
      */
     target: string;
+}
+
+export interface GetTrafficSteeringRuleActionForwardNoPbf {
 }
 
 export interface GetTrafficSteeringRuleListData {
@@ -35151,24 +35654,34 @@ export interface GetTrafficSteeringRuleListDataAction {
      * Forward
      */
     forward: outputs.GetTrafficSteeringRuleListDataActionForward;
-    /**
-     * No pbf
-     */
-    noPbf: string;
 }
 
 export interface GetTrafficSteeringRuleListDataActionForward {
+    /**
+     * Forward
+     */
+    forward: outputs.GetTrafficSteeringRuleListDataActionForwardForward;
+    /**
+     * No pbf
+     */
+    noPbf: outputs.GetTrafficSteeringRuleListDataActionForwardNoPbf;
+}
+
+export interface GetTrafficSteeringRuleListDataActionForwardForward {
     /**
      * Target
      */
     target: string;
 }
 
+export interface GetTrafficSteeringRuleListDataActionForwardNoPbf {
+}
+
 export interface GetTunnelInterfaceIp {
     /**
-     * tunnel interfaces IP address(es)
+     * Tunnel Interface IP address(es)
      */
-    ips: string[];
+    name: string;
 }
 
 export interface GetTunnelInterfaceListData {
@@ -35177,9 +35690,9 @@ export interface GetTunnelInterfaceListData {
      */
     comment: string;
     /**
-     * Default value
+     * Default interface assignment
      */
-    defaultValue: number;
+    defaultValue: string;
     /**
      * The device in which the resource is defined
      */
@@ -35197,9 +35710,9 @@ export interface GetTunnelInterfaceListData {
      */
     interfaceManagementProfile: string;
     /**
-     * tunnel interfaces ip parent
+     * Tunnel Interface IP Parent
      */
-    ip: outputs.GetTunnelInterfaceListDataIp;
+    ips: outputs.GetTunnelInterfaceListDataIp[];
     /**
      * MTU
      */
@@ -35217,9 +35730,9 @@ export interface GetTunnelInterfaceListData {
 
 export interface GetTunnelInterfaceListDataIp {
     /**
-     * tunnel interfaces IP address(es)
+     * Tunnel Interface IP address(es)
      */
-    ips: string[];
+    name: string;
 }
 
 export interface GetUrlAccessProfileCredentialEnforcement {
@@ -35494,7 +36007,7 @@ export interface GetVariableListData {
 
 export interface GetVlanInterfaceArp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress: string;
     /**
@@ -35509,11 +36022,11 @@ export interface GetVlanInterfaceArp {
 
 export interface GetVlanInterfaceDdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
     ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled: boolean;
     /**
@@ -35521,34 +36034,34 @@ export interface GetVlanInterfaceDdnsConfig {
      */
     ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
     ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
     ddnsVendorConfig: string;
 }
 
 export interface GetVlanInterfaceDhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable: boolean;
     /**
@@ -35563,9 +36076,16 @@ export interface GetVlanInterfaceDhcpClientSendHostname {
      */
     enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname: string;
+}
+
+export interface GetVlanInterfaceIp {
+    /**
+     * VLAN Interface IP address(es)
+     */
+    name: string;
 }
 
 export interface GetVlanInterfaceListData {
@@ -35582,7 +36102,7 @@ export interface GetVlanInterfaceListData {
      */
     ddnsConfig: outputs.GetVlanInterfaceListDataDdnsConfig;
     /**
-     * Default value
+     * Default interface assignment
      */
     defaultValue: string;
     /**
@@ -35590,7 +36110,7 @@ export interface GetVlanInterfaceListData {
      */
     device: string;
     /**
-     * Dhcp client
+     * Vlan interfaces DHCP Client Object
      */
     dhcpClient: outputs.GetVlanInterfaceListDataDhcpClient;
     /**
@@ -35606,9 +36126,9 @@ export interface GetVlanInterfaceListData {
      */
     interfaceManagementProfile: string;
     /**
-     * Ip
+     * VLAN Interface IP Parent
      */
-    ips: string[];
+    ips: outputs.GetVlanInterfaceListDataIp[];
     /**
      * MTU
      */
@@ -35623,14 +36143,14 @@ export interface GetVlanInterfaceListData {
     snippet: string;
     tfid: string;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    vlanTag: number;
+    vlanTag: string;
 }
 
 export interface GetVlanInterfaceListDataArp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress: string;
     /**
@@ -35645,11 +36165,11 @@ export interface GetVlanInterfaceListDataArp {
 
 export interface GetVlanInterfaceListDataDdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
     ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled: boolean;
     /**
@@ -35657,34 +36177,34 @@ export interface GetVlanInterfaceListDataDdnsConfig {
      */
     ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
     ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
     ddnsVendorConfig: string;
 }
 
 export interface GetVlanInterfaceListDataDhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable: boolean;
     /**
@@ -35699,9 +36219,16 @@ export interface GetVlanInterfaceListDataDhcpClientSendHostname {
      */
     enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname: string;
+}
+
+export interface GetVlanInterfaceListDataIp {
+    /**
+     * VLAN Interface IP address(es)
+     */
+    name: string;
 }
 
 export interface GetVulnerabilityProtectionProfileListData {
@@ -36312,7 +36839,7 @@ export interface GetVulnerabilityProtectionSignatureListData {
     /**
      * threat id range \n\n and \n\n
      */
-    threatId: number;
+    threatId: string;
     /**
      * Threatname
      */
@@ -37094,13 +37621,40 @@ export interface GetZoneListDataNetwork {
      */
     enablePacketBufferProtection: boolean;
     /**
+     * External
+     */
+    externals: string[];
+    /**
+     * Layer2
+     */
+    layer2s: string[];
+    /**
+     * Layer3
+     */
+    layer3s: string[];
+    /**
      * Log setting
      */
     logSetting: string;
     /**
+     * Tap
+     */
+    taps: string[];
+    /**
+     * Tunnel
+     */
+    tunnel: outputs.GetZoneListDataNetworkTunnel;
+    /**
+     * Virtual wire
+     */
+    virtualWires: string[];
+    /**
      * Zone protection profile
      */
     zoneProtectionProfile: string;
+}
+
+export interface GetZoneListDataNetworkTunnel {
 }
 
 export interface GetZoneListDataUserAcl {
@@ -37120,13 +37674,40 @@ export interface GetZoneNetwork {
      */
     enablePacketBufferProtection: boolean;
     /**
+     * External
+     */
+    externals: string[];
+    /**
+     * Layer2
+     */
+    layer2s: string[];
+    /**
+     * Layer3
+     */
+    layer3s: string[];
+    /**
      * Log setting
      */
     logSetting: string;
     /**
+     * Tap
+     */
+    taps: string[];
+    /**
+     * Tunnel
+     */
+    tunnel: outputs.GetZoneNetworkTunnel;
+    /**
+     * Virtual wire
+     */
+    virtualWires: string[];
+    /**
      * Zone protection profile
      */
     zoneProtectionProfile: string;
+}
+
+export interface GetZoneNetworkTunnel {
 }
 
 export interface GetZoneProtectionProfileFlood {
@@ -37262,6 +37843,21 @@ export interface GetZoneProtectionProfileFloodSctpInitRed {
 
 export interface GetZoneProtectionProfileFloodTcpSyn {
     /**
+     * Enable protection against SYN floods?
+     */
+    enable: boolean;
+    /**
+     * Red
+     */
+    red: outputs.GetZoneProtectionProfileFloodTcpSynRed;
+    /**
+     * Syn cookies
+     */
+    synCookies: outputs.GetZoneProtectionProfileFloodTcpSynSynCookies;
+}
+
+export interface GetZoneProtectionProfileFloodTcpSynRed {
+    /**
      * When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
      */
     activateRate: number;
@@ -37270,9 +37866,20 @@ export interface GetZoneProtectionProfileFloodTcpSyn {
      */
     alarmRate: number;
     /**
-     * Enable protection against SYN floods?
+     * When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
      */
-    enable: boolean;
+    maximalRate: number;
+}
+
+export interface GetZoneProtectionProfileFloodTcpSynSynCookies {
+    /**
+     * When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+     */
+    activateRate: number;
+    /**
+     * When the flow exceeds the `alertRate`` threshold, an alarm is generated.
+     */
+    alarmRate: number;
     /**
      * When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
      */
@@ -37729,6 +38336,21 @@ export interface GetZoneProtectionProfileListDataFloodSctpInitRed {
 
 export interface GetZoneProtectionProfileListDataFloodTcpSyn {
     /**
+     * Enable protection against SYN floods?
+     */
+    enable: boolean;
+    /**
+     * Red
+     */
+    red: outputs.GetZoneProtectionProfileListDataFloodTcpSynRed;
+    /**
+     * Syn cookies
+     */
+    synCookies: outputs.GetZoneProtectionProfileListDataFloodTcpSynSynCookies;
+}
+
+export interface GetZoneProtectionProfileListDataFloodTcpSynRed {
+    /**
      * When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
      */
     activateRate: number;
@@ -37737,9 +38359,20 @@ export interface GetZoneProtectionProfileListDataFloodTcpSyn {
      */
     alarmRate: number;
     /**
-     * Enable protection against SYN floods?
+     * When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
      */
-    enable: boolean;
+    maximalRate: number;
+}
+
+export interface GetZoneProtectionProfileListDataFloodTcpSynSynCookies {
+    /**
+     * When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+     */
+    activateRate: number;
+    /**
+     * When the flow exceeds the `alertRate`` threshold, an alarm is generated.
+     */
+    alarmRate: number;
     /**
      * When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
      */
@@ -37915,9 +38548,9 @@ export interface GetZoneProtectionProfileListDataNonIpProtocolProtocol {
     enable: boolean;
     /**
      * Enter an Ethertype code (protocol) preceded by 0x to indicate hexadecimal (range is 0x0000 to 0xFFFF). A list can have a maximum of 64 Ethertypes. Some sources of Ethertype codes are:
-     * * [IEEE hexadecimal Ethertype](http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
-     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](http://standards-oui.ieee.org/ethertype/eth.txt)
-     * * [http://www.cavebear.com/archive/cavebear/Ethernet/type.html](http://www.cavebear.com/archive/cavebear/Ethernet/type.html)
+     * * [IEEE hexadecimal Ethertype](https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
+     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](https://standards-oui.ieee.org/ethertype/eth.txt)
+     * * [www.cavebear.com/archive/cavebear/Ethernet/type.html](https://www.cavebear.com/archive/cavebear/Ethernet/type.html)
      */
     etherType: string;
     /**
@@ -37951,6 +38584,34 @@ export interface GetZoneProtectionProfileListDataScan {
 
 export interface GetZoneProtectionProfileListDataScanAction {
     /**
+     * Alert
+     */
+    alert: outputs.GetZoneProtectionProfileListDataScanActionAlert;
+    /**
+     * Allow
+     */
+    allow: outputs.GetZoneProtectionProfileListDataScanActionAllow;
+    /**
+     * Block
+     */
+    block: outputs.GetZoneProtectionProfileListDataScanActionBlock;
+    /**
+     * Block ip
+     */
+    blockIp: outputs.GetZoneProtectionProfileListDataScanActionBlockIp;
+}
+
+export interface GetZoneProtectionProfileListDataScanActionAlert {
+}
+
+export interface GetZoneProtectionProfileListDataScanActionAllow {
+}
+
+export interface GetZoneProtectionProfileListDataScanActionBlock {
+}
+
+export interface GetZoneProtectionProfileListDataScanActionBlockIp {
+    /**
      * Duration
      */
     duration: number;
@@ -37961,6 +38622,14 @@ export interface GetZoneProtectionProfileListDataScanAction {
 }
 
 export interface GetZoneProtectionProfileListDataScanWhiteList {
+    /**
+     * Ipv4
+     */
+    ipv4: string;
+    /**
+     * Ipv6
+     */
+    ipv6: string;
     /**
      * A descriptive name for the address to exclude.
      */
@@ -37987,9 +38656,9 @@ export interface GetZoneProtectionProfileNonIpProtocolProtocol {
     enable: boolean;
     /**
      * Enter an Ethertype code (protocol) preceded by 0x to indicate hexadecimal (range is 0x0000 to 0xFFFF). A list can have a maximum of 64 Ethertypes. Some sources of Ethertype codes are:
-     * * [IEEE hexadecimal Ethertype](http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
-     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](http://standards-oui.ieee.org/ethertype/eth.txt)
-     * * [http://www.cavebear.com/archive/cavebear/Ethernet/type.html](http://www.cavebear.com/archive/cavebear/Ethernet/type.html)
+     * * [IEEE hexadecimal Ethertype](https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
+     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](https://standards-oui.ieee.org/ethertype/eth.txt)
+     * * [www.cavebear.com/archive/cavebear/Ethernet/type.html](https://www.cavebear.com/archive/cavebear/Ethernet/type.html)
      */
     etherType: string;
     /**
@@ -38023,6 +38692,34 @@ export interface GetZoneProtectionProfileScan {
 
 export interface GetZoneProtectionProfileScanAction {
     /**
+     * Alert
+     */
+    alert: outputs.GetZoneProtectionProfileScanActionAlert;
+    /**
+     * Allow
+     */
+    allow: outputs.GetZoneProtectionProfileScanActionAllow;
+    /**
+     * Block
+     */
+    block: outputs.GetZoneProtectionProfileScanActionBlock;
+    /**
+     * Block ip
+     */
+    blockIp: outputs.GetZoneProtectionProfileScanActionBlockIp;
+}
+
+export interface GetZoneProtectionProfileScanActionAlert {
+}
+
+export interface GetZoneProtectionProfileScanActionAllow {
+}
+
+export interface GetZoneProtectionProfileScanActionBlock {
+}
+
+export interface GetZoneProtectionProfileScanActionBlockIp {
+    /**
      * Duration
      */
     duration: number;
@@ -38033,6 +38730,14 @@ export interface GetZoneProtectionProfileScanAction {
 }
 
 export interface GetZoneProtectionProfileScanWhiteList {
+    /**
+     * Ipv4
+     */
+    ipv4: string;
+    /**
+     * Ipv6
+     */
+    ipv6: string;
     /**
      * A descriptive name for the address to exclude.
      */
@@ -40186,6 +40891,13 @@ export interface IkeGatewayProtocolIkev2Dpd {
     enable?: boolean;
 }
 
+export interface InterfaceManagementProfilePermittedIp {
+    /**
+     * The allowed IP address or CIDR block.
+     */
+    name: string;
+}
+
 export interface IpsecCryptoProfileAh {
     /**
      * Authentication
@@ -40412,7 +41124,7 @@ export interface KerberosServerProfileServer {
 
 export interface Layer3SubinterfaceArp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress?: string;
     /**
@@ -40423,63 +41135,70 @@ export interface Layer3SubinterfaceArp {
 
 export interface Layer3SubinterfaceDdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
-    ddnsCertProfile?: string;
+    ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
-    ddnsEnabled?: boolean;
+    ddnsEnabled: boolean;
     /**
      * Ddns hostname
      */
-    ddnsHostname?: string;
+    ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
-    ddnsIp?: string;
+    ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
-    ddnsUpdateInterval?: number;
+    ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
-    ddnsVendor?: string;
+    ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
-    ddnsVendorConfig?: string;
+    ddnsVendorConfig: string;
 }
 
 export interface Layer3SubinterfaceDhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
-    createDefaultRoute?: boolean;
+    createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
-    defaultRouteMetric?: number;
+    defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
-    enable?: boolean;
+    enable: boolean;
     /**
-     * Send hostname
+     * Layer3 sub interfaces DHCP Client Send hostname
      */
-    sendHostname?: outputs.Layer3SubinterfaceDhcpClientSendHostname;
+    sendHostname: outputs.Layer3SubinterfaceDhcpClientSendHostname;
 }
 
 export interface Layer3SubinterfaceDhcpClientSendHostname {
     /**
      * Enable
      */
-    enable?: boolean;
+    enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
-    hostname?: string;
+    hostname: string;
+}
+
+export interface Layer3SubinterfaceIp {
+    /**
+     * L3 sub-interface IP address(es)
+     */
+    name: string;
 }
 
 export interface LdapServerProfileServer {
@@ -43826,7 +44545,7 @@ export interface LogicalRouterVrfOspfGracefulRestart {
     /**
      * Strict l s a checking
      */
-    strictLSAChecking?: boolean;
+    strictLsaChecking?: boolean;
 }
 
 export interface LogicalRouterVrfOspfVrTimers {
@@ -44616,7 +45335,7 @@ export interface LogicalRouterVrfOspfv3GracefulRestart {
     /**
      * Strict l s a checking
      */
-    strictLSAChecking?: boolean;
+    strictLsaChecking?: boolean;
 }
 
 export interface LogicalRouterVrfOspfv3VrTimers {
@@ -44921,6 +45640,10 @@ export interface LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
      * Fqdn
      */
     fqdn?: string;
+    /**
+     * Ip address
+     */
+    ipAddress?: string;
     /**
      * Ipv6 address
      */
@@ -45258,7 +45981,33 @@ export interface LoopbackInterfaceIp {
     /**
      * Loopback IP address(es)
      */
-    ips?: string[];
+    name: string;
+}
+
+export interface LoopbackInterfaceIpv6 {
+    /**
+     * IPv6 Address Parent
+     */
+    addresses: outputs.LoopbackInterfaceIpv6Address[];
+    /**
+     * Enable IPv6
+     */
+    enabled: boolean;
+}
+
+export interface LoopbackInterfaceIpv6Address {
+    /**
+     * Enable Address on Interface
+     */
+    enableOnInterface: boolean;
+    /**
+     * Interface ID
+     */
+    interfaceId: string;
+    /**
+     * IPv6 Address
+     */
+    name?: string;
 }
 
 export interface MfaServerMfaVendorType {
@@ -45380,41 +46129,130 @@ export interface MfaServerMfaVendorTypeRsaSecuridAccessV1 {
     rsaTimeout: number;
 }
 
-export interface NatRuleDnsRewrite {
+export interface NatRuleDestinationTranslation {
+    /**
+     * DNS rewrite
+     */
+    dnsRewrite?: outputs.NatRuleDestinationTranslationDnsRewrite;
+    /**
+     * Translated destination IP address
+     */
+    translatedAddress?: string;
+    /**
+     * Translated destination port
+     */
+    translatedPort?: number;
+}
+
+export interface NatRuleDestinationTranslationDnsRewrite {
     /**
      * Direction
      */
     direction?: string;
 }
 
+export interface NatRuleDynamicDestinationTranslation {
+    /**
+     * Distribution method
+     */
+    distribution?: string;
+    /**
+     * Translated destination IP address
+     */
+    translatedAddress?: string;
+    /**
+     * Translated destination port
+     */
+    translatedPort?: number;
+}
+
 export interface NatRuleSourceTranslation {
     /**
-     * Bi directional
+     * Dynamic IP
      */
-    biDirectional?: boolean;
+    dynamicIp?: outputs.NatRuleSourceTranslationDynamicIp;
+    /**
+     * Dynamic IP and port
+     */
+    dynamicIpAndPort?: outputs.NatRuleSourceTranslationDynamicIpAndPort;
+    /**
+     * Static IP
+     */
+    staticIp?: outputs.NatRuleSourceTranslationStaticIp;
+}
+
+export interface NatRuleSourceTranslationDynamicIp {
     /**
      * Fallback
      */
-    fallback?: outputs.NatRuleSourceTranslationFallback;
-    /**
-     * Interface name
-     */
-    interface?: string;
+    fallback?: outputs.NatRuleSourceTranslationDynamicIpFallback;
     /**
      * Translated IP addresses
      */
-    translatedAddressArrays?: string[];
-    /**
-     * Translated IP address
-     */
-    translatedAddressSingle?: string;
+    translatedAddresses?: string[];
 }
 
-export interface NatRuleSourceTranslationFallback {
+export interface NatRuleSourceTranslationDynamicIpAndPort {
+    /**
+     * Translated source interface
+     */
+    interfaceAddress?: outputs.NatRuleSourceTranslationDynamicIpAndPortInterfaceAddress;
+    /**
+     * Translated source IP addresses
+     */
+    translatedAddresses?: string[];
+}
+
+export interface NatRuleSourceTranslationDynamicIpAndPortInterfaceAddress {
+    /**
+     * Floating IP address
+     */
+    floatingIp?: string;
     /**
      * Interface name
      */
     interface?: string;
+    /**
+     * Translated source IP address
+     */
+    ip?: string;
+}
+
+export interface NatRuleSourceTranslationDynamicIpFallback {
+    /**
+     * Fallback interface
+     */
+    interfaceAddress?: outputs.NatRuleSourceTranslationDynamicIpFallbackInterfaceAddress;
+    /**
+     * Fallback IP addresses
+     */
+    translatedAddresses?: string[];
+}
+
+export interface NatRuleSourceTranslationDynamicIpFallbackInterfaceAddress {
+    /**
+     * Floating IP address
+     */
+    floatingIp?: string;
+    /**
+     * Interface name
+     */
+    interface?: string;
+    /**
+     * IP address
+     */
+    ip?: string;
+}
+
+export interface NatRuleSourceTranslationStaticIp {
+    /**
+     * Bi directional
+     */
+    biDirectional?: string;
+    /**
+     * Translated IP address
+     */
+    translatedAddress?: string;
 }
 
 export interface OspfAuthProfileMd5 {
@@ -45471,7 +46309,7 @@ export interface PbfRuleActionForwardMonitor {
      */
     disableIfUnreachable?: boolean;
     /**
-     * Ip address
+     * Monitor IP address
      */
     ipAddress?: string;
     /**
@@ -45486,7 +46324,7 @@ export interface PbfRuleActionForwardNexthop {
      */
     fqdn?: string;
     /**
-     * Ip address
+     * Next hop IP address
      */
     ipAddress?: string;
 }
@@ -45705,26 +46543,29 @@ export interface RadiusServerProfileProtocol {
     /**
      * C h a p
      */
-    cHAP?: string;
+    chap?: outputs.RadiusServerProfileProtocolChap;
     /**
      * E a p t t l s with p a p
      */
-    eAPTTLSWithPAP?: outputs.RadiusServerProfileProtocolEAPTTLSWithPAP;
+    eapTtlsWithPap?: outputs.RadiusServerProfileProtocolEapTtlsWithPap;
     /**
      * P a p
      */
-    pAP?: string;
+    pap?: outputs.RadiusServerProfileProtocolPap;
     /**
      * P e a p m s c h a pv2
      */
-    pEAPMSCHAPv2?: outputs.RadiusServerProfileProtocolPEAPMSCHAPv2;
+    peapMschaPv2?: outputs.RadiusServerProfileProtocolPeapMschaPv2;
     /**
      * P e a p with g t c
      */
-    pEAPWithGTC?: outputs.RadiusServerProfileProtocolPEAPWithGTC;
+    peapWithGtc?: outputs.RadiusServerProfileProtocolPeapWithGtc;
 }
 
-export interface RadiusServerProfileProtocolEAPTTLSWithPAP {
+export interface RadiusServerProfileProtocolChap {
+}
+
+export interface RadiusServerProfileProtocolEapTtlsWithPap {
     /**
      * Anon outer id
      */
@@ -45735,7 +46576,10 @@ export interface RadiusServerProfileProtocolEAPTTLSWithPAP {
     radiusCertProfile?: string;
 }
 
-export interface RadiusServerProfileProtocolPEAPMSCHAPv2 {
+export interface RadiusServerProfileProtocolPap {
+}
+
+export interface RadiusServerProfileProtocolPeapMschaPv2 {
     /**
      * Allow pwd change
      */
@@ -45750,7 +46594,7 @@ export interface RadiusServerProfileProtocolPEAPMSCHAPv2 {
     radiusCertProfile?: string;
 }
 
-export interface RadiusServerProfileProtocolPEAPWithGTC {
+export interface RadiusServerProfileProtocolPeapWithGtc {
     /**
      * Anon outer id
      */
@@ -45956,12 +46800,34 @@ export interface RouteAccessListTypeIpv4Ipv4EntryDestinationAddress {
      */
     address?: string;
     /**
+     * Entry
+     */
+    entry?: outputs.RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntry;
+}
+
+export interface RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntry {
+    /**
+     * Destination IP address
+     */
+    address?: string;
+    /**
      * Destination IP wildcard
      */
     wildcard?: string;
 }
 
 export interface RouteAccessListTypeIpv4Ipv4EntrySourceAddress {
+    /**
+     * Source IP address
+     */
+    address?: string;
+    /**
+     * Entry
+     */
+    entry?: outputs.RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry;
+}
+
+export interface RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry {
     /**
      * Source IP address
      */
@@ -46296,13 +47162,13 @@ export interface SdwanPathQualityProfileMetricLatency {
 
 export interface SdwanPathQualityProfileMetricPktLoss {
     /**
-     * Sensitivity
+     * Packet loss sensitivity
      */
-    sensitivity?: string;
+    sensitivity: string;
     /**
-     * Threshold
+     * Packet loss threshold (percentage)
      */
-    threshold?: number;
+    threshold: number;
 }
 
 export interface SdwanRuleAction {
@@ -46376,11 +47242,11 @@ export interface SdwanSaasQualityProfileMonitorModeStaticIpIpAddress {
 
 export interface SdwanTrafficDistributionProfileLinkTag {
     /**
-     * Name
+     * Link-Tag used for identifying a set of interfaces
      */
-    name?: string;
+    name: string;
     /**
-     * Weight
+     * Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
      */
     weight?: number;
 }
@@ -46915,24 +47781,34 @@ export interface TrafficSteeringRuleAction {
      * Forward
      */
     forward?: outputs.TrafficSteeringRuleActionForward;
-    /**
-     * No pbf
-     */
-    noPbf?: string;
 }
 
 export interface TrafficSteeringRuleActionForward {
+    /**
+     * Forward
+     */
+    forward?: outputs.TrafficSteeringRuleActionForwardForward;
+    /**
+     * No pbf
+     */
+    noPbf?: outputs.TrafficSteeringRuleActionForwardNoPbf;
+}
+
+export interface TrafficSteeringRuleActionForwardForward {
     /**
      * Target
      */
     target?: string;
 }
 
+export interface TrafficSteeringRuleActionForwardNoPbf {
+}
+
 export interface TunnelInterfaceIp {
     /**
-     * tunnel interfaces IP address(es)
+     * Tunnel Interface IP address(es)
      */
-    ips?: string[];
+    name: string;
 }
 
 export interface UrlAccessProfileCredentialEnforcement {
@@ -46992,7 +47868,7 @@ export interface UrlAccessProfileCredentialEnforcementModeIpUser {
 
 export interface VlanInterfaceArp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress?: string;
     /**
@@ -47007,63 +47883,70 @@ export interface VlanInterfaceArp {
 
 export interface VlanInterfaceDdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
-    ddnsCertProfile?: string;
+    ddnsCertProfile: string;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
-    ddnsEnabled?: boolean;
+    ddnsEnabled: boolean;
     /**
      * Ddns hostname
      */
-    ddnsHostname?: string;
+    ddnsHostname: string;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
-    ddnsIp?: string;
+    ddnsIp: string;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
-    ddnsUpdateInterval?: number;
+    ddnsUpdateInterval: number;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
-    ddnsVendor?: string;
+    ddnsVendor: string;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
-    ddnsVendorConfig?: string;
+    ddnsVendorConfig: string;
 }
 
 export interface VlanInterfaceDhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
-    createDefaultRoute?: boolean;
+    createDefaultRoute: boolean;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
-    defaultRouteMetric?: number;
+    defaultRouteMetric: number;
     /**
-     * Enable
+     * Enable DHCP?
      */
-    enable?: boolean;
+    enable: boolean;
     /**
      * Send hostname
      */
-    sendHostname?: outputs.VlanInterfaceDhcpClientSendHostname;
+    sendHostname: outputs.VlanInterfaceDhcpClientSendHostname;
 }
 
 export interface VlanInterfaceDhcpClientSendHostname {
     /**
      * Enable
      */
-    enable?: boolean;
+    enable: boolean;
     /**
-     * Hostname
+     * Set interface hostname
      */
-    hostname?: string;
+    hostname: string;
+}
+
+export interface VlanInterfaceIp {
+    /**
+     * VLAN Interface IP address(es)
+     */
+    name: string;
 }
 
 export interface VulnerabilityProtectionProfileRule {
@@ -47367,7 +48250,7 @@ export interface VulnerabilityProtectionSignatureSignature {
     /**
      * vulnerability protection signature standard array
      */
-    standards: outputs.VulnerabilityProtectionSignatureSignatureStandard[];
+    standards?: outputs.VulnerabilityProtectionSignatureSignatureStandard[];
 }
 
 export interface VulnerabilityProtectionSignatureSignatureCombination {
@@ -47664,13 +48547,40 @@ export interface ZoneNetwork {
      */
     enablePacketBufferProtection?: boolean;
     /**
+     * External
+     */
+    externals?: string[];
+    /**
+     * Layer2
+     */
+    layer2s?: string[];
+    /**
+     * Layer3
+     */
+    layer3s?: string[];
+    /**
      * Log setting
      */
     logSetting?: string;
     /**
+     * Tap
+     */
+    taps?: string[];
+    /**
+     * Tunnel
+     */
+    tunnel?: outputs.ZoneNetworkTunnel;
+    /**
+     * Virtual wire
+     */
+    virtualWires?: string[];
+    /**
      * Zone protection profile
      */
     zoneProtectionProfile?: string;
+}
+
+export interface ZoneNetworkTunnel {
 }
 
 export interface ZoneProtectionProfileFlood {
@@ -47806,21 +48716,47 @@ export interface ZoneProtectionProfileFloodSctpInitRed {
 
 export interface ZoneProtectionProfileFloodTcpSyn {
     /**
-     * When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-     */
-    activateRate?: number;
-    /**
-     * When the flow exceeds the `alertRate`` threshold, an alarm is generated.
-     */
-    alarmRate?: number;
-    /**
      * Enable protection against SYN floods?
      */
     enable?: boolean;
     /**
+     * Red
+     */
+    red?: outputs.ZoneProtectionProfileFloodTcpSynRed;
+    /**
+     * Syn cookies
+     */
+    synCookies?: outputs.ZoneProtectionProfileFloodTcpSynSynCookies;
+}
+
+export interface ZoneProtectionProfileFloodTcpSynRed {
+    /**
+     * When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+     */
+    activateRate: number;
+    /**
+     * When the flow exceeds the `alertRate`` threshold, an alarm is generated.
+     */
+    alarmRate: number;
+    /**
      * When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
      */
-    maximalRate?: number;
+    maximalRate: number;
+}
+
+export interface ZoneProtectionProfileFloodTcpSynSynCookies {
+    /**
+     * When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+     */
+    activateRate: number;
+    /**
+     * When the flow exceeds the `alertRate`` threshold, an alarm is generated.
+     */
+    alarmRate: number;
+    /**
+     * When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
+     */
+    maximalRate: number;
 }
 
 export interface ZoneProtectionProfileFloodUdp {
@@ -47992,9 +48928,9 @@ export interface ZoneProtectionProfileNonIpProtocolProtocol {
     enable?: boolean;
     /**
      * Enter an Ethertype code (protocol) preceded by 0x to indicate hexadecimal (range is 0x0000 to 0xFFFF). A list can have a maximum of 64 Ethertypes. Some sources of Ethertype codes are:
-     * * [IEEE hexadecimal Ethertype](http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
-     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](http://standards-oui.ieee.org/ethertype/eth.txt)
-     * * [http://www.cavebear.com/archive/cavebear/Ethernet/type.html](http://www.cavebear.com/archive/cavebear/Ethernet/type.html)
+     * * [IEEE hexadecimal Ethertype](https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
+     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](https://standards-oui.ieee.org/ethertype/eth.txt)
+     * * [www.cavebear.com/archive/cavebear/Ethernet/type.html](https://www.cavebear.com/archive/cavebear/Ethernet/type.html)
      */
     etherType: string;
     /**
@@ -48028,16 +48964,52 @@ export interface ZoneProtectionProfileScan {
 
 export interface ZoneProtectionProfileScanAction {
     /**
+     * Alert
+     */
+    alert?: outputs.ZoneProtectionProfileScanActionAlert;
+    /**
+     * Allow
+     */
+    allow?: outputs.ZoneProtectionProfileScanActionAllow;
+    /**
+     * Block
+     */
+    block?: outputs.ZoneProtectionProfileScanActionBlock;
+    /**
+     * Block ip
+     */
+    blockIp?: outputs.ZoneProtectionProfileScanActionBlockIp;
+}
+
+export interface ZoneProtectionProfileScanActionAlert {
+}
+
+export interface ZoneProtectionProfileScanActionAllow {
+}
+
+export interface ZoneProtectionProfileScanActionBlock {
+}
+
+export interface ZoneProtectionProfileScanActionBlockIp {
+    /**
      * Duration
      */
-    duration?: number;
+    duration: number;
     /**
      * Track by
      */
-    trackBy?: string;
+    trackBy: string;
 }
 
 export interface ZoneProtectionProfileScanWhiteList {
+    /**
+     * Ipv4
+     */
+    ipv4?: string;
+    /**
+     * Ipv6
+     */
+    ipv6?: string;
     /**
      * A descriptive name for the address to exclude.
      */

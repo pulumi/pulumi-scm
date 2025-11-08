@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHop {
     /**
-     * @return Access list
+     * @return Connected Static BGP Route maps match ip4 next hop Access list
      * 
      */
     private @Nullable String accessList;
     /**
-     * @return Prefix list
+     * @return Connected Static BGP Route maps match ip4 next hop Prefix list
      * 
      */
     private @Nullable String prefixList;
 
     private BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHop() {}
     /**
-     * @return Access list
+     * @return Connected Static BGP Route maps match ip4 next hop Access list
      * 
      */
     public Optional<String> accessList() {
         return Optional.ofNullable(this.accessList);
     }
     /**
-     * @return Prefix list
+     * @return Connected Static BGP Route maps match ip4 next hop Prefix list
      * 
      */
     public Optional<String> prefixList() {

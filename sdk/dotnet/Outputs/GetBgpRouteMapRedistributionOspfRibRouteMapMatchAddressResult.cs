@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionOspfRibRouteMapMatchAddressResult
     {
         /// <summary>
-        /// Access list
+        /// OSPF RIB Route maps address Access list
         /// </summary>
         public readonly string AccessList;
         /// <summary>
-        /// Prefix list
+        /// OSPF RIB Route maps address Prefix list
         /// </summary>
         public readonly string PrefixList;
 

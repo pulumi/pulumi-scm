@@ -21,6 +21,132 @@ import javax.annotation.Nullable;
 /**
  * PbfRule resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Tag;
+ * import com.pulumi.scm.TagArgs;
+ * import com.pulumi.scm.PbfRule;
+ * import com.pulumi.scm.PbfRuleArgs;
+ * import com.pulumi.scm.inputs.PbfRuleFromArgs;
+ * import com.pulumi.scm.inputs.PbfRuleActionArgs;
+ * import com.pulumi.scm.inputs.PbfRuleActionDiscardArgs;
+ * import com.pulumi.scm.inputs.PbfRuleEnforceSymmetricReturnArgs;
+ * import com.pulumi.scm.inputs.PbfRuleActionNoPbfArgs;
+ * import com.pulumi.scm.inputs.PbfRuleActionForwardArgs;
+ * import com.pulumi.scm.inputs.PbfRuleActionForwardNexthopArgs;
+ * import com.pulumi.scm.inputs.PbfRuleActionForwardMonitorArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleTag = new Tag("exampleTag", TagArgs.builder()
+ *             .folder("All")
+ *             .name("pbf-rule-tag-test-1")
+ *             .color("Red")
+ *             .build());
+ * 
+ *         // --- PBF Rule Resource with discard action---
+ *         var examplePbfRule = new PbfRule("examplePbfRule", PbfRuleArgs.builder()
+ *             .name("pbf-test-rule-discard")
+ *             .folder("All")
+ *             .description("PBF rule for forwarding specific traffic.")
+ *             .from(PbfRuleFromArgs.builder()
+ *                 .zones("zone-untrust")
+ *                 .build())
+ *             .sources("any")
+ *             .destinations("any")
+ *             .applications("any")
+ *             .services("service-http")
+ *             .sourceUsers("any")
+ *             .action(PbfRuleActionArgs.builder()
+ *                 .discard(PbfRuleActionDiscardArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .tags(exampleTag.name())
+ *             .enforceSymmetricReturn(PbfRuleEnforceSymmetricReturnArgs.builder()
+ *                 .enabled(false)
+ *                 .build())
+ *             .schedule("non-work-hours")
+ *             .build());
+ * 
+ *         // --- PBF Rule Resource with no-pbf action---
+ *         var exampleNoPbfRule = new PbfRule("exampleNoPbfRule", PbfRuleArgs.builder()
+ *             .name("pbf-test-rule-no-pbf")
+ *             .folder("All")
+ *             .description("PBF rule for forwarding specific traffic")
+ *             .from(PbfRuleFromArgs.builder()
+ *                 .zones("zone-untrust")
+ *                 .build())
+ *             .sources("any")
+ *             .destinations("any")
+ *             .applications("any")
+ *             .services("service-https")
+ *             .sourceUsers("any")
+ *             .action(PbfRuleActionArgs.builder()
+ *                 .noPbf(PbfRuleActionNoPbfArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .tags(exampleTag.name())
+ *             .enforceSymmetricReturn(PbfRuleEnforceSymmetricReturnArgs.builder()
+ *                 .enabled(false)
+ *                 .build())
+ *             .schedule("non-work-hours")
+ *             .build());
+ * 
+ *         // --- PBF Rule Resource with forward action---
+ *         var exampleForwardPbfRule = new PbfRule("exampleForwardPbfRule", PbfRuleArgs.builder()
+ *             .name("pbf-test-rule-forward")
+ *             .folder("All")
+ *             .description("PBF rule for forwarding specific traffic")
+ *             .from(PbfRuleFromArgs.builder()
+ *                 .zones("zone-untrust")
+ *                 .build())
+ *             .sources("any")
+ *             .destinations("any")
+ *             .applications("any")
+ *             .services("service-http")
+ *             .sourceUsers("any")
+ *             .action(PbfRuleActionArgs.builder()
+ *                 .forward(PbfRuleActionForwardArgs.builder()
+ *                     .egressInterface("ethernet1/1")
+ *                     .nexthop(PbfRuleActionForwardNexthopArgs.builder()
+ *                         .ipAddress("192.168.1.254")
+ *                         .build())
+ *                     .monitor(PbfRuleActionForwardMonitorArgs.builder()
+ *                         .ipAddress("8.8.8.10")
+ *                         .profile("test_tf_profile")
+ *                         .disableIfUnreachable(true)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tags(exampleTag.name())
+ *             .enforceSymmetricReturn(PbfRuleEnforceSymmetricReturnArgs.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .schedule("non-work-hours")
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/pbfRule:PbfRule")
 public class PbfRule extends com.pulumi.resources.CustomResource {

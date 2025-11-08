@@ -13,16 +13,16 @@ namespace Pulumi.Scm.Inputs
     public sealed class SdwanPathQualityProfileMetricPktLossGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Sensitivity
+        /// Packet loss sensitivity
         /// </summary>
-        [Input("sensitivity")]
-        public Input<string>? Sensitivity { get; set; }
+        [Input("sensitivity", required: true)]
+        public Input<string> Sensitivity { get; set; } = null!;
 
         /// <summary>
-        /// Threshold
+        /// Packet loss threshold (percentage)
         /// </summary>
-        [Input("threshold")]
-        public Input<int>? Threshold { get; set; }
+        [Input("threshold", required: true)]
+        public Input<int> Threshold { get; set; } = null!;
 
         public SdwanPathQualityProfileMetricPktLossGetArgs()
         {

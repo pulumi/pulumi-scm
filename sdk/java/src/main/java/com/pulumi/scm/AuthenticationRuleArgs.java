@@ -275,6 +275,21 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
+     * Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    @Import(name="relativePosition")
+    private @Nullable Output<String> relativePosition;
+
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public Optional<Output<String>> relativePosition() {
+        return Optional.ofNullable(this.relativePosition);
+    }
+
+    /**
      * The destination ports
      * 
      */
@@ -365,6 +380,21 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    @Import(name="targetRule")
+    private @Nullable Output<String> targetRule;
+
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public Optional<Output<String>> targetRule() {
+        return Optional.ofNullable(this.targetRule);
+    }
+
+    /**
      * The authentication session timeout (seconds)
      * 
      */
@@ -414,12 +444,14 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         this.negateDestination = $.negateDestination;
         this.negateSource = $.negateSource;
         this.position = $.position;
+        this.relativePosition = $.relativePosition;
         this.services = $.services;
         this.snippet = $.snippet;
         this.sourceHips = $.sourceHips;
         this.sourceUsers = $.sourceUsers;
         this.sources = $.sources;
         this.tags = $.tags;
+        this.targetRule = $.targetRule;
         this.timeout = $.timeout;
         this.tos = $.tos;
     }
@@ -850,6 +882,27 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
+         * @param relativePosition Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relativePosition(@Nullable Output<String> relativePosition) {
+            $.relativePosition = relativePosition;
+            return this;
+        }
+
+        /**
+         * @param relativePosition Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relativePosition(String relativePosition) {
+            return relativePosition(Output.of(relativePosition));
+        }
+
+        /**
          * @param services The destination ports
          * 
          * @return builder
@@ -1023,6 +1076,27 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
          */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
+        }
+
+        /**
+         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetRule(@Nullable Output<String> targetRule) {
+            $.targetRule = targetRule;
+            return this;
+        }
+
+        /**
+         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetRule(String targetRule) {
+            return targetRule(Output.of(targetRule));
         }
 
         /**

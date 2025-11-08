@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -37,13 +37,13 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpNeighborArgs e
      * 
      */
     @Import(name="priority")
-    private @Nullable Output<Double> priority;
+    private @Nullable Output<Integer> priority;
 
     /**
      * @return Priority
      * 
      */
-    public Optional<Output<Double>> priority() {
+    public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
 
@@ -99,7 +99,7 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpNeighborArgs e
          * @return builder
          * 
          */
-        public Builder priority(@Nullable Output<Double> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
@@ -110,7 +110,7 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpNeighborArgs e
          * @return builder
          * 
          */
-        public Builder priority(Double priority) {
+        public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 

@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 
@@ -19,13 +19,13 @@ public final class SdwanErrorCorrectionProfileModePacketDuplicationArgs extends 
      * 
      */
     @Import(name="recoveryDurationPd", required=true)
-    private Output<Double> recoveryDurationPd;
+    private Output<Integer> recoveryDurationPd;
 
     /**
      * @return Recovery duration pd
      * 
      */
-    public Output<Double> recoveryDurationPd() {
+    public Output<Integer> recoveryDurationPd() {
         return this.recoveryDurationPd;
     }
 
@@ -59,7 +59,7 @@ public final class SdwanErrorCorrectionProfileModePacketDuplicationArgs extends 
          * @return builder
          * 
          */
-        public Builder recoveryDurationPd(Output<Double> recoveryDurationPd) {
+        public Builder recoveryDurationPd(Output<Integer> recoveryDurationPd) {
             $.recoveryDurationPd = recoveryDurationPd;
             return this;
         }
@@ -70,7 +70,7 @@ public final class SdwanErrorCorrectionProfileModePacketDuplicationArgs extends 
          * @return builder
          * 
          */
-        public Builder recoveryDurationPd(Double recoveryDurationPd) {
+        public Builder recoveryDurationPd(Integer recoveryDurationPd) {
             return recoveryDurationPd(Output.of(recoveryDurationPd));
         }
 

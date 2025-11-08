@@ -22,12 +22,12 @@ public final class GetBgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     private GetBgpRouteMapRedistributionOspfBgpRouteMapSetAggregator aggregator;
     /**
-     * @return AS numbers
+     * @return OSPF BGP Route maps set AS numbers
      * 
      */
     private List<Integer> aspathPrepends;
     /**
-     * @return Enable BGP atomic aggregate?
+     * @return OSPF BGP Route maps set Enable BGP atomic aggregate?
      * 
      */
     private Boolean atomicAggregate;
@@ -37,12 +37,12 @@ public final class GetBgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     private GetBgpRouteMapRedistributionOspfBgpRouteMapSetIpv4 ipv4;
     /**
-     * @return Large communities
+     * @return OSPF BGP Route maps set Large communities
      * 
      */
     private List<String> largeCommunities;
     /**
-     * @return Local preference
+     * @return OSPF BGP Route maps set Local preference
      * 
      */
     private Integer localPreference;
@@ -52,27 +52,27 @@ public final class GetBgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     private GetBgpRouteMapRedistributionOspfBgpRouteMapSetMetric metric;
     /**
-     * @return Origin
+     * @return OSPF BGP Route maps set Origin
      * 
      */
     private String origin;
     /**
-     * @return Originator ID
+     * @return OSPF BGP Route maps set Originator ID
      * 
      */
     private String originatorId;
     /**
-     * @return Regular communities
+     * @return OSPF BGP Route maps set Regular communities
      * 
      */
     private List<String> regularCommunities;
     /**
-     * @return Tag
+     * @return OSPF BGP Route maps set Tag
      * 
      */
     private Integer tag;
     /**
-     * @return Weight
+     * @return OSPF BGP Route maps set Weight
      * 
      */
     private Integer weight;
@@ -86,14 +86,14 @@ public final class GetBgpRouteMapRedistributionOspfBgpRouteMapSet {
         return this.aggregator;
     }
     /**
-     * @return AS numbers
+     * @return OSPF BGP Route maps set AS numbers
      * 
      */
     public List<Integer> aspathPrepends() {
         return this.aspathPrepends;
     }
     /**
-     * @return Enable BGP atomic aggregate?
+     * @return OSPF BGP Route maps set Enable BGP atomic aggregate?
      * 
      */
     public Boolean atomicAggregate() {
@@ -107,14 +107,14 @@ public final class GetBgpRouteMapRedistributionOspfBgpRouteMapSet {
         return this.ipv4;
     }
     /**
-     * @return Large communities
+     * @return OSPF BGP Route maps set Large communities
      * 
      */
     public List<String> largeCommunities() {
         return this.largeCommunities;
     }
     /**
-     * @return Local preference
+     * @return OSPF BGP Route maps set Local preference
      * 
      */
     public Integer localPreference() {
@@ -128,35 +128,35 @@ public final class GetBgpRouteMapRedistributionOspfBgpRouteMapSet {
         return this.metric;
     }
     /**
-     * @return Origin
+     * @return OSPF BGP Route maps set Origin
      * 
      */
     public String origin() {
         return this.origin;
     }
     /**
-     * @return Originator ID
+     * @return OSPF BGP Route maps set Originator ID
      * 
      */
     public String originatorId() {
         return this.originatorId;
     }
     /**
-     * @return Regular communities
+     * @return OSPF BGP Route maps set Regular communities
      * 
      */
     public List<String> regularCommunities() {
         return this.regularCommunities;
     }
     /**
-     * @return Tag
+     * @return OSPF BGP Route maps set Tag
      * 
      */
     public Integer tag() {
         return this.tag;
     }
     /**
-     * @return Weight
+     * @return OSPF BGP Route maps set Weight
      * 
      */
     public Integer weight() {

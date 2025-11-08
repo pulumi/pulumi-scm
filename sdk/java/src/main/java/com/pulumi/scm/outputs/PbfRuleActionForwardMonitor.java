@@ -18,7 +18,7 @@ public final class PbfRuleActionForwardMonitor {
      */
     private @Nullable Boolean disableIfUnreachable;
     /**
-     * @return Ip address
+     * @return Monitor IP address
      * 
      */
     private @Nullable String ipAddress;
@@ -37,7 +37,7 @@ public final class PbfRuleActionForwardMonitor {
         return Optional.ofNullable(this.disableIfUnreachable);
     }
     /**
-     * @return Ip address
+     * @return Monitor IP address
      * 
      */
     public Optional<String> ipAddress() {

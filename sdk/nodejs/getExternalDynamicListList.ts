@@ -17,12 +17,12 @@ import * as utilities from "./utilities";
  *
  * // Data source to fetch all external dynamic lists in the "Shared" folder.
  * const allSharedEdls = scm.getExternalDynamicListList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const allSharedEdlsMap = allSharedEdls.then(allSharedEdls => allSharedEdls.datas);
  * // Example of using pagination to get the first 5 EDLs.
  * const paginatedEdls = scm.getExternalDynamicListList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
@@ -129,12 +129,12 @@ export interface GetExternalDynamicListListResult {
  *
  * // Data source to fetch all external dynamic lists in the "Shared" folder.
  * const allSharedEdls = scm.getExternalDynamicListList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const allSharedEdlsMap = allSharedEdls.then(allSharedEdls => allSharedEdls.datas);
  * // Example of using pagination to get the first 5 EDLs.
  * const paginatedEdls = scm.getExternalDynamicListList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });

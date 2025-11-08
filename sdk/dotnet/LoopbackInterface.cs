@@ -11,6 +11,54 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// LoopbackInterface resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     //
+    ///     // Creates a loopback interface with static ipv4 address
+    ///     //
+    ///     var scmLoopbackIntf = new Scm.LoopbackInterface("scm_loopback_intf", new()
+    ///     {
+    ///         Name = "$scm_loopback_intf",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Ips = new[]
+    ///         {
+    ///             new Scm.Inputs.LoopbackInterfaceIpArgs
+    ///             {
+    ///                 Name = "198.18.1.1/32",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a loopback interface with static ipv4 address, with default value loopback.123
+    ///     //
+    ///     var scmLoopbackIntf2 = new Scm.LoopbackInterface("scm_loopback_intf_2", new()
+    ///     {
+    ///         Name = "$scm_loopback_intf_2",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         DefaultValue = "loopback.123",
+    ///         Ips = new[]
+    ///         {
+    ///             new Scm.Inputs.LoopbackInterfaceIpArgs
+    ///             {
+    ///                 Name = "198.18.1.2/32",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/loopbackInterface:LoopbackInterface")]
     public partial class LoopbackInterface : global::Pulumi.CustomResource
@@ -22,10 +70,10 @@ namespace Pulumi.Scm
         public Output<string?> Comment { get; private set; } = null!;
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Output("defaultValue")]
-        public Output<int?> DefaultValue { get; private set; } = null!;
+        public Output<string?> DefaultValue { get; private set; } = null!;
 
         /// <summary>
         /// The device in which the resource is defined
@@ -46,19 +94,25 @@ namespace Pulumi.Scm
         public Output<string?> InterfaceManagementProfile { get; private set; } = null!;
 
         /// <summary>
-        /// loopback ip parent
+        /// Loopback IP Parent
         /// </summary>
-        [Output("ip")]
-        public Output<Outputs.LoopbackInterfaceIp?> Ip { get; private set; } = null!;
+        [Output("ips")]
+        public Output<ImmutableArray<Outputs.LoopbackInterfaceIp>> Ips { get; private set; } = null!;
+
+        /// <summary>
+        /// Loopback IPv6 Configuration
+        /// </summary>
+        [Output("ipv6")]
+        public Output<Outputs.LoopbackInterfaceIpv6> Ipv6 { get; private set; } = null!;
 
         /// <summary>
         /// MTU
         /// </summary>
         [Output("mtu")]
-        public Output<double?> Mtu { get; private set; } = null!;
+        public Output<int?> Mtu { get; private set; } = null!;
 
         /// <summary>
-        /// L3 sub-interface name
+        /// Loopback Interface name
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
@@ -125,10 +179,10 @@ namespace Pulumi.Scm
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Input("defaultValue")]
-        public Input<int>? DefaultValue { get; set; }
+        public Input<string>? DefaultValue { get; set; }
 
         /// <summary>
         /// The device in which the resource is defined
@@ -148,20 +202,32 @@ namespace Pulumi.Scm
         [Input("interfaceManagementProfile")]
         public Input<string>? InterfaceManagementProfile { get; set; }
 
+        [Input("ips")]
+        private InputList<Inputs.LoopbackInterfaceIpArgs>? _ips;
+
         /// <summary>
-        /// loopback ip parent
+        /// Loopback IP Parent
         /// </summary>
-        [Input("ip")]
-        public Input<Inputs.LoopbackInterfaceIpArgs>? Ip { get; set; }
+        public InputList<Inputs.LoopbackInterfaceIpArgs> Ips
+        {
+            get => _ips ?? (_ips = new InputList<Inputs.LoopbackInterfaceIpArgs>());
+            set => _ips = value;
+        }
+
+        /// <summary>
+        /// Loopback IPv6 Configuration
+        /// </summary>
+        [Input("ipv6")]
+        public Input<Inputs.LoopbackInterfaceIpv6Args>? Ipv6 { get; set; }
 
         /// <summary>
         /// MTU
         /// </summary>
         [Input("mtu")]
-        public Input<double>? Mtu { get; set; }
+        public Input<int>? Mtu { get; set; }
 
         /// <summary>
-        /// L3 sub-interface name
+        /// Loopback Interface name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -187,10 +253,10 @@ namespace Pulumi.Scm
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Input("defaultValue")]
-        public Input<int>? DefaultValue { get; set; }
+        public Input<string>? DefaultValue { get; set; }
 
         /// <summary>
         /// The device in which the resource is defined
@@ -210,20 +276,32 @@ namespace Pulumi.Scm
         [Input("interfaceManagementProfile")]
         public Input<string>? InterfaceManagementProfile { get; set; }
 
+        [Input("ips")]
+        private InputList<Inputs.LoopbackInterfaceIpGetArgs>? _ips;
+
         /// <summary>
-        /// loopback ip parent
+        /// Loopback IP Parent
         /// </summary>
-        [Input("ip")]
-        public Input<Inputs.LoopbackInterfaceIpGetArgs>? Ip { get; set; }
+        public InputList<Inputs.LoopbackInterfaceIpGetArgs> Ips
+        {
+            get => _ips ?? (_ips = new InputList<Inputs.LoopbackInterfaceIpGetArgs>());
+            set => _ips = value;
+        }
+
+        /// <summary>
+        /// Loopback IPv6 Configuration
+        /// </summary>
+        [Input("ipv6")]
+        public Input<Inputs.LoopbackInterfaceIpv6GetArgs>? Ipv6 { get; set; }
 
         /// <summary>
         /// MTU
         /// </summary>
         [Input("mtu")]
-        public Input<double>? Mtu { get; set; }
+        public Input<int>? Mtu { get; set; }
 
         /// <summary>
-        /// L3 sub-interface name
+        /// Loopback Interface name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }

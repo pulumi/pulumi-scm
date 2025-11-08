@@ -13,6 +13,106 @@ import (
 )
 
 // QosPolicyRule resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// --- 2. ANCHOR QOS POLICY RULE (Used for relative positioning) ---
+//			anchorQosRule, err := scm.NewQosPolicyRule(ctx, "anchor_qos_rule", &scm.QosPolicyRuleArgs{
+//				Name:        pulumi.String("anchor-qos-rule"),
+//				Description: pulumi.String("Base rule for testing 'before' and 'after' positioning."),
+//				Folder:      pulumi.String("All"),
+//				Position:    pulumi.String("pre"),
+//				Action: &scm.QosPolicyRuleActionArgs{
+//					Class: pulumi.String("2"),
+//				},
+//				Schedule: pulumi.String("non-work-hours"),
+//				DscpTos: &scm.QosPolicyRuleDscpTosArgs{
+//					Codepoints: scm.QosPolicyRuleDscpTosCodepointArray{
+//						&scm.QosPolicyRuleDscpTosCodepointArgs{
+//							Name: pulumi.String("Set-EF"),
+//							Type: &scm.QosPolicyRuleDscpTosCodepointTypeArgs{
+//								Ef: &scm.QosPolicyRuleDscpTosCodepointTypeEfArgs{},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+//			_, err = scm.NewQosPolicyRule(ctx, "rule_top_qos_rule", &scm.QosPolicyRuleArgs{
+//				Name:             pulumi.String("top-absolute-qos-rule"),
+//				Description:      pulumi.String("Placed at the very TOP of the QoS rulebase (Highest Priority)."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("top"),
+//				Action: &scm.QosPolicyRuleActionArgs{
+//					Class: pulumi.String("2"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewQosPolicyRule(ctx, "rule_bottom_qos_rule", &scm.QosPolicyRuleArgs{
+//				Name:             pulumi.String("bottom-absolute-qos-rule"),
+//				Description:      pulumi.String("Placed at the very BOTTOM of the QoS rulebase (Lowest Priority)"),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("bottom"),
+//				Action: &scm.QosPolicyRuleActionArgs{
+//					Class: pulumi.String("3"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+//			_, err = scm.NewQosPolicyRule(ctx, "rule_before_anchor_qos", &scm.QosPolicyRuleArgs{
+//				Name:             pulumi.String("before-anchor-qos-rule"),
+//				Description:      pulumi.String("Positioned immediately BEFORE the anchor-qos-rule."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("before"),
+//				TargetRule:       anchorQosRule.ID(),
+//				Action: &scm.QosPolicyRuleActionArgs{
+//					Class: pulumi.String("5"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewQosPolicyRule(ctx, "rule_after_anchor_qos", &scm.QosPolicyRuleArgs{
+//				Name:             pulumi.String("after-anchor-qos-rule"),
+//				Description:      pulumi.String("Positioned immediately AFTER the anchor-qos-rule."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("after"),
+//				TargetRule:       anchorQosRule.ID(),
+//				Action: &scm.QosPolicyRuleActionArgs{
+//					Class: pulumi.String("4"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type QosPolicyRule struct {
 	pulumi.CustomResourceState
 
@@ -30,11 +130,15 @@ type QosPolicyRule struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The relative position of the rule
 	Position pulumi.StringOutput `pulumi:"position"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrOutput `pulumi:"relativePosition"`
 	// Schedule
 	Schedule pulumi.StringPtrOutput `pulumi:"schedule"`
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrOutput `pulumi:"targetRule"`
+	Tfid       pulumi.StringOutput    `pulumi:"tfid"`
 }
 
 // NewQosPolicyRule registers a new resource with the given unique name, arguments, and options.
@@ -84,11 +188,15 @@ type qosPolicyRuleState struct {
 	Name *string `pulumi:"name"`
 	// The relative position of the rule
 	Position *string `pulumi:"position"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition *string `pulumi:"relativePosition"`
 	// Schedule
 	Schedule *string `pulumi:"schedule"`
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	Tfid    *string `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule *string `pulumi:"targetRule"`
+	Tfid       *string `pulumi:"tfid"`
 }
 
 type QosPolicyRuleState struct {
@@ -106,11 +214,15 @@ type QosPolicyRuleState struct {
 	Name pulumi.StringPtrInput
 	// The relative position of the rule
 	Position pulumi.StringPtrInput
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrInput
 	// Schedule
 	Schedule pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	Tfid    pulumi.StringPtrInput
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrInput
+	Tfid       pulumi.StringPtrInput
 }
 
 func (QosPolicyRuleState) ElementType() reflect.Type {
@@ -132,10 +244,14 @@ type qosPolicyRuleArgs struct {
 	Name *string `pulumi:"name"`
 	// The relative position of the rule
 	Position *string `pulumi:"position"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition *string `pulumi:"relativePosition"`
 	// Schedule
 	Schedule *string `pulumi:"schedule"`
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule *string `pulumi:"targetRule"`
 }
 
 // The set of arguments for constructing a QosPolicyRule resource.
@@ -154,10 +270,14 @@ type QosPolicyRuleArgs struct {
 	Name pulumi.StringPtrInput
 	// The relative position of the rule
 	Position pulumi.StringPtrInput
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrInput
 	// Schedule
 	Schedule pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrInput
 }
 
 func (QosPolicyRuleArgs) ElementType() reflect.Type {
@@ -282,6 +402,11 @@ func (o QosPolicyRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
 
+// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+func (o QosPolicyRuleOutput) RelativePosition() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.RelativePosition }).(pulumi.StringPtrOutput)
+}
+
 // Schedule
 func (o QosPolicyRuleOutput) Schedule() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.Schedule }).(pulumi.StringPtrOutput)
@@ -290,6 +415,11 @@ func (o QosPolicyRuleOutput) Schedule() pulumi.StringPtrOutput {
 // The snippet in which the resource is defined
 func (o QosPolicyRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
+}
+
+// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+func (o QosPolicyRuleOutput) TargetRule() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.TargetRule }).(pulumi.StringPtrOutput)
 }
 
 func (o QosPolicyRuleOutput) Tfid() pulumi.StringOutput {

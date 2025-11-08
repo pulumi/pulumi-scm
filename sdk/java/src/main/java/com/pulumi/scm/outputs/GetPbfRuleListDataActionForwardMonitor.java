@@ -17,7 +17,7 @@ public final class GetPbfRuleListDataActionForwardMonitor {
      */
     private Boolean disableIfUnreachable;
     /**
-     * @return Ip address
+     * @return Monitor IP address
      * 
      */
     private String ipAddress;
@@ -36,7 +36,7 @@ public final class GetPbfRuleListDataActionForwardMonitor {
         return this.disableIfUnreachable;
     }
     /**
-     * @return Ip address
+     * @return Monitor IP address
      * 
      */
     public String ipAddress() {

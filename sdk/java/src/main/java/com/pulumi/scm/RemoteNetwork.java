@@ -23,6 +23,127 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.IkeCryptoProfile;
+ * import com.pulumi.scm.IkeCryptoProfileArgs;
+ * import com.pulumi.scm.IkeGateway;
+ * import com.pulumi.scm.IkeGatewayArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+ * import com.pulumi.scm.IpsecTunnel;
+ * import com.pulumi.scm.IpsecTunnelArgs;
+ * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+ * import com.pulumi.scm.RemoteNetwork;
+ * import com.pulumi.scm.RemoteNetworkArgs;
+ * import com.pulumi.scm.inputs.RemoteNetworkProtocolArgs;
+ * import com.pulumi.scm.inputs.RemoteNetworkProtocolBgpArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         // --- DEPENDENCY 1: IKE Crypto Profile ---
+ *         // This profile defines the encryption and authentication algorithms for the IKE Gateway.
+ *         // The values are taken from the 'createTestIKECryptoProfile' helper function.
+ *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+ *             .name("example-ike-crypto-prf-for-rn")
+ *             .folder("Remote Networks")
+ *             .hashes("sha256")
+ *             .dhGroups("group14")
+ *             .encryptions("aes-256-cbc")
+ *             .build());
+ * 
+ *         // --- DEPENDENCY 2: IKE Gateway ---
+ *         // This defines the VPN peer. It depends on the IKE Crypto Profile created above.
+ *         // The values are taken from the 'createTestIKEGateway' helper function.
+ *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+ *             .name("example-ike-gateway-for-rn")
+ *             .folder("Remote Networks")
+ *             .authentication(IkeGatewayAuthenticationArgs.builder()
+ *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+ *                     .key("secret")
+ *                     .build())
+ *                 .build())
+ *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+ *                 .ip("1.1.1.1")
+ *                 .build())
+ *             .protocol(IkeGatewayProtocolArgs.builder()
+ *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+ *                     .ikeCryptoProfile(example.name())
+ *                     .build())
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(example)
+ *                 .build());
+ * 
+ *         // --- DEPENDENCY 3: IPsec Tunnel ---
+ *         // This defines the tunnel interface itself and uses the IKE Gateway.
+ *         // The values are taken from the 'createTestIPsecTunnel' helper function.
+ *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+ *             .name("example-ipsec-tunnel-for-rn")
+ *             .folder("Remote Networks")
+ *             .antiReplay(true)
+ *             .copyTos(false)
+ *             .enableGreEncapsulation(false)
+ *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+ *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+ *                     .name(exampleIkeGateway.name())
+ *                     .build())
+ *                 .ipsecCryptoProfile("PaloAlto-Networks-IPSec-Crypto")
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(exampleIkeGateway)
+ *                 .build());
+ * 
+ *         // --- MAIN RESOURCE: Remote Network ---
+ *         // This is the final resource, which uses the IPsec Tunnel created above.
+ *         // The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
+ *         var exampleRemoteNetwork = new RemoteNetwork("exampleRemoteNetwork", RemoteNetworkArgs.builder()
+ *             .name("example-remote-network")
+ *             .folder("Remote Networks")
+ *             .licenseType("FWAAS-AGGREGATE")
+ *             .region("us-west-2")
+ *             .spnName("us-west-dakota")
+ *             .subnets("192.168.1.0/24")
+ *             .ipsecTunnel(exampleIpsecTunnel.name())
+ *             .protocol(RemoteNetworkProtocolArgs.builder()
+ *                 .bgp(RemoteNetworkProtocolBgpArgs.builder()
+ *                     .enable(true)
+ *                     .peerAs("65000")
+ *                     .localIpAddress("169.254.1.1")
+ *                     .peerIpAddress("169.254.1.2")
+ *                     .doNotExportRoutes(false)
+ *                     .originateDefaultRoute(false)
+ *                     .summarizeMobileUserRoutes(false)
+ *                     .build())
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(exampleIpsecTunnel)
+ *                 .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/remoteNetwork:RemoteNetwork")
 public class RemoteNetwork extends com.pulumi.resources.CustomResource {

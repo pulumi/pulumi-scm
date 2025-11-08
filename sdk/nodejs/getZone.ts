@@ -8,6 +8,28 @@ import * as utilities from "./utilities";
 
 /**
  * Zone data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up zone by its ID.
+ * const scmZoneDs = scm.getZone({
+ *     id: "50f1f0f3-a420-4989-9770-c927f1467a9a",
+ * });
+ * export const zoneDataSourceResults = {
+ *     id: scmZoneDs.then(scmZoneDs => scmZoneDs.id),
+ *     name: scmZoneDs.then(scmZoneDs => scmZoneDs.name),
+ *     network: scmZoneDs.then(scmZoneDs => scmZoneDs.network),
+ *     enableDeviceIdentification: scmZoneDs.then(scmZoneDs => scmZoneDs.enableDeviceIdentification),
+ *     enableUserIdentification: scmZoneDs.then(scmZoneDs => scmZoneDs.enableUserIdentification),
+ *     userAcl: scmZoneDs.then(scmZoneDs => scmZoneDs.userAcl),
+ *     deviceAcl: scmZoneDs.then(scmZoneDs => scmZoneDs.deviceAcl),
+ *     folder: scmZoneDs.then(scmZoneDs => scmZoneDs.folder),
+ * };
+ * ```
  */
 export function getZone(args: GetZoneArgs, opts?: pulumi.InvokeOptions): Promise<GetZoneResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -87,6 +109,28 @@ export interface GetZoneResult {
 }
 /**
  * Zone data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up zone by its ID.
+ * const scmZoneDs = scm.getZone({
+ *     id: "50f1f0f3-a420-4989-9770-c927f1467a9a",
+ * });
+ * export const zoneDataSourceResults = {
+ *     id: scmZoneDs.then(scmZoneDs => scmZoneDs.id),
+ *     name: scmZoneDs.then(scmZoneDs => scmZoneDs.name),
+ *     network: scmZoneDs.then(scmZoneDs => scmZoneDs.network),
+ *     enableDeviceIdentification: scmZoneDs.then(scmZoneDs => scmZoneDs.enableDeviceIdentification),
+ *     enableUserIdentification: scmZoneDs.then(scmZoneDs => scmZoneDs.enableUserIdentification),
+ *     userAcl: scmZoneDs.then(scmZoneDs => scmZoneDs.userAcl),
+ *     deviceAcl: scmZoneDs.then(scmZoneDs => scmZoneDs.deviceAcl),
+ *     folder: scmZoneDs.then(scmZoneDs => scmZoneDs.folder),
+ * };
+ * ```
  */
 export function getZoneOutput(args: GetZoneOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetZoneResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

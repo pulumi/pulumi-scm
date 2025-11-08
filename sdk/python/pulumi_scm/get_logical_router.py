@@ -137,6 +137,23 @@ def get_logical_router(id: Optional[_builtins.str] = None,
     """
     LogicalRouter data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up the logical router by its ID.
+    scm_logical_router_ds = scm.get_logical_router(id="b7c6f00b-b20e-4073-af1c-1f42863a5983")
+    pulumi.export("scmLogicalRouterDataSourceOutput", {
+        "id": scm_logical_router_ds.id,
+        "name": scm_logical_router_ds.name,
+        "routingStack": scm_logical_router_ds.routing_stack,
+        "vrf": scm_logical_router_ds.vrves,
+        "folder": scm_logical_router_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Name
@@ -161,6 +178,23 @@ def get_logical_router_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLogicalRouterResult]:
     """
     LogicalRouter data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up the logical router by its ID.
+    scm_logical_router_ds = scm.get_logical_router(id="b7c6f00b-b20e-4073-af1c-1f42863a5983")
+    pulumi.export("scmLogicalRouterDataSourceOutput", {
+        "id": scm_logical_router_ds.id,
+        "name": scm_logical_router_ds.name,
+        "routingStack": scm_logical_router_ds.routing_stack,
+        "vrf": scm_logical_router_ds.vrves,
+        "folder": scm_logical_router_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

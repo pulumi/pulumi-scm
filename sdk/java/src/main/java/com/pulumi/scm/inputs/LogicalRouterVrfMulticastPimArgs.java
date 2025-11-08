@@ -10,7 +10,7 @@ import com.pulumi.scm.inputs.LogicalRouterVrfMulticastPimRpArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfMulticastPimSptThresholdArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfMulticastPimSsmAddressSpaceArgs;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -87,13 +87,13 @@ public final class LogicalRouterVrfMulticastPimArgs extends com.pulumi.resources
      * 
      */
     @Import(name="routeAgeoutTime")
-    private @Nullable Output<Double> routeAgeoutTime;
+    private @Nullable Output<Integer> routeAgeoutTime;
 
     /**
      * @return Route ageout time
      * 
      */
-    public Optional<Output<Double>> routeAgeoutTime() {
+    public Optional<Output<Integer>> routeAgeoutTime() {
         return Optional.ofNullable(this.routeAgeoutTime);
     }
 
@@ -289,7 +289,7 @@ public final class LogicalRouterVrfMulticastPimArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder routeAgeoutTime(@Nullable Output<Double> routeAgeoutTime) {
+        public Builder routeAgeoutTime(@Nullable Output<Integer> routeAgeoutTime) {
             $.routeAgeoutTime = routeAgeoutTime;
             return this;
         }
@@ -300,7 +300,7 @@ public final class LogicalRouterVrfMulticastPimArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder routeAgeoutTime(Double routeAgeoutTime) {
+        public Builder routeAgeoutTime(Integer routeAgeoutTime) {
             return routeAgeoutTime(Output.of(routeAgeoutTime));
         }
 

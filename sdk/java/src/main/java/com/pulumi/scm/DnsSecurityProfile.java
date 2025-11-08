@@ -18,6 +18,8 @@ import javax.annotation.Nullable;
 /**
  * DnsSecurityProfile resource
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="scm:index/dnsSecurityProfile:DnsSecurityProfile")
 public class DnsSecurityProfile extends com.pulumi.resources.CustomResource {

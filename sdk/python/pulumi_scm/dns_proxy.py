@@ -38,7 +38,7 @@ class DnsProxyArgs:
         :param pulumi.Input['DnsProxyDefaultArgs'] default: Default
         :param pulumi.Input['DnsProxyCacheArgs'] cache: Cache
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Sequence[pulumi.Input['DnsProxyDomainServerArgs']]] domain_servers: Domain servers
+        :param pulumi.Input[Sequence[pulumi.Input['DnsProxyDomainServerArgs']]] domain_servers: DNS proxy rules
         :param pulumi.Input[_builtins.bool] enabled: Enable DNS proxy?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] interfaces: Interfaces on which to enable DNS proxy service
@@ -112,7 +112,7 @@ class DnsProxyArgs:
     @pulumi.getter(name="domainServers")
     def domain_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DnsProxyDomainServerArgs']]]]:
         """
-        Domain servers
+        DNS proxy rules
         """
         return pulumi.get(self, "domain_servers")
 
@@ -238,7 +238,7 @@ class _DnsProxyState:
         :param pulumi.Input['DnsProxyCacheArgs'] cache: Cache
         :param pulumi.Input['DnsProxyDefaultArgs'] default: Default
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Sequence[pulumi.Input['DnsProxyDomainServerArgs']]] domain_servers: Domain servers
+        :param pulumi.Input[Sequence[pulumi.Input['DnsProxyDomainServerArgs']]] domain_servers: DNS proxy rules
         :param pulumi.Input[_builtins.bool] enabled: Enable DNS proxy?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] interfaces: Interfaces on which to enable DNS proxy service
@@ -315,7 +315,7 @@ class _DnsProxyState:
     @pulumi.getter(name="domainServers")
     def domain_servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['DnsProxyDomainServerArgs']]]]:
         """
-        Domain servers
+        DNS proxy rules
         """
         return pulumi.get(self, "domain_servers")
 
@@ -456,7 +456,7 @@ class DnsProxy(pulumi.CustomResource):
         :param pulumi.Input[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict']] cache: Cache
         :param pulumi.Input[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict']] default: Default
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict']]]] domain_servers: Domain servers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict']]]] domain_servers: DNS proxy rules
         :param pulumi.Input[_builtins.bool] enabled: Enable DNS proxy?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] interfaces: Interfaces on which to enable DNS proxy service
@@ -559,7 +559,7 @@ class DnsProxy(pulumi.CustomResource):
         :param pulumi.Input[Union['DnsProxyCacheArgs', 'DnsProxyCacheArgsDict']] cache: Cache
         :param pulumi.Input[Union['DnsProxyDefaultArgs', 'DnsProxyDefaultArgsDict']] default: Default
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
-        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict']]]] domain_servers: Domain servers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DnsProxyDomainServerArgs', 'DnsProxyDomainServerArgsDict']]]] domain_servers: DNS proxy rules
         :param pulumi.Input[_builtins.bool] enabled: Enable DNS proxy?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] interfaces: Interfaces on which to enable DNS proxy service
@@ -590,7 +590,7 @@ class DnsProxy(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def cache(self) -> pulumi.Output[Optional['outputs.DnsProxyCache']]:
+    def cache(self) -> pulumi.Output['outputs.DnsProxyCache']:
         """
         Cache
         """
@@ -616,7 +616,7 @@ class DnsProxy(pulumi.CustomResource):
     @pulumi.getter(name="domainServers")
     def domain_servers(self) -> pulumi.Output[Optional[Sequence['outputs.DnsProxyDomainServer']]]:
         """
-        Domain servers
+        DNS proxy rules
         """
         return pulumi.get(self, "domain_servers")
 
@@ -670,7 +670,7 @@ class DnsProxy(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="tcpQueries")
-    def tcp_queries(self) -> pulumi.Output[Optional['outputs.DnsProxyTcpQueries']]:
+    def tcp_queries(self) -> pulumi.Output['outputs.DnsProxyTcpQueries']:
         """
         Tcp queries
         """
@@ -683,7 +683,7 @@ class DnsProxy(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="udpQueries")
-    def udp_queries(self) -> pulumi.Output[Optional['outputs.DnsProxyUdpQueries']]:
+    def udp_queries(self) -> pulumi.Output['outputs.DnsProxyUdpQueries']:
         """
         Udp queries
         """

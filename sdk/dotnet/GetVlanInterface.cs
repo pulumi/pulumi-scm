@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// VlanInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up vlan interface by its ID.
+        ///     var scmVlanInterfaceDs = Scm.GetVlanInterface.Invoke(new()
+        ///     {
+        ///         Id = "3f9382a3-5c93-46d9-ae06-a632c2d9ce0c",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["vlanInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Id) },
+        ///             { "name", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Name) },
+        ///             { "comment", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Comment) },
+        ///             { "vlanTag", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.VlanTag) },
+        ///             { "ip", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Ips) },
+        ///             { "folder", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetVlanInterfaceResult> InvokeAsync(GetVlanInterfaceArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetVlanInterfaceResult>("scm:index/getVlanInterface:getVlanInterface", args ?? new GetVlanInterfaceArgs(), options.WithDefaults());
 
         /// <summary>
         /// VlanInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up vlan interface by its ID.
+        ///     var scmVlanInterfaceDs = Scm.GetVlanInterface.Invoke(new()
+        ///     {
+        ///         Id = "3f9382a3-5c93-46d9-ae06-a632c2d9ce0c",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["vlanInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Id) },
+        ///             { "name", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Name) },
+        ///             { "comment", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Comment) },
+        ///             { "vlanTag", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.VlanTag) },
+        ///             { "ip", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Ips) },
+        ///             { "folder", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetVlanInterfaceResult> Invoke(GetVlanInterfaceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetVlanInterfaceResult>("scm:index/getVlanInterface:getVlanInterface", args ?? new GetVlanInterfaceInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// VlanInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up vlan interface by its ID.
+        ///     var scmVlanInterfaceDs = Scm.GetVlanInterface.Invoke(new()
+        ///     {
+        ///         Id = "3f9382a3-5c93-46d9-ae06-a632c2d9ce0c",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["vlanInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Id) },
+        ///             { "name", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Name) },
+        ///             { "comment", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Comment) },
+        ///             { "vlanTag", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.VlanTag) },
+        ///             { "ip", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Ips) },
+        ///             { "folder", scmVlanInterfaceDs.Apply(getVlanInterfaceResult =&gt; getVlanInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetVlanInterfaceResult> Invoke(GetVlanInterfaceInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetVlanInterfaceResult>("scm:index/getVlanInterface:getVlanInterface", args ?? new GetVlanInterfaceInvokeArgs(), options.WithDefaults());
@@ -88,7 +181,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly Outputs.GetVlanInterfaceDdnsConfigResult DdnsConfig;
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         public readonly string DefaultValue;
         /// <summary>
@@ -96,7 +189,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// Dhcp client
+        /// Vlan interfaces DHCP Client Object
         /// </summary>
         public readonly Outputs.GetVlanInterfaceDhcpClientResult DhcpClient;
         /// <summary>
@@ -112,13 +205,13 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string InterfaceManagementProfile;
         /// <summary>
-        /// Ip
+        /// VLAN Interface IP Parent
         /// </summary>
-        public readonly ImmutableArray<string> Ips;
+        public readonly ImmutableArray<Outputs.GetVlanInterfaceIpResult> Ips;
         /// <summary>
         /// MTU
         /// </summary>
-        public readonly double Mtu;
+        public readonly int Mtu;
         /// <summary>
         /// L3 sub-interface name
         /// </summary>
@@ -129,9 +222,9 @@ namespace Pulumi.Scm
         public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// Vlan tag
+        /// VLAN tag
         /// </summary>
-        public readonly double VlanTag;
+        public readonly string VlanTag;
 
         [OutputConstructor]
         private GetVlanInterfaceResult(
@@ -153,9 +246,9 @@ namespace Pulumi.Scm
 
             string interfaceManagementProfile,
 
-            ImmutableArray<string> ips,
+            ImmutableArray<Outputs.GetVlanInterfaceIpResult> ips,
 
-            double mtu,
+            int mtu,
 
             string name,
 
@@ -163,7 +256,7 @@ namespace Pulumi.Scm
 
             string tfid,
 
-            double vlanTag)
+            string vlanTag)
         {
             Arps = arps;
             Comment = comment;

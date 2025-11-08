@@ -8,6 +8,145 @@ import * as utilities from "./utilities";
 
 /**
  * DecryptionProfile resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmDecryptionProfileBase = new scm.DecryptionProfile("scm_decryption_profile_base", {
+ *     folder: "ngfw-shared",
+ *     name: "dp_base",
+ * });
+ * const scmDecryptionProfileForwardProxy = new scm.DecryptionProfile("scm_decryption_profile_forward_proxy", {
+ *     folder: "ngfw-shared",
+ *     name: "dp_forward_proxy",
+ *     sslForwardProxy: {
+ *         autoIncludeAltname: false,
+ *         blockClientCert: true,
+ *         blockExpiredCertificate: true,
+ *         blockTimeoutCert: true,
+ *         blockTls13DowngradeNoResource: false,
+ *         blockUnknownCert: false,
+ *         blockUnsupportedCipher: true,
+ *         blockUnsupportedVersion: true,
+ *         blockUntrustedIssuer: true,
+ *         restrictCertExts: false,
+ *         stripAlpn: true,
+ *     },
+ * });
+ * const scmDecryptionProfileInboundProxy = new scm.DecryptionProfile("scm_decryption_profile_inbound_proxy", {
+ *     folder: "ngfw-shared",
+ *     name: "dp_inbound_proxy",
+ *     sslInboundProxy: {
+ *         blockIfHsmUnavailable: true,
+ *         blockIfNoResource: true,
+ *         blockUnsupportedCipher: false,
+ *         blockUnsupportedVersion: true,
+ *     },
+ * });
+ * const scmDecryptionProfileNoProxy = new scm.DecryptionProfile("scm_decryption_profile_no_proxy", {
+ *     folder: "ngfw-shared",
+ *     name: "dp_no_proxy",
+ *     sslNoProxy: {
+ *         blockExpiredCertificate: true,
+ *         blockUntrustedIssuer: false,
+ *     },
+ * });
+ * const scmDecryptionProfileProtocolSettings = new scm.DecryptionProfile("scm_decryption_profile_protocol_settings", {
+ *     folder: "ngfw-shared",
+ *     name: "dp_protocol_settings",
+ *     sslProtocolSettings: {
+ *         authAlgoMd5: true,
+ *         authAlgoSha1: true,
+ *         authAlgoSha256: true,
+ *         authAlgoSha384: false,
+ *         encAlgo3des: false,
+ *         encAlgoAes128Cbc: false,
+ *         encAlgoAes128Gcm: true,
+ *         encAlgoAes256Cbc: false,
+ *         encAlgoAes256Gcm: true,
+ *         encAlgoChacha20Poly1305: false,
+ *         encAlgoRc4: false,
+ *         keyxchgAlgoDhe: true,
+ *         keyxchgAlgoEcdhe: true,
+ *         keyxchgAlgoRsa: false,
+ *         maxVersion: "max",
+ *         minVersion: "tls1-2",
+ *     },
+ * });
+ * const mixedDecryptionProfile = new scm.DecryptionProfile("mixed_decryption_profile", {
+ *     folder: "ngfw-shared",
+ *     name: "mixed_dp",
+ *     sslForwardProxy: {
+ *         autoIncludeAltname: true,
+ *         blockClientCert: true,
+ *         blockExpiredCertificate: false,
+ *         restrictCertExts: false,
+ *         stripAlpn: true,
+ *     },
+ *     sslInboundProxy: {
+ *         blockIfHsmUnavailable: true,
+ *         blockIfNoResource: true,
+ *         blockUnsupportedCipher: true,
+ *         blockUnsupportedVersion: true,
+ *     },
+ *     sslProtocolSettings: {
+ *         authAlgoMd5: true,
+ *         authAlgoSha1: true,
+ *         authAlgoSha256: false,
+ *         authAlgoSha384: true,
+ *         encAlgo3des: true,
+ *         encAlgoRc4: true,
+ *         keyxchgAlgoDhe: false,
+ *         keyxchgAlgoEcdhe: false,
+ *         maxVersion: "tls1-3",
+ *         minVersion: "tls1-1",
+ *     },
+ * });
+ * const fullMixedDecryptionProfile = new scm.DecryptionProfile("full_mixed_decryption_profile", {
+ *     folder: "ngfw-shared",
+ *     name: "full_mixed_dp",
+ *     sslForwardProxy: {
+ *         autoIncludeAltname: true,
+ *         blockClientCert: true,
+ *         blockExpiredCertificate: false,
+ *         blockTimeoutCert: true,
+ *         blockUnknownCert: false,
+ *         blockUnsupportedCipher: true,
+ *         blockUntrustedIssuer: false,
+ *         restrictCertExts: false,
+ *         stripAlpn: true,
+ *     },
+ *     sslInboundProxy: {
+ *         blockIfHsmUnavailable: true,
+ *         blockIfNoResource: false,
+ *         blockUnsupportedCipher: true,
+ *         blockUnsupportedVersion: false,
+ *     },
+ *     sslNoProxy: {
+ *         blockExpiredCertificate: false,
+ *         blockUntrustedIssuer: true,
+ *     },
+ *     sslProtocolSettings: {
+ *         authAlgoMd5: false,
+ *         authAlgoSha1: true,
+ *         authAlgoSha256: false,
+ *         authAlgoSha384: true,
+ *         encAlgo3des: false,
+ *         encAlgoAes128Gcm: true,
+ *         encAlgoAes256Cbc: false,
+ *         encAlgoAes256Gcm: true,
+ *         encAlgoRc4: true,
+ *         keyxchgAlgoDhe: false,
+ *         keyxchgAlgoEcdhe: true,
+ *         keyxchgAlgoRsa: false,
+ *         maxVersion: "tls1-0",
+ *         minVersion: "sslv3",
+ *     },
+ * });
+ * ```
  */
 export class DecryptionProfile extends pulumi.CustomResource {
     /**

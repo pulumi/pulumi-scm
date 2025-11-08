@@ -8,7 +8,7 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfOspfAreaTypeStubAbr;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRoute;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -32,7 +32,7 @@ public final class GetLogicalRouterListDataVrfOspfAreaTypeStub {
      * @return Default route metric
      * 
      */
-    private Double defaultRouteMetric;
+    private Integer defaultRouteMetric;
     /**
      * @return No summary
      * 
@@ -65,7 +65,7 @@ public final class GetLogicalRouterListDataVrfOspfAreaTypeStub {
      * @return Default route metric
      * 
      */
-    public Double defaultRouteMetric() {
+    public Integer defaultRouteMetric() {
         return this.defaultRouteMetric;
     }
     /**
@@ -88,7 +88,7 @@ public final class GetLogicalRouterListDataVrfOspfAreaTypeStub {
         private GetLogicalRouterListDataVrfOspfAreaTypeStubAbr abr;
         private Boolean acceptSummary;
         private GetLogicalRouterListDataVrfOspfAreaTypeStubDefaultRoute defaultRoute;
-        private Double defaultRouteMetric;
+        private Integer defaultRouteMetric;
         private Boolean noSummary;
         public Builder() {}
         public Builder(GetLogicalRouterListDataVrfOspfAreaTypeStub defaults) {
@@ -125,7 +125,7 @@ public final class GetLogicalRouterListDataVrfOspfAreaTypeStub {
             return this;
         }
         @CustomType.Setter
-        public Builder defaultRouteMetric(Double defaultRouteMetric) {
+        public Builder defaultRouteMetric(Integer defaultRouteMetric) {
             if (defaultRouteMetric == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfOspfAreaTypeStub", "defaultRouteMetric");
             }

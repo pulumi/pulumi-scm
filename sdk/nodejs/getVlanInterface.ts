@@ -8,6 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * VlanInterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up vlan interface by its ID.
+ * const scmVlanInterfaceDs = scm.getVlanInterface({
+ *     id: "3f9382a3-5c93-46d9-ae06-a632c2d9ce0c",
+ * });
+ * export const vlanInterfaceDataSourceResults = {
+ *     id: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.id),
+ *     name: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.name),
+ *     comment: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.comment),
+ *     vlanTag: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.vlanTag),
+ *     ip: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.ips),
+ *     folder: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.folder),
+ * };
+ * ```
  */
 export function getVlanInterface(args: GetVlanInterfaceArgs, opts?: pulumi.InvokeOptions): Promise<GetVlanInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -48,7 +68,7 @@ export interface GetVlanInterfaceResult {
      */
     readonly ddnsConfig: outputs.GetVlanInterfaceDdnsConfig;
     /**
-     * Default value
+     * Default interface assignment
      */
     readonly defaultValue: string;
     /**
@@ -56,7 +76,7 @@ export interface GetVlanInterfaceResult {
      */
     readonly device: string;
     /**
-     * Dhcp client
+     * Vlan interfaces DHCP Client Object
      */
     readonly dhcpClient: outputs.GetVlanInterfaceDhcpClient;
     /**
@@ -72,9 +92,9 @@ export interface GetVlanInterfaceResult {
      */
     readonly interfaceManagementProfile: string;
     /**
-     * Ip
+     * VLAN Interface IP Parent
      */
-    readonly ips: string[];
+    readonly ips: outputs.GetVlanInterfaceIp[];
     /**
      * MTU
      */
@@ -89,12 +109,32 @@ export interface GetVlanInterfaceResult {
     readonly snippet: string;
     readonly tfid: string;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    readonly vlanTag: number;
+    readonly vlanTag: string;
 }
 /**
  * VlanInterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up vlan interface by its ID.
+ * const scmVlanInterfaceDs = scm.getVlanInterface({
+ *     id: "3f9382a3-5c93-46d9-ae06-a632c2d9ce0c",
+ * });
+ * export const vlanInterfaceDataSourceResults = {
+ *     id: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.id),
+ *     name: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.name),
+ *     comment: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.comment),
+ *     vlanTag: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.vlanTag),
+ *     ip: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.ips),
+ *     folder: scmVlanInterfaceDs.then(scmVlanInterfaceDs => scmVlanInterfaceDs.folder),
+ * };
+ * ```
  */
 export function getVlanInterfaceOutput(args: GetVlanInterfaceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVlanInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,12 +15,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VlanInterfaceDdnsConfig {
     /**
-     * @return Ddns cert profile
+     * @return Certificate profile
      * 
      */
-    private @Nullable String ddnsCertProfile;
+    private String ddnsCertProfile;
     /**
-     * @return Ddns enabled
+     * @return Enable DDNS?
      * 
      */
     private @Nullable Boolean ddnsEnabled;
@@ -27,38 +28,38 @@ public final class VlanInterfaceDdnsConfig {
      * @return Ddns hostname
      * 
      */
-    private @Nullable String ddnsHostname;
+    private String ddnsHostname;
     /**
-     * @return Ddns ip
+     * @return IP to register (static only)
      * 
      */
     private @Nullable String ddnsIp;
     /**
-     * @return Ddns update interval
+     * @return Update interval (days)
      * 
      */
     private @Nullable Integer ddnsUpdateInterval;
     /**
-     * @return Ddns vendor
+     * @return DDNS vendor
      * 
      */
-    private @Nullable String ddnsVendor;
+    private String ddnsVendor;
     /**
-     * @return Ddns vendor config
+     * @return DDNS vendor
      * 
      */
-    private @Nullable String ddnsVendorConfig;
+    private String ddnsVendorConfig;
 
     private VlanInterfaceDdnsConfig() {}
     /**
-     * @return Ddns cert profile
+     * @return Certificate profile
      * 
      */
-    public Optional<String> ddnsCertProfile() {
-        return Optional.ofNullable(this.ddnsCertProfile);
+    public String ddnsCertProfile() {
+        return this.ddnsCertProfile;
     }
     /**
-     * @return Ddns enabled
+     * @return Enable DDNS?
      * 
      */
     public Optional<Boolean> ddnsEnabled() {
@@ -68,36 +69,36 @@ public final class VlanInterfaceDdnsConfig {
      * @return Ddns hostname
      * 
      */
-    public Optional<String> ddnsHostname() {
-        return Optional.ofNullable(this.ddnsHostname);
+    public String ddnsHostname() {
+        return this.ddnsHostname;
     }
     /**
-     * @return Ddns ip
+     * @return IP to register (static only)
      * 
      */
     public Optional<String> ddnsIp() {
         return Optional.ofNullable(this.ddnsIp);
     }
     /**
-     * @return Ddns update interval
+     * @return Update interval (days)
      * 
      */
     public Optional<Integer> ddnsUpdateInterval() {
         return Optional.ofNullable(this.ddnsUpdateInterval);
     }
     /**
-     * @return Ddns vendor
+     * @return DDNS vendor
      * 
      */
-    public Optional<String> ddnsVendor() {
-        return Optional.ofNullable(this.ddnsVendor);
+    public String ddnsVendor() {
+        return this.ddnsVendor;
     }
     /**
-     * @return Ddns vendor config
+     * @return DDNS vendor
      * 
      */
-    public Optional<String> ddnsVendorConfig() {
-        return Optional.ofNullable(this.ddnsVendorConfig);
+    public String ddnsVendorConfig() {
+        return this.ddnsVendorConfig;
     }
 
     public static Builder builder() {
@@ -109,13 +110,13 @@ public final class VlanInterfaceDdnsConfig {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String ddnsCertProfile;
+        private String ddnsCertProfile;
         private @Nullable Boolean ddnsEnabled;
-        private @Nullable String ddnsHostname;
+        private String ddnsHostname;
         private @Nullable String ddnsIp;
         private @Nullable Integer ddnsUpdateInterval;
-        private @Nullable String ddnsVendor;
-        private @Nullable String ddnsVendorConfig;
+        private String ddnsVendor;
+        private String ddnsVendorConfig;
         public Builder() {}
         public Builder(VlanInterfaceDdnsConfig defaults) {
     	      Objects.requireNonNull(defaults);
@@ -129,8 +130,10 @@ public final class VlanInterfaceDdnsConfig {
         }
 
         @CustomType.Setter
-        public Builder ddnsCertProfile(@Nullable String ddnsCertProfile) {
-
+        public Builder ddnsCertProfile(String ddnsCertProfile) {
+            if (ddnsCertProfile == null) {
+              throw new MissingRequiredPropertyException("VlanInterfaceDdnsConfig", "ddnsCertProfile");
+            }
             this.ddnsCertProfile = ddnsCertProfile;
             return this;
         }
@@ -141,8 +144,10 @@ public final class VlanInterfaceDdnsConfig {
             return this;
         }
         @CustomType.Setter
-        public Builder ddnsHostname(@Nullable String ddnsHostname) {
-
+        public Builder ddnsHostname(String ddnsHostname) {
+            if (ddnsHostname == null) {
+              throw new MissingRequiredPropertyException("VlanInterfaceDdnsConfig", "ddnsHostname");
+            }
             this.ddnsHostname = ddnsHostname;
             return this;
         }
@@ -159,14 +164,18 @@ public final class VlanInterfaceDdnsConfig {
             return this;
         }
         @CustomType.Setter
-        public Builder ddnsVendor(@Nullable String ddnsVendor) {
-
+        public Builder ddnsVendor(String ddnsVendor) {
+            if (ddnsVendor == null) {
+              throw new MissingRequiredPropertyException("VlanInterfaceDdnsConfig", "ddnsVendor");
+            }
             this.ddnsVendor = ddnsVendor;
             return this;
         }
         @CustomType.Setter
-        public Builder ddnsVendorConfig(@Nullable String ddnsVendorConfig) {
-
+        public Builder ddnsVendorConfig(String ddnsVendorConfig) {
+            if (ddnsVendorConfig == null) {
+              throw new MissingRequiredPropertyException("VlanInterfaceDdnsConfig", "ddnsVendorConfig");
+            }
             this.ddnsVendorConfig = ddnsVendorConfig;
             return this;
         }

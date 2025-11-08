@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// Domain servers
+        /// DNS proxy rules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetDnsProxyListDataDomainServerResult> DomainServers;
         /// <summary>

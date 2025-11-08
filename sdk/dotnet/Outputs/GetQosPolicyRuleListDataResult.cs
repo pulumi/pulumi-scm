@@ -42,6 +42,14 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
+        /// The relative position of the rule
+        /// </summary>
+        public readonly string Position;
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        public readonly string RelativePosition;
+        /// <summary>
         /// Schedule
         /// </summary>
         public readonly string Schedule;
@@ -49,6 +57,10 @@ namespace Pulumi.Scm.Outputs
         /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        public readonly string TargetRule;
         public readonly string Tfid;
 
         [OutputConstructor]
@@ -67,9 +79,15 @@ namespace Pulumi.Scm.Outputs
 
             string name,
 
+            string position,
+
+            string relativePosition,
+
             string schedule,
 
             string snippet,
+
+            string targetRule,
 
             string tfid)
         {
@@ -80,8 +98,11 @@ namespace Pulumi.Scm.Outputs
             Folder = folder;
             Id = id;
             Name = name;
+            Position = position;
+            RelativePosition = relativePosition;
             Schedule = schedule;
             Snippet = snippet;
+            TargetRule = targetRule;
             Tfid = tfid;
         }
     }

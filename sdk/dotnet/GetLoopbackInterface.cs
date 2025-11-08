@@ -13,18 +13,108 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// LoopbackInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up loopback interface by its ID.
+        ///     var scmLoopbackIntfDs = Scm.GetLoopbackInterface.Invoke(new()
+        ///     {
+        ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f1",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLoopbackInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Id) },
+        ///             { "name", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Name) },
+        ///             { "comment", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Comment) },
+        ///             { "ip", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Ips) },
+        ///             { "folder", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLoopbackInterfaceResult> InvokeAsync(GetLoopbackInterfaceArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLoopbackInterfaceResult>("scm:index/getLoopbackInterface:getLoopbackInterface", args ?? new GetLoopbackInterfaceArgs(), options.WithDefaults());
 
         /// <summary>
         /// LoopbackInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up loopback interface by its ID.
+        ///     var scmLoopbackIntfDs = Scm.GetLoopbackInterface.Invoke(new()
+        ///     {
+        ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f1",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLoopbackInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Id) },
+        ///             { "name", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Name) },
+        ///             { "comment", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Comment) },
+        ///             { "ip", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Ips) },
+        ///             { "folder", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLoopbackInterfaceResult> Invoke(GetLoopbackInterfaceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLoopbackInterfaceResult>("scm:index/getLoopbackInterface:getLoopbackInterface", args ?? new GetLoopbackInterfaceInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// LoopbackInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up loopback interface by its ID.
+        ///     var scmLoopbackIntfDs = Scm.GetLoopbackInterface.Invoke(new()
+        ///     {
+        ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f1",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLoopbackInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Id) },
+        ///             { "name", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Name) },
+        ///             { "comment", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Comment) },
+        ///             { "ip", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Ips) },
+        ///             { "folder", scmLoopbackIntfDs.Apply(getLoopbackInterfaceResult =&gt; getLoopbackInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLoopbackInterfaceResult> Invoke(GetLoopbackInterfaceInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLoopbackInterfaceResult>("scm:index/getLoopbackInterface:getLoopbackInterface", args ?? new GetLoopbackInterfaceInvokeArgs(), options.WithDefaults());
@@ -40,7 +130,7 @@ namespace Pulumi.Scm
         public string Id { get; set; } = null!;
 
         /// <summary>
-        /// L3 sub-interface name
+        /// Loopback Interface name
         /// </summary>
         [Input("name")]
         public string? Name { get; set; }
@@ -60,7 +150,7 @@ namespace Pulumi.Scm
         public Input<string> Id { get; set; } = null!;
 
         /// <summary>
-        /// L3 sub-interface name
+        /// Loopback Interface name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -80,9 +170,9 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Comment;
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
-        public readonly int DefaultValue;
+        public readonly string DefaultValue;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
@@ -100,15 +190,19 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string InterfaceManagementProfile;
         /// <summary>
-        /// loopback ip parent
+        /// Loopback IP Parent
         /// </summary>
-        public readonly Outputs.GetLoopbackInterfaceIpResult Ip;
+        public readonly ImmutableArray<Outputs.GetLoopbackInterfaceIpResult> Ips;
+        /// <summary>
+        /// Loopback IPv6 Configuration
+        /// </summary>
+        public readonly Outputs.GetLoopbackInterfaceIpv6Result Ipv6;
         /// <summary>
         /// MTU
         /// </summary>
-        public readonly double Mtu;
+        public readonly int Mtu;
         /// <summary>
-        /// L3 sub-interface name
+        /// Loopback Interface name
         /// </summary>
         public readonly string Name;
         /// <summary>
@@ -121,7 +215,7 @@ namespace Pulumi.Scm
         private GetLoopbackInterfaceResult(
             string comment,
 
-            int defaultValue,
+            string defaultValue,
 
             string device,
 
@@ -131,9 +225,11 @@ namespace Pulumi.Scm
 
             string interfaceManagementProfile,
 
-            Outputs.GetLoopbackInterfaceIpResult ip,
+            ImmutableArray<Outputs.GetLoopbackInterfaceIpResult> ips,
 
-            double mtu,
+            Outputs.GetLoopbackInterfaceIpv6Result ipv6,
+
+            int mtu,
 
             string name,
 
@@ -147,7 +243,8 @@ namespace Pulumi.Scm
             Folder = folder;
             Id = id;
             InterfaceManagementProfile = interfaceManagementProfile;
-            Ip = ip;
+            Ips = ips;
+            Ipv6 = ipv6;
             Mtu = mtu;
             Name = name;
             Snippet = snippet;

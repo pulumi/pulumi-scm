@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.InterfaceManagementProfileArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.InterfaceManagementProfileState;
+import com.pulumi.scm.outputs.InterfaceManagementProfilePermittedIp;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,6 +19,58 @@ import javax.annotation.Nullable;
 
 /**
  * InterfaceManagementProfile resource
+ * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.InterfaceManagementProfile;
+ * import com.pulumi.scm.InterfaceManagementProfileArgs;
+ * import com.pulumi.scm.inputs.InterfaceManagementProfilePermittedIpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dcPostmanProfile = new InterfaceManagementProfile("dcPostmanProfile", InterfaceManagementProfileArgs.builder()
+ *             .name("test_inf_mgmt_profile_1_update")
+ *             .folder("All")
+ *             .permittedIps(            
+ *                 InterfaceManagementProfilePermittedIpArgs.builder()
+ *                     .name("10.0.0.0/24")
+ *                     .build(),
+ *                 InterfaceManagementProfilePermittedIpArgs.builder()
+ *                     .name("10.0.0.0/32")
+ *                     .build())
+ *             .http(true)
+ *             .https(false)
+ *             .telnet(false)
+ *             .ssh(true)
+ *             .ping(false)
+ *             .httpOcsp(true)
+ *             .useridService(true)
+ *             .useridSyslogListenerSsl(true)
+ *             .useridSyslogListenerUdp(true)
+ *             .responsePages(false)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  */
 @ResourceType(type="scm:index/interfaceManagementProfile:InterfaceManagementProfile")
@@ -65,14 +118,14 @@ public class InterfaceManagementProfile extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.http);
     }
     /**
-     * Http ocsp
+     * Allow HTTP OCSP?
      * 
      */
     @Export(name="httpOcsp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> httpOcsp;
 
     /**
-     * @return Http ocsp
+     * @return Allow HTTP OCSP?
      * 
      */
     public Output<Optional<Boolean>> httpOcsp() {
@@ -107,17 +160,17 @@ public class InterfaceManagementProfile extends com.pulumi.resources.CustomResou
         return this.name;
     }
     /**
-     * Permitted ip
+     * Allowed IP address(es)
      * 
      */
-    @Export(name="permittedIps", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> permittedIps;
+    @Export(name="permittedIps", refs={List.class,InterfaceManagementProfilePermittedIp.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<InterfaceManagementProfilePermittedIp>> permittedIps;
 
     /**
-     * @return Permitted ip
+     * @return Allowed IP address(es)
      * 
      */
-    public Output<Optional<List<String>>> permittedIps() {
+    public Output<Optional<List<InterfaceManagementProfilePermittedIp>>> permittedIps() {
         return Codegen.optional(this.permittedIps);
     }
     /**
@@ -135,17 +188,17 @@ public class InterfaceManagementProfile extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ping);
     }
     /**
-     * Response pages
+     * Allow response pages?
      * 
      */
-    @Export(name="responsePages", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> responsePages;
+    @Export(name="responsePages", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> responsePages;
 
     /**
-     * @return Response pages
+     * @return Allow response pages?
      * 
      */
-    public Output<Optional<String>> responsePages() {
+    public Output<Optional<Boolean>> responsePages() {
         return Codegen.optional(this.responsePages);
     }
     /**
@@ -197,42 +250,42 @@ public class InterfaceManagementProfile extends com.pulumi.resources.CustomResou
         return this.tfid;
     }
     /**
-     * Userid service
+     * Allow User-ID?
      * 
      */
     @Export(name="useridService", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> useridService;
 
     /**
-     * @return Userid service
+     * @return Allow User-ID?
      * 
      */
     public Output<Optional<Boolean>> useridService() {
         return Codegen.optional(this.useridService);
     }
     /**
-     * Userid syslog listener ssl
+     * Allow User-ID syslog listener (SSL)?
      * 
      */
     @Export(name="useridSyslogListenerSsl", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> useridSyslogListenerSsl;
 
     /**
-     * @return Userid syslog listener ssl
+     * @return Allow User-ID syslog listener (SSL)?
      * 
      */
     public Output<Optional<Boolean>> useridSyslogListenerSsl() {
         return Codegen.optional(this.useridSyslogListenerSsl);
     }
     /**
-     * Userid syslog listener udp
+     * Allow User-ID syslog listener (UDP)?
      * 
      */
     @Export(name="useridSyslogListenerUdp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> useridSyslogListenerUdp;
 
     /**
-     * @return Userid syslog listener udp
+     * @return Allow User-ID syslog listener (UDP)?
      * 
      */
     public Output<Optional<Boolean>> useridSyslogListenerUdp() {

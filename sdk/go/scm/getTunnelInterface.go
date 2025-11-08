@@ -12,6 +12,40 @@ import (
 )
 
 // TunnelInterface data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Look up tunnel interface by its ID.
+//			scmTunnelIntfDs, err := scm.LookupTunnelInterface(ctx, &scm.LookupTunnelInterfaceArgs{
+//				Id: "ddad1e64-0b64-41a4-b361-c6191169a8f1",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmTunnelInterfaceDataSourceResults", pulumi.Map{
+//				"id":      scmTunnelIntfDs.Id,
+//				"name":    scmTunnelIntfDs.Name,
+//				"comment": scmTunnelIntfDs.Comment,
+//				"ip":      scmTunnelIntfDs.Ips,
+//				"folder":  scmTunnelIntfDs.Folder,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupTunnelInterface(ctx *pulumi.Context, args *LookupTunnelInterfaceArgs, opts ...pulumi.InvokeOption) (*LookupTunnelInterfaceResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupTunnelInterfaceResult
@@ -34,8 +68,8 @@ type LookupTunnelInterfaceArgs struct {
 type LookupTunnelInterfaceResult struct {
 	// Description
 	Comment string `pulumi:"comment"`
-	// Default value
-	DefaultValue int `pulumi:"defaultValue"`
+	// Default interface assignment
+	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
 	// The folder in which the resource is defined
@@ -44,10 +78,10 @@ type LookupTunnelInterfaceResult struct {
 	Id string `pulumi:"id"`
 	// Interface management profile
 	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
-	// tunnel interfaces ip parent
-	Ip GetTunnelInterfaceIp `pulumi:"ip"`
+	// Tunnel Interface IP Parent
+	Ips []GetTunnelInterfaceIp `pulumi:"ips"`
 	// MTU
-	Mtu float64 `pulumi:"mtu"`
+	Mtu int `pulumi:"mtu"`
 	// L3 sub-interface name
 	Name string `pulumi:"name"`
 	// The snippet in which the resource is defined
@@ -96,9 +130,9 @@ func (o LookupTunnelInterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
-// Default value
-func (o LookupTunnelInterfaceResultOutput) DefaultValue() pulumi.IntOutput {
-	return o.ApplyT(func(v LookupTunnelInterfaceResult) int { return v.DefaultValue }).(pulumi.IntOutput)
+// Default interface assignment
+func (o LookupTunnelInterfaceResultOutput) DefaultValue() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
@@ -121,14 +155,14 @@ func (o LookupTunnelInterfaceResultOutput) InterfaceManagementProfile() pulumi.S
 	return o.ApplyT(func(v LookupTunnelInterfaceResult) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
 }
 
-// tunnel interfaces ip parent
-func (o LookupTunnelInterfaceResultOutput) Ip() GetTunnelInterfaceIpOutput {
-	return o.ApplyT(func(v LookupTunnelInterfaceResult) GetTunnelInterfaceIp { return v.Ip }).(GetTunnelInterfaceIpOutput)
+// Tunnel Interface IP Parent
+func (o LookupTunnelInterfaceResultOutput) Ips() GetTunnelInterfaceIpArrayOutput {
+	return o.ApplyT(func(v LookupTunnelInterfaceResult) []GetTunnelInterfaceIp { return v.Ips }).(GetTunnelInterfaceIpArrayOutput)
 }
 
 // MTU
-func (o LookupTunnelInterfaceResultOutput) Mtu() pulumi.Float64Output {
-	return o.ApplyT(func(v LookupTunnelInterfaceResult) float64 { return v.Mtu }).(pulumi.Float64Output)
+func (o LookupTunnelInterfaceResultOutput) Mtu() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTunnelInterfaceResult) int { return v.Mtu }).(pulumi.IntOutput)
 }
 
 // L3 sub-interface name

@@ -13,7 +13,8 @@ import com.pulumi.scm.inputs.VlanInterfaceState;
 import com.pulumi.scm.outputs.VlanInterfaceArp;
 import com.pulumi.scm.outputs.VlanInterfaceDdnsConfig;
 import com.pulumi.scm.outputs.VlanInterfaceDhcpClient;
-import java.lang.Double;
+import com.pulumi.scm.outputs.VlanInterfaceIp;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +22,49 @@ import javax.annotation.Nullable;
 
 /**
  * VlanInterface resource
+ * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.VlanInterface;
+ * import com.pulumi.scm.VlanInterfaceArgs;
+ * import com.pulumi.scm.inputs.VlanInterfaceIpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates a vlan interface used as parent-interface for subsequent examples
+ *         //
+ *         var scmVlanInterfaceIpv4 = new VlanInterface("scmVlanInterfaceIpv4", VlanInterfaceArgs.builder()
+ *             .name("$scm_vlan_interface_ipv4")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .vlanTag("1234")
+ *             .ips(VlanInterfaceIpArgs.builder()
+ *                 .name("198.18.1.1/24")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  */
 @ResourceType(type="scm:index/vlanInterface:VlanInterface")
@@ -58,24 +102,24 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="ddnsConfig", refs={VlanInterfaceDdnsConfig.class}, tree="[0]")
-    private Output</* @Nullable */ VlanInterfaceDdnsConfig> ddnsConfig;
+    private Output<VlanInterfaceDdnsConfig> ddnsConfig;
 
     /**
      * @return Dynamic DNS configuration specific to the Vlan Interfaces.
      * 
      */
-    public Output<Optional<VlanInterfaceDdnsConfig>> ddnsConfig() {
-        return Codegen.optional(this.ddnsConfig);
+    public Output<VlanInterfaceDdnsConfig> ddnsConfig() {
+        return this.ddnsConfig;
     }
     /**
-     * Default value
+     * Default interface assignment
      * 
      */
     @Export(name="defaultValue", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultValue;
 
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
     public Output<Optional<String>> defaultValue() {
@@ -96,18 +140,18 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.device);
     }
     /**
-     * Dhcp client
+     * Vlan interfaces DHCP Client Object
      * 
      */
     @Export(name="dhcpClient", refs={VlanInterfaceDhcpClient.class}, tree="[0]")
-    private Output</* @Nullable */ VlanInterfaceDhcpClient> dhcpClient;
+    private Output<VlanInterfaceDhcpClient> dhcpClient;
 
     /**
-     * @return Dhcp client
+     * @return Vlan interfaces DHCP Client Object
      * 
      */
-    public Output<Optional<VlanInterfaceDhcpClient>> dhcpClient() {
-        return Codegen.optional(this.dhcpClient);
+    public Output<VlanInterfaceDhcpClient> dhcpClient() {
+        return this.dhcpClient;
     }
     /**
      * The folder in which the resource is defined
@@ -138,31 +182,31 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.interfaceManagementProfile);
     }
     /**
-     * Ip
+     * VLAN Interface IP Parent
      * 
      */
-    @Export(name="ips", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> ips;
+    @Export(name="ips", refs={List.class,VlanInterfaceIp.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<VlanInterfaceIp>> ips;
 
     /**
-     * @return Ip
+     * @return VLAN Interface IP Parent
      * 
      */
-    public Output<Optional<List<String>>> ips() {
+    public Output<Optional<List<VlanInterfaceIp>>> ips() {
         return Codegen.optional(this.ips);
     }
     /**
      * MTU
      * 
      */
-    @Export(name="mtu", refs={Double.class}, tree="[0]")
-    private Output</* @Nullable */ Double> mtu;
+    @Export(name="mtu", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> mtu;
 
     /**
      * @return MTU
      * 
      */
-    public Output<Optional<Double>> mtu() {
+    public Output<Optional<Integer>> mtu() {
         return Codegen.optional(this.mtu);
     }
     /**
@@ -200,17 +244,17 @@ public class VlanInterface extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * Vlan tag
+     * VLAN tag
      * 
      */
-    @Export(name="vlanTag", refs={Double.class}, tree="[0]")
-    private Output</* @Nullable */ Double> vlanTag;
+    @Export(name="vlanTag", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> vlanTag;
 
     /**
-     * @return Vlan tag
+     * @return VLAN tag
      * 
      */
-    public Output<Optional<Double>> vlanTag() {
+    public Output<Optional<String>> vlanTag() {
         return Codegen.optional(this.vlanTag);
     }
 

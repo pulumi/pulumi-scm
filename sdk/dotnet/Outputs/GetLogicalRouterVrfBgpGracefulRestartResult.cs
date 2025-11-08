@@ -20,25 +20,25 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Local restart time
         /// </summary>
-        public readonly double LocalRestartTime;
+        public readonly int LocalRestartTime;
         /// <summary>
         /// Max peer restart time
         /// </summary>
-        public readonly double MaxPeerRestartTime;
+        public readonly int MaxPeerRestartTime;
         /// <summary>
         /// Stale route time
         /// </summary>
-        public readonly double StaleRouteTime;
+        public readonly int StaleRouteTime;
 
         [OutputConstructor]
         private GetLogicalRouterVrfBgpGracefulRestartResult(
             bool enable,
 
-            double localRestartTime,
+            int localRestartTime,
 
-            double maxPeerRestartTime,
+            int maxPeerRestartTime,
 
-            double staleRouteTime)
+            int staleRouteTime)
         {
             Enable = enable;
             LocalRestartTime = localRestartTime;

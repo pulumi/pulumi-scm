@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,13 +20,13 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
      * 
      */
     @Import(name="deadCounts")
-    private @Nullable Output<Double> deadCounts;
+    private @Nullable Output<Integer> deadCounts;
 
     /**
      * @return Dead counts
      * 
      */
-    public Optional<Output<Double>> deadCounts() {
+    public Optional<Output<Integer>> deadCounts() {
         return Optional.ofNullable(this.deadCounts);
     }
 
@@ -35,13 +35,13 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
      * 
      */
     @Import(name="helloInterval")
-    private @Nullable Output<Double> helloInterval;
+    private @Nullable Output<Integer> helloInterval;
 
     /**
      * @return Hello interval
      * 
      */
-    public Optional<Output<Double>> helloInterval() {
+    public Optional<Output<Integer>> helloInterval() {
         return Optional.ofNullable(this.helloInterval);
     }
 
@@ -50,13 +50,13 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
      * 
      */
     @Import(name="retransmitInterval")
-    private @Nullable Output<Double> retransmitInterval;
+    private @Nullable Output<Integer> retransmitInterval;
 
     /**
      * @return Retransmit interval
      * 
      */
-    public Optional<Output<Double>> retransmitInterval() {
+    public Optional<Output<Integer>> retransmitInterval() {
         return Optional.ofNullable(this.retransmitInterval);
     }
 
@@ -65,13 +65,13 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
      * 
      */
     @Import(name="transitDelay")
-    private @Nullable Output<Double> transitDelay;
+    private @Nullable Output<Integer> transitDelay;
 
     /**
      * @return Transit delay
      * 
      */
-    public Optional<Output<Double>> transitDelay() {
+    public Optional<Output<Integer>> transitDelay() {
         return Optional.ofNullable(this.transitDelay);
     }
 
@@ -108,7 +108,7 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
          * @return builder
          * 
          */
-        public Builder deadCounts(@Nullable Output<Double> deadCounts) {
+        public Builder deadCounts(@Nullable Output<Integer> deadCounts) {
             $.deadCounts = deadCounts;
             return this;
         }
@@ -119,7 +119,7 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
          * @return builder
          * 
          */
-        public Builder deadCounts(Double deadCounts) {
+        public Builder deadCounts(Integer deadCounts) {
             return deadCounts(Output.of(deadCounts));
         }
 
@@ -129,7 +129,7 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
          * @return builder
          * 
          */
-        public Builder helloInterval(@Nullable Output<Double> helloInterval) {
+        public Builder helloInterval(@Nullable Output<Integer> helloInterval) {
             $.helloInterval = helloInterval;
             return this;
         }
@@ -140,7 +140,7 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
          * @return builder
          * 
          */
-        public Builder helloInterval(Double helloInterval) {
+        public Builder helloInterval(Integer helloInterval) {
             return helloInterval(Output.of(helloInterval));
         }
 
@@ -150,7 +150,7 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
          * @return builder
          * 
          */
-        public Builder retransmitInterval(@Nullable Output<Double> retransmitInterval) {
+        public Builder retransmitInterval(@Nullable Output<Integer> retransmitInterval) {
             $.retransmitInterval = retransmitInterval;
             return this;
         }
@@ -161,7 +161,7 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
          * @return builder
          * 
          */
-        public Builder retransmitInterval(Double retransmitInterval) {
+        public Builder retransmitInterval(Integer retransmitInterval) {
             return retransmitInterval(Output.of(retransmitInterval));
         }
 
@@ -171,7 +171,7 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
          * @return builder
          * 
          */
-        public Builder transitDelay(@Nullable Output<Double> transitDelay) {
+        public Builder transitDelay(@Nullable Output<Integer> transitDelay) {
             $.transitDelay = transitDelay;
             return this;
         }
@@ -182,7 +182,7 @@ public final class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs extends com.p
          * @return builder
          * 
          */
-        public Builder transitDelay(Double transitDelay) {
+        public Builder transitDelay(Integer transitDelay) {
             return transitDelay(Output.of(transitDelay));
         }
 

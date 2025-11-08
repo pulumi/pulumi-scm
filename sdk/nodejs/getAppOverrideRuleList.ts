@@ -8,9 +8,25 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allPreRules = scm.getAppOverrideRuleList({
+ *     offset: 10,
+ *     position: "pre",
+ *     folder: "All",
+ * });
+ * export const fetchedRuleListSummary = {
+ *     countOfRulesFetched: allPreRules.then(allPreRules => allPreRules.total),
+ *     firstRuleName: allPreRules.then(allPreRules => allPreRules.datas?.[0]?.name),
+ * };
+ * ```
  */
-export function getAppOverrideRuleList(args?: GetAppOverrideRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetAppOverrideRuleListResult> {
-    args = args || {};
+export function getAppOverrideRuleList(args: GetAppOverrideRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetAppOverrideRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAppOverrideRuleList:getAppOverrideRuleList", {
         "device": args.device,
@@ -18,6 +34,7 @@ export function getAppOverrideRuleList(args?: GetAppOverrideRuleListArgs, opts?:
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -46,6 +63,10 @@ export interface GetAppOverrideRuleListArgs {
      * The offset of the first item to return.
      */
     offset?: number;
+    /**
+     * The position of a security rule
+     */
+    position: string;
     /**
      * The snippet of the item.
      */
@@ -85,6 +106,10 @@ export interface GetAppOverrideRuleListResult {
      */
     readonly offset?: number;
     /**
+     * The position of a security rule
+     */
+    readonly position: string;
+    /**
      * The snippet of the item.
      */
     readonly snippet?: string;
@@ -96,9 +121,25 @@ export interface GetAppOverrideRuleListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allPreRules = scm.getAppOverrideRuleList({
+ *     offset: 10,
+ *     position: "pre",
+ *     folder: "All",
+ * });
+ * export const fetchedRuleListSummary = {
+ *     countOfRulesFetched: allPreRules.then(allPreRules => allPreRules.total),
+ *     firstRuleName: allPreRules.then(allPreRules => allPreRules.datas?.[0]?.name),
+ * };
+ * ```
  */
-export function getAppOverrideRuleListOutput(args?: GetAppOverrideRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAppOverrideRuleListResult> {
-    args = args || {};
+export function getAppOverrideRuleListOutput(args: GetAppOverrideRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAppOverrideRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAppOverrideRuleList:getAppOverrideRuleList", {
         "device": args.device,
@@ -106,6 +147,7 @@ export function getAppOverrideRuleListOutput(args?: GetAppOverrideRuleListOutput
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -134,6 +176,10 @@ export interface GetAppOverrideRuleListOutputArgs {
      * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
+    /**
+     * The position of a security rule
+     */
+    position: pulumi.Input<string>;
     /**
      * The snippet of the item.
      */

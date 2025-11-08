@@ -27,13 +27,13 @@ namespace Pulumi.Scm
         ///     // Fetch a list of all HIP Profile objects in the Shared folder.
         ///     var allShared = Scm.GetHipProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 10 HIP Profiles.
         ///     var paginated = Scm.GetHipProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 10,
         ///         Offset = 0,
         ///     });
@@ -65,13 +65,13 @@ namespace Pulumi.Scm
         ///     // Fetch a list of all HIP Profile objects in the Shared folder.
         ///     var allShared = Scm.GetHipProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 10 HIP Profiles.
         ///     var paginated = Scm.GetHipProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 10,
         ///         Offset = 0,
         ///     });
@@ -103,13 +103,13 @@ namespace Pulumi.Scm
         ///     // Fetch a list of all HIP Profile objects in the Shared folder.
         ///     var allShared = Scm.GetHipProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get the first 10 HIP Profiles.
         ///     var paginated = Scm.GetHipProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 10,
         ///         Offset = 0,
         ///     });

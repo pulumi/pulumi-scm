@@ -6,6 +6,24 @@ import * as utilities from "./utilities";
 
 /**
  * Folder data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up a folder by id
+ * const scmFolderDs = scm.getFolder({
+ *     id: "0f11d0d9-df7c-45da-a60c-4d80f8422544",
+ * });
+ * export const scmFolderOutput = {
+ *     id: scmFolderDs.then(scmFolderDs => scmFolderDs.id),
+ *     name: scmFolderDs.then(scmFolderDs => scmFolderDs.name),
+ *     description: scmFolderDs.then(scmFolderDs => scmFolderDs.description),
+ *     parent: scmFolderDs.then(scmFolderDs => scmFolderDs.parent),
+ * };
+ * ```
  */
 export function getFolder(args: GetFolderArgs, opts?: pulumi.InvokeOptions): Promise<GetFolderResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -61,6 +79,24 @@ export interface GetFolderResult {
 }
 /**
  * Folder data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up a folder by id
+ * const scmFolderDs = scm.getFolder({
+ *     id: "0f11d0d9-df7c-45da-a60c-4d80f8422544",
+ * });
+ * export const scmFolderOutput = {
+ *     id: scmFolderDs.then(scmFolderDs => scmFolderDs.id),
+ *     name: scmFolderDs.then(scmFolderDs => scmFolderDs.name),
+ *     description: scmFolderDs.then(scmFolderDs => scmFolderDs.description),
+ *     parent: scmFolderDs.then(scmFolderDs => scmFolderDs.parent),
+ * };
+ * ```
  */
 export function getFolderOutput(args: GetFolderOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFolderResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

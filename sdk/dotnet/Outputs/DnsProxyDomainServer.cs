@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class DnsProxyDomainServer
     {
         /// <summary>
-        /// Cacheable
+        /// Enable caching for this DNS proxy rule?
         /// </summary>
         public readonly bool? Cacheable;
         /// <summary>
-        /// Domain name
+        /// Domain names(s) that will be matched
         /// </summary>
         public readonly ImmutableArray<string> DomainNames;
         /// <summary>
-        /// Name
+        /// Proxy rule name
         /// </summary>
-        public readonly string? Name;
+        public readonly string Name;
         /// <summary>
-        /// Primary
+        /// Primary DNS server IP address
         /// </summary>
-        public readonly string? Primary;
+        public readonly string Primary;
         /// <summary>
-        /// Secondary
+        /// Secondary DNS server IP address
         /// </summary>
         public readonly string? Secondary;
 
@@ -40,9 +40,9 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> domainNames,
 
-            string? name,
+            string name,
 
-            string? primary,
+            string primary,
 
             string? secondary)
         {

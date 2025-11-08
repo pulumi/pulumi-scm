@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionBgpRib {
     /**
-     * @return Route maps
+     * @return BGP Root RIB Route maps
      * 
      */
     private @Nullable List<BgpRouteMapRedistributionBgpRibRouteMap> routeMaps;
 
     private BgpRouteMapRedistributionBgpRib() {}
     /**
-     * @return Route maps
+     * @return BGP Root RIB Route maps
      * 
      */
     public List<BgpRouteMapRedistributionBgpRibRouteMap> routeMaps() {

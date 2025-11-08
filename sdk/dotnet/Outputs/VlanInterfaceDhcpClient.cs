@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class VlanInterfaceDhcpClient
     {
         /// <summary>
-        /// Create default route
+        /// Automatically create default route pointing to default gateway provided by server
         /// </summary>
         public readonly bool? CreateDefaultRoute;
         /// <summary>
-        /// Default route metric
+        /// Metric of the default route created
         /// </summary>
         public readonly int? DefaultRouteMetric;
         /// <summary>
-        /// Enable
+        /// Enable DHCP?
         /// </summary>
         public readonly bool? Enable;
         /// <summary>

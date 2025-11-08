@@ -19,13 +19,13 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressGetArgs>? Address { get; set; }
 
         /// <summary>
-        /// Interface
+        /// OSPF BGP Route maps Interface
         /// </summary>
         [Input("interface")]
         public Input<string>? Interface { get; set; }
 
         /// <summary>
-        /// Metric
+        /// OSPF BGP Route maps Metric
         /// </summary>
         [Input("metric")]
         public Input<int>? Metric { get; set; }
@@ -37,7 +37,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopGetArgs>? NextHop { get; set; }
 
         /// <summary>
-        /// Tag
+        /// OSPF BGP Route maps Tag
         /// </summary>
         [Input("tag")]
         public Input<int>? Tag { get; set; }

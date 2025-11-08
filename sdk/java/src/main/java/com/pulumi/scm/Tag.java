@@ -44,19 +44,19 @@ import javax.annotation.Nullable;
  *         // This file is embedded using go:embed
  *         // Tags for organizing and categorizing resources
  *         var scmTag1 = new Tag("scmTag1", TagArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_tag_1")
  *             .color("Red")
  *             .build());
  * 
  *         var scmTag2 = new Tag("scmTag2", TagArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_tag_2")
  *             .color("Blue")
  *             .build());
  * 
  *         var scmTag3 = new Tag("scmTag3", TagArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_tag_3")
  *             .color("Orange")
  *             .build());

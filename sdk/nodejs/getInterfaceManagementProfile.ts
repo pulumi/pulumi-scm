@@ -2,10 +2,52 @@
 // *** Do not edit by hand unless you're certain you know what you are doing! ***
 
 import * as pulumi from "@pulumi/pulumi";
+import * as inputs from "./types/input";
+import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
  * InterfaceManagementProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // 1. Resource: Create the Interface Management Profile
+ * // This block creates the profile with your specified configuration.
+ * const testInfMgmtProfile = new scm.InterfaceManagementProfile("test_inf_mgmt_profile", {
+ *     name: "test_inf_mgmt_profile_ds_1",
+ *     folder: "All",
+ *     permittedIps: [
+ *         {
+ *             name: "10.0.0.0/24",
+ *         },
+ *         {
+ *             name: "10.0.0.0/32",
+ *         },
+ *     ],
+ *     http: true,
+ *     https: false,
+ *     telnet: false,
+ *     ssh: true,
+ *     ping: false,
+ *     httpOcsp: true,
+ *     useridService: true,
+ *     useridSyslogListenerSsl: true,
+ *     useridSyslogListenerUdp: true,
+ *     responsePages: false,
+ * });
+ * // --------------------------------------------------------------------------------
+ * // 2. Data Source: Retrieve the Interface Management Profile by ID
+ * // We use the resource's generated 'id' attribute to fetch the profile.
+ * const singleProfileById = scm.getInterfaceManagementProfileOutput({
+ *     id: testInfMgmtProfile.id,
+ * });
+ * export const fetchedProfileName = singleProfileById.apply(singleProfileById => singleProfileById.name);
+ * export const fetchedProfile = singleProfileById;
+ * ```
  */
 export function getInterfaceManagementProfile(args: GetInterfaceManagementProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetInterfaceManagementProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -46,7 +88,7 @@ export interface GetInterfaceManagementProfileResult {
      */
     readonly http: boolean;
     /**
-     * Http ocsp
+     * Allow HTTP OCSP?
      */
     readonly httpOcsp: boolean;
     /**
@@ -62,17 +104,17 @@ export interface GetInterfaceManagementProfileResult {
      */
     readonly name: string;
     /**
-     * Permitted ip
+     * Allowed IP address(es)
      */
-    readonly permittedIps: string[];
+    readonly permittedIps: outputs.GetInterfaceManagementProfilePermittedIp[];
     /**
      * Allow ping?
      */
     readonly ping: boolean;
     /**
-     * Response pages
+     * Allow response pages?
      */
-    readonly responsePages: string;
+    readonly responsePages: boolean;
     /**
      * The snippet in which the resource is defined
      */
@@ -87,20 +129,60 @@ export interface GetInterfaceManagementProfileResult {
     readonly telnet: boolean;
     readonly tfid: string;
     /**
-     * Userid service
+     * Allow User-ID?
      */
     readonly useridService: boolean;
     /**
-     * Userid syslog listener ssl
+     * Allow User-ID syslog listener (SSL)?
      */
     readonly useridSyslogListenerSsl: boolean;
     /**
-     * Userid syslog listener udp
+     * Allow User-ID syslog listener (UDP)?
      */
     readonly useridSyslogListenerUdp: boolean;
 }
 /**
  * InterfaceManagementProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // 1. Resource: Create the Interface Management Profile
+ * // This block creates the profile with your specified configuration.
+ * const testInfMgmtProfile = new scm.InterfaceManagementProfile("test_inf_mgmt_profile", {
+ *     name: "test_inf_mgmt_profile_ds_1",
+ *     folder: "All",
+ *     permittedIps: [
+ *         {
+ *             name: "10.0.0.0/24",
+ *         },
+ *         {
+ *             name: "10.0.0.0/32",
+ *         },
+ *     ],
+ *     http: true,
+ *     https: false,
+ *     telnet: false,
+ *     ssh: true,
+ *     ping: false,
+ *     httpOcsp: true,
+ *     useridService: true,
+ *     useridSyslogListenerSsl: true,
+ *     useridSyslogListenerUdp: true,
+ *     responsePages: false,
+ * });
+ * // --------------------------------------------------------------------------------
+ * // 2. Data Source: Retrieve the Interface Management Profile by ID
+ * // We use the resource's generated 'id' attribute to fetch the profile.
+ * const singleProfileById = scm.getInterfaceManagementProfileOutput({
+ *     id: testInfMgmtProfile.id,
+ * });
+ * export const fetchedProfileName = singleProfileById.apply(singleProfileById => singleProfileById.name);
+ * export const fetchedProfile = singleProfileById;
+ * ```
  */
 export function getInterfaceManagementProfileOutput(args: GetInterfaceManagementProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetInterfaceManagementProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

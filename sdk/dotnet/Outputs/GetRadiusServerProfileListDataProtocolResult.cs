@@ -16,41 +16,41 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// C h a p
         /// </summary>
-        public readonly string CHAP;
+        public readonly Outputs.GetRadiusServerProfileListDataProtocolChapResult Chap;
         /// <summary>
         /// E a p t t l s with p a p
         /// </summary>
-        public readonly Outputs.GetRadiusServerProfileListDataProtocolEAPTTLSWithPAPResult EAPTTLSWithPAP;
+        public readonly Outputs.GetRadiusServerProfileListDataProtocolEapTtlsWithPapResult EapTtlsWithPap;
         /// <summary>
         /// P a p
         /// </summary>
-        public readonly string PAP;
+        public readonly Outputs.GetRadiusServerProfileListDataProtocolPapResult Pap;
         /// <summary>
         /// P e a p m s c h a pv2
         /// </summary>
-        public readonly Outputs.GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2Result PEAPMSCHAPv2;
+        public readonly Outputs.GetRadiusServerProfileListDataProtocolPeapMschaPv2Result PeapMschaPv2;
         /// <summary>
         /// P e a p with g t c
         /// </summary>
-        public readonly Outputs.GetRadiusServerProfileListDataProtocolPEAPWithGTCResult PEAPWithGTC;
+        public readonly Outputs.GetRadiusServerProfileListDataProtocolPeapWithGtcResult PeapWithGtc;
 
         [OutputConstructor]
         private GetRadiusServerProfileListDataProtocolResult(
-            string cHAP,
+            Outputs.GetRadiusServerProfileListDataProtocolChapResult chap,
 
-            Outputs.GetRadiusServerProfileListDataProtocolEAPTTLSWithPAPResult eAPTTLSWithPAP,
+            Outputs.GetRadiusServerProfileListDataProtocolEapTtlsWithPapResult eapTtlsWithPap,
 
-            string pAP,
+            Outputs.GetRadiusServerProfileListDataProtocolPapResult pap,
 
-            Outputs.GetRadiusServerProfileListDataProtocolPEAPMSCHAPv2Result pEAPMSCHAPv2,
+            Outputs.GetRadiusServerProfileListDataProtocolPeapMschaPv2Result peapMschaPv2,
 
-            Outputs.GetRadiusServerProfileListDataProtocolPEAPWithGTCResult pEAPWithGTC)
+            Outputs.GetRadiusServerProfileListDataProtocolPeapWithGtcResult peapWithGtc)
         {
-            CHAP = cHAP;
-            EAPTTLSWithPAP = eAPTTLSWithPAP;
-            PAP = pAP;
-            PEAPMSCHAPv2 = pEAPMSCHAPv2;
-            PEAPWithGTC = pEAPWithGTC;
+            Chap = chap;
+            EapTtlsWithPap = eapTtlsWithPap;
+            Pap = pap;
+            PeapMschaPv2 = peapMschaPv2;
+            PeapWithGtc = peapWithGtc;
         }
     }
 }

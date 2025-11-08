@@ -25,8 +25,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &Address{}
 	case "scm:index/addressGroup:AddressGroup":
 		r = &AddressGroup{}
-	case "scm:index/aggregateEthernetInterface:AggregateEthernetInterface":
-		r = &AggregateEthernetInterface{}
+	case "scm:index/aggregateInterface:AggregateInterface":
+		r = &AggregateInterface{}
 	case "scm:index/antiSpywareProfile:AntiSpywareProfile":
 		r = &AntiSpywareProfile{}
 	case "scm:index/antiSpywareSignature:AntiSpywareSignature":
@@ -256,7 +256,7 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
-		"index/aggregateEthernetInterface",
+		"index/aggregateInterface",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

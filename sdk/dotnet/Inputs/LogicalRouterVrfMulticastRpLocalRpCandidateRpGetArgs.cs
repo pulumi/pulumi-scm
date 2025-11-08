@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         /// Advertisement interval
         /// </summary>
         [Input("advertisementInterval")]
-        public Input<double>? AdvertisementInterval { get; set; }
+        public Input<int>? AdvertisementInterval { get; set; }
 
         [Input("groupAddresses")]
         private InputList<string>? _groupAddresses;
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Inputs
         /// Priority
         /// </summary>
         [Input("priority")]
-        public Input<double>? Priority { get; set; }
+        public Input<int>? Priority { get; set; }
 
         public LogicalRouterVrfMulticastRpLocalRpCandidateRpGetArgs()
         {

@@ -38,7 +38,7 @@ type LookupSdwanTrafficDistributionProfileResult struct {
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Link tags
+	// Link-Tags for interfaces identified by defined tags
 	LinkTags []GetSdwanTrafficDistributionProfileLinkTag `pulumi:"linkTags"`
 	// Profile name
 	Name string `pulumi:"name"`
@@ -100,7 +100,7 @@ func (o LookupSdwanTrafficDistributionProfileResultOutput) Id() pulumi.StringOut
 	return o.ApplyT(func(v LookupSdwanTrafficDistributionProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Link tags
+// Link-Tags for interfaces identified by defined tags
 func (o LookupSdwanTrafficDistributionProfileResultOutput) LinkTags() GetSdwanTrafficDistributionProfileLinkTagArrayOutput {
 	return o.ApplyT(func(v LookupSdwanTrafficDistributionProfileResult) []GetSdwanTrafficDistributionProfileLinkTag {
 		return v.LinkTags

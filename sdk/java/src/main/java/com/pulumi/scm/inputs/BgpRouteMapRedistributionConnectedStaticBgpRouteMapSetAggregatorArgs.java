@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggrega
     public static final BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorArgs Empty = new BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorArgs();
 
     /**
-     * Aggregator AS
+     * Connected Static BGP Route maps set Aggregator AS
      * 
      */
     @Import(name="as")
     private @Nullable Output<Integer> as;
 
     /**
-     * @return Aggregator AS
+     * @return Connected Static BGP Route maps set Aggregator AS
      * 
      */
     public Optional<Output<Integer>> as() {
@@ -32,14 +32,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggrega
     }
 
     /**
-     * Router ID
+     * Connected Static BGP Route maps set Router ID
      * 
      */
     @Import(name="routerId")
     private @Nullable Output<String> routerId;
 
     /**
-     * @return Router ID
+     * @return Connected Static BGP Route maps set Router ID
      * 
      */
     public Optional<Output<String>> routerId() {
@@ -72,7 +72,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggrega
         }
 
         /**
-         * @param as Aggregator AS
+         * @param as Connected Static BGP Route maps set Aggregator AS
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggrega
         }
 
         /**
-         * @param as Aggregator AS
+         * @param as Connected Static BGP Route maps set Aggregator AS
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggrega
         }
 
         /**
-         * @param routerId Router ID
+         * @param routerId Connected Static BGP Route maps set Router ID
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggrega
         }
 
         /**
-         * @param routerId Router ID
+         * @param routerId Connected Static BGP Route maps set Router ID
          * 
          * @return builder
          * 

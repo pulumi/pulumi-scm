@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4GetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// bgp-route-map-redistributions ipv4 object address
+        /// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
         /// </summary>
         [Input("address")]
         public Input<Inputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressGetArgs>? Address { get; set; }
 
         /// <summary>
-        /// bgp-route-map-redistributions ipv4 object next*hop
+        /// BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
         /// </summary>
         [Input("nextHop")]
         public Input<Inputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopGetArgs>? NextHop { get; set; }
 
         /// <summary>
-        /// bgp-route-map-redistributions ipv4 object route*source
+        /// BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
         /// </summary>
         [Input("routeSource")]
         public Input<Inputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceGetArgs>? RouteSource { get; set; }

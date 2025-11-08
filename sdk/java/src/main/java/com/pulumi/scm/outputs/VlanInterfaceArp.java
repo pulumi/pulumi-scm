@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VlanInterfaceArp {
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     private @Nullable String hwAddress;
@@ -29,7 +29,7 @@ public final class VlanInterfaceArp {
 
     private VlanInterfaceArp() {}
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     public Optional<String> hwAddress() {

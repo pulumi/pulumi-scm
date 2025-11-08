@@ -174,9 +174,9 @@ def get_address_list(device: Optional[_builtins.str] = None,
     # This data source will call the "ListAddresses" API endpoint
     # and return all filters in the "Shared" folder.
     # 1. Use a single data block to fetch ALL addresses in the "Shared" folder.
-    all_shared = scm.get_address_list(folder="Shared")
+    all_shared = scm.get_address_list(folder="All")
     pulumi.export("addressDataSourceResultsFromList", {addr.id: addr for addr in all_shared.datas})
-    paginated_addresses_example = scm.get_address_list(folder="Shared",
+    paginated_addresses_example = scm.get_address_list(folder="All",
         limit=5,
         offset=0)
     pulumi.export("paginatedAddresses", {addr.id: addr for addr in paginated_addresses_example.datas})
@@ -234,9 +234,9 @@ def get_address_list_output(device: Optional[pulumi.Input[Optional[_builtins.str
     # This data source will call the "ListAddresses" API endpoint
     # and return all filters in the "Shared" folder.
     # 1. Use a single data block to fetch ALL addresses in the "Shared" folder.
-    all_shared = scm.get_address_list(folder="Shared")
+    all_shared = scm.get_address_list(folder="All")
     pulumi.export("addressDataSourceResultsFromList", {addr.id: addr for addr in all_shared.datas})
-    paginated_addresses_example = scm.get_address_list(folder="Shared",
+    paginated_addresses_example = scm.get_address_list(folder="All",
         limit=5,
         offset=0)
     pulumi.export("paginatedAddresses", {addr.id: addr for addr in paginated_addresses_example.datas})

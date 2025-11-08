@@ -12,6 +12,55 @@ import (
 )
 
 // AppOverrideRule data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+//			testAppOverrideRule, err := scm.NewAppOverrideRule(ctx, "test_app_override_rule", &scm.AppOverrideRuleArgs{
+//				Name:        pulumi.String("data-source-app-override-test"),
+//				Description: pulumi.String("Rule created specifically for data source testing."),
+//				Folder:      pulumi.String("All"),
+//				Position:    pulumi.String("pre"),
+//				Application: pulumi.String("ssl"),
+//				Protocol:    pulumi.String("tcp"),
+//				Port:        pulumi.String("8443"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("trust"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			singleRuleById := scm.LookupAppOverrideRuleOutput(ctx, scm.GetAppOverrideRuleOutputArgs{
+//				Id: testAppOverrideRule.ID(),
+//			}, nil)
+//			ctx.Export("singleAppOverrideRuleName", singleRuleById)
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupAppOverrideRule(ctx *pulumi.Context, args *LookupAppOverrideRuleArgs, opts ...pulumi.InvokeOption) (*LookupAppOverrideRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupAppOverrideRuleResult
@@ -57,16 +106,22 @@ type LookupAppOverrideRuleResult struct {
 	// Negate source
 	NegateSource bool `pulumi:"negateSource"`
 	// Port
-	Port int `pulumi:"port"`
+	Port string `pulumi:"port"`
+	// The position of a security rule
+	Position string `pulumi:"position"`
 	// Protocol
 	Protocol string `pulumi:"protocol"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition string `pulumi:"relativePosition"`
 	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
 	// Source
 	Sources []string `pulumi:"sources"`
 	// Tag
 	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule string `pulumi:"targetRule"`
+	Tfid       string `pulumi:"tfid"`
 	// To
 	Tos []string `pulumi:"tos"`
 }
@@ -168,13 +223,23 @@ func (o LookupAppOverrideRuleResultOutput) NegateSource() pulumi.BoolOutput {
 }
 
 // Port
-func (o LookupAppOverrideRuleResultOutput) Port() pulumi.IntOutput {
-	return o.ApplyT(func(v LookupAppOverrideRuleResult) int { return v.Port }).(pulumi.IntOutput)
+func (o LookupAppOverrideRuleResultOutput) Port() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Port }).(pulumi.StringOutput)
+}
+
+// The position of a security rule
+func (o LookupAppOverrideRuleResultOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Position }).(pulumi.StringOutput)
 }
 
 // Protocol
 func (o LookupAppOverrideRuleResultOutput) Protocol() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.Protocol }).(pulumi.StringOutput)
+}
+
+// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+func (o LookupAppOverrideRuleResultOutput) RelativePosition() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.RelativePosition }).(pulumi.StringOutput)
 }
 
 // The snippet in which the resource is defined
@@ -190,6 +255,11 @@ func (o LookupAppOverrideRuleResultOutput) Sources() pulumi.StringArrayOutput {
 // Tag
 func (o LookupAppOverrideRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAppOverrideRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
+}
+
+// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+func (o LookupAppOverrideRuleResultOutput) TargetRule() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAppOverrideRuleResult) string { return v.TargetRule }).(pulumi.StringOutput)
 }
 
 func (o LookupAppOverrideRuleResultOutput) Tfid() pulumi.StringOutput {

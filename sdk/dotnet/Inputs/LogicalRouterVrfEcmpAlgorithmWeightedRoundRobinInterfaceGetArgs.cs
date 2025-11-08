@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         /// Weight
         /// </summary>
         [Input("weight")]
-        public Input<double>? Weight { get; set; }
+        public Input<int>? Weight { get; set; }
 
         public LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInterfaceGetArgs()
         {

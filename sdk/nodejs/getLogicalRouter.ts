@@ -8,6 +8,25 @@ import * as utilities from "./utilities";
 
 /**
  * LogicalRouter data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up the logical router by its ID.
+ * const scmLogicalRouterDs = scm.getLogicalRouter({
+ *     id: "b7c6f00b-b20e-4073-af1c-1f42863a5983",
+ * });
+ * export const scmLogicalRouterDataSourceOutput = {
+ *     id: scmLogicalRouterDs.then(scmLogicalRouterDs => scmLogicalRouterDs.id),
+ *     name: scmLogicalRouterDs.then(scmLogicalRouterDs => scmLogicalRouterDs.name),
+ *     routingStack: scmLogicalRouterDs.then(scmLogicalRouterDs => scmLogicalRouterDs.routingStack),
+ *     vrf: scmLogicalRouterDs.then(scmLogicalRouterDs => scmLogicalRouterDs.vrves),
+ *     folder: scmLogicalRouterDs.then(scmLogicalRouterDs => scmLogicalRouterDs.folder),
+ * };
+ * ```
  */
 export function getLogicalRouter(args: GetLogicalRouterArgs, opts?: pulumi.InvokeOptions): Promise<GetLogicalRouterResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -67,6 +86,25 @@ export interface GetLogicalRouterResult {
 }
 /**
  * LogicalRouter data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up the logical router by its ID.
+ * const scmLogicalRouterDs = scm.getLogicalRouter({
+ *     id: "b7c6f00b-b20e-4073-af1c-1f42863a5983",
+ * });
+ * export const scmLogicalRouterDataSourceOutput = {
+ *     id: scmLogicalRouterDs.then(scmLogicalRouterDs => scmLogicalRouterDs.id),
+ *     name: scmLogicalRouterDs.then(scmLogicalRouterDs => scmLogicalRouterDs.name),
+ *     routingStack: scmLogicalRouterDs.then(scmLogicalRouterDs => scmLogicalRouterDs.routingStack),
+ *     vrf: scmLogicalRouterDs.then(scmLogicalRouterDs => scmLogicalRouterDs.vrves),
+ *     folder: scmLogicalRouterDs.then(scmLogicalRouterDs => scmLogicalRouterDs.folder),
+ * };
+ * ```
  */
 export function getLogicalRouterOutput(args: GetLogicalRouterOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLogicalRouterResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

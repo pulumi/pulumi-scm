@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionConnectedStaticRibRouteMapSetGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Source address
+        /// Connected Static BGP Rib Route Map Distribution Source address
         /// </summary>
         [Input("sourceAddress")]
         public Input<string>? SourceAddress { get; set; }

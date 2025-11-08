@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -92,6 +93,21 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
     }
 
     /**
+     * The position of a security rule
+     * 
+     */
+    @Import(name="position", required=true)
+    private Output<String> position;
+
+    /**
+     * @return The position of a security rule
+     * 
+     */
+    public Output<String> position() {
+        return this.position;
+    }
+
+    /**
      * The snippet of the item.
      * 
      */
@@ -114,6 +130,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         this.limit = $.limit;
         this.name = $.name;
         this.offset = $.offset;
+        this.position = $.position;
         this.snippet = $.snippet;
     }
 
@@ -241,6 +258,27 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
+         * @param position The position of a security rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder position(Output<String> position) {
+            $.position = position;
+            return this;
+        }
+
+        /**
+         * @param position The position of a security rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder position(String position) {
+            return position(Output.of(position));
+        }
+
+        /**
          * @param snippet The snippet of the item.
          * 
          * @return builder
@@ -262,6 +300,9 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         public GetSecurityRuleListArgs build() {
+            if ($.position == null) {
+                throw new MissingRequiredPropertyException("GetSecurityRuleListArgs", "position");
+            }
             return $;
         }
     }

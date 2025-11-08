@@ -13,18 +13,117 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Zone data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up zone by its ID.
+        ///     var scmZoneDs = Scm.GetZone.Invoke(new()
+        ///     {
+        ///         Id = "50f1f0f3-a420-4989-9770-c927f1467a9a",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["zoneDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Id) },
+        ///             { "name", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Name) },
+        ///             { "network", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Network) },
+        ///             { "enableDeviceIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableDeviceIdentification) },
+        ///             { "enableUserIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableUserIdentification) },
+        ///             { "userAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.UserAcl) },
+        ///             { "deviceAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.DeviceAcl) },
+        ///             { "folder", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetZoneResult> InvokeAsync(GetZoneArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetZoneResult>("scm:index/getZone:getZone", args ?? new GetZoneArgs(), options.WithDefaults());
 
         /// <summary>
         /// Zone data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up zone by its ID.
+        ///     var scmZoneDs = Scm.GetZone.Invoke(new()
+        ///     {
+        ///         Id = "50f1f0f3-a420-4989-9770-c927f1467a9a",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["zoneDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Id) },
+        ///             { "name", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Name) },
+        ///             { "network", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Network) },
+        ///             { "enableDeviceIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableDeviceIdentification) },
+        ///             { "enableUserIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableUserIdentification) },
+        ///             { "userAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.UserAcl) },
+        ///             { "deviceAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.DeviceAcl) },
+        ///             { "folder", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetZoneResult> Invoke(GetZoneInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetZoneResult>("scm:index/getZone:getZone", args ?? new GetZoneInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Zone data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up zone by its ID.
+        ///     var scmZoneDs = Scm.GetZone.Invoke(new()
+        ///     {
+        ///         Id = "50f1f0f3-a420-4989-9770-c927f1467a9a",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["zoneDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Id) },
+        ///             { "name", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Name) },
+        ///             { "network", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Network) },
+        ///             { "enableDeviceIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableDeviceIdentification) },
+        ///             { "enableUserIdentification", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.EnableUserIdentification) },
+        ///             { "userAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.UserAcl) },
+        ///             { "deviceAcl", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.DeviceAcl) },
+        ///             { "folder", scmZoneDs.Apply(getZoneResult =&gt; getZoneResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetZoneResult> Invoke(GetZoneInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetZoneResult>("scm:index/getZone:getZone", args ?? new GetZoneInvokeArgs(), options.WithDefaults());

@@ -19,6 +19,106 @@ import javax.annotation.Nullable;
 /**
  * QosPolicyRule resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.QosPolicyRule;
+ * import com.pulumi.scm.QosPolicyRuleArgs;
+ * import com.pulumi.scm.inputs.QosPolicyRuleActionArgs;
+ * import com.pulumi.scm.inputs.QosPolicyRuleDscpTosArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         // --- 2. ANCHOR QOS POLICY RULE (Used for relative positioning) ---
+ *         var anchorQosRule = new QosPolicyRule("anchorQosRule", QosPolicyRuleArgs.builder()
+ *             .name("anchor-qos-rule")
+ *             .description("Base rule for testing 'before' and 'after' positioning.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .action(QosPolicyRuleActionArgs.builder()
+ *                 .class_("2")
+ *                 .build())
+ *             .schedule("non-work-hours")
+ *             .dscpTos(QosPolicyRuleDscpTosArgs.builder()
+ *                 .codepoints(QosPolicyRuleDscpTosCodepointArgs.builder()
+ *                     .name("Set-EF")
+ *                     .type(QosPolicyRuleDscpTosCodepointTypeArgs.builder()
+ *                         .ef(QosPolicyRuleDscpTosCodepointTypeEfArgs.builder()
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+ *         var ruleTopQosRule = new QosPolicyRule("ruleTopQosRule", QosPolicyRuleArgs.builder()
+ *             .name("top-absolute-qos-rule")
+ *             .description("Placed at the very TOP of the QoS rulebase (Highest Priority).")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("top")
+ *             .action(QosPolicyRuleActionArgs.builder()
+ *                 .class_("2")
+ *                 .build())
+ *             .build());
+ * 
+ *         var ruleBottomQosRule = new QosPolicyRule("ruleBottomQosRule", QosPolicyRuleArgs.builder()
+ *             .name("bottom-absolute-qos-rule")
+ *             .description("Placed at the very BOTTOM of the QoS rulebase (Lowest Priority)")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("bottom")
+ *             .action(QosPolicyRuleActionArgs.builder()
+ *                 .class_("3")
+ *                 .build())
+ *             .build());
+ * 
+ *         // --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+ *         var ruleBeforeAnchorQos = new QosPolicyRule("ruleBeforeAnchorQos", QosPolicyRuleArgs.builder()
+ *             .name("before-anchor-qos-rule")
+ *             .description("Positioned immediately BEFORE the anchor-qos-rule.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("before")
+ *             .targetRule(anchorQosRule.id())
+ *             .action(QosPolicyRuleActionArgs.builder()
+ *                 .class_("5")
+ *                 .build())
+ *             .build());
+ * 
+ *         var ruleAfterAnchorQos = new QosPolicyRule("ruleAfterAnchorQos", QosPolicyRuleArgs.builder()
+ *             .name("after-anchor-qos-rule")
+ *             .description("Positioned immediately AFTER the anchor-qos-rule.")
+ *             .folder("All")
+ *             .position("pre")
+ *             .relativePosition("after")
+ *             .targetRule(anchorQosRule.id())
+ *             .action(QosPolicyRuleActionArgs.builder()
+ *                 .class_("4")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/qosPolicyRule:QosPolicyRule")
 public class QosPolicyRule extends com.pulumi.resources.CustomResource {
@@ -121,6 +221,20 @@ public class QosPolicyRule extends com.pulumi.resources.CustomResource {
         return this.position;
     }
     /**
+     * Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    @Export(name="relativePosition", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> relativePosition;
+
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public Output<Optional<String>> relativePosition() {
+        return Codegen.optional(this.relativePosition);
+    }
+    /**
      * Schedule
      * 
      */
@@ -147,6 +261,20 @@ public class QosPolicyRule extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
+    }
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    @Export(name="targetRule", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> targetRule;
+
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public Output<Optional<String>> targetRule() {
+        return Codegen.optional(this.targetRule);
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;

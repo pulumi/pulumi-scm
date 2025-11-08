@@ -19,7 +19,7 @@ namespace Pulumi.Scm
         /// Cache
         /// </summary>
         [Output("cache")]
-        public Output<Outputs.DnsProxyCache?> Cache { get; private set; } = null!;
+        public Output<Outputs.DnsProxyCache> Cache { get; private set; } = null!;
 
         /// <summary>
         /// Default
@@ -34,7 +34,7 @@ namespace Pulumi.Scm
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// Domain servers
+        /// DNS proxy rules
         /// </summary>
         [Output("domainServers")]
         public Output<ImmutableArray<Outputs.DnsProxyDomainServer>> DomainServers { get; private set; } = null!;
@@ -79,7 +79,7 @@ namespace Pulumi.Scm
         /// Tcp queries
         /// </summary>
         [Output("tcpQueries")]
-        public Output<Outputs.DnsProxyTcpQueries?> TcpQueries { get; private set; } = null!;
+        public Output<Outputs.DnsProxyTcpQueries> TcpQueries { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
@@ -88,7 +88,7 @@ namespace Pulumi.Scm
         /// Udp queries
         /// </summary>
         [Output("udpQueries")]
-        public Output<Outputs.DnsProxyUdpQueries?> UdpQueries { get; private set; } = null!;
+        public Output<Outputs.DnsProxyUdpQueries> UdpQueries { get; private set; } = null!;
 
 
         /// <summary>
@@ -158,7 +158,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.DnsProxyDomainServerArgs>? _domainServers;
 
         /// <summary>
-        /// Domain servers
+        /// DNS proxy rules
         /// </summary>
         public InputList<Inputs.DnsProxyDomainServerArgs> DomainServers
         {
@@ -256,7 +256,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.DnsProxyDomainServerGetArgs>? _domainServers;
 
         /// <summary>
-        /// Domain servers
+        /// DNS proxy rules
         /// </summary>
         public InputList<Inputs.DnsProxyDomainServerGetArgs> DomainServers
         {

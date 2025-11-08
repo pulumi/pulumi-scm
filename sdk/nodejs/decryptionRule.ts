@@ -8,6 +8,121 @@ import * as utilities from "./utilities";
 
 /**
  * DecryptionRule resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // --- 1. TAG Resource ---
+ * const decryptionPositionTag = new scm.Tag("decryption_position_tag", {
+ *     name: "decryption-position-tag",
+ *     folder: "All",
+ *     color: "Purple",
+ * });
+ * // --- 2. ANCHOR DECRYPTION RULE (Used for relative positioning) ---
+ * const anchorDecryptionRule = new scm.DecryptionRule("anchor_decryption_rule", {
+ *     name: "anchor-decryption-rule",
+ *     description: "Base rule for testing 'before' and 'after' positioning.",
+ *     folder: "All",
+ *     position: "pre",
+ *     action: "decrypt",
+ *     froms: ["trust"],
+ *     tos: ["untrust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     services: ["service-https"],
+ *     categories: ["high-risk"],
+ *     sourceUsers: ["any"],
+ *     type: {
+ *         sslForwardProxy: {},
+ *     },
+ *     destinationHips: ["any"],
+ *     tags: [decryptionPositionTag.name],
+ *     logSuccess: true,
+ *     logFail: true,
+ *     disabled: false,
+ *     negateSource: false,
+ *     negateDestination: false,
+ * });
+ * // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+ * const ruleTopDecryptionRule = new scm.DecryptionRule("rule_top_decryption_rule", {
+ *     name: "top-absolute-decryption-rule",
+ *     description: "Placed at the very TOP of the Decryption rulebase.",
+ *     folder: "All",
+ *     position: "pre",
+ *     action: "no-decrypt",
+ *     relativePosition: "top",
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     services: ["service-https"],
+ *     categories: ["high-risk"],
+ *     sourceUsers: ["any"],
+ *     type: {
+ *         sslForwardProxy: {},
+ *     },
+ * });
+ * const ruleBottomDecryptionRule = new scm.DecryptionRule("rule_bottom_decryption_rule", {
+ *     name: "bottom-absolute-decryption-rule",
+ *     description: "Placed at the very BOTTOM of the Decryption rulebase.",
+ *     folder: "All",
+ *     position: "pre",
+ *     action: "decrypt",
+ *     relativePosition: "bottom",
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     services: ["service-https"],
+ *     categories: ["high-risk"],
+ *     sourceUsers: ["any"],
+ *     type: {
+ *         sslForwardProxy: {},
+ *     },
+ * });
+ * // --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+ * const ruleBeforeAnchorDecryption = new scm.DecryptionRule("rule_before_anchor_decryption", {
+ *     name: "before-anchor-decryption-rule",
+ *     description: "Positioned immediately BEFORE the anchor-decryption-rule. Updating",
+ *     folder: "All",
+ *     position: "pre",
+ *     action: "decrypt",
+ *     relativePosition: "before",
+ *     targetRule: anchorDecryptionRule.id,
+ *     froms: ["trust"],
+ *     tos: ["untrust"],
+ *     sources: ["10.1.1.0/24"],
+ *     destinations: ["any"],
+ *     services: ["service-https"],
+ *     categories: ["high-risk"],
+ *     sourceUsers: ["any"],
+ *     type: {
+ *         sslForwardProxy: {},
+ *     },
+ * });
+ * const ruleAfterAnchorDecryption = new scm.DecryptionRule("rule_after_anchor_decryption", {
+ *     name: "after-anchor-decryption-rule_123",
+ *     description: "Positioned immediately AFTER the anchor-decryption-rule.",
+ *     folder: "All",
+ *     position: "pre",
+ *     action: "decrypt",
+ *     relativePosition: "after",
+ *     targetRule: anchorDecryptionRule.id,
+ *     froms: ["any"],
+ *     tos: ["untrust"],
+ *     sources: ["any"],
+ *     destinations: ["192.168.1.10"],
+ *     services: ["service-https"],
+ *     categories: ["any"],
+ *     sourceUsers: ["any"],
+ *     type: {
+ *         sslForwardProxy: {},
+ *     },
+ * });
+ * ```
  */
 export class DecryptionRule extends pulumi.CustomResource {
     /**
@@ -106,6 +221,10 @@ export class DecryptionRule extends pulumi.CustomResource {
      */
     declare public readonly profile: pulumi.Output<string | undefined>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    declare public readonly relativePosition: pulumi.Output<string | undefined>;
+    /**
      * The destination services and/or service groups
      */
     declare public readonly services: pulumi.Output<string[]>;
@@ -129,6 +248,10 @@ export class DecryptionRule extends pulumi.CustomResource {
      * The tags associated with the decryption rule
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    declare public readonly targetRule: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The destination security zone
@@ -169,12 +292,14 @@ export class DecryptionRule extends pulumi.CustomResource {
             resourceInputs["negateSource"] = state?.negateSource;
             resourceInputs["position"] = state?.position;
             resourceInputs["profile"] = state?.profile;
+            resourceInputs["relativePosition"] = state?.relativePosition;
             resourceInputs["services"] = state?.services;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["sourceHips"] = state?.sourceHips;
             resourceInputs["sourceUsers"] = state?.sourceUsers;
             resourceInputs["sources"] = state?.sources;
             resourceInputs["tags"] = state?.tags;
+            resourceInputs["targetRule"] = state?.targetRule;
             resourceInputs["tfid"] = state?.tfid;
             resourceInputs["tos"] = state?.tos;
             resourceInputs["type"] = state?.type;
@@ -221,12 +346,14 @@ export class DecryptionRule extends pulumi.CustomResource {
             resourceInputs["negateSource"] = args?.negateSource;
             resourceInputs["position"] = args?.position;
             resourceInputs["profile"] = args?.profile;
+            resourceInputs["relativePosition"] = args?.relativePosition;
             resourceInputs["services"] = args?.services;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["sourceHips"] = args?.sourceHips;
             resourceInputs["sourceUsers"] = args?.sourceUsers;
             resourceInputs["sources"] = args?.sources;
             resourceInputs["tags"] = args?.tags;
+            resourceInputs["targetRule"] = args?.targetRule;
             resourceInputs["tos"] = args?.tos;
             resourceInputs["type"] = args?.type;
             resourceInputs["tfid"] = undefined /*out*/;
@@ -309,6 +436,10 @@ export interface DecryptionRuleState {
      */
     profile?: pulumi.Input<string>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition?: pulumi.Input<string>;
+    /**
      * The destination services and/or service groups
      */
     services?: pulumi.Input<pulumi.Input<string>[]>;
@@ -332,6 +463,10 @@ export interface DecryptionRuleState {
      * The tags associated with the decryption rule
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
      * The destination security zone
@@ -416,6 +551,10 @@ export interface DecryptionRuleArgs {
      */
     profile?: pulumi.Input<string>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition?: pulumi.Input<string>;
+    /**
      * The destination services and/or service groups
      */
     services: pulumi.Input<pulumi.Input<string>[]>;
@@ -439,6 +578,10 @@ export interface DecryptionRuleArgs {
      * The tags associated with the decryption rule
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule?: pulumi.Input<string>;
     /**
      * The destination security zone
      */

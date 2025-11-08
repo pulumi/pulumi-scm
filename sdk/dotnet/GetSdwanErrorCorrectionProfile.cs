@@ -78,7 +78,7 @@ namespace Pulumi.Scm
         /// <summary>
         /// Activation threshold
         /// </summary>
-        public readonly double ActivationThreshold;
+        public readonly int ActivationThreshold;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
@@ -107,7 +107,7 @@ namespace Pulumi.Scm
 
         [OutputConstructor]
         private GetSdwanErrorCorrectionProfileResult(
-            double activationThreshold,
+            int activationThreshold,
 
             string device,
 

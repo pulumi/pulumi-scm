@@ -13,6 +13,225 @@ import (
 )
 
 // DecryptionRule resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// --- 1. TAG Resource ---
+//			decryptionPositionTag, err := scm.NewTag(ctx, "decryption_position_tag", &scm.TagArgs{
+//				Name:   pulumi.String("decryption-position-tag"),
+//				Folder: pulumi.String("All"),
+//				Color:  pulumi.String("Purple"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- 2. ANCHOR DECRYPTION RULE (Used for relative positioning) ---
+//			anchorDecryptionRule, err := scm.NewDecryptionRule(ctx, "anchor_decryption_rule", &scm.DecryptionRuleArgs{
+//				Name:        pulumi.String("anchor-decryption-rule"),
+//				Description: pulumi.String("Base rule for testing 'before' and 'after' positioning."),
+//				Folder:      pulumi.String("All"),
+//				Position:    pulumi.String("pre"),
+//				Action:      pulumi.String("decrypt"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("trust"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-https"),
+//				},
+//				Categories: pulumi.StringArray{
+//					pulumi.String("high-risk"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Type: &scm.DecryptionRuleTypeArgs{
+//					SslForwardProxy: &scm.DecryptionRuleTypeSslForwardProxyArgs{},
+//				},
+//				DestinationHips: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tags: pulumi.StringArray{
+//					decryptionPositionTag.Name,
+//				},
+//				LogSuccess:        pulumi.Bool(true),
+//				LogFail:           pulumi.Bool(true),
+//				Disabled:          pulumi.Bool(false),
+//				NegateSource:      pulumi.Bool(false),
+//				NegateDestination: pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+//			_, err = scm.NewDecryptionRule(ctx, "rule_top_decryption_rule", &scm.DecryptionRuleArgs{
+//				Name:             pulumi.String("top-absolute-decryption-rule"),
+//				Description:      pulumi.String("Placed at the very TOP of the Decryption rulebase."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				Action:           pulumi.String("no-decrypt"),
+//				RelativePosition: pulumi.String("top"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-https"),
+//				},
+//				Categories: pulumi.StringArray{
+//					pulumi.String("high-risk"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Type: &scm.DecryptionRuleTypeArgs{
+//					SslForwardProxy: &scm.DecryptionRuleTypeSslForwardProxyArgs{},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDecryptionRule(ctx, "rule_bottom_decryption_rule", &scm.DecryptionRuleArgs{
+//				Name:             pulumi.String("bottom-absolute-decryption-rule"),
+//				Description:      pulumi.String("Placed at the very BOTTOM of the Decryption rulebase."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				Action:           pulumi.String("decrypt"),
+//				RelativePosition: pulumi.String("bottom"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-https"),
+//				},
+//				Categories: pulumi.StringArray{
+//					pulumi.String("high-risk"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Type: &scm.DecryptionRuleTypeArgs{
+//					SslForwardProxy: &scm.DecryptionRuleTypeSslForwardProxyArgs{},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+//			_, err = scm.NewDecryptionRule(ctx, "rule_before_anchor_decryption", &scm.DecryptionRuleArgs{
+//				Name:             pulumi.String("before-anchor-decryption-rule"),
+//				Description:      pulumi.String("Positioned immediately BEFORE the anchor-decryption-rule. Updating"),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				Action:           pulumi.String("decrypt"),
+//				RelativePosition: pulumi.String("before"),
+//				TargetRule:       anchorDecryptionRule.ID(),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("trust"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("10.1.1.0/24"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-https"),
+//				},
+//				Categories: pulumi.StringArray{
+//					pulumi.String("high-risk"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Type: &scm.DecryptionRuleTypeArgs{
+//					SslForwardProxy: &scm.DecryptionRuleTypeSslForwardProxyArgs{},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDecryptionRule(ctx, "rule_after_anchor_decryption", &scm.DecryptionRuleArgs{
+//				Name:             pulumi.String("after-anchor-decryption-rule_123"),
+//				Description:      pulumi.String("Positioned immediately AFTER the anchor-decryption-rule."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				Action:           pulumi.String("decrypt"),
+//				RelativePosition: pulumi.String("after"),
+//				TargetRule:       anchorDecryptionRule.ID(),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("192.168.1.10"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-https"),
+//				},
+//				Categories: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Type: &scm.DecryptionRuleTypeArgs{
+//					SslForwardProxy: &scm.DecryptionRuleTypeSslForwardProxyArgs{},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type DecryptionRule struct {
 	pulumi.CustomResourceState
 
@@ -50,6 +269,8 @@ type DecryptionRule struct {
 	Position pulumi.StringOutput `pulumi:"position"`
 	// The decryption profile associated with the decryption rule
 	Profile pulumi.StringPtrOutput `pulumi:"profile"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrOutput `pulumi:"relativePosition"`
 	// The destination services and/or service groups
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// The snippet in which the resource is defined
@@ -62,7 +283,9 @@ type DecryptionRule struct {
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
 	// The tags associated with the decryption rule
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	Tfid pulumi.StringOutput      `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrOutput `pulumi:"targetRule"`
+	Tfid       pulumi.StringOutput    `pulumi:"tfid"`
 	// The destination security zone
 	Tos pulumi.StringArrayOutput `pulumi:"tos"`
 	// The type of decryption
@@ -157,6 +380,8 @@ type decryptionRuleState struct {
 	Position *string `pulumi:"position"`
 	// The decryption profile associated with the decryption rule
 	Profile *string `pulumi:"profile"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition *string `pulumi:"relativePosition"`
 	// The destination services and/or service groups
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
@@ -169,7 +394,9 @@ type decryptionRuleState struct {
 	Sources []string `pulumi:"sources"`
 	// The tags associated with the decryption rule
 	Tags []string `pulumi:"tags"`
-	Tfid *string  `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule *string `pulumi:"targetRule"`
+	Tfid       *string `pulumi:"tfid"`
 	// The destination security zone
 	Tos []string `pulumi:"tos"`
 	// The type of decryption
@@ -211,6 +438,8 @@ type DecryptionRuleState struct {
 	Position pulumi.StringPtrInput
 	// The decryption profile associated with the decryption rule
 	Profile pulumi.StringPtrInput
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrInput
 	// The destination services and/or service groups
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
@@ -223,7 +452,9 @@ type DecryptionRuleState struct {
 	Sources pulumi.StringArrayInput
 	// The tags associated with the decryption rule
 	Tags pulumi.StringArrayInput
-	Tfid pulumi.StringPtrInput
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrInput
+	Tfid       pulumi.StringPtrInput
 	// The destination security zone
 	Tos pulumi.StringArrayInput
 	// The type of decryption
@@ -269,6 +500,8 @@ type decryptionRuleArgs struct {
 	Position *string `pulumi:"position"`
 	// The decryption profile associated with the decryption rule
 	Profile *string `pulumi:"profile"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition *string `pulumi:"relativePosition"`
 	// The destination services and/or service groups
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
@@ -281,6 +514,8 @@ type decryptionRuleArgs struct {
 	Sources []string `pulumi:"sources"`
 	// The tags associated with the decryption rule
 	Tags []string `pulumi:"tags"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule *string `pulumi:"targetRule"`
 	// The destination security zone
 	Tos []string `pulumi:"tos"`
 	// The type of decryption
@@ -323,6 +558,8 @@ type DecryptionRuleArgs struct {
 	Position pulumi.StringPtrInput
 	// The decryption profile associated with the decryption rule
 	Profile pulumi.StringPtrInput
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrInput
 	// The destination services and/or service groups
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
@@ -335,6 +572,8 @@ type DecryptionRuleArgs struct {
 	Sources pulumi.StringArrayInput
 	// The tags associated with the decryption rule
 	Tags pulumi.StringArrayInput
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrInput
 	// The destination security zone
 	Tos pulumi.StringArrayInput
 	// The type of decryption
@@ -513,6 +752,11 @@ func (o DecryptionRuleOutput) Profile() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.Profile }).(pulumi.StringPtrOutput)
 }
 
+// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+func (o DecryptionRuleOutput) RelativePosition() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.RelativePosition }).(pulumi.StringPtrOutput)
+}
+
 // The destination services and/or service groups
 func (o DecryptionRuleOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.Services }).(pulumi.StringArrayOutput)
@@ -541,6 +785,11 @@ func (o DecryptionRuleOutput) Sources() pulumi.StringArrayOutput {
 // The tags associated with the decryption rule
 func (o DecryptionRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
+}
+
+// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+func (o DecryptionRuleOutput) TargetRule() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.TargetRule }).(pulumi.StringPtrOutput)
 }
 
 func (o DecryptionRuleOutput) Tfid() pulumi.StringOutput {

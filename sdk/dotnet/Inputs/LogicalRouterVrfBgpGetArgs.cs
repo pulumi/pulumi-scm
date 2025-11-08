@@ -64,7 +64,7 @@ namespace Pulumi.Scm.Inputs
         /// Default local preference
         /// </summary>
         [Input("defaultLocalPreference")]
-        public Input<double>? DefaultLocalPreference { get; set; }
+        public Input<int>? DefaultLocalPreference { get; set; }
 
         /// <summary>
         /// Ecmp multi as

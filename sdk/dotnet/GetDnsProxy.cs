@@ -88,7 +88,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// Domain servers
+        /// DNS proxy rules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetDnsProxyDomainServerResult> DomainServers;
         /// <summary>

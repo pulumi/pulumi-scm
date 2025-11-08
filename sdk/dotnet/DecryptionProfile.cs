@@ -11,6 +11,175 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// DecryptionProfile resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmDecryptionProfileBase = new Scm.DecryptionProfile("scm_decryption_profile_base", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "dp_base",
+    ///     });
+    /// 
+    ///     var scmDecryptionProfileForwardProxy = new Scm.DecryptionProfile("scm_decryption_profile_forward_proxy", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "dp_forward_proxy",
+    ///         SslForwardProxy = new Scm.Inputs.DecryptionProfileSslForwardProxyArgs
+    ///         {
+    ///             AutoIncludeAltname = false,
+    ///             BlockClientCert = true,
+    ///             BlockExpiredCertificate = true,
+    ///             BlockTimeoutCert = true,
+    ///             BlockTls13DowngradeNoResource = false,
+    ///             BlockUnknownCert = false,
+    ///             BlockUnsupportedCipher = true,
+    ///             BlockUnsupportedVersion = true,
+    ///             BlockUntrustedIssuer = true,
+    ///             RestrictCertExts = false,
+    ///             StripAlpn = true,
+    ///         },
+    ///     });
+    /// 
+    ///     var scmDecryptionProfileInboundProxy = new Scm.DecryptionProfile("scm_decryption_profile_inbound_proxy", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "dp_inbound_proxy",
+    ///         SslInboundProxy = new Scm.Inputs.DecryptionProfileSslInboundProxyArgs
+    ///         {
+    ///             BlockIfHsmUnavailable = true,
+    ///             BlockIfNoResource = true,
+    ///             BlockUnsupportedCipher = false,
+    ///             BlockUnsupportedVersion = true,
+    ///         },
+    ///     });
+    /// 
+    ///     var scmDecryptionProfileNoProxy = new Scm.DecryptionProfile("scm_decryption_profile_no_proxy", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "dp_no_proxy",
+    ///         SslNoProxy = new Scm.Inputs.DecryptionProfileSslNoProxyArgs
+    ///         {
+    ///             BlockExpiredCertificate = true,
+    ///             BlockUntrustedIssuer = false,
+    ///         },
+    ///     });
+    /// 
+    ///     var scmDecryptionProfileProtocolSettings = new Scm.DecryptionProfile("scm_decryption_profile_protocol_settings", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "dp_protocol_settings",
+    ///         SslProtocolSettings = new Scm.Inputs.DecryptionProfileSslProtocolSettingsArgs
+    ///         {
+    ///             AuthAlgoMd5 = true,
+    ///             AuthAlgoSha1 = true,
+    ///             AuthAlgoSha256 = true,
+    ///             AuthAlgoSha384 = false,
+    ///             EncAlgo3des = false,
+    ///             EncAlgoAes128Cbc = false,
+    ///             EncAlgoAes128Gcm = true,
+    ///             EncAlgoAes256Cbc = false,
+    ///             EncAlgoAes256Gcm = true,
+    ///             EncAlgoChacha20Poly1305 = false,
+    ///             EncAlgoRc4 = false,
+    ///             KeyxchgAlgoDhe = true,
+    ///             KeyxchgAlgoEcdhe = true,
+    ///             KeyxchgAlgoRsa = false,
+    ///             MaxVersion = "max",
+    ///             MinVersion = "tls1-2",
+    ///         },
+    ///     });
+    /// 
+    ///     var mixedDecryptionProfile = new Scm.DecryptionProfile("mixed_decryption_profile", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "mixed_dp",
+    ///         SslForwardProxy = new Scm.Inputs.DecryptionProfileSslForwardProxyArgs
+    ///         {
+    ///             AutoIncludeAltname = true,
+    ///             BlockClientCert = true,
+    ///             BlockExpiredCertificate = false,
+    ///             RestrictCertExts = false,
+    ///             StripAlpn = true,
+    ///         },
+    ///         SslInboundProxy = new Scm.Inputs.DecryptionProfileSslInboundProxyArgs
+    ///         {
+    ///             BlockIfHsmUnavailable = true,
+    ///             BlockIfNoResource = true,
+    ///             BlockUnsupportedCipher = true,
+    ///             BlockUnsupportedVersion = true,
+    ///         },
+    ///         SslProtocolSettings = new Scm.Inputs.DecryptionProfileSslProtocolSettingsArgs
+    ///         {
+    ///             AuthAlgoMd5 = true,
+    ///             AuthAlgoSha1 = true,
+    ///             AuthAlgoSha256 = false,
+    ///             AuthAlgoSha384 = true,
+    ///             EncAlgo3des = true,
+    ///             EncAlgoRc4 = true,
+    ///             KeyxchgAlgoDhe = false,
+    ///             KeyxchgAlgoEcdhe = false,
+    ///             MaxVersion = "tls1-3",
+    ///             MinVersion = "tls1-1",
+    ///         },
+    ///     });
+    /// 
+    ///     var fullMixedDecryptionProfile = new Scm.DecryptionProfile("full_mixed_decryption_profile", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "full_mixed_dp",
+    ///         SslForwardProxy = new Scm.Inputs.DecryptionProfileSslForwardProxyArgs
+    ///         {
+    ///             AutoIncludeAltname = true,
+    ///             BlockClientCert = true,
+    ///             BlockExpiredCertificate = false,
+    ///             BlockTimeoutCert = true,
+    ///             BlockUnknownCert = false,
+    ///             BlockUnsupportedCipher = true,
+    ///             BlockUntrustedIssuer = false,
+    ///             RestrictCertExts = false,
+    ///             StripAlpn = true,
+    ///         },
+    ///         SslInboundProxy = new Scm.Inputs.DecryptionProfileSslInboundProxyArgs
+    ///         {
+    ///             BlockIfHsmUnavailable = true,
+    ///             BlockIfNoResource = false,
+    ///             BlockUnsupportedCipher = true,
+    ///             BlockUnsupportedVersion = false,
+    ///         },
+    ///         SslNoProxy = new Scm.Inputs.DecryptionProfileSslNoProxyArgs
+    ///         {
+    ///             BlockExpiredCertificate = false,
+    ///             BlockUntrustedIssuer = true,
+    ///         },
+    ///         SslProtocolSettings = new Scm.Inputs.DecryptionProfileSslProtocolSettingsArgs
+    ///         {
+    ///             AuthAlgoMd5 = false,
+    ///             AuthAlgoSha1 = true,
+    ///             AuthAlgoSha256 = false,
+    ///             AuthAlgoSha384 = true,
+    ///             EncAlgo3des = false,
+    ///             EncAlgoAes128Gcm = true,
+    ///             EncAlgoAes256Cbc = false,
+    ///             EncAlgoAes256Gcm = true,
+    ///             EncAlgoRc4 = true,
+    ///             KeyxchgAlgoDhe = false,
+    ///             KeyxchgAlgoEcdhe = true,
+    ///             KeyxchgAlgoRsa = false,
+    ///             MaxVersion = "tls1-0",
+    ///             MinVersion = "sslv3",
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/decryptionProfile:DecryptionProfile")]
     public partial class DecryptionProfile : global::Pulumi.CustomResource

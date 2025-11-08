@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,13 +20,13 @@ public final class LogicalRouterVrfBgpPeerGroupPeerBfdMultihopArgs extends com.p
      * 
      */
     @Import(name="minReceivedTtl")
-    private @Nullable Output<Double> minReceivedTtl;
+    private @Nullable Output<Integer> minReceivedTtl;
 
     /**
      * @return Min received ttl
      * 
      */
-    public Optional<Output<Double>> minReceivedTtl() {
+    public Optional<Output<Integer>> minReceivedTtl() {
         return Optional.ofNullable(this.minReceivedTtl);
     }
 
@@ -60,7 +60,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerBfdMultihopArgs extends com.p
          * @return builder
          * 
          */
-        public Builder minReceivedTtl(@Nullable Output<Double> minReceivedTtl) {
+        public Builder minReceivedTtl(@Nullable Output<Integer> minReceivedTtl) {
             $.minReceivedTtl = minReceivedTtl;
             return this;
         }
@@ -71,7 +71,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerBfdMultihopArgs extends com.p
          * @return builder
          * 
          */
-        public Builder minReceivedTtl(Double minReceivedTtl) {
+        public Builder minReceivedTtl(Integer minReceivedTtl) {
             return minReceivedTtl(Output.of(minReceivedTtl));
         }
 

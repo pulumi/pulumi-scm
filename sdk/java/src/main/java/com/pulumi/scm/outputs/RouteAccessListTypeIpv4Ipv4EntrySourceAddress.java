@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.scm.outputs.RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,10 +18,10 @@ public final class RouteAccessListTypeIpv4Ipv4EntrySourceAddress {
      */
     private @Nullable String address;
     /**
-     * @return Source IP wildcard
+     * @return Entry
      * 
      */
-    private @Nullable String wildcard;
+    private @Nullable RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry entry;
 
     private RouteAccessListTypeIpv4Ipv4EntrySourceAddress() {}
     /**
@@ -31,11 +32,11 @@ public final class RouteAccessListTypeIpv4Ipv4EntrySourceAddress {
         return Optional.ofNullable(this.address);
     }
     /**
-     * @return Source IP wildcard
+     * @return Entry
      * 
      */
-    public Optional<String> wildcard() {
-        return Optional.ofNullable(this.wildcard);
+    public Optional<RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry> entry() {
+        return Optional.ofNullable(this.entry);
     }
 
     public static Builder builder() {
@@ -48,12 +49,12 @@ public final class RouteAccessListTypeIpv4Ipv4EntrySourceAddress {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String address;
-        private @Nullable String wildcard;
+        private @Nullable RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry entry;
         public Builder() {}
         public Builder(RouteAccessListTypeIpv4Ipv4EntrySourceAddress defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.address = defaults.address;
-    	      this.wildcard = defaults.wildcard;
+    	      this.entry = defaults.entry;
         }
 
         @CustomType.Setter
@@ -63,15 +64,15 @@ public final class RouteAccessListTypeIpv4Ipv4EntrySourceAddress {
             return this;
         }
         @CustomType.Setter
-        public Builder wildcard(@Nullable String wildcard) {
+        public Builder entry(@Nullable RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry entry) {
 
-            this.wildcard = wildcard;
+            this.entry = entry;
             return this;
         }
         public RouteAccessListTypeIpv4Ipv4EntrySourceAddress build() {
             final var _resultValue = new RouteAccessListTypeIpv4Ipv4EntrySourceAddress();
             _resultValue.address = address;
-            _resultValue.wildcard = wildcard;
+            _resultValue.entry = entry;
             return _resultValue;
         }
     }

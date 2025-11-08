@@ -149,10 +149,20 @@ public final class GetSecurityRuleListData {
      */
     private String policyType;
     /**
+     * @return The position of a security rule
+     * 
+     */
+    private String position;
+    /**
      * @return The security profile object
      * 
      */
     private GetSecurityRuleListDataProfileSetting profileSetting;
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    private String relativePosition;
     /**
      * @return Schedule in which this rule will be applied
      * 
@@ -193,6 +203,11 @@ public final class GetSecurityRuleListData {
      * 
      */
     private List<String> tags;
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    private String targetRule;
     /**
      * @return Tenant restrictions
      * 
@@ -389,11 +404,25 @@ public final class GetSecurityRuleListData {
         return this.policyType;
     }
     /**
+     * @return The position of a security rule
+     * 
+     */
+    public String position() {
+        return this.position;
+    }
+    /**
      * @return The security profile object
      * 
      */
     public GetSecurityRuleListDataProfileSetting profileSetting() {
         return this.profileSetting;
+    }
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public String relativePosition() {
+        return this.relativePosition;
     }
     /**
      * @return Schedule in which this rule will be applied
@@ -452,6 +481,13 @@ public final class GetSecurityRuleListData {
         return this.tags;
     }
     /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public String targetRule() {
+        return this.targetRule;
+    }
+    /**
      * @return Tenant restrictions
      * 
      */
@@ -504,7 +540,9 @@ public final class GetSecurityRuleListData {
         private Boolean negateSource;
         private Boolean negateUser;
         private String policyType;
+        private String position;
         private GetSecurityRuleListDataProfileSetting profileSetting;
+        private String relativePosition;
         private String schedule;
         private GetSecurityRuleListDataSecuritySettings securitySettings;
         private List<String> services;
@@ -513,6 +551,7 @@ public final class GetSecurityRuleListData {
         private List<String> sourceUsers;
         private List<String> sources;
         private List<String> tags;
+        private String targetRule;
         private List<String> tenantRestrictions;
         private String tfid;
         private List<String> tos;
@@ -545,7 +584,9 @@ public final class GetSecurityRuleListData {
     	      this.negateSource = defaults.negateSource;
     	      this.negateUser = defaults.negateUser;
     	      this.policyType = defaults.policyType;
+    	      this.position = defaults.position;
     	      this.profileSetting = defaults.profileSetting;
+    	      this.relativePosition = defaults.relativePosition;
     	      this.schedule = defaults.schedule;
     	      this.securitySettings = defaults.securitySettings;
     	      this.services = defaults.services;
@@ -554,6 +595,7 @@ public final class GetSecurityRuleListData {
     	      this.sourceUsers = defaults.sourceUsers;
     	      this.sources = defaults.sources;
     	      this.tags = defaults.tags;
+    	      this.targetRule = defaults.targetRule;
     	      this.tenantRestrictions = defaults.tenantRestrictions;
     	      this.tfid = defaults.tfid;
     	      this.tos = defaults.tos;
@@ -798,11 +840,27 @@ public final class GetSecurityRuleListData {
             return this;
         }
         @CustomType.Setter
+        public Builder position(String position) {
+            if (position == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleListData", "position");
+            }
+            this.position = position;
+            return this;
+        }
+        @CustomType.Setter
         public Builder profileSetting(GetSecurityRuleListDataProfileSetting profileSetting) {
             if (profileSetting == null) {
               throw new MissingRequiredPropertyException("GetSecurityRuleListData", "profileSetting");
             }
             this.profileSetting = profileSetting;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder relativePosition(String relativePosition) {
+            if (relativePosition == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleListData", "relativePosition");
+            }
+            this.relativePosition = relativePosition;
             return this;
         }
         @CustomType.Setter
@@ -885,6 +943,14 @@ public final class GetSecurityRuleListData {
             return tags(List.of(tags));
         }
         @CustomType.Setter
+        public Builder targetRule(String targetRule) {
+            if (targetRule == null) {
+              throw new MissingRequiredPropertyException("GetSecurityRuleListData", "targetRule");
+            }
+            this.targetRule = targetRule;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tenantRestrictions(List<String> tenantRestrictions) {
             if (tenantRestrictions == null) {
               throw new MissingRequiredPropertyException("GetSecurityRuleListData", "tenantRestrictions");
@@ -942,7 +1008,9 @@ public final class GetSecurityRuleListData {
             _resultValue.negateSource = negateSource;
             _resultValue.negateUser = negateUser;
             _resultValue.policyType = policyType;
+            _resultValue.position = position;
             _resultValue.profileSetting = profileSetting;
+            _resultValue.relativePosition = relativePosition;
             _resultValue.schedule = schedule;
             _resultValue.securitySettings = securitySettings;
             _resultValue.services = services;
@@ -951,6 +1019,7 @@ public final class GetSecurityRuleListData {
             _resultValue.sourceUsers = sourceUsers;
             _resultValue.sources = sources;
             _resultValue.tags = tags;
+            _resultValue.targetRule = targetRule;
             _resultValue.tenantRestrictions = tenantRestrictions;
             _resultValue.tfid = tfid;
             _resultValue.tos = tos;

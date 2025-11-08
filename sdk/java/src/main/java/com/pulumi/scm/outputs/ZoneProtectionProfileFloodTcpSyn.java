@@ -4,8 +4,9 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.scm.outputs.ZoneProtectionProfileFloodTcpSynRed;
+import com.pulumi.scm.outputs.ZoneProtectionProfileFloodTcpSynSynCookies;
 import java.lang.Boolean;
-import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -13,41 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ZoneProtectionProfileFloodTcpSyn {
     /**
-     * @return When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-     * 
-     */
-    private @Nullable Integer activateRate;
-    /**
-     * @return When the flow exceeds the `alertRate`` threshold, an alarm is generated.
-     * 
-     */
-    private @Nullable Integer alarmRate;
-    /**
      * @return Enable protection against SYN floods?
      * 
      */
     private @Nullable Boolean enable;
     /**
-     * @return When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
+     * @return Red
      * 
      */
-    private @Nullable Integer maximalRate;
+    private @Nullable ZoneProtectionProfileFloodTcpSynRed red;
+    /**
+     * @return Syn cookies
+     * 
+     */
+    private @Nullable ZoneProtectionProfileFloodTcpSynSynCookies synCookies;
 
     private ZoneProtectionProfileFloodTcpSyn() {}
-    /**
-     * @return When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-     * 
-     */
-    public Optional<Integer> activateRate() {
-        return Optional.ofNullable(this.activateRate);
-    }
-    /**
-     * @return When the flow exceeds the `alertRate`` threshold, an alarm is generated.
-     * 
-     */
-    public Optional<Integer> alarmRate() {
-        return Optional.ofNullable(this.alarmRate);
-    }
     /**
      * @return Enable protection against SYN floods?
      * 
@@ -56,11 +38,18 @@ public final class ZoneProtectionProfileFloodTcpSyn {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * @return When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
+     * @return Red
      * 
      */
-    public Optional<Integer> maximalRate() {
-        return Optional.ofNullable(this.maximalRate);
+    public Optional<ZoneProtectionProfileFloodTcpSynRed> red() {
+        return Optional.ofNullable(this.red);
+    }
+    /**
+     * @return Syn cookies
+     * 
+     */
+    public Optional<ZoneProtectionProfileFloodTcpSynSynCookies> synCookies() {
+        return Optional.ofNullable(this.synCookies);
     }
 
     public static Builder builder() {
@@ -72,31 +61,17 @@ public final class ZoneProtectionProfileFloodTcpSyn {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Integer activateRate;
-        private @Nullable Integer alarmRate;
         private @Nullable Boolean enable;
-        private @Nullable Integer maximalRate;
+        private @Nullable ZoneProtectionProfileFloodTcpSynRed red;
+        private @Nullable ZoneProtectionProfileFloodTcpSynSynCookies synCookies;
         public Builder() {}
         public Builder(ZoneProtectionProfileFloodTcpSyn defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.activateRate = defaults.activateRate;
-    	      this.alarmRate = defaults.alarmRate;
     	      this.enable = defaults.enable;
-    	      this.maximalRate = defaults.maximalRate;
+    	      this.red = defaults.red;
+    	      this.synCookies = defaults.synCookies;
         }
 
-        @CustomType.Setter
-        public Builder activateRate(@Nullable Integer activateRate) {
-
-            this.activateRate = activateRate;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder alarmRate(@Nullable Integer alarmRate) {
-
-            this.alarmRate = alarmRate;
-            return this;
-        }
         @CustomType.Setter
         public Builder enable(@Nullable Boolean enable) {
 
@@ -104,17 +79,22 @@ public final class ZoneProtectionProfileFloodTcpSyn {
             return this;
         }
         @CustomType.Setter
-        public Builder maximalRate(@Nullable Integer maximalRate) {
+        public Builder red(@Nullable ZoneProtectionProfileFloodTcpSynRed red) {
 
-            this.maximalRate = maximalRate;
+            this.red = red;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder synCookies(@Nullable ZoneProtectionProfileFloodTcpSynSynCookies synCookies) {
+
+            this.synCookies = synCookies;
             return this;
         }
         public ZoneProtectionProfileFloodTcpSyn build() {
             final var _resultValue = new ZoneProtectionProfileFloodTcpSyn();
-            _resultValue.activateRate = activateRate;
-            _resultValue.alarmRate = alarmRate;
             _resultValue.enable = enable;
-            _resultValue.maximalRate = maximalRate;
+            _resultValue.red = red;
+            _resultValue.synCookies = synCookies;
             return _resultValue;
         }
     }

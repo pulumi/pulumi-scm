@@ -19,11 +19,11 @@ import * as utilities from "./utilities";
  * // and return all filters in the "Shared" folder.
  * // 1. Use a single data block to fetch ALL addresses in the "Shared" folder.
  * const allShared = scm.getAddressGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const addressGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
  * const paginatedAddressGroupsExample = scm.getAddressGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
@@ -132,11 +132,11 @@ export interface GetAddressGroupListResult {
  * // and return all filters in the "Shared" folder.
  * // 1. Use a single data block to fetch ALL addresses in the "Shared" folder.
  * const allShared = scm.getAddressGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const addressGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
  * const paginatedAddressGroupsExample = scm.getAddressGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });

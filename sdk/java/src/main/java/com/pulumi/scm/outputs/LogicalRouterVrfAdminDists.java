@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,146 +15,146 @@ public final class LogicalRouterVrfAdminDists {
      * @return Bgp external
      * 
      */
-    private @Nullable Double bgpExternal;
+    private @Nullable Integer bgpExternal;
     /**
      * @return Bgp internal
      * 
      */
-    private @Nullable Double bgpInternal;
+    private @Nullable Integer bgpInternal;
     /**
      * @return Bgp local
      * 
      */
-    private @Nullable Double bgpLocal;
+    private @Nullable Integer bgpLocal;
     /**
      * @return Ospf ext
      * 
      */
-    private @Nullable Double ospfExt;
+    private @Nullable Integer ospfExt;
     /**
      * @return Ospf inter
      * 
      */
-    private @Nullable Double ospfInter;
+    private @Nullable Integer ospfInter;
     /**
      * @return Ospf intra
      * 
      */
-    private @Nullable Double ospfIntra;
+    private @Nullable Integer ospfIntra;
     /**
      * @return Ospfv3 ext
      * 
      */
-    private @Nullable Double ospfv3Ext;
+    private @Nullable Integer ospfv3Ext;
     /**
      * @return Ospfv3 inter
      * 
      */
-    private @Nullable Double ospfv3Inter;
+    private @Nullable Integer ospfv3Inter;
     /**
      * @return Ospfv3 intra
      * 
      */
-    private @Nullable Double ospfv3Intra;
+    private @Nullable Integer ospfv3Intra;
     /**
      * @return Rip
      * 
      */
-    private @Nullable Double rip;
+    private @Nullable Integer rip;
     /**
      * @return Static
      * 
      */
-    private @Nullable Double static_;
+    private @Nullable Integer static_;
     /**
      * @return Static ipv6
      * 
      */
-    private @Nullable Double staticIpv6;
+    private @Nullable Integer staticIpv6;
 
     private LogicalRouterVrfAdminDists() {}
     /**
      * @return Bgp external
      * 
      */
-    public Optional<Double> bgpExternal() {
+    public Optional<Integer> bgpExternal() {
         return Optional.ofNullable(this.bgpExternal);
     }
     /**
      * @return Bgp internal
      * 
      */
-    public Optional<Double> bgpInternal() {
+    public Optional<Integer> bgpInternal() {
         return Optional.ofNullable(this.bgpInternal);
     }
     /**
      * @return Bgp local
      * 
      */
-    public Optional<Double> bgpLocal() {
+    public Optional<Integer> bgpLocal() {
         return Optional.ofNullable(this.bgpLocal);
     }
     /**
      * @return Ospf ext
      * 
      */
-    public Optional<Double> ospfExt() {
+    public Optional<Integer> ospfExt() {
         return Optional.ofNullable(this.ospfExt);
     }
     /**
      * @return Ospf inter
      * 
      */
-    public Optional<Double> ospfInter() {
+    public Optional<Integer> ospfInter() {
         return Optional.ofNullable(this.ospfInter);
     }
     /**
      * @return Ospf intra
      * 
      */
-    public Optional<Double> ospfIntra() {
+    public Optional<Integer> ospfIntra() {
         return Optional.ofNullable(this.ospfIntra);
     }
     /**
      * @return Ospfv3 ext
      * 
      */
-    public Optional<Double> ospfv3Ext() {
+    public Optional<Integer> ospfv3Ext() {
         return Optional.ofNullable(this.ospfv3Ext);
     }
     /**
      * @return Ospfv3 inter
      * 
      */
-    public Optional<Double> ospfv3Inter() {
+    public Optional<Integer> ospfv3Inter() {
         return Optional.ofNullable(this.ospfv3Inter);
     }
     /**
      * @return Ospfv3 intra
      * 
      */
-    public Optional<Double> ospfv3Intra() {
+    public Optional<Integer> ospfv3Intra() {
         return Optional.ofNullable(this.ospfv3Intra);
     }
     /**
      * @return Rip
      * 
      */
-    public Optional<Double> rip() {
+    public Optional<Integer> rip() {
         return Optional.ofNullable(this.rip);
     }
     /**
      * @return Static
      * 
      */
-    public Optional<Double> static_() {
+    public Optional<Integer> static_() {
         return Optional.ofNullable(this.static_);
     }
     /**
      * @return Static ipv6
      * 
      */
-    public Optional<Double> staticIpv6() {
+    public Optional<Integer> staticIpv6() {
         return Optional.ofNullable(this.staticIpv6);
     }
 
@@ -167,18 +167,18 @@ public final class LogicalRouterVrfAdminDists {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Double bgpExternal;
-        private @Nullable Double bgpInternal;
-        private @Nullable Double bgpLocal;
-        private @Nullable Double ospfExt;
-        private @Nullable Double ospfInter;
-        private @Nullable Double ospfIntra;
-        private @Nullable Double ospfv3Ext;
-        private @Nullable Double ospfv3Inter;
-        private @Nullable Double ospfv3Intra;
-        private @Nullable Double rip;
-        private @Nullable Double static_;
-        private @Nullable Double staticIpv6;
+        private @Nullable Integer bgpExternal;
+        private @Nullable Integer bgpInternal;
+        private @Nullable Integer bgpLocal;
+        private @Nullable Integer ospfExt;
+        private @Nullable Integer ospfInter;
+        private @Nullable Integer ospfIntra;
+        private @Nullable Integer ospfv3Ext;
+        private @Nullable Integer ospfv3Inter;
+        private @Nullable Integer ospfv3Intra;
+        private @Nullable Integer rip;
+        private @Nullable Integer static_;
+        private @Nullable Integer staticIpv6;
         public Builder() {}
         public Builder(LogicalRouterVrfAdminDists defaults) {
     	      Objects.requireNonNull(defaults);
@@ -197,73 +197,73 @@ public final class LogicalRouterVrfAdminDists {
         }
 
         @CustomType.Setter
-        public Builder bgpExternal(@Nullable Double bgpExternal) {
+        public Builder bgpExternal(@Nullable Integer bgpExternal) {
 
             this.bgpExternal = bgpExternal;
             return this;
         }
         @CustomType.Setter
-        public Builder bgpInternal(@Nullable Double bgpInternal) {
+        public Builder bgpInternal(@Nullable Integer bgpInternal) {
 
             this.bgpInternal = bgpInternal;
             return this;
         }
         @CustomType.Setter
-        public Builder bgpLocal(@Nullable Double bgpLocal) {
+        public Builder bgpLocal(@Nullable Integer bgpLocal) {
 
             this.bgpLocal = bgpLocal;
             return this;
         }
         @CustomType.Setter
-        public Builder ospfExt(@Nullable Double ospfExt) {
+        public Builder ospfExt(@Nullable Integer ospfExt) {
 
             this.ospfExt = ospfExt;
             return this;
         }
         @CustomType.Setter
-        public Builder ospfInter(@Nullable Double ospfInter) {
+        public Builder ospfInter(@Nullable Integer ospfInter) {
 
             this.ospfInter = ospfInter;
             return this;
         }
         @CustomType.Setter
-        public Builder ospfIntra(@Nullable Double ospfIntra) {
+        public Builder ospfIntra(@Nullable Integer ospfIntra) {
 
             this.ospfIntra = ospfIntra;
             return this;
         }
         @CustomType.Setter
-        public Builder ospfv3Ext(@Nullable Double ospfv3Ext) {
+        public Builder ospfv3Ext(@Nullable Integer ospfv3Ext) {
 
             this.ospfv3Ext = ospfv3Ext;
             return this;
         }
         @CustomType.Setter
-        public Builder ospfv3Inter(@Nullable Double ospfv3Inter) {
+        public Builder ospfv3Inter(@Nullable Integer ospfv3Inter) {
 
             this.ospfv3Inter = ospfv3Inter;
             return this;
         }
         @CustomType.Setter
-        public Builder ospfv3Intra(@Nullable Double ospfv3Intra) {
+        public Builder ospfv3Intra(@Nullable Integer ospfv3Intra) {
 
             this.ospfv3Intra = ospfv3Intra;
             return this;
         }
         @CustomType.Setter
-        public Builder rip(@Nullable Double rip) {
+        public Builder rip(@Nullable Integer rip) {
 
             this.rip = rip;
             return this;
         }
         @CustomType.Setter("static")
-        public Builder static_(@Nullable Double static_) {
+        public Builder static_(@Nullable Integer static_) {
 
             this.static_ = static_;
             return this;
         }
         @CustomType.Setter
-        public Builder staticIpv6(@Nullable Double staticIpv6) {
+        public Builder staticIpv6(@Nullable Integer staticIpv6) {
 
             this.staticIpv6 = staticIpv6;
             return this;

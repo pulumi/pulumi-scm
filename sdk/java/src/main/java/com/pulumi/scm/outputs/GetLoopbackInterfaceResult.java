@@ -6,9 +6,10 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetLoopbackInterfaceIp;
-import java.lang.Double;
+import com.pulumi.scm.outputs.GetLoopbackInterfaceIpv6;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
@@ -19,10 +20,10 @@ public final class GetLoopbackInterfaceResult {
      */
     private String comment;
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
-    private Integer defaultValue;
+    private String defaultValue;
     /**
      * @return The device in which the resource is defined
      * 
@@ -44,17 +45,22 @@ public final class GetLoopbackInterfaceResult {
      */
     private String interfaceManagementProfile;
     /**
-     * @return loopback ip parent
+     * @return Loopback IP Parent
      * 
      */
-    private GetLoopbackInterfaceIp ip;
+    private List<GetLoopbackInterfaceIp> ips;
+    /**
+     * @return Loopback IPv6 Configuration
+     * 
+     */
+    private GetLoopbackInterfaceIpv6 ipv6;
     /**
      * @return MTU
      * 
      */
-    private Double mtu;
+    private Integer mtu;
     /**
-     * @return L3 sub-interface name
+     * @return Loopback Interface name
      * 
      */
     private String name;
@@ -74,10 +80,10 @@ public final class GetLoopbackInterfaceResult {
         return this.comment;
     }
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
-    public Integer defaultValue() {
+    public String defaultValue() {
         return this.defaultValue;
     }
     /**
@@ -109,21 +115,28 @@ public final class GetLoopbackInterfaceResult {
         return this.interfaceManagementProfile;
     }
     /**
-     * @return loopback ip parent
+     * @return Loopback IP Parent
      * 
      */
-    public GetLoopbackInterfaceIp ip() {
-        return this.ip;
+    public List<GetLoopbackInterfaceIp> ips() {
+        return this.ips;
+    }
+    /**
+     * @return Loopback IPv6 Configuration
+     * 
+     */
+    public GetLoopbackInterfaceIpv6 ipv6() {
+        return this.ipv6;
     }
     /**
      * @return MTU
      * 
      */
-    public Double mtu() {
+    public Integer mtu() {
         return this.mtu;
     }
     /**
-     * @return L3 sub-interface name
+     * @return Loopback Interface name
      * 
      */
     public String name() {
@@ -150,13 +163,14 @@ public final class GetLoopbackInterfaceResult {
     @CustomType.Builder
     public static final class Builder {
         private String comment;
-        private Integer defaultValue;
+        private String defaultValue;
         private String device;
         private String folder;
         private String id;
         private String interfaceManagementProfile;
-        private GetLoopbackInterfaceIp ip;
-        private Double mtu;
+        private List<GetLoopbackInterfaceIp> ips;
+        private GetLoopbackInterfaceIpv6 ipv6;
+        private Integer mtu;
         private String name;
         private String snippet;
         private String tfid;
@@ -169,7 +183,8 @@ public final class GetLoopbackInterfaceResult {
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.interfaceManagementProfile = defaults.interfaceManagementProfile;
-    	      this.ip = defaults.ip;
+    	      this.ips = defaults.ips;
+    	      this.ipv6 = defaults.ipv6;
     	      this.mtu = defaults.mtu;
     	      this.name = defaults.name;
     	      this.snippet = defaults.snippet;
@@ -185,7 +200,7 @@ public final class GetLoopbackInterfaceResult {
             return this;
         }
         @CustomType.Setter
-        public Builder defaultValue(Integer defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             if (defaultValue == null) {
               throw new MissingRequiredPropertyException("GetLoopbackInterfaceResult", "defaultValue");
             }
@@ -225,15 +240,26 @@ public final class GetLoopbackInterfaceResult {
             return this;
         }
         @CustomType.Setter
-        public Builder ip(GetLoopbackInterfaceIp ip) {
-            if (ip == null) {
-              throw new MissingRequiredPropertyException("GetLoopbackInterfaceResult", "ip");
+        public Builder ips(List<GetLoopbackInterfaceIp> ips) {
+            if (ips == null) {
+              throw new MissingRequiredPropertyException("GetLoopbackInterfaceResult", "ips");
             }
-            this.ip = ip;
+            this.ips = ips;
+            return this;
+        }
+        public Builder ips(GetLoopbackInterfaceIp... ips) {
+            return ips(List.of(ips));
+        }
+        @CustomType.Setter
+        public Builder ipv6(GetLoopbackInterfaceIpv6 ipv6) {
+            if (ipv6 == null) {
+              throw new MissingRequiredPropertyException("GetLoopbackInterfaceResult", "ipv6");
+            }
+            this.ipv6 = ipv6;
             return this;
         }
         @CustomType.Setter
-        public Builder mtu(Double mtu) {
+        public Builder mtu(Integer mtu) {
             if (mtu == null) {
               throw new MissingRequiredPropertyException("GetLoopbackInterfaceResult", "mtu");
             }
@@ -272,7 +298,8 @@ public final class GetLoopbackInterfaceResult {
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.interfaceManagementProfile = interfaceManagementProfile;
-            _resultValue.ip = ip;
+            _resultValue.ips = ips;
+            _resultValue.ipv6 = ipv6;
             _resultValue.mtu = mtu;
             _resultValue.name = name;
             _resultValue.snippet = snippet;

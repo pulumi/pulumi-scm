@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,29 +18,29 @@ public final class DnsProxyTcpQueriesArgs extends com.pulumi.resources.ResourceA
     public static final DnsProxyTcpQueriesArgs Empty = new DnsProxyTcpQueriesArgs();
 
     /**
-     * Enabled
+     * Turn on forwarding of TCP DNS queries?
      * 
      */
-    @Import(name="enabled")
-    private @Nullable Output<Boolean> enabled;
+    @Import(name="enabled", required=true)
+    private Output<Boolean> enabled;
 
     /**
-     * @return Enabled
+     * @return Turn on forwarding of TCP DNS queries?
      * 
      */
-    public Optional<Output<Boolean>> enabled() {
-        return Optional.ofNullable(this.enabled);
+    public Output<Boolean> enabled() {
+        return this.enabled;
     }
 
     /**
-     * Max pending requests
+     * Upper limit on number of concurrent TCP DNS requests
      * 
      */
     @Import(name="maxPendingRequests")
     private @Nullable Output<Integer> maxPendingRequests;
 
     /**
-     * @return Max pending requests
+     * @return Upper limit on number of concurrent TCP DNS requests
      * 
      */
     public Optional<Output<Integer>> maxPendingRequests() {
@@ -72,18 +73,18 @@ public final class DnsProxyTcpQueriesArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param enabled Enabled
+         * @param enabled Turn on forwarding of TCP DNS queries?
          * 
          * @return builder
          * 
          */
-        public Builder enabled(@Nullable Output<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
         /**
-         * @param enabled Enabled
+         * @param enabled Turn on forwarding of TCP DNS queries?
          * 
          * @return builder
          * 
@@ -93,7 +94,7 @@ public final class DnsProxyTcpQueriesArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param maxPendingRequests Max pending requests
+         * @param maxPendingRequests Upper limit on number of concurrent TCP DNS requests
          * 
          * @return builder
          * 
@@ -104,7 +105,7 @@ public final class DnsProxyTcpQueriesArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param maxPendingRequests Max pending requests
+         * @param maxPendingRequests Upper limit on number of concurrent TCP DNS requests
          * 
          * @return builder
          * 
@@ -114,6 +115,9 @@ public final class DnsProxyTcpQueriesArgs extends com.pulumi.resources.ResourceA
         }
 
         public DnsProxyTcpQueriesArgs build() {
+            if ($.enabled == null) {
+                throw new MissingRequiredPropertyException("DnsProxyTcpQueriesArgs", "enabled");
+            }
             return $;
         }
     }

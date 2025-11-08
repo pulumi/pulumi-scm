@@ -12,6 +12,66 @@ import (
 )
 
 // AuthenticationRule data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			ruleToFetch, err := scm.NewAuthenticationRule(ctx, "rule_to_fetch", &scm.AuthenticationRuleArgs{
+//				Name:        pulumi.String("rule-to-be-queried-scm-105"),
+//				Description: pulumi.String("This rule is created purely to test the data source functionality."),
+//				Position:    pulumi.String("pre"),
+//				Folder:      pulumi.String("All"),
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-http"),
+//					pulumi.String("service-https"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Timeout:           pulumi.Int(1200),
+//				NegateSource:      pulumi.Bool(false),
+//				NegateDestination: pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ruleData := scm.LookupAuthenticationRuleOutput(ctx, scm.GetAuthenticationRuleOutputArgs{
+//				Id: ruleToFetch.ID(),
+//			}, nil)
+//			ctx.Export("fetchedRuleId", ruleData.ApplyT(func(ruleData scm.GetAuthenticationRuleResult) (*string, error) {
+//				return &ruleData.Id, nil
+//			}).(pulumi.StringPtrOutput))
+//			ctx.Export("fetchedRuleTimeout", ruleData.ApplyT(func(ruleData scm.GetAuthenticationRuleResult) (*int, error) {
+//				return &ruleData.Timeout, nil
+//			}).(pulumi.IntPtrOutput))
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupAuthenticationRule(ctx *pulumi.Context, args *LookupAuthenticationRuleArgs, opts ...pulumi.InvokeOption) (*LookupAuthenticationRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupAuthenticationRuleResult
@@ -66,6 +126,10 @@ type LookupAuthenticationRuleResult struct {
 	NegateDestination bool `pulumi:"negateDestination"`
 	// Are the source addresses negated?
 	NegateSource bool `pulumi:"negateSource"`
+	// The relative position of the rule
+	Position string `pulumi:"position"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition string `pulumi:"relativePosition"`
 	// The destination ports
 	Services []string `pulumi:"services"`
 	// Snippet
@@ -78,7 +142,9 @@ type LookupAuthenticationRuleResult struct {
 	Sources []string `pulumi:"sources"`
 	// The authentication rule tags
 	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule string `pulumi:"targetRule"`
+	Tfid       string `pulumi:"tfid"`
 	// The authentication session timeout (seconds)
 	Timeout int `pulumi:"timeout"`
 	// The destination security zones
@@ -206,6 +272,16 @@ func (o LookupAuthenticationRuleResultOutput) NegateSource() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) bool { return v.NegateSource }).(pulumi.BoolOutput)
 }
 
+// The relative position of the rule
+func (o LookupAuthenticationRuleResultOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.Position }).(pulumi.StringOutput)
+}
+
+// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+func (o LookupAuthenticationRuleResultOutput) RelativePosition() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.RelativePosition }).(pulumi.StringOutput)
+}
+
 // The destination ports
 func (o LookupAuthenticationRuleResultOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.Services }).(pulumi.StringArrayOutput)
@@ -234,6 +310,11 @@ func (o LookupAuthenticationRuleResultOutput) Sources() pulumi.StringArrayOutput
 // The authentication rule tags
 func (o LookupAuthenticationRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
+}
+
+// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+func (o LookupAuthenticationRuleResultOutput) TargetRule() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAuthenticationRuleResult) string { return v.TargetRule }).(pulumi.StringOutput)
 }
 
 func (o LookupAuthenticationRuleResultOutput) Tfid() pulumi.StringOutput {

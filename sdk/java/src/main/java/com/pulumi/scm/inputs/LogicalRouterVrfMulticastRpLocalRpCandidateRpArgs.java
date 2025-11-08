@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,13 +37,13 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs extends com
      * 
      */
     @Import(name="advertisementInterval")
-    private @Nullable Output<Double> advertisementInterval;
+    private @Nullable Output<Integer> advertisementInterval;
 
     /**
      * @return Advertisement interval
      * 
      */
-    public Optional<Output<Double>> advertisementInterval() {
+    public Optional<Output<Integer>> advertisementInterval() {
         return Optional.ofNullable(this.advertisementInterval);
     }
 
@@ -82,13 +82,13 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs extends com
      * 
      */
     @Import(name="priority")
-    private @Nullable Output<Double> priority;
+    private @Nullable Output<Integer> priority;
 
     /**
      * @return Priority
      * 
      */
-    public Optional<Output<Double>> priority() {
+    public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
 
@@ -147,7 +147,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs extends com
          * @return builder
          * 
          */
-        public Builder advertisementInterval(@Nullable Output<Double> advertisementInterval) {
+        public Builder advertisementInterval(@Nullable Output<Integer> advertisementInterval) {
             $.advertisementInterval = advertisementInterval;
             return this;
         }
@@ -158,7 +158,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs extends com
          * @return builder
          * 
          */
-        public Builder advertisementInterval(Double advertisementInterval) {
+        public Builder advertisementInterval(Integer advertisementInterval) {
             return advertisementInterval(Output.of(advertisementInterval));
         }
 
@@ -220,7 +220,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs extends com
          * @return builder
          * 
          */
-        public Builder priority(@Nullable Output<Double> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
@@ -231,7 +231,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs extends com
          * @return builder
          * 
          */
-        public Builder priority(Double priority) {
+        public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 

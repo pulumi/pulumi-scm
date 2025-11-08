@@ -12,6 +12,40 @@ import (
 )
 
 // LogicalRouter data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Look up the logical router by its ID.
+//			scmLogicalRouterDs, err := scm.LookupLogicalRouter(ctx, &scm.LookupLogicalRouterArgs{
+//				Id: "b7c6f00b-b20e-4073-af1c-1f42863a5983",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmLogicalRouterDataSourceOutput", pulumi.Map{
+//				"id":           scmLogicalRouterDs.Id,
+//				"name":         scmLogicalRouterDs.Name,
+//				"routingStack": scmLogicalRouterDs.RoutingStack,
+//				"vrf":          scmLogicalRouterDs.Vrves,
+//				"folder":       scmLogicalRouterDs.Folder,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupLogicalRouter(ctx *pulumi.Context, args *LookupLogicalRouterArgs, opts ...pulumi.InvokeOption) (*LookupLogicalRouterResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupLogicalRouterResult

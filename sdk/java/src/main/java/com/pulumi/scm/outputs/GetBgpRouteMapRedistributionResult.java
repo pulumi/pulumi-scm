@@ -24,7 +24,7 @@ public final class GetBgpRouteMapRedistributionResult {
      */
     private GetBgpRouteMapRedistributionConnectedStatic connectedStatic;
     /**
-     * @return Description
+     * @return BGP Route Map Redistributions Description
      * 
      */
     private String description;
@@ -39,12 +39,12 @@ public final class GetBgpRouteMapRedistributionResult {
      */
     private String folder;
     /**
-     * @return UUID of the resource
+     * @return BGP Route Map Redistributions UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return Name
+     * @return BGP Route Map Redistributions Name
      * 
      */
     private String name;
@@ -76,7 +76,7 @@ public final class GetBgpRouteMapRedistributionResult {
         return this.connectedStatic;
     }
     /**
-     * @return Description
+     * @return BGP Route Map Redistributions Description
      * 
      */
     public String description() {
@@ -97,14 +97,14 @@ public final class GetBgpRouteMapRedistributionResult {
         return this.folder;
     }
     /**
-     * @return UUID of the resource
+     * @return BGP Route Map Redistributions UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Name
+     * @return BGP Route Map Redistributions Name
      * 
      */
     public String name() {

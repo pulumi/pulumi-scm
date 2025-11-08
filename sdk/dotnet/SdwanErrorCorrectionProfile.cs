@@ -19,7 +19,7 @@ namespace Pulumi.Scm
         /// Activation threshold
         /// </summary>
         [Output("activationThreshold")]
-        public Output<double> ActivationThreshold { get; private set; } = null!;
+        public Output<int> ActivationThreshold { get; private set; } = null!;
 
         /// <summary>
         /// The device in which the resource is defined
@@ -104,7 +104,7 @@ namespace Pulumi.Scm
         /// Activation threshold
         /// </summary>
         [Input("activationThreshold", required: true)]
-        public Input<double> ActivationThreshold { get; set; } = null!;
+        public Input<int> ActivationThreshold { get; set; } = null!;
 
         /// <summary>
         /// The device in which the resource is defined
@@ -148,7 +148,7 @@ namespace Pulumi.Scm
         /// Activation threshold
         /// </summary>
         [Input("activationThreshold")]
-        public Input<double>? ActivationThreshold { get; set; }
+        public Input<int>? ActivationThreshold { get; set; }
 
         /// <summary>
         /// The device in which the resource is defined

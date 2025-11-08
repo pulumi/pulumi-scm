@@ -44,7 +44,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Route ageout time
         /// </summary>
-        public readonly double RouteAgeoutTime;
+        public readonly int RouteAgeoutTime;
         /// <summary>
         /// Rp
         /// </summary>
@@ -78,7 +78,7 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetLogicalRouterListDataVrfMulticastPimResult pim,
 
-            double routeAgeoutTime,
+            int routeAgeoutTime,
 
             Outputs.GetLogicalRouterListDataVrfMulticastRpResult rp,
 

@@ -56,7 +56,7 @@ type LookupAntiSpywareSignatureResult struct {
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 	// threat id range \n\n and \n\n
-	ThreatId int `pulumi:"threatId"`
+	ThreatId string `pulumi:"threatId"`
 	// Threatname
 	Threatname string `pulumi:"threatname"`
 	// Vendor
@@ -162,8 +162,8 @@ func (o LookupAntiSpywareSignatureResultOutput) Tfid() pulumi.StringOutput {
 }
 
 // threat id range \n\n and \n\n
-func (o LookupAntiSpywareSignatureResultOutput) ThreatId() pulumi.IntOutput {
-	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) int { return v.ThreatId }).(pulumi.IntOutput)
+func (o LookupAntiSpywareSignatureResultOutput) ThreatId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.ThreatId }).(pulumi.StringOutput)
 }
 
 // Threatname

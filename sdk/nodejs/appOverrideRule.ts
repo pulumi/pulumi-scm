@@ -6,6 +6,95 @@ import * as utilities from "./utilities";
 
 /**
  * AppOverrideRule resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // --- 1. TAG Resource ---
+ * const appOverridePositionTag = new scm.Tag("app_override_position_tag", {
+ *     name: "app-override-position-tag_1",
+ *     folder: "All",
+ *     color: "Orange",
+ * });
+ * // --- 2. ANCHOR RULE (Used for relative positioning by other rules) ---
+ * const anchorAppOverride = new scm.AppOverrideRule("anchor_app_override", {
+ *     name: "anchor-app-override-rule",
+ *     description: "Base rule for testing 'before' and 'after' positioning. Updating",
+ *     folder: "All",
+ *     position: "pre",
+ *     application: "ssl",
+ *     protocol: "tcp",
+ *     port: "112",
+ *     froms: ["trust"],
+ *     tos: ["untrust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     tags: [appOverridePositionTag.name],
+ * });
+ * // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+ * const ruleTopAppOverride = new scm.AppOverrideRule("rule_top_app_override", {
+ *     name: "top-absolute-app-override",
+ *     description: "Placed at the very TOP of the App Override rulebase.",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "bottom",
+ *     application: "ssl",
+ *     protocol: "tcp",
+ *     port: "443",
+ *     froms: ["untrust"],
+ *     tos: ["trust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ * });
+ * const ruleBottomAppOverride = new scm.AppOverrideRule("rule_bottom_app_override", {
+ *     name: "bottom-absolute-app-override",
+ *     description: "Placed at the very BOTTOM of the App Override rulebase.",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "bottom",
+ *     application: "ssl",
+ *     protocol: "tcp",
+ *     port: "443",
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ * });
+ * //--- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+ * const ruleBeforeAnchorOverride = new scm.AppOverrideRule("rule_before_anchor_override", {
+ *     name: "before-anchor-app-override",
+ *     description: "Positioned immediately BEFORE the anchor-app-override-rule.",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "before",
+ *     targetRule: anchorAppOverride.id,
+ *     application: "ssl",
+ *     protocol: "tcp",
+ *     port: "443",
+ *     froms: ["trust"],
+ *     tos: ["untrust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ * });
+ * const ruleAfterAnchorOverride = new scm.AppOverrideRule("rule_after_anchor_override", {
+ *     name: "after-anchor-app-override",
+ *     description: "Positioned immediately AFTER the anchor-app-override-rule.",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "before",
+ *     targetRule: anchorAppOverride.id,
+ *     application: "ssl",
+ *     protocol: "tcp",
+ *     port: "443",
+ *     froms: ["untrust"],
+ *     tos: ["trust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ * });
+ * ```
  */
 export class AppOverrideRule extends pulumi.CustomResource {
     /**
@@ -82,11 +171,19 @@ export class AppOverrideRule extends pulumi.CustomResource {
     /**
      * Port
      */
-    declare public readonly port: pulumi.Output<number>;
+    declare public readonly port: pulumi.Output<string>;
+    /**
+     * The position of a security rule
+     */
+    declare public readonly position: pulumi.Output<string>;
     /**
      * Protocol
      */
     declare public readonly protocol: pulumi.Output<string>;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    declare public readonly relativePosition: pulumi.Output<string | undefined>;
     /**
      * The snippet in which the resource is defined
      */
@@ -99,6 +196,10 @@ export class AppOverrideRule extends pulumi.CustomResource {
      * Tag
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    declare public readonly targetRule: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * To
@@ -130,10 +231,13 @@ export class AppOverrideRule extends pulumi.CustomResource {
             resourceInputs["negateDestination"] = state?.negateDestination;
             resourceInputs["negateSource"] = state?.negateSource;
             resourceInputs["port"] = state?.port;
+            resourceInputs["position"] = state?.position;
             resourceInputs["protocol"] = state?.protocol;
+            resourceInputs["relativePosition"] = state?.relativePosition;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["sources"] = state?.sources;
             resourceInputs["tags"] = state?.tags;
+            resourceInputs["targetRule"] = state?.targetRule;
             resourceInputs["tfid"] = state?.tfid;
             resourceInputs["tos"] = state?.tos;
         } else {
@@ -171,10 +275,13 @@ export class AppOverrideRule extends pulumi.CustomResource {
             resourceInputs["negateDestination"] = args?.negateDestination;
             resourceInputs["negateSource"] = args?.negateSource;
             resourceInputs["port"] = args?.port;
+            resourceInputs["position"] = args?.position;
             resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["relativePosition"] = args?.relativePosition;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["sources"] = args?.sources;
             resourceInputs["tags"] = args?.tags;
+            resourceInputs["targetRule"] = args?.targetRule;
             resourceInputs["tos"] = args?.tos;
             resourceInputs["tfid"] = undefined /*out*/;
         }
@@ -234,11 +341,19 @@ export interface AppOverrideRuleState {
     /**
      * Port
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<string>;
+    /**
+     * The position of a security rule
+     */
+    position?: pulumi.Input<string>;
     /**
      * Protocol
      */
     protocol?: pulumi.Input<string>;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
      */
@@ -251,6 +366,10 @@ export interface AppOverrideRuleState {
      * Tag
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
      * To
@@ -309,11 +428,19 @@ export interface AppOverrideRuleArgs {
     /**
      * Port
      */
-    port: pulumi.Input<number>;
+    port: pulumi.Input<string>;
+    /**
+     * The position of a security rule
+     */
+    position?: pulumi.Input<string>;
     /**
      * Protocol
      */
     protocol: pulumi.Input<string>;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
      */
@@ -326,6 +453,10 @@ export interface AppOverrideRuleArgs {
      * Tag
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule?: pulumi.Input<string>;
     /**
      * To
      */

@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         /// Hold time
         /// </summary>
         [Input("holdTime")]
-        public Input<double>? HoldTime { get; set; }
+        public Input<int>? HoldTime { get; set; }
 
         [Input("monitorDestinations")]
         private InputList<Inputs.LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDestinationGetArgs>? _monitorDestinations;

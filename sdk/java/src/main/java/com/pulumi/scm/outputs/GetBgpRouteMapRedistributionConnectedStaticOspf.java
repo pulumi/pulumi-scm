@@ -12,14 +12,14 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionConnectedStaticOspf {
     /**
-     * @return Route maps
+     * @return Connected Static  BGP OSPF Route maps
      * 
      */
     private List<GetBgpRouteMapRedistributionConnectedStaticOspfRouteMap> routeMaps;
 
     private GetBgpRouteMapRedistributionConnectedStaticOspf() {}
     /**
-     * @return Route maps
+     * @return Connected Static  BGP OSPF Route maps
      * 
      */
     public List<GetBgpRouteMapRedistributionConnectedStaticOspfRouteMap> routeMaps() {

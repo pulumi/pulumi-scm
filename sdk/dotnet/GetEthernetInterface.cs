@@ -13,18 +13,108 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// EthernetInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up ethernet interface by its ID.
+        ///     var scmL3IntfStaticDs = Scm.GetEthernetInterface.Invoke(new()
+        ///     {
+        ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f2",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ethernetInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Id) },
+        ///             { "name", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Name) },
+        ///             { "comment", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Comment) },
+        ///             { "layer3", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Layer3) },
+        ///             { "folder", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetEthernetInterfaceResult> InvokeAsync(GetEthernetInterfaceArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetEthernetInterfaceResult>("scm:index/getEthernetInterface:getEthernetInterface", args ?? new GetEthernetInterfaceArgs(), options.WithDefaults());
 
         /// <summary>
         /// EthernetInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up ethernet interface by its ID.
+        ///     var scmL3IntfStaticDs = Scm.GetEthernetInterface.Invoke(new()
+        ///     {
+        ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f2",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ethernetInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Id) },
+        ///             { "name", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Name) },
+        ///             { "comment", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Comment) },
+        ///             { "layer3", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Layer3) },
+        ///             { "folder", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetEthernetInterfaceResult> Invoke(GetEthernetInterfaceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetEthernetInterfaceResult>("scm:index/getEthernetInterface:getEthernetInterface", args ?? new GetEthernetInterfaceInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// EthernetInterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up ethernet interface by its ID.
+        ///     var scmL3IntfStaticDs = Scm.GetEthernetInterface.Invoke(new()
+        ///     {
+        ///         Id = "ddad1e64-0b64-41a4-b361-c6199769a8f2",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ethernetInterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Id) },
+        ///             { "name", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Name) },
+        ///             { "comment", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Comment) },
+        ///             { "layer3", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Layer3) },
+        ///             { "folder", scmL3IntfStaticDs.Apply(getEthernetInterfaceResult =&gt; getEthernetInterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetEthernetInterfaceResult> Invoke(GetEthernetInterfaceInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetEthernetInterfaceResult>("scm:index/getEthernetInterface:getEthernetInterface", args ?? new GetEthernetInterfaceInvokeArgs(), options.WithDefaults());
@@ -80,7 +170,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Comment;
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         public readonly string DefaultValue;
         /// <summary>
@@ -104,7 +194,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceLayer2Result Layer2;
         /// <summary>
-        /// Layer3
+        /// Ethernet Interface Layer 3 configuration
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceLayer3Result Layer3;
         /// <summary>

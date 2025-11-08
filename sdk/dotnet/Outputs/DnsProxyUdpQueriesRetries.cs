@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class DnsProxyUdpQueriesRetries
     {
         /// <summary>
-        /// Attempts
+        /// Maximum number of retries before trying next name server
         /// </summary>
         public readonly int? Attempts;
         /// <summary>
-        /// Interval
+        /// Time in seconds for another request to be sent
         /// </summary>
         public readonly int? Interval;
 

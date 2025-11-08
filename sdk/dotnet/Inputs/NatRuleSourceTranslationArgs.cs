@@ -13,40 +13,22 @@ namespace Pulumi.Scm.Inputs
     public sealed class NatRuleSourceTranslationArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Bi directional
+        /// Dynamic IP
         /// </summary>
-        [Input("biDirectional")]
-        public Input<bool>? BiDirectional { get; set; }
+        [Input("dynamicIp")]
+        public Input<Inputs.NatRuleSourceTranslationDynamicIpArgs>? DynamicIp { get; set; }
 
         /// <summary>
-        /// Fallback
+        /// Dynamic IP and port
         /// </summary>
-        [Input("fallback")]
-        public Input<Inputs.NatRuleSourceTranslationFallbackArgs>? Fallback { get; set; }
+        [Input("dynamicIpAndPort")]
+        public Input<Inputs.NatRuleSourceTranslationDynamicIpAndPortArgs>? DynamicIpAndPort { get; set; }
 
         /// <summary>
-        /// Interface name
+        /// Static IP
         /// </summary>
-        [Input("interface")]
-        public Input<string>? Interface { get; set; }
-
-        [Input("translatedAddressArrays")]
-        private InputList<string>? _translatedAddressArrays;
-
-        /// <summary>
-        /// Translated IP addresses
-        /// </summary>
-        public InputList<string> TranslatedAddressArrays
-        {
-            get => _translatedAddressArrays ?? (_translatedAddressArrays = new InputList<string>());
-            set => _translatedAddressArrays = value;
-        }
-
-        /// <summary>
-        /// Translated IP address
-        /// </summary>
-        [Input("translatedAddressSingle")]
-        public Input<string>? TranslatedAddressSingle { get; set; }
+        [Input("staticIp")]
+        public Input<Inputs.NatRuleSourceTranslationStaticIpArgs>? StaticIp { get; set; }
 
         public NatRuleSourceTranslationArgs()
         {

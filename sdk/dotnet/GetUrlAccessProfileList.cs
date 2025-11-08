@@ -30,7 +30,7 @@ namespace Pulumi.Scm
         ///     // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
         ///     var allShared = Scm.GetUrlAccessProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -62,7 +62,7 @@ namespace Pulumi.Scm
         ///     // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
         ///     var allShared = Scm.GetUrlAccessProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -94,7 +94,7 @@ namespace Pulumi.Scm
         ///     // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
         ///     var allShared = Scm.GetUrlAccessProfileList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;

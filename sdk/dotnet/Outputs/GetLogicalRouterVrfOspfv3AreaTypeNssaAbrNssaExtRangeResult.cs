@@ -24,7 +24,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Route tag
         /// </summary>
-        public readonly double RouteTag;
+        public readonly int RouteTag;
         /// <summary>
         /// Suppress
         /// </summary>
@@ -36,7 +36,7 @@ namespace Pulumi.Scm.Outputs
 
             string name,
 
-            double routeTag,
+            int routeTag,
 
             Outputs.GetLogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeSuppressResult suppress)
         {

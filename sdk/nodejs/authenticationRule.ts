@@ -6,6 +6,105 @@ import * as utilities from "./utilities";
 
 /**
  * AuthenticationRule resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const appAccessTag = new scm.Tag("app_access_tag", {
+ *     folder: "All",
+ *     name: "app-access-test_25",
+ *     color: "Blue",
+ * });
+ * // -----------------------------------------------------------------------------
+ * // 2. ANCHOR RULE (Used for relative positioning by other rules)
+ * // -----------------------------------------------------------------------------
+ * const anchorRule = new scm.AuthenticationRule("anchor_rule", {
+ *     name: "test_anchor_rule_251",
+ *     description: "Base rule. Used to test 'before' and 'after' positioning",
+ *     position: "pre",
+ *     folder: "All",
+ *     destinations: ["any"],
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     services: [
+ *         "service-http",
+ *         "service-https",
+ *     ],
+ *     sourceUsers: ["any"],
+ *     timeout: 1200,
+ *     negateSource: false,
+ *     negateDestination: false,
+ *     tags: [appAccessTag.name],
+ *     categories: ["any"],
+ *     destinationHips: ["any"],
+ *     logAuthenticationTimeout: false,
+ *     disabled: false,
+ * });
+ * // # -----------------------------------------------------------------------------
+ * // # 3. ABSOLUTE POSITIONING Examples ("top" and "bottom")
+ * // # -----------------------------------------------------------------------------
+ * const ruleTopOfList = new scm.AuthenticationRule("rule_top_of_list", {
+ *     name: "test_top_rule_25",
+ *     description: "Placed at the very top of the 'pre' rulebase.",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "top",
+ *     destinations: ["any"],
+ *     froms: ["untrust"],
+ *     tos: ["trust"],
+ *     sources: ["any"],
+ *     services: ["any"],
+ *     sourceUsers: ["any"],
+ * });
+ * const ruleBottomOfList = new scm.AuthenticationRule("rule_bottom_of_list", {
+ *     name: "test_bottom_rule_25",
+ *     description: "Placed at the very bottom of the 'pre' rulebase.",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "bottom",
+ *     destinations: ["any"],
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     services: ["any"],
+ *     sourceUsers: ["any"],
+ * });
+ * // -----------------------------------------------------------------------------
+ * // 4. RELATIVE POSITIONING Examples ("before" and "after")
+ * // -----------------------------------------------------------------------------
+ * const ruleBeforeAnchor = new scm.AuthenticationRule("rule_before_anchor", {
+ *     name: "test_before_rule_25_updating",
+ *     description: "Positioned immediately BEFORE the anchor_rule.",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "before",
+ *     targetRule: anchorRule.id,
+ *     destinations: ["any"],
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     services: ["any"],
+ *     sourceUsers: ["any"],
+ * });
+ * const ruleAfterAnchor = new scm.AuthenticationRule("rule_after_anchor", {
+ *     name: "test_after_rule_25",
+ *     description: "Positioned immediately AFTER the anchor_rule.",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "after",
+ *     targetRule: anchorRule.id,
+ *     destinations: ["any"],
+ *     froms: ["any"],
+ *     tos: ["any"],
+ *     sources: ["any"],
+ *     services: ["any"],
+ *     sourceUsers: ["any"],
+ * });
+ * ```
  */
 export class AuthenticationRule extends pulumi.CustomResource {
     /**
@@ -104,6 +203,10 @@ export class AuthenticationRule extends pulumi.CustomResource {
      */
     declare public readonly position: pulumi.Output<string>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    declare public readonly relativePosition: pulumi.Output<string | undefined>;
+    /**
      * The destination ports
      */
     declare public readonly services: pulumi.Output<string[]>;
@@ -127,6 +230,10 @@ export class AuthenticationRule extends pulumi.CustomResource {
      * The authentication rule tags
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    declare public readonly targetRule: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * The authentication session timeout (seconds)
@@ -167,12 +274,14 @@ export class AuthenticationRule extends pulumi.CustomResource {
             resourceInputs["negateDestination"] = state?.negateDestination;
             resourceInputs["negateSource"] = state?.negateSource;
             resourceInputs["position"] = state?.position;
+            resourceInputs["relativePosition"] = state?.relativePosition;
             resourceInputs["services"] = state?.services;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["sourceHips"] = state?.sourceHips;
             resourceInputs["sourceUsers"] = state?.sourceUsers;
             resourceInputs["sources"] = state?.sources;
             resourceInputs["tags"] = state?.tags;
+            resourceInputs["targetRule"] = state?.targetRule;
             resourceInputs["tfid"] = state?.tfid;
             resourceInputs["timeout"] = state?.timeout;
             resourceInputs["tos"] = state?.tos;
@@ -210,12 +319,14 @@ export class AuthenticationRule extends pulumi.CustomResource {
             resourceInputs["negateDestination"] = args?.negateDestination;
             resourceInputs["negateSource"] = args?.negateSource;
             resourceInputs["position"] = args?.position;
+            resourceInputs["relativePosition"] = args?.relativePosition;
             resourceInputs["services"] = args?.services;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["sourceHips"] = args?.sourceHips;
             resourceInputs["sourceUsers"] = args?.sourceUsers;
             resourceInputs["sources"] = args?.sources;
             resourceInputs["tags"] = args?.tags;
+            resourceInputs["targetRule"] = args?.targetRule;
             resourceInputs["timeout"] = args?.timeout;
             resourceInputs["tos"] = args?.tos;
             resourceInputs["tfid"] = undefined /*out*/;
@@ -298,6 +409,10 @@ export interface AuthenticationRuleState {
      */
     position?: pulumi.Input<string>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition?: pulumi.Input<string>;
+    /**
      * The destination ports
      */
     services?: pulumi.Input<pulumi.Input<string>[]>;
@@ -321,6 +436,10 @@ export interface AuthenticationRuleState {
      * The authentication rule tags
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
      * The authentication session timeout (seconds)
@@ -405,6 +524,10 @@ export interface AuthenticationRuleArgs {
      */
     position?: pulumi.Input<string>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition?: pulumi.Input<string>;
+    /**
      * The destination ports
      */
     services: pulumi.Input<pulumi.Input<string>[]>;
@@ -428,6 +551,10 @@ export interface AuthenticationRuleArgs {
      * The authentication rule tags
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule?: pulumi.Input<string>;
     /**
      * The authentication session timeout (seconds)
      */

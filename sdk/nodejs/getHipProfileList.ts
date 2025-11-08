@@ -17,12 +17,12 @@ import * as utilities from "./utilities";
  *
  * // Fetch a list of all HIP Profile objects in the Shared folder.
  * const allShared = scm.getHipProfileList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const hipProfilesListAllShared = allShared.then(allShared => allShared.datas);
  * // Example of using pagination to get the first 10 HIP Profiles.
  * const paginated = scm.getHipProfileList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 10,
  *     offset: 0,
  * });
@@ -125,12 +125,12 @@ export interface GetHipProfileListResult {
  *
  * // Fetch a list of all HIP Profile objects in the Shared folder.
  * const allShared = scm.getHipProfileList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const hipProfilesListAllShared = allShared.then(allShared => allShared.datas);
  * // Example of using pagination to get the first 10 HIP Profiles.
  * const paginated = scm.getHipProfileList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 10,
  *     offset: 0,
  * });

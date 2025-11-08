@@ -13,10 +13,28 @@ namespace Pulumi.Scm.Inputs
     public sealed class EthernetInterfaceLayer3DhcpClientGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Dhcp client
+        /// Automatically create default route pointing to default gateway provided by server
         /// </summary>
-        [Input("dhcpClient")]
-        public Input<Inputs.EthernetInterfaceLayer3DhcpClientDhcpClientGetArgs>? DhcpClient { get; set; }
+        [Input("createDefaultRoute")]
+        public Input<bool>? CreateDefaultRoute { get; set; }
+
+        /// <summary>
+        /// Metric of the default route created
+        /// </summary>
+        [Input("defaultRouteMetric")]
+        public Input<int>? DefaultRouteMetric { get; set; }
+
+        /// <summary>
+        /// Enable DHCP?
+        /// </summary>
+        [Input("enable")]
+        public Input<bool>? Enable { get; set; }
+
+        /// <summary>
+        /// Ethernet Interfaces DHCP ClientSend hostname
+        /// </summary>
+        [Input("sendHostname")]
+        public Input<Inputs.EthernetInterfaceLayer3DhcpClientSendHostnameGetArgs>? SendHostname { get; set; }
 
         public EthernetInterfaceLayer3DhcpClientGetArgs()
         {

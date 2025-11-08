@@ -7,7 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnection;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnection;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -32,7 +32,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions 
      * @return Idle hold time
      * 
      */
-    private Double idleHoldTime;
+    private Integer idleHoldTime;
     /**
      * @return Incoming bgp connection
      * 
@@ -52,7 +52,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions 
      * @return Min route adv interval
      * 
      */
-    private Double minRouteAdvInterval;
+    private Integer minRouteAdvInterval;
     /**
      * @return Multihop
      * 
@@ -62,7 +62,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions 
      * @return Open delay time
      * 
      */
-    private Double openDelayTime;
+    private Integer openDelayTime;
     /**
      * @return Outgoing bgp connection
      * 
@@ -100,7 +100,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions 
      * @return Idle hold time
      * 
      */
-    public Double idleHoldTime() {
+    public Integer idleHoldTime() {
         return this.idleHoldTime;
     }
     /**
@@ -128,7 +128,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions 
      * @return Min route adv interval
      * 
      */
-    public Double minRouteAdvInterval() {
+    public Integer minRouteAdvInterval() {
         return this.minRouteAdvInterval;
     }
     /**
@@ -142,7 +142,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions 
      * @return Open delay time
      * 
      */
-    public Double openDelayTime() {
+    public Integer openDelayTime() {
         return this.openDelayTime;
     }
     /**
@@ -172,13 +172,13 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions 
         private String authentication;
         private String dampening;
         private String holdTime;
-        private Double idleHoldTime;
+        private Integer idleHoldTime;
         private GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnection incomingBgpConnection;
         private String keepAliveInterval;
         private String maxPrefixes;
-        private Double minRouteAdvInterval;
+        private Integer minRouteAdvInterval;
         private String multihop;
-        private Double openDelayTime;
+        private Integer openDelayTime;
         private GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnection outgoingBgpConnection;
         private String timers;
         public Builder() {}
@@ -223,7 +223,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions 
             return this;
         }
         @CustomType.Setter
-        public Builder idleHoldTime(Double idleHoldTime) {
+        public Builder idleHoldTime(Integer idleHoldTime) {
             if (idleHoldTime == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions", "idleHoldTime");
             }
@@ -255,7 +255,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions 
             return this;
         }
         @CustomType.Setter
-        public Builder minRouteAdvInterval(Double minRouteAdvInterval) {
+        public Builder minRouteAdvInterval(Integer minRouteAdvInterval) {
             if (minRouteAdvInterval == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions", "minRouteAdvInterval");
             }
@@ -271,7 +271,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions 
             return this;
         }
         @CustomType.Setter
-        public Builder openDelayTime(Double openDelayTime) {
+        public Builder openDelayTime(Integer openDelayTime) {
             if (openDelayTime == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptions", "openDelayTime");
             }

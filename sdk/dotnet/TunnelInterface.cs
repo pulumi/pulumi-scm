@@ -11,6 +11,53 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// TunnelInterface resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     //
+    ///     // Creates a tunnel interface with static ipv4 address
+    ///     //
+    ///     var scmTunnelIntf = new Scm.TunnelInterface("scm_tunnel_intf", new()
+    ///     {
+    ///         Name = "$scm_tunnel_intf",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Ips = new[]
+    ///         {
+    ///             new Scm.Inputs.TunnelInterfaceIpArgs
+    ///             {
+    ///                 Name = "198.18.1.1/32",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a tunnel interface with static ipv4 address, with default value tunnel.123
+    ///     //
+    ///     var scmTunnelIntf2 = new Scm.TunnelInterface("scm_tunnel_intf_2", new()
+    ///     {
+    ///         Name = "$scm_tunnel_intf_2",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Ips = new[]
+    ///         {
+    ///             new Scm.Inputs.TunnelInterfaceIpArgs
+    ///             {
+    ///                 Name = "198.18.1.2/32",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/tunnelInterface:TunnelInterface")]
     public partial class TunnelInterface : global::Pulumi.CustomResource
@@ -22,10 +69,10 @@ namespace Pulumi.Scm
         public Output<string?> Comment { get; private set; } = null!;
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Output("defaultValue")]
-        public Output<int?> DefaultValue { get; private set; } = null!;
+        public Output<string?> DefaultValue { get; private set; } = null!;
 
         /// <summary>
         /// The device in which the resource is defined
@@ -46,16 +93,16 @@ namespace Pulumi.Scm
         public Output<string?> InterfaceManagementProfile { get; private set; } = null!;
 
         /// <summary>
-        /// tunnel interfaces ip parent
+        /// Tunnel Interface IP Parent
         /// </summary>
-        [Output("ip")]
-        public Output<Outputs.TunnelInterfaceIp?> Ip { get; private set; } = null!;
+        [Output("ips")]
+        public Output<ImmutableArray<Outputs.TunnelInterfaceIp>> Ips { get; private set; } = null!;
 
         /// <summary>
         /// MTU
         /// </summary>
         [Output("mtu")]
-        public Output<double?> Mtu { get; private set; } = null!;
+        public Output<int?> Mtu { get; private set; } = null!;
 
         /// <summary>
         /// L3 sub-interface name
@@ -125,10 +172,10 @@ namespace Pulumi.Scm
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Input("defaultValue")]
-        public Input<int>? DefaultValue { get; set; }
+        public Input<string>? DefaultValue { get; set; }
 
         /// <summary>
         /// The device in which the resource is defined
@@ -148,17 +195,23 @@ namespace Pulumi.Scm
         [Input("interfaceManagementProfile")]
         public Input<string>? InterfaceManagementProfile { get; set; }
 
+        [Input("ips")]
+        private InputList<Inputs.TunnelInterfaceIpArgs>? _ips;
+
         /// <summary>
-        /// tunnel interfaces ip parent
+        /// Tunnel Interface IP Parent
         /// </summary>
-        [Input("ip")]
-        public Input<Inputs.TunnelInterfaceIpArgs>? Ip { get; set; }
+        public InputList<Inputs.TunnelInterfaceIpArgs> Ips
+        {
+            get => _ips ?? (_ips = new InputList<Inputs.TunnelInterfaceIpArgs>());
+            set => _ips = value;
+        }
 
         /// <summary>
         /// MTU
         /// </summary>
         [Input("mtu")]
-        public Input<double>? Mtu { get; set; }
+        public Input<int>? Mtu { get; set; }
 
         /// <summary>
         /// L3 sub-interface name
@@ -187,10 +240,10 @@ namespace Pulumi.Scm
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Input("defaultValue")]
-        public Input<int>? DefaultValue { get; set; }
+        public Input<string>? DefaultValue { get; set; }
 
         /// <summary>
         /// The device in which the resource is defined
@@ -210,17 +263,23 @@ namespace Pulumi.Scm
         [Input("interfaceManagementProfile")]
         public Input<string>? InterfaceManagementProfile { get; set; }
 
+        [Input("ips")]
+        private InputList<Inputs.TunnelInterfaceIpGetArgs>? _ips;
+
         /// <summary>
-        /// tunnel interfaces ip parent
+        /// Tunnel Interface IP Parent
         /// </summary>
-        [Input("ip")]
-        public Input<Inputs.TunnelInterfaceIpGetArgs>? Ip { get; set; }
+        public InputList<Inputs.TunnelInterfaceIpGetArgs> Ips
+        {
+            get => _ips ?? (_ips = new InputList<Inputs.TunnelInterfaceIpGetArgs>());
+            set => _ips = value;
+        }
 
         /// <summary>
         /// MTU
         /// </summary>
         [Input("mtu")]
-        public Input<double>? Mtu { get; set; }
+        public Input<int>? Mtu { get; set; }
 
         /// <summary>
         /// L3 sub-interface name

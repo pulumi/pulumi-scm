@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +26,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Last member query interval
      * 
      */
-    private Double lastMemberQueryInterval;
+    private Integer lastMemberQueryInterval;
     /**
      * @return Max groups
      * 
@@ -36,7 +36,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Max query response time
      * 
      */
-    private Double maxQueryResponseTime;
+    private Integer maxQueryResponseTime;
     /**
      * @return Max sources
      * 
@@ -51,7 +51,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Query interval
      * 
      */
-    private Double queryInterval;
+    private Integer queryInterval;
     /**
      * @return Robustness
      * 
@@ -87,7 +87,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Last member query interval
      * 
      */
-    public Double lastMemberQueryInterval() {
+    public Integer lastMemberQueryInterval() {
         return this.lastMemberQueryInterval;
     }
     /**
@@ -101,7 +101,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Max query response time
      * 
      */
-    public Double maxQueryResponseTime() {
+    public Integer maxQueryResponseTime() {
         return this.maxQueryResponseTime;
     }
     /**
@@ -122,7 +122,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Query interval
      * 
      */
-    public Double queryInterval() {
+    public Integer queryInterval() {
         return this.queryInterval;
     }
     /**
@@ -158,12 +158,12 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
     public static final class Builder {
         private Boolean enable;
         private Boolean immediateLeave;
-        private Double lastMemberQueryInterval;
+        private Integer lastMemberQueryInterval;
         private String maxGroups;
-        private Double maxQueryResponseTime;
+        private Integer maxQueryResponseTime;
         private String maxSources;
         private String mode;
-        private Double queryInterval;
+        private Integer queryInterval;
         private String robustness;
         private Boolean routerAlertPolicing;
         private String version;
@@ -200,7 +200,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
             return this;
         }
         @CustomType.Setter
-        public Builder lastMemberQueryInterval(Double lastMemberQueryInterval) {
+        public Builder lastMemberQueryInterval(Integer lastMemberQueryInterval) {
             if (lastMemberQueryInterval == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfMulticastInterfaceGroupIgmp", "lastMemberQueryInterval");
             }
@@ -216,7 +216,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
             return this;
         }
         @CustomType.Setter
-        public Builder maxQueryResponseTime(Double maxQueryResponseTime) {
+        public Builder maxQueryResponseTime(Integer maxQueryResponseTime) {
             if (maxQueryResponseTime == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfMulticastInterfaceGroupIgmp", "maxQueryResponseTime");
             }
@@ -240,7 +240,7 @@ public final class GetLogicalRouterVrfMulticastInterfaceGroupIgmp {
             return this;
         }
         @CustomType.Setter
-        public Builder queryInterval(Double queryInterval) {
+        public Builder queryInterval(Integer queryInterval) {
             if (queryInterval == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfMulticastInterfaceGroupIgmp", "queryInterval");
             }

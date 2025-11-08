@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetSdwanPathQualityProfileMetricPktLoss {
     /**
-     * @return Sensitivity
+     * @return Packet loss sensitivity
      * 
      */
     private String sensitivity;
     /**
-     * @return Threshold
+     * @return Packet loss threshold (percentage)
      * 
      */
     private Integer threshold;
 
     private GetSdwanPathQualityProfileMetricPktLoss() {}
     /**
-     * @return Sensitivity
+     * @return Packet loss sensitivity
      * 
      */
     public String sensitivity() {
         return this.sensitivity;
     }
     /**
-     * @return Threshold
+     * @return Packet loss threshold (percentage)
      * 
      */
     public Integer threshold() {

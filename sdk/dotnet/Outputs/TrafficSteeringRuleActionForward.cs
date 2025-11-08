@@ -14,14 +14,22 @@ namespace Pulumi.Scm.Outputs
     public sealed class TrafficSteeringRuleActionForward
     {
         /// <summary>
-        /// Target
+        /// Forward
         /// </summary>
-        public readonly string? Target;
+        public readonly Outputs.TrafficSteeringRuleActionForwardForward? Forward;
+        /// <summary>
+        /// No pbf
+        /// </summary>
+        public readonly Outputs.TrafficSteeringRuleActionForwardNoPbf? NoPbf;
 
         [OutputConstructor]
-        private TrafficSteeringRuleActionForward(string? target)
+        private TrafficSteeringRuleActionForward(
+            Outputs.TrafficSteeringRuleActionForwardForward? forward,
+
+            Outputs.TrafficSteeringRuleActionForwardNoPbf? noPbf)
         {
-            Target = target;
+            Forward = forward;
+            NoPbf = noPbf;
         }
     }
 }

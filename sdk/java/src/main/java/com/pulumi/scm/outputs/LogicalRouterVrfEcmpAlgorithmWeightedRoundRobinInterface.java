@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInterface {
      * @return Weight
      * 
      */
-    private @Nullable Double weight;
+    private @Nullable Integer weight;
 
     private LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInterface() {}
     /**
@@ -36,7 +36,7 @@ public final class LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInterface {
      * @return Weight
      * 
      */
-    public Optional<Double> weight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 
@@ -50,7 +50,7 @@ public final class LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInterface {
     @CustomType.Builder
     public static final class Builder {
         private String name;
-        private @Nullable Double weight;
+        private @Nullable Integer weight;
         public Builder() {}
         public Builder(LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInterface defaults) {
     	      Objects.requireNonNull(defaults);
@@ -67,7 +67,7 @@ public final class LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInterface {
             return this;
         }
         @CustomType.Setter
-        public Builder weight(@Nullable Double weight) {
+        public Builder weight(@Nullable Integer weight) {
 
             this.weight = weight;
             return this;

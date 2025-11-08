@@ -7,7 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.LogicalRouterVrfMulticastInterfaceGroupPimAllowedNeighborArgs;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -38,13 +38,13 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
      * 
      */
     @Import(name="assertInterval")
-    private @Nullable Output<Double> assertInterval;
+    private @Nullable Output<Integer> assertInterval;
 
     /**
      * @return Assert interval
      * 
      */
-    public Optional<Output<Double>> assertInterval() {
+    public Optional<Output<Integer>> assertInterval() {
         return Optional.ofNullable(this.assertInterval);
     }
 
@@ -68,13 +68,13 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
      * 
      */
     @Import(name="drPriority")
-    private @Nullable Output<Double> drPriority;
+    private @Nullable Output<Integer> drPriority;
 
     /**
      * @return Dr priority
      * 
      */
-    public Optional<Output<Double>> drPriority() {
+    public Optional<Output<Integer>> drPriority() {
         return Optional.ofNullable(this.drPriority);
     }
 
@@ -98,13 +98,13 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
      * 
      */
     @Import(name="helloInterval")
-    private @Nullable Output<Double> helloInterval;
+    private @Nullable Output<Integer> helloInterval;
 
     /**
      * @return Hello interval
      * 
      */
-    public Optional<Output<Double>> helloInterval() {
+    public Optional<Output<Integer>> helloInterval() {
         return Optional.ofNullable(this.helloInterval);
     }
 
@@ -113,13 +113,13 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
      * 
      */
     @Import(name="joinPruneInterval")
-    private @Nullable Output<Double> joinPruneInterval;
+    private @Nullable Output<Integer> joinPruneInterval;
 
     /**
      * @return Join prune interval
      * 
      */
-    public Optional<Output<Double>> joinPruneInterval() {
+    public Optional<Output<Integer>> joinPruneInterval() {
         return Optional.ofNullable(this.joinPruneInterval);
     }
 
@@ -190,7 +190,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder assertInterval(@Nullable Output<Double> assertInterval) {
+        public Builder assertInterval(@Nullable Output<Integer> assertInterval) {
             $.assertInterval = assertInterval;
             return this;
         }
@@ -201,7 +201,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder assertInterval(Double assertInterval) {
+        public Builder assertInterval(Integer assertInterval) {
             return assertInterval(Output.of(assertInterval));
         }
 
@@ -232,7 +232,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder drPriority(@Nullable Output<Double> drPriority) {
+        public Builder drPriority(@Nullable Output<Integer> drPriority) {
             $.drPriority = drPriority;
             return this;
         }
@@ -243,7 +243,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder drPriority(Double drPriority) {
+        public Builder drPriority(Integer drPriority) {
             return drPriority(Output.of(drPriority));
         }
 
@@ -274,7 +274,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder helloInterval(@Nullable Output<Double> helloInterval) {
+        public Builder helloInterval(@Nullable Output<Integer> helloInterval) {
             $.helloInterval = helloInterval;
             return this;
         }
@@ -285,7 +285,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder helloInterval(Double helloInterval) {
+        public Builder helloInterval(Integer helloInterval) {
             return helloInterval(Output.of(helloInterval));
         }
 
@@ -295,7 +295,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder joinPruneInterval(@Nullable Output<Double> joinPruneInterval) {
+        public Builder joinPruneInterval(@Nullable Output<Integer> joinPruneInterval) {
             $.joinPruneInterval = joinPruneInterval;
             return this;
         }
@@ -306,7 +306,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPimArgs extends com.pu
          * @return builder
          * 
          */
-        public Builder joinPruneInterval(Double joinPruneInterval) {
+        public Builder joinPruneInterval(Integer joinPruneInterval) {
             return joinPruneInterval(Output.of(joinPruneInterval));
         }
 

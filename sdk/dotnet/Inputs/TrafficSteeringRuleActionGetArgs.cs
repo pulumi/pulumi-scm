@@ -18,12 +18,6 @@ namespace Pulumi.Scm.Inputs
         [Input("forward")]
         public Input<Inputs.TrafficSteeringRuleActionForwardGetArgs>? Forward { get; set; }
 
-        /// <summary>
-        /// No pbf
-        /// </summary>
-        [Input("noPbf")]
-        public Input<string>? NoPbf { get; set; }
-
         public TrafficSteeringRuleActionGetArgs()
         {
         }

@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetSdwanTrafficDistributionProfileLinkTag {
     /**
-     * @return Name
+     * @return Link-Tag used for identifying a set of interfaces
      * 
      */
     private String name;
     /**
-     * @return Weight
+     * @return Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
      * 
      */
     private Integer weight;
 
     private GetSdwanTrafficDistributionProfileLinkTag() {}
     /**
-     * @return Name
+     * @return Link-Tag used for identifying a set of interfaces
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Weight
+     * @return Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
      * 
      */
     public Integer weight() {

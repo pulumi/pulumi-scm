@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class Layer3SubinterfaceDhcpClientArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Create default route
+        /// Automatically create default route pointing to default gateway provided by server
         /// </summary>
         [Input("createDefaultRoute")]
         public Input<bool>? CreateDefaultRoute { get; set; }
 
         /// <summary>
-        /// Default route metric
+        /// Metric of the default route created
         /// </summary>
         [Input("defaultRouteMetric")]
         public Input<int>? DefaultRouteMetric { get; set; }
 
         /// <summary>
-        /// Enable
+        /// Enable DHCP?
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }
 
         /// <summary>
-        /// Send hostname
+        /// Layer3 sub interfaces DHCP Client Send hostname
         /// </summary>
         [Input("sendHostname")]
         public Input<Inputs.Layer3SubinterfaceDhcpClientSendHostnameArgs>? SendHostname { get; set; }

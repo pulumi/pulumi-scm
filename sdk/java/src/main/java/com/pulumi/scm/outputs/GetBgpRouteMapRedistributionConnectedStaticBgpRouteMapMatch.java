@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch {
     /**
-     * @return Interface
+     * @return Connected Static BGP Route maps match Interface
      * 
      */
     private String interface_;
@@ -23,14 +23,14 @@ public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch {
      */
     private GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4 ipv4;
     /**
-     * @return Metric
+     * @return Connected Static BGP Route maps match Metric
      * 
      */
     private Integer metric;
 
     private GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch() {}
     /**
-     * @return Interface
+     * @return Connected Static BGP Route maps match Interface
      * 
      */
     public String interface_() {
@@ -44,7 +44,7 @@ public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch {
         return this.ipv4;
     }
     /**
-     * @return Metric
+     * @return Connected Static BGP Route maps match Metric
      * 
      */
     public Integer metric() {

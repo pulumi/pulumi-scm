@@ -8,6 +8,19 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all tunnel interfaces
+ * const allTunnelInterfaces = scm.getTunnelInterfaceList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmTunnelInterfaceList = allTunnelInterfaces.then(allTunnelInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * ```
  */
 export function getTunnelInterfaceList(args?: GetTunnelInterfaceListArgs, opts?: pulumi.InvokeOptions): Promise<GetTunnelInterfaceListResult> {
     args = args || {};
@@ -96,6 +109,19 @@ export interface GetTunnelInterfaceListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all tunnel interfaces
+ * const allTunnelInterfaces = scm.getTunnelInterfaceList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmTunnelInterfaceList = allTunnelInterfaces.then(allTunnelInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * ```
  */
 export function getTunnelInterfaceListOutput(args?: GetTunnelInterfaceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTunnelInterfaceListResult> {
     args = args || {};

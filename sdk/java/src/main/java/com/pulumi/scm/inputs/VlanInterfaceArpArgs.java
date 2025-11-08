@@ -16,14 +16,14 @@ public final class VlanInterfaceArpArgs extends com.pulumi.resources.ResourceArg
     public static final VlanInterfaceArpArgs Empty = new VlanInterfaceArpArgs();
 
     /**
-     * Hw address
+     * MAC address
      * 
      */
     @Import(name="hwAddress")
     private @Nullable Output<String> hwAddress;
 
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     public Optional<Output<String>> hwAddress() {
@@ -87,7 +87,7 @@ public final class VlanInterfaceArpArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param hwAddress Hw address
+         * @param hwAddress MAC address
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class VlanInterfaceArpArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param hwAddress Hw address
+         * @param hwAddress MAC address
          * 
          * @return builder
          * 

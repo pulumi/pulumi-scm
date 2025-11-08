@@ -18,14 +18,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     public static final BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs Empty = new BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs();
 
     /**
-     * AS path access list
+     * BGP Root OSPF Route maps match AS path access list
      * 
      */
     @Import(name="asPathAccessList")
     private @Nullable Output<String> asPathAccessList;
 
     /**
-     * @return AS path access list
+     * @return BGP Root OSPF Route maps match AS path access list
      * 
      */
     public Optional<Output<String>> asPathAccessList() {
@@ -33,14 +33,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     }
 
     /**
-     * Extended community
+     * EBGP Root OSPF Route maps match xtended community
      * 
      */
     @Import(name="extendedCommunity")
     private @Nullable Output<String> extendedCommunity;
 
     /**
-     * @return Extended community
+     * @return EBGP Root OSPF Route maps match xtended community
      * 
      */
     public Optional<Output<String>> extendedCommunity() {
@@ -48,14 +48,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     }
 
     /**
-     * Interface
+     * BGP Root OSPF Route maps match Interface
      * 
      */
     @Import(name="interface")
     private @Nullable Output<String> interface_;
 
     /**
-     * @return Interface
+     * @return BGP Root OSPF Route maps match Interface
      * 
      */
     public Optional<Output<String>> interface_() {
@@ -63,14 +63,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     }
 
     /**
-     * bgp-route-map-redistributions ipv4 object
+     * BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
      * 
      */
     @Import(name="ipv4")
     private @Nullable Output<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args> ipv4;
 
     /**
-     * @return bgp-route-map-redistributions ipv4 object
+     * @return BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args>> ipv4() {
@@ -78,14 +78,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     }
 
     /**
-     * Large community
+     * BGP Root OSPF Route maps match Large community
      * 
      */
     @Import(name="largeCommunity")
     private @Nullable Output<String> largeCommunity;
 
     /**
-     * @return Large community
+     * @return BGP Root OSPF Route maps match Large community
      * 
      */
     public Optional<Output<String>> largeCommunity() {
@@ -93,14 +93,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     }
 
     /**
-     * Local preference
+     * BGP Root OSPF Route maps match Local preference
      * 
      */
     @Import(name="localPreference")
     private @Nullable Output<Integer> localPreference;
 
     /**
-     * @return Local preference
+     * @return BGP Root OSPF Route maps match Local preference
      * 
      */
     public Optional<Output<Integer>> localPreference() {
@@ -108,14 +108,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     }
 
     /**
-     * Metric
+     * BGP Root OSPF Route maps match Metric
      * 
      */
     @Import(name="metric")
     private @Nullable Output<Integer> metric;
 
     /**
-     * @return Metric
+     * @return BGP Root OSPF Route maps match Metric
      * 
      */
     public Optional<Output<Integer>> metric() {
@@ -123,14 +123,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     }
 
     /**
-     * Origin
+     * BGP Root OSPF Route maps match Origin
      * 
      */
     @Import(name="origin")
     private @Nullable Output<String> origin;
 
     /**
-     * @return Origin
+     * @return BGP Root OSPF Route maps match Origin
      * 
      */
     public Optional<Output<String>> origin() {
@@ -138,14 +138,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     }
 
     /**
-     * Peer
+     * BGP Root OSPF Route maps match Peer
      * 
      */
     @Import(name="peer")
     private @Nullable Output<String> peer;
 
     /**
-     * @return Peer
+     * @return BGP Root OSPF Route maps match Peer
      * 
      */
     public Optional<Output<String>> peer() {
@@ -153,14 +153,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     }
 
     /**
-     * Regular community
+     * BGP Root OSPF Route maps match Regular community
      * 
      */
     @Import(name="regularCommunity")
     private @Nullable Output<String> regularCommunity;
 
     /**
-     * @return Regular community
+     * @return BGP Root OSPF Route maps match Regular community
      * 
      */
     public Optional<Output<String>> regularCommunity() {
@@ -168,14 +168,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
     }
 
     /**
-     * Tag
+     * BGP Root OSPF Route maps match Tag
      * 
      */
     @Import(name="tag")
     private @Nullable Output<Integer> tag;
 
     /**
-     * @return Tag
+     * @return BGP Root OSPF Route maps match Tag
      * 
      */
     public Optional<Output<Integer>> tag() {
@@ -217,7 +217,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param asPathAccessList AS path access list
+         * @param asPathAccessList BGP Root OSPF Route maps match AS path access list
          * 
          * @return builder
          * 
@@ -228,7 +228,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param asPathAccessList AS path access list
+         * @param asPathAccessList BGP Root OSPF Route maps match AS path access list
          * 
          * @return builder
          * 
@@ -238,7 +238,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param extendedCommunity Extended community
+         * @param extendedCommunity EBGP Root OSPF Route maps match xtended community
          * 
          * @return builder
          * 
@@ -249,7 +249,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param extendedCommunity Extended community
+         * @param extendedCommunity EBGP Root OSPF Route maps match xtended community
          * 
          * @return builder
          * 
@@ -259,7 +259,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param interface_ Interface
+         * @param interface_ BGP Root OSPF Route maps match Interface
          * 
          * @return builder
          * 
@@ -270,7 +270,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param interface_ Interface
+         * @param interface_ BGP Root OSPF Route maps match Interface
          * 
          * @return builder
          * 
@@ -280,7 +280,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param ipv4 bgp-route-map-redistributions ipv4 object
+         * @param ipv4 BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
          * 
          * @return builder
          * 
@@ -291,7 +291,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param ipv4 bgp-route-map-redistributions ipv4 object
+         * @param ipv4 BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
          * 
          * @return builder
          * 
@@ -301,7 +301,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param largeCommunity Large community
+         * @param largeCommunity BGP Root OSPF Route maps match Large community
          * 
          * @return builder
          * 
@@ -312,7 +312,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param largeCommunity Large community
+         * @param largeCommunity BGP Root OSPF Route maps match Large community
          * 
          * @return builder
          * 
@@ -322,7 +322,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param localPreference Local preference
+         * @param localPreference BGP Root OSPF Route maps match Local preference
          * 
          * @return builder
          * 
@@ -333,7 +333,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param localPreference Local preference
+         * @param localPreference BGP Root OSPF Route maps match Local preference
          * 
          * @return builder
          * 
@@ -343,7 +343,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param metric Metric
+         * @param metric BGP Root OSPF Route maps match Metric
          * 
          * @return builder
          * 
@@ -354,7 +354,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param metric Metric
+         * @param metric BGP Root OSPF Route maps match Metric
          * 
          * @return builder
          * 
@@ -364,7 +364,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param origin Origin
+         * @param origin BGP Root OSPF Route maps match Origin
          * 
          * @return builder
          * 
@@ -375,7 +375,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param origin Origin
+         * @param origin BGP Root OSPF Route maps match Origin
          * 
          * @return builder
          * 
@@ -385,7 +385,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param peer Peer
+         * @param peer BGP Root OSPF Route maps match Peer
          * 
          * @return builder
          * 
@@ -396,7 +396,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param peer Peer
+         * @param peer BGP Root OSPF Route maps match Peer
          * 
          * @return builder
          * 
@@ -406,7 +406,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param regularCommunity Regular community
+         * @param regularCommunity BGP Root OSPF Route maps match Regular community
          * 
          * @return builder
          * 
@@ -417,7 +417,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param regularCommunity Regular community
+         * @param regularCommunity BGP Root OSPF Route maps match Regular community
          * 
          * @return builder
          * 
@@ -427,7 +427,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param tag Tag
+         * @param tag BGP Root OSPF Route maps match Tag
          * 
          * @return builder
          * 
@@ -438,7 +438,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs extends com
         }
 
         /**
-         * @param tag Tag
+         * @param tag BGP Root OSPF Route maps match Tag
          * 
          * @return builder
          * 

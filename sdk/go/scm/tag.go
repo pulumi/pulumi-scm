@@ -30,7 +30,7 @@ import (
 //			// This file is embedded using go:embed
 //			// Tags for organizing and categorizing resources
 //			_, err := scm.NewTag(ctx, "scm_tag_1", &scm.TagArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("All"),
 //				Name:   pulumi.String("scm_tag_1"),
 //				Color:  pulumi.String("Red"),
 //			})
@@ -38,7 +38,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewTag(ctx, "scm_tag_2", &scm.TagArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("All"),
 //				Name:   pulumi.String("scm_tag_2"),
 //				Color:  pulumi.String("Blue"),
 //			})
@@ -46,7 +46,7 @@ import (
 //				return err
 //			}
 //			_, err = scm.NewTag(ctx, "scm_tag_3", &scm.TagArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder: pulumi.String("All"),
 //				Name:   pulumi.String("scm_tag_3"),
 //				Color:  pulumi.String("Orange"),
 //			})

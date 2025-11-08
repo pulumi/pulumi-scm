@@ -13,18 +13,105 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Folder data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up a folder by id
+        ///     var scmFolderDs = Scm.GetFolder.Invoke(new()
+        ///     {
+        ///         Id = "0f11d0d9-df7c-45da-a60c-4d80f8422544",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmFolderOutput"] = 
+        ///         {
+        ///             { "id", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Id) },
+        ///             { "name", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Name) },
+        ///             { "description", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Description) },
+        ///             { "parent", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Parent) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetFolderResult> InvokeAsync(GetFolderArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetFolderResult>("scm:index/getFolder:getFolder", args ?? new GetFolderArgs(), options.WithDefaults());
 
         /// <summary>
         /// Folder data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up a folder by id
+        ///     var scmFolderDs = Scm.GetFolder.Invoke(new()
+        ///     {
+        ///         Id = "0f11d0d9-df7c-45da-a60c-4d80f8422544",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmFolderOutput"] = 
+        ///         {
+        ///             { "id", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Id) },
+        ///             { "name", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Name) },
+        ///             { "description", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Description) },
+        ///             { "parent", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Parent) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetFolderResult> Invoke(GetFolderInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetFolderResult>("scm:index/getFolder:getFolder", args ?? new GetFolderInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Folder data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up a folder by id
+        ///     var scmFolderDs = Scm.GetFolder.Invoke(new()
+        ///     {
+        ///         Id = "0f11d0d9-df7c-45da-a60c-4d80f8422544",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmFolderOutput"] = 
+        ///         {
+        ///             { "id", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Id) },
+        ///             { "name", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Name) },
+        ///             { "description", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Description) },
+        ///             { "parent", scmFolderDs.Apply(getFolderResult =&gt; getFolderResult.Parent) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetFolderResult> Invoke(GetFolderInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetFolderResult>("scm:index/getFolder:getFolder", args ?? new GetFolderInvokeArgs(), options.WithDefaults());

@@ -9,7 +9,7 @@ import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyConditionalAdvertiseme
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchAsPath;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchCommunity;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchExtendedCommunity;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,7 +50,7 @@ public final class GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdv
      * @return Med
      * 
      */
-    private Double med;
+    private Integer med;
     /**
      * @return Nexthop
      * 
@@ -114,7 +114,7 @@ public final class GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdv
      * @return Med
      * 
      */
-    public Double med() {
+    public Integer med() {
         return this.med;
     }
     /**
@@ -154,7 +154,7 @@ public final class GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdv
         private GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchCommunity community;
         private GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchExtendedCommunity extendedCommunity;
         private List<String> fromPeers;
-        private Double med;
+        private Integer med;
         private List<String> nexthops;
         private String routeTable;
         private String safi;
@@ -228,7 +228,7 @@ public final class GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdv
             return fromPeers(List.of(fromPeers));
         }
         @CustomType.Setter
-        public Builder med(Double med) {
+        public Builder med(Integer med) {
             if (med == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatch", "med");
             }

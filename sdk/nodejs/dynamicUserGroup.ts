@@ -15,17 +15,17 @@ import * as utilities from "./utilities";
  *
  * // First, create the tags that will be used in the dynamic user group's filter.
  * const scmDugTag1 = new scm.Tag("scm_dug_tag_1", {
- *     folder: "Shared",
+ *     folder: "All",
  *     name: "scm_dug_tag_1",
  *     color: "Red",
  * });
  * const scmDugTag2 = new scm.Tag("scm_dug_tag_2", {
- *     folder: "Shared",
+ *     folder: "All",
  *     name: "scm_dug_tag_2",
  *     color: "Blue",
  * });
  * const scmDugTag3 = new scm.Tag("scm_dug_tag_3", {
- *     folder: "Shared",
+ *     folder: "All",
  *     name: "scm_dug_tag_3",
  *     color: "Green",
  * });

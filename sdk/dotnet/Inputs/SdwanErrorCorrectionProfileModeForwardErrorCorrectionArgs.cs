@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         /// Recovery duration
         /// </summary>
         [Input("recoveryDuration", required: true)]
-        public Input<double> RecoveryDuration { get; set; } = null!;
+        public Input<int> RecoveryDuration { get; set; } = null!;
 
         public SdwanErrorCorrectionProfileModeForwardErrorCorrectionArgs()
         {

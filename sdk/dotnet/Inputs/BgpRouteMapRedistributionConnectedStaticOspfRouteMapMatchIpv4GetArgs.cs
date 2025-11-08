@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4GetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Address
+        /// Connected Static Root OSPF Address
         /// </summary>
         [Input("address")]
         public Input<Inputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressGetArgs>? Address { get; set; }

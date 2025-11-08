@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *
  * // Fetch a list of all certificate profile objects from the "Shared" folder.
  * const allProfiles = scm.getCertificateProfileList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const certificateProfilesList = allProfiles.then(allProfiles => allProfiles.datas);
  * ```
@@ -118,7 +118,7 @@ export interface GetCertificateProfileListResult {
  *
  * // Fetch a list of all certificate profile objects from the "Shared" folder.
  * const allProfiles = scm.getCertificateProfileList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const certificateProfilesList = allProfiles.then(allProfiles => allProfiles.datas);
  * ```

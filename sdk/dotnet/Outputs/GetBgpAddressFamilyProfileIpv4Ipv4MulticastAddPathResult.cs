@@ -20,16 +20,16 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Tx bestpath per a s
         /// </summary>
-        public readonly bool TxBestpathPerAS;
+        public readonly bool TxBestpathPerAs;
 
         [OutputConstructor]
         private GetBgpAddressFamilyProfileIpv4Ipv4MulticastAddPathResult(
             bool txAllPaths,
 
-            bool txBestpathPerAS)
+            bool txBestpathPerAs)
         {
             TxAllPaths = txAllPaths;
-            TxBestpathPerAS = txBestpathPerAS;
+            TxBestpathPerAs = txBestpathPerAs;
         }
     }
 }

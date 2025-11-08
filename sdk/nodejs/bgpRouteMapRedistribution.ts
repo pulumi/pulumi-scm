@@ -46,7 +46,7 @@ export class BgpRouteMapRedistribution extends pulumi.CustomResource {
      */
     declare public readonly connectedStatic: pulumi.Output<outputs.BgpRouteMapRedistributionConnectedStatic | undefined>;
     /**
-     * Description
+     * BGP Route Map Redistributions Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
@@ -58,7 +58,7 @@ export class BgpRouteMapRedistribution extends pulumi.CustomResource {
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Name
+     * BGP Route Map Redistributions Name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
@@ -123,7 +123,7 @@ export interface BgpRouteMapRedistributionState {
      */
     connectedStatic?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStatic>;
     /**
-     * Description
+     * BGP Route Map Redistributions Description
      */
     description?: pulumi.Input<string>;
     /**
@@ -135,7 +135,7 @@ export interface BgpRouteMapRedistributionState {
      */
     folder?: pulumi.Input<string>;
     /**
-     * Name
+     * BGP Route Map Redistributions Name
      */
     name?: pulumi.Input<string>;
     /**
@@ -162,7 +162,7 @@ export interface BgpRouteMapRedistributionArgs {
      */
     connectedStatic?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStatic>;
     /**
-     * Description
+     * BGP Route Map Redistributions Description
      */
     description?: pulumi.Input<string>;
     /**
@@ -174,7 +174,7 @@ export interface BgpRouteMapRedistributionArgs {
      */
     folder?: pulumi.Input<string>;
     /**
-     * Name
+     * BGP Route Map Redistributions Name
      */
     name?: pulumi.Input<string>;
     /**

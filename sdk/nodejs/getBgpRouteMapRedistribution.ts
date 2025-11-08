@@ -22,11 +22,11 @@ export function getBgpRouteMapRedistribution(args: GetBgpRouteMapRedistributionA
  */
 export interface GetBgpRouteMapRedistributionArgs {
     /**
-     * UUID of the resource
+     * BGP Route Map Redistributions UUID of the resource
      */
     id: string;
     /**
-     * Name
+     * BGP Route Map Redistributions Name
      */
     name?: string;
 }
@@ -44,7 +44,7 @@ export interface GetBgpRouteMapRedistributionResult {
      */
     readonly connectedStatic: outputs.GetBgpRouteMapRedistributionConnectedStatic;
     /**
-     * Description
+     * BGP Route Map Redistributions Description
      */
     readonly description: string;
     /**
@@ -56,11 +56,11 @@ export interface GetBgpRouteMapRedistributionResult {
      */
     readonly folder: string;
     /**
-     * UUID of the resource
+     * BGP Route Map Redistributions UUID of the resource
      */
     readonly id: string;
     /**
-     * Name
+     * BGP Route Map Redistributions Name
      */
     readonly name: string;
     /**
@@ -89,11 +89,11 @@ export function getBgpRouteMapRedistributionOutput(args: GetBgpRouteMapRedistrib
  */
 export interface GetBgpRouteMapRedistributionOutputArgs {
     /**
-     * UUID of the resource
+     * BGP Route Map Redistributions UUID of the resource
      */
     id: pulumi.Input<string>;
     /**
-     * Name
+     * BGP Route Map Redistributions Name
      */
     name?: pulumi.Input<string>;
 }

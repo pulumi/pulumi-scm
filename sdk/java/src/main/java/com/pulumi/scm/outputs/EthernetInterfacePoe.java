@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EthernetInterfacePoe {
     /**
-     * @return Poe enabled
+     * @return Enabled PoE?
      * 
      */
     private @Nullable Boolean poeEnabled;
     /**
-     * @return Poe rsvd pwr
+     * @return PoE reserved power
      * 
      */
     private @Nullable Integer poeRsvdPwr;
 
     private EthernetInterfacePoe() {}
     /**
-     * @return Poe enabled
+     * @return Enabled PoE?
      * 
      */
     public Optional<Boolean> poeEnabled() {
         return Optional.ofNullable(this.poeEnabled);
     }
     /**
-     * @return Poe rsvd pwr
+     * @return PoE reserved power
      * 
      */
     public Optional<Integer> poeRsvdPwr() {

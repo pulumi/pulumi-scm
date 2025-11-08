@@ -8,6 +8,8 @@ import * as utilities from "./utilities";
 
 /**
  * LogicalRouter resource
+ *
+ * ## Example Usage
  */
 export class LogicalRouter extends pulumi.CustomResource {
     /**

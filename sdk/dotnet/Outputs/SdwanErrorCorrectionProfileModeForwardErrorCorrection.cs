@@ -20,13 +20,13 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Recovery duration
         /// </summary>
-        public readonly double RecoveryDuration;
+        public readonly int RecoveryDuration;
 
         [OutputConstructor]
         private SdwanErrorCorrectionProfileModeForwardErrorCorrection(
             string ratio,
 
-            double recoveryDuration)
+            int recoveryDuration)
         {
             Ratio = ratio;
             RecoveryDuration = recoveryDuration;

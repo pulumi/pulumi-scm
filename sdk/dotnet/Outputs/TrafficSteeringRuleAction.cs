@@ -17,19 +17,11 @@ namespace Pulumi.Scm.Outputs
         /// Forward
         /// </summary>
         public readonly Outputs.TrafficSteeringRuleActionForward? Forward;
-        /// <summary>
-        /// No pbf
-        /// </summary>
-        public readonly string? NoPbf;
 
         [OutputConstructor]
-        private TrafficSteeringRuleAction(
-            Outputs.TrafficSteeringRuleActionForward? forward,
-
-            string? noPbf)
+        private TrafficSteeringRuleAction(Outputs.TrafficSteeringRuleActionForward? forward)
         {
             Forward = forward;
-            NoPbf = noPbf;
         }
     }
 }

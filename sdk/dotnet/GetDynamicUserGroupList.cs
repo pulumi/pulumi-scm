@@ -27,13 +27,13 @@ namespace Pulumi.Scm
         ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
         ///     var allSharedDugs = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // This data source block shows an example of pagination.
         ///     var paginatedDugsExample = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -70,13 +70,13 @@ namespace Pulumi.Scm
         ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
         ///     var allSharedDugs = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // This data source block shows an example of pagination.
         ///     var paginatedDugsExample = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -113,13 +113,13 @@ namespace Pulumi.Scm
         ///     // 1. Use a single data block to fetch ALL dynamic user groups in the "Shared" folder. [cite: 2]
         ///     var allSharedDugs = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // This data source block shows an example of pagination.
         ///     var paginatedDugsExample = Scm.GetDynamicUserGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });

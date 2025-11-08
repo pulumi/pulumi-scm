@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// DnsSecurityProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM DNS Security Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM DNS Profile you want to find.
+        ///     var scmDnsProfile = Scm.GetDnsSecurityProfile.Invoke(new()
+        ///     {
+        ///         Id = "18607c90-22fa-4627-8741-f0584d1fa7d6",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDnsSecurityProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Id) },
+        ///             { "folder", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Folder) },
+        ///             { "name", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetDnsSecurityProfileResult> InvokeAsync(GetDnsSecurityProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDnsSecurityProfileResult>("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", args ?? new GetDnsSecurityProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// DnsSecurityProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM DNS Security Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM DNS Profile you want to find.
+        ///     var scmDnsProfile = Scm.GetDnsSecurityProfile.Invoke(new()
+        ///     {
+        ///         Id = "18607c90-22fa-4627-8741-f0584d1fa7d6",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDnsSecurityProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Id) },
+        ///             { "folder", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Folder) },
+        ///             { "name", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDnsSecurityProfileResult> Invoke(GetDnsSecurityProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDnsSecurityProfileResult>("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", args ?? new GetDnsSecurityProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// DnsSecurityProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM DNS Security Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM DNS Profile you want to find.
+        ///     var scmDnsProfile = Scm.GetDnsSecurityProfile.Invoke(new()
+        ///     {
+        ///         Id = "18607c90-22fa-4627-8741-f0584d1fa7d6",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDnsSecurityProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Id) },
+        ///             { "folder", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Folder) },
+        ///             { "name", scmDnsProfile.Apply(getDnsSecurityProfileResult =&gt; getDnsSecurityProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDnsSecurityProfileResult> Invoke(GetDnsSecurityProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetDnsSecurityProfileResult>("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", args ?? new GetDnsSecurityProfileInvokeArgs(), options.WithDefaults());

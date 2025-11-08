@@ -13,134 +13,134 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatch {
     /**
-     * @return AS path access list
+     * @return BGP Root RIB Route maps match AS path access list
      * 
      */
     private String asPathAccessList;
     /**
-     * @return Extended community
+     * @return BGP Root RIB Route maps match Extended community
      * 
      */
     private String extendedCommunity;
     /**
-     * @return Interface
+     * @return BGP Root RIB Route maps match Interface
      * 
      */
     private String interface_;
     /**
-     * @return Ipv4
+     * @return BGP Route Map Redistributions Root BGP rib Route Map IPv4
      * 
      */
     private GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatchIpv4 ipv4;
     /**
-     * @return Large community
+     * @return BGP Root RIB Route maps match Large community
      * 
      */
     private String largeCommunity;
     /**
-     * @return Local preference
+     * @return BGP Root RIB Route maps match Local preference
      * 
      */
     private Integer localPreference;
     /**
-     * @return Metric
+     * @return BGP Root RIB Route maps match Metric
      * 
      */
     private Integer metric;
     /**
-     * @return Origin
+     * @return BGP Root RIB Route maps match Origin
      * 
      */
     private String origin;
     /**
-     * @return Peer
+     * @return BGP Root RIB Route maps match Peer
      * 
      */
     private String peer;
     /**
-     * @return Regular community
+     * @return BGP Root RIB Route maps match Regular community
      * 
      */
     private String regularCommunity;
     /**
-     * @return Tag
+     * @return BGP Root RIB Route maps match Tag
      * 
      */
     private Integer tag;
 
     private GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatch() {}
     /**
-     * @return AS path access list
+     * @return BGP Root RIB Route maps match AS path access list
      * 
      */
     public String asPathAccessList() {
         return this.asPathAccessList;
     }
     /**
-     * @return Extended community
+     * @return BGP Root RIB Route maps match Extended community
      * 
      */
     public String extendedCommunity() {
         return this.extendedCommunity;
     }
     /**
-     * @return Interface
+     * @return BGP Root RIB Route maps match Interface
      * 
      */
     public String interface_() {
         return this.interface_;
     }
     /**
-     * @return Ipv4
+     * @return BGP Route Map Redistributions Root BGP rib Route Map IPv4
      * 
      */
     public GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatchIpv4 ipv4() {
         return this.ipv4;
     }
     /**
-     * @return Large community
+     * @return BGP Root RIB Route maps match Large community
      * 
      */
     public String largeCommunity() {
         return this.largeCommunity;
     }
     /**
-     * @return Local preference
+     * @return BGP Root RIB Route maps match Local preference
      * 
      */
     public Integer localPreference() {
         return this.localPreference;
     }
     /**
-     * @return Metric
+     * @return BGP Root RIB Route maps match Metric
      * 
      */
     public Integer metric() {
         return this.metric;
     }
     /**
-     * @return Origin
+     * @return BGP Root RIB Route maps match Origin
      * 
      */
     public String origin() {
         return this.origin;
     }
     /**
-     * @return Peer
+     * @return BGP Root RIB Route maps match Peer
      * 
      */
     public String peer() {
         return this.peer;
     }
     /**
-     * @return Regular community
+     * @return BGP Root RIB Route maps match Regular community
      * 
      */
     public String regularCommunity() {
         return this.regularCommunity;
     }
     /**
-     * @return Tag
+     * @return BGP Root RIB Route maps match Tag
      * 
      */
     public Integer tag() {

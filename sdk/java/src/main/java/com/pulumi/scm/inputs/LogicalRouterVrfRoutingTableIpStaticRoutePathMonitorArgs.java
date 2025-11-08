@@ -7,7 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDestinationArgs;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,13 +54,13 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgs exte
      * 
      */
     @Import(name="holdTime")
-    private @Nullable Output<Double> holdTime;
+    private @Nullable Output<Integer> holdTime;
 
     /**
      * @return Hold time
      * 
      */
-    public Optional<Output<Double>> holdTime() {
+    public Optional<Output<Integer>> holdTime() {
         return Optional.ofNullable(this.holdTime);
     }
 
@@ -154,7 +154,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgs exte
          * @return builder
          * 
          */
-        public Builder holdTime(@Nullable Output<Double> holdTime) {
+        public Builder holdTime(@Nullable Output<Integer> holdTime) {
             $.holdTime = holdTime;
             return this;
         }
@@ -165,7 +165,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgs exte
          * @return builder
          * 
          */
-        public Builder holdTime(Double holdTime) {
+        public Builder holdTime(Integer holdTime) {
             return holdTime(Output.of(holdTime));
         }
 

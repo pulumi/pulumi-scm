@@ -124,6 +124,22 @@ def get_folder(id: Optional[_builtins.str] = None,
     """
     Folder data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up a folder by id
+    scm_folder_ds = scm.get_folder(id="0f11d0d9-df7c-45da-a60c-4d80f8422544")
+    pulumi.export("scmFolderOutput", {
+        "id": scm_folder_ds.id,
+        "name": scm_folder_ds.name,
+        "description": scm_folder_ds.description,
+        "parent": scm_folder_ds.parent,
+    })
+    ```
+
 
     :param _builtins.str id: The UUID of the folder
     :param _builtins.str name: The name of the folder
@@ -147,6 +163,22 @@ def get_folder_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFolderResult]:
     """
     Folder data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up a folder by id
+    scm_folder_ds = scm.get_folder(id="0f11d0d9-df7c-45da-a60c-4d80f8422544")
+    pulumi.export("scmFolderOutput", {
+        "id": scm_folder_ds.id,
+        "name": scm_folder_ds.name,
+        "description": scm_folder_ds.description,
+        "parent": scm_folder_ds.parent,
+    })
+    ```
 
 
     :param _builtins.str id: The UUID of the folder

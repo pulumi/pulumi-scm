@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,29 +18,29 @@ public final class SdwanTrafficDistributionProfileLinkTagArgs extends com.pulumi
     public static final SdwanTrafficDistributionProfileLinkTagArgs Empty = new SdwanTrafficDistributionProfileLinkTagArgs();
 
     /**
-     * Name
+     * Link-Tag used for identifying a set of interfaces
      * 
      */
-    @Import(name="name")
-    private @Nullable Output<String> name;
+    @Import(name="name", required=true)
+    private Output<String> name;
 
     /**
-     * @return Name
+     * @return Link-Tag used for identifying a set of interfaces
      * 
      */
-    public Optional<Output<String>> name() {
-        return Optional.ofNullable(this.name);
+    public Output<String> name() {
+        return this.name;
     }
 
     /**
-     * Weight
+     * Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
      * 
      */
     @Import(name="weight")
     private @Nullable Output<Integer> weight;
 
     /**
-     * @return Weight
+     * @return Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
      * 
      */
     public Optional<Output<Integer>> weight() {
@@ -72,18 +73,18 @@ public final class SdwanTrafficDistributionProfileLinkTagArgs extends com.pulumi
         }
 
         /**
-         * @param name Name
+         * @param name Link-Tag used for identifying a set of interfaces
          * 
          * @return builder
          * 
          */
-        public Builder name(@Nullable Output<String> name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
         /**
-         * @param name Name
+         * @param name Link-Tag used for identifying a set of interfaces
          * 
          * @return builder
          * 
@@ -93,7 +94,7 @@ public final class SdwanTrafficDistributionProfileLinkTagArgs extends com.pulumi
         }
 
         /**
-         * @param weight Weight
+         * @param weight Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
          * 
          * @return builder
          * 
@@ -104,7 +105,7 @@ public final class SdwanTrafficDistributionProfileLinkTagArgs extends com.pulumi
         }
 
         /**
-         * @param weight Weight
+         * @param weight Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
          * 
          * @return builder
          * 
@@ -114,6 +115,9 @@ public final class SdwanTrafficDistributionProfileLinkTagArgs extends com.pulumi
         }
 
         public SdwanTrafficDistributionProfileLinkTagArgs build() {
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("SdwanTrafficDistributionProfileLinkTagArgs", "name");
+            }
             return $;
         }
     }

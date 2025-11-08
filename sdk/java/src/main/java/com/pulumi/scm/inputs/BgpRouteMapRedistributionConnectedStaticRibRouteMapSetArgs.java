@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs ex
     public static final BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs Empty = new BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs();
 
     /**
-     * Source address
+     * Connected Static BGP Rib Route Map Distribution Source address
      * 
      */
     @Import(name="sourceAddress")
     private @Nullable Output<String> sourceAddress;
 
     /**
-     * @return Source address
+     * @return Connected Static BGP Rib Route Map Distribution Source address
      * 
      */
     public Optional<Output<String>> sourceAddress() {
@@ -55,7 +55,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs ex
         }
 
         /**
-         * @param sourceAddress Source address
+         * @param sourceAddress Connected Static BGP Rib Route Map Distribution Source address
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs ex
         }
 
         /**
-         * @param sourceAddress Source address
+         * @param sourceAddress Connected Static BGP Rib Route Map Distribution Source address
          * 
          * @return builder
          * 

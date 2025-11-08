@@ -34,14 +34,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs extends com
     }
 
     /**
-     * Interface
+     * OSPF BGP Route maps Interface
      * 
      */
     @Import(name="interface")
     private @Nullable Output<String> interface_;
 
     /**
-     * @return Interface
+     * @return OSPF BGP Route maps Interface
      * 
      */
     public Optional<Output<String>> interface_() {
@@ -49,14 +49,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs extends com
     }
 
     /**
-     * Metric
+     * OSPF BGP Route maps Metric
      * 
      */
     @Import(name="metric")
     private @Nullable Output<Integer> metric;
 
     /**
-     * @return Metric
+     * @return OSPF BGP Route maps Metric
      * 
      */
     public Optional<Output<Integer>> metric() {
@@ -79,14 +79,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs extends com
     }
 
     /**
-     * Tag
+     * OSPF BGP Route maps Tag
      * 
      */
     @Import(name="tag")
     private @Nullable Output<Integer> tag;
 
     /**
-     * @return Tag
+     * @return OSPF BGP Route maps Tag
      * 
      */
     public Optional<Output<Integer>> tag() {
@@ -143,7 +143,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs extends com
         }
 
         /**
-         * @param interface_ Interface
+         * @param interface_ OSPF BGP Route maps Interface
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs extends com
         }
 
         /**
-         * @param interface_ Interface
+         * @param interface_ OSPF BGP Route maps Interface
          * 
          * @return builder
          * 
@@ -164,7 +164,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs extends com
         }
 
         /**
-         * @param metric Metric
+         * @param metric OSPF BGP Route maps Metric
          * 
          * @return builder
          * 
@@ -175,7 +175,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs extends com
         }
 
         /**
-         * @param metric Metric
+         * @param metric OSPF BGP Route maps Metric
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs extends com
         }
 
         /**
-         * @param tag Tag
+         * @param tag OSPF BGP Route maps Tag
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs extends com
         }
 
         /**
-         * @param tag Tag
+         * @param tag OSPF BGP Route maps Tag
          * 
          * @return builder
          * 

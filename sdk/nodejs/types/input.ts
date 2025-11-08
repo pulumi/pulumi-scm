@@ -12,18 +12,18 @@ export interface AddressGroupDynamic {
     filter: pulumi.Input<string>;
 }
 
-export interface AggregateEthernetInterfaceLayer2 {
+export interface AggregateInterfaceLayer2 {
     /**
      * Lacp
      */
-    lacp?: pulumi.Input<inputs.AggregateEthernetInterfaceLayer2Lacp>;
+    lacp?: pulumi.Input<inputs.AggregateInterfaceLayer2Lacp>;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    vlanTag?: pulumi.Input<number>;
+    vlanTag?: pulumi.Input<string>;
 }
 
-export interface AggregateEthernetInterfaceLayer2Lacp {
+export interface AggregateInterfaceLayer2Lacp {
     /**
      * Enable LACP?
      */
@@ -33,7 +33,7 @@ export interface AggregateEthernetInterfaceLayer2Lacp {
      */
     fastFailover?: pulumi.Input<boolean>;
     /**
-     * Max ports
+     * Maximum number of physical ports bundled in the LAG
      */
     maxPorts?: pulumi.Input<number>;
     /**
@@ -41,49 +41,49 @@ export interface AggregateEthernetInterfaceLayer2Lacp {
      */
     mode?: pulumi.Input<string>;
     /**
-     * System priority
+     * LACP system priority in system ID
      */
     systemPriority?: pulumi.Input<number>;
     /**
-     * Transmission rate
+     * Transmission mode
      */
     transmissionRate?: pulumi.Input<string>;
 }
 
-export interface AggregateEthernetInterfaceLayer3 {
+export interface AggregateInterfaceLayer3 {
     /**
      * Aggregate Ethernet ARP configuration
      */
-    arps?: pulumi.Input<pulumi.Input<inputs.AggregateEthernetInterfaceLayer3Arp>[]>;
+    arps?: pulumi.Input<pulumi.Input<inputs.AggregateInterfaceLayer3Arp>[]>;
     /**
-     * Ddns config
+     * Dynamic DNS configuration specific to the Aggregate Interface.
      */
-    ddnsConfig?: pulumi.Input<inputs.AggregateEthernetInterfaceLayer3DdnsConfig>;
+    ddnsConfig?: pulumi.Input<inputs.AggregateInterfaceLayer3DdnsConfig>;
     /**
-     * Dhcp client
+     * Aggregate Ethernet DHCP Client Object
      */
-    dhcpClient?: pulumi.Input<inputs.AggregateEthernetInterfaceLayer3DhcpClient>;
+    dhcpClient?: pulumi.Input<inputs.AggregateInterfaceLayer3DhcpClient>;
     /**
      * Interface management profile
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
-     * Interface IP addresses
+     * Aggregate Interface IP addresses
      */
-    ips?: pulumi.Input<pulumi.Input<string>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.AggregateInterfaceLayer3Ip>[]>;
     /**
      * Lacp
      */
-    lacp?: pulumi.Input<inputs.AggregateEthernetInterfaceLayer3Lacp>;
+    lacp?: pulumi.Input<inputs.AggregateInterfaceLayer3Lacp>;
     /**
      * MTU
      */
     mtu?: pulumi.Input<number>;
 }
 
-export interface AggregateEthernetInterfaceLayer3Arp {
+export interface AggregateInterfaceLayer3Arp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress?: pulumi.Input<string>;
     /**
@@ -92,68 +92,75 @@ export interface AggregateEthernetInterfaceLayer3Arp {
     name?: pulumi.Input<string>;
 }
 
-export interface AggregateEthernetInterfaceLayer3DdnsConfig {
+export interface AggregateInterfaceLayer3DdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
-    ddnsCertProfile?: pulumi.Input<string>;
+    ddnsCertProfile: pulumi.Input<string>;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled?: pulumi.Input<boolean>;
     /**
      * Ddns hostname
      */
-    ddnsHostname?: pulumi.Input<string>;
+    ddnsHostname: pulumi.Input<string>;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp?: pulumi.Input<string>;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval?: pulumi.Input<number>;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
-    ddnsVendor?: pulumi.Input<string>;
+    ddnsVendor: pulumi.Input<string>;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
-    ddnsVendorConfig?: pulumi.Input<string>;
+    ddnsVendorConfig: pulumi.Input<string>;
 }
 
-export interface AggregateEthernetInterfaceLayer3DhcpClient {
+export interface AggregateInterfaceLayer3DhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute?: pulumi.Input<boolean>;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric?: pulumi.Input<number>;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable?: pulumi.Input<boolean>;
     /**
-     * Send hostname
+     * Aggregate Ethernet DHCP Client Send hostname
      */
-    sendHostname?: pulumi.Input<inputs.AggregateEthernetInterfaceLayer3DhcpClientSendHostname>;
+    sendHostname?: pulumi.Input<inputs.AggregateInterfaceLayer3DhcpClientSendHostname>;
 }
 
-export interface AggregateEthernetInterfaceLayer3DhcpClientSendHostname {
+export interface AggregateInterfaceLayer3DhcpClientSendHostname {
     /**
      * Enable
      */
     enable?: pulumi.Input<boolean>;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname?: pulumi.Input<string>;
 }
 
-export interface AggregateEthernetInterfaceLayer3Lacp {
+export interface AggregateInterfaceLayer3Ip {
+    /**
+     * Aggregate Interface IP addresses name
+     */
+    name: pulumi.Input<string>;
+}
+
+export interface AggregateInterfaceLayer3Lacp {
     /**
      * Enable LACP?
      */
@@ -163,7 +170,7 @@ export interface AggregateEthernetInterfaceLayer3Lacp {
      */
     fastFailover?: pulumi.Input<boolean>;
     /**
-     * Max ports
+     * Maximum number of physical ports bundled in the LAG
      */
     maxPorts?: pulumi.Input<number>;
     /**
@@ -171,11 +178,11 @@ export interface AggregateEthernetInterfaceLayer3Lacp {
      */
     mode?: pulumi.Input<string>;
     /**
-     * System priority
+     * LACP system priority in system ID
      */
     systemPriority?: pulumi.Input<number>;
     /**
-     * Transmission rate
+     * Transmission mode
      */
     transmissionRate?: pulumi.Input<string>;
 }
@@ -1094,7 +1101,7 @@ export interface BgpAddressFamilyProfileIpv4Ipv4Multicast {
     /**
      * Remove private a s
      */
-    removePrivateAS?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS>;
+    removePrivateAs?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs>;
     /**
      * Route reflector client?
      */
@@ -1117,7 +1124,7 @@ export interface BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath {
     /**
      * Tx bestpath per a s
      */
-    txBestpathPerAS?: pulumi.Input<boolean>;
+    txBestpathPerAs?: pulumi.Input<boolean>;
 }
 
 export interface BgpAddressFamilyProfileIpv4Ipv4MulticastAllowasIn {
@@ -1194,15 +1201,21 @@ export interface BgpAddressFamilyProfileIpv4Ipv4MulticastOrf {
     orfPrefixList?: pulumi.Input<string>;
 }
 
-export interface BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS {
+export interface BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs {
     /**
      * All
      */
-    all?: pulumi.Input<string>;
+    all?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll>;
     /**
      * Replace a s
      */
-    replaceAS?: pulumi.Input<string>;
+    replaceAs?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs>;
+}
+
+export interface BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll {
+}
+
+export interface BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs {
 }
 
 export interface BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunity {
@@ -1283,7 +1296,7 @@ export interface BgpAddressFamilyProfileIpv4Ipv4Unicast {
     /**
      * Remove private a s
      */
-    removePrivateAS?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS>;
+    removePrivateAs?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs>;
     /**
      * Route reflector client?
      */
@@ -1306,7 +1319,7 @@ export interface BgpAddressFamilyProfileIpv4Ipv4UnicastAddPath {
     /**
      * Tx bestpath per a s
      */
-    txBestpathPerAS?: pulumi.Input<boolean>;
+    txBestpathPerAs?: pulumi.Input<boolean>;
 }
 
 export interface BgpAddressFamilyProfileIpv4Ipv4UnicastAllowasIn {
@@ -1383,15 +1396,21 @@ export interface BgpAddressFamilyProfileIpv4Ipv4UnicastOrf {
     orfPrefixList?: pulumi.Input<string>;
 }
 
-export interface BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS {
+export interface BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs {
     /**
      * All
      */
-    all?: pulumi.Input<string>;
+    all?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll>;
     /**
      * Replace a s
      */
-    replaceAS?: pulumi.Input<string>;
+    replaceAs?: pulumi.Input<inputs.BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs>;
+}
+
+export interface BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll {
+}
+
+export interface BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs {
 }
 
 export interface BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunity {
@@ -1735,25 +1754,25 @@ export interface BgpRouteMapRedistributionBgp {
      */
     ospf?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpOspf>;
     /**
-     * Rib
+     * BGP Root RIB
      */
     rib?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpRib>;
 }
 
 export interface BgpRouteMapRedistributionBgpOspf {
     /**
-     * Route maps
+     * BGP Root OSPF Route maps
      */
     routeMaps?: pulumi.Input<pulumi.Input<inputs.BgpRouteMapRedistributionBgpOspfRouteMap>[]>;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMap {
     /**
-     * Action
+     * BGP Root OSPF Route maps Action
      */
     action?: pulumi.Input<string>;
     /**
-     * Description
+     * BGP Root OSPF Route maps Description
      */
     description?: pulumi.Input<string>;
     /**
@@ -1761,106 +1780,106 @@ export interface BgpRouteMapRedistributionBgpOspfRouteMap {
      */
     match?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpOspfRouteMapMatch>;
     /**
-     * Sequence number
+     * BGP Root OSPF Route maps Sequence number
      */
     name?: pulumi.Input<number>;
     /**
-     * Set
+     * BGP Root OSPF Set
      */
     set?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpOspfRouteMapSet>;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapMatch {
     /**
-     * AS path access list
+     * BGP Root OSPF Route maps match AS path access list
      */
     asPathAccessList?: pulumi.Input<string>;
     /**
-     * Extended community
+     * EBGP Root OSPF Route maps match xtended community
      */
     extendedCommunity?: pulumi.Input<string>;
     /**
-     * Interface
+     * BGP Root OSPF Route maps match Interface
      */
     interface?: pulumi.Input<string>;
     /**
-     * bgp-route-map-redistributions ipv4 object
+     * BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
      */
     ipv4?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4>;
     /**
-     * Large community
+     * BGP Root OSPF Route maps match Large community
      */
     largeCommunity?: pulumi.Input<string>;
     /**
-     * Local preference
+     * BGP Root OSPF Route maps match Local preference
      */
     localPreference?: pulumi.Input<number>;
     /**
-     * Metric
+     * BGP Root OSPF Route maps match Metric
      */
     metric?: pulumi.Input<number>;
     /**
-     * Origin
+     * BGP Root OSPF Route maps match Origin
      */
     origin?: pulumi.Input<string>;
     /**
-     * Peer
+     * BGP Root OSPF Route maps match Peer
      */
     peer?: pulumi.Input<string>;
     /**
-     * Regular community
+     * BGP Root OSPF Route maps match Regular community
      */
     regularCommunity?: pulumi.Input<string>;
     /**
-     * Tag
+     * BGP Root OSPF Route maps match Tag
      */
     tag?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4 {
     /**
-     * bgp-route-map-redistributions ipv4 object address
+     * BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
      */
     address?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address>;
     /**
-     * bgp-route-map-redistributions ipv4 object next*hop
+     * BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
      */
     nextHop?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop>;
     /**
-     * bgp-route-map-redistributions ipv4 object route*source
+     * BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
      */
     routeSource?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource>;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * BGP Root OSPF Route maps match ipv4 Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps match ipv4 Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * BGP Root OSPF Route maps ipv4 nextVr hop Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps ipv4 next hop Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource {
     /**
-     * Access list
+     * BGP Root OSPF Route maps ipv4 route source Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps ipv4 route source Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
@@ -1871,99 +1890,99 @@ export interface BgpRouteMapRedistributionBgpOspfRouteMapSet {
      */
     metric?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpOspfRouteMapSetMetric>;
     /**
-     * Metric type
+     * BGP Root OSPF Route maps set Metric type
      */
     metricType?: pulumi.Input<string>;
     /**
-     * Tag
+     * BGP Root OSPF Route maps set Tag
      */
     tag?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionBgpOspfRouteMapSetMetric {
     /**
-     * Metric action
+     * BGP Root OSPF Route maps set Metric action
      */
     action?: pulumi.Input<string>;
     /**
-     * Metric value
+     * BGP Root OSPF Route maps set Metric value
      */
     value?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionBgpRib {
     /**
-     * Route maps
+     * BGP Root RIB Route maps
      */
     routeMaps?: pulumi.Input<pulumi.Input<inputs.BgpRouteMapRedistributionBgpRibRouteMap>[]>;
 }
 
 export interface BgpRouteMapRedistributionBgpRibRouteMap {
     /**
-     * Action
+     * BGP Root RIB Route maps Action
      */
     action?: pulumi.Input<string>;
     /**
-     * Description
+     * BGP Root RIB Route maps Description
      */
     description?: pulumi.Input<string>;
     /**
-     * Match
+     * match attribute for BG Rib route map
      */
     match?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpRibRouteMapMatch>;
     /**
-     * Sequence number
+     * BGP Root RIB Route maps Sequence number
      */
     name?: pulumi.Input<number>;
     /**
-     * Set
+     * Set attributes for BGP route map
      */
     set?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpRibRouteMapSet>;
 }
 
 export interface BgpRouteMapRedistributionBgpRibRouteMapMatch {
     /**
-     * AS path access list
+     * BGP Root RIB Route maps match AS path access list
      */
     asPathAccessList?: pulumi.Input<string>;
     /**
-     * Extended community
+     * BGP Root RIB Route maps match Extended community
      */
     extendedCommunity?: pulumi.Input<string>;
     /**
-     * Interface
+     * BGP Root RIB Route maps match Interface
      */
     interface?: pulumi.Input<string>;
     /**
-     * Ipv4
+     * BGP Route Map Redistributions Root BGP rib Route Map IPv4
      */
     ipv4?: pulumi.Input<inputs.BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4>;
     /**
-     * Large community
+     * BGP Root RIB Route maps match Large community
      */
     largeCommunity?: pulumi.Input<string>;
     /**
-     * Local preference
+     * BGP Root RIB Route maps match Local preference
      */
     localPreference?: pulumi.Input<number>;
     /**
-     * Metric
+     * BGP Root RIB Route maps match Metric
      */
     metric?: pulumi.Input<number>;
     /**
-     * Origin
+     * BGP Root RIB Route maps match Origin
      */
     origin?: pulumi.Input<string>;
     /**
-     * Peer
+     * BGP Root RIB Route maps match Peer
      */
     peer?: pulumi.Input<string>;
     /**
-     * Regular community
+     * BGP Root RIB Route maps match Regular community
      */
     regularCommunity?: pulumi.Input<string>;
     /**
-     * Tag
+     * BGP Root RIB Route maps match Tag
      */
     tag?: pulumi.Input<number>;
 }
@@ -1985,47 +2004,47 @@ export interface BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4 {
 
 export interface BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv next hop Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv next hop Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSource {
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv route source Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv route source Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionBgpRibRouteMapSet {
     /**
-     * Source address
+     * BGP Root RIB Route maps set Source address
      */
     sourceAddress?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStatic {
     /**
-     * Bgp
+     * Connected Static Root BGP
      */
     bgp?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticBgp>;
     /**
@@ -2040,18 +2059,18 @@ export interface BgpRouteMapRedistributionConnectedStatic {
 
 export interface BgpRouteMapRedistributionConnectedStaticBgp {
     /**
-     * Route maps
+     * Connected Static BGP Route maps
      */
     routeMaps?: pulumi.Input<pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMap>[]>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
     /**
-     * Action
+     * Connected Static BGP Route maps Action
      */
     action?: pulumi.Input<string>;
     /**
-     * Description
+     * Connected Static BGP Route maps Description
      */
     description?: pulumi.Input<string>;
     /**
@@ -2059,7 +2078,7 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
      */
     match?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch>;
     /**
-     * Sequence number
+     * Connected Static BGP Route maps Sequence number
      */
     name?: pulumi.Input<number>;
     /**
@@ -2070,7 +2089,7 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP Route maps match Interface
      */
     interface?: pulumi.Input<string>;
     /**
@@ -2078,7 +2097,7 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch {
      */
     ipv4?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4>;
     /**
-     * Metric
+     * Connected Static BGP Route maps match Metric
      */
     metric?: pulumi.Input<number>;
 }
@@ -2096,22 +2115,22 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4 {
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP Route maps match ip4 Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * Connected Static BGP Route maps match ip4  Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP Route maps match ip4 next hop Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * Connected Static BGP Route maps match ip4 next hop Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
@@ -2122,11 +2141,11 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     aggregator?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator>;
     /**
-     * AS numbers
+     * Connected Static BGP Route maps set AS numbers
      */
     aspathPrepends?: pulumi.Input<pulumi.Input<number>[]>;
     /**
-     * Enable BGP atomic aggregate?
+     * Connected Static BGP Route maps set Enable BGP atomic aggregate?
      */
     atomicAggregate?: pulumi.Input<boolean>;
     /**
@@ -2134,11 +2153,11 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     ipv4?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4>;
     /**
-     * Large communities
+     * Connected Static  BGP Route maps set Large communities
      */
     largeCommunities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Local preference
+     * Connected Static BGP Route maps set Local preference
      */
     localPreference?: pulumi.Input<number>;
     /**
@@ -2146,74 +2165,74 @@ export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     metric?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric>;
     /**
-     * Origin
+     * Connected Static BGP Route maps set Origin
      */
     origin?: pulumi.Input<string>;
     /**
-     * Originator ID
+     * Connected Static BGP Route maps set Originator ID
      */
     originatorId?: pulumi.Input<string>;
     /**
-     * Regular communities
+     * Connected Static  BGP Route maps set Regular communities
      */
     regularCommunities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Tag
+     * Connected Static BGP Route maps set Tag
      */
     tag?: pulumi.Input<number>;
     /**
-     * Weight
+     * Connected Static BGP Route maps set Weight
      */
     weight?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator {
     /**
-     * Aggregator AS
+     * Connected Static BGP Route maps set Aggregator AS
      */
     as?: pulumi.Input<number>;
     /**
-     * Router ID
+     * Connected Static BGP Route maps set Router ID
      */
     routerId?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4 {
     /**
-     * Next hop
+     * Connected Static BGP Route maps set Next ipv4 hop
      */
     nextHop?: pulumi.Input<string>;
     /**
-     * Source address
+     * Connected Static BGP Route maps set ipv4 Source address
      */
     sourceAddress?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric {
     /**
-     * Metric action
+     * Connected Static BGP Route maps set Metric action
      */
     action?: pulumi.Input<string>;
     /**
-     * Metric value
+     * Connected Static BGP Route maps set Metric value
      */
     value?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspf {
     /**
-     * Route maps
+     * Connected Static  BGP OSPF Route maps
      */
     routeMaps?: pulumi.Input<pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMap>[]>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
     /**
-     * Action
+     * Connected Static BGP OSPF Route map Action
      */
     action?: pulumi.Input<string>;
     /**
-     * Description
+     * Connected Static BGP OSPF Route map Description
      */
     description?: pulumi.Input<string>;
     /**
@@ -2221,18 +2240,18 @@ export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
      */
     match?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch>;
     /**
-     * Sequence number
+     * Connected Static BGP OSPF Route map Sequence number
      */
     name?: pulumi.Input<number>;
     /**
-     * Set
+     * Connected Static Root OSPF Set
      */
     set?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP OSPF Route map Interface
      */
     interface?: pulumi.Input<string>;
     /**
@@ -2240,14 +2259,14 @@ export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch {
      */
     ipv4?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4>;
     /**
-     * Metric
+     * Connected Static BGP OSPF Route map Metric
      */
     metric?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4 {
     /**
-     * Address
+     * Connected Static Root OSPF Address
      */
     address?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address>;
     /**
@@ -2258,22 +2277,22 @@ export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4 {
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP OSPF Route map ipv4 Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * Connected Static BGP OSPF Route map ipv4 Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP OSPF Route map ipv4 next hop Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * Connected Static BGP OSPF Route map ipv4 next hop Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
@@ -2284,40 +2303,40 @@ export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet {
      */
     metric?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric>;
     /**
-     * Metric type
+     * Connected Static BGP OSPF Route map set Metric type
      */
     metricType?: pulumi.Input<string>;
     /**
-     * Tag
+     * Connected Static BGP OSPF Route map set Tag
      */
     tag?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric {
     /**
-     * Metric action
+     * Connected Static BGP OSPF Route map set Metric action
      */
     action?: pulumi.Input<string>;
     /**
-     * Metric value
+     * Connected Static BGP OSPF Route map set Metric value
      */
     value?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRib {
     /**
-     * Route maps
+     * Connected Static BGP Rib Route maps
      */
     routeMaps?: pulumi.Input<pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticRibRouteMap>[]>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMap {
     /**
-     * Action
+     * Connected Static BGP Rib Route maps Action
      */
     action?: pulumi.Input<string>;
     /**
-     * Description
+     * Connected Static BGP Rib Route maps Description
      */
     description?: pulumi.Input<string>;
     /**
@@ -2325,18 +2344,18 @@ export interface BgpRouteMapRedistributionConnectedStaticRibRouteMap {
      */
     match?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch>;
     /**
-     * Sequence number
+     * Connected Static BGP Rib Route maps Sequence number
      */
     name?: pulumi.Input<number>;
     /**
-     * Set
+     * Connected Static Root RIB set
      */
     set?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticRibRouteMapSet>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch {
     /**
-     * Interface
+     * Connected Static BGP Rib Route maps Interface
      */
     interface?: pulumi.Input<string>;
     /**
@@ -2344,14 +2363,14 @@ export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch {
      */
     ipv4?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4>;
     /**
-     * Metric
+     * Connected Static BGP Rib Route maps Metric
      */
     metric?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4 {
     /**
-     * Address
+     * Connected Static BGP Rib Route maps ipv4 address
      */
     address?: pulumi.Input<inputs.BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address>;
     /**
@@ -2362,36 +2381,36 @@ export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4 {
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address {
     /**
-     * Access list
+     * Connected Static BGP Rib Route maps ipv4 Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * Connected Static BGP Rib Route maps ipv4 Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHop {
     /**
-     * Access list
+     * Connected Static BGP Rib Route maps ipv4 nect hop Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * Connected Static BGP Rib Route maps ipv4 next hop Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionConnectedStaticRibRouteMapSet {
     /**
-     * Source address
+     * Connected Static BGP Rib Route Map Distribution Source address
      */
     sourceAddress?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionOspf {
     /**
-     * Bgp
+     * OSPF Root BGP
      */
     bgp?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfBgp>;
     /**
@@ -2402,18 +2421,18 @@ export interface BgpRouteMapRedistributionOspf {
 
 export interface BgpRouteMapRedistributionOspfBgp {
     /**
-     * Route maps
+     * OSPF BGP Route maps
      */
     routeMaps?: pulumi.Input<pulumi.Input<inputs.BgpRouteMapRedistributionOspfBgpRouteMap>[]>;
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMap {
     /**
-     * Action
+     * OSPF BGP Route maps Action
      */
     action?: pulumi.Input<string>;
     /**
-     * Description
+     * OSPF BGP Route maps Description
      */
     description?: pulumi.Input<string>;
     /**
@@ -2421,11 +2440,11 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMap {
      */
     match?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfBgpRouteMapMatch>;
     /**
-     * Sequence number
+     * OSPF BGP Route maps Sequence number
      */
     name?: pulumi.Input<number>;
     /**
-     * Set
+     * OSPF Root Set
      */
     set?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfBgpRouteMapSet>;
 }
@@ -2436,11 +2455,11 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapMatch {
      */
     address?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfBgpRouteMapMatchAddress>;
     /**
-     * Interface
+     * OSPF BGP Route maps Interface
      */
     interface?: pulumi.Input<string>;
     /**
-     * Metric
+     * OSPF BGP Route maps Metric
      */
     metric?: pulumi.Input<number>;
     /**
@@ -2448,29 +2467,29 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapMatch {
      */
     nextHop?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop>;
     /**
-     * Tag
+     * OSPF BGP Route maps Tag
      */
     tag?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMapMatchAddress {
     /**
-     * Access list
+     * OSPF BGP Route maps match Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * OSPF BGP Route maps match Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop {
     /**
-     * Access list
+     * OSPF BGP Route maps nextHop Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * OSPF BGP Route maps nextHop Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
@@ -2481,11 +2500,11 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     aggregator?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator>;
     /**
-     * AS numbers
+     * OSPF BGP Route maps set AS numbers
      */
     aspathPrepends?: pulumi.Input<pulumi.Input<number>[]>;
     /**
-     * Enable BGP atomic aggregate?
+     * OSPF BGP Route maps set Enable BGP atomic aggregate?
      */
     atomicAggregate?: pulumi.Input<boolean>;
     /**
@@ -2493,11 +2512,11 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     ipv4?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4>;
     /**
-     * Large communities
+     * OSPF BGP Route maps set Large communities
      */
     largeCommunities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Local preference
+     * OSPF BGP Route maps set Local preference
      */
     localPreference?: pulumi.Input<number>;
     /**
@@ -2505,74 +2524,74 @@ export interface BgpRouteMapRedistributionOspfBgpRouteMapSet {
      */
     metric?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfBgpRouteMapSetMetric>;
     /**
-     * Origin
+     * OSPF BGP Route maps set Origin
      */
     origin?: pulumi.Input<string>;
     /**
-     * Originator ID
+     * OSPF BGP Route maps set Originator ID
      */
     originatorId?: pulumi.Input<string>;
     /**
-     * Regular communities
+     * OSPF BGP Route maps set Regular communities
      */
     regularCommunities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Tag
+     * OSPF BGP Route maps set Tag
      */
     tag?: pulumi.Input<number>;
     /**
-     * Weight
+     * OSPF BGP Route maps set Weight
      */
     weight?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator {
     /**
-     * Aggregator AS
+     * OSPF BGP Route maps set Aggregator AS
      */
     as?: pulumi.Input<number>;
     /**
-     * Router ID
+     * OSPF BGP Route maps set Router ID
      */
     routerId?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4 {
     /**
-     * Next hop
+     * OSPF BGP Route maps set ipv4 Next hop
      */
     nextHop?: pulumi.Input<string>;
     /**
-     * Source address
+     * OSPF BGP Route maps set ipv4 Source address
      */
     sourceAddress?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionOspfBgpRouteMapSetMetric {
     /**
-     * Metric action
+     * OSPF BGP Route maps set Metric action
      */
     action?: pulumi.Input<string>;
     /**
-     * Metric value
+     * OSPF BGP Route maps set Metric value
      */
     value?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionOspfRib {
     /**
-     * Route maps
+     * OSPF RIB Route maps set Route maps
      */
     routeMaps?: pulumi.Input<pulumi.Input<inputs.BgpRouteMapRedistributionOspfRibRouteMap>[]>;
 }
 
 export interface BgpRouteMapRedistributionOspfRibRouteMap {
     /**
-     * Action
+     * OSPF RIB Route maps Action
      */
     action?: pulumi.Input<string>;
     /**
-     * Description
+     * OSPF RIB Route maps Description
      */
     description?: pulumi.Input<string>;
     /**
@@ -2580,63 +2599,63 @@ export interface BgpRouteMapRedistributionOspfRibRouteMap {
      */
     match?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfRibRouteMapMatch>;
     /**
-     * Sequence number
+     * OSPF RIB Route mapsSequence number
      */
     name?: pulumi.Input<number>;
     /**
-     * Set
+     * OSPF RIB Route maps set
      */
     set?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfRibRouteMapSet>;
 }
 
 export interface BgpRouteMapRedistributionOspfRibRouteMapMatch {
     /**
-     * Address
+     * OSPF RIB Route maps address
      */
     address?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfRibRouteMapMatchAddress>;
     /**
-     * Interface
+     * OSPF RIB Route maps Interface
      */
     interface?: pulumi.Input<string>;
     /**
-     * Metric
+     * OSPF RIB Route maps Metric
      */
     metric?: pulumi.Input<number>;
     /**
-     * Next hop
+     * OSPF RIB Route maps next*hop
      */
     nextHop?: pulumi.Input<inputs.BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop>;
     /**
-     * Tag
+     * OSPF RIB Route maps tag
      */
     tag?: pulumi.Input<number>;
 }
 
 export interface BgpRouteMapRedistributionOspfRibRouteMapMatchAddress {
     /**
-     * Access list
+     * OSPF RIB Route maps address Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * OSPF RIB Route maps address Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop {
     /**
-     * Access list
+     * OSPF RIB Route maps nextHop Access list
      */
     accessList?: pulumi.Input<string>;
     /**
-     * Prefix list
+     * OSPF RIB Route maps nextHop Prefix list
      */
     prefixList?: pulumi.Input<string>;
 }
 
 export interface BgpRouteMapRedistributionOspfRibRouteMapSet {
     /**
-     * Source address
+     * OSPF RIB Route maps set Source address
      */
     sourceAddress?: pulumi.Input<string>;
 }
@@ -3252,7 +3271,7 @@ export interface DhcpInterfaceServerReserved {
 
 export interface DnsProxyCache {
     /**
-     * Cache edns
+     * Cache EDNS UDP response
      */
     cacheEdns?: pulumi.Input<boolean>;
     /**
@@ -3267,11 +3286,11 @@ export interface DnsProxyCache {
 
 export interface DnsProxyCacheMaxTtl {
     /**
-     * Enabled
+     * Enable max ttl for this DNS object
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled: pulumi.Input<boolean>;
     /**
-     * Time to live
+     * Time in seconds after which entry is cleared
      */
     timeToLive?: pulumi.Input<number>;
 }
@@ -3300,23 +3319,23 @@ export interface DnsProxyDefaultInheritance {
 
 export interface DnsProxyDomainServer {
     /**
-     * Cacheable
+     * Enable caching for this DNS proxy rule?
      */
     cacheable?: pulumi.Input<boolean>;
     /**
-     * Domain name
+     * Domain names(s) that will be matched
      */
     domainNames?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Name
+     * Proxy rule name
      */
-    name?: pulumi.Input<string>;
+    name: pulumi.Input<string>;
     /**
-     * Primary
+     * Primary DNS server IP address
      */
-    primary?: pulumi.Input<string>;
+    primary: pulumi.Input<string>;
     /**
-     * Secondary
+     * Secondary DNS server IP address
      */
     secondary?: pulumi.Input<string>;
 }
@@ -3325,24 +3344,24 @@ export interface DnsProxyStaticEntry {
     /**
      * Address
      */
-    addresses?: pulumi.Input<pulumi.Input<string>[]>;
+    addresses: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Domain
+     * Fully qualified domain name
      */
-    domain?: pulumi.Input<string>;
+    domain: pulumi.Input<string>;
     /**
-     * Name
+     * Static entry name
      */
-    name?: pulumi.Input<string>;
+    name: pulumi.Input<string>;
 }
 
 export interface DnsProxyTcpQueries {
     /**
-     * Enabled
+     * Turn on forwarding of TCP DNS queries?
      */
-    enabled?: pulumi.Input<boolean>;
+    enabled: pulumi.Input<boolean>;
     /**
-     * Max pending requests
+     * Upper limit on number of concurrent TCP DNS requests
      */
     maxPendingRequests?: pulumi.Input<number>;
 }
@@ -3356,11 +3375,11 @@ export interface DnsProxyUdpQueries {
 
 export interface DnsProxyUdpQueriesRetries {
     /**
-     * Attempts
+     * Maximum number of retries before trying next name server
      */
     attempts?: pulumi.Input<number>;
     /**
-     * Interval
+     * Time in seconds for another request to be sent
      */
     interval?: pulumi.Input<number>;
 }
@@ -3789,9 +3808,20 @@ export interface DosProtectionRuleProtectionClassifiedClassificationCriteria {
 
 export interface EthernetInterfaceLayer2 {
     /**
-     * Vlan tag
+     * LLDP Settings
      */
-    vlanTag?: pulumi.Input<number>;
+    lldp?: pulumi.Input<inputs.EthernetInterfaceLayer2Lldp>;
+    /**
+     * Assign interface to VLAN tag
+     */
+    vlanTag?: pulumi.Input<string>;
+}
+
+export interface EthernetInterfaceLayer2Lldp {
+    /**
+     * Enable LLDP on Interface
+     */
+    enable: pulumi.Input<boolean>;
 }
 
 export interface EthernetInterfaceLayer3 {
@@ -3800,11 +3830,11 @@ export interface EthernetInterfaceLayer3 {
      */
     arps?: pulumi.Input<pulumi.Input<inputs.EthernetInterfaceLayer3Arp>[]>;
     /**
-     * Ddns config
+     * Dynamic DNS configuration specific to the Ethernet Interfaces.
      */
     ddnsConfig?: pulumi.Input<inputs.EthernetInterfaceLayer3DdnsConfig>;
     /**
-     * Dhcp client
+     * Ethernet Interfaces DHCP Client Object
      */
     dhcpClient?: pulumi.Input<inputs.EthernetInterfaceLayer3DhcpClient>;
     /**
@@ -3812,9 +3842,9 @@ export interface EthernetInterfaceLayer3 {
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
-     * Interface IP addresses
+     * Ethernet Interface IP addresses
      */
-    ips?: pulumi.Input<pulumi.Input<string>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.EthernetInterfaceLayer3Ip>[]>;
     /**
      * MTU
      */
@@ -3827,7 +3857,7 @@ export interface EthernetInterfaceLayer3 {
 
 export interface EthernetInterfaceLayer3Arp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress?: pulumi.Input<string>;
     /**
@@ -3838,70 +3868,70 @@ export interface EthernetInterfaceLayer3Arp {
 
 export interface EthernetInterfaceLayer3DdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
-    ddnsCertProfile?: pulumi.Input<string>;
+    ddnsCertProfile: pulumi.Input<string>;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled?: pulumi.Input<boolean>;
     /**
      * Ddns hostname
      */
-    ddnsHostname?: pulumi.Input<string>;
+    ddnsHostname: pulumi.Input<string>;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp?: pulumi.Input<string>;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval?: pulumi.Input<number>;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
-    ddnsVendor?: pulumi.Input<string>;
+    ddnsVendor: pulumi.Input<string>;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
-    ddnsVendorConfig?: pulumi.Input<string>;
+    ddnsVendorConfig: pulumi.Input<string>;
 }
 
 export interface EthernetInterfaceLayer3DhcpClient {
     /**
-     * Dhcp client
-     */
-    dhcpClient?: pulumi.Input<inputs.EthernetInterfaceLayer3DhcpClientDhcpClient>;
-}
-
-export interface EthernetInterfaceLayer3DhcpClientDhcpClient {
-    /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute?: pulumi.Input<boolean>;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric?: pulumi.Input<number>;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable?: pulumi.Input<boolean>;
     /**
-     * Send hostname
+     * Ethernet Interfaces DHCP ClientSend hostname
      */
-    sendHostname?: pulumi.Input<inputs.EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname>;
+    sendHostname?: pulumi.Input<inputs.EthernetInterfaceLayer3DhcpClientSendHostname>;
 }
 
-export interface EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname {
+export interface EthernetInterfaceLayer3DhcpClientSendHostname {
     /**
      * Enable
      */
     enable?: pulumi.Input<boolean>;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname?: pulumi.Input<string>;
+}
+
+export interface EthernetInterfaceLayer3Ip {
+    /**
+     * Ethernet Interface IP addresses name
+     */
+    name: pulumi.Input<string>;
 }
 
 export interface EthernetInterfaceLayer3Pppoe {
@@ -3914,7 +3944,7 @@ export interface EthernetInterfaceLayer3Pppoe {
      */
     authentication?: pulumi.Input<string>;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric?: pulumi.Input<number>;
     /**
@@ -3924,7 +3954,7 @@ export interface EthernetInterfaceLayer3Pppoe {
     /**
      * Passive
      */
-    passive?: pulumi.Input<boolean>;
+    passive?: pulumi.Input<inputs.EthernetInterfaceLayer3PppoePassive>;
     /**
      * Password
      */
@@ -3943,20 +3973,27 @@ export interface EthernetInterfaceLayer3Pppoe {
     username: pulumi.Input<string>;
 }
 
+export interface EthernetInterfaceLayer3PppoePassive {
+    /**
+     * Passive Mode enabled
+     */
+    enable: pulumi.Input<boolean>;
+}
+
 export interface EthernetInterfaceLayer3PppoeStaticAddress {
     /**
-     * Ip
+     * Static IP address
      */
-    ip?: pulumi.Input<string>;
+    ip: pulumi.Input<string>;
 }
 
 export interface EthernetInterfacePoe {
     /**
-     * Poe enabled
+     * Enabled PoE?
      */
     poeEnabled?: pulumi.Input<boolean>;
     /**
-     * Poe rsvd pwr
+     * PoE reserved power
      */
     poeRsvdPwr?: pulumi.Input<number>;
 }
@@ -6668,6 +6705,13 @@ export interface IkeGatewayProtocolIkev2Dpd {
     enable?: pulumi.Input<boolean>;
 }
 
+export interface InterfaceManagementProfilePermittedIp {
+    /**
+     * The allowed IP address or CIDR block.
+     */
+    name: pulumi.Input<string>;
+}
+
 export interface IpsecCryptoProfileAh {
     /**
      * Authentication
@@ -6894,7 +6938,7 @@ export interface KerberosServerProfileServer {
 
 export interface Layer3SubinterfaceArp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress?: pulumi.Input<string>;
     /**
@@ -6905,50 +6949,50 @@ export interface Layer3SubinterfaceArp {
 
 export interface Layer3SubinterfaceDdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
-    ddnsCertProfile?: pulumi.Input<string>;
+    ddnsCertProfile: pulumi.Input<string>;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled?: pulumi.Input<boolean>;
     /**
      * Ddns hostname
      */
-    ddnsHostname?: pulumi.Input<string>;
+    ddnsHostname: pulumi.Input<string>;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp?: pulumi.Input<string>;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval?: pulumi.Input<number>;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
-    ddnsVendor?: pulumi.Input<string>;
+    ddnsVendor: pulumi.Input<string>;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
-    ddnsVendorConfig?: pulumi.Input<string>;
+    ddnsVendorConfig: pulumi.Input<string>;
 }
 
 export interface Layer3SubinterfaceDhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute?: pulumi.Input<boolean>;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric?: pulumi.Input<number>;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable?: pulumi.Input<boolean>;
     /**
-     * Send hostname
+     * Layer3 sub interfaces DHCP Client Send hostname
      */
     sendHostname?: pulumi.Input<inputs.Layer3SubinterfaceDhcpClientSendHostname>;
 }
@@ -6959,9 +7003,16 @@ export interface Layer3SubinterfaceDhcpClientSendHostname {
      */
     enable?: pulumi.Input<boolean>;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname?: pulumi.Input<string>;
+}
+
+export interface Layer3SubinterfaceIp {
+    /**
+     * L3 sub-interface IP address(es)
+     */
+    name: pulumi.Input<string>;
 }
 
 export interface LdapServerProfileServer {
@@ -10308,7 +10359,7 @@ export interface LogicalRouterVrfOspfGracefulRestart {
     /**
      * Strict l s a checking
      */
-    strictLSAChecking?: pulumi.Input<boolean>;
+    strictLsaChecking?: pulumi.Input<boolean>;
 }
 
 export interface LogicalRouterVrfOspfVrTimers {
@@ -11098,7 +11149,7 @@ export interface LogicalRouterVrfOspfv3GracefulRestart {
     /**
      * Strict l s a checking
      */
-    strictLSAChecking?: pulumi.Input<boolean>;
+    strictLsaChecking?: pulumi.Input<boolean>;
 }
 
 export interface LogicalRouterVrfOspfv3VrTimers {
@@ -11403,6 +11454,10 @@ export interface LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
      * Fqdn
      */
     fqdn?: pulumi.Input<string>;
+    /**
+     * Ip address
+     */
+    ipAddress?: pulumi.Input<string>;
     /**
      * Ipv6 address
      */
@@ -11740,7 +11795,33 @@ export interface LoopbackInterfaceIp {
     /**
      * Loopback IP address(es)
      */
-    ips?: pulumi.Input<pulumi.Input<string>[]>;
+    name: pulumi.Input<string>;
+}
+
+export interface LoopbackInterfaceIpv6 {
+    /**
+     * IPv6 Address Parent
+     */
+    addresses?: pulumi.Input<pulumi.Input<inputs.LoopbackInterfaceIpv6Address>[]>;
+    /**
+     * Enable IPv6
+     */
+    enabled?: pulumi.Input<boolean>;
+}
+
+export interface LoopbackInterfaceIpv6Address {
+    /**
+     * Enable Address on Interface
+     */
+    enableOnInterface?: pulumi.Input<boolean>;
+    /**
+     * Interface ID
+     */
+    interfaceId?: pulumi.Input<string>;
+    /**
+     * IPv6 Address
+     */
+    name?: pulumi.Input<string>;
 }
 
 export interface MfaServerMfaVendorType {
@@ -11862,41 +11943,130 @@ export interface MfaServerMfaVendorTypeRsaSecuridAccessV1 {
     rsaTimeout?: pulumi.Input<number>;
 }
 
-export interface NatRuleDnsRewrite {
+export interface NatRuleDestinationTranslation {
+    /**
+     * DNS rewrite
+     */
+    dnsRewrite?: pulumi.Input<inputs.NatRuleDestinationTranslationDnsRewrite>;
+    /**
+     * Translated destination IP address
+     */
+    translatedAddress?: pulumi.Input<string>;
+    /**
+     * Translated destination port
+     */
+    translatedPort?: pulumi.Input<number>;
+}
+
+export interface NatRuleDestinationTranslationDnsRewrite {
     /**
      * Direction
      */
     direction?: pulumi.Input<string>;
 }
 
+export interface NatRuleDynamicDestinationTranslation {
+    /**
+     * Distribution method
+     */
+    distribution?: pulumi.Input<string>;
+    /**
+     * Translated destination IP address
+     */
+    translatedAddress?: pulumi.Input<string>;
+    /**
+     * Translated destination port
+     */
+    translatedPort?: pulumi.Input<number>;
+}
+
 export interface NatRuleSourceTranslation {
     /**
-     * Bi directional
+     * Dynamic IP
      */
-    biDirectional?: pulumi.Input<boolean>;
+    dynamicIp?: pulumi.Input<inputs.NatRuleSourceTranslationDynamicIp>;
+    /**
+     * Dynamic IP and port
+     */
+    dynamicIpAndPort?: pulumi.Input<inputs.NatRuleSourceTranslationDynamicIpAndPort>;
+    /**
+     * Static IP
+     */
+    staticIp?: pulumi.Input<inputs.NatRuleSourceTranslationStaticIp>;
+}
+
+export interface NatRuleSourceTranslationDynamicIp {
     /**
      * Fallback
      */
-    fallback?: pulumi.Input<inputs.NatRuleSourceTranslationFallback>;
-    /**
-     * Interface name
-     */
-    interface?: pulumi.Input<string>;
+    fallback?: pulumi.Input<inputs.NatRuleSourceTranslationDynamicIpFallback>;
     /**
      * Translated IP addresses
      */
-    translatedAddressArrays?: pulumi.Input<pulumi.Input<string>[]>;
-    /**
-     * Translated IP address
-     */
-    translatedAddressSingle?: pulumi.Input<string>;
+    translatedAddresses?: pulumi.Input<pulumi.Input<string>[]>;
 }
 
-export interface NatRuleSourceTranslationFallback {
+export interface NatRuleSourceTranslationDynamicIpAndPort {
+    /**
+     * Translated source interface
+     */
+    interfaceAddress?: pulumi.Input<inputs.NatRuleSourceTranslationDynamicIpAndPortInterfaceAddress>;
+    /**
+     * Translated source IP addresses
+     */
+    translatedAddresses?: pulumi.Input<pulumi.Input<string>[]>;
+}
+
+export interface NatRuleSourceTranslationDynamicIpAndPortInterfaceAddress {
+    /**
+     * Floating IP address
+     */
+    floatingIp?: pulumi.Input<string>;
     /**
      * Interface name
      */
     interface?: pulumi.Input<string>;
+    /**
+     * Translated source IP address
+     */
+    ip?: pulumi.Input<string>;
+}
+
+export interface NatRuleSourceTranslationDynamicIpFallback {
+    /**
+     * Fallback interface
+     */
+    interfaceAddress?: pulumi.Input<inputs.NatRuleSourceTranslationDynamicIpFallbackInterfaceAddress>;
+    /**
+     * Fallback IP addresses
+     */
+    translatedAddresses?: pulumi.Input<pulumi.Input<string>[]>;
+}
+
+export interface NatRuleSourceTranslationDynamicIpFallbackInterfaceAddress {
+    /**
+     * Floating IP address
+     */
+    floatingIp?: pulumi.Input<string>;
+    /**
+     * Interface name
+     */
+    interface?: pulumi.Input<string>;
+    /**
+     * IP address
+     */
+    ip?: pulumi.Input<string>;
+}
+
+export interface NatRuleSourceTranslationStaticIp {
+    /**
+     * Bi directional
+     */
+    biDirectional?: pulumi.Input<string>;
+    /**
+     * Translated IP address
+     */
+    translatedAddress?: pulumi.Input<string>;
 }
 
 export interface OspfAuthProfileMd5 {
@@ -11953,7 +12123,7 @@ export interface PbfRuleActionForwardMonitor {
      */
     disableIfUnreachable?: pulumi.Input<boolean>;
     /**
-     * Ip address
+     * Monitor IP address
      */
     ipAddress?: pulumi.Input<string>;
     /**
@@ -11968,7 +12138,7 @@ export interface PbfRuleActionForwardNexthop {
      */
     fqdn?: pulumi.Input<string>;
     /**
-     * Ip address
+     * Next hop IP address
      */
     ipAddress?: pulumi.Input<string>;
 }
@@ -12187,26 +12357,29 @@ export interface RadiusServerProfileProtocol {
     /**
      * C h a p
      */
-    cHAP?: pulumi.Input<string>;
+    chap?: pulumi.Input<inputs.RadiusServerProfileProtocolChap>;
     /**
      * E a p t t l s with p a p
      */
-    eAPTTLSWithPAP?: pulumi.Input<inputs.RadiusServerProfileProtocolEAPTTLSWithPAP>;
+    eapTtlsWithPap?: pulumi.Input<inputs.RadiusServerProfileProtocolEapTtlsWithPap>;
     /**
      * P a p
      */
-    pAP?: pulumi.Input<string>;
+    pap?: pulumi.Input<inputs.RadiusServerProfileProtocolPap>;
     /**
      * P e a p m s c h a pv2
      */
-    pEAPMSCHAPv2?: pulumi.Input<inputs.RadiusServerProfileProtocolPEAPMSCHAPv2>;
+    peapMschaPv2?: pulumi.Input<inputs.RadiusServerProfileProtocolPeapMschaPv2>;
     /**
      * P e a p with g t c
      */
-    pEAPWithGTC?: pulumi.Input<inputs.RadiusServerProfileProtocolPEAPWithGTC>;
+    peapWithGtc?: pulumi.Input<inputs.RadiusServerProfileProtocolPeapWithGtc>;
 }
 
-export interface RadiusServerProfileProtocolEAPTTLSWithPAP {
+export interface RadiusServerProfileProtocolChap {
+}
+
+export interface RadiusServerProfileProtocolEapTtlsWithPap {
     /**
      * Anon outer id
      */
@@ -12217,7 +12390,10 @@ export interface RadiusServerProfileProtocolEAPTTLSWithPAP {
     radiusCertProfile?: pulumi.Input<string>;
 }
 
-export interface RadiusServerProfileProtocolPEAPMSCHAPv2 {
+export interface RadiusServerProfileProtocolPap {
+}
+
+export interface RadiusServerProfileProtocolPeapMschaPv2 {
     /**
      * Allow pwd change
      */
@@ -12232,7 +12408,7 @@ export interface RadiusServerProfileProtocolPEAPMSCHAPv2 {
     radiusCertProfile?: pulumi.Input<string>;
 }
 
-export interface RadiusServerProfileProtocolPEAPWithGTC {
+export interface RadiusServerProfileProtocolPeapWithGtc {
     /**
      * Anon outer id
      */
@@ -12438,12 +12614,34 @@ export interface RouteAccessListTypeIpv4Ipv4EntryDestinationAddress {
      */
     address?: pulumi.Input<string>;
     /**
+     * Entry
+     */
+    entry?: pulumi.Input<inputs.RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntry>;
+}
+
+export interface RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntry {
+    /**
+     * Destination IP address
+     */
+    address?: pulumi.Input<string>;
+    /**
      * Destination IP wildcard
      */
     wildcard?: pulumi.Input<string>;
 }
 
 export interface RouteAccessListTypeIpv4Ipv4EntrySourceAddress {
+    /**
+     * Source IP address
+     */
+    address?: pulumi.Input<string>;
+    /**
+     * Entry
+     */
+    entry?: pulumi.Input<inputs.RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry>;
+}
+
+export interface RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry {
     /**
      * Source IP address
      */
@@ -12778,13 +12976,13 @@ export interface SdwanPathQualityProfileMetricLatency {
 
 export interface SdwanPathQualityProfileMetricPktLoss {
     /**
-     * Sensitivity
+     * Packet loss sensitivity
      */
-    sensitivity?: pulumi.Input<string>;
+    sensitivity: pulumi.Input<string>;
     /**
-     * Threshold
+     * Packet loss threshold (percentage)
      */
-    threshold?: pulumi.Input<number>;
+    threshold: pulumi.Input<number>;
 }
 
 export interface SdwanRuleAction {
@@ -12858,11 +13056,11 @@ export interface SdwanSaasQualityProfileMonitorModeStaticIpIpAddress {
 
 export interface SdwanTrafficDistributionProfileLinkTag {
     /**
-     * Name
+     * Link-Tag used for identifying a set of interfaces
      */
-    name?: pulumi.Input<string>;
+    name: pulumi.Input<string>;
     /**
-     * Weight
+     * Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
      */
     weight?: pulumi.Input<number>;
 }
@@ -13397,24 +13595,34 @@ export interface TrafficSteeringRuleAction {
      * Forward
      */
     forward?: pulumi.Input<inputs.TrafficSteeringRuleActionForward>;
-    /**
-     * No pbf
-     */
-    noPbf?: pulumi.Input<string>;
 }
 
 export interface TrafficSteeringRuleActionForward {
+    /**
+     * Forward
+     */
+    forward?: pulumi.Input<inputs.TrafficSteeringRuleActionForwardForward>;
+    /**
+     * No pbf
+     */
+    noPbf?: pulumi.Input<inputs.TrafficSteeringRuleActionForwardNoPbf>;
+}
+
+export interface TrafficSteeringRuleActionForwardForward {
     /**
      * Target
      */
     target?: pulumi.Input<string>;
 }
 
+export interface TrafficSteeringRuleActionForwardNoPbf {
+}
+
 export interface TunnelInterfaceIp {
     /**
-     * tunnel interfaces IP address(es)
+     * Tunnel Interface IP address(es)
      */
-    ips?: pulumi.Input<pulumi.Input<string>[]>;
+    name: pulumi.Input<string>;
 }
 
 export interface UrlAccessProfileCredentialEnforcement {
@@ -13474,7 +13682,7 @@ export interface UrlAccessProfileCredentialEnforcementModeIpUser {
 
 export interface VlanInterfaceArp {
     /**
-     * Hw address
+     * MAC address
      */
     hwAddress?: pulumi.Input<string>;
     /**
@@ -13489,46 +13697,46 @@ export interface VlanInterfaceArp {
 
 export interface VlanInterfaceDdnsConfig {
     /**
-     * Ddns cert profile
+     * Certificate profile
      */
-    ddnsCertProfile?: pulumi.Input<string>;
+    ddnsCertProfile: pulumi.Input<string>;
     /**
-     * Ddns enabled
+     * Enable DDNS?
      */
     ddnsEnabled?: pulumi.Input<boolean>;
     /**
      * Ddns hostname
      */
-    ddnsHostname?: pulumi.Input<string>;
+    ddnsHostname: pulumi.Input<string>;
     /**
-     * Ddns ip
+     * IP to register (static only)
      */
     ddnsIp?: pulumi.Input<string>;
     /**
-     * Ddns update interval
+     * Update interval (days)
      */
     ddnsUpdateInterval?: pulumi.Input<number>;
     /**
-     * Ddns vendor
+     * DDNS vendor
      */
-    ddnsVendor?: pulumi.Input<string>;
+    ddnsVendor: pulumi.Input<string>;
     /**
-     * Ddns vendor config
+     * DDNS vendor
      */
-    ddnsVendorConfig?: pulumi.Input<string>;
+    ddnsVendorConfig: pulumi.Input<string>;
 }
 
 export interface VlanInterfaceDhcpClient {
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      */
     createDefaultRoute?: pulumi.Input<boolean>;
     /**
-     * Default route metric
+     * Metric of the default route created
      */
     defaultRouteMetric?: pulumi.Input<number>;
     /**
-     * Enable
+     * Enable DHCP?
      */
     enable?: pulumi.Input<boolean>;
     /**
@@ -13543,9 +13751,16 @@ export interface VlanInterfaceDhcpClientSendHostname {
      */
     enable?: pulumi.Input<boolean>;
     /**
-     * Hostname
+     * Set interface hostname
      */
     hostname?: pulumi.Input<string>;
+}
+
+export interface VlanInterfaceIp {
+    /**
+     * VLAN Interface IP address(es)
+     */
+    name: pulumi.Input<string>;
 }
 
 export interface VulnerabilityProtectionProfileRule {
@@ -14146,13 +14361,40 @@ export interface ZoneNetwork {
      */
     enablePacketBufferProtection?: pulumi.Input<boolean>;
     /**
+     * External
+     */
+    externals?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Layer2
+     */
+    layer2s?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Layer3
+     */
+    layer3s?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
      * Log setting
      */
     logSetting?: pulumi.Input<string>;
     /**
+     * Tap
+     */
+    taps?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Tunnel
+     */
+    tunnel?: pulumi.Input<inputs.ZoneNetworkTunnel>;
+    /**
+     * Virtual wire
+     */
+    virtualWires?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
      * Zone protection profile
      */
     zoneProtectionProfile?: pulumi.Input<string>;
+}
+
+export interface ZoneNetworkTunnel {
 }
 
 export interface ZoneProtectionProfileFlood {
@@ -14288,21 +14530,47 @@ export interface ZoneProtectionProfileFloodSctpInitRed {
 
 export interface ZoneProtectionProfileFloodTcpSyn {
     /**
-     * When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-     */
-    activateRate?: pulumi.Input<number>;
-    /**
-     * When the flow exceeds the `alertRate`` threshold, an alarm is generated.
-     */
-    alarmRate?: pulumi.Input<number>;
-    /**
      * Enable protection against SYN floods?
      */
     enable?: pulumi.Input<boolean>;
     /**
+     * Red
+     */
+    red?: pulumi.Input<inputs.ZoneProtectionProfileFloodTcpSynRed>;
+    /**
+     * Syn cookies
+     */
+    synCookies?: pulumi.Input<inputs.ZoneProtectionProfileFloodTcpSynSynCookies>;
+}
+
+export interface ZoneProtectionProfileFloodTcpSynRed {
+    /**
+     * When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+     */
+    activateRate: pulumi.Input<number>;
+    /**
+     * When the flow exceeds the `alertRate`` threshold, an alarm is generated.
+     */
+    alarmRate: pulumi.Input<number>;
+    /**
      * When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
      */
-    maximalRate?: pulumi.Input<number>;
+    maximalRate: pulumi.Input<number>;
+}
+
+export interface ZoneProtectionProfileFloodTcpSynSynCookies {
+    /**
+     * When the flow exceeds the `activateRate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+     */
+    activateRate: pulumi.Input<number>;
+    /**
+     * When the flow exceeds the `alertRate`` threshold, an alarm is generated.
+     */
+    alarmRate: pulumi.Input<number>;
+    /**
+     * When the flow exceeds the `maximalRate` threshold, 100% of incoming SYN packets are dropped.
+     */
+    maximalRate: pulumi.Input<number>;
 }
 
 export interface ZoneProtectionProfileFloodUdp {
@@ -14474,9 +14742,9 @@ export interface ZoneProtectionProfileNonIpProtocolProtocol {
     enable?: pulumi.Input<boolean>;
     /**
      * Enter an Ethertype code (protocol) preceded by 0x to indicate hexadecimal (range is 0x0000 to 0xFFFF). A list can have a maximum of 64 Ethertypes. Some sources of Ethertype codes are:
-     * * [IEEE hexadecimal Ethertype](http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
-     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](http://standards-oui.ieee.org/ethertype/eth.txt)
-     * * [http://www.cavebear.com/archive/cavebear/Ethernet/type.html](http://www.cavebear.com/archive/cavebear/Ethernet/type.html)
+     * * [IEEE hexadecimal Ethertype](https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
+     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](https://standards-oui.ieee.org/ethertype/eth.txt)
+     * * [www.cavebear.com/archive/cavebear/Ethernet/type.html](https://www.cavebear.com/archive/cavebear/Ethernet/type.html)
      */
     etherType: pulumi.Input<string>;
     /**
@@ -14510,16 +14778,52 @@ export interface ZoneProtectionProfileScan {
 
 export interface ZoneProtectionProfileScanAction {
     /**
+     * Alert
+     */
+    alert?: pulumi.Input<inputs.ZoneProtectionProfileScanActionAlert>;
+    /**
+     * Allow
+     */
+    allow?: pulumi.Input<inputs.ZoneProtectionProfileScanActionAllow>;
+    /**
+     * Block
+     */
+    block?: pulumi.Input<inputs.ZoneProtectionProfileScanActionBlock>;
+    /**
+     * Block ip
+     */
+    blockIp?: pulumi.Input<inputs.ZoneProtectionProfileScanActionBlockIp>;
+}
+
+export interface ZoneProtectionProfileScanActionAlert {
+}
+
+export interface ZoneProtectionProfileScanActionAllow {
+}
+
+export interface ZoneProtectionProfileScanActionBlock {
+}
+
+export interface ZoneProtectionProfileScanActionBlockIp {
+    /**
      * Duration
      */
-    duration?: pulumi.Input<number>;
+    duration: pulumi.Input<number>;
     /**
      * Track by
      */
-    trackBy?: pulumi.Input<string>;
+    trackBy: pulumi.Input<string>;
 }
 
 export interface ZoneProtectionProfileScanWhiteList {
+    /**
+     * Ipv4
+     */
+    ipv4?: pulumi.Input<string>;
+    /**
+     * Ipv6
+     */
+    ipv6?: pulumi.Input<string>;
     /**
      * A descriptive name for the address to exclude.
      */

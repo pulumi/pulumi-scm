@@ -24,6 +24,11 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
      */
     private @Nullable String fqdn;
     /**
+     * @return Ip address
+     * 
+     */
+    private @Nullable String ipAddress;
+    /**
      * @return Ipv6 address
      * 
      */
@@ -63,6 +68,13 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
      */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
+    }
+    /**
+     * @return Ip address
+     * 
+     */
+    public Optional<String> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
     /**
      * @return Ipv6 address
@@ -111,6 +123,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     public static final class Builder {
         private @Nullable LogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscard discard;
         private @Nullable String fqdn;
+        private @Nullable String ipAddress;
         private @Nullable String ipv6Address;
         private @Nullable String nextLr;
         private @Nullable String nextVr;
@@ -121,6 +134,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     	      Objects.requireNonNull(defaults);
     	      this.discard = defaults.discard;
     	      this.fqdn = defaults.fqdn;
+    	      this.ipAddress = defaults.ipAddress;
     	      this.ipv6Address = defaults.ipv6Address;
     	      this.nextLr = defaults.nextLr;
     	      this.nextVr = defaults.nextVr;
@@ -138,6 +152,12 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
         public Builder fqdn(@Nullable String fqdn) {
 
             this.fqdn = fqdn;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipAddress(@Nullable String ipAddress) {
+
+            this.ipAddress = ipAddress;
             return this;
         }
         @CustomType.Setter
@@ -174,6 +194,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthop {
             final var _resultValue = new LogicalRouterVrfRoutingTableIpStaticRouteNexthop();
             _resultValue.discard = discard;
             _resultValue.fqdn = fqdn;
+            _resultValue.ipAddress = ipAddress;
             _resultValue.ipv6Address = ipv6Address;
             _resultValue.nextLr = nextLr;
             _resultValue.nextVr = nextVr;

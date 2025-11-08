@@ -9,7 +9,7 @@ import com.pulumi.scm.outputs.BgpAddressFamilyProfileIpv4Ipv4MulticastAllowasIn;
 import com.pulumi.scm.outputs.BgpAddressFamilyProfileIpv4Ipv4MulticastMaximumPrefix;
 import com.pulumi.scm.outputs.BgpAddressFamilyProfileIpv4Ipv4MulticastNextHop;
 import com.pulumi.scm.outputs.BgpAddressFamilyProfileIpv4Ipv4MulticastOrf;
-import com.pulumi.scm.outputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS;
+import com.pulumi.scm.outputs.BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs;
 import com.pulumi.scm.outputs.BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunity;
 import java.lang.Boolean;
 import java.lang.String;
@@ -68,7 +68,7 @@ public final class BgpAddressFamilyProfileIpv4Ipv4Multicast {
      * @return Remove private a s
      * 
      */
-    private @Nullable BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS removePrivateAS;
+    private @Nullable BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs removePrivateAs;
     /**
      * @return Route reflector client?
      * 
@@ -153,8 +153,8 @@ public final class BgpAddressFamilyProfileIpv4Ipv4Multicast {
      * @return Remove private a s
      * 
      */
-    public Optional<BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS> removePrivateAS() {
-        return Optional.ofNullable(this.removePrivateAS);
+    public Optional<BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs> removePrivateAs() {
+        return Optional.ofNullable(this.removePrivateAs);
     }
     /**
      * @return Route reflector client?
@@ -196,7 +196,7 @@ public final class BgpAddressFamilyProfileIpv4Ipv4Multicast {
         private @Nullable BgpAddressFamilyProfileIpv4Ipv4MulticastMaximumPrefix maximumPrefix;
         private @Nullable BgpAddressFamilyProfileIpv4Ipv4MulticastNextHop nextHop;
         private @Nullable BgpAddressFamilyProfileIpv4Ipv4MulticastOrf orf;
-        private @Nullable BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS removePrivateAS;
+        private @Nullable BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs removePrivateAs;
         private @Nullable Boolean routeReflectorClient;
         private @Nullable BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunity sendCommunity;
         private @Nullable Boolean softReconfigWithStoredInfo;
@@ -212,7 +212,7 @@ public final class BgpAddressFamilyProfileIpv4Ipv4Multicast {
     	      this.maximumPrefix = defaults.maximumPrefix;
     	      this.nextHop = defaults.nextHop;
     	      this.orf = defaults.orf;
-    	      this.removePrivateAS = defaults.removePrivateAS;
+    	      this.removePrivateAs = defaults.removePrivateAs;
     	      this.routeReflectorClient = defaults.routeReflectorClient;
     	      this.sendCommunity = defaults.sendCommunity;
     	      this.softReconfigWithStoredInfo = defaults.softReconfigWithStoredInfo;
@@ -273,9 +273,9 @@ public final class BgpAddressFamilyProfileIpv4Ipv4Multicast {
             return this;
         }
         @CustomType.Setter
-        public Builder removePrivateAS(@Nullable BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS removePrivateAS) {
+        public Builder removePrivateAs(@Nullable BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs removePrivateAs) {
 
-            this.removePrivateAS = removePrivateAS;
+            this.removePrivateAs = removePrivateAs;
             return this;
         }
         @CustomType.Setter
@@ -307,7 +307,7 @@ public final class BgpAddressFamilyProfileIpv4Ipv4Multicast {
             _resultValue.maximumPrefix = maximumPrefix;
             _resultValue.nextHop = nextHop;
             _resultValue.orf = orf;
-            _resultValue.removePrivateAS = removePrivateAS;
+            _resultValue.removePrivateAs = removePrivateAs;
             _resultValue.routeReflectorClient = routeReflectorClient;
             _resultValue.sendCommunity = sendCommunity;
             _resultValue.softReconfigWithStoredInfo = softReconfigWithStoredInfo;

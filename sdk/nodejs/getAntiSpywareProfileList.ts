@@ -17,7 +17,7 @@ import * as utilities from "./utilities";
  *
  * // Fetch a list of all anti-spyware profiles
  * const allAntiSpywareProfiles = scm.getAntiSpywareProfileList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const scmAntiSpywareProfileList = allAntiSpywareProfiles.then(allAntiSpywareProfiles => allAntiSpywareProfiles.datas);
  * ```
@@ -118,7 +118,7 @@ export interface GetAntiSpywareProfileListResult {
  *
  * // Fetch a list of all anti-spyware profiles
  * const allAntiSpywareProfiles = scm.getAntiSpywareProfileList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const scmAntiSpywareProfileList = allAntiSpywareProfiles.then(allAntiSpywareProfiles => allAntiSpywareProfiles.datas);
  * ```

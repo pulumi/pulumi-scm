@@ -18,11 +18,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapSetMetricResult Metric;
         /// <summary>
-        /// Metric type
+        /// BGP Root OSPF Route maps set Metric type
         /// </summary>
         public readonly string MetricType;
         /// <summary>
-        /// Tag
+        /// BGP Root OSPF Route maps set Tag
         /// </summary>
         public readonly int Tag;
 

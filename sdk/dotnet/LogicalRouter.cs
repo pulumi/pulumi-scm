@@ -11,6 +11,8 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// LogicalRouter resource
+    /// 
+    /// ## Example Usage
     /// </summary>
     [ScmResourceType("scm:index/logicalRouter:LogicalRouter")]
     public partial class LogicalRouter : global::Pulumi.CustomResource

@@ -13,18 +13,267 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// SecurityRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var standardWebAccess = new Scm.SecurityRule("standard_web_access", new()
+        ///     {
+        ///         Folder = "All",
+        ///         Name = "Allow Standard Web Access DS1",
+        ///         Description = "Allow outbound web traffic to any destination...",
+        ///         Position = "pre",
+        ///         Action = "allow",
+        ///         Categories = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Applications = new[]
+        ///         {
+        ///             "web-browsing",
+        ///             "ssl",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-http",
+        ///             "service-https",
+        ///         },
+        ///         Froms = new[]
+        ///         {
+        ///             "untrust",
+        ///             "trust",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "trust",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         NegateSource = false,
+        ///         NegateDestination = false,
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         SourceHips = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         DestinationHips = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         LogStart = true,
+        ///         LogEnd = true,
+        ///         Disabled = false,
+        ///     });
+        /// 
+        ///     // --- Data Source Calls to Fetch Existing Rules ---
+        ///     // 1. Fetch by ID (Best for direct lookup)
+        ///     var standardWebAccessById = Scm.GetSecurityRule.Invoke(new()
+        ///     {
+        ///         Id = standardWebAccess.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedStandardWebId"] = standardWebAccessById.Apply(getSecurityRuleResult =&gt; getSecurityRuleResult.Id),
+        ///         ["fetchedStandardWebName"] = standardWebAccessById.Apply(getSecurityRuleResult =&gt; getSecurityRuleResult.Name),
+        ///         ["fetchedStandardWebDescription"] = standardWebAccessById.Apply(getSecurityRuleResult =&gt; getSecurityRuleResult.Description),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetSecurityRuleResult> InvokeAsync(GetSecurityRuleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSecurityRuleResult>("scm:index/getSecurityRule:getSecurityRule", args ?? new GetSecurityRuleArgs(), options.WithDefaults());
 
         /// <summary>
         /// SecurityRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var standardWebAccess = new Scm.SecurityRule("standard_web_access", new()
+        ///     {
+        ///         Folder = "All",
+        ///         Name = "Allow Standard Web Access DS1",
+        ///         Description = "Allow outbound web traffic to any destination...",
+        ///         Position = "pre",
+        ///         Action = "allow",
+        ///         Categories = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Applications = new[]
+        ///         {
+        ///             "web-browsing",
+        ///             "ssl",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-http",
+        ///             "service-https",
+        ///         },
+        ///         Froms = new[]
+        ///         {
+        ///             "untrust",
+        ///             "trust",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "trust",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         NegateSource = false,
+        ///         NegateDestination = false,
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         SourceHips = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         DestinationHips = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         LogStart = true,
+        ///         LogEnd = true,
+        ///         Disabled = false,
+        ///     });
+        /// 
+        ///     // --- Data Source Calls to Fetch Existing Rules ---
+        ///     // 1. Fetch by ID (Best for direct lookup)
+        ///     var standardWebAccessById = Scm.GetSecurityRule.Invoke(new()
+        ///     {
+        ///         Id = standardWebAccess.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedStandardWebId"] = standardWebAccessById.Apply(getSecurityRuleResult =&gt; getSecurityRuleResult.Id),
+        ///         ["fetchedStandardWebName"] = standardWebAccessById.Apply(getSecurityRuleResult =&gt; getSecurityRuleResult.Name),
+        ///         ["fetchedStandardWebDescription"] = standardWebAccessById.Apply(getSecurityRuleResult =&gt; getSecurityRuleResult.Description),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSecurityRuleResult> Invoke(GetSecurityRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSecurityRuleResult>("scm:index/getSecurityRule:getSecurityRule", args ?? new GetSecurityRuleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// SecurityRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var standardWebAccess = new Scm.SecurityRule("standard_web_access", new()
+        ///     {
+        ///         Folder = "All",
+        ///         Name = "Allow Standard Web Access DS1",
+        ///         Description = "Allow outbound web traffic to any destination...",
+        ///         Position = "pre",
+        ///         Action = "allow",
+        ///         Categories = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Applications = new[]
+        ///         {
+        ///             "web-browsing",
+        ///             "ssl",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-http",
+        ///             "service-https",
+        ///         },
+        ///         Froms = new[]
+        ///         {
+        ///             "untrust",
+        ///             "trust",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "trust",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         NegateSource = false,
+        ///         NegateDestination = false,
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         SourceHips = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         DestinationHips = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         LogStart = true,
+        ///         LogEnd = true,
+        ///         Disabled = false,
+        ///     });
+        /// 
+        ///     // --- Data Source Calls to Fetch Existing Rules ---
+        ///     // 1. Fetch by ID (Best for direct lookup)
+        ///     var standardWebAccessById = Scm.GetSecurityRule.Invoke(new()
+        ///     {
+        ///         Id = standardWebAccess.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedStandardWebId"] = standardWebAccessById.Apply(getSecurityRuleResult =&gt; getSecurityRuleResult.Id),
+        ///         ["fetchedStandardWebName"] = standardWebAccessById.Apply(getSecurityRuleResult =&gt; getSecurityRuleResult.Name),
+        ///         ["fetchedStandardWebDescription"] = standardWebAccessById.Apply(getSecurityRuleResult =&gt; getSecurityRuleResult.Description),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSecurityRuleResult> Invoke(GetSecurityRuleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSecurityRuleResult>("scm:index/getSecurityRule:getSecurityRule", args ?? new GetSecurityRuleInvokeArgs(), options.WithDefaults());
@@ -180,9 +429,17 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string PolicyType;
         /// <summary>
+        /// The position of a security rule
+        /// </summary>
+        public readonly string Position;
+        /// <summary>
         /// The security profile object
         /// </summary>
         public readonly Outputs.GetSecurityRuleProfileSettingResult ProfileSetting;
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        public readonly string RelativePosition;
         /// <summary>
         /// Schedule in which this rule will be applied
         /// </summary>
@@ -215,6 +472,10 @@ namespace Pulumi.Scm
         /// The tags associated with the security rule
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        public readonly string TargetRule;
         /// <summary>
         /// Tenant restrictions
         /// </summary>
@@ -279,7 +540,11 @@ namespace Pulumi.Scm
 
             string policyType,
 
+            string position,
+
             Outputs.GetSecurityRuleProfileSettingResult profileSetting,
+
+            string relativePosition,
 
             string schedule,
 
@@ -296,6 +561,8 @@ namespace Pulumi.Scm
             ImmutableArray<string> sources,
 
             ImmutableArray<string> tags,
+
+            string targetRule,
 
             ImmutableArray<string> tenantRestrictions,
 
@@ -329,7 +596,9 @@ namespace Pulumi.Scm
             NegateSource = negateSource;
             NegateUser = negateUser;
             PolicyType = policyType;
+            Position = position;
             ProfileSetting = profileSetting;
+            RelativePosition = relativePosition;
             Schedule = schedule;
             SecuritySettings = securitySettings;
             Services = services;
@@ -338,6 +607,7 @@ namespace Pulumi.Scm
             SourceUsers = sourceUsers;
             Sources = sources;
             Tags = tags;
+            TargetRule = targetRule;
             TenantRestrictions = tenantRestrictions;
             Tfid = tfid;
             Tos = tos;

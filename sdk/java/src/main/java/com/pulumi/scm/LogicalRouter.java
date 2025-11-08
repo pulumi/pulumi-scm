@@ -19,6 +19,8 @@ import javax.annotation.Nullable;
 /**
  * LogicalRouter resource
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="scm:index/logicalRouter:LogicalRouter")
 public class LogicalRouter extends com.pulumi.resources.CustomResource {

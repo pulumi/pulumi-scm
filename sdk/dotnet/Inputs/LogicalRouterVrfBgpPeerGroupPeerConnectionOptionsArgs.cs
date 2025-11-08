@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         /// Idle hold time
         /// </summary>
         [Input("idleHoldTime")]
-        public Input<double>? IdleHoldTime { get; set; }
+        public Input<int>? IdleHoldTime { get; set; }
 
         /// <summary>
         /// Incoming bgp connection
@@ -58,7 +58,7 @@ namespace Pulumi.Scm.Inputs
         /// Min route adv interval
         /// </summary>
         [Input("minRouteAdvInterval")]
-        public Input<double>? MinRouteAdvInterval { get; set; }
+        public Input<int>? MinRouteAdvInterval { get; set; }
 
         /// <summary>
         /// Multihop
@@ -70,7 +70,7 @@ namespace Pulumi.Scm.Inputs
         /// Open delay time
         /// </summary>
         [Input("openDelayTime")]
-        public Input<double>? OpenDelayTime { get; set; }
+        public Input<int>? OpenDelayTime { get; set; }
 
         /// <summary>
         /// Outgoing bgp connection

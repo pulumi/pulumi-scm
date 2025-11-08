@@ -13,18 +13,114 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // -----------------------------------------------------------------------------
+        ///     // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+        ///     // This data source retrieves multiple Interface Management Profiles from SCM.
+        ///     // -----------------------------------------------------------------------------
+        ///     var allMgmtProfiles = Scm.GetInterfaceManagementProfileList.Invoke(new()
+        ///     {
+        ///         Limit = 50,
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedMgmtProfileListSummary"] = 
+        ///         {
+        ///             { "countOfProfilesFetched", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Total) },
+        ///             { "firstProfileName", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas[0]?.Name) },
+        ///             { "data", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetInterfaceManagementProfileListResult> InvokeAsync(GetInterfaceManagementProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetInterfaceManagementProfileListResult>("scm:index/getInterfaceManagementProfileList:getInterfaceManagementProfileList", args ?? new GetInterfaceManagementProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // -----------------------------------------------------------------------------
+        ///     // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+        ///     // This data source retrieves multiple Interface Management Profiles from SCM.
+        ///     // -----------------------------------------------------------------------------
+        ///     var allMgmtProfiles = Scm.GetInterfaceManagementProfileList.Invoke(new()
+        ///     {
+        ///         Limit = 50,
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedMgmtProfileListSummary"] = 
+        ///         {
+        ///             { "countOfProfilesFetched", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Total) },
+        ///             { "firstProfileName", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas[0]?.Name) },
+        ///             { "data", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetInterfaceManagementProfileListResult> Invoke(GetInterfaceManagementProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetInterfaceManagementProfileListResult>("scm:index/getInterfaceManagementProfileList:getInterfaceManagementProfileList", args ?? new GetInterfaceManagementProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // -----------------------------------------------------------------------------
+        ///     // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+        ///     // This data source retrieves multiple Interface Management Profiles from SCM.
+        ///     // -----------------------------------------------------------------------------
+        ///     var allMgmtProfiles = Scm.GetInterfaceManagementProfileList.Invoke(new()
+        ///     {
+        ///         Limit = 50,
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedMgmtProfileListSummary"] = 
+        ///         {
+        ///             { "countOfProfilesFetched", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Total) },
+        ///             { "firstProfileName", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas[0]?.Name) },
+        ///             { "data", allMgmtProfiles.Apply(getInterfaceManagementProfileListResult =&gt; getInterfaceManagementProfileListResult.Datas) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetInterfaceManagementProfileListResult> Invoke(GetInterfaceManagementProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetInterfaceManagementProfileListResult>("scm:index/getInterfaceManagementProfileList:getInterfaceManagementProfileList", args ?? new GetInterfaceManagementProfileListInvokeArgs(), options.WithDefaults());

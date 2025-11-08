@@ -69,14 +69,14 @@ public final class DnsProxyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Domain servers
+     * DNS proxy rules
      * 
      */
     @Import(name="domainServers")
     private @Nullable Output<List<DnsProxyDomainServerArgs>> domainServers;
 
     /**
-     * @return Domain servers
+     * @return DNS proxy rules
      * 
      */
     public Optional<Output<List<DnsProxyDomainServerArgs>>> domainServers() {
@@ -310,7 +310,7 @@ public final class DnsProxyState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainServers Domain servers
+         * @param domainServers DNS proxy rules
          * 
          * @return builder
          * 
@@ -321,7 +321,7 @@ public final class DnsProxyState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainServers Domain servers
+         * @param domainServers DNS proxy rules
          * 
          * @return builder
          * 
@@ -331,7 +331,7 @@ public final class DnsProxyState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainServers Domain servers
+         * @param domainServers DNS proxy rules
          * 
          * @return builder
          * 

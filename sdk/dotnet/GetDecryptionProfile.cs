@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// DecryptionProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Decryption Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+        ///     var scmDpProfile = Scm.GetDecryptionProfile.Invoke(new()
+        ///     {
+        ///         Id = "c7629092-d286-400b-ba3f-1d57b8065645",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDecryptionProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Id) },
+        ///             { "folder", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Folder) },
+        ///             { "name", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetDecryptionProfileResult> InvokeAsync(GetDecryptionProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDecryptionProfileResult>("scm:index/getDecryptionProfile:getDecryptionProfile", args ?? new GetDecryptionProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// DecryptionProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Decryption Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+        ///     var scmDpProfile = Scm.GetDecryptionProfile.Invoke(new()
+        ///     {
+        ///         Id = "c7629092-d286-400b-ba3f-1d57b8065645",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDecryptionProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Id) },
+        ///             { "folder", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Folder) },
+        ///             { "name", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDecryptionProfileResult> Invoke(GetDecryptionProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionProfileResult>("scm:index/getDecryptionProfile:getDecryptionProfile", args ?? new GetDecryptionProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// DecryptionProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Decryption Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+        ///     var scmDpProfile = Scm.GetDecryptionProfile.Invoke(new()
+        ///     {
+        ///         Id = "c7629092-d286-400b-ba3f-1d57b8065645",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmDecryptionProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Id) },
+        ///             { "folder", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Folder) },
+        ///             { "name", scmDpProfile.Apply(getDecryptionProfileResult =&gt; getDecryptionProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetDecryptionProfileResult> Invoke(GetDecryptionProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionProfileResult>("scm:index/getDecryptionProfile:getDecryptionProfile", args ?? new GetDecryptionProfileInvokeArgs(), options.WithDefaults());

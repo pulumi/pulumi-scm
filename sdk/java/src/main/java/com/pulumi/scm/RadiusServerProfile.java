@@ -21,6 +21,71 @@ import javax.annotation.Nullable;
 /**
  * RadiusServerProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.RadiusServerProfile;
+ * import com.pulumi.scm.RadiusServerProfileArgs;
+ * import com.pulumi.scm.inputs.RadiusServerProfileProtocolArgs;
+ * import com.pulumi.scm.inputs.RadiusServerProfileServerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var chapRadiusProfile = new RadiusServerProfile("chapRadiusProfile", RadiusServerProfileArgs.builder()
+ *             .name("CHAP_only_rsp_1")
+ *             .folder("All")
+ *             .retries(5)
+ *             .timeout(60)
+ *             .protocol(RadiusServerProfileProtocolArgs.builder()
+ *                 .cHAP(RadiusServerProfileProtocolChapArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .servers(RadiusServerProfileServerArgs.builder()
+ *                 .name("Chap_Server_Primary")
+ *                 .ipAddress("10.1.1.10")
+ *                 .port(1812)
+ *                 .secret("-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==")
+ *                 .build())
+ *             .build());
+ * 
+ *         var papRadiusProfile = new RadiusServerProfile("papRadiusProfile", RadiusServerProfileArgs.builder()
+ *             .name("pap_only_rsp_1")
+ *             .folder("All")
+ *             .retries(5)
+ *             .timeout(60)
+ *             .protocol(RadiusServerProfileProtocolArgs.builder()
+ *                 .pAP(RadiusServerProfileProtocolPapArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .servers(RadiusServerProfileServerArgs.builder()
+ *                 .name("pap_Server_Primary")
+ *                 .ipAddress("10.1.1.10")
+ *                 .port(1812)
+ *                 .secret("-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/radiusServerProfile:RadiusServerProfile")
 public class RadiusServerProfile extends com.pulumi.resources.CustomResource {

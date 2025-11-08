@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsProxyListDataUdpQueriesRetries {
     /**
-     * @return Attempts
+     * @return Maximum number of retries before trying next name server
      * 
      */
     private Integer attempts;
     /**
-     * @return Interval
+     * @return Time in seconds for another request to be sent
      * 
      */
     private Integer interval;
 
     private GetDnsProxyListDataUdpQueriesRetries() {}
     /**
-     * @return Attempts
+     * @return Maximum number of retries before trying next name server
      * 
      */
     public Integer attempts() {
         return this.attempts;
     }
     /**
-     * @return Interval
+     * @return Time in seconds for another request to be sent
      * 
      */
     public Integer interval() {

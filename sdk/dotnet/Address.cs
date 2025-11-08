@@ -25,21 +25,21 @@ namespace Pulumi.Scm
     ///     // This file is embedded using go:embed
     ///     var scmAddrTag1 = new Scm.Tag("scm_addr_tag_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_addr_tag_1",
     ///         Color = "Red",
     ///     });
     /// 
     ///     var scmAddrTag2 = new Scm.Tag("scm_addr_tag_2", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_addr_tag_2",
     ///         Color = "Blue",
     ///     });
     /// 
     ///     var scmAddrTag3 = new Scm.Tag("scm_addr_tag_3", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_addr_tag_3",
     ///         Color = "Orange",
     ///     });

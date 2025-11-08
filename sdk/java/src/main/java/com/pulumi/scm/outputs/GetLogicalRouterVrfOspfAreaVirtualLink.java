@@ -8,7 +8,7 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfOspfAreaVirtualLinkBfd;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfOspfAreaVirtualLinkVrTiming;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,12 +33,12 @@ public final class GetLogicalRouterVrfOspfAreaVirtualLink {
      * @return Instance id
      * 
      */
-    private Double instanceId;
+    private Integer instanceId;
     /**
      * @return Interface id
      * 
      */
-    private Double interfaceId;
+    private Integer interfaceId;
     /**
      * @return Name
      * 
@@ -96,14 +96,14 @@ public final class GetLogicalRouterVrfOspfAreaVirtualLink {
      * @return Instance id
      * 
      */
-    public Double instanceId() {
+    public Integer instanceId() {
         return this.instanceId;
     }
     /**
      * @return Interface id
      * 
      */
-    public Double interfaceId() {
+    public Integer interfaceId() {
         return this.interfaceId;
     }
     /**
@@ -161,8 +161,8 @@ public final class GetLogicalRouterVrfOspfAreaVirtualLink {
         private String authentication;
         private GetLogicalRouterVrfOspfAreaVirtualLinkBfd bfd;
         private Boolean enable;
-        private Double instanceId;
-        private Double interfaceId;
+        private Integer instanceId;
+        private Integer interfaceId;
         private String name;
         private String neighborId;
         private Boolean passive;
@@ -210,7 +210,7 @@ public final class GetLogicalRouterVrfOspfAreaVirtualLink {
             return this;
         }
         @CustomType.Setter
-        public Builder instanceId(Double instanceId) {
+        public Builder instanceId(Integer instanceId) {
             if (instanceId == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfAreaVirtualLink", "instanceId");
             }
@@ -218,7 +218,7 @@ public final class GetLogicalRouterVrfOspfAreaVirtualLink {
             return this;
         }
         @CustomType.Setter
-        public Builder interfaceId(Double interfaceId) {
+        public Builder interfaceId(Integer interfaceId) {
             if (interfaceId == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfAreaVirtualLink", "interfaceId");
             }

@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -36,13 +36,13 @@ public final class LogicalRouterVrfOspfFloodPreventionLsaArgs extends com.pulumi
      * 
      */
     @Import(name="maxPacket")
-    private @Nullable Output<Double> maxPacket;
+    private @Nullable Output<Integer> maxPacket;
 
     /**
      * @return Max packet
      * 
      */
-    public Optional<Output<Double>> maxPacket() {
+    public Optional<Output<Integer>> maxPacket() {
         return Optional.ofNullable(this.maxPacket);
     }
 
@@ -98,7 +98,7 @@ public final class LogicalRouterVrfOspfFloodPreventionLsaArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder maxPacket(@Nullable Output<Double> maxPacket) {
+        public Builder maxPacket(@Nullable Output<Integer> maxPacket) {
             $.maxPacket = maxPacket;
             return this;
         }
@@ -109,7 +109,7 @@ public final class LogicalRouterVrfOspfFloodPreventionLsaArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder maxPacket(Double maxPacket) {
+        public Builder maxPacket(Integer maxPacket) {
             return maxPacket(Output.of(maxPacket));
         }
 

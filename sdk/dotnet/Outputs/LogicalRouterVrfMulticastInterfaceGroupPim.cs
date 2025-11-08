@@ -20,7 +20,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Assert interval
         /// </summary>
-        public readonly double? AssertInterval;
+        public readonly int? AssertInterval;
         /// <summary>
         /// Bsr border
         /// </summary>
@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Dr priority
         /// </summary>
-        public readonly double? DrPriority;
+        public readonly int? DrPriority;
         /// <summary>
         /// Enable
         /// </summary>
@@ -36,27 +36,27 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Hello interval
         /// </summary>
-        public readonly double? HelloInterval;
+        public readonly int? HelloInterval;
         /// <summary>
         /// Join prune interval
         /// </summary>
-        public readonly double? JoinPruneInterval;
+        public readonly int? JoinPruneInterval;
 
         [OutputConstructor]
         private LogicalRouterVrfMulticastInterfaceGroupPim(
             ImmutableArray<Outputs.LogicalRouterVrfMulticastInterfaceGroupPimAllowedNeighbor> allowedNeighbors,
 
-            double? assertInterval,
+            int? assertInterval,
 
             bool? bsrBorder,
 
-            double? drPriority,
+            int? drPriority,
 
             bool? enable,
 
-            double? helloInterval,
+            int? helloInterval,
 
-            double? joinPruneInterval)
+            int? joinPruneInterval)
         {
             AllowedNeighbors = allowedNeighbors;
             AssertInterval = assertInterval;

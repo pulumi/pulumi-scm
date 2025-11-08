@@ -10,6 +10,34 @@ import * as utilities from "./utilities";
  * IpsecCryptoProfile resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // The resource block defines a new IPsec Crypto Profile.
+ * const scmIpsecCryptoProfile2 = new scm.IpsecCryptoProfile("scm_ipsec_crypto_profile_2", {
+ *     name: "scm_ipsec_crypto_profile_2",
+ *     folder: "Prisma Access",
+ *     esp: {
+ *         authentications: [
+ *             "sha256",
+ *             "sha384",
+ *         ],
+ *         encryptions: [
+ *             "aes-256-gcm",
+ *             "aes-128-cbc",
+ *         ],
+ *     },
+ *     dhGroup: "group14",
+ *     lifetime: {
+ *         hours: 1,
+ *     },
+ *     lifesize: {
+ *         gb: 10,
+ *     },
+ * });
+ * ```
  */
 export class IpsecCryptoProfile extends pulumi.CustomResource {
     /**

@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRoutePathMonit
      * @return Count
      * 
      */
-    private Double count;
+    private Integer count;
     /**
      * @return Destination
      * 
@@ -36,7 +36,7 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRoutePathMonit
      * @return Interval
      * 
      */
-    private Double interval;
+    private Integer interval;
     /**
      * @return Name
      * 
@@ -53,7 +53,7 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRoutePathMonit
      * @return Count
      * 
      */
-    public Double count() {
+    public Integer count() {
         return this.count;
     }
     /**
@@ -81,7 +81,7 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRoutePathMonit
      * @return Interval
      * 
      */
-    public Double interval() {
+    public Integer interval() {
         return this.interval;
     }
     /**
@@ -108,11 +108,11 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRoutePathMonit
     }
     @CustomType.Builder
     public static final class Builder {
-        private Double count;
+        private Integer count;
         private String destination;
         private String destinationFqdn;
         private Boolean enable;
-        private Double interval;
+        private Integer interval;
         private String name;
         private String source;
         public Builder() {}
@@ -128,7 +128,7 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRoutePathMonit
         }
 
         @CustomType.Setter
-        public Builder count(Double count) {
+        public Builder count(Integer count) {
             if (count == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfRoutingTableIpStaticRoutePathMonitorMonitorDestination", "count");
             }
@@ -160,7 +160,7 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpStaticRoutePathMonit
             return this;
         }
         @CustomType.Setter
-        public Builder interval(Double interval) {
+        public Builder interval(Integer interval) {
             if (interval == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfRoutingTableIpStaticRoutePathMonitorMonitorDestination", "interval");
             }

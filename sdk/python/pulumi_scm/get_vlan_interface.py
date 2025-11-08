@@ -58,8 +58,8 @@ class GetVlanInterfaceResult:
         if ips and not isinstance(ips, list):
             raise TypeError("Expected argument 'ips' to be a list")
         pulumi.set(__self__, "ips", ips)
-        if mtu and not isinstance(mtu, float):
-            raise TypeError("Expected argument 'mtu' to be a float")
+        if mtu and not isinstance(mtu, int):
+            raise TypeError("Expected argument 'mtu' to be a int")
         pulumi.set(__self__, "mtu", mtu)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
@@ -70,8 +70,8 @@ class GetVlanInterfaceResult:
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
-        if vlan_tag and not isinstance(vlan_tag, float):
-            raise TypeError("Expected argument 'vlan_tag' to be a float")
+        if vlan_tag and not isinstance(vlan_tag, str):
+            raise TypeError("Expected argument 'vlan_tag' to be a str")
         pulumi.set(__self__, "vlan_tag", vlan_tag)
 
     @_builtins.property
@@ -102,7 +102,7 @@ class GetVlanInterfaceResult:
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> _builtins.str:
         """
-        Default value
+        Default interface assignment
         """
         return pulumi.get(self, "default_value")
 
@@ -118,7 +118,7 @@ class GetVlanInterfaceResult:
     @pulumi.getter(name="dhcpClient")
     def dhcp_client(self) -> 'outputs.GetVlanInterfaceDhcpClientResult':
         """
-        Dhcp client
+        Vlan interfaces DHCP Client Object
         """
         return pulumi.get(self, "dhcp_client")
 
@@ -148,15 +148,15 @@ class GetVlanInterfaceResult:
 
     @_builtins.property
     @pulumi.getter
-    def ips(self) -> Sequence[_builtins.str]:
+    def ips(self) -> Sequence['outputs.GetVlanInterfaceIpResult']:
         """
-        Ip
+        VLAN Interface IP Parent
         """
         return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
-    def mtu(self) -> _builtins.float:
+    def mtu(self) -> _builtins.int:
         """
         MTU
         """
@@ -185,9 +185,9 @@ class GetVlanInterfaceResult:
 
     @_builtins.property
     @pulumi.getter(name="vlanTag")
-    def vlan_tag(self) -> _builtins.float:
+    def vlan_tag(self) -> _builtins.str:
         """
-        Vlan tag
+        VLAN tag
         """
         return pulumi.get(self, "vlan_tag")
 
@@ -221,6 +221,24 @@ def get_vlan_interface(id: Optional[_builtins.str] = None,
     """
     VlanInterface data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up vlan interface by its ID.
+    scm_vlan_interface_ds = scm.get_vlan_interface(id="3f9382a3-5c93-46d9-ae06-a632c2d9ce0c")
+    pulumi.export("vlanInterfaceDataSourceResults", {
+        "id": scm_vlan_interface_ds.id,
+        "name": scm_vlan_interface_ds.name,
+        "comment": scm_vlan_interface_ds.comment,
+        "vlanTag": scm_vlan_interface_ds.vlan_tag,
+        "ip": scm_vlan_interface_ds.ips,
+        "folder": scm_vlan_interface_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: L3 sub-interface name
@@ -252,6 +270,24 @@ def get_vlan_interface_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetVlanInterfaceResult]:
     """
     VlanInterface data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up vlan interface by its ID.
+    scm_vlan_interface_ds = scm.get_vlan_interface(id="3f9382a3-5c93-46d9-ae06-a632c2d9ce0c")
+    pulumi.export("vlanInterfaceDataSourceResults", {
+        "id": scm_vlan_interface_ds.id,
+        "name": scm_vlan_interface_ds.name,
+        "comment": scm_vlan_interface_ds.comment,
+        "vlanTag": scm_vlan_interface_ds.vlan_tag,
+        "ip": scm_vlan_interface_ds.ips,
+        "folder": scm_vlan_interface_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

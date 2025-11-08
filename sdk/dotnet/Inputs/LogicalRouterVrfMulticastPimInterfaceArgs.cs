@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         /// Dr priority
         /// </summary>
         [Input("drPriority")]
-        public Input<double>? DrPriority { get; set; }
+        public Input<int>? DrPriority { get; set; }
 
         /// <summary>
         /// If timer

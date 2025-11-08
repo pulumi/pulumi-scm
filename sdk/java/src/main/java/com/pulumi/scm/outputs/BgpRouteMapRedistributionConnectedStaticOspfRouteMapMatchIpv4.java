@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4 {
     /**
-     * @return Address
+     * @return Connected Static Root OSPF Address
      * 
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address address;
@@ -25,7 +25,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4
 
     private BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4() {}
     /**
-     * @return Address
+     * @return Connected Static Root OSPF Address
      * 
      */
     public Optional<BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address> address() {

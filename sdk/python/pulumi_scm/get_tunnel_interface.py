@@ -27,12 +27,12 @@ class GetTunnelInterfaceResult:
     """
     A collection of values returned by getTunnelInterface.
     """
-    def __init__(__self__, comment=None, default_value=None, device=None, folder=None, id=None, interface_management_profile=None, ip=None, mtu=None, name=None, snippet=None, tfid=None):
+    def __init__(__self__, comment=None, default_value=None, device=None, folder=None, id=None, interface_management_profile=None, ips=None, mtu=None, name=None, snippet=None, tfid=None):
         if comment and not isinstance(comment, str):
             raise TypeError("Expected argument 'comment' to be a str")
         pulumi.set(__self__, "comment", comment)
-        if default_value and not isinstance(default_value, int):
-            raise TypeError("Expected argument 'default_value' to be a int")
+        if default_value and not isinstance(default_value, str):
+            raise TypeError("Expected argument 'default_value' to be a str")
         pulumi.set(__self__, "default_value", default_value)
         if device and not isinstance(device, str):
             raise TypeError("Expected argument 'device' to be a str")
@@ -46,11 +46,11 @@ class GetTunnelInterfaceResult:
         if interface_management_profile and not isinstance(interface_management_profile, str):
             raise TypeError("Expected argument 'interface_management_profile' to be a str")
         pulumi.set(__self__, "interface_management_profile", interface_management_profile)
-        if ip and not isinstance(ip, dict):
-            raise TypeError("Expected argument 'ip' to be a dict")
-        pulumi.set(__self__, "ip", ip)
-        if mtu and not isinstance(mtu, float):
-            raise TypeError("Expected argument 'mtu' to be a float")
+        if ips and not isinstance(ips, list):
+            raise TypeError("Expected argument 'ips' to be a list")
+        pulumi.set(__self__, "ips", ips)
+        if mtu and not isinstance(mtu, int):
+            raise TypeError("Expected argument 'mtu' to be a int")
         pulumi.set(__self__, "mtu", mtu)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
@@ -72,9 +72,9 @@ class GetTunnelInterfaceResult:
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
-    def default_value(self) -> _builtins.int:
+    def default_value(self) -> _builtins.str:
         """
-        Default value
+        Default interface assignment
         """
         return pulumi.get(self, "default_value")
 
@@ -112,15 +112,15 @@ class GetTunnelInterfaceResult:
 
     @_builtins.property
     @pulumi.getter
-    def ip(self) -> 'outputs.GetTunnelInterfaceIpResult':
+    def ips(self) -> Sequence['outputs.GetTunnelInterfaceIpResult']:
         """
-        tunnel interfaces ip parent
+        Tunnel Interface IP Parent
         """
-        return pulumi.get(self, "ip")
+        return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
-    def mtu(self) -> _builtins.float:
+    def mtu(self) -> _builtins.int:
         """
         MTU
         """
@@ -160,7 +160,7 @@ class AwaitableGetTunnelInterfaceResult(GetTunnelInterfaceResult):
             folder=self.folder,
             id=self.id,
             interface_management_profile=self.interface_management_profile,
-            ip=self.ip,
+            ips=self.ips,
             mtu=self.mtu,
             name=self.name,
             snippet=self.snippet,
@@ -172,6 +172,23 @@ def get_tunnel_interface(id: Optional[_builtins.str] = None,
                          opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetTunnelInterfaceResult:
     """
     TunnelInterface data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up tunnel interface by its ID.
+    scm_tunnel_intf_ds = scm.get_tunnel_interface(id="ddad1e64-0b64-41a4-b361-c6191169a8f1")
+    pulumi.export("scmTunnelInterfaceDataSourceResults", {
+        "id": scm_tunnel_intf_ds.id,
+        "name": scm_tunnel_intf_ds.name,
+        "comment": scm_tunnel_intf_ds.comment,
+        "ip": scm_tunnel_intf_ds.ips,
+        "folder": scm_tunnel_intf_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource
@@ -190,7 +207,7 @@ def get_tunnel_interface(id: Optional[_builtins.str] = None,
         folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         interface_management_profile=pulumi.get(__ret__, 'interface_management_profile'),
-        ip=pulumi.get(__ret__, 'ip'),
+        ips=pulumi.get(__ret__, 'ips'),
         mtu=pulumi.get(__ret__, 'mtu'),
         name=pulumi.get(__ret__, 'name'),
         snippet=pulumi.get(__ret__, 'snippet'),
@@ -200,6 +217,23 @@ def get_tunnel_interface_output(id: Optional[pulumi.Input[_builtins.str]] = None
                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTunnelInterfaceResult]:
     """
     TunnelInterface data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up tunnel interface by its ID.
+    scm_tunnel_intf_ds = scm.get_tunnel_interface(id="ddad1e64-0b64-41a4-b361-c6191169a8f1")
+    pulumi.export("scmTunnelInterfaceDataSourceResults", {
+        "id": scm_tunnel_intf_ds.id,
+        "name": scm_tunnel_intf_ds.name,
+        "comment": scm_tunnel_intf_ds.comment,
+        "ip": scm_tunnel_intf_ds.ips,
+        "folder": scm_tunnel_intf_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource
@@ -217,7 +251,7 @@ def get_tunnel_interface_output(id: Optional[pulumi.Input[_builtins.str]] = None
         folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         interface_management_profile=pulumi.get(__response__, 'interface_management_profile'),
-        ip=pulumi.get(__response__, 'ip'),
+        ips=pulumi.get(__response__, 'ips'),
         mtu=pulumi.get(__response__, 'mtu'),
         name=pulumi.get(__response__, 'name'),
         snippet=pulumi.get(__response__, 'snippet'),

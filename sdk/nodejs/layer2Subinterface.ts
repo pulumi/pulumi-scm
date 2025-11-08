@@ -6,6 +6,35 @@ import * as utilities from "./utilities";
 
 /**
  * Layer2Subinterface resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Creates a ethernet interface used as parent-interface for subsequent examples
+ * //
+ * const scmParentInterface = new scm.EthernetInterface("scm_parent_interface", {
+ *     name: "$scm_parent_interface",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     layer2: {},
+ * });
+ * //
+ * // Creates a layer2 sub-interface with vlan tag 100
+ * //
+ * const scmLayer2Subinterface = new scm.Layer2Subinterface("scm_layer2_subinterface", {
+ *     name: "$scm_parent_interface.100",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     vlanTag: "100",
+ *     parentInterface: "$scm_parent_interface",
+ * }, {
+ *     dependsOn: [scmParentInterface],
+ * });
+ * ```
  */
 export class Layer2Subinterface extends pulumi.CustomResource {
     /**
@@ -61,9 +90,9 @@ export class Layer2Subinterface extends pulumi.CustomResource {
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    declare public readonly vlanTag: pulumi.Output<number | undefined>;
+    declare public readonly vlanTag: pulumi.Output<string>;
 
     /**
      * Create a Layer2Subinterface resource with the given unique name, arguments, and options.
@@ -72,7 +101,7 @@ export class Layer2Subinterface extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: Layer2SubinterfaceArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: Layer2SubinterfaceArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: Layer2SubinterfaceArgs | Layer2SubinterfaceState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -88,6 +117,9 @@ export class Layer2Subinterface extends pulumi.CustomResource {
             resourceInputs["vlanTag"] = state?.vlanTag;
         } else {
             const args = argsOrState as Layer2SubinterfaceArgs | undefined;
+            if (args?.vlanTag === undefined && !opts.urn) {
+                throw new Error("Missing required property 'vlanTag'");
+            }
             resourceInputs["comment"] = args?.comment;
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
@@ -132,9 +164,9 @@ export interface Layer2SubinterfaceState {
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    vlanTag?: pulumi.Input<number>;
+    vlanTag?: pulumi.Input<string>;
 }
 
 /**
@@ -166,7 +198,7 @@ export interface Layer2SubinterfaceArgs {
      */
     snippet?: pulumi.Input<string>;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    vlanTag?: pulumi.Input<number>;
+    vlanTag: pulumi.Input<string>;
 }

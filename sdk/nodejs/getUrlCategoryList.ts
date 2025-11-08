@@ -20,12 +20,12 @@ import * as utilities from "./utilities";
  * //
  * // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
  * const allShared = scm.getUrlCategoryList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const urlCategoriesListAllShared = allShared.then(allShared => allShared.datas);
  * // Example 2: Use pagination to get the first 5 URL Categories by name.
  * const paginated = scm.getUrlCategoryList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
@@ -131,12 +131,12 @@ export interface GetUrlCategoryListResult {
  * //
  * // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
  * const allShared = scm.getUrlCategoryList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const urlCategoriesListAllShared = allShared.then(allShared => allShared.datas);
  * // Example 2: Use pagination to get the first 5 URL Categories by name.
  * const paginated = scm.getUrlCategoryList({
- *     folder: "Shared",
+ *     folder: "All",
  *     limit: 5,
  *     offset: 0,
  * });
